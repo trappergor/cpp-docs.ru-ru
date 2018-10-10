@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435536"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890872"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 
@@ -365,13 +365,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Создает объект `COleControl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|
@@ -535,7 +535,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 *dwVersionDefault*<br/>
 Текущий номер версии элемента управления.
@@ -2158,7 +2158,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>Примечания
 
-Реализация платформы `IDispatch::Invoke` вызовы `IsInvokeAllowed` для определения данной функции (определяется `dispid`), могут быть вызваны. Поведение по умолчанию для элемента управления OLE разрешено методы автоматизации, которые вызываются только в том случае, если элемент управления был инициализирован; Тем не менее `IsInvokeAllowed` является виртуальной функцией и можно переопределить при необходимости (например, при использовании элемента управления как сервера автоматизации). Дополнительные сведения см. в статье базы знаний Q166472, «HOWTO: использовать в качестве сервера автоматизации управления OLE.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).
+Реализация платформы `IDispatch::Invoke` вызовы `IsInvokeAllowed` для определения данной функции (определяется `dispid`), могут быть вызваны. Поведение по умолчанию для элемента управления OLE разрешено методы автоматизации, которые вызываются только в том случае, если элемент управления был инициализирован; Тем не менее `IsInvokeAllowed` является виртуальной функцией и можно переопределить при необходимости (например, при использовании элемента управления как сервера автоматизации).
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

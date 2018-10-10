@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: a6c7d961119d4fe25652601ebe5e423be898f49e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821521"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890742"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -367,7 +367,7 @@ class CWinApp : public CWinThread
 
 - `CWinApp`в ключа переопределяются.
 
-`m_hPrevInstance` Элемент данных больше не существует. Сведения об определении к предыдущему экземпляру `CWinApp`, см. в статье базы знаний «Определить предыдущего экземпляра из приложения» (KB106385) в [ http://support.microsoft.com/default.aspxscid=kb; 106385](http://support.microsoft.com/default.aspxscid=kb;106385).
+`m_hPrevInstance` Элемент данных больше не существует. Чтобы определить, выполняется ли другой экземпляр приложения, используйте именованного мьютекса. Если не удается открыть мьютекс, отсутствуют другие экземпляры приложения, запущенного.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 Переопределить `InitInstance` для инициализации каждого нового экземпляра приложения под управлением Windows. Как правило, можно переопределить `InitInstance` для создания объекта главного окна и задания `CWinThread::m_pMainWnd` данные-член для указания этого окна. Дополнительные сведения о переопределении эта функция-член, см. в разделе [CWinApp: класс приложений](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED). Дополнительные сведения см. в статье PRB: MFC приложение перестает отвечать на запросы при инициализации приложения в качестве многопотокового подразделения (828643) в [ http://support.microsoft.com/default.aspxscid=kb; 828643](http://support.microsoft.com/default.aspxscid=kb;828643).
+> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Пример
 
@@ -1821,7 +1821,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*код*<br/>
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
 *lpMsg*<br/>

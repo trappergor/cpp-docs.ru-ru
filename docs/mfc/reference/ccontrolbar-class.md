@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393429"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890535"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -75,13 +75,13 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Создает объект `CControlBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Возвращает размер панели динамических элементов управления как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
 |[CControlBar::CalcFixedLayout](#calcfixedlayout)|Возвращает размер панели элементов управления, как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
@@ -102,7 +102,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Если значение ненулевое, `CControlBar` объект удаляется при удалении панели элементов управления Windows.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Владелец на месте на панели управления.|
@@ -118,8 +118,6 @@ class CControlBar : public CWnd
 - [Панели элементов управления](../../mfc/control-bars.md)
 
 - [Техническое Примечание 31: Панелей элементов управления](../../mfc/tn031-control-bars.md).
-
-- Статье базы знаний Q242577: PRB: обновление команды пользовательского интерфейса обработчики не работают для вложенных меню в диалоговое окно
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>Параметры
 
 *pWnd*<br/>
-Указатель на объект `CWnd`.
+Указатель на объект `CWnd` .
 
 ### <a name="remarks"></a>Примечания
 

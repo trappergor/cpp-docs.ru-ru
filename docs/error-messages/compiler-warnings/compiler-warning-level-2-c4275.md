@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb8f397243bb6531f33ac5e444914cfa36e5fe1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55b93d1ebd81850982b4f6ceac1ceb008ed1fa49
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022640"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890287"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>Предупреждение компилятора (уровень 2) C4275
 
@@ -42,8 +42,6 @@ ms.locfileid: "46022640"
 - Нет методов класса (вне зависимости от встраивания) можно использовать типы, где отличаются статические данные в экземпляров в EXE и DLL.
 
 Экспортирование классов, определяя, библиотеки DLL, которая определяет класс с виртуальными функциями и функции, которые можно использовать для создания и удаления объектов типа, можно предотвратить.  Затем можно просто вызвать виртуальные функции в типе.
-
-Дополнительные сведения об экспорте шаблонов см. в разделе [ http://support.microsoft.com/default.aspx?scid=KB; EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958).
 
 В Visual C++ может игнорироваться C4275, при наследовании от типа в стандартной библиотеке C++, компиляция отладочного выпуска (**/MTd**), где сообщение об ошибке компилятора ссылается на _Container_base.
 

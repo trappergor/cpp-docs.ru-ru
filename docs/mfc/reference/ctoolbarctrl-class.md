@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861893"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890820"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Примечания
 
 Это диалоговое окно позволяет пользователю настроить путем добавления и удаления кнопок панели инструментов. Для поддержки настройки, на панели инструментов родительского окна необходимо обрабатывать сообщения уведомления настройки, как описано в разделе [обработка уведомлений о настройке](../../mfc/handling-customization-notifications.md). На панель инструментов должна также быть создана в стиле CCS_ADJUSTABLE, как описано в разделе [CToolBarCtrl::Create](#create).
-
-Дополнительные сведения см. в статье базы знаний Q241850: PRB: вызов CToolBarCtrl::Customize не поддерживает хранение видимым настройки диалогового окна.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

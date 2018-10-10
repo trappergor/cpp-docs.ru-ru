@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381079"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890379"
 ---
 # <a name="cdocobjectserver-class"></a>Класс CDocObjectServer
 
@@ -47,19 +47,19 @@ class CDocObjectServer : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocObjectServer::CDocObjectServer](#cdocobjectserver)|Создает объект `CDocObjectServer`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocObjectServer::ActivateDocObject](#activatedocobject)|Активирует сервер объект документа, но не отображается.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocObjectServer::OnActivateView](#onactivateview)|Отображает представление DocObject.|
 |[CDocObjectServer::OnApplyViewState](#onapplyviewstate)|Восстанавливает состояние представления DocObject.|
@@ -74,10 +74,6 @@ DocObject серверного документа может содержать 
 Чтобы настроить сервер DocObject, собственный производный класс от `CDocObjectServer` и переопределите его представление функций настройки, [OnActivateView](#onactivateview), [OnApplyViewState](#onapplyviewstate), и [OnSaveViewState ](#onsaveviewstate). Необходимо будет предоставлять новый экземпляр класса в ответ на вызовы framework.
 
 Дополнительные сведения о DocObjects см. в разделе [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md) и [COleCmdUI](../../mfc/reference/colecmdui-class.md) в *Справочник по библиотеке MFC*.
-
-Также см. в следующей статье базы знаний:
-
-- Q247382: PRB: всплывающие подсказки для элементов управления на сервере документов ActiveX скрыты по контейнер ActiveX
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

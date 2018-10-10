@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378193"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890209"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Пример. Отображение диалогового окна через команду меню
 
@@ -98,12 +98,7 @@ ms.locfileid: "46378193"
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-Кроме того см. в следующей статье базы знаний:
-
-- Q251059: HOWTO: Укажите собственное имя класса окна для диалогового окна MFC
-
 ## <a name="see-also"></a>См. также
 
 [Диалоговые окна](../mfc/dialog-boxes.md)<br/>
 [Модальные и немодальные диалоговые окна](../mfc/modal-and-modeless-dialog-boxes.md)
-

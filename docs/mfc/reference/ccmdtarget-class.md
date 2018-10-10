@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415737"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890588"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 
@@ -77,13 +77,13 @@ class CCmdTarget : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCmdTarget::CCmdTarget](#ccmdtarget)|Создает объект `CCmdTarget`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCmdTarget::BeginWaitCursor](#beginwaitcursor)|Отображает курсор в виде курсор с песочными часами.|
 |[CCmdTarget::DoOleVerb](#dooleverb)|Вызывает действие, определенное командой OLE для выполнения.|
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите эту функцию-член в конструкторе вашего `CCmdTarget`-производного объекта, если он предоставляет сведения о типе. Дополнительные сведения см. в статье базы знаний Q185720, «HOWTO: указать сведения о типах из сервера автоматизации MFC.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).
+Вызовите эту функцию-член в конструкторе вашего `CCmdTarget`-производного объекта, если он предоставляет сведения о типе.
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ virtual BOOL GetDispatchIID(IID* pIID);
 ### <a name="remarks"></a>Примечания
 
 Производные классы должны переопределить эту функцию-член (если не переопределен, `GetDispatchIID` возвращает значение FALSE). См. в разделе [COleControl](../../mfc/reference/colecontrol-class.md).
-
-Дополнительные сведения см. в статье базы знаний Q185720, «HOWTO: указать сведения о типах из сервера автоматизации MFC.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CTypeLibCache`.
+Указатель на объект `CTypeLibCache` .
 
 ### <a name="remarks"></a>Примечания
 

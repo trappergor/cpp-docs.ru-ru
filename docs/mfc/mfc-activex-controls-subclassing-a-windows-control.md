@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407550"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890561"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Элементы управления ActiveX в MFC. Создание подкласса элемента управления Windows
 
@@ -48,10 +48,8 @@ ms.locfileid: "46407550"
 
 - [Обрабатывать сообщения элемента управления ActiveX (OCM), отражаются в элемент управления](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Значительную часть этой работы выполняется автоматически с помощью мастера управления ActiveX при выборе элемента управления, для которого создаются подклассы с помощью **выберите класс родительского окна** стрелку раскрывающегося списка на **параметры управления** страницы.
-
-См. в статье базы знаний Q243454 подробнее на создание подкласса элемента управления.
+   > [!NOTE]
+   > Значительную часть этой работы выполняется автоматически с помощью мастера управления ActiveX при выборе элемента управления, для которого создаются подклассы с помощью **выберите класс родительского окна** стрелку раскрывающегося списка на **параметры управления** страницы.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Переопределение IsSubclassedControl и PreCreateWindow
 

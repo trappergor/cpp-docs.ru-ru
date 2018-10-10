@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03d418fc45d3947248c78d70af5d036bd93b204d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821508"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890651"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 При внедрении `CComboBox` объекта в объект в другом окне, необходимо уничтожить его. Если вы создаете `CComboBox` объект в стеке, он будет удален автоматически. При создании `CComboBox` объект в куче с помощью **новый** функцию, необходимо вызвать **удалить** в объекте уничтожить его при уничтожении поле со списком Windows.
 
-**Примечание** требуется обрабатывать сообщения WM_KEYDOWN и WM_CHAR, необходимость подкласс списком измените и список элементов управления, создавать производные классы от `CEdit` и `CListBox`, и добавьте обработчики для этих сообщений для производных классов. Дополнительные сведения см. в разделе [ http://support.microsoft.com/default.aspxscid=kb; Q174667](http://support.microsoft.com/default.aspxscid=kb;q174667) и [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Примечание** требуется обрабатывать сообщения WM_KEYDOWN и WM_CHAR, необходимость подкласс списком измените и список элементов управления, создавать производные классы от `CEdit` и `CListBox`, и добавьте обработчики для этих сообщений для производных классов. Дополнительные сведения см. в разделе [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1070,7 +1070,7 @@ int InsertString(
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от [AddString](#addstring) функции-члена `InsertString` функция-член не ведет список с [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стилем.
+В отличие от функции-члена [AddString](#addstring) , функция-член `InsertString` не вызывает сортировку списка со стилем [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 > [!NOTE]
 >  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.

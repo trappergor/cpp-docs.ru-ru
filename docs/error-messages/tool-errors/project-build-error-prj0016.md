@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820481"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890261"
 ---
 # <a name="project-build-error-prj0016"></a>Ошибка построения проекта PRJ0016
 
@@ -37,8 +37,4 @@ ms.locfileid: "48820481"
 
 Другой причиной этой ошибки является то, что параметры политики не включает VCSpawn.exe в разделе реестра HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun как разрешенные программа окно для этой учетной записи пользователя.
 
-Дополнительные сведения см. в разделе:
-
-- Статье базы знаний 324153, доступном на [ http://support.microsoft.com/default.aspx?scid=kb; 324153](http://support.microsoft.com/default.aspx?scid=kb;324153).
-
-- [Использование системных параметров политики](https://msdn.microsoft.com/library/aa372139), раздел «Запуск только допустимых приложений Windows».
+Дополнительные сведения см. в разделе [использование системных параметров политики](https://msdn.microsoft.com/library/aa372139), в разделе «Запуск только допустимых приложений Windows».

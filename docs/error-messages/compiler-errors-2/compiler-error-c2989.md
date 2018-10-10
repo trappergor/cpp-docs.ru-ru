@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79da071b592a31ea3fe7ca486a7e02abc770f08e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081914"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890095"
 ---
 # <a name="compiler-error-c2989"></a>Ошибка компилятора C2989
 
@@ -29,11 +29,9 @@ ms.locfileid: "46081914"
 
 Универсальный класс или шаблон переопределяет нешаблонных или неуниверсальный класс. Проверьте файлы заголовков для конфликтов.
 
-Если вы используете частичные специализации шаблона класса, см. в статье базы знаний Q240866.
-
 Следующий пример приводит к возникновению ошибки C2989:
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +43,7 @@ class C2{};
 
 C2989 также может возникнуть при использовании универсальных шаблонов:
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448549"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890755"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -125,13 +125,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Создает `CEdit` объект элемента управления.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Определяет, можно ли отменить операцию управления ввода.|
 |[CEdit::CharFromPos](#charfrompos)|Возвращает индексы строки и символ для символа, ближайшего к заданной позиции.|
@@ -225,11 +225,7 @@ class CEdit : public CWnd
 
 Чтобы изменить стили, определенные в элемент управления редактирования (например, ES_READONLY) необходимо отправить определенных сообщений на элемент управления, вместо использования [ModifyStyle](cwnd-class.md#modifystyle). См. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles) в Windows SDK.
 
-Дополнительные сведения о `CEdit`, см. в разделе:
-
-- [Элементы управления](../../mfc/controls-mfc.md)
-
-- Статье базы знаний Q259949: INFO: SetCaretPos() является не соответствующие с CEdit или элементами управления CRichEditCtrl
+Дополнительные сведения о `CEdit`, см. в разделе [элементов управления](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -561,7 +557,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pichStart*|[out] Отсчитываемый от нуля индекс первого символа в диапазоне текста, который будет выделен.|
 |*pichEnd*|[out] Отсчитываемый от нуля индекс последнего символа в диапазоне текста, который будет выделен.|
@@ -1113,7 +1109,7 @@ void SetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*ichStart*|[in] Отсчитываемый от нуля индекс первого символа в диапазоне текста для выделения.|
 |*ichEnd*|[in] Отсчитываемый от нуля индекс последнего символа в диапазоне текста для выделения.|
@@ -1416,7 +1412,7 @@ BOOL ShowBalloonTip(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pEditBalloonTip*|[in] Указатель на [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) структура, описывающая всплывающей подсказки.|
 |*lpszTitle*|[in] Указатель на строку Юникода, которая содержит заголовок всплывающей подсказки.|

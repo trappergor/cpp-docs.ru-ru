@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432825"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890340"
 ---
 # <a name="activex-controls-on-the-internet"></a>Элементы управления ActiveX в Интернете
 
@@ -170,10 +170,6 @@ ms.locfileid: "46432825"
 Например если только 10 байт, доступны и чтения вызывается асинхронно с файлом 1 КБ, чтения не блокирует, но возвращает с сейчас доступно 10 байт.
 
 Вы реализуете [асинхронных моникеров](../mfc/asynchronous-monikers-on-the-internet.md) с помощью `CAsyncMonikerFile` класса. Тем не менее, можно использовать элементы управления ActiveX `CDataPathProperty` класс, который является производным от `CAsyncMonikerFile`, чтобы реализовать асинхронный элемент управления свойства.
-
-ASYNDOWN демонстрируется настройка асинхронном цикле использование таймеров для чтения данных. ASYNDOWN подробно описаны в статье базы знаний «HOWTO: AsyncDown демонстрирует асинхронных данных Download» (Q177244) и доступна для загрузки из центра загрузки Майкрософт. (Дополнительные сведения о загрузке файлов из центра загрузки Майкрософт, см. в статье «Как для получения поддержки файлов из Online Майкрософт» (Q119591) в базе знаний Майкрософт.) Можно найти в статьях базы знаний [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
-
-Основной способ, используемый в ASYNDOWN является задание таймера в **CDataPathProperty::OnDataAvailable** чтобы указать, когда данные недоступны. При получении сообщения таймера, приложение считывает в 128-байтового блоки данных и заполняет элемент управления редактированием. Если данные недоступны, при обработке сообщения таймера, таймер будет отключено. `OnDataAvailable` Включение таймера, если больше данных поступает позже.
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Отображение элемента управления на веб-странице
 

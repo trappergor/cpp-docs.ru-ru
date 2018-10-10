@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409575"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890364"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Обновление существующего элемента управления ActiveX
 
@@ -56,7 +56,7 @@ ms.locfileid: "46409575"
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Упаковка кода для загрузки
 
-Дополнительные сведения по этой теме см. в статье базы знаний «Упаковки MFC элементов управления для использования по Интернету» (Q167158). Можно найти в статьях базы знаний [ http://support.microsoft.com/support ](http://support.microsoft.com/support).
+Дополнительные сведения по этому вопросу см. в разделе [упаковка элементов управления ActiveX](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29).
 
 ### <a name="the-codebase-tag"></a>CODEBASE тега
 
@@ -94,7 +94,7 @@ CAB-файлы являются рекомендуемым способом уп
 
 ### <a name="creating-cab-files"></a>Создание CAB-файлов
 
-Пакет средств разработки CAB-файл можно загрузить из статьи базы знаний [310618: Microsoft Cabinet Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204). В этом пакете вы найдете необходимые средства для создания CAB-файлов.
+Средства для создания CAB-файлов, теперь входит в состав [пакета SDK для Windows 10](https://dev.windows.com/downloads/windows-10-sdk).
 
 CAB-файл, на которые указывают `CODEBASE` должен содержать соответствующий файл для элемента управления ActiveX и INF-файл для его установки. Вы создадите CAB-файл, указав имя файла элемента управления и INF-файл. Не используйте зависимые библиотеки DLL, которые могут уже существовать в системе в этот CAB-файл. Например библиотеки DLL MFC упаковываются в отдельный CAB-файл и ссылается управляющий INF-файла.
 
