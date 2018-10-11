@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021581"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082427"
 ---
 # <a name="ole-db-consumer-templates-c"></a>Шаблоны потребителей OLE DB (C++)
 
@@ -35,7 +35,7 @@ ms.locfileid: "46021581"
   
 - типы данных неуправляемого кода C/C++ для программирования OLE DB.  
   
-Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms718124\(v=vs.85\)).  
+Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. [справочник программиста OLE DB](/previous-versions/windows/desktop/ms718124).  
   
 Шаблоны OLE DB поддерживают существующую объектную модель OLE DB, а не добавляют новую объектную модель. Классы верхнего уровня в шаблонах потребителей OLE DB создают компоненты, параллельные компонентам, определенным в спецификации OLE DB. Шаблоны потребителей OLE DB включает дополнительные возможности, такие как несколько методов доступа к набору строк. Использование шаблонов и множественного наследования позволяет создавать более компактные и гибкие библиотеки.  
   
@@ -71,5 +71,5 @@ ms.locfileid: "46021581"
 
 [Программирование объектов OLE DB](../../data/oledb/ole-db-programming.md)<br/>
 [Доступ к данным](../data-access-in-cpp.md)<br/>
-[Документация по OLE DB SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[Справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[Документация по OLE DB SDK](/previous-versions/windows/desktop/ms722784)   
+[справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643)

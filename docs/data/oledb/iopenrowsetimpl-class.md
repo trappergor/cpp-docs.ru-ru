@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f5071adcf12bde10a3fc67a5503875dfb264372
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086958"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081608"
 ---
 # <a name="iopenrowsetimpl-class"></a>Класс IOpenRowsetImpl
 
@@ -63,11 +63,11 @@ class IOpenRowsetImpl : public IOpenRowset
   
 ## <a name="remarks"></a>Примечания  
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\)) интерфейс является обязательным для объекта сеанса. Она открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.  
+[IOpenRowset](/previous-versions/windows/desktop/ms716946) интерфейс является обязательным для объекта сеанса. Она открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.  
   
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Создает объект набора строк. Не вызывается непосредственно пользователем. См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) в *справочнике программиста OLE DB.*  
+Создает объект набора строк. Не вызывается непосредственно пользователем. См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *справочнике программиста OLE DB.*  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -91,7 +91,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 [out] Указатель на объект набора строк. Обычно этот параметр не используется, но он может использоваться, если необходимо выполнить дополнительные действия в наборе строк перед его передачей в COM-объект. Время существования *pRowsetObj* привязана к *ppRowset*.  
   
-Другие параметры, см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) в *Справочник программиста OLE DB по.*  
+Другие параметры, см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *Справочник программиста OLE DB по.*  
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -111,7 +111,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
 

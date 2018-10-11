@@ -111,12 +111,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 06b33f5003b073e854f68dc2083baee10a650b2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0f6bb0949525bd844d4c9faf4a712a0b28f3fb23
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080549"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083883"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>Макросы и глобальные функции для шаблонов потребителей OLE DB
 
@@ -377,7 +377,7 @@ BEGIN_COLUMN_MAP-макрос выполняется с помощью END_COLUM
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))).  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)).  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -405,7 +405,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает длину в байтах столбца BLOB-ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает длину в байтах столбца BLOB-ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -436,7 +436,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также возвращает длину и состояние столбца BLOB-ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также возвращает длину и состояние столбца BLOB-ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -476,7 +476,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-Используется с BEGIN_COLUMN_MAP или BEGIN_ACCESSOR_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает состояние столбца BLOB-ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP или BEGIN_ACCESSOR_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос также получает состояние столбца BLOB-ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -507,7 +507,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос принимает имя столбца, а не как число столбцов.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [BLOB_ENTRY](../../data/oledb/blob-entry.md), за исключением того, что этот макрос принимает имя столбца, а не как число столбцов.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -535,7 +535,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает длину в байтах данных столбца больших двоичных ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает длину в байтах данных столбца больших двоичных ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -562,7 +562,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также возвращает длину и состояние столбца данных больших двоичных ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также возвращает длину и состояние столбца данных больших двоичных ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -592,7 +592,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511\(v=vs.85\))). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает состояние столбца данных больших двоичных ОБЪЕКТОВ.  
+Используется с BEGIN_COLUMN_MAP и END_COLUMN_MAP для привязки больших двоичных объектов ([BLOB-ОБЪЕКТОВ](/previous-versions/windows/desktop/ms711511)). Аналогичную [имя_большого_двоичного_объекта](../../data/oledb/blob-name.md), за исключением того, что этот макрос также получает состояние столбца данных больших двоичных ОБЪЕКТОВ.  
   
 #### <a name="syntax"></a>Синтаксис  
   
@@ -683,7 +683,7 @@ END_COLUMN_MAP()
 #### <a name="see-also"></a>См. также  
 
 [Класс CBookmark](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728\(v=vs.85\))
+[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728)
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -697,7 +697,7 @@ COLUMN_ENTRY(nOrdinal, data)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -731,7 +731,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -783,7 +783,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца, начиная с единицы. Закладка соответствует нулевым столбцом.  
@@ -816,7 +816,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -852,7 +852,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -888,7 +888,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца, начиная с единицы. Закладка соответствует нулевым столбцом.  
@@ -927,7 +927,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -969,7 +969,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -1008,7 +1008,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [DBBINDING](/previous-versions/windows/desktop/ms716845) в *справочнике программиста OLE DB*.  
   
 *nOrdinal*<br/>
 [in] Номер столбца.  
@@ -1558,7 +1558,7 @@ BEGIN_PARAM_MAP(x)
   
 #### <a name="remarks"></a>Примечания  
 
-Используются параметры [команды](/previous-versions/windows/desktop/ms724608\(v=vs.85\)).  
+Используются параметры [команды](/previous-versions/windows/desktop/ms724608).  
   
 #### <a name="example"></a>Пример  
 
@@ -1595,7 +1595,7 @@ SET_PARAM_TYPE(type)
   
 #### <a name="remarks"></a>Примечания  
 
-Поставщики поддерживают только входные и выходные типы параметров, поддерживаемые в базовом источнике данных. Тип представляет собой сочетание одного или нескольких `DBPARAMIO` значения (см. в разделе [структуры DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) в *Справочник программиста OLE DB по*):  
+Поставщики поддерживают только входные и выходные типы параметров, поддерживаемые в базовом источнике данных. Тип представляет собой сочетание одного или нескольких `DBPARAMIO` значения (см. в разделе [структуры DBBINDING](/previous-versions/windows/desktop/ms716845) в *Справочник программиста OLE DB по*):  
   
 - `DBPARAMIO_NOTPARAM` Метод доступа не имеет параметров. Обычно задается `eParamIO` этому значению в строке доступа, чтобы напомнить пользователям, что параметры игнорируются.  
   

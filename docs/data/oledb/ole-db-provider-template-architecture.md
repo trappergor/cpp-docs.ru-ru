@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078898"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082999"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Архитектура шаблона поставщика OLE DB
 
@@ -50,7 +50,7 @@ ms.locfileid: "46078898"
   
 Обратите внимание, что шаблоны поставщика OLE DB не реализуют объекты строк и хранилищ.  
   
-В следующей таблице перечислены обязательные и необязательные интерфейсы для объектов, перечисленных выше, согласно [OLE DB версии 2.6 документации по пакету SDK](/previous-versions/windows/desktop/ms722784\(v=vs.85\)).  
+В следующей таблице перечислены обязательные и необязательные интерфейсы для объектов, перечисленных выше, согласно [OLE DB версии 2.6 документации по пакету SDK](/previous-versions/windows/desktop/ms722784).  
   
 |Компонент|Интерфейс|Комментарий|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ ms.locfileid: "46078898"
 ## <a name="see-also"></a>См. также  
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[Интерфейсы OLE DB](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[Интерфейсы OLE DB](/previous-versions/windows/desktop/ms709709)

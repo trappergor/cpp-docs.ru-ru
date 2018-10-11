@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744fdd80e16e292399a261e10dc6b974af1dca4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371931"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081875"
 ---
 # <a name="thread-local-storage-tls"></a>Локальное хранилище потока (TLS)
 
@@ -114,7 +114,7 @@ __declspec( thread ) int tls_i = 1;
 
      C++ не допускает такой динамической инициализации данных потока из-за возможных будущих улучшений локального хранилища потока.
 
-- В операционных системах Windows до Windows Vista `__declspec`(thread) имеет некоторые ограничения. Если библиотека DLL объявляет любые данные или объекты как `__declspec`(thread), это может привести к сбою защиты при динамической загрузке. После загрузки библиотеки DLL с [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175), происходит сбой в системе всякий раз, когда код ссылается на `__declspec`данных (поток). Поскольку пространство глобальных переменных для потока выделяется во время выполнения, размер данного пространства основан на расчете требований приложению, а также требований всех библиотек DLL, которые привязываются статически. При использовании `LoadLibrary` невозможно расширить это пространство, чтобы объявлять локальные переменные потока с помощью `__declspec`(thread). Используйте API-интерфейсы TLS, такие как [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), библиотеки DLL, чтобы выделить TLS, если библиотека DLL может загружаться с помощью `LoadLibrary`.
+- В операционных системах Windows до Windows Vista `__declspec`(thread) имеет некоторые ограничения. Если библиотека DLL объявляет любые данные или объекты как `__declspec`(thread), это может привести к сбою защиты при динамической загрузке. После загрузки библиотеки DLL с [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya), происходит сбой в системе всякий раз, когда код ссылается на `__declspec`данных (поток). Поскольку пространство глобальных переменных для потока выделяется во время выполнения, размер данного пространства основан на расчете требований приложению, а также требований всех библиотек DLL, которые привязываются статически. При использовании `LoadLibrary` невозможно расширить это пространство, чтобы объявлять локальные переменные потока с помощью `__declspec`(thread). Используйте API-интерфейсы TLS, такие как [TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc), библиотеки DLL, чтобы выделить TLS, если библиотека DLL может загружаться с помощью `LoadLibrary`.
 
 ## <a name="see-also"></a>См. также
 

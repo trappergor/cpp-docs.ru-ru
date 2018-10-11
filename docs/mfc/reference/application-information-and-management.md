@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374377"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083805"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает дескриптор, который может использоваться в [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) при получении адреса функции DLL. `AfxLoadLibrary` может также использоваться для сопоставления других исполняемых модулей.
+Возвращает дескриптор, который может использоваться в [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) при получении адреса функции DLL. `AfxLoadLibrary` может также использоваться для сопоставления других исполняемых модулей.
 
 Каждый процесс поддерживает счетчик ссылок для каждого модуля в загруженной библиотеки. Этот счетчик ссылок увеличивается каждый раз `AfxLoadLibrary` вызывается и уменьшается на единицу каждый раз `AfxFreeLibrary` вызывается. Когда число ссылок достигает нуля, модуль, не имеет сопоставления из адресного пространства вызывающего процесса и дескриптор недействителен.
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 До появления Windows Vista приложения, обращавшиеся к реестр, обычно используется **HKEY_CLASSES_ROOT** узла. Тем не менее с Windows Vista или более поздних операционных системах, необходимо запустить приложение в режиме с повышенными правами для записи в HKCR.
 
-Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [страницы свойств компоновщика](../../ide/linker-property-pages.md).
+Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Если вы включили функцию перенаправления реестра, платформа перенаправляет доступ из HKCR для **HKEY_CURRENT_USER\Software\Classes**. Перенаправление влияет только на платформах MFC и ATL.
 

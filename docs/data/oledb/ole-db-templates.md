@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60c7e33a0a486bf0880b06a2eb159ba02300dec7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f828f21ebdb841d4eca1bb168f908543f990e94
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118249"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082674"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 
@@ -41,7 +41,7 @@ ms.locfileid: "46118249"
 [Общие сведения о программировании OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Описываются OLE DB — и универсального доступа к данным в OLE DB.  
   
-[Справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
+[справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643)  
 Ссылки в документации пакета SDK для Windows OLE DB.  
   
 [Примеры шаблонов OLE DB](../../visual-cpp-samples.md)<br/>

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861646"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083051"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 
@@ -36,7 +36,7 @@ ms.locfileid: "48861646"
 
 - **Источник данных**
 
-   **Источника данных** кнопку настраивать указанного источника данных с помощью указанного поставщика OLE DB. При нажатии этой кнопки **свойства канала передачи данных** откроется диалоговое окно. Дополнительные сведения о создании строк подключения и **свойства канала передачи данных** диалоговом окне см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102\(v=vs.85\)) в документации по Windows SDK.
+   **Источника данных** кнопку настраивать указанного источника данных с помощью указанного поставщика OLE DB. При нажатии этой кнопки **свойства канала передачи данных** откроется диалоговое окно. Дополнительные сведения о создании строк подключения и **свойства канала передачи данных** диалоговом окне см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102) в документации по Windows SDK.
 
    Следующие дополнительные сведения описаны вкладки **свойства канала передачи данных** диалоговое окно.
 
@@ -177,7 +177,7 @@ ms.locfileid: "48861646"
 
 - **Поддержка**
 
-   Установите флажки, чтобы указывать типы обновлений, которые должны поддерживаться в объекте-получателе (по умолчанию не используется). Каждое из перечисленных ниже задаст [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\)) и соответствующие записи для [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\)) в наборе свойств карты.
+   Установите флажки, чтобы указывать типы обновлений, которые должны поддерживаться в объекте-получателе (по умолчанию не используется). Каждое из перечисленных ниже задаст [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) и соответствующие записи для [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) в наборе свойств карты.
 
    - **Изменение**
 
@@ -195,4 +195,4 @@ ms.locfileid: "48861646"
 
 [Потребителя ATL OLE DB](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[Строки подключения и связи данных (OLE DB)](/previous-versions/windows/desktop/ms718376)

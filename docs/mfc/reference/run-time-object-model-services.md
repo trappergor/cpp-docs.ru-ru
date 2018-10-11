@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396472"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083597"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -92,7 +92,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="remarks"></a>Примечания
 
-Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212).
+Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress).
 
 ### <a name="requirements"></a>Требования
 
@@ -119,7 +119,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="remarks"></a>Примечания
 
-Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212). Этот макрос версия Юникода AFX_COMCTL32_IF_EXISTS.
+Используйте этот макрос для определения ли библиотеки стандартных элементов управления функция определяемое *proc* (вместо вызова метода [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress). Этот макрос версия Юникода AFX_COMCTL32_IF_EXISTS.
 
 ### <a name="requirements"></a>Требования
 

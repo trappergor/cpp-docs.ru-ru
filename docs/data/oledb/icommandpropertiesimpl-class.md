@@ -27,16 +27,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b31a023e39241a5393fbb9f36177ca42f88fd57e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 432fb57b1505733b4f9cbda4e558699a8108a3ad
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070903"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084000"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
 
-Предоставляет реализацию [ICommandProperties](/previous-versions/windows/desktop/ms723044\(v=vs.85\)) интерфейс.  
+Предоставляет реализацию [ICommandProperties](/previous-versions/windows/desktop/ms723044) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -86,7 +86,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
 
@@ -105,7 +105,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497) в *справочнике программиста OLE DB*.  
   
 ## <a name="see-also"></a>См. также  
 

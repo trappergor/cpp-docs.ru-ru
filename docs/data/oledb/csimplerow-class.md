@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095220"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082700"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -112,11 +112,11 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>Параметры  
 
 *pRow*<br/>
-Указатель на объект `CSimpleRow`.  
+Указатель на объект `CSimpleRow` .  
   
 ### <a name="return-value"></a>Возвращаемое значение  
 
-Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения. 
+Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения. 
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

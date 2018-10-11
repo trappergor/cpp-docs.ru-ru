@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6283f29455cc3d835babdd83414e9dc98127eacd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029732"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082557"
 ---
 # <a name="icommandtextimpl-class"></a>Класс ICommandTextImpl
 
-Предоставляет реализацию для [ICommandText](/previous-versions/windows/desktop/ms714914\(v=vs.85\)) интерфейс.  
+Предоставляет реализацию для [ICommandText](/previous-versions/windows/desktop/ms714914) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -93,7 +93,7 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825\(v=vs.85\)) в *справочнике программиста OLE DB*. *PguidDialect* параметр игнорируется методом по умолчанию.  
+См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) в *справочнике программиста OLE DB*. *PguidDialect* параметр игнорируется методом по умолчанию.  
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
@@ -108,7 +108,7 @@ STDMETHOD(SetCommandText)(REFGUID rguidDialect,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+См. в разделе [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) в *справочнике программиста OLE DB*. 
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 

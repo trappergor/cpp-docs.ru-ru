@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222084"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083467"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 
@@ -84,26 +84,26 @@ ms.locfileid: "43222084"
 
 3. Удалите все неуправляемые типы:
 
-   Где это необходимо, замените неуправляемые типы ссылок на структуры из [системы](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx) пространства имен. В следующей таблице перечислены распространенные управляемых типов.
+   Где это необходимо, замените неуправляемые типы ссылок на структуры из [системы](/dotnet/api/system) пространства имен. В следующей таблице перечислены распространенные управляемых типов.
 
    |Структура|Описание:|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|Представляет логическое значение.|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|Представляет 8-битовое целое число без знака.|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Представляет символ Юникода.|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|Представляет текущее время, обычно выраженное как дата и время суток.|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|Представляет десятичное число.|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|Представляет число двойной точности с плавающей запятой.|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|Представляет глобальный уникальный идентификатор (GUID).|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|Представляет 16-разрядное целое число со знаком.|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|Представляет 32-разрядное целое число со знаком.|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|Представляет 64-разрядное целое число со знаком.|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|Представляет 8-разрядное целое число со знаком.|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|Представляет число с плавающей запятой одиночной точности.|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|Представляет интервал времени.|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|Представляет 16-битовое целое число без знака.|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|Представляет 32-битовое целое число без знака.|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|Представляет 64-битовое целое число без знака.|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|
-   |[void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|Указывает метод, который не возвращает значений. то есть метод имеет тип возвращаемого значения void.|
+   |[Boolean](/dotnet/api/system.boolean)|Представляет логическое значение.|
+   |[Byte](/dotnet/api/system.byte)|Представляет 8-битовое целое число без знака.|
+   |[Char](/dotnet/api/system.char)|Представляет символ Юникода.|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Представляет текущее время, обычно выраженное как дата и время суток.|
+   |[Decimal](/dotnet/api/system.decimal)|Представляет десятичное число.|
+   |[Double](/dotnet/api/system.double)|Представляет число двойной точности с плавающей запятой.|
+   |[Guid](/dotnet/api/system.guid)|Представляет глобальный уникальный идентификатор (GUID).|
+   |[Int16](/dotnet/api/system.int16)|Представляет 16-разрядное целое число со знаком.|
+   |[Int32](/dotnet/api/system.int32)|Представляет 32-разрядное целое число со знаком.|
+   |[Int64](/dotnet/api/system.int64)|Представляет 64-разрядное целое число со знаком.|
+   |[IntPtr](/dotnet/api/system.intptr)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|
+   |[SByte](/dotnet/api/system.byte.aspx)|Представляет 8-разрядное целое число со знаком.|
+   |[Single](/dotnet/api/system.single.aspx)|Представляет число с плавающей запятой одиночной точности.|
+   |[TimeSpan](/dotnet/api/system.timespan)|Представляет интервал времени.|
+   |[UInt16](/dotnet/api/system.uint16)|Представляет 16-битовое целое число без знака.|
+   |[UInt32](/dotnet/api/system.uint32)|Представляет 32-битовое целое число без знака.|
+   |[UInt64](/dotnet/api/system.uint64)|Представляет 64-битовое целое число без знака.|
+   |[UIntPtr](/dotnet/api/system.uintptr)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|
+   |[void](/dotnet/api/system.void)|Указывает метод, который не возвращает значений. то есть метод имеет тип возвращаемого значения void.|
