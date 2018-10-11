@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100435"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083454"
 ---
 # <a name="platformguid-value-class"></a>Класс значения Platform::Guid
 
-Представляет [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) тип в системе типов среды выполнения Windows.
+Представляет тип [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) в системе типов среды выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,7 +36,7 @@ public value struct Guid
 
 Структура Guid имеет методы Equals(), GetHashCode() и ToString(), производные от [Platform::Object Class](../cppcx/platform-object-class.md), и метод GetTypeCode(), производный от [Platform::Type Class](../cppcx/platform-type-class.md). У структуры Guid также имеются следующие члены.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[Guid](#ctor)|Инициализирует новый экземпляр структуры Guid.|
 |[operator==](#operator-equality)|Оператор равенства.|
@@ -45,7 +45,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>Примечания
 
-Пример создания новой структуры Platform::Guid с помощью функции Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), см. в разделе [компонент WinRT: как создать GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Пример создания новой структуры Platform::Guid с использованием функции Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)см. в разделе [Компонент WinRT: как создать GUID?](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
 
 ### <a name="requirements"></a>Требования
 
@@ -157,7 +157,7 @@ Platform::Guid::operator!=
 
 ## <a name="operator-call"></a> Оператор GUID:: operator()
 
-Неявно преобразует [структуры GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)в Platform::guid.
+Неявно преобразует [структуры GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931)в Platform::guid.
 
 ### <a name="syntax"></a>Синтаксис
 

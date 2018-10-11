@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792213"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083532"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -57,7 +57,7 @@ ms.locfileid: "48792213"
 Уникальный идентификатор для библиотеки. Если этот параметр опущен, идентификатор для библиотеки будет создан автоматически. Может потребоваться получить *uuid* для блока библиотеки, что можно сделать с помощью идентификатора **__uuidof (** *Имя_библиотеки* **)**.
 
 *lcid*<br/>
-Параметр локализации. См. в разделе [lcid](/windows/desktop/Midl/lcid) Дополнительные сведения.
+Параметр локализации. Дополнительные сведения см. в описании [lcid](/windows/desktop/Midl/lcid) .
 
 *control*<br/>
 (Необязательно) Указывает, что все коклассы в библиотеке являются элементами управления.
@@ -66,7 +66,7 @@ ms.locfileid: "48792213"
 Указывает библиотеку типов.
 
 *helpstringdll*<br/>
-(Необязательно) Задает имя DLL-файла, в которых будет производиться уточняющего запроса строки документа. См. в разделе [helpstringdll](/windows/desktop/Midl/helpstringdll) Дополнительные сведения.
+(Необязательно) Задает имя DLL-файла, в которых будет производиться уточняющего запроса строки документа. Дополнительные сведения см. в описании [helpstringdll](/windows/desktop/Midl/helpstringdll) .
 
 *helpfile*<br/>
 (Необязательно) Имя **помочь** файл для библиотеки типов.
@@ -78,19 +78,19 @@ ms.locfileid: "48792213"
 (Необязательно) См. в разделе [helpstringcontext](helpstringcontext.md) Дополнительные сведения.
 
 *hidden*<br/>
-(Необязательно) Запрещает отображение всей библиотеки. Этот режим предназначен для использования с элементами управления. Узлы должны создать новую библиотеку типов, инкапсулирующую элемент управления с расширенными свойствами. См. в разделе [скрытые](/windows/desktop/Midl/hidden) описании атрибута MIDL Дополнительные сведения.
+(Необязательно) Запрещает отображение всей библиотеки. Этот режим предназначен для использования с элементами управления. Узлы должны создать новую библиотеку типов, инкапсулирующую элемент управления с расширенными свойствами. Дополнительные сведения см. в описании атрибута MIDL [hidden](/windows/desktop/Midl/hidden) .
 
 *restricted*<br/>
-(Необязательно) Элементы библиотеки нельзя вызывать произвольным образом. См. в разделе [ограниченных](/windows/desktop/Midl/restricted) описании атрибута MIDL Дополнительные сведения.
+(Необязательно) Элементы библиотеки нельзя вызывать произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](/windows/desktop/Midl/restricted) .
 
-*Custom*<br/>
+*custom*<br/>
 (Необязательно) Один или несколько атрибутов; Это похоже на [пользовательских](custom-cpp.md) атрибута. Первый параметр для *пользовательских* является идентификатором GUID атрибута. Пример:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*имя_ресурса*<br/>
+*resource_name*<br/>
 Идентификатор строкового ресурса RGS-файла, используемый для регистрации идентификатора приложения для библиотеки DLL, исполняемого файла или службы. Если модуль имеет тип service, этот аргумент также используется для получения идентификатора строки, содержащей имя службы.
 
 > [!NOTE]
@@ -98,9 +98,9 @@ ms.locfileid: "48792213"
 
 ## <a name="remarks"></a>Примечания
 
-Если не указать *ограниченных* параметр [emitidl](emitidl.md), **модуль** требуется в любой программе, использующей атрибуты C++.
+Если не указать параметр *restricted* для [emitidl](emitidl.md), **module** требуется в любой программе, использующей атрибуты C++.
 
-Блок библиотеки создается, если в дополнение к **модуль** атрибута, исходный код также использует [disp-интерфейс](dispinterface.md), [двойного](dual.md), [объекта](object-cpp.md), или атрибут, подразумевающий [coclass](coclass.md).
+Блок библиотеки создается, если в дополнение к атрибуту **module** исходный код также использует [dispinterface](dispinterface.md), [dual](dual.md), [object](object-cpp.md)либо атрибут, подразумевающий [coclass](coclass.md).
 
 В IDL-файле разрешен один блок библиотеки. Несколько записей module в исходном коде будут объединены с применением самых последних значений параметров.
 
@@ -108,15 +108,15 @@ ms.locfileid: "48792213"
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) используется в качестве базового класса и стандартной библиотеки DLL записи точек, необходимых для COM-сервера. Это точки входа: [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162), [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow), и [ DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) используется в качестве базового класса и стандартных точек входа библиотеки DLL, необходимых для COM-сервера. Это точки входа: [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)и [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) используется в качестве базового класса и стандартной исполняемый файл точки входа [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) используется в качестве базового класса и стандартной исполняемый файл точки входа [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
 
 - `type` = **unspecified**
 
@@ -132,7 +132,7 @@ ms.locfileid: "48792213"
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-В следующем коде показано, что можно предоставить собственную реализацию функции, которая будет отображаться в коде, внедренном в результате применения **module**. См. в разделе [/Fx](../../build/reference/fx-merge-injected-code.md) Дополнительные сведения о просмотре внедренного кода. Чтобы переопределить одну из функций, вставленных атрибутом **module** , создайте класс, который будет содержать реализацию функции, и примените к этому классу атрибут **module** .
+В следующем коде показано, что можно предоставить собственную реализацию функции, которая будет отображаться в коде, внедренном в результате применения **module**. Дополнительные сведения о просмотре внедренного кода см. в разделе [/Fx](../../build/reference/fx-merge-injected-code.md) . Чтобы переопределить одну из функций, вставленных атрибутом **module** , создайте класс, который будет содержать реализацию функции, и примените к этому классу атрибут **module** .
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -168,7 +168,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 

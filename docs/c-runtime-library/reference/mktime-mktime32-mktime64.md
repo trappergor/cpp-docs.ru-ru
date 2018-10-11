@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206072"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083571"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime, _mktime32, _mktime64
 
@@ -93,7 +93,7 @@ __time64_t _mktime64(
 
 - значение меньше нуля, чтобы указать, что код библиотеки времени выполнения языка C должен вычислить, действует ли стандартное время или переход на зимнее время.
 
-Библиотека времени выполнения языка C определит режим перехода на зимнее время на основе значения переменной среды [TZ](tzset.md). Если **TZ** не задано, вызов Win32 API [GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx) используется для получения летнее время сведения из операционной системы. В случае сбоя библиотека предполагает, что для реализации вычисления перехода на зимнее время используются правила для США. **tm_isdst** — это обязательное поле. Если оно не задано, его значение является неопределенным, а возвращаемые значения этих функций — непредсказуемыми. Если *timeptr* указывает **tm** структуру, возвращенную предыдущим вызовом [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), или [localtime](localtime-localtime32-localtime64.md) (или вариаций этих функций), **tm_isdst** поле содержит правильное значение.
+Библиотека времени выполнения языка C определит режим перехода на зимнее время на основе значения переменной среды [TZ](tzset.md). Если **TZ** не задано, вызов Win32 API [GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation) используется для получения летнее время сведения из операционной системы. В случае сбоя библиотека предполагает, что для реализации вычисления перехода на зимнее время используются правила для США. **tm_isdst** — это обязательное поле. Если оно не задано, его значение является неопределенным, а возвращаемые значения этих функций — непредсказуемыми. Если *timeptr* указывает **tm** структуру, возвращенную предыдущим вызовом [asctime](asctime-wasctime.md), [gmtime](gmtime-gmtime32-gmtime64.md), или [localtime](localtime-localtime32-localtime64.md) (или вариаций этих функций), **tm_isdst** поле содержит правильное значение.
 
 Обратите внимание, что **gmtime** и **localtime** (и **_gmtime32**, **_gmtime64**, **_localtime32**, и **_localtime64**) используют один буфер на поток для преобразования. Если вы предоставляете этот буфер **mktime**, **_mktime32** или **_mktime64**, предыдущее содержимое удаляется.
 

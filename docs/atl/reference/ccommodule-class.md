@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 519837379369f08108d3d5b5b300fe0bcb9ac5e7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090702"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083818"
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 
@@ -65,7 +65,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComModule::GetClassObject](#getclassobject)|Создает объект с заданным идентификатором CLSID. Для DLL.|
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Возвращает `m_hInst`.|
@@ -86,7 +86,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComModule::m_csObjMap](#m_csobjmap)|Гарантирует синхронизированного доступа к сведениям объекта карты.|
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Гарантирует синхронизированного доступа к информации о библиотеке типов.|
@@ -386,7 +386,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>Параметры
 
 *dwClsContext*<br/>
-[in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) в пакете Windows SDK.
+[in] Определяет контекст, в котором будет выполняться объект класса. Возможные значения: CLSCTX_INPROC_SERVER, CLSCTX_INPROC_HANDLER или CLSCTX_LOCAL_SERVER. Описание этих значений, см. в разделе [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) в пакете Windows SDK.
 
 *dwFlags*<br/>
 [in] Определяет типы подключения к объекту класса. Возможные значения: REGCLS_SINGLEUSE, REGCLS_MULTIPLEUSE или REGCLS_MULTI_SEPARATE. Описание этих значений, см. в разделе [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) в пакете Windows SDK.

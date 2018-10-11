@@ -15,22 +15,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88272c935c3e610ee633a1e076a2d2d76b5840f2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034855"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082570"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Чтение строк в поставщике OLE DB
 
-`RMyProviderRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757\(v=vs.85\)). Поставщик получает имя файла и сохраняет его в переменной-члена `m_szCommandText`. `Execute` считывает имя файла из `m_szCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (`CAgentMan`) и помещает их в массив.  
+`RMyProviderRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757). Поставщик получает имя файла и сохраняет его в переменной-члена `m_szCommandText`. `Execute` считывает имя файла из `m_szCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (`CAgentMan`) и помещает их в массив.  
   
 Если не удается открыть файл, `Execute` должен возвращать DB_E_NOTABLE. Если вместо этого он возвращает E_FAIL, поставщик не будет работать с объектами-получателями и передавать OLE DB [проверка на совместимость с](../../data/oledb/testing-your-provider.md).  
   
 ## <a name="example"></a>Пример  
   
-### <a name="description"></a>Описание  
+### <a name="description"></a>Описание:  
 
 То Изменяемая строка `Execute` выглядит следующим образом:  
   

@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1431fb9b35ab83f6cb0fc167eff4ba4508f2e301
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b47cbf2b30323cf51881ebaae9f546001a2d61b3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036193"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081504"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 
-Реализует OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913\(v=vs.85\)) интерфейс, позволяющий тестирования для идентификации строки.  
+Реализует OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913) интерфейс, позволяющий тестирования для идентификации строки.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -77,7 +77,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
 

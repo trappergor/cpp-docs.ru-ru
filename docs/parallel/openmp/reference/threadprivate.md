@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9313934744f6eae66736f25b0d0b8592743cf12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b769b5aa5f46b9a4b815424a0c4178cf4504ab5
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376984"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082440"
 ---
 # <a name="threadprivate"></a>threadprivate
 
@@ -46,7 +46,7 @@ ms.locfileid: "46376984"
 
 `threadprivate` Директива основан на [поток](../../../cpp/thread.md) `__declspec` атрибут; ограничения на **__declspec(thread)** применяются к `threadprivate`.
 
-Нельзя использовать `threadprivate` в любой библиотеки DLL, которые будут загружены через [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175).  Сюда входят библиотек DLL, загружаемых с [/DELAYLOAD (Импорт отложенной загрузки)](../../../build/reference/delayload-delay-load-import.md), который также используется **LoadLibrary**.
+Нельзя использовать `threadprivate` в любой библиотеки DLL, которые будут загружены через [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya).  Сюда входят библиотек DLL, загружаемых с [/DELAYLOAD (Импорт отложенной загрузки)](../../../build/reference/delayload-delay-load-import.md), который также используется **LoadLibrary**.
 
 Можно использовать `threadprivate` в библиотеку DLL, которая загружается статически при запуске процесса.
 

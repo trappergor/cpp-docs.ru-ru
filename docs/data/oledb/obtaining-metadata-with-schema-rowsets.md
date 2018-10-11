@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057110"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083662"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>Получение метаданных в схеме набора строк
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md) класс предоставляет поддержку ограничений. После создания экземпляра набора строк схемы, вызовите [CRestrictions::Open](../../data/oledb/crestrictions-open.md). Он возвращает результирующий набор, основанный на заданных ограничениях.  
   
-Указать ограничения, см. в статье [приложение б. наборы строк схемы](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) и найдите набор строк, который вы используете. Например `CColumns` соответствует [набор строк COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); этой теме перечислены столбцы ограничений в наборе строк COLUMNS: значениям TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Необходимо придерживаться этого порядка при указании ограничений.  
+Указать ограничения, см. в статье [приложение б. наборы строк схемы](/previous-versions/windows/desktop/ms712921) и найдите набор строк, который вы используете. Например `CColumns` соответствует [набор строк COLUMNS](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); этой теме перечислены столбцы ограничений в наборе строк COLUMNS: значениям TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. Необходимо придерживаться этого порядка при указании ограничений.  
   
 Таким образом, например, если требуется ограничение по имени таблицы, обратите внимание, что TABLE_NAME — это третий столбец ограничений и затем вызвать `Open`, указав необходимое имя таблицы в качестве третьего параметра ограничения, как показано в следующем примере.  
   
@@ -93,7 +93,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 Справочные сведения о наборе строк схемы, классы typedef, предоставленного в шаблонах OLE DB (см. в разделе [классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)).  
   
-Дополнительные сведения о наборах строк схемы OLE DB, включая столбцы ограничений, см. в разделе [приложение б. наборы строк схемы](/previous-versions/windows/desktop/ms712921\(v=vs.85\)) справочника программиста OLE DB.  
+Дополнительные сведения о наборах строк схемы OLE DB, включая столбцы ограничений, см. в разделе [приложение б. наборы строк схемы](/previous-versions/windows/desktop/ms712921) справочника программиста OLE DB.  
   
 Более сложные примеры использования классов набора строк схемы см. в разделе ["CatDB"](https://github.com/Microsoft/VCSamples) и [DBViewer](https://github.com/Microsoft/VCSamples) примеры.  
   

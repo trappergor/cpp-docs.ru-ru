@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76dc4cb86601be714e7ca1d442eb904d016e877b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 47b869ffc6ad3dd1492ab052d648bcb8acde7e52
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102792"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083701"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>Поддержка транзакций в OLE DB
 
@@ -33,11 +33,11 @@ ms.locfileid: "46102792"
   
 OLE DB поддерживает транзакции с помощью следующих трех методов:  
   
-- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786\(v=vs.85\))  
+- [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786)  
   
-- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008\(v=vs.85\))  
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008)  
   
-- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833\(v=vs.85\))  
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833)  
   
 ## <a name="relationship-of-sessions-and-transactions"></a>Связь между сеансами и транзакциями  
 
@@ -59,7 +59,7 @@ OLE DB поддерживает транзакции с помощью след�
   
 ## <a name="nested-transactions"></a>Вложенные транзакции  
 
-Объект [вложенные транзакции](/previous-versions/windows/desktop/ms716985\(v=vs.85\)) возникает при запуске новой локальной транзакции, если активная транзакция уже существует в сеансе. Новая транзакция запускается как вложенную транзакцию под текущей транзакцией. Если поставщик не поддерживает вложенных транзакций, при вызове метода `StartTransaction` при наличии активной транзакции в сеансе, возвращается значение XACT_E_XTIONEXISTS.  
+Объект [вложенные транзакции](/previous-versions/windows/desktop/ms716985) возникает при запуске новой локальной транзакции, если активная транзакция уже существует в сеансе. Новая транзакция запускается как вложенную транзакцию под текущей транзакцией. Если поставщик не поддерживает вложенных транзакций, при вызове метода `StartTransaction` при наличии активной транзакции в сеансе, возвращается значение XACT_E_XTIONEXISTS.  
   
 ## <a name="distributed-transactions"></a>Распределенные транзакции  
 

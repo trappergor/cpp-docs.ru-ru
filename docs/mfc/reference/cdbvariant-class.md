@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419650"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083298"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 
@@ -65,25 +65,25 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в настоящее время сохраненное значение. Введите `DWORD`.|
 
 ### <a name="public-union-members"></a>Открытые члены объединения
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **unsigned char**.|
@@ -226,7 +226,7 @@ void Clear();
 
 `m_pdate` Данные-член принадлежит к объединению. Прежде чем обращаться к `m_pdate`, сначала проверьте значение [CDBVariant::m_dwType](#m_dwtype). Если `m_dwType` имеет значение DBVT_DATE, затем `m_pdate` содержит допустимый указатель; в противном случае доступ к `m_pdate` создаст ненадежные результаты.
 
-Дополнительные сведения о типе данных TIMESTAMP_STRUCT см. в разделе [типы данных C](/previous-versions/windows/desktop/ms714556\(v=vs.85\)) в приложении D *Справочник по программированию ODBC* в пакете Windows SDK.
+Дополнительные сведения о типе данных TIMESTAMP_STRUCT см. в разделе [типы данных C](/previous-versions/windows/desktop/ms714556) в приложении D *Справочник по программированию ODBC* в пакете Windows SDK.
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

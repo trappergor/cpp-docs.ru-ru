@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108356"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083831"
 ---
 # <a name="updating-rowsets"></a>обновление наборов строк
 
 Обновление или запись данных в хранилище данных — одна из простейших операций баз данных. В OLE DB используется простой механизм обновления: приложение-клиент задает значения привязанных членов данных, а затем записывает эти значения в набор строк; затем клиент запрашивает у поставщика обновление хранилища данных.  
   
-Клиенты могут выполнять следующие типы обновлений в данных набора строк: задание значений столбцов в строке, вставка строки и удаление строки. Для выполнения этих операций, класс шаблона OLE DB [CRowset](../../data/oledb/crowset-class.md) реализует [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)) интерфейс и переопределяет следующие методы интерфейса:  
+Клиенты могут выполнять следующие типы обновлений в данных набора строк: задание значений столбцов в строке, вставка строки и удаление строки. Чтобы можно было использовать эти операции, класс шаблона OLE DB [CRowset](../../data/oledb/crowset-class.md) реализует интерфейс [IRowsetChange](/previous-versions/windows/desktop/ms715790) и переопределяет следующие методы интерфейса:  
   
 - Команда[SetData](../../data/oledb/crowset-setdata.md) изменяет значения столбцов в строке набора строк; она эквивалентна команде SQL UPDATE.  
   
@@ -223,4 +223,4 @@ product.Update();                 // Update row 101 now
 
 [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [Класс CRowset](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

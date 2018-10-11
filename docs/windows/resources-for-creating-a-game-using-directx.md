@@ -17,12 +17,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 414074c6cbc7945573409923da8070eac218c91a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 41f506f5b8b60f925cfa2270168ed7a643cf4e3b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315656"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083545"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>Ресурсы для создания игры C++ с использованием DirectX
 
@@ -36,7 +36,7 @@ Visual C++ включается во всех выпусках Visual Studio, н
 
 Для создания приложений DirectX для Windows 7, Windows Vista или Windows XP, можно загрузить отдельный [DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
 
-[DirectX Graphics and Gaming](https://msdn.microsoft.com/library/windows/desktop/ee663274\(v=vs.85\).aspx) содержит сведения и примеры, которые помогут вам приступить к работе с DirectX программирования.
+[DirectX Graphics and Gaming](https://msdn.microsoft.com/library/windows/desktop/ee663274) содержит сведения и примеры, которые помогут вам приступить к работе с DirectX программирования.
 
 [Приложения Windows Win32](../windows/windows-desktop-applications-cpp.md) содержит статьи, описывающие, как создать базовое приложение рабочего стола Windows.
 

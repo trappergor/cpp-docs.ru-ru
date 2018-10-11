@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117482"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082453"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
 
-Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
+Использует объект перечисления OLE DB, который предоставляет [ISourcesRowset](/previous-versions/windows/desktop/ms715969) интерфейс, чтобы вернуть набор строк, описывающий все источники данных и перечислителей.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[найти](#find)|Перебирает доступных поставщиков (источники данных), поиск с указанным именем.|  
+|[Find](#find)|Перебирает доступных поставщиков (источники данных), поиск с указанным именем.|  
 |[GetMoniker](#getmoniker)|Извлекает `IMoniker` интерфейс для текущей записи.|  
 |[Открыть](#open)|Открывает перечислитель.|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Примечания  
 
-Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\)) интерфейс.  
+Это имя сопоставляется `SOURCES_NAME` членом [ISourcesRowset](/previous-versions/windows/desktop/ms715969) интерфейс.  
   
 ## <a name="getmoniker"></a> CEnumerator::GetMoniker
 
@@ -119,7 +119,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 ## <a name="open"></a> CEnumerator::Open
 
-Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\)).  
+Привязывает моникера для перечислителя, если один указан, а затем получает набор строк для перечислителя, вызывая [ISourcesRowset::GetSourcesRowset](/previous-versions/windows/desktop/ms711200).  
   
 ### <a name="syntax"></a>Синтаксис  
   

@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67510ada7af557877f427d757200a48c0df95fe9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f13da3ed0b1f2193ab86e1644d401a6e4fb6b942
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054120"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082867"
 ---
 # <a name="irowsetupdateimpl-class"></a>Класс IRowsetUpdateImpl
 
-Реализация шаблонов OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401\(v=vs.85\)) интерфейс.  
+Реализация шаблонов OLE DB [IRowsetUpdate](/previous-versions/windows/desktop/ms714401) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -146,7 +146,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
   
 ## <a name="remarks"></a>Примечания  
 
-Вам необходимо сначала прочесть и понять в документации по [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\)), так как все там описано также применяется здесь. Также следует ознакомиться с главе 6 *Справочник программиста OLE DB по* о настройке данных.  
+Вам необходимо сначала прочесть и понять в документации по [IRowsetChange](/previous-versions/windows/desktop/ms715790), так как все там описано также применяется здесь. Также следует ознакомиться с главе 6 *Справочник программиста OLE DB по* о настройке данных.  
   
 `IRowsetUpdateImpl` реализует OLE DB `IRowsetUpdate` интерфейс, который позволяет потребителям приостановить передачу изменений, внесенных с `IRowsetChange` для источника данных и отменить изменения перед передачей.  
   
@@ -173,7 +173,7 @@ STDMETHOD (SetData )(HROW hRow,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [IRowsetChange::SetData](/previous-versions/windows/desktop/ms721232) в *справочнике программиста OLE DB*.  
   
 ### <a name="remarks"></a>Примечания  
 
@@ -193,7 +193,7 @@ STDMETHOD (GetOriginalData )(HROW hRow,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947\(v=vs.85\)) в *справочнике программиста OLE DB*.   
+См. в разделе [IRowsetUpdate::GetOriginalData](/previous-versions/windows/desktop/ms709947) в *справочнике программиста OLE DB*.   
 
 ## <a name="getpendingrows"></a> IRowsetUpdateImpl::GetPendingRows
 
@@ -212,13 +212,13 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Параметры  
 
 *hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)).  
+[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626).  
   
-Другие параметры, см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Другие параметры, см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) в *Справочник программиста OLE DB по*.  
   
 ### <a name="remarks"></a>Примечания  
 
-Дополнительные сведения см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Дополнительные сведения см. в разделе [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626) в *Справочник программиста OLE DB по*.  
 
 ## <a name="getrowstatus"></a> IRowsetUpdateImpl::GetRowStatus
 
@@ -236,9 +236,9 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Параметры  
 
 *hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)).  
+[in] Соответствует *hChapter* параметр в [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377).  
   
-Другие параметры, см. в разделе [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Другие параметры, см. в разделе [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377) в *Справочник программиста OLE DB по*.  
 
 ## <a name="undo"></a> IRowsetUpdateImpl::Undo
 
@@ -258,15 +258,15 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Параметры  
 
 *hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *pcRowsUndone*<br/>
-[out] Соответствует *pcRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[out] Соответствует *pcRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
 *prgRowsUndone*<br/>
-[in] Соответствует *prgRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)).  
+[in] Соответствует *prgRows* параметр в [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655).  
   
-Другие параметры, см. в разделе [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655\(v=vs.85\)) в *Справочник программиста OLE DB по*. 
+Другие параметры, см. в разделе [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655) в *Справочник программиста OLE DB по*. 
 
 ## <a name="update"></a> IRowsetUpdateImpl::Update
 
@@ -286,13 +286,13 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 #### <a name="parameters"></a>Параметры  
 
 *hReserved*<br/>
-[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)).  
+[in] Соответствует *hChapter* параметр в [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709).  
   
-Другие параметры, см. в разделе [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Другие параметры, см. в разделе [IRowsetUpdate::Update](/previous-versions/windows/desktop/ms719709) в *Справочник программиста OLE DB по*.  
   
 ### <a name="remarks"></a>Примечания  
 
-Изменения передаются путем вызова [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Потребитель должен вызвать метод [CRowset::Update](../../data/oledb/crowset-update.md) изменения вступили в силу. Задайте *prgRowstatus* соответствующее значение, описанных в [состояния строк](/previous-versions/windows/desktop/ms722752\(v=vs.85\)) в *Справочник программиста OLE DB по*. 
+Изменения передаются путем вызова [IRowsetChangeImpl::FlushData](../../data/oledb/irowsetchangeimpl-flushdata.md). Потребитель должен вызвать метод [CRowset::Update](../../data/oledb/crowset-update.md) изменения вступили в силу. Задайте *prgRowstatus* соответствующее значение, описанных в [состояния строк](/previous-versions/windows/desktop/ms722752) в *Справочник программиста OLE DB по*. 
   
 ## <a name="isupdateallowed"></a> IRowsetUpdateImpl::IsUpdateAllowed
 
@@ -319,7 +319,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
   
 ### <a name="remarks"></a>Примечания  
 
-Если вы определили, что обновление должно быть разрешено, возвращает значение S_OK; в противном случае возвращает значение E_FAIL. Если разрешить обновления, необходимо также задать `DBROWSTATUS` в [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) — соответствующую [состоянием строк](/previous-versions/windows/desktop/ms722752\(v=vs.85\)).  
+Если вы определили, что обновление должно быть разрешено, возвращает значение S_OK; в противном случае возвращает значение E_FAIL. Если разрешить обновления, необходимо также задать `DBROWSTATUS` в [IRowsetUpdateImpl::Update](../../data/oledb/irowsetupdateimpl-update.md) — соответствующую [состоянием строк](/previous-versions/windows/desktop/ms722752).  
 
 ## <a name="mapcacheddata"></a> IRowsetUpdateImpl::m_mapCachedData
 

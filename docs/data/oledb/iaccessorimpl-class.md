@@ -48,16 +48,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0fd40d4cac87302a6a636693e0da4480720a2cf3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a5de49679652b04afa4df08ce9d4ea015ebd031d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098125"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082727"
 ---
 # <a name="iaccessorimpl-class"></a>Класс IAccessorImpl
 
-Предоставляет реализацию [IAccessor](/previous-versions/windows/desktop/ms719672\(v=vs.85\)) интерфейс.  
+Предоставляет реализацию [IAccessor](/previous-versions/windows/desktop/ms719672) интерфейс.  
   
 ## <a name="syntax"></a>Синтаксис
 
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IAccessorImpl : public IAccessorImplBase<BindType>
   
 ## <a name="remarks"></a>Примечания  
 
-Обязателен для наборов строк и команд. OLE DB требует, чтобы поставщики для реализации HACCESSOR, который является тегом в массив [DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\)) структуры. Предоставляемые HACCESSORs `IAccessorImpl` являются адресами `BindType` структуры. По умолчанию `BindType` определяется как `ATLBINDINGS` в `IAccessorImpl`в определении шаблона. `BindType` предоставляет механизм, используемый `IAccessorImpl` для отслеживания числа элементов в его `DBBINDING` массива, а также ссылка метода доступа и число флагов.  
+Обязателен для наборов строк и команд. OLE DB требует, чтобы поставщики для реализации HACCESSOR, который является тегом в массив [DBBINDING](/previous-versions/windows/desktop/ms716845) структуры. Предоставляемые HACCESSORs `IAccessorImpl` являются адресами `BindType` структуры. По умолчанию `BindType` определяется как `ATLBINDINGS` в `IAccessorImpl`в определении шаблона. `BindType` предоставляет механизм, используемый `IAccessorImpl` для отслеживания числа элементов в его `DBBINDING` массива, а также ссылка метода доступа и число флагов.  
 
 ## <a name="iaccessorimpl"></a> IAccessorImpl::IAccessorImpl
 
@@ -127,7 +127,7 @@ STDMETHOD(AddRefAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978\(v=vs.85\)) в *справочнике программиста OLE DB*.
+См. в разделе [IAccessor::AddRefAccessor](/previous-versions/windows/desktop/ms714978) в *справочнике программиста OLE DB*.
 
 ## <a name="createaccessor"></a> IAccessorImpl::CreateAccessor
 
@@ -146,7 +146,7 @@ STDMETHOD(CreateAccessor)(DBACCESSORFLAGS dwAccessorFlags,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [IAccessor::CreateAccessor](/previous-versions/windows/desktop/ms720969) в *справочнике программиста OLE DB*.  
 
 ## <a name="getbindings"></a> IAccessorImpl::GetBindings
 
@@ -163,7 +163,7 @@ STDMETHOD(GetBindings)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+См. в разделе [IAccessor::GetBindings](/previous-versions/windows/desktop/ms721253) в *справочнике программиста OLE DB*. 
 
 ## <a name="releaseaccessor"></a> IAccessorImpl::ReleaseAccessor
 
@@ -178,7 +178,7 @@ STDMETHOD(ReleaseAccessor)(HACCESSOR hAccessor,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717\(v=vs.85\)) в *справочнике программиста OLE DB*.
+См. в разделе [IAccessor::ReleaseAccessor](/previous-versions/windows/desktop/ms719717) в *справочнике программиста OLE DB*.
   
 ## <a name="see-also"></a>См. также  
 

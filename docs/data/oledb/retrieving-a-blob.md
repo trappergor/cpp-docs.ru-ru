@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2d3c66fdb15a27b027be656ab07152e74d848526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5194d205dc29df9c73e3ca44637f23ca16f72e6b
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086906"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083779"
 ---
 # <a name="retrieving-a-blob"></a>Извлечение двоичного объекта (BLOB)
 
-Можно получить большой двоичный объект (BLOB) по-разному. Можно использовать `DBTYPE_BYTES` для получения большого двоичного ОБЪЕКТА как последовательность байтов, или использовать интерфейс, как `ISequentialStream`. Дополнительные сведения см. в разделе [большие двоичные ОБЪЕКТЫ и объекты OLE](/previous-versions/windows/desktop/ms711511\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Можно получить большой двоичный объект (BLOB) по-разному. Можно использовать `DBTYPE_BYTES` для получения большого двоичного ОБЪЕКТА как последовательность байтов, или использовать интерфейс, как `ISequentialStream`. Дополнительные сведения см. в разделе [большие двоичные ОБЪЕКТЫ и объекты OLE](/previous-versions/windows/desktop/ms711511) в *Справочник программиста OLE DB по*.  
   
 Следующий код показывает способ получения BLOB-ОБЪЕКТОВ с помощью `ISequentialStream`. Макрос [BLOB_ENTRY](../../data/oledb/blob-entry.md) позволяет указать интерфейс и флаги, используемые для интерфейса. После открытия таблицы, код вызывает `Read` несколько раз на `ISequentialStream` для чтения байтов из большого двоичного ОБЪЕКТА. Этот код вызывает `Release` для указателя интерфейса, перед вызовом dispose `MoveNext` для получения следующей записи.  
   

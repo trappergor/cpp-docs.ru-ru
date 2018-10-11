@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb1ea67a0b89a59ad8ee16ec3a3ee0993a0fdafc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208325"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083285"
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 
-Наборы строк схемы позволяют пользователям получать информацию о хранилище данных, не зная ее базовую структуру, или схему. Например хранилище данных есть таблицы, упорядоченные в пользовательской иерархии, поэтому будет невозможно получить сведения о схеме, читая его. (Еще один пример, обратите внимание, что мастера Visual C++ используют наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю это сделать, объект сеанса поставщика представляет методы на [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) интерфейс. В приложениях Visual C++, используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класс для реализации `IDBSchemaRowset`.
+Наборы строк схемы позволяют пользователям получать информацию о хранилище данных, не зная ее базовую структуру, или схему. Например хранилище данных есть таблицы, упорядоченные в пользовательской иерархии, поэтому будет невозможно получить сведения о схеме, читая его. (Еще один пример, обратите внимание, что мастера Visual C++ используют наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю это сделать, объект сеанса поставщика представляет методы на [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) интерфейс. В приложениях Visual C++, используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класс для реализации `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` поддерживает следующие методы:
 
@@ -97,7 +97,7 @@ class CUpdateSessionTRSchemaRowset :
 
 Обратите внимание, что `CUpdateSession` наследует от `IDBSchemaRowsetImpl`, поэтому он поддерживает все методы обработки ограничений. С помощью `CSchemaRowsetImpl`, объявляет три дочерних класса (перечислены в схеме выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, и `CUpdateSessionPTSchemaRowset`. Каждый из этих дочерних классов имеет `Execute` метод, который обрабатывает соответствующий набор ограничений (критерии поиска). Каждый `Execute` метод сравнивает значения `cRestrictions` и `rgRestrictions` параметров. Описание этих параметров см. в разделе [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\)) в *Справочник программиста OLE DB по* в Windows SDK.
+Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) в *Справочник программиста OLE DB по* в Windows SDK.
 
 Например, если вы поддерживается **TABLE_NAME** ограничение на `DBSCHEMA_TABLES`, можно сделать следующее:
 
@@ -270,7 +270,7 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 Сведения о том, как пользователи могут применять `IDBSchemaRowset` методы, см. в разделе [получение метаданных в схеме набора строк](../../data/oledb/obtaining-metadata-with-schema-rowsets.md).
 
-Пример поставщика, поддерживающего наборы строк схемы, см. в разделе [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) образца.
+Пример поставщика, поддерживающего наборы строк схемы, см. в примере [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) .
 
 ## <a name="see-also"></a>См. также
 

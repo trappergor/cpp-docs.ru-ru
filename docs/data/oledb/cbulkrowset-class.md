@@ -113,12 +113,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3538a8cd15fc315f4d91d1c83c517811acce1802
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116767"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082908"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 
@@ -165,7 +165,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.  
+Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.  
   
 ### <a name="syntax"></a>Синтаксис  
   
@@ -264,7 +264,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
   
 ### <a name="return-value"></a>Возвращаемое значение  
 
-См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988) в *справочнике программиста OLE DB*. 
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
@@ -295,11 +295,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
   
 `(nNumerator *  RowsetSize ) / nDenominator`  
   
-Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) в *Справочник программиста OLE DB по*.   
+Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) в *Справочник программиста OLE DB по*.   
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.  
+Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.  
   
 ### <a name="syntax"></a>Синтаксис  
   

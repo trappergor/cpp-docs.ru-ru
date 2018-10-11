@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423017"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084078"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений универсальной платформы Windows
 
@@ -61,7 +61,7 @@ ms.locfileid: "46423017"
 
 С помощью среды выполнения Windows, можно использовать лучшие функции различных языков программирования и объединить их в одно приложение. Например, можно создать ИП в JavaScript и выполнять трудоемкую вычислительную логику приложения в компоненте, написанном на C++. Возможность выполнять такие ресурсоемкие операции в фоновом режиме является ключевым фактором в обеспечении скорости реагирования ИП. Так как `task` класс относится к C++, необходимо использовать интерфейс среды выполнения Windows для взаимодействия асинхронных операций с другими компонентами (которые могут быть написаны на языках, отличных от C++). Среда выполнения Windows предоставляет 4 интерфейса, которые можно использовать для представления асинхронных операций:
 
-[Windows::Foundation:: iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 Представляет асинхронное действие.
 
 [Windows::Foundation:: iasyncactionwithprogress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -113,7 +113,7 @@ ms.locfileid: "46423017"
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-Каждый метод сначала выполняет проверку, чтобы убедиться, что входные параметры являются отрицательными. Если входное значение является отрицательным, метод вызывает [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx). Обработка ошибок объясняется далее в этом разделе.
+Каждый метод сначала выполняет проверку, чтобы убедиться, что входные параметры являются отрицательными. Если входное значение отрицательное, метод выдает исключение [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx). Обработка ошибок объясняется далее в этом разделе.
 
 Чтобы использовать эти методы из приложения универсальной платформы Windows, используйте Visual C# **пустое приложение (XAML)** шаблон, чтобы добавить второй проект в решение Visual Studio. В этом примере проект называется `Primes`. Затем из проекта `Primes` добавьте ссылку на проект `PrimesLibrary` .
 
@@ -136,7 +136,7 @@ ms.locfileid: "46423017"
 
 ![Приложение Primes среды выполнения Windows](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-Примеры использования `create_async` для создания асинхронных задач, которые могут использоваться другими языками, см. в разделе [использование C++ в примере Bing Maps Trip optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx) и [асинхронные операции Windows 8 в C++ с PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Дополнительную информацию о примерах, которые применяют `create_async` для создания асинхронных задач, которые могут использоваться другими языками, см. в разделе [Использование C++ в примере Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) и [Асинхронные операции в Windows 8 в C++ с PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Управление потоком выполнения
 
@@ -166,7 +166,7 @@ ms.locfileid: "46423017"
 
 ##  <a name="example-app"></a> Пример: Управление выполнением в приложении среды выполнения Windows с помощью C++ и XAML
 
-Рассмотрим приложение C++ XAML, которое считывает файл с диска, находит наиболее распространенные слова в этом файле, а затем отображает результаты в пользовательском интерфейсе. Чтобы создать это приложение, начните работу в Visual Studio, создав **пустое приложение (универсальные Windows)** проект и назовите его `CommonWords`. В манифесте приложения укажите возможность **Библиотека документов** , которая позволяет приложению обращаться к папке "Документы". Также добавьте текстовый тип файла (TXT) в раздел объявлений манифеста приложения. Дополнительные сведения о возможностях и объявлениях приложения см. в разделе [пакеты приложения и развертывание](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
+Рассмотрим приложение C++ XAML, которое считывает файл с диска, находит наиболее распространенные слова в этом файле, а затем отображает результаты в пользовательском интерфейсе. Чтобы создать это приложение, начните работу в Visual Studio, создав **пустое приложение (универсальные Windows)** проект и назовите его `CommonWords`. В манифесте приложения укажите возможность **Библиотека документов** , которая позволяет приложению обращаться к папке "Документы". Также добавьте текстовый тип файла (TXT) в раздел объявлений манифеста приложения. Дополнительные сведения о возможностях и объявлениях приложения см. в разделе [Пакеты приложений и их развертывание](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx).
 
 Обновите элемент `Grid` в MainPage.xaml для включения элемента `ProgressRing` и элемента `TextBlock` . `ProgressRing` показывает, что операция выполняется, а `TextBlock` отображает результаты вычислений.
 

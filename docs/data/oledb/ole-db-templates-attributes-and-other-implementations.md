@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101721"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082661"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Шаблоны, атрибуты и другие реализации OLE DB
 
@@ -36,7 +36,7 @@ ms.locfileid: "46101721"
   
 - **Шаблоны поставщика OLE DB** используется для реализации приложения сервера (поставщик) OLE DB.  
   
-Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643\(v=vs.85\)).  
+Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. [справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643).  
   
 Дополнительные сведения вы можете:  
   
@@ -48,7 +48,7 @@ ms.locfileid: "46101721"
   
 - См. в списке [примеры шаблонов OLE DB](https://github.com/Microsoft/VCSamples).  
   
-- См. в разделе [справочнике программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) (в Windows SDK).  
+- См. в разделе [справочнике программиста OLE DB](/previous-versions/windows/desktop/ms713643) (в Windows SDK).  
   
 ## <a name="ole-db-attributes"></a>Атрибуты OLE DB  
 
@@ -60,7 +60,7 @@ ms.locfileid: "46101721"
   
 ## <a name="ole-db-sdk-interfaces"></a>Интерфейсы OLE DB SDK  
 
-В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643\(v=vs.85\)) в пакете Windows SDK.  
+В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643) в пакете Windows SDK.  
   
 ## <a name="see-also"></a>См. также  
 

@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024649"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081740"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -82,7 +82,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|Конструктор.|  
 |[Закрыть](#close)|Закрывает набор строк и все методы доступа.|  
 |[FreeRecordMemory](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые следует освободиться.|  
-|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)).|  
+|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704).|  
   
 ## <a name="remarks"></a>Примечания  
 
@@ -153,7 +153,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
   
 #### <a name="parameters"></a>Параметры  
 
-См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
   
 ### <a name="return-value"></a>Возвращаемое значение  
 
@@ -163,7 +163,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 Пользователь должен освободить сведения возвращаемого столбца и строки буфера. Использовать второй версии этого метода при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и нужно переопределить привязок.  
   
-Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *Справочник программиста OLE DB по*.  
+Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *Справочник программиста OLE DB по*.  
   
 ## <a name="see-also"></a>См. также  
 

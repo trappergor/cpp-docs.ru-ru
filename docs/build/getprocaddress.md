@@ -18,16 +18,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce1a287a9fa608881a39f82a2b86cfc541674218
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ef48157d1f4efb467fd33270ff05271bedd1a563
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713733"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081894"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
-Процессы, явно связанные с DLL вызов [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) получить адрес экспортированной функции в библиотеке DLL. Для вызова функции DLL используется указатель возвращаемой. **GetProcAddress** принимает в качестве параметров дескриптор модуля DLL (возвращенный ранее функцией **LoadLibrary**, `AfxLoadLibrary`, или **GetModuleHandle**) и принимает имя требуемую функцию к вызову или порядковому номеру экспорта функция.
+Процессы, явно связанные с DLL вызов [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) получить адрес экспортированной функции в библиотеке DLL. Для вызова функции DLL используется указатель возвращаемой. **GetProcAddress** принимает в качестве параметров дескриптор модуля DLL (возвращенный ранее функцией **LoadLibrary**, `AfxLoadLibrary`, или **GetModuleHandle**) и принимает имя требуемую функцию к вызову или порядковому номеру экспорта функция.
 
 Поскольку вы вызываете функцию DLL посредством указателя и отсутствует проверка типов во время компиляции, убедитесь, что правильность параметров в функцию, чтобы не превысить объем памяти, выделенной в стеке и вызвать нарушение прав доступа. Один из способов обеспечения безопасности типа — просмотреть прототипы экспортированных функций и создать соответствующие определения типов для указателей функций. Пример:
 
@@ -73,7 +73,7 @@ if (hDLL != NULL)
 
 - [Функции LoadLibrary и AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
 
-- [FreeLibrary](https://msdn.microsoft.com/library/windows/desktop/ms683152)
+- [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 
 - [Экспорт из библиотеки DLL с использованием DEF-файлов](../build/exporting-from-a-dll-using-def-files.md)
 

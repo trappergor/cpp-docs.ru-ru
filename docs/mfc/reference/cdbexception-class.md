@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389581"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083116"
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 
@@ -43,7 +43,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Содержит код возврата Open Database Connectivity (ODBC), типа RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Содержит строку с описанием ошибки в терминах буквенно-цифровых.|
@@ -142,7 +142,7 @@ class CDBException : public CException
 
 Строка имеет форму «состояние: % s, машинный код: % ld, источник: % s», где коды формата, в порядке, будут заменены значениями, которые описывают:
 
-- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687\(v=vs.85\))в *Справочник по программированию ODBC*. Пример: «S0022».
+- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687)в *Справочник по программированию ODBC*. Пример: «S0022».
 
 - Машинный код ошибки, относящиеся к источнику данных, возвращаемых в *pfNativeError* параметр `SQLError` функции. Пример: 207.
 
@@ -150,7 +150,7 @@ class CDBException : public CException
 
 Платформа framework интерпретирует строку ошибки и помещает его компоненты в `m_strStateNativeOrigin`; Если `m_strStateNativeOrigin` содержит сведения для более чем одна ошибка, ошибки разделяются символы новой строки. Платформа помещает текст ошибки буквенно-цифровых в `m_strError`.
 
-Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\)) работать в *Справочник по программированию ODBC*.
+Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](/previous-versions/windows/desktop/ms716312) работать в *Справочник по программированию ODBC*.
 
 ### <a name="example"></a>Пример
 
