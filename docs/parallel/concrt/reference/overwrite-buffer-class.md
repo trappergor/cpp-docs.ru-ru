@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387670"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162117"
 ---
 # <a name="overwritebuffer-class"></a>Класс overwrite_buffer
 
@@ -67,7 +67,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |Имя|Описание|
 |----------|-----------------|
 |[has_value](#has_value)|Проверяет, является ли это `overwrite_buffer` блок обмена сообщениями еще имеет значение.|
-|[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `overwrite_buffer` блок обмена сообщениями.|
+|[значение](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `overwrite_buffer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если блок получил значение, `false` в противном случае.
+**значение true,** Если блок получил значение, **false** в противном случае.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -214,10 +214,10 @@ overwrite_buffer(
 Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
 
 *_PScheduler*<br/>
-`Scheduler` Объекта, в течение которого задача распространения для `overwrite_buffer` запланировано блок обмена сообщениями.
+Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `overwrite_buffer` .
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `overwrite_buffer` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `overwrite_buffer` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, поскольку блок не откладывает предоставляемые сообщения.
+**значение true,** поскольку блок не откладывает предоставляемые сообщения.
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

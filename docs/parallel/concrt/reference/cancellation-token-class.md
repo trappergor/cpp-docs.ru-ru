@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414307"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162078"
 ---
 # <a name="cancellationtoken-class"></a>Класс cancellation_token
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|Удаляет обратный вызов, ранее зарегистрированный с помощью метода `register` на основании объекта `cancellation_token_registration`, возвращенного во время регистрации.|
 |[is_cancelable](#is_cancelable)|Возвращает значение, указывающее, может ли этот токен быть отменен или нет.|
-|[is_canceled](#is_canceled)|Возвращает `true`, если токен был отменен.|
+|[is_canceled](#is_canceled)|Возвращает **true** Если токен был отменен.|
 |[none](#none)|Возвращает токен отмены, который никогда не может подвергаться отмене.|
 |[register_callback](#register_callback)|Регистрирует функцию обратного вызова в токене. Если и когда токен отменяется, выполняется обратный вызов. Обратите внимание, что если токен уже отменен в той точке, где вызывается этот метод, обратный вызов будет выполнен немедленно и синхронно.|
 
@@ -63,9 +63,9 @@ class cancellation_token;
 
 |Имя|Описание|
 |----------|-----------------|
-|[оператор!=](#operator_neq)||
+|[operator!=](#operator_neq)||
 |[оператор=](#operator_eq)||
-|[оператор==](#operator_eq_eq)||
+|[operator==](#operator_eq_eq)||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -123,7 +123,7 @@ bool is_cancelable() const;
 
 ##  <a name="is_canceled"></a> is_canceled
 
-Возвращает `true`, если токен был отменен.
+Возвращает **true** Если токен был отменен.
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если токен был отменен; в противном случае — значение `false`.
+Значение **true** Если токен был отменен, в противном случае — значение **false**.
 
 ##  <a name="none"></a> Нет
 

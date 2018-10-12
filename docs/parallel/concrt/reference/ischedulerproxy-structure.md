@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430063"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163144"
 ---
 # <a name="ischedulerproxy-structure"></a>Структура ISchedulerProxy
 
@@ -124,7 +124,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`IExecutionResource` Интерфейс для текущего потока, если параметр `doSubscribeCurrentThread` имеет значение `true`. Если значение равно `false`, метод возвращает `NULL`.
+`IExecutionResource` Интерфейс для текущего потока, если параметр `doSubscribeCurrentThread` имеет значение **true**. Если значение равно **false**, метод возвращает значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
@@ -132,7 +132,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 Диспетчер ресурсов предоставляет ресурсы для планировщика путем вызова метода [IScheduler::AddVirtualProcessors](ischeduler-structure.md#addvirtualprocessors) со списком корни виртуального процессора. Метод вызывается как обратный вызов в планировщик, перед возвратом этот метод.
 
-Если планировщик запросили подписку для текущего потока, присвоив параметру `doSubscribeCurrentThread` для `true`, метод возвращает `IExecutionResource` интерфейс. Подписки должны завершаться в дальнейшем с помощью [IExecutionResource::Remove](iexecutionresource-structure.md#remove) метод.
+Если планировщик запросили подписку для текущего потока, присвоив параметру `doSubscribeCurrentThread` для **true**, метод возвращает `IExecutionResource` интерфейс. Подписки должны завершаться в дальнейшем с помощью [IExecutionResource::Remove](iexecutionresource-structure.md#remove) метод.
 
 При определении, какие аппаратные потоки выбраны, диспетчер ресурсов будет пытаться оптимизировать для процессора сходство узлов. Если подписка запрашивается для текущего потока, это означает, что текущий поток планирует участвовать в работе, назначенные данным планировщиком. В таком случае корни выделенных виртуальных процессоров, находятся в узле процессора, которые текущий поток выполняется, если это возможно.
 

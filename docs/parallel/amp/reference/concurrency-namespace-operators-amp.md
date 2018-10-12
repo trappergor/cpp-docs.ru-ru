@@ -10,20 +10,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d5844afa476510e4b4984ae69c75193fdf048ddd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1e313dbda3dfc75f291310818d593b9a4daf90b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382366"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162182"
 ---
 # <a name="concurrency-namespace-operators-amp"></a>Операторы пространства имен Concurrency (AMP)
 
 ||||
 |-|-|-|
-|[оператор!=](#operator_neq)|[оператор%](#operator_mod)|[оператор*](#operator_star)|
+|[operator!=](#operator_neq)|[оператор%](#operator_mod)|[оператор*](#operator_star)|
 |[operator+](#operator_add)|[operator-](#operator-)|[оператор/](#operator_div)|
-|[оператор==](#operator_eq_eq)|
+|[operator==](#operator_eq_eq)|
 
 ##  <a name="operator_eq_eq"></a> operator==
 
@@ -52,7 +52,7 @@ bool operator== (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если кортежи равны; в противном случае `false`.
+**значение true,** Если кортежи равны; в противном случае — значение **false**.
 
 ##  <a name="operator_neq"></a> operator!=
 
@@ -81,7 +81,7 @@ bool operator!= (
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если кортежи не равны; в противном случае `false`.
+**значение true,** Если кортежи не равны; в противном случае — значение **false**.
 
 ##  <a name="operator_add"></a> operator+
 

@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427893"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162234"
 ---
 # <a name="transformer-class"></a>Класс transformer
 
@@ -61,7 +61,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 |Имя|Описание|
 |----------|-----------------|
-|[transformer](#ctor)|Перегружен. Создает `transformer` блок обмена сообщениями.|
+|[transformer](#ctor)|Перегружен. Создает блок обмена сообщениями `transformer` .|
 |[~ transformer деструктор](#dtor)|Уничтожает `transformer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
@@ -205,11 +205,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,11 +251,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, поскольку блок не откладывает предоставляемые сообщения.
+**значение true,** поскольку блок не откладывает предоставляемые сообщения.
 
 ##  <a name="ctor"></a> transformer
 
-Создает `transformer` блок обмена сообщениями.
+Создает блок обмена сообщениями `transformer` .
 
 ```
 transformer(
@@ -302,10 +302,10 @@ transformer(
 Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
 
 *_PScheduler*<br/>
-`Scheduler` Объекта, в течение которого задача распространения для `transformer` запланировано блок обмена сообщениями.
+Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `transformer` .
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `transformer` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `transformer` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 

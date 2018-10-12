@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399682"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163339"
 ---
 # <a name="acceleratorview-class"></a>Класс accelerator_view
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |Имя|Описание|
 |----------|-----------------|
-|[оператор!=](#operator_neq)|Сравнивает этот `accelerator_view` объект с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|
+|[operator!=](#operator_neq)|Сравнивает этот `accelerator_view` объект с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator_view` в данный объект.|
-|[оператор==](#operator_eq_eq)|Сравнивает этот `accelerator_view` объект с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|
+|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator_view` объект с другим и возвращает **true** если они совпадают; в противном случае возвращает **false**.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
@@ -183,7 +183,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если среда выполнения будет автоматически выбирать соответствующий ускоритель; в противном случае `false`.
+**значение true,** Если среда выполнения будет автоматически выбирать соответствующий ускоритель; в противном случае **false**.
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug
 
@@ -249,7 +249,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> оператор! =
 
-Сравнивает данный объект accelerator_view, с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.
+Сравнивает данный объект accelerator_view, с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -264,7 +264,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `false`, если объекты совпадают; в противном случае — значение `true`.
+**false** Если два объекта одинаковы; в противном случае **true**.
 
 ## <a name="accelerator_view__operator_eq"></a> оператор =
 
@@ -287,7 +287,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ## <a name="accelerator_view__operator_eq_eq"></a> оператор ==
 
-Сравнивает данный объект accelerator_view, с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.
+Сравнивает данный объект accelerator_view, с другим и возвращает **true** если они совпадают; в противном случае возвращает **false**.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -302,7 +302,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если объекты совпадают; в противном случае — значение `false`.
+**значение true,** Если два объекта одинаковы; в противном случае **false**.
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode
 

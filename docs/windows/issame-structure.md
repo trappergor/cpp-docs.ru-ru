@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788465"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161857"
 ---
 # <a name="issame-structure"></a>IsSame - структура
 
@@ -92,4 +92,4 @@ struct IsSame<T1, T1>
 
 Указывает, совпадают ли заданные типы друг с другом.
 
-`value` — `true` Если параметров шаблона являются одинаковыми, и `false` Если параметры шаблона различаются.
+`value` — **true** Если параметров шаблона являются одинаковыми, и **false** Если параметры шаблона различаются.

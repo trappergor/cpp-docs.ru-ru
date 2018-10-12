@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429972"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163131"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 
@@ -110,7 +110,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если указанный `index` значение содержится в `extent` объекта; в противном случае `false`.
+**значение true,** Если указанного *индекс* значение содержится в `extent` объекта; в противном случае **false**.
 
 ##  <a name="ctor"></a> экстент
 

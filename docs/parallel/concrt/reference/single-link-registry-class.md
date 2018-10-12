@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30efbfa9c7c9b4be0c9b92e4ec5300a9c4313cb4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f03e3366caaf6b18ecb8f401fb3209f859113ca0
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448327"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163638"
 ---
 # <a name="singlelinkregistry-class"></a>Класс single_link_registry
 
@@ -125,7 +125,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ссылка была обнаружена, `false` в противном случае.
+**значение true,** ссылку, если было обнаружено **false** в противном случае.
 
 ##  <a name="count"></a> число
 
@@ -154,7 +154,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ссылка была найдена и удалена, `false` в противном случае.
+**значение true,** Если ссылки был найден и удален, **false** в противном случае.
 
 ##  <a name="ctor"></a> single_link_registry
 

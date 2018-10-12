@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 186fe4bbeb86780cde586500380a7e2c500da38e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a5fef363b289ba2062db6f8d903ea832bffd6e5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443526"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161675"
 ---
 # <a name="ptroperator"></a>ptr::operator!
 
@@ -39,17 +39,17 @@ bool operator!();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` Если собственный объект COM является недопустимым; `false` в противном случае.
+**значение true,** если собственный объект COM является недопустимым; **false** в противном случае.
 
 ## <a name="remarks"></a>Примечания
 
-Собственный объект COM допустим, если это не `nullptr`.
+Собственный объект COM допустим, если это не **nullptr**.
 
 ## <a name="example"></a>Пример
 
 Этот пример реализует класс CLR, который использует `com::ptr` программы-оболочки для его закрытого члена `IXMLDOMDocument` объекта.  `CreateInstance` Функция-член использует `operator!` чтобы определить, использует ли объект документа уже есть владелец и создает новый экземпляр, только если объект является недопустимым.
 
-```
+```cpp
 // comptr_op_not.cpp
 // compile with: /clr /link msxml2.lib
 #include <msxml2.h>

@@ -1,7 +1,7 @@
 ---
 title: try-except Statement | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861932"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162039"
 ---
 # <a name="try-except-statement"></a>Оператор try-except
 
@@ -89,6 +90,8 @@ ms.locfileid: "48861932"
 Каждое приложение может иметь свой собственный обработчик исключений.
 
 Не допускается для перехода в **__try** инструкции, но допускается выход из него. Обработчик исключений не вызывается, если процесс был завершен во время выполнения **try-except** инструкции.
+
+Для совместимости с предыдущими версиями **_try**, **_except**, и **_leave** являются синонимами для **__try**, **__except** , и **__leave** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) указан.
 
 ### <a name="the-leave-keyword"></a>Ключевое слово __leave
 

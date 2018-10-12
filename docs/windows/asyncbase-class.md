@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861958"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162936"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 
@@ -106,13 +106,13 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                               | Описание:
+Имя                               | Описание
 ---------------------------------- | -------------------------------------------------
 [AsyncBase::AsyncBase](#asyncbase) | Инициализирует экземпляр класса `AsyncBase`.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                         | Описание:
+Имя                                         | Описание
 -------------------------------------------- | -------------------------------------------------------------------------------------
 [AsyncBase::Cancel](#cancel)                 | Отменяет асинхронную операцию.
 [AsyncBase::Close](#close)                   | Закрывает асинхронной операции.
@@ -130,7 +130,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-Имя                                                                         | Описание:
+Имя                                                                         | Описание
 ---------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------
 [AsyncBase::CheckValidStateForDelegateCall](#checkvalidstatefordelegatecall) | Проверяет, является ли делегат свойства можно изменить в текущем состоянии асинхронной.
 [AsyncBase::CheckValidStateForResultsCall](#checkvalidstateforresultscall)   | Проверяет, является ли результаты асинхронной операции можно собирать в текущем состоянии асинхронной.
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущее состояние асинхронной операции *работы*, который означает, что операция должна продолжаться. В противном случае `false`, который означает, что операция следует остановить.
+**значение true,** Если текущее состояние асинхронной операции *работы*, который означает, что операция должна продолжаться. В противном случае **false**, который означает, что операция следует остановить.
 
 ## <a name="currentstatus"></a>AsyncBase::CurrentStatus
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если асинхронная операция была завершена; в противном случае `false`.
+**значение true,** Если асинхронная операция была завершена; в противном случае **false**.
 
 ## <a name="trytransitiontoerror"></a>AsyncBase::TryTransitionToError
 
@@ -547,7 +547,7 @@ bool TryTransitionToError(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если внутреннее состояние ошибки был изменен; в противном случае `false`.
+**значение true,** если внутреннее состояние ошибки было изменено; в противном случае — значение **false**.
 
 ### <a name="remarks"></a>Примечания
 

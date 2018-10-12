@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fea4f576e347ca03dda1142b3118bf605bc9f385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235351"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163124"
 ---
 # <a name="hstring-class"></a>Класс HString
 
@@ -225,7 +225,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>Параметры
 
-`true` Если текущий `HString` объект не является пустой; в противном случае `false`.
+**значение true,** Если текущий `HString` объект не является пустой; в противном случае **false**.
 
 ## <a name="makereference"></a>HString::MakeReference
 
@@ -310,7 +310,7 @@ inline bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* и *rhs* параметры равны; в противном случае — значение `false`.
+**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
 
 ## <a name="operator-inequality"></a>Оператор HString::operator! =-оператор
 
@@ -343,7 +343,7 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* и *rhs* параметры не равны; в противном случае — значение `false`.
+**значение true,** Если *lhs* и *rhs* параметры не равны; в противном случае — значение **false**.
 
 ## <a name="operator-less-than"></a>Оператор HString::operator&lt; оператор
 
@@ -365,7 +365,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае `false`.
+**значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.
 
 ## <a name="release"></a>HString::Release
 

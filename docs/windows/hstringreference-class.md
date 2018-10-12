@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 70663c43c6d3bc7b661f339ce679d3faf16c9aae
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235868"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162533"
 ---
 # <a name="hstringreference-class"></a>Класс HStringReference
 
@@ -199,7 +199,7 @@ inline bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* и *rhs* параметры равны; в противном случае — значение `false`.
+**значение true,** Если *lhs* и *rhs* параметры равны; в противном случае — значение **false**.
 
 ## <a name="operator-inequality"></a>Оператор HStringReference::operator! =
 
@@ -229,7 +229,7 @@ inline bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* и *rhs* параметры не равны; в противном случае — значение `false`.
+**значение true,** Если *lhs* и *rhs* параметры не равны; в противном случае — значение **false**.
 
 ## <a name="operator-less-than"></a>Оператор HStringReference::operator&lt;
 
@@ -251,4 +251,4 @@ inline bool operator<(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае `false`.
+**значение true,** Если *lhs* параметр меньше, чем *rhs* параметра; в противном случае **false**.

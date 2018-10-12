@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379544"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163820"
 ---
 # <a name="join-class"></a>Класс join
 
@@ -60,7 +60,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 
 |Имя|Описание|
 |----------|-----------------|
-|[join](#ctor)|Перегружен. Создает `join` блок обмена сообщениями.|
+|[join](#ctor)|Перегружен. Создает блок обмена сообщениями `join` .|
 |[~ join деструктор](#dtor)|Уничтожает `join` блока.|
 
 ### <a name="protected-methods"></a>Защищенные методы
@@ -138,7 +138,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 ##  <a name="ctor"></a> соединения
 
-Создает `join` блок обмена сообщениями.
+Создает блок обмена сообщениями `join` .
 
 ```
 join(
@@ -176,10 +176,10 @@ join(
 Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
 
 *_PScheduler*<br/>
-`Scheduler` Объекта, в течение которого задача распространения для `join` запланировано блок обмена сообщениями.
+Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `join` .
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `join` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `join` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 
@@ -261,11 +261,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

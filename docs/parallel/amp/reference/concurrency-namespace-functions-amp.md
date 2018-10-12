@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441919"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163417"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Функции пространства имен Concurrency (AMP)
 
@@ -92,7 +92,7 @@ inline bool atomic_compare_exchange(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если операция выполнена успешно; в противном случае — значение `false`.
+**значение true,** Если операция выполнена успешно; в противном случае — **false**.
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange функции (C++ AMP)
 
@@ -554,7 +554,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Прерывает выполнение функции с предложением ограничения `restrict(amp)` . Когда среда выполнения AMP обнаруживает вызов, он вызывает [runtime_exception](runtime-exception-class.md) исключение с сообщением об ошибке «программной прорисовки: инструкция прекращения работы шейдера».
+Прерывает выполнение функции с предложением ограничения `restrict(amp)` . Когда среда выполнения AMP обнаруживает вызов, она порождает исключение [runtime_exception](runtime-exception-class.md) с таким сообщением об ошибке: "Средство программной прорисовки: обнаружена инструкция прекращения работы шейдера".
 
 ```
 void direct3d_abort() restrict(amp);

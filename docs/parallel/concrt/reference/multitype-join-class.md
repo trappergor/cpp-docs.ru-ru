@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2a0a49431b50157248d6a86c03fa5085d78dcd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2e8a06068d7a9bec4fd828941da409780eeed457
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387943"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163670"
 ---
 # <a name="multitypejoin-class"></a>Класс multitype_join
 
@@ -164,7 +164,7 @@ virtual message<_Destination_type>* consume(
 
 ### <a name="remarks"></a>Примечания
 
-`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.
+`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` которые вернули **true**.
 
 ##  <a name="link_target"></a> link_target
 

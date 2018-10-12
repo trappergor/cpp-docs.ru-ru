@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388489"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163430"
 ---
 # <a name="asynchronous-message-blocks"></a>Асинхронные блоки сообщений
 
@@ -307,7 +307,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 `timer` Класс отправляет сообщение только один целевой объект. Если задать `_PTarget` параметра в конструктор для `NULL`, позже можно указать целевой объект, вызвав [concurrency::ISource::link_target](reference/source-block-class.md#link_target) метод.
 
-Объект `timer` может быть повторяющихся или неповторяющихся. Чтобы создать повторяющийся таймер, передайте `true` для `_Repeating` параметра при вызове конструктора. В противном случае передайте `false` для `_Repeating` параметр, чтобы создать неповторяющегося таймера. Если повторяющийся таймер, он отправляет это же сообщение своей цели после каждого интервала.
+Объект `timer` может быть повторяющихся или неповторяющихся. Чтобы создать повторяющийся таймер, передайте **true** для `_Repeating` параметра при вызове конструктора. В противном случае передайте **false** для `_Repeating` параметр, чтобы создать неповторяющегося таймера. Если повторяющийся таймер, он отправляет это же сообщение своей цели после каждого интервала.
 
 Библиотека агентов создает `timer` объекты в состоянии-started. Чтобы запустить объект таймера, вызовите [Concurrency::Timer:: Start](reference/timer-class.md#start) метод. Чтобы остановить `timer` объекта, уничтожить объект или вызов [concurrency::timer::stop](reference/timer-class.md#stop) метод. Чтобы приостановить повторяющийся таймер, вызовите [concurrency::timer::pause](reference/timer-class.md#pause) метод.
 

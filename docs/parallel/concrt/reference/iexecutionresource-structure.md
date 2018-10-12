@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390270"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162403"
 ---
 # <a name="iexecutionresource-structure"></a>Структура IExecutionResource
 
@@ -79,7 +79,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 Уровень подписки сообщает, сколько выполняющиеся потоки связаны с потоком оборудования. Это включает только потоки, которые диспетчер ресурсов учитывает в форме подписанных потоков и корни виртуального процессора, которые активно выполняют прокси-потоки.
 
-Вызов метода [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), или метод [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) с параметром `doSubscribeCurrentThread` присвоено значение `true`увеличивает уровень подписки на аппаратный поток на единицу. Они также возвращают `IExecutionResource` интерфейс, представляющий подписку. Соответствующего вызова [IExecutionResource::Remove](#remove) уменьшает уровень подписки аппаратный поток на единицу.
+Вызов метода [ISchedulerProxy::SubscribeCurrentThread](ischedulerproxy-structure.md#subscribecurrentthread), или метод [ISchedulerProxy::RequestInitialVirtualProcessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors) с параметром `doSubscribeCurrentThread` присвоено значение **true** увеличивает уровень подписки на аппаратный поток на единицу. Они также возвращают `IExecutionResource` интерфейс, представляющий подписку. Соответствующего вызова [IExecutionResource::Remove](#remove) уменьшает уровень подписки аппаратный поток на единицу.
 
 Процесс активации с помощью метода корневом виртуальном процессоре [IVirtualProcessorRoot::Activate](ivirtualprocessorroot-structure.md#activate) увеличивает уровень подписки на аппаратный поток на единицу. Методы [IVirtualProcessorRoot::Deactivate](ivirtualprocessorroot-structure.md#deactivate), или [IExecutionResource::Remove](#remove) уменьшение на единицу при вызове для корневого виртуального процессора, активированные уровня подписки.
 

@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386734"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163495"
 ---
 # <a name="sourceblock-class"></a>Класс source_block
 
@@ -237,7 +237,7 @@ virtual message<_Target_type>* consume(
 
 Метод вызывает [bad_target](bad-target-class.md) исключения Если параметр `_PTarget` не представляет целевой объект, который вызывается `reserve`.
 
-`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.
+`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` которые вернули **true**.
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
 
 ### <a name="remarks"></a>Примечания
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
