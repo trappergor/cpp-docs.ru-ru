@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061480"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860684"
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C)
 
@@ -38,7 +38,7 @@ ms.locfileid: "46061480"
 
 1. Выполняется тело оператора.
 
-2. Затем вычисляется значение *expression*. Если выражение *expression* имеет значение false, выполнение оператора *do-while* завершается и управление передается следующему оператору программы. Если *expression* имеет значение true (то есть не равно нулю), процесс повторяется с шага 1.
+1. Затем вычисляется значение *expression*. Если выражение *expression* имеет значение false, выполнение оператора *do-while* завершается и управление передается следующему оператору программы. Если *expression* имеет значение true (то есть не равно нулю), процесс повторяется с шага 1.
 
 Выполнение оператора *do-while* также может прерваться, если в теле оператора выполняется оператор **break**, **goto** или **return**.
 

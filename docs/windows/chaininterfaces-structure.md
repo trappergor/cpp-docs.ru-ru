@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789025"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161818"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces - структура
 
@@ -117,7 +117,7 @@ struct ChainInterfaces<
 Базовый тип производного типа.
 
 *hasImplements*<br/>
-Логическое значение, если `true`, означает, что нельзя использовать [Примеси](../windows/mixin-structure.md) структуру с классом, который является производным от [реализует](../windows/implements-structure.md) структура.
+Логическое значение, если **true**, означает, что нельзя использовать [Примеси](../windows/mixin-structure.md) структуру с классом, который является производным от [реализует](../windows/implements-structure.md) структура.
 
 ## <a name="members"></a>Участники
 
@@ -169,7 +169,7 @@ __forceinline bool CanCastTo(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если все операции приведения выполнена успешно; в противном случае `false`.
+**значение true,** Если все операции приведения выполнена успешно; в противном случае **false**.
 
 ## <a name="casttounknown"></a>ChainInterfaces::CastToUnknown
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715147"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163534"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (встраивает в манифест сведений об UAC)
 
@@ -50,7 +50,7 @@ ms.locfileid: "45715147"
 Один из *asInvoker*, *highestAvailable*, или *requireAdministrator*. По умолчанию asInvoker. Дополнительные сведения см. в разделе "Примечания" Далее в этом разделе.
 
 *_uiAccess*<br/>
-`true` Если требуется приложению обходить уровни защиты пользовательского интерфейса и принимайте более высоким уровнем разрешений окон на рабочем столе; в противном случае `false`. По умолчанию — `false`. Значение `true` только для приложений со специальными возможностями интерфейса пользователя.
+**значение true,** Если требуется приложению обходить уровни защиты пользовательского интерфейса и диска ввода к более высоким уровнем разрешений windows на рабочем столе, в противном случае — **false**. По умолчанию используется **false**. Значение **true** только для приложений со специальными возможностями интерфейса пользователя.
 
 ## <a name="remarks"></a>Примечания
 

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7782f59ae63c185995fe52f19bca739bc12fcaa1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f121ff9915e49c98bc9f32ff683f8d08914f560
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375855"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163469"
 ---
 # <a name="locktryacquire"></a>lock::try_acquire
 
@@ -50,7 +50,7 @@ bool try_acquire(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` Если была получена блокировка, `false` в противном случае.
+**значение true,** Если была получена блокировка, **false** в противном случае.
 
 ## <a name="remarks"></a>Примечания
 
@@ -60,7 +60,7 @@ bool try_acquire(
 
 В этом примере используется один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока, доступ к ее внутренним данным.  Основного потока приложения использует блокировку на том же экземпляре класса для периодической проверки любого рабочих потоков по-прежнему существовать, и ожиданий, чтобы завершить работу, пока все потоки исполнителей выполнили свои задачи.
 
-```
+```cpp
 // msl_lock_try_acquire.cpp
 // compile with: /clr
 #include <msclr/lock.h>

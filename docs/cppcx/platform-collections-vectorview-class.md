@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102516"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163898"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 Отсчитываемый от нуля индекс начала элементов для извлечения.
 
 *dest*<br/>
-После завершения операции, массив элементов начинается с элемента, указанного `startIndex` и заканчивается последним элементом объекта vectorview.
+Когда эта операция завершается, массив элементов начинается с элемента, заданного `startIndex`, и заканчивается последним элементом объекта VectorView.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -168,11 +168,11 @@ virtual bool IndexOf(
 *Индекс*<br/>
 Отсчитываемый от нуля индекс элемента, если параметр `value` найден; в противном случае — 0.
 
-Параметр `index` имеет значение 0, если элемент является первым элементом объекта VectorView или элемент не найден. Если возвращаемое значение — `true`, элемент найден и является первым элементом; в противном случае элемент не найден.
+*Индекс* параметр равен 0, если один из элементов имеет первый элемент `VectorView` или элемент не найден. Если возвращается значение **true**, элемент был найден и он является первым элементом; в противном случае элемент не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если указанный элемент найден; в противном случае — значение `false`.
+**значение true,** Если указанный элемент найден; в противном случае — значение **false**.
 
 ## <a name="size"></a>  Метод VectorView::Size
 

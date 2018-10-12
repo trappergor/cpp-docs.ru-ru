@@ -1,12 +1,14 @@
 ---
 title: __declspec | Документация Майкрософт
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111327"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163592"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ ms.locfileid: "46111327"
 Эти атрибуты класса хранения характерные для Майкрософт поддерживаются грамматикой расширенный атрибут: [выровнять](../cpp/align-cpp.md), [выделить](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [устаревшим](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [сатрибутомnaked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [процесс](../cpp/process.md), [ограничить](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), и [поток](../cpp/thread.md). Она также поддерживает эти атрибуты COM-объекта: [свойство](../cpp/property-cpp.md) и [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **с атрибутом naked**, **noalias**, **nothrow** , **свойство**, **ограничить**, **selectany**, **поток**, и **uuid**атрибуты класса хранения это свойства исключительно объявления объекта или функции, к которому они применяются. **Поток** атрибут влияет на данные и только объекты. **С атрибутом naked** и **spectre** атрибуты влияют на функции только. **Dllimport** и **dllexport** атрибуты влияют на функции, данные и объекты. **Свойство**, **selectany**, и **uuid** атрибуты влияют на COM-объекты.
+
+Для совместимости с предыдущими версиями **_declspec** является синонимом **__declspec** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) — указан.
 
 **__Declspec** ключевые слова, которые должны размещаться в начале простого объявления. Компилятор игнорирует без предупреждения все **__declspec** ключевые слова помещаются после * или & и перед идентификатором переменной в объявлении.
 

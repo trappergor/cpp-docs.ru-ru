@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 33181b2cf477c3f753eacf63110a426b36e62b31
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3e670dca205f07d1e13a93f8acd0df5965b45109
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235273"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161714"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits - структура
 
@@ -80,7 +80,7 @@ inline static bool Close(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если обрабатывать *h* Закрыто успешно; в противном случае — значение `false`.
+**значение true,** Если обрабатывать *h* Закрыто успешно; в противном случае — значение **false**.
 
 ## <a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
 

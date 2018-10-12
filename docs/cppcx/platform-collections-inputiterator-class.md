@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0aa56c511ac5f7b98ffdd75aebd7f71ef9f21ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110783"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162026"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
 
@@ -137,7 +137,7 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект InputIterator равен объекту `other`, в противном случае — значение `false`.
+**значение true,** Если текущий объект InputIterator равен *других*; в противном случае **false**.
 
 ## <a name="operator-increment"></a>  Оператор InputIterator::operator ++
 
@@ -177,7 +177,7 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект InputIterator не равен объекту `other`, в противном случае — значение `false`.
+**значение true,** Если текущий объект InputIterator не равен *других*; в противном случае **false**.
 
 ## <a name="see-also"></a>См. также
 

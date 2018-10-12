@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9fc41bdccf9cce3d455d4effd3541731929e5de2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789271"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161207"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
 
@@ -52,7 +52,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 Проверяет, является ли один тип базовым для другого.
 
-Первый шаблон проверяет, является ли тип, производный от базового типа, который может дать `true` или `false`. Второй шаблон проверяет, является ли тип является производным от самого себя, которая всегда создает `false`.
+Первый шаблон проверяет, является ли тип, производный от базового типа, который может дать **true** или **false**. Второй шаблон проверяет, является ли тип является производным от самого себя, которая всегда создает **false**.
 
 ## <a name="members"></a>Участники
 
@@ -84,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 Указывает, является ли один тип базовым для другого.
 
-Значение параметра `value` равно `true`, если тип `Base` является базовым классом типа `Derived`; в противном случае — значение `false`.
+`value` — **true** Если тип `Base` является базовым классом типа `Derived`, в противном случае это **false**.

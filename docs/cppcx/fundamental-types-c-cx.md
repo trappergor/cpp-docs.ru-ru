@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110796"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161233"
 ---
 # <a name="fundamental-types-ccx"></a>Фундаментальные типы (C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "44110796"
 
 |Пространство имен|C + +/ CX имя|Определение|Имя в Standard C++|Диапазон значений|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|Платформа|Boolean|8-битовое логическое значение.|bool|`true` (не равно нулю) и `false` (ноль)|
+|Платформа|Boolean|8-битовое логическое значение.|bool|**значение true,** (не равно нулю) и **false** (ноль)|
 |default|char16|16-битовое нечисловое значение, представляющее кодовую точку Юникода (UTF-16).|wchar_t<br /><br /> - или -<br /><br /> L'c'|(Определяется стандартом Юникода)|
 
 ## <a name="numeric-types"></a>Числовые типы

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380156"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163625"
 ---
 # <a name="location-class"></a>Класс location
 
@@ -57,9 +57,9 @@ class location;
 
 |Имя|Описание|
 |----------|-----------------|
-|[оператор!=](#operator_neq)|Определяет, представляют ли два объекта `location` различные расположения.|
+|[operator!=](#operator_neq)|Определяет, представляют ли два объекта `location` различные расположения.|
 |[оператор=](#operator_eq)|Назначает содержимое другого объекта `location` данному.|
-|[оператор==](#operator_eq_eq)|Определяет, является ли два `location` объекты представляют то же расположение.|
+|[operator==](#operator_eq_eq)|Определяет, является ли два `location` объекты представляют то же расположение.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -157,7 +157,7 @@ bool operator!= (const location& _Rhs) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если расположения различаются; в противном случае — значение `false`.
+**значение true,** Если расположения различаются, **false** в противном случае.
 
 ##  <a name="operator_eq"></a> оператор =
 
@@ -189,7 +189,7 @@ bool operator== (const location& _Rhs) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если два расположения идентичны, и `false` в противном случае.
+**значение true,** Если этих двух папок совпадают, и **false** в противном случае.
 
 ## <a name="see-also"></a>См. также
 

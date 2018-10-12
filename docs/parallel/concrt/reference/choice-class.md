@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414580"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163963"
 ---
 # <a name="choice-class"></a>Класс choice
 
@@ -85,7 +85,7 @@ class choice: public ISource<size_t>;
 |[reserve](#reserve)|Резервирует сообщение, ранее предложенного этим объектом `choice` блок обмена сообщениями.|
 |[unlink_target](#unlink_target)|Удаляет связь с целевым блоком и это `choice` блок обмена сообщениями.|
 |[unlink_targets](#unlink_targets)|Удаляет связь всех целевых объектов из данного `choice` блок обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|
-|[value](#value)|Получает сообщение, индекс которого была выбрана инструментом `choice` блок обмена сообщениями.|
+|[значение](#value)|Получает сообщение, индекс которого была выбрана инструментом `choice` блок обмена сообщениями.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -216,7 +216,7 @@ virtual message<size_t>* consume(
 
 ### <a name="remarks"></a>Примечания
 
-`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` , возвращается `true`.
+`consume` Метод аналогичен методу `accept`, но всегда должно начинаться с помощью вызова `reserve` которые вернули **true**.
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если блок получил значение, `false` в противном случае.
+**значение true,** Если блок получил значение, **false** в противном случае.
 
 ##  <a name="index"></a> Индекс
 
@@ -315,7 +315,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае. Резервирования могут завершаться неудачей по ряду причин, включая следующие: сообщение уже было зарезервировано или принято другим целевым объектом, источник может отклонять резервирования и т. п.
 
 ### <a name="remarks"></a>Примечания
 

@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: eea3e1f54fa1c5e1c4313a9442e812770b0a6cdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0aee08fc59130e829d9448ba4f28a9823a461ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424733"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161779"
 ---
 # <a name="lockoperator-bool"></a>lock::operator bool
 
@@ -40,17 +40,17 @@ operator bool();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` Если блокировка, `false` в противном случае.
+**значение true,** Если блокировка, **false** в противном случае.
 
 ## <a name="remarks"></a>Примечания
 
-Этот оператор фактически преобразует `_detail_class::_safe_bool` которого является более безопасным, чем `bool` , так как он не может быть преобразован в целочисленный тип.
+Этот оператор фактически преобразует `_detail_class::_safe_bool` которого является более безопасным, чем **bool** , так как он не может быть преобразован в целочисленный тип.
 
 ## <a name="example"></a>Пример
 
 В этом примере используется один экземпляр класса в нескольких потоках.  Этот класс использует блокировку на себя для обеспечения согласованности для каждого потока, доступ к ее внутренним данным.  Основного потока приложения использует блокировку на том же экземпляре класса для периодической проверки любого рабочих потоков по-прежнему существовать, и ожиданий, чтобы завершить работу, пока все потоки исполнителей выполнили свои задачи.
 
-```
+```cpp
 // msl_lock_op_bool.cpp
 // compile with: /clr
 #include <msclr/lock.h>

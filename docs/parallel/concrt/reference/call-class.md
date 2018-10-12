@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423901"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161870"
 ---
 # <a name="call-class"></a>Класс call
 
@@ -55,7 +55,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |Имя|Описание|
 |----------|-----------------|
-|[Вызов](#ctor)|Перегружен. Создает `call` блок обмена сообщениями.|
+|[Вызов](#ctor)|Перегружен. Создает блок обмена сообщениями `call` .|
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
@@ -88,7 +88,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ##  <a name="ctor"></a> Вызов
 
-Создает `call` блок обмена сообщениями.
+Создает блок обмена сообщениями `call` .
 
 ```
 call(
@@ -126,10 +126,10 @@ call(
 Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
 
 *_PScheduler*<br/>
-`Scheduler` Объекта, в течение которого задача распространения для `call` запланировано блок обмена сообщениями.
+Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `call` .
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `call` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `call` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, поскольку блок не откладывает предоставляемые сообщения.
+**значение true,** поскольку блок не откладывает предоставляемые сообщения.
 
 ## <a name="see-also"></a>См. также
 

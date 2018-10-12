@@ -1,12 +1,13 @@
 ---
 title: __assume | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - __assume
+- _assume
 - __assume_cpp
 dev_langs:
 - C++
@@ -17,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e1c8c37bc46580db42bfa2a91d215b09bc1dbaf4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405701"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163677"
 ---
 # <a name="assume"></a>__assume
 
@@ -57,6 +58,8 @@ __assume(
 Используйте `__assume` в [ASSERT](../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) только когда утверждение не может быть восстановлен. Не используйте `__assume` в assert, для которого имеется код восстановления после ошибки, поскольку компилятор может изменить оптимизацию кода обработки ошибок.
 
 Инструкция `__assume(0)` является особым случаем. Используйте `__assume(0)` для указания пути к коду, который нельзя достигнуть. Следующий пример показывает, как использовать `__assume(0)` для указания того, что в вариант по умолчанию инструкции switch нельзя попасть. Это показывает наиболее типичное использование `__assume(0)`.
+
+Для совместимости с предыдущими версиями **_assume** является синонимом **__assume** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) — указан.
 
 ## <a name="requirements"></a>Требования
 

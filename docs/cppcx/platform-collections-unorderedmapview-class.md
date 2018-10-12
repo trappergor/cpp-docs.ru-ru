@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4acecf3697b793d52079d4f55176717e3f6f2d5c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4d4638bafdf512caf7eeff6b95e53f9f0b1adeea
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109931"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163937"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 
@@ -112,7 +112,7 @@ bool HasKey(K key);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если ключ найден; в противном случае — значение `false`.
+**значение true,** Если ключ найден; в противном случае — значение **false**.
 
 ## <a name="lookup"></a>  Метод UnorderedMapView::Lookup
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102043"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163703"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Класс Platform::Collections::VectorViewIterator
 
@@ -123,7 +123,7 @@ VectorViewIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorViewIterator перед его использованием.
 
-Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. `int` Тип во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
+Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. Тип `int` во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
 
 ## <a name="operator-dereference"></a>  VectorViewIterator::operator\* оператор
 
@@ -156,7 +156,7 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorViewIterator равен `other`; в противном случае `false`.
+**значение true,** Если текущий `VectorViewIterator` равен *других*; в противном случае **false**.
 
 ## <a name="operator-greater-than"></a>  VectorViewIterator::operator&gt; оператор
 
@@ -176,11 +176,11 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorViewIterator больше объекта `other`; в противном случае — значение `false`.
+**значение true,** Если текущий объект VectorViewIterator больше, чем *других*; в противном случае **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorViewIterator::operator&gt;=-оператор
 
-Указывает, является ли текущий объект VectorViewIterator большим или равным указанному объекту VectorViewIterator.
+Указывает, является ли текущий `VectorViewIterator` больше или равно указанной `VectorViewIterator`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -196,7 +196,7 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorViewIterator больше или равен объекту `other`, в противном случае — значение `false`.
+**значение true,** Если текущий `VectorViewIterator` больше или равно *других*; в противном случае **false**.
 
 ## <a name="operator-increment"></a>  Оператор VectorViewIterator::operator ++
 
@@ -237,7 +237,7 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorViewIterator не равен `other`; в противном случае `false`.
+**значение true,** Если текущий `VectorViewIterator` не равно *других*; в противном случае **false**.
 
 ## <a name="operator-less-than"></a>  VectorViewIterator::operator&lt; оператор
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Параметры
 
 *other*<br/>
-Другой объект VectorIterator.
+Другой `VectorIterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorIterator меньше объекта `other`, в противном случае — значение `false`.
+**значение true,** Если текущий `VectorIterator` — меньше, чем *других*; в противном случае **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorViewIterator::operator&lt;=-оператор
 
-Указывает, является ли текущий объект VectorIterator меньшим или равным указанному объекту VectorIterator.
+Указывает, является ли текущий `VectorIterator` меньше или равно указанному `VectorIterator`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>Параметры
 
 *other*<br/>
-Другой объект VectorIterator.
+Другой `VectorIterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorIterator меньше или равно `other`; в противном случае `false`.
+**значение true,** Если текущий `VectorIterator` меньше или равно *других*; в противном случае **false**.
 
 ## <a name="operator-minus"></a>  VectorViewIterator::operator--оператор
 
@@ -353,7 +353,7 @@ inline VectorViewIterator<T> operator+
 
 В первом синтаксисе — объект VectorViewIterator, указывающий на элемент с заданным смещением от текущего объекта VectorViewIterator.
 
-В втором синтаксисе — объект VectorViewIterator, который ссылается на элемент с заданным смещением от начала параметра `i`.
+Во втором синтаксисе — объект VectorViewIterator, указывающий на элемент с заданным смещением от начала `i` параметра.
 
 ## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-=-оператор
 

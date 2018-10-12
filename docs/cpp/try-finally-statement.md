@@ -1,17 +1,19 @@
 ---
 title: Оператор try-finally | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
+- _finally
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024246"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161662"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 
@@ -81,6 +83,8 @@ __finally {
 
 > [!NOTE]
 >  Поведение оператора try-finally отличается от некоторых других языков, которые поддерживают использование **наконец**, например C#.  Один **__try** , возможно, но не оба объекта **__finally** и **__except**.  Если оба следует использовать одновременно, оператор try-except должен включать внутренней оператор try-finally.  Правила,задающие время выполнения каждого блока, также различаются.
+
+Для совместимости с предыдущими версиями **_try**, **_finally**, и **_leave** являются синонимами для **__try**, **__ Наконец**, и **__leave** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) указан.
 
 ## <a name="the-leave-keyword"></a>Ключевое слово __leave
 

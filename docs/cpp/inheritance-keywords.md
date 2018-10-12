@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061179"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161805"
 ---
 # <a name="inheritance-keywords"></a>Ключевые слова наследования
 
@@ -83,6 +83,8 @@ int S::*p;
 
 > [!NOTE]
 >  То же опережающее объявление представления указателя на член должно быть включено в каждую запись преобразования, которая объявляет указатели на члены этого класса, и объявление должно выполняться до объявления указателей на члены.
+
+Для совместимости с предыдущими версиями **_single_inheritance**, **_multiple_inheritance**, и **_virtual_inheritance** являются синонимами для **__ одиночного наследования**, **__multiple_inheritance**, и **__virtual_inheritance** Если параметр компилятора [/Za \(отключить языка расширения)](../build/reference/za-ze-disable-language-extensions.md) указан.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

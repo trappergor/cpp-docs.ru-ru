@@ -1,7 +1,7 @@
 ---
 title: Ключевые слова (C++) | Документация Майкрософт
 ms.custom: index-page
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169610"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162455"
 ---
 # <a name="keywords-c"></a>Ключевые слова (C++)
 
@@ -31,19 +31,20 @@ ms.locfileid: "47169610"
 
 |||||
 |-|-|-|-|
-|[__abstract-](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[Оператор __alignof](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
-|[__based](based-pointers-cpp.md)|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
-|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
-|[__finally](try-finally-statement.md)|[__forceinline](inline-functions-cpp.md)|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
-|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists](if-exists-statement.md)|[__if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md)|
-|[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
-|[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
-|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md)|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__raise](raise.md)|
-|**__sealed** <sup>2</sup>|[__single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[__try /\__except.](try-except-statement.md)|[__try /\__finally](try-finally-statement.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
-|[__unaligned](unaligned.md)|[__unhook](unhook.md) <sup>3</sup>|[__uuidof](uuidof-operator.md)|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|
-|[__virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|[__abstract-](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[оператор __alignof](alignof-operator.md) <sup>4</sup>|[__asm](../assembler/inline/asm.md) <sup>4</sup>|[__assume](../intrinsics/assume.md) <sup>4</sup>|
+|[__based](based-pointers-cpp.md) <sup>4</sup>|[__box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md) <sup>4</sup>|[__declspec](declspec.md) <sup>4</sup>|
+|[__delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md) <sup>4</sup>|[__fastcall](fastcall.md) <sup>4</sup>|
+|[__finally](try-finally-statement.md) <sup>4</sup>|[__forceinline](inline-functions-cpp.md) <sup>4</sup>|[__gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[__hook](hook.md) <sup>3</sup>|
+|[__identifier](../windows/identifier-cpp-cli.md)|[__if_exists](if-exists-statement.md)|[__if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md) <sup>4</sup>|
+|[__int16](int8-int16-int32-int64.md) <sup>4</sup>|[__int32](int8-int16-int32-int64.md) <sup>4</sup>|[__int64](int8-int16-int32-int64.md) <sup>4</sup>|[__int8](int8-int16-int32-int64.md) <sup>4</sup>|
+|[__interface](interface.md)|[__leave-](try-finally-statement.md) <sup>4</sup>|[__m128](m128.md)|[__m128d](m128d.md)|
+|[__m128i](m128i.md)|[__m64](m64.md)|[__multiple_inheritance](inheritance-keywords.md) <sup>4</sup>|[__nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**__pin** <sup>2</sup>|**__property** <sup>2</sup>|[__ptr32](ptr32-ptr64.md) <sup>4</sup>|
+|[__ptr64](ptr32-ptr64.md)<sup>4</sup>|[__raise](raise.md)|[__restrict](extension-restrict.md) <sup>4</sup>|**__sealed** <sup>2</sup>|
+|[__single_inheritance](inheritance-keywords.md)<sup>4</sup>|[__sptr](sptr-uptr.md)<sup>4</sup>|[__stdcall](stdcall.md) <sup>4</sup>|[__super](super.md)|
+|[__thiscall](thiscall.md)|[__try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[__unaligned](unaligned.md) <sup>4</sup>|[__unhook](unhook.md) <sup>3</sup>|
+|[__uptr](sptr-uptr.md) <sup>4</sup>|[__uuidof](uuidof-operator.md) <sup>4</sup>|[__value](../dotnet/value-type-semantics.md) <sup>2</sup>|[__vectorcall](vectorcall.md) <sup>4</sup>|
+|[__virtual_inheritance](inheritance-keywords.md) <sup>4</sup>|[__w64](w64.md) <sup>4</sup>|[__wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[array](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
@@ -56,7 +57,7 @@ ms.locfileid: "47169610"
 |[for each в](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |[Универсальный](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
 |[встроенный](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[класс интерфейса](../windows/interface-class-cpp-component-extensions.md)|[Структура интерфейса](../windows/interface-class-cpp-component-extensions.md)|
-|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[литерал](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[Изменяемый](mutable-data-members-cpp.md)|
+|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[literal](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[Изменяемый](mutable-data-members-cpp.md)|
 |[с атрибутом naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
@@ -72,22 +73,21 @@ ms.locfileid: "47169610"
 |[Структура значения](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
+<sup>1</sup> дополнительные атрибуты для **__declspec** ключевое слово.
 
-1 расширенные атрибуты для **__declspec** ключевое слово.
+<sup>2</sup> применимо к управляемым расширениям для C++ только. В настоящее время использование этого синтаксиса не рекомендуется. См. в разделе [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md) Дополнительные сведения.
 
-2 применимо к управляемым расширениям для C++ только. В настоящее время использование этого синтаксиса не рекомендуется.
+<sup>3</sup> встроенная функция, используемая при обработке событий.
 
-3 встроенная функция, используемая в обработке событий.
+<sup>4</sup> для обеспечения обратной совместимости с предыдущими версиями доступны эти ключевые слова с двумя начальными символами подчеркивания и одного символа подчеркивания, при использовании расширений Microsoft включено (по умолчанию).
 
-См. в разделе [расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md) Дополнительные сведения.
-
-## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
+**Блок, относящийся только к системам Microsoft**
 
 В Microsoft C++ идентификаторы с двумя начальными символами подчеркивания зарезервированы для реализаций компилятора. Таким образом, в Microsoft принято соглашение, что специфические ключевые слова для систем Microsoft должны начинаться с двух символов подчеркивания. Эти слова невозможно использовать как имена идентификаторов.
 
-Расширения Microsoft по умолчанию включены. Чтобы убедитесь, что ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав совместимый со стандартом ANSI [/Za](../build/reference/za-ze-disable-language-extensions.md) параметр командной строки (компилировать для совместимости с ANSI) во время компиляции. При этом ключевые слова для систем Microsoft будут отключены.
+Расширения Microsoft по умолчанию включены. Чтобы убедитесь, что ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) параметр во время компиляции. При этом некоторые ключевые слова систем Microsoft будут отключены.
 
-Если расширения Microsoft включены, в программах можно использовать ключевые слова, специфические для систем Microsoft. Для совместимости со стандартом ANSI эти ключевые слова начинаются с двух символов подчеркивания. В целях обратной совместимости версий одним символом подчеркивания для всех ключевых слов, подобна двойной за исключением **__except**, **__finally**, **__leave**, и **_ _try** поддерживаются. Кроме того **__cdecl** доступен без начальных символов подчеркивания.
+Если расширения Microsoft включены, в программах можно использовать ключевые слова, специфические для систем Microsoft. Для совместимости со стандартом ANSI эти ключевые слова начинаются с двух символов подчеркивания. Для обеспечения обратной совместимости поддерживаются одним символом подчеркивания версий многих популярных подобна двойной ключевые слова. Кроме того **__cdecl** доступен без начальных символов подчеркивания.
 
 **__Asm** ключевое слово заменяет C++ `asm` синтаксис. Ключевое слово `asm` зарезервировано для совместимости с другими реализациями C++, но оно не реализовано. Используйте **__asm**.
 

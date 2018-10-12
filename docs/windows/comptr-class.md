@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236001"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163235"
 ---
 # <a name="comptr-class"></a>Класс ComPtr
 
@@ -539,9 +539,9 @@ bool operator==(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор возвращает `true` Если объект *a* равен объекту *b*; в противном случае `false`.
+Первый оператор возвращает **true** Если объект *a* равен объекту *b*; в противном случае **false**.
 
-Второй и третий операторы возвращают `true` Если объект *a* равен `nullptr`; в противном случае `false`.
+Второй и третий операторы возвращают **true** Если объект *a* равен **nullptr**; в противном случае **false**.
 
 ## <a name="operator-inequality"></a>Оператор ComPtr::operator! =
 
@@ -574,9 +574,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор возвращает `true` Если объект *a* не равен объекту *b*; в противном случае `false`.
+Первый оператор возвращает **true** Если объект *a* не равен объекту *b*; в противном случае **false**.
 
-Второй и третий операторы возвращают `true` Если объект *a* не равно `nullptr`; в противном случае `false`.
+Второй и третий операторы возвращают **true** Если объект *a* не равно **nullptr**; в противном случае **false**.
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>Оператор ComPtr::operator Microsoft::WRL::Details::BoolType
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если интерфейс связан с данным `ComPtr`, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае `nullptr`.
+Если интерфейс связан с данным `ComPtr`, адрес [BoolStruct::Member](../windows/boolstruct-member-data-member.md) данные-член; в противном случае **nullptr**.
 
 ## <a name="ptr"></a>ComPtr::ptr_
 

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106419"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162546"
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 
@@ -174,7 +174,7 @@ String^ Concat( String^ str1, String^ str2);
 
 Новый объект String^, значение которого является объединением значений `str1` и `str2`.
 
-Если `str1` — `null` и `str2` — нет, `str1` возвращается. Если `str2` — `null` и `str1` — нет, `str2` возвращается. Если оба параметра `str1` и `str2` имеют значение `null`, возвращается пустая строка (L"").
+Если `str1` имеет значение `null`, а `str2` — значение, отличное от null, возвращается значение `str1`. Если `str2` имеет значение `null`, а `str1` — значение, отличное от null, возвращается значение `str2`. Если оба параметра `str1` и `str2` имеют значение `null`, возвращается пустая строка (L"").
 
 ## <a name="data"></a>  Метод String::Data
 
@@ -240,7 +240,7 @@ bool String::Equals(String^ str);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если `str` равен текущему объекту; в противном случае — значение `false`.
+**значение true,** Если `str` равен текущему объекту; в противном случае — значение **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект String имеет значение `null` или является пустой строкой (L""); в противном случае — значение `false`.
+**значение true,** Если текущий `String` объект **null** или является пустой строкой (L» "); в противном случае **false**.
 
 ## <a name="isfastpass"></a>  Метод String::IsFastPass
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект String участвует в операции быстрой передачи; в противном случае — значение `false`.
+**значение true,** Если текущий `String` объекта быстрой передачи; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -294,7 +294,7 @@ bool IsFastPass();
 
 ## <a name="length"></a>  Метод String::length
 
-Получает количество символов в указанном объекте String.
+Возвращает число символов в текущем `String` объекта.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Количество символов в указанном объекте String.
+Число символов в текущем `String` объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -337,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если значения параметров `str1` и `str2` равны; в противном случае — `false`.
+**значение true,** Если *str1* равен *str2*; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первый из сравниваемых объектов String.
+Первый из сравниваемых объектов `String`.
 
 *str2*<br/>
-Второй из сравниваемых объектов String.
+Второй из сравниваемых объектов `String`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если значения параметров `str1` и `str2` равны; в противном случае — значение `false`.
+**значение true,** Если содержание `str1` равны `str2`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -371,7 +371,7 @@ bool String::operator==( String^ str1, String^ str2);
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-Указывает, является ли значение одного объекта String большим, чем значение второго объекта String.
+Указывает ли значение одного `String` объект больше, чем значение второго `String` объекта.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первый объект String.
+Первый объект `String`.
 
 *str2*<br/>
-Второй объект String.
+Второй объект `String`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если значение `str1` больше `str2`; в противном случае — значение `false`.
+**значение true,** Если значение `str1` больше, чем значение `str2`; в противном случае **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -397,7 +397,7 @@ bool String::operator>( String^ str1, String^ str2);
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.
+Указывает ли значение одного `String` объекта больше или равно значению второго `String` объекта.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первый объект String.
+Первый объект `String`.
 
 *str2*<br/>
-Второй объект String.
+Второй объект `String`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если значение `str1` больше или равно `str2`; в противном случае — значение `false`.
+**значение true,** Если значение `str1` больше или равно значению `str2`; в противном случае **false**.
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-Указывает, различны ли значения двух указанных объектов String.
+Указывает ли два указанных `String` объекты имеют разные значения.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первый из сравниваемых объектов String.
+Первый из сравниваемых объектов `String`.
 
 *str2*<br/>
-Второй из сравниваемых объектов String.
+Второй из сравниваемых объектов `String`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true`, если значения `str1` и `str2` не равны; в противном случае — `false`.
+**значение true,** Если `str1` не равно `str2`; в противном случае **false**.
 
 ## <a name="operator-less-than"></a> String::operator&lt;
 
-Указывает, является ли значение одного объекта String меньшим, чем значение второго объекта String.
+Указывает, является ли значение одного `String` объект меньше, чем значение второго `String` объекта.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>Параметры
 
 *str1*<br/>
-Первый объект String.
+Первый объект `String`.
 
 *str2*<br/>
-Второй объект String.
+Второй объект `String`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если значение `str1` меньше `str2`; в противном случае — значение `false`.
+**значение true,** Если значение *str1* меньше, чем значение *str2*; в противном случае **false**.
 
 ## <a name="ctor"></a> Конструктор String::String
 
-Инициализирует новый экземпляр класса String с копией входных данных строки.
+Инициализирует новый экземпляр класса `String` класс копию данных входной строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::ToString
 
-Возвращает объект String, значение которого совпадает со значением текущей строки.
+Возвращает `String` объект, значение которого совпадает со значением текущей строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект String, значение которого совпадает со значением текущей строки.
+Объект `String` объект, значение которого совпадает со значением текущей строки.
 
 ## <a name="see-also"></a>См. также
 

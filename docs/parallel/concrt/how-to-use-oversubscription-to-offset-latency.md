@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392973"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163573"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>Практическое руководство. Использование лимита подписки для устранения задержек
 
@@ -30,7 +30,7 @@ ms.locfileid: "46392973"
 
 В этом примере используется [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) для загрузки файлов с HTTP-серверов. `http_reader` Класс является производным от [concurrency::agent](../../parallel/concrt/reference/agent-class.md) и использует передачу сообщений для асинхронного чтения имен URL-адрес для загрузки.
 
-`http_reader` Класс использует [concurrency::task_group](reference/task-group-class.md) класс для параллельного чтения всех файлов. Каждая задача вызывает [Concurrency::Context:: Oversubscribe](reference/context-class.md#oversubscribe) метод с `_BeginOversubscription` параметру присвоить `true` чтобы разрешить превышение лимита подписки в текущем контексте. Каждая задача затем использует Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) и [CHttpFile](../../mfc/reference/chttpfile-class.md) классы для загрузки файла. Наконец, каждая задача вызывает `Context::Oversubscribe` с `_BeginOversubscription` параметру присвоить `false` отключить превышение лимита подписки.
+`http_reader` Класс использует [concurrency::task_group](reference/task-group-class.md) класс для параллельного чтения всех файлов. Каждая задача вызывает [Concurrency::Context:: Oversubscribe](reference/context-class.md#oversubscribe) метод с `_BeginOversubscription` параметру присвоить **true** чтобы разрешить превышение лимита подписки в текущем контексте. Каждая задача затем использует Microsoft Foundation Classes (MFC) [CInternetSession](../../mfc/reference/cinternetsession-class.md) и [CHttpFile](../../mfc/reference/chttpfile-class.md) классы для загрузки файла. Наконец, каждая задача вызывает `Context::Oversubscribe` с `_BeginOversubscription` параметру присвоить **false** отключить превышение лимита подписки.
 
 Если превышение лимита подписки включена, среда выполнения создает один дополнительный поток, в котором будут выполняться задачи. Каждый из этих потоков можно также превышать лимит подписки текущего контекста и таким образом, создать дополнительные потоки. `http_reader` Класс использует [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта, чтобы ограничить количество потоков, используемых приложением. Агент инициализирует буфер с фиксированным числом значений маркера. Для каждой операции загрузки агент считывает значение токена из буфера до начала операции, затем записывает это значение обратно в буфер после завершения операции. Если буфер пуст, агент ожидает в течение одной из операций загрузки будет записано значение в буфер.
 
@@ -68,7 +68,7 @@ Downloaded 1801040 bytes in 3276 ms.
 
 ## <a name="compiling-the-code"></a>Компиляция кода
 
-Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `download-oversubscription.cpp` и затем выполняется один из следующих команд в окне командной строки Visual Studio.
+Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `download-oversubscription.cpp` и затем выполняется один из следующих команд в **Командная строка Visual Studio** окна.
 
 **/ MD /D «_AFXDLL» CL.exe/EHsc download-oversubscription.cpp**
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374266"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163093"
 ---
 # <a name="singleassignment-class"></a>Класс single_assignment
 
@@ -58,7 +58,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 |Имя|Описание|
 |----------|-----------------|
-|[single_assignment](#ctor)|Перегружен. Создает `single_assignment` блок обмена сообщениями.|
+|[single_assignment](#ctor)|Перегружен. Создает блок обмена сообщениями `single_assignment` .|
 |[~ single_assignment деструктор](#dtor)|Уничтожает `single_assignment` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
@@ -66,7 +66,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Имя|Описание|
 |----------|-----------------|
 |[has_value](#has_value)|Проверяет, является ли это `single_assignment` блок обмена сообщениями еще была инициализирована со значением.|
-|[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `single_assignment` блок обмена сообщениями.|
+|[значение](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `single_assignment` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если блок получил значение, `false` в противном случае.
+**значение true,** Если блок получил значение, **false** в противном случае.
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ virtual message_status send_message(
 
 ##  <a name="ctor"></a> single_assignment
 
-Создает `single_assignment` блок обмена сообщениями.
+Создает блок обмена сообщениями `single_assignment` .
 
 ```
 single_assignment();
@@ -303,10 +303,10 @@ single_assignment(
 Функция фильтра, который определяет, следует ли принять предлагаемые сообщения.
 
 *_PScheduler*<br/>
-`Scheduler` Объекта, в течение которого задача распространения для `single_assignment` запланировано блок обмена сообщениями.
+Объект `Scheduler` , в котором запланирована задача распространения для блока обмена сообщениями `single_assignment` .
 
 *_PScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `single_assignment` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `single_assignment` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 
