@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578208"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076012"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>Строки имени языкового стандарта, языка и страны и региона
 
 Аргумент*Языковой стандарт* для функций `setlocale` и `_create_locale` можно задать путем использования имен языкового стандарта, языков, кодов страны или региона и кодовых страниц, которые поддерживаются API многоязыковой поддержки Windows. Аргумент *locale* принимает следующую форму:
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*locale_name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 Форма имени языкового стандарта, например `en-US` для английского языка (США) или `bs-Cyrl-BA` для боснийского (кириллица, Босния и Герцеговина), является предпочтительной. Набор имен языковых стандартов описан в разделе [Имена языковых стандартов](/windows/desktop/Intl/locale-names). Список поддерживаемых имен языковых стандартов для версий операционной системы Windows см. в столбце **Тег языка** таблицы, которая приведена в [приложении A (поведение продукта)](https://msdn.microsoft.com/library/cc233982.aspx) справочника по коду языка Windows. Этот список ресурсов включает в себя поддерживаемый язык, скрипт и региональные части имен языковых стандартов. Дополнительные сведения о поддерживаемых именах языковых стандартов, имеющих порядок сортировки не по умолчанию, см. в столбце **Имя языкового стандарта** в разделе [Идентификаторы порядка сортировки](/windows/desktop/Intl/sort-order-identifiers). В версии Windows 10 или более поздней допускаются имена языкового стандарта, соответствующие допустимым тегам языка BCP-47. Например, `jp-US` является допустимым тегом BCP-47, однако он работает только для функциональных возможностей языкового стандарта `US`.
 
@@ -50,8 +45,7 @@ ms.locfileid: "42578208"
 
 Можно указать все категории языкового стандарта одновременно для функций `setlocale` и `_wsetlocale` с помощью категории `LC_ALL` . Всем категориям можно задать тот же языковой стандарт, также можно задать каждую категорию по отдельности с помощью аргумента языкового стандарта, имеющего следующую форму:
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
 Можно задать несколько типов категорий с разделением точкой с запятой. Типы категорий, которые не заданы, используют текущий параметр языкового стандарта. Например, этот фрагмент кода задает текущий языковой стандарт для всех категорий `de-DE`, а затем задает категории `LC_MONETARY` для `en-GB` и `LC_TIME` для `es-ES`:
 
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[Строки языка](../c-runtime-library/language-strings.md)  
-[Строки страны и региона](../c-runtime-library/country-region-strings.md)  
+[Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale, _wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[Строки языка](../c-runtime-library/language-strings.md)<br/>
+[Строки страны и региона](../c-runtime-library/country-region-strings.md)

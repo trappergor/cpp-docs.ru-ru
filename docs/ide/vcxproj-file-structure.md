@@ -1,7 +1,7 @@
 ---
 title: Структура файлов VCXPROJ и PROPS | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/27/2017
+ms.date: 09/18/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe466ff9250543a61fde8da41900b152a9874e09
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 957d9e1063c71e342339eb4e6a6c913eeb5a8f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33337354"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374092"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Структура файлов VCXPROJ и PROPS
 
-MSBuild — это система проектов по умолчанию в Visual Studio. Выбирая **Файл | Создать проект** в Visual C++, вы создаете проект MSBuild, параметры которого хранятся в XML-файле проекта с расширением `.vcxproj`. Файл проекта также может импортировать файлы PROPS и TARGETS, где могут храниться параметры. Вручную изменять файл проекта в большинстве случаев не требуется и даже не следует, если только у вас нет четкого представления о работе MSBuild. По возможности для изменения параметров проектов следует использовать страницы свойств Visual Studio (см. раздел [Работа со свойствами проекта](working-with-project-properties.md). Однако в некоторых случаях может потребоваться изменить файл проекта или страницу свойств вручную. Для этих сценариев в этой статье приведены основные сведения о структуре данного файла.
+[MSBuild](../build/msbuild-visual-cpp.md) — это система проектов по умолчанию в Visual Studio. Выбирая **Файл** > **Создать проект** в Visual C++, вы создаете проект MSBuild, параметры которого хранятся в XML-файле проекта с расширением `.vcxproj`. Файл проекта также может импортировать файлы PROPS и TARGETS, где могут храниться параметры. Вручную изменять файл проекта в большинстве случаев не требуется и даже не следует, если только у вас нет четкого представления о работе MSBuild. По возможности для изменения параметров проектов следует использовать страницы свойств Visual Studio (см. раздел [Работа со свойствами проекта](working-with-project-properties.md). Однако в некоторых случаях может потребоваться изменить файл проекта или страницу свойств вручную. Для этих сценариев в этой статье приведены основные сведения о структуре данного файла.
 
 **Внимание!**
 
@@ -43,6 +43,8 @@ MSBuild — это система проектов по умолчанию в Vi
    <ClCompile Include="$(IntDir)\generated.cpp"/>
    ```
 
+   "Не поддерживается" означает, что макросы, возможно, будут работать не для всех операций в IDE. Макросы, которые не предполагают изменения значений в различных конфигурациях, будут работать, но не будут сохраняться, если элемент перемещается в другой фильтр или проект. Макросы, значения которых будут меняться в различных конфигурациях проекта, приведут к проблемам, так как IDE не предполагает, что пути к элементам проекта будут другими.
+
 1. Чтобы обеспечить правильное добавление, удаление или изменение свойств проекта при редактировании в диалоговом окне **Свойства проекта**, этот файл должен содержать отдельные группы для каждой конфигурации проекта и эти условия должны иметь следующую форму:
 
    ```xml
@@ -58,7 +60,9 @@ MSBuild — это система проектов по умолчанию в Vi
 Первое, на что нужно обратить внимание, — это определенный порядок следования элементов верхнего уровня. Пример:
 
 - Большинство групп свойств и групп определений элементов расположено после импорта для Microsoft.Cpp.Default.props.
+
 - Все целевые объекты импортируются в конце файла.
+
 - Существует несколько групп свойств, каждая из которых имеет уникальную метку, и все они расположены в определенном порядке.
 
 Порядок элементов в файле проекта очень важен, так как система MSBuild основана на модели последовательной оценки.  Если файл проекта, включая все импортированные файлы PROPS и TARGETS, состоит из нескольких определений одного свойства, последнее определение переопределяет предыдущие. В примере ниже значение xyz задается во время компиляции, так как подсистема MSBUild обнаруживает его последним во время оценки.
@@ -72,20 +76,20 @@ MSBuild — это система проектов по умолчанию в Vi
 
 ```xml
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns='http://schemas.microsoft.com/developer/msbuild/2003'>
-   <ItemGroup Label="ProjectConfigurations" />
-   <PropertyGroup Label="Globals" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
-   <PropertyGroup Label="Configuration" />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
-   <ImportGroup Label="ExtensionSettings" />
-   <ImportGroup Label="PropertySheets" />
-   <PropertyGroup Label="UserMacros" />
-   <PropertyGroup />
-   <ItemDefinitionGroup />
-   <ItemGroup />
-   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
-   <ImportGroup Label="ExtensionTargets" />
- </Project>
+  <ItemGroup Label="ProjectConfigurations" />
+  <PropertyGroup Label="Globals" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
+  <PropertyGroup Label="Configuration" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets" />
+</Project>
 ```
 
 Следующие разделы описывают назначение каждого из этих элементов и причину подобного упорядочивания.
@@ -112,23 +116,27 @@ MSBuild — это система проектов по умолчанию в Vi
 
 В следующем фрагменте кода показана конфигурация проекта. В этом примере используется имя конфигурации "Debug|x64". Имя конфигурации проекта должно иметь формат $(Конфигурация)|$(Платформа). Узел конфигурации проекта может иметь два свойства: "Конфигурация" и "Платформа". При активной конфигурации этим свойствам автоматически назначаются указанные здесь значения.
 
-   ```xml
-   <ProjectConfiguration Include="Debug|x64">
-     <Configuration>Debug</Configuration>
-     <Platform>x64</Platform>
-   </ProjectConfiguration>
-   ```
+```xml
+<ProjectConfiguration Include="Debug|x64">
+  <Configuration>Debug</Configuration>
+  <Platform>x64</Platform>
+</ProjectConfiguration>
+```
 
 Интегрированная среда разработки ожидает найти конфигурацию проекта для любого сочетания значений "Конфигурация" и "Платформа", используемых во всех элементах ProjectConfiguration. Часто это означает, что для выполнения данного требования в проект могут включаться бесполезные конфигурации. Например, если проект имеет следующие конфигурации:
 
 - Debug|Win32;
+
 - Retail|Win32;
+
 - Special 32-bit Optimization|Win32;
 
 то он должен содержать и следующие конфигурации, хотя конфигурация Special 32-bit Optimization не имеет смысла для x64:
 
 - Отладка|x64
+
 - Retail|x64;
+
 - Special 32-bit Optimization|x64.
 
 Вы можете отключить команды сборки и развертывания для любой конфигурации в **диспетчере конфигурации решения**.
@@ -136,7 +144,7 @@ MSBuild — это система проектов по умолчанию в Vi
 ### <a name="globals-propertygroup-element"></a>Элемент Globals PropertyGroup
 
 ```xml
- <PropertyGroup Label="Globals" />
+<PropertyGroup Label="Globals" />
 ```
 
 `Globals` содержит параметры уровня проекта, такие как ProjectGuid, RootNamespace и ApplicationType/ApplicationTypeRevision. Последние два часто определяют целевую ОС. Проект можно ориентировать только на одну целевую ОС, так как ссылки и элементы проекта пока не могут иметь условий. Эти свойства обычно не переопределяются в другом месте в файле проекта. Эта группа не зависит от конфигурации, и поэтому в файле проекта обычно существует только одна группа Globals.
@@ -202,7 +210,7 @@ MSBuild — это система проектов по умолчанию в Vi
 ### <a name="per-configuration-itemdefinitiongroup-elements"></a>Элементы ItemDefinitionGroup для отдельных конфигураций
 
 ```xml
- <ItemDefinitionGroup />
+<ItemDefinitionGroup />
 ```
 
 Содержит определения элемента. Они должны соответствовать тем же правилам условий, что и элементы PropertyGroup без метки для отдельных конфигураций.
@@ -217,34 +225,35 @@ MSBuild — это система проектов по умолчанию в Vi
 
 Метаданные должны иметь условия конфигурации для каждой конфигурации, даже если они все одинаковые. Пример:
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="stdafx.cpp">
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
-       <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
-     </ClCompile>
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="stdafx.cpp">
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|Win32’">true</TreatWarningAsError>
+    <TreatWarningAsError Condition="‘$(Configuration)|$(Platform)’==’Debug|x64’">true</TreatWarningAsError>
+  </ClCompile>
+</ItemGroup>
+```
 
 Сейчас система проектов Visual C++ не поддерживает подстановочные знаки в элементах проекта.
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="*.cpp"> <!--Error-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="*.cpp"> <!--Error-->
+</ItemGroup>
+```
 
 Сейчас система проектов Visual C++ не поддерживает макросы в элементах проекта.
 
-   ```xml
-   <ItemGroup>
-     <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
-   </ItemGroup>
-   ```
+```xml
+<ItemGroup>
+  <ClCompile Include="$(IntDir)\generated.cpp"> <!--not guaranteed to work in all scenarios-->
+</ItemGroup>
+```
 
 Ссылки указываются в ItemGroup и имеют следующие ограничения:
 
 - Ссылки не поддерживают условия.
+
 - Метаданные ссылок не поддерживают условия.
 
 ### <a name="microsoftcpptargets-import-element"></a>Элемент Microsoft.Cpp.targets Import
@@ -293,5 +302,5 @@ MSBuild — это система проектов по умолчанию в Vi
 
 ## <a name="see-also"></a>См. также
 
-[Работа со свойствами проектов](working-with-project-properties.md)  
-[XML-файлы страницы свойств](property-page-xml-files.md)  
+[Работа со свойствами проектов](working-with-project-properties.md)<br/>
+[XML-файлы страницы свойств](property-page-xml-files.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384337"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118522"
 ---
 # <a name="c-bitwise-operators"></a>Побитовые операторы в C
 
@@ -35,17 +35,11 @@ ms.locfileid: "32384337"
 
 ## <a name="syntax"></a>Синтаксис
 
-*AND-expression*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*:  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 Операнды побитовых операторов должны иметь целочисленные типы, но их типы могут отличаться. Эти операторы выполняют обычные арифметические преобразования; типом результата является тип операнда после преобразования.
 
@@ -96,6 +90,6 @@ n = i ^ j;
 
 ## <a name="see-also"></a>См. также
 
-[Оператор побитового И: &](../cpp/bitwise-and-operator-amp.md)  
-[Оператор побитового исключающего ИЛИ: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[Оператор побитового включающего ИЛИ: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[Оператор побитового И: &](../cpp/bitwise-and-operator-amp.md)<br/>
+[Оператор побитового исключающего ИЛИ: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[Оператор побитового включающего ИЛИ: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

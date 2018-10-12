@@ -27,47 +27,50 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 53659b462f811bca79209dd141d90527401cbc95
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a4141d932cfad78ca9c563334ebbe51f711153e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388295"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46088726"
 ---
 # <a name="cxxframehandler"></a>__CxxFrameHandler
-Внутренняя функция CRT. Используется CRT для обработки кадров структурированной обработки исключений.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-EXCEPTION_DISPOSITION __CxxFrameHandler(  
-      EHExceptionRecord  *pExcept,  
-      EHRegistrationNode *pRN,  
-      void               *pContext,   
-      DispatcherContext  *pDC  
-   )  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `pExcept`  
- Запись исключения, передаваемая в возможные операторы `catch`.  
-  
- `pRN`  
- Динамические сведения о кадре стека, который используется для обработки исключения. Дополнительные сведения см. в описании ehdata.h.  
-  
- `pContext`  
- Контекст. (Не используется для процессоров Intel.)  
-  
- `pDC`  
- Дополнительные сведения о входе в функцию и кадре стека.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Одно из значений *выражения фильтра*, используемое в [операторе try-except](../cpp/try-except-statement.md).  
-  
-## <a name="remarks"></a>Примечания  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
+
+Внутренняя функция CRT. Используется CRT для обработки кадров структурированной обработки исключений.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+EXCEPTION_DISPOSITION __CxxFrameHandler(
+      EHExceptionRecord  *pExcept,
+      EHRegistrationNode *pRN,
+      void               *pContext,
+      DispatcherContext  *pDC
+   )
+```
+
+#### <a name="parameters"></a>Параметры
+
+*pExcept*<br/>
+Запись исключения, передаваемая в возможные операторы `catch`.
+
+*pRN*<br/>
+Динамические сведения о кадре стека, который используется для обработки исключения. Дополнительные сведения см. в описании ehdata.h.
+
+*pContext*<br/>
+Контекст. (Не используется для процессоров Intel.)
+
+*pDC*<br/>
+Дополнительные сведения о входе в функцию и кадре стека.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Одно из значений *выражения фильтра*, используемое в [операторе try-except](../cpp/try-except-statement.md).
+
+## <a name="remarks"></a>Примечания
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
 |__CxxFrameHandler|excpt.h, ehdata.h|

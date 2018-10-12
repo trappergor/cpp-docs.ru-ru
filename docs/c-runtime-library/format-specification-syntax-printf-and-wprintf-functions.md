@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216676"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082499"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>Синтаксис описания формата: функции printf и wprintf
 
@@ -58,8 +58,7 @@ ms.locfileid: "43216676"
 Целочисленные типы, такие как `short`, `int`, `long`, `long long` и их варианты `unsigned` указываются с помощью символов **d**, **i**, **o**, **u**, **x** и **X**. Типы с плавающей запятой, такие как `float`, `double` и `long double`, указываются с помощью символов **a**, **A**, **e**, **E**, **f**, **F**, **g** и **G**. По умолчанию, если не применяется префикс поля *size*, целочисленные аргументы приводятся к типу `int`, а аргументы с плавающей запятой приводятся к типу `double`. В 64-разрядных системах тип `int` является 32-разрядным значением; поэтому 64-разрядные целые числа будут усекаться при форматировании для вывода, если не используется префикс *size* со значением **ll** или **I64**. Для типов указателей, которые указываются с помощью символа**p**, используется размер указателя по умолчанию для платформы.
 
 > [!NOTE]
-> **Блок, относящийся только к системам Microsoft**  
-> Символ типа **Z**, а также поведение символов типа **c**, **C**, **s** и **S** при использовании с функциями `printf` и `wprintf` представляют собой расширения Майкрософт. C стандарта ISO постоянно использует **c** и **s** для узких символов и строк, и **C** и **S** — для расширенных символов и строк во всех функциях форматирования.
+> **Относится только к системам Майкрософт.** Символ типа **Z**, а также поведение символов типа **c**, **C**, **s** и **S** при использовании с функциями `printf` и `wprintf` представляют собой расширения Майкрософт. C стандарта ISO постоянно использует **c** и **s** для узких символов и строк, и **C** и **S** — для расширенных символов и строк во всех функциях форматирования.
 
 ### <a name="type-field-characters"></a>Символы поля типа
 
@@ -212,11 +211,10 @@ ms.locfileid: "43216676"
 Спецификатор типа **hc** или **hC** аналогичен **c** в функциях `printf` и **C** в функциях `wprintf`. Спецификатор типа **lc**, **lC**, **wc** или **wC** аналогичен **C** в функциях `printf` и **c** в функциях `wprintf`. Спецификатор типа **hs** или **hS** аналогичен **s** в функциях `printf` и **S** в функциях `wprintf`. Спецификатор типа **ls**, **lS**, **ws** или **wS** аналогичен **S** в функциях `printf` и **s** в функциях `wprintf`.
 
 > [!NOTE]
-> **Блок, относящийся только к системам Microsoft**  
-> Префиксы модификатора размера аргумента **I** (прописная i), **I32**, **I64** и **w** являются расширениями Майкрософт и не совместимы с C стандарта ISO. Префикс **h** при использовании с данными типа `char` и префикс **l** (строчная L) при использовании с данными типа `double` являются расширениями Майкрософт.
+> **Относится только к системам Майкрософт.** Префиксы модификатора размера аргумента **I** (прописная i), **I32**, **I64** и **w** являются расширениями Майкрософт и не совместимы с C стандарта ISO. Префикс **h** при использовании с данными типа `char` и префикс **l** (строчная L) при использовании с данными типа `double` являются расширениями Майкрософт.
 
 ## <a name="see-also"></a>См. также
 
-[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[Позиционные параметры printf_p](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf, _printf_l, wprintf, _wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s, _printf_s_l, wprintf_s, _wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[Позиционные параметры printf_p](../c-runtime-library/printf-p-positional-parameters.md)

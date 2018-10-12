@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f87b8ce4c8270b8f0d22c2396358e8e1118a4bbd
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57bd79e1df35f650d78da3108137d58405b33f25
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765059"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082018"
 ---
 # <a name="c-string-literals"></a>Строковые литералы в C
 
@@ -29,17 +29,11 @@ ms.locfileid: "43765059"
 
 ## <a name="syntax"></a>Синтаксис
 
-*string-literal*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"**  
-&nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
+*string-literal*: &nbsp;&nbsp;&nbsp;&nbsp;**"** *s-char-sequence*<sub>opt</sub> **"** &nbsp;&nbsp;&nbsp;&nbsp;**L"** *s-char-sequence*<sub>opt</sub> **"**
 
-*s-char-sequence*:  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char*  
-&nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
+*s-char-sequence*: &nbsp;&nbsp;&nbsp;&nbsp;*s-char* &nbsp;&nbsp;&nbsp;&nbsp;*s-char-sequence* *s-char*
 
-*s-char*:  
-&nbsp;&nbsp;&nbsp;&nbsp;любой член исходной кодировки, кроме двойной кавычки ("), обратной косой черты (\\) и символа новой строки  
-&nbsp;&nbsp;&nbsp;&nbsp;*escape-sequence*
+*s-char*: &nbsp;&nbsp;&nbsp;&nbsp;любой член исходной кодировки, кроме двойной кавычки ("), обратной косой черты (\\) и &nbsp;&nbsp;&nbsp;&nbsp;*escape-последовательности* символа новой строки
 
 ## <a name="remarks"></a>Примечания
 
@@ -53,4 +47,4 @@ char *amessage = "This is a string literal.";
 
 ## <a name="see-also"></a>См. также
 
-[Элементы языка C](../c-language/elements-of-c.md)  
+[Элементы языка C](../c-language/elements-of-c.md)
