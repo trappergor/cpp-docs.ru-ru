@@ -18,52 +18,56 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e78c8ace8b482baa29fbabaf102a8a1bccadd06
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9bd811080e3a5587056d67a45fce345b0a2b4d37
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325400"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419806"
 ---
 # <a name="ltvaluegt-visual-c"></a>&lt;value&gt; (Visual C++)
-Тег \<value> позволяет описать свойство и методы доступа к свойству. Обратите внимание, что при добавлении свойства с помощью мастера создания кода из интегрированной среды разработки Visual Studio для нового свойства будет добавлен тег [\<summary>](../ide/summary-visual-cpp.md). После этого следует вручную добавить тег \<value> для описания значения, которое представляется свойством.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-<value>property-description</value>  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `property-description`  
- Описание свойства.  
-  
-## <a name="remarks"></a>Примечания  
- Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).  
-  
-## <a name="example"></a>Пример  
-  
-```  
-// xml_value_tag.cpp  
-// compile with: /LD /clr /doc  
-// post-build command: xdcmake xml_value_tag.dll  
-using namespace System;  
-/// Text for class Employee.  
-public ref class Employee {  
-private:  
-   String ^ name;  
-   /// <value>Name accesses the value of the name data member</value>  
-public:  
-   property String ^ Name {  
-      String ^ get() {  
-         return name;   
-      }  
-      void set(String ^ i) {  
-         name = i;  
-      }  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>См. также  
- [Документация XML](../ide/xml-documentation-visual-cpp.md)
+
+Тег \<value> позволяет описать свойство и методы доступа к свойству. Обратите внимание, что при добавлении свойства с помощью мастера создания кода из интегрированной среды разработки Visual Studio для нового свойства будет добавлен тег [\<summary>](../ide/summary-visual-cpp.md). После этого следует вручную добавить тег \<value> для описания значения, которое представляется свойством.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+<value>property-description</value>
+```
+
+#### <a name="parameters"></a>Параметры
+
+*property-description*<br/>
+Описание свойства.
+
+## <a name="remarks"></a>Примечания
+
+Чтобы обработать и сохранить комментарии документации в файл, при компиляции необходимо использовать параметр [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md).
+
+## <a name="example"></a>Пример
+
+```
+// xml_value_tag.cpp
+// compile with: /LD /clr /doc
+// post-build command: xdcmake xml_value_tag.dll
+using namespace System;
+/// Text for class Employee.
+public ref class Employee {
+private:
+   String ^ name;
+   /// <value>Name accesses the value of the name data member</value>
+public:
+   property String ^ Name {
+      String ^ get() {
+         return name;
+      }
+      void set(String ^ i) {
+         name = i;
+      }
+   }
+};
+```
+
+## <a name="see-also"></a>См. также
+
+[Документация XML](../ide/xml-documentation-visual-cpp.md)

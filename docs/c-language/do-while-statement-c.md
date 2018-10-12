@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ef670aca60b2e3156ea70480a1dafc315ae60624
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755557"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46061480"
 ---
 # <a name="do-while-statement-c"></a>Оператор do-while (C)
 
@@ -30,8 +30,7 @@ ms.locfileid: "43755557"
 
 ## <a name="syntax"></a>Синтаксис
 
-*оператор-итерации*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do** *statement*  **while (**  *expression* **) ;**
 
 Выражение *expression* в операторе *do-while* вычисляется после выполнения тела цикла. Поэтому тело цикла всегда выполняется по крайней мере один раз.
 
@@ -47,10 +46,10 @@ ms.locfileid: "43755557"
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 В этом операторе *do-while* два оператора `y = f( x );` и `x--;` выполняются независимо от начального значения переменной `x`. Затем вычисляется выражение `x > 0`. Если `x` больше 0, тело оператора выполняется еще раз и снова вычисляется выражение `x > 0`. Тело оператора многократно выполняется, пока значение переменной `x` остается больше 0. Выполнение оператора *do-while* завершается, когда значение переменной `x` становится равным 0 или отрицательным. Тело цикла выполняется по крайней мере один раз.

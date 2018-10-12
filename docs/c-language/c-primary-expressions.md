@@ -14,30 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 688e62cc82446a2e52dc1b75a439881a4f2d8eed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 276e82a7768520c6a75c87cb49fcb26ce1f01253
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381435"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46066470"
 ---
 # <a name="c-primary-expressions"></a>Первичные выражения в C
-Операнды в выражениях называются основными выражениями.  
-  
-## <a name="syntax"></a>Синтаксис  
- *primary-expression*:  
- *identifier*  
-  
- *constant*  
-  
- *string-literal*  
-  
- **(**  *expression*  **)**  
-  
- *expression*:  
- *assignment-expression*  
-  
- *expression*  **,**  *assignment-expression*  
-  
-## <a name="see-also"></a>См. также  
- [Операнды и выражения](../c-language/operands-and-expressions.md)
+
+Операнды в выражениях называются основными выражениями.
+
+## <a name="syntax"></a>Синтаксис
+
+*primary-expression*: *identifier*
+
+*constant*
+
+*string-literal*
+
+**(**  *expression*  **)**
+
+*expression*: *assignment-expression*
+
+*expression*  **,**  *assignment-expression*
+
+## <a name="see-also"></a>См. также
+
+[Операнды и выражения](../c-language/operands-and-expressions.md)

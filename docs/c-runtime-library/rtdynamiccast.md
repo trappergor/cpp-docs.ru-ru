@@ -27,55 +27,60 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 90c68ed56b52b57deb234717b3b95ec197d26318
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450938"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092067"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
-Реализация оператора [dynamic_cast](../cpp/dynamic-cast-operator.md) в среде выполнения.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```cpp  
-PVOID __RTDynamicCast (  
-   PVOID inptr,   
-   LONG VfDelta,  
-   PVOID SrcType,  
-   PVOID TargetType,   
-   BOOL isReference  
-   ) throw(...)  
-```  
-  
-#### <a name="parameters"></a>Параметры  
- `inptr`  
- Указатель на полиморфный объект.  
-  
- `VfDelta`  
- Смещение указателя на виртуальную функцию в объекте.  
-  
- `SrcType`  
- Статический тип объекта, на который указывает параметр `inptr`.  
-  
- `TargetType`  
- Планируемый результат преобразования.  
-  
- `isReference`  
- Значение `true`, если аргумент является ссылкой; значение `false`, если аргумент является указателем.  
-  
-## <a name="return-value"></a>Возвращаемое значение  
- Указатель на соответствующий подобъект при успехе; в противном случае — значение **NULL**.  
-  
-## <a name="exceptions"></a>Исключения  
- `bad_cast()`, если входное значение `dynamic_cast<>` является ссылкой и приведение завершается неудачей.  
-  
-## <a name="remarks"></a>Примечания  
- Преобразует `inptr` в объект типа `TargetType`. Тип операнда `inptr` должен быть указателем, если `TargetType` является указателем, или l-значением, если `TargetType` является ссылкой. Параметр `TargetType` должен быть указателем или ссылкой на ранее определенный тип класса или указателем на void.  
-  
-## <a name="requirements"></a>Требования  
-  
-|Подпрограмма|Обязательный заголовок|  
-|-------------|---------------------|  
+
+Реализация оператора [dynamic_cast](../cpp/dynamic-cast-operator.md) в среде выполнения.
+
+## <a name="syntax"></a>Синтаксис
+
+```cpp
+PVOID __RTDynamicCast (
+   PVOID inptr,
+   LONG VfDelta,
+   PVOID SrcType,
+   PVOID TargetType,
+   BOOL isReference
+   ) throw(...)
+```
+
+#### <a name="parameters"></a>Параметры
+
+*inptr*<br/>
+Указатель на полиморфный объект.
+
+*VfDelta*<br/>
+Смещение указателя на виртуальную функцию в объекте.
+
+*SrcType*<br/>
+Статический тип объекта, на который указывает параметр `inptr`.
+
+*TargetType*<br/>
+Планируемый результат преобразования.
+
+*isReference*<br/>
+Значение `true`, если аргумент является ссылкой; значение `false`, если аргумент является указателем.
+
+## <a name="return-value"></a>Возвращаемое значение
+
+Указатель на соответствующий подобъект при успехе; в противном случае — значение **NULL**.
+
+## <a name="exceptions"></a>Исключения
+
+`bad_cast()`, если входное значение `dynamic_cast<>` является ссылкой и приведение завершается неудачей.
+
+## <a name="remarks"></a>Примечания
+
+Преобразует `inptr` в объект типа `TargetType`. Тип операнда `inptr` должен быть указателем, если `TargetType` является указателем, или l-значением, если `TargetType` является ссылкой. Параметр `TargetType` должен быть указателем или ссылкой на ранее определенный тип класса или указателем на void.
+
+## <a name="requirements"></a>Требования
+
+|Подпрограмма|Обязательный заголовок|
+|-------------|---------------------|
 |__RTDynamicCast|rtti.h|

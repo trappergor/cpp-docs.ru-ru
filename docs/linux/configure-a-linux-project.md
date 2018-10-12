@@ -1,7 +1,7 @@
 ---
 title: Настройка проекта C++ Linux в Visual Studio | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895205"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383250"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
 
@@ -33,9 +33,11 @@ ms.locfileid: "43895205"
 
 По умолчанию исполняемый файл (OUT-файл) создается с помощью инструмента.  Чтобы построить статическую или динамическую библиотеку или использовать существующий файл Makefile, используйте раздел **Тип конфигурации**.
 
+Дополнительные сведения о параметрах на страницах свойств см. в статье [Справочник по страницам свойств проекта Linux](prop-pages-linux.md).
+
 ## <a name="remote-settings"></a>Настройки удаленной системы
 
-Чтобы изменить параметры, относящиеся к удаленному компьютеру Linux, настройте удаленные параметры, отображаемые в окне **Общие**:
+Чтобы изменить параметры, относящиеся к удаленному компьютеру Linux, настройте удаленные параметры, отображаемые в окне [Общие](prop-pages/general-linux.md):
 
 - Чтобы изменить целевой компьютер Linux, используйте запись **Компьютер удаленной сборки**.  Это позволит выбрать одно из подключений, созданных ранее.  Чтобы создать новую запись, см. раздел [Подключение к удаленному компьютеру Linux](connect-to-your-remote-linux-computer.md).
 
@@ -44,11 +46,12 @@ ms.locfileid: "43895205"
 - **Каталог проекта удаленной сборки** — это место, где будет выполняться сборка этого конкретного проекта на удаленном компьютере Linux.  По умолчанию это каталог **$(RemoteRootDir)/$(ProjectName)**, который будет развернут в каталог с именем текущего проекта в корневом каталоге, заданном выше.
 
 > [!NOTE]
-> Изменить компиляторы C и C++ или компоновщик и архиватор, которые используются для сборки проекта по умолчанию, можно в соответствующих записях в разделе **C/C++ > Общие** и разделе **Компоновщик > Общие**.  Например, здесь можно задать использование определенной версии GCC или даже компилятора Clang.
+> Изменить компиляторы C и C++ или компоновщик и архиватор, которые используются для сборки проекта по умолчанию, можно в соответствующих записях в разделе **C/C++ > Общие** и разделе **Компоновщик > Общие**.  Например, здесь можно задать использование определенной версии GCC или даже компилятора Clang. Дополнительные сведения см. в статьях [Свойства C/C++ (Linux)](prop-pages/c-cpp-linux.md) и [Свойства компоновщика (Linux C++)](prop-pages/linker-linux.md).
 
 ## <a name="include-directories-and-intellisense-support"></a>Каталоги включаемых файлов и поддержка технологии IntelliSense
 
-**Visual Studio 2017 15.6 и более ранние версии:** по умолчанию Visual Studio не включает никакие системные файлы include с компьютера Linux.  Например, элементы из каталога **/usr/include** отсутствуют в Visual Studio.
+**Visual Studio 2017 версии 15.6 или более ранних версий**<br/>
+По умолчанию Visual Studio не включает никакие системные файлы include с компьютера Linux.  Например, элементы из каталога **/usr/include** отсутствуют в Visual Studio.
 Для полной поддержки [IntelliSense](/visualstudio/ide/using-intellisense) вы должны будете скопировать эти файлы в какое-нибудь место на компьютере разработки и указать Visual Studio это место.  Одним из вариантов является использование scp (безопасное копирование) для копирования файлов.  В Windows 10 можно использовать [Bash в Windows](https://msdn.microsoft.com/commandline/wsl/about) для выполнения команды scp.  В предыдущих версиях Windows можно использовать что-нибудь вроде [PSCP (PuTTY Secure Copy)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).
 
 Можно скопировать файлы с помощью команды, аналогичной приведенной ниже:
@@ -61,7 +64,8 @@ ms.locfileid: "43895205"
 
 ![Каталоги VC++](media/settings_directories.png)
 
-**Visual Studio 2017 15.7 и более поздние версии:** см. раздел [Управление удаленными заголовками для IntelliSense](#remote_intellisense).
+**Visual Studio 2017 версии 15.7 и выше**<br/>
+Сведения см. в разделе [IntelliSense для удаленных заголовков (Visual Studio 2017 15.7 и более поздние версии)](#remote_intellisense).
 
 ## <a name="copy-sources"></a>Копирование источников
 
@@ -97,8 +101,8 @@ apt install zip
 
 ## <a name="see-also"></a>См. также
 
-[Работа со свойствами проектов](../ide/working-with-project-properties.md)  
-[Общие свойства C++ (Linux C++)](../linux/prop-pages/general-linux.md)  
-[Каталоги VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[Свойства копирования источников проекта (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[Работа со свойствами проектов](../ide/working-with-project-properties.md)<br/>
+[Общие свойства C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[Каталоги VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[Свойства копирования источников проекта (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [Свойства событий сборки (Linux C++)](../linux/prop-pages/build-events-linux.md)
