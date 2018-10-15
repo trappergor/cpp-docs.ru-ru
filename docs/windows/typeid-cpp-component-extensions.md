@@ -1,7 +1,7 @@
 ---
-title: typeid (расширения компонентов C++) | Документация Майкрософт
+title: typeid (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435406"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327587"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (расширения компонентов C++)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C + +/ CLI и C + +/ CX)
 
 Получает значение, указывающее тип объекта.
 
-> [!WARNING]
+> [!NOTE]
 > Этот раздел относится к версии typeid расширений компонентов C++. Версии ISO C++ этого ключевого слова, см. в разделе [оператор typeid](../cpp/typeid-operator.md).
 
 ## <a name="all-runtimes"></a>Все среды выполнения
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

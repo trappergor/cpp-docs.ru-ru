@@ -1,7 +1,7 @@
 ---
 title: Перенаправление типов (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396555"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328341"
 ---
 # <a name="type-forwarding-ccli"></a>Перенаправление типов (C++/CLI)
 
 *Перенаправление типов* позволяет переместить тип из одной сборки (А) в другую сборку (сборку Б), таким образом, что нет необходимости в повторной компиляции клиентов, использующих сборку а
 
-## <a name="all-platforms"></a>Все платформы
-
-Эта возможность поддерживается не во всех средах выполнения.
-
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
 Эта функция не поддерживается в среде выполнения Windows.
-
-### <a name="requirements"></a>Требования
-
-Параметр компилятора: `/ZW`
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
@@ -44,7 +36,7 @@ ms.locfileid: "46396555"
 
 ### <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ ms.locfileid: "46396555"
 
 3. Удалите определение типа `MyClass` из исходного кода, используемого для создания сборки A.dll, и замените его следующим кодом:
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

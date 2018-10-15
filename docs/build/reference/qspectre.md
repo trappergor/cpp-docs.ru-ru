@@ -1,7 +1,7 @@
 ---
 title: / Qspectre | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/24/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ed4b84ab761653dde4da6adcd14ec8e77334688
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821651"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328523"
 ---
 # <a name="qspectre"></a>/ Qspectre
 
@@ -32,7 +32,7 @@ ms.locfileid: "48821651"
 
 ## <a name="remarks"></a>Примечания
 
-**/Qspectre** параметр недоступен в Visual Studio 2017 версии 15.5.5 и более поздней версии и в Visual Studio 2015 с обновлением 3 через [4338871 КБ](https://support.microsoft.com/en-us/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Она предписывает компилятору вставить инструкции для устранения определенных [уязвимости Spectre](https://spectreattack.com/spectre.pdf). Эти уязвимости, вызывается *атаки упреждающего исполнения на стороне канала*, влияют на многие операционные системы и современных процессоров, включая процессоры от Intel, AMD и ARM.
+**/Qspectre** параметр недоступен в Visual Studio 2017 версии 15.5.5 и более поздней версии и в Visual Studio 2015 с обновлением 3 через [4338871 КБ](https://support.microsoft.com/help/4338871/visual-studio-2015-update-3-spectre-variant-1-toolset-qspectre). Она предписывает компилятору вставить инструкции для устранения определенных [уязвимости Spectre](https://spectreattack.com/spectre.pdf). Эти уязвимости, вызывается *атаки упреждающего исполнения на стороне канала*, влияют на многие операционные системы и современных процессоров, включая процессоры от Intel, AMD и ARM.
 
 **/Qspectre** параметр отключен по умолчанию.
 

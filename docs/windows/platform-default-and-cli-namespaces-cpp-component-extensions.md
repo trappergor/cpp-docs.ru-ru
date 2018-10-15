@@ -1,7 +1,7 @@
 ---
-title: Platform, default и cli пространств имен (расширения компонентов C++) | Документация Майкрософт
+title: Platform, default и cli пространств имен (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194653"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328029"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>Пространства имен platform, default и cli (расширения компонентов C++)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>Platform, default и cli пространств имен (C + +/ CLI и C + +/ CX)
 
 Пространство имен определяет имена языковых элементов таким образом, чтобы они не конфликтовали с именами в других частях исходного кода, которые в противном случае считались бы идентичными. Например, конфликты имен могут не дать компилятору распознать [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md). Пространства имен используются компилятором, но не сохраняются в скомпилированной сборке.
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
-При создании проекта Visual C++ предоставляет для него пространство имен по умолчанию. Можно вручную переименовать пространство имен, несмотря на то, что в среде выполнения Windows имя winmd-файла должно соответствовать имени корневого пространства имен.
+Visual Studio предоставляет пространство имен по умолчанию для проекта, при создании проекта. Можно вручную переименовать пространство имен, несмотря на то что в C + +/ CX имя winmd-файла должно соответствовать имени корневого пространства имен.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 566164f40f8795c8402b04c9c25e13dda036961d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 50295c9d296449e36ed4a305b568d2e0aaed10a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765441"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327912"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Классы, совместно используемые MFC и ATL
 
@@ -33,8 +33,8 @@ ms.locfileid: "43765441"
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Инкапсулирует тип данных даты, используемый в OLE-автоматизации.|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Представляет относительное время, период времени.|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Класс, аналогичный Windows [ТОЧКИ](../../mfc/reference/point-structure1.md) структура также включает функции-члены для управления `CPoint` и `POINT` структур.|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Класс, аналогичный Windows [RECT](../../mfc/reference/rect-structure1.md) структура также включает функции-члены для управления `CRect` объекты и Windows `RECT` структуры.|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Класс, аналогичный Windows [ТОЧКИ](../../mfc/reference/point-structure.md) структура также включает функции-члены для управления `CPoint` и `POINT` структур.|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Класс, аналогичный Windows [RECT](../../mfc/reference/rect-structure.md) структура также включает функции-члены для управления `CRect` объекты и Windows `RECT` структуры.|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|Представляет `CSimpleStringT` объекта.|atlsimpstr.h|
 |[CSize](../../atl-mfc-shared/reference/csize-class.md)|Класс, аналогичную структуре размер Windows, реализующий относительные координаты или положение.|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|Обеспечивает автоматическое освобождение ресурстов для `GetBuffer` и `ReleaseBuffer` вызывает на имеющихся `CStringT` объекта.|atlsimpstr.h|
