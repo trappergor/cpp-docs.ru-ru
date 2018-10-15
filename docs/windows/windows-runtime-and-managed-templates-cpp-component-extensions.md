@@ -1,7 +1,7 @@
 ---
-title: Среда выполнения Windows и управляемые шаблоны (расширения компонентов C++) | Документация Майкрософт
+title: Среда выполнения Windows и управляемые шаблоны (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591453"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328302"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Среда выполнения Windows и управляемые шаблоны (расширения компонентов C++)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Среда выполнения Windows и управляемые шаблоны (C + +/ CLI и C + +/ CX)
 
 Шаблоны позволяют определять прототип среды выполнения Windows или тип среды CLR, а затем создавать варианты этого типа с помощью разных параметров типа шаблонов.
 
@@ -50,7 +50,7 @@ ms.locfileid: "42591453"
 
 ### <a name="examples"></a>Примеры
 
-Экземпляр универсального типа можно создать с помощью параметра шаблона управляемого типа, но создать экземпляр управляемого шаблона с помощью параметра шаблона универсального типа невозможно. Это связано с тем, что универсальные типы разрешаются во время выполнения. Дополнительные сведения см. в разделе [универсальные типы и шаблоны (Visual C++)](../windows/generics-and-templates-visual-cpp.md).
+Экземпляр универсального типа можно создать с помощью параметра шаблона управляемого типа, но создать экземпляр управляемого шаблона с помощью параметра шаблона универсального типа невозможно. Это связано с тем, что универсальные типы разрешаются во время выполнения. Дополнительные сведения см. в разделе [универсальные типы и шаблоны (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md).
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

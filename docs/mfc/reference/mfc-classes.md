@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403150"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328614"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 
@@ -34,7 +34,7 @@ ms.locfileid: "46403150"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Класс CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[Класс CAccelerateDecelerateTransition](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 Реализует переход между ускорением и замедлением.
 
 [Класс CAnimateCtrl](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ ms.locfileid: "46403150"
 Предоставляет функции поля со списком Windows.
 
 [Класс CClientDC](../../mfc/reference/cclientdc-class.md)<br/>
-Обрабатывает вызовы функций Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) во время создания и [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения.
+Обрабатывает вызовы функций Windows [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) во время разработки и функций [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) во время уничтожения.
 
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 Базовый класс для архитектуры схемы сообщений библиотеки классов Microsoft Foundation.
@@ -863,7 +863,7 @@ ms.locfileid: "46403150"
 Представляет фреймовое окно половинной высоты по сравнению с тем, которое стандартно отображается на плавающих панелях инструментов.
 
 [Класс CMonikerFile](../../mfc/reference/cmonikerfile-class.md)<br/>
-Представляет поток данных ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) с именем, [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
+Представляет поток данных ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) с именем [IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker).
 
 [Класс CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 Инкапсулирует функциональность элемента управления "календарь месяца".
@@ -1022,7 +1022,7 @@ ms.locfileid: "46403150"
 Используется в особых случаях в диалоговом окне OLE "Изменить ссылки", которое используется при необходимости обновления только существующих связанных или внедренных объектов в документе.
 
 [Класс COleVariant](../../mfc/reference/colevariant-class.md)<br/>
-Инкапсулирует [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных.
+Инкапсулирует тип данных [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) .
 
 [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 Класс `CPagerCtrl` создается элемент управления страничного навигатора Windows, который может выполнить прокрутку и отобразить содержащееся окно, которое не помещается в содержащее его окно.
@@ -1109,7 +1109,7 @@ ms.locfileid: "46403150"
 Представление, которое отображает записи базы данных в элементах управления.
 
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Аналогичную Windows [структура RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us).
+Аналогичную Windows [структура RECT](rect-structure.md).
 
 [Класс CRectTracker](../../mfc/reference/crecttracker-class.md)<br/>
 Позволяет отображать и перемещать элемент, а также различными способами изменять его размеры.
@@ -1175,7 +1175,7 @@ ms.locfileid: "46403150"
 Инкапсулирует переход с синусоидальной скоростью, амплитуда которого определяется начальной скоростью переменной анимации.
 
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Аналогичную Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, реализующий относительные координаты или положение.
+Аналог структуры [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.
 
 [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)<br/>
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.

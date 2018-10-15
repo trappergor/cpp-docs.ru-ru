@@ -1,7 +1,7 @@
 ---
-title: safe_cast (расширения компонентов C++) | Документация Майкрософт
+title: safe_cast (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404219"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328484"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (расширения компонентов C++)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI и C + +/ CX)
 
 **Safe_cast** операция возвращает указанное выражение как указанный тип, в случае успеха; в противном случае создает `InvalidCastException`.
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404219"
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )  
 ```
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )  
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -132,7 +120,7 @@ expression
 
 ### <a name="remarks"></a>Примечания
 
-Выражение `safe_cast<` *идентификатор типа*`>(`*выражение* `)` преобразует выражение операнда в объект типа type-id.
+Выражение `safe_cast<` *идентификатор типа*`>(`*выражение* `)` преобразует операнд *выражение* для объекта типа *идентификатор типа*.
 
 Компилятор будет принимать [static_cast](../cpp/static-cast-operator.md) в большинстве мест, где он будет принимать **safe_cast**.  Тем не менее **safe_cast** гарантированно создается проверяемый код MSIL, тогда как **static_cast** может создать непроверяемый MSIL.  См. в разделе [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md) и [Peverify.exe (средство PEVerify)](/dotnet/framework/tools/peverify-exe-peverify-tool) Дополнительные сведения о проверяемом коде.
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

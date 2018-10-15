@@ -1,7 +1,7 @@
 ---
-title: Универсальные шаблоны (расширения компонентов C++) | Документация Майкрософт
+title: Универсальные шаблоны (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448354"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327679"
 ---
-# <a name="generics--c-component-extensions"></a>Универсальные типы и методы (расширения компонентов C++)
+# <a name="generics--ccli-and-ccx"></a>Универсальные шаблоны (C + +/ CLI и C + +/ CX)
 
-Универсальные шаблоны — это параметризованные типы и методы. В этом разделе указывается, какие универсальные функции поддерживаются как средой выполнения Windows, так и средой CLR, а какие — только средой CLR. Кроме того, рассматривается создание в Visual C++ собственных универсальных методов и типов, а также использование в Visual С++ универсальных типов, созданных на языке .NET Framework. Наконец, в этом разделе сравниваются универсальные шаблоны и шаблоны C++.
+Универсальные шаблоны — это параметризованные типы и методы. В этом разделе указывается, какие универсальные возможности поддерживаются как средой выполнения Windows, так и средой CLR, а какие — только средой CLR. Кроме того, узнайте, как создавать собственные универсальные методы и типы в C + +/ CLI и использование универсальных типов, созданных на языке .NET Framework в C + +/ CLI. Наконец, в этом разделе сравниваются универсальные шаблоны и шаблоны C++.
 
 ## <a name="in-this-section"></a>В этом разделе
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Поддержка средой выполнения Windows и средой CLR
 
-[Обзор универсальных типов в Visual C++](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[Обзор универсальных типов в C + +/ CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Сведения об универсальных шаблонах, причины использования возможности языка, определения терминов, используемых для описания универсальных шаблонов, и сведения об использовании ссылочных типов и типов значений в качестве параметров типа для универсальных шаблонов.
 
-[Универсальные интерфейсы (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Универсальные интерфейсы (C + +/ CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных интерфейсов.
 
-[Универсальные делегаты (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Универсальные делегаты (C + +/ CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных делегатов.
 
 [Ограничения, применяемые к параметрам универсальных типов (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 Сведения об использовании ограничений в универсальных типах.
 
 [Использование универсальных типов (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Сведения об использовании в Visual C++ универсальных шаблонов, определенных в сборках .NET, возможно, созданных на других языках.
+Сведения об использовании универсальных шаблонов, определенных в сборках .NET, возможно, созданных на других языках, в C + +/ CLI.
 
-[Универсальные типы и шаблоны (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Универсальные типы и шаблоны (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Сравнение универсальных и обычных шаблонов, а также сведения о том, когда использовать каждый из них и как их эффективно объединять.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Поддержка средой CLR
@@ -66,4 +66,4 @@ ms.locfileid: "46448354"
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

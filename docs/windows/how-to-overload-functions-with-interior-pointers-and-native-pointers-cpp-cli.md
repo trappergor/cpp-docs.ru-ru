@@ -1,7 +1,7 @@
 ---
 title: 'Практическое: перегрузка функций с внутренними и собственными указателями (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c019114726f696461de58d2dc4110a3150318c8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 02f8d15c69bfef361d8ce34d9d6a1748692ea345
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598005"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327834"
 ---
 # <a name="how-to-overload-functions-with-interior-pointers-and-native-pointers-ccli"></a>Практическое руководство. Перегрузка функций с внутренними и собственными указателями (C++/CLI)
 
 Функции могут быть перегружены в зависимости от того, является ли тип параметра внутреннего указателя или собственного указателя.
 
 > [!IMPORTANT]
-> Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
+> Эта возможность языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
 
 ## <a name="example"></a>Пример
 

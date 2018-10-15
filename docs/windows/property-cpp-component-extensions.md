@@ -1,7 +1,7 @@
 ---
-title: Property (расширения компонентов C++) | Документация Майкрософт
+title: свойства (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420508"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328237"
 ---
-# <a name="property--c-component-extensions"></a>property (расширения компонентов C++)
+# <a name="property--ccli-and-ccx"></a>свойства (C + +/ CLI и C + +/ CX)
 
 Объявляет *свойство*, который является функцией-членом, который действует и доступна как элемент данных или элемент массива.
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
