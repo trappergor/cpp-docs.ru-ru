@@ -1,7 +1,7 @@
 ---
-title: Классы и структуры (расширения компонентов C++) | Документация Майкрософт
+title: Класс ссылки и структуры ссылки (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448380"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328081"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>Классы и структуры (расширения компонентов C++)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>Класс ссылки и структуры ссылки (C + +/ CLI и C + +/ CX)
 
-Объявляет класс или структура, *время жизни объекта* администрируется автоматически. Когда объект больше не доступен или выходит за пределы области, Visual C++ автоматически отменяет память, выделенную для этого объекта.
+**Ссылочного класса** или **структура ссылки** расширения объявления класса или структуры, *время жизни объекта* администрируется автоматически. Когда объект больше не доступен или выходит за пределы области, память освобождается.
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
@@ -61,7 +61,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *base_type*<br/>
 (Необязательно) Базовый тип. Однако тип значения не может действовать как базовый тип.
 
-Дополнительные сведения см. в разделе описания конкретного языка этого параметра в общие Runtimesections языка и параметров времени выполнения Windows.
+Дополнительные сведения см. в разделе описания конкретного языка этого параметра в среде выполнения Windows и среда CLR.
 
 ### <a name="remarks"></a>Примечания
 
@@ -129,4 +129,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
