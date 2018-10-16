@@ -1,7 +1,7 @@
 ---
-title: Упаковка-преобразование (расширения компонентов C++) | Документация Майкрософт
+title: Упаковка-преобразование (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b11ac2f6b640e42c14522b45fe0c3da89036ae24
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316722"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328016"
 ---
-# <a name="boxing--c-component-extensions"></a>Упаковка-преобразование (расширения компонентов C++)
+# <a name="boxing--ccli-and-ccx"></a>Упаковка-преобразование (C + +/ CLI и C + +/ CX)
 
-Компилятор Visual C++ может преобразовывать типы значений в объекты в процессе, называемом *упаковки-преобразования*и преобразовывать объекты в типы значений в процессе, называемом *распаковки*.
+Преобразование типов значений в объекты называется *упаковки-преобразования*, и преобразование объектов в типы значений называется *распаковки*.
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
@@ -86,7 +86,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-Компилятор Visual C++ теперь упаковывает-преобразовывает типы значений в <xref:System.Object>. Это возможно благодаря преобразованию, заданному компилятором, для преобразования типов значений в <xref:System.Object>.
+Поля компилятора типы значений в <xref:System.Object>. Это возможно благодаря преобразованию, заданному компилятором, для преобразования типов значений в <xref:System.Object>.
 
 Упаковка-преобразование и распаковка-преобразование позволяют обрабатывать типы значений как объекты. Типы значений, включая типы структур и встроенные типы, такие как int, могут преобразовываться в тип <xref:System.Object> и из этого типа.
 
@@ -200,4 +200,4 @@ in func2(System::ValueType^)
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
