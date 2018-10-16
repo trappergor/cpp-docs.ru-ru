@@ -1,7 +1,7 @@
 ---
 title: Страница свойств каталогов VC++ | Документы Майкрософт
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82aaa2dc43177963b9b38c398e74aaa0ffff11dd
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 1799bfedaacd5e1560b1294524f717db8912f6b0
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821222"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072402"
 ---
 # <a name="vc-directories-property-page-windows"></a>Страница свойств каталогов VC++ (Windows)
 
@@ -76,7 +76,7 @@ ms.locfileid: "48821222"
 
 Дополнительные сведения о макросах и о том, почему их по возможности следует использовать вместо жестко заданных путей, см. в разделе [Работа со свойствами проектов](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros).
 
-Список распространенных макросов см. в разделе [Стандартные макросы для команд и свойств сборки](https://docs.microsoft.com/cpp/ide/common-macros-for-build-commands-and-properties).
+Список распространенных макросов см. в разделе [Стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
 
 Вы можете определить собственные макросы двумя способами:
 

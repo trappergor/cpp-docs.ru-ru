@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821547"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083987"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
 
@@ -282,7 +282,7 @@ ms.locfileid: "48821547"
 
 - **часы**
 
-   В предыдущих версиях функция [clock](../c-runtime-library/reference/clock.md) была реализована с помощью функции API-интерфейса Windows [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx). При такой реализации функция clock зависела от системного времени и поэтому не была обязательно монотонной. Реализация функции clock была изменена с учетом [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) и теперь является монотонной.
+   В предыдущих версиях функция [clock](../c-runtime-library/reference/clock.md) была реализована с помощью функции API-интерфейса Windows [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime). При такой реализации функция clock зависела от системного времени и поэтому не была обязательно монотонной. Реализация функции clock была изменена с учетом [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) и теперь является монотонной.
 
 - **fstat и _utime**
 
@@ -2545,7 +2545,7 @@ ms.locfileid: "48821547"
 
 - **Недопустимость поддержки атрибутивного кода ATL** (уровень 1 (`/W1`) включен по умолчанию)
 
-   Предыдущие версии компилятора поддерживали атрибутивный код ATL. На следующем этапе процесса отмены поддержки атрибутивного кода ATL, который [начался в Visual Studio 2008](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx), атрибутивный код ATL выведен из эксплуатации. Для выявления такого нерекомендуемого кода компилятор теперь выдает предупреждение C4467.
+   Предыдущие версии компилятора поддерживали атрибутивный код ATL. На следующем этапе процесса отмены поддержки атрибутивного кода ATL, который [начался в Visual Studio 2008](https://msdn.microsoft.com/library/bb384632), атрибутивный код ATL выведен из эксплуатации. Для выявления такого нерекомендуемого кода компилятор теперь выдает предупреждение C4467.
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated
