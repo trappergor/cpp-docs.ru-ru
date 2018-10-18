@@ -1,7 +1,7 @@
 ---
 title: Использование проверяемых сборок вместе с SQL Server (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382223"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410711"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Использование проверяемых сборок вместе с SQL Server (C++/CLI)
 
@@ -32,9 +32,10 @@ SQL Server предоставляет расширения языка Transact-S
 
 - Неограниченный режим: выполнять код на свой страх и риск; не требуется быть проверяемый типобезопасный код.
 
-- Безопасный режим: запускает строго типизированный код; компилировать с/CLR: safe.
+- Безопасный режим: запускает строго типизированный код; компилировать с/CLR: safe. 
 
-Безопасный режим требует выполняемых сборок проверяемым строго типизированной.
+> [!IMPORTANT]
+> Рекомендуется использовать Visual Studio 2015 и Visual Studio 2017 не поддерживает **/CLR: pure** и **/CLR: safe** Создание проверяемых проектов. Если вам требуется проверяемый код, мы рекомендуем перевести код на C#.
 
 Чтобы создать и загрузить проверяемой сборки в SQL Server, используйте команды Transact-SQL CREATE ASSEMBLY и инструкция DROP ASSEMBLY следующим образом:
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>См. также
 
-[Практическое: перенос в/CLR: safe (C + +/ CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)

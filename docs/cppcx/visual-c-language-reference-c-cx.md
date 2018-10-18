@@ -9,19 +9,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 578df738d2c601c82f530ee32ae30284f6dac5ef
+ms.sourcegitcommit: e462e78a2dac06a0a539299facf34cdaeaf4d08c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105709"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401413"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Справочник по языку C++ (C++/CX)
 
 C + +/ CX представляет собой набор расширений языка C++, которые позволяют создавать приложения Windows и компонентов среды выполнения Windows с идиоматикой, близкой к современному максимально C++. Использовать C + +/ CX для написания приложений Windows и компонентов в машинном коде, легко взаимодействующих с Visual C#, Visual Basic и JavaScript и другими языками, поддерживающими среды выполнения Windows. В редких случаях, когда требуется прямой доступ к интерфейсам COM или код без поддержки исключений, можно использовать [библиотеки шаблонов C++ (WRL) среды выполнения Windows](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 > [!NOTE]
-> C + +/ WinRT — это новый "," стандартный C ++ 17 языковых проекции для API среды выполнения Windows. Она доступна в последний пакет SDK Windows 10 версии 1803 и далее. C + +/ WinRT реализуется полностью в файлах заголовков и предоставляющая с первоклассный доступ к современных API Windows.
+> **[C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) рекомендуется в качестве альтернативы к C + +/ CX**. Это новый "," стандартный C ++ 17 языковых проекции для API среды выполнения Windows, доступные в последний пакет SDK Windows 10 версии 1803 и далее. C + +/ WinRT реализуется полностью в файлах заголовков и предоставляющая с первоклассный доступ к современных API Windows.
 
 > С использованием C + +/ WinRT, можно одновременно использовать и создавать интерфейсы API среды выполнения Windows, с помощью любой совместимый со стандартами C ++ 17 компилятор. C + +/ WinRT обычно работает быстрее и создает меньше двоичных файлов, чем любой другой параметр языка для среды выполнения Windows. Мы продолжим предоставлять поддержку C + +/ CX и WRL, но настоятельно рекомендуется, использовать новые приложения C + +/ WinRT. Дополнительные сведения см. в разделе [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
@@ -29,7 +29,7 @@ C + +/ CX представляет собой набор расширений я
 
 - Приложения C++ универсальной платформы Windows (UWP), использующие XAML для определения пользователя интерфейса и используется собственный стек. Дополнительные сведения см. в разделе [Создание приложения «hello world» в C++ (UWP)](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
-- Компоненты среды выполнения Windows на C++, которые можно использовать их в приложениях Windows на базе JavaScript. Дополнительные сведения см. в разделе [создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+- Компоненты среды выполнения Windows на C++, которые можно использовать их в приложениях Windows на базе JavaScript. Для получения дополнительной информации см. [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 - Игры Windows на базе DirectX и приложения, активно использующие графику. Дополнительные сведения см. в разделе [создание простой игрой UWP с помощью DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
 
@@ -44,5 +44,5 @@ C + +/ CX представляет собой набор расширений я
 |[Работа с потоками и маршалинг](../cppcx/threading-and-marshaling-c-cx.md)|Принципы указания поведения при использовании потоков и маршалинга в создаваемых компонентах.|
 |[Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)|Справочная документация по следующим пространствам имен: по умолчанию, Platform, Platform::Collections и другим связанным с ними пространствам имен.|
 |[Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)|Список функций CRT, недоступных для использования в приложениях среды выполнения Windows.|
-|[Практические руководства для приложений Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Общие рекомендации по приложениям Windows 10, а также ссылки на дополнительную информацию.|
+|[Практические руководства по приложениям Windows 10](https://msdn.microsoft.com/library/windows/apps/xaml/mt244352.aspx)|Общие рекомендации по приложениям Windows 10, а также ссылки на дополнительную информацию.|
 |[C + +/ CX: часть 0 из \[n\]: введение](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction/)<br /><br />[C + +/ CX: часть 1 из \[n\]: простой класс](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class/)<br /><br />[C + +/ CX: часть 2 из \[n\]: типы крышками](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats/)<br /><br />[C + +/ CX: часть 3 из \[n\]: В процессе построения](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)<br /><br />[C + +/ CX: часть 4 из \[n\]: статические функции-члены](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions/)|Вводные серии публикаций в блоге Visual C++, C + +/ CX.|
