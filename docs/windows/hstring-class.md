@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163124"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410815"
 ---
 # <a name="hstring-class"></a>Класс HString
 
-Вспомогательный класс для управления жизненным циклом с помощью шаблон RAII HSTRING.
+Вспомогательный класс для управления жизненным циклом [HSTRING](/windows/desktop/WinRT/hstring) с помощью шаблон RAII.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Примечания
 
-Среда выполнения Windows предоставляет доступ к строкам посредством дескрипторов HSTRING. `HString` Класс предоставляет удобные функции и операторы для упрощения использования дескрипторов HSTRING. Этот класс может обрабатывать время существования HSTRING, которому он принадлежит через шаблон RAII.
+Среда выполнения Windows предоставляет доступ к строкам посредством [HSTRING](/windows/desktop/WinRT/hstring) дескрипторов. `HString` Класс предоставляет удобные функции и операторы для упрощения использования дескрипторов HSTRING. Этот класс может обрабатывать время существования HSTRING, которому он принадлежит через шаблон RAII.
 
 ## <a name="members"></a>Участники
 

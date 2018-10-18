@@ -1,7 +1,7 @@
 ---
 title: Реализация простых объектов получателей | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ce6f57846a0dcad79eead500286525e94c66a8e6
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b407af3e6c105bdbb2f8d91aa9d854e6d877592c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162299"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410698"
 ---
 # <a name="implementing-a-simple-consumer"></a>Реализация простых объектов-получателей
 
@@ -211,75 +211,6 @@ ms.locfileid: "49162299"
     ```  
   
 Дополнительные сведения о закладках см. в разделе [с помощью закладок](../../data/oledb/using-bookmarks.md). Примеры закладок также отображаются в [обновление наборов строк](../../data/oledb/updating-rowsets.md).  
-  
-## <a name="adding-xml-support-to-the-consumer"></a>Добавление поддержки XML объекту-получателю  
-
-Как уже говорилось в [доступ к данным XML](../../data/oledb/accessing-xml-data.md), существует два способа для получения XML-данных из источника данных: с помощью [CStreamRowset](../../data/oledb/cstreamrowset-class.md) или с помощью [CXMLAccessor](../../data/oledb/cxmlaccessor-class.md). В этом примере используется `CStreamRowset`, которое более эффективно, но требует наличия SQL Server 2000, запущенного на компьютере, на котором выполнена в этом образце приложения.  
-  
-### <a name="to-modify-the-command-class-to-inherit-from-cstreamrowset"></a>Чтобы изменить класс команд для наследования от класса CStreamRowset  
-  
-1. В приложении-потребителе, созданный ранее, измените вашей `CCommand` декларацию, чтобы определять `CStreamRowset` как набор строк класса следующим образом:  
-  
-    ```cpp  
-    class CProducts : public CCommand<CAccessor<CProductsAccessor>, CStreamRowset >  
-    ```  
-  
-### <a name="to-modify-the-main-code-to-retrieve-and-output-the-xml-data"></a>Чтобы изменить основной код для извлечения и вывода XML-данных  
-  
-1. В файле MyCons.cpp из консольного приложения, созданного ранее измените основной код следующим образом:  
-  
-    ```cpp  
-    ///////////////////////////////////////////////////////////////////////  
-    // MyCons.cpp : Defines the entry point for the console application.  
-    //  
-  
-    #include "stdafx.h"  
-    #include "Products.h"   
-    #include <iostream>  
-    #include <fstream>  
-    using namespace std;  
-  
-    int _tmain(int argc, _TCHAR* argv[])  
-    {  
-       HRESULT hr = CoInitialize(NULL);  
-  
-       // Instantiate rowset  
-       CProducts rs;  
-  
-       // Add variable declarations for the Read method to handle sequential stream data  
-       CHAR buffer[1001];  // Pointer to buffer into which data stream is read  
-       ULONG cbRead;       // Actual number of bytes read from the data stream  
-  
-       hr = rs.OpenAll();  
-  
-       // Open file output.txt for writing in overwrite mode  
-       ofstream outfile( "C:\\output.txt", ios::out );  
-  
-       if (!outfile)      // Test for invalid file  
-          return -1;  
-  
-       // The following loop reads 1000 bytes of the data stream at a time   
-       // until it reaches the end of the data stream  
-       for (;;)  
-       {  
-          // Read sequential stream data into buffer  
-          HRESULT hr = rs.m_spStream->Read(buffer, 1000, &cbRead);  
-          if (FAILED (hr))  
-             break;  
-          // Output buffer to file  
-          buffer[cbRead] = 0;  
-          outfile << buffer;  
-          // Test for end of data stream  
-          if (cbRead < 1000)  
-             break;  
-       }  
-  
-       rs.CloseAll();  
-       CoUninitialize();  
-  
-       return 0;  
-    }  
-    ```  
   
 ## <a name="see-also"></a>См. также  
 
