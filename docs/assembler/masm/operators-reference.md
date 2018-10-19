@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688180"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459157"
 ---
 # <a name="masm-operators-reference"></a>Справочник по операторам MASM
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688180"
 
 ||||
 |-|-|-|
-|[! (логическое не среды выполнения)](operator-logical-not-masm-run-time.md)|[! = (среда выполнения не равно)](operator-not-equal-masm.md)|[&#124;&#124;(среда выполнения логического или)](operator-logical-or.md)|
+|[\! (логическое не среды выполнения)](operator-logical-not-masm-run-time.md)|[\!= (среда выполнения не равно)](operator-not-equal-masm.md)|[&#124;&#124;(среда выполнения логического или)](operator-logical-or.md)|
 |[& & (среда выполнения логического и)](operator-logical-and-masm-run-time.md)|[< (среда выполнения меньше, чем)](operator-less-than-masm-run-time.md)|[\<= (среда выполнения, меньше или равно)](operator-less-or-equal-masm-run-time.md)|
 |[== (равно среда выполнения)](operator-equal-masm-run-time.md)|[> (больше, чем среда выполнения)](operator-greater-than-masm-run-time.md)|[> = (среда выполнения больше или равно)](operator-greater-or-equal-masm-run-time.md)|
 |[& (среда выполнения побитовое и)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688180"
 
 ||||
 |-|-|-|
-|[! (символьного литерала)](operator-logical-not-masm.md)|[% (Power BI как текст)](operator-percent.md)||
+|[\! (символьного литерала)](operator-logical-not-masm.md)|[% (Power BI как текст)](operator-percent.md)||
 |[;; (следует считать комментария)](operator-semicolons.md)|[&lt; &gt; (следует считать один литерал)](operator-literal.md)|[& & (замените значение параметра)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>Прочее
