@@ -1,7 +1,7 @@
 ---
 title: Упрощение доступа к данным с помощью атрибутов базы данных | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054081"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808021"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>Упрощение доступа к данным с помощью атрибутов базы данных
 
@@ -52,18 +52,26 @@ ms.locfileid: "46054081"
   
 - `db_table` Вызов в версию эквивалентно следующее объявление шаблона:  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - `db_column` Вызовы в версию эквивалентны в сопоставление столбцов (см. в разделе `BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) в объявлении шаблона.  
   
-Эти атрибуты внедряют класс записей пользователя объявление для вас. Класс записей пользователя эквивалентно `CAuthorsNoAttrAccessor` в объявлении шаблона. Если класс таблицы `CAuthors`, пользовательский класс записи называется `CAuthorsAccessor`, и могут только просматривать ее объявления в подставляемый код. Дополнительные сведения см. в разделе «Классы записей пользователя см.в» в [записи пользователей](../../data/oledb/user-records.md).  
+Эти атрибуты внедряют класс записей пользователя объявление для вас. Класс записей пользователя равен `CAuthorsNoAttrAccessor` в объявлении шаблона. Если класс таблицы `CAuthors`, пользовательский класс записи называется `CAuthorsAccessor`, и могут только просматривать ее объявления в подставляемый код. Дополнительные сведения см. в разделе «Классы записей пользователя см.в» в [записи пользователей](../../data/oledb/user-records.md).  
   
-Обратите внимание, что в помеченные атрибутами и коде, необходимо задать свойства набора строк с помощью `CDBPropSet::AddProperty`.  
+Помеченные атрибутами и коде, необходимо задать свойства набора строк с помощью `CDBPropSet::AddProperty`.  
   
-Сведения об атрибутах, описанных в этом разделе, см. в разделе [атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md).  
-  
+Сведения об атрибутах, описанных в этом разделе, см. в разделе [атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md).
+
+> [!NOTE]
+> Следующие `include` инструкций необходимых для компиляции в приведенных ниже примерах:
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>Таблицы и объявление метода доступа, с помощью атрибутов  
 
 Следующий код вызывает `db_source` и `db_table` в классе таблицы. `db_source` Указывает источник данных и подключение могло использоваться. `db_table` вставляет соответствующий код шаблона для объявления класса таблицы. `db_column` Укажите сопоставление столбцов и внедрить объявление метода доступа. Атрибуты потребителя OLE DB можно использовать в любом проекте, который поддерживает ATL.  
@@ -85,15 +93,15 @@ ms.locfileid: "46054081"
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  

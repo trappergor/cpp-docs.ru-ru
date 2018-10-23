@@ -1,7 +1,7 @@
 ---
 title: Класс модуля | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 5df7ae90a347d82b303d7db251e533733c8e4a86
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494534"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808634"
 ---
 # <a name="module-class"></a>Module - класс
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*T*  
+*T*<br/>
 Тип модуля.
 
-*обратный вызов*  
+*обратный вызов*<br/>
 Вызывается при освобождении последнего объекта экземпляр модуля.
 
-*object*  
+*object*<br/>
 *Объект* и *метод* параметры используются в сочетании. Указывает на последний объект экземпляра при освобождении последнего объекта экземпляра в модуле.
 
-*Метод*  
+*Метод*<br/>
 *Объект* и *метод* параметры используются в сочетании. Указывает метод последнего экземпляра объекта при освобождении последнего объекта экземпляра в модуле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Параметры
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 Представляет IID класса среды выполнения.
 
-*ppIFactory*  
+*ppIFactory*<br/>
 Представляет интерфейс IActivationFactory указанного класса среды выполнения.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя подмножества фабрик класса в текущем модуле. Укажите имя сервера, используемое в [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md) макрос, или указать `nullptr` для получения имени сервера по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -253,16 +253,16 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>Параметры
 
-*CLSID*  
+*CLSID*<br/>
 Идентификатор класса.
 
-*riid*  
+*riid*<br/>
 Запрошенный идентификатор интерфейса.
 
-*ppv*  
+*ppv*<br/>
 Указатель на возвращаемый объект.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя сервера, указанное в макросе `ActivatableClassWithFactory`, `ActivatableClassWithFactoryEx` или `ActivatableClass`; в противном случае — значение `nullptr` для получения имени сервера по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Полное имя сервера.
 
-*идентификаторов CLSID*  
+*идентификаторов CLSID*<br/>
 Массив регистрируемых идентификаторов CLSID.
 
-*фабрики*  
+*фабрики*<br/>
 Массив интерфейсов IUnknown объектов класса, чья доступность публикуется.
 
-*Файлы cookie*  
+*Файлы cookie*<br/>
 После завершения операции представляет массив указателей на значения, которые определяют зарегистрированные объекты класса. Эти значения в дальнейшем используются для отмены регистрации.
 
-*count*  
+*count*<br/>
 Количество идентификаторов CLSID, которые необходимо зарегистрировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*модуль*  
+*module*<br/>
 Массив объектов COM или среду выполнения Windows.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя сервера, который создал объекты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -399,21 +399,21 @@ HRESULT RegisterObjects(
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Имя, которое определяет подмножество объектов, затронутых этой операцией.
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 Массив активируемых идентификаторов CLSID для регистрации.
 
-*Файл cookie*  
+*Файл cookie*<br/>
 Значение, которое идентифицирует зарегистрированные объекты класса. Это значение в дальнейшем используется для отмены регистрации.
 
-*count*  
+*count*<br/>
 Количество объектов, которое необходимо зарегистрировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 (Не используется)
 
-*Файлы cookie*  
+*Файлы cookie*<br/>
 Массив указателей на значения, которые идентифицируют объекты класса для отмены регистрации. Массив был создан с [RegisterCOMObject](#registercomobject) метод.
 
-*count*  
+*count*<br/>
 Количество классов для отмены регистрации.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>Параметры
 
-*модуль*  
+*module*<br/>
 Указатель на модуль.
 
-*Имя_сервера*  
+*Имя_сервера*<br/>
 Представляет имя, которое определяет подмножество объектов, затронутых этой операцией.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>Параметры
 
-*Файл cookie*  
+*Файл cookie*<br/>
 Указатель на значение, определяющее объект класса, регистрация которого должна быть отменена.

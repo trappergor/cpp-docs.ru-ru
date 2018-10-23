@@ -1,7 +1,7 @@
 ---
 title: high_method_prefix | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -16,35 +16,37 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 883f573100c31fab8cc0142d371f6a8a14f8783f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1fb69b9fbb7ede0ca458007aec1bee2cf38e286f
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428724"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807722"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
-**Конкретных C++**  
-  
-Задает префикс, используемый при именовании высокоуровневых свойств и методов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-high_method_prefix("Prefix")  
-```  
-  
-### <a name="parameters"></a>Параметры  
-*Prefix*  
-Префикс, который следует использовать.  
-  
-## <a name="remarks"></a>Примечания  
- 
-По умолчанию высокоуровневые свойства и методы обработки ошибок предоставляются функциями-членами с именами без префикса. Это имена из библиотеки типов.  
-  
-**КОНЕЦ конкретных C++**  
-  
-## <a name="see-also"></a>См. также  
- 
+
+**Конкретных C++**
+
+Задает префикс, используемый при именовании высокоуровневых свойств и методов.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+high_method_prefix("Prefix")
+```
+
+### <a name="parameters"></a>Параметры
+
+*Prefix*<br/>
+Префикс, который следует использовать.
+
+## <a name="remarks"></a>Примечания
+
+По умолчанию высокоуровневые свойства и методы обработки ошибок предоставляются функциями-членами с именами без префикса. Это имена из библиотеки типов.
+
+**КОНЕЦ конкретных C++**
+
+## <a name="see-also"></a>См. также
+
 [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [директива #import](../preprocessor/hash-import-directive-cpp.md)

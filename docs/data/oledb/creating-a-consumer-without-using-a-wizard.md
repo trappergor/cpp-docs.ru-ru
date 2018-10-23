@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ce6949e582142e208058b4fa59d02008513e29f
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: cd8412ed280c0a256ea8acb7274da5d6238134fc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410737"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807801"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>Создание объекта-получателя без помощи мастера
 
@@ -67,7 +67,7 @@ ms.locfileid: "49410737"
     hr = rs.Open();            // (Open also executes the command)  
     ```  
   
-- При необходимости, свойства набора строк, с помощью `CDBPropSet::AddProperty` и передавать их в качестве параметра `rs.Open`. Пример того, как это можно сделать, см. в разделе **GetRowsetProperties** в [разделе методы](../../data/oledb/consumer-wizard-generated-methods.md).  
+- При необходимости, свойства набора строк, с помощью `CDBPropSet::AddProperty` и передавать их в качестве параметра `rs.Open`. Пример того, как это можно сделать, см. в разделе `GetRowsetProperties` в [разделе методы](../../data/oledb/consumer-wizard-generated-methods.md).  
   
 - Теперь можно использовать набор строк для получения и обработки данных.  
   

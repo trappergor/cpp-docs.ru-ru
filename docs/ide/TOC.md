@@ -26,7 +26,6 @@
 ### [XML-файлы страницы свойств](property-page-xml-files.md)
 ### [Структура файлов VCXPROJ и PROPS](vcxproj-file-structure.md)
 ## [Создание проектов для рабочего стола с помощью мастеров приложений](creating-desktop-projects-by-using-application-wizards.md)
-### [Поддержка мастера для других языков](wizard-support-for-other-languages.md)
 ### [Создание проекта Makefile](creating-a-makefile-project.md)
 #### [Мастер проекта Makefile](makefile-project-wizard.md)
 ##### [Параметры приложения, мастер проекта Makefile](application-settings-makefile-project-wizard.md)

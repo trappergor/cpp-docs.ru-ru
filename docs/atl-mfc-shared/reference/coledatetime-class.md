@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92761508a5e93c7ef0d0a4099dde587987a50dad
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448432"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809165"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*date*  
+*date*<br/>
 Сравниваемый объект `COleDateTime`.
 
 ### <a name="remarks"></a>Примечания
@@ -210,22 +210,22 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dateSrc*  
+*dateSrc*<br/>
 Существующий `COleDateTime` объект, который необходимо скопировать в новый `COleDateTime` объекта.
 
-*varSrc*  
+*varSrc*<br/>
 Существующий `VARIANT` структуры данных (возможно `COleVariant` объекта) преобразовывается в значение даты и времени (VT_DATE) и скопировать в новый `COleDateTime` объекта.
 
-*dtSrc*  
+*dtSrc*<br/>
 Даты и времени (`DATE`) значение для копирования в новый `COleDateTime` объекта.
 
-*timeSrc*  
+*timeSrc*<br/>
 Объект `time_t` или `__time64_t` значение преобразовывается в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Объект `SYSTEMTIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
 
 *nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*  
@@ -234,7 +234,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 *wDosDate*, *wDosTime*  
 Значения даты и времени MS-DOS, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*DBTS*  
+*DBTS*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуру, содержащую текущее местное время.
 
 ### <a name="remarks"></a>Примечания
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает один из следующих флагов языкового стандарта:
 
 - LOCALE_NOUSEROVERRIDE системные настройки языкового стандарта по умолчанию, используйте вместо пользовательских параметров.
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY пропускать части времени во время синтаксического анализа.
 
-*lcid*  
+*lcid*<br/>
 Указывает идентификатор языкового стандарта для использования для преобразования. Дополнительные сведения об идентификаторах языков см. в разделе [идентификаторы языка](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Форматирование строки аналогичную `printf` форматирования строки. Каждый форматирование кода, предшествует процента ( `%`) выполните вход, заменен соответствующим `COleDateTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Дополнительные сведения. Значение и значение коды форматирования для `Format` являются:
 
 - `%H` Часов в текущей даты
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` Знак процента
 
-*nFormatID*  
+*nFormatID*<br/>
 Идентификатор ресурса для управления форматом строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*DBTS*  
+*DBTS*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*sysTime*  
+*sysTime*<br/>
 Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*UDATE*  
+*UDATE*<br/>
 Ссылку на `UDATE` структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -938,10 +938,10 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lpszDate*  
+*lpszDate*<br/>
 Указатель на заканчивающуюся нулем строку, который анализируется. Дополнительные сведения см. в разделе "Заметки".
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает флаги для параметров языкового стандарта и синтаксического анализа. Один или несколько из следующих флагов:
 
 - LOCALE_NOUSEROVERRIDE использовать параметры языкового стандарта системы по умолчанию, а не пользовательские параметры пользователя.
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY пропускать части времени во время синтаксического анализа.
 
-*lcid*  
+*lcid*<br/>
 Указывает идентификатор языкового стандарта для использования для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*status*  
+*status*<br/>
 Новое значение состояния для данного `COleDateTime` объекта.
 
 ### <a name="remarks"></a>Примечания

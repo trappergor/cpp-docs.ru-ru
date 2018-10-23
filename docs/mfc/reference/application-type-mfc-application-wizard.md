@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434381"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808775"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Тип приложения, мастер приложений MFC
 
@@ -58,7 +58,7 @@ ms.locfileid: "46434381"
 
 - **Язык ресурсов**
 
-   Задает язык ресурсов. В списке отображаются языки, доступные в системе, установки Visual Studio. Если вы хотите выбрать язык, отличный от языка системы, соответствующую папку с шаблонами для этого языка должна быть установлена. Дополнительные сведения об установке языковых ресурсов, отличается от значения по умолчанию, доступных в **язык ресурсов** списке, см. в разделе [поддержка мастера для других языков](../../ide/wizard-support-for-other-languages.md).
+   Задает язык ресурсов. В списке отображаются языки, доступные в системе, установки Visual Studio. Если вы хотите выбрать язык, отличный от языка системы, соответствующую папку с шаблонами для этого языка должна быть установлена.
 
    Язык, который выбран отражается в **локализованные строки** параметр [строки шаблонов документов, мастер приложений MFC](../../mfc/reference/document-template-strings-mfc-application-wizard.md) странице мастера.
 

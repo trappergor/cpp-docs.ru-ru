@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 939937ec79ae3e6d172b48d22368176088064397
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dba47b8464c7fcdd170df1819b65aa448d8f8aeb
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434353"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808425"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Типы файлов, создаваемых для проектов Visual C++
 
@@ -82,7 +82,7 @@ ms.locfileid: "46434353"
 |PCH|Отладка|Файл предкомпилированных заголовков.|
 |RC, RC2|Ресурс|[Файлы скриптов ресурсов](../windows/working-with-resource-files.md) для генерации ресурсов.|
 |SBR|Компиляция|Промежуточный файл обозревателя исходного кода. Входной файл для [BSCMAKE](../build/reference/bscmake-options.md).|
-|.SLN|Решение|Файл [решения](/visualstudio/ide/solutions-and-projects-in-visual-studio).|
+|.SLN|Решение|Файл [решения](/visualstudio/ide/solutions-and-projects-in-visual-studio) .|
 |SUO|Решение|Файл параметров решения.|
 |TXT|Ресурс|Текстовый файл, обычно README-файл.|
 |VAP|Проект|Файл проекта Visual Studio Analyzer.|
@@ -105,4 +105,3 @@ ms.locfileid: "46434353"
 
 [Создание проектов Visual C++ и управление ими](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Типы проектов Visual C++](../ide/visual-cpp-project-types.md)<br>
-[Поддержка мастера для других языков](../ide/wizard-support-for-other-languages.md)
