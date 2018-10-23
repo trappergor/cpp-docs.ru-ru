@@ -1,7 +1,7 @@
 ---
 title: Использование динамических методов доступа | Документация Майкрософт
 ms.custom: ''
-ms.date: 02/14/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,26 +16,24 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fed93404a6c11addb8068d6140fda48d1c02a253
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a776043d8a65d0a037d17c1c2538a4606b4c9d1
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056743"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808385"
 ---
 # <a name="using-dynamic-accessors"></a>Использование динамических методов доступа
 
-Динамические методы доступа позволяют получить доступ к источнику данных, когда вы не имеют сведений о схеме базы данных (базовая структура). Библиотека шаблонов OLE DB предоставляет несколько классов, которые помогут вам сделать это.
+Динамические методы доступа позволяют получить доступ к источнику данных, когда вы не имеют сведений о схеме базы данных (базовая структура). Библиотека шаблонов OLE DB предоставляет несколько классов, чтобы помочь вам.
 
-[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) примере показано, как использовать классы динамического метода доступа, чтобы получить сведения о столбцах и динамически создать методы доступа.
+[DynamicConsumer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/DynamicConsumer) примере показано, как использовать классы динамического метода доступа, чтобы получить сведения о столбце и динамически создать методы доступа.
 
 ## <a name="using-cdynamicaccessor"></a>С помощью CDynamicAccessor
 
-[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) позволяет доступ к источнику данных, когда схема базы данных (базовая структура). `CDynamicAccessor` методы получают сведения о столбцах, таких как имена столбцов, количество и тип данных. Используйте эти сведения для столбца для динамического создания метода доступа во время выполнения. Сведения о столбцах хранятся в буфере, который создается и управляется данным классом. Получение данных из буфера с помощью [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) метод.
+[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) позволяет доступ к источнику данных, когда схема базы данных (базовая структура). `CDynamicAccessor` методы получить сведения о столбце, такие как имена столбцов, количество и тип данных. Используйте эти сведения для столбца для динамического создания метода доступа во время выполнения. Сведения о столбцах хранятся в буфере, который создается и управляется данным классом. Получение данных из буфера с помощью [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md) метод.
 
 ## <a name="example"></a>Пример
-
-### <a name="code"></a>Код
 
 ```cpp
 // Using_Dynamic_Accessors.cpp
@@ -103,13 +101,11 @@ int main(int argc, char* argv[] )
 
 ## <a name="using-cdynamicstringaccessor"></a>С помощью CDynamicStringAccessor
 
-[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) работает как [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), за исключением одной важной особенностью. Хотя `CDynamicAccessor` запрашивает данные в собственном формате, Поставщик сообщил, что, `CDynamicStringAccessor` запросов, что поставщик получить все данные из хранилища данных в виде строковых данных. Это особенно полезно для простых задач, не требующих вычисления значений в хранилище данных, например отображением или печатью содержимого хранилища данных.
+[CDynamicStringAccessor](../../data/oledb/cdynamicstringaccessor-class.md) работает как [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md), за исключением одной важной особенностью. Хотя `CDynamicAccessor` запрашивает данные в собственном формате, Поставщик сообщил, что, `CDynamicStringAccessor` запросов, что поставщик получить все данные из хранилища данных в виде строковых данных. Процесс особенно полезен для простых задач, не требующих вычисления значений в хранилище данных, например отображением или печатью содержимого хранилища данных.
 
-Используйте `CDynamicStringAccessor` методов, чтобы получить сведения о столбцах. Используйте эти сведения для столбца для динамического создания метода доступа во время выполнения. Сведения о столбце хранится в буфере, создаваемом и управляемом данным классом. Получение данных из буфера с помощью [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) и не сохраняет в буфере с помощью [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
+Используйте `CDynamicStringAccessor` методов, чтобы получить сведения о столбце. Используйте эти сведения для столбца для динамического создания метода доступа во время выполнения. Сведения о столбце хранится в буфере, создаваемом и управляемом данным классом. Получение данных из буфера с помощью [CDynamicStringAccessor::GetString](../../data/oledb/cdynamicstringaccessor-getstring.md) и не сохраняет в буфере с помощью [CDynamicStringAccessor::SetString](../../data/oledb/cdynamicstringaccessor-setstring.md).
 
 ## <a name="example"></a>Пример
-
-### <a name="code"></a>Код
 
 ```cpp
 // Using_Dynamic_Accessors_b.cpp

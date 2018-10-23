@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434184"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808983"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dateSpan*  
+*dateSpan*<br/>
 Сравниваемый шаблон `COleDateTimeSpan`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 Число дней, который необходимо скопировать в новый `COleDateTimeSpan` объекта.
 
 *lDays*, *nHours*, *nMins*, *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pFormat*  
+*pFormat*<br/>
 Форматирование строки аналогичную `printf` форматирования строки. Коды, предшествует процента форматирования (`%`) выполните вход, заменен соответствующим `COleDateTimeSpan` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Значение и значение коды форматирования для `Format` , перечислены ниже:
 
 - **%H** часов в текущей даты
@@ -204,7 +204,7 @@ CString Format(UINT nID) const;
 
 -
 
-*nID*  
+*nID*<br/>
 Идентификатор ресурса для управления форматом строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*status*  
+*status*<br/>
 Новое значение состояния для данного `COleDateTimeSpan` объекта.
 
 ### <a name="remarks"></a>Примечания

@@ -1,7 +1,7 @@
 ---
 title: Класс CSimpleStringT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434665"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809152"
 ---
 # <a name="csimplestringt-class"></a>Класс CSimpleStringT
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Параметры
 
-*BaseType*  
+*BaseType*<br/>
 Тип символа класса string. Ниже указаны доступные значения.
 
 - **char** (для символьных строк ANSI).
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Параметры
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT` Объект для добавления.
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется добавить.
 
-*nLength*  
+*nLength*<br/>
 Количество добавляемых знаков.
 
 ### <a name="remarks"></a>Примечания
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>Параметры
 
-*ch*  
+*ch*<br/>
 Символ для добавления
 
 ### <a name="remarks"></a>Примечания
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Параметры
 
-*pchDest*  
+*pchDest*<br/>
 Указатель на строку символов.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется скопировать.
 
-*nChars*  
+*nChars*<br/>
 Число *pchSrc* копируемых символов.
 
 ### <a name="remarks"></a>Примечания
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Параметры
 
-*pchDest*  
+*pchDest*<br/>
 Указатель на строку символов.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется скопировать.
 
-*nChars*  
+*nChars*<br/>
 Число *pchSrc* копируемых символов.
 
 ### <a name="remarks"></a>Примечания
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>Параметры
 
-*strSrc*  
+*strSrc*<br/>
 Существующий `CSimpleStringT` объект, который необходимо скопировать в это `CSimpleStringT` объекта.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на массив символов длиной *nLength*, не заканчивается на null.
 
-*pszSrc*  
+*pszSrc*<br/>
 Заканчивающуюся нулем строку, который необходимо скопировать в это `CSimpleStringT` объекта.
 
-*nLength*  
+*nLength*<br/>
 Число символов в `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на диспетчер памяти `CSimpleStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управление памятью для `CSimpleStringT`, см. в разделе [управление памятью и CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Примечания
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в `CSimpleStringT` объекта. *IChar* параметр должен быть больше или равно 0 и меньше, чем значение, возвращенное [GetLength](#getlength). В противном случае `GetAt` возникает исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>Параметры
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Минимальное число символов, содержащихся в буфере символов. Это значение не включает свободное место для завершающего нуль.
 
 Если *nMinBufferLength* больше, чем длина буфера текущего `GetBuffer` уничтожает текущего буфера и заменяет его с буфером запрошенного размера обнуляется счетчик ссылок объекта. Если ранее был вызван [LockBuffer](#lockbuffer) данного буфера, вы потеряете блокировки буфера.
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>Параметры
 
-*nLength*  
+*nLength*<br/>
 Точный размер `CSimpleStringT` символ буфера в символах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в строке.
 
 ### <a name="remarks"></a>Примечания
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в строке.
 
 ### <a name="remarks"></a>Примечания
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*strSrc*  
+*strSrc*<br/>
 Указатель на существующий `CSimpleStringT` объекта.
 
-*ch*  
+*ch*<br/>
 Символ значение для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*strSrc*  
+*strSrc*<br/>
 Указатель на существующий `CSimpleStringT` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>Параметры
 
-*nLength*  
+*nLength*<br/>
 Точный размер `CSimpleStringT` символ буфера в символах.
 
 ### <a name="remarks"></a>Примечания
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Новая длина строки в символах, не считая завершающий нуль-символ. Если строка имеет значение null прервано, значение по умолчанию-1 задает `CSimpleStringT` размер к текущей длины строки.
 
 ### <a name="remarks"></a>Примечания
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Длина строки, которые выпускаются
 
 ### <a name="remarks"></a>Примечания
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в `CSimpleStringT` объекта. *IChar* параметр должен быть больше или равно 0 и меньше, чем значение, возвращенное [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Новый символ.
 
 ### <a name="remarks"></a>Примечания
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>Параметры
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на новый диспетчер памяти.
 
 ### <a name="remarks"></a>Примечания
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*nLength*  
+*nLength*<br/>
 Число символов в *pszSrc*.
 
 ### <a name="remarks"></a>Примечания
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Указатель на строку, завершающуюся символом null.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Новая длина строки.
 
 ### <a name="remarks"></a>Примечания

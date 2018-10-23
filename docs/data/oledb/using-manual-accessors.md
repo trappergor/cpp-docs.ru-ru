@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101648"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808931"
 ---
 # <a name="using-manual-accessors"></a>Использование методов ручного доступа
 
@@ -36,7 +36,7 @@ ms.locfileid: "46101648"
   
 - Проверить, есть несколько наборов строк, возвращаемого значения  
   
-Чтобы сделать это с помощью шаблонов потребителей OLE DB, используйте `CManualAccessor` класса и выполните следующие действия:  
+Чтобы выполнить эти действия с Шаблоны потребителей OLE DB, используйте `CManualAccessor` класса и выполните следующие действия:  
   
 1. Откройте `CCommand` со `CManualAccessor` как параметр шаблона.  
   

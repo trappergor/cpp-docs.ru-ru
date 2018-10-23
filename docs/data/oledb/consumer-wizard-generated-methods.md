@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056031"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808229"
 ---
 # <a name="consumer-wizard-generated-methods"></a>Методы, создаваемые мастером объекта-получателя
 
@@ -40,7 +40,7 @@ ms.locfileid: "46056031"
   
 - `CloseAll` Закрывает все открытые наборы строк и прекращает выполнение всех команд.  
   
-- `OpenRowset` вызывается методом OpenAll для открытия набора строк потребителя или наборы строк.  
+- `OpenRowset` вызывается `OpenAll` для открытия набора строк потребителя или наборы строк.  
   
 - `GetRowsetProperties` Извлекает указатель на свойство в наборе строк с помощью свойства, которые могут быть заданы.  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Примечания  
 
-Обратите внимание, что при определении `HasBookmark` метод, `OpenAll` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
+Обратите внимание, что при определении `HasBookmark` метод, `OpenAll` кода задается `DBPROP_IRowsetLocate` свойство; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` вызывает этот метод для открытия набора или наборов строк в объекте-получателе. Как правило, не нужно вызывать `OpenRowset` только если вы хотите работать с несколькими источниками данных и сеансы либо/строк. `OpenRowset` объявляется в файле заголовка класса команд или таблиц:  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метод, `OpenRowset` код задает свойства DBPROP_IRowsetLocate; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
+Атрибуты реализуют этот метод по-разному. Эта версия принимает объект сеанса и командной строки, который по умолчанию для командной строки, указанной в db_command, несмотря на то, что вы можете передать его. Обратите внимание, что при определении `HasBookmark` метод, `OpenRowset` кода задается `DBPROP_IRowsetLocate` свойство; убедитесь, что только в том случае, если используемый поставщик поддерживает это свойство.  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-Этот метод извлекает указатель на набор свойств набора строк; Этот указатель можно использовать для задания свойства, такие как DBPROP_IRowsetChange. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
+Этот метод извлекает указатель на набор свойств набора строк; Этот указатель можно использовать для задания свойств, таких как `DBPROP_IRowsetChange`. `GetRowsetProperties` используется в класс записей пользователя следующим образом. Можно изменить этот код, чтобы задать дополнительные свойства набора строк:  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

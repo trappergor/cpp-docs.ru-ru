@@ -1,7 +1,7 @@
 ---
 title: Класс IAtlStringMgr | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408145"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808879"
 ---
 # <a name="iatlstringmgr-class"></a>Класс IAtlStringMgr
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Число символов в новом блоке памяти.
 
-*nCharSize*  
+*nCharSize*<br/>
 Размер (в байтах) тип символа, используемый диспетчером строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pData*  
+*pData*<br/>
 Указатель на блок памяти, который требуется освободить.
 
 ### <a name="remarks"></a>Примечания
@@ -151,31 +151,31 @@ CStringData* GetNilString() throw();
 Вызывайте эту функцию для возврата представления является пустая строка.
 
 > [!NOTE]
->  При реализации диспетчера пользовательская строка, эта функция никогда не должен завершаться ошибкой. Это можно обеспечить путем внедрения экземпляр `CNilStringData` в класс диспетчера строки и возвращают указатель на этот экземпляр.
+> При реализации диспетчера пользовательская строка, эта функция никогда не должен завершаться ошибкой. Это можно обеспечить путем внедрения экземпляр `CNilStringData` в класс диспетчера строки и возвращают указатель на этот экземпляр.
 
 > [!NOTE]
->  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 Перераспределяет структуру данных строки.
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pData*  
+*pData*<br/>
 Указатель на память, выделенную ранее данным диспетчером памяти.
 
-*nAllocLength*  
+*nAllocLength*<br/>
 Число символов в новом блоке памяти.
 
-*nCharSize*  
+*nCharSize*<br/>
 Размер (в байтах) тип символа, используемый диспетчером строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -189,10 +189,9 @@ int nCharSize) throw();
 Вызовите [IAtlStringMgr::Free](#free) для освобождения памяти, выделенной с помощью этого метода.
 
 > [!NOTE]
->  Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
+> Примеры использования см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

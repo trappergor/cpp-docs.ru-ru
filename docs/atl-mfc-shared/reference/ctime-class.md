@@ -1,7 +1,7 @@
 ---
 title: Класс CTime | Документация Майкрософт
 ms.custom: ''
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328601"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808840"
 ---
 # <a name="ctime-class"></a>Класс CTime
 
@@ -49,7 +49,7 @@ ms.locfileid: "49328601"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>Участники
@@ -119,17 +119,17 @@ class CTime
 Операторы сравнения.
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*time*  
+*time*<br/>
 Сравниваемый объект `CTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*timeSrc*  
+*timeSrc*<br/>
 Указывает `CTime` объект, который уже существует.
 
-*time*  
-Объект **__time64_t** значение времени, которое является количество секунд после 1 января 1970 года в формате UTC. Обратите внимание на то, что это будет впоследствии скорректирована местное время. Например, если находятся в Нью-Йорк и создайте `CTime` объекта, передав параметр 0, [CTime::GetMonth](#getmonth) возвращает 12.  
+*time*<br/>
+Объект **__time64_t** значение времени, которое является количество секунд после 1 января 1970 года в формате UTC. Обратите внимание на то, что это будет впоследствии скорректирована местное время. Например, если находятся в Нью-Йорк и создайте `CTime` объекта, передав параметр 0, [CTime::GetMonth](#getmonth) возвращает 12.
 
-
-*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*  
+*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*<br/>
 Указывает, значений даты и времени, который необходимо скопировать в новый `CTime` объекта.
 
-*nDST*  
+*nDST*<br/>
 Указывает, действует ли летнее время. Может иметь одно из трех значений:
 
 - *nDST* наборов 0Standard время.
@@ -176,16 +175,16 @@ CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
 
 - *nDST* присвоено значение меньше, чем 0The по умолчанию. Автоматически вычисляет стандартное время или летнее время действует ли.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Значения даты и времени MS-DOS, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
-*ST*  
+*ST*<br/>
 Объект [SYSTEMTIME](../../mfc/reference/systemtime-structure.md) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
-*FT*  
+*FT*<br/>
 Объект [FILETIME](../../mfc/reference/filetime-structure.md) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
-DBTS  
+*DBTS*<br/>
 Ссылка на структуру DBTIMESTAMP, содержащую текущее местное время.
 
 ### <a name="remarks"></a>Примечания
@@ -200,13 +199,13 @@ DBTS
 
 - `CTime( int, int, ...);` Создает `CTime` объект из компонентов местного времени с каждым компонентом ограничен следующие диапазоны:
 
-   |Компонент|Диапазон|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1–12|  
-   |*nDay*|1–31|  
-   |*основе Nчас*|0-23|  
-   |*Nмин.*|0-59|  
+   |Компонент|Диапазон|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1–12|
+   |*nDay*|1–31|
+   |*основе Nчас*|0-23|
+   |*Nмин.*|0-59|
    |*nSec*|0-59|
 
    Этот конструктор создает соответствующее преобразование в формат UTC. Отладочную версию библиотеки Microsoft Foundation Class утверждений, если один или несколько компонентов времени выходят за пределы диапазона. Необходимо проверить перед вызовом аргументы. Этот конструктор ожидает, что местное время.
@@ -231,16 +230,16 @@ DBTS
 Эта функция члена для создания отформатированное представление значения даты и времени.
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Форматирование строки аналогичную `printf` форматирования строки. Коды, предшествует процента форматирования (`%`) выполните вход, заменен соответствующим `CTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) список кодов форматирования.
 
-*nFormatID*  
+*nFormatID*<br/>
 Идентификатор строки, который определяет этот формат.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Задает строку форматирования, аналогичную `printf` форматирования строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) подробные сведения.
 
-*nFormatID*  
+*nFormatID*<br/>
 Идентификатор строки, который определяет этот формат.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*DBTS*  
+*DBTS*<br/>
 Ссылка на структуру DBTIMESTAMP, содержащую текущее местное время.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*timeDest*  
+*timeDest*<br/>
 Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, которая будет хранить значение преобразованного даты и времени `CTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -359,7 +358,7 @@ static CTime WINAPI GetCurrentTime() throw();
 Возвращает день представлен `CTime` объекта.
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ptm*  
+*ptm*<br/>
 Указывает на буфер, получающий данные времени. Если этот указатель имеет значение NULL, создается исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ptm*  
+*ptm*<br/>
 Указывает на буфер, получающий данные времени. Если этот указатель имеет значение NULL, создается исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*time*  
+*time*<br/>
 Значение нового даты и времени.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*интервал времени*  
+*интервал времени*<br/>
 `CTimeSpan` Объект добавляемое или вычитаемое.
 
-*time*  
+*time*<br/>
 `CTime` Объект, который будет вычтен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 `CTimeSpan` Объект добавляемое или вычитаемое.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Параметры
 
-*ar*  
+*ar*<br/>
 `CArchive` Объект, который требуется обновить.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105379"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808450"
 ---
 # <a name="defining-stored-procedures"></a>Определение хранимых процедур
 
 Перед вызовом хранимой процедуры, необходимо сначала определить, с помощью [DEFINE_COMMAND](../../data/oledb/define-command.md) макрос. При определении команда обозначения параметров знаком вопроса (?), как маркер параметров:  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
-Обратите внимание, что синтаксис (Использование фигурных скобок и т. д.), который используется в примерах кода в этом разделе относится к SQL Server. Синтаксис, который используется в хранимых процедурах может различаться в зависимости от поставщика, которые можно использовать.  
+Синтаксис (Использование фигурных скобок и т. д.), который используется в примерах кода в этом разделе относится только к SQL Server. Синтаксис, который используется в хранимых процедурах может различаться в зависимости от поставщика, которые можно использовать.  
   
 Затем в сопоставлении параметров, укажите параметры, которые вы использовали в команде со списком параметров в порядке их появления в команде:  
   
-```  
+```cpp  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
    COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
@@ -46,9 +46,9 @@ BEGIN_PARAM_MAP(CMySProcAccessor)
 END_PARAM_MAP()  
 ```  
   
-Он определяется хранимой процедуры в предыдущем примере. Как правило для эффективного повторного использования кода, база данных содержит набор стандартные хранимые процедуры с именами, например «Sales by Year» или «dt_adduserobject». Вы можете просмотреть их определения, с помощью SQL Server Enterprise Manager. Можно вызвать следующим образом (размещение "?" параметров зависит от интерфейса хранимых процедур):  
+Он определяется хранимой процедуры в предыдущем примере. Как правило для эффективного повторного использования кода, база данных содержит набор стандартные хранимые процедуры с именами, например «Sales by Year» или «dt_adduserobject». Вы можете просмотреть их определения, с помощью SQL Server Enterprise Manager. Можно вызвать следующим образом (размещение "?" Параметры зависят от интерфейса хранимых процедур):  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  

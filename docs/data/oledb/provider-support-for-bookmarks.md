@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017177"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807527"
 ---
 # <a name="provider-support-for-bookmarks"></a>Поддержка закладок поставщиками
 
@@ -36,7 +36,7 @@ ms.locfileid: "46017177"
   
 - Добавление поддержки закладок.  
   
-Интерфейс `IRowsetLocate` наследует от интерфейса `IRowset`. Чтобы добавить `IRowsetLocate` интерфейсом, наследуют `CMyProviderRowset` из [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
+Интерфейс `IRowsetLocate` наследует от интерфейса `IRowset` . Чтобы добавить `IRowsetLocate` интерфейсом, наследуют `CMyProviderRowset` из [IRowsetLocateImpl](../../data/oledb/irowsetlocateimpl-class.md).  
   
 Добавление `IRowsetLocate` интерфейс немного отличается от большинства других интерфейсов. Чтобы сделать файл vtable на строку вверх, OLE DB шаблонов поставщика имеют параметр шаблона для обработки производного интерфейса. В следующем коде показано новый список наследования:  
   
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While содержит код для вызова `Compare` метод в `IRowsetLocate` интерфейс. Код, который у вас есть всегда должно передавать, так как при сравнении точное же закладки. Кроме того, сохранить одну закладку во временной переменной, таким образом, вы можете использовать после while окончании для вызова цикла `MoveToBookmark` функция в шаблонах потребителей. `MoveToBookmark` Вызовы функций `GetRowsAt` метод в `IRowsetLocate`.  
+**Хотя** цикл содержит код для вызова `Compare` метод в `IRowsetLocate` интерфейс. Код, который у вас есть всегда должно передавать, так как при сравнении точное же закладки. Кроме того, сохранить одну закладку во временной переменной, чтобы его можно использовать после **хотя** окончании для вызова цикла `MoveToBookmark` функция в шаблонах потребителей. `MoveToBookmark` Вызовы функций `GetRowsAt` метод в `IRowsetLocate`.  
   
 Необходимо также обновить запись пользователя в объекте-получателе. Добавьте запись в класс для обработки закладки и запись в `COLUMN_MAP`:  
   

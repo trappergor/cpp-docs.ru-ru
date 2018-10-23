@@ -1,7 +1,7 @@
 ---
 title: Класс CSize | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328549"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808502"
 ---
 # <a name="csize-class"></a>Класс CSize
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*initCX*  
+*initCX*<br/>
 Наборы `cx` член для `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Наборы `cy` член для `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [РАЗМЕР](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` объект, используемый для инициализации `CSize`.
 
-*initPt*  
+*initPt*<br/>
 [ТОЧКА](../../mfc/reference/point-structure.md) структуры или `CPoint` объект, используемый для инициализации `CSize`.
 
-*dwSize*  
+*dwSize*<br/>
 DWORD используется для инициализации `CSize`. Младшее слово — `cx` член и старшее слово является `cy` член.
 
 ### <a name="remarks"></a>Примечания

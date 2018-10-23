@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378232"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808255"
 ---
 # <a name="cfixedstringt-class"></a>Класс CFixedStringT
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>Параметры
 
-*StringType*  
+*StringType*<br/>
 Используется в качестве базового класса для фиксированной строки объекта и может быть любым `CStringT`-тип данных на основе. Некоторые примеры включают `CString`, `CStringA`, и `CStringW`.
 
-*t_nChars*  
+*t_nChars*<br/>
 Число символов, сохраненных в буфере.
 
 ## <a name="members"></a>Участники
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Заканчивающуюся нулем строку, который необходимо скопировать в это `CFixedStringT` объекта.
 
-*str*  
+*str*<br/>
 Существующий `CFixedStringT` объект, который необходимо скопировать в это `CFixedStringT` объекта.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на диспетчер памяти `CFixedStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управление памятью для `CFixedStringT`, см. в разделе [управление памятью и CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Примечания
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>Параметры
 
-*str*  
+*str*<br/>
 Заканчивающуюся нулем строку, который необходимо скопировать в это `CFixedStringT` объекта.
 
-*psz*  
+*psz*<br/>
 Существующий `CFixedStringT` копируются в это `CFixedStringT` объекта.
 
 ### <a name="remarks"></a>Примечания
