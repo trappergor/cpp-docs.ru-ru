@@ -1,7 +1,7 @@
 ---
 title: Создание объекта-получателя OLE DB | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d4ef6d5d54bb3d6ed55ec2837a2300d8a1dcb03e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f64145a8d6269a5c6fd09f7178343a59ebc1b3ad
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034093"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989922"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Создание объекта-получателя OLE DB
 
-Можно создать объект-получатель шаблоны OLE DB с или без OLE DB мастер потребителя ATL, хотя с помощью мастера является рекомендуемым методом. Объект-получатель может работать в любом приложении, поддерживающем ATL.  
+Можно создать объект-получатель шаблоны OLE DB с или без **Мастер потребителя ATL OLE DB**, хотя с помощью мастера является рекомендуемым методом. Объект-получатель может работать в любом приложении, поддерживающем ATL.  
   
 Данный раздел охватывает следующее:  
   

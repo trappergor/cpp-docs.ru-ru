@@ -1,7 +1,7 @@
 ---
 title: Создание проекта для поставщика | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f4d776dbbfbab5e038e14c15a9c281c8edb09153
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 86f85b95b4b45624a778bc183cabadda886d002d
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410880"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990091"
 ---
 # <a name="creating-a-project-for-the-provider"></a>Создание проекта для поставщика
 
@@ -32,7 +32,10 @@ ms.locfileid: "49410880"
   
      Откроется диалоговое окно **Новый проект** .  
   
-1. В **типы проектов** панели щелкните **проекты Visual C++** папки. В **шаблоны** панели щелкните **проекта ATL**.  
+1. В **типы проектов** панели щелкните **установленные** > **Visual C++** > **MFC/ATL** папки. В **шаблоны** панели щелкните **проекта ATL**.  
+
+    > [!NOTE]
+    > В предыдущих версиях Visual Studio, найдите типа проекта в разделе **установленные** > **шаблоны** > **Visual C++**  >  **ATL**.
   
 1. В **имя** введите имя для проекта и нажмите кнопку **ОК**.  
   

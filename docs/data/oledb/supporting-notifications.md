@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 73bc32cd4a02affa98c53f892e5d34e1650d08f7
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082466"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990106"
 ---
 # <a name="supporting-notifications"></a>Поддержка уведомлений
 
@@ -39,7 +39,7 @@ ms.locfileid: "49082466"
   
 Кроме того класс должен также содержать картой, которая определяет запись точки подключения, следующим образом:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP  
    CONNECTIONPOINT_ENTRY (IID_IRowsetNotify)  
 END_CONNECTION_POINT_MAP  
@@ -52,7 +52,7 @@ END_CONNECTION_POINT_MAP
 Например, вот цепочку наследования для `RUpdateRowset` в [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV):  
   
 > [!NOTE]
->  Пример кода может отличаться от приведенного в примере; пример кода следует рассматривать в качестве более новой версии.  
+> Пример кода может отличаться от приведенного в примере; пример кода следует рассматривать в качестве более новой версии.  
   
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -71,7 +71,7 @@ public CRowsetImpl< RUpdateRowset, CAgentMan, CUpdateCommand,
 
 Также необходимо добавить следующее в сопоставление COM в наборе строк:  
   
-```  
+```cpp  
 COM_INTERFACE_ENTRY(IConnectionPointContainer)  
 COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)  
 ```  
@@ -82,7 +82,7 @@ COM_INTERFACE_ENTRY_IMPL(IConnectionPointContainer)
 
 Необходимо также добавить сопоставление точки подключения. Он должен выглядеть примерно следующим образом:  
   
-```  
+```cpp  
 BEGIN_CONNECTION_POINT_MAP(rowset-name)  
      CONNECTION_POINT_ENTRY(_uuidof(IRowsetNotify))  
 END_CONNECTION_POINT_MAP()  

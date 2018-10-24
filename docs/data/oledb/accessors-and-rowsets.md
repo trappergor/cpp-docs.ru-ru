@@ -1,7 +1,7 @@
 ---
 title: Методы доступа и наборы строк | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113101"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990182"
 ---
 # <a name="accessors-and-rowsets"></a>Методы доступа и наборы строк
 
@@ -50,7 +50,7 @@ ms.locfileid: "46113101"
   
 - [CAccessor](../../data/oledb/caccessor-class.md) используйте этот метод доступа в том случае, если вы знаете структуры базы данных-источника во время разработки. `CAccessor` статически связывает запись в базе данных, который содержит буфер, к источнику данных.  
   
-- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) используйте этот метод доступа, если вы не знаете структуру базы данных во время разработки. `CDynamicAccessor` вызовы `IColumnsInfo::GetColumnInfo` Чтобы получить сведения о столбцах базы данных. Создает и управляет метод доступа и буфера.  
+- [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) использовать этот метод доступа, если вы не знаете структуру базы данных во время разработки. `CDynamicAccessor` вызовы `IColumnsInfo::GetColumnInfo` Чтобы получить сведения о столбцах базы данных. Создает и управляет метод доступа и буфера.  
   
 - [CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md) использовать этот метод доступа для обработки типов Неизвестная команда. При подготовке команды `CDynamicParameterAccessor` можно получить сведения о параметрах из `ICommandWithParameters` интерфейс, если поставщик поддерживает `ICommandWithParameters`.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "46113101"
 ![График RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 Классы набора строк  
   
-[Наборы строк схемы](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) сделать не доступа в данных хранилища данных, но вместо этого доступ к сведениям о хранилище данных, называемые метаданными. Наборы строк схемы обычно используются в ситуациях, в которых структуру базы данных не известен во время компиляции и должен быть получен во время выполнения.  
+[Наборы строк схемы](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) не доступа в данных хранилища данных, но вместо этого доступ к сведениям о хранилище данных, называемые метаданными. Наборы строк схемы обычно используются в ситуациях, в которых структуру базы данных не известен во время компиляции и должен быть получен во время выполнения.  
   
 ## <a name="see-also"></a>См. также  
 
