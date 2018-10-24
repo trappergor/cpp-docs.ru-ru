@@ -17,24 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdde0f8d4edc13e8c1e1a53d8f4393dc7c2dac40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372474"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889936"
 ---
 # <a name="redistributing-web-client-applications"></a>Распространение клиентских веб-приложений
 
 Если приложение использует классы MFC, реализуя элемент управления WebBrowser (например, `CHtmlView` или `CHtmlEditView`), на целевом компьютере нужно установить Microsoft Internet Explorer 4.0 или более поздней версии.
 
-Установка последней версии Internet Explorer также гарантирует, что целевой компьютер располагает новейшими файлами общих элементов управления.
-
-Сведения об установке минимальных компонентов Internet Explorer можно найти в следующей статье базы знаний:
-
-- Q185375. Практическое руководство: создание установки Internet Explorer из одного исполняемого файла ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp))
-
-Статьи базы знаний можно найти в библиотеке MSDN или по адресу [http://support.microsoft.com](http://support.microsoft.com).
+Установка последней версии Internet Explorer также гарантирует, что целевой компьютер располагает новейшими файлами общих элементов управления. Дополнительные сведения см. в статье [Установка и развертывание Internet Explorer 11](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11).
 
 ## <a name="see-also"></a>См. также
 

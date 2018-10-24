@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3091437333d01db3fa556cb3c164e916c3628333
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057801"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860892"
 ---
 # <a name="c-keywords"></a>Ключевые слова в C
 
@@ -48,15 +48,15 @@ ms.locfileid: "46057801"
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**2|**__int8**|**naked**2|
-|**__based**1|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**2|
+|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
+|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
+|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
 |**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**2|**__inline**|**__leave**||
+|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
 
-1. Ключевое слово **__based** имеет ограниченное применение: в компиляциях для 32- и 64-разрядных платформ.
+<sup>1</sup> Ключевое слово **__based** имеет ограниченное применение: в компиляциях для 32- и 64-разрядных платформ.
 
-2. Если эти ключевые слова используются с ключевым словом **__declspec**, они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
+<sup>2</sup> Если эти ключевые слова используются с ключевым словом **__declspec**, они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
 
 Расширения Microsoft по умолчанию включены. Для того чтобы ваши программы были полностью переносимы, расширения Microsoft можно отключить, установив во время компиляции параметр /Za (компилировать для совместимости с ANSI). При этом ключевые слова для систем Microsoft будут отключены.
 
