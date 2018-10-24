@@ -15,6 +15,7 @@
 ### [Исправление зависимостей от внутренних компонентов библиотеки](fix-your-dependencies-on-library-internals.md)
 ### [Проблемы при миграции с плавающей запятой](floating-point-migration-issues.md)
 ### [Использование собственного многоплатформенного нацеливания в Visual Studio для сборки старых проектов](use-native-multi-targeting.md)
+### [Функции Visual C++, не рекомендуемые для использования в предварительной версии Visual Studio 2019](features-deprecated-in-visual-studio.md)
 ## [Знакомство с Visual C++ для пользователей UNIX](introduction-to-visual-cpp-for-unix-users.md)
 ## [Перенос приложений из UNIX в Win32](porting-from-unix-to-win32.md)
 ## [Перенос на универсальную платформу Windows (C++)](porting-to-the-universal-windows-platform-cpp.md)

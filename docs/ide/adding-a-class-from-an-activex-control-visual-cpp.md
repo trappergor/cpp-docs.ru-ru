@@ -1,7 +1,7 @@
 ---
 title: Добавление класса из элемента ActiveX (Visual C++) | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,16 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fd284236d2e9267d281061eef3915ed41f6f590
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f9e7d8ea0e3b21b06d73e187a4f45c53cd896cf
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375961"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250488"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>Добавление класса из элемента управления ActiveX (Visual C++)
 
 Этот мастер используется для создания класса MFC из интерфейса в доступном элементе управления ActiveX. Вы можете добавить класс MFC для [приложения MFC](../mfc/reference/creating-an-mfc-application.md), [библиотеки DLL MFC](../mfc/reference/creating-an-mfc-dll-project.md) или [элемента управления ActiveX MFC](../mfc/reference/creating-an-mfc-activex-control.md).
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
 
 > [!NOTE]
 >  Чтобы добавить класс из элемента управления ActiveX, вам не нужно создавать проект MFC с включенной автоматизацией.
