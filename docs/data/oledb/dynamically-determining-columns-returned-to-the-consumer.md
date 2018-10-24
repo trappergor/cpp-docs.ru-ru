@@ -16,22 +16,22 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d3b7d20fb82399f3778c751de28858b93f81071a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fffa63c9bbcc556009fb5edff93fd02f302ae3ea
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080887"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990130"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Динамично определяемые столбцы, возвращенные объекту-получателю
 
 PROVIDER_COLUMN_ENTRY в обычном режиме обработки `IColumnsInfo::GetColumnsInfo` вызова. Тем не менее так как объект-получатель может предпочесть использование закладок, поставщик должен иметь возможность изменять столбцы, возвращаемые в зависимости от того, является ли потребитель запрашивает закладку.  
   
-Для обработки `IColumnsInfo::GetColumnsInfo` вызова, удалите PROVIDER_COLUMN_MAP, которая определяет функцию `GetColumnInfo`, из `CAgentMan` пользователя записи в MyProviderRS.h и замените его определение собственных `GetColumnInfo` функции:  
+Для обработки `IColumnsInfo::GetColumnsInfo` вызова, удалите PROVIDER_COLUMN_MAP, которая определяет функцию `GetColumnInfo`, из `CAgentMan` запись пользователя в *Custom*RS.h и замените его определение собственных `GetColumnInfo` функция:  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.H  
+// CustomRS.H  
 class CAgentMan  
 {  
 public:  
@@ -52,13 +52,13 @@ public:
   
 Далее, реализовать `GetColumnInfo` работать в MyProviderRS.cpp, как показано в следующем коде.  
   
-`GetColumnInfo` проверяет, чтобы проверить, если свойство OLE DB `DBPROP_BOOKMARKS` имеет значение. Чтобы получить значение свойства `GetColumnInfo` использует указатель (`pRowset`) объекта набора строк. `pThis` Указатель представляет класс, который создал набор строк, который является классом, где хранится в схеме сопоставления свойств. `GetColumnInfo` приводит `pThis` указатель на `RMyProviderRowset` указатель.  
+`GetColumnInfo` проверяет, чтобы проверить, если свойство OLE DB `DBPROP_BOOKMARKS` имеет значение. Чтобы получить значение свойства `GetColumnInfo` использует указатель (`pRowset`) объекта набора строк. `pThis` Указатель представляет класс, который создал набор строк, который является классом, где хранится в схеме сопоставления свойств. `GetColumnInfo` приводит `pThis` указатель на `RCustomRowset` указатель.  
   
 Для проверки `DBPROP_BOOKMARKS` свойство, `GetColumnInfo` использует `IRowsetInfo` интерфейс, который можно получить, вызвав `QueryInterface` на `pRowset` интерфейс. Кроме того, можно использовать ATL [CComQIPtr](../../atl/reference/ccomqiptr-class.md) метод вместо этого.  
   
 ```cpp
 ////////////////////////////////////////////////////////////////////  
-// MyProviderRS.cpp  
+// CustomRS.cpp  
 ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)  
 {  
    static ATLCOLUMNINFO _rgColumns[5];  
@@ -119,7 +119,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
 ```cpp
 ////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
+// CustomRS.h  
   
 #define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
    _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  

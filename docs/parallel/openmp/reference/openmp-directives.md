@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809009"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990338"
 ---
 # <a name="openmp-directives"></a>Директивы OpenMP
 
@@ -66,7 +66,7 @@ Visual C++ поддерживает следующие директивы OpenMP
 [single](#single)                     | Позволяет указать, что раздела кода, должна выполняться в одном потоке, не обязательно главного потока.
 [threadprivate](#threadprivate)       | Указывает, что переменная является частной для потока.
 
-## <a name="atomic"></a>атомарный
+## <a name="atomic"></a>atomic
 
 Указывает, что ячейку памяти, которая обновляется атомарно.
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>Барьер
 
 Синхронизирует все потоки в группе; все потоки остановиться барьера, пока все потоки выполнения барьера.
 
@@ -129,7 +129,7 @@ Number of threads: 10
 
 Пример использования `barrier`, см. в разделе [master](#master).
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>Критические
 
 Указывает, что код будет выполняться только в одном потоке за раз.
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>Flush (OpenMP)
 
 Указывает, что все потоки имеют одинаковое представление памяти для всех общих объектов.
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>для (OpenMP)
 
 Приводит к работе, выполненной в `for` цикла внутри параллельной области для будет разделен между потоками.
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>Master
 
 Указывает, что только главный поток должен выполняться части программы.
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>Параллельный
 
 Определяет параллельной области, который приведен код, который будет выполняться сразу несколько потоков параллельно.
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 Обратите внимание, что порядок выходных данных могут различаться на разных компьютерах.
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>разделы (OpenMP)
 
 Идентифицирует разделов кода необходимо распределить между всеми потоками.
 
@@ -588,7 +588,7 @@ Hello from thread 3
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>одиночный
+## <a name="single"></a>Единый
 
 Позволяет указать, что раздела кода, должна выполняться в одном потоке, не обязательно главного потока.
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }
