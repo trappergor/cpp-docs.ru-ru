@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0e735ece878797ffdcf89fffefa33473107ad3d5
+ms.sourcegitcommit: 7098d64443ffbd4a47f30bc41753007b570b47e8
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821053"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49120568"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
@@ -30,7 +30,7 @@ ms.locfileid: "48821053"
 В этом разделе предполагается, что вы уже знакомы с поддержкой CMake в Visual Studio. Дополнительные сведения см. в разделе [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md). Дополнительные сведения о CMake см. на странице [Сборка, тестирование и упаковка программного обеспечения с помощью CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт, которая поддерживает панель [Представление целевых объектов CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) в Visual Studio, скачайте последние готовые двоичные файлы: [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Если диспетчер пакетов предоставляет более раннюю версию, чем CMake 3.8, можно [создать CMake из источника](#build-a-supported-cmake-release-from-source) или, если вы предпочитаете использовать стандартный CMake, скачать нужную версию на [официальной странице CMake](https://cmake.org/download/). 
+> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
 ## <a name="open-a-folder"></a>Открытие папки
 
@@ -118,49 +118,10 @@ add_executable(hello-cmake hello.cpp)
 
 Эти параметры позволяют вам выполнять команды в окне удаленного ввода до и после сборки и до создания CMake. Они могут быть любой допустимой командой в окне удаленного ввода. Выходные данные передаются обратно в Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Создание поддерживаемого выпуска CMake из источника
+## <a name="download-prebuilt-cmake-binaries"></a>Скачивание предварительно созданных двоичных файлов CMake
 
-Минимальной версией CMake, необходимой на компьютере Linux, является 3.8. Кроме того, должен поддерживаться режим сервера. Чтобы проверить это, выполните следующую команду:
+В дистрибутиве Linux может быть более ранняя версия CMake. Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
-```cmd
-cmake --version
-```
-
-Чтобы проверить, включен ли режим сервера, выполните следующую команду:
-
-```cmd
-cmake -E capabilities
-```
-
-В выходных данных найдите **"serverMode":true**. Обратите внимание, что даже при компиляции CMake из источника, как описано ниже, после завершения процесса необходимо проверить возможности. Система Linux может накладывать ограничения, которые препятствуют включению режима сервера.
-
-Чтобы начать сборку CMake из источника в оболочке системы Linux, убедитесь, что диспетчер пакетов обновлен и вам доступны средства cmake и git.
-
-Сначала клонируйте источники CMake из [репозитория Microsoft CMake](https://github.com/Microsoft/CMake), в котором доступна вилка для поддержки CMake в Visual Studio:
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-Затем выполните следующие команды, чтобы создать и установить текущий выпуск CMake в папке /usr/local/bin:
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-После этого выполните следующую команду, чтобы удостовериться, что используется версия 3.8 или выше и что включен режим сервера:
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>См. также
 

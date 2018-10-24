@@ -27,12 +27,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f94d60d4c6e804a9bd27293bb0eff67b29a1e8a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85f8b31ee9faec433fa0c9f1ff64d5bfa1e9665a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092067"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161259"
 ---
 # <a name="rtdynamiccast"></a>__RTDynamicCast
 
@@ -65,7 +65,7 @@ PVOID __RTDynamicCast (
 Планируемый результат преобразования.
 
 *isReference*<br/>
-Значение `true`, если аргумент является ссылкой; значение `false`, если аргумент является указателем.
+Значение **true**, если входные данные являются ссылкой; значение **false**, если входные данные являются указателем.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
