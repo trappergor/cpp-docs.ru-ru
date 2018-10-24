@@ -2,7 +2,7 @@
 title: Установка рабочей нагрузки Linux для проектов C++ в Visual Studio | Документация Майкрософт
 description: Скачивание, установка и настройка рабочей нагрузки Linux для проектов C++ в Visual Studio.
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601396"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307910"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Загрузка, установка и настройка рабочей нагрузки Linux
 
@@ -41,7 +41,7 @@ Visual Studio IDE в Windows можно использовать для созд
 
 Еще один вариант — активировать в Windows 10 подсистему Windows для Linux. Дополнительные сведения см. в [руководстве по установке Windows 10](/windows/wsl/install-win10).
 
-## <a name="linux-setup"></a>Установка Linux
+## <a name="linux-setup-ubuntu"></a>Настройка Linux Ubuntu
 
 На целевом компьютере Linux должны быть установлены **openssh-server**, **g++**, **gdb** и **gdbserver** и запущена управляющая программа SSH. **ZIP** необходим для автоматической синхронизации удаленных заголовков на локальном компьютере, чтобы обеспечить поддержку Intellisense. Если эти приложения отсутствуют, их можно установить следующим образом.
 
@@ -49,10 +49,27 @@ Visual Studio IDE в Windows можно использовать для созд
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   Для выполнения команды sudo вам может быть предложено ввести пароль учетной записи root.  Введите его и продолжите.  После завершения эти службы и инструменты будут установлены.
+   Для выполнения команды sudo вам может быть предложено ввести пароль учетной записи root.  Введите его и продолжите. После завершения будут установлены требуемые службы и средства.
 
 1. Запустите службу ssh на компьютере Linux, выполнив следующую команду:
 
    `sudo service ssh start`
 
-   Эта команда запустит службу в фоновом режиме для готовности к принятию подключений.
+   Эта команда запустит службу в фоновом режиме в режиме готовности к принятию подключений.
+
+## <a name="linux-setup-fedora"></a>Настройка Linux Fedora
+
+На целевой машине под управлением Fedora используются установщик пакетов **dnf**. Чтобы скачать **openssh-server**, **g ++**, **gdb**, **gdbserver** и **zip**, а затем перезапустить ssh управляющую программу, сделайте следующее:
+
+1. В командной строке оболочки на компьютере Linux выполните следующую команду:
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   Для выполнения команды sudo вам может быть предложено ввести пароль учетной записи root.  Введите его и продолжите. После завершения будут установлены требуемые службы и средства.
+
+1. Запустите службу ssh на компьютере Linux, выполнив следующую команду:
+
+   `sudo systemctl start sshd`
+
+   Эта команда запустит службу в фоновом режиме в режиме готовности к принятию подключений.
+
