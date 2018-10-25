@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9b157cfb497c355f44a15c8e42b81bc30753a4a9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29632784248d624f184550f0c598d05cd26b85cf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079549"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Класс CMFCPreviewCtrlImpl
 
@@ -180,9 +180,8 @@ virtual void DoPaint(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства для рисования.
-
 
 ## <a name="focus"></a> CMFCPreviewCtrlImpl::Focus
 
@@ -193,6 +192,7 @@ virtual void DoPaint(
 ```
 virtual void Focus();
 ```
+
 ## <a name="getdocument"></a> CMFCPreviewCtrlImpl::GetDocument
 
 Возвращает документ, подключенных к этому элементу управления предварительной версии.
@@ -226,6 +226,7 @@ COLORREF m_clrBackColor;
 ```
 COLORREF m_clrTextColor;
 ```
+
 ## <a name="m_font"></a> CMFCPreviewCtrlImpl::m_font шрифт, используемый для отображения текста в окне предварительного просмотра.
 
 ### <a name="syntax"></a>Синтаксис
@@ -233,6 +234,7 @@ COLORREF m_clrTextColor;
 ```
 CFont m_font;
 ```
+
 ## <a name="m_pdocument"></a> CMFCPreviewCtrlImpl::m_pDocument
 
 Указатель на документ, содержимое которого отображается в элементе управления.
@@ -252,6 +254,7 @@ ATL::IDocument* m_pDocument;
 ```
 virtual void Redraw();
 ```
+
 ## <a name="setdocument"></a> CMFCPreviewCtrlImpl::SetDocument
 
 Вызывается обработчик просмотра, чтобы создать связь между реализацией документа и элемента управления просмотра.

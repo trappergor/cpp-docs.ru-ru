@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057274"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>Изменение свойств ресурса (C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313355"
 
 1. В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши ресурс, нужно изменить и выберите **свойства** в контекстном меню.
 
-   > [!NOTE] 
+   > [!NOTE]
    > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).
 
 2. В [окно "Свойства"](/visualstudio/ide/reference/properties-window), изменение свойств ресурса.

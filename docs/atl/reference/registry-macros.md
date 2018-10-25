@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058501"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053660"
 ---
 # <a name="registry-macros"></a>Макросы реестра
 
@@ -41,7 +41,7 @@ ms.locfileid: "46058501"
 |[DECLARE_REGISTRY](#declare_registry)|Вводит или удаляет записи основного объекта в системном реестре.|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|Указывает сведения, необходимые для автоматической регистрации *appid*.|
 |[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|Именованный ресурс обнаружен и запускает его реестра внутри него.|
-|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Находит ресурс, идентифицируемый идентификатор и запускает скрипт реестра, в ней.|  
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|Находит ресурс, идентифицируемый идентификатор и запускает скрипт реестра, в ней.|
 
 ## <a name="requirements"></a>Требования
 
@@ -96,10 +96,10 @@ DECLARE_NO_REGISTRY()
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ DECLARE_REGISTRY(
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Если требуется ATL для замены значений для замены во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), передавая массив. Это добавляет все значения замены в `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.  
+Если требуется ATL для замены значений для замены во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), передавая массив. Это добавляет все значения замены в `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.
 
 Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
@@ -198,7 +198,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-Если требуется ATL для замены значений для замены во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), передавая массив. Это добавляет все значения замены в `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.  
+Если требуется ATL для замены значений для замены во время выполнения, не указывайте DECLARE_REGISTRY_RESOURCE или DECLARE_REGISTRY_RESOURCEID макрос. Вместо этого создайте массив `_ATL_REGMAP_ENTRIES` структуры, где каждая запись содержит переменной заполнитель в паре со значением для замены заполнителя во время выполнения. Затем вызовите [CAtlModule::UpdateRegistryFromResourceD](catlmodule-class.md#updateregistryfromresourced) или [CAtlModule::UpdateRegistryFromResourceS](catlmodule-class.md#updateregistryfromresources), передавая массив. Это добавляет все значения замены в `_ATL_REGMAP_ENTRIES` структур карту замены регистратора.
 
 Дополнительные сведения о подстановочных параметров и сценариев см. в статье [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 

@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07dddbcfba7920efdda1f222843299ef29f19f0c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235793"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076756"
 ---
 # <a name="vector-class"></a>Класс vector
 
@@ -116,7 +116,7 @@ class vector
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*<br/>
+*Type*<br/>
 Тип данных элементов, сохраняемых в векторе.
 
 *Распределитель*<br/>
@@ -370,7 +370,7 @@ const_reference back() const;
 
 Если возвращаемое значение `back` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `back` присвоено `reference`, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -402,7 +402,6 @@ int main() {
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -789,7 +788,6 @@ int main( )
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -1165,7 +1163,7 @@ const_reference front() const;
 
 Если возвращаемое значение `front` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `front` присвоено **ссылке**, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -1410,7 +1408,7 @@ const_reference operator[](size_type Pos) const;
 
 Если возвращаемое значение `operator[]` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `operator[]` присвоено ссылке, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -1554,7 +1552,6 @@ void pop_back();
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

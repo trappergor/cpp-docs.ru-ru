@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: fc11631b6a9b4c675d488d69c5575a89853e64a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079276"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -125,13 +125,13 @@ class CEdit : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CEdit::CEdit](#cedit)|Создает `CEdit` объект элемента управления.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Определяет, можно ли отменить операцию управления ввода.|
 |[CEdit::CharFromPos](#charfrompos)|Возвращает индексы строки и символ для символа, ближайшего к заданной позиции.|
@@ -557,7 +557,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pichStart*|[out] Отсчитываемый от нуля индекс первого символа в диапазоне текста, который будет выделен.|
 |*pichEnd*|[out] Отсчитываемый от нуля индекс последнего символа в диапазоне текста, который будет выделен.|
@@ -1031,7 +1031,6 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 BOOL SetCueBanner(LPCWSTR lpszText);
 
-
 BOOL SetCueBanner(
     LPCWSTR lpszText,
     BOOL fDrawWhenFocused = FALSE);
@@ -1109,7 +1108,7 @@ void SetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ichStart*|[in] Отсчитываемый от нуля индекс первого символа в диапазоне текста для выделения.|
 |*ichEnd*|[in] Отсчитываемый от нуля индекс последнего символа в диапазоне текста для выделения.|
@@ -1322,7 +1321,6 @@ void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
 
-
 void SetSel(
     int nStartChar,
     int nEndChar,
@@ -1358,7 +1356,6 @@ void SetSel(
 ```
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
-
 
 BOOL SetTabStops(
     int nTabStops,
@@ -1403,7 +1400,6 @@ BOOL SetTabStops(
 ```
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
 
-
 BOOL ShowBalloonTip(
     LPCWSTR lpszTitle,
     LPCWSTR lpszText,
@@ -1412,7 +1408,7 @@ BOOL ShowBalloonTip(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pEditBalloonTip*|[in] Указатель на [EDITBALLOONTIP](/windows/desktop/api/commctrl/ns-commctrl-_tageditballoontip) структура, описывающая всплывающей подсказки.|
 |*lpszTitle*|[in] Указатель на строку Юникода, которая содержит заголовок всплывающей подсказки.|

@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074739"
 ---
 # <a name="cdockingmanager-class"></a>Класс CDockingManager
 
@@ -296,7 +296,7 @@ class CDockingManager : public CObject
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     Эти режимы закрепления определяются [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) и устанавливаются с помощью вызова [CDockingManager::SetDockingMode](#setdockingmode).
+   Эти режимы закрепления определяются [CDockingManager::m_dockModeGlobal](#m_dockmodeglobal) и устанавливаются с помощью вызова [CDockingManager::SetDockingMode](#setdockingmode).
 
 - Если вы хотите создать область неплавающего, неизменяемый, вызвать [CDockingManager::AddPane](#addpane) метод. Этот метод регистрирует области в диспетчере закрепления, который отвечает за размещение области.
 
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>Параметры
 
 *hdwp*<br/>
-[in] Задает структуру позиции отложенного окна. Дополнительные сведения см. в разделе [типы данных Windows](/windows/desktop/WinProg/windows-data-types).
+[in] Задает структуру позиции отложенного окна. Дополнительные сведения см. в разделе [Типы данных Windows](/windows/desktop/WinProg/windows-data-types).
 
 ### <a name="remarks"></a>Примечания
 

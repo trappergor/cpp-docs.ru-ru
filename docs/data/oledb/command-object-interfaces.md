@@ -17,19 +17,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ea824fda89ccf45c62145a0fe72e55edc614970a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8176bad2921edd22edaab1688e38bc7de275b0bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106978"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074804"
 ---
 # <a name="command-object-interfaces"></a>Интерфейсы объекта команды
 
-Объект команды использует `IAccessor` интерфейса для указания привязок параметров. Потребитель вызывает метод `IAccessor::CreateAccessor`, передавая ему массив `DBBINDING` структуры. `DBBINDING` содержит сведения о привязках к столбцам (например, тип и длина). Поставщик получает структуры и определяет, как данные должны передаваться и нужны ли преобразования.  
-  
-`ICommandText` Интерфейс обеспечивает способ определения текстовой команды. `ICommandProperties` Интерфейс обрабатывает все свойства команд.  
-  
-## <a name="see-also"></a>См. также  
+Объект команды использует `IAccessor` интерфейса для указания привязок параметров. Потребитель вызывает метод `IAccessor::CreateAccessor`, передавая ему массив `DBBINDING` структуры. `DBBINDING` содержит сведения о привязках к столбцам (например, тип и длина). Поставщик получает структуры и определяет, как данные должны передаваться и нужны ли преобразования.
+
+`ICommandText` Интерфейс обеспечивает способ определения текстовой команды. `ICommandProperties` Интерфейс обрабатывает все свойства команд.
+
+## <a name="see-also"></a>См. также
 
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fe5aeaa288f0d36db71df7f7ab5d498aec3256
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 496b958c1ff96b2bc8f3fd3ce8b453c9d3497dcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081148"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -887,7 +887,6 @@ BOOL Arc(
     int x4,
     int y4);
 
-
 BOOL Arc(
     LPCRECT lpRect,
     POINT ptStart,
@@ -957,7 +956,6 @@ BOOL ArcTo(
     int y3,
     int x4,
     int y4);
-
 
 BOOL ArcTo(
     LPCRECT lpRect,
@@ -1142,7 +1140,6 @@ BOOL Chord(
     int x4,
     int y4);
 
-
 BOOL Chord(
     LPCRECT lpRect,
     POINT ptStart,
@@ -1226,7 +1223,7 @@ BOOL CreateCompatibleDC(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства. Если *pDC* имеет значение NULL, функция создает контекста устройства памяти, который совместим с отображением системы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1420,7 +1417,6 @@ void Draw3dRect(
     LPCRECT lpRect,
     COLORREF clrTopLeft,
     COLORREF clrBottomRight);
-
 
 void Draw3dRect(
     int x,
@@ -1672,7 +1668,6 @@ BOOL DrawIcon(
     int y,
     HICON hIcon);
 
-
 BOOL DrawIcon(
     POINT point,
     HICON hIcon);
@@ -1721,7 +1716,6 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1729,7 +1723,6 @@ BOOL DrawState(
     UINT nFlags,
     CBrush* pBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1737,14 +1730,12 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
     HICON hIcon,
     UINT nFlags,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1755,7 +1746,6 @@ BOOL DrawState(
     int nTextLen = 0,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1764,7 +1754,6 @@ BOOL DrawState(
     BOOL bPrefixText = TRUE,
     int nTextLen = 0,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1773,7 +1762,6 @@ BOOL DrawState(
     LPARAM lData,
     UINT nFlags,
     HBRUSH hBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1840,7 +1828,6 @@ virtual int DrawText(
     LPRECT lpRect,
     UINT nFormat);
 
-
 int DrawText(
     const CString& str,
     LPRECT lpRect,
@@ -1896,7 +1883,6 @@ virtual int DrawTextEx(
     LPRECT lpRect,
     UINT nFormat,
     LPDRAWTEXTPARAMS lpDTParams);
-
 
 int DrawTextEx(
     const CString& str,
@@ -2097,7 +2083,6 @@ virtual int Escape(
     int nCount,
     LPCSTR lpszInData,
     LPVOID lpOutData);
-
 
 int Escape(
     int nEscape,
@@ -2301,7 +2286,6 @@ virtual BOOL ExtTextOut(
     UINT nCount,
     LPINT lpDxWidths);
 
-
 BOOL ExtTextOut(
     int x,
     int y,
@@ -2433,7 +2417,6 @@ BOOL FillRgn(
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
-
 
 void FillSolidRect(
     int x,
@@ -3553,7 +3536,7 @@ int GetPath(
 
 Типы PT_BEZIERTO всегда находятся в наборах из трех. Точка в пути, непосредственно перед их определяет отправной точкой для Bzier кривой. Первые два пункта PT_BEZIERTO являются точками управления, а третья точка PT_BEZIERTO является конечной точкой (если жестко).
 
-     A PT_LINETO or PT_BEZIERTO type may be combined with the following flag (by using the bitwise operator **OR**) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:
+   Тип PT_LINETO или PT_BEZIERTO могут объединяться с помощью следующего флага (с помощью побитового оператора **OR**) чтобы указать, что соответствующая точка является последней точкой в фигуре и что фигура должна быть закрыта:
 
 - PT_CLOSEFIGURE указывает, что автоматически замкнутой после соответствующей строки или кривой. Фигура замыкается путем рисования линии из линий или кривых конечной точки к точке, соответствующее последней PT_MOVETO.
 
@@ -4704,7 +4687,6 @@ BOOL Pie(
     int x4,
     int y4);
 
-
 BOOL Pie(
     LPCRECT lpRect,
     POINT ptStart,
@@ -4768,7 +4750,6 @@ BOOL Pie(
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
-
 
 BOOL PlayMetaFile(
     HENHMETAFILE hEnhMetaFile,
@@ -4951,11 +4932,11 @@ BOOL PolyDraw(
 
 Типы PT_BEZIERTO всегда находятся в наборах из трех. Текущая позиция определяет начальную точку для Bzier сплайна. Первые два пункта PT_BEZIERTO являются точками управления, а третья точка PT_BEZIERTO является конечной точки. Конечная точка становится новой текущей позиции. Если не три последовательных точек PT_BEZIERTO, результаты ошибку.
 
-     A PT_LINETO or PT_BEZIERTO type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:
+   Тип PT_LINETO или PT_BEZIERTO могут сочетаться с следующую константу с помощью побитового оператора или закрывается, соответствующая точка является последней точкой фигуры и его:
 
 - PT_CLOSEFIGURE указывает, что рисунок будет автоматически закрыто через PT_LINETO или выполняется PT_BEZIERTO типа для этой точки. Линия проводится с этого момента для самой последней PT_MOVETO или `MoveTo` точки.
 
-     Этот флаг используется в сочетании с типом PT_LINETO для строки или с типом PT_BEZIERTO конечную точку для Bzier сплайн, с помощью побитовой операции **OR** оператор. Текущая позиция имеет значение конечной точки к заключительной строке.
+   Этот флаг используется в сочетании с типом PT_LINETO для строки или с типом PT_BEZIERTO конечную точку для Bzier сплайн, с помощью побитовой операции **OR** оператор. Текущая позиция имеет значение конечной точки к заключительной строке.
 
 *nCount*<br/>
 Указывает общее количество точек в *lpPoints* массива, тип таким же, как число байтов в *lpTypes* массива.
@@ -5332,7 +5313,6 @@ BOOL RoundRect(
     int x3,
     int y3);
 
-
 BOOL RoundRect(
     LPCRECT lpRect,
     POINT point);
@@ -5557,7 +5537,6 @@ BOOL SelectClipPath(int nMode);
 
 ```
 int SelectClipRgn(CRgn* pRgn);
-
 
 int SelectClipRgn(
     CRgn* pRgn,
@@ -6194,7 +6173,6 @@ COLORREF SetPixel(
     int y,
     COLORREF crColor);
 
-
 COLORREF SetPixel(
     POINT point,
     COLORREF crColor);
@@ -6233,7 +6211,6 @@ BOOL SetPixelV(
     int x,
     int y,
     COLORREF crColor);
-
 
 BOOL SetPixelV(
     POINT point,
@@ -6903,7 +6880,6 @@ virtual CSize TabbedTextOut(
     LPINT lpnTabStopPositions,
     int nTabOrigin);
 
-
 CSize TabbedTextOut(
     int x,
     int y,
@@ -6961,7 +6937,6 @@ virtual BOOL TextOut(
     int y,
     LPCTSTR lpszString,
     int nCount);
-
 
 BOOL TextOut(
     int x,

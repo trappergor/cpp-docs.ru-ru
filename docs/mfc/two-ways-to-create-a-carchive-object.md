@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080589"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Два способа создать объект CArchive
 
@@ -66,9 +66,9 @@ ms.locfileid: "46409342"
 
 1. Передайте `CFile` конструктору для `CArchive`, как показано в следующем примере:
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     Второй аргумент `CArchive` конструктор является значение перечисления, которое указывает, используется ли для сохранения или загрузки данных в или из файла архива. `Serialize` Функция объекта проверяет это состояние, вызвав `IsStoring` функцией для объекта архива.
+   Второй аргумент `CArchive` конструктор является значение перечисления, которое указывает, используется ли для сохранения или загрузки данных в или из файла архива. `Serialize` Функция объекта проверяет это состояние, вызвав `IsStoring` функцией для объекта архива.
 
 Когда вы закончите, сохранения или загрузки данных из `CArchive` объекта, закройте его. Несмотря на то что `CArchive` (и `CFile`) объекты автоматически закроется архива (и файл), рекомендуется явно сделать это, так как это упрощает восстановление после ошибки. Дополнительные сведения об обработке ошибок см. в статье [исключений: исключения для перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
@@ -76,7 +76,7 @@ ms.locfileid: "46409342"
 
 1. В следующем примере показано, как закрыть `CArchive` объекта:
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>См. также
 

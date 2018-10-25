@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440060"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078210"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
 
@@ -65,7 +65,7 @@ ms.locfileid: "46440060"
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **Добавление класса**.
 
-     Откроется [Добавление класса](../ide/add-class-dialog-box.md) диалоговое окно.
+   Откроется [Добавление класса](../ide/add-class-dialog-box.md) диалоговое окно.
 
 1. Дважды щелкните **класс MFC** шаблона.
 
@@ -95,25 +95,25 @@ ms.locfileid: "46440060"
 
 1. Дважды щелкните **таблица строк** папку и дважды щелкните существующую строку ресурса, к которому вы хотите добавить строку таблицы.
 
-     В таблице Строка откроется в окне.
+   В таблице Строка откроется в окне.
 
 1. Выберите пустую строку в конце строки таблицы и введите текст или заголовок, строки: например, «дополнительные свойства Page.»
 
-     Откроется **свойства строки** отображение страницы **заголовок** и **идентификатор** поля. **Заголовок** поле содержит строку, вы ввели.
+   Откроется **свойства строки** отображение страницы **заголовок** и **идентификатор** поля. **Заголовок** поле содержит строку, вы ввели.
 
 1. В **идентификатор** выберите или введите идентификатор для строки. Когда вы закончите, нажмите клавишу ВВОД.
 
-     В этом примере используется **IDS_SAMPLE_ADDPAGE** для имени типа новые страницы свойств.
+   В этом примере используется **IDS_SAMPLE_ADDPAGE** для имени типа новые страницы свойств.
 
 1. Повторите шаги 3 и 4 с помощью **IDS_SAMPLE_ADDPPG_CAPTION** для идентификатора и «Страница дополнительные свойства» для заголовка.
 
 1. В. CPP-файла нового класса страницы свойств (в этом примере `CAddtlPropPage`) изменить `CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry` , чтобы IDS_SAMPLE_ADDPAGE передается по [AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass), как показано в следующем примере:
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. Измените конструктор элемента `CAddtlPropPage` таким образом, передать IDS_SAMPLE_ADDPPG_CAPTION `COlePropertyPage` конструктора, как показано ниже:
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 После внесения необходимые изменения заново Постройте свой проект и использовать контейнер для тестирования новую страницу свойств. Сведения о том, как получить доступ к Контейнеру для тестирования, см. в разделе [Тестирование свойств и событий в Контейнере для тестирования](../mfc/testing-properties-and-events-with-test-container.md) .
 

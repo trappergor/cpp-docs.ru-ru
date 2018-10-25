@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403790"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056598"
 ---
 # <a name="creating-stack-and-queue-collections"></a>Создание коллекций стеков и очередей
 
@@ -40,9 +40,9 @@ ms.locfileid: "46403790"
 
 1. Наследовать новый класс списка из одного из существующих классов MFC списка и добавьте дополнительные функции-члены для поддержки функциональных возможностей операции стека.
 
-     В следующем примере показано, как для добавления функции-члены в стек элементов на стек, взглянуть на верхний элемент стека и восстановить верхний элемент из стека:
+   В следующем примере показано, как для добавления функции-члены в стек элементов на стек, взглянуть на верхний элемент стека и восстановить верхний элемент из стека:
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 Обратите внимание, что этот подход предоставляет основной `CObList` класса. Пользователь может вызвать любую `CObList` функция-член, ли имеет смысл для стека или нет.
 
@@ -54,9 +54,9 @@ ms.locfileid: "46403790"
 
 1. Наследовать новый класс списка из одного из предопределенного списка классов с помощью библиотеки Microsoft Foundation Class и добавьте дополнительные функции-члены для поддержки семантику операций с очередями.
 
-     В следующем примере показано, как можно добавить функции-члены для добавления элемента в конец очереди и получить элемент из начала очереди.
+   В следующем примере показано, как можно добавить функции-члены для добавления элемента в конец очереди и получить элемент из начала очереди.
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>См. также
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067193"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>удаление всех объектов из коллекции CObject
 
@@ -68,9 +68,9 @@ ms.locfileid: "46448252"
 
 1. Вызовите `RemoveAll` функции, чтобы удалить все элементы из массива, после они были удалены.
 
-     Удаление всех элементов в массиве код выглядит следующим образом:
+   Удаление всех элементов в массиве код выглядит следующим образом:
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 В приведенном выше примере список так же, как можно `RemoveAll` для удаления всех элементов в массиве или `RemoveAt` для удаления отдельных элементов.
 
@@ -82,9 +82,9 @@ ms.locfileid: "46448252"
 
 1. Вызовите `RemoveAll` функцию для удаления всех элементов из сопоставления, после они были удалены.
 
-     Код для удаления всех элементов `CMap` коллекции выглядит следующим образом. Каждый элемент в сопоставлении имеет строку в качестве ключа и `CPerson` объекта (производного от `CObject`) как значение.
+   Код для удаления всех элементов `CMap` коллекции выглядит следующим образом. Каждый элемент в сопоставлении имеет строку в качестве ключа и `CPerson` объекта (производного от `CObject`) как значение.
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 Можно вызвать `RemoveAll` для удаления всех элементов в сопоставлении или `RemoveKey` для удаления отдельных элемента с указанным ключом.
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dbf6d861dd446745ba0cc3581c7e3e5511c01d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f5d87663402081a06270f09547b2d61477d5ea3f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409367"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056910"
 ---
 # <a name="generic-classes-ccli"></a>Универсальные классы (C++/CLI)
 
@@ -58,7 +58,7 @@ class-body
 *предложения ограничений*<br/>
 Список (не запятыми) **где** предложения определяют ограничения параметров типа. Имеет следующий вид:
 
-> **где** *идентификатор для параметра типа* **:** *список ограничений***...** 
+> **где** *идентификатор для параметра типа* **:** *список ограничений***...**
 
 *Список ограничений*<br/>
 *класс или интерфейс*[`,` *...* ]
@@ -346,7 +346,7 @@ int main() {
 
 ```Output
 Name: Jeff Smith
-Amount: $123.00**  
+Amount: $123.00**
 ```
 
 ## <a name="generic-methods-in-generic-classes"></a>Универсальные методы в универсальных классах

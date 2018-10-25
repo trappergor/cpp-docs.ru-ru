@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082844"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 Число дней, который необходимо скопировать в новый `COleDateTimeSpan` объекта.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Значения дней недели и времени, который необходимо скопировать в новый `COleDateTimeSpan` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -217,10 +217,10 @@ CString Format(UINT nID) const;
 
 Краткое описание формы для этой функции выглядит следующим образом:
 
-**Формат (** *pFormat* **)**  
+**Формат (** *pFormat* **)**<br/>
 Эта форма форматирует значение, используя строку формата, содержащий специальные коды форматирования, которым предшествует знак процента (%), как показано на `printf`. Строка форматирования передается в качестве параметра функции.
 
-**Формат (** *nID* **)**  
+**Формат (** *nID* **)**<br/>
 Эта форма форматирует значение, используя строку формата, содержащий специальные коды форматирования, которым предшествует знак процента (%), как показано на `printf`. Строка форматирования — это ресурс. Идентификатор этого ресурса строка передается в качестве параметра.
 
 ### <a name="example"></a>Пример
@@ -388,11 +388,11 @@ DateTimeSpanStatus GetStatus() const throw();
 Возвращаемое значение определяется `DateTimeSpanStatus` перечислимый тип, который определен в `COleDateTimeSpan` класса.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 Краткое описание этих значений состояния см. в следующем списке:
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Примечания
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Краткое описание этих значений состояния см. в следующем списке:
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Значения в диапазоне дат и времени копируются в это `COleDateTimeSpan` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -739,11 +739,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 *Состояние* значение параметра определяется `DateTimeSpanStatus` перечислимый тип, который определен в `COleDateTimeSpan` класса.
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 Краткое описание этих значений состояния см. в следующем списке:

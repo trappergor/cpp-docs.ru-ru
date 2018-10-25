@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990338"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083260"
 ---
 # <a name="openmp-directives"></a>Директивы OpenMP
 
@@ -52,19 +52,19 @@ ms.locfileid: "49990338"
 
 Visual C++ поддерживает следующие директивы OpenMP.
 
-Директива                             | Описание
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | Указывает, что ячейку памяти, которая обновляется атомарно.
-[barrier](#barrier)                   | Синхронизирует все потоки в группе; все потоки остановиться барьера, пока все потоки выполнения барьера.
-[critical](#critical)                 | Указывает, что код только выполняется в одном потоке за раз.
-[flush](#flush-openmp)                | Указывает, что все потоки имеют одинаковое представление памяти для всех общих объектов.
-[for](#for-openmp)                    | Приводит к работе, выполненной в `for` цикла внутри параллельной области для будет разделен между потоками.
-[master](#master)                     | Указывает, что только главный поток должен выполняться части программы.
-[Упорядоченные](#ordered-openmp-directives) | Код в разделе распараллеленное `for` цикл должен выполняться как последовательный цикл.
-[parallel](#parallel)                 | Определяет параллельной области, который приведен код, который будет выполняться сразу несколько потоков параллельно.
-[Разделы](#sections-openmp)          | Идентифицирует разделов кода необходимо распределить между всеми потоками.
-[single](#single)                     | Позволяет указать, что раздела кода, должна выполняться в одном потоке, не обязательно главного потока.
-[threadprivate](#threadprivate)       | Указывает, что переменная является частной для потока.
+|Директива|Описание|
+|---------|-----------|
+|[atomic](#atomic)|Указывает, что ячейку памяти, которая обновляется атомарно.|
+|[barrier](#barrier)|Синхронизирует все потоки в группе; все потоки остановиться барьера, пока все потоки выполнения барьера.|
+|[critical](#critical)|Указывает, что код только выполняется в одном потоке за раз.|
+|[flush](#flush-openmp)|Указывает, что все потоки имеют одинаковое представление памяти для всех общих объектов.|
+|[for](#for-openmp)|Приводит к работе, выполненной в `for` цикла внутри параллельной области для будет разделен между потоками.|
+|[master](#master)|Указывает, что только главный поток должен выполняться части программы.|
+|[Упорядоченные](#ordered-openmp-directives)|Код в разделе распараллеленное `for` цикл должен выполняться как последовательный цикл.|
+|[parallel](#parallel)|Определяет параллельной области, который приведен код, который будет выполняться сразу несколько потоков параллельно.|
+|[Разделы](#sections-openmp)|Идентифицирует разделов кода необходимо распределить между всеми потоками.|
+|[single](#single)|Позволяет указать, что раздела кода, должна выполняться в одном потоке, не обязательно главного потока.|
+|[threadprivate](#threadprivate)|Указывает, что переменная является частной для потока.|
 
 ## <a name="atomic"></a>atomic
 
@@ -306,13 +306,13 @@ data = 2
 
 `for` Директива поддерживает следующие предложения OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [Упорядоченные](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [Упорядоченные](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 Если `parallel` также указан `clauses` предложения принимаются по `parallel` или `for` директивы, за исключением `nowait`.
 
@@ -535,14 +535,14 @@ test2() iteration 4
 
 `parallel` Директива поддерживает следующие предложения OpenMP:
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [Общие](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [Общие](openmp-clauses.md#shared-openmp)
 
 `parallel` Можно также использовать с [разделах](#sections-openmp) и [для](#for-openmp) директивы.
 
@@ -603,11 +603,11 @@ Hello from thread 3
 
 `sections` Директива поддерживает следующие предложения OpenMP:
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 Если `parallel` также указан `clauses` предложения принимаются по `parallel` или `sections` директивы, за исключением `nowait`.
 
@@ -656,10 +656,10 @@ Hello from thread 0
 
 `single` Директива поддерживает следующие предложения OpenMP:
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [Master](#master) директива позволяет указать, что раздела кода, должны выполняться только для главного потока.
 
@@ -745,4 +745,4 @@ int main()
 
 ### <a name="example"></a>Пример
 
-Пример использования `threadprivate`, см. в разделе [частного](../../../parallel/openmp/reference/private-openmp.md).
+Пример использования `threadprivate`, см. в разделе [частного](openmp-clauses.md#private-openmp).

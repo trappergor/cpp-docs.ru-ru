@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dff9f3c988e7ffdf8f15b5502bb0326e2692a128
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094186"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079042"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>Предупреждение компилятора (уровень 3) C4996
 
@@ -82,7 +82,6 @@ Microsoft переименовала некоторые функции POSIX в 
 Чтобы устранить эту проблему, мы обычно рекомендуем изменить код, чтобы вместо этого используйте имена функций, предлагаемых. Тем не менее новые имена, характерные для Майкрософт. Если необходимо использовать существующие имена функций в целях переносимости, то отключить эти предупреждения. Функции POSIX по-прежнему доступны в библиотеке в разделе первоначальные имена.
 
 Чтобы отключить предупреждения об устаревании для этих функций, задайте макрос препроцессора  **\_CRT\_NONSTDC\_нет\_ПРЕДУПРЕЖДЕНИЯ**. Можно определить этот макрос в командной строке, включив параметр `/D_CRT_NONSTDC_NO_WARNINGS`.
-
 
 ### <a name="unsafe-crt-library-functions"></a>Небезопасные функции библиотеки CRT
 
