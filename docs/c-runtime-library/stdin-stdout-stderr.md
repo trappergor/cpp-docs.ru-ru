@@ -1,7 +1,7 @@
 ---
 title: Потоки stdin, stdout, stderr | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/23/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: conceptual
@@ -23,20 +23,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a36d5fd60a19222e6f802e5a14037fb01ff865f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071982"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808710"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin, stdout, stderr
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
-      FILE *stdin; 
+FILE *stdin; 
 FILE *stdout; 
 FILE *stderr; 
 #include <stdio.h>
@@ -53,12 +52,12 @@ FILE *stderr;
 |Указатель|Поток|
 |-------------|------------|
 |`stdin`|Стандартный ввод|
-|**stdout**|Стандартный вывод|
+|`stdout`|Стандартный вывод|
 |`stderr`|Стандартная ошибка|
 
-Эти указатели можно использовать в качестве аргументов для функций. Некоторые функции, например **getchar** и `putchar`, используют `stdin` и **stdout** автоматически.
+Эти указатели можно использовать в качестве аргументов для функций. Некоторые функции, например [getchar](../c-runtime-library/reference/getchar-getwchar.md) и [putchar](../c-runtime-library/reference/putchar-putwchar.md), используют `stdin` и `stdout` автоматически.
 
-Эти указатели являются константами, и им не могут быть присвоены новые значения. Функцию `freopen` можно использовать, чтобы перенаправить потоки в файлы на диске или на другие устройства. Операционная система позволяет перенаправлять стандартный ввод и вывод программы на командном уровне.
+Эти указатели являются константами, и им не могут быть присвоены новые значения. Функцию [freopen](../c-runtime-library/reference/freopen-wfreopen.md) можно использовать, чтобы перенаправить потоки в файлы на диске или на другие устройства. Операционная система позволяет перенаправлять стандартный ввод и вывод программы на командном уровне.
 
 ## <a name="see-also"></a>См. также
 

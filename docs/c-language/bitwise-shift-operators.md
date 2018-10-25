@@ -1,7 +1,7 @@
 ---
 title: Операторы побитового сдвига | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020125"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808203"
 ---
 # <a name="bitwise-shift-operators"></a>Операторы побитового сдвига
 
-Операторы сдвига сдвигают свой первый операнд влево (`<<`) или вправо (`>>`) на число позиций, задаваемое вторым операндом.
+Операторы сдвига сдвигают свой первый операнд влево (**&lt;&lt;**) или вправо (**>>**) на число позиций, задаваемое вторым операндом.
 
 ## <a name="syntax"></a>Синтаксис
 
-*shift-expression*: *additive-expression*
-
-*shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 Оба операнда должны быть целыми значениями. Эти операторы выполняют обычные арифметические преобразования; типом результата является тип левого операнда после преобразования.
 
 В случае сдвига влево для освобождаемых правых битов задается значение 0. В случае сдвига вправо освобождающиеся левые биты заполняются в зависимости от типа первого операнда после преобразования. В случае типа `unsigned` для них устанавливается значение 0. В противном случае они заполняются путем копирования бита знака. Для операторов сдвига влево без переполнения оператор
 
-```
+```C
 expr1 << expr2
 ```
 
 эквивалентен умножению на 2<sup>expr2</sup>. Для операторов сдвига вправо операция
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ expr1 >> expr2
 
 Поскольку преобразования, выполняемые операторами сдвига, не обеспечивают условия переполнения и потери значимости, данные могут быть потеряны, если результат операции сдвига невозможно представить в типе первого операнда после преобразования.
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;
