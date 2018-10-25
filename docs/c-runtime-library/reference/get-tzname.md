@@ -1,7 +1,7 @@
 ---
 title: _get_tzname | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451697"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990312"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -59,10 +59,10 @@ errno_t _get_tzname(
 ### <a name="parameters"></a>Параметры
 
 *pReturnValue*<br/>
-Длина строки *timeZoneName* включая значение NULL.
+Длина строки *timeZoneName* включая завершающий нуль-символ.
 
 *timeZoneName*<br/>
-Адрес символьной строки для представления часового пояса имя или имя зоны (зима) переход на летнее (DST) в зависимости от *индекса*.
+Адрес символьной строки для представления названия часового пояса или летнее стандартное имя часового пояса (DST), в зависимости от *индекс*.
 
 *sizeInBytes*<br/>
 Размер *timeZoneName* символьные строки в байтах.
@@ -70,15 +70,23 @@ errno_t _get_tzname(
 *Индекс*<br/>
 Индекс, определяющий извлечение одного или двух названий часовых поясов.
 
+|*Индекс*|Содержание *timeZoneName*|*timeZoneName* значение по умолчанию|
+|-|-|-|
+|0|Название часового пояса|"PST"|
+|1|Название часового пояса с переходом на летнее время|"PDT"|
+|> 1 или < 0|**errno** присвоено **EINVAL**|не изменено|
+
+Если значения не изменяются явным образом во время выполнения, по умолчанию используются значения "PST" и "PDT" соответственно.
+
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль при успешном завершении, в противном случае **errno** введите значение.
+Нуль при успешном завершении, в противном случае **errno** введите значение.
 
-Если параметр *timeZoneName* — **NULL**, или *sizeInBytes* равно нулю или меньше нуля (но не оба), вызывается обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если параметр *timeZoneName* — **NULL**, или *sizeInBytes* равно нулю или меньше нуля (но не оба), вызывается обработчик недопустимого параметра, как описано в разделе [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*Индекс*|Возвращаемое значение|Содержимое *timeZoneName*|
+|*pReturnValue*|*timeZoneName*|*sizeInBytes*|*Индекс*|Возвращаемое значение|Содержание *timeZoneName*|
 |--------------------|--------------------|-------------------|-------------|------------------|--------------------------------|
 |Длина названия часового пояса|**NULL**|0|0 или 1|0|не изменено|
 |Длина названия часового пояса|any|> 0|0 или 1|0|Название часового пояса|
@@ -88,17 +96,51 @@ errno_t _get_tzname(
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_tzname** функция получает строковое представление символа названия часовой пояс и летнее стандартное название часового пояса (DST) в адрес *timeZoneName* в зависимости от индекса значение, а также размер строки в *pReturnValue*. Если *timeZoneName* — **NULL** и *sizeInBytes* равно нулю, только что размер строки, либо времени зоны в байтах возвращается в *pReturnValue*. Значение индекса должно быть равно 0 для стандартного часового пояса или 1 для часового пояса с переходом на летнее время. Другие значения индекса дают неопределенные результаты.
+**_Get_tzname** функция получает символ строковое представление текущего часового пояса или летнее стандартное имя часового пояса (DST) в адрес *timeZoneName* в зависимости от значение, а также размер строки в индекса *pReturnValue*. Если *timeZoneName* — **NULL** и *sizeInBytes* нулю, то размер строки, необходимое для хранения указанный часовой пояс и в возвращаетсянуль-символавбайтах*pReturnValue*. Значения индекса должны быть либо 0 для стандартного часового пояса или 1 для перехода на летнее стандартного часового пояса; другие значения *индекс* имеют неопределенные результаты.
 
-### <a name="index-values"></a>Значения индекса
+## <a name="example"></a>Пример
 
-|*Индекс*|Содержимое *timeZoneName*|*timeZoneName* значение по умолчанию|
-|-------------|--------------------------------|----------------------------------|
-|0|Название часового пояса|"PST"|
-|1|Название часового пояса с переходом на летнее время|"PDT"|
-|> 1 или < 0|**errno** значение **EINVAL**|не изменено|
+В этом примере вызывает **_get_tzname** получить необходимый размер буфера для отображения текущего перехода на летнее стандартное имя часового пояса, выделяет буфера этого размера, вызовы **_get_tzname** еще раз, чтобы загрузить имя в буфер и выводит его на консоль.
 
-Если значения не изменяются явным образом во время выполнения, по умолчанию используются значения "PST" и "PDT" соответственно.  Размеры этих массивов знаков управляются **TZNAME_MAX** значение.
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
+
+enum TZINDEX {
+    STD,
+    DST
+};
+
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>Вывод
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
 
 ## <a name="requirements"></a>Требования
 
@@ -115,4 +157,3 @@ errno_t _get_tzname(
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>
