@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1dfaed296242d2a0fc341c2ff5f137a08d753e71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bb13132c651323fcdffef2c06215314ad193c91d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791237"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071106"
 ---
 # <a name="restricted"></a>restricted
 
@@ -83,10 +83,10 @@ class c : public a, public b
 |**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
-[Атрибуты метода](method-attributes.md)  
+[Атрибуты метода](method-attributes.md)

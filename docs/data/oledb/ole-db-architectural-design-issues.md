@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072243"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Вопросы проектирования архитектуры OLE DB
 
-Перед запуском приложения OLE DB, рассмотрите следующие вопросы:  
-  
+Перед запуском приложения OLE DB, рассмотрите следующие вопросы:
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>Какой язык программирования будет использоваться для создания вашего приложения OLE DB?
 
 Корпорация Майкрософт предлагает несколько библиотек для выполнения этой задачи: библиотеку шаблонов OLE DB, атрибуты OLE DB и необработанные интерфейсы OLE DB в пакете SDK OLE DB. Кроме того существуют мастеров, помогающих при написании программы. Эти реализации описаны в [шаблоны OLE DB, атрибуты и другие реализации](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md).

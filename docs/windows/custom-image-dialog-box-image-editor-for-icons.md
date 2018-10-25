@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071684"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>Диалоговое окно пользовательского образа (C++) (редактор изображений для значков)
 
@@ -31,19 +31,19 @@ ms.locfileid: "46384719"
 - **Ширина**
 
    Место для ввода ширину пользовательского изображения в пикселях (1-512, предельное значение 2048).
-  
+
 - **Высота**
 
    Место для ввода высоту для пользовательского изображения в пикселях (1-512, предельное значение 2048).
-  
+
 - **Цвета**
 
    Поле нужно указать число цветов для пользовательского образа: 2, 16 или 256.
-  
+
 ## <a name="requirements"></a>Требования
 
 Нет
-  
+
 ## <a name="see-also"></a>См. также
 
 [Новый \<устройства > Изображение диалогового окна типа](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>

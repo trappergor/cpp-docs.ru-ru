@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070599"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Пошаговое руководство. Создание приложения на основе агента
 
@@ -64,7 +64,7 @@ ms.locfileid: "46377175"
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   Файл заголовка agents.h содержит функциональные возможности [concurrency::agent](../../parallel/concrt/reference/agent-class.md) класса.
 
 1. Убедитесь, что приложение успешно создан путем создания и выполнения его. Для построения приложения, на **построения** меню, щелкните **построить решение**. Если сборка приложения прошла успешно, запустите приложение, выбрав **начать отладку** на **Отладка** меню.
 
@@ -90,19 +90,19 @@ ms.locfileid: "46377175"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   `_file_name` Член является имя файла, который агент считывает данные из. `_target` Член является [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) объекта, который агент записывает содержимое файла. `_error` Член содержит любая ошибка, возникающая во время работы агента.
 
 1. Добавьте следующий код для `file_reader` конструкторы `public` раздел `file_reader` класса.
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   Каждая перегрузка конструктора задает `file_reader` данные-члены. Перегрузки конструктора, второй и третий позволяет вашему приложению, использование определенного планировщика с агентом. Первая перегрузка использует планировщик по умолчанию с агентом.
 
 1. Добавить `get_error` метод в общем разделе класса `file_reader` класса.
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   `get_error` Метод извлекает любая ошибка, возникающая во время работы агента.
 
 1. Реализуйте [Concurrency::agent:: Run](reference/agent-class.md#run) метод в `protected` части вашего класса.
 
@@ -140,7 +140,7 @@ ms.locfileid: "46377175"
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   Это `call` объекта также задает `event` объекта при получении пустую строку для обозначения окончания обработки.
 
 1. Создание `file_reader` объект, который считывает из файла test.txt и записывает содержимое этого файла значение `call` объекта.
 

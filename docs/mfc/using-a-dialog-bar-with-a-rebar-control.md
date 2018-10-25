@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c881e31d178d6303939c94d68e2824fb11ec2cbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9d4155fec333061c65f148f29e849dc4717f0d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425408"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073765"
 ---
 # <a name="using-a-dialog-bar-with-a-rebar-control"></a>Использование диалоговой панели с элементом управления главной панели
 
@@ -41,13 +41,13 @@ ms.locfileid: "46425408"
 
 1. В новый обработчик измените существующий код в соответствии со следующим примером:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#29](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_1.cpp)]
 
 1. Добавьте обработчик для сообщения WM_MOVE.
 
 1. В новый обработчик измените существующий код в соответствии со следующим примером:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#30](../mfc/codesnippet/cpp/using-a-dialog-bar-with-a-rebar-control_2.cpp)]
 
 Новые обработчики смоделировать прозрачность диалоговой панели, пересылки сообщения WM_ERASEBKGND родительского окна и принудительно перекрашивает каждый раз при перемещении объекта панели диалогового окна.
 

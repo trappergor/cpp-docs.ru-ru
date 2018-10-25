@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 605bc438b51fb96581d679ab0d9d37ed3696a5e4
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 1f9eeea62e1872cbea737313192b3822c23bb433
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064489"
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 
@@ -141,6 +141,7 @@ reader_writer_lock();
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 Создает `scoped_lock` объекта и получает `reader_writer_lock` переданный объект `_Reader_writer_lock` параметр как средство записи. Если блокировка удерживается другим потоком, этот вызов блокируется.

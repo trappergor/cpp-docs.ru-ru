@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8041d3928b819a7a5a53f89cc3dc2351a29ecf8f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4bcafdeecdc0091039e9bb4008aab4e85f6a34aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020915"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064971"
 ---
 # <a name="security-identifier-global-functions"></a>Глобальные функции идентификатор безопасности
 
@@ -94,11 +94,11 @@ ms.locfileid: "46020915"
 |[SIDs::SystemOps](#systemops)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_SYSTEM_OPS.|
 |[SIDs::TerminalServer](#terminalserver)|Возвращает идентификатор безопасности SECURITY_TERMINAL_SERVER_RID.|
 |[SIDs::Users](#users)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_USERS.|
-|[SIDs::World](#world)|Возвращает идентификатор безопасности SECURITY_WORLD_RID.|  
+|[SIDs::World](#world)|Возвращает идентификатор безопасности SECURITY_WORLD_RID.|
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="accountops"></a>  SIDs::AccountOps
 
@@ -110,7 +110,7 @@ CSid AccountOps() throw(...);
 
 ##  <a name="admins"></a>  SIDs::Admins
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_ADMINS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_ADMINS.
 
 ```
 CSid Admins() throw(...);
@@ -118,7 +118,7 @@ CSid Admins() throw(...);
 
 ##  <a name="anonymouslogon"></a>  SIDs::AnonymousLogon
 
-Возвращает идентификатор безопасности SECURITY_ANONYMOUS_LOGON_RID.  
+Возвращает идентификатор безопасности SECURITY_ANONYMOUS_LOGON_RID.
 
 ```
 CSid AnonymousLogon() throw(...);
@@ -126,7 +126,7 @@ CSid AnonymousLogon() throw(...);
 
 ##  <a name="authenticateduser"></a>  SIDs::AuthenticatedUser
 
-Возвращает идентификатор безопасности SECURITY_AUTHENTICATED_USER_RID.  
+Возвращает идентификатор безопасности SECURITY_AUTHENTICATED_USER_RID.
 
 ```
 CSid AuthenticatedUser() throw(...);
@@ -134,7 +134,7 @@ CSid AuthenticatedUser() throw(...);
 
 ##  <a name="backupops"></a>  SIDs::BackupOps
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_BACKUP_OPS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_BACKUP_OPS.
 
 ```
 CSid BackupOps() throw(...);
@@ -142,7 +142,7 @@ CSid BackupOps() throw(...);
 
 ##  <a name="batch"></a>  SIDs::Batch
 
-Возвращает идентификатор безопасности SECURITY_BATCH_RID.  
+Возвращает идентификатор безопасности SECURITY_BATCH_RID.
 
 ```
 CSid Batch() throw(...);
@@ -150,7 +150,7 @@ CSid Batch() throw(...);
 
 ##  <a name="creatorgroup"></a>  SIDs::CreatorGroup
 
-Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_RID.  
+Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_RID.
 
 ```
 CSid CreatorGroup() throw(...);
@@ -158,7 +158,7 @@ CSid CreatorGroup() throw(...);
 
 ##  <a name="creatorgroupserver"></a>  SIDs::CreatorGroupServer
 
-Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_SERVER_RID.  
+Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_SERVER_RID.
 
 ```
 CSid CreatorGroupServer() throw(...);
@@ -166,7 +166,7 @@ CSid CreatorGroupServer() throw(...);
 
 ##  <a name="creatorowner"></a>  SIDs::CreatorOwner
 
-Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_RID.  
+Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_RID.
 
 ```
 CSid CreatorOwner() throw(...);
@@ -174,7 +174,7 @@ CSid CreatorOwner() throw(...);
 
 ##  <a name="creatorownerserver"></a>  SIDs::CreatorOwnerServer
 
-Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_SERVER_RID.  
+Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_SERVER_RID.
 
 ```
 CSid CreatorOwnerServer() throw(...);
@@ -182,7 +182,7 @@ CSid CreatorOwnerServer() throw(...);
 
 ##  <a name="dialup"></a>  SIDs::Dialup
 
-Возвращает идентификатор безопасности SECURITY_DIALUP_RID.  
+Возвращает идентификатор безопасности SECURITY_DIALUP_RID.
 
 ```
 CSid Dialup() throw(...);
@@ -190,7 +190,7 @@ CSid Dialup() throw(...);
 
 ##  <a name="guests"></a>  SIDs::Guests
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_GUESTS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_GUESTS.
 
 ```
 CSid Guests() throw(...);
@@ -198,7 +198,7 @@ CSid Guests() throw(...);
 
 ##  <a name="interactive"></a>  SIDs::Interactive
 
-Возвращает идентификатор безопасности SECURITY_INTERACTIVE_RID.  
+Возвращает идентификатор безопасности SECURITY_INTERACTIVE_RID.
 
 ```
 CSid Interactive() throw(...);
@@ -206,7 +206,7 @@ CSid Interactive() throw(...);
 
 ##  <a name="local"></a>  SIDs::Local
 
-Возвращает идентификатор безопасности SECURITY_LOCAL_RID.  
+Возвращает идентификатор безопасности SECURITY_LOCAL_RID.
 
 ```
 CSid Local() throw(...);
@@ -214,7 +214,7 @@ CSid Local() throw(...);
 
 ##  <a name="network"></a>  SIDs::Network
 
-Возвращает идентификатор безопасности SECURITY_NETWORK_RID.  
+Возвращает идентификатор безопасности SECURITY_NETWORK_RID.
 
 ```
 CSid Network() throw(...);
@@ -222,7 +222,7 @@ CSid Network() throw(...);
 
 ##  <a name="networkservice"></a>  SIDs::NetworkService
 
-Возвращает идентификатор безопасности SECURITY_NETWORK_SERVICE_RID.  
+Возвращает идентификатор безопасности SECURITY_NETWORK_SERVICE_RID.
 
 ```
 CSid NetworkService() throw(...);
@@ -236,7 +236,7 @@ CSid NetworkService() throw(...);
 
 ##  <a name="null"></a>  SIDs::NULL
 
-Возвращает идентификатор безопасности SECURITY_NULL_RID.  
+Возвращает идентификатор безопасности SECURITY_NULL_RID.
 
 ```
 CSid Null() throw(...);
@@ -244,7 +244,7 @@ CSid Null() throw(...);
 
 ##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 
 ```
 CSid PreW2KAccess() throw(...);
@@ -252,7 +252,7 @@ CSid PreW2KAccess() throw(...);
 
 ##  <a name="powerusers"></a>  SIDs::PowerUsers
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_POWER_USERS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_POWER_USERS.
 
 ```
 CSid PowerUsers() throw(...);
@@ -260,7 +260,7 @@ CSid PowerUsers() throw(...);
 
 ##  <a name="printops"></a>  SIDs::PrintOps
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PRINT_OPS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PRINT_OPS.
 
 ```
 CSid PrintOps() throw(...);
@@ -268,7 +268,7 @@ CSid PrintOps() throw(...);
 
 ##  <a name="proxy"></a>  SIDs::Proxy
 
-Возвращает идентификатор безопасности SECURITY_PROXY_RID.  
+Возвращает идентификатор безопасности SECURITY_PROXY_RID.
 
 ```
 CSid Proxy() throw(...);
@@ -276,7 +276,7 @@ CSid Proxy() throw(...);
 
 ##  <a name="rasservers"></a>  SIDs::RasServers
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_RAS_SERVERS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_RAS_SERVERS.
 
 ```
 CSid RasServers() throw(...);
@@ -284,7 +284,7 @@ CSid RasServers() throw(...);
 
 ##  <a name="replicator"></a>  SIDs::Replicator
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_REPLICATOR.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_REPLICATOR.
 
 ```
 CSid Replicator() throw(...);
@@ -292,7 +292,7 @@ CSid Replicator() throw(...);
 
 ##  <a name="restrictedcode"></a>  SIDs::RestrictedCode
 
-Возвращает идентификатор безопасности SECURITY_RESTRICTED_CODE_RID.  
+Возвращает идентификатор безопасности SECURITY_RESTRICTED_CODE_RID.
 
 ```
 CSid RestrictedCode() throw(...);
@@ -300,7 +300,7 @@ CSid RestrictedCode() throw(...);
 
 ##  <a name="self"></a>  SIDs::SELF
 
-Возвращает идентификатор безопасности SECURITY_PRINCIPAL_SELF_RID.  
+Возвращает идентификатор безопасности SECURITY_PRINCIPAL_SELF_RID.
 
 ```
 CSid Self() throw(...);
@@ -308,7 +308,7 @@ CSid Self() throw(...);
 
 ##  <a name="serverlogon"></a>  SIDs::ServerLogon
 
-Возвращает идентификатор безопасности SECURITY_SERVER_LOGON_RID.  
+Возвращает идентификатор безопасности SECURITY_SERVER_LOGON_RID.
 
 ```
 CSid ServerLogon() throw(...);
@@ -316,7 +316,7 @@ CSid ServerLogon() throw(...);
 
 ##  <a name="service"></a>  SIDs::Service
 
-Возвращает идентификатор безопасности SECURITY_SERVICE_RID.  
+Возвращает идентификатор безопасности SECURITY_SERVICE_RID.
 
 ```
 CSid Service() throw(...);
@@ -324,7 +324,7 @@ CSid Service() throw(...);
 
 ##  <a name="system"></a>  SIDs::System
 
-Возвращает идентификатор безопасности SECURITY_LOCAL_SYSTEM_RID.  
+Возвращает идентификатор безопасности SECURITY_LOCAL_SYSTEM_RID.
 
 ```
 CSid System() throw(...);
@@ -332,7 +332,7 @@ CSid System() throw(...);
 
 ##  <a name="systemops"></a>  SIDs::SystemOps
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_SYSTEM_OPS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_SYSTEM_OPS.
 
 ```
 CSid SystemOps() throw(...);
@@ -340,7 +340,7 @@ CSid SystemOps() throw(...);
 
 ##  <a name="terminalserver"></a>  SIDs::TerminalServer
 
-Возвращает идентификатор безопасности SECURITY_TERMINAL_SERVER_RID.  
+Возвращает идентификатор безопасности SECURITY_TERMINAL_SERVER_RID.
 
 ```
 CSid TerminalServer() throw(...);
@@ -348,7 +348,7 @@ CSid TerminalServer() throw(...);
 
 ##  <a name="users"></a>  SIDs::Users
 
-Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_USERS.  
+Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_USERS.
 
 ```
 CSid Users() throw(...);
@@ -356,7 +356,7 @@ CSid Users() throw(...);
 
 ##  <a name="world"></a>  SIDs::World
 
-Возвращает идентификатор безопасности SECURITY_WORLD_RID.  
+Возвращает идентификатор безопасности SECURITY_WORLD_RID.
 
 ```
 CSid World() throw(...);

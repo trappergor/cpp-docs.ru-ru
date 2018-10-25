@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069286"
 ---
 # <a name="ccriticalsection-class"></a>Класс CCriticalSection
 
@@ -81,7 +81,7 @@ class CCriticalSection : public CSyncObject
 
 - Автономный метод, используемый изолированного `CCriticalSection` объекта, создания `CCriticalSection` объекта при необходимости. После успешного возвращения из конструктора, явно заблокировать объект с помощью вызова [блокировки](#lock). Вызовите [Unlock](#unlock) после доступа к критической секции. Этот метод при яснее кому-либо чтение исходный код, вероятность возникновения ошибки необходимо помнить о том, блокировать и разблокировать критический раздел до и после доступа.
 
-     Более предпочтительным методом является использование [CSingleLock](../../mfc/reference/csinglelock-class.md) класса. Есть также `Lock` и `Unlock` метод, но вам не нужно беспокоиться о разблокировании ресурсов при возникновении исключения.
+   Более предпочтительным методом является использование [CSingleLock](../../mfc/reference/csinglelock-class.md) класса. Есть также `Lock` и `Unlock` метод, но вам не нужно беспокоиться о разблокировании ресурсов при возникновении исключения.
 
 - Внедренный метод, вы можете поделиться класс с несколькими потоками, добавив `CCriticalSection`-член данных типа для класса и блокировка элемента данных, при необходимости.
 

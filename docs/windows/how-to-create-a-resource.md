@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 61105469abc25de38d0d9ae9a59755e08fd298b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23717c35d0590c88a4904e5b6b6ddb0e4c7ccffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071976"
 ---
 # <a name="how-to-create-a-resource"></a>Практическое руководство. Создание ресурса
 
@@ -33,7 +33,7 @@ ms.locfileid: "46438643"
 
 1. Установив фокус на RC-файл в [представление ресурсов](../windows/resource-view-window.md), нажмите кнопку **изменить** меню и выберите **добавить ресурс** (или щелкните правой кнопкой мыши RC-файл в **представление ресурсов** и выберите **добавить ресурс** в контекстном меню).
 
-   > [!NOTE] 
+   > [!NOTE]
    > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).
 
 2. В [диалоговом окне "Добавить ресурс"](../windows/add-resource-dialog-box.md)выберите тип ресурса, который хотите добавить в проект.
@@ -48,7 +48,7 @@ ms.locfileid: "46438643"
 
 ### <a name="to-create-a-new-resource-in-class-view"></a>Создание ресурса в представлении классов
 
-1. В [представление классов](/visualstudio/ide/viewing-the-structure-of-code), щелкните класс правой кнопкой мыши и выберите пункт **добавить**, затем нажмите кнопку **добавить ресурс** в контекстном меню.
+1. В [представлении классов](/visualstudio/ide/viewing-the-structure-of-code)щелкните правой кнопкой мыши нужный класс, выберите в контекстном меню команду **Добавить**, а затем выберите пункт **Добавить ресурс** .
 
 2. В [диалоговом окне "Добавить ресурс"](../windows/add-resource-dialog-box.md)выберите тип ресурса, который хотите добавить в проект.
 
@@ -70,4 +70,4 @@ Win32
 
 [Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редакторы ресурсов](../windows/resource-editors.md)<br/>
-[Диалоговое окно "Добавление ресурса"](../windows/add-resource-dialog-box.md)
+[Add Resource Dialog Box](../windows/add-resource-dialog-box.md)

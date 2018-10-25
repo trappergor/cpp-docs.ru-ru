@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 25116b0750016fdbb4ffd792d0b16efb6c6c1793
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c1acf9602dedf0eef1b8d96344914c367ce5926
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711955"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073556"
 ---
 # <a name="options-atl-control-wizard"></a>Параметры, мастер элементов управления ATL
 
@@ -49,11 +49,11 @@ ms.locfileid: "45711955"
 
    - Тестовая страница HTML содержащий составного элемента управления.
 
-     По умолчанию этот элемент управления задает [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) в значение true, чтобы указать, что это оконного элемента управления. Она реализует карту в качестве приемника. Дополнительные сведения см. в разделе [поддержка элементов управления DHTML](../../atl/atl-support-for-dhtml-controls.md).
+   По умолчанию этот элемент управления задает [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) в значение true, чтобы указать, что это оконного элемента управления. Она реализует карту в качестве приемника. Дополнительные сведения см. в разделе [поддержка элементов управления DHTML](../../atl/atl-support-for-dhtml-controls.md).
 
 - **Элемент управления DHTML**: элемент управления ATL DHTML задает пользовательский интерфейс, с помощью HTML. Класс пользовательского интерфейса DHTML содержит COM карты. По умолчанию этот элемент управления задает [CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly) в значение true, чтобы указать, что это оконного элемента управления.
 
-     Дополнительные сведения см. в разделе [определение элементов для проекта элемента управления DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
+   Дополнительные сведения см. в разделе [определение элементов для проекта элемента управления DHTML](../../atl/identifying-the-elements-of-the-dhtml-control-project.md).
 
 ### <a name="minimal-control"></a>Минимальный элемент управления
 

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396562"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076260"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 
@@ -135,7 +135,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на CDC, связанного с флажком.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -156,7 +156,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на CDC, связанные с этот флажок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -177,7 +177,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на объект CDC, связанный с этот флажок.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -212,7 +212,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на CDC, в котором отображается флажок.
 
 ### <a name="remarks"></a>Примечания
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CDC** указатель на CDC, связанного с флажком.
+[in] *CDC&#42;*<br/>
+Указатель на CDC, связанного с флажком.
 
 *CRect*<br/>
 [in] Объект `CRect` объект, указывающий прямоугольник, в котором должно быть нарисовано изображение меню.
@@ -256,7 +257,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, в котором отображается флажок.
 
 *strText*<br/>

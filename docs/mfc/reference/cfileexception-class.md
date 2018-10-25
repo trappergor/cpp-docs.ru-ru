@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6230e488bdcca6f21e6c867c86c86f18a05bbe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8db7d3f59ae226eff00c2c3c0f286db996669ce1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072646"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 
@@ -323,6 +323,4 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Обработка исключений](../../mfc/reference/exception-processing.md)
-
-
 

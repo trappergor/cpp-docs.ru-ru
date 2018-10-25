@@ -74,12 +74,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc4c205ff7c68fbf778b8d300fbe98e6a3deca1d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0cde2b5c62d4d4584330fe24000114b33ba957b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067492"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Класс CMFCToolBarComboBoxButton
 
@@ -146,7 +146,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCToolBarComboBoxButton` класса. В примере для включения поля редактирования и поля со списком, задайте поле кнопок вертикальное положение поля со списком в приложении, установите высоту окна списка, при его вставке, задайте плоский внешний вид кнопок поле со списком в приложении , а затем установите текст в поле ввода поля со списком кнопку в окне. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarComboBoxButton` . В примере для включения поля редактирования и поля со списком, задайте поле кнопок вертикальное положение поля со списком в приложении, установите высоту окна списка, при его вставке, задайте плоский внешний вид кнопок поле со списком в приложении , а затем установите текст в поле ввода поля со списком кнопку в окне. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]
@@ -908,7 +908,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, отображается кнопка поле со списком.
 
 *sizeDefault*<br/>
@@ -968,7 +968,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, отображается кнопка поле со списком.
 
 *nCtlColor*<br/>
@@ -1037,7 +1037,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, отображается кнопка поле со списком.
 
 *Rect*<br/>
@@ -1176,11 +1176,9 @@ static BOOL SelectItemAll(
     UINT uiCmd,
     int iIndex);
 
-
 static BOOL SelectItemAll(
     UINT uiCmd,
     DWORD_PTR dwData);
-
 
 static BOOL SelectItemAll(
     UINT uiCmd,
@@ -1348,6 +1346,4 @@ void SetText(LPCTSTR lpszText);
 [Класс CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

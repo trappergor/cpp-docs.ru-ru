@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6d42dc242a2818f677f8f486b2c7db50125854c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 00b0e7824de3c6977bd641e7016e3efc5acdcfa1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791288"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067376"
 ---
 # <a name="helpstringcontext"></a>helpstringcontext
 
@@ -70,7 +70,7 @@ __interface IMyI
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
@@ -78,4 +78,4 @@ __interface IMyI
 [Атрибуты интерфейса](interface-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[модуль](module-cpp.md)  
+[module](module-cpp.md)

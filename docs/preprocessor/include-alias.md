@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065178"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ ms.locfileid: "42538505"
 
 ## <a name="syntax"></a>Синтаксис
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива #pragma include_alias («*длинное_имя_файла*","*кратким_именем_файла*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива #pragma include_alias («*длинное_имя_файла*","*кратким_именем_файла*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива #pragma include_alias (*длинное_имя_файла*, *кратким_именем_файла*)
 
 ## <a name="remarks"></a>Примечания
@@ -59,7 +59,7 @@ ms.locfileid: "42538505"
 ```
 
 В этом примере псевдоним не назначается (подстановка не выполняется), поскольку строки файлов заголовков совпадают не полностью. Кроме того, именах файлов заголовков, используемых как аргументы для `/Yu` и `/Yc` параметры компилятора, или `hdrstop` pragma, подстановка не выполняется. Например, представим, что исходный файл содержит следующую директиву:
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-В этом случае компилятор будет искать файл TWO.H, а не THREE.H.  
+В этом случае компилятор будет искать файл TWO.H, а не THREE.H.
 
 ## <a name="see-also"></a>См. также
 

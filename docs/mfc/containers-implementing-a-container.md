@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074076"
 ---
 # <a name="containers-implementing-a-container"></a>Контейнеры. Реализация контейнера
 
@@ -62,15 +62,15 @@ ms.locfileid: "46394365"
 
 - Активация на месте при редактировании внедренного элемента.
 
-     Дополнительные сведения см. в разделе [активации](../mfc/activation-cpp.md).
+   Дополнительные сведения см. в разделе [активации](../mfc/activation-cpp.md).
 
 - Создание объекта OLE элементы с помощью перетаскивания выделения из серверного приложения.
 
-     Дополнительные сведения см. в разделе [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).
+   Дополнительные сведения см. в разделе [Drag and Drop (OLE)](../mfc/drag-and-drop-ole.md).
 
 - Ссылки на внедренные объекты или сочетание контейнера и сервера приложений.
 
-     Дополнительные сведения см. в разделе [контейнеры: Дополнительные функции](../mfc/containers-advanced-features.md).
+   Дополнительные сведения см. в разделе [контейнеры: Дополнительные функции](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075935"
 ---
 # <a name="object-map-macros"></a>Макросы сопоставления объектов
 
@@ -31,7 +31,7 @@ ms.locfileid: "46040444"
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|Позволяет указать объект класса текстовое описание, которое будет введено в карте объектов.|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|Вводит объект ATL в карте объектов, обновляет реестр и создает экземпляр объекта.|
-|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Позволяет указать, что объект должен быть зарегистрирован и инициализирован, но не должен создаваться внешне через `CoCreateInstance`.|  
+|[OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](#object_entry_non_createable_ex_auto)|Позволяет указать, что объект должен быть зарегистрирован и инициализирован, но не должен создаваться внешне через `CoCreateInstance`.|
 
 ## <a name="requirements"></a>Требования
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL вводит это описание в карте объектов через [OBJECT_ENTRY_AUTO](#object_entry_auto) макрос.
 
-Реализует DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` функцию, которую можно использовать для переопределения [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) метод.  
+Реализует DECLARE_OBJECT_DESCRIPTION `GetObjectDescription` функцию, которую можно использовать для переопределения [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription) метод.
 
 `GetObjectDescription` Функция вызывается из `IComponentRegistrar::GetComponents`. `IComponentRegistrar` представляет собой интерфейс автоматизации для регистрации и отмены регистрации отдельных компонентов в библиотеке DLL. При создании объекта регистрации компонента с помощью мастера проектов ATL, мастер будет автоматически реализовывать `IComponentRegistrar` интерфейс. `IComponentRegistrar` обычно используется сервером транзакций.
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 Макросы записи объекта помещаются в глобальной области видимости в проекте для поддержки регистрации, инициализации и создания класса.
 
-OBJECT_ENTRY_AUTO вводит указатели функций класс создателя и класс создателя фабрики класса `CreateInstance` функции для данного объекта в карте объектов ATL автоматически созданный. Когда [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) является именем, он обновляет системного реестра для каждого объекта в карте объектов.  
+OBJECT_ENTRY_AUTO вводит указатели функций класс создателя и класс создателя фабрики класса `CreateInstance` функции для данного объекта в карте объектов ATL автоматически созданный. Когда [CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver) является именем, он обновляет системного реестра для каждого объекта в карте объектов.
 
 В следующей таблице описывается способ получения информации, добавлен новый объект из класса, присвоенный данного макроса в качестве второго параметра.
 
@@ -94,7 +94,7 @@ OBJECT_ENTRY_AUTO вводит указатели функций класс со
 |Создание фабрики класса|[Макросы фабрики класса](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Создание экземпляра|[Макросы агрегирования](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |Регистрации категории компонентов|[Макросы категорий](../../atl/reference/category-macros.md)|
-|Уровня класса инициализации и очистки|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|Уровня класса инициализации и очистки|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 

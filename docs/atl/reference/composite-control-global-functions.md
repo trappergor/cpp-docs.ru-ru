@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dee59f5e86cddeec47da47c648b0cf12789cc85a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084104"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068649"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -56,11 +56,11 @@ ms.locfileid: "49084104"
 |[AtlSetChildSite](#atlsetchildsite)|Инициализирует `IUnknown` дочернего сайта.|
 |[AtlAxWinInit](#atlaxwininit)|Инициализирует код размещения для AxWin объектов.|
 |[AtlAxWinTerm](#atlaxwinterm)|Отменяет инициализацию код размещения для AxWin объектов.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Возвращает сведения об интерфейсе источника по умолчанию объекта.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Возвращает сведения об интерфейсе источника по умолчанию объекта.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlhost.h  
+**Заголовок:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -101,7 +101,7 @@ ATLAPI_(int) AtlAxDialogBox(
 Для использования `AtlAxDialogBox` с помощью шаблона диалогового окна, содержащий элемент управления ActiveX, укажите допустимую строку CLSID, APPID или URL-адрес как *текст* поле **УПРАВЛЕНИЯ** раздел ресурса диалогового окна, вместе с " AtlAxWin80» как *имя класса* поле в том же разделе. Следующий подход демонстрирует какие является допустимым **УПРАВЛЕНИЯ** раздел может выглядеть так:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -261,7 +261,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.  
+Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="remarks"></a>Примечания
 
-Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) или [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), как описано в пакете Windows SDK.  
+Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) или [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), как описано в пакете Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

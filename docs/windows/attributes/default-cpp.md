@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075088"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ ms.locfileid: "48792480"
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первое вхождение неисходного интерфейса.
 
 *Interface2*<br/>
-(Необязательно) Исходный интерфейс по умолчанию. Необходимо также указать этот интерфейс с [источника](source-cpp.md) атрибута.
+(Необязательно) Исходный интерфейс по умолчанию. Этот интерфейс также необходимо указать с помощью атрибута [source](source-cpp.md) .
 
 Если исходный интерфейс по умолчанию не указан, в качестве интерфейса по умолчанию используется первый исходный интерфейс.
 
 ## <a name="remarks"></a>Примечания
 
-**По умолчанию** атрибут C++ имеет ту же функциональность, что [по умолчанию](/windows/desktop/Midl/default) описании атрибута MIDL. **По умолчанию** атрибут также используется с [случай](case-cpp.md) атрибута.
+Атрибут **default** языка C++ имеет ту же функциональность, что и атрибут [default](/windows/desktop/Midl/default) языка MIDL. Атрибут **default** также используется вместе с атрибутом [case](case-cpp.md) .
 
 ## <a name="example"></a>Пример
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,7 +102,7 @@ int main() {
 }
 ```
 
-[Источника](source-cpp.md) атрибут также содержит пример использования **по умолчанию**.
+Атрибут [source](source-cpp.md) также содержит пример использования атрибута **default**.
 
 ## <a name="requirements"></a>Требования
 
@@ -115,10 +115,10 @@ int main() {
 |**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[кокласс](coclass.md)
