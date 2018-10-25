@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417024"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053413"
 ---
 # <a name="mapi-support-in-mfc"></a>Поддержка MAPI в MFC
 
@@ -44,11 +44,11 @@ MAPI необходимо прочитать файл для отправки в
 
 1. Редактор меню Visual C++ для добавления элемента меню, чей идентификатор команды — ID_FILE_SEND_MAIL.
 
-     Этот идентификатор команды предоставляется платформой в AFXRES. З. Команды могут добавляться к все меню, но он обычно добавляется **файл** меню.
+   Этот идентификатор команды предоставляется платформой в AFXRES. З. Команды могут добавляться к все меню, но он обычно добавляется **файл** меню.
 
 1. Вручную добавьте следующие схемы сообщений в документе:
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  Эта карта сообщений работает для документа, произведенный от любого `CDocument` или `COleDocument` — он собирал правильного базового класса в любом случае, несмотря на то, что в схеме сообщений — в документ в производном классе.

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410815"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063865"
 ---
 # <a name="hstring-class"></a>Класс HString
 
@@ -115,7 +115,7 @@ class HString;
 Удаляет текущий экземпляр `HString` класса.
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>HString::Attach
@@ -125,7 +125,7 @@ class HString;
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -157,7 +157,7 @@ HSTRING, который получает копию.
 Отменяет связывание заданных `HString` объект с его базовым значением.
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -169,7 +169,7 @@ HSTRING Detach() throw()
 Получает значение базового дескриптора HSTRING.
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -181,7 +181,7 @@ HSTRING Get() const throw()
 Извлекает указатель на базовый дескриптор HSTRING.
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -220,7 +220,7 @@ HString(HString&& other) throw();
 Указывает, является ли текущий `HString` объект пуст или не.
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -262,7 +262,7 @@ template<unsigned int sizeDest>
 Перемещает значение другого `HString` объект с текущим `HString` объекта.
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -352,7 +352,7 @@ inline bool operator!=( const HString& lhs,
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -372,7 +372,7 @@ inline bool operator<(
 Удаляет базовое строковое значение и инициализирует текущий `HString` объекта пустое значение.
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>HString::Set

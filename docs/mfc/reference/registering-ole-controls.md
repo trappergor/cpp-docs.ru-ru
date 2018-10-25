@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9008ba16d52987e4d7f14b5692cdf349951f83a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27e0589e7ba0b2428f4cfea1d2561ef5e666641e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054167"
 ---
 # <a name="registering-ole-controls"></a>Регистрация элементов управления OLE
 
@@ -86,7 +86,7 @@ BOOL AFXAPI AfxOleRegisterControlClass(
 
 - `afxRegFreeThreading` Задает модель потоков в реестре ThreadingModel = Free.
 
-     Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.
+   Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.
 
 > [!NOTE]
 >  В версиях MFC до MFC 4.2 **int** *nRegFlags* параметр был параметром BOOL *bInsertable*, разрешены или запрещены элемент управления, который будет вставлен из инструкции Insert Объект-диалоговое окно.

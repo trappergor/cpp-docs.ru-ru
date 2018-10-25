@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792157"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057820"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,14 +57,14 @@ ms.locfileid: "48792157"
 *optimize*<br/>
 Когда *тип* — `native`, можно указать `optimize=size`, чтобы указать, что доступно 4 байта хранилища (минимум) для всех событий в классе или `optimize=speed` (по умолчанию) для указания, что доступно 4 * (число событий) байт для хранения.
 
-*украшения*<br/>
-Когда *тип* — `native`, можно указать `decorate=false`, чтобы указать, что развернутое имя в объединенном файле (MRG) не должно содержать имя включающего класса. [/FX](../../build/reference/fx-merge-injected-code.md) позволяет создавать MRG-файлы. `decorate=false`, который используется по умолчанию, приводит-полных имен типов в объединенном файле.
+*decorate*<br/>
+Когда *тип* — `native`, можно указать `decorate=false`, чтобы указать, что развернутое имя в объединенном файле (MRG) не должно содержать имя включающего класса. [/Fx](../../build/reference/fx-merge-injected-code.md) позволяет создавать MRG-файлы. `decorate=false`, который используется по умолчанию, приводит-полных имен типов в объединенном файле.
 
 ## <a name="remarks"></a>Примечания
 
 Атрибут **event_source** языка C++ указывает, что класс или структура, к которым он применяется, будут источником события.
 
-**event_source** используется в сочетании с [event_receiver](event-receiver.md) атрибут и [__event](../../cpp/event.md) ключевое слово. Используйте `event_receiver` для создания приемников событий. Используйте **__event** для методов в пределах источника событий, чтобы указать эти методы в качестве событий.
+**event_source** используется в сочетании с атрибутом [event_receiver](event-receiver.md) и ключевым словом [__event](../../cpp/event.md) . Используйте `event_receiver` для создания приемников событий. Используйте **__event** для методов в пределах источника событий, чтобы указать эти методы в качестве событий.
 
 > [!NOTE]
 > Класс-шаблон или структура не могут содержать события.
@@ -80,7 +80,7 @@ ms.locfileid: "48792157"
 |**Обязательные атрибуты**|**Компонентный класс** при `type`=`com`|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
@@ -89,4 +89,4 @@ ms.locfileid: "48792157"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[Атрибуты классов](class-attributes.md)  
+[Атрибуты классов](class-attributes.md)

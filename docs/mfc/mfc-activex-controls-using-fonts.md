@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396705"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063488"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Элементы управления MFC ActiveX: использование шрифтов
 
@@ -64,7 +64,7 @@ ms.locfileid: "46396705"
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **добавить свойство**.
 
-     Откроется мастер добавления свойств.
+   Откроется мастер добавления свойств.
 
 1. В **имя свойства** выберите **шрифта**.
 
@@ -90,7 +90,7 @@ ms.locfileid: "46396705"
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **добавить свойство**.
 
-     Откроется мастер добавления свойств.
+   Откроется мастер добавления свойств.
 
 1. В **имя свойства** выберите **заголовок**.
 
@@ -132,7 +132,7 @@ ms.locfileid: "46396705"
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **добавить свойство**.
 
-     Откроется мастер добавления свойств.
+   Откроется мастер добавления свойств.
 
 1. В **имя свойства** введите имя для свойства. В этом примере используйте **HeadingFont**.
 
@@ -168,35 +168,35 @@ ms.locfileid: "46396705"
 
 - Инициализировать *m_fontHeading* в конструкторе элемента управления.
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - Объявите статический FONTDESC структуру, содержащую атрибуты шрифта по умолчанию.
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - В элементе управления `DoPropExchange` член функции, добавьте вызов `PX_Font` функции. Это обеспечивает инициализацию и постоянного хранения для пользовательского свойства шрифта.
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - Готово, реализация элемента управления `GetHeadingFont` функция-член.
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - Готово, реализация элемента управления `SetHeadingFont` функция-член.
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - Изменить элемент управления `OnDraw` функция-член для определения переменной для хранения ранее выбранного шрифта.
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - Изменить элемент управления `OnDraw` функция-член для выбора пользовательского шрифта в контексте устройства, добавив в следующей строке везде, где будет использоваться шрифт.
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - Изменить элемент управления `OnDraw` функция-член для выбора предыдущего шрифт обратно в контекст устройства, добавив следующую строку после использования шрифта.
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 После реализации настраиваемого свойства шрифта, стандартные свойства шрифтов должны быть реализованы, позволяя пользователям элемента управления для изменения текущего шрифта элемента управления. Чтобы добавить идентификатор страницы свойств для стандартных свойств Font, страница, вставьте следующую строку после begin_proppageids-макрос:
 

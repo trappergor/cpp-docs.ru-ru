@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::initializer_list::size
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11014748dcbfa105d111e9e2a8d83fc57d0cb405
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b84ed250bcacc07b421318429458c889546e9e6a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954058"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060654"
 ---
 # <a name="initializerlist-class"></a>Класс initializer_list
 
@@ -42,10 +42,9 @@ class initializer_list
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
-|*Тип*|Тип данных элемента для сохранения в `initializer_list`.|
-
+|*Type*|Тип данных элемента для сохранения в `initializer_list`.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -59,13 +58,13 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[initializer_list](../standard-library/forward-list-class.md#forward_list)|Создает объект типа `initializer_list`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |value_type|Тип элементов в `initializer_list`.|
 |ссылка|Тип, предоставляющий ссылку на элемент в `initializer_list`.|
@@ -76,7 +75,7 @@ initializer_list<int> i1{ 1, 2, 3, 4 };
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[begin](#begin)|Возвращает указатель на первый элемент в `initializer_list`.|
 |[end](#end)|Возвращает указатель на позицию, следующую за последним элементом в `initializer_list`.|
@@ -125,7 +124,7 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
 |*последний*|Положение первого элемента после диапазона копируемых элементов.|

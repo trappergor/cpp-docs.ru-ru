@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062162"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "48792224"
 |**Обязательные атрибуты**|**Компонентный класс** (при использовании класса)|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
@@ -72,4 +72,4 @@ ms.locfileid: "48792224"
 [Атрибуты параметра](parameter-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
-[Атрибуты интерфейса](interface-attributes.md)  
+[Атрибуты интерфейса](interface-attributes.md)

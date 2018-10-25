@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6b343ec9342199727122ac89f6df77e532429ad
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85ffa775fd18b6979fccf4354ce243f017634d02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059679"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -71,10 +71,10 @@ ms.locfileid: "48792509"
 |-|-|
 |**Применение**|**Класс**, **структуры**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|**coclass**|
+|**Обязательные атрибуты**|**кокласс**|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
@@ -82,4 +82,4 @@ ms.locfileid: "48792509"
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Поддержка многопоточности для устаревшего кода (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[Нейтральный подразделения](/windows/desktop/cossdk/neutral-apartments)  
+[Нейтральный подразделения](/windows/desktop/cossdk/neutral-apartments)

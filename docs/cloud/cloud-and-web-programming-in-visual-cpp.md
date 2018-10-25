@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcdbc8012edbe17ce9fcc8298da68f45acad4b8b
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2553ac5cdc20f3d5d38a6bad77dc79fc7c1737d8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683369"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052886"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -27,7 +27,7 @@ ms.locfileid: "43683369"
 
 - [Мобильные службы Microsoft Azure](http://www.windowsazure.com/develop/mobile/)
 
-   Предоставляет собственный API, которые можно использовать в приложениях универсальной платформы Windows (UWP) или классических приложениях Windows для подключения к мобильным службам Windows Azure. Хотя большинство примеров на веб-сайте написаны на C#, также можно использовать и C++. Дополнительные сведения см. в разделе [краткое руководство: Добавление мобильной службы с помощью C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
+   Предоставляет собственный API, которые можно использовать в приложениях универсальной платформы Windows (UWP) или классических приложениях Windows для подключения к мобильным службам Windows Azure. Хотя большинство примеров на веб-сайте написаны на C#, также можно использовать и C++. Дополнительные сведения см. в разделе [Краткое руководство. Добавление мобильной службы с помощью C++](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx).
 
 - [Клиентская библиотека хранилища Microsoft Azure для C++](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -52,11 +52,11 @@ ms.locfileid: "43683369"
   - Устанавливают соединения Websockets от удаленной службы
   - Полностью асинхронная задача API, основанный на библиотеке параллельных Шаблонов, включая встроенные threadpool
 
-   Поддерживает Windows Desktop (7 +), Windows Server (2012 или более поздней), универсальной платформы Windows, Linux, OSX, Android и iOS. 
+   Поддерживает Windows Desktop (7 +), Windows Server (2012 или более поздней), универсальной платформы Windows, Linux, OSX, Android и iOS.
 
-- [Windows::Web::http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
 
-   Клиентский класс HTTP среды выполнения Windows, основанный на классе .NET Framework с тем же именем в пространстве имен System.Web. `HttpClient` полностью поддерживает асинхронной отправку и загрузку по протоколу HTTP, а также фильтры конвейера, позволяющие вставлять пользовательские обработчики HTTP в конвейер. Пакет Windows SDK содержит примеры фильтров для лимитных сетей, проверки подлинности OAuth и т. д. Для приложений, предназначенных для универсальной платформы Windows, мы рекомендуем использовать `Windows::Web:HttpClient` класса. 
+   Клиентский класс HTTP среды выполнения Windows, основанный на классе .NET Framework с тем же именем в пространстве имен System.Web. `HttpClient` полностью поддерживает асинхронной отправку и загрузку по протоколу HTTP, а также фильтры конвейера, позволяющие вставлять пользовательские обработчики HTTP в конвейер. Пакет Windows SDK содержит примеры фильтров для лимитных сетей, проверки подлинности OAuth и т. д. Для приложений, предназначенных для универсальной платформы Windows, мы рекомендуем использовать `Windows::Web:HttpClient` класса.
 
 - [Интерфейс IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 

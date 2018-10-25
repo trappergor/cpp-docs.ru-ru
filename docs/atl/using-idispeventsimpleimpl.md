@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00dadde438af1b4de820316dd4dc50e773827aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 635edd00fbb7126b9d4d87615321387867b2978c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107529"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063202"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Использование IDispEventSimpleImpl
 
@@ -43,7 +43,7 @@ ms.locfileid: "46107529"
 
 В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.
 
-Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).  
+Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

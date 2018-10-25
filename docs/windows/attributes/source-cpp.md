@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81ea5c45aff148d8f0683d0058963571bc02a57a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f7bc10b89df58dc72c35855fea43c2a0387f9efd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792365"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058470"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -90,11 +90,11 @@ class NN : public b
 |**Обязательные атрибуты**|`coclass` (когда применимы к классам или структурам)|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[coclass](coclass.md)  
+[кокласс](coclass.md)

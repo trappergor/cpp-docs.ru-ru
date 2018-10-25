@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054869"
 ---
 # <a name="serialization-making-a-serializable-class"></a>Сериализация. Создание сериализуемого класса
 
@@ -67,9 +67,9 @@ ms.locfileid: "46443349"
 
 1. Вставить или извлечь переменные-члены, относящиеся к классу.
 
-     Операторы вставки и извлечения взаимодействия с классом архив для чтения и записи данных. В следующем примере показано, как реализовать `Serialize` для `CPerson` класс, объявленный над:
+   Операторы вставки и извлечения взаимодействия с классом архив для чтения и записи данных. В следующем примере показано, как реализовать `Serialize` для `CPerson` класс, объявленный над:
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 Можно также использовать [CArchive::Read](../mfc/reference/carchive-class.md#read) и [CArchive::Write](../mfc/reference/carchive-class.md#write) функции-члены для чтения и записи больших объемов нетипизированных данных.
 

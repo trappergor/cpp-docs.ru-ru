@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053049"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Альтернативы для архитектуры "документ-представление"
 
@@ -56,7 +56,7 @@ ms.locfileid: "46403480"
 
 - Рассматривать документ как неиспользуемые appendage и реализовать в коде управления данными в классе представления, как описано выше. Дополнительные затраты на его сравнительно мала. Один [CDocument](../mfc/reference/cdocument-class.md) объект влечет за собой небольшое количество издержек сам по себе, а также небольшой объем затрат из `CDocument`его базовые классы, [CCmdTarget](../mfc/reference/ccmdtarget-class.md) и [CObject](../mfc/reference/cobject-class.md). Оба класса последний имеют небольшой размер.
 
-     Объявленные в `CDocument`:
+   Объявленные в `CDocument`:
 
    - Два `CString` объектов.
 
@@ -66,7 +66,7 @@ ms.locfileid: "46403480"
 
    - Один `CPtrList` объект, содержащий список представлений документа.
 
-     Кроме того документ требуется время, чтобы создать объект документа, его просмотр объектов, окно рамки и объект шаблона документа.
+   Кроме того документ требуется время, чтобы создать объект документа, его просмотр объектов, окно рамки и объект шаблона документа.
 
 - Считайте неиспользуемые дополнений документов и представлений. Поместите управления данными и код рисования в фрейме окна, а не представление. Этот подход является ближе к модели языка программирования.
 

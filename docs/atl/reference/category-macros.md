@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fdfa363da286952139248088c737b348873ec8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078703"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063683"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -51,11 +51,11 @@ ms.locfileid: "46078703"
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|Отмечает начало карты категории.|
 |[END_CATEGORY_MAP](#end_category_map)|Помечает конец карты категории.|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|Указывает категории, которые реализуются посредством COM-объекта.|
-|[REQUIRED_CATEGORY](#required_category)|Указывает категории, которые требуются контейнера с COM-объекта.|  
+|[REQUIRED_CATEGORY](#required_category)|Указывает категории, которые требуются контейнера с COM-объекта.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h  
+**Заголовок:** atlcom.h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 

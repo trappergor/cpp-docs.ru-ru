@@ -138,588 +138,588 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b9d1982e1da6526c1c9db607062a66b163f912ce
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f0288321a6304b6b8e56baf544fea8b438ffe9d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054284"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
 
-Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).  
-  
+Позволяет доступ к источнику данных, когда схема базы данных (базовая структура).
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class CDynamicAccessor : public CAccessorBase  
-```  
+class CDynamicAccessor : public CAccessorBase
+```
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[AddBindEntry](#addbindentry)|При переопределении метода доступа по умолчанию добавляет запись привязки выходных столбцов.|  
-|[CDynamicAccessor](#cdynamicaccessor)|Создает и инициализирует `CDynamicAccessor` объекта.|  
-|[Закрыть](#close)|Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672) указатель на интерфейс в классе.|  
-|[GetBlobHandling](#getblobhandling)|Извлекает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.|  
-|[GetBlobSizeLimit](#getblobsizelimit)|Получает максимальный размер большого двоичного ОБЪЕКТА в байтах.|  
-|[GetBookmark](#getbookmark)|Извлекает закладки для текущей строки.|  
-|[GetColumnCount](#getcolumncount)|Возвращает число столбцов в наборе строк.|  
-|[GetColumnFlags](#getcolumnflags)|Получает характеристики столбца.|  
-|[GetColumnInfo](#getcolumninfo)|Извлекает метаданные столбца.|  
-|[GetColumnName](#getcolumnname)|Извлекает имя указанного столбца.|  
-|[GetColumnType](#getcolumntype)|Возвращает тип данных указанного столбца.|  
-|[GetLength](#getlength)|Извлекает максимально возможная длина столбца в байтах.|  
-|[GetOrdinal](#getordinal)|Получает индекс столбца, заданному имени столбца.|  
-|[GetStatus](#getstatus)|Получает состояние указанного столбца.|  
-|[GetValue](#getvalue)|Извлекает данные из буфера.|  
-|[SetBlobHandling](#setblobhandling)|Задает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.|  
-|[SetBlobSizeLimit](#setblobsizelimit)|Задает максимальный размер большого двоичного ОБЪЕКТА в байтах.|  
-|[SetLength](#setlength)|Задает длину столбца в байтах.|  
-|[SetStatus](#setstatus)|Задает состояние указанного столбца.|  
-|[SetValue](#setvalue)|Сохраняет данные в буфер.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldbcli.h
 
-Используйте `CDynamicAccessor` методов, чтобы получить сведения о столбцах, таких как имена столбцов, число столбцов, тип данных и т. д. Затем используйте эти сведения для столбца для динамического создания метода доступа во время выполнения.  
-  
-Сведения о столбцах хранятся в буфере, который создается и управляется данным классом. Получение данных из буфера с помощью [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).  
-  
-Обсуждение и примеры использования классов динамического метода доступа, см. в разделе [с помощью динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[AddBindEntry](#addbindentry)|При переопределении метода доступа по умолчанию добавляет запись привязки выходных столбцов.|
+|[CDynamicAccessor](#cdynamicaccessor)|Создает и инициализирует `CDynamicAccessor` объекта.|
+|[Закрыть](#close)|Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672) указатель на интерфейс в классе.|
+|[GetBlobHandling](#getblobhandling)|Извлекает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.|
+|[GetBlobSizeLimit](#getblobsizelimit)|Получает максимальный размер большого двоичного ОБЪЕКТА в байтах.|
+|[GetBookmark](#getbookmark)|Извлекает закладки для текущей строки.|
+|[GetColumnCount](#getcolumncount)|Возвращает число столбцов в наборе строк.|
+|[GetColumnFlags](#getcolumnflags)|Получает характеристики столбца.|
+|[GetColumnInfo](#getcolumninfo)|Извлекает метаданные столбца.|
+|[GetColumnName](#getcolumnname)|Извлекает имя указанного столбца.|
+|[GetColumnType](#getcolumntype)|Возвращает тип данных указанного столбца.|
+|[GetLength](#getlength)|Извлекает максимально возможная длина столбца в байтах.|
+|[GetOrdinal](#getordinal)|Получает индекс столбца, заданному имени столбца.|
+|[GetStatus](#getstatus)|Получает состояние указанного столбца.|
+|[GetValue](#getvalue)|Извлекает данные из буфера.|
+|[SetBlobHandling](#setblobhandling)|Задает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.|
+|[SetBlobSizeLimit](#setblobsizelimit)|Задает максимальный размер большого двоичного ОБЪЕКТА в байтах.|
+|[SetLength](#setlength)|Задает длину столбца в байтах.|
+|[SetStatus](#setstatus)|Задает состояние указанного столбца.|
+|[SetValue](#setvalue)|Сохраняет данные в буфер.|
+
+## <a name="remarks"></a>Примечания
+
+Используйте `CDynamicAccessor` методов, чтобы получить сведения о столбцах, таких как имена столбцов, число столбцов, тип данных и т. д. Затем используйте эти сведения для столбца для динамического создания метода доступа во время выполнения.
+
+Сведения о столбцах хранятся в буфере, который создается и управляется данным классом. Получение данных из буфера с помощью [GetValue](../../data/oledb/cdynamicaccessor-getvalue.md).
+
+Обсуждение и примеры использования классов динамического метода доступа, см. в разделе [с помощью динамических методов доступа](../../data/oledb/using-dynamic-accessors.md).
 
 ## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 
-Добавляет запись привязки для выходных столбцов.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Добавляет запись привязки для выходных столбцов.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *Сведения о*<br/>
-[in] Объект `DBCOLUMNINFO` структура, содержащая сведения о столбце. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Объект `DBCOLUMNINFO` структура, содержащая сведения о столбце. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.
 
-Одно из стандартных значений HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Используйте этот метод, если переопределение доступа по умолчанию, созданные с помощью `CDynamicAccessor` (см. в разделе [инструкции выборки данных?](../../data/oledb/fetching-data.md)). 
-  
+Одно из стандартных значений HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+Используйте этот метод, если переопределение доступа по умолчанию, созданные с помощью `CDynamicAccessor` (см. в разделе [инструкции выборки данных?](../../data/oledb/fetching-data.md)).
+
 ## <a name="cdynamicaccessor"></a> CDynamicAccessor::CDynamicAccessor
 
-Создает и инициализирует `CDynamicAccessor` объекта.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Создает и инициализирует `CDynamicAccessor` объекта.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,   
-   DBLENGTH nBlobSize = 8000);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+CDynamicAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *eBlobHandling*<br/>
-Определяет, как обрабатывать данные больших двоичных объектов (BLOB). Значение по умолчанию — DBBLOBHANDLING_DEFAULT. См. в разделе [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) описание DBBLOBHANDLINGENUM значения.  
-  
-*nBlobSize*<br/>
-Максимальный размер большого двоичного ОБЪЕКТА в байтах; столбец данных, это значение рассматривается как большой двоичный объект. Значение по умолчанию — 8000. См. в разделе [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) сведения.  
-  
-### <a name="remarks"></a>Примечания  
+Определяет, как обрабатывать данные больших двоичных объектов (BLOB). Значение по умолчанию — DBBLOBHANDLING_DEFAULT. См. в разделе [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md) описание DBBLOBHANDLINGENUM значения.
 
-Если вы используете конструктор для инициализации `CDynamicAccessor` объекта, можно указать, как он выполняет привязку больших двоичных объектов. Больших двоичных объектов может содержать двоичные данные, такие как графический, звук или скомпилированный код. Поведение по умолчанию — обрабатывать более 8000 байт столбцы как большие двоичные объекты и попытке привязать их к `ISequentialStream` объекта. Тем не менее можно указать другое значение размера большого двоичного ОБЪЕКТА.  
-  
-Также можно указать как `CDynamicAccessor` обрабатывает столбец данных, определяемая как данные большого двоичного ОБЪЕКТА: он может обрабатывать данные большого двоичного ОБЪЕКТА по умолчанию; его можно пропустить (привязки) данных больших двоичных ОБЪЕКТОВ; или его можно привязать данные большого двоичного ОБЪЕКТА в память, выделенную поставщика.  
+*nBlobSize*<br/>
+Максимальный размер большого двоичного ОБЪЕКТА в байтах; столбец данных, это значение рассматривается как большой двоичный объект. Значение по умолчанию — 8000. См. в разделе [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md) сведения.
+
+### <a name="remarks"></a>Примечания
+
+Если вы используете конструктор для инициализации `CDynamicAccessor` объекта, можно указать, как он выполняет привязку больших двоичных объектов. Больших двоичных объектов может содержать двоичные данные, такие как графический, звук или скомпилированный код. Поведение по умолчанию — обрабатывать более 8000 байт столбцы как большие двоичные объекты и попытке привязать их к `ISequentialStream` объекта. Тем не менее можно указать другое значение размера большого двоичного ОБЪЕКТА.
+
+Также можно указать как `CDynamicAccessor` обрабатывает столбец данных, определяемая как данные большого двоичного ОБЪЕКТА: он может обрабатывать данные большого двоичного ОБЪЕКТА по умолчанию; его можно пропустить (привязки) данных больших двоичных ОБЪЕКТОВ; или его можно привязать данные большого двоичного ОБЪЕКТА в память, выделенную поставщика.
 
 ## <a name="close"></a> CDynamicAccessor::Close
 
-Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672) указатель на интерфейс в классе.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Отменяет привязку столбцов по, освобождает выделенную память и освобождает [IAccessor](/previous-versions/windows/desktop/ms719672) указатель на интерфейс в классе.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void Close() throw();  
-```  
+void Close() throw();
+```
 
 ## <a name="getblobhandling"></a> CDynamicAccessor::GetBlobHandling
 
-Извлекает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-const DBBLOBHANDLINGENUM GetBlobHandling() const;  
-```  
-  
-### <a name="remarks"></a>Примечания  
+Извлекает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.
 
-Возвращает большой двоичный объект, обработка значение *eBlobHandling* как задается [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md). 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+const DBBLOBHANDLINGENUM GetBlobHandling() const;
+```
+
+### <a name="remarks"></a>Примечания
+
+Возвращает большой двоичный объект, обработка значение *eBlobHandling* как задается [SetBlobHandling](../../data/oledb/cdynamicaccessor-setblobhandling.md).
 
 ## <a name="getblobsizelimit"></a> CDynamicAccessor::GetBlobSizeLimit
 
-Получает максимальный размер большого двоичного ОБЪЕКТА в байтах.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-const DBLENGTH GetBlobSizeLimit() const;  
-```  
-  
-### <a name="remarks"></a>Примечания  
+Получает максимальный размер большого двоичного ОБЪЕКТА в байтах.
 
-Возвращает большой двоичный объект, обработка значение *nBlobSize* как задается [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+const DBLENGTH GetBlobSizeLimit() const;
+```
+
+### <a name="remarks"></a>Примечания
+
+Возвращает большой двоичный объект, обработка значение *nBlobSize* как задается [SetBlobSizeLimit](../../data/oledb/cdynamicaccessor-setblobsizelimit.md).
 
 ## <a name="getbookmark"></a> CDynamicAccessor::GetBookmark
 
-Извлекает закладки для текущей строки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Извлекает закладки для текущей строки.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT GetBookmark(CBookmark< >* pBookmark) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *pBookmark*<br/>
-[out] Указатель на [CBookmark](../../data/oledb/cbookmark-class.md) объекта.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[out] Указатель на [CBookmark](../../data/oledb/cbookmark-class.md) объекта.
 
-Одно из стандартных значений HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Необходимо задать `DBPROP_IRowsetLocate` значение VARIANT_TRUE для получения закладки. 
+Одно из стандартных значений HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+Необходимо задать `DBPROP_IRowsetLocate` значение VARIANT_TRUE для получения закладки.
 
 ## <a name="getcolumncount"></a> CDynamicAccessor::GetColumnCount
 
-Возвращает число столбцов.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-DBORDINAL GetColumnCount() const throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Возвращает число столбцов.
 
-Получить число столбцов.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+DBORDINAL GetColumnCount() const throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Получить число столбцов.
 
 ## <a name="getcolumnflags"></a> CDynamicAccessor::GetColumnFlags
 
-Получает характеристики столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает характеристики столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool GetColumnFlags(DBORDINAL nColumn,   
-   DBCOLUMNFLAGS* pFlags) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool GetColumnFlags(DBORDINAL nColumn, 
+   DBCOLUMNFLAGS* pFlags) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-*pFlags*<br/>
-[out] Указатель на Битовая маска, которая описывает характеристики столбца. См. в разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Возвращает **true** Если характеристики столбца успешно получены. В противном случае возвращается значение **false**.  
-  
-### <a name="remarks"></a>Примечания  
+*pFlags*<br/>
+[out] Указатель на Битовая маска, которая описывает характеристики столбца. См. в разделе «DBCOLUMNFLAGS перечисляемый тип» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **true** Если характеристики столбца успешно получены. В противном случае возвращается значение **false**.
+
+### <a name="remarks"></a>Примечания
 
 Номер столбца смещается от одного. Нулевым столбцом является особым случаем; Это закладки, если он доступен.
 
 ## <a name="getcolumninfo"></a> CDynamicAccessor::GetColumnInfo
 
-Возвращает метаданные столбца, требуемые большинством объектов-получателей.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Возвращает метаданные столбца, требуемые большинством объектов-получателей.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT GetColumnInfo(IRowset* pRowset,   
-   DBORDINAL* pColumns,   
-   DBCOLUMNINFO** ppColumnInfo,   
-   OLECHAR** ppStringsBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT GetColumnInfo(IRowset* pRowset, 
+   DBORDINAL* pColumns, 
+   DBCOLUMNINFO** ppColumnInfo, 
+   OLECHAR** ppStringsBuffer) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *pRowset*<br/>
-[in] Указатель на [IRowset](/previous-versions/windows/desktop/ms720986) интерфейс.  
-  
+[in] Указатель на [IRowset](/previous-versions/windows/desktop/ms720986) интерфейс.
+
 *pColumns*<br/>
-[out] Указатель на буфер, в которой должна возвращаться количество столбцов в наборе строк. Этот номер столбца закладки он включается, если таковой имеется.  
-  
+[out] Указатель на буфер, в которой должна возвращаться количество столбцов в наборе строк. Этот номер столбца закладки он включается, если таковой имеется.
+
 *ppColumnInfo*<br/>
-[out] Указатель на область памяти, в которую будет возвращен массив `DBCOLUMNINFO` структуры. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
-  
+[out] Указатель на область памяти, в которую будет возвращен массив `DBCOLUMNINFO` структуры. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.
+
 *ppStringsBuffer*<br/>
-[out] Указатель на область памяти, в которую будет возвращен указатель в хранилище для всех строковых значений (имена используются как в пределах *columnid* или *pwszName*) в одном блоке распределения.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[out] Указатель на область памяти, в которую будет возвращен указатель в хранилище для всех строковых значений (имена используются как в пределах *columnid* или *pwszName*) в одном блоке распределения.
 
-Одно из стандартных значений HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *Справочник программиста OLE DB по* сведения о типах данных `DBORDINAL`, `DBCOLUMNINFO`, и `OLECHAR`.  
+Одно из стандартных значений HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *Справочник программиста OLE DB по* сведения о типах данных `DBORDINAL`, `DBCOLUMNINFO`, и `OLECHAR`.
 
 ## <a name="getcolumnname"></a> CDynamicAccessor::GetColumnName
 
-Извлекает имя заданного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Извлекает имя заданного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Имя заданного столбца.  
+### <a name="return-value"></a>Возвращаемое значение
+
+Имя заданного столбца.
 
 ## <a name="getcolumntype"></a> CDynamicAccessor::GetColumnType
 
-Возвращает тип данных указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Возвращает тип данных указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool GetColumnType(DBORDINAL nColumn,   
-   DBTYPE* pType) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool GetColumnType(DBORDINAL nColumn, 
+   DBTYPE* pType) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-*pType*<br/>
-[out] Указатель на тип данных указанного столбца.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Возвращает **true** в случае успешного выполнения или **false** в случае сбоя.  
+*pType*<br/>
+[out] Указатель на тип данных указанного столбца.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **true** в случае успешного выполнения или **false** в случае сбоя.
 
 ## <a name="getlength"></a> CDynamicAccessor::GetLength
 
-Получает длину указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает длину указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool GetLength(DBORDINAL nColumn,   
-   DBLENGTH* pLength) const throw();  
+bool GetLength(DBORDINAL nColumn, 
+   DBLENGTH* pLength) const throw();
 
-bool GetLength(const CHAR* pColumnName,   
-   DBLENGTH* pLength) const throw();  
+bool GetLength(const CHAR* pColumnName, 
+   DBLENGTH* pLength) const throw();
 
-bool GetLength(const WCHAR* pColumnName,   
-   DBLENGTH* pLength) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool GetLength(const WCHAR* pColumnName, 
+   DBLENGTH* pLength) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
+
 *pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
+[in] Указатель на строку символов, содержащая имя столбца.
+
 *pLength*<br/>
-[out] Указатель на целое число, содержащее длину столбца в байтах.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[out] Указатель на целое число, содержащее длину столбца в байтах.
 
-Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Первое переопределение принимает номер столбца, а второй и третий переопределения принимают имя столбца в формате ANSI или Юникода, соответственно. 
+Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.
+
+### <a name="remarks"></a>Примечания
+
+Первое переопределение принимает номер столбца, а второй и третий переопределения принимают имя столбца в формате ANSI или Юникода, соответственно.
 
 ## <a name="getordinal"></a> CDynamicAccessor::GetOrdinal
 
-Получает номер столбца, заданному имени столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-bool GetOrdinal(const CHAR* pColumnName,  
-   DBORDINAL* pOrdinal) const throw();  
+Получает номер столбца, заданному имени столбца.
 
-bool GetOrdinal(const WCHAR* pColumnName,  
-   DBORDINAL* pOrdinal) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+bool GetOrdinal(const CHAR* pColumnName,
+   DBORDINAL* pOrdinal) const throw();
+
+bool GetOrdinal(const WCHAR* pColumnName,
+   DBORDINAL* pOrdinal) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
+[in] Указатель на строку символов, содержащая имя столбца.
+
 *pOrdinal*<br/>
-[out] Указатель на номер столбца.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[out] Указатель на номер столбца.
+
+### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает **true** Если столбец с указанным именем найден. В противном случае эта функция возвращает **false**.
 
 ## <a name="getstatus"></a> CDynamicAccessor::GetStatus
 
-Получает состояние указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает состояние указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool GetStatus(DBORDINAL nColumn,   
-   DBSTATUS* pStatus) const throw();  
+bool GetStatus(DBORDINAL nColumn, 
+   DBSTATUS* pStatus) const throw();
 
-bool GetStatus(const CHAR* pColumnName,  
-   DBSTATUS* pStatus) const throw();  
+bool GetStatus(const CHAR* pColumnName,
+   DBSTATUS* pStatus) const throw();
 
-bool GetStatus(const WCHAR* pColumnName,  
-   DBSTATUS* pStatus) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool GetStatus(const WCHAR* pColumnName,
+   DBSTATUS* pStatus) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-*pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
-*pStatus*<br/>
-[out] Указатель на переменную, содержащую состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по* Дополнительные сведения.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.  
+*pColumnName*<br/>
+[in] Указатель на строку символов, содержащая имя столбца.
+
+*pStatus*<br/>
+[out] Указатель на переменную, содержащую состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **true** при обнаружении указанного столбца. В противном случае эта функция возвращает **false**.
 
 ## <a name="getvalue"></a> CDynamicAccessor::GetValue
 
-Извлекает данные для указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Извлекает данные для указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void* GetValue(DBORDINAL nColumn) const throw();  
+void* GetValue(DBORDINAL nColumn) const throw();
 
-void* GetValue(const CHAR* pColumnName) const throw();  
+void* GetValue(const CHAR* pColumnName) const throw();
 
-void* GetValue(const WCHAR* pColumnName) const throw();  
+void* GetValue(const WCHAR* pColumnName) const throw();
 
 template < class ctype >
-bool GetValue(DBORDINAL nColumn, ctype* pData) const throw();  
+bool GetValue(DBORDINAL nColumn, ctype* pData) const throw();
 
-template < class ctype >  
-bool GetValue(const CHAR* pColumnName, ctype* pData) const throw();  
+template < class ctype >
+bool GetValue(const CHAR* pColumnName, ctype* pData) const throw();
 
-template < class ctype >  
-bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+template < class ctype >
+bool GetValue(const WCHAR* pColumnName, ctype* pData) const throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *ctype*<br/>
-[in] Шаблонный параметр, который обрабатывает любые типы данных, кроме строковые типы (`CHAR*`, `WCHAR*`), который требует специальной обработки. `GetValue` использует соответствующий тип данных зависимости от того, что указано здесь.  
-  
+[in] Шаблонный параметр, который обрабатывает любые типы данных, кроме строковые типы (`CHAR*`, `WCHAR*`), который требует специальной обработки. `GetValue` использует соответствующий тип данных зависимости от того, что указано здесь.
+
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
+
 *pColumnName*<br/>
-[in] Имя столбца.  
-  
+[in] Имя столбца.
+
 *pData*<br/>
-[out] Указатель на содержимое указанного столбца.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[out] Указатель на содержимое указанного столбца.
 
-Если вы хотите передать строковые данные, использовать версии без шаблона `GetValue`. Версии без шаблона этого метода возвращают `void*`, который указывает на часть буфер, содержащий данные указанного столбца. Возвращает значение NULL, если столбец не найден.  
-  
-Для всех других типов данных, проще использовать шаблонного версии `GetValue`. Шаблонный версии возвращают **true** в случае успешного выполнения или **false** в случае сбоя.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Используете версии без шаблона для возврата столбцов, содержащих строки и шаблонного версии для столбцов, содержащих другие типы данных.  
-  
-В режиме отладки, будет выведено утверждение размер *pData* не равно размер столбца, на который он указывает.  
+Если вы хотите передать строковые данные, использовать версии без шаблона `GetValue`. Версии без шаблона этого метода возвращают `void*`, который указывает на часть буфер, содержащий данные указанного столбца. Возвращает значение NULL, если столбец не найден.
+
+Для всех других типов данных, проще использовать шаблонного версии `GetValue`. Шаблонный версии возвращают **true** в случае успешного выполнения или **false** в случае сбоя.
+
+### <a name="remarks"></a>Примечания
+
+Используете версии без шаблона для возврата столбцов, содержащих строки и шаблонного версии для столбцов, содержащих другие типы данных.
+
+В режиме отладки, будет выведено утверждение размер *pData* не равно размер столбца, на который он указывает.
 
 ## <a name="setblobhandling"></a> CDynamicAccessor::SetBlobHandling
 
-Задает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Задает BLOB-ОБЪЕКТОВ, обработки значения для текущей строки.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool SetBlobHandling(DBBLOBHANDLINGENUM eBlobHandling);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *eBlobHandling*<br/>
-Определяет, как обрабатывать данные большого двоичного ОБЪЕКТА. Он может принимать следующие значения:  
-  
-- DBBLOBHANDLING_DEFAULT: Обработка данных столбца, размер которых превышает *nBlobSize* (как задается `SetBlobSizeLimit`) как данные большого двоичного ОБЪЕКТА и получить его через `ISequentialStream` или `IStream` объекта. Этот параметр будет предпринята попытка привязки каждый столбец, содержащий данные, размер которых превышает *nBlobSize* или как DBTYPE_IUNKNOWN, как данные большого двоичного ОБЪЕКТА в списке.  
-  
-- DBBLOBHANDLING_NOSTREAMS: Обработка данных столбца, размер которых превышает *nBlobSize* (как задается `SetBlobSizeLimit`) как данные большого двоичного ОБЪЕКТА и получить его через ссылку в выделенных поставщика, потребителя памяти. Этот параметр полезен для таблиц, имеющих более одного столбца BLOB-ОБЪЕКТОВ, а поставщик поддерживает только один `ISequentialStream` объекта на каждый метод доступа.  
-  
-- DBBLOBHANDLING_SKIP: Пропустить (привязки) столбцов, допускающих как с большими двоичными объектами (метод доступа не привязать или получить значение столбца, но будет по-прежнему получать столбец состояния и длины).  
-  
-### <a name="remarks"></a>Примечания  
+Определяет, как обрабатывать данные большого двоичного ОБЪЕКТА. Он может принимать следующие значения:
 
-Перед вызовом `SetBlobHandling` следует вызвать метод `Open`.  
-  
+- DBBLOBHANDLING_DEFAULT: Обработка данных столбца, размер которых превышает *nBlobSize* (как задается `SetBlobSizeLimit`) как данные большого двоичного ОБЪЕКТА и получить его через `ISequentialStream` или `IStream` объекта. Этот параметр будет предпринята попытка привязки каждый столбец, содержащий данные, размер которых превышает *nBlobSize* или как DBTYPE_IUNKNOWN, как данные большого двоичного ОБЪЕКТА в списке.
+
+- DBBLOBHANDLING_NOSTREAMS: Обработка данных столбца, размер которых превышает *nBlobSize* (как задается `SetBlobSizeLimit`) как данные большого двоичного ОБЪЕКТА и получить его через ссылку в выделенных поставщика, потребителя памяти. Этот параметр полезен для таблиц, имеющих более одного столбца BLOB-ОБЪЕКТОВ, а поставщик поддерживает только один `ISequentialStream` объекта на каждый метод доступа.
+
+- DBBLOBHANDLING_SKIP: Пропустить (привязки) столбцов, допускающих как с большими двоичными объектами (метод доступа не привязать или получить значение столбца, но будет по-прежнему получать столбец состояния и длины).
+
+### <a name="remarks"></a>Примечания
+
+Перед вызовом `SetBlobHandling` следует вызвать метод `Open`.
+
 Метод-конструктор [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) задает значение DBBLOBHANDLING_DEFAULT обработки большого двоичного ОБЪЕКТА.
 
 ## <a name="setblobsizelimit"></a> CDynamicAccessor::SetBlobSizeLimit
 
-Задает максимальный размер большого двоичного ОБЪЕКТА в байтах.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Задает максимальный размер большого двоичного ОБЪЕКТА в байтах.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void SetBlobSizeLimit(DBLENGTH nBlobSize);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+void SetBlobSizeLimit(DBLENGTH nBlobSize);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nBlobSize*<br/>
-Задает предельный размер большого двоичного ОБЪЕКТА.  
-  
-### <a name="remarks"></a>Примечания  
+Задает предельный размер большого двоичного ОБЪЕКТА.
 
-Задает максимальный размер большого двоичного ОБЪЕКТА в байтах; столбец данных, размер которых превышает это значение рассматривается как большой двоичный объект. Некоторые поставщики предоставляют очень больших размеров для столбцов (например, 2 ГБ). Вместо того чтобы пытаться выделить память для столбца этот размер, обычно будет выполнена попытка привязать эти столбцы в виде больших двоичных объектов. Таким образом, нет необходимости выделять всю память, но вы по-прежнему может читать все данные, не опасаясь усечения. Тем не менее, существуют случаи, в которых может потребоваться принудительно `CDynamicAccessor` привязать больших столбцов в собственных типах данных. Чтобы сделать это, вызовите `SetBlobSizeLimit` перед вызовом `Open`.  
-  
-Метод-конструктор [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) задает максимальный размер большого двоичного ОБЪЕКТА на значение по умолчанию 8 000 байт.  
+### <a name="remarks"></a>Примечания
+
+Задает максимальный размер большого двоичного ОБЪЕКТА в байтах; столбец данных, размер которых превышает это значение рассматривается как большой двоичный объект. Некоторые поставщики предоставляют очень больших размеров для столбцов (например, 2 ГБ). Вместо того чтобы пытаться выделить память для столбца этот размер, обычно будет выполнена попытка привязать эти столбцы в виде больших двоичных объектов. Таким образом, нет необходимости выделять всю память, но вы по-прежнему может читать все данные, не опасаясь усечения. Тем не менее, существуют случаи, в которых может потребоваться принудительно `CDynamicAccessor` привязать больших столбцов в собственных типах данных. Чтобы сделать это, вызовите `SetBlobSizeLimit` перед вызовом `Open`.
+
+Метод-конструктор [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) задает максимальный размер большого двоичного ОБЪЕКТА на значение по умолчанию 8 000 байт.
 
 ## <a name="setlength"></a> CDynamicAccessor::SetLength
 
-Задает длину указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Задает длину указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool SetLength(DBORDINAL nColumn,   
-   DBLENGTH nLength)throw();  
+bool SetLength(DBORDINAL nColumn, 
+   DBLENGTH nLength)throw();
 
-bool SetLength(const CHAR* pColumnName,   
-   DBLENGTH nLength) throw();  
+bool SetLength(const CHAR* pColumnName, 
+   DBLENGTH nLength) throw();
 
-bool SetLength(const WCHAR* pColumnName,   
-   DBLENGTH nLength) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool SetLength(const WCHAR* pColumnName, 
+   DBLENGTH nLength) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-*nLength*<br/>
-[in] Длина столбца в байтах.  
-  
-*pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Возвращает **true** Если длина указанного столбца устанавливается успешно. В противном случае эта функция возвращает **false**.  
+*nLength*<br/>
+[in] Длина столбца в байтах.
+
+*pColumnName*<br/>
+[in] Указатель на строку символов, содержащая имя столбца.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **true** Если длина указанного столбца устанавливается успешно. В противном случае эта функция возвращает **false**.
 
 ## <a name="setstatus"></a> CDynamicAccessor::SetStatus
 
-Задает состояние указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Задает состояние указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool SetStatus(DBORDINAL nColumn,   
-   DBSTATUS status)throw();  
+bool SetStatus(DBORDINAL nColumn, 
+   DBSTATUS status)throw();
 
-bool SetStatus(const CHAR* pColumnName,   
-   DBSTATUS status) throw();  
+bool SetStatus(const CHAR* pColumnName, 
+   DBSTATUS status) throw();
 
-bool SetStatus(const WCHAR* pColumnName,   
-   DBSTATUS status) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool SetStatus(const WCHAR* pColumnName, 
+   DBSTATUS status) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-*status*<br/>
-[in] Состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по* Дополнительные сведения.  
-  
-*pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Возвращает **true** Если успешно задано состояние указанного столбца. В противном случае эта функция возвращает **false**. 
+*status*<br/>
+[in] Состояние столбца. См. в разделе [DBSTATUS](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по* Дополнительные сведения.
+
+*pColumnName*<br/>
+[in] Указатель на строку символов, содержащая имя столбца.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Возвращает **true** Если успешно задано состояние указанного столбца. В противном случае эта функция возвращает **false**.
 
 ## <a name="setvalue"></a> CDynamicAccessor::SetValue
 
-Хранит данные для указанного столбца.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp  
+Хранит данные для указанного столбца.
+
+### <a name="syntax"></a>Синтаксис
+
+```cpp
 template <class ctype>
-bool SetValue(   
-   DBORDINAL nColumn,   
-   constctype& data) throw( );  
+bool SetValue( 
+   DBORDINAL nColumn, 
+   constctype& data) throw( );
 
-template <class ctype>    
-bool SetValue(   
-   const CHAR * pColumnName,   
-   const ctype& data) throw( );  
+template <class ctype>  
+bool SetValue( 
+   const CHAR * pColumnName, 
+   const ctype& data) throw( );
 
-template <class ctype>   
-bool SetValue(  
-   const WCHAR *pColumnName,  
-   const ctype& data) throw( );  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+template <class ctype> 
+bool SetValue(
+   const WCHAR *pColumnName,
+   const ctype& data) throw( );
+```
+
+#### <a name="parameters"></a>Параметры
 
 *ctype*<br/>
-[in] Шаблонный параметр, который обрабатывает любые типы данных, кроме строковые типы (`CHAR*`, `WCHAR*`), который требует специальной обработки. `GetValue` использует соответствующий тип данных зависимости от того, что указано здесь.  
-  
+[in] Шаблонный параметр, который обрабатывает любые типы данных, кроме строковые типы (`CHAR*`, `WCHAR*`), который требует специальной обработки. `GetValue` использует соответствующий тип данных зависимости от того, что указано здесь.
+
 *pColumnName*<br/>
-[in] Указатель на строку символов, содержащая имя столбца.  
-  
+[in] Указатель на строку символов, содержащая имя столбца.
+
 *data*<br/>
-[in] Указатель на буфер, содержащий данные.  
-  
+[in] Указатель на буфер, содержащий данные.
+
 *nColumn*<br/>
-[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Номер столбца. Номера столбцов начинаются с 1. Значение 0 относится к столбцу закладку, если таковые имеются.
 
-Если вы хотите задать строковые данные, использовать версии без шаблона `GetValue`. Версии без шаблона этого метода возвращают `void*`, который указывает на часть буфер, содержащий данные указанного столбца. Возвращает значение NULL, если столбец не найден.  
-  
-Для всех других типов данных, проще использовать шаблонного версии `GetValue`. Шаблонный версии возвращают **true** в случае успешного выполнения или **false** в случае сбоя.  
+### <a name="return-value"></a>Возвращаемое значение
 
-## <a name="see-also"></a>См. также  
+Если вы хотите задать строковые данные, использовать версии без шаблона `GetValue`. Версии без шаблона этого метода возвращают `void*`, который указывает на часть буфер, содержащий данные указанного столбца. Возвращает значение NULL, если столбец не найден.
+
+Для всех других типов данных, проще использовать шаблонного версии `GetValue`. Шаблонный версии возвращают **true** в случае успешного выполнения или **false** в случае сбоя.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

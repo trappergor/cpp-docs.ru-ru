@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a76fa402cd270bfc7d0fa87902362de50c55a73
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df131b79d3247e39aecb95c81564d7ac9fc2732d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791088"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058938"
 ---
 # <a name="coclass"></a>кокласс
 
@@ -102,7 +102,7 @@ appobject, uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")]
 class CMyClass : public I {};
 ```
 
-Следующий пример показано, как переопределить реализацию по умолчанию функции, которая отображается в коде, введенному **coclass** атрибута. См. в разделе [/Fx](../../build/reference/fx-merge-injected-code.md) Дополнительные сведения о просмотре внедренного кода. В этот код будет отображаться все базовые классы или интерфейсы, которые можно использовать для класса. Кроме того Если класс включен по умолчанию в этот код и явно указать этот класс базовым о вашей компонентного класса, поставщик атрибутов будет использовать формат, определенный в коде.
+Следующий пример показано, как переопределить реализацию по умолчанию функции, которая отображается в коде, введенному **coclass** атрибута. Дополнительные сведения о просмотре внедренного кода см. в разделе [/Fx](../../build/reference/fx-merge-injected-code.md) . В этот код будет отображаться все базовые классы или интерфейсы, которые можно использовать для класса. Кроме того Если класс включен по умолчанию в этот код и явно указать этот класс базовым о вашей компонентного класса, поставщик атрибутов будет использовать формат, определенный в коде.
 
 ```cpp
 // cpp_attr_ref_coclass2.cpp
@@ -128,7 +128,7 @@ public:
       // you can add to the default implementation
       CRegistryVirtualMachine rvm;
       HRESULT hr;
-      if (FAILED(hr = rvm.AddStandardReplacements()))  
+      if (FAILED(hr = rvm.AddStandardReplacements()))
          return hr;
       rvm.AddReplacement(_T("FriendlyName"), GetObjectFriendlyName());
       return rvm.VMUpdateRegistry(GetOpCodes(), GetOpcodeStringVals(),       GetOpcodeDWORDVals(), GetOpcodeBinaryVals(), bRegister);
@@ -147,7 +147,7 @@ public:
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 

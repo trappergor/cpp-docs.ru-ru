@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052568"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>Определение обработчика сообщений для отраженного сообщения
 
@@ -53,7 +53,7 @@ ms.locfileid: "46413748"
 
 1. Щелкните предлагаемое имя для приема. Обработчик добавляется в проект.
 
-     В столбце справа от окна отраженных сообщений отображаются имена обработчиков сообщения, которые были добавлены.
+   В столбце справа от окна отраженных сообщений отображаются имена обработчиков сообщения, которые были добавлены.
 
 9. Чтобы изменить или удалить обработчик сообщений, повторите шаги 4 – 7. Щелкните ячейку, содержащую имя обработчика, чтобы изменить или удалить и выберите соответствующую задачу.
 

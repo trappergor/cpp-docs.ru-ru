@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c8426a0113ca245f6c9390a5c95f350398938731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0b9a8e72cb3c1334484ed4a4e5c85c8b9a12347
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46106237"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055142"
 ---
 # <a name="marshaling-global-functions"></a>Глобальные функции для маршалинга
 
@@ -34,7 +34,7 @@ ms.locfileid: "46106237"
 |-|-|
 |[AtlFreeMarshalStream](#atlfreemarshalstream)|Освобождает данные маршалинга и `IStream` указатель.|
 |[AtlMarshalPtrInProc](#atlmarshalptrinproc)|Создает новый объект потока и маршалирует заданный указатель интерфейса.|
-|[AtlUnmarshalPtr](#atlunmarshalptr)|Преобразует данные маршалинга потока в указатель интерфейса.|  
+|[AtlUnmarshalPtr](#atlunmarshalptr)|Преобразует данные маршалинга потока в указатель интерфейса.|
 
 ## <a name="requirements"></a>Требования:
 
@@ -42,7 +42,7 @@ ms.locfileid: "46106237"
 
 ##  <a name="atlfreemarshalstream"></a>  AtlFreeMarshalStream
 
-Освобождает данные маршалинга в потоке, затем освобождает указатель потока.  
+Освобождает данные маршалинга в потоке, затем освобождает указатель потока.
 
 ```
 HRESULT AtlFreeMarshalStream(IStream* pStream);
