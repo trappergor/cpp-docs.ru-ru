@@ -1,7 +1,7 @@
 ---
 title: Поле членов данных состояния в мастере создания методов доступа | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,117 +16,105 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e289e2f40326142894894dad1bfe34c801889bb3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: def38b763094c78e7e03ad1f0197c1df49fecdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080004"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>Статус поля элементов данных в мастере создания методов доступа
 
-При использовании Мастер потребителя ATL OLE DB для создания получателя, мастер формирует данные-член в класс записей пользователя для каждого поля, указанного в сопоставлении столбцов. Каждый элемент данных имеет тип `DWORD` и содержит значение состояния, соответствующее соответствующему полю.  
-  
-Например, для элемента данных *m_OwnerID*, мастер создает дополнительный член данных для поля состояния (*dwOwnerIDStatus*) и еще один — для длины полей (*dwOwnerIDLength*). Она также создает схему столбца со COLUMN_ENTRY_LENGTH_STATUS элементами.  
-  
-Это показано в следующем коде:  
-  
-```cpp  
-[db_source("insert connection string")]  
-[db_command(" \  
-   SELECT \  
-      Au_ID, \  
-      Author, \  
-      `Year Born`, \  
-      FROM Authors")]  
-  
-class CAuthors  
-{  
-public:  
-  
-   // The following wizard-generated data members contain status   
-   // values for the corresponding fields in the column map. You   
-   // can use these values to hold NULL values that the database   
-   // returns or to hold error information when the compiler returns   
-   // errors. See "Field Status Data Members in Wizard-Generated   
-   // Accessors" in the Visual C++ documentation for more information   
-   // on using these fields.  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-  
-   // The following wizard-generated data members contain length  
-   // values for the corresponding fields in the column map.  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-  
-BEGIN_COLUMN_MAP(CAuthorsAccessor)  
-   COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)  
-   COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)  
-   COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)  
-END_COLUMN_MAP()  
-  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
-  
-   void GetRowsetProperties(CDBPropSet* pPropSet)  
-   {  
-      pPropSet->AddProperty(DBPROP_IRowsetChange, true);  
-      pPropSet->AddProperty(DBPROP_UPDATABILITY, DBPROPVAL_UP_CHANGE | DBPROPVAL_UP_INSERT | DBPROPVAL_UP_DELETE);  
-   }  
-};  
-```  
-  
+При использовании **Мастер потребителя ATL OLE DB** для создания получателя, мастер создает данные-член в класс записей пользователя для каждого поля, указанного в сопоставлении столбцов. Каждый элемент данных имеет тип `DWORD` и содержит значение состояния, соответствующее соответствующему полю.
+
+Например, для элемента данных *m_OwnerID*, мастер создает дополнительный член данных для поля состояния (*dwOwnerIDStatus*) и еще один — для длины полей (*dwOwnerIDLength*). Она также создает схему столбца со COLUMN_ENTRY_LENGTH_STATUS элементами.
+
+Это показано в следующем коде:
+
+```cpp
+class CAuthorsAccessor
+{
+public:
+   LONG m_AuID;
+   TCHAR m_Author[53];
+   LONG m_YearBorn;
+
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+
+    DEFINE_COMMAND_EX(CAuthorsAccessor, L" \
+    SELECT \
+        AuID, \
+        Author, \
+        YearBorn \
+        FROM dbo.Authors")
+
+    BEGIN_COLUMN_MAP(CAuthorsAccessor)
+       COLUMN_ENTRY_LENGTH_STATUS(1, m_AuID, dwAuIDLength, dwAuIDStatus)
+       COLUMN_ENTRY_LENGTH_STATUS(2, m_Author, dwAuthorLength, dwAuthorStatus)
+       COLUMN_ENTRY_LENGTH_STATUS(3, m_YearBorn, dwYearBornLength, dwYearBornStatus)
+    END_COLUMN_MAP()
+...
+```
+
 > [!NOTE]
->  Если вы изменяете класс записей пользователя или создаете собственного потребителя, переменные данных должны находиться перед переменными состояния и длины.  
-  
-Значения состояния можно использовать для отладки. Если код, сгенерированный Мастер потребителя ATL OLE DB создает ошибки компиляции, например DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED, вы сначала просмотрите текущие значения членов данных состояния поля. Те, которые имеют ненулевые значения соответствуют столбцам, вызывающим ошибки.  
-  
-Значения состояния также можно присвоить значение NULL для определенного поля. Это помогает в случаях, когда необходимо отличать друг значение поля как значение NULL, а не с нуля. Это можно решить, является ли NULL допустимым значением или специальное значение, а также решить, каким образом приложение необходимо обработать его. OLE DB определяет DBSTATUS_S_ISNULL как правильные средства, указав универсальный значение NULL. Если потребитель считывает данные и имеет значение null, в поле состояния устанавливается в значение DBSTATUS_S_ISNULL. Если необходимо установить значение NULL, потребитель задает значение состояния DBSTATUS_S_ISNULL перед вызовом поставщика.  
-  
-Затем откройте Oledb.h и поиск `DBSTATUSENUM`. Затем можно сопоставить числовое значение ненулевое значение состояния от `DBSTATUSENUM` значений перечисления. Если имя перечисления не достаточно сказать, что не так, см. в разделе «Состояние» в разделе «Значения привязки данных» [Руководство программиста OLE DB](/previous-versions/windows/desktop/ms713643\(v=vs.85\)). Этот раздел содержит таблицы значений состояния, используемый при получении или задании данных. Сведения о значениях длины см. в разделе «Длина» в одном разделе.  
-  
-## <a name="retrieving-the-length-or-status-of-a-column"></a>Получение длины или состояния столбца  
+> Если вы изменяете класс записей пользователя или создаете собственного потребителя, переменные данных должны находиться перед переменными состояния и длины.
 
-Можно получить длину столбца переменной длины или изменении состояния столбца (например проверки DBSTATUS_S_ISNULL):  
-  
-- Чтобы получить длину, используйте column_entry_length-макрос.  
-  
-- Чтобы получить состояние, используйте column_entry_status-макрос.  
-  
-- Чтобы получить оба, используйте COLUMN_ENTRY_LENGTH_STATUS, как показано ниже.  
-  
-```cpp  
-class CProducts  
-{  
-public:  
-   char      szName[40];  
-   long      nNameLength;  
-   DBSTATUS   nNameStatus;  
-  
-BEGIN_COLUMN_MAP(CProducts)  
-// Bind the column to CProducts.m_ProductName.  
-// nOrdinal is zero-based, so the column number of m_ProductName is 1.  
-   COLUMN_ENTRY_LENGTH_STATUS(1, szName, nNameLength, nNameStatus)  
-END_COLUMN_MAP()  
-};  
-  
-CTable<CAccessor<CProducts >> product;  
-  
-product.Open(session, "Product");  
+Значения состояния можно использовать для отладки. Если созданный код **Мастер потребителя ATL OLE DB** производит ошибки компиляции, например DB_S_ERRORSOCCURRED или DB_E_ERRORSOCCURRED, необходимо просмотреть текущие значения членов данных состояния поля. Те, которые имеют ненулевые значения соответствуют столбцам, вызывающим ошибки.
 
-while (product.MoveNext() == S_OK)  
-{  
-   // Check the product name isn't NULL before tracing it  
-   if (product.nNameStatus == DBSTATUS_S_OK)  
-      ATLTRACE("%s is %d characters\n", szName, nNameLength);  
-}  
-```  
-  
-При использовании `CDynamicAccessor`, длина и состояние привязываются автоматически. Чтобы получить значения длины и состояния, используйте `GetLength` и `GetStatus` функций-членов.  
-  
-## <a name="see-also"></a>См. также  
+Значения состояния также можно присвоить значение NULL для определенного поля. Это помогает в случаях, когда необходимо отличать друг значение поля как значение NULL, а не с нуля. Это можно решить, является ли NULL допустимым значением или специальное значение, а также решить, каким образом приложение необходимо обработать его. OLE DB определяет DBSTATUS_S_ISNULL как правильные средства, указав универсальный значение NULL. Если потребитель считывает данные и имеет значение null, в поле состояния устанавливается в значение DBSTATUS_S_ISNULL. Если необходимо установить значение NULL, потребитель задает значение состояния DBSTATUS_S_ISNULL перед вызовом поставщика.
+
+Затем откройте Oledb.h и выполните поиск DBSTATUSENUM. Затем можно сопоставить численного значения перечисления DBSTATUSENUM ненулевое значение состояния. Если имя перечисления не является достаточно сказать, что не так, см. в разделе **состояние** подразделы **привязки значения данных** раздел [Руководство программиста OLE DB](/previous-versions/windows/desktop/ms713643). Этот раздел содержит таблицы значений состояния, используемый при получении или задании данных. Сведения о значениях длины см. в разделе **длина** раздела в одном разделе.
+
+## <a name="retrieving-the-length-or-status-of-a-column"></a>Получение длины или состояния столбца
+
+Можно получить длину столбца переменной длины или изменении состояния столбца (например проверки DBSTATUS_S_ISNULL):
+
+- Чтобы получить длину, используйте column_entry_length-макрос.
+
+- Чтобы получить состояние, используйте column_entry_status-макрос.
+
+- Чтобы получить оба, используйте COLUMN_ENTRY_LENGTH_STATUS, как показано:
+
+    ```cpp
+    class CProducts
+    {
+    public:
+       char      szName[40];
+       long      nNameLength;
+       DBSTATUS   nNameStatus;
+
+    BEGIN_COLUMN_MAP(CProducts)
+    // Bind the column to CProducts.m_ProductName.
+    // nOrdinal is zero-based, so the column number of m_ProductName is 1.
+       COLUMN_ENTRY_LENGTH_STATUS(1, szName, nNameLength, nNameStatus)
+    END_COLUMN_MAP()
+    };
+    ```
+
+- Затем получить доступ к длины или состоянии как показано:
+
+    ```cpp
+    CTable<CAccessor<CProducts >> product;
+    CSession session;
+
+    product.Open(session, "Product");
+
+    while (product.MoveNext() == S_OK)
+    {
+       // Check the product name isn't NULL before tracing it
+       if (product.nNameStatus == DBSTATUS_S_OK)
+          ATLTRACE("%s is %d characters\n", product.szName, product.nNameLength);
+    }
+    ```
+
+При использовании `CDynamicAccessor`, длина и состояние привязываются автоматически. Чтобы получить значения длины и состояния, используйте `GetLength` и `GetStatus` функций-членов.
+
+## <a name="see-also"></a>См. также
 
 [Работа с шаблонами объекта-получателя OLE DB](../../data/oledb/working-with-ole-db-consumer-templates.md)

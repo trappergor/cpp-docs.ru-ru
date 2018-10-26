@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2d511eb29c081cfbb85770b35e31aab927b2480b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: d470b60716ab81636be838f2a61e58542a52ffd9
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957125"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234844"
 ---
 # <a name="syncpercontainer-class"></a>Класс sync_per_container
 
@@ -33,18 +33,18 @@ ms.locfileid: "38957125"
 ```cpp
 template <class Cache>
 class sync_per_container
- : public Cache
+    : public Cache
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[equals](#equals)|Сравнивает два кэша на равенство.|
 
@@ -64,7 +64,7 @@ bool equals(const sync_per_container<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Объект кэша фильтра синхронизации.|
 |*Другое*|Объект кэша для сравнения на равенство.|

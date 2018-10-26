@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384511"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080225"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *Rect*<br/>
 [in] Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.
 
-[in] [out] *pParentWnd* указывает родительское окно данной области.
+*pParentWnd*<br/>
+[in, out] Задает родительское окно данной области.
 
 *nID*<br/>
 [in] Указывает идентификатор области.
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Задает стиль для области. Дополнительные сведения см. в разделе [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* указывает контекст создания области.
+*pContext*<br/>
+[in, out] Указывает контекст создания области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *Rect*<br/>
 [in] Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.
 
-[in] [out] *pParentWnd* указывает родительское окно данной области.
+*pParentWnd*<br/>
+[in, out] Задает родительское окно данной области.
 
 *nID*<br/>
 [in] Указывает идентификатор области.
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Задает стиль для области. Дополнительные сведения см. в разделе [CBasePane::CreateEx](../../mfc/reference/cbasepane-class.md#createex).
 
-[in] [out] *pContext* указывает создать контекст для области.
+*pContext*<br/>
+[in, out] Указывает контекст создать для панели.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pDockBar* указывает панель, базовый закрепление этой панели на.
+*pDockBar*<br/>
+[in, out] Указывает панель, базовый закрепление этой панели на.
 
 *lpRect*<br/>
 [in] Указывает прямоугольник в базовый области, где в этой области быть закреплено.
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pWndOldParent* предыдущего родительского окна области.
+*pWndOldParent*<br/>
+[in, out] Область предыдущего родительского окна.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pWndNewParent* указывает нового родительского окна.
+*pWndNewParent*<br/>
+[in, out] Указывает нового родительского окна.
 
 *bDelay*<br/>
 [in] Значение TRUE, чтобы отложить глобальные настройки макета закрепления. в противном случае — значение FALSE.
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *ppDockBar* указывает панель, на которой эта панель закрепление в.
+*ppDockBar*<br/>
+[in, out] Указывает панель, на которой эта панель закрепление в.
 
 *lpRect*<br/>
 [in] Указывает прямоугольник закрепления.
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pClass* указывает сведения о классе среды выполнения для окна области.
+*pClass*<br/>
+[in, out] Указывает сведения о классе среды выполнения для окна области.
 
 ### <a name="remarks"></a>Примечания
 

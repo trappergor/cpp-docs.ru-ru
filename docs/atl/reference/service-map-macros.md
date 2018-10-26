@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053717"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079939"
 ---
 # <a name="service-map-macros"></a>Макросы сопоставления служб
 
@@ -33,7 +33,7 @@ ms.locfileid: "46053717"
 |[BEGIN_SERVICE_MAP](#begin_service_map)|Помечает начало ATL схемы услуги.|
 |[END_SERVICE_MAP](#end_service_map)|Помечает конец ATL схемы услуги.|
 |[SERVICE_ENTRY](#service_entry)|Указывает, что объект поддерживает с идентификатором конкретной службы.|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Указывает, что [IServiceProviderImpl::QueryService](#queryservice) цепочку в указанный объект.|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|Указывает, что [IServiceProviderImpl::QueryService](#queryservice) цепочку в указанный объект.|
 
 ## <a name="requirements"></a>Требования
 
@@ -115,7 +115,7 @@ SERVICE_ENTRY_CHAIN( punk )
 Создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

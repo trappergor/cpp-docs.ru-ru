@@ -1,28 +1,32 @@
 ---
 title: Handlenulltraits-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLENullTraits::GetInvalidValue method
 ms.assetid: 88a29a14-c516-40cb-a0ca-ee897a668623
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3a49a1a1ac4495c7697fc041f8fcf217850f09d8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 1060d28e35a52e2a8c5c550664d36d8272628526
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609428"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161740"
 ---
 # <a name="handlenulltraits-structure"></a>HANDLENullTraits - структура
 
@@ -38,16 +42,16 @@ struct HANDLENullTraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
-|----------|-----------------|
-|`Type`|Синоним для HANDLE.|
+Имя   | Описание
+------ | ---------------------
+`Type` | Синоним для HANDLE.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод HANDLENullTraits::Close](../windows/handlenulltraits-close-method.md)|Закрывает указанный дескриптор.|
-|[Метод HANDLENullTraits::GetInvalidValue](../windows/handlenulltraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|
+Имя                                                  | Описание
+----------------------------------------------------- | -----------------------------
+[HANDLENullTraits::Close](#close)                     | Закрывает указанный дескриптор.
+[HANDLENullTraits::GetInvalidValue](#getinvalidvalue) | Представляет недопустимый дескриптор.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,6 +63,33 @@ struct HANDLENullTraits;
 
 **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>См. также
+## <a name="close"></a>HANDLENullTraits::Close
 
-[Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Закрывает указанный дескриптор.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*h*<br/>
+Чтобы закрыть дескриптор.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если обрабатывать *h* Закрыто успешно; в противном случае — значение **false**.
+
+## <a name="getinvalidvalue"></a>HANDLENullTraits::GetInvalidValue
+
+Представляет недопустимый дескриптор.
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Всегда возвращает значение `nullptr`.

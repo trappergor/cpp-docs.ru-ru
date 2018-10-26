@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895231"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393286"
 ---
 # <a name="hint-files"></a>Файлы подсказок
 
@@ -52,9 +52,9 @@ STDMETHOD(myMethod)(int parameter1);
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 Система анализа не может интерпретировать исходный код, так как функция `STDMETHOD` объявлена, а это объявление синтаксически неверно из-за того, что функция имеет два списка параметров. Система анализа не открывает файл заголовка, чтобы найти определения для макросов `STDMETHOD`, `STDMETHODCALLTYPE` и `HRESULT`. Так как система анализа не может интерпретировать макрос `STDMETHOD`, она пропускает весь оператор и продолжает анализ.
@@ -127,21 +127,21 @@ STDMETHOD(myMethod)(int parameter1);
 
 В следующем исходном коде для функции `FormatWindowClassName()` используется тип параметра `PXSTR` и имя параметра `szBuffer`. Однако система анализа путает заметки SAL `_Pre_notnull_` и `_Post_z_` с типом или именем параметра.
 
-**Исходный код:**  
+**Исходный код:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **Стратегия:** определение Null
 
-В этом случае рекомендуется рассматривать заметки SAL как несуществующие. Для этого задайте указание, строка замены которого имеет значение Null. В результате система анализа пропускает эти заметки, и они не отображаются в обозревателе **представления классов**. (Visual C++ имеет встроенный файл указаний, скрывающий заметку SAL.)  
+В этом случае рекомендуется рассматривать заметки SAL как несуществующие. Для этого задайте указание, строка замены которого имеет значение Null. В результате система анализа пропускает эти заметки, и они не отображаются в обозревателе **представления классов**. (Visual C++ имеет встроенный файл указаний, скрывающий заметку SAL.)
 
-**Файл указаний:**  
+**Файл указаний:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>Скрытые элементы языка C/C++
 
@@ -149,11 +149,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 В приведенном ниже исходном коде макрос `START_NAMESPACE` скрывает непарную открывающую фигурную скобку (`{`).
 
-**Исходный код:**  
+**Исходный код:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **Стратегия:** прямое копирование
 
@@ -161,11 +161,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 Обратите внимание, что, если макрос в исходном файле содержит другие макросы, они будут интерпретированы только в том случае, если уже находятся в наборе полезных указаний.
 
-**Файл указаний:**  
+**Файл указаний:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>Карты
 
@@ -173,9 +173,9 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 Приведенный ниже исходный код определяет макросы `BEGIN_CATEGORY_MAP`, `IMPLEMENTED_CATEGORY` и `END_CATEGORY_MAP`.
 
-**Исходный код:**  
+**Исходный код:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **Стратегия:** определение элементов схемы
 
 Задайте указания для начального, средних (при их наличии) и конечного элементов схемы. Используйте специальные строки замены схемы — `@<`, `@=` и `@>`. Дополнительные сведения см. в подразделе `Syntax` данного раздела.
 
-**Файл указаний:**  
+**Файл указаний:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>Составные макросы
 
@@ -208,11 +208,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 Приведенный ниже исходный код содержит макрос `START_NAMESPACE`, задающий начало области пространства имен, и макрос `BEGIN_CATEGORY_MAP`, задающий начало схемы.
 
-**Исходный код:**  
+**Исходный код:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **Стратегия:** прямое копирование
 
@@ -220,31 +220,31 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 В этом примере предполагается, что `START_NAMESPACE` уже имеется указание, как описано в подразделе `Concealed C/C++ Language Elements`. Кроме того, предполагается, что `BEGIN_CATEGORY_MAP` содержит указание, как описано выше в подразделе `Maps`.
 
-**Файл указаний:**  
+**Файл указаний:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>Неудобные макросы
 
 Некоторые макросы могут интерпретироваться системой анализа, однако из-за того, что макрос является длинным или сложным, исходный код будет трудно читать. В целях удобочитаемости можно предоставить указание, упрощающее отображение макроса.
 
-**Исходный код:**  
+**Исходный код:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **Стратегия:** упрощение
 
 Создайте указание, отображающее упрощенное определение макроса.
 
-**Файл указаний:**  
+**Файл указаний:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>Пример
 
@@ -254,7 +254,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="hint-file-directories"></a>Каталоги файлов указаний
 
-![Общие и зависящие от проекта каталоги файлов указаний.](../ide/media/hintfile.png "HintFile")  
+![Общие и зависящие от проекта каталоги файлов указаний.](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>Каталоги и содержимое файлов указаний
 
@@ -262,41 +262,41 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - Отладка
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>Полезные указания
 
@@ -306,19 +306,19 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - Полезные указания:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 Следующие заметки применяются к предыдущему списку.
 
@@ -332,10 +332,10 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ## <a name="see-also"></a>См. также
 
-[Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)    
-[Директива #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[Директива #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[Заметки SAL](../c-runtime-library/sal-annotations.md)   
-[Схемы сообщений](../mfc/reference/message-maps-mfc.md)   
-[Макросы схемы сообщений](../atl/reference/message-map-macros-atl.md)   
+[Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[Директива #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[Директива #undef (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[Заметки SAL](../c-runtime-library/sal-annotations.md)<br>
+[Схемы сообщений](../mfc/reference/message-maps-mfc.md)<br>
+[Макросы схемы сообщений](../atl/reference/message-map-macros-atl.md)<br>
 [Макросы сопоставления объектов](../atl/reference/object-map-macros.md)

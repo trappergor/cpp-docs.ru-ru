@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374377"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068974"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -61,8 +61,6 @@ ms.locfileid: "46374377"
 |[AfxSocketInit](#afxsocketinit)|Вызывается `CWinApp::InitInstance` переопределение, чтобы инициализировать Windows Sockets.|
 |[AfxUserToolsManager](#afxusertoolsmanager)|Указатель на глобальную [средства диспетчера пользователей](cusertoolsmanager-class.md).|
 |[AfxWinInit](#afxwininit)|Вызывается библиотека MFC предоставляет `WinMain` функции, как часть [CWinApp](../../mfc/reference/cwinapp-class.md) инициализации приложения на базе графического интерфейса пользователя, для инициализации MFC. Должен быть вызван непосредственно для консольных приложений, использующих MFC.|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -145,6 +143,7 @@ RUNTIME_CLASS объекта, производного от [CWinThread](../../m
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxcontextmenumanager.h
@@ -152,7 +151,6 @@ CContextMenuManager* afxContextMenuManager;
 ### <a name="see-also"></a>См. также
 
 [Класс CContextMenuManager](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -190,6 +188,7 @@ void AFXAPI AfxEndThread(
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *lpszName*<br/>
@@ -471,6 +470,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pWnd*<br/>
@@ -514,6 +514,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pWnd*<br/>
@@ -536,7 +537,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 [Класс CWnd](cwnd-class.md)<br/>
 [Класс CMFCToolBar](cmfctoolbar-class.md)
 
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Указатель на глобальную [manager клавиатуры](ckeyboardmanager-class.md).
@@ -546,6 +546,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxkeyboardmanager.h
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [Макросы, глобальные функции и глобальные переменные](mfc-macros-and-globals.md)<br/>
 [Класс CKeyboardManager](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>Примечания
 
-Возвращает дескриптор, который может использоваться в [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) при получении адреса функции DLL. `AfxLoadLibrary` может также использоваться для сопоставления других исполняемых модулей.
+Возвращает дескриптор, который может использоваться в [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) при получении адреса функции DLL. `AfxLoadLibrary` может также использоваться для сопоставления других исполняемых модулей.
 
 Каждый процесс поддерживает счетчик ссылок для каждого модуля в загруженной библиотеки. Этот счетчик ссылок увеличивается каждый раз `AfxLoadLibrary` вызывается и уменьшается на единицу каждый раз `AfxFreeLibrary` вызывается. Когда число ссылок достигает нуля, модуль, не имеет сопоставления из адресного пространства вызывающего процесса и дескриптор недействителен.
 
@@ -618,6 +618,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxmenutearoffmanager.h
@@ -635,6 +636,7 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 CMouseManager* afxMouseManager;
 ```
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxmousemanager.h
@@ -642,8 +644,6 @@ CMouseManager* afxMouseManager;
 ### <a name="see-also"></a>См. также
 
 [Класс CMouseManager](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 До появления Windows Vista приложения, обращавшиеся к реестр, обычно используется **HKEY_CLASSES_ROOT** узла. Тем не менее с Windows Vista или более поздних операционных системах, необходимо запустить приложение в режиме с повышенными правами для записи в HKCR.
 
-Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [страницы свойств компоновщика](../../ide/linker-property-pages.md).
+Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [Linker Property Pages](../../ide/linker-property-pages.md).
 
 Если вы включили функцию перенаправления реестра, платформа перенаправляет доступ из HKCR для **HKEY_CURRENT_USER\Software\Classes**. Перенаправление влияет только на платформах MFC и ATL.
 
@@ -843,7 +843,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="see-also"></a>См. также
 
 [Класс CUserToolsManager](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 

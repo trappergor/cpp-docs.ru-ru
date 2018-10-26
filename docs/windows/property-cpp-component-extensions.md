@@ -1,7 +1,7 @@
 ---
-title: Property (расширения компонентов C++) | Документация Майкрософт
+title: свойства (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075870"
 ---
-# <a name="property--c-component-extensions"></a>property (расширения компонентов C++)
+# <a name="property--ccli-and-ccx"></a>свойства (C + +/ CLI и C + +/ CX)
 
 Объявляет *свойство*, который является функцией-членом, который действует и доступна как элемент данных или элемент массива.
 
@@ -53,17 +53,17 @@ ms.locfileid: "46420508"
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -173,7 +173,6 @@ Get и set для свойства должны быть согласованн�
 
 **Свойство** является контекстно-зависимые ключевым словом.  Дополнительные сведения см. в разделе [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).
 
-
 ### <a name="requirements"></a>Требования
 
 Параметр компилятора: `/clr`
@@ -226,4 +225,4 @@ test
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

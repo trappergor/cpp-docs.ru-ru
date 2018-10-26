@@ -1,7 +1,7 @@
 ---
-title: abstract (расширения компонентов C++) | Документация Майкрософт
+title: абстрактный (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 463848ea5f01bf232850d548c9f4255c07409254
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78a5b42de6b0ac54d060bb6369566aa446863289
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611003"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328198"
 ---
-# <a name="abstract--c-component-extensions"></a>abstract (расширения компонентов C++)
+# <a name="abstract--ccli-and-ccx"></a>абстрактный (C + +/ CLI и C + +/ CX)
 
 **Абстрактный** ключевое слово объявляет один из:
 
@@ -37,12 +37,9 @@ ms.locfileid: "42611003"
 
 ### <a name="syntax"></a>Синтаксис
 
-```cpp
-      class-declaration
-      class-identifier
-      abstract {}
-virtualreturn-typemember-function-identifier() abstract ;
-```
+*объявление класса* *идентификатор класса* **абстрактный {}**
+
+**виртуальный** *типа возвращаемого значения* *идентификатор элемента функция* **абстрактный ();**
 
 ### <a name="remarks"></a>Примечания
 
@@ -115,4 +112,4 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

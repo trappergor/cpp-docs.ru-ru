@@ -1,7 +1,7 @@
 ---
-title: Массивы (расширения компонентов C++) | Документация Майкрософт
+title: Массивы (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29f84515bfa802af8d6463d34de9b6717c8df044
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061330"
 ---
-# <a name="arrays-c-component-extensions"></a>Массивы (расширения компонентов C++)
+# <a name="arrays-ccli-and-ccx"></a>Массивы (C + +/ CLI и C + +/ CX)
 
 `Platform::Array<T>` Тип в C + +/ CX, или **массива** ключевое слово в C + +/ CLI, объявляет массив указанного типа и начальное значение.
 
@@ -55,10 +55,10 @@ ms.locfileid: "46402854"
 В первом примере синтаксиса используется **ref новый** агрегатное ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -111,10 +111,10 @@ int main() {
 В первом примере синтаксиса используется **gcnew** ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

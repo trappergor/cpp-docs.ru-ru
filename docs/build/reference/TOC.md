@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE (определение типа образа среды CLR)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (сохранение кода последней ошибки для вызовов PInvoke)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE (указание атрибута потока среды CLR)](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK (добавление атрибута SupressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK (удаление SuppressUnmanagedCodeSecurityAttribute)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
 ### [/DEBUG (создание отладочной информации)](debug-generate-debug-info.md)
 ### [/DEBUGTYPE (параметры отладочной информации)](debugtype-debug-info-options.md)
 ### [/DEF (указание файла определения модуля)](def-specify-module-definition-file.md)

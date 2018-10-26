@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054940"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>Использование стандартных элементов управления в диалоговом окне
 
@@ -42,7 +42,7 @@ ms.locfileid: "46389873"
 
 1. В [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) для классов диалоговых окон, задать начальное условие для общего элемента управления. С помощью переменной-члена, созданные на предыдущем шаге, используйте функции-члены для задания начального значения и другие параметры. См. следующие описания элементов управления, Дополнительные сведения о параметрах.
 
-     Можно также использовать [обмен данными диалоговых окон](../mfc/dialog-data-exchange-and-validation.md) окон (DDX) для инициализации элементов управления в диалоговом окне.
+   Можно также использовать [обмен данными диалоговых окон](../mfc/dialog-data-exchange-and-validation.md) окон (DDX) для инициализации элементов управления в диалоговом окне.
 
 1. В обработчиках для элементов управления в диалоговом окне используйте переменную-член, работать с элементом управления. См. следующие описания элементов управления, Дополнительные сведения о методах.
 

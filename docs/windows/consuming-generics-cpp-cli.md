@@ -1,7 +1,7 @@
 ---
 title: Использование универсальных типов (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,20 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c17e8212b01ad2cf80c74f80de26209d00f6d1a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 6388342e4ca8e8c524bfa57e58f4090fe64af8ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057186"
 ---
 # <a name="consuming-generics-ccli"></a>Использование универсальных типов (C++/CLI)
 
-Универсальные шаблоны, созданные на одном языке .NET, могут использоваться в других языках .NET. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.
+Универсальные шаблоны, созданные на одном языке .NET (или UWP) может использоваться на других языках. В отличие от обычных шаблонов, универсальный шаблон в скомпилированной сборке остается универсальным. Таким образом, экземпляр универсального типа можно создать в другой сборке и даже на языке, отличном от языка сборки, в которой был определен универсальный тип.
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показан универсальный класс, определенный в C#.
 
@@ -71,9 +71,9 @@ public class CircularList<ItemType> {
          first =
          last.next = first.next;
       }
-      for ( ; iter != last ; iter = iter.next )  
+      for ( ; iter != last ; iter = iter.next )
          if (iter.next.m_item.Equals( item )) {
-              if (iter.next == last)  
+              if (iter.next == last)
                   last = iter;
               iter.next = iter.next.next;
               return;
@@ -92,7 +92,7 @@ public class CircularList<ItemType> {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере используется сборка, созданная в C#.
 
@@ -110,7 +110,7 @@ int main() {
    CircularList<int>^ circ1 = gcnew CircularList<int>();
    CircularList<MgdClass^>^ circ2 = gcnew CircularList<MgdClass^>();
 
-   for (int i = 0 ; i < 100 ; i += 10)  
+   for (int i = 0 ; i < 100 ; i += 10)
       circ1->Add(i);
    circ1->Remove(50);
    circ1->PrintAll();

@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a3a503528f5e12fbfafab8cb8e71711ba0650c6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396848"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820689"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -41,7 +41,7 @@ unsigned char __vmx_vmwrite(
 
 #### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*Поле*|[in] Поле VMCS для записи.|
 |*FieldValue*|[in] Значение для записи в поле VMCS.|
@@ -56,7 +56,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>Примечания
 
-`__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/en-us/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.
+`__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.
 
 ## <a name="requirements"></a>Требования
 

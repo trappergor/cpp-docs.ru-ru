@@ -1,7 +1,7 @@
 ---
 title: Класс WeakRef | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 12fd66c7ff5a6f6fee7588aa7bd51ae2053ba7e8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386981"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071028"
 ---
 # <a name="weakref-class"></a>Класс WeakRef
 
@@ -43,7 +43,7 @@ ms.locfileid: "46386981"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class WeakRef : public ComPtr<IWeakReference>
+class WeakRef : public ComPtr<IWeakReference>;
 ```
 
 ## <a name="members"></a>Участники
@@ -75,7 +75,7 @@ class WeakRef : public ComPtr<IWeakReference>
 
 Объект `WeakRef` объекта обычно используется для представления объекта, существование которого управляет внешний поток или приложение. Например, конструкция `WeakRef` объект из ссылки на объект файла. Пока открыт файл, строгая ссылка является действительной. Но если закрыть файл, строгая ссылка станет недействительной.
 
-Обратите внимание, что изменение в поведении [как](#as), [AsIID](#asiid) и [CopyTo](#copyto) методы пакета SDK для Windows 10. Ранее после вызова любого из этих методов, можно проверить `WeakRef` для `nullptr` для определения того, если строгую ссылку был успешно получен, как показано в следующем коде:
+Обратите внимание на изменение в поведении методов [As](#as), [AsIID](#asiid) и [CopyTo](#copyto) в пакете SDK для Windows 10. Ранее после вызова любого из этих методов, можно проверить `WeakRef` для `nullptr` для определения того, если строгую ссылку был успешно получен, как показано в следующем коде:
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 Приведенный выше код не работает при использовании пакета SDK для Windows 10 (или более поздней версии). Вместо этого проверьте указатель, который был передан в для `nullptr`.
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -244,7 +244,7 @@ HRESULT CopyTo(
 Возвращает `ComPtrRef` , представляющий текущий `WeakRef` объекта.
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -262,7 +262,7 @@ Details::ComPtrRef<WeakRef> operator&() throw()
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

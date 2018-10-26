@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c319ba90a92ac534f4444960ff1e6e6d27acb180
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f9eeea62e1872cbea737313192b3822c23bb433
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390199"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064489"
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 
@@ -141,6 +141,7 @@ reader_writer_lock();
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 Создает `scoped_lock` объекта и получает `reader_writer_lock` переданный объект `_Reader_writer_lock` параметр как средство записи. Если блокировка удерживается другим потоком, этот вызов блокируется.
@@ -203,7 +204,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если блокировка была получена, значение `true`; в противном случае значение `false`.
+Если блокировка была получена, значение **true**; в противном случае значение **false**.
 
 ##  <a name="try_lock_read"></a> try_lock_read
 
@@ -215,7 +216,7 @@ bool try_lock_read();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если блокировка была получена, значение `true`; в противном случае значение `false`.
+Если блокировка была получена, значение **true**; в противном случае значение **false**.
 
 ##  <a name="unlock"></a> разблокировать
 

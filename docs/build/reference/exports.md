@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714532"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084065"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ EXPORTS
 
 Можно использовать \@ *порядковый номер* для указания, что число, а не имя функции, переходит в таблице экспорта DLL. Многие библиотеки DLL Windows экспортируют порядковые номера для поддержки устаревшего кода. В 16-разрядном коде Windows часто использовались порядковые номера, так как это позволяло уменьшить размер DLL. Мы не рекомендуем экспортировать функции по порядковым номерам, если это не требуется клиентам библиотеки DLL для поддержки устаревшего кода. Файл LIB будет содержать сопоставление между порядковым номером и функцией, что позволит использовать имя функции, как обычно в проектах, использующих DLL.
 
-С помощью необязательного **NONAME** ключевое слово, можно экспортировать только порядковый номер и сократить размер таблицы экспорта в итоговому файлу DLL. Тем не менее если вы хотите использовать [GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) в DLL, необходимо знать порядковый номер, поскольку имя не будет допустимым.
+С помощью необязательного **NONAME** ключевое слово, можно экспортировать только порядковый номер и сократить размер таблицы экспорта в итоговому файлу DLL. Тем не менее если вы хотите использовать [GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) в DLL, необходимо знать порядковый номер, поскольку имя не будет допустимым.
 
 Необязательное ключевое слово **ЧАСТНОГО** предотвращает *имя* включаются в библиотеке импорта, созданной LINK. Оно не влияет на экспорт в образ, также созданный с помощью LINK.
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) ключевое слово в исходном коде
 
-2. оператор `EXPORTS` в файле DEF;
+1. оператор `EXPORTS` в файле DEF;
 
-3. [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
+1. [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
 
-4. Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, в формате `#pragma comment(linker, "/export: definition ")`. В следующем примере показано comment-директива #pragma перед объявлением функции, где `PlainFuncName` недекорированное имя, и `_PlainFuncName@4` декорированное имя функции:
+1. Объект [комментарий](../../preprocessor/comment-c-cpp.md) директив в исходном коде, в формате `#pragma comment(linker, "/export: definition ")`. В следующем примере показано comment-директива #pragma перед объявлением функции, где `PlainFuncName` недекорированное имя, и `_PlainFuncName@4` декорированное имя функции:
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

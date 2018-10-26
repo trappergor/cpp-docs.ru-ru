@@ -1,7 +1,7 @@
 ---
-title: nullptr (расширения компонентов C++) | Документация Майкрософт
+title: nullptr (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0596276589790ee6fae8e071e50b4d9b55dd8b85
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 25ecf09d4794500bbc53f7f555380b050d394c71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439618"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056611"
 ---
-# <a name="nullptr--c-component-extensions"></a>nullptr (расширения компонентов C++)
+# <a name="nullptr--ccli-and-ccx"></a>nullptr (C + +/ CLI и C + +/ CX)
 
 **Nullptr** ключевое слово представляет *значение указателя null*. Значение пустого указателя показывает, что тип дескриптора объекта, внутреннего указателя или собственного указателя не указывает на объект.
 
@@ -86,7 +86,7 @@ int main() {
    if (pV1 == nullptr) {}
    if (pV2 == nullptr) {}
 // nullptr can be used as a function argument.
-   f(nullptr);   // calls f(System::Object ^)  
+   f(nullptr);   // calls f(System::Object ^)
 }
 ```
 
@@ -104,17 +104,17 @@ public:
 
 int main() {
    MyClass * pMyClass = nullptr;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 
    pMyClass = 0;
-   if ( pMyClass == nullptr)  
+   if ( pMyClass == nullptr)
       System::Console::WriteLine("pMyClass == nullptr");
 
-   if ( pMyClass == 0)  
+   if ( pMyClass == 0)
       System::Console::WriteLine("pMyClass == 0");
 }
 ```
@@ -164,7 +164,7 @@ int main() {
    // Delete the following line to resolve.
    f(nullptr);
 
-   f(0);   // T = int, call f(int)  
+   f(0);   // T = int, call f(int)
 }
 ```
 
@@ -201,7 +201,7 @@ ref class MyClass {
 public:
    void Test() {
       MyClass ^pMyClass;   // gc type
-      if (pMyClass == nullptr)  
+      if (pMyClass == nullptr)
          Console::WriteLine("NULL");
    }
 };
@@ -235,5 +235,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [nullptr](../cpp/nullptr.md)

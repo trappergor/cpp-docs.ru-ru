@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ad4689c15e14ba0bbac61c8c3b28148536b9057
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 46446b03b557aa3c685ff4ab4f1658cd6972124e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715472"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388606"
 ---
 # <a name="general-property-page-file"></a>Страница свойств "Общие" (файл)
 
@@ -44,4 +44,4 @@ ms.locfileid: "45715472"
 
 ## <a name="see-also"></a>См. также
 
-[Страницы свойств](../ide/property-pages-visual-cpp.md)  
+[Страницы свойств](../ide/property-pages-visual-cpp.md)

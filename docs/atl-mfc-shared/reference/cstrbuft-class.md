@@ -1,7 +1,7 @@
 ---
 title: Класс CStrBufT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411187"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808996"
 ---
 # <a name="cstrbuft-class"></a>Класс CStrBufT
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>Параметры
 
-*TCharType*  
+*TCharType*<br/>
 Тип символа для `CStrBufT` класса. Ниже указаны доступные значения.
 
 - **char** (для символьных строк ANSI)
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>Параметры
 
-*str*  
+*str*<br/>
 Строковый объект, связанный с буфером. Как правило, разработчик будет использовать предварительно заданных определений типов из `CStrBuf` (TCHAR вариант), `CStrBufA` (**char** вариант) и `CStrBufW` (**wchar_t** вариант).
 
-*nMinLength*  
+*nMinLength*<br/>
 Минимальная длина буфера знаков.
 
-*dwFlags*  
+*dwFlags*<br/>
 Определяет, если длина строки определяется автоматически. Ниже указаны доступные значения.
 
 - Длина строки AUTO_LENGTH является автоматически определяется при [CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer) вызывается. Строка должна быть нулем. Значение по умолчанию.
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>Параметры
 
-*nLength*  
+*nLength*<br/>
 Новая длина буфера символ объекта строки.
 
 > [!NOTE]

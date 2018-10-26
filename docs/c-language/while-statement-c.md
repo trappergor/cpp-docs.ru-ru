@@ -17,27 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6993f209f5e7c5ab6f56ae886f2d57ba90a19936
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763244"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860658"
 ---
 # <a name="while-statement-c"></a>Оператор while (C)
 
-Оператор `while` позволяет повторять выполнение оператора до тех пор, пока указанное выражение не станет ложным.  
-  
+Оператор `while` позволяет повторять выполнение оператора до тех пор, пока указанное выражение не станет ложным.
+
 ## <a name="syntax"></a>Синтаксис
 
 *оператор-итерации*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
-  
-Выражение *expression* должно иметь арифметический тип или тип указателя. Выполнение происходит следующим образом:  
-  
-1. Вычисляется значение *expression*.  
-  
-2. Если *expression* изначально ложно, тело оператора `while` не выполняется ни одного раза и управление передается из оператора `while` следующему оператору в программе.
+
+Выражение *expression* должно иметь арифметический тип или тип указателя. Выполнение происходит следующим образом:
+
+1. Вычисляется значение *expression*.
+
+1. Если *expression* изначально ложно, тело оператора `while` не выполняется ни одного раза и управление передается из оператора `while` следующему оператору в программе.
 
    Если *expression* имеет значение True (то есть не равно нулю), выполняется тело оператора и процесс повторяется с шага 1.
 

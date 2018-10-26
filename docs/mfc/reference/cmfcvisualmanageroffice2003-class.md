@@ -102,12 +102,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43f180fd62d4e79f64119097401632caca9b44fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50731fede9a65e8d354008e1cee0075b43dd163
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083533"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
 
@@ -252,7 +252,7 @@ virtual BOOL DrawComboBorderWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -288,7 +288,7 @@ virtual BOOL DrawComboDropButtonWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -325,7 +325,7 @@ virtual void DrawCustomizeButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст отображения.
 
 *Rect*<br/>
@@ -359,7 +359,7 @@ virtual BOOL DrawPushButtonWinXP(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -459,7 +459,7 @@ virtual int GetShowAllMenuItemsHeight(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *sizeDefault*<br/>
@@ -740,7 +740,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectBounds*<br/>
@@ -772,7 +772,7 @@ virtual void OnDrawBarGripper(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели элементов управления.
 
 *rectGripper*<br/>
@@ -803,10 +803,11 @@ virtual BOOL OnDrawBrowseButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
-[in] [in] *rect*
-*pEdit*<br/>
-[in] [in] *состояние* [in] *clrText*
+[in] *основного контроллера домена*<br/>
+[in] *rect*<br/>
+[in] *pEdit*<br/>
+[in] *состояния*<br/>
+[in] *clrText*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -826,7 +827,7 @@ virtual void OnDrawButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, кнопки панели инструментов.
 
 *pButton*<br/>
@@ -859,7 +860,7 @@ virtual void OnDrawCaptionBarBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pBar*<br/>
@@ -894,7 +895,7 @@ virtual void OnDrawCheckBoxEx(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -930,7 +931,7 @@ virtual void OnDrawComboBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, кнопки поля со списком.
 
 *Rect*<br/>
@@ -968,7 +969,7 @@ virtual void OnDrawComboDropButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1019,7 +1020,7 @@ virtual void OnDrawExpandingBox(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель для контекста отображения, в котором раскрывающемся поле будет отображаться.
 
 *Rect*<br/>
@@ -1051,14 +1052,15 @@ virtual void OnDrawHeaderCtrlBorder(
 *pCtrl*<br/>
 [in] Указатель на [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Платформа рисует границы данного элемента управления заголовка.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
 [in] Прямоугольник, который указывает границы элемента управления заголовка.
 
-*bIsPressed*<br/>
-[in] [in] *bIsHighlighted* логический параметр, указывающий, нажата ли в элементе управления заголовком.
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+Логический параметр, который указывает, нажата ли в элементе управления заголовком.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1077,7 +1079,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для [класс CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md) объекта.
 
 *pMenu*<br/>
@@ -1102,7 +1104,7 @@ virtual void OnDrawOutlookBarSplitter(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectSplitter*<br/>
@@ -1126,7 +1128,7 @@ virtual void OnDrawOutlookPageButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectBtn*<br/>
@@ -1155,7 +1157,7 @@ virtual void OnDrawPaneBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства на панели элементов управления.
 
 *pBar*<br/>
@@ -1183,7 +1185,7 @@ virtual COLORREF OnDrawPaneCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pBar*<br/>
@@ -1216,7 +1218,7 @@ virtual void OnDrawPopupWindowBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства всплывающего окна.
 
 *Rect*<br/>
@@ -1237,7 +1239,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства кнопки.
 
 *rectClient*<br/>
@@ -1261,7 +1263,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства заголовка.
 
 *rectCaption*<br/>
@@ -1291,7 +1293,7 @@ virtual COLORREF OnDrawRibbonButtonsGroup(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pGroup*<br/>
@@ -1320,7 +1322,7 @@ virtual COLORREF OnDrawRibbonCategoryCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства категорию ленты.
 
 *pContextCaption*<br/>
@@ -1347,7 +1349,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pTab*<br/>
@@ -1379,7 +1381,7 @@ virtual void OnDrawRibbonProgressBar(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pProgress*<br/>
@@ -1411,7 +1413,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pSeparator*<br/>
@@ -1437,7 +1439,7 @@ virtual void OnDrawRibbonSliderChannel(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pSlider*<br/>
@@ -1466,7 +1468,7 @@ virtual void OnDrawRibbonSliderThumb(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pSlider*<br/>
@@ -1505,7 +1507,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pSlider*<br/>
@@ -1543,7 +1545,7 @@ virtual COLORREF OnDrawRibbonStatusBarPane(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pBar*<br/>
@@ -1575,7 +1577,7 @@ virtual void OnDrawScrollButtons(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1606,7 +1608,7 @@ virtual void OnDrawSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели элементов управления.
 
 *pBar*<br/>
@@ -1635,7 +1637,7 @@ virtual void OnDrawShowAllMenuItems(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1661,7 +1663,7 @@ virtual void OnDrawStatusBarPaneBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pBar*<br/>
@@ -1699,7 +1701,7 @@ virtual void OnDrawStatusBarProgress(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для строки состояния
 
 *pStatusBar*<br/>
@@ -1717,8 +1719,9 @@ virtual void OnDrawStatusBarProgress(
 *clrBar*<br/>
 [in] Цвет для индикатора выполнения. Значение равно либо начала цветным градиентом, либо полный цвет индикатора хода выполнения.
 
-*clrProgressBarDest*<br/>
-[in] [in] *clrProgressText* [in] *bProgressText*
+[in] *clrProgressBarDest*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -1737,7 +1740,7 @@ virtual void OnDrawStatusBarSizeBox(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pStatBar*<br/>
@@ -1765,7 +1768,7 @@ virtual void OnDrawTab(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectTab*<br/>
@@ -1799,7 +1802,7 @@ virtual void OnDrawTabsButtonBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1833,7 +1836,7 @@ virtual void OnDrawTask(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pTask*<br/>
@@ -1866,7 +1869,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1897,7 +1900,7 @@ virtual void OnDrawTasksGroupCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pGroup*<br/>
@@ -1929,7 +1932,7 @@ virtual void OnDrawTearOffCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1957,7 +1960,7 @@ virtual void OnErasePopupWindowButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectClient*<br/>
@@ -1981,7 +1984,7 @@ virtual void OnEraseTabsArea(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2010,7 +2013,7 @@ virtual void OnEraseTabsButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2041,7 +2044,7 @@ virtual BOOL OnEraseTabsFrame(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2071,7 +2074,7 @@ virtual void OnFillAutoHideButtonBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2099,7 +2102,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели элементов управления.
 
 *pBar*<br/>
@@ -2134,7 +2137,7 @@ virtual void OnFillButtonInterior(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, кнопки панели инструментов.
 
 *pButton*<br/>
@@ -2163,7 +2166,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2196,7 +2199,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pCtrl*<br/>
 [in] Указатель на [класс CMFCHeaderCtrl](../../mfc/reference/cmfcheaderctrl-class.md) объекта. Автоматически заполняются фона для данного элемента управления заголовка.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2220,7 +2223,7 @@ virtual void OnFillHighlightedArea(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2247,7 +2250,7 @@ virtual void OnFillOutlookBarCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectCaption*<br/>
@@ -2277,7 +2280,7 @@ virtual void OnFillOutlookPageButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2308,7 +2311,7 @@ virtual void OnFillPopupWindowBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2334,7 +2337,7 @@ virtual void OnFillTab(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectFill*<br/>
@@ -2369,7 +2372,7 @@ virtual void OnFillTasksGroupInterior(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -2394,7 +2397,7 @@ virtual void OnFillTasksPaneBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectWorkArea*<br/>
@@ -2417,7 +2420,7 @@ virtual void OnHighlightQuickCustomizeMenuButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для кнопки.
 
 *pButton*<br/>
@@ -2440,7 +2443,7 @@ virtual void OnHighlightRarelyUsedMenuItems(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectRarelyUsed*<br/>

@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0e4eba9940546e72f11c220dc03a6538750ae85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af2780c8b7fb332cd739416e5051a57a8bc7f765
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028341"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073543"
 ---
 # <a name="registry-and-typelib-global-functions"></a>Глобальные функции реестра и библиотеки типов
 
@@ -60,7 +60,7 @@ ms.locfileid: "46028341"
 |||
 |-|-|
 |[AtlGetPerUserRegistration](#atlgetperuserregistration)|Извлекает, перенаправляет ли приложение доступ к реестру **HKEY_CURRENT_USER** ( **HKCU**) узла.|
-|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Задает, перенаправляет ли приложение доступ к реестру **HKEY_CURRENT_USER** ( **HKCU**) узла.|  
+|[AtlSetPerUserRegistration](#atlsetperuserregistration)|Задает, перенаправляет ли приложение доступ к реестру **HKEY_CURRENT_USER** ( **HKCU**) узла.|
 
 ### <a name="requirements"></a>Требования
 
@@ -93,7 +93,7 @@ ATLINLINE ATLAPI AtlGetPerUserRegistration(bool* pEnabled);
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h  
+**Заголовок:** atlbase.h
 
 ## <a name="afxregcreatekey"></a> AfxRegCreateKey
 
@@ -121,11 +121,11 @@ LONG AFXAPI AfxRegCreateKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTr
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполняется успешно, возвращаемое значение равно ERROR_SUCCESS. Если функция завершается с ошибкой, возвращается код ненулевого значения ошибки, определенный в Winerror.h.  
+Если функция выполняется успешно, возвращаемое значение равно ERROR_SUCCESS. Если функция завершается с ошибкой, возвращается код ненулевого значения ошибки, определенный в Winerror.h.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxpriv.h  
+**Заголовок:** afxpriv.h
 
 ## <a name="afxregdeletekey"></a> AfxRegDeleteKey
 
@@ -154,7 +154,7 @@ LONG AFXAPI AfxRegDeleteKey(HKEY hKey, LPCTSTR lpSubKey, CAtlTransactionManager*
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxpriv.h  
+**Заголовок:** afxpriv.h
 
 ## <a name="afxregisterpreviewhandler"></a>
 
@@ -179,7 +179,7 @@ BOOL AFXAPI AfxRegisterPreviewHandler(LPCTSTR lpszCLSID, LPCTSTR lpszShortTypeNa
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxdisp.h   
+**Заголовок:** afxdisp.h
 
 ##  <a name="atlregistertypelib"></a>  AtlRegisterTypeLib
 
@@ -239,11 +239,11 @@ LONG AFXAPI AfxRegOpenKey(HKEY hKey, LPCTSTR lpSubKey, PHKEY phkResult, CAtlTran
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxpriv.h  
+**Заголовок:** afxpriv.h
 
 ## <a name="afxregopenkeyex"></a>  AfxRegOpenKeyEx
 
-Открывает указанный раздел реестра. 
+Открывает указанный раздел реестра.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -277,7 +277,7 @@ LONG AFXAPI AfxRegOpenKeyEx(HKEY hKey, LPCTSTR lpSubKey, DWORD ulOptions, REGSAM
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxpriv.h  
+**Заголовок:** afxpriv.h
 
 ## <a name="afxunregisterpreviewhandler"></a> AfxUnregisterPreviewHandler
 
@@ -296,7 +296,7 @@ BOOL AFXAPI AfxUnRegisterPreviewHandler(LPCTSTR lpszCLSID);
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** afxdisp.h  
+**Заголовок:** afxdisp.h
 
 ## <a name="atlsetperuserregistration"></a> AtlSetPerUserRegistration
 
@@ -321,11 +321,11 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 Перенаправление системного реестра не включена по умолчанию. Если этот параметр включен, доступ к реестру перенаправляется на **HKEY_CURRENT_USER\Software\Classes**.
 
-Перенаправление не является общим. Только платформы MFC и ATL затрагивает это перенаправление системного реестра.  
+Перенаправление не является общим. Только платформы MFC и ATL затрагивает это перенаправление системного реестра.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlbase.h  
+**Заголовок:** atlbase.h
 
 ##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
@@ -335,7 +335,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 ```
 ATLAPI AtlUnRegisterTypeLib(
-    HINSTANCE hInstTypeLib, 
+    HINSTANCE hInstTypeLib,
     LPCOLESTR lpszIndex);
 ```
 
@@ -353,7 +353,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>Примечания
 
-Эта вспомогательная функция используемой [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).  
+Эта вспомогательная функция используемой [CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib) и [AtlComModuleUnregisterServer](#atlcommoduleunregisterserver).
 
 ### <a name="requirements"></a>Требования
 
@@ -405,7 +405,7 @@ ATLINLINE ATLAPI AtlLoadTypeLib(
 
 ##  <a name="registrydataexchange"></a>  RegistryDataExchange
 
-Эта функция вызывается для чтения из системного реестра или записи в него.  
+Эта функция вызывается для чтения из системного реестра или записи в него.
 
 ### <a name="syntax"></a>Синтаксис
 

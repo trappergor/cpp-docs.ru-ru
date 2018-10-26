@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061252"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Создание проекта библиотеки DLL MFC
 
@@ -46,12 +46,11 @@ ms.locfileid: "46386812"
 
 1. Нажмите кнопку **Готово** закрыть мастер и откройте новый проект в **обозревателе решений**.
 
-После создания проекта можно просмотреть файлы, созданные в обозревателе решений. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>См. также
 
 [Типы проектов Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [Страницы свойств](../../ide/property-pages-visual-cpp.md)
-
 

@@ -1,7 +1,7 @@
 ---
 title: Класс AgileEventSource | Документация Майкрософт
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405259"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054578"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
 
@@ -31,9 +31,13 @@ ms.locfileid: "46405259"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>Параметры
@@ -92,7 +96,6 @@ HRESULT Add(
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение S_OK, если операция завершилась успешно; в противном случае — значение HRESULT, указывающее на ошибку.
-
 
 ## <a name="see-also"></a>См. также
 

@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436901"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069338"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 
@@ -253,7 +253,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|Вызывается платформой при активации меню с перемещаемой панелью.|
 |[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|Вызывается платформой для обновления меню фрейма. (Переопределяет `CMDIFrameWnd::OnUpdateFrameMenu`.)|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|Возвращает закрепляемой области, содержащей заданную точку.|
-|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows.  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|
+|`CMDIFrameWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .  (Переопределяет `CMDIFrameWnd::PreTranslateMessage`.)|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|Вызывается платформой для повторно рассчитать макет окна фрейма. (Переопределяет [CFrameWnd::RecalcLayout](../../mfc/reference/cframewnd-class.md#recalclayout).)|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из диспетчера закрепления.|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|Сохраняет текущий макет групп с вкладками MDI и список ранее открывавшихся документов.|
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -1449,7 +1448,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pMenuButton*<br/>

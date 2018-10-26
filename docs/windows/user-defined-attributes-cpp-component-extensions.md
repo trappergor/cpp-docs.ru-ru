@@ -1,7 +1,7 @@
 ---
-title: Пользовательские атрибуты (расширения компонентов C++) | Документация Майкрософт
+title: Пользовательские атрибуты (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600385"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328445"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>Пользовательские атрибуты (расширения компонентов C++)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>Пользовательские атрибуты (C + +/ CLI и C + +/ CX)
 
-Настраиваемые атрибуты позволяют расширять метаданные интерфейса, класса или структуры, метода, параметра или перечисления.
-
-## <a name="all-runtimes"></a>Все среды выполнения
-
-Настраиваемые атрибуты поддерживаются всеми средами выполнения.
+C + +/ CLI и C + +/ CX можно создавать атрибуты конкретных платформ, расширять метаданные интерфейса, класса или структуры, метода, параметра или перечисления. Эти атрибуты отличаются от [стандартные атрибуты C++](../cpp/attributes.md).
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-Атрибуты C++/CX поддерживают только свойства; конструкторы атрибутов и методы не поддерживаются.
-
-### <a name="remarks"></a>Примечания
+Можно применить C + +/ CX атрибуты к свойствам, но не к конструкторы или методы.
 
 ### <a name="requirements"></a>Требования
 
@@ -43,21 +37,15 @@ ms.locfileid: "42600385"
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-Настраиваемые атрибуты позволяют расширять метаданные управляемого элемента. Дополнительные сведения см. в разделе [Атрибуты](/dotnet/standard/attributes/index).
-
-### <a name="remarks"></a>Примечания
-
-Сведения и синтаксис, представленные в этом разделе предполагается заменяют сведения, приведенные в [атрибут](../windows/attribute.md).
+Сведения и синтаксис, представленные в этом разделе предполагается заменяют сведения, приведенные в [атрибут](attributes/attribute.md).
 
 Настраиваемый атрибут можно определить, указав тип и создав для него базовый класс <xref:System.Attribute>, а также при необходимости применив атрибут <xref:System.AttributeUsageAttribute>.
 
-Например, на сервере транзакций Microsoft Transaction Server (MTS) 1.0 поведение по отношению к транзакциям, синхронизации, распределению нагрузки и т. д. было задано с помощью пользовательских идентификаторов GUID, вставленных в библиотеку типов посредством настраиваемого атрибута ODL. Следовательно, клиент сервера MTS может определить его характеристики, считав библиотеку типов. В .NET Framework аналогом библиотеки типов являются метаданные, а аналогом настраиваемого атрибута ODL — настраиваемые атрибуты. Кроме того, чтение библиотеки типов аналогично использованию отражения на типы.
+Дополнительные сведения:
 
-Дополнительные сведения см. в следующих разделах:
+- [Целевые объекты атрибутов](attribute-targets-cpp-component-extensions.md)
 
-- [Целевые объекты атрибутов](../windows/attribute-targets-cpp-component-extensions.md)
-
-- [Типы параметров атрибутов](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [Типы параметров атрибутов](attribute-parameter-types-cpp-component-extensions.md)
 
 Сведения о подписи сборок в Visual C++, см. в разделе [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
@@ -177,7 +165,7 @@ Service Access = Read
 
 Аргументы атрибута должны быть константами времени компиляции; в большинстве случаев они должны быть константными литералами.
 
-См. в разделе [typeid](../windows/typeid-cpp-component-extensions.md) сведения о возврате значения типа System::Type из блока настраиваемых атрибутов.
+См. в разделе [typeid](typeid-cpp-component-extensions.md) сведения о возврате значения типа System::Type из блока настраиваемых атрибутов.
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](component-extensions-for-runtime-platforms.md)

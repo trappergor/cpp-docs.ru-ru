@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376490"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079861"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Элементы управления ActiveX в MFC. Страницы свойств
 
@@ -86,7 +86,7 @@ ms.locfileid: "46376490"
 
 1. Откройте диалоговое окно IDD_PROPPAGE_SAMPLE.
 
-     Мастер элементов управления ActiveX добавляет в конец идентификатора диалоговое окно, в этом случае пример имя проекта.
+   Мастер элементов управления ActiveX добавляет в конец идентификатора диалоговое окно, в этом случае пример имя проекта.
 
 1. Перетащите выбранный элемент управления из области элементов в область диалогового окна.
 

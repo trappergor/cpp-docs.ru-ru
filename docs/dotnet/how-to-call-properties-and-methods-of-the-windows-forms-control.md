@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393403"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061577"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>Практическое руководство. Вызов свойств и методов элемента управления Windows Forms
 
@@ -39,11 +39,11 @@ ms.locfileid: "46393403"
 
 1. Добавьте следующую строку в раздел общих переопределения `CMFC02View` объявление в MFC02View.h класса.
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. Добавьте переопределение для OnInitialupdate.
 
-     Отображение **свойства** окно (F4). В **представление классов** (CTRL + SHIFT + C), выберите класс CMFC02View. В **свойства** окно, выберите значок для переопределений. Прокрутки вниз по списку, чтобы OnInitialUpdate. Щелкните раскрывающийся список и выберите \<Добавить >. В MFC02View.cpp. Убедитесь, что тело функции OnInitialUpdate выглядит следующим образом:
+   Отображение **свойства** окно (F4). В **представление классов** (CTRL + SHIFT + C), выберите класс CMFC02View. В **свойства** окно, выберите значок для переопределений. Прокрутки вниз по списку, чтобы OnInitialUpdate. Щелкните раскрывающийся список и выберите \<Добавить >. В MFC02View.cpp. Убедитесь, что тело функции OnInitialUpdate выглядит следующим образом:
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ ms.locfileid: "46393403"
 
 1. Постройте и запустите проект.
 
-     В меню **Сборка** выберите **Собрать решение**.
+   В меню **Сборка** выберите **Собрать решение**.
 
-     На **Отладка** меню, щелкните **Запуск без отладки**.
+   На **Отладка** меню, щелкните **Запуск без отладки**.
 
-     Обратите внимание на то, что поле инициализируется теперь.
+   Обратите внимание на то, что поле инициализируется теперь.
 
 ## <a name="see-also"></a>См. также
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427008"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163807"
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 
@@ -91,7 +91,7 @@ ms.locfileid: "46427008"
 
 - Для `task` объекты, используют [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) функции. `cancel_current_task` отменяет текущую задачу и любое ее продолжение, основанное на значении. (Он не отменяет отмену *маркера* связанный с задачей или ее продолжениями.)
 
-- Для групп задач и параллельных алгоритмов, используйте [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) функцию, чтобы отследить отмену и как можно скорее вернуться из тела задачи, когда эта функция возвращает `true`. (Не вызывайте `cancel_current_task` из группы задач.)
+- Для групп задач и параллельных алгоритмов, используйте [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling) функцию, чтобы отследить отмену и как можно скорее вернуться из тела задачи, когда эта функция возвращает **true** . (Не вызывайте `cancel_current_task` из группы задач.)
 
 В следующем примере показан первый базовый шаблон для отмены задачи. Тело задачи время от времени проверяет, нет ли отмены внутри цикла.
 

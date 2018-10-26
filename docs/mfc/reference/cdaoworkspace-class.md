@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442023"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054362"
 ---
 # <a name="cdaoworkspace-class"></a>Класс CDaoWorkspace
 
@@ -163,7 +163,7 @@ MFC не реализует коллекций пользователей и г�
 
 - Явным образом откройте рабочую область по умолчанию.
 
-     Обычно подразумевается использование рабочей области по умолчанию — при открытии новых [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объектов. Но может потребоваться доступ к ней явным образом — например, для доступа к свойствам ядра базы данных или коллекции рабочих областей. См. в разделе «Неявное использование рабочей области по умолчанию» ниже.
+   Обычно подразумевается использование рабочей области по умолчанию — при открытии новых [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) объектов. Но может потребоваться доступ к ней явным образом — например, для доступа к свойствам ядра базы данных или коллекции рабочих областей. См. в разделе «Неявное использование рабочей области по умолчанию» ниже.
 
 - Создайте новые рабочие области. Вызовите [Append](#append) Если вы хотите добавить их в коллекцию рабочих областей.
 
@@ -309,7 +309,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
 
-
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
     LPCTSTR lpszDestName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

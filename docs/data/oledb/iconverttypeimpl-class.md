@@ -25,67 +25,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed4eefe8c05e2b5b027ba1d7c1fec022c9e44409
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 351f22f49ec005b07fad6f4b215cdc75637213e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078483"
 ---
 # <a name="iconverttypeimpl-class"></a>Класс IConvertTypeImpl
 
-Предоставляет реализацию [IConvertType](/previous-versions/windows/desktop/ms715926\(v=vs.85\)) интерфейс.  
-  
+Предоставляет реализацию [IConvertType](/previous-versions/windows/desktop/ms715926) интерфейс.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IConvertTypeImpl   
-   : public IConvertType, public CConvertHelper  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T>
+class ATL_NO_VTABLE IConvertTypeImpl
+   : public IConvertType, public CConvertHelper
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IConvertTypeImpl`.  
+Ваш класс, производный от `IConvertTypeImpl`.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="interface-methods"></a>Методы интерфейса  
-  
-|||  
-|-|-|  
-|[CanConvert](#canconvert)|Сведения о доступности преобразований типа команды или для набора строк.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldb.h
 
-Этот интерфейс является обязательным на команды, наборы строк и наборов строк индекса. `IConvertTypeImpl` реализует интерфейс путем делегирования для преобразования объекта, заданного параметром OLE DB.  
+## <a name="members"></a>Участники
+
+### <a name="interface-methods"></a>Методы интерфейса
+
+|||
+|-|-|
+|[CanConvert](#canconvert)|Сведения о доступности преобразований типа команды или для набора строк.|
+
+## <a name="remarks"></a>Примечания
+
+Этот интерфейс является обязательным на команды, наборы строк и наборов строк индекса. `IConvertTypeImpl` реализует интерфейс путем делегирования для преобразования объекта, заданного параметром OLE DB.
 
 ## <a name="canconvert"></a> IConvertTypeImpl::CanConvert
 
-Сведения о доступности преобразований типа команды или для набора строк.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Сведения о доступности преобразований типа команды или для набора строк.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-STDMETHOD(CanConvert)(DBTYPE wFromType,   
-   DBTYPE wToType,   
-   DBCONVERTFLAGS dwConvertFlags);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+STDMETHOD(CanConvert)(DBTYPE wFromType, 
+   DBTYPE wToType, 
+   DBCONVERTFLAGS dwConvertFlags);
+```
 
-См. в разделе [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224\(v=vs.85\)) в *справочнике программиста OLE DB*.  
-  
-### <a name="remarks"></a>Примечания  
+#### <a name="parameters"></a>Параметры
 
-Использует преобразования данных OLE DB в `MSADC.DLL`.  
-  
-## <a name="see-also"></a>См. также  
+См. в разделе [IConvertType::CanConvert](/previous-versions/windows/desktop/ms711224) в *справочнике программиста OLE DB*.
+
+### <a name="remarks"></a>Примечания
+
+Использует преобразования данных OLE DB в `MSADC.DLL`.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716876"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163248"
 ---
 # <a name="msbuild-visual-c-overview"></a>Общие сведения о MSBuild (Visual C++)
 
@@ -111,7 +111,7 @@ A *параметр задачи* свойство класса задачи, о
 
 ### <a name="useenv-property"></a>UseEnv-свойство
 
-По умолчанию параметры платформы для текущего проекта переопределение переменных среды PATH, INCLUDE, LIB, LIBPATH, КОНФИГУРАЦИИ и ПЛАТФОРМЫ. Задать `UseEnv` Свойства `true` гарантировать, что переменные среды не переопределен.
+По умолчанию параметры платформы для текущего проекта переопределение переменных среды PATH, INCLUDE, LIB, LIBPATH, КОНФИГУРАЦИИ и ПЛАТФОРМЫ. Задайте `UseEnv` свойства **true** гарантировать, что переменные среды не переопределен.
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 

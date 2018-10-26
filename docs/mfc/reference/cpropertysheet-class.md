@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7df22a7e2209b49f65d240336229a3c80ba4ddb7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063826"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet-класс
 
@@ -155,7 +155,7 @@ class CPropertySheet : public CWnd
 
 Чтобы создать диалоговое окно мастера, выполните те же действия, которые необходимо выполнить для создания стандартных свойств, но вызывает [SetWizardMode](#setwizardmode) перед вызовом метода [DoModal](#domodal). Чтобы включить кнопок мастера, вызовите [SetWizardButtons](#setwizardbuttons), используя флаги для настройки их функциональности и внешнему виду. Чтобы включить **Готово** "Кнопка", вызовите [SetFinishText](#setfinishtext) после пользователя были предприняты никакие меры на последней странице мастера.
 
-Дополнительные сведения об использовании `CPropertySheet` объектов, см. в статье [вкладки свойств и страницы свойств](../../mfc/property-sheets-and-property-pages-in-mfc.md). Кроме того, см. в статье базы знаний Q146916: Практическое руководство: создание CPropertySheet немодальное окна с помощью стандартных кнопок, а статья Q300606: HOWTO: проектировать страницу свойств можно изменять MFC.
+Дополнительные сведения об использовании `CPropertySheet` объектов, см. в статье [вкладки свойств и страницы свойств](../../mfc/property-sheets-and-property-pages-in-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -210,12 +210,10 @@ void Construct(
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
 
-
 void Construct(
     LPCTSTR pszCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
-
 
 void Construct(
     UINT nIDCaption,
@@ -224,7 +222,6 @@ void Construct(
     HBITMAP hbmWatermark,
     HPALETTE hpalWatermark = NULL,
     HBITMAP hbmHeader = NULL);
-
 
 void Construct(
     LPCTSTR pszCaption,
@@ -279,18 +276,15 @@ void Construct(
 ```
 CPropertySheet();
 
-
 explicit CPropertySheet(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
 
-
 explicit CPropertySheet(
     LPCTSTR pszCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
-
 
 CPropertySheet(
     UINT nIDCaption,
@@ -299,7 +293,6 @@ CPropertySheet(
     HBITMAP hbmWatermark,
     HPALETTE hpalWatermark = NULL,
     HBITMAP hbmHeader = NULL);
-
 
 CPropertySheet(
     LPCTSTR pszCaption,

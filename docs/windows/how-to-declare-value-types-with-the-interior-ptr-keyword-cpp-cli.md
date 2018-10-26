@@ -1,7 +1,7 @@
 ---
 title: 'Практическое: объявление типов значений с использованием ключевого слова interior_ptr (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,23 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4da55ff3621d0b8c89d92bf804aba8ad0bdab591
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e9e24b2ac55e36c256adc076cee4ace2109a642d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605785"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056205"
 ---
 # <a name="how-to-declare-value-types-with-the-interiorptr-keyword-ccli"></a>Практическое руководство. Объявление типов значений с использованием ключевого слова interior_ptr (C++/CLI)
 
 **Interior_ptr** может использоваться с типом значения.
 
 > [!IMPORTANT]
-> Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
+> Эта возможность языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 Следующие C + +/ CLI примере показано, как использовать **interior_ptr** с типом значения.
 
@@ -77,7 +77,7 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В тип значения **это** указатель равен interior_ptr.
 
@@ -99,7 +99,7 @@ value struct V {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем примере показано использование оператора взятия адреса со статическими членами.
 
@@ -131,7 +131,7 @@ int main() {
 }
 ```
 
-```Output 
+```Output
 22
 23
 hello

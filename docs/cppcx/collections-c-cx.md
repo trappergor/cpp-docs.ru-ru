@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103351"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062643"
 ---
 # <a name="collections-ccx"></a>Коллекции (C++/CX)
 
@@ -30,14 +30,14 @@ ms.locfileid: "44103351"
 
 - [Класс Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md) и[класс Platform::Collections::MapView](../cppcx/platform-collections-mapview-class.md) являются доступными только для чтения версиями `Vector` и `Map`.
 
-- Итераторы определяются в [пространстве имен Platform::Collections](../cppcx/platform-collections-namespace.md). Эти итераторы удовлетворяют требованиям итераторов STL и позволяют использовать [std::find](../standard-library/algorithm-functions.md#find), [std::count_if](../standard-library/algorithm-functions.md#count_if)и другие алгоритмы STL в любом [Windows::Foundation:: Collections](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) тип интерфейса или [Platform::Collections](../cppcx/platform-collections-namespace.md) конкретный тип. Например это означает, что можно выполнять итерацию по коллекции в компоненте среды выполнения Windows, которая создается на языке C# и применять к ней алгоритм STL.
+- Итераторы определяются в [пространстве имен Platform::Collections](../cppcx/platform-collections-namespace.md). Эти итераторы удовлетворяют требованиям итераторов STL и позволяют использовать алгоритмы [std::find](../standard-library/algorithm-functions.md#find),  [std::count_if](../standard-library/algorithm-functions.md#count_if)и другие алгоритмы STL в любом типе интерфейса [Windows::Foundation::Collections](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) или конкретном типе [Platform::Collections](../cppcx/platform-collections-namespace.md) . Например это означает, что можно выполнять итерацию по коллекции в компоненте среды выполнения Windows, которая создается на языке C# и применять к ней алгоритм STL.
 
    > [!IMPORTANT]
    > Итераторы прокси-сервера `VectorIterator` и `VectorViewIterator` используют прокси-объекты `VectoryProxy<T>` и `ArrowProxy<T>` для включения использования с контейнерами STL. Дополнительные сведения см. в теме "Элементы VectorProxy" далее в этой статье.
 
 - C + +/ CX коллекции типов поддержки же гарантии потокобезопасности, контейнерами STL.
 
-- [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) и [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) определяют события, инициируемые при изменении коллекции различными способами. Реализуя эти интерфейсы, объекты  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) и [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) поддерживают привязку данных с коллекциями XAML. Например, если имеется объект `Vector` , данные которого связаны с `Grid`, то при добавлении данных в коллекцию их изменения отражаются в пользовательском интерфейсе таблицы.
+- [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) и [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) определяют события, инициируемые при разнообразных изменениях коллекции. Реализуя эти интерфейсы, объекты  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) и [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) поддерживают привязку данных с коллекциями XAML. Например, если имеется объект `Vector` , данные которого связаны с `Grid`, то при добавлении данных в коллекцию их изменения отражаются в пользовательском интерфейсе таблицы.
 
 ## <a name="vector-usage"></a>Использование класса Vector
 
@@ -60,11 +60,11 @@ ms.locfileid: "44103351"
 
 ## <a name="value-types-in-vector"></a>Типы значений в объекте Vector
 
-Любой элемент, который необходимо сохранить в объекте [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) , должен поддерживать сравнение на равенство (неявно или с помощью пользовательского алгоритма сравнения [std::equal_to](../standard-library/equal-to-struct.md) ). Все ссылочные типы и все скалярные типы неявно поддерживают сравнение на равенство. Для нескалярных типов значений, таких как [Windows::Foundation:: DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), или для пользовательских вариантов сравнения — например, `objA->UniqueID == objB->UniqueID`— необходимо предоставить специальный объект функции.
+Любой элемент, который необходимо сохранить в объекте [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) , должен поддерживать сравнение на равенство (неявно или с помощью пользовательского алгоритма сравнения [std::equal_to](../standard-library/equal-to-struct.md) ). Все ссылочные типы и все скалярные типы неявно поддерживают сравнение на равенство. Для нескалярных типов значений, таких как [Windows::FoundationDateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), или для пользовательских сравнений (например, `objA->UniqueID == objB->UniqueID`) необходимо предоставить специальный объект функции.
 
 ## <a name="vectorproxy-elements"></a>Элементы VectorProxy
 
-[Platform::Collections:: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) и [Platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) позволяют использовать `range for` циклы и алгоритмы, такие как [std::sort](../standard-library/algorithm-functions.md#sort) с [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) контейнера. Но `IVector` элементов не может осуществляться через C++ разыменование указателя; они могут быть доступны только через [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) и [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) методы. Следовательно, эти итераторы используют прокси-классы `Platform::Details::VectorProxy<T>` и `Platform::Details::ArrowProxy<T>` для предоставления доступа к отдельным элементам с использованием операторов `*`, `->`и `[]` в соответствии с требованиями STL. Строго говоря, при использовании `IVector<Person^> vec`типом `*begin(vec)` является `VectorProxy<Person^>`. Однако прокси-объект практически всегда прозрачен для кода. Эти прокси-объекты не документируются, поскольку предназначены исключительно для внутреннего пользования итераторами, однако полезно иметь представление о самом механизме работы.
+[Platform::Collections:: vectoriterator](../cppcx/platform-collections-vectoriterator-class.md) и [Platform::Collections:: vectorviewiterator](../cppcx/platform-collections-vectorviewiterator-class.md) позволяют использовать `range for` циклы и алгоритмы, такие как [std::sort](../standard-library/algorithm-functions.md#sort) с [ IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) контейнера. Однако невозможно получить доступ к элементам `IVector` через отмену ссылки на указатель C++; доступ к ним можно получить только с использованием методов [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) и [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) . Таким образом, эти итераторы используют прокси-классы `Platform::Details::VectorProxy<T>` и `Platform::Details::ArrowProxy<T>` для предоставления доступа к отдельным элементам с использованием __\*__, __->__ и  __\[]__ операторы, согласно требованиям стандартной библиотеке. Строго говоря, при использовании `IVector<Person^> vec`типом `*begin(vec)` является `VectorProxy<Person^>`. Однако прокси-объект практически всегда прозрачен для кода. Эти прокси-объекты не документируются, поскольку предназначены исключительно для внутреннего пользования итераторами, однако полезно иметь представление о самом механизме работы.
 
 При использовании цикла `range for` с контейнерами `IVector` используйте `auto&&` для включения переменной итератора для правильной привязки к элементам `VectorProxy` . При использовании `auto` или `auto&`создается предупреждение компилятора С4239, а `VectoryProxy` упоминается в тексте предупреждения.
 
@@ -74,8 +74,7 @@ ms.locfileid: "44103351"
 
 Один из сценариев, в котором необходимо создать код для прокси-объекта, заключается в следующем: необходимо выполнить операцию `dynamic_cast` с элементами, например при поиске объектов XAML определенного типа в коллекции элементов `UIElement` . В этом случае необходимо сначала привести элемент к [Platform::Object](../cppcx/platform-object-class.md)^, а затем выполнить динамическое приведение.
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -96,7 +95,7 @@ void FindButton(UIElementCollection^ col)
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
-Как правило, для реализации внутренних возможностей сопоставления предпочтительно использовать тип `std::map` (из соображений производительности). Если необходимо передать контейнер с помощью интерфейса ABI, создайте [Platform::Collections:: map](../cppcx/platform-collections-map-class.md) из [std::map](../standard-library/map-class.md) и вернуть `Map` как [Windows::Foundation:: Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_). При попытке использования типа `Map` в качестве открытого возвращаемого значения или параметра возникнет ошибка компилятора C3986. Эту ошибку можно исправить, заменив `Map` объектом `IMap`. В некоторых случаях (например, если вы не выполняете большого количества операций поиска или вставки и часто передаете коллекцию через интерфейс ABI) более рационально использовать класс `Platform::Collections::Map` с самого начала, не затрачивая ресурсы на преобразование типа объекта `std::map`. В любом случае следует избегать операций поиска и вставки в объектах `IMap` , поскольку из всех трех типов он обладает самой низкой производительностью. Преобразование в `IMap` следует выполнять только в момент передачи контейнера через интерфейс ABI.
+Как правило, для реализации внутренних возможностей сопоставления предпочтительно использовать тип `std::map` (из соображений производительности). Если необходимо передать контейнер с помощью интерфейса ABI, создайте объект [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) из [std::map](../standard-library/map-class.md) и верните `Map` в качестве [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_). При попытке использования типа `Map` в качестве открытого возвращаемого значения или параметра возникнет ошибка компилятора C3986. Эту ошибку можно исправить, заменив `Map` объектом `IMap`. В некоторых случаях (например, если вы не выполняете большого количества операций поиска или вставки и часто передаете коллекцию через интерфейс ABI) более рационально использовать класс `Platform::Collections::Map` с самого начала, не затрачивая ресурсы на преобразование типа объекта `std::map`. В любом случае следует избегать операций поиска и вставки в объектах `IMap` , поскольку из всех трех типов он обладает самой низкой производительностью. Преобразование в `IMap` следует выполнять только в момент передачи контейнера через интерфейс ABI.
 
 ## <a name="value-types-in-map"></a>Типы значений в объекте Map
 
@@ -149,7 +148,7 @@ void FindButton(UIElementCollection^ col)
 
 Классы`Vector` и `Map` поддерживают привязку данных в коллекциях XAML за счет реализации событий, которые возникают при изменении или сбросе объекта коллекции, а также при вставке, удалении или изменении любого элемента коллекции. Можно разрабатывать собственные типы, поддерживающие привязку данных, но нельзя наследовать от типов `Map` и `Vector` , так как эти типы запечатаны.
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) и [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) делегаты определяют сигнатуры для обработчиков событий события изменения коллекции. [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) открытый класс перечисления и `Platform::Collection::Details::MapChangedEventArgs` и `Platform::Collections::Details::VectorChangedEventArgs` ссылочных классов, хранят аргументы события, чтобы определить, что вызвало событие. Типы *`EventArgs` определены в пространстве имен `Details` , поскольку нет необходимости создавать и использовать их явно при использовании классов `Map` и `Vector`.
+Делегаты [Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) и [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) определяют сигнатуры для обработчиков событий для событий изменения коллекции. Открытый класс перечисления [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) и ссылочные классы `Platform::Collection::Details::MapChangedEventArgs` и `Platform::Collections::Details::VectorChangedEventArgs` хранят аргументы события, по которым можно определить его причину. `*EventArgs` Типы определены в `Details` пространства имен, так как у вас нет необходимости создавать и использовать их явно при использовании `Map` или `Vector`.
 
 ## <a name="see-also"></a>См. также
 

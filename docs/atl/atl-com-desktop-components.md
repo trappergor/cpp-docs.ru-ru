@@ -1,7 +1,7 @@
 ---
 title: Компоненты ATL COM Desktop | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eadbcd138bd9fc73835938b8ff59d694ede152b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065625"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062305"
 ---
 # <a name="atl-com-desktop-components"></a>Компоненты ATL COM Desktop
 
-ATL в справочных документах Active Template Library (ATL), набор основанных на шаблонах классов C++, упрощающих программирование объектов модели объектов компонента (COM). Чтобы полностью воспользоваться преимуществами ATL, настоятельно рекомендуется ознакомиться с COM.
+ATL в справочных документах Active Template Library (ATL), набор основанных на шаблонах классов C++, упрощающих программирование объектов модели объектов компонента (COM). COM — это двоичный спецификация для создания и использования компонентов программного обеспечения Windows. Чтобы полностью воспользоваться преимуществами ATL, настоятельно рекомендуется ознакомиться с COM. Дополнительные сведения о COM, см. в разделе [объектов модели компонентов (COM)](/windows/desktop/com/component-object-model--com--portal).
 
 ## <a name="in-this-section"></a>В этом разделе
 
@@ -61,4 +61,4 @@ ATL в справочных документах Active Template Library (ATL), 
 Пример кода, показывающий, как использовать библиотеку ATL для записи COM-объектов.
 
 [Шаблоны OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Предоставляет справочные материалы по шаблонам клиента и поставщика OLE DB, набор классов, реализующих многие часто используемые интерфейсы OLE DB.  
+Предоставляет справочные материалы по шаблонам клиента и поставщика OLE DB, набор классов, реализующих многие часто используемые интерфейсы OLE DB.

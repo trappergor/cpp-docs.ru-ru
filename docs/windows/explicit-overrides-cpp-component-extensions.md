@@ -1,7 +1,7 @@
 ---
-title: Явные переопределения (расширения компонентов C++) | Документация Майкрософт
+title: Явные переопределения (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408951"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328042"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>Явные переопределения (Расширения компонентов C++)
+# <a name="explicit-overrides--ccli-and-ccx"></a>Явные переопределения (C + +/ CLI и C + +/ CX)
 
 В этом разделе описывается явно переопределить член базового класса или интерфейса. Именованное переопределение (явно) должен использоваться только для переопределения одного метода производном методе отличается от имени.
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)

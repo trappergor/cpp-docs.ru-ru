@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c6a48067ebc145c907a81212a9acca55c3f4665
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 71c28ab1531c2af19f2b8f594db457d0272b0664
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066600"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820364"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>лямбда-выражения constexpr в C++
 
@@ -38,7 +38,9 @@ ms.locfileid: "46066600"
         return [n] { return n + 1; }();
     }
 ```
+
 Лямбда-выражения является неявно **constexpr** Если результат не соответствует требованиям **constexpr** функции:
+
 ```cpp
     auto answer = [](int n)
     {
@@ -47,6 +49,7 @@ ms.locfileid: "46066600"
 
     constexpr int response = answer(10);
 ```
+
 Если лямбда-выражение неявно или явно **constexpr**и его преобразования в указатель на функцию, полученная функция также **constexpr**:
 
 ```cpp

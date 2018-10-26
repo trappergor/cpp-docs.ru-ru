@@ -19,16 +19,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e55788e280eb60f176a286cf9d1693e93447a077
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aee04052a0088ff95a41ccb6083abc334287ea2b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031463"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820650"
 ---
 # <a name="if-else-statement-c"></a>Оператор if-else (C++)
 
 Управляет условным ветвлением. Инструкции в *блок if* выполняются только в том случае, если *выражение if* принимает значение, отличное от нуля значение (или TRUE). Если значение *выражение* не равно нулю, *оператор1* -блок else, если он присутствует, пропускается и выполнения любых операторов в блоке. Если значение *выражение* равно нулю, а затем блоке if пропускается, а также-блок else, если он присутствует, при выполнении. Выражения, которые возвращают ненулевое значение —
+
 - true
 - указатель не null
 - арифметические любое ненулевое значение, или
@@ -36,7 +37,7 @@ ms.locfileid: "46031463"
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 if ( expression )
 {
    statement1;
@@ -84,7 +85,7 @@ using namespace std;
 class C
 {
     public:
-    void do_somthing(){}
+    void do_something(){}
 };
 void init(C){}
 bool is_true() { return true; }
@@ -101,15 +102,14 @@ int main()
         cout << "b is false!\n";
     }
 
-  // no else statement
+    // no else statement
     if (x == 10)
     {
         x = 0;
     }
-    
 
     C* c;
-  init(c);
+    init(c);
     if (c)
     {
         c->do_something();
@@ -120,13 +120,14 @@ int main()
     }
 }
 ```
+
 ## <a name="if_with_init"></a> Если инструкция, с помощью инициализатора
 
 **Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **Если** инструкция также может содержать выражение, которое объявляет и инициализирует именованной переменной. Используйте эту форму инструкции if, когда нужна только в пределах блока if.
 
-```cpp
-## Example
+## <a name="example"></a>Пример
 
+```cpp
 #include <iostream>
 #include <mutex>
 #include <map>
@@ -180,18 +181,18 @@ int main()
 template <class T, class... Rest>
 void f(T&& t, Rest&&... r)
 {
-// handle t
-   do_something(t);
+    // handle t
+    do_something(t);
 
-   // handle r conditionally
-   if constexpr (sizeof...(r))
-   {
-      f(r...);
-   }
-   else
-   {
-       g(r...);
-   }
+    // handle r conditionally
+    if constexpr (sizeof...(r))
+    {
+        f(r...);
+    }
+    else
+    {
+        g(r...);
+    }
 }
 ```
 

@@ -21,54 +21,54 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a838bc904a4f09f72962ce7c991bab8e5ac8fcbf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f14ad79e1cbd2207b4eb1582cb80e0107d68ec39
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064242"
 ---
 # <a name="cnorowset-class"></a>Класс CNoRowset
 
-Можно использовать в качестве аргумента шаблона (`TRowset`) для [CCommand](../../data/oledb/ccommand-class.md) или [CTable](../../data/oledb/ctable-class.md).  
-  
+Можно использовать в качестве аргумента шаблона (`TRowset`) для [CCommand](../../data/oledb/ccommand-class.md) или [CTable](../../data/oledb/ctable-class.md).
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CNoRowset  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class TAccessor = CAccessorBase>
+class CNoRowset
+```
+
+### <a name="parameters"></a>Параметры
 
 *TAccessor*<br/>
-Класс, метод доступа. Значение по умолчанию — `CAccessorBase`.  
-  
-## <a name="remarks"></a>Примечания  
+Класс, метод доступа. Значение по умолчанию — `CAccessorBase`.
 
-Используйте `CNoRowset` как аргумент шаблона, если команда не возвращает набор строк.  
-  
-`CNoRowset` реализует следующие методы-заглушки, каждый из которых соответствуют другим методам класса метода доступа:  
-  
-- `BindFinished` — Указывает, когда привязка завершена (возвращает `S_OK`).  
-  
-- `Close` -Освобождает строки и текущий интерфейс IRowset.  
-  
-- `GetIID` — Извлекает идентификатор интерфейса точки подключения.  
-  
-- `GetInterface` — Извлекает интерфейс.  
-  
-- `GetInterfacePtr` — Извлекает инкапсулированный указатель на интерфейс.  
-  
-- `SetAccessor` — Задает указатель метода доступа.  
-  
-- `SetupOptionalRowsetInterfaces` — Устанавливает дополнительные интерфейсы для набора строк.  
-  
-## <a name="requirements"></a>Требования  
+## <a name="remarks"></a>Примечания
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="see-also"></a>См. также  
+Используйте `CNoRowset` как аргумент шаблона, если команда не возвращает набор строк.
+
+`CNoRowset` реализует следующие методы-заглушки, каждый из которых соответствуют другим методам класса метода доступа:
+
+- `BindFinished` — Указывает, когда привязка завершена (возвращает `S_OK`).
+
+- `Close` -Освобождает строки и текущий интерфейс IRowset.
+
+- `GetIID` — Извлекает идентификатор интерфейса точки подключения.
+
+- `GetInterface` — Извлекает интерфейс.
+
+- `GetInterfacePtr` — Извлекает инкапсулированный указатель на интерфейс.
+
+- `SetAccessor` — Задает указатель метода доступа.
+
+- `SetupOptionalRowsetInterfaces` — Устанавливает дополнительные интерфейсы для набора строк.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atldbcli.h
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

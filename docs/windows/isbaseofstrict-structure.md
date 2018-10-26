@@ -1,28 +1,30 @@
 ---
 title: Isbaseofstrict-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::IsBaseOfStrict
+- internal/Microsoft::WRL::Details::IsBaseOfStrict::value
 dev_langs:
 - C++
 helpviewer_keywords:
-- IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict structure
+- Microsoft::WRL::Details::IsBaseOfStrict::value constant
 ms.assetid: 6fed7366-c8d4-4991-b4fb-43ed93f8e1bf
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52db5abd0487624f52f692e785007adaf9eac7ee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428269"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161207"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict - структура
 
@@ -31,15 +33,10 @@ ms.locfileid: "46428269"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <
-   typename Base,
-   typename Derived
->
-
+template <typename Base, typename Derived>
 struct IsBaseOfStrict;
-template <
-   typename Base
->
+
+template <typename Base>
 struct IsBaseOfStrict<Base, Base>;
 ```
 
@@ -61,9 +58,9 @@ struct IsBaseOfStrict<Base, Base>;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
-|----------|-----------------|
-|[Константа IsBaseOfStrict::value](../windows/isbaseofstrict-value-constant.md)|Указывает, является ли один тип базовым для другого.|
+name                            | Описание
+------------------------------- | --------------------------------------------------
+[IsBaseOfStrict::value](#value) | Указывает, является ли один тип базовым для другого.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -75,6 +72,16 @@ struct IsBaseOfStrict<Base, Base>;
 
 **Пространство имен:** Microsoft::wrl:: Details
 
-## <a name="see-also"></a>См. также
+## <a name="value"></a>IsBaseOfStrict::value
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+static const bool value = __is_base_of(Base, Derived);
+```
+
+### <a name="remarks"></a>Примечания
+
+Указывает, является ли один тип базовым для другого.
+
+`value` — **true** Если тип `Base` является базовым классом типа `Derived`, в противном случае это **false**.

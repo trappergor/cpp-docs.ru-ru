@@ -1,7 +1,7 @@
 ---
-title: Атрибут целевых объектов (расширения компонентов C++) | Документация Майкрософт
+title: Целевые объекты атрибутов (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3ffa13167de3de14e2338942cc9a41acf84b8aae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058964"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>Целевые объекты атрибутов (расширения компонентов C++)
+# <a name="attribute-targets-ccli-and-ccx"></a>Целевые объекты атрибутов (C + +/ CLI и C + +/ CX)
 
 Описатели использования атрибута позволяют определить его целевые объекты.  Каждый атрибут определяется для применения к определенным элементам языка. Например, атрибут может быть определен для применения только для классов и структур.  В приведенном ниже списке показаны возможные синтаксические элементы, для которых можно использовать настраиваемый атрибут. Можно использовать сочетания этих значений (с помощью операций логического ИЛИ).
 
@@ -230,8 +230,8 @@ ms.locfileid: "42589420"
 - Для указания того, что атрибут применяется к методу доступа свойства, а не к свойству:
 
     ```cpp
-    [method:MyAttr(123)] property int Property()  
-    [property:MyAttr(123)] property int Property()  
+    [method:MyAttr(123)] property int Property()
+    [property:MyAttr(123)] property int Property()
     [MyAttr(123)] property int get_MyPropy() // default: property
     ```
 
@@ -260,7 +260,7 @@ ms.locfileid: "42589420"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано задание нескольких целевых объектов.
 

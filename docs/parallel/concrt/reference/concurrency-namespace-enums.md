@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078849"
 ---
 # <a name="concurrency-namespace-enums"></a>перечисления пространства имен Concurrency
 
@@ -44,6 +44,7 @@ ms.locfileid: "46416699"
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -94,6 +95,7 @@ enum Agents_EventType;
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -119,6 +121,7 @@ enum ConcRT_EventType;
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -142,6 +145,7 @@ enum Concrt_TraceFlags;
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -161,6 +165,7 @@ enum CriticalRegionType;
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -174,6 +179,7 @@ enum DynamicProgressFeedbackType;
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -192,6 +198,7 @@ enum join_type;
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -212,6 +219,7 @@ enum message_status;
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -258,6 +266,7 @@ enum SchedulerType;
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -276,6 +285,7 @@ enum SchedulingProtocolType;
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -297,6 +307,7 @@ enum SwitchingProxyState;
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|
@@ -316,6 +327,7 @@ enum task_group_status;
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>Значения
 
 |Имя|Описание|

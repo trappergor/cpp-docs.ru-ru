@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71e1bfaf47a901cc57c1280194c4209d94356aac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30f6bac0e693b32d7ab6a761b6d4620244e85acd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377491"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055897"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>Просмотр меню в виде всплывающего меню
 
@@ -43,4 +43,4 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Создание всплывающих меню](../windows/creating-pop-up-menus.md)<br/>
-[Редактор меню](../windows/menu-editor.md)  
+[Редактор меню](../windows/menu-editor.md)

@@ -1,5 +1,5 @@
 ---
-title: Изменение порядка наследования класса RMyProviderRowset | Документация Майкрософт
+title: Изменение порядка наследования класса RCustomRowset | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -10,58 +10,59 @@ dev_langs:
 helpviewer_keywords:
 - RMyProviderRowset
 - inheritance [C++]
+- RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 77b26d1d0b67726e1ba2cd66d0e181bc04105a6a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1a9b6e238d3824451ab0f820917c34c97826ffab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028172"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060394"
 ---
-# <a name="modifying-the-inheritance-of-rmyproviderrowset"></a>Изменение порядка наследования класса RMyProviderRowset
+# <a name="modifying-the-inheritance-of-rcustomrowset"></a>Изменение порядка наследования класса RCustomRowset
 
-Чтобы добавить `IRowsetLocate` интерфейс, в примере простого поставщика только для чтения, изменение порядка наследования класса `RMyProviderRowset`. Изначально `RMyProviderRowset` наследует от `CRowsetImpl`. Вам нужно изменить так, чтобы наследовать от `CRowsetBaseImpl`.  
-  
-Чтобы сделать это, создайте новый класс, `CMyRowsetImpl`, в MyProviderRS.h:  
-  
+Чтобы добавить `IRowsetLocate` интерфейс, в примере простого поставщика только для чтения, изменение порядка наследования класса `RCustomRowset`. Изначально `RCustomRowset` наследует от `CRowsetImpl`. Вам нужно изменить так, чтобы наследовать от `CRowsetBaseImpl`.
+
+Чтобы сделать это, создайте новый класс, `CCustomRowsetImpl`, в CustomRS.h:
+
 ```cpp
-////////////////////////////////////////////////////////////////////////  
-// MyProviderRS.h  
-  
-template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>  
-class CMyRowsetImpl:  
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>  
-{  
-...  
-};  
-```  
-  
-Теперь измените схему интерфейсов COM в MyProviderRS.h быть следующим:  
-  
-```cpp  
-BEGIN_COM_MAP(CMyRowsetImpl)  
-   COM_INTERFACE_ENTRY(IRowsetLocate)  
-   COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)  
-END_COM_MAP()  
-```  
-  
-Это создает схему интерфейсов COM, сообщающий `CMyRowsetImpl` для вызова `QueryInterface` для обоих `IRowset` и `IRowsetLocate` интерфейсов. Чтобы получить все реализации для других набора строк, классы, карта ссылки `CMyRowsetImpl` класс `CRowsetBaseImpl` класс определен в шаблонах OLE DB; карта использует макрос COM_INTERFACE_ENTRY_CHAIN, предписывающие шаблоны OLE DB для сканирования в сопоставление COM в `CRowsetBaseImpl` в ответ на `QueryInterface` вызова.  
-  
-Свяжите `RAgentRowset` для `CMyRowsetBaseImpl` , изменив `RAgentRowset` наследование `CMyRowsetImpl`, как показано ниже:  
-  
-```cpp  
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CMyProviderCommand>  
-```  
-  
-`RAgentRowset` Теперь можно использовать `IRowsetLocate` интерфейс, при этом преимуществами оставшаяся часть реализации класса набора строк.  
-  
-Если это сделано, вы можете [динамически определять столбцы, возвращенные объекту-получателю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).  
-  
-## <a name="see-also"></a>См. также  
+////////////////////////////////////////////////////////////////////////
+// CustomRS.h
+
+template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>
+class CCustomRowsetImpl:
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>
+{
+...
+};
+```
+
+Теперь измените схему интерфейсов COM в CustomRS.h быть следующим:
+
+```cpp
+BEGIN_COM_MAP(CCustomRowsetImpl)
+   COM_INTERFACE_ENTRY(IRowsetLocate)
+   COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)
+END_COM_MAP()
+```
+
+Это создает схему интерфейсов COM, сообщающий `CCustomRowsetImpl` для вызова `QueryInterface` для обоих `IRowset` и `IRowsetLocate` интерфейсов. Чтобы получить все реализации для других набора строк, классы, карта ссылки `CCustomRowsetImpl` класс `CRowsetBaseImpl` класс определен в шаблонах OLE DB; карта использует макрос COM_INTERFACE_ENTRY_CHAIN, предписывающие шаблоны OLE DB для сканирования в сопоставление COM в `CRowsetBaseImpl` в ответ на `QueryInterface` вызова.
+
+Свяжите `RAgentRowset` для `CCustomRowsetBaseImpl` , изменив `RAgentRowset` наследование `CCustomRowsetImpl`, как показано ниже:
+
+```cpp
+class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+```
+
+`RAgentRowset` Теперь можно использовать `IRowsetLocate` интерфейс, при этом преимуществами оставшаяся часть реализации класса набора строк.
+
+Если это сделано, вы можете [динамически определять столбцы, возвращенные объекту-получателю](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md).
+
+## <a name="see-also"></a>См. также
 
 [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md)

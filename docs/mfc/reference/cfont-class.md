@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 760f8c5527f0dbd4fa0ebc2aed3aed59a9676b82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c914bab9ab7a4bb15f6fe3d2820d7ff2534c3c6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399026"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053647"
 ---
 # <a name="cfont-class"></a>Класс CFont
 
@@ -250,7 +250,7 @@ BOOL CreatePointFont(
 *lpszFaceName*<br/>
 Объект `CString` или указатель на заканчивающуюся нулем строку, которая указывает название гарнитуры шрифта. Длина этой строки не должна превышать 30 символов. Windows "EnumFontFamilies функция может использоваться для перечисления всех доступных шрифтов. Если *lpszFaceName* имеет значение NULL, GDI использует аппаратно независимые шрифта.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на [CDC](../../mfc/reference/cdc-class.md) , который может использоваться для преобразования высоту в *nPointSize* логических единиц. Если значение равно NULL, контекста устройства экран используется для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -282,7 +282,7 @@ BOOL CreatePointFontIndirect(
 *lpLogFont*<br/>
 Указывает на [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta) структура, определяющая характеристики логического шрифта. `lfHeight` Членом `LOGFONT` структуры измеряется в десятых долях точку, а не в логических единицах. (Например, задать `lfHeight` 120, чтобы запросить шрифта 12 пунктов.)
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на [CDC](../../mfc/reference/cdc-class.md) , который может использоваться для преобразования высоту в `lfHeight` логических единиц. Если значение равно NULL, контекста устройства экран используется для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -372,6 +372,4 @@ operator HFONT() const;
 [Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

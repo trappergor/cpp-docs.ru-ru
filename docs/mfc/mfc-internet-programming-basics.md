@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082681"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
@@ -91,6 +91,4 @@ MFC предоставляет классы, поддерживающие про
 В разделе "OLE" пакета SDK для Windows содержит дополнительные сведения о программировании OLE. Эти сведения содержат сведения об использовании функций Win32 WinInet, напрямую, а не через классы MFC. Он также содержит общие сведения о технологии Интернета.
 
 ## <a name="see-also"></a>См. также
-
-
 

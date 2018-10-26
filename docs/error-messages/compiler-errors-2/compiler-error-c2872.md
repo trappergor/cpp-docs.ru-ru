@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036765"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890120"
 ---
 # <a name="compiler-error-c2872"></a>Ошибка компилятора C2872
 
@@ -31,7 +31,11 @@ ms.locfileid: "46036765"
 
 C2872 может возникать, если в файле заголовка [директива using](../../cpp/namespaces-cpp.md#using_directives), и включается в последующем файле заголовка, содержащий тип, который также находится в пространстве имен, заданном в `using` директива. Укажите `using` директив только после всех указанных файлов заголовка с `#include`.
 
-Дополнительные сведения о C2872, см. в разделе статьи базы знаний [PRB: компилятора ошибки при использовании #import с XML в Visual C++ .NET](http://support.microsoft.com/kb/316317) и [«Ошибка C2872: «Платформа»: неоднозначный символ» сообщение об ошибке при использовании Пространство имен Windows::Foundation::Metadata в Visual Studio 2013](https://support.microsoft.com/kb/2890859).
+C2872 может произойти в Visual Studio 2013 из-за конфликта между `Windows::Foundation::Metadata::Platform` перечисления типа и C + +/ CX определяемые `Platform` пространства имен. Чтобы обойти эту проблему, выполните следующие действия.
+
+- Удалите предложение «using Windows::Foundation::Metadata пространства имен» из файлов проекта.
+
+- Укажите полное доменное имя для любого типа, который включен в этом пространстве имен.
 
 ## <a name="example"></a>Пример
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375881"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163170"
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |Имя|Описание|
 |----------|-----------------|
-|[оператор!=](#operator_neq)|Сравнивает этот `accelerator` объект с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.|
+|[operator!=](#operator_neq)|Сравнивает этот `accelerator` объект с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator` в данный объект.|
-|[оператор==](#operator_eq_eq)|Сравнивает этот `accelerator` объект с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.|
+|[operator==](#operator_eq_eq)|Сравнивает этот `accelerator` объект с другим и возвращает **true** если они совпадают; в противном случае возвращает **false**.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если `accelerator` можно выводить данные на дисплей; в противном случае `false`.
+**значение true,** Если `accelerator` можно выводить данные на дисплей; в противном случае **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если `accelerator` имеет уровень DEBUG для расширенных отчетов об ошибках. В противном случае — значение `false`.
+**значение true,** Если `accelerator` имеет уровень DEBUG для расширенных отчетов об ошибках. В противном случае **false**.
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если `accelerator` эмулируется. В противном случае — значение `false`.
+**значение true,** Если `accelerator` эмулируется. В противном случае **false**.
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ускоритель поддерживает общую память с ЦП; в противном случае `false`.
+**значение true,** Если ускоритель поддерживает ЦП общей памяти; в противном случае **false**.
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-Возвращает логическое значение, указывающее, поддерживает ли ускоритель математические операции двойной точности, включая совмещенного умножения-сложения (FMA), деления, обратная величина и приведения между `int` и `double`.
+Возвращает логическое значение, указывающее, поддерживает ли ускоритель математические операции двойной точности, включая совмещенного умножения-сложения (FMA), деления, обратная величина и приведения между **int** и **double**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ускоритель поддерживает математические операции двойной точности; в противном случае `false`.
+**значение true,** Если ускоритель поддерживает математические операции двойной точности; в противном случае **false**.
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-Возвращает логическое значение, указывающее, является ли ускоритель имеет ограниченную поддержку математические операции двойной точности. Если ускоритель имеет только ограниченную поддержку, затем совмещенного умножения сложения (FMA), деления, обратная величина и приведения между `int` и `double` не поддерживаются.
+Возвращает логическое значение, указывающее, является ли ускоритель имеет ограниченную поддержку математические операции двойной точности. Если ускоритель имеет только ограниченную поддержку, затем совмещенного умножения сложения (FMA), деления, обратная величина и приведения между **int** и **двойные** не поддерживаются.
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ускоритель имеет ограниченную поддержку математические операции двойной точности; в противном случае `false`.
+**значение true,** Если ускоритель имеет ограниченную поддержку математические операции двойной точности; в противном случае **false**.
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> оператор! =
 
-Сравнивает этот `accelerator` объект с другим и возвращает `false` если они совпадают; в противном случае возвращает `true`.
+Сравнивает этот `accelerator` объект с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`false` Если два `accelerator` объекты совпадают; в противном случае `true`.
+**false** Если двух `accelerator` объекты совпадают; в противном случае **true**.
 
 ##  <a name="operator_eq"></a> оператор =
 
@@ -503,7 +503,7 @@ accelerator& operator= (const accelerator& _Other);
 
 ##  <a name="operator_eq_eq"></a> оператор ==
 
-Сравнивает этот `accelerator` объект с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.
+Сравнивает этот `accelerator` объект с другим и возвращает **true** если они совпадают; в противном случае возвращает **false**.
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если другой `accelerator` объект то же, что это `accelerator` объекта; в противном случае `false`.
+**значение true,** Если другой `accelerator` объект то же, что это `accelerator` объекта; в противном случае **false**.
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если вызов завершается успешно задан ускоритель по умолчанию. В противном случае — значение `false`.
+**значение true,** Если вызова успешно задан ускоритель по умолчанию. В противном случае **false**.
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если среда выполнения будет автоматически выбирать соответствующий ускоритель; в противном случае `false`.
+**значение true,** Если среда выполнения будет автоматически выбирать соответствующий ускоритель; в противном случае **false**.
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `false`, если объекты совпадают; в противном случае — значение `true`.
+**false** Если два объекта одинаковы; в противном случае **true**.
 
 ##  <a name="operator_eq"></a> оператор =
 
@@ -758,7 +758,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ##  <a name="operator_eq_eq"></a> оператор ==
 
-Сравнивает этот [accelerator_view](accelerator-view-class.md) объект с другим и возвращает `true` если они совпадают; в противном случае возвращает `false`.
+Сравнивает этот [accelerator_view](accelerator-view-class.md) объект с другим и возвращает **true** если они совпадают; в противном случае возвращает **false**.
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если объекты совпадают; в противном случае — значение `false`.
+**значение true,** Если два объекта одинаковы; в противном случае **false**.
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

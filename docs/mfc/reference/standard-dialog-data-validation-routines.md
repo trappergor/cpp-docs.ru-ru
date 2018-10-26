@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446556"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067921"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>Стандартные программы проверки данных диалоговых окон
 
@@ -47,8 +47,6 @@ ms.locfileid: "46446556"
 |[DDV_MinMaxUInt](#ddv_minmaxuint)|Проверяет, не будет превышать это значение заданного элемента управления данного **UINT** диапазона.|
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|Проверяет, что заданного элемента управления значение находится между двумя указанными значениями.|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|Проверяет, не будет превышать это значение заданного элемента управления данного **ULONGLONG** диапазона.|
-
-
 
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
@@ -552,6 +550,7 @@ void AFXAPI DDV_MinMaxULongLong(
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pDX*<br/>
@@ -579,6 +578,4 @@ void AFXAPI DDV_MinMaxULongLong(
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

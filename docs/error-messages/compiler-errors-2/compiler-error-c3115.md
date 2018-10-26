@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da47a6987a1b540dc42b154c1a181c67e1524043
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 716566066a58c20378128ee56d9da0aa070b6e9b
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090689"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788697"
 ---
 # <a name="compiler-error-c3115"></a>Ошибка компилятора C3115
 
 «атрибут»: этот атрибут не допускается в «конструкция»
 
-Атрибут был применен к конструкции, для которого не предполагалось.  См. в разделе [атрибутов по использованию](../../windows/attributes-by-usage.md) Дополнительные сведения.
+Атрибут был применен к конструкции, для которого не предполагалось.  См. в разделе [атрибутов по использованию](../../windows/attributes/attributes-by-usage.md) Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 

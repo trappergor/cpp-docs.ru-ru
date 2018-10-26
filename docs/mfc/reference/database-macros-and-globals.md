@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67a0fd2af9bb8bf3ec11d5a4e2a38c195b18633c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7d29222b461091dcd72a0c894a138a4df15b9d4b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424252"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057302"
 ---
 # <a name="database-macros-and-globals"></a>Макросы и глобальные объекты баз данных
 
@@ -50,7 +50,6 @@ ms.locfileid: "46424252"
 |-|-|
 |[AfxDbInitModule](#afxdbinitmodule)|Добавляет поддержку базы данных для обычной библиотеки DLL MFC, динамически компонуемые с MFC.|
 |[AfxGetHENV](#afxgethenv)|Извлекает дескриптор среды ODBC в настоящий момент каким MFC. Вы можете использовать этот дескриптор в прямые вызовы ODBC.|
-
 
 ## <a name="afxdbinitmodule"></a> AfxDbInitModule
 
@@ -74,8 +73,6 @@ void AFXAPI AfxDbInitModule( );
 
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)
 
-
-
 ##  <a name="afx_odbc_call"></a>  AFX_ODBC_CALL
 
 Используйте этот макрос для вызова любой функции ODBC API, могут возвращать `SQL_STILL_EXECUTING`.
@@ -96,7 +93,6 @@ AFX_ODBC_CALL(SQLFunc)
 Перед вызовом `AFX_ODBC_CALL`, необходимо объявить переменную, `nRetCode`, типа RETCODE.
 
 Обратите внимание на то, что MFC ODBC классы сейчас используется только синхронная обработка. Чтобы выполнить асинхронную операцию, необходимо вызвать функцию ODBC API `SQLSetConnectOption`. Дополнительные сведения см. в разделе «Выполнение функции асинхронно» в пакете Windows SDK.
-
 
 ### <a name="example"></a>Пример
 

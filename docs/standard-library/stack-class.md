@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 166a0fe22669927e0b57f56fae61847eb950537f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110416"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861529"
 ---
 # <a name="stack-class"></a>Класс stack
 
@@ -72,13 +72,13 @@ class stack
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[stack](#stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|
@@ -86,7 +86,7 @@ class stack
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[empty](#empty)|Проверяет, является ли `stack` пустым.|
 |[pop](#pop)|Удаляет элемент из верхней части `stack`.|
@@ -221,7 +221,7 @@ After a pop, the element at the top of the stack is 20.
 
 ## <a name="push"></a> stack::push
 
-Добавляет элемент в начало (верх) стека.
+Добавляет элемент в верхней части стека.
 
 ```cpp
 void push(const Type& val);

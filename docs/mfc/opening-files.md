@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408522"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080927"
 ---
 # <a name="opening-files"></a>Открытие файлов
 
@@ -41,15 +41,15 @@ ms.locfileid: "46408522"
 
 1. Создайте объект файла без указания пути или разрешение флаги.
 
-     Обычно создается путем объявления объекта файла [CFile](../mfc/reference/cfile-class.md) переменной в кадре стека.
+   Обычно создается путем объявления объекта файла [CFile](../mfc/reference/cfile-class.md) переменной в кадре стека.
 
 1. Вызовите [откройте](../mfc/reference/cfile-class.md#open) функция-член для объекта "файл", указав путь и разрешение флаги.
 
-     Возвращаемое значение для `Open` ненулевое значение, если файл был успешно открыт, или 0, если не удалось открыть указанный файл. `Open` Функция-член является прототипом следующим образом:
+   Возвращаемое значение для `Open` ненулевое значение, если файл был успешно открыт, или 0, если не удалось открыть указанный файл. `Open` Функция-член является прототипом следующим образом:
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     Откройте флаги указать, какие разрешения, такие как только для чтения, необходимые для файла. Флаг возможные значения определяются как перечислимых констант в `CFile` класса, чтобы они были в определении "`CFile::`" в качестве `CFile::modeRead`. Используйте `CFile::modeCreate` флаг, если вы хотите создать файл.
+   Откройте флаги указать, какие разрешения, такие как только для чтения, необходимые для файла. Флаг возможные значения определяются как перечислимых констант в `CFile` класса, чтобы они были в определении "`CFile::`" в качестве `CFile::modeRead`. Используйте `CFile::modeCreate` флаг, если вы хотите создать файл.
 
 Приведенный ниже показано, как создать новый файл с разрешениями чтения и записи (Замените любого предыдущего файла тот же путь):
 

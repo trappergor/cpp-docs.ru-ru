@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2656871f62bf7881eee9c64041f3f1f492a3c948
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064892"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -35,7 +35,7 @@ ms.locfileid: "46374227"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-class CPoint : public tagPOINT 
+class CPoint : public tagPOINT
 ```
 
 ## <a name="members"></a>Участники
@@ -65,7 +65,7 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Примечания
 
-Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры.
+Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](../../mfc/reference/point-structure.md) структуры.
 
 Объект `CPoint` объект можно использовать везде, где `POINT` используется структура. Операторы этого класса, которые взаимодействуют с «размер» допускает оба [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, так как они взаимозаменяемы.
 
@@ -99,19 +99,19 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*initX*  
+*initX*<br/>
 Определяет значение члена `x` структуры `CPoint`.
 
-*initY*  
+*initY*<br/>
 Определяет значение члена `y` структуры `CPoint`.
 
-*initPt*  
-[ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.
+*initPt*<br/>
+[ТОЧКА](../../mfc/reference/point-structure.md) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.
 
-*initSize*  
+*initSize*<br/>
 [РАЗМЕР](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , определяет значения, используемые для инициализации `CPoint`.
 
-*dwPoint*  
+*dwPoint*<br/>
 Наборы `x` члена младшее слово из *dwPoint* и `y` член для старшего слова из *dwPoint*.
 
 ### <a name="remarks"></a>Примечания
@@ -120,25 +120,25 @@ CPoint(LPARAM dwPoint) throw();
 
 ### <a name="example"></a>Пример
 
-```cpp   
-CPoint   ptTopLeft(0, 0); 
+```cpp
+CPoint   ptTopLeft(0, 0);
 // works from a POINT, too
 
-POINT   ptHere;  
-ptHere.x = 35;  
+POINT   ptHere;
+ptHere.x = 35;
 ptHere.y = 95;
 
 CPoint   ptMFCHere(ptHere);
 
-// works from a SIZE 
-SIZE   sHowBig;  
-sHowBig.cx = 300;  
+// works from a SIZE
+SIZE   sHowBig;
+sHowBig.cx = 300;
 sHowBig.cy = 10;
 
-CPoint ptMFCBig(sHowBig); 
+CPoint ptMFCBig(sHowBig);
 // or from a DWORD
 
-DWORD   dwSize;  
+DWORD   dwSize;
 dwSize = MAKELONG(35, 95);
 
 CPoint ptFromDouble(dwSize);
@@ -157,16 +157,16 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Смещение*  
+*Смещение*<br/>
 Указывает величина смещения `x` членом `CPoint`.
 
-*Смещение*  
+*Смещение*<br/>
 Указывает величина смещения `y` членом `CPoint`.
 
-*точка*  
-Указывает объем ( [ТОЧКИ](../../mfc/reference/point-structure1.md) или `CPoint`) смещения `CPoint`.
+*точка*<br/>
+Указывает объем ( [ТОЧКИ](../../mfc/reference/point-structure.md) или `CPoint`) смещения `CPoint`.
 
-*size*  
+*size*<br/>
 Указывает объем ( [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.
 
 ### <a name="example"></a>Пример
@@ -183,8 +183,8 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*  
-Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или `CPoint` объекта.
+*точка*<br/>
+Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -204,8 +204,8 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*  
-Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или `CPoint` объекта.
+*точка*<br/>
+Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -220,17 +220,17 @@ BOOL operator!=(POINT point) const throw();
 Первая перегрузка добавляет размер `CPoint`.
 
 ```
-void operator+=(SIZE size) throw(); 
+void operator+=(SIZE size) throw();
 void operator+=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*  
-Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*точка*<br/>
+Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -249,17 +249,17 @@ void operator+=(POINT point) throw();
 Первая перегрузка вычитает размер из `CPoint`.
 
 ```
-void operator-=(SIZE size) throw(); 
+void operator-=(SIZE size) throw();
 void operator-=(POINT point) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*  
-Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*точка*<br/>
+Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -285,14 +285,14 @@ CRect operator+(const RECT* lpRect) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*size*  
+*size*<br/>
 Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*  
-Содержит [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*точка*<br/>
+Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
-*lpRect*  
-Содержит указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+*lpRect*<br/>
+Содержит указатель на [RECT](../../mfc/reference/rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -321,14 +321,14 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*  
-Объект [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*точка*<br/>
+Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
-*size*  
+*size*<br/>
 Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*lpRect*  
-Указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+*lpRect*<br/>
+Указатель на [RECT](../../mfc/reference/rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -354,7 +354,7 @@ CPoint operator-() const throw();
 
 [Пример MFC MDI](../../visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Структура POINT](../../mfc/reference/point-structure1.md)<br/>
+[Структура POINT](../../mfc/reference/point-structure.md)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)
 

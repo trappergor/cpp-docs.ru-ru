@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9f17eea48e01d12df103382483b352e5dce46b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080563"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -334,7 +334,6 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
     CBaseTransition* pTransition);
-
 
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
@@ -882,7 +881,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения об управлении конфликтами (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +911,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения об управлении конфликтами (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +941,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения об управлении конфликтами (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +971,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения об управлении конфликтами (https://msdn.microsoft.com/library/dd371759(VS.85).aspx).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

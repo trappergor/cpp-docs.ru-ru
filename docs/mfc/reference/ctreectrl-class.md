@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f1294517a49687a2fc94b1bb696a111a9f55da7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 79cc811464b4aa33ee11b480ec76c932b123f7da
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074375"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -292,8 +292,6 @@ class CTreeCtrl : public CWnd
 - [Использование CTreeCtrl](../../mfc/using-ctreectrl.md)
 
 - [Ссылки на элемент управления представления дерева](/windows/desktop/Controls/tree-view-control-reference) в Windows SDK.
-
-- Статье базы знаний Q222905: Практическое руководство: Отображение контекстного меню для CTreeCtrl
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1404,7 +1402,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
 
-
 HTREEITEM InsertItem(
     UINT nMask,
     LPCTSTR lpszItem,
@@ -1416,12 +1413,10 @@ HTREEITEM InsertItem(
     HTREEITEM hParent,
     HTREEITEM hInsertAfter);
 
-
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
     HTREEITEM hParent = TVI_ROOT,
     HTREEITEM hInsertAfter = TVI_LAST);
-
 
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
@@ -1914,7 +1909,6 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 
 ```
 BOOL SetItem(TVITEM* pItem);
-
 
 BOOL SetItem(
     HTREEITEM hItem,

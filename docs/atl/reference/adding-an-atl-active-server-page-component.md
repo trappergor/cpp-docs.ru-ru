@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112997"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861516"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>Добавление компонентов страницы активного сервера ATL
 
@@ -36,13 +36,13 @@ ASP-компоненты являются частью архитектуры с
 
 - Можно использовать функции обработки ошибок ASP для веб-приложений.
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Чтобы добавить компонент ATL Active Server Pages в проект
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Чтобы добавить компонент ATL Active Server Pages в проект
 
 1. В **обозревателе решений** щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить компонент ATL ASP-страницы.
 
-2. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
+1. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
 
-3. В [Добавление класса](../../ide/add-class-dialog-box.md) диалоговом окне в области «Шаблоны» щелкните **компонент библиотеки ATL**, а затем нажмите кнопку **откройте** для отображения [активного сервера ATL Мастер компонентов страницы](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. В [Добавление класса](../../ide/add-class-dialog-box.md) отображаемое в диалоговом окне **шаблоны** панели щелкните **компонент библиотеки ATL**и нажмите кнопку **откройте** для отображения [Мастер компонентов страницы активного сервера ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -52,4 +52,3 @@ ASP-компоненты являются частью архитектуры с
 [Добавление метода](../../ide/adding-a-method-visual-cpp.md)<br/>
 [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Добавление универсального класса C++](../../ide/adding-a-generic-cpp-class.md)
-

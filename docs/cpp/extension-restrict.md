@@ -1,12 +1,14 @@
 ---
 title: __restrict | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
+- __restrict
+- _restrict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9245571e21be04cc250347f30ce8ddb464ff9b55
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076441"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163456"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +36,8 @@ ms.locfileid: "46076441"
 - Когда **__restrict** — используется, компилятор не распространяет свойство переменной нет-alias. То есть если назначить **__restrict** переменных, отличному от **__restrict** переменной, компилятор по-прежнему сможет не __restrict переменной, для которого создается псевдоним. Это отличается от поведения **ограничить** ключевое слово из спецификации C99.
 
 Как правило, если вы намереваетесь подействовать на поведение всей функции, вместо этого ключевого слова лучше использовать `__declspec ( restrict )`.
+
+Для совместимости с предыдущими версиями **_restrict** является синонимом **__restrict** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) — указан.
 
 В Visual Studio 2015 и более поздних версиях **__restrict** может использоваться для ссылок C++.
 

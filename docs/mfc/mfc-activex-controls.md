@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428646"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065594"
 ---
 # <a name="mfc-activex-controls"></a>Элементы управления ActiveX MFC
 
@@ -109,19 +109,19 @@ ms.locfileid: "46428646"
 
 - **\Common7\Tools**
 
-     Содержит файлы тестового контейнера (TstCon32.exe, а также файлы справки).
+   Содержит файлы тестового контейнера (TstCon32.exe, а также файлы справки).
 
 - **\Vc7\atlmfc\include**
 
-     Содержит включаемые файлы, необходимые для разработки элементов управления ActiveX MFC
+   Содержит включаемые файлы, необходимые для разработки элементов управления ActiveX MFC
 
 - **\Vc7\atlmfc\src\mfc**
 
-     Содержит исходный код для конкретных классов элементов управления ActiveX в MFC
+   Содержит исходный код для конкретных классов элементов управления ActiveX в MFC
 
 - **\Vc7\atlmfc\lib**
 
-     Содержит библиотеки, необходимые для разработки элементов управления ActiveX MFC
+   Содержит библиотеки, необходимые для разработки элементов управления ActiveX MFC
 
 Кроме того, существуют также примеры для элементов управления ActiveX в MFC. Дополнительные сведения об этих образцах см. в разделе [Примеры элементов управления: элементы управления ActiveX MFC-Based](../visual-cpp-samples.md)
 

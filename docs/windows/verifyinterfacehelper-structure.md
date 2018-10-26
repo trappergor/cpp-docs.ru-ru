@@ -1,28 +1,30 @@
 ---
 title: Verifyinterfacehelper-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInterfaceHelper
+- implements/Microsoft::WRL::Details::VerifyInterfaceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper structure
+- Microsoft::WRL::Details::VerifyInterfaceHelper::Verify method
 ms.assetid: ea95b641-199a-4fdf-964b-186b40cb3ba7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 62914b6e46b1fe98c95fba3ab96821c961888db8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b70155566695ade6b6778ade3b4758faebb3ea67
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413657"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788869"
 ---
 # <a name="verifyinterfacehelper-structure"></a>VerifyInterfaceHelper - структура
 
@@ -31,15 +33,10 @@ ms.locfileid: "46413657"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <
-   bool isWinRTInterface,
-   typename I
->
+template <bool isWinRTInterface, typename I>
 struct VerifyInterfaceHelper;
 
-template <
-   typename I
->
+template <typename I>
 struct VerifyInterfaceHelper<false, I>;
 ```
 
@@ -58,9 +55,9 @@ struct VerifyInterfaceHelper<false, I>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
-|----------|-----------------|
-|[Метод VerifyInterfaceHelper::Verify](../windows/verifyinterfacehelper-verify-method.md)||
+Имя                                            | Описание
+----------------------------------------------- | ---------------------------------------------------------------------------------------------------
+[Метод VerifyInterfaceHelper::Verify](#verify) | Проверяет, отвечает ли определенным требованиям интерфейс, заданный текущим параметром шаблона.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -72,6 +69,14 @@ struct VerifyInterfaceHelper<false, I>;
 
 **Пространство имен:** Microsoft::wrl:: Details
 
-## <a name="see-also"></a>См. также
+## <a name="verify"></a>VerifyInterfaceHelper::Verify
 
-[Пространство имен Microsoft::WRL::Details](../windows/microsoft-wrl-details-namespace.md)
+Поддерживает инфраструктуру WRL и не предназначен для использования непосредственно из программного кода.
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Примечания
+
+Проверяет, отвечает ли определенным требованиям интерфейс, заданный текущим параметром шаблона.

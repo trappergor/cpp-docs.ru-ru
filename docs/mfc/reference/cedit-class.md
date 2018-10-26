@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc11631b6a9b4c675d488d69c5575a89853e64a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079276"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -225,11 +225,7 @@ class CEdit : public CWnd
 
 Чтобы изменить стили, определенные в элемент управления редактирования (например, ES_READONLY) необходимо отправить определенных сообщений на элемент управления, вместо использования [ModifyStyle](cwnd-class.md#modifystyle). См. в разделе [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles) в Windows SDK.
 
-Дополнительные сведения о `CEdit`, см. в разделе:
-
-- [Элементы управления](../../mfc/controls-mfc.md)
-
-- Статье базы знаний Q259949: INFO: SetCaretPos() является не соответствующие с CEdit или элементами управления CRichEditCtrl
+Дополнительные сведения о `CEdit`, см. в разделе [элементов управления](../../mfc/controls-mfc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1035,7 +1031,6 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 ```
 BOOL SetCueBanner(LPCWSTR lpszText);
 
-
 BOOL SetCueBanner(
     LPCWSTR lpszText,
     BOOL fDrawWhenFocused = FALSE);
@@ -1326,7 +1321,6 @@ void SetSel(
     DWORD dwSelection,
     BOOL bNoScroll = FALSE);
 
-
 void SetSel(
     int nStartChar,
     int nEndChar,
@@ -1362,7 +1356,6 @@ void SetSel(
 ```
 void SetTabStops();
 BOOL SetTabStops(const int& cxEachStop);
-
 
 BOOL SetTabStops(
     int nTabStops,
@@ -1406,7 +1399,6 @@ BOOL SetTabStops(
 
 ```
 BOOL ShowBalloonTip(PEDITBALLOONTIP pEditBalloonTip);
-
 
 BOOL ShowBalloonTip(
     LPCWSTR lpszTitle,

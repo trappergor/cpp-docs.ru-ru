@@ -78,150 +78,150 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064339"
 ---
 # <a name="cbookmark-class"></a>Класс CBookmark
 
-Содержит значение закладки в свой буфер.  
-  
+Содержит значение закладки в свой буфер.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template < DBLENGTH nSize = 0 >  
+template < DBLENGTH nSize = 0 >
 class CBookmark : public CBookmarkBase
-  
-template <>  
-class CBookmark< 0 > : public CBookmarkBase  
-```  
-  
-### <a name="parameters"></a>Параметры  
+
+template <>
+class CBookmark< 0 > : public CBookmarkBase
+```
+
+### <a name="parameters"></a>Параметры
 
 *nSize*<br/>
-Размер буфера закладки в байтах. Когда *nSize* равен нулю, буфера закладки создается динамически во время выполнения.  
+Размер буфера закладки в байтах. Когда *nSize* равен нулю, буфера закладки создается динамически во время выполнения.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[CBookmark](#cbookmark)|Конструктор|  
-|[GetBuffer](#getbuffer)|Извлекает указатель на буфер.|  
-|[GetSize](#getsize)|Получает размер буфера в байтах.|  
-|[SetBookmark](#setbookmark)|Задает значение закладки.|  
-  
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор =](#operator)|Назначает один `CBookmark` класса в другой.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldbcli.h
 
-`CBookmark<0>` является специализацией шаблона `CBookmark`; его буфера создается динамически во время выполнения.  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[CBookmark](#cbookmark)|Конструктор|
+|[GetBuffer](#getbuffer)|Извлекает указатель на буфер.|
+|[GetSize](#getsize)|Получает размер буфера в байтах.|
+|[SetBookmark](#setbookmark)|Задает значение закладки.|
+
+### <a name="operators"></a>Операторы
+
+|||
+|-|-|
+|[оператор =](#operator)|Назначает один `CBookmark` класса в другой.|
+
+## <a name="remarks"></a>Примечания
+
+`CBookmark<0>` является специализацией шаблона `CBookmark`; его буфера создается динамически во время выполнения.
 
 ## <a name="cbookmark"></a> CBookmark::CBookmark
 
-Конструктор.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Конструктор.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
 CBookmark();
-   
-CBookmark(DBLENGTH nSize);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+ 
+CBookmark(DBLENGTH nSize);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nSize*<br/>
-[in] Размер буфера закладки в байтах.  
-  
-### <a name="remarks"></a>Примечания  
+[in] Размер буфера закладки в байтах.
 
-Первая функция задает буфер значение NULL, и размер буфера равным 0. Вторая функция задает размер буфера *nSize*и буфер для байтового массива *nSize* байт.  
-  
+### <a name="remarks"></a>Примечания
+
+Первая функция задает буфер значение NULL, и размер буфера равным 0. Вторая функция задает размер буфера *nSize*и буфер для байтового массива *nSize* байт.
+
 > [!NOTE]
->  Эта функция доступна только в `CBookmark<0>`. 
-  
+>  Эта функция доступна только в `CBookmark<0>`.
+
 ## <a name="getbuffer"></a> CBookmark::GetBuffer
 
-Извлекает указатель на буфер закладки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-virtual BYTE* GetBuffer() const throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Извлекает указатель на буфер закладки.
 
-Указатель на буфер закладки. 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual BYTE* GetBuffer() const throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на буфер закладки.
 
 ## <a name="getsize"></a> CBookmark::GetSize
 
-Получает размер буфера закладки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-virtual DBLENGTH GetSize() const throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Получает размер буфера закладки.
 
-Размер буфера в байтах.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+virtual DBLENGTH GetSize() const throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Размер буфера в байтах.
 
 ## <a name="setbookmark"></a> CBookmark::SetBookmark
 
-Копирует значение ссылается *pBuffer* для `CBookmark` буфер и задает размер буфера *nSize*.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Копирует значение ссылается *pBuffer* для `CBookmark` буфер и задает размер буфера *nSize*.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nSize*<br/>
-[in] Размер буфера закладки.  
-  
+[in] Размер буфера закладки.
+
 *pBuffer*<br/>
-[in] Указатель на массив байтов, содержащий значение.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Указатель на массив байтов, содержащий значение.
 
-Стандартный HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Эта функция доступна только в `CBookmark<0>`. 
+Стандартный HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+Эта функция доступна только в `CBookmark<0>`.
 
 ## <a name="operator"></a> CBookmark::operator =
 
-Назначает `CBookmark` объект с другим объектом.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Назначает `CBookmark` объект с другим объектом.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CBookmark& operator =(const CBookmark& bookmark) throw();  
-```  
-  
-### <a name="remarks"></a>Примечания  
+CBookmark& operator =(const CBookmark& bookmark) throw();
+```
 
-Этот оператор необходим только в `CBookmark<0>`.   
+### <a name="remarks"></a>Примечания
 
-## <a name="see-also"></a>См. также  
+Этот оператор необходим только в `CBookmark<0>`.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

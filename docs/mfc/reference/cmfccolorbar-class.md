@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8c5b1a1bd1358caa491370b2e38b35bde1f8fc7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 309d3eb7c7bdfffed387293835926e549c00cfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387527"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054349"
 ---
 # <a name="cmfccolorbar-class"></a>Класс CMFCColorBar
 
@@ -321,7 +321,6 @@ CMFCColorBar(
     UINT nCommandID,
     CMFCColorButton* pParentBtn);
 
-
 CMFCColorBar(
     const CArray<COLORREF,COLORREF>& colors,
     COLORREF color,
@@ -333,7 +332,6 @@ CMFCColorBar(
     COLORREF colorAutomatic,
     UINT nCommandID,
     CMFCRibbonColorButton* pParentRibbonBtn);
-
 
 CMFCColorBar(
     CMFCColorBar& src,
@@ -804,7 +802,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*основного контроллера домена*|[in] Указатель на контекст устройства кнопки родительского текущего элемента управления цветовой полосы.|
+|*pDC*|[in] Указатель на контекст устройства кнопки родительского текущего элемента управления цветовой полосы.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

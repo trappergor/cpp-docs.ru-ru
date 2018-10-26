@@ -1,7 +1,7 @@
 ---
-title: typeid (расширения компонентов C++) | Документация Майкрософт
+title: typeid (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1196956208d490674d4705a8d1e61ea3381d94a2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435406"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065191"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (расширения компонентов C++)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C + +/ CLI и C + +/ CX)
 
 Получает значение, указывающее тип объекта.
 
-> [!WARNING]
+> [!NOTE]
 > Этот раздел относится к версии typeid расширений компонентов C++. Версии ISO C++ этого ключевого слова, см. в разделе [оператор typeid](../cpp/typeid-operator.md).
 
 ## <a name="all-runtimes"></a>Все среды выполнения
@@ -110,7 +110,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +123,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 Следующий пример показывает, что переменная типа System::Type можно использовать для получения атрибутов типа.  Он также показывает, что для некоторых типов, будет необходимо создать определение типа для использования `typeid`.
@@ -169,13 +169,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

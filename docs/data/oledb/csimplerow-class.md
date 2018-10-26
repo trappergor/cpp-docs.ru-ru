@@ -46,128 +46,128 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d5ceb07577386f4b3fc9389cf9103fba4036b591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076794"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
-Предоставляет реализацию по умолчанию для дескриптора строки, которая используется в [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) класса.  
-  
+Предоставляет реализацию по умолчанию для дескриптора строки, которая используется в [IRowsetImpl](../../data/oledb/irowsetimpl-class.md) класса.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class CSimpleRow  
-```  
+class CSimpleRow
+```
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
+**Заголовок:** atldb.h
 
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[AddRefRow](#addrefrow)|Добавляет счетчик ссылок в дескриптор существующей строки.|  
-|[Compare](#compare)|Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.|  
-|[CSimpleRow](#csimplerow)|Конструктор.|  
-|[ReleaseRow](#releaserow)|Высвобождает строки.|  
-  
-### <a name="data-members"></a>Элементы данных  
-  
-|||  
-|-|-|  
-|[m_dwRef](#dwref)|Счетчик ссылок в дескриптор существующей строки.|  
-|[m_iRowset](#irowset)|Индекс для строк, представляющий курсор.|  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="members"></a>Участники
 
-Дескриптор строки логически является уникальный маркер для строки результата. `IRowsetImpl` Создает новый `CSimpleRow` для каждой строки запроса в [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` Можно также заменить на собственную реализацию маркер строки, как аргумент шаблона по умолчанию для `IRowsetImpl`. Единственное требование для замены этого класса заключается в том, чтобы создать конструктор, который принимает один параметр типа класс замены **LONG**.  
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[AddRefRow](#addrefrow)|Добавляет счетчик ссылок в дескриптор существующей строки.|
+|[Compare](#compare)|Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.|
+|[CSimpleRow](#csimplerow)|Конструктор.|
+|[ReleaseRow](#releaserow)|Высвобождает строки.|
+
+### <a name="data-members"></a>Элементы данных
+
+|||
+|-|-|
+|[m_dwRef](#dwref)|Счетчик ссылок в дескриптор существующей строки.|
+|[m_iRowset](#irowset)|Индекс для строк, представляющий курсор.|
+
+## <a name="remarks"></a>Примечания
+
+Дескриптор строки логически является уникальный маркер для строки результата. `IRowsetImpl` Создает новый `CSimpleRow` для каждой строки запроса в [IRowsetImpl::GetNextRows](../../data/oledb/irowsetimpl-getnextrows.md). `CSimpleRow` Можно также заменить на собственную реализацию маркер строки, как аргумент шаблона по умолчанию для `IRowsetImpl`. Единственное требование для замены этого класса заключается в том, чтобы создать конструктор, который принимает один параметр типа класс замены **LONG**.
 
 ## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
-Добавляет счетчик ссылок в дескриптор существующей строки в потокобезопасным способом.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Добавляет счетчик ссылок в дескриптор существующей строки в потокобезопасным способом.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-DWORD AddRefRow();  
-```  
+DWORD AddRefRow();
+```
 
 ## <a name="compare"></a> CSimpleRow::Compare
 
-Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT Compare(CSimpleRow* pRow);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT Compare(CSimpleRow* pRow);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *pRow*<br/>
-Указатель на объект `CSimpleRow`.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Указатель на объект `CSimpleRow` .
 
-Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\)) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения. 
+### <a name="return-value"></a>Возвращаемое значение
+
+Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
-Конструктор.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Конструктор.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CSimpleRow(DBCOUNTITEM iRowsetCur);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+CSimpleRow(DBCOUNTITEM iRowsetCur);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *iRowsetCur*<br/>
-[in] Индекс текущего набора строк.  
-  
-### <a name="remarks"></a>Примечания  
+[in] Индекс текущего набора строк.
 
-Наборы [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) для *iRowsetCur*. 
+### <a name="remarks"></a>Примечания
+
+Наборы [m_iRowset](../../data/oledb/csimplerow-m-irowset.md) для *iRowsetCur*.
 
 ## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
-Высвобождает строки в потокобезопасным способом.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Высвобождает строки в потокобезопасным способом.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-DWORD ReleaseRow();  
-```  
+DWORD ReleaseRow();
+```
 
 ## <a name="dwref"></a> CSimpleRow::m_dwRef
 
-Счетчик ссылок в дескриптор существующей строки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Счетчик ссылок в дескриптор существующей строки.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-DWORD m_dwRef;  
-```  
+DWORD m_dwRef;
+```
 
 ## <a name="irowset"></a> CSimpleRow::m_iRowset
 
-Индекс для строк, представляющий курсор.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Индекс для строк, представляющий курсор.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-KeyType m_iRowset;  
-```  
-  
-## <a name="see-also"></a>См. также  
+KeyType m_iRowset;
+```
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

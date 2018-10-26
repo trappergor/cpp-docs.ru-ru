@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b82d7066f9fa0adfaae0f989941f191c99223aed
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413455"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080238"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>Параметры
 
 *lpRectMargins*<br/>
-Указатель на [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий (в дюймах 1/1000 или 1/100 мм) поля печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
+Указатель на [RECT](rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий (в дюймах 1/1000 или 1/100 мм) поля печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
 
 *lpRectMinMargins*<br/>
 Указатель на `RECT` структуры или `CRect` , описывающий (в дюймах 1/1000 или 1/100 мм) минимальный размер полей печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
@@ -332,7 +332,7 @@ virtual UINT OnDrawPage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства принтера.
 
 *nMessage*<br/>
@@ -351,7 +351,7 @@ virtual UINT OnDrawPage(
 - Область WM_PSD_YAFULLPAGERECT представление обратный адрес. Эта область распространяется на краю области страницы примера.
 
 *lpRect*<br/>
-Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us) объект, содержащий координаты области рисования.
+Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](rect-structure.md) объект, содержащий координаты области рисования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -418,6 +418,4 @@ virtual UINT PreDrawPage(
 [Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

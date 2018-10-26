@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d9acae5f87223a3b23c492f02596452fabb745f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8a6689d0ac305a0dc3264b0311a4d7bf2e7d11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441295"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076078"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 
@@ -419,8 +419,6 @@ static BOOL IsWindowsThemingEnabled();
 
 Значение TRUE, если стиль границы кнопки соответствует текущей темы Windows; в противном случае — значение FALSE.
 
-
-
 ## <a name="a-namembdontusewinxptheme-cmfcbuttonmbdontusewinxptheme"></a><a name="m_bDontUseWinXPTheme"/> CMFCButton::m_bDontUseWinXPTheme
 
 Указывает, следует ли использовать темы Windows XP при рисовании кнопки.
@@ -446,7 +444,6 @@ BOOL m_bDrawFocus;
 ##  <a name="m_bGrayDisabled"></a>  CMFCButton::m_bGrayDisabled
 
 Если значение равно TRUE, включает кнопку в отключенном состоянии которые изображаются в виде закрашены серым.
-
 
 ```
 BOOL m_bGrayDisabled;
@@ -479,7 +476,6 @@ BOOL m_bResponseOnButtonDown;
 ```
 BOOL m_bRightImage;
 ```
-
 
 ##  <a name="m_bTopImage"></a>  CMFCButton::m_bTopImage](#m_bTopImage)
 
@@ -574,7 +570,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -600,7 +596,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectClient*<br/>
@@ -625,7 +621,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectClient*<br/>
@@ -650,7 +646,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -681,7 +677,7 @@ virtual void OnFillBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectClient*<br/>
@@ -701,7 +697,7 @@ virtual CFont* SelectFont(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -739,14 +735,12 @@ void SetCheckedImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetCheckedImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetCheckedImage(
     UINT uiBmpResId,
@@ -828,14 +822,12 @@ void SetImage(
     HICON hIconDisabled=NULL,
     BOOL bAlphaBlend=FALSE);
 
-
 void SetImage(
     HBITMAP hBitmap,
     BOOL bAutoDestroy=TRUE,
     HBITMAP hBitmapHot=NULL,
     BOOL bMap3dColors=TRUE,
     HBITMAP hBitmapDisabled=NULL);
-
 
 void SetImage(
     UINT uiBmpResId,

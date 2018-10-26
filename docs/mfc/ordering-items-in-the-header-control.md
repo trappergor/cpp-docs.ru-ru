@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60139821c1b15673fac0fb8f9ec3925cbfa6dc31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052101"
 ---
 # <a name="ordering-items-in-the-header-control"></a>Сортировка элементов в элементе управления "Заголовок"
 
@@ -35,11 +35,11 @@ ms.locfileid: "46416829"
 
 - [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray) и [CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
 
-     Получает и задает порядок элементов заголовка слева направо.
+   Получает и задает порядок элементов заголовка слева направо.
 
 - [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex).
 
-     Получает значение индекса для определенного заголовка элемента.
+   Получает значение индекса для определенного заголовка элемента.
 
 В дополнение к предыдущей функции-члены hds_dragdrop-стиль позволяет пользователю перетаскивать элементы заголовка в элементе управления заголовка. Дополнительные сведения см. в разделе [Предоставление поддержки перетаскивания и вставки для элементов заголовка](../mfc/providing-drag-and-drop-support-for-header-items.md).
 

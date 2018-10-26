@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409653"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083559"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 
@@ -372,7 +372,6 @@ int AddBitmap(
     int nNumButtons,
     UINT nBitmapID);
 
-
 int AddBitmap(
     int nNumButtons,
     CBitmap* pBitmap);
@@ -440,11 +439,11 @@ typedef struct _TBBUTTON {
 
    Отсчитываемый от нуля индекс изображения для кнопки, -1, если изображение не для данной кнопки.
 
--  `idCommand`
+- `idCommand`
 
    Идентификатор команды, связанный с кнопкой. Этот идентификатор отправляется в сообщении WM_COMMAND, после нажатия кнопки. Если `fsStyle` имеет значение TBSTYLE_SEP, этот элемент должен быть равен нулю.
 
--  `fsState`
+- `fsState`
 
    Флаги состояния кнопок. Это может быть сочетанием значений, перечисленных ниже:
 
@@ -731,8 +730,6 @@ void Customize();
 ### <a name="remarks"></a>Примечания
 
 Это диалоговое окно позволяет пользователю настроить путем добавления и удаления кнопок панели инструментов. Для поддержки настройки, на панели инструментов родительского окна необходимо обрабатывать сообщения уведомления настройки, как описано в разделе [обработка уведомлений о настройке](../../mfc/handling-customization-notifications.md). На панель инструментов должна также быть создана в стиле CCS_ADJUSTABLE, как описано в разделе [CToolBarCtrl::Create](#create).
-
-Дополнительные сведения см. в статье базы знаний Q241850: PRB: вызов CToolBarCtrl::Customize не поддерживает хранение видимым настройки диалогового окна.
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

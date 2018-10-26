@@ -5,7 +5,7 @@ ms.custom: mvc
 ms.date: 12/12/2017
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05a5204234eb127da676e3b4a12ef875baecdad0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c9c32f6811a18fae00cb2943a9ca97a89cf159a1
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705787"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029597"
 ---
 # <a name="build-and-run-a-c-console-app-project"></a>Сборка и запуск проекта консольного приложения C++
 
@@ -45,7 +45,7 @@ ms.locfileid: "45705787"
 
    ![Запустите проект](../build/media/vscpp-start-without-debugging.gif "запуска проекта")
 
-    Откроется окно консоли и затем запускает приложение. При запуске консольного приложения в Visual Studio, он выполняет код, а затем выводит «нажмите любую клавишу для продолжения. . ." Чтобы дать вам возможность просмотреть выходные данные.
+   Откроется окно консоли и затем запускает приложение. При запуске консольного приложения в Visual Studio, он выполняет код, а затем выводит «нажмите любую клавишу для продолжения. . ." Чтобы дать вам возможность просмотреть выходные данные.
 
 Поздравляем! Вы создали свое первое «Hello, world!» Консольное приложение в Visual Studio! Нажмите клавишу, чтобы закрыть окно консоли и вернуться в Visual Studio.
 

@@ -1,7 +1,7 @@
 ---
-title: Delegate (расширения компонентов C++) | Документация Майкрософт
+title: делегат (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd0f63aebaa6dd742e1ce701e42cf8238fb6033f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068103"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (расширения компонентов C++)
+# <a name="delegate--ccli-and-ccx"></a>делегат (C + +/ CLI и C + +/ CX)
 
 Объявляет тип, представляющий указатель на функцию.
 
@@ -52,7 +52,7 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -131,7 +131,7 @@ function_declaration
 
 - [Практическое руководство. Определение и использование делегатов (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [Универсальные делегаты (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [Универсальные делегаты (C++/CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>Требования
 
@@ -171,14 +171,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

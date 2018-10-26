@@ -110,12 +110,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ca5b649ba5d09d0406658112b8067ed804f7e70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423940"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890729"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -131,13 +131,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Создает объект `CRichEditView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Перемещает диалоговое окно, чтобы он не скрывать текущего выделения.|
 |[CRichEditView::CanPaste](#canpaste)|Указывает, содержит ли буфер данных, которая может быть вставлена в представлении rich edit.|
@@ -174,7 +174,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Получает объект Clipboard для диапазона в этом представлении rich edit.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Получает контекстное меню для использования в правой-нажатия кнопки мыши.|
@@ -191,7 +191,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Указывает отступ для маркированные списки.|
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|Указывает ограничения переноса слов.|
@@ -470,8 +470,6 @@ virtual HMENU GetContextMenu(
 Реализация по умолчанию возвращает значение NULL. Существует расширенная переопределяемый.
 
 Дополнительные сведения см. в разделе [IRichEditOleCallback::GetContextMenu](/windows/desktop/api/richole/nf-richole-iricheditolecallback-getcontextmenu) и [CHARRANGE](/windows/desktop/api/richedit/ns-richedit-_charrange) в пакете Windows SDK.
-
-Дополнительные сведения о `OLEOBJECT` введите, см. в статье структур OLE данных и структура распределения *OLE знаний*.
 
 ##  <a name="getdocument"></a>  CRichEditView::GetDocument
 

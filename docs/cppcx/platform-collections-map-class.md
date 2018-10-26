@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103883"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162559"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -173,7 +173,7 @@ bool HasKey(K key);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если ключ найден; в противном случае — значение `false`.
+**значение true,** Если ключ найден; в противном случае — значение **false**.
 
 ## <a name="insert"></a>  Метод MAP::INSERT
 
@@ -195,7 +195,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ключ существующего элемента в текущем объекте Map совпадает с *ключ* и часть, представляющая значение этого элемента имеет значение *значение*. `false` Если в текущем объекте Map нет элемента соответствует *ключ* и *ключ* и *значение* параметров, внесенные в пару ключ значение и затем добавляются в текущего объекта Map.
+**значение true,** Если ключ существующего элемента в текущем объекте Map совпадает с *ключ* и часть, представляющая значение этого элемента имеет значение *значение*. **false** совпадает ни один существующий элемент в текущем объекте Map *ключ* и *ключ* и *значение* параметров, внесенные в пару ключ значение и затем добавляются в текущий объект Map.
 
 ## <a name="lookup"></a>  Метод MAP::Lookup
 

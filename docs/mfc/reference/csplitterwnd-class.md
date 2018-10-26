@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389564"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890677"
 ---
 # <a name="csplitterwnd-class"></a>Класс CSplitterWnd
 
@@ -103,13 +103,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Вызов для создания `CSplitterWnd` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Выполняет команды Next Pane и Previous Pane.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Проверяет, является ли команды Next Pane и Previous Pane сейчас невозможно.|
@@ -143,7 +143,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Вызывается платформой для отрисовки окна разделителя.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Выполняет отрисовку рисунка окна разделителя.|
@@ -181,11 +181,7 @@ class CSplitterWnd : public CWnd
 
 При создании окна разделителя, создайте эти специальные ползунки. Например `CSplitterWnd` с одной строки, два столбца, и стиль WS_VSCROLL будет отображать вертикальную полосу прокрутки, совместно используется двумя областями. Когда пользователь перемещает полосу прокрутки, WM_VSCROLL сообщения отправляются в обеих областях. При области задать положение полосы прокрутки, полосы прокрутки общего устанавливается.
 
-Дополнительные сведения о окна разделителей см. в разделе:
-
-- [Техническое Примечание 29](../../mfc/tn029-splitter-windows.md)
-
-- Статье базы знаний Q262024: Практическое руководство: использование CPropertySheet как дочерние CSplitterWnd
+Дополнительные сведения о окна разделителей, см. в разделе [технические 29 Примечание](../../mfc/tn029-splitter-windows.md).
 
 Дополнительные сведения о способах создания окон с динамическими разделителями см. в разделе:
 
@@ -898,7 +894,7 @@ virtual void SetActivePane(
 Если *pWnd* имеет значение NULL, указывает столбец, в области, где будет активна.
 
 *pWnd*<br/>
-Указатель на объект `CWnd`. Если значение равно NULL, определяемое области *строки* и *col* имеет значение active. Если значение не NULL, указывает область, которая имеет значение active.
+Указатель на объект `CWnd` . Если значение равно NULL, определяемое области *строки* и *col* имеет значение active. Если значение не NULL, указывает область, которая имеет значение active.
 
 ### <a name="remarks"></a>Примечания
 

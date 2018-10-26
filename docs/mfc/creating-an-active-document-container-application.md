@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052818"
 ---
 # <a name="creating-an-active-document-container-application"></a>Создание приложения с контейнером активных документов
 
@@ -57,9 +57,9 @@ ms.locfileid: "46388343"
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` предоставляет поддержку печати. Этот код заменяет `DoPreparePrinting`, который является подготовка печати по умолчанию.
+   `OnPreparePrinting` предоставляет поддержку печати. Этот код заменяет `DoPreparePrinting`, который является подготовка печати по умолчанию.
 
-     Вложение активного документа предоставляет Улучшенная схема печати:
+   Вложение активного документа предоставляет Улучшенная схема печати:
 
    - Сначала можно вызвать активного документа по его `IPrint` интерфейс и указал сам. Это отличается от предыдущих вложения OLE, в котором было контейнера для отрисовки рисунка содержащегося элемента в принтер `CDC` объекта.
 
@@ -67,7 +67,7 @@ ms.locfileid: "46388343"
 
    - В случае неудачи убедитесь в собственной отрисовки элемента.
 
-     Статические функции-члены `COleDocObjectItem::OnPrint` и `COleDocObjectItem::OnPreparePrinting`, реализованный в предыдущем коде обработки Эта улучшенная схема печати.
+   Статические функции-члены `COleDocObjectItem::OnPrint` и `COleDocObjectItem::OnPreparePrinting`, реализованный в предыдущем коде обработки Эта улучшенная схема печати.
 
 11. Добавление собственной реализацией и выполните сборку приложения.
 

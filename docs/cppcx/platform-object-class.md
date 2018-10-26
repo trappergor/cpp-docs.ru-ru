@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82f9cf473a1b38e3a77b43bc5fde30057c7b1a8a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 39c51c10ad8c697fcc21c56fcef247c17e8faab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069767"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 
@@ -86,7 +86,7 @@ bool Equals(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение`true` , если объекты равны; в противном случае — значение `false`.
+**значение true,** Если объекты равны; в противном случае **false**.
 
 ## <a name="gethashcode"></a>  Метод Object::GetHashCode
 
@@ -168,7 +168,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если объекты совпадают; в противном случае — значение `false`.
+**значение true,** Если два объекта одинаковы; в противном случае **false**.
 
 ## <a name="tostring"></a>  Метод Object::ToString (C + +/ CX)
 
@@ -196,6 +196,7 @@ public:
     };
 };
 ```
+
 ## <a name="see-also"></a>См. также
 
 [Пространство имен Platform](platform-namespace-c-cx.md)

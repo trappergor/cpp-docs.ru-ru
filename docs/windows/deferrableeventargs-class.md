@@ -1,7 +1,7 @@
 ---
 title: Класс DeferrableEventArgs | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 082cae10bbd01c4c46fcfaa84bfd94ba6178bc1a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f5c117d0d65f86e4f4b69011457e166b6440820
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401788"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081567"
 ---
 # <a name="deferrableeventargs-class"></a>Класс DeferrableEventArgs
 
@@ -35,11 +35,8 @@ ms.locfileid: "46401788"
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <
-typename TEventArgsInterface,
-typename TEventArgsClass
->
-class DeferrableEventArgs : public TEventArgsInterface
+template <typename TEventArgsInterface, typename TEventArgsClass>
+class DeferrableEventArgs : public TEventArgsInterface;
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -76,7 +73,7 @@ class DeferrableEventArgs : public TEventArgsInterface
 Получает ссылку на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, который представляет отложенное событие.
 
 ```cpp
-HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)  
+HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -91,11 +88,11 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ## <a name="invokeallfinished"></a>DeferrableEventArgs::InvokeAllFinished
 
 Вызывается, чтобы указать, что вся обработка для отложенного события завершена.
-  
+
 ```cpp
-void InvokeAllFinished()  
+void InvokeAllFinished()
 ```
-  
+
 ### <a name="remarks"></a>Примечания
 
 Этот метод следует вызывать после источник события вызовет [InvokeAll](../windows/eventsource-invokeall-method.md). Вызов этого метода предотвращает ввод последующих задержек и вызывает принудительное выполнение обработчика завершения, если задержки отсутствовали.

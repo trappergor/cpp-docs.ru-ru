@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ddefef4525e000002b6fb685887b666aa53fc87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378076"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060472"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -278,8 +278,6 @@ class CRichEditCtrl : public CWnd
 - [Элементы управления](../../mfc/controls-mfc.md)
 
 - [Использование CRichEditCtrl](../../mfc/using-cricheditctrl.md)
-
-- Статье базы знаний Q259949: INFO: SetCaretPos() является не соответствующие с CEdit или элементами управления CRichEditCtrl
 
 Пример использования элемента управления форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../visual-cpp-samples.md) пример приложения.
 
@@ -929,7 +927,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>Параметры
 
-*Общая папка*<br/>
+*pf*<br/>
 В первой версии, указатель на [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) структуру для хранения атрибуты текущего выделенного фрагмента форматирования абзаца.
 
 Во второй версии, указатель на [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) структуру, которая является расширением Rich Edit 2.0 для `PARAFORMAT` структуры, удерживая атрибутов форматирования символов по умолчанию.
@@ -1784,7 +1782,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Параметры
 
-*Общая папка*<br/>
+*pf*<br/>
 В первой версии, указатель на [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.
 
 Во второй версии, указатель на [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) структуру, которая является расширением Rich Edit 2.0 для `PARAFORMAT` структуры, удерживая атрибутов форматирования символов по умолчанию.
@@ -1958,7 +1956,6 @@ BOOL SetSelectionCharFormat(CHARFORMAT2& cf);
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

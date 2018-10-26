@@ -44,153 +44,153 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a047416c22eb57fc3ee3d3eb6a69275768182525
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081905"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
-Наследует от `DBPROPSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также `AddProperty` доступ к методу.  
-  
+Наследует от `DBPROPSET` структурировать и добавляет конструктор, который инициализирует ключевых полей, а также `AddProperty` доступ к методу.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class CDBPropSet : public tagDBPROPSET  
-```  
+class CDBPropSet : public tagDBPROPSET
+```
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
+**Заголовок:** atldbcli.h
 
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[AddProperty](#addproperty)|Добавляет свойство в набор свойств.|  
-|[CDBPropSet](#cdbpropset)|Конструктор.|  
-|[SetGUID](#setguid)|Наборы `guidPropertySet` поле `DBPROPSET` структуры.|  
-  
-### <a name="operators"></a>Операторы  
-  
-|||  
-|-|-|  
-|[оператор =](#op_equal)|Назначает содержимое для одного свойства.|  
-  
-## <a name="remarks"></a>Примечания  
+## <a name="members"></a>Участники
 
-Использование поставщиков и потребителей OLE DB `DBPROPSET` структуры для передачи массивов `DBPROP` структуры. Каждый `DBPROP` структура представляет одно свойство, которое можно задать.  
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[AddProperty](#addproperty)|Добавляет свойство в набор свойств.|
+|[CDBPropSet](#cdbpropset)|Конструктор.|
+|[SetGUID](#setguid)|Наборы `guidPropertySet` поле `DBPROPSET` структуры.|
+
+### <a name="operators"></a>Операторы
+
+|||
+|-|-|
+|[оператор =](#op_equal)|Назначает содержимое для одного свойства.|
+
+## <a name="remarks"></a>Примечания
+
+Использование поставщиков и потребителей OLE DB `DBPROPSET` структуры для передачи массивов `DBPROP` структуры. Каждый `DBPROP` структура представляет одно свойство, которое можно задать.
 
 ## <a name="addproperty"></a> CDBPropSet::AddProperty
 
-Добавляет свойство в набор свойств.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Добавляет свойство в набор свойств.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-bool AddProperty(DWORD dwPropertyID,   
-   constVARIANT& var,   
-   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,  
-   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,  
-   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+bool AddProperty(DWORD dwPropertyID, 
+   constVARIANT& var, 
+   DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   LPCSTR szValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   LPCWSTR szValue,DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   bool bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   BYTE bValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   short nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   long nValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   float fltValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED);bool AddProperty(DWORD dwPropertyID,
+   double dblValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();bool AddProperty(DWORD dwPropertyID,
+   CY cyValue,  DBPROPOPTIONS propoptions = DBPROPOPTIONS_REQUIRED) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *dwPropertyID*<br/>
-[in] Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` из `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*var*<br/>
-[in] Значение variant, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*szValue*<br/>
-[in] Строка, используемая для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*bValue*<br/>
-[in] Объект `BYTE` или логическое значение, используемое для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*nValue*<br/>
-[in] Целочисленное значение, используемое для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*fltValue*<br/>
-[in] Значение с плавающей запятой, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*dblValue*<br/>
-[in] Значение с плавающей запятой двойной точности, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-*cyValue*<br/>
-[in] Значение валюты CY, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Идентификатор добавляемого свойства. Используется для инициализации `dwPropertyID` из `DBPROP` структуры, добавляемый в набор свойств.
 
-**значение true,** Если свойство было успешно добавлено. В противном случае **false**. 
+*var*<br/>
+[in] Значение variant, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*szValue*<br/>
+[in] Строка, используемая для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*bValue*<br/>
+[in] Объект `BYTE` или логическое значение, используемое для инициализации значения свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*nValue*<br/>
+[in] Целочисленное значение, используемое для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*fltValue*<br/>
+[in] Значение с плавающей запятой, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*dblValue*<br/>
+[in] Значение с плавающей запятой двойной точности, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+*cyValue*<br/>
+[in] Значение валюты CY, используемый для инициализации значение свойства для `DBPROP` структуры, добавляемый в набор свойств.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если свойство было успешно добавлено. В противном случае **false**.
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
-Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CDBPropSet(const GUID& guid);  
+CDBPropSet(const GUID& guid);
 
-CDBPropSet(const CDBPropSet& propset);  
+CDBPropSet(const CDBPropSet& propset);
 
-CDBPropSet();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+CDBPropSet();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.  
-  
+[in] Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.
+
 *набор свойств*<br/>
-[in] Другой `CDBPropSet` объект для копирования.  
+[in] Другой `CDBPropSet` объект для копирования.
 
 ## <a name="setguid"></a> CDBPropSet::SetGUID
 
-Наборы `guidPropertySet` в `DBPROPSET` структуры.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Наборы `guidPropertySet` в `DBPROPSET` структуры.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void SetGUID(const GUID& guid) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+void SetGUID(const GUID& guid) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\)) структуры.  
-  
-### <a name="remarks"></a>Примечания  
+[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры.
 
-Это поле можно задать [конструктор](../../data/oledb/cdbpropset-cdbpropset.md) также.  
+### <a name="remarks"></a>Примечания
+
+Это поле можно задать [конструктор](../../data/oledb/cdbpropset-cdbpropset.md) также.
 
 ## <a name="op_equal"></a> CDBPropSet::operator =
 
-Назначает содержимое одного из свойств задать другой набор свойств.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Назначает содержимое одного из свойств задать другой набор свойств.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CDBPropSet& operator =(CDBPropSet& propset) throw();  
-```  
-  
-## <a name="see-also"></a>См. также  
+CDBPropSet& operator =(CDBPropSet& propset) throw();
+```
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Структуре DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[Структуры DBPROP](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[Структуре DBPROPSET](/previous-versions/windows/desktop/ms714367)
+[структуры DBPROP](/previous-versions/windows/desktop/ms717970)

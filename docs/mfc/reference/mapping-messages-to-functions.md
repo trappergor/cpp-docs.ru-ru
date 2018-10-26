@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb37637cbfc2ec0af96ed339da6e71cf349797e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b53175e46cfa858a73b581dfefc78047e96380d6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058959"
 ---
 # <a name="mapping-messages-to-functions"></a>Сопоставление сообщений с функциями
 
@@ -42,7 +42,7 @@ ms.locfileid: "46402880"
     > [!NOTE]
     >  **Сообщений** кнопка доступна при выборе имени класса в представлении классов или при нажатии кнопки в окне исходного кода.
 
-     Если проект имеет обработчик для сообщения, то имя обработчика отображается в правом столбце рядом с сообщением.
+   Если проект имеет обработчик для сообщения, то имя обработчика отображается в правом столбце рядом с сообщением.
 
 1. Если сообщение не имеет обработчика, затем щелкните ячейку в столбце справа от в окне «Свойства», чтобы отобразить предлагаемое имя обработчика в виде \<Добавить >*HandlerName*. (Например, обработчик сообщений WM_TIMER предложит \<Добавить >`OnTimer`).
 

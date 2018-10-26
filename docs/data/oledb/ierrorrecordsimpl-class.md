@@ -76,265 +76,265 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 13e00d3d5ac7cb6cf6e4078ee24a7c3b02a2778e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0413a83f51e430c52cfcccba05637a59973dc604
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043395"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070391"
 ---
 # <a name="ierrorrecordsimpl-class"></a>Класс IErrorRecordsImpl
 
-Реализует OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) интерфейс, добавления записей и извлечения записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.  
-  
+Реализует OLE DB [IErrorRecords](/previous-versions/windows/desktop/ms718112) интерфейс, добавления записей и извлечения записей из элемента данных ([m_rgErrors](../../data/oledb/ierrorrecordsimpl-m-rgerrors.md)) типа **CAtlArray <** `RecordClass`**>**.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T, class RecordClass = ATLERRORINFO>  
-class IErrorRecordsImpl : public IErrorRecords  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T, class RecordClass = ATLERRORINFO>
+class IErrorRecordsImpl : public IErrorRecords
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, производный от `IErrorRecordsImpl`.  
-  
+Класс, производный от `IErrorRecordsImpl`.
+
 *RecordClass*<br/>
-Класс, который представляет объект ошибки OLE DB.  
+Класс, который представляет объект ошибки OLE DB.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[GetErrorDescriptionString](#geterrordescriptionstring)|Получает строку описания ошибки из записи об ошибке.|  
-|[GetErrorGUID](#geterrorguid)|Получает ошибку GUID из записи об ошибке.|  
-|[GetErrorHelpContext](#geterrorhelpcontext)|Получает идентификатор контекста справки из записи об ошибке.|  
-|[GetErrorHelpFile](#geterrorhelpfile)|Получает полный путь файла справки из записи об ошибке.|  
-|[GetErrorSource](#geterrorsource)|Получает исходный код ошибки из записи об ошибке.|  
-  
-### <a name="interface-methods"></a>Методы интерфейса  
-  
-|||  
-|-|-|  
-|[AddErrorRecord](#adderrorrecord)|Добавляет запись в объекте ошибки OLE DB.|  
-|[GetBasicErrorInfo](#getbasicerrorinfo)|Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.|  
-|[GetCustomErrorObject](#getcustomerrorobject)|Возвращает указатель на интерфейс объекта пользовательских ошибок.|  
-|[GetErrorInfo](#geterrorinfo)|Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) указатель интерфейса на указанную запись.|  
-|[GetErrorParameters](#geterrorparameters)|Возвращает параметры ошибки.|  
-|[GetRecordCount](#getrecordcount)|Возвращает число записей в объекте запись OLE DB.|  
-  
-### <a name="data-members"></a>Элементы данных  
-  
-|||  
-|-|-|  
-|[m_rgErrors](#rgerrors)|Массив записей ошибок.|  
+**Заголовок:** atldb.h
+
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[GetErrorDescriptionString](#geterrordescriptionstring)|Получает строку описания ошибки из записи об ошибке.|
+|[GetErrorGUID](#geterrorguid)|Получает ошибку GUID из записи об ошибке.|
+|[GetErrorHelpContext](#geterrorhelpcontext)|Получает идентификатор контекста справки из записи об ошибке.|
+|[GetErrorHelpFile](#geterrorhelpfile)|Получает полный путь файла справки из записи об ошибке.|
+|[GetErrorSource](#geterrorsource)|Получает исходный код ошибки из записи об ошибке.|
+
+### <a name="interface-methods"></a>Методы интерфейса
+
+|||
+|-|-|
+|[AddErrorRecord](#adderrorrecord)|Добавляет запись в объекте ошибки OLE DB.|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.|
+|[GetCustomErrorObject](#getcustomerrorobject)|Возвращает указатель на интерфейс объекта пользовательских ошибок.|
+|[GetErrorInfo](#geterrorinfo)|Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112) указатель интерфейса на указанную запись.|
+|[GetErrorParameters](#geterrorparameters)|Возвращает параметры ошибки.|
+|[GetRecordCount](#getrecordcount)|Возвращает число записей в объекте запись OLE DB.|
+
+### <a name="data-members"></a>Элементы данных
+
+|||
+|-|-|
+|[m_rgErrors](#rgerrors)|Массив записей ошибок.|
 
 ## <a name="geterrordescriptionstring"></a> IErrorRecordsImpl::GetErrorDescriptionString
 
-Получает строку описания ошибки из записи об ошибке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает строку описания ошибки из записи об ошибке.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+LPOLESTR GetErrorDescriptionString(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *rCurError*<br/>
-`ERRORINFO` Записей в `IErrorInfo` интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+`ERRORINFO` Записей в `IErrorInfo` интерфейс.
 
-Указатель на строку, описывающую ошибку.  
-  
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на строку, описывающую ошибку.
+
 ## <a name="geterrorguid"></a> IErrorRecordsImpl::GetErrorGUID
 
-Получает ошибку GUID из записи об ошибке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает ошибку GUID из записи об ошибке.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-REFGUID GetErrorGUID(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+REFGUID GetErrorGUID(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *rCurError*<br/>
-`ERRORINFO` Записей в `IErrorInfo` интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+`ERRORINFO` Записей в `IErrorInfo` интерфейс.
 
-Ссылка на идентификатор GUID для ошибки.  
+### <a name="return-value"></a>Возвращаемое значение
+
+Ссылка на идентификатор GUID для ошибки.
 
 ## <a name="geterrorhelpcontext"></a> IErrorRecordsImpl::GetErrorHelpContext
 
-Получает идентификатор контекста справки из записи об ошибке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает идентификатор контекста справки из записи об ошибке.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-DWORD GetErrorHelpContext(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+DWORD GetErrorHelpContext(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *rCurError*<br/>
-`ERRORINFO` Записей в `IErrorInfo` интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+`ERRORINFO` Записей в `IErrorInfo` интерфейс.
 
-Идентификатор контекста справки для ошибки.  
+### <a name="return-value"></a>Возвращаемое значение
+
+Идентификатор контекста справки для ошибки.
 
 ## <a name="geterrorhelpfile"></a> IErrorRecordsImpl::GetErrorHelpFile
 
-Возвращает имя пути файла справки из записи об ошибке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Возвращает имя пути файла справки из записи об ошибке.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+LPOLESTR GetErrorHelpFile(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *rCurError*<br/>
-`ERRORINFO` Записей в `IErrorInfo` интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+`ERRORINFO` Записей в `IErrorInfo` интерфейс.
+
+### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку, содержащую путь файла справки для ошибки.
 
 ## <a name="geterrorsource"></a> IErrorRecordsImpl::GetErrorSource
 
-Получает исходный код, который вызвал ошибку из записи об ошибке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Получает исходный код, который вызвал ошибку из записи об ошибке.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-LPOLESTR GetErrorSource(ERRORINFO& rCurError);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+LPOLESTR GetErrorSource(ERRORINFO& rCurError);
+```
+
+#### <a name="parameters"></a>Параметры
 
 *rCurError*<br/>
-`ERRORINFO` Записей в `IErrorInfo` интерфейс.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+`ERRORINFO` Записей в `IErrorInfo` интерфейс.
 
-Указатель на строку, содержащую исходный код для ошибки. 
+### <a name="return-value"></a>Возвращаемое значение
+
+Указатель на строку, содержащую исходный код для ошибки.
 
 ## <a name="adderrorrecord"></a> IErrorRecordsImpl::AddErrorRecord
 
-Добавляет запись в объекте ошибки OLE DB.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,  
-   DWORD dwLookupID,  
-   DISPPARAMS *pdispparams,  
-   IUnknown *punkCustomError,  
-   DWORD dwDynamicErrorID);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Добавляет запись в объекте ошибки OLE DB.
 
-См. в разделе [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(AddErrorRecord )(ERRORINFO *pErrorInfo,
+   DWORD dwLookupID,
+   DISPPARAMS *pdispparams,
+   IUnknown *punkCustomError,
+   DWORD dwDynamicErrorID);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::AddErrorRecord](/previous-versions/windows/desktop/ms725362) в *справочнике программиста OLE DB*.
 
 ## <a name="getbasicerrorinfo"></a> IErrorRecordsImpl::GetBasicErrorInfo
 
-Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,  
-   ERRORINFO *pErrorInfo);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает основные сведения об ошибке, например кода возврата и номер ошибки от поставщика.
 
-См. в разделе [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetBasicErrorInfo )(ULONG ulRecordNum,
+   ERRORINFO *pErrorInfo);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907) в *справочнике программиста OLE DB*.
 
 ## <a name="getcustomerrorobject"></a> IErrorRecordsImpl::GetCustomErrorObject
 
-Возвращает указатель на интерфейс объекта пользовательских ошибок.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,  
-   REFIID riid,  
-   IUnknown **ppObject);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает указатель на интерфейс объекта пользовательских ошибок.
 
-См. в разделе [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetCustomErrorObject )(ULONG ulRecordNum,
+   REFIID riid,
+   IUnknown **ppObject);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417) в *справочнике программиста OLE DB*.
 
 ## <a name="geterrorinfo"></a> IErrorRecordsImpl::GetErrorInfo
 
-Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112\(v=vs.85\)) указатель интерфейса на указанную запись.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,  
-   LCID lcid,  
-   IErrorInfo **ppErrorInfo);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает [IErrorInfo](/previous-versions/windows/desktop/ms718112) указатель интерфейса на указанную запись.
 
-См. в разделе [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230\(v=vs.85\)) в *справочнике программиста OLE DB*.
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetErrorInfo )(ULONG ulRecordNum,
+   LCID lcid,
+   IErrorInfo **ppErrorInfo);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230) в *справочнике программиста OLE DB*.
 
 ## <a name="geterrorparameters"></a> IErrorRecordsImpl::GetErrorParameters
 
-Возвращает параметры ошибки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,  
-   DISPPARAMS *pdispparams);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает параметры ошибки.
 
-См. в разделе [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetErrorParameters )(ULONG ulRecordNum,
+   DISPPARAMS *pdispparams);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793) в *справочнике программиста OLE DB*.
 
 ## <a name="getrecordcount"></a> IErrorRecordsImpl::GetRecordCount
 
-Возвращает число записей в объекте запись OLE DB.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetRecordCount )(ULONG *pcRecords);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает число записей в объекте запись OLE DB.
 
-См. в разделе [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724\(v=vs.85\)) в *справочнике программиста OLE DB*.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetRecordCount )(ULONG *pcRecords);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IErrorRecords::GetRecordCount](/previous-versions/windows/desktop/ms722724) в *справочнике программиста OLE DB*.
 
 ## <a name="rgerrors"></a> IErrorRecordsImpl::m_rgErrors
 
-Массив записей ошибок.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Массив записей ошибок.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CAtlArray< RecordClass > m_rgErrors;  
-```  
-  
-## <a name="see-also"></a>См. также  
+CAtlArray< RecordClass > m_rgErrors;
+```
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

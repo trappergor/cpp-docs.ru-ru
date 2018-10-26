@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437798"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890548"
 ---
 # <a name="toolbars"></a>Панели инструментов
 
@@ -38,10 +38,7 @@ ms.locfileid: "46437798"
 
 - [Пример](../mfc/toolbar-sample-list.md)
 
-Дополнительные сведения о панели инструментов MFC, см. в статье Q232017, «HOWTO: добавить текст для кнопки панели инструментов,» в базе знаний Майкрософт в http://support.microsoft.com.
-
 ## <a name="see-also"></a>См. также
 
 [Элементы пользовательского интерфейса](../mfc/user-interface-elements-mfc.md)<br/>
 [Редактор панелей инструментов](../windows/toolbar-editor.md)
-

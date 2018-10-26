@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3844c0ad304c1ebd18a707ca1821b72b60e92707
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7c3d16cada621232c54176717f9bbdedb71a7e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43198023"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083430"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>Практическое руководство. Создание классического компонента COM с помощью WRL
 
@@ -38,7 +38,7 @@ Windows шаблонов среды выполнения C++ Library (WRL) мо�
 
    [!code-cpp[wrl-classic-com-component#1](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_1.idl)]
 
-5. В файле CalculatorComponent.cpp определите класс `CalculatorComponent`. `CalculatorComponent` Класс наследует от [Microsoft::wrl:: runtimeclass](../windows/runtimeclass-class.md). [Microsoft::wrl:: runtimeclassflags\<ClassicCom >](../windows/runtimeclassflags-structure.md) указывает, что класс является производным от [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) и не [IInspectable](https://msdn.microsoft.com/library/br205821\(v=vs.85\).aspx). (`IInspectable` доступен только для компонентов приложения среды выполнения Windows.) `CoCreatableClass` создает фабрику для класса, который можно использовать с помощью функции например [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
+5. В файле CalculatorComponent.cpp определите класс `CalculatorComponent`. `CalculatorComponent` Класс наследует от [Microsoft::wrl:: runtimeclass](../windows/runtimeclass-class.md). [Microsoft::wrl:: runtimeclassflags\<ClassicCom >](../windows/runtimeclassflags-structure.md) указывает, что класс является производным от [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown) и не [IInspectable](https://msdn.microsoft.com/library/br205821). (`IInspectable` доступен только для компонентов приложения среды выполнения Windows.) `CoCreatableClass` создает фабрику для класса, который можно использовать с помощью функции например [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).
 
    [!code-cpp[wrl-classic-com-component#2](../windows/codesnippet/CPP/how-to-create-a-classic-com-component-using-wrl_2.cpp)]
 

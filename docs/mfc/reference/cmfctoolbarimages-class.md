@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35b9d8d5a60fd35f69ec336a38d05a9ad614760
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecb54aab57449b59231fcfe03fdbb6c6e8e2b4b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431766"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055181"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 
@@ -279,7 +279,6 @@ class CMFCToolBarImages : public CObject
 
 ##  <a name="adaptcolors"></a>  CMFCToolBarImages::AdaptColors
 
-
 ```
 void AdaptColors(
     COLORREF clrBase,
@@ -288,8 +287,8 @@ void AdaptColors(
 
 ### <a name="parameters"></a>Параметры
 
-*clrBase*<br/>
-[in] [in] *clrTone*
+[in] *clrBase*<br/>
+[in] *clrTone*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -349,7 +348,6 @@ int AddImage(
 
 ##  <a name="cleanup"></a>  CMFCToolBarImages::CleanUp
 
-
 ```
 static void __stdcall CleanUp();
 ```
@@ -378,14 +376,13 @@ CMFCToolBarImages();
 
 ##  <a name="copyimagetoclipboard"></a>  CMFCToolBarImages::CopyImageToClipboard
 
-
 ```
 BOOL CopyImageToClipboard(int iImage);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *iImage*
+[in] *iImage*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -393,14 +390,13 @@ BOOL CopyImageToClipboard(int iImage);
 
 ##  <a name="copyto"></a>  CMFCToolBarImages::CopyTo
 
-
 ```
 BOOL CopyTo(CMFCToolBarImages& imageList);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *imageList*
+[in] *imageList*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -429,7 +425,6 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ##  <a name="createregionfromimage"></a>  CMFCToolBarImages::CreateRegionFromImage
 
-
 ```
 static HRGN __stdcall CreateRegionFromImage(
     HBITMAP bmp,
@@ -438,8 +433,8 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>Параметры
 
-*BMP*<br/>
-[in] [in] *clrTransparent*
+[in] *bmp*<br/>
+[in] *clrTransparent*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -482,7 +477,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *x*<br/>
@@ -518,7 +513,6 @@ BOOL Draw(
 
 ##  <a name="drawex"></a>  CMFCToolBarImages::DrawEx
 
-
 ```
 BOOL DrawEx(
     CDC* pDC,
@@ -526,23 +520,19 @@ BOOL DrawEx(
     int iImageIndex,
     ImageAlignHorz horzAlign = ImageAlignHorzLeft,
     ImageAlignVert vertAlign = ImageAlignVertTop,
-    CRect rectSrc = CRect(0,
-    0,
-    0,
-    0),
+    CRect rectSrc = CRect(0, 0, 0, 0),
     BYTE alphaSrc = 255);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
-[in] [in] *rect*
-*iImageIndex*<br/>
-[in] [in] *horzAlign*
-*vertAlign*<br/>
-[in] [in] *rectSrc*
-*0*<br/>
-[in] [in] *0)*  [in] *alphaSrc*
+[in] *основного контроллера домена*<br/>
+[in] *rect*<br/>
+[in] *iImageIndex*<br/>
+[in] *horzAlign*<br/>
+[in] *vertAlign*<br/>
+[in] *rectSrc*<br/>
+[in] *alphaSrc*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -550,14 +540,13 @@ BOOL DrawEx(
 
 ##  <a name="enablertl"></a>  CMFCToolBarImages::EnableRTL
 
-
 ```
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bIsRTL*
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -603,7 +592,7 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -614,7 +603,6 @@ static void FillDitheredRect(
 Используйте этот метод для заполнения прямоугольника цветом, — это среднее COLOR_BTNFACE и COLOR_BTNHIGHLIGHT системные цвета. Если система использует не более 256 цветов, прямоугольник будет заполняться вместо сглаженным шаблоном этих двух цветов.
 
 ##  <a name="getalwayslight"></a>  CMFCToolBarImages::GetAlwaysLight
-
 
 ```
 BOOL GetAlwaysLight() const;
@@ -653,7 +641,6 @@ static BYTE GetDisabledImageAlpha();
 Можно вызвать [CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha) для изменения значения альфа-канала.
 
 ##  <a name="getfadedimagealpha"></a>  CMFCToolBarImages::GetFadedImageAlpha
-
 
 ```
 static BYTE __stdcall GetFadedImageAlpha();
@@ -704,7 +691,6 @@ HBITMAP GetImageWell() const;
 
 ##  <a name="getimagewelllight"></a>  CMFCToolBarImages::GetImageWellLight
 
-
 ```
 HBITMAP GetImageWellLight() const;
 ```
@@ -714,7 +700,6 @@ HBITMAP GetImageWellLight() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getlastimagerect"></a>  CMFCToolBarImages::GetLastImageRect
-
 
 ```
 CRect GetLastImageRect() const;
@@ -726,7 +711,6 @@ CRect GetLastImageRect() const;
 
 ##  <a name="getlightpercentage"></a>  CMFCToolBarImages::GetLightPercentage
 
-
 ```
 int GetLightPercentage() const;
 ```
@@ -736,7 +720,6 @@ int GetLightPercentage() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getmapto3dcolors"></a>  CMFCToolBarImages::GetMapTo3DColors
-
 
 ```
 BOOL GetMapTo3DColors() const;
@@ -748,14 +731,13 @@ BOOL GetMapTo3DColors() const;
 
 ##  <a name="getmask"></a>  CMFCToolBarImages::GetMask
 
-
 ```
 HBITMAP GetMask(int iImage);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *iImage*
+[in] *iImage*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -779,7 +761,6 @@ int GetResourceOffset(UINT uiResId) const;
 Индекс изображения, если метод был выполнен успешно; значение -1, если изображение с указанным Идентификатором ресурса не существует.
 
 ##  <a name="gettransparentcolor"></a>  CMFCToolBarImages::GetTransparentColor
-
 
 ```
 COLORREF GetTransparentColor() const;
@@ -830,7 +811,6 @@ static BOOL Is32BitTransparencySupported();
 Используйте этот статический метод на этапе выполнения определить, поддерживает ли операционная система альфа-смешение цвета 32 бита. Эта функция поддерживается в Windows 2000 и более поздних версий.
 
 ##  <a name="ispremultiplyautocheck"></a>  CMFCToolBarImages::IsPreMultiplyAutoCheck
-
 
 ```
 BOOL IsPreMultiplyAutoCheck() const;
@@ -942,7 +922,6 @@ BOOL Load(
 
 ##  <a name="loadstr"></a>  CMFCToolBarImages::LoadStr
 
-
 ```
 BOOL LoadStr(
     LPCTSTR lpszResourceName,
@@ -952,15 +931,15 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszResourceName*<br/>
-[in] [in] *hinstRes* [in] *bAdd*
+[in] *lpszResourceName*<br/>
+[in] *hinstRes*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="mapfromsyscolor"></a>  CMFCToolBarImages::MapFromSysColor
-
 
 ```
 static COLORREF __stdcall MapFromSysColor(
@@ -970,15 +949,14 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
-[in] [in] *bUseRGBQUAD*
+[in] *цвет*<br/>
+[in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="mapto3dcolors"></a>  CMFCToolBarImages::MapTo3dColors
-
 
 ```
 BOOL MapTo3dColors(
@@ -989,15 +967,15 @@ BOOL MapTo3dColors(
 
 ### <a name="parameters"></a>Параметры
 
-*bUseRGBQUAD*<br/>
-[in] [in] *clrSrc* [in] *clrDest*
+[in] *bUseRGBQUAD*<br/>
+[in] *clrSrc*<br/>
+[in] *clrDest*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="maptosyscolor"></a>  CMFCToolBarImages::MapToSysColor
-
 
 ```
 static COLORREF __stdcall MapToSysColor(
@@ -1007,8 +985,8 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
-[in] [in] *bUseRGBQUAD*
+[in] *цвет*<br/>
+[in] *bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1016,14 +994,13 @@ static COLORREF __stdcall MapToSysColor(
 
 ##  <a name="maptosyscoloralpha"></a>  CMFCToolBarImages::MapToSysColorAlpha
 
-
 ```
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *цвет*
+[in] *цвет*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1073,7 +1050,6 @@ static BOOL MirrorBitmap(
 
 ##  <a name="mirrorbitmapvert"></a>  CMFCToolBarImages::MirrorBitmapVert
 
-
 ```
 static BOOL __stdcall MirrorBitmapVert(
     HBITMAP& hbmp,
@@ -1082,15 +1058,14 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>Параметры
 
-*hbmp*<br/>
-[in] [in] *cyImage*
+[in] *hbmp*<br/>
+[in] *cyImage*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="mirrorvert"></a>  CMFCToolBarImages::MirrorVert
-
 
 ```
 BOOL MirrorVert();
@@ -1102,7 +1077,6 @@ BOOL MirrorVert();
 
 ##  <a name="onsyscolorchange"></a>  CMFCToolBarImages::OnSysColorChange
 
-
 ```
 void OnSysColorChange();
 ```
@@ -1110,7 +1084,6 @@ void OnSysColorChange();
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="premultiplyalpha"></a>  CMFCToolBarImages::PreMultiplyAlpha
-
 
 ```
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1122,8 +1095,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>Параметры
 
-*hbmp*<br/>
-[in] [in] *bAutoCheckPremlt*
+[in] *hbmp*<br/>
+[in] *bAutoCheckPremlt*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1197,14 +1170,13 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight
 
-
 ```
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bAlwaysLight*
+[in] *bAlwaysLight*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -1227,14 +1199,13 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ##  <a name="setfadedimagealpha"></a>  CMFCToolBarImages::SetFadedImageAlpha
 
-
 ```
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nValue*
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -1259,19 +1230,17 @@ void SetImageSize(
 
 ##  <a name="setlightpercentage"></a>  CMFCToolBarImages::SetLightPercentage
 
-
 ```
 void SetLightPercentage(int nValue);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nValue*
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="setmapto3dcolors"></a>  CMFCToolBarImages::SetMapTo3DColors
-
 
 ```
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1279,12 +1248,11 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bMapTo3DColors*
+[in] *bMapTo3DColors*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="setpremultiplyautocheck"></a>  CMFCToolBarImages::SetPreMultiplyAutoCheck
-
 
 ```
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1292,12 +1260,11 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *кнопкой мыши*
+[in] *кнопкой мыши*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="setsingleimage"></a>  CMFCToolBarImages::SetSingleImage
-
 
 ```
 void SetSingleImage();

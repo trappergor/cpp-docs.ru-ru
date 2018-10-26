@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1fdf47a6995a29641cf18018199f8d7b88a622c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a873776db6381a78b99e0323e669235b7863ea04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067648"
 ---
 # <a name="changing-the-properties-of-a-string-resource-c"></a>Изменение свойств строковый ресурс (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "44318360"
         > [!NOTE]
         >  Можно также изменить свойства строки в [окно "Свойства"](/visualstudio/ide/reference/properties-window).
 
-Сведения о добавлении ресурсов в управляемые проекты (предназначенные среда CLR), см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: локализация форм Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Сведения о добавлении ресурсов в управляемые проекты (предназначенные среда CLR), см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: локализация форм Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Требования
 
@@ -52,4 +52,4 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Редактор строк](../windows/string-editor.md)  
+[Редактор строк](../windows/string-editor.md)

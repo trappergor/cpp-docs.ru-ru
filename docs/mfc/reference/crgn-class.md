@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90524b63a7d89d43cb6ed080804ed72fe2429e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f6ed7b94509c5dafd868680254c5f48f0066b7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412683"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054232"
 ---
 # <a name="crgn-class"></a>Crgn-класс
 
@@ -333,7 +333,7 @@ BOOL CreateFromPath(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Определяет контекст устройства, содержащий замкнутого контура.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -622,7 +622,7 @@ static CRgn* PASCAL FromHandle(HRGN hRgn);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CRgn`. Если функция не выполнена успешно, возвращается значение NULL.
+Указатель на объект `CRgn` . Если функция не выполнена успешно, возвращается значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
@@ -852,6 +852,4 @@ void SetRectRgn(LPCRECT lpRect);
 
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

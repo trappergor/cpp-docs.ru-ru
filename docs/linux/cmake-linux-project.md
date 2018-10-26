@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 346e83461fd9dbfb7635b85e8765d241564d3157
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 20291e1f824704ee94cb45f14c16d6f0e4960348
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708010"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410841"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
@@ -30,7 +30,7 @@ ms.locfileid: "45708010"
 В этом разделе предполагается, что вы уже знакомы с поддержкой CMake в Visual Studio. Дополнительные сведения см. в разделе [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md). Дополнительные сведения о CMake см. на странице [Сборка, тестирование и упаковка программного обеспечения с помощью CMake](https://cmake.org/).
 
 > [!NOTE]  
-> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт, которая поддерживает панель [Представление целевых объектов CMake](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) в Visual Studio, скачайте последние готовые двоичные файлы: [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). Если диспетчер пакетов предоставляет более раннюю версию, чем CMake 3.8, можно [создать CMake из источника](#build-a-supported-cmake-release-from-source) или, если вы предпочитаете использовать стандартный CMake, скачать нужную версию на [официальной странице CMake](https://cmake.org/download/). 
+> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
 ## <a name="open-a-folder"></a>Открытие папки
 
@@ -72,7 +72,7 @@ add_executable(hello-cmake hello.cpp)
 
 Чтобы отладить код в удаленной системе, задайте точку останова, выберите целевой объект CMake в качестве элемента автозагрузки на панели инструментов рядом с параметром проекта, а затем щелкните **&#x23f5; Запустить** на панели инструментов или нажмите клавишу F5.
 
-Чтобы настроить аргументы командной строки для своей программы, щелкните правой кнопкой мыши исполняемый файл в **обозревателе решений** и выберите **Параметры отладки и запуска**. Будет открыт или создан файл конфигурации launch.vs.json, который содержит сведения о программе. Чтобы указать дополнительные аргументы, добавьте их в массив JSON `args`. Дополнительные сведения см. в статье [Open Folder projects in Visual C++](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects) (Открытие папки проектов в Visual C++).
+Чтобы настроить аргументы командной строки для своей программы, щелкните правой кнопкой мыши исполняемый файл в **обозревателе решений** и выберите **Параметры отладки и запуска**. Будет открыт или создан файл конфигурации launch.vs.json, который содержит сведения о программе. Чтобы указать дополнительные аргументы, добавьте их в массив JSON `args`. Дополнительные сведения см. в статье [Open Folder projects in Visual C++](../ide/non-msbuild-projects.md) (Открытие папки проектов в Visual C++).
 
 ## <a name="configure-cmake-settings-for-linux"></a>Настройка параметров CMake для Linux
 
@@ -118,51 +118,12 @@ add_executable(hello-cmake hello.cpp)
 
 Эти параметры позволяют вам выполнять команды в окне удаленного ввода до и после сборки и до создания CMake. Они могут быть любой допустимой командой в окне удаленного ввода. Выходные данные передаются обратно в Visual Studio.
 
-## <a name="build-a-supported-cmake-release-from-source"></a>Создание поддерживаемого выпуска CMake из источника
+## <a name="download-prebuilt-cmake-binaries"></a>Скачивание предварительно созданных двоичных файлов CMake
 
-Минимальной версией CMake, необходимой на компьютере Linux, является 3.8. Кроме того, должен поддерживаться режим сервера. Чтобы проверить это, выполните следующую команду:
+В дистрибутиве Linux может быть более ранняя версия CMake. Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). 
 
-```cmd
-cmake --version
-```
-
-Чтобы проверить, включен ли режим сервера, выполните следующую команду:
-
-```cmd
-cmake -E capabilities
-```
-
-В выходных данных найдите **"serverMode":true**. Обратите внимание, что даже при компиляции CMake из источника, как описано ниже, после завершения процесса необходимо проверить возможности. Система Linux может накладывать ограничения, которые препятствуют включению режима сервера.
-
-Чтобы начать сборку CMake из источника в оболочке системы Linux, убедитесь, что диспетчер пакетов обновлен и вам доступны средства cmake и git.
-
-Сначала клонируйте источники CMake из [репозитория Microsoft CMake](https://github.com/Microsoft/CMake), в котором доступна вилка для поддержки CMake в Visual Studio:
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-Затем выполните следующие команды, чтобы создать и установить текущий выпуск CMake в папке /usr/local/bin:
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-После этого выполните следующую команду, чтобы удостовериться, что используется версия 3.8 или выше и что включен режим сервера:
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
 
 ## <a name="see-also"></a>См. также
 
-[Работа со свойствами проектов](../ide/working-with-project-properties.md)  
+[Работа со свойствами проектов](../ide/working-with-project-properties.md)<br/>
 [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md)  

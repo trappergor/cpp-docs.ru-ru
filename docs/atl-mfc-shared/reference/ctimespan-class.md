@@ -1,7 +1,7 @@
 ---
 title: Класс CTimeSpan | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397524"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809087"
 ---
 # <a name="ctimespan-class"></a>Класс CTimeSpan
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -133,22 +133,22 @@ bool operator>=(CTimeSpan span) const throw();
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 Объект `CTimeSpan` объект, который уже существует.
 
-*time*  
+*time*<br/>
 Объект **__time64_t** значение времени, которое представляет число секунд в промежутке времени.
 
-*lDays*, *nHours*, *nMins*, *nSecs*  
+*lDays*, *nHours*, *nMins*, *nSecs*<br/>
 Дни, часы минуты и секунды, соответственно.
 
 ### <a name="remarks"></a>Примечания
@@ -163,12 +163,12 @@ int nSecs) throw();
 
 - `CTimeSpan( LONG, int, int, int );` Создает `CTimeSpan` объект из компонентов с каждым компонентом ограничен следующие диапазоны:
 
-    |Компонент|Диапазон|  
-    |---------------|-----------|  
-    |*lDays*|0 – 25 000 (приблизительно)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |Компонент|Диапазон|
+   |---------------|-----------|
+   |*lDays*|0 – 25 000 (приблизительно)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 Обратите внимание, что отладочную версию библиотеки Microsoft Foundation Class утверждает, если один или несколько компонентов времени суток выходит за пределы диапазона. Это необходимо проверить аргументы до вызова метода.
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pFormat*, *pszFormat*  
+*pFormat*, *pszFormat*<br/>
 Форматирование строки аналогичную `printf` форматирования строки. Коды, предшествует процента форматирования (`%`) выполните вход, заменен соответствующим `CTimeSpan` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Значение и значение коды форматирования для `Format` , перечислены ниже:
 
 - **%D** Итого дней в этом `CTimeSpan`
@@ -201,7 +201,7 @@ CString Format(UINT nID) const;
 
 - **%%** Знак процента
 
-*nID*  
+*nID*<br/>
 Идентификатор строки, который определяет этот формат.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Значение, которое нужно добавить `CTimeSpan` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Значение, которое нужно добавить `CTimeSpan` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>Параметры
 
-*ar*  
+*ar*<br/>
 `CArchive` Объект, который требуется обновить.
 
 ### <a name="return-value"></a>Возвращаемое значение

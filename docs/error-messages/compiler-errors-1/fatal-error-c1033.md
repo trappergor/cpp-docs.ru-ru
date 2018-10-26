@@ -16,18 +16,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6338325a788ec0c0e672c2dc28fa8fea73c3ec9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48816aa801e5085d1646efdeff2af40e233cbf3f
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032203"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889867"
 ---
 # <a name="fatal-error-c1033"></a>Неустранимая ошибка C1033
 
 не удается открыть PDB-файл базы данных программы
 
-Эта ошибка может быть вызвана ошибка диска.
-
-
-Дополнительные сведения см. в разделе [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 246007](http://support.microsoft.com/default.aspx?scid=kb;en-us;246007).
+Эта ошибка может вызываться сбой диска, временные блокировка, созданная перекрытием антивирусной программы, предыдущий экземпляр отладчика, который имеет не полностью выключаются, или процессы mspdbsrv.exe параллельной сборки, которые пытаются получить доступ к тому же файлу, среди других возможных причин.

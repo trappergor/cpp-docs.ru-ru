@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5b9d710bef136893c66208480056f6bc6390d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9061205bdf3697e492b846d160a5b4dd2d154bb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429712"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065022"
 ---
 # <a name="deleteitemstruct-structure"></a>Структура DELETEITEMSTRUCT
 
@@ -68,5 +68,4 @@ typedef struct tagDELETEITEMSTRUCT { /* ditms */
 
 [Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
-
 

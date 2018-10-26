@@ -25,84 +25,84 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b90d89a5a9541f0c3c68efc8031e6cb1dd87ad84
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9880da2737ddd58d6521712252906c1431955173
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019033"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052906"
 ---
 # <a name="isessionpropertiesimpl-class"></a>Класс ISessionPropertiesImpl
 
-Предоставляет реализацию [ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\)) интерфейс.  
-  
+Предоставляет реализацию [ISessionProperties](/previous-versions/windows/desktop/ms713721) интерфейс.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T, class PropClass = T>  
-class ATL_NO_VTABLE ISessionPropertiesImpl :  
-   public ISessionProperties,    
-   public CUtlProps<PropClass>  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T, class PropClass = T>
+class ATL_NO_VTABLE ISessionPropertiesImpl :
+   public ISessionProperties,  
+   public CUtlProps<PropClass>
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `ISessionPropertiesImpl`.  
-  
+Ваш класс, производный от `ISessionPropertiesImpl`.
+
 *PropClass*<br/>
-Класс определяемые пользователем свойства, который по умолчанию используется *T*.  
+Класс определяемые пользователем свойства, который по умолчанию используется *T*.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="interface-methods"></a>Методы интерфейса  
-  
-|||  
-|-|-|  
-|[GetProperties](#getproperties)|Возвращает список свойств в группе свойств сеанса, в настоящее время заданы в сеансе.|  
-|[SetProperties](#setproperties)|Задает свойства в группе свойств сеанса.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldb.h
 
-Обязательный интерфейс для сеансов. Этот класс реализует свойства сеанса, вызвав статические функции, определенной на [сопоставление набора свойств](../../data/oledb/begin-propset-map.md). Сопоставление набора свойств должен быть указан в классе сеанса.  
-  
+## <a name="members"></a>Участники
+
+### <a name="interface-methods"></a>Методы интерфейса
+
+|||
+|-|-|
+|[GetProperties](#getproperties)|Возвращает список свойств в группе свойств сеанса, в настоящее время заданы в сеансе.|
+|[SetProperties](#setproperties)|Задает свойства в группе свойств сеанса.|
+
+## <a name="remarks"></a>Примечания
+
+Обязательный интерфейс для сеансов. Этот класс реализует свойства сеанса, вызвав статические функции, определенной на [сопоставление набора свойств](../../data/oledb/begin-propset-map.md). Сопоставление набора свойств должен быть указан в классе сеанса.
+
 ## <a name="getproperties"></a> ISessionPropertiesImpl::GetProperties
 
-Возвращает список свойств в `DBPROPSET_SESSION` группу свойств, заданных в настоящее время на сеанс.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetProperties)(ULONG cPropertyIDSets,   
-   const DBPROPIDSET rgPropertyIDSets[],   
-   ULONG * pcPropertySets,   
-   DBPROPSET ** prgPropertySets);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает список свойств в `DBPROPSET_SESSION` группу свойств, заданных в настоящее время на сеанс.
 
-См. в разделе [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetProperties)(ULONG cPropertyIDSets, 
+   const DBPROPIDSET rgPropertyIDSets[], 
+   ULONG * pcPropertySets, 
+   DBPROPSET ** prgPropertySets);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [ISessionProperties::GetProperties](/previous-versions/windows/desktop/ms723643) в *справочнике программиста OLE DB*.
 
 ## <a name="setproperties"></a> ISessionPropertiesImpl::SetProperties
 
-Задает свойства в `DBPROPSET_SESSION` группу свойств.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets,   
-   DBPROPSET rgPropertySets[]);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Задает свойства в `DBPROPSET_SESSION` группу свойств.
 
-См. в разделе [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405\(v=vs.85\)) в *справочнике программиста OLE DB*.  
-  
-## <a name="see-also"></a>См. также  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(SetProperties)(ULONG cPropertySets, 
+   DBPROPSET rgPropertySets[]);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [ISessionProperties::SetProperties](/previous-versions/windows/desktop/ms714405) в *справочнике программиста OLE DB*.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

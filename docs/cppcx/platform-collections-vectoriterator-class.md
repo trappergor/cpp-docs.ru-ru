@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6be436af0dc6954ff8bab71e598576f463bdcee2
+ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102555"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49336552"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Класс Platform::Collections::VectorIterator
 
@@ -124,7 +124,7 @@ VectorIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorIterator перед его использованием.
 
-Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. `int` Тип во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
+Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. Тип `int` во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
 
 ## <a name="operator-dereference"></a>  VectorIterator::operator\* оператор
 
@@ -157,7 +157,7 @@ bool operator==(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorIterator равен объекту `other`, в противном случае — значение `false`.
+**значение true,** Если текущий объект VectorIterator равен *других*; в противном случае **false**.
 
 ## <a name="operator-greater-than"></a>  VectorIterator::operator&gt; оператор
 
@@ -176,7 +176,7 @@ bool operator>(const VectorIterator& other) const
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorIterator больше, чем `other`; в противном случае `false`.
+**значение true,** Если текущий объект VectorIterator больше, чем *других*; в противном случае **false**.
 
 ## <a name="operator-greater-than-or-equals"></a>  VectorIterator::operator&gt;=-оператор
 
@@ -195,7 +195,7 @@ bool operator>=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorIterator больше или равен объекту `other`, в противном случае — значение `false`.
+**значение true,** ли текущий объект VectorIterator больше или равно *других*; в противном случае **false**.
 
 ## <a name="operator-increment"></a>  Оператор VectorIterator::operator ++
 
@@ -235,7 +235,7 @@ bool operator!=(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorIterator не равен `other`; в противном случае `false`.
+**значение true,** Если текущий объект VectorIterator не равен *других*; в противном случае **false**.
 
 ## <a name="operator-less-than"></a>  VectorIterator::operator&lt; оператор
 
@@ -254,7 +254,7 @@ bool operator<(const VectorIterator& other) const
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение `true`, если текущий объект VectorIterator меньше объекта `other`, в противном случае — значение `false`.
+**значение true,** Если текущий объект vectoriterator меньше, чем *других*; в противном случае **false**.
 
 ## <a name="operator-less-than-or-equals"></a>  VectorIterator::operator&lt;=-оператор
 
@@ -273,7 +273,7 @@ bool operator<=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если текущий объект VectorIterator меньше или равно `other`; в противном случае `false`.
+**значение true,** , является ли текущий объект VectorIterator меньше или равно *других*; в противном случае **false**.
 
 ## <a name="operator-minus"></a>  Оператор VectorIterator::operator-
 
@@ -298,7 +298,7 @@ difference_type operator-(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Синтаксис первого оператора возвращает объект VectorIterator, который является `n` элементов меньше, чем текущий объект VectorIterator. Синтаксис второго оператора возвращает количество элементов между текущим и `other` VectorIterator.
+Синтаксис первого оператора возвращает объект VectorIterator, количество элементов которого меньше, чем у текущего объекта VectorIterator, на `n`. Синтаксис второго оператора возвращает количество элементов между текущим объектом VectorIterator и другим объектом VectorIterator, заданным параметром `other`.
 
 ## <a name="operator-plus-assign"></a>  Оператор VectorIterator::operator +=
 
@@ -319,7 +319,7 @@ VectorIterator& operator+=(difference_type n);
 
 Обновленный VectorIterator.
 
-## <a name="operator-plus"></a>  ectorIterator::operator Operator +
+## <a name="operator-plus"></a>  Оператор VectorIterator::operator +
 
 Возвращает объект VectorIterator, указывающий на элемент с заданным смещением от указанного объекта VectorIterator.
 

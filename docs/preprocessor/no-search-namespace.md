@@ -16,29 +16,29 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c9ebcdd54e145ff17dc7c473abf6a3ae37e35e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0895bc1ab6141eaadbeda4a567b8e4cfaad30658
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440099"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072282"
 ---
 # <a name="nosearchnamespace"></a>no_search_namespace
-**Конкретных C++**  
-  
-Имеет ту же функциональность, что [no_namespace](../preprocessor/no-namespace.md) атрибут, однако применяется для библиотек типов, используемых вами `#import` директиву [auto_search](../preprocessor/auto-search.md) атрибута.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-no_search_namespace  
-```  
-  
-## <a name="remarks"></a>Примечания  
- 
-**КОНЕЦ конкретных C++**  
-  
-## <a name="see-also"></a>См. также  
- 
+**Конкретных C++**
+
+Имеет ту же функциональность, что [no_namespace](../preprocessor/no-namespace.md) атрибут, однако применяется для библиотек типов, используемых вами `#import` директиву [auto_search](../preprocessor/auto-search.md) атрибута.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+no_search_namespace
+```
+
+## <a name="remarks"></a>Примечания
+
+**КОНЕЦ конкретных C++**
+
+## <a name="see-also"></a>См. также
+
 [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [директива #import](../preprocessor/hash-import-directive-cpp.md)

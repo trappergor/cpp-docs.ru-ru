@@ -14,7 +14,6 @@
 # [Стандартная библиотека C++](standard-library/cpp-standard-library-reference.md)
 # [Разработка для Windows](windows/overview-of-windows-programming-in-cpp.md)
 # [Разработка для Linux](linux/download-install-and-setup-the-linux-development-workload.md)
-# [Разработка .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Облачное и веб-программирование в Visual C++](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [Параллельное программирование](parallel/parallel-programming-in-visual-cpp.md)
 # [Доступ к данным](data/data-access-in-cpp.md)

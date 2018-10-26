@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078626"
 ---
 # <a name="implementing-the-event-handling-interface"></a>Реализация интерфейса обработки событий
 
@@ -37,7 +37,7 @@ ATL помогает выполнить все три элементы, необ
 
 - Наследование от [IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md) для диспетчерских интерфейсов, которые не описаны в библиотеке типов, или если вы хотите повысить эффективность, не удалось загрузить сведения о типе времени выполнения.
 
-При реализации пользовательских или два интерфейса, должен сообщить источника события путем вызова [AtlAdvise](reference/connection-point-global-functions.md#atladvise) или [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Вам потребуется для отслеживания файлов cookie, возвращенный вызовом метода самостоятельно. Вызовите [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) Чтобы разорвать подключение.  
+При реализации пользовательских или два интерфейса, должен сообщить источника события путем вызова [AtlAdvise](reference/connection-point-global-functions.md#atladvise) или [CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise). Вам потребуется для отслеживания файлов cookie, возвращенный вызовом метода самостоятельно. Вызовите [AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise) Чтобы разорвать подключение.
 
 При реализации disp-интерфейса с помощью `IDispEventImpl` или `IDispEventSimpleImpl`, следует сообщить источника события путем вызова [IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise). Вызовите [IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise) Чтобы разорвать подключение.
 
@@ -48,4 +48,3 @@ ATL помогает выполнить все три элементы, необ
 ## <a name="see-also"></a>См. также
 
 [Обработка событий](../atl/event-handling-and-atl.md)
-

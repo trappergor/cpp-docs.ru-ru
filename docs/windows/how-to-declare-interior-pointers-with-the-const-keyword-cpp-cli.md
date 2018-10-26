@@ -1,7 +1,7 @@
 ---
 title: 'Практическое: объявление внутренних указателей с помощью ключевого слова const (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ec8b965cb29e689fccf7af6a3692a5fe164a9aa6
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3781caf8d45037ae634ea4baccc8f297aa344609
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603189"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327510"
 ---
 # <a name="how-to-declare-interior-pointers-with-the-const-keyword-ccli"></a>Практическое руководство. Объявление внутренних указателей с использованием ключевого слова const (C++/CLI)
 
 Ниже приведен пример, как использовать **const** в объявлении внутреннего указателя.
 
 > [!IMPORTANT]
-> Эта функция языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
+> Эта возможность языка поддерживается параметром компилятора `/clr`, а параметром компилятора `/ZW` не поддерживается.
 
 ## <a name="example"></a>Пример
 

@@ -113,224 +113,224 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3406614b99e2057c9469fe69d02a9fcbe4eae23b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a5548d9c2b54b265910ea6708bc448f09f8f151
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059991"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
 
-Извлекает и управляет строк, чтобы работать с данными в пакетном режиме, получая несколько дескрипторов строк с помощью одного вызова.  
-  
+Извлекает и управляет строк, чтобы работать с данными в пакетном режиме, получая несколько дескрипторов строк с помощью одного вызова.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class TAccessor>  
-class CBulkRowset : public CRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class TAccessor>
+class CBulkRowset : public CRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Параметры
 
 *TAccessor*<br/>
-Класс, метод доступа.  
+Класс, метод доступа.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[AddRefRows](#addrefrows)|Увеличивает счетчик ссылок.|  
-|[CBulkRowset](#cbulkrowset)|Конструктор.|  
-|[MoveFirst](#movefirst)|Извлекает первую строку данных, выполнения новый массовой выборки при необходимости.|  
-|[MoveLast](#movelast)|Переход к последней строке.|  
-|[MoveNext](#movenext)|Извлекает следующую строку данных.|  
-|[MovePrev](#moveprev)|Переход к предыдущей строке.|  
-|[Функции MoveToBookmark](#movetobookmark)|Получает строку, помеченную с закладкой или строки с указанным смещением из эту закладку.|  
-|[MoveToRatio](#movetoratio)|Извлекает строки, начиная с долей позиции в наборе строк.|  
-|[ReleaseRows](#releaserows)|Задает текущую строку (`m_nCurrentRow`) и выпуски все строки.|  
-|[SetRows](#setrows)|Задает число дескрипторов строк, извлекаемых в одном вызове.|  
-  
-## <a name="example"></a>Пример  
+**Заголовок:** atldbcli.h
 
-В следующем примере показано использование `CBulkRowset` класса.  
-  
-[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[AddRefRows](#addrefrows)|Увеличивает счетчик ссылок.|
+|[CBulkRowset](#cbulkrowset)|Конструктор.|
+|[MoveFirst](#movefirst)|Извлекает первую строку данных, выполнения новый массовой выборки при необходимости.|
+|[MoveLast](#movelast)|Переход к последней строке.|
+|[MoveNext](#movenext)|Извлекает следующую строку данных.|
+|[MovePrev](#moveprev)|Переход к предыдущей строке.|
+|[Функции MoveToBookmark](#movetobookmark)|Получает строку, помеченную с закладкой или строки с указанным смещением из эту закладку.|
+|[MoveToRatio](#movetoratio)|Извлекает строки, начиная с долей позиции в наборе строк.|
+|[ReleaseRows](#releaserows)|Задает текущую строку (`m_nCurrentRow`) и выпуски все строки.|
+|[SetRows](#setrows)|Задает число дескрипторов строк, извлекаемых в одном вызове.|
+
+## <a name="example"></a>Пример
+
+В следующем примере показано использование `CBulkRowset` класса.
+
+[!code-cpp[NVC_OLEDB_Consumer#1](../../data/oledb/codesnippet/cpp/cbulkrowset-class_1.cpp)]
 
 ## <a name="addrefrows"></a> CBulkRowset::AddRefRows
 
-Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\)) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT AddRefRows() throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) следует выполнить приращение счетчика ссылок для всех строк, в данный момент получить из набора строк bulk.
 
-Стандартный HRESULT. 
-  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT AddRefRows() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
+
 ## <a name="cbulkrowset"></a> CBulkRowset::CBulkRowset
 
-Создает новый `CBulkRowset` и устанавливает количество строк по умолчанию до 10.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Создает новый `CBulkRowset` и устанавливает количество строк по умолчанию до 10.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CBulkRowset();  
-```  
+CBulkRowset();
+```
 
 ## <a name="movefirst"></a> CBulkRowset::MoveFirst
 
-Извлекает первую строку данных.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Извлекает первую строку данных.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT MoveFirst() throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+HRESULT MoveFirst() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
 
 Стандартный HRESULT.
 
 ## <a name="movelast"></a> CBulkRowset::MoveLast
 
-Переход к последней строке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT MoveLast() throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Переход к последней строке.
 
-Стандартный HRESULT.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT MoveLast() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
 
 ## <a name="movenext"></a> CBulkRowset::MoveNext
 
-Извлекает следующую строку данных.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT MoveNext() throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Извлекает следующую строку данных.
 
-Стандартный HRESULT. Возвращает DB_S_ENDOFROWSET, по достижении конца набора строк. 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT MoveNext() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT. Возвращает DB_S_ENDOFROWSET, по достижении конца набора строк.
 
 ## <a name="moveprev"></a> CBulkRowset::MovePrev
 
-Переход к предыдущей строке.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT MovePrev() throw();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Переход к предыдущей строке.
 
-Стандартный HRESULT.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT MovePrev() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
 
 ## <a name="movetobookmark"></a> CBulkRowset::MoveToBookmark
 
-Выбирается строка, помеченная закладку или строки с указанным смещением (*lSkip*) из этой закладки.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Выбирается строка, помеченная закладку или строки с указанным смещением (*lSkip*) из этой закладки.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
-   DBCOUNTITEM lSkip = 0) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
+   DBCOUNTITEM lSkip = 0) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *Закладка*<br/>
-[in] Закладка, расположения, из которого требуется извлечь данные.  
-  
-*lSkip*<br/>
-[in] Число строк из закладки в строку. Если *lSkip* равен нулю, первая строка выборки представляет строке с закладкой. Если *lSkip* -1, первый выбранная строка является строкой после строке с закладкой. Если *lSkip* равно -1, первая строка выборки представляет закладками строки.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Закладка, расположения, из которого требуется извлечь данные.
 
-См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988\(v=vs.85\)) в *справочнике программиста OLE DB*. 
+*lSkip*<br/>
+[in] Число строк из закладки в строку. Если *lSkip* равен нулю, первая строка выборки представляет строке с закладкой. Если *lSkip* -1, первый выбранная строка является строкой после строке с закладкой. Если *lSkip* равно -1, первая строка выборки представляет закладками строки.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988) в *справочнике программиста OLE DB*.
 
 ## <a name="movetoratio"></a> CBulkRowset::MoveToRatio
 
-Извлекает строки, начиная с долей позиции в наборе строк.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Извлекает строки, начиная с долей позиции в наборе строк.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
-   DBCOUNTITEM nDenominator)throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
+   DBCOUNTITEM nDenominator)throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nNumerator*<br/>
-[in] Числитель, используемый для определения доли положение, с которого для выборки данных.  
-  
+[in] Числитель, используемый для определения доли положение, с которого для выборки данных.
+
 *nDenominator*<br/>
-[in] Знаменатель, используемый для определения доли положение, с которого для выборки данных.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Знаменатель, используемый для определения доли положение, с которого для выборки данных.
 
-Стандартный HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-`MoveToRatio` Извлекает строки, примерно по следующей формуле:  
-  
-`(nNumerator *  RowsetSize ) / nDenominator`  
-  
-Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602\(v=vs.85\)) в *Справочник программиста OLE DB по*.   
+Стандартный HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+`MoveToRatio` Извлекает строки, примерно по следующей формуле:
+
+`(nNumerator *  RowsetSize ) / nDenominator`
+
+Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602) в *Справочник программиста OLE DB по*.
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 
-Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771\(v=vs.85\)) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT ReleaseRows() throw();   
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) для уменьшения числа ссылок для всех строк, в данный момент получить из набора строк bulk.
 
-Стандартный HRESULT.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT ReleaseRows() throw();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
 
 ## <a name="setrows"></a> CBulkRowset::SetRows
 
-Задает количество дескрипторов строки, полученные при каждом вызове.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Задает количество дескрипторов строки, полученные при каждом вызове.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void SetRows(DBROWCOUNT nRows) throw();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+void SetRows(DBROWCOUNT nRows) throw();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *nRows*<br/>
-[in] Новый размер набора строк (количество строк).  
-  
-### <a name="remarks"></a>Примечания  
+[in] Новый размер набора строк (количество строк).
+
+### <a name="remarks"></a>Примечания
 
 Если вы вызываете эту функцию, он должен быть перед открытием набора строк.
-  
-## <a name="see-also"></a>См. также  
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

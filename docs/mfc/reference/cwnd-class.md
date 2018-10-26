@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f619eeba8f239b145ceb44485a9cc1eadd2cc82d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448614"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083611"
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 Кроме того `BringWindowToTop` активирует всплывающие окна, окна высшего уровня и дочерние окна MDI. Функцию-член `BringWindowToTop` следует использовать, чтобы показать любое окно, частично или полностью скрытое какими-либо перекрывающими окнами.
 
-Эта функция просто вызывает Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx) функции. Вызовите [SetWindowPos](#setwindowpos) функции, чтобы изменить положение окна в Z-порядке. Функция `BringWindowToTop` не изменяет стиль окна, чтобы сделать его окном верхнего уровня. Дополнительные сведения см. в разделе [Какова разница между различаются HWND_TOP и HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+Эта функция просто вызывает Win32 [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) функции. Вызовите [SetWindowPos](#setwindowpos) функции, чтобы изменить положение окна в Z-порядке. Функция `BringWindowToTop` не изменяет стиль окна, чтобы сделать его окном верхнего уровня. Дополнительные сведения см. в разделе [Какова разница между различаются HWND_TOP и HWND_TOPMOST](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>Пример
 
@@ -2035,7 +2035,6 @@ BOOL CreateControl(
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
 
-
 BOOL CreateControl(
     REFCLSID clsid,
     LPCTSTR pszWindowName,
@@ -2046,7 +2045,6 @@ BOOL CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 BOOL CreateControl(
     REFCLSID clsid,
@@ -2140,7 +2138,6 @@ virtual BOOL CreateEx(
     HWND hWndParent,
     HMENU nIDorHMenu,
     LPVOID lpParam = NULL);
-
 
 virtual BOOL CreateEx(
     DWORD dwExStyle,
@@ -2724,7 +2721,7 @@ BOOL DrawCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства. Функция рисует заголовок окна в этот контекст устройства.
 
 *lprc*<br/>
@@ -3207,7 +3204,7 @@ HWND окна Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CWnd`.
+Указатель на объект `CWnd` .
 
 ### <a name="remarks"></a>Примечания
 
@@ -4417,7 +4414,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CWnd`.
+Указатель на объект `CWnd` .
 
 ### <a name="remarks"></a>Примечания
 
@@ -4467,7 +4464,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CWnd`. Если объект `CWnd` не прикреплен к дескриптору, создается и прикрепляется временный объект `CWnd`. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
+Указатель на объект `CWnd` . Если объект `CWnd` не прикреплен к дескриптору, создается и прикрепляется временный объект `CWnd`. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4492,7 +4489,7 @@ void GetProperty(
 Определяет свойство, которое требуется получить.
 
 *vtProp*<br/>
-Тип извлекаемого свойства. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Тип извлекаемого свойства. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Адрес переменной, которая будет получит значение свойства. Он должен соответствовать типа, заданного параметром *vtProp*.
@@ -5363,7 +5360,7 @@ void AFX_CDECL InvokeHelper(
 Флаги, описывающие контекст вызова `IDispatch::Invoke`.
 
 *vtRet*<br/>
-Указывает тип возвращаемого значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип возвращаемого значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Адрес переменной, которая будет, который будет принимать значение свойства или возвращаемое значение. Он должен соответствовать типа, заданного параметром *vtRet*.
@@ -5376,9 +5373,9 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>Примечания
 
-*PbParamInfo* параметр указывает типы параметров, передаваемых в метод или свойство. Переменный список аргументов представлен *...*  в объявлении синтаксиса.
+*PbParamInfo* параметр указывает типы параметров, передаваемых в метод или свойство. Переменный список аргументов представлен в объявлении синтаксиса как *...* .
 
-Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает `IDispatch::Invoke` метода для элемента управления ActiveX. Если вызов `IDispatch::Invoke` завершается ошибкой, эта функция будет создано исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объекта, в противном случае он вызывает [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает `IDispatch::Invoke` метода для элемента управления ActiveX. Если вызов `IDispatch::Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объекта, в противном случае он вызывает [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
 > [!NOTE]
 > Эта функция должна вызываться только на `CWnd` объект, представляющий элемент управления ActiveX.
@@ -5816,7 +5813,6 @@ void MoveWindow(
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE);
-
 
 void MoveWindow(
     LPCRECT lpRect,
@@ -6490,7 +6486,7 @@ afx_msg HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Содержит указатель на контекст отображения для дочернего окна. Может быть временной.
 
 *pWnd*<br/>
@@ -6910,7 +6906,7 @@ afx_msg BOOL OnEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указывает объект контекста устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -7246,7 +7242,7 @@ afx_msg void OnIconEraseBkgnd(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указывает объект контекста устройства значка. Может быть временным и не должны быть сохранены для последующего использования.
 
 ### <a name="remarks"></a>Примечания
@@ -8805,7 +8801,7 @@ afx_msg void OnPaintClipboard(
 Определяет указатель на окно приложения буфера обмена. Указатель может быть временным. Его не требуется сохранять для дальнейшего использования.
 
 *hPaintStruct*<br/>
-Идентифицирует [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) структура данных, которая определяет, какая часть клиентской области для рисования.
+Определяет структуру данных [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) , которая определяет, какая часть клиентской области предназначена для рисования.
 
 ### <a name="remarks"></a>Примечания
 
@@ -10497,7 +10493,7 @@ BOOL PaintWindowlessControls(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Контекст устройства, на котором необходимо рисовать элементы управления без окон.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -10602,7 +10598,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows.
+Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) .
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -10629,7 +10625,7 @@ void Print(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства.
 
 *dwFlags*<br/>
@@ -10675,7 +10671,7 @@ void PrintClient(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства.
 
 *dwFlags*<br/>
@@ -10705,7 +10701,7 @@ BOOL PrintWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства для печати на.
 
 *nFlags*<br/>
@@ -10855,7 +10851,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Определяет контекст устройства, которые будут выпущены.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -11592,7 +11588,7 @@ void AFX_CDECL SetProperty(
 Определяет свойство, которое необходимо задать.
 
 *vtProp*<br/>
-Определяет тип свойства, которое необходимо задать. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Определяет тип свойства, которое необходимо задать. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Один параметр типа, заданного параметром *vtProp*.

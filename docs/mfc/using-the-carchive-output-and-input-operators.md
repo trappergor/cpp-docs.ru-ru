@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061317"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>С помощью CArchive &lt; &lt; и &gt; &gt; операторы
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372461"
 
 1. В следующем примере показано, как для хранения объекта в файле через архив:
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>Для загрузки объекта из значения ранее сохраняются в файле
 
 1. Приведенный ниже показано, как загрузить объект со значением параметра ранее сохраняются в файле:
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 Как правило, сохранять и загружать данные в файл с помощью архива в и из `Serialize` функции `CObject`-производные классы, которые должен был объявлен с помощью макроса DECLARE_SERIALIZE. Ссылку на `CArchive` объект передается в вашей `Serialize` функции. Вы вызываете `IsLoading` функции `CArchive` объектом, чтобы определить ли `Serialize` функция была вызвана для загрузки данных из файла или хранения данных в файл.
 
@@ -57,8 +57,8 @@ ms.locfileid: "46372461"
 |-|-|-|
 |`CObject*`|**РАЗМЕР** и `CSize`|**float**|
 |**WORD**|`CString`|**ТОЧКА** и `CPoint`|
-|`DWORD`|**BYTE**|`RECT` и `CRect`.|
-|**Double**|**LONG**|`CTime` и `CTimeSpan`.|
+|`DWORD`|**BYTE**|`RECT` и `CRect`|
+|**Double**|**LONG**|`CTime` и `CTimeSpan`|
 |`Int`|**COleCurrency**|`COleVariant`|
 |`COleDateTime`|`COleDateTimeSpan`||
 

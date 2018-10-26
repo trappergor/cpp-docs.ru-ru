@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080121"
 ---
-# <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY  
+# <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY
 
-Эти макросы ввести интерфейсы объекта в его сопоставления COM, таким образом, чтобы они обращаются `QueryInterface`. Порядок записей в карте COM является интерфейсов порядок будет проверяться сопоставления IID во время `QueryInterface`.  
+Эти макросы ввести интерфейсы объекта в его сопоставления COM, таким образом, чтобы они обращаются `QueryInterface`. Порядок записей в карте COM является интерфейсов порядок будет проверяться сопоставления IID во время `QueryInterface`.
 
 |||
 |-|-|
@@ -55,7 +55,7 @@ ms.locfileid: "46085229"
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Выполняет сопоставление COM базового класса, когда будет достигнут эту запись в карту COM.|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|Общий механизм для прикрепления ATL `QueryInterface` логики.|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func), за исключением того, что запрос любой IID приводит к вызову для *func*.|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Возвращается E_NOINTERFACE и завершения обработки COM карты при запросе указанный интерфейс.|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|Возвращается E_NOINTERFACE и завершения обработки COM карты при запросе указанный интерфейс.|
 
 ## <a name="requirements"></a>Требования
 
@@ -70,6 +70,7 @@ ms.locfileid: "46085229"
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
@@ -88,6 +89,7 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
+
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** atlcom.h
@@ -356,7 +358,7 @@ COM_INTERFACE_ENTRY_FUNC(iid, dw, func)
 *dw*<br/>
 [in] Параметр, передаваемый через *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] Указатель на функцию, которая вернет *iid*.
 
 ### <a name="remarks"></a>Примечания
@@ -380,7 +382,7 @@ COM_INTERFACE_ENTRY_FUNC_BLIND(dw, func)
 *dw*<br/>
 [in] Параметр, передаваемый через *func*.
 
-*Func*<br/>
+*func*<br/>
 [in] Функция, которая вызывается при обработке данной записи в COM карты.
 
 ### <a name="remarks"></a>Примечания
@@ -406,4 +408,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 Интерфейс IID будет сформировать, добавив *x* для `IID_`. Например если *x* — `IPersistStorage`, будет иметь идентификатор IID `IID_IPersistStorage`.
 
-  

@@ -1,7 +1,7 @@
 ---
 title: Класс CSimpleStringT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 326fdd3d4d5e8f19408adc7300c97523b37d942e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434665"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078938"
 ---
 # <a name="csimplestringt-class"></a>Класс CSimpleStringT
 
@@ -66,14 +66,14 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>Параметры
 
-*BaseType*  
+*BaseType*<br/>
 Тип символа класса string. Ниже указаны доступные значения.
 
 - **char** (для символьных строк ANSI).
 
 - **wchar_t** (для символьных строк в Юникоде).
 
-- TCHAR (для символьных строк ANSI и Юникода).  
+- TCHAR (для символьных строк ANSI и Юникода).
 
 ## <a name="members"></a>Участники
 
@@ -89,8 +89,7 @@ class CSimpleStringT
 |Имя|Описание|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Создает `CSimpleStringT` объекты различными способами.|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Деструктор.|  
-
+|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -119,7 +118,7 @@ class CSimpleStringT
 |[CSimpleStringT::SetString](#setstring)|Задает строку `CSimpleStringT` объекта.|
 |[CSimpleStringT::StringLength](#stringlength)|Возвращает число символов в указанной строке.|
 |[CSimpleStringT::Truncate](#truncate)|Усекает строку до указанной длины.|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Обеспечивает подсчет ссылок и освобождает строку в буфере.|  
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|Обеспечивает подсчет ссылок и освобождает строку в буфере.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
@@ -136,7 +135,7 @@ class CSimpleStringT
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsimpstr.h  
+**Заголовок:** atlsimpstr.h
 
 ## <a name="append"></a> CSimpleStringT::Append
 
@@ -145,19 +144,20 @@ class CSimpleStringT
 ### <a name="syntax"></a>Синтаксис
 
 ```
-void Append(const CSimpleStringT& strSrc); 
-void Append(PCXSTR pszSrc, int nLength); 
+void Append(const CSimpleStringT& strSrc);
+void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT` Объект для добавления.
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется добавить.
 
-*nLength*  
+*nLength*<br/>
 Количество добавляемых знаков.
 
 ### <a name="remarks"></a>Примечания
@@ -168,7 +168,7 @@ void Append(PCXSTR pszSrc);
 
 В следующем примере показано использование функции `CSimpleStringT::Append`.
 
-```cpp  
+```cpp
 CSimpleString str1(pMgr), str2(pMgr);
 str1.SetString(_T("Soccer is"));
 str2.SetString(_T(" an elegant game"));
@@ -185,9 +185,10 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
 void AppendChar(XCHAR ch);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*ch*  
+*ch*<br/>
 Символ для добавления
 
 ### <a name="remarks"></a>Примечания
@@ -198,7 +199,7 @@ void AppendChar(XCHAR ch);
 
 Копирует символ или символы, `CSimpleStringT` объекта.
 
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Синтаксис
 
 ```
 static void CopyChars(
@@ -209,13 +210,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>Параметры
 
-*pchDest*  
+*pchDest*<br/>
 Указатель на строку символов.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется скопировать.
 
-*nChars*  
+*nChars*<br/>
 Число *pchSrc* копируемых символов.
 
 ### <a name="remarks"></a>Примечания
@@ -226,7 +227,7 @@ static void CopyChars(
 
 В следующем примере показано использование функции `CSimpleStringT::CopyChars`.
 
-```cpp  
+```cpp
 CSimpleString str(_T("xxxxxxxxxxxxxxxxxxx"), 20, pMgr);
 TCHAR* pszSrc = _T("Hello world!");
 _tprintf_s(_T("%s\n"), str);
@@ -238,7 +239,7 @@ _tprintf_s(_T("%s\n"), str);
 
 Копирует символ или символы, `CSimpleStringT` объекта.
 
-### <a name="syntax"></a>Синтаксис  
+### <a name="syntax"></a>Синтаксис
 
 ```
 static void CopyCharsOverlapped(
@@ -249,13 +250,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>Параметры
 
-*pchDest*  
+*pchDest*<br/>
 Указатель на строку символов.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на строку, содержащую символы, которые требуется скопировать.
 
-*nChars*  
+*nChars*<br/>
 Число *pchSrc* копируемых символов.
 
 ### <a name="remarks"></a>Примечания
@@ -273,26 +274,27 @@ static void CopyCharsOverlapped(
 ### <a name="syntax"></a>Синтаксис
 
 ```
-CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(const CSimpleStringT& strSrc); 
-explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw(); 
+CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr);
+CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr);
+CSimpleStringT(const CSimpleStringT& strSrc);
+explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*strSrc*  
+*strSrc*<br/>
 Существующий `CSimpleStringT` объект, который необходимо скопировать в это `CSimpleStringT` объекта.
 
-*pchSrc*  
+*pchSrc*<br/>
 Указатель на массив символов длиной *nLength*, не заканчивается на null.
 
-*pszSrc*  
+*pszSrc*<br/>
 Заканчивающуюся нулем строку, который необходимо скопировать в это `CSimpleStringT` объекта.
 
-*nLength*  
+*nLength*<br/>
 Число символов в `pch`.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на диспетчер памяти `CSimpleStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управление памятью для `CSimpleStringT`, см. в разделе [управление памятью и CStringT](../memory-management-with-cstringt.md).
 
 ### <a name="remarks"></a>Примечания
@@ -303,7 +305,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 
 В следующем примере показано использование `CSimpleStringT::CSimpleStringT` с помощью ATL **typedef** `CSimpleString`. `CSimpleString` является часто используемые специализацией шаблона класса `CSimpleStringT`.
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr);
 // Empty string
 CSimpleString s2(_T("cat"), pMgr);
@@ -315,9 +317,8 @@ CSimpleString s4(s2 + _T(" ") + s3);
 
 // From a string expression
 CSimpleString s5(_T("xxxxxx"), 6, pMgr);
-// s5 = "xxxxxx"   
+// s5 = "xxxxxx"
 ```
-
 
 ##  <a name="empty"></a>  CSimpleStringT::Empty
 
@@ -326,8 +327,9 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 ### <a name="syntax"></a>Синтаксис
 
 ```
-void Empty() throw();  
+void Empty() throw();
 ```
+
 ### <a name="remarks"></a>Примечания
 
 Дополнительные сведения см. в разделе [строк: очистка исключений CString](../cstring-exception-cleanup.md).
@@ -336,9 +338,9 @@ void Empty() throw();
 
 В следующем примере показано использование функции `CSimpleStringT::Empty`.
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
-ASSERT(s.IsEmpty());  
+ASSERT(s.IsEmpty());
 ```
 
 ##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
@@ -348,15 +350,16 @@ ASSERT(s.IsEmpty());
 ### <a name="syntax"></a>Синтаксис
 
 ```
-void FreeExtra(); 
+void FreeExtra();
 ```
+
 ### <a name="remarks"></a>Примечания
 
 Это должно снизить число дополнительная нагрузка на память, занятая строковый объект. Метод повторно выделяет буфер для точная длина возвращенных [GetLength](#getlength).
 
 ### <a name="example"></a>Пример
 
-```cpp  
+```cpp
 CAtlString basestr;
 IAtlStringMgr* pMgr;
 
@@ -368,13 +371,13 @@ CSimpleString str(_T("Many sports are fun to play."), 28, pMgr);
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// Assigning a smaller string won't cause CSimpleString to free its 
+// Assigning a smaller string won't cause CSimpleString to free its
 // memory, because it assumes the string will grow again anyway.
 str = _T("Soccer is best!");
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// This call forces CSimpleString to release the extra 
+// This call forces CSimpleString to release the extra
 // memory it doesn't need.
 str.FreeExtra();
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
@@ -398,8 +401,9 @@ Alloc length is 15, String length is 15
 ### <a name="syntax"></a>Синтаксис
 
 ```
-int GetAllocLength() const throw();  
+int GetAllocLength() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Число символов, выделенных для этого объекта.
@@ -417,9 +421,10 @@ int GetAllocLength() const throw();
 ```
 XCHAR GetAt(int iChar) const;
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в `CSimpleStringT` объекта. *IChar* параметр должен быть больше или равно 0 и меньше, чем значение, возвращенное [GetLength](#getlength). В противном случае `GetAt` возникает исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -434,7 +439,7 @@ XCHAR GetAt(int iChar) const;
 
 Следующий пример демонстрирует, как использовать `CSimpleStringT::GetAt`.
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
@@ -446,12 +451,13 @@ ASSERT(s.GetAt(2) == _T('c'));
 ### <a name="syntax"></a>Синтаксис
 
 ```
-PXSTR GetBuffer(int nMinBufferLength); 
+PXSTR GetBuffer(int nMinBufferLength);
 PXSTR GetBuffer();
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 Минимальное число символов, содержащихся в буфере символов. Это значение не включает свободное место для завершающего нуль.
 
 Если *nMinBufferLength* больше, чем длина буфера текущего `GetBuffer` уничтожает текущего буфера и заменяет его с буфером запрошенного размера обнуляется счетчик ссылок объекта. Если ранее был вызван [LockBuffer](#lockbuffer) данного буфера, вы потеряете блокировки буфера.
@@ -476,7 +482,7 @@ PXSTR GetBuffer();
 
 ### <a name="example"></a>Пример
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcd"), pMgr);
 LPTSTR pBuffer = s.GetBuffer(10);
 int sizeOfBuffer = s.GetAllocLength();
@@ -484,7 +490,7 @@ int sizeOfBuffer = s.GetAllocLength();
 // Directly access CSimpleString buffer
 _tcscpy_s(pBuffer, sizeOfBuffer, _T("Hello"));
 ASSERT(_tcscmp(s, _T("Hello")) == 0);
-s.ReleaseBuffer();   
+s.ReleaseBuffer();
 ```
 
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
@@ -496,9 +502,10 @@ s.ReleaseBuffer();
 ```
 PXSTR GetBufferSetLength(int nLength);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nLength*  
+*nLength*<br/>
 Точный размер `CSimpleStringT` символ буфера в символах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -529,14 +536,14 @@ PXSTR GetBufferSetLength(int nLength);
 
 В следующем примере показано использование функции `CSimpleStringT::GetBufferSetLength`.
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 LPTSTR pstr = str.GetBufferSetLength(3);
 pstr[0] = _T('C');
 pstr[1] = _T('u');
 pstr[2] = _T('p');
 
-// No need for trailing zero or call to ReleaseBuffer() 
+// No need for trailing zero or call to ReleaseBuffer()
 // because GetBufferSetLength() set it for us.
 
 str += _T(" soccer is best!");
@@ -550,8 +557,9 @@ ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ### <a name="syntax"></a>Синтаксис
 
 ```
-int GetLength() const throw();  
+int GetLength() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Количество символов в строке.
@@ -569,8 +577,9 @@ int GetLength() const throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```
-IAtlStringMgr* GetManager() const throw();  
+IAtlStringMgr* GetManager() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на диспетчер памяти для `CSimpleStringT` объекта.
@@ -588,6 +597,7 @@ IAtlStringMgr* GetManager() const throw();
 ```
 PCXSTR GetString() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку символов с завершающим нулем.
@@ -603,7 +613,7 @@ PCXSTR GetString() const throw();
 
 В следующем примере показано использование функции `CSimpleStringT::GetString`.
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
@@ -616,8 +626,9 @@ _tprintf_s(_T("%s"), str.GetString());
 ### <a name="syntax"></a>Синтаксис
 
 ```
-bool IsEmpty() const throw();  
+bool IsEmpty() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает значение TRUE, если `CSimpleStringT` объект имеет 0 длины; в противном случае — FALSE.
@@ -630,7 +641,7 @@ bool IsEmpty() const throw();
 
 В следующем примере показано использование функции `CSimpleStringT::IsEmpty`.
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
@@ -644,6 +655,7 @@ ASSERT(s.IsEmpty());
 ```
 PXSTR LockBuffer();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Указатель на `CSimpleStringT` объект или строку, завершающуюся символом null.
@@ -675,7 +687,7 @@ PXSTR LockBuffer();
 
 В следующем примере показано использование функции `CSimpleStringT::LockBuffer`.
 
-```cpp  
+```cpp
 CSimpleString str(_T("Hello"), pMgr);
 TCHAR ch;
 
@@ -694,9 +706,10 @@ str.UnlockBuffer();
 ```
 XCHAR operator[](int iChar) const;
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в строке.
 
 ### <a name="remarks"></a>Примечания
@@ -710,7 +723,7 @@ XCHAR operator[](int iChar) const;
 
 В следующем примере показано использование функции `CSimpleStringT::operator []`.
 
-```cpp  
+```cpp
 CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
@@ -721,13 +734,13 @@ ASSERT(s[1] == _T('b'));
 
 ### <a name="syntax"></a>Синтаксис
 
-``` 
+```
 XCHAR operator[](int iChar) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в строке.
 
 ### <a name="remarks"></a>Примечания
@@ -737,7 +750,6 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  Можно использовать индекс (**[]**) оператор, чтобы получить это значение символа в `CSimpleStringT`, но его нельзя использовать для изменения значения символа в `CSimpleStringT`.
 
-
 ##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 Присоединяет новую строку или символ в конец существующей строки.
@@ -745,23 +757,24 @@ XCHAR operator[](int iChar) const;
 ### <a name="syntax"></a>Синтаксис
 
 ```
-CSimpleStringT& operator +=(PCXSTR pszSrc); 
-CSimpleStringT& operator +=(const CSimpleStringT& strSrc); 
-template<int t_nSize>  
-CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc); 
-CSimpleStringT& operator +=(char ch); 
-CSimpleStringT& operator +=(unsigned char ch); 
+CSimpleStringT& operator +=(PCXSTR pszSrc);
+CSimpleStringT& operator +=(const CSimpleStringT& strSrc);
+template<int t_nSize>
+CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc);
+CSimpleStringT& operator +=(char ch);
+CSimpleStringT& operator +=(unsigned char ch);
 CSimpleStringT& operator +=(wchar_t ch);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*strSrc*  
+*strSrc*<br/>
 Указатель на существующий `CSimpleStringT` объекта.
 
-*ch*  
+*ch*<br/>
 Символ значение для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -772,7 +785,7 @@ CSimpleStringT& operator +=(wchar_t ch);
 
 В следующем примере показано использование функции `CSimpleStringT::operator +=`.
 
-```cpp  
+```cpp
 CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
@@ -784,15 +797,16 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ### <a name="syntax"></a>Синтаксис
 
 ```
-CSimpleStringT& operator =(PCXSTR pszSrc); 
+CSimpleStringT& operator =(PCXSTR pszSrc);
 CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*strSrc*  
+*strSrc*<br/>
 Указатель на существующий `CSimpleStringT` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -803,7 +817,7 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 
 В следующем примере показано использование функции `CSimpleStringT::operator =`.
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr), s2(pMgr);
 // Empty CSimpleStringT objects
 
@@ -814,7 +828,7 @@ ASSERT(_tcscmp(s1, _T("cat")) == 0);
 s2 = s1;               // s1 and s2 each = "cat"
 ASSERT(_tcscmp(s2, _T("cat")) == 0);
 
-s1 = _T("the ") + s1;      
+s1 = _T("the ") + s1;
 // Or expressions
 ASSERT(_tcscmp(s1, _T("the cat")) == 0);
 
@@ -823,7 +837,7 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
 
 Напрямую обращается к символов, сохраненных в `CSimpleStringT` объект в виде строки C-стиля.
 
@@ -832,6 +846,7 @@ ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 operator PCXSTR() const throw();
 ```
+
 ### <a name="return-value"></a>Возвращаемое значение
 
 Символ указатель на строку данных.
@@ -844,8 +859,8 @@ operator PCXSTR() const throw();
 
 В следующем примере показано использование функции `CSimpleStringT::operator PCXSTR`.
 
-```cpp  
-// If the prototype of a function is known to the compiler, 
+```cpp
+// If the prototype of a function is known to the compiler,
 // the PCXSTR cast operator may be invoked implicitly.
 
 CSimpleString strSports(L"Soccer is Best!", pMgr);
@@ -853,25 +868,25 @@ WCHAR sz[1024];
 
 wcscpy_s(sz, strSports);
 
-// If the prototype isn't known or is a va_arg prototype, 
-// you must invoke the cast operator explicitly. For example, 
+// If the prototype isn't known or is a va_arg prototype,
+// you must invoke the cast operator explicitly. For example,
 // the va_arg part of a call to swprintf_s() needs the cast:
 
 swprintf_s(sz, 1024, L"I think that %s!\n", (PCWSTR)strSports);
 
-// While the format parameter is known to be an PCXSTR and 
+// While the format parameter is known to be an PCXSTR and
 // therefore doesn't need the cast:
 
 swprintf_s(sz, 1024, strSports);
 
-// Note that some situations are ambiguous. This line will 
+// Note that some situations are ambiguous. This line will
 // put the address of the strSports object to stdout:
 
 wcout << strSports;
 
 // while this line will put the content of the string out:
 
-wcout << (PCWSTR)strSports;   
+wcout << (PCWSTR)strSports;
 ```
 
 ##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
@@ -881,8 +896,9 @@ wcout << (PCWSTR)strSports;
 ### <a name="syntax"></a>Синтаксис
 
 ```
-typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;    
+typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
+
 ##  <a name="preallocate"></a>  CSimpleStringT::Preallocate
 
 Выделяет определенный объем байт для `CSimpleStringT` объекта.
@@ -892,9 +908,10 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
 void Preallocate( int nLength);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nLength*  
+*nLength*<br/>
 Точный размер `CSimpleStringT` символ буфера в символах.
 
 ### <a name="remarks"></a>Примечания
@@ -907,7 +924,7 @@ void Preallocate( int nLength);
 
 В следующем примере показано использование функции `CSimpleStringT::Preallocate`.
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 str.Preallocate(100);
@@ -921,8 +938,9 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ### <a name="syntax"></a>Синтаксис
 
 ```
-typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
+typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
+
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
 
 Управление буфер, выделенный с [GetBuffer](#getbuffer).
@@ -932,9 +950,10 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
 void ReleaseBuffer(int nNewLength = -1);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Новая длина строки в символах, не считая завершающий нуль-символ. Если строка имеет значение null прервано, значение по умолчанию-1 задает `CSimpleStringT` размер к текущей длины строки.
 
 ### <a name="remarks"></a>Примечания
@@ -945,7 +964,7 @@ void ReleaseBuffer(int nNewLength = -1);
 
 В следующем примере показано использование функции `CSimpleStringT::ReleaseBuffer`.
 
-```cpp  
+```cpp
 const int bufferSize = 1024;
 CSimpleString s(_T("abc"), pMgr);
 LPTSTR p = s.GetBuffer(bufferSize);
@@ -972,9 +991,10 @@ ASSERT(s.GetLength() == 3);
 ```
 void ReleaseBufferSetLength(int nNewLength);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Длина строки, которые выпускаются
 
 ### <a name="remarks"></a>Примечания
@@ -990,12 +1010,13 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 void SetAt(int iChar, XCHAR ch);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*iChar*  
+*iChar*<br/>
 Отсчитываемый от нуля индекс символа в `CSimpleStringT` объекта. *IChar* параметр должен быть больше или равно 0 и меньше, чем значение, возвращенное [GetLength](#getlength).
 
-*ch*  
+*ch*<br/>
 Новый символ.
 
 ### <a name="remarks"></a>Примечания
@@ -1006,7 +1027,7 @@ void SetAt(int iChar, XCHAR ch);
 
 В следующем примере показано использование функции `CSimpleStringT::SetAt`.
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
@@ -1021,9 +1042,10 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ```
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на новый диспетчер памяти.
 
 ### <a name="remarks"></a>Примечания
@@ -1034,7 +1056,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 
 В следующем примере показано использование функции `CSimpleStringT::SetManager`.
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
@@ -1046,15 +1068,16 @@ s.SetManager(pCustomMgr);
 ### <a name="syntax"></a>Синтаксис
 
 ```
-void SetString(PCXSTR pszSrc, int nLength); 
+void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на строку, завершающуюся символом null.
 
-*nLength*  
+*nLength*<br/>
 Число символов в *pszSrc*.
 
 ### <a name="remarks"></a>Примечания
@@ -1073,7 +1096,7 @@ void SetString(PCXSTR pszSrc);
 
 В следующем примере показано использование функции `CSimpleStringT::SetString`.
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(_tcscmp(s, _T("abcdef")) == 0);
 s.SetString(_T("Soccer"), 6);
@@ -1089,9 +1112,10 @@ ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
 ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Указатель на строку, завершающуюся символом null.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1106,7 +1130,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 
 В следующем примере показано использование функции `CSimpleStringT::StringLength`.
 
-```cpp  
+```cpp
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 
@@ -1119,9 +1143,10 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 void Truncate(int nNewLength);
 ```
+
 #### <a name="parameters"></a>Параметры
 
-*nNewLength*  
+*nNewLength*<br/>
 Новая длина строки.
 
 ### <a name="remarks"></a>Примечания
@@ -1135,7 +1160,7 @@ void Truncate(int nNewLength);
 
 В следующем примере показано использование функции `CSimpleStringT::Truncate`.
 
-```cpp  
+```cpp
 CSimpleString str(_T("abcdefghi"), pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
@@ -1153,6 +1178,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 ```
 void UnlockBuffer() throw();
 ```
+
 ### <a name="remarks"></a>Примечания
 
 Вызовите этот метод, чтобы сбросить счетчик ссылок строки до 1.
@@ -1168,6 +1194,7 @@ void UnlockBuffer() throw();
 ```
 ~CSimpleStringT() throw();
 ```
+
 ### <a name="remarks"></a>Примечания
 
 Этот метод вызывается для уничтожения `CSimpleStringT` объекта.

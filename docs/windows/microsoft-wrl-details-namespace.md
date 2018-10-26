@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436888"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250397"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Пространство имен Microsoft::WRL::Details
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[Класс MakeAllocator](../windows/makeallocator-class.md)|Выделяет память для активируемого класса, с или без поддержку слабых ссылок.|
 |[Класс ModuleBase](../windows/modulebase-class.md)|Представляет базовый класс для [модуль](../windows/module-class.md) классы.|
 |[Класс RemoveIUnknown](../windows/removeiunknown-class.md)|Создает тип, который эквивалентен `IUnknown`-на основе типа, но имеет невиртуальный `QueryInterface`, `AddRef`, и `Release` методы.|
-|[Класс WeakReference](../windows/weakreference-class1.md)|Представляет *слабую ссылку* , можно использовать с помощью среды выполнения Windows или классической модели COM. Слабая ссылка представляет собой объект, который может быть доступен или недоступен.|
+|[Класс WeakReference](../windows/weakreference-class.md)|Представляет *слабую ссылку* , можно использовать с помощью среды выполнения Windows или классической модели COM. Слабая ссылка представляет собой объект, который может быть доступен или недоступен.|
 
 ### <a name="structures"></a>Структуры
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[Функция ActivationFactoryCallback](../windows/activationfactorycallback-function.md)|Возвращает фабрику активации для активации указанного идентификатора.|
 |[Функция Move](../windows/move-function.md)|Перемещает указанный аргумент из одного расположения в другое.|
 |[Функция RaiseException](../windows/raiseexception-function.md)|Вызывает исключение в вызывающем потоке.|
-|[Функция Swap (библиотека шаблонов C++ среды выполнения Windows)](../windows/swap-function-windows-runtime-cpp-template-library.md)|Меняет местами значения двух заданных аргументов.|
+|[Функция Swap (WRL)](../windows/swap-function-wrl.md)|Меняет местами значения двух заданных аргументов.|
 |[Функция TerminateMap](../windows/terminatemap-function.md)|Завершает работу фабрик классов в указанном модуле.|
 
 ## <a name="requirements"></a>Требования

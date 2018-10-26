@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430596"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063241"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>Окно "Цвета" (редактор изображений для значков)
 
@@ -36,8 +36,8 @@ ms.locfileid: "46430596"
 
 2. **Индикатор цветов**, показывающий цвета переднего плана и фона, селекторы для экрана и инвертированный цвет.
 
-   ![Окно "цвета"](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-Окно "Цвета"
+   ![Окно "цвета"](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   Окно "Цвета"
 
 > [!NOTE]
 > **Экрана цвет** и **Инвертированный цвет** средства доступны только для значков и курсоров.

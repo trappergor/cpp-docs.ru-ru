@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408574"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058912"
 ---
 # <a name="record-field-exchange-functions"></a>Функции обмена данными полями записей
 
@@ -440,7 +440,6 @@ void RFX_Single(
 
 **Заголовок:** afxdb.h
 
-
 ## <a name="rfx_text"></a>  RFX_Text
 
 Передача `CString` данных между элементами данных полей `CRecordset` объекта и записи в источнике данных ODBC типа SQL_LONGVARCHAR, SQL_CHAR, SQL_VARCHAR, SQL_DECIMAL или SQL_NUMERIC.
@@ -506,7 +505,6 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -873,7 +871,6 @@ void RFX_Single_Bulk(
 
 **Заголовок:** afxdb.h
 
-
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
 Передает несколько строк, символьных данных из столбца источника данных ODBC в соответствующий массив `CRecordset`-объект, производный от.
@@ -986,7 +983,6 @@ void AFXAPI DFX_Binary(
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1249,7 +1245,6 @@ void AFXAPI DFX_Long(
 
 **Заголовок:** afxdao.h
 
-
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
 **Важные** рекомендуется использовать [DFX_Binary](#dfx_binary) вместо этой функции.
@@ -1342,7 +1337,6 @@ void AFXAPI DFX_Short(
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 

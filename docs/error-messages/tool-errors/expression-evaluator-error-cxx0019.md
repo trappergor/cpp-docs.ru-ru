@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f1e78bd88f35240e90332ef9a9139558051cab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070131"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>Ошибка вычислителя выражений CXX0019
 
@@ -42,4 +42,4 @@ ms.locfileid: "46031812"
     (char **)h_message
     ```
 
-     Невозможно вычислить с помощью вычислителя выражений C.
+   Невозможно вычислить с помощью вычислителя выражений C.

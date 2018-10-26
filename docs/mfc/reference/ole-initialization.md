@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cd4318ac3d6b1da998e661da2a88f46cb84c8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0187364a44c84a2d0f7f38e968e0ea17df1fb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435835"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064164"
 ---
 # <a name="ole-initialization"></a>Инициализация OLE
 
@@ -34,7 +34,6 @@ ms.locfileid: "46435835"
 |-|-|
 |[AfxOleInit](#afxoleinit)|Инициализирует библиотек OLE.|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|Вызовите эту функцию в объект приложения `InitInstance` функции, чтобы включить поддержку для включения элементов управления OLE.|
-
 
 ## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 
@@ -53,7 +52,6 @@ void AfxEnableControlContainer( );
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxdisp.h
-
 
 ##  <a name="afxoleinit"></a>  AfxOleInit
 
@@ -79,7 +77,7 @@ BOOL AFXAPI AfxOleInit();
 >  Если **AfxOleInit** вызывается из библиотеки DLL MFC, вызов завершится ошибкой. Сбой происходит, так как функция предполагает, что, если он вызывается из библиотеки DLL, система OLE ранее был инициализирован в вызывающем приложении.
 
 > [!NOTE]
->  MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED). Дополнительные сведения см. в статье PRB: MFC приложение перестает отвечать на запросы при инициализации приложения в качестве многопотокового подразделения (828643) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+>  MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
 ### <a name="requirements"></a>Требования
 

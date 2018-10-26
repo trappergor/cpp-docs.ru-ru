@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053803"
 ---
 # <a name="functions-c"></a>Функции (C++)
 
@@ -101,7 +101,7 @@ int sum(int a, int b)
 
     ```
 
-     Дополнительные сведения см. в разделе [программа и компоновка](../cpp/program-and-linkage-cpp.md).
+   Дополнительные сведения см. в разделе [программа и компоновка](../cpp/program-and-linkage-cpp.md).
 
 1. **встроенный**, предписывающее компилятору команду заменять каждый вызов функции с код самой функции. Подстановка может улучшить эффективность кода в сценариях, где функция выполняется быстро и многократно вызывается во фрагментах, являющихся критическими для производительности программы.
 
@@ -112,7 +112,7 @@ int sum(int a, int b)
     }
     ```
 
-     Дополнительные сведения см. в разделе [встраиваемые функции](../cpp/inline-functions-cpp.md).
+   Дополнительные сведения см. в разделе [встраиваемые функции](../cpp/inline-functions-cpp.md).
 
 1. Объект `noexcept` выражение, которое указывает ли функция может создавать исключения. В следующем примере функция не вызывает исключение, если `is_pod` выражение, результатом которого является **true**.
 
@@ -123,7 +123,7 @@ int sum(int a, int b)
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     Дополнительные сведения см. в разделе [noexcept](../cpp/noexcept-cpp.md).
+   Дополнительные сведения см. в разделе [noexcept](../cpp/noexcept-cpp.md).
 
 1. (Только функции-члены) Cv квалификаторы, которые определяют, является ли эта функция **const** или **volatile**.
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 Когда **автоматически** используется в сочетании с завершающим возвращаемым типом, он просто служит в качестве заполнителя для любого действия выражения decltype и сам по себе не выполняет выведение типа.
-
 
 ## <a name="function-local-variables"></a>Локальные переменные функции
 

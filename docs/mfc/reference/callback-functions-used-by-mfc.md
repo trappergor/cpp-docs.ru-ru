@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be34fa84a05d329d26d1bc4aaacbed0c2b0a76e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3093ca60b222512e517400f478fc9d635a6f867
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409198"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073777"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Функции обратного вызова, используемые MFC
 
@@ -117,7 +117,7 @@ BOOL CALLBACK EXPORT AbortFunc(
 *hPr*<br/>
 Определяет контекст устройства.
 
-*Код*<br/>
+*код*<br/>
 Указывает, произошла ли ошибка. Это 0, если ошибки не произошло. Является SP_OUTOFDISK диспетчер печати уже недостаточно места на диске и места на диске будут доступны, если приложение ожидает. Если *кода* является SP_OUTOFDISK, приложение не имеет прервать задание печати. Если нет, она должна возвращать для диспетчера печати путем вызова `PeekMessage` или `GetMessage` функции Windows.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -127,7 +127,6 @@ BOOL CALLBACK EXPORT AbortFunc(
 ### <a name="remarks"></a>Примечания
 
 Фактическое имя необходимо экспортировать, как описано в разделе "Примечания" [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc).
-
 
 ## <a name="see-also"></a>См. также
 

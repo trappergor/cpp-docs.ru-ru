@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba47b7f78e372f05a851d2180590bbc68a8c61ca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069845"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 
@@ -115,12 +115,12 @@ template <class T,
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ HWND Create(
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-Уничтожает немодального диалогового окна.  
+Уничтожает немодального диалогового окна.
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ BOOL DestroyWindow();
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-Эта статическая функция реализует процедуру диалогового окна.  
+Эта статическая функция реализует процедуру диалогового окна.
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ static LRESULT CALLBACK DialogProc(
 Создает модальное диалоговое окно.
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -273,7 +273,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на `CRect` объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры, который принимает клиентских координат элемента обновление, которое включает в область обновления.
+Указывает на `CRect` объекта или [RECT](../../mfc/reference/rect-structure.md) структуры, который принимает клиентских координат элемента обновление, которое включает в область обновления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -306,9 +306,9 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

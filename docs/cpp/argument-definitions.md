@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056395"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084156"
 ---
 # <a name="argument-definitions"></a>Определения аргументов
 
@@ -45,7 +45,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 Первый аргумент командной строки — всегда `argv` **[1]** и последний из них `argv` **[** `argc` - 1 **]**.
 
 > [!NOTE]
->  По соглашению параметр `argv`**[0]** содержит команду, которая использовалась для вызова программы.  Тем не менее, можно инициализировать с помощью процесса [CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197) и при использовании первого и второго аргумента (*lpApplicationName* и *lpCommandLine*), `argv` **[0]** не может быть исполняемый файл, используйте [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197) для получения его полный путь и имя исполняемого файла.
+>  По соглашению параметр `argv`**[0]** содержит команду, которая использовалась для вызова программы.  Тем не менее, можно инициализировать с помощью процесса [CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) и при использовании первого и второго аргумента (*lpApplicationName* и *lpCommandLine*), `argv` **[0]** не может быть исполняемый файл, используйте [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea) для получения его полный путь и имя исполняемого файла.
 
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
 

@@ -22,14 +22,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 265dfe599d4c3586b350787baab5977562326991
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cbfc7e7bd6a3f2ef727a0cc259f222afad0ab555
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757686"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055238"
 ---
 # <a name="c-function-definitions"></a>Определения функций в C
+
 Определение функции задает имя функции, типы и число ожидаемых параметров, а также тип значений, возвращаемый функцией. Определение функции также содержит тело функции с объявлениями ее локальных переменных и операторы, которые определяют действия, выполняемые функцией.
 
 ## <a name="syntax"></a>Синтаксис
@@ -62,7 +63,7 @@ ms.locfileid: "43757686"
 &nbsp;&nbsp;&nbsp;&nbsp;*pointer*<sub>opt</sub> *direct-declarator*
 
 *direct-declarator*: /\* Декларатор функции \*/<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* New-style declarator \*/<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *parameter-type-list*  **)** /\* Декларатор нового стиля \*/<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*direct-declarator*  **(**  *identifier-list*<sub>opt</sub> **)** /\* Декларатор устаревшего стиля \*/
 
 Для списка параметров в определении используется следующий синтаксис:
@@ -103,4 +104,5 @@ ms.locfileid: "43757686"
 Компоненты определения функции подробно рассматриваются в статьях [Атрибуты функций](../c-language/function-attributes.md), [Класс хранения](../c-language/storage-class.md), [Тип возвращаемого значения](../c-language/return-type.md), [Параметры](../c-language/parameters.md) и [Текст функции](../c-language/function-body.md).
 
 ## <a name="see-also"></a>См. также
+
 [Функции](../c-language/functions-c.md)

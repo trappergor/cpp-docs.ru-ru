@@ -1,5 +1,5 @@
 ---
-title: override (расширения компонентов C++) | Документация Майкрософт
+title: переопределить (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6071cef3d5669fda86975bb0f27a2b9b87eeb011
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d97558dc50adc0bac8758d0821badff14707c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407274"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056143"
 ---
-# <a name="override--c-component-extensions"></a>override (расширения компонентов C++)
+# <a name="override--ccli-and-ccx"></a>переопределить (C + +/ CLI и C + +/ CX)
 
 **Переопределить** контекстно-зависимые ключевое слово указывает, что член типа переопределяет базовый класс или член базового интерфейса.
 
@@ -55,7 +55,7 @@ struct X : public I1 {
 
 В следующем примере кода показано, что **переопределить** может использоваться в компиляциях среды выполнения Windows.
 
-```cpp 
+```cpp
 // override_keyword_2.cpp
 // compile with: /ZW /c
 ref struct I1 {

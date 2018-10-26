@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fde79b2f96c815144b9cbdef1dcc7623e5a0eb60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040483"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065217"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 
@@ -118,7 +118,7 @@ class CContainedWindowT : public TBase
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|
 |Использование окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595) и последующие разделы в пакете SDK для Windows|
+|Windows|[Windows](/windows/desktop/winmsg/windows) и последующие разделы в пакете SDK для Windows|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -176,7 +176,7 @@ CContainedWindowT(
 Вызовы [RegisterWndSuperclass](#registerwndsuperclass) зарегистрировать класс окна, который основан на существующий класс, но использует [CContainedWindowT::WindowProc](#windowproc).
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +441,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 Этот статический метод реализует процедуру окна.
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

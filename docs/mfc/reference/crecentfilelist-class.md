@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a6ac97eaa55dde337068e450c0223b4ec4409f8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f8f3d1b4be06caeacc86718eafed432979b0c59
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069429"
 ---
 # <a name="crecentfilelist-class"></a>Класс CRecentFileList
 
@@ -79,10 +79,6 @@ class CRecentFileList
 
 Файлы можно добавить или удалить из списка последних Использованных файлов, список файлов может быть чтения или записи в реестр или. Можно обновить INI-файл и меню, отображение в списке последних Выбиравшихся файлов.
 
-Дополнительные сведения о последних Использованных элементов меню см. в разделе
-
-- Статье базы знаний Q243751: Практическое руководство: Добавление обработчики команд для последних Использованных элементов меню в приложении MFC
-
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 `CRecentFileList`
@@ -98,21 +94,17 @@ class CRecentFileList
 ```
 virtual void Add(LPCTSTR lpszPathName);
 
-
 virtual void Add(
     LPCTSTR lpszPathName,
     LPCTSTR lpszAppID);
-
 
 void Add(
     IShellItem* pItem,
     LPCTSTR lpszAppID);
 
-
 void Add(
     IShellLink* pLink,
     LPCTSTR lpszAppID);
-
 
 void Add(
     PIDLIST_ABSOLUTE pidl,
@@ -282,6 +274,4 @@ virtual void WriteList();
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

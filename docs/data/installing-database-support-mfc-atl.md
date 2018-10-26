@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 81e03f515d01902ad4c6935b8b263e51823f62d8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af1eab82c95c933108cf71861083828b939a7591
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080211"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079055"
 ---
 # <a name="installing-database-support-mfcatl"></a>Установка поддержки базы данных (MFC/ATL)
 
-Visual C++ не поддерживает все продукты базы данных. Кому  
-  
- 
-## <a name="see-also"></a>См. также  
+Visual C++ не поддерживает все продукты базы данных. Кому
+
+
+## <a name="see-also"></a>См. также
 
 [Доступ к данным](data-access-in-cpp.md)

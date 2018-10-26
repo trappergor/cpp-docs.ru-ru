@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578474"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421990"
 ---
 # <a name="floating-point-migration-issues"></a>Проблемы при миграции с плавающей запятой  
+
   
 Иногда при обновлении проектов до более новой версии Visual Studio, может оказаться, что были изменены результаты отдельных операций с плавающей запятой. Обычно это происходит по одной из двух причин: изменения создания кода, когда более эффективно используются доступные ресурсы процессора, и исправления ошибок или изменения в алгоритмах, используемых в математических функциях в библиотеке среды выполнения C (CRT). Как правило, новые результаты верны в рамках ограничений, установленных языковым стандартом. Ознакомьтесь с изменениями и, если для вас это важно, узнайте, как получать прежние результаты.  
 
@@ -41,6 +42,6 @@ ms.locfileid: "42578474"
   
 ## <a name="see-also"></a>См. также  
   
-[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)  

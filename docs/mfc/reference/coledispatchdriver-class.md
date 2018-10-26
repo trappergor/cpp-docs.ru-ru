@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55852c4de4ca85a41eb7396014655f2e90cea393
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433014"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821326"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 
@@ -57,13 +57,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Создает объект `COleDispatchDriver`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Присоединяет `IDispatch` соединение `COleDispatchDriver` объекта.|
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|Создает `IDispatch` подключения и присоединяет его к `COleDispatchDriver` объекта.|
@@ -75,14 +75,14 @@ class COleDispatchDriver
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::operator =](#operator_eq)|Копирует значение источника в `COleDispatchDriver` объекта.|
 |[COleDispatchDriver::operator LPDISPATCH](#operator_lpdispatch)|Получает доступ к базовой `IDispatch` указатель.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::m_bAutoRelease](#m_bautorelease)|Указывает, следует ли освободить `IDispatch` во время `ReleaseDispatch` или уничтожение объектов.|
 |[COleDispatchDriver::m_lpDispatch](#m_lpdispatch)|Указывает указатель на `IDispatch` интерфейс, подключенный к этому `COleDispatchDriver`.|
@@ -115,8 +115,8 @@ class COleDispatchDriver
 
 ```
 void AttachDispatch(
-        LPDISPATCH lpDispatch,
-        BOOL bAutoRelease = TRUE);
+    LPDISPATCH lpDispatch,
+    BOOL bAutoRelease = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -142,7 +142,7 @@ void AttachDispatch(
 ```
 COleDispatchDriver();
 COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
-  COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
+COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -174,9 +174,8 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 
 ```
 BOOL CreateDispatch(
-        REFCLSID clsid,
-        COleException* pError = NULL);
-
+    REFCLSID clsid,
+    COleException* pError = NULL);
 
 BOOL CreateDispatch(
     LPCTSTR lpszProgID,
@@ -256,11 +255,11 @@ void GetProperty(
 
 ```
 void AFX_CDECL InvokeHelper(
-        DISPID dwDispID,
-        WORD wFlags,
-        VARTYPE vtRet,
-        void* pvRet,
-        const BYTE* pbParamInfo, ...);
+    DISPID dwDispID,
+    WORD wFlags,
+    VARTYPE vtRet,
+    void* pvRet,
+    const BYTE* pbParamInfo, ...);
 ```
 
 ### <a name="parameters"></a>Параметры

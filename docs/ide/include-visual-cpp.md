@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894458"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425851"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -31,22 +31,22 @@ ms.locfileid: "43894458"
 
 ## <a name="syntax"></a>Синтаксис
 
-```  
+```
 <include file='filename' path='tagpath' />
-```  
+```
 
 #### <a name="parameters"></a>Параметры
 
-`filename`  
+*filename*<br/>
 Имя файла, содержащего документацию. Имя файла может быть дополнено с указанием пути.  Заключите имя в одинарные или двойные кавычки.  Если компилятору не удается найти `filename`, он выдает предупреждение.
 
-`tagpath`  
+*tagpath*<br/>
 Допустимое выражение XPath, которое выбирает нужный набор узлов, содержащийся в файле.
 
-`name`  
+*name*<br/>
 Спецификатор имени в теге, предшествующий комментариям. `name` будет иметь идентификатор `id`.
 
-`id`  
+*id*<br/>
 Идентификатор тега, который предшествует комментариям.  Заключите имя в одинарные или двойные кавычки.
 
 ## <a name="remarks"></a>Примечания
@@ -75,7 +75,7 @@ public ref class Test2 {
    void Test() {
    }
 };
-```  
+```
 
 Второй файл (xml_include_tag.doc) содержит следующие комментарии документации:
 
@@ -95,7 +95,7 @@ The summary for this other type.
 </MyMembers>
 
 </MyDocs>
-```  
+```
 
 ## <a name="program-output"></a>Выходные данные программы
 

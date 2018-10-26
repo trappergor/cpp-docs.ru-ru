@@ -1,7 +1,7 @@
 ---
 title: Класс Path | Документы Майкрософт
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725313"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235468"
 ---
 # <a name="path-class"></a>Класс path
 
-**Путь** класс сохраняет объект типа `string_type`, который называется `myname` здесь в целях надстройках, подходящий для использования в качестве пути. `string_type` является синонимом для `basic_string<value_type>`, где `value_type` является синонимом **char** в группе Windows или **wchar_t** в Posix.
+**Путь** класс сохраняет объект типа `string_type`, который называется `myname` здесь в целях надстройках, подходящий для использования в качестве пути. `string_type` является синонимом для `basic_string<value_type>`, где `value_type` является синонимом **wchar_t** на Windows или **char** в POSIX.
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 

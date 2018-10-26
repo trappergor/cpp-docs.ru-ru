@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b5ba9789226e54c9607e85caaa5e8af3f157f02d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052642"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>Источник данных. Определение схемы источника данных (ODBC)
 
-Этот раздел относится к классам ODBC библиотеки MFC.  
-  
-Чтобы задать элементы данных в вашей `CRecordset` объектов, вам нужно знать схемы источника данных, к которому вы подключаетесь. Определение схемы источника данных предполагает получение списка таблиц в источнике данных, список столбцов в каждой таблице, тип данных каждого столбца и наличия индексов.  
-  
-## <a name="see-also"></a>См. также  
+Этот раздел относится к классам ODBC библиотеки MFC.
+
+Чтобы задать элементы данных в вашей `CRecordset` объектов, вам нужно знать схемы источника данных, к которому вы подключаетесь. Определение схемы источника данных предполагает получение списка таблиц в источнике данных, список столбцов в каждой таблице, тип данных каждого столбца и наличия индексов.
+
+## <a name="see-also"></a>См. также
 
 [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [Источник данных. Управление соединениями (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

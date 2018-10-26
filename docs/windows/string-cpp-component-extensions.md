@@ -1,7 +1,7 @@
 ---
-title: String (расширения компонентов C++) | Документация Майкрософт
+title: Строка (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4caaf49bd72a85a6d81003926c4e556d0731e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054245"
 ---
-# <a name="string--c-component-extensions"></a>String (расширения компонентов C++)
-
-Компилятор Visual C++ поддерживает *строки*, являющиеся объектами, которые представляют текст в виде последовательности символов. Visual C++ поддерживает строковые переменные с неявными значениями и литералы, значения которых — явные строки в кавычках.
-
-## <a name="all-runtimes"></a>Все среды выполнения
+# <a name="string--ccli-and-ccx"></a>Строка (C + +/ CLI и C + +/ CX)
 
 Среда выполнения Windows и среда CLR представляют строки в виде объектов, управление выделяемой памятью которых осуществляется автоматически. Это значит, что в случае выхода строковой переменной за пределы области видимости или завершении работы приложения явно отменять память для строки не требуется. Указывает время существования строкового объекта должно осуществляться автоматически, следует объявить тип string с [дескриптор объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) модификатор.
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
 
-Архитектура среды выполнения Windows требует от Visual C++ реализации типа данных `String` в пространстве имен `Platform`. Для удобства в Visual C++ также предусмотрен тип данных `string`, являющийся синонимом для `Platform::String` в пространстве имен `default`.
+Архитектура среды выполнения Windows требует, `String` тип данных находится в `Platform` пространства имен. Для удобства в Visual C++ также предусмотрен тип данных `string`, являющийся синонимом для `Platform::String` в пространстве имен `default`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -52,8 +48,6 @@ using namespace default;
 
 ## <a name="common-language-runtime"></a>Среда CLR
 
-В этом разделе рассматривается обработка компилятором Visual C++ строковых литералов при запуске компилятора с использованием параметра `/clr`. Для применения `/clr` необходимо использовать среду CLR, синтаксис C++/CLI и управляемые объекты. Дополнительные сведения о `/clr`, см. в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md).
-
 При компиляции с параметром `/clr` компилятор преобразует строковые литералы в строки типа <xref:System.String>. Для сохранения обратной совместимости с существующим кодом у этого правила есть два исключения:
 
 - Обработка исключений. Если появляется строковый литерал, компилятор перехватывает его как строковый литерал.
@@ -62,11 +56,11 @@ using namespace default;
 
 В компиляторе также есть встроенная поддержка трех операторов, которые можно переопределять для настройки их поведения:
 
-- System::String ^ operator +( System::String, System::String);
+- System::String ^ оператор + (System::String, System::String);
 
-- System::String ^ operator +( System::Object, System::String);
+- System::String ^ оператор + (System::Object, System::String);
 
-- System::String ^ operator +( System::String, System::Object);
+- System::String ^ оператор + (System::String, System::Object);
 
 После передачи <xref:System.String> компилятор при необходимости упаковывает, а затем объединяет объект (с помощью ToString) со строкой.
 
@@ -91,9 +85,9 @@ using namespace default;
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,29 +105,29 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
-   if (a == b)  
+   if (a == b)
       Console::WriteLine("a and b are equal");
 
    a = "abc";
-   if (a != b)  
+   if (a != b)
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
-   if (n == nullptr)  
+   // testing an empty System::String^
+   String^ n;
+   if (n == nullptr)
       Console::WriteLine("n is empty");
 }
 ```
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -233,7 +227,7 @@ const char * a
 // compile with: /clr
 using namespace System;
 int func() {
-   throw "simple string";   // const char *  
+   throw "simple string";   // const char *
 };
 
 int func2() {
@@ -260,7 +254,7 @@ int main() {
       Console::WriteLine("String^ str");
    }
 
-   func3("string");   // const char *  
+   func3("string");   // const char *
    func3("string" + "string");   // returns System::String
 }
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Строковые и символьные литералы](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)

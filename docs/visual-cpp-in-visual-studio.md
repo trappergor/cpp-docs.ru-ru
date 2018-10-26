@@ -1,35 +1,32 @@
 ---
 title: Visual C++ в Visual Studio | Документы Майкрософт
+description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684495"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821299"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
 > [!NOTE]  
 > Эта документация для разработчиков применима к Visual Studio 2015 и Visual Studio 2017. 
 
-> Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/en-us/download/) и введите в поле поиска **Visual C++**.  
+> Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/download/) и введите в поле поиска **Visual C++**.  
   
 
 Microsoft Visual C++ (обычно сокращают до Visual C++ или MSVC) является названием для библиотек и средств разработки на языке ассемблера, C++ и C, входящих в состав Visual Studio в Windows. Эти средства и библиотеки позволяют создавать приложения универсальной платформы Windows (UWP), собственные классические и серверные приложения Windows, кроссплатформенные библиотеки и приложения для Windows, Linux, Android и iOS, а также управляемые приложения и библиотеки, использующие платформу .NET Framework. С помощью Visual C++ можно разработать что угодно — от простых консольных приложений до самых сложных приложений для настольных систем Windows, от драйверов устройств и компонентов операционной системы до кроссплатформенных игр для мобильных устройств и от мельчайших устройств Интернета вещей до многосерверных высокопроизводительных вычислительных систем в облаке Azure.
@@ -81,10 +78,20 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="c-development-tools"></a>Средства разработки C++
 
-[Интегрированная среда разработки и средства разработки](ide/ide-and-tools-for-visual-cpp-development.md).
-Использование интегрированной среды разработки Visual Studio для создания проектов, работы с файлами исходного кода, ссылки на библиотеки, компиляции, отладки, создания модульных тестов, выполнения статического анализа, развертывания и многого другого.
+[Интегрированная среда разработки и средства разработки](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+Использование интегрированной среды разработки Visual Studio для создания проектов, редактирования кода, создания ссылок на библиотеки, компиляции, отладки, создания модульных тестов, выполнения статического анализа, развертывания и многого другого.
 
-[Компиляторы и средства сборки](build/building-c-cpp-programs.md). Разделы, посвященные возможностям компилятора и компоновщика Microsoft C++, сообщениям об ошибках, примерам командной строки, настройке для разных платформ и ссылкам на сборки. 
+[Компиляторы и инструменты сборки](build/building-c-cpp-programs.md)<br/>
+Разделы, посвященные возможностям компилятора и компоновщика Microsoft C++, сообщениям об ошибках, примерам командной строки, настройке для разных платформ и ссылкам на сборки.
+
+[Отладка машинного кода](/visualstudio/debugger/debugging-native-code)<br/>
+Сведения об использовании отладчика Visual Studio с проектами C++.
+
+[Общие сведения об анализе кода на C и C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+Используйте заметки SAL или средства проверки C++ Core Guidelines для выполнения статического анализа.
+
+[Написание модульных тестов для C/C++ в Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+Создание модульных тестов с помощью платформы модульного тестирования Майкрософт для C++, Google Test, Boost.Test или CTest.
 
 ## <a name="write-applications-in-c"></a>Создание приложений на C++
 
@@ -94,9 +101,11 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Классические приложения (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Сведения о создании классических приложений с машинным кодом на C++ для Windows.
 
-[Программирование в .NET на C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md). Сведения о создании библиотек DLL, обеспечивающих взаимодействие между машинным кодом на C++ и программами .NET, написанными на таких языках, как C# или Visual Basic.
+[Программирование .NET с использованием C++/CLI](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+Сведения о создании библиотек DLL, обеспечивающих взаимодействие между машинным кодом на C++ и программами .NET, написанными на таких языках, как C# или Visual Basic.
 
-[Программирование на Linux](linux/index.md). Интегрированная среда разработки Visual Studio позволяет написать код и развернуть его на удаленном компьютере с ОС Linux для компиляции с помощью GCC.
+[Программирование на Linux](linux/index.md)<br/>
+Интегрированная среда разработки Visual Studio позволяет написать код и развернуть его на удаленном компьютере с ОС Linux для компиляции с помощью GCC.
 
 [DLL в Visual C++](build/dlls-in-visual-cpp.md)<br/>
 Использование Win32, ATL и MFC для создания классических библиотек DLL для Windows, а также сведения о компиляции и регистрации библиотеки DLL.
@@ -116,11 +125,15 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Текст и строки](text/text-and-strings-in-visual-cpp.md)<br/>
 Подробнее о работе с другими форматами текста и строк и кодировках для локальных и международных разработок.
 
-## <a name="c-language-reference"></a>Справочник по языку C++
+## <a name="languages-reference"></a>Справочники по языкам
 
-Сведения о языке C++ см. в документе [C++ Language Reference](cpp/cpp-language-reference.md).
+[Справочник по языку C++](cpp/cpp-language-reference.md)
 
-Сведения о препроцессоре C++ см. в документе [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md).
+[Справочник по препроцессору в C/C++](preprocessor/c-cpp-preprocessor-reference.md)
+
+[Справочник по языку C#](c-language/c-language-reference.md)
+
+[Внутренние объекты компилятора и язык ассемблера](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Библиотеки C++ в Visual Studio
 

@@ -1,7 +1,7 @@
 ---
 title: Класс CStringT | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 253282092bb71b6d4a5c520355ab4f8b51015c9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf54f03ffd18c9f02920049fa60781a781865cc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445143"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082330"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
@@ -105,8 +105,8 @@ ms.locfileid: "46445143"
 
 ```
 
-template<typename BaseType, class StringTraits>  
-class CStringT :   
+template<typename BaseType, class StringTraits>
+class CStringT :
 public CSimpleStringT<BaseType,
                       _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                       ::c_bIsMFCDLLTraits>
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>Параметры
 
-*BaseType*  
+*BaseType*<br/>
 Тип символа класса string. Ниже указаны доступные значения.
 
 - **char** (для символьных строк ANSI).
@@ -124,7 +124,7 @@ public CSimpleStringT<BaseType,
 
 - TCHAR (для символьных строк ANSI и Юникода).
 
-*StringTraits*  
+*StringTraits*<br/>
 Определяет, должен ли класс string поддержка библиотек времени выполнения C (CRT) и где расположены строковые ресурсы. Ниже указаны доступные значения.
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -224,7 +224,7 @@ public CSimpleStringT<BaseType,
 `CString`, `CStringA`, и `CStringW` экспортируются из библиотеки DLL MFC (MFC90. Библиотека DLL), никогда не от пользователя библиотеки DLL. Это делается во избежание `CStringT` из определен несколько раз.
 
 > [!NOTE]
->  Если код содержит инструкции по решению для ошибки компоновщика, которые описаны в [Linking Errors When You Import CString-Derived классов» (номер Q309801)](https://support.microsoft.com/help/309801/you-may-receive-an-lnk2019-error-message-when-you-build-a-visual-c-200), следует удалить этот код. Больше не используется.
+>  Если код содержит инструкции по решению для ошибки компоновщика, которые описаны в [Экспорт CStringT с помощью классов строка](../../atl-mfc-shared/exporting-string-classes-using-cstringt.md), следует удалить этот код. Больше не используется.
 
 В приложениях MFC доступны следующие строки:
 
@@ -294,7 +294,7 @@ public CSimpleStringT<BaseType,
 Выделяет строку совместимые с автоматизацией типа BSTR и копирует содержимое объекта `CStringT` объекта, включая завершающий нуль-символ.
 
 ```
-BSTR AllocSysString() const;  
+BSTR AllocSysString() const;
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -307,8 +307,7 @@ BSTR AllocSysString() const;
 
 Обычно если эта строка передается в функцию COM как [in] параметр, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), как описано в пакете Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) в пакете Windows SDK.  
-
+Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -343,13 +342,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Строка управления форматом.
 
-*nFormatID*  
+*nFormatID*<br/>
 Строковый идентификатор ресурса, содержащего строку управления форматом.
 
-*Аргумент*  
+*Аргумент*<br/>
 Необязательные аргументы.
 
 ### <a name="remarks"></a>Примечания
@@ -370,7 +369,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Другая строка, используемый для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -391,7 +390,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Другая строка, используемый для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -411,12 +410,12 @@ int CollateNoCase(PCXSTR psz) const throw();
 Сравнивает две строки (с учетом регистра).
 
 ```
-int Compare(PCXSTR psz) const; 
+int Compare(PCXSTR psz) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Другая строка, используемый для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -445,7 +444,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*psz*  
+*psz*<br/>
 Другая строка, используемый для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -465,102 +464,102 @@ int CompareNoCase(PCXSTR psz) const throw();
 Создает объект `CStringT`.
 
 ```
-CStringT() throw() :   
+CStringT() throw() :
     CThisSimpleString(StringTraits::GetDefaultManager());
 
-explicit CStringT(IAtlStringMgr* pStringMgr) throw() :   
-    CThisSimpleString( pStringMgr); 
+explicit CStringT(IAtlStringMgr* pStringMgr) throw() :
+    CThisSimpleString( pStringMgr);
 
 CStringT(const VARIANT& varSrc);
 
 CStringT(const VARIANT& varSrc, IAtlStringMgr* pStringMgr);
 
-CStringT(const CStringT& strSrc) :   
+CStringT(const CStringT& strSrc) :
     CThisSimpleString( strSrc);
 
 operator CSimpleStringT<
-                    BaseType, 
+                    BaseType,
                     !_CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
                     :: c_bIsMFCDLLTraits> &()
 
-template <bool bMFCDLL>  
-CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :   
+template <bool bMFCDLL>
+CStringT(const CSimpleStringT<BaseType, bMFCDLL>& strSrc) :
     CThisSimpleString( strSrc);
 
-template <class SystemString>  
-CStringT(SystemString^ pString) :   
+template <class SystemString>
+CStringT(SystemString^ pString) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pszSrc) :   
+CStringT(const XCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const YCHAR* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(LPCWSTR pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(const unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :   
+/*CSTRING_EXPLICIT*/ CStringT(char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :   
+CSTRING_EXPLICIT CStringT(unsigned char* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :   
+CSTRING_EXPLICIT CStringT(wchar_t* pszSrc) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :   
+CStringT(const unsigned char* pszSrc, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 
-CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(char ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :   
+CSTRING_EXPLICIT CStringT(wchar_t ch, int nLength = 1) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength) :   
+CStringT(const XCHAR* pch, int nLength) :
     CThisSimpleString( pch, nLength, StringTraits::GetDefaultManager());
 
-CStringT(const YCHAR* pch, int nLength) :   
+CStringT(const YCHAR* pch, int nLength) :
     CThisSimpleString( StringTraits::GetDefaultManager());
 
-CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :   
+CStringT(const XCHAR* pch, int nLength, AtlStringMgr* pStringMgr) :
     CThisSimpleString( pch, nLength, pStringMgr);
 
-CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :   
+CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
     CThisSimpleString( pStringMgr);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*PCH*  
+*PCH*<br/>
 Указатель на массив символов длиной *nLength*, не оканчивается символом null.
 
-*nLength*  
+*nLength*<br/>
 Число символов в *pch*.
 
-*ch*  
+*ch*<br/>
 Один символ.
 
-*pszSrc*  
+*pszSrc*<br/>
 Заканчивающуюся нулем строку, который необходимо скопировать в это `CStringT` объекта.
 
-*pStringMgr*  
+*pStringMgr*<br/>
 Указатель на диспетчер памяти для `CStringT` объекта. Дополнительные сведения о `IAtlStringMgr` и управление памятью для `CStringT`, см. в разделе [управление памятью с помощью CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md).
 
-*strSrc*  
+*strSrc*<br/>
 Существующий `CStringT` объект, который необходимо скопировать в это `CStringT` объекта. Дополнительные сведения о `CThisString` и `CThisSimpleString`, см. в разделе "Примечания".
 
-*varSrc*  
+*varSrc*<br/>
 Объект variant, который необходимо скопировать в это `CStringT` объекта.
 
-*BaseType*  
+*BaseType*<br/>
 Тип символа класса string. Ниже указаны доступные значения.
 
 **char** (для символьных строк ANSI).
@@ -569,13 +568,13 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 TCHAR (для символьных строк ANSI и Юникода).
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Логическое значение, указывающее, является ли проект библиотеки DLL MFC (TRUE) или нет (FALSE).
 
-*SystemString*  
+*SystemString*<br/>
 Должен быть `System::String`, и проект должен быть скомпилирован с параметром/CLR.
 
-*pString*  
+*pString*<br/>
 Дескриптор для `CStringT` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -624,10 +623,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>Параметры
 
-*iIndex*  
+*iIndex*<br/>
 Отсчитываемый от нуля индекс первого символа в `CStringT` удаляемого объекта.
 
-*nCount*  
+*nCount*<br/>
 Число удаляемых символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -642,11 +641,11 @@ int Delete(int iIndex, int nCount = 1);
 
 [!code-cpp[NVC_ATLMFC_Utilities#113](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_8.cpp)]
 
-```Output  
+```Output
 Before: Soccer is best,
-    but hockey is quicker!  
+    but hockey is quicker!
 After: Soccer best,
-    but hockey is quicker!  
+    but hockey is quicker!
 ```
 
 ##  <a name="find"></a>  CStringT::Find
@@ -660,13 +659,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszSub*  
+*pszSub*<br/>
 Подстрока для поиска.
 
-*iStart*  
+*iStart*<br/>
 Индекс символа в строке, чтобы начать поиск с или 0, чтобы начать с самого начала.
 
-*ch*  
+*ch*<br/>
 Один символ для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -691,7 +690,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Строка, содержащая символы для сопоставления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -717,13 +716,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>Параметры
 
-*nFormatID*  
+*nFormatID*<br/>
 Строковый идентификатор ресурса, содержащего строку управления форматом.
 
-*pszFormat*  
+*pszFormat*<br/>
 Строка управления форматом.
 
-*Аргумент*  
+*Аргумент*<br/>
 Необязательные аргументы.
 
 ### <a name="remarks"></a>Примечания
@@ -751,13 +750,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>Параметры
 
-*nFormatID*  
+*nFormatID*<br/>
 Строковый идентификатор ресурса, содержащий текст неформатированного сообщения.
 
-*pszFormat*  
+*pszFormat*<br/>
 Указывает на строку управления форматом. Его поиск для вставок и соответствующим образом в формате. Строка формата подобна функции времени выполнения *printf*-стиль строки формата, за исключением того, он допускает использование параметров должны быть вставлены в произвольном порядке.
 
-*Аргумент*  
+*Аргумент*<br/>
 Необязательные аргументы.
 
 ### <a name="remarks"></a>Примечания
@@ -783,10 +782,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Указывает на строку управления форматом. Его поиск для вставок и соответствующим образом в формате. Строка формата подобна функции времени выполнения `printf`-стиль строки формата, за исключением того, он допускает использование параметров должны быть вставлены в произвольном порядке.
 
-*pArgList*  
+*pArgList*<br/>
 Указатель на список аргументов.
 
 ### <a name="remarks"></a>Примечания
@@ -808,10 +807,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>Параметры
 
-*pszFormat*  
+*pszFormat*<br/>
 Указывает на строку управления форматом. Его поиск для вставок и соответствующим образом в формате. Строка формата подобна функции времени выполнения `printf`-стиль строки формата, за исключением того, он допускает использование параметров должны быть вставлены в произвольном порядке.
 
-*аргументы*  
+*аргументы*<br/>
 Указатель на список аргументов.
 
 ### <a name="remarks"></a>Примечания
@@ -834,7 +833,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>Параметры
 
-*pszVar*  
+*pszVar*<br/>
 Указатель на заканчивающуюся нулем строку, который указывает переменную среды.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -860,13 +859,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>Параметры
 
-*iIndex*  
+*iIndex*<br/>
 Индекс символа, перед которым вставки будет выполняться.
 
-*psz*  
+*psz*<br/>
 Указатель на подстроки, которую требуется вставить.
 
-*ch*  
+*ch*<br/>
 Символ для вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -886,12 +885,12 @@ int Insert(int iIndex, XCHAR ch);
 Извлекает крайнее левое *nCount* символов из этого `CStringT` объекта и возвращает копию извлеченной подстроки.
 
 ```
-CStringT Left(int nCount) const; 
+CStringT Left(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nCount*  
+*nCount*<br/>
 Число символов, извлекаемых из данного объекта `CStringT`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -920,13 +919,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>Параметры
 
-*hInstance*  
+*hInstance*<br/>
 Дескриптор экземпляра модуля.
 
-*nID*  
+*nID*<br/>
 Идентификатор ресурса строки Windows.
 
-*wLanguageID*  
+*wLanguageID*<br/>
 Язык строкового ресурса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -997,15 +996,15 @@ CStringT& MakeUpper();
 
 ```
 CStringT Mid(int iFirst, int nCount) const;
-CStringT Mid(int iFirst) const; 
+CStringT Mid(int iFirst) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*iFirst*  
+*iFirst*<br/>
 Отсчитываемый от нуля индекс первого символа в этом `CStringT` объекта, добавляемого в извлеченной подстроки.
 
-*nCount*  
+*nCount*<br/>
 Число символов, извлекаемых из данного объекта `CStringT`. Если этот параметр не задан, извлекается оставшейся части строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1054,22 +1053,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*  
+*гл. 1*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
-*ch2*  
+*ch2*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для объединения с строку или символ.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для объединения с строку или символ.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для объединения с строку или символ.
 
-*psz2*  
+*psz2*<br/>
 Указатель на строку для объединения с строку или символ.
 
 ### <a name="remarks"></a>Примечания
@@ -1090,10 +1089,10 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 ```
 CStringT& operator+=(const CThisSimpleString& str);
 
-template<bool bMFCDLL>  
+template<bool bMFCDLL>
 CStringT& operator+=(const const CSimpleStringT<BaseType, bMFCDLL>& str);
 
-template<int t_nSize>  
+template<int t_nSize>
 CStringT& operator+=(const CStaticString<XCHAR, t_nSize>& strSrc);
 CStringT& operator+=(PCXSTR pszSrc);
 CStringT& operator+=(PCYSTR pszSrc);
@@ -1105,25 +1104,25 @@ CStringT& operator+=(const VARIANT& var);
 
 ### <a name="parameters"></a>Параметры
 
-str  
+*str*<br/>
 Ссылка на объект `CThisSimpleString`.
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 Логическое значение, показывающее, является ли проект MFC библиотеки DLL.
 
-*BaseType*  
+*BaseType*<br/>
 Базовый тип строки.
 
-*var*  
+*var*<br/>
 Объект типа variant для объединения этой строки.
 
-*ch*  
+*ch*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
-*pszSrc*  
+*pszSrc*<br/>
 Указатель на исходную строку, объединяемых.
 
-*strSrc*  
+*strSrc*<br/>
 Объект `CStringT` сцепляемых этой строки.
 
 ### <a name="remarks"></a>Примечания
@@ -1155,22 +1154,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*  
+*гл. 1*<br/>
 Символ ANSI или Юникода, для сравнения.
 
-*ch2*  
+*ch2*<br/>
 Символ ANSI или Юникода, для сравнения.
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1197,22 +1196,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*  
+*гл. 1*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
-*ch2*  
+*ch2*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1235,16 +1234,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1273,16 +1272,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1311,16 +1310,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на заканчивающуюся нулем строку, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1349,16 +1348,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*str1*  
+*str1*<br/>
 Объект `CStringT` для сравнения.
 
-*str2*  
+*str2*<br/>
 Объект `CStringT` для сравнения.
 
-*psz1*  
+*psz1*<br/>
 Указатель на строку для сравнения.
 
-*psz2*  
+*psz2*<br/>
 Указатель на строку для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -1385,7 +1384,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>Параметры
 
-*chRemove*  
+*chRemove*<br/>
 Символ, который необходимо удалить из строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1411,16 +1410,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>Параметры
 
-*pszOld*  
+*pszOld*<br/>
 Указатель на заканчивающуюся нулем строку, заменяется *pszNew*.
 
-*pszNew*  
+*pszNew*<br/>
 Указатель на заканчивающуюся нулем строку, которая заменяет *pszOld*.
 
-*chOld*  
+*chOld*<br/>
 Символ заменяется *chNew*.
 
-*chNew*  
+*chNew*<br/>
 Символ замены *chOld*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1458,7 +1457,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*ch*  
+*ch*<br/>
 Символ для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1478,12 +1477,12 @@ int ReverseFind(XCHAR ch) const throw();
 Извлекает последний (то есть крайний справа) *nCount* символов из этого `CStringT` объекта и возвращает копию извлеченной подстроки.
 
 ```
-CStringT Right(int nCount) const; 
+CStringT Right(int nCount) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nCount*  
+*nCount*<br/>
 Число символов, извлекаемых из данного объекта `CStringT`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1505,12 +1504,12 @@ CStringT Right(int nCount) const;
 Повторно выделяет строку BSTR, на которые указывают *pbstr* и копирует содержимое объекта `CStringT` объекта, включая нуль-символ.
 
 ```
-BSTR SetSysString(BSTR* pbstr) const; 
+BSTR SetSysString(BSTR* pbstr) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pbstr*  
+*pbstr*<br/>
 Указатель на строку символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1532,12 +1531,12 @@ BSTR SetSysString(BSTR* pbstr) const;
 Извлекает символы из строки, начиная с первого символа, не вошедших в набор символов, идентифицируемый *pszCharSet*.
 
 ```
-CStringT SpanExcluding(PCXSTR pszCharSet) const; 
+CStringT SpanExcluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Строка интерпретируется как набор символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1557,12 +1556,12 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 Извлекает символы из строки, начиная с первого символа, в набор символов, идентифицируемый *pszCharSet*.
 
 ```
-CStringT SpanIncluding(PCXSTR pszCharSet) const; 
+CStringT SpanIncluding(PCXSTR pszCharSet) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pszCharSet*  
+*pszCharSet*<br/>
 Строка интерпретируется как набор символов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1582,15 +1581,15 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 Находит следующий токен в целевой строке
 
 ```
-CStringT Tokenize(PCXSTR pszTokens, int& iStart) const; 
+CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*pszTokens*  
+*pszTokens*<br/>
 Строка, содержащая разделители токенов. Порядок эти разделители не имеет значения.
 
-*iStart*  
+*iStart*<br/>
 Отсчитываемый от нуля индекс начала поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1629,10 +1628,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>Параметры
 
-*chTarget*  
+*chTarget*<br/>
 Конечный символ для усечения.
 
-*pszTargets*  
+*pszTargets*<br/>
 Указатель на строку, содержащую символы целевой для усечения. Все начальные и конечные вхождения символов в *pszTarget* будут удалены из `CStringT` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1674,10 +1673,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>Параметры
 
-*chTarget*  
+*chTarget*<br/>
 Конечный символ для усечения.
 
-*pszTargets*  
+*pszTargets*<br/>
 Указатель на строку, содержащую символы целевой для усечения. Все начальные вхождения символов в *pszTarget* будут удалены из `CStringT` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1710,10 +1709,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>Параметры
 
-*chTarget*  
+*chTarget*<br/>
 Конечный символ для усечения.
 
-*pszTargets*  
+*pszTargets*<br/>
 Указатель на строку, содержащую символы целевой для усечения. Все конечные вхождения символов в *pszTarget* будут удалены из `CStringT` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение

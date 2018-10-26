@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb101179cff40d79ab142e55b4fc46cc8941d126
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1e050baf87374b98d5490ef8a760ca13620e240
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399555"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083935"
 ---
 # <a name="cdatabase-class"></a>Класс CDatabase
 
@@ -81,13 +81,13 @@ class CDatabase : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Создает объект `CDatabase`. Необходимо инициализировать объект путем вызова `OpenEx` или `Open`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDatabase::BeginTrans](#begintrans)|Запускает «транзакция» — ряд обратимое вызовы `AddNew`, `Edit`, `Delete`, и `Update` функции-члены класса `CRecordset` — на подключенном источнике данных. Источник данных должен поддерживать транзакции для `BeginTrans` в действие.|
 |[CDatabase::BindParameters](#bindparameters)|Позволяет выполнить привязку параметров перед вызовом `CDatabase::ExecuteSQL`.|
@@ -112,7 +112,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) дескриптора соединения с источником данных. Тип *HDBC*.|
 
@@ -202,7 +202,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Примечания
 
-Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564\(v=vs.85\)). Дополнительные сведения см. в разделе [асинхронное выполнение](/previous-versions/windows/desktop/ms713563\(v=vs.85\)) в пакете Windows SDK.
+Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Дополнительные сведения см. в разделе [асинхронное выполнение](/previous-versions/windows/desktop/ms713563) в пакете Windows SDK.
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

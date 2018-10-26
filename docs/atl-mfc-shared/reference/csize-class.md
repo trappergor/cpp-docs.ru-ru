@@ -1,7 +1,7 @@
 ---
 title: Класс CSize | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055233"
 ---
 # <a name="csize-class"></a>Класс CSize
 
-Аналогичную Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, реализующий относительные координаты или положение.
+Аналог структуры [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>Участники
@@ -64,7 +64,7 @@ class CSize : public tagSIZE
 `cx` И `cy` членами `SIZE` (и `CSize`) являются открытыми. Кроме того `CSize` реализует функции-члены для управления `SIZE` структуры.
 
 > [!NOTE]
->  Дополнительные сведения о общие служебные классы (как `CSize`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Дополнительные сведения о общие служебные классы (как `CSize`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,24 +85,24 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*initCX*  
+*initCX*<br/>
 Наборы `cx` член для `CSize`.
 
-*initCY*  
+*initCY*<br/>
 Наборы `cy` член для `CSize`.
 
-*initSize*  
+*initSize*<br/>
 [РАЗМЕР](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` объект, используемый для инициализации `CSize`.
 
-*initPt*  
-[ТОЧКА](../../mfc/reference/point-structure1.md) структуры или `CPoint` объект, используемый для инициализации `CSize`.
+*initPt*<br/>
+[ТОЧКА](../../mfc/reference/point-structure.md) структуры или `CPoint` объект, используемый для инициализации `CSize`.
 
-*dwSize*  
+*dwSize*<br/>
 DWORD используется для инициализации `CSize`. Младшее слово — `cx` член и старшее слово является `cy` член.
 
 ### <a name="remarks"></a>Примечания
@@ -117,8 +117,8 @@ DWORD используется для инициализации `CSize`. Мла
 
 Проверяет равенство двух размеров.
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -133,8 +133,8 @@ BOOL operator==(SIZE size) const throw();
 
 Проверяет неравенство двух размеров.
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -149,8 +149,8 @@ BOOL operator!=(SIZE size) const throw();
 
 Добавляет это размер `CSize`.
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Пример
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 Вычитает размер из этого `CSize`.
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Пример
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 Добавьте эти операторы `CSize` задаваемое значение параметра.
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -197,11 +197,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Первые три из этих операторов вычесть это `CSize` задаваемое значение параметра.
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Примечания

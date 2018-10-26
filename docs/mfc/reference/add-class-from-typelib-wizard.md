@@ -1,7 +1,7 @@
 ---
 title: Библиотеки типов мастер добавления классов из | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d8558758ba67afaa03eef5fbfbd83d8ebea70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415516"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250384"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Мастер добавления классов из TypeLib
 
 Этот мастер используется для добавления класса MFC из библиотеки типов, доступных. Мастер создает класс для каждого интерфейса, добавленные из выбранной библиотеки типов.
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
 
 - **Добавить класс из**
 

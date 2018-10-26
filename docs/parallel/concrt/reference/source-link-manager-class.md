@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1f84bd617505b78e572537b7c5cf7ce036692bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 94c3e3c43f573cde22c9818752544eb18bf32191
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405688"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162273"
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 
@@ -140,7 +140,7 @@ bool contains(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если указанный блок был найден, `false` в противном случае.
+**значение true,** указанного блока, если было обнаружено **false** в противном случае.
 
 ##  <a name="count"></a> число
 
@@ -198,7 +198,7 @@ bool remove(_EType _Link);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если ссылка была найдена и удалена, `false` в противном случае.
+**значение true,** Если ссылки был найден и удален, **false** в противном случае.
 
 ##  <a name="set_bound"></a> set_bound
 

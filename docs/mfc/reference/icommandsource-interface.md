@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377967"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060680"
 ---
 # <a name="icommandsource-interface"></a>Интерфейс ICommandSource
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ void AddCommandUIHandler(
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *command*<br/>
@@ -170,13 +174,13 @@ void PostCommand(unsigned int command);
 
 Этот метод асинхронно отправляет сообщение, сопоставляется с Идентификатором, указанным параметром команды. Он вызывает CWnd::PostMessage для размещения сообщения в очередь сообщений окна и затем возвращается без ожидания соответствующее окно для обработки сообщения.
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 Удаляет обработчик команд из исходного объекта команды.
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Примечания
 
 Этот метод удаляет обработчик команды, сопоставленный с cmdID объект источника команды.
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ void RemoveCommandRangeUIHandler(
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *command*<br/>

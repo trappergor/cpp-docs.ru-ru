@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6c7d961119d4fe25652601ebe5e423be898f49e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412188"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890742"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -223,13 +223,13 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::CWinApp](#cwinapp)|Создает объект `CWinApp`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::AddDocTemplate](#adddoctemplate)|Добавляет шаблон документа список шаблонов документов, доступных в приложения.|
 |[CWinApp::AddToRecentFileList](#addtorecentfilelist)|Добавляет имя файла в списке недавно использованных файлов (MRU).|
@@ -297,7 +297,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::EnableShellOpen](#enableshellopen)|Позволяет пользователю открывать файлы данных в диспетчере файлов Windows.|
 |[CWinApp::LoadStdProfileSettings](#loadstdprofilesettings)|Загружает standard. Параметры INI-файла и включает MRU файла списка компонентов.|
@@ -316,7 +316,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Указывает, является ли пользователь режим контекста справки (обычно вызывается с помощью клавиши SHIFT + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Указывает тип справки, используемый приложением.|
@@ -333,7 +333,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Флаги, которые определяют поведение диспетчера перезапуска.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Продолжительность времени в миллисекундах между преждевременном прекращении работы.|
@@ -367,7 +367,7 @@ class CWinApp : public CWinThread
 
 - `CWinApp`в ключа переопределяются.
 
-`m_hPrevInstance` Элемент данных больше не существует. Сведения об определении к предыдущему экземпляру `CWinApp`, см. в статье базы знаний «Определить предыдущего экземпляра из приложения» (KB106385) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385).
+`m_hPrevInstance` Элемент данных больше не существует. Чтобы определить, выполняется ли другой экземпляр приложения, используйте именованного мьютекса. Если не удается открыть мьютекс, отсутствуют другие экземпляры приложения, запущенного.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 Переопределить `InitInstance` для инициализации каждого нового экземпляра приложения под управлением Windows. Как правило, можно переопределить `InitInstance` для создания объекта главного окна и задания `CWinThread::m_pMainWnd` данные-член для указания этого окна. Дополнительные сведения о переопределении эта функция-член, см. в разделе [CWinApp: класс приложений](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
-> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED). Дополнительные сведения см. в статье PRB: MFC приложение перестает отвечать на запросы при инициализации приложения в качестве многопотокового подразделения (828643) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643).
+> MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
 
 ### <a name="example"></a>Пример
 
@@ -1315,7 +1315,7 @@ DWORD m_dwRestartManagerSupportFlags;
 
 |||
 |-|-|
-|Flag|Описание|
+|Flag|Описание:|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Приложение регистрируется с помощью [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Диспетчер перезапуска несет ответственность за перезапуска приложения, если она неожиданно завершает работу.|
 |-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Приложение регистрируется с диспетчером перезапуска и диспетчер перезапуска вызывает функцию обратного вызова восстановления, после его перезапуска приложения. Функция обратного вызова для восстановления по умолчанию является [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы при повторном запуске приложения.|
@@ -1821,7 +1821,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*код*<br/>
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
 *lpMsg*<br/>
@@ -1972,7 +1972,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*bRegisterRecoveryCallback*|[in] Значение TRUE указывает, что этот экземпляр приложения использует функцию обратного вызова восстановления; Значение FALSE указывает, что это не так. Платформа вызывает функцию обратного вызова восстановления, когда приложение неожиданно завершает работу. Дополнительные сведения см. в разделе [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |*strRestartIdentifier*|[in] Уникальная строка, определяющая данного экземпляра диспетчера перезапуска. Идентификатор диспетчера перезапуска является уникальным для каждого экземпляра приложения.|
 |*pwzCommandLineArgs*|[in] Строка, содержащая все лишние аргументы из командной строки.|

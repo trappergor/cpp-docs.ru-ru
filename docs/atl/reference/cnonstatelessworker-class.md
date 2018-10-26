@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095603"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053621"
 ---
 # <a name="cnonstatelessworker-class"></a>Класс CNonStatelessWorker
 
@@ -75,7 +75,7 @@ class CNonStatelessWorker
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-Реализация [WorkerArchetype::Execute](worker-archetype.md#execute).  
+Реализация [WorkerArchetype::Execute](worker-archetype.md#execute).
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод создает экземпляр класса *рабочих* класс на стек и вызывает [инициализировать](worker-archetype.md#initialize) на этот объект. Если инициализация прошла успешно, этот метод также вызывает [Execute](worker-archetype.md#execute) и [Terminate](worker-archetype.md#terminate) того же объекта.  
+Этот метод создает экземпляр класса *рабочих* класс на стек и вызывает [инициализировать](worker-archetype.md#initialize) на этот объект. Если инициализация прошла успешно, этот метод также вызывает [Execute](worker-archetype.md#execute) и [Terminate](worker-archetype.md#terminate) того же объекта.
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

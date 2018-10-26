@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: be9c1bc8125c30eb2208b389097eac7e1cf38e09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2534563ba85ec3d2d513c192637d3ae8b3beb971
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374390"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162364"
 ---
 # <a name="autohandleoperator-bool"></a>auto_handle::operator bool
 
@@ -40,11 +40,11 @@ operator bool();
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-`true` Если инкапсулированный объект является допустимым; `false` в противном случае.
+**значение true,** Если инкапсулированный объект является допустимым; **false** в противном случае.
 
 ## <a name="remarks"></a>Примечания
 
-Этот оператор фактически преобразует `_detail_class::_safe_bool` которого является более безопасным, чем `bool` , так как он не может быть преобразован в целочисленный тип.
+Этот оператор фактически преобразует `_detail_class::_safe_bool` которого является более безопасным, чем **bool** , так как он не может быть преобразован в целочисленный тип.
 
 ## <a name="example"></a>Пример
 

@@ -1,13 +1,15 @@
 ---
 title: оператор __uuidof | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
+- __uuidof
+- _uuidof
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c75e33dd7aab1e96a1d2d3464e974a7095f83f3f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056744"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163859"
 ---
 # <a name="uuidof-operator"></a>Оператор __uuidof
 
@@ -50,7 +52,9 @@ __uuidof (expression)
 - Блок библиотеки, созданный с помощью [модуль](../windows/module-cpp.md) атрибута.
 
 > [!NOTE]
->  В отладочной сборке **__uuidof** всегда инициализирует объект динамически (во время выполнения). В окончательном построении **__uuidof** можно статически (во время компиляции) инициализировать объект.
+> В отладочной сборке **__uuidof** всегда инициализирует объект динамически (во время выполнения). В окончательном построении **__uuidof** можно статически (во время компиляции) инициализировать объект.
+
+Для совместимости с предыдущими версиями **_uuidof** является синонимом **__uuidof** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) — указан.
 
 ## <a name="example"></a>Пример
 

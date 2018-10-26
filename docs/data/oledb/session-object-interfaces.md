@@ -19,42 +19,42 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e8c641cc543f213b6c81950c22b97f25b31d6c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0b88a2b04862743839b3cd438b31506c8aea0883
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057332"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079926"
 ---
 # <a name="session-object-interfaces"></a>Интерфейсы объекта сеанса
 
-В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта сеанса.  
-  
-|Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|  
-|---------------|---------------|--------------------------------------|  
-|[IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))|Обязательный|Да|  
-|[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))|Обязательный|Да|  
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721\(v=vs.85\))|Обязательный|Да|  
-|[IAlterIndex](/previous-versions/windows/desktop/ms714943\(v=vs.85\))|Optional|Нет|  
-|[IAlterTable](/previous-versions/windows/desktop/ms719764\(v=vs.85\))|Optional|Нет|  
-|[IBindResource](/previous-versions/windows/desktop/ms714936\(v=vs.85\))|Optional|Нет|  
-|[ICreateRow](/previous-versions/windows/desktop/ms716832\(v=vs.85\))|Optional|Нет|  
-|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))|Optional|Да|  
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))|Optional|Да|  
-|[IIndexDefinition](/previous-versions/windows/desktop/ms711593\(v=vs.85\))|Optional|Нет|  
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816\(v=vs.85\))|Optional|Да|  
-|[ITableCreation](/previous-versions/windows/desktop/ms713639\(v=vs.85\))|Optional|Нет|  
-|[ITableDefinition](/previous-versions/windows/desktop/ms714277\(v=vs.85\))|Optional|Нет|  
-|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947\(v=vs.85\))|Optional|Нет|  
-|[ITransaction](/previous-versions/windows/desktop/ms723053\(v=vs.85\))|Optional|Нет|  
-|[Интерфейс ITransactionJoin](/previous-versions/windows/desktop/ms718071\(v=vs.85\))|Optional|Нет|  
-|[Интерфейс ITransactionLocal](/previous-versions/windows/desktop/ms714893\(v=vs.85\))|Optional|Нет|  
-|[ITransactionObject](/previous-versions/windows/desktop/ms713659\(v=vs.85\))|Optional|Нет|  
-  
-Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает объект command (`CCommand`, реализации OLE DB `TCommand`). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на рисунке ниже.  
-  
-![Концептуальная схема поставщика](../../data/oledb/media/vc4u551.gif "vc4u551")  
-  
-## <a name="see-also"></a>См. также  
+В следующей таблице показаны обязательные и необязательные интерфейсы, определенные в OLE DB для объекта сеанса.
+
+|Интерфейс|Обязательный?|Реализовано с помощью шаблонов OLE DB?|
+|---------------|---------------|--------------------------------------|
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721)|Обязательный|Да|
+|[IOpenRowset](/previous-versions/windows/desktop/ms716946)|Обязательный|Да|
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721)|Обязательный|Да|
+|[IAlterIndex](/previous-versions/windows/desktop/ms714943)|Optional|Нет|
+|[IAlterTable](/previous-versions/windows/desktop/ms719764)|Optional|Нет|
+|[IBindResource](/previous-versions/windows/desktop/ms714936)|Optional|Нет|
+|[ICreateRow](/previous-versions/windows/desktop/ms716832)|Optional|Нет|
+|[IDBCreateCommand](/previous-versions/windows/desktop/ms711625)|Optional|Да|
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)|Optional|Да|
+|[IIndexDefinition](/previous-versions/windows/desktop/ms711593)|Optional|Нет|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816)|Optional|Да|
+|[ITableCreation](/previous-versions/windows/desktop/ms713639)|Optional|Нет|
+|[ITableDefinition](/previous-versions/windows/desktop/ms714277)|Optional|Нет|
+|[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947)|Optional|Нет|
+|[ITransaction](/previous-versions/windows/desktop/ms723053)|Optional|Нет|
+|[Интерфейс ITransactionJoin](/previous-versions/windows/desktop/ms718071)|Optional|Нет|
+|[Интерфейс ITransactionLocal](/previous-versions/windows/desktop/ms714893)|Optional|Нет|
+|[ITransactionObject](/previous-versions/windows/desktop/ms713659)|Optional|Нет|
+
+Объект сеанса создает объект набора строк. Если поставщик поддерживает команды, сеанс также создает объект command (`CCommand`, реализации OLE DB `TCommand`). Реализует объект команды `ICommand` интерфейс и использует `ICommand::Execute` метод для выполнения команд на наборе строк, как показано на рисунке ниже.
+
+![Концептуальная схема поставщика](../../data/oledb/media/vc4u551.gif "vc4u551")
+
+## <a name="see-also"></a>См. также
 
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

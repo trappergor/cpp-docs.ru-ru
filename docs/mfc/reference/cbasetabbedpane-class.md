@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412032"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067324"
 ---
 # <a name="cbasetabbedpane-class"></a>Класс CBaseTabbedPane
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pNewBar* указатель на область для добавления. Этот указатель может перестать работать после вызова этого метода. Дополнительные сведения см. в разделе "Примечания".
+*pNewBar*<br/>
+[in, out] Указатель на область для добавления. Этот указатель может перестать работать после вызова этого метода. Дополнительные сведения см. в разделе "Примечания".
 
 *bVisible*<br/>
 [in] Значение TRUE, чтобы сделать видимым. в противном случае — значение FALSE.
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pBar* указатель на панель, число с плавающей запятой.
+*pBar*<br/>
+[in, out] Указатель на панель, число с плавающей запятой.
 
 *nTabID*<br/>
 [in] Указывает отсчитываемый от нуля индекс вкладки, число с плавающей запятой.
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pBar* указатель на панели, чтобы удалить из области с вкладками.
+*pBar*<br/>
+[in, out] Указатель на панели, чтобы удалить из области с вкладками.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Задает выравнивание автоматического скрытия области, в которой должен быть создан. Список возможных значений см. в разделе [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment).
 
-[in] [out] *pCurrAutoHideBar* указатель на текущей панели инструментов автоматического скрытия. Может иметь значение NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Указатель на текущей панели инструментов автоматического скрытия. Может иметь значение NULL.
 
 *bUseTimer*<br/>
 [in] Указывает, следует ли использовать автоматическое скрытие эффекта, когда пользователь переключает область в режим автоматического скрытия или скрыть область немедленно.

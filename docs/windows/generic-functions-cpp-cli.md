@@ -1,7 +1,7 @@
 ---
 title: Универсальные функции (C + +/ CLI) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e5305aaa35064c26a78cbd4654c27a0d608d70c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398863"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067908"
 ---
 # <a name="generic-functions-ccli"></a>Универсальные функции (C++/CLI)
 
@@ -57,7 +57,7 @@ ms.locfileid: "46398863"
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
@@ -91,7 +91,7 @@ return-type identifier<type-parameter identifier(s)>
 
 Универсальные функции — это функции, объявленные с параметром универсального типа. Они могут быть методами в классе или структуре или автономными функциями. В одном универсальном объявлении неявно объявляется семейство функций, отличающихся только подстановкой различных фактических типов вместо параметра универсального типа.
 
-В Visual C++ конструкторы класса или структуры не могут объявляться с параметрами универсального типа.
+Конструктор класса или структуры не могут объявляться с параметрами универсального типа.
 
 При вызове параметр универсального типа заменяется фактическим типом. Фактический тип может быть явно указан в угловых скобках с использованием синтаксиса, аналогичного синтаксису вызова шаблонной функции. При вызове без параметров типа компилятор будет пытаться определить фактический тип по параметрам, указанным в вызове функции. Если определить заданный аргумент типа по используемым параметрам не удается, компилятор выдает ошибку.
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [Универсальные шаблоны](../windows/generics-cpp-component-extensions.md)

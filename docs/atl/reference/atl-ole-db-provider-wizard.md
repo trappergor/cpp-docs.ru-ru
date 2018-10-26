@@ -1,7 +1,7 @@
 ---
 title: Мастер поставщика ATL OLE DB | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15104e0252ad6994b6220b433c7324085199440c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060738"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Мастер поставщика ATL OLE DB
 
 Этот мастер создает классы, составляющие поставщик OLE DB.
+
+> [!WARNING]
+> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
 
 ## <a name="remarks"></a>Примечания
 

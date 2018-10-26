@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38933847065544f97d60dfc109436f059a025f7a
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1ce0acc7eb90e534e1e66882f5a4a6a88b1eb782
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763858"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890183"
 ---
 # <a name="date-and-time-automation-support"></a>Дата и время: Поддержка модели автоматизации
 
@@ -57,11 +57,8 @@ ms.locfileid: "43763858"
 
 CRT правильно вычисляет разность 23 часа. `COleDateTimeSpan` Вычисляет разность 24 часа.
 
-Обратите внимание, что решение перед завершением этого примера для отображения даты надлежащим образом при использовании `COleDateTime::Format`. См. в статье базы знаний «ошибка: произошел сбой Format("%D") `COleDateTime` и `COleDateTimeSpan`"(Q167338).
-
 [!code-cpp[NVC_ATLMFC_Utilities#176](../atl-mfc-shared/codesnippet/cpp/date-and-time-automation-support_1.cpp)]
 
 ## <a name="see-also"></a>См. также
 
 [Дата и время](../atl-mfc-shared/date-and-time.md)
-

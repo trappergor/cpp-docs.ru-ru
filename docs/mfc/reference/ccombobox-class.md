@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447431"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890651"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -139,13 +139,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в окне списка, поле со списком или в отсортированном позиции для поля списка CBS_SORT стиль.|
 |[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковое имеется, в элементе управления.|
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 При внедрении `CComboBox` объекта в объект в другом окне, необходимо уничтожить его. Если вы создаете `CComboBox` объект в стеке, он будет удален автоматически. При создании `CComboBox` объект в куче с помощью **новый** функцию, необходимо вызвать **удалить** в объекте уничтожить его при уничтожении поле со списком Windows.
 
-**Примечание** требуется обрабатывать сообщения WM_KEYDOWN и WM_CHAR, необходимость подкласс списком измените и список элементов управления, создавать производные классы от `CEdit` и `CListBox`, и добавьте обработчики для этих сообщений для производных классов. Дополнительные сведения см. в разделе [ http://support.microsoft.com/default.aspxscid=kb; en-us; Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667) и [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
+**Примечание** требуется обрабатывать сообщения WM_KEYDOWN и WM_CHAR, необходимость подкласс списком измените и список элементов управления, создавать производные классы от `CEdit` и `CListBox`, и добавьте обработчики для этих сообщений для производных классов. Дополнительные сведения см. в разделе [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -675,7 +675,7 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszText*|[out] Указатель на буфер, получающий текст баннера подсказки.|
 |*cchText*|[in] Размер буфера, *lpszText* указывает параметр.|
@@ -1070,7 +1070,7 @@ int InsertString(
 
 ### <a name="remarks"></a>Примечания
 
-В отличие от [AddString](#addstring) функции-члена `InsertString` функция-член не ведет список с [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) стилем.
+В отличие от функции-члена [AddString](#addstring) , функция-член `InsertString` не вызывает сортировку списка со стилем [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) .
 
 > [!NOTE]
 >  Эта функция не поддерживается Windows `ComboBoxEx` элемента управления. Дополнительные сведения об этом элементе управления см. в разделе [элементы управления ComboBoxEx](/windows/desktop/Controls/comboboxex-controls) в пакете Windows SDK.
@@ -1201,7 +1201,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszText*|[in] Указатель на буфер нулевым байтом, который содержит текст подсказки.|
 
@@ -1493,7 +1493,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iMinVisible*|[in] Указывает минимальное число видимых элементов.|
 

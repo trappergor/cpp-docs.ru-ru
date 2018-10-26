@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef2aaf3f37e9699547c3a85c55a2f72d4baab7a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 86387103d4d8257a109928a665579621468a3cf3
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047698"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788704"
 ---
 # <a name="compiler-warning-level-1-c4096"></a>Компилятор предупреждение (уровень 1) C4096
 
@@ -29,7 +29,7 @@ ms.locfileid: "46047698"
 
 Определение интерфейса, предназначенное для использования в качестве COM-интерфейс не был определен как COM-интерфейс и поэтому он не будет передан в IDL-файл.
 
-См. в разделе [атрибуты интерфейса](../../windows/interface-attributes.md) список атрибутов, определяющих интерфейс COM-интерфейса.
+См. в разделе [атрибуты интерфейса](../../windows/attributes/interface-attributes.md) список атрибутов, определяющих интерфейс COM-интерфейса.
 
 Следующий пример приводит к возникновению ошибки C4096:
 

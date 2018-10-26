@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a02bc21362c8f8acd71984f91d5528078d141eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060420"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>Пример. Отображение диалогового окна через команду меню
 
@@ -56,15 +56,15 @@ ms.locfileid: "46378193"
 
 1. В **представление классов**, выберите класс документа (CDisplayDialogDoc). В окне **Свойства** нажмите кнопку **События** . Дважды щелкните идентификатор команды меню (ID_VIEW_TEST) в левой части **свойства** и выберите **команда**. В области справа щелкните стрелку вниз и выберите  **\<Добавить > OnViewTest**.
 
-     Если вы добавили команду меню мэйнфрейма MDI-приложения, выберите класс приложения (CDisplayDialogApp).
+   Если вы добавили команду меню мэйнфрейма MDI-приложения, выберите класс приложения (CDisplayDialogApp).
 
 1. Добавьте следующие включать инструкцию CDisplayDialogDoc.cpp (или CDisplayDialogApp.cpp) после существующего включают инструкции:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#42](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_1.cpp)]
 
 1. Добавьте следующий код, чтобы `OnViewTest` для выполнения функции:
 
-     [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#43](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_2.cpp)]
 
 ### <a name="to-display-a-modeless-dialog-box"></a>Для отображения немодального диалогового окна
 
@@ -98,12 +98,7 @@ ms.locfileid: "46378193"
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-Кроме того см. в следующей статье базы знаний:
-
-- Q251059: HOWTO: Укажите собственное имя класса окна для диалогового окна MFC
-
 ## <a name="see-also"></a>См. также
 
 [Диалоговые окна](../mfc/dialog-boxes.md)<br/>
 [Модальные и немодальные диалоговые окна](../mfc/modal-and-modeless-dialog-boxes.md)
-

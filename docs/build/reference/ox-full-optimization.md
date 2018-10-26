@@ -1,13 +1,14 @@
 ---
 title: -Ox (Включение большинства видов оптимизации скорости) | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438084"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459170"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (Включение большинства видов оптимизации скорости)
 
@@ -33,7 +34,7 @@ ms.locfileid: "46438084"
 
 ## <a name="syntax"></a>Синтаксис
 
-> /Ox
+> **/Ox**
 
 ## <a name="remarks"></a>Примечания
 
@@ -59,7 +60,7 @@ ms.locfileid: "46438084"
 
 - [/Od (отключение (отладчика))](../../build/reference/od-disable-debug.md)
 
-Вы можете отменить смещения в сторону быстродействия **/Ox** параметр компилятора, если указать **/Oxs**, сочетающий **/Ox** параметра компилятора с [/Os (приоритет небольшого размера Код)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Объединенные параметры предпочитать размер кода.
+Вы можете отменить смещения в сторону быстродействия **/Ox** параметр компилятора, если указать **/Oxs**, сочетающий **/Ox** параметра компилятора с [/Os (приоритет небольшого размера Код)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md). Объединенные параметры предпочитать размер кода.  **/Oxs** параметр именно это аналогично указанию **/Ox** **/Os** после того как параметры отобразятся в указанном порядке.
 
 Чтобы применить все доступные файлового уровня оптимизации для сборок выпуска, мы рекомендуем указать [/O2 (максимизировать скорость)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) вместо **/Ox**, и [/O1 (минимизировать размер)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) вместо из **/Oxs**. Для еще больше оптимизации в версии сборок, также учитывать [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md) параметр компилятора и [/LTCG (Создание кода во время компоновки)](../../build/reference/ltcg-link-time-code-generation.md) параметр компоновщика.
 

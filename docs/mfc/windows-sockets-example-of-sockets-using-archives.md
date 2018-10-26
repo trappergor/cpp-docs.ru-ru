@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427281"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062233"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Сокеты Windows. Пример сокетов с использованием архивов
 
@@ -40,11 +40,11 @@ ms.locfileid: "46427281"
 
 - «header», указывающий характер данных (в данном случае, значение *bValue* переменной и будет отправлен количество копий).
 
-     Оба элемента генерируются случайным образом в этом примере.
+   Оба элемента генерируются случайным образом в этом примере.
 
 - Указанное число копий данных.
 
-     Внутренний **для** цикл отправляет *bValue* указанное число раз.
+   Внутренний **для** цикл отправляет *bValue* указанное число раз.
 
 - Строка с именем *strText* , получатель отображает его пользователю.
 

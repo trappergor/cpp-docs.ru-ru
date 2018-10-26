@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32a58d35a78fce6a0a6bb499df1363a80200de5a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063358"
 ---
 # <a name="member-access-control-c"></a>Управление доступом к членам (C++)
 
@@ -47,7 +47,7 @@ protected:      // Declare protected function for derived classes only.
 
 По умолчанию доступ **частного** в классе, и **открытый** в структуре или объединении. Спецификаторы доступа класса могут использоваться любое количество раз и в любом порядке. Выделение хранилища для объектов типов классов зависит от реализации, но членам гарантировано присваиваются старшие адреса памяти, расположенные подряд между описателями доступа.
 
-### <a name="member-access-control"></a>Управление доступом к членам
+## <a name="member-access-control"></a>Управление доступом к членам
 
 |Тип доступа|Значение|
 |--------------------|-------------|
@@ -247,7 +247,6 @@ int main()
 ![Доступ вдоль линий графа наследования](../cpp/media/vc38v91.gif "vc38V91") вдоль пути доступа в графе наследования
 
 На этом рисунке обращение к имени, которое было объявлено в классе `VBase`, всегда будет выполняться через класс `RightPath`. Путь справа дает более широкий доступ, поскольку в `RightPath` класс `VBase` объявлен как общедоступный базовый, а в `LeftPath` класс `VBase` объявлен как закрытый.
-
 
 ## <a name="see-also"></a>См. также
 

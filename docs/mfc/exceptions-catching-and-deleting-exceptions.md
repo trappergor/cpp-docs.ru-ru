@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bd59cc19c80e305a7e57fb711a49f59a024d528
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ad6ad1c4d1d7d74f60acbd985ee549d708ae28f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434769"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074128"
 ---
 # <a name="exceptions-catching-and-deleting-exceptions"></a>Исключения. Перехват и удаление исключений
 
@@ -36,9 +36,9 @@ ms.locfileid: "46434769"
 
 - **Catch** блок вызывает исключение.
 
-     Конечно не удаляйте исключение при появлении этого исключения еще раз:
+   Конечно не удаляйте исключение при появлении этого исключения еще раз:
 
-     [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
+   [!code-cpp[NVC_MFCExceptions#3](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_1.cpp)]
 
 - Выполнение возвращается изнутри **catch** блока.
 
@@ -49,15 +49,15 @@ ms.locfileid: "46434769"
 
 1. Используйте **попробуйте** ключевое слово для настройки **попробуйте** блока. Выполните все инструкции программы, которые могут создавать исключение в **попробуйте** блока.
 
-     Используйте **catch** ключевое слово для настройки **catch** блока. Поместите код обработки исключений в **catch** блока. Код в **catch** блок выполняется только в том случае, если код внутри **попробуйте** блок вызывает исключение типа, указанного в **catch** инструкции.
+   Используйте **catch** ключевое слово для настройки **catch** блока. Поместите код обработки исключений в **catch** блока. Код в **catch** блок выполняется только в том случае, если код внутри **попробуйте** блок вызывает исключение типа, указанного в **catch** инструкции.
 
-     Скелет показано как **попробуйте** и **catch** блоки обычно упорядочиваются:
+   Скелет показано как **попробуйте** и **catch** блоки обычно упорядочиваются:
 
-     [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
+   [!code-cpp[NVC_MFCExceptions#4](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_2.cpp)]
 
-     Когда создается исключение, управление передается первой **catch** блок, объявление которого исключение соответствует типу исключения. Можно выборочно обрабатывать различные типы исключений с последующими **catch** блокирует, как показано ниже:
+   Когда создается исключение, управление передается первой **catch** блок, объявление которого исключение соответствует типу исключения. Можно выборочно обрабатывать различные типы исключений с последующими **catch** блокирует, как показано ниже:
 
-     [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
+   [!code-cpp[NVC_MFCExceptions#5](../mfc/codesnippet/cpp/exceptions-catching-and-deleting-exceptions_3.cpp)]
 
 Дополнительные сведения см. в разделе [исключения: преобразование из макроса исключений MFC](../mfc/exceptions-converting-from-mfc-exception-macros.md).
 

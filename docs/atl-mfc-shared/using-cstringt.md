@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f11590a78cb691f4812e7b503350fb72a4bdc95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9972d603aa563b4432d2935f3d934d4916b7c8b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076221"
 ---
 # <a name="using-cstringt"></a>С помощью CStringT
 
@@ -35,7 +35,7 @@ ms.locfileid: "46390738"
 
 ## <a name="reference"></a>Ссылка
 
-[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md).  
+[Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md).<br/>
 Содержит справочные сведения об общей `CStringT` класса.
 
 ## <a name="see-also"></a>См. также

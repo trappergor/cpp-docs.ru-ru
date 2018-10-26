@@ -1,7 +1,7 @@
 ---
-title: 'Практическое: повышение производительности с помощью универсальных коллекций (Visual C++) | Документация Майкрософт'
+title: 'Практическое: повышение производительности с помощью универсальных типов (C + +/ CLI) | Документация Майкрософт'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 18228ab8f855f926e4600d6579baa2999f02f7e9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061737"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>Практическое руководство. Повышение производительности с помощью универсальных коллекций (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>Практическое: повышение производительности с помощью универсальных типов (C + +/ CLI)
 
-С помощью универсальных шаблонов можно создать многократно используемый код на основе параметра типа. Определение фактического типа параметра типа откладывается до вызова из клиентского кода. Дополнительные сведения об универсальных классах см. в разделе [универсальные шаблоны](../windows/generics-cpp-component-extensions.md).
+С помощью универсальных шаблонов можно создать многократно используемый код на основе параметра типа. Определение фактического типа параметра типа откладывается до вызова из клиентского кода. Дополнительные сведения об универсальных классах см. в разделе [Generics](../windows/generics-cpp-component-extensions.md).
 
 В этой статье обсуждается, как универсальные шаблоны позволяют повысить производительность приложения, использующего коллекции.
 
@@ -48,7 +48,7 @@ ms.locfileid: "44318530"
 using namespace System;
 using namespace System::Collections;
 
-int main()  
+int main()
 {
     // This Stack can contain any type.
     Stack ^s = gcnew Stack();
@@ -64,14 +64,14 @@ int main()
     // Pop the items off the Stack.
     // The item is returned as an Object, so a cast is
     // necessary to convert it to its proper type.
-    while (s->Count> 0)  
+    while (s->Count> 0)
     {
         Object ^o = s->Pop();
-        if (o->GetType() == Type::GetType("System.String"))  
+        if (o->GetType() == Type::GetType("System.String"))
         {
             Console::WriteLine("Popped a String: {0}", (String ^)o);
         }
-        else if (o->GetType() == Type::GetType("System.Int32"))  
+        else if (o->GetType() == Type::GetType("System.Int32"))
         {
             Console::WriteLine("Popped an int: {0}", (int)o);
         }
@@ -103,7 +103,7 @@ Popped an int: 7
 using namespace System;
 using namespace System::Collections::Generic;
 
-int main()  
+int main()
 {
     // This Stack can only contain integers.
     Stack<int> ^s = gcnew Stack<int>();

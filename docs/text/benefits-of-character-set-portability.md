@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115a4524f3b11d847291015f3bee5ca10f628310
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d016b95ea2a2d5d94b8db47a2d6c9d5cc577083f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423446"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064450"
 ---
 # <a name="benefits-of-character-set-portability"></a>Преимущества переносимости кодировки
 
@@ -29,7 +29,6 @@ ms.locfileid: "46423446"
 - Разработка переносимых приложений делает базу кода гибкие. Вы можете позже его легко для Юникода и MBCS.
 
 - Использование Юникода повышает эффективность своих приложений для Windows. Поскольку в Windows используется Юникод, строки не в Юникоде, передавалась и от операционной системы должны быть переведены, что снижает производительность.
-
 
 ## <a name="see-also"></a>См. также
 

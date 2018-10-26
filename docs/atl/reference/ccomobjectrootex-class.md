@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098957"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076988"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>Параметры
 
 *ThreadModel*<br/>
-Класс, методы которого реализовать нужный потоковой модели. Можно явно выбрать потоковую модель, задав *ThreadModel* для [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), или [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Вы можете принять потоковую модель сервера по умолчанию, задав *ThreadModel* для [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).  
+Класс, методы которого реализовать нужный потоковой модели. Можно явно выбрать потоковую модель, задав *ThreadModel* для [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), или [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Вы можете принять потоковую модель сервера по умолчанию, задав *ThreadModel* для [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
 ## <a name="members"></a>Участники
 
@@ -139,9 +139,9 @@ HRESULT FinalConstruct();
 
 - Нельзя вызывать виртуальные функции посредством механизма виртуальных функций из конструктора класса. Вызов виртуальной функции из конструктора класса приводит к статически разрешаемым вызову функции, как это определено в этот момент в иерархии наследования. Вызовов чистых виртуальных функций к ошибкам компоновщика.
 
-     Класс не является наиболее производный класс в иерархии наследования, он основывается на производном классе, предоставляемые ATL для обеспечения части функциональных возможностей. Есть шанс, что инициализации будет необходимо использовать возможности, предоставляемые этим классом, (Это безусловно относится когда объектов класса, необходимы для статистической обработки других объектов), но в конструктор в класс не имеет доступ к этим функциям. Код создания для класса выполняется до наиболее производного класса создается полностью.
+   Класс не является наиболее производный класс в иерархии наследования, он основывается на производном классе, предоставляемые ATL для обеспечения части функциональных возможностей. Есть шанс, что инициализации будет необходимо использовать возможности, предоставляемые этим классом, (Это безусловно относится когда объектов класса, необходимы для статистической обработки других объектов), но в конструктор в класс не имеет доступ к этим функциям. Код создания для класса выполняется до наиболее производного класса создается полностью.
 
-     Тем не менее `FinalConstruct` вызывается сразу после наиболее производный класс полностью созданы, что позволяет вызывать виртуальные функции и использовать реализацию подсчет ссылок, предоставляемые ATL.
+   Тем не менее `FinalConstruct` вызывается сразу после наиболее производный класс полностью созданы, что позволяет вызывать виртуальные функции и использовать реализацию подсчет ссылок, предоставляемые ATL.
 
 ### <a name="example"></a>Пример
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Примечания
 
-С помощью `m_pOuterUnknown`, являющийся частью объединения:  
+С помощью `m_pOuterUnknown`, являющийся частью объединения:
 
 ```
 union {

@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054453"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
 
@@ -227,9 +227,9 @@ B b(42L); // now calls B(int)
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 Это новое предупреждение C4768 выдается для некоторых заголовков Windows SDK, которые поставлялись с Visual Studio 2017 15.3 или более ранними версиями (например, с версией 10.0.15063.0, также известной как пакет SDK для RS2). Однако в более поздних версиях заголовков Windows SDK (в частности, ShlObj.h и ShlObj_core.h) ошибка была исправлена, поэтому это предупреждение не создается. При появлении этого предупреждения от заголовков Windows SDK можно выполнить следующие действия:
 
 1. Переключитесь на последнюю версию Windows SDK, поставляемую вместе с выпуском Visual Studio 2017 версии 15.5.
-2. Отключите предупреждение вокруг #include инструкции заголовка пакета Windows SDK:
+
+1. Отключите предупреждение вокруг #include инструкции заголовка пакета Windows SDK:
 
 ```cpp
    #pragma warning (push)
@@ -1374,7 +1375,7 @@ struct B : A {
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1587,7 +1588,7 @@ D<int> d;
 
 ### <a name="constexpr-aggregate-initialization"></a>Агрегатная инициализация constexpr
 
-В предыдущих версиях компилятора C++ неправильно обрабатывалась агрегатная инициализация constexpr; принимался недопустимый код, в котором список агрегатной инициализации содержал слишком много элементов, и создавался неправильный объект Codegen. Примером является следующий код: 
+В предыдущих версиях компилятора C++ неправильно обрабатывалась агрегатная инициализация constexpr; принимался недопустимый код, в котором список агрегатной инициализации содержал слишком много элементов, и создавался неправильный объект Codegen. Примером является следующий код:
 
 ```cpp
 #include <array>
@@ -1689,15 +1690,14 @@ struct S : Base<T> {
 
 Стандарт C++ запрещает пользователю добавлять опережающие объявления и определения в пространство имен `std`. Добавление объявлений или определений в пространство имен `std` или во вложенное в std пространство имен теперь приводит в неопределенному поведению.
 
-В дальнейшем Майкрософт изменит место определения некоторых типов STL. При этом работа существующего кода, который добавляет опережающие объявления в пространство имен `std`, будет нарушена. Новое предупреждение C4643 помогает выявить такие проблемы с источником. Предупреждение можно включить в режиме **/default**; по умолчанию оно отключено. Оно повлияет на программы, которые компилируются с параметром **/Wall** или **/WX**. 
+В дальнейшем Майкрософт изменит место определения некоторых типов STL. При этом работа существующего кода, который добавляет опережающие объявления в пространство имен `std`, будет нарушена. Новое предупреждение C4643 помогает выявить такие проблемы с источником. Предупреждение можно включить в режиме **/default**; по умолчанию оно отключено. Оно повлияет на программы, которые компилируются с параметром **/Wall** или **/WX**.
 
-Следующий код теперь вызывает ошибку C4643: *опережающее объявление vector в пространстве имен std запрещено стандартом C++*. 
-
+Следующий код теперь вызывает ошибку C4643: *опережающее объявление vector в пространстве имен std запрещено стандартом C++*.
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 Чтобы исправить эту ошибку, используйте директиву **include** вместо опережающего объявления.
@@ -1713,106 +1713,106 @@ namespace std {
 Без этой ошибки следующая программа скомпилируется, но создаст бесконечный цикл.
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 Чтобы избежать этого, делегируйте в другой конструктор.
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>Макрос offsetof с константными выражениями
 
-Макрос [offsetof](c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](cpp/reinterpret-cast-operator.md). Это недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал это. Макрос offsetof, входящий в состав библиотеки STL, правильно использует встроенные функции компилятора (**__builtin_offsetof**), но многие изменяли его на собственный **offsetof**.  
+Макрос [offsetof](c-runtime-library/reference/offsetof-macro.md) обычно реализовывался с помощью макроса, требующего [reinterpret_cast](cpp/reinterpret-cast-operator.md). Это недопустимо в контекстах, требующих константного выражения, но обычно компилятор Microsoft C++ разрешал это. Макрос offsetof, входящий в состав библиотеки STL, правильно использует встроенные функции компилятора (**__builtin_offsetof**), но многие изменяли его на собственный **offsetof**.
 
 В Visual Studio 2017 версии 15.8 компилятор ограничивает области, в которых reinterpret_cast может использоваться в режиме по умолчанию, чтобы код соответствовал стандартному поведению C++. В режиме [/permissive-](build/reference/permissive-standards-conformance.md) ограничения еще строже. Использование offsetof там, где требуются константные выражения, может привести к тому, что код вызовет предупреждение C4644: *нестандартное использование шаблона offsetof на основе макроса в константных выражениях; используйте offsetof, заданный в стандартной библиотеке C++*, — или C2975: *недопустимый аргумент шаблона, ожидается константное выражение времени компиляции*.
 
-Следующий код вызывает ошибку C4644 в режимах **/default** и **/std:c++17**, а также ошибку C2975 в режиме **/permissive-**: 
+Следующий код вызывает ошибку C4644 в режимах **/default** и **/std:c++17**, а также ошибку C2975 в режиме **/permissive-**:
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 Чтобы исправить ошибку, используйте **offsetof**, определенный в \<cstddef>.
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>Квалификаторы cv-qualifier в базовых классах, участвующих в раскрытии пакета
 
-Компиляторы Microsoft C++ предыдущих версий не обнаруживали квалификаторы cv-qualifier в базовом классе, если он также участвовал в раскрытии пакета. 
+Компиляторы Microsoft C++ предыдущих версий не обнаруживали квалификаторы cv-qualifier в базовом классе, если он также участвовал в раскрытии пакета.
 
-В Visual Studio 2017 версии 15.8 в режиме **/permissive-** следующий код вызывает ошибку C3770: *const S: не является допустимым базовым классом*. 
+В Visual Studio 2017 версии 15.8 в режиме **/permissive-** следующий код вызывает ошибку C3770: *const S: не является допустимым базовым классом*.
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>Ключевое слово template и описатели вложенных имен
 
-В режиме **/permissive-** компилятору теперь нужно, чтобы ключевое слово `template` предшествовало имени шаблона, если оно стоит после зависимого описателя вложенных имен. 
+В режиме **/permissive-** компилятору теперь нужно, чтобы ключевое слово `template` предшествовало имени шаблона, если оно стоит после зависимого описателя вложенных имен.
 
 Следующий код в режиме **/permissive-** теперь вызывает ошибку C7510: *foo: перед зависимым именем шаблона теперь должен стоять префикс template. Примечание. См. справку по компилируемому экземпляру шаблона класса "X<T>"*.
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 Чтобы исправить эту ошибку, добавьте ключевое слово `template` в инструкцию `Base<T>::foo<int>();`, как показано в следующем примере.
@@ -1822,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>См. также

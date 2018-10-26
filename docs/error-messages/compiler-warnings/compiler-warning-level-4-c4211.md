@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2c92ef68768f4a9f8ac606716d5ae53c4aa72e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e38764970b8afde477c4f627e5cd3e5874d3b129
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048218"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054542"
 ---
 # <a name="compiler-warning-level-4-c4211"></a>Предупреждение компилятора (уровень 4) C4211
 
@@ -45,5 +45,4 @@ int main()
 Такие переопределения недействительны в режиме совместимости с ANSI ([/Za](../../build/reference/za-ze-disable-language-extensions.md)).
 
 ## <a name="see-also"></a>См. также
-
 

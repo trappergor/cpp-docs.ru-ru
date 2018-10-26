@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4b5ed392850fac97e8671774dee0905bf3417eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 765a5293f233cb6df0654416ea2a5463df1095a8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375894"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054427"
 ---
 # <a name="specifying-levels-of-functionality"></a>Задание уровней функциональности
 
@@ -46,11 +46,11 @@ ms.locfileid: "46375894"
 
 1. Используйте DECLARE_DYNAMIC-макрос в объявлении класса, как показано ниже:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/specifying-levels-of-functionality_1.h)]
 
 1. Использовать implement_dynamic-макрос в файле реализации (. CPP) вашего класса. Этот макрос принимает в качестве аргументов имя класса и его базового класса, следующим образом:
 
-     [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
 >  Всегда помещать IMPLEMENT_DYNAMIC в файле реализации (. CPP) для класса. Implement_dynamic-макрос должно оцениваться только один раз во время компиляции и поэтому не следует использовать в файле интерфейса (. H), потенциально может включаться в более чем одного файла.

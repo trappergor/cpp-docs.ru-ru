@@ -1,17 +1,19 @@
 ---
 title: Оператор try-finally | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
+- _finally
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024246"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060017"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 
@@ -42,7 +44,7 @@ ms.locfileid: "46024246"
 Следующий синтаксис описывает **try-finally** инструкции:
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -71,7 +73,7 @@ __finally {
 
 1. По завершении работы обработчика завершения выполнение продолжается после **__finally** инструкции. Независимо от того как завершается защищенный раздел (например, с помощью **goto** из защищенного тела или **возвращают** инструкции), выполняется обработчик завершения *перед* поток управления перемещается из защищенного раздела.
 
-     Объект **__finally** инструкции не блокирует поиск соответствующего обработчика исключений.
+   Объект **__finally** инструкции не блокирует поиск соответствующего обработчика исключений.
 
 При возникновении исключения в **__try** блока, операционная система должна найти обработчик для исключения или программа завершится ошибкой. Если обработчик найден, все **__finally** блоки выполняются и выполнение продолжается в обработчике.
 
@@ -81,6 +83,8 @@ __finally {
 
 > [!NOTE]
 >  Поведение оператора try-finally отличается от некоторых других языков, которые поддерживают использование **наконец**, например C#.  Один **__try** , возможно, но не оба объекта **__finally** и **__except**.  Если оба следует использовать одновременно, оператор try-except должен включать внутренней оператор try-finally.  Правила,задающие время выполнения каждого блока, также различаются.
+
+Для совместимости с предыдущими версиями **_try**, **_finally**, и **_leave** являются синонимами для **__try**, **__ Наконец**, и **__leave** Если параметр компилятора [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) указан.
 
 ## <a name="the-leave-keyword"></a>Ключевое слово __leave
 

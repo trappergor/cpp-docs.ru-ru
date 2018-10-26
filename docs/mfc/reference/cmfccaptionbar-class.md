@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a6379112de9b31de55b86cc4bc4e06a94863ac6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 509c2eb386e235e8ba7c6d2bc016ff92f6499263
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077547"
 ---
 # <a name="cmfccaptionbar-class"></a>Класс CMFCCaptionBar
 
@@ -158,7 +158,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCCaptionBar` класса. В примере показано создание элемента управления панели заголовка, задать трехмерной границы заголовка окна, задайте расстояние в пикселях между краем заголовка панели элементов и границей элемента управления панели заголовка, кнопки для строки заголовка , примените всплывающую подсказку для кнопки, задать текстовую метку для строки заголовка, растровое изображение для строки заголовка и подсказку для изображения в строке заголовка. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCCaptionBar` . В примере показано создание элемента управления панели заголовка, задать трехмерной границы заголовка окна, задайте расстояние в пикселях между краем заголовка панели элементов и границей элемента управления панели заголовка, кнопки для строки заголовка , примените всплывающую подсказку для кнопки, задать текстовую метку для строки заголовка, растровое изображение для строки заголовка и подсказку для изображения в строке заголовка. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -363,7 +363,7 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства заголовка окна.
 
 *Rect*<br/>
@@ -387,7 +387,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, который используется для отображения границ.
 
 *Rect*<br/>
@@ -413,7 +413,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
 *Rect*<br/>
@@ -441,7 +441,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения изображения.
 
 *Rect*<br/>
@@ -464,7 +464,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
 *Rect*<br/>
@@ -525,7 +525,6 @@ void SetBitmap(
     COLORREF clrTransparent,
     BOOL bStretch=FALSE,
     BarElementAlignment bmpAlignment=ALIGN_RIGHT);
-
 
 void SetBitmap(
     UINT uiBmpResID,

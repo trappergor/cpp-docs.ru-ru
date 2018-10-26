@@ -1,7 +1,7 @@
 ---
 title: Пошаговое руководство. Работа с проектами и решениями (C++) | Документы Майкрософт
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339139"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235156"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Пошаговое руководство. Работа с проектами и решениями (C++)
 
@@ -42,13 +42,16 @@ ms.locfileid: "33339139"
 
 ### <a name="to-create-a-project"></a>Создание проекта
 
-1. В строке меню выберите **Файл > Создать > Проект**.
+1. В строке меню выберите **Файл** > **Создать** > **Проект**.
 
 1. В левой области диалогового она **Новый проект** разверните узел **Установленные** и выберите **Visual C++**, если он еще не открыт.
 
 1. В списке установленных шаблонов в центральной области выберите шаблон **Консольное приложение Windows**.
 
-1. В поле **Имя** введите имя проекта. Для этого примера введите **Game** (Игра).
+   > [!NOTE]
+   > В предыдущих версиях Visual Studio установленный шаблон называется **Консольное приложение Win32**.
+
+1. В поле **Имя** введите имя проекта. Для этого примера введите *Game* (Игра).
 
    Вы можете принять расположение по умолчанию в раскрывающемся списке **Расположение**, ввести другое расположение или нажать кнопку **Обзор**, чтобы перейти к каталогу, в котором требуется сохранить проект.
 
@@ -66,11 +69,11 @@ ms.locfileid: "33339139"
 
 ### <a name="to-add-a-class-to-a-project"></a>Добавление класса в проект
 
-1. Если **обозреватель решений** не отображается в Visual Studio, в строке меню последовательно выберите **Вид > Обозреватель решений**.
+1. Если окно **Обозреватель решений** не отображается в Visual Studio, выберите в строке меню **Вид** > **Обозреватель решений**.
 
-1. Выберите проект **Game** в **обозревателе решений**. В строке меню выберите **Проект > Добавить класс**.
+1. Выберите проект **Game** в **обозревателе решений**. В строке меню выберите **Проект** > **Добавить класс**.
 
-1. В поле **Имя класса** диалогового окна **Добавление класса** введите значение *Cardgame*. Не изменяйте имена файлов и параметры по умолчанию. Нажмите кнопку **ОК** .
+1. В диалоговом окне **Добавление класса** в поле **Имя класса** введите значение *Cardgame*. Не изменяйте имена файлов и параметры по умолчанию. Нажмите кнопку **ОК** .
 
    Visual Studio создает файлы и добавляет их в проект. Вы можете просмотреть их в **обозревателе решений**. Файлы Cardgame.h и Cardgame.cpp открываются в редакторе.
 
@@ -84,21 +87,19 @@ ms.locfileid: "33339139"
       static int totalParticipants;
       ```
 
-   - Измените конструктор по умолчанию, созданный средой Visual Studio. После спецификатора доступа `public:` найдите строку, которая выглядит следующим образом:
+   - Измените конструктор по умолчанию, созданный средой Visual Studio. После описателя доступа `public:` найдите строку, которая выглядит следующим образом:
 
       `Cardgame();`
 
-      Измените этот конструктор таким образом, чтобы он принимал один параметр типа `int` с именем *players*.
+      Измените этот конструктор так, чтобы он принимал один параметр типа `int` с именем *players*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
-      `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
 
    - После деструктора по умолчанию добавьте встроенное объявление функции-члена типа `static int` с именем *GetParticipants*, которая не принимает параметры и возвращает значение `totalParticipants`.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
-      `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
 
-   После изменений файл Cardgame.h должен иметь следующий вид:
+   После изменения файл Cardgame.h должен содержать примерно такой код:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -109,12 +110,12 @@ ms.locfileid: "33339139"
        static int totalParticipants;
    public:
        Cardgame(int players);
-       ~Cardgame(void);
+       ~Cardgame();
        static int GetParticipants() { return totalParticipants; }
    };
    ```
 
-   Строка `#pragma once` указывает компилятору включить файл заголовка только один раз. Дополнительные сведения см. в разделе [once](../preprocessor/once.md). Сведения о других ключевых словах C++ в этом файле заголовка см в разделах [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) и [public](../cpp/public-cpp.md).
+   Строка `#pragma once` указывает компилятору включить файл заголовка только один раз. Дополнительные сведения см. в разделе [once](../preprocessor/once.md). Сведения о других ключевых словах C++ в представленном выше файле заголовка см. в разделах [class](../cpp/class-cpp.md), [int](../cpp/fundamental-types-cpp.md), [static](../cpp/storage-classes-cpp.md) и [public](../cpp/public-cpp.md).
 
 1. Перейдите на вкладку **Cardgame.cpp** в верхней части области редактирования, чтобы открыть этот файл для внесения изменений.
 
@@ -122,7 +123,7 @@ ms.locfileid: "33339139"
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -144,7 +145,7 @@ ms.locfileid: "33339139"
    ```
 
    > [!NOTE]
-   > При вводе кода можно использовать автозавершение. Например, при вводе с клавиатуры можно ввести *pl* или *tot* и нажать клавиши CTRL+ПРОБЕЛ. Функция автозавершения автоматически вводит `players` или `totalParticipants`.
+   > При вводе кода можно использовать автозавершение. Например, при вводе кода с клавиатуры можно ввести *pl* или *tot* и нажать клавиши **Ctrl**+**Пробел**. Функция автозавершения автоматически вводит `players` или `totalParticipants`.
 
 ## <a name="add-test-code-to-your-main-function"></a>Добавление тестового кода в функцию main
 
@@ -152,14 +153,14 @@ ms.locfileid: "33339139"
 
 ### <a name="to-add-test-code-to-the-project"></a>Добавление тестового кода в проект
 
-1. В окне редактора Game.cpp замените существующий код следующим:
+1. В окне редактора **Game.cpp** замените существующий код следующим:
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
    // Game.cpp : Defines the entry point for the console application.
    //
 
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -179,7 +180,7 @@ ms.locfileid: "33339139"
        return 0;
    }
    ```
-Этот код добавляет функцию тестирования `PlayGames` в исходный код и вызывает ее в `main`. 
+Этот код добавляет в исходный код функцию тестирования `PlayGames` и вызывает ее в `main`.
 
 ## <a name="build-and-run-your-app-project"></a>Сборка и запуск проекта приложения
 
@@ -187,25 +188,25 @@ ms.locfileid: "33339139"
 
 ### <a name="to-build-and-run-the-project"></a>Построение и запуск проекта
 
-1. В строке меню последовательно выберите **Сборка > Собрать решение**.
+1. В строке меню последовательно выберите **Сборка**  >  **Собрать решение**.
 
-   Выходные данные сборки выводятся в окне **Вывод**. Если сборка выполнена успешно, выходные данные должны выглядеть следующим образом:
+   Выходные данные сборки выводятся в окне **Вывод**. Если сборка пройдет успешно, выходные данные должны выглядеть следующим образом:
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>  stdafx.cpp
-   1>  Game.cpp
-   1>  Cardgame.cpp
-   1>  Generating Code...
-   1>  Game.vcxproj -> C:\Users\username\Source\Repos\Game\Debug\Game.exe
+   1>pch.cpp
+   1>Cardgame.cpp
+   1>Game.cpp
+   1>Generating Code...
+   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
    ```
 
    В окне **Вывод** в зависимости от конфигурации сборки могут отображаться различные шаги, но если сборка проекта завершается успешно, то последняя строка выходных данных должна выглядеть так, как показано выше.
 
-   Если сборка завершилась неудачей, сравните свой код с приведенными ранее шагами.
+   Если сборка завершилась неудачей, сравните свой код с образцами в предыдущих действиях.
 
-1. Чтобы запустить проект, в строке меню выберите **Отладка > Запуск без отладки**. Должно появиться консольное окно, а результат выполнения должен выглядеть примерно следующим образом:
+1. Чтобы запустить проект, в строке меню выберите **Отладка** > **Запуск без отладки**. Появится консольное окно, а результат выполнения должен выглядеть примерно следующим образом:
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
@@ -219,10 +220,10 @@ ms.locfileid: "33339139"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Предыдущий:** [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).  
-**Следующий:** [Пошаговое руководство. Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md).
+**Назад:** [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).<br/>
+**Далее:** [Пошаговое руководство. Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md).<br/>
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C++](../cpp/cpp-language-reference.md)  
-[Сборка программ C/C++](../build/building-c-cpp-programs.md)
+[Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
+[Сборка программ C/C++](../build/building-c-cpp-programs.md)<br/>

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5b025e29c93cffe9c600646a2475f7e3230fd03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a654f820d3c1dcdaa49ed8b3b3203d2c271b6880
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055491"
 ---
 # <a name="connection-point-macros"></a>Макросы точки подключения
 
@@ -33,7 +33,7 @@ ms.locfileid: "46039547"
 |[BEGIN_CONNECTION_POINT_MAP](#begin_connection_point_map)|Отмечает начало карты записей точки подключения.|
 |[CONNECTION_POINT_ENTRY](#connection_point_entry)|Вводит точки подключения в схеме.|
 |[CONNECTION_POINT_ENTRY_P](#connection_point_entry)| (Visual Studio 2017 г.) Но, похоже на CONNECTION_POINT_ENTRY принимает указатель на iid.|
-|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Помечает конец записи подключения точки карты.|  
+|[END_CONNECTION_POINT_MAP](#end_connection_point_map)|Помечает конец записи подключения точки карты.|
 
 ## <a name="requirements"></a>Требования
 
@@ -74,7 +74,7 @@ CONNECTION_POINT_ENTRY_P(piid) // (Visual Studio 2017)
 ### <a name="parameters"></a>Параметры
 
 *IID*<br/>
-[in] Идентификатор GUID интерфейса, добавляемое сопоставление точки подключения. 
+[in] Идентификатор GUID интерфейса, добавляемое сопоставление точки подключения.
 
 *piid*<br/>
 [in] Указатель на идентификатор GUID интерфейса, добавить.

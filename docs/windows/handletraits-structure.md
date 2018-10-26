@@ -1,28 +1,32 @@
 ---
 title: Handletraits-структура | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue
 dev_langs:
 - C++
 helpviewer_keywords:
-- HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::Close method
+- Microsoft::WRL::Wrappers::HandleTraits::HANDLETraits::GetInvalidValue method
 ms.assetid: 22963e88-d857-4624-9182-7c986daff722
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2193743da9e7b5667714650660cd8e1efdb5cf4
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3e670dca205f07d1e13a93f8acd0df5965b45109
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161714"
 ---
 # <a name="handletraits-structure"></a>HANDLETraits - структура
 
@@ -38,16 +42,16 @@ struct HANDLETraits;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
-|----------|-----------------|
-|`Type`|Синоним для HANDLE.|
+Имя   | Описание
+------ | ---------------------
+`Type` | Синоним для HANDLE.
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
-|----------|-----------------|
-|[Метод HANDLETraits::Close](../windows/handletraits-close-method.md)|Закрывает указанный дескриптор.|
-|[Метод HANDLETraits::GetInvalidValue](../windows/handletraits-getinvalidvalue-method.md)|Представляет недопустимый дескриптор.|
+Имя                                              | Описание
+------------------------------------------------- | -----------------------------
+[HANDLETraits::Close](#close)                     | Закрывает указанный дескриптор.
+[HANDLETraits::GetInvalidValue](#getinvalidvalue) | Представляет недопустимый дескриптор.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -59,6 +63,33 @@ struct HANDLETraits;
 
 **Пространство имен:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>См. также
+## <a name="close"></a>HANDLETraits::Close
 
-[Пространство имен Microsoft::WRL::Wrappers::HandleTraits](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+Закрывает указанный дескриптор.
+
+```cpp
+inline static bool Close(
+   _In_ Type h
+);
+```
+
+### <a name="parameters"></a>Параметры
+
+*h*<br/>
+Чтобы закрыть дескриптор.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+**значение true,** Если обрабатывать *h* Закрыто успешно; в противном случае — значение **false**.
+
+## <a name="getinvalidvalue"></a>HANDLETraits::GetInvalidValue
+
+Представляет недопустимый дескриптор.
+
+```cpp
+inline static HANDLE GetInvalidValue();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Всегда возвращает значение INVALID_HANDLE_VALUE (INVALID_HANDLE_VALUE определяется Windows).

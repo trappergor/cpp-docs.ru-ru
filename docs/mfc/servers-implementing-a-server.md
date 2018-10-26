@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dd43b806852e578c28dc7a647cb367ad6f2780
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406799"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076624"
 ---
 # <a name="servers-implementing-a-server"></a>Серверы. Реализация сервера
 
@@ -36,7 +36,7 @@ ms.locfileid: "46406799"
 
    - Меню и панели инструментов ресурсов, используемых при сервер активен на месте.
 
-     Дополнительные сведения об этих ресурсах см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
+   Дополнительные сведения об этих ресурсах см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
 
 - Определив элемент класс производным от `COleServerItem`. Дополнительные сведения для элементов сервера см. в разделе [серверов: элементы сервера](../mfc/servers-server-items.md).
 

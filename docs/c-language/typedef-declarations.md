@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765789"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100582"
 ---
 # <a name="typedef-declarations"></a>Объявления Typedef
+
 Объявление typedef — это объявление с typedef в качестве класса хранения. Декларатор становится новым типом. Объявления typedef можно использовать для создания более коротких или более понятных имен для типов, уже определенных в языке C или объявленных пользователем. Имена typedef позволяют инкапсулировать детали реализации, которые могут измениться.
 
 Объявление typedef интерпретируется точно так же, как и объявление переменной или функции, но идентификатор становится синонимом типа, а не принимает тип, указанный в объявлении.
@@ -113,6 +114,7 @@ pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
 ## <a name="examples"></a>Примеры
+
 В следующих примерах показаны объявления typedef:
 
 ```C

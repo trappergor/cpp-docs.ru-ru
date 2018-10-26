@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383065"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054882"
 ---
 # <a name="ddxdhtml-helper-macros"></a>Вспомогательные макросы DDX_DHtml
 
@@ -58,8 +58,6 @@ ms.locfileid: "46383065"
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 Задает или получает назначения URL-адрес или точку привязки.
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ DDX_DHtml_Anchor_Target(
 
 Устанавливает или извлекает HTML между открывающий и закрывающий теги текущего элемента.
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ DDX_DHtml_ElementInnerHtml(
 
 Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLELEMENT_INNERHTML идентификатор диспетчера.
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 Задает или получает текст между тегами начала и окончания текущего элемента.
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ DDX_DHtml_Frame_Src(
 
 Задает или получает URL-адрес связанного кадра.
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ DDX_DHtml_Img_Src(
 При использовании макроса DDX_DHtml_Img_Src требуется извлечь свойство src для элемента ИЗОБРАЖЕНИЯ, объект изображения Internet Explorer будет возвращать полностью escape-URL-адрес источника изображения. Например при использовании макроса DDX_DHtml_Img_Src задать свойство src элемент ИЗОБРАЖЕНИЯ к строке «некоторые интересные картины», при извлечении свойства, Internet Explorer возвращает строку «res://d:\myapplication\myapp.exe/some% 20interesting 20picture %.»
 
 Этот макрос вызывает [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) функцию с помощью DISPID_IHTMLIMGELEMENT_SRC идентификатор диспетчера.
-
 
 ## <a name="see-also"></a>См. также
 

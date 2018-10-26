@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067297"
 ---
 # <a name="security-global-functions"></a>Глобальные функции безопасности
 
@@ -50,11 +50,11 @@ ms.locfileid: "46075166"
 |[AtlSetOwnerSid](#atlsetownersid)|Вызывайте эту функцию для задания идентификатора безопасности (SID) владельца для объекта.|
 |[AtlGetSacl](#atlgetsacl)|Вызывайте эту функцию для получения данных системного списка управления доступом (SACL) указанного объекта.|
 |[AtlSetSacl](#atlsetsacl)|Вызывайте эту функцию для задания данных системного списка управления доступом (SACL) указанного объекта.|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Вызывайте эту функцию для извлечения дескриптора безопасности заданного объекта.|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|Вызывайте эту функцию для извлечения дескриптора безопасности заданного объекта.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -127,7 +127,7 @@ inline bool AtlSetDacl(
 В отладочных сборках, произойдет ошибка утверждения, если *hObject* является недопустимым, или если *dwInheritanceFlowControl* не является одним из трех разрешенных значений.
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ inline bool AtlGetGroupSid(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
+Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ inline bool AtlSetGroupSid(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
+Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
+Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.  
+Возвращает значение true, если операция выполнена успешно; в противном случае — значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ inline bool AtlGetSacl(
 
 ### <a name="remarks"></a>Примечания
 
-Если `AtlGetSacl` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.  
+Если `AtlGetSacl` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ inline bool AtlSetSacl(
 
 В отладочных сборках, произойдет ошибка утверждения, если *hObject* является недопустимым, или если *dwInheritanceFlowControl* не является одним из трех разрешенных значений.
 
-Если `AtlSetSacl` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.  
+Если `AtlSetSacl` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlsecurity.h 
+**Заголовок:** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,7 +390,7 @@ bool bRequestNeededPrivileges = true) throw(...);
 
 ### <a name="remarks"></a>Примечания
 
-Если `AtlGetSecurityDescriptor` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.  
+Если `AtlGetSecurityDescriptor` вызывается много раз на множество разных объектов, он будет более эффективной, чтобы включить привилегией SE_SECURITY_NAME — в один раз перед вызовом функции, с помощью *bRequestNeededPrivileges* значение false.
 
 ### <a name="requirements"></a>Требования
 

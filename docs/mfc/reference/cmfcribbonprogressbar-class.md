@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375567"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071577"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Класс CMFCRibbonProgressBar
 
@@ -81,7 +81,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonProgressBar` класса. В примере как задать индикатор хода выполнения для работы в бесконечную режиме (где время завершения операции неизвестно), установите минимальное и максимальное значения для индикатора выполнения и установить текущее положение индикатора выполнения. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonProgressBar` . В примере как задать индикатор хода выполнения для работы в бесконечную режиме (где время завершения операции неизвестно), установите минимальное и максимальное значения для индикатора выполнения и установить текущее положение индикатора выполнения. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -103,7 +103,6 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*
+[in] *основного контроллера домена*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*
+[in] *основного контроллера домена*<br/>
 
 ### <a name="remarks"></a>Примечания
 

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03cc6ab0708914f9283ac713e2a63dba02711db9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068350"
 ---
 # <a name="cdialog-class"></a>Класс CDialog
 
@@ -133,11 +133,7 @@ class CDialog : public CWnd
 
 При реализации немодального диалогового окна всегда переопределять `OnCancel` функция-член и вызов `DestroyWindow` из внутри него. Не вызывайте базовый класс `CDialog::OnCancel`, так как он вызывает `EndDialog`, который будет сделать окно невидимым, но не будут уничтожены. Следует также переопределить `PostNcDestroy` для немодальных диалоговых окон, чтобы удалить **это**, поскольку обычно безрежимные диалоговые окна выделяются с **новый**. Модальные диалоговые окна, обычно создается в кадре и не обязательно `PostNcDestroy` очистки.
 
-Дополнительные сведения о `CDialog`, см. в разделе:
-
-- [Диалоговые окна](../../mfc/dialog-boxes.md)
-
-- Статье базы знаний Q262954: Практическое руководство: Создание диалогового окна перемещаемом с полосами прокрутки
+Дополнительные сведения о `CDialog`, см. в разделе [диалоговым окнам](../../mfc/dialog-boxes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -161,7 +157,6 @@ class CDialog : public CWnd
 explicit CDialog(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 explicit CDialog(
     UINT nIDTemplate,
@@ -199,7 +194,6 @@ CDialog();
 virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 virtual BOOL Create(
     UINT nIDTemplate,
@@ -249,7 +243,6 @@ virtual BOOL CreateIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
 virtual BOOL CreateIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -281,7 +274,7 @@ virtual BOOL CreateIndirect(
 
 Используйте `CWnd::DestroyWindow` функции для уничтожения диалогового окна, созданные `CreateIndirect` функции.
 
-Диалоговые окна, которые содержат элементы управления ActiveX требуются дополнительные сведения, предоставленные в ресурсе DLGINIT. Дополнительные сведения см. в статье базы знаний Q231591, "Практическое руководство: использование шаблона диалогового окна Создание диалогового окна MFC с элементом управления ActiveX.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).
+Диалоговые окна, которые содержат элементы управления ActiveX требуются дополнительные сведения, предоставленные в ресурсе DLGINIT.
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -382,7 +375,6 @@ BOOL InitModalIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
     BOOL InitModalIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -410,7 +402,7 @@ BOOL InitModalIndirect(
 
 Для создания модального диалогового окна косвенно, выделить глобальный блок памяти и заполнить его шаблон диалогового окна. Затем вызовите пустой `CDialog` конструктор для создания объекта диалогового окна. Затем вызовите `InitModalIndirect` для хранения маркер в шаблон диалогового окна в памяти. Диалоговое окно Windows будет создан и отображен впоследствии при [DoModal](#domodal) вызывается функция-член.
 
-Диалоговые окна, которые содержат элементы управления ActiveX требуются дополнительные сведения, предоставленные в ресурсе DLGINIT. Дополнительные сведения см. в статье базы знаний Q231591, "Практическое руководство: использование шаблона диалогового окна Создание диалогового окна MFC с элементом управления ActiveX.» Статьи базы знаний можно найти по адресу [ http://support.microsoft.com ](http://support.microsoft.com/).
+Диалоговые окна, которые содержат элементы управления ActiveX требуются дополнительные сведения, предоставленные в ресурсе DLGINIT.
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

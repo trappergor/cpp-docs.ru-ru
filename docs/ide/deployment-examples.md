@@ -16,25 +16,28 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 436b289c14110dd8f616112a309e757618b6f954
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eebcb272a07b225aaa249e986f8fac69d0c7edf8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327415"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405532"
 ---
 # <a name="deployment-examples"></a>Примеры развертывания
-Этот раздел содержит примеры, демонстрирующие развертывание приложений Visual C++.  
-  
-## <a name="examples"></a>Примеры  
- [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)  
-  
- [Пошаговое руководство. Развертывание приложения Visual C++ в локальную папку приложения](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)  
-  
- [Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)  
-  
- [Подготовка тестового компьютера для выполнения исполняемого файла отладки](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)  
-  
-## <a name="see-also"></a>См. также  
- [Пошаговое руководство. Развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)   
- [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)
+
+Этот раздел содержит примеры, демонстрирующие развертывание приложений Visual C++.
+
+## <a name="examples"></a>Примеры
+
+[Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)
+
+[Пошаговое руководство. Развертывание приложения Visual C++ в локальную папку приложения](../ide/walkthrough-deploying-a-visual-cpp-application-to-an-application-local-folder.md)
+
+[Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)
+
+[Подготовка тестового компьютера для выполнения исполняемого файла отладки](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)
+
+## <a name="see-also"></a>См. также
+
+[Разбор примера: развертывание вручную приложения ClickOnce](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
+[Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)

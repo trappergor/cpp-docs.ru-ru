@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2fdb8fea78d62202dd460f5dd219f2686bd99c6b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 926a0f90f366f3644bfce33f15a0a85dd1792a85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710239"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076756"
 ---
 # <a name="vector-class"></a>Класс vector
 
@@ -116,7 +116,7 @@ class vector
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*<br/>
+*Type*<br/>
 Тип данных элементов, сохраняемых в векторе.
 
 *Распределитель*<br/>
@@ -370,7 +370,7 @@ const_reference back() const;
 
 Если возвращаемое значение `back` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `back` присвоено `reference`, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -402,7 +402,6 @@ int main() {
 
 ```cpp
 const_iterator begin() const;
-
 
 iterator begin();
 ```
@@ -443,7 +442,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1_Iter = c1.begin();
- *c1_Iter = 20;
+    *c1_Iter = 20;
     for (; c1_Iter != c1.end(); c1_Iter++)
     {
         cout << " " << *c1_Iter;
@@ -789,7 +788,6 @@ int main( )
 ```cpp
 const_pointer data() const;
 
-
 pointer data();
 ```
 
@@ -825,7 +823,7 @@ int main()
 
     cout << "The vector c1 now contains elements:";
     c1 ptr = c1.data();
- *c1 ptr = 20;
+    *c1 ptr = 20;
     for (size_t n = c1.size(); 0 < n; --n, c1 ptr++)
     {
         cout << " " << *c1 ptr;
@@ -1165,7 +1163,7 @@ const_reference front() const;
 
 Если возвращаемое значение `front` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `front` присвоено **ссылке**, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу в пустом векторе.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -1410,7 +1408,7 @@ const_reference operator[](size_type Pos) const;
 
 Если возвращаемое значение `operator[]` присвоено `const_reference`, то объект вектора нельзя изменить. Если возвращаемое значение `operator[]` присвоено ссылке, то объект вектора можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу за пределами вектора.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -1516,17 +1514,17 @@ typedef typename Allocator::pointer pointer;
 
 int main( )
 {
-   using namespace std;
-   vector<int> v;
-   v.push_back( 11 );
-   v.push_back( 22 );
+    using namespace std;
+    vector<int> v;
+    v.push_back( 11 );
+    v.push_back( 22 );
 
-   vector<int>::pointer ptr = &v[0];
-   cout << *ptr << endl;
-   ptr++;
-   cout << *ptr << endl;
- *ptr = 44;
-   cout << *ptr << endl;
+    vector<int>::pointer ptr = &v[0];
+    cout << *ptr << endl;
+    ptr++;
+    cout << *ptr << endl;
+    *ptr = 44;
+    cout << *ptr << endl;
 }
 ```
 
@@ -1554,7 +1552,6 @@ void pop_back();
 
 ```cpp
 void push_back(const T& Val);
-
 
 void push_back(T&& Val);
 ```

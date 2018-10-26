@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1fbe498c5c255ec95772c9e75b6ce588ae4a4c3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1255eb0fc00d1b134335807a1f20e6761c49ec90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401983"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064476"
 ---
 # <a name="moving-a-string-from-one-resource-file-to-another-c"></a>Перемещение строки из одного файла ресурса в другой (C++)
 
@@ -43,7 +43,7 @@ ms.locfileid: "46401983"
    > [!NOTE]
    > Если **идентификатор** или **значение** перемещенной строки конфликтует с существующим **идентификатор** или **значение** в целевом файле, либо **Идентификатор** или **значение** перемещенной строки изменений. Если строка существует с тем же **идентификатор**, **идентификатор** перемещенной строки изменений. Если строка существует с тем же **значение**, **значение** перемещенной строки изменений.
 
-Сведения о добавлении ресурсов в управляемые проекты (предназначенные среда CLR), см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: локализация форм Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3\(v=vs.100\)).
+Сведения о добавлении ресурсов в управляемые проекты (предназначенные среда CLR), см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Пошаговое руководство: локализация форм Windows Forms](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3).
 
 ## <a name="requirements"></a>Требования
 
@@ -53,4 +53,4 @@ Win32
 
 [Редактор строк](../windows/string-editor.md)<br/>
 [Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
-[Настройка макетов окон](/visualstudio/ide/customizing-window-layouts-in-visual-studio)  
+[Настройка макетов окон](/visualstudio/ide/customizing-window-layouts-in-visual-studio)

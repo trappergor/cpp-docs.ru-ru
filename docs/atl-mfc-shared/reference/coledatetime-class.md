@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448432"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057405"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*date*  
+*date*<br/>
 Сравниваемый объект `COleDateTime`.
 
 ### <a name="remarks"></a>Примечания
@@ -210,31 +210,31 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*dateSrc*  
+*dateSrc*<br/>
 Существующий `COleDateTime` объект, который необходимо скопировать в новый `COleDateTime` объекта.
 
-*varSrc*  
+*varSrc*<br/>
 Существующий `VARIANT` структуры данных (возможно `COleVariant` объекта) преобразовывается в значение даты и времени (VT_DATE) и скопировать в новый `COleDateTime` объекта.
 
-*dtSrc*  
+*dtSrc*<br/>
 Даты и времени (`DATE`) значение для копирования в новый `COleDateTime` объекта.
 
-*timeSrc*  
+*timeSrc*<br/>
 Объект `time_t` или `__time64_t` значение преобразовывается в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*systimeSrc*  
+*systimeSrc*<br/>
 Объект `SYSTEMTIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
 
-*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*  
+*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*<br/>
 Указать значения даты и времени, который необходимо скопировать в новый `COleDateTime` объекта.
 
-*wDosDate*, *wDosTime*  
+*wDosDate*, *wDosTime*<br/>
 Значения даты и времени MS-DOS, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*DBTS*  
+*DBTS*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуру, содержащую текущее местное время.
 
 ### <a name="remarks"></a>Примечания
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>Параметры
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает один из следующих флагов языкового стандарта:
 
 - LOCALE_NOUSEROVERRIDE системные настройки языкового стандарта по умолчанию, используйте вместо пользовательских параметров.
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY пропускать части времени во время синтаксического анализа.
 
-*lcid*  
+*lcid*<br/>
 Указывает идентификатор языкового стандарта для использования для преобразования. Дополнительные сведения об идентификаторах языков см. в разделе [идентификаторы языка](/windows/desktop/Intl/language-identifiers).
 
-*lpszFormat*  
+*lpszFormat*<br/>
 Форматирование строки аналогичную `printf` форматирования строки. Каждый форматирование кода, предшествует процента ( `%`) выполните вход, заменен соответствующим `COleDateTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Дополнительные сведения. Значение и значение коды форматирования для `Format` являются:
 
 - `%H` Часов в текущей даты
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` Знак процента
 
-*nFormatID*  
+*nFormatID*<br/>
 Идентификатор ресурса для управления форматом строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -333,13 +333,13 @@ CString Format(UINT nFormatID) const;
 
 Краткое описание три формы для этой функции выглядит следующим образом:
 
-`Format`( *dwFlags*, *lcid*)  
+`Format`( *dwFlags*, *lcid*)<br/>
 Эта форма форматирует значение с помощью языка спецификаций (идентификаторы языковых стандартов) для даты и времени. С параметрами по умолчанию, эта форма, печатаются дату и время, если части времени — 0 (полночь), в противном случае он выводит только дату или часть даты имеет значение 0 (30 декабря 1899 г.), в противном случае оно печатается только время. Если значение даты и времени равно 0 (30 декабря 1899 г., полночь), эта форма с параметрами по умолчанию будет печататься полуночи.
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 Эта форма форматирует значение с помощью строки формата, которая содержит специальные коды форматирования, которым предшествует знак процента (%), как показано на `printf`. Строка форматирования передается в качестве параметра функции. Дополнительные сведения о кодах форматирования см. в разделе [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) справочника по библиотеке времени выполнения.
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 Эта форма форматирует значение с помощью строки формата, которая содержит специальные коды форматирования, которым предшествует знак процента (%), как показано на `printf`. Строка форматирования — это ресурс. Идентификатор этого ресурса строка передается в качестве параметра. Дополнительные сведения о кодах форматирования см. в разделе [strftime, wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) в *Справочник по библиотеке времени выполнения*.
 
 ### <a name="example"></a>Пример
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*DBTS*  
+*DBTS*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*sysTime*  
+*sysTime*<br/>
 Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*UDATE*  
+*UDATE*<br/>
 Ссылку на `UDATE` структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -701,13 +701,13 @@ DateTimeStatus GetStatus() const throw();
 Возвращаемое значение определяется `DateTimeStatus` перечислимый тип, который определен в `COleDateTime` класса.
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 Краткое описание этих значений состояния см. в следующем списке:
@@ -930,18 +930,18 @@ operator DATE() const throw();
 Анализирует строку для чтения значения даты и времени.
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lpszDate*  
+*lpszDate*<br/>
 Указатель на заканчивающуюся нулем строку, который анализируется. Дополнительные сведения см. в разделе "Заметки".
 
-*dwFlags*  
+*dwFlags*<br/>
 Указывает флаги для параметров языкового стандарта и синтаксического анализа. Один или несколько из следующих флагов:
 
 - LOCALE_NOUSEROVERRIDE использовать параметры языкового стандарта системы по умолчанию, а не пользовательские параметры пользователя.
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY пропускать части времени во время синтаксического анализа.
 
-*lcid*  
+*lcid*<br/>
 Указывает идентификатор языкового стандарта для использования для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -991,15 +991,15 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 Задает дату данной `COleDateTime` объекта.
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nYear*, *nMonth*, *nDay*  
+*nYear*, *nMonth*, *nDay*<br/>
 Указать компоненты даты, который необходимо скопировать в это `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1062,18 +1062,18 @@ int nDay) throw();
 Задает дату и время `COleDateTime` объекта.
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*  
+*nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*<br/>
 Указать компоненты даты и времени, который необходимо скопировать в это `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*status*  
+*status*<br/>
 Новое значение состояния для данного `COleDateTime` объекта.
 
 ### <a name="remarks"></a>Примечания
@@ -1170,15 +1170,15 @@ void SetStatus(DateTimeStatus status) throw();
 Задает время `COleDateTime` объекта.
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*основе Nчас*, *Nмин.*, *nSec*  
+*основе Nчас*, *Nмин.*, *nSec*<br/>
 Указать компоненты времени, который необходимо скопировать в это `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение

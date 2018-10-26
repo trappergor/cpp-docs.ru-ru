@@ -14,39 +14,39 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df8fcc1f316b5281e8c6775492d402559d77f483
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e8bfad1919863a58554604fe6d32b4563e57a14a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33857757"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235715"
 ---
 # <a name="writing-your-own-manipulators-without-arguments"></a>Создание собственных манипуляторов без аргументов
 
 Для создания манипуляторов, которые не имеют аргументов, не требуются ни сложные макросы, ни создание производного класса. Предположим, на принтер нужно передать пару символов \<ESC>[ для перехода в режим полужирного текста. Эту пару символов можно вставить прямо в поток:
 
 ```cpp
-cout <<"regular " <<'\033' <<'[' <<"boldface" <<endl;
+cout << "regular " << '\033' << '[' << "boldface" << endl;
 ```
 
 Или можно определить манипулятор `bold`, который вставляет символы:
 
 ```cpp
 ostream& bold(ostream& os) {
-    return os <<'\033' <<'[';
+    return os << '\033' << '[';
 }
-cout <<"regular " <<bold <<"boldface" <<endl;
+cout << "regular " << bold << "boldface" << endl;
 ```
 
 Глобально определенная функция `bold` принимает ссылку `ostream` в качестве аргумента и возвращает ссылку `ostream`. Это не функция-член и не дружественная функция, так как ей не требуется доступ к закрытым элементам класса. Функция `bold` подключается к потоку, так как оператор потока `<<` перегружен, чтобы принимать этот тип функции. Для этого используется следующее объявление:
 
 ```cpp
 _Myt& operator<<(ios_base& (__cdecl *_Pfn)(ios_base&))
-{     // call ios_base manipulator
- (*_Pfn)(*(ios_base *)this);
+{
+    // call ios_base manipulator
+    (*_Pfn)(*(ios_base *)this);
 
     return (*this);
-
 }
 ```
 

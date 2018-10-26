@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7f178923e043d9ecd3be4849f7b2f497b51a08
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116871"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057378"
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 
@@ -556,14 +556,14 @@ operator const SECURITY_DESCRIPTOR *() const throw();
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *ControlBitsOfInterest*<br/>
-Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 *ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL маску, которая указывает новые значения управляющих битов, заданных *ControlBitsOfInterest* маски. Этот параметр может быть сочетанием флагов, указанных для *ControlBitsOfInterest* параметра.
@@ -574,18 +574,18 @@ SECURITY_DESCRIPTOR_CONTROL маску, которая указывает нов
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx).
+Этот метод вызывает метод [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
 Задает информацию в список управления доступом (DACL). Если список DACL в дескрипторе безопасности уже присутствует, он заменяется.
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

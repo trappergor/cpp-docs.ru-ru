@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f678a00d4556cf81ad378088df2525038bbdd6a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8a943374731785ecadd13f89ee5c1b760acfb46d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426371"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064866"
 ---
 # <a name="cdaotabledef-class"></a>Класс CDaoTableDef
 
@@ -573,7 +573,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -635,7 +634,6 @@ void GetIndexInfo(
     int nIndex,
     CDaoIndexInfo& indexinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetIndexInfo(
     LPCTSTR lpszName,
@@ -887,7 +885,7 @@ void SetConnect(LPCTSTR lpszConnect);
 |Excel 97|«Excel 8.0»;|" `drive`:\\\ *путь*\ *filename*. XLS»|
 |Импорт HTML|«Импорт HTML»;|" `drive`:\\\ *путь*\ *filename*"|
 |Экспорт HTML-кода|«Экспорт HTML-кода»;|" `drive`:\\\ *путь*"|
-|Text|«Текст»;|«диск:\\\path»|
+|Текста|«Текст»;|«диск:\\\path»|
 |ODBC|«ODBC; Базы данных = `database`; UID = *пользователя*; PWD = *пароль*; DSN = *datasourcename;* LOGINTIMEOUT = *секунды;*" (Это может быть полной строки соединения для всех серверов, это всего лишь примером. Это крайне важно не содержат пробелы между параметрами.)|Нет|
 |Exchange|«Exchange;<br /><br /> MAPILEVEL = *folderpath*;<br /><br /> [TABLETYPE = {0 &AMP;#124; 1};]<br /><br /> [Профиль = *профиль*;]<br /><br /> [PWD = *пароль*;]<br /><br /> [DATABASE = `database`;]»|*«диск*:\\\ *путь*\\\ *filename*. MDB»|
 

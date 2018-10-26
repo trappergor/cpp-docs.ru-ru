@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081710"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Элементы управления ActiveX в MFC. Создание подкласса элемента управления Windows
 
@@ -48,10 +48,8 @@ ms.locfileid: "46407550"
 
 - [Обрабатывать сообщения элемента управления ActiveX (OCM), отражаются в элемент управления](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  Значительную часть этой работы выполняется автоматически с помощью мастера управления ActiveX при выборе элемента управления, для которого создаются подклассы с помощью **выберите класс родительского окна** стрелку раскрывающегося списка на **параметры управления** страницы.
-
-См. в статье базы знаний Q243454 подробнее на создание подкласса элемента управления.
+   > [!NOTE]
+   > Значительную часть этой работы выполняется автоматически с помощью мастера управления ActiveX при выборе элемента управления, для которого создаются подклассы с помощью **выберите класс родительского окна** стрелку раскрывающегося списка на **параметры управления** страницы.
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> Переопределение IsSubclassedControl и PreCreateWindow
 
@@ -96,12 +94,12 @@ ms.locfileid: "46407550"
 
 - В классе элемента управления. H-файл, объявите функцию обработчика событий. Функция должна иметь тип возвращаемого значения **LRESULT** и два параметра, с типами **WPARAM** и **LPARAM**, соответственно. Пример:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - В классе элемента управления. CPP добавьте запись ON_MESSAGE к схеме сообщения. Параметры данной записи должен иметь идентификатор сообщения и имя функции обработчика. Пример:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - Кроме того, в. Файл CPP, реализовать `OnOcmCommand` функции-члена для обработки отраженного сообщения. *WParam* и *lParam* параметры являются те же исходного сообщения окна.
 

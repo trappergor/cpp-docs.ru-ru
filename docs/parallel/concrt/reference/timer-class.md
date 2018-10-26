@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416205"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163108"
 ---
 # <a name="timer-class"></a>Класс timer
 
@@ -66,7 +66,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 |----------|-----------------|
 |[Приостановка](#pause)|Останавливает `timer` блок обмена сообщениями. Если это повторяющееся `timer` блоке сообщений, его можно перезапустить с последующем `start()` вызова. — Для неповторяющихся таймеров, это имеет тот же эффект, что `stop` вызова.|
 |[start](#start)|Запускает `timer` блок обмена сообщениями. Указанное число миллисекунд, после этого вызывается, указанное значение будет распространяться подчиненных как `message`.|
-|[Остановить](#stop)|Останавливает `timer` блок обмена сообщениями.|
+|[stop](#stop)|Останавливает `timer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
@@ -193,11 +193,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-`true` Если сообщение было успешно зарезервировано, `false` в противном случае.
+**значение true,** Если сообщение было успешно зарезервировано, **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
-После `reserve` вызывается, если он возвращает `true`, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
+После `reserve` вызывается, если он возвращает **true**, либо `consume` или `release` необходимо вызвать, чтобы принять или высвободить владение сообщением.
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -267,11 +267,11 @@ timer(
 `Scheduler` Объекта, в течение которого задача распространения для `timer` блок обмена сообщениями запланировано запланировано.
 
 *_ScheduleGroup*<br/>
-`ScheduleGroup` Объекта, в течение которого задача распространения для `timer` запланировано блок обмена сообщениями. Используемый объект `Scheduler` подразумевается группой расписаний.
+Объект `ScheduleGroup` , в котором запланирована задача распространения для блока обмена сообщениями `timer` . Используемый объект `Scheduler` подразумевается группой расписаний.
 
 ### <a name="remarks"></a>Примечания
 
-Среда выполнения использует планировщик по умолчанию, если вы не укажете `_Scheduler` или `_ScheduleGroup` параметров.
+Среда выполнения использует планировщик по умолчанию, если вы не указали параметры `_Scheduler` или `_ScheduleGroup` .
 
 ##  <a name="dtor"></a> ~ timer
 

@@ -1,7 +1,7 @@
 ---
-title: Атрибут типы параметров (расширения компонентов C++) | Документация Майкрософт
+title: Типы параметров атрибутов (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84c97dc0eb449ed0a2e835c46e77981dda0b67e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8db82e2b31984429165ce39a328abc28ba6e2cfd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611910"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328172"
 ---
-# <a name="attribute-parameter-types--c-component-extensions"></a>Типы параметров атрибутов (расширения компонентов C++)
+# <a name="attribute-parameter-types--ccli-and-ccx"></a>Типы параметров атрибутов (C + +/ CLI и C + +/ CX)
 
 Значения, передаваемые в атрибуты, должны быть известны компилятору во время компиляции.  Параметры атрибутов могут быть следующих типов:
 
@@ -77,7 +77,7 @@ ref struct MyStruct {
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 При определении атрибутов все неименованные (позиционные) аргументы должны предшествовать любым именованным аргументам.
 
@@ -111,7 +111,7 @@ ref class ClassD {};   // Positional and named
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 Параметры атрибутов могут быть одномерными массивами указанных выше типов.
 

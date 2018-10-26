@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373900"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057469"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>Практическое руководство. Управление экземпляром планировщика
 
@@ -34,7 +34,7 @@ ms.locfileid: "46373900"
 
 1. Вызовите [Concurrency::CurrentScheduler:: CREATE](reference/currentscheduler-class.md#create) метод или [Concurrency::Scheduler:: CREATE](reference/scheduler-class.md#create) метод для создания экземпляра планировщика.
 
-     Если вы используете `Scheduler::Create` мы вызываем метод [Concurrency::Scheduler:: Attach](reference/scheduler-class.md#attach) метод, если вам нужно связать планировщик с текущим контекстом.
+   Если вы используете `Scheduler::Create` мы вызываем метод [Concurrency::Scheduler:: Attach](reference/scheduler-class.md#attach) метод, если вам нужно связать планировщик с текущим контекстом.
 
 1. Вызовите [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa) функции для создания дескриптора объекта несигнальное, автоматического сброса события.
 
@@ -44,7 +44,7 @@ ms.locfileid: "46373900"
 
 1. Вызовите [Concurrency::CurrentScheduler:: Detach](reference/currentscheduler-class.md#detach) метод для отсоединения текущего планировщика и восстановить предыдущий планировщик в качестве текущего.
 
-     Если вы используете `Scheduler::Create` мы вызываем метод [Concurrency::Scheduler:: Release](reference/scheduler-class.md#release) метод, чтобы уменьшить количество ссылок на `Scheduler` объекта.
+   Если вы используете `Scheduler::Create` мы вызываем метод [Concurrency::Scheduler:: Release](reference/scheduler-class.md#release) метод, чтобы уменьшить количество ссылок на `Scheduler` объекта.
 
 1. Передайте дескриптор события [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) функции для ожидания завершения работы планировщика.
 

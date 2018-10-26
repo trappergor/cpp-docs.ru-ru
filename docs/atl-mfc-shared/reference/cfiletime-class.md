@@ -1,7 +1,7 @@
 ---
 title: Класс CFileTime | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b81a8aeaf2b4475a95421853c4ab5822bc06abb3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 36e71cd975ff138343770b80e60b0287faa32558
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437774"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808827"
 ---
 # <a name="cfiletime-class"></a>Класс CFileTime
 
@@ -133,10 +133,10 @@ CFileTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Объект [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуры.
 
-*nTime*  
+*nTime*<br/>
 Дата и время, выраженное как 64-разрядное значение.
 
 ### <a name="remarks"></a>Примечания
@@ -246,10 +246,10 @@ CFileTimeSpan operator-(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Объект `CFileTimeSpan`.
 
-*FT*  
+*FT*<br/>
 Объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -266,7 +266,7 @@ bool operator!=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Сравниваемый объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -283,7 +283,7 @@ CFileTime operator+(CFileTimeSpan span) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Объект `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -300,7 +300,7 @@ CFileTime& operator+=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Объект `CFileTimeSpan`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -317,7 +317,7 @@ bool operator<(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Сравниваемый объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -338,7 +338,7 @@ bool operator<=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Сравниваемый объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -355,7 +355,7 @@ CFileTime& operator=(const FILETIME& ft) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Объект `CFileTime` объект, содержащий новое значение времени и даты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -372,7 +372,7 @@ CFileTime& operator-=(CFileTimeSpan span) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*диапазон*  
+*диапазон*<br/>
 Объект `CFileTimeSpan` объект, содержащий относительного времени для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -389,7 +389,7 @@ bool operator==(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 `CFileTime` Объект для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -406,7 +406,7 @@ bool operator>(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Сравниваемый объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -423,7 +423,7 @@ bool operator>=(CFileTime ft) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*FT*  
+*FT*<br/>
 Сравниваемый объект `CFileTime`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -452,7 +452,7 @@ void SetTime(ULONGLONG nTime) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*nTime*  
+*nTime*<br/>
 64-разрядное значение, представляющее дату и время, в локальной или форматирования в формате UTC (UTC).
 
 ##  <a name="utctolocal"></a>  CFileTime::UTCToLocal
@@ -489,4 +489,3 @@ static const ULONGLONG Week = Day* 7;
 [Класс CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430856"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076364"
 ---
 # <a name="cmultilock-class"></a>Класс CMultiLock
 
@@ -148,19 +148,19 @@ DWORD Lock(
 
 - Между WAIT_OBJECT_0 и WAIT_OBJECT_0 + (число объектов - 1)
 
-     Если *bWaitForAll* имеет значение TRUE, все объекты получают сигнал (доступно). Если *bWaitForAll* имеет значение FALSE, возвращаемое значение — WAIT_OBJECT_0, — это индекс в массиве объектов объекта, который получает сигналы (доступно).
+   Если *bWaitForAll* имеет значение TRUE, все объекты получают сигнал (доступно). Если *bWaitForAll* имеет значение FALSE, возвращаемое значение — WAIT_OBJECT_0, — это индекс в массиве объектов объекта, который получает сигналы (доступно).
 
 - WAIT_OBJECT_0 + (число объектов)
 
-     Событие, указанное в *dwWakeMask* доступна во входной очереди для потока.
+   Событие, указанное в *dwWakeMask* доступна во входной очереди для потока.
 
 - Между WAIT_ABANDONED_0 и WAIT_ABANDONED_0 + (число объектов - 1)
 
-     Если *bWaitForAll* имеет значение TRUE, все объекты получают сигнал и по крайней мере один из объектов — это объект Брошенный мьютекс. Если *bWaitForAll* имеет значение FALSE, возвращаемое значение — WAIT_ABANDONED_0 — это индекс в массиве объектов Брошенный мьютекс объекта, удовлетворившего операцию ожидания.
+   Если *bWaitForAll* имеет значение TRUE, все объекты получают сигнал и по крайней мере один из объектов — это объект Брошенный мьютекс. Если *bWaitForAll* имеет значение FALSE, возвращаемое значение — WAIT_ABANDONED_0 — это индекс в массиве объектов Брошенный мьютекс объекта, удовлетворившего операцию ожидания.
 
 - WAIT_TIMEOUT
 
-     Интервал времени ожидания, указанный в *dwTimeOut* истек срок действия без ожидания успешного.
+   Интервал времени ожидания, указанный в *dwTimeOut* истек срок действия без ожидания успешного.
 
 ### <a name="remarks"></a>Примечания
 
@@ -174,7 +174,6 @@ DWORD Lock(
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ BOOL Unlock(
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

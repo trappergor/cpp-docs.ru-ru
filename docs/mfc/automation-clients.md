@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cca4818d0ace6270b986ddb9b99068ca9532f1b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395521"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890066"
 ---
 # <a name="automation-clients"></a>клиентами автоматизации
 
@@ -46,7 +46,7 @@ ms.locfileid: "46395521"
 
 ### <a name="handling-events-in-automation-clients"></a>Обработка событий в клиентах автоматизации
 
-Если вы хотите обрабатывать события в клиентском приложении автоматизации, необходимо добавить интерфейс приемника. MFC предоставляет поддержка мастера для добавления интерфейсов-приемников для элементов управления ActiveX, но не поддерживает для других серверов COM. Сведения о том, как добавлять интерфейс приемника в клиенте MFC для интерфейсов источника, описываемого COM-серверов, см. в разделе Практическое руководство: Создание интерфейса приемника в MFC-Based COM-клиент (181845 КБ) в [ http://support.microsoft.com/default.aspxscid=kb; en-us; 181845](http://support.microsoft.com/default.aspxscid=kb;en-us;181845).
+Если вы хотите обрабатывать события в клиентском приложении автоматизации, необходимо добавить интерфейс приемника. MFC предоставляет поддержка мастера для добавления интерфейсов-приемников для элементов управления ActiveX, но не поддерживает для других серверов COM.
 
 ## <a name="see-also"></a>См. также
 

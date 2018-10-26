@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5e6a5dd4a00bd4d98c36222434d7cd83242905c9
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207670"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410763"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Подключение к удаленному компьютеру Linux
 
@@ -41,7 +41,7 @@ ms.locfileid: "39207670"
    | **Имя пользователя**           | Пользователь для проверки подлинности
    | **Тип проверки подлинности** | Поддерживается и пароль, и закрытый ключ
    | **Пароль**            | Пароль для указанного имени пользователя
-   | **Файл закрытого ключа**    | Закрытый ключ, созданный для ssh-подключения
+   | **Файл закрытого ключа**    | Закрытый ключ, созданный для подключения по SSH
    | **Парольная фраза**          | Парольная фраза, используемая с закрытым ключом, выбранным выше
 
 1. Нажмите кнопку **Подключить**, чтобы попытаться подключиться к удаленному компьютеру.  Если подключение не удастся, поля ввода, которые необходимо изменить, будут выделены красным цветом.

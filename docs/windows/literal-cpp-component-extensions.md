@@ -1,7 +1,7 @@
 ---
-title: Literal (расширения компонентов C++) | Документация Майкрософт
+title: литерал (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069927"
 ---
-# <a name="literal-c-component-extensions"></a>literal (расширения компонентов C++)
+# <a name="literal-ccli-and-ccx"></a>литерал (C + +/ CLI и C + +/ CX)
 
 Переменная (элемент данных) с пометкой **литерала** в **/CLR** компиляции являются собственными эквивалентами из **статический const** переменной.
 
@@ -91,11 +91,11 @@ public ref struct A {
 Обратите внимание на разницу в метаданных для `sc` и `lit`: директива `modopt` применяется к `sc` и поэтому она может игнорироваться другими компиляторами.
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>Пример
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

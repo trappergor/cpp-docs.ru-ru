@@ -84,12 +84,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15f021d78158caa6f607be3d68a9666b4ab6d6a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ca52f7a5940de3caa87f81ddf07625ab751927c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448523"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054541"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 
@@ -184,7 +184,6 @@ class CImageList : public CObject
 int Add(
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Add(
     CBitmap* pbmImage,
@@ -288,7 +287,6 @@ BOOL Copy(
     int iSrc,
     UINT uFlags = ILCF_MOVE);
 
-
 BOOL Copy(
     int iDst,
     CImageList* pSrc,
@@ -335,20 +333,17 @@ BOOL Create(
     int nInitial,
     int nGrow);
 
-
 BOOL Create(
     UINT nBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
 
-
 BOOL Create(
     LPCTSTR lpszBitmapID,
     int cx,
     int nGrow,
     COLORREF crMask);
-
 
 BOOL Create(
     CImageList& imagelist1,
@@ -417,7 +412,7 @@ BOOL Create(CImageList* pImageList);
 Смещение ось y второе изображение в связи с первого изображения в пикселях.
 
 *pImageList*<br/>
-Указатель на объект `CImageList`.
+Указатель на объект `CImageList` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -594,7 +589,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель контекста устройства назначения.
 
 *Изображение*<br/>
@@ -639,7 +634,7 @@ BOOL DrawEx(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель контекста устройства назначения.
 
 *Изображение*<br/>
@@ -679,7 +674,6 @@ BOOL DrawEx(
 ```
 BOOL DrawIndirect(IMAGELISTDRAWPARAMS* pimldp);
 
-
 BOOL DrawIndirect(
     CDC* pDC,
     int nImage,
@@ -700,7 +694,7 @@ BOOL DrawIndirect(
 *pimldp*<br/>
 Указатель на [IMAGELISTDRAWPARAMS](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams) структуру, содержащую сведения об операции рисования.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контексте устройства назначения. Необходимо удалить это [CDC](../../mfc/reference/cdc-class.md) объекта, когда вы закончите с ним.
 
 *Изображение*<br/>
@@ -1046,7 +1040,6 @@ BOOL Replace(
     int nImage,
     CBitmap* pbmImage,
     CBitmap* pbmMask);
-
 
 int Replace(
     int nImage,

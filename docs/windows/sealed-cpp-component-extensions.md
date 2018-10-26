@@ -1,7 +1,7 @@
 ---
-title: запечатанные (расширения компонентов C++) | Документация Майкрософт
+title: sealed (C + +/ CLI и C + +/ CX) | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439566"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071957"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (расширения компонентов C++)
+# <a name="sealed--ccli-and-ccx"></a>sealed (C + +/ CLI и C + +/ CX)
 
 **Запечатанный** контекстно-зависимые ключевое слово для ссылочных классов, которое указывает, что виртуальный член нельзя переопределить или тип не может использоваться в качестве базового типа.
 
 > [!NOTE]
-> ISO C ++ 11 Standard язык имеет [окончательный](../cpp/final-specifier.md) ключевое слово, которое поддерживается в Visual Studio. Используйте **окончательный** в стандартных классов и **запечатанный** в ссылочных классах.
+> C ++ 11 Standard языка ISO появились [окончательный](../cpp/final-specifier.md) ключевое слово. Используйте **окончательный** в стандартных классов и **запечатанный** в ссылочных классах.
 
 ## <a name="all-runtimes"></a>Все среды выполнения
 
@@ -53,7 +53,7 @@ virtual return-type identifier() sealed {...};
 
 В первом примере синтаксиса запечатан (sealed) класс. Во втором примере запечатана виртуальная функция.
 
-**Запечатанный** ключевое слово может использоваться для компиляции в машинный код, а также для среды выполнения Windows и среда CLR (CLR). Дополнительные сведения см. в разделе [спецификаторы переопределения и компиляции в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
+Используйте **запечатанный** ключевое слово для классов ссылок и их виртуальных функций-членов. Дополнительные сведения см. в разделе [спецификаторы переопределения и компиляции в машинный код](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md).
 
 Во время компиляции можно определить, является ли тип запечатанным с помощью `__is_sealed(type)` Признак типа. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
 
@@ -104,11 +104,11 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

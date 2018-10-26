@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b25012f65eb1d86674ae9271dcb4f93ef09617
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d081b09f271bd2f557b0396a2632dc47c9bebdc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403959"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073585"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 
@@ -244,7 +244,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::GetLocationURL](#getlocationurl)|Получает URL-адрес ресурса, который в данный момент отображается элементом управления WebBrowser.|
 |[CHtmlView::GetMenuBar](#getmenubar)|Получает значение, указывающее, является ли строка меню видимой.|
 |[CHtmlView::GetOffline](#getoffline)|Получает значение, указывающее, находится ли элемент управления в автономном режиме.|
-|[CHtmlView::GetParentBrowser](#getparentbrowser)|Получает указатель на интерфейс `IDispatch` . Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
+|[CHtmlView::GetParentBrowser](#getparentbrowser)|Получает указатель на интерфейс `IDispatch` . Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).|
 |[CHtmlView::GetProperty](#getproperty)|Возвращает текущее значение свойства, связанного с данным объектом.|
 |[CHtmlView::GetReadyState](#getreadystate)|Получает состояние готовности объекта веб-браузера.|
 |[CHtmlView::GetRegisterAsBrowser](#getregisterasbrowser)|Указывает, зарегистрирован ли элемент управления WebBrowser в качестве браузера верхнего уровня для разрешения целевых имен.|
@@ -269,14 +269,14 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnBeforeNavigate2](#onbeforenavigate2)|Вызывается до того, как начинается переход в данном элементе управления WebBrowser (в окне или элементе набора фреймов).|
 |[CHtmlView::OnCommandStateChange](#oncommandstatechange)|Вызывается для уведомления приложения о том, что состояние выполнения команды веб-браузера изменилось.|
 |[CHtmlView::OnDocumentComplete](#ondocumentcomplete)|Вызывается для уведомления приложения о том, что документ достиг состояния READYSTATE_COMPLETE.|
-|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Вызывается из Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), который уведомляет активный встроенный объект активации или отключении окна документа контейнера.|
+|[CHtmlView::OnDocWindowActivate](#ondocwindowactivate)|Вызывается из реализованного в Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::OnDocWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate), который уведомляет активный встроенный объект об активации или отключении окна документа контейнера.|
 |[CHtmlView::OnDownloadBegin](#ondownloadbegin)|Вызывается для уведомления приложения о том, что начинается операция перехода.|
 |[CHtmlView::OnDownloadComplete](#ondownloadcomplete)|Вызывается, когда операция перехода закончилась, была остановлена или завершилась с ошибкой.|
 |[CHtmlView::OnEnableModeless](#onenablemodeless)|Вызывается для включения или отключения безрежимных диалоговых окон, когда контейнер создает или уничтожает модальное диалоговое окно.|
 |[CHtmlView::OnFilterDataObject](#onfilterdataobject)|Вызывается Internet Explorer или MSHTML в основном приложении, чтобы разрешить ему заменить объект данных Internet Explorer или MSHTML.|
-|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Вызывается из [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) чтобы уведомить об объект контейнера верхнего уровня активации или отключении окна фрейма.|
+|[CHtmlView::OnFrameWindowActivate](#onframewindowactivate)|Вызывается из [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) , чтобы уведомить объект об активации или отключении окна фрейма верхнего уровня контейнера.|
 |[CHtmlView::OnFullScreen](#onfullscreen)|Вызывается после изменения свойства FullScreen.|
-|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Вызывается Internet Explorer или MSHTML при его использовании в качестве целевого объекта перетаскивания, чтобы разрешить основному приложению предоставить альтернативный интерфейс [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
+|[CHtmlView::OnGetDropTarget](#ongetdroptarget)|Вызывается Internet Explorer или MSHTML при использовании в качестве целевого объекта перетаскивания, чтобы разрешить основному приложению предоставить альтернативный интерфейс [IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget).|
 |[CHtmlView::OnGetExternal](#ongetexternal)|Вызывается Internet Explorer или MSHTML для получения интерфейса `IDispatch` основного приложения.|
 |[CHtmlView::OnGetHostInfo](#ongethostinfo)|Возвращает возможности пользовательского интерфейса основного приложения Internet Explorer или MSHTML.|
 |[CHtmlView::OnGetOptionKeyPath](#ongetoptionkeypath)|Возвращает раздел реестра, в котором хранятся пользовательские настройки Internet Explorer или MSHTML.|
@@ -288,7 +288,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnProgressChange](#onprogresschange)|Вызывается для уведомления приложения о том, что ход операции скачивания был обновлен.|
 |[CHtmlView::OnPropertyChange](#onpropertychange)|Вызывается для уведомления приложения о том, что метод [PutProperty](#putproperty) изменил значение свойства.|
 |[CHtmlView::OnQuit](#onquit)|Вызывается для уведомления приложения о том, что приложение Internet Explorer готово закрыться. (Применяется только в Internet Explorer.)|
-|[CHtmlView::OnResizeBorder](#onresizeborder)|Вызывается из Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), который оповещает объект о необходимости изменить размер пространства границы.|
+|[CHtmlView::OnResizeBorder](#onresizeborder)|Вызывается из реализованного в Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), который оповещает объект о необходимости изменить размер пространства вокруг границы.|
 |[CHtmlView::OnShowContextMenu](#onshowcontextmenu)|Вызывается из Internet Explorer или MSHTML перед отображением контекстного меню.|
 |[CHtmlView::OnShowUI](#onshowui)|Вызывается перед отображением меню и панелей инструментов в Internet Explorer или MSHTML.|
 |[CHtmlView::OnStatusBar](#onstatusbar)|Вызывается после изменения свойства StatusBar.|
@@ -296,7 +296,7 @@ class CHtmlView : public CFormView
 |[CHtmlView::OnTheaterMode](#ontheatermode)|Вызывается после изменения свойства TheaterMode.|
 |[CHtmlView::OnTitleChange](#ontitlechange)|Вызывается для уведомления приложения о том, что заголовок документа в элементе управления WebBrowser стал доступен или изменился.|
 |[CHtmlView::OnToolBar](#ontoolbar)|Вызывается после изменения свойства ToolBar.|
-|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Вызывается Internet Explorer или MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) вызывается для обработки сообщений сочетания клавиш меню из очереди сообщений контейнера.|
+|[CHtmlView::OnTranslateAccelerator](#ontranslateaccelerator)|Вызывается Internet Explorer или MSHTML при вызове метода [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) для обработки сообщений об использовании сочетаний клавиш, связанных с меню, из очереди сообщений контейнера.|
 |[CHtmlView::OnTranslateUrl](#ontranslateurl)|Вызывается Internet Explorer или MSHTML, чтобы разрешить основному приложению изменять URL-адрес, который нужно загрузить.|
 |[CHtmlView::OnUpdateUI](#onupdateui)|Уведомляет основное приложение об изменении состояния команды.|
 |[CHtmlView::OnVisible](#onvisible)|Вызывается, когда окно элемента управления WebBrowser должно быть показано или скрыто.|
@@ -531,7 +531,7 @@ LPDISPATCH GetApplication() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на `IDispatch` интерфейс объекта активного документа. Дополнительные сведения см. в разделе [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
+Указатель на `IDispatch` интерфейс объекта активного документа. Дополнительные сведения см. в разделе [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface).
 
 ### <a name="remarks"></a>Примечания
 
@@ -1083,7 +1083,6 @@ void Navigate2(
     DWORD dwFlags = 0,
     LPCTSTR lpszTargetFrameName = NULL);
 
-
 void Navigate2(
     LPCTSTR lpszURL,
     DWORD dwFlags = 0,
@@ -1091,7 +1090,6 @@ void Navigate2(
     LPCTSTR lpszHeaders = NULL,
     LPVOID lpvPostData = NULL,
     DWORD dwPostDataLen = 0);
-
 
 void Navigate2(
     LPCTSTR lpszURL,
@@ -1298,7 +1296,7 @@ virtual HRESULT OnFilterDataObject(
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
-Вызывается из [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) чтобы уведомить об объект контейнера верхнего уровня активации или отключении окна фрейма.
+Вызывается из [IOleInPlaceActiveObject::OnFrameWindowActivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate) , чтобы уведомить объект об активации или отключении окна фрейма верхнего уровня контейнера.
 
 ```
 virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
@@ -1571,7 +1569,7 @@ virtual void OnQuit();
 
 ##  <a name="onresizeborder"></a>  CHtmlView::OnResizeBorder
 
-Вызывается из Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), который оповещает объект о необходимости изменить размер пространства границы.
+Вызывается из реализованного в Internet Explorer или MSHTML метода [IOleInPlaceActiveObject::ResizeBorder](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder), который оповещает объект о необходимости изменить размер пространства вокруг границы.
 
 ```
 virtual HRESULT OnResizeBorder(
@@ -1742,7 +1740,7 @@ virtual void OnToolBar(BOOL bToolBar);
 
 ##  <a name="ontranslateaccelerator"></a>  CHtmlView::OnTranslateAccelerator
 
-Вызывается Internet Explorer или MSHTML при [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) вызывается для обработки сообщений сочетания клавиш меню из очереди сообщений контейнера.
+Вызывается Internet Explorer или MSHTML при вызове метода [IOleInPlaceActiveObject::TranslateAccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator) или [IOleControlSite::TranslateAccelerator](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator) для обработки сообщений об использовании сочетаний клавиш, связанных с меню, из очереди сообщений контейнера.
 
 ```
 virtual HRESULT OnTranslateAccelerator(
@@ -1842,21 +1840,17 @@ void PutProperty(
     LPCTSTR lpszProperty,
     const VARIANT& vtValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     double dValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,
     long lValue);
 
-
 void PutProperty(
     LPCTSTR lpszPropertyName,
     LPCTSTR lpszValue);
-
 
 void PutProperty(
     LPCTSTR lpszPropertyName,

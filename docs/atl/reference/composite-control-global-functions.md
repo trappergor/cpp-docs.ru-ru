@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037363"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068649"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -56,11 +56,11 @@ ms.locfileid: "46037363"
 |[AtlSetChildSite](#atlsetchildsite)|Инициализирует `IUnknown` дочернего сайта.|
 |[AtlAxWinInit](#atlaxwininit)|Инициализирует код размещения для AxWin объектов.|
 |[AtlAxWinTerm](#atlaxwinterm)|Отменяет инициализацию код размещения для AxWin объектов.|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Возвращает сведения об интерфейсе источника по умолчанию объекта.|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|Возвращает сведения об интерфейсе источника по умолчанию объекта.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlhost.h  
+**Заголовок:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.
 
 *lpTemplateName*<br/>
-[in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.
+[in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) макрос для создания этого значения.
 
 *hWndParent*<br/>
 [in] Определяет окно, которому принадлежит диалоговое окно.
@@ -101,7 +101,7 @@ ATLAPI_(int) AtlAxDialogBox(
 Для использования `AtlAxDialogBox` с помощью шаблона диалогового окна, содержащий элемент управления ActiveX, укажите допустимую строку CLSID, APPID или URL-адрес как *текст* поле **УПРАВЛЕНИЯ** раздел ресурса диалогового окна, вместе с " AtlAxWin80» как *имя класса* поле в том же разделе. Следующий подход демонстрирует какие является допустимым **УПРАВЛЕНИЯ** раздел может выглядеть так:
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Идентифицирует экземпляр модуля, исполняемый файл содержит шаблон диалогового окна.
 
 *lpTemplateName*<br/>
-[in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](https://msdn.microsoft.com/library/windows/desktop/ms648029) макрос для создания этого значения.
+[in] Определяет шаблон диалогового окна. Этот параметр является указатель на строку нуль-символом, который указывает имя шаблона диалогового окна или целочисленное значение, указывающее идентификатор ресурса шаблона диалогового окна. Если параметр задает идентификатор ресурса, его старшее слово должно быть равно нулю, и его младшее слово должно содержать идентификатор. Можно использовать [MAKEINTRESOURCE](/windows/desktop/api/winuser/nf-winuser-makeintresourcea) макрос для создания этого значения.
 
 *hWndParent*<br/>
 [in] Определяет окно, которому принадлежит диалоговое окно.
@@ -261,7 +261,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.  
+Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="remarks"></a>Примечания
 
-Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) или [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), как описано в пакете Windows SDK.  
+Эту функцию необходимо вызывать перед использованием элемента управления ATL, интерфейс API размещения. После вызова этой функции **«AtlAxWin»** класс окна может использоваться в вызовах [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) или [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa), как описано в пакете Windows SDK.
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 
