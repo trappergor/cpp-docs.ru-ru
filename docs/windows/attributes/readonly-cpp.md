@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8cba3c15049c176b19f0da197d19017ae2aa699d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 297b457bdf2c70a75b9abdc433c87381fd115037
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792380"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067752"
 ---
 # <a name="readonly-c"></a>readonly (C++)
 
@@ -36,9 +36,9 @@ ms.locfileid: "48792380"
 
 ## <a name="remarks"></a>Примечания
 
-**Readonly** атрибут C++ имеет ту же функциональность, что [readonly](/windows/desktop/Midl/readonly) описании атрибута MIDL.
+Атрибут **readonly** языка C++ имеет ту же функциональность, что и атрибут [readonly](/windows/desktop/Midl/readonly) языка MIDL.
 
-Если вы хотите запретить изменение параметра метода, используйте [в](in-cpp.md) атрибута.
+Если вы хотите запретить изменение параметра метода, используйте атрибут [in](in-cpp.md) .
 
 ## <a name="example"></a>Пример
 
@@ -69,9 +69,9 @@ __interface IFireTabCtrl
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты элементов данных](data-member-attributes.md)  
+[Атрибуты элементов данных](data-member-attributes.md)

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391908"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063852"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>Панель инструментов (редактор C++ изображений для значков)
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391908"
 > [!NOTE]
 > Все инструменты, доступные в **редактор изображений** инструментов также доступны из **изображение** меню (в разделе **средства** команду).
 
-![Панель инструментов редактора изображений](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-Панель инструментов редактора изображений
+![Панель инструментов редактора изображений](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar") панель инструментов редактора изображений
 
 Для использования **редактор изображений** инструментов и **параметр** селектора, щелкните инструмент или параметра, возникает необходимость.
 
@@ -46,8 +45,7 @@ ms.locfileid: "46391908"
 
 С помощью **параметр** селектор, можно указать ширину линии, кисть штриха и т.д. Значок на **параметр** выбора переключателя изменяется в зависимости от того, какое средство выбора.
 
-![Рисование&#45;селектор фигуры на панели инструментов редактора изображений](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-Селектор параметров на панели инструментов редактора изображений
+![Рисование&#45;селектор фигуры на панели инструментов редактора изображений](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector") селектор параметров на панели инструментов редактора изображений
 
 Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 

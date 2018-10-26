@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 8f878d1cdf450c1672298fc16ec8948c94a33056
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059835"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 
@@ -137,13 +137,13 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFrameWnd::CFrameWnd](#cframewnd)|Создает объект `CFrameWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFrameWnd::ActivateFrame](#activateframe)|Становится кадр отображаются и доступны пользователю.|
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Задает фрейм окна к модальному окну.|
@@ -192,7 +192,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFrameWnd::OnCreateClient](#oncreateclient)|Создает окно клиента для кадра.|
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Вызывается перед меню в текущем приложении MFC является скрытым.|
@@ -200,7 +200,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Элементы управления автоматическое включение и отключение функциональные возможности для пунктов меню.|
 |[CFrameWnd::rectDefault](#rectdefault)|Передайте этот статический `CRect` как параметр при создании `CFrameWnd` объекта, чтобы разрешить Windows выбрать исходный размер и положение окна.|
@@ -1101,7 +1101,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nState*|[in] Указывает, следует ли отобразить или скрыть меню. *NState* параметр может иметь следующие значения:<br /><br />-AFX_MBS_VISIBLE (0x01) — открывает меню, если он скрыт, но не действует, если он видим.<br />-AFX_MBS_HIDDEN (0x02) — скрывает элемент управления menu, если она видна, но не действует, если он скрыт.|
 
@@ -1123,7 +1123,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nStyle*|[in] Указывает меню по умолчанию скрыт, или является видимым и имеет фокус. *NStyle* параметр может иметь следующие значения:<br /><br />-AFX_MBV_KEEPVISIBLE (0X01) —<br />     В меню отображается все время и по умолчанию не имеет фокус.<br />-AFX_MBV_DISPLAYONFOCUS (0X02 —)<br />     Меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу ALT, чтобы отобразить меню и сделать его активным. Если меню отображается, нажмите клавишу ALT или ESC для скрытия меню.<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (битовую комбинацию (OR)) — меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу F10 для отображения меню и сделать его активным. Если меню отображается, нажмите клавишу F10, чтобы переключить фокус, или отключить меню. До нажатия клавиши ALT или ESC, чтобы скрыть его отображении меню.|
 
@@ -1212,7 +1212,6 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 BOOL SetTaskbarOverlayIcon(
     UINT nIDResource,
     LPCTSTR lpcszDescr);
-
 
 BOOL SetTaskbarOverlayIcon(
     HICON hIcon,

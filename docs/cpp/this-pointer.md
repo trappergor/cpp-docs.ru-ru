@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070591"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077339"
 ---
 # <a name="this-pointer"></a>Указатель this
 
@@ -32,7 +32,7 @@ ms.locfileid: "46070591"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 Тип **это** функции в члене описывается следующим синтаксисом, где *cv квалификаторов* определяется исходя из декларатора функций-членов и может быть **const**или **volatile** (или оба), и *типа класса* — это имя класса:
 
-*тип класса [cv квалификаторов]* **\* const это**
+*тип класса [cv квалификаторов]* **&#42; const это**
 
 Другими словами **это** всегда является указателем const; не может быть переназначен.  **Const** или **volatile** квалификаторы, используемые в объявлении функции-члена применяются к экземпляру класса, на которые указывают **это** в рамках этой функции.
 

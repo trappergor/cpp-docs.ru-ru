@@ -15,23 +15,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f64145a8d6269a5c6fd09f7178343a59ebc1b3ad
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: aad20a43cc334e4b6642772b156afe52b7eb6008
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989922"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052529"
 ---
 # <a name="creating-an-ole-db-consumer"></a>Создание объекта-получателя OLE DB
 
-Можно создать объект-получатель шаблоны OLE DB с или без **Мастер потребителя ATL OLE DB**, хотя с помощью мастера является рекомендуемым методом. Объект-получатель может работать в любом приложении, поддерживающем ATL.  
-  
-Данный раздел охватывает следующее:  
-  
-- [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)  
-  
-- [Создание объекта-получателя OLE DB без помощи мастера](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)  
-  
-## <a name="see-also"></a>См. также  
+Можно создать объект-получатель шаблоны OLE DB с или без **Мастер потребителя ATL OLE DB**, хотя с помощью мастера является рекомендуемым методом. Объект-получатель может работать в любом приложении, поддерживающем ATL.
+
+Данный раздел охватывает следующее:
+
+- [Создание объекта-получателя OLE DB с помощью мастера](../../data/oledb/creating-an-ole-db-consumer-using-a-wizard.md)
+
+- [Создание объекта-получателя OLE DB без помощи мастера](../../data/oledb/creating-a-consumer-without-using-a-wizard.md)
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

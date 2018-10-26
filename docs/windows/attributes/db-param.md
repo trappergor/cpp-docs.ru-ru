@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 153e1bba37b10da64b394c48ee1cf8c059ae86e9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 03131071f38dbbe1f9e1dbc2dc6645dcfb5d7366
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057859"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -71,7 +71,7 @@ ms.locfileid: "49083031"
 
 **db_param** используется в сочетании с любым [db_table](db-table.md) или [db_command](db-command.md) атрибуты.
 
-Когда поставщик атрибутов потребителя применяет этот атрибут к классу, компилятор переименует класс \_ *Имя_вашего_класса*метод доступа, где *Имя_вашего_класса* — это имя, присвоенное класс, компилятор также создаст класс с именем *Имя_вашего_класса*, который является производным от \_ *имя_класса*метода доступа.  В представлении классов отображаются оба класса.
+Если поставщик атрибутов потребителя применяет этот атрибут к классу, компилятор переименует класс в \_*YourClassName*Accessor, где *YourClassName* — это имя, которое вы присвоили классу. Также компилятор создаст класс с именем *YourClassName*, производный от \_*YourClassName*Accessor.  В представлении классов отображаются оба класса.
 
 ## <a name="example"></a>Пример
 
@@ -87,7 +87,7 @@ ms.locfileid: "49083031"
 #include <atldbcli.h>
 
 [ db_source(L"my_connection_string"),
-  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")  
+  db_command(L"{ ? = CALL dbo.\"Sales by Year\"(?,?) }")
 ]
 struct CSalesbyYear {
    DBSTATUS m_dwShippedDateStatus;
@@ -119,7 +119,7 @@ struct CSalesbyYear {
 
 |||
 |-|-|
-|**Применение**|**Класс**, **структуры**, член, метод, локальный|
+|**Применение**|**class**, **struct**, member, method, local|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
@@ -128,4 +128,4 @@ struct CSalesbyYear {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)  
+[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)

@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a01e6cf423aece9fba74c4b81fa247d57844e107
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 233e302d4035801e7d8871754d8ecfcfee54cf1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439891"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060915"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**Конкретных C++**  
-  
-Отключает создание интеллектуальных указателей для всех интерфейсов в библиотеке типов.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-no_smart_pointers  
-```  
-  
-## <a name="remarks"></a>Примечания  
- 
-По умолчанию при использовании директивы `#import` пользователь получает объявление интеллектуального указателя для всех интерфейсов в библиотеке типов. Эти интеллектуальные указатели имеют тип [класс _com_ptr_t](../cpp/com-ptr-t-class.md).  
-  
-**КОНЕЦ конкретных C++**  
-  
-## <a name="see-also"></a>См. также  
- 
+**Конкретных C++**
+
+Отключает создание интеллектуальных указателей для всех интерфейсов в библиотеке типов.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+no_smart_pointers
+```
+
+## <a name="remarks"></a>Примечания
+
+По умолчанию при использовании директивы `#import` пользователь получает объявление интеллектуального указателя для всех интерфейсов в библиотеке типов. Эти интеллектуальные указатели имеют тип [класс _com_ptr_t](../cpp/com-ptr-t-class.md).
+
+**КОНЕЦ конкретных C++**
+
+## <a name="see-also"></a>См. также
+
 [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [директива #import](../preprocessor/hash-import-directive-cpp.md)

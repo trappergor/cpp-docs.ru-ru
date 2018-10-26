@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063800"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Класс CMFCRibbonStatusBar
 
@@ -121,7 +121,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonStatusBar` класса. В примере показано добавление нового элемента ленты в строки состояния ленты, добавьте элемент ленты в расширенной области строки состояния ленты, добавить разделитель и включить обычный режим для строки состояния ленты.
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonStatusBar` . В примере показано добавление нового элемента ленты в строки состояния ленты, добавьте элемент ленты в расширенной области строки состояния ленты, добавить разделитель и включить обычный режим для строки состояния ленты.
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*uiCmdID*<br/>
-[in] [in] *BOOL*
+[in] *uiCmdID*<br/>
+[in] *BOOL*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *rect*
+[in] *rect*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pElement*
+[in] *pElement*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -460,7 +460,7 @@ virtual void OnDrawInformation(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *strInfo*<br/>

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861321"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058340"
 ---
 # <a name="storage-classes-c"></a>Классы хранения (C++)
 
@@ -35,7 +35,6 @@ ms.locfileid: "48861321"
 1. [Изменяемый](../cpp/mutable-data-members-cpp.md) ключевое слово может рассматриваться как спецификатор класса хранения. Однако он доступен только в списке членов в определении класса.
 
 1. **Visual C++ 2010 и более поздних версий:** **автоматически** слово больше не является спецификатором класса хранения C++ и **зарегистрировать** ключевое слово является устаревшим. **Visual Studio 2017 версии 15.7 и более поздние версии:** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): **зарегистрировать** ключевое слово удаляется из языка C++.
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

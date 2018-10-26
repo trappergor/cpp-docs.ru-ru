@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd4f5ac780b36e51be63aef7ce87884284542cbb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861945"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054675"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -187,13 +187,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Упорядочивает все свернутые дочерние окна.|
 |[CWindow::Attach](#attach)|Прикрепляет окно к `CWindow` объекта.|
@@ -341,14 +341,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|
 |[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|
 |[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|
@@ -499,7 +499,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 Проверяет указанный переключатель.
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ CWindow(HWND hWnd = NULL) throw();
 Обновляет указанную структуру нескольких положение окна для указанного окна.
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ HWND Detach() throw();
 Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ int DlgDirList(
 Заполняет поле со списком имена всех файлов, соответствующих указанному пути или имени файла.
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ int DlgDirListComboBox(
 Извлекает текущее выделение из списка.
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ BOOL DlgDirSelect(
 Извлекает текущее выделение из поля со списком.
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ HWND GetDescendantWindow(int nID) const throw();
 Вызывайте эту функцию для получения указателя интерфейса элемента управления ActiveX, размещенного по составного элемента управления или диалоговое окно размещения элементов управления.
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ int GetDlgCtrlID() const throw();
 Извлекает указатель на интерфейс для управления ATL, контейнер размещается.
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ HWND GetDlgItem(int nID) const throw();
 Переводит текст элемента управления в целое число.
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ UINT GetDlgItemInt(
 Получает текст элемента управления.
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ int GetScrollPos(int nBar) const throw();
 Получает диапазон значений для полосы прокрутки.
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ BOOL HideCaret() throw();
 Выделяет или снимает выделение с меню верхнего уровня.
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 Преобразует набор точек из координатного пространства окна в координатное пространство другого окна.
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ int MapWindowPoints(
 Отображает окно сообщения.
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ int MessageBox(
 Изменение стилей окна `CWindow` объекта.
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ BOOL ModifyStyle(
 Изменяет расширенные стили окна из `CWindow` объекта.
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ BOOL ModifyStyleEx(
 Изменяет размер и положение окна.
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 Помещает сообщение в очередь сообщений, связанный с потоком, создавший окно.
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 Обновляет заданную прямоугольную или другую в клиентской области.
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ int ReleaseDC(HDC hDC);
 Изменяет размер окна по размеру области указанного клиента.
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 Прокручивает область указанного клиента.
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ BOOL ScrollWindow(
 Прокручивает область указанного клиента с помощью дополнительных функций.
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ int ScrollWindowEx(
 Отправляет сообщение в элемент управления.
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ LRESULT SendDlgItemMessage(
 Отправляет сообщение в окно и ожидает сообщение процедуре окна обработано.
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ static LRESULT SendMessage(
 Отправляет указанное сообщение для всех непосредственных дочерних объектов `CWindow` объекта.
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ void SendMessageToDescendants(
 Отправляет сообщение в окно.
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ int SetDlgCtrlID(int nID) throw();
 Изменяет текст элемента управления в строковое представление целочисленного значения.
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 Задает параметры полосы прокрутки.
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ int SetScrollInfo(
 Изменяет положение ползунка полосы прокрутки.
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ int SetScrollPos(
 Изменяет диапазон значений для полосы прокрутки.
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ BOOL SetScrollRange(
 Создает событие таймера.
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 Задает размер, положение и Z-порядке.
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 Справка Windows запускается.
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

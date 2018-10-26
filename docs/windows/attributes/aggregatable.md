@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0b686cd19d76706bb6a30286cf611c563c1aed50
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 169b0ab1194783f1e7de44c9ae0a153e9d4d3071
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057834"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -49,7 +49,7 @@ ms.locfileid: "48791217"
 
 **Статистическую обработку** атрибут C++ имеет ту же функциональность, что [статистическую обработку](/windows/desktop/Midl/aggregatable) описании атрибута MIDL. Это означает, что компилятор пройдет **статистическую обработку** через атрибут для созданного IDL-файла.
 
-Этот атрибут требует, чтобы [coclass](coclass.md), [progid](progid.md), или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.
+Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу. Если используется любой отдельный атрибут, два других применяются автоматически. Например если `progid` применяется, `vi_progid` и `coclass` также применяются.
 
 ### <a name="atl-projects"></a>Проекты ATL
 
@@ -88,11 +88,11 @@ class CMyClass {};
 |**Обязательные атрибуты**|Один или несколько из следующих: `coclass`, `progid`, или `vi_progid`.|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Статистическая обработка](/windows/desktop/com/aggregation)  
+[Статистическая обработка](/windows/desktop/com/aggregation)

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02323f1af8ee36d53cdd29d48989a96e61f72c60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 15b073d361fe8dbffb7c92718f5d7522534fc7e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406806"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052357"
 ---
 # <a name="adding-an-mfc-odbc-consumer"></a>Добавление потребителя ODBC MFC
 
@@ -31,7 +31,7 @@ ms.locfileid: "46406806"
 
 1. В папке Visual C++, дважды щелкните **потребителя ODBC MFC** значок или выберите его и нажмите кнопку **откройте**.
 
-     Откроется Мастер потребителя MFC ODBC.
+   Откроется Мастер потребителя MFC ODBC.
 
 1. Задайте параметры, как описано в разделе [Мастер потребителя MFC ODBC](../../mfc/reference/mfc-odbc-consumer-wizard.md).
 

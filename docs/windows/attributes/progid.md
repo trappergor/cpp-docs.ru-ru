@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5e499a6faabda20450a7af76d97664b90464b36
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 239f50011c91320c2b5e0a96449139e8eeab10ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072868"
 ---
 # <a name="progid"></a>progid
 
@@ -68,11 +68,11 @@ ms.locfileid: "48791137"
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[Идентификатор progID ключ](/windows/desktop/com/-progid--key)  
+[Идентификатор progID ключ](/windows/desktop/com/-progid--key)

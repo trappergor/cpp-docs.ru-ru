@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b257628747dca488292cfdfff0ef783303bd1b88
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2a20a5c8ad87428e66f90b8f04c3006e5f1c2e84
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068877"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Класс CComSingleThreadModel
 
@@ -58,9 +58,9 @@ class CComSingleThreadModel
 
 ## <a name="remarks"></a>Примечания
 
-`CComSingleThreadModel` Предоставляет методы для увеличение и уменьшение значения переменной. В отличие от [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) и [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), эти методы не являются поточно ориентированными.  
+`CComSingleThreadModel` Предоставляет методы для увеличение и уменьшение значения переменной. В отличие от [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md) и [CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md), эти методы не являются поточно ориентированными.
 
-Как правило, используется `CComSingleThreadModel` посредством одного из двух **typedef** имена, либо [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Класс, который ссылается каждый **typedef** зависит потоковую модель, как показано в следующей таблице:  
+Как правило, используется `CComSingleThreadModel` посредством одного из двух **typedef** имена, либо [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel). Класс, который ссылается каждый **typedef** зависит потоковую модель, как показано в следующей таблице:
 
 |typedef|Единый потоковой модели|Потоковая модель с подразделением|Бесплатное потоковая модель|
 |-------------|----------------------------|-------------------------------|--------------------------|

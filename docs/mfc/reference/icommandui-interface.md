@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429215"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055012"
 ---
 # <a name="icommandui-interface"></a>Интерфейс ICommandUI
 
@@ -73,6 +73,7 @@ interface class ICommandUI
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство задает элемент пользовательского интерфейса для этой команды для проверки соответствующего состояния. Проверка набора следующие значения:
@@ -86,6 +87,7 @@ property UICheckState Check;
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это функция дополнительный член, который должен использоваться в сочетании с обработчик ON_COMMAND_EX, который возвращает значение FALSE. Дополнительные сведения см. в разделе технических TN006 Примечание: схемы сообщений.
@@ -96,6 +98,7 @@ void ContinueRouting();
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство включает или отключает элемент интерфейса пользователя для этой команды. Задайте Enabled в true, чтобы включить элемент, значение FALSE, чтобы отключить его.
@@ -106,6 +109,7 @@ property bool Enabled;
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство получает идентификатор (дескриптор) пункта меню, кнопки панели инструментов или других объекта пользовательского интерфейса, представленный объектом ICommandUI.
@@ -116,6 +120,7 @@ property unsigned int ID;
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство возвращает индекс пункта меню, кнопки панели инструментов или других объекта пользовательского интерфейса, представленный объектом ICommandUI (дескриптор).
@@ -126,6 +131,7 @@ property unsigned int Index;
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство задает элемент пользовательского интерфейса для этой команды для проверки соответствующего состояния. Установите переключатель в true, чтобы включить элемент; в противном случае — значение FALSE.
@@ -136,6 +142,7 @@ property bool Radio;
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Это свойство задает текст элемента интерфейса пользователя для этой команды. Задать текст на дескриптор строки текста.

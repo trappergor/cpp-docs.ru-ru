@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 59689abec68fc6cff2a742bd4db97b58cd023af1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 91098a0a225519f9b657d9424872e99be0e86354
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065542"
 ---
 # <a name="creating-a-menu-c"></a>Создание меню (C++)
 
@@ -37,8 +37,8 @@ ms.locfileid: "44316267"
 
 2. Выберите в строке меню поле **Новый элемент** (прямоугольник с надписью "Прототип для текста").
 
-   ![«Новый элемент» в редакторе меню](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")  
-Поле "Новый элемент"
+   ![«Новый элемент» в редакторе меню](../windows/media/vcmenueditornewitembox.gif "vcMenuEditorNewItemBox")<br/>
+   Поле "Новый элемент"
 
 3. Введите название нового меню, например "Файл".
 
@@ -46,8 +46,8 @@ ms.locfileid: "44316267"
 
    Как только вы присвоите название новому меню в строке меню, поле нового элемента сдвинется вправо (чтобы вы могли добавить еще одно меню), а другое поле нового элемента откроется под первым меню, чтобы вы могли добавить в него команды.
 
-   ![Развернутое поле "новый элемент"](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")  
-Поле нового элемента со смещенным фокусом после ввода названия меню
+   ![Развернутое поле "новый элемент"](../windows/media/vcmenueditornewitemboxexpanded.gif "vcMenuEditorNewItemBoxExpanded")<br/>
+   Поле нового элемента со смещенным фокусом после ввода названия меню
 
    > [!NOTE]
    > Чтобы создать меню с одним элементом в строке меню, задайте **всплывающее окно** свойства **False**.

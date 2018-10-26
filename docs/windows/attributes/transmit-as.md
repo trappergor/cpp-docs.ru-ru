@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c096853c968b78b4c5b7c1dacc87da4104f3e78
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28b95974379a01b4ecd1a07edeb2da35562d82df
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792180"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079692"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -86,10 +86,10 @@ struct _TREE_NODE_TYPE * right;
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

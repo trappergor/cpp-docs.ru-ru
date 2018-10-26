@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 77d9647fd4432bf2ab0cf9e4add2a08ce964b85a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060082"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Выбор прозрачного и непрозрачного фона (Редактор изображений для значков)
 
@@ -32,7 +32,7 @@ ms.locfileid: "46378728"
 
 Можно переключиться с прозрачным фоном (по умолчанию) на непрозрачный фон и обратно. При использовании инструмента выделения, **прозрачный фон** и **непрозрачный фон** параметры отображаются в **параметр** селектор на **редактор изображений** панели инструментов (как показано ниже).
 
-![Параметры фона &#45; прозрачный или непрозрачный](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")  
+![Параметры фона &#45; прозрачный или непрозрачный](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
 **Параметры прозрачности и непрозрачности** на **панель инструментов редактора изображений**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Для переключения между прозрачного и непрозрачного фона

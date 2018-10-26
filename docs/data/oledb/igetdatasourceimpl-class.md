@@ -25,65 +25,65 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0101f0d32ebf5fa5a46d735f64fea03b7e5208da
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 7467a658ca8739ba933f266f58e756b8f7a3ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055454"
 ---
 # <a name="igetdatasourceimpl-class"></a>Класс IGetDataSourceImpl
 
-Предоставляет реализацию [IGetDataSource](/previous-versions/windows/desktop/ms709721) объекта.  
-  
+Предоставляет реализацию [IGetDataSource](/previous-versions/windows/desktop/ms709721) объекта.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T>
+class ATL_NO_VTABLE IGetDataSourceImpl : public IGetDataSource
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IGetDataSourceImpl`.  
+Ваш класс, производный от `IGetDataSourceImpl`.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="interface-methods"></a>Методы интерфейса  
-  
-|||  
-|-|-|  
-|[GetDataSource](#getdatasource)|Возвращает указатель интерфейса на объект источника данных, создавшего сеанс.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldb.h
 
-Это обязательный интерфейс во время сеанса получение указатель интерфейса на объект источника данных.  
+## <a name="members"></a>Участники
+
+### <a name="interface-methods"></a>Методы интерфейса
+
+|||
+|-|-|
+|[GetDataSource](#getdatasource)|Возвращает указатель интерфейса на объект источника данных, создавшего сеанс.|
+
+## <a name="remarks"></a>Примечания
+
+Это обязательный интерфейс во время сеанса получение указатель интерфейса на объект источника данных.
 
 ## <a name="getdatasource"></a> IGetDataSourceImpl::GetDataSource
 
-Возвращает указатель интерфейса на объект источника данных, создавшего сеанс.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Возвращает указатель интерфейса на объект источника данных, создавшего сеанс.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-STDMETHOD(GetDataSource)(REFIID riid,   
-   IUnknown ** ppDataSource);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+STDMETHOD(GetDataSource)(REFIID riid, 
+   IUnknown ** ppDataSource);
+```
 
-См. в разделе [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) в *справочнике программиста OLE DB*.  
-  
-### <a name="remarks"></a>Примечания  
+#### <a name="parameters"></a>Параметры
 
-Полезно, если вам нужно получить доступ к свойствам в объекте источника данных.  
-  
-## <a name="see-also"></a>См. также  
+См. в разделе [IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443) в *справочнике программиста OLE DB*.
+
+### <a name="remarks"></a>Примечания
+
+Полезно, если вам нужно получить доступ к свойствам в объекте источника данных.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378401"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076313"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[CBasePane::OnSetAccData](#onsetaccdata)|`CBasePane` не используйте этот метод.|
 |`CBasePane::OnUpdateCmdUI`|Используется внутренним образом.|
 |[CBasePane::PaneFromPoint](#panefrompoint)|Возвращает область, содержащее заданную точку.|
-|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CBasePane::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` не используйте этот метод.|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|Отменяет регистрацию область и удаляет его из списка в диспетчере закрепления.|
 |[CBasePane::SaveState](#savestate)|Сохраняет состояние панели в реестр.|
@@ -332,7 +332,7 @@ class CBasePane : public CWnd
 
     - AFX_CBRS_CLOSE включает области, чтобы закрыть (скрытый).
 
-     Это флаги, которые можно комбинировать с помощью операции побитового или.
+   Это флаги, которые можно комбинировать с помощью операции побитового или.
 
 `CBasePane` реализует следующие методы виртуального логическое, чтобы отразить эти флаги: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Их можно переопределить в производных классах для настройки их поведения.
 
@@ -352,7 +352,7 @@ class CBasePane : public CWnd
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CBasePane` класса. В примере показано получение области из `CFrameWndEx` класс и как задать режим закрепления панели выравнивание и стиль панели. Приведенный код взят из [примера Word Pad](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CBasePane` . В примере показано получение области из `CFrameWndEx` класс и как задать режим закрепления панели выравнивание и стиль панели. Приведенный код взят из [примера Word Pad](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -867,7 +867,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CPaneDivider\**  не используется.
+*CPaneDivider\**<br/>
+[in] Не используется.
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 
@@ -1815,7 +1816,7 @@ CFont* SelectDefaultFont(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение

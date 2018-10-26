@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083597"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064568"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -39,8 +39,6 @@ ms.locfileid: "49083597"
 
 ### <a name="run-time-object-model-services-macros"></a>Макросы служб времени выполнения объектной модели
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|Разрешает доступ к сведения о классе среды выполнения (необходимо использовать в объявлении класса).|
@@ -51,19 +49,11 @@ ms.locfileid: "49083597"
 |[IMPLEMENT_SERIAL](#implement_serial)|Позволяет сериализацию и доступ к сведениям о классе среды выполнения (необходимо использовать в реализации класса).|
 |[RUNTIME_CLASS](#runtime_class)|Возвращает `CRuntimeClass` структуры, соответствующий именованный класс.|
 
-
 OLE часто требуется динамическое создание объектов во время выполнения. Например приложения сервера OLE должен иметь возможность динамически создавать элементы OLE в ответ на запрос от клиента. Аналогичным образом сервер автоматизации, необходима возможность создавать элементы в ответ на запросы от клиентов автоматизации.
 
 Библиотеки Microsoft Foundation Class предоставляет два макроса конкретных OLE.
 
 ### <a name="dynamic-creation-of-ole-objects"></a>Динамическое создание объектов OLE
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ OLE часто требуется динамическое создание об
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *proc*<br/>
@@ -112,6 +103,7 @@ afxcomctl32.h, afxcomctl32.inl
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *proc*<br/>
@@ -129,8 +121,6 @@ afxcomctl32.h, afxcomctl32.inl
 
 [Изоляция библиотеки общих элементов управления MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -197,7 +187,6 @@ DECLARE_DYNCREATE(class_name)
 
 **Заголовок:** afx.h
 
-
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
 Объявляет `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
@@ -207,6 +196,7 @@ DECLARE_DYNCREATE(class_name)
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
@@ -224,7 +214,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Объявляет, что элемент управления OLE предоставляет список страниц свойств для отображения его свойств.
@@ -234,6 +223,7 @@ DECLARE_OLECTLTYPE( class_name )
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>
@@ -408,7 +399,6 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [Раздел CLSID](/windows/desktop/com/clsid-key-hklm)
 
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Реализует `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
@@ -418,6 +408,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *class_name*<br/>

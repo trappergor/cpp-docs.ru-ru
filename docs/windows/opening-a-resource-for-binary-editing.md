@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 256ceee14f38885259da11453efef8451d34248c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068012"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>Открытие ресурса для редактирования в двоичном редакторе (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "44316358"
    > [!NOTE]
    > Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
-![Двоичный редактор](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![Двоичный редактор](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 Двоичные данные диалогового окна в двоичном редакторе
 
 Только некоторые значение ASCII могут быть представлены в двоичном редакторе (в диапазоне от 0x20 до 0x7E). Дополнительные символы отображаются в виде точек в разделе "Значение ASCII" (на правой панели двоичного редактора). "Печатным" символам соответствуют значения ASCII в диапазоне от 32 до 126.
