@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e5a091a4301a107fb820f63c357c4e7f43c35948
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ca1bae4e2ca45424fd7f9cff48d8ece1039d73f6
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721296"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136176"
 ---
 # <a name="linker-options"></a>Параметры компоновщика
 
@@ -60,7 +60,7 @@ LINK.exe связывает объектные файлы в формате COFF
 |[/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md)|Задает тип (IJW, pure или safe) CLR-образа.|
 |[/CLRSUPPORTLASTERROR](../../build/reference/clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)|Сохраняет последний код ошибки функций, вызываемых с помощью механизма P/Invoke.|
 |[/CLRTHREADATTRIBUTE](../../build/reference/clrthreadattribute-set-clr-thread-attribute.md)|Указывает атрибут потока для применения к точке входа CLR-программы.|
-|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)|Указывает, должен ли компоновщик применять атрибут SuppressUnmanagedCodeSecurity к создаваемым компоновщиком заглушкам PInvoke, осуществляющим вызовы из управляемого кода в библиотеки DLL неуправляемого кода.|
+|[/CLRUNMANAGEDCODECHECK](../../build/reference/clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute.md)|Указывает, должен ли компоновщик применять атрибут SuppressUnmanagedCodeSecurity к создаваемым компоновщиком заглушкам PInvoke, осуществляющим вызовы из управляемого кода в библиотеки DLL неуправляемого кода.|
 |[/DEBUG](../../build/reference/debug-generate-debug-info.md)|Создает отладочную информацию.|
 |[/DEBUGTYPE](../../build/reference/debugtype-debug-info-options.md)|Указывает, какие данные необходимо включить в отладочную информацию.|
 |[/DEF](../../build/reference/def-specify-module-definition-file.md)|Передает компоновщику файл определения модуля (DEF).|
