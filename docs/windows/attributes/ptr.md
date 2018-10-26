@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89f00c5e2d65fde2c8a3bb2fd064796c2585c720
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1f9f0fede8c5c3fd522aa7eb9dd95214062e3949
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792392"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066718"
 ---
 # <a name="ptr"></a>ptr
 
@@ -53,11 +53,11 @@ ms.locfileid: "48792392"
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)

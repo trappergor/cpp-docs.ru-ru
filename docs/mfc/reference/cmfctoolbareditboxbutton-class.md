@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397329"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066998"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Класс CMFCToolBarEditBoxButton
 
@@ -141,7 +141,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCToolBarEditBoxButton` класса. В примере для указания, что пользователь можно растянуть кнопки во время настройки, указать, что граница кнопки отображается, когда пользователь нажимает кнопку, текст в элементе текстового поля, указать плоский внешний вид для кнопки поле изменения в приложения Проверка подлинности и укажите в поле редактирования стиль панели инструментов.
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarEditBoxButton` . В примере для указания, что пользователь можно растянуть кнопки во время настройки, указать, что граница кнопки отображается, когда пользователь нажимает кнопку, текст в элементе текстового поля, указать плоский внешний вид для кнопки поле изменения в приложения Проверка подлинности и укажите в поле редактирования стиль панели инструментов.
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -499,7 +499,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *nCtlColor*<br/>
@@ -703,6 +703,4 @@ virtual void SetStyle(UINT nStyle);
 [Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407456"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077722"
 ---
 # <a name="accessing-run-time-class-information"></a>Доступ к сведениям о классе во время выполнения
 
@@ -50,7 +50,7 @@ ms.locfileid: "46407456"
 
 1. Используйте `RUNTIME_CLASS` с именем класса, как показано ниже, для класса `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 Редко требуется прямой доступ к объекте класса среды выполнения. Более обычно используется для передачи объекта класс времени выполнения для `IsKindOf` функции, как показано в следующей процедуре. `IsKindOf` Функция проверяет объект принадлежит ли он для определенного класса.
 
@@ -60,9 +60,9 @@ ms.locfileid: "46407456"
 
 1. Вызовите `IsKindOf` функция-член для объектов этого класса, с помощью `RUNTIME_CLASS` макрос для создания `CRuntimeClass` аргумент, как показано ниже:
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  Возвращает IsKindOf **TRUE** Если объект является членом указанного класса или класса, производного от указанного класса. `IsKindOf` не поддерживает множественные наследования или виртуальными базовыми классами, несмотря на то, что при необходимости можно использовать множественное наследование для производных классов Microsoft Foundation.

@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8a0eeb4b7da53b5722733ba0b0116cf03dab4a29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788765"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053450"
 ---
 # <a name="roinitializewrapper-class"></a>Класс RoInitializeWrapper
 
@@ -74,7 +74,7 @@ class RoInitializeWrapper;
 Получает значение HRESULT, создаваемое при последнем `RoInitializeWrapper` конструктор.
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>RoInitializeWrapper::RoInitializeWrapper
@@ -82,7 +82,7 @@ operator HRESULT()
 Инициализирует новый экземпляр класса `RoInitializeWrapper`.
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -99,7 +99,7 @@ RoInitializeWrapper(   RO_INIT_TYPE flags)
 Отменяет инициализацию среды выполнения Windows.
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>Примечания

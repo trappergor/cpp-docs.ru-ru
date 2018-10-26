@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76d53a1322024f1a56477de4e4b58bcdb88930ad
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 2b8f9b1e40deadbc23fe19f02bf2aaef899c52a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328484"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056700"
 ---
 # <a name="safecast-ccli-and-ccx"></a>safe_cast (C + +/ CLI и C + +/ CX)
 
@@ -37,7 +37,7 @@ ms.locfileid: "49328484"
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-[default]:: safe_cast< type-id >( expression )  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Среда выполнения Windows
@@ -107,7 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-[cli]:: safe_cast< type-id >( expression )  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -136,7 +136,7 @@ Caught expected exception: InvalidCastException
 
 - [Приведение в стиле C с параметром/CLR (C + +/ CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [Практическое руководство. Использование safe_cast в C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [Практическое руководство. Использование safe_cast в C++/CLI](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
 ### <a name="requirements"></a>Требования
 
@@ -176,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

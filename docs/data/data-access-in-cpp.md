@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082688"
 ---
 # <a name="data-access-in-visual-c"></a>Доступ к данным в Visual C++
 
@@ -52,13 +52,13 @@ ms.locfileid: "46060308"
 [Хранилище Azure](/azure/storage/storage-introduction) представляет собой решение облачного хранилища для современных приложений, которым необходима устойчивость, доступность и масштабируемость для удовлетворения потребностей пользователей. Подключитесь к хранилищу Azure из приложения на языке C++ с помощью клиентской библиотеки хранилища Azure для C++.
 
 [ODBC Driver 13.1 for SQL Server — Windows выпуска](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Последняя версия драйвера ODBC обеспечивает надежный доступ к базам данных SQL Microsoft Azure и Microsoft SQL Server 2016 для приложений на языках C и C++. Предоставляет поддержку для функций, включая постоянного шифрования, Azure Active Directory и группы доступности AlwaysOn. Также доступен для MacOS и Linux.     
- 
+Последняя версия драйвера ODBC обеспечивает надежный доступ к базам данных SQL Microsoft Azure и Microsoft SQL Server 2016 для приложений на языках C и C++. Предоставляет поддержку для функций, включая постоянного шифрования, Azure Active Directory и группы доступности AlwaysOn. Также доступен для MacOS и Linux.
+
 [Собственный клиент SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 Собственный клиент SQL Server — прикладной программный интерфейс (API) для автономного доступа к данным, который используется для OLE DB и ODBC и поддерживается в версиях SQL Server начиная с SQL Server 2005 и заканчивая SQL Server 2014. В новых приложениях следует использовать драйвер ODBC версии 13.1 для SQL Server.
 
 [Microsoft Azure C и C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure позволяет легко создавать приложения C++, обладающие высокой гибкостью, масштабируемостью и надежностью, с помощью тех инструментов, которые вам нравятся.    
+Azure позволяет легко создавать приложения C++, обладающие высокой гибкостью, масштабируемостью и надежностью, с помощью тех инструментов, которые вам нравятся.
 
 [Использование хранилища BLOB-объектов из C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Хранилище BLOB-объектов Azure — это служба, которая сохраняет неструктурированные данные в облаке в виде BLOB-объектов. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.

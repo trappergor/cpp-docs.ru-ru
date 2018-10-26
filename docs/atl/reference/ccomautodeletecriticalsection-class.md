@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c8ff6141fb5aa58e8de626675e29b46426ed47f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 327c5fdcdc2a73cc8ee662ed71736f848ccd2e9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118444"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066348"
 ---
 # <a name="ccomautodeletecriticalsection-class"></a>Класс CComAutoDeleteCriticalSection
 
@@ -36,7 +36,7 @@ class CComAutoDeleteCriticalSection : public CComSafeDeleteCriticalSection
 
 ## <a name="remarks"></a>Примечания
 
-`CComAutoDeleteCriticalSection` является производным от класса [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Тем не менее `CComAutoDeleteCriticalSection` переопределяет [термин](ccomsafedeletecriticalsection-class.md#term) метод **частного** доступа, который обеспечивает внутреннюю память очистки, только когда экземпляры этого класса не выйдут из области или будут явно удалены из объем памяти.  
+`CComAutoDeleteCriticalSection` является производным от класса [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md). Тем не менее `CComAutoDeleteCriticalSection` переопределяет [термин](ccomsafedeletecriticalsection-class.md#term) метод **частного** доступа, который обеспечивает внутреннюю память очистки, только когда экземпляры этого класса не выйдут из области или будут явно удалены из объем памяти.
 
 Этот класс предоставляет дополнительные методы не через своего базового класса. См. в разделе [CComSafeDeleteCriticalSection](../../atl/reference/ccomsafedeletecriticalsection-class.md) и [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md) Дополнительные сведения о вспомогательных классов критический раздел.
 

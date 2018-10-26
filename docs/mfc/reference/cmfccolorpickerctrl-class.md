@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107da291ea12490964fc5d142f8360c93a1ac536
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28085c49903aff1c49fa9114b6a0828c5493840b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380104"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077924"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс CMFCColorPickerCtrl
 
@@ -166,7 +166,7 @@ virtual void DrawCursor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -265,7 +265,6 @@ void SelectCellHexagon(
     BYTE R,
     BYTE G,
     BYTE B);
-
 
 BOOL SelectCellHexagon(
     int x,
@@ -433,7 +432,7 @@ void SetSaturation(double Saturation);
 
 ### <a name="parameters"></a>Параметры
 
-*Насыщенность*<br/>
+*насыщенность*<br/>
 [in] Значение насыщенности.
 
 ### <a name="remarks"></a>Примечания

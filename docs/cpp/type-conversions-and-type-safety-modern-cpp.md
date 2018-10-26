@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136163"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059094"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>Преобразования типов и безопасность типов (современный C++)
 
@@ -70,7 +70,7 @@ int k = 7.7; // warning C4244:'initializing':conversion from 'double' to
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ int(x); // old-style cast, functional syntax
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     Дополнительные сведения см. в разделе [static_cast](../cpp/static-cast-operator.md).
+   Дополнительные сведения см. в разделе [static_cast](../cpp/static-cast-operator.md).
 
 - **dynamic_cast**, для безопасного, флажки для среды выполнения приведения указателя на базовый для указателя на производный. Объект **dynamic_cast** является более безопасным, чем **static_cast** нисходящее приведение типа, но среда выполнения проверки влечет за собой дополнительные издержки.
 
@@ -151,7 +151,7 @@ int(x); // old-style cast, functional syntax
     //Output: d3 is null;
     ```
 
-     Дополнительные сведения см. в разделе [dynamic_cast](../cpp/dynamic-cast-operator.md).
+   Дополнительные сведения см. в разделе [dynamic_cast](../cpp/dynamic-cast-operator.md).
 
 - **const_cast**для приведение **const**- ness переменной или преобразование не -**const** переменную **const**. Приведение **const**-ness с помощью этого оператора является просто как ошибкам как используется приведение к типу, за исключением того, что при использовании в стиле **приведением const** вы скорее случайно выполнить приведение. Иногда необходимо удалять **const**-ness переменной, например, для передачи **const** в функцию, принимающий отличный от**const** параметра. Следующий пример показывает, как это сделать.
 
@@ -164,14 +164,14 @@ int(x); // old-style cast, functional syntax
     }
     ```
 
-     Дополнительные сведения см. в разделе [const_cast](../cpp/const-cast-operator.md).
+   Дополнительные сведения см. в разделе [const_cast](../cpp/const-cast-operator.md).
 
 - **reinterpret_cast**для приведения между несвязанные типы, такие как **указатель** для **int**.
 
     > [!NOTE]
     >  Этот оператор cast используется не так часто, что и остальные, и он имеет не обязательно будет переносимым в другие компиляторы.
 
-     В следующем примере показано как **reinterpret_cast** отличается от **static_cast**.
+   В следующем примере показано как **reinterpret_cast** отличается от **static_cast**.
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ int(x); // old-style cast, functional syntax
                                        // However, it is not 64-bit safe.
     ```
 
-     Дополнительные сведения см. в разделе [оператор reinterpret_cast](../cpp/reinterpret-cast-operator.md).
+   Дополнительные сведения см. в разделе [оператор reinterpret_cast](../cpp/reinterpret-cast-operator.md).
 
 ## <a name="see-also"></a>См. также
 

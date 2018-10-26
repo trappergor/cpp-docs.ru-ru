@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c86efacf7211415bfdc2936a736d78e29dc419bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423134"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076403"
 ---
 # <a name="crecordset-class"></a>Класс CRecordset
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ short GetODBCFieldCount() const;
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` Только для чтения записей с только прямую прокрутку.
 
-     Для `CRecordset`, значение по умолчанию — `CRecordset::snapshot`. Значение по умолчанию механизм позволяет мастера Visual C++ для взаимодействия с и ODBC `CRecordset` и DAO `CDaoRecordset`, которые имеют различные значения по умолчанию.
+   Для `CRecordset`, значение по умолчанию — `CRecordset::snapshot`. Значение по умолчанию механизм позволяет мастера Visual C++ для взаимодействия с и ODBC `CRecordset` и DAO `CDaoRecordset`, которые имеют различные значения по умолчанию.
 
 Дополнительные сведения об этих типах записей см. в статье [записей (ODBC)](../../data/odbc/recordset-odbc.md). Дополнительные сведения см. в статье «С помощью блока и Прокручиваемые курсоры» в пакете Windows SDK.
 
@@ -1613,7 +1609,7 @@ virtual BOOL Open(
 
 Стандартные действия является передача значения NULL для `Open`; в этом случае `Open` вызовы [GetDefaultSQL](#getdefaultsql). Если вы используете производный `CRecordset` класса `GetDefaultSQL` предоставляет имена таблицы, указанной в ClassWizard. Вместо этого можно указать другие сведения в `lpszSQL` параметра.
 
-Все передаваемые `Open` создает окончательной строки SQL для запроса (строка может содержать SQL **ГДЕ** и **ORDER BY** добавляемой в конце предложения `lpszSQL` строки, которые Вы передали), а затем выполняет запрос. Сконструированная строка можно просмотреть путем вызова [GetSQL](#getsql) после вызова метода *`Open`. Дополнительные сведения о том, как набор записей создает инструкцию SQL и выбирает записи, см. в статье [набор записей: принцип наборы записей выберите записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
+Все передаваемые `Open` создает окончательной строки SQL для запроса (строка может содержать SQL **ГДЕ** и **ORDER BY** добавляемой в конце предложения `lpszSQL` строки, которые Вы передали), а затем выполняет запрос. Сконструированная строка можно просмотреть путем вызова [GetSQL](#getsql) после вызова метода `Open`. Дополнительные сведения о том, как набор записей создает инструкцию SQL и выбирает записи, см. в статье [набор записей: принцип наборы записей выберите записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md).
 
 Элементами данных полей класса набора записей привязанные к столбцам выбранных данных. Если возвращаются все записи, первая запись становится текущей записи.
 

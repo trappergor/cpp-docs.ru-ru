@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b1a1f977e15d80d631799d8a9e101a8c85e3aaf1
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 29f84515bfa802af8d6463d34de9b6717c8df044
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328107"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061330"
 ---
 # <a name="arrays-ccli-and-ccx"></a>Массивы (C + +/ CLI и C + +/ CX)
 
@@ -55,10 +55,10 @@ ms.locfileid: "49328107"
 В первом примере синтаксиса используется **ref новый** агрегатное ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -111,10 +111,10 @@ int main() {
 В первом примере синтаксиса используется **gcnew** ключевое слово, чтобы выделить память для массива. Во втором примере объявляется локальный массив.
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

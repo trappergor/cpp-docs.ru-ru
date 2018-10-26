@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440294"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077534"
 ---
 # <a name="cpen-class"></a>Cpen-класс
 
@@ -92,12 +92,10 @@ class CPen : public CGdiObject
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ CPen(
 
 - PS_COSMETIC создает финальных перо.
 
-     Вторая версия `CPen` конструктор добавляет следующие стили пера для *nPenStyle*:
+   Вторая версия `CPen` конструктор добавляет следующие стили пера для *nPenStyle*:
 
 - PS_ALTERNATE создает перо, задает все пикселы. (Этот стиль применяется только к финальных перья.)
 
 - Создает PS_USERSTYLE перо, использует массив стилей предоставленные пользователем.
 
-     Конечного элемента может принимать одно из следующих значений:
+   Конечного элемента может принимать одно из следующих значений:
 
 - PS_ENDCAP_ROUND оконечных round.
 
@@ -146,7 +144,7 @@ CPen(
 
 - PS_ENDCAP_FLAT оконечных фиксированы.
 
-     Соединение может принимать одно из следующих значений:
+   Соединение может принимать одно из следующих значений:
 
 - Присоединяет PS_JOIN_BEVEL являются скошенные.
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

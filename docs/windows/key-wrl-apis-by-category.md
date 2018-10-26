@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441932"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059874"
 ---
 # <a name="key-wrl-apis-by-category"></a>Основные API WRL по категориям
+
 В следующих таблицах перечислены основной классы, структуры, функции и макросы библиотека шаблонов C++ среды выполнения Windows. Конструкции в вспомогательные пространства имен и классы, опущены. Эти списки дополнить документации по API, упорядоченных по степени пространства имен.
-  
-### <a name="classes"></a>Классы
-  
+
+## <a name="classes"></a>Классы
+
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Класс ActivationFactory](../windows/activationfactory-class.md)|Позволяет одному или нескольким классам быть активированными средой выполнения Windows.|
@@ -46,18 +47,18 @@ ms.locfileid: "46441932"
 |[Класс SimpleActivationFactory](../windows/simpleactivationfactory-class.md)|Предоставляет основной механизм для создания базового класса среды выполнения Windows или классической модели COM.|
 |[Класс SimpleClassFactory](../windows/simpleclassfactory-class.md)|Предоставляет основной механизм для создания базового класса.|
 |[Класс WeakRef](../windows/weakref-class.md)|Представляет собой *слабую ссылку* , которая может использоваться только в среде выполнения Windows, а не в классической модели COM. Слабая ссылка представляет собой объект, который может быть доступен или недоступен.|
-  
-### <a name="structures"></a>Структуры
-  
+
+## <a name="structures"></a>Структуры
+
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Структура ChainInterfaces](../windows/chaininterfaces-structure.md)|Указывает функции проверки и инициализации, которые могут применяться к набору идентификаторов интерфейсов.|
 |[Структура CloakedIid](../windows/cloakediid-structure.md)|Указывает `RuntimeClass`, `Implements` и `ChainInterfaces` шаблоны, что заданный интерфейс недоступен в списке IID.|
 |[Структура Implements](../windows/implements-structure.md)|Реализует `QueryInterface` и `GetIid` для указанных интерфейсов.|
 |[Структура MixIn](../windows/mixin-structure.md)|Гарантирует, что класс среды выполнения является производным от интерфейсов среды выполнения Windows, если таковые имеются, а затем от интерфейсов классической модели COM.|
-  
-### <a name="functions"></a>Функции
-  
+
+## <a name="functions"></a>Функции
+
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Функция ActivateInstance](../windows/activateinstance-function.md)|Регистрирует и возвращает экземпляр заданного типа, определенного в идентификатор указанного класса.|
@@ -67,14 +68,14 @@ ms.locfileid: "46441932"
 |[Функция CreateClassFactory](../windows/createclassfactory-function.md)|Создает фабрику, которая создает экземпляры указанного класса.|
 |[Функция GetActivationFactory](../windows/getactivationfactory-function.md)|Извлекает фабрику активации для типа, указанного в параметре шаблона.|
 |[Функция Make](../windows/make-function.md)|Инициализирует указанный класс среды выполнения Windows.|
-  
-### <a name="macros"></a>Макросы
-  
+
+## <a name="macros"></a>Макросы
+
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Макрос ActivatableClass](../windows/activatableclass-macros.md)|Заполняет внутренний кэш, содержащий фабрику, можно создать экземпляр указанного класса.|
 |[Макрос InspectableClass](../windows/inspectableclass-macro.md)|Задает уровень имя и доверия класса среды выполнения.|
-  
+
 ## <a name="see-also"></a>См. также
 
 [Библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd53bc778b3229522d34993c72833500732323b3
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 654ddd149eb6875bede85bdef51641c359644f51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821105"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075636"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Создание проекта (учебник ATL, часть 1)
 
@@ -30,13 +30,13 @@ ms.locfileid: "48821105"
 > Этот учебник создает того же исходного кода, что и в примере многоугольника. Если вы хотите избежать ручного ввода исходного кода, его можно скачать из [абстрактный пример многоугольника](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/Controls/Polygon). Затем можно ссылаться на исходный код многоугольника, как работать с учебником, или использовать его на наличие ошибок в проекте.
 > Чтобы скомпилировать, откройте файл stdafx.h и замените:
 > ```
-> #ifndef WINVER  
-> #define WINVER 0x0400   
+> #ifndef WINVER
+> #define WINVER 0x0400
 > #endif
 > ```
 > на
 > ```
-> #ifndef WINVER  
+> #ifndef WINVER
 > #define WINVER 0x0500
 > #define _WIN32_WINNT 0x0500
 > #endif
@@ -63,7 +63,7 @@ ms.locfileid: "48821105"
 
 **Мастер проектов ATL** будет создан проект, создав несколько файлов. Вы можете просматривать эти файлы в **обозревателе решений** , развернув `Polygon` объекта. Ниже перечислены файлы.
 
-|Файл|Описание:|
+|Файл|Описание|
 |----------|-----------------|
 |Polygon.cpp|Содержит реализацию `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, и `DllUnregisterServer`. Также содержит сопоставление объекта, который является списком объектов ATL в проект. Это поле пустым.|
 |Polygon.DEF|Этот файл определения модуля предоставляет сведения о экспортов, необходимых для библиотеки DLL для компоновщика.|

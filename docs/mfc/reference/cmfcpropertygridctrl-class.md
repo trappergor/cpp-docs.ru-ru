@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075987"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 
@@ -247,7 +247,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|Указывает ли платформа перерисовывает столбцов name и значение текущего элемента управления сетки свойств, если пользователь изменяет размер столбцов.|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|Указывает, является ли внешний вид элемента управления сетки свойств в стиле, который используется платформой VS .NET.|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|Указывает способ отображения измененных свойств.|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|Удаляет все объекты свойств элемента управления сетки свойств.|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|Для восстановления первоначальных значений всех свойств.|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|Задает или сбрасывает алфавитном порядке.|
@@ -331,7 +331,6 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
 
-
 ```
 virtual HRESULT accSelect(
     long flagsSelect,
@@ -340,8 +339,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>Параметры
 
-*flagsSelect*<br/>
-[in] [in] *varChild*
+[in] *flagsSelect*<br/>
+[in] *varChild*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -391,14 +390,13 @@ virtual void AdjustLayout();
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bShow*
+[in] *bShow*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -527,7 +525,6 @@ BOOL DeleteProperty(
 Этот метод позволяет удалить свойство и вложенные элементы, из элемента управления сетки свойств.
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +679,13 @@ CMFCPropertyGridProperty* FindItemByData(
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pcountChildren*
+[in] *pcountChildren*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -697,21 +693,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pvarChild*
+[in] *pvarChild*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +715,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-[in] [in] *pszHelp*
+[in] *varChild*<br/>
+[in] *pszHelp*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +733,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>Параметры
 
-*pszHelpFile*<br/>
-[in] [in] *varChild* [in] *pidTopic*
+[in] *pszHelpFile*<br/>
+[in] *varChild*<br/>
+[in] *pidTopic*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +751,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>Параметры
 
-*varChild*<br/>
-[in] [in] *pszKeyboardShortcut*
+[in] *varChild*<br/>
+[in] *pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -767,14 +760,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pvarChildren*
+[in] *pvarChildren*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1137,7 +1129,6 @@ BOOL IsAlphabeticMode() const;
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
 
-
 ```
 BOOL IsAlwaysShowUserToolTip() const;
 ```
@@ -1308,7 +1299,7 @@ virtual void OnDrawBorder(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1325,7 +1316,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1345,7 +1336,7 @@ virtual void OnDrawList(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1362,7 +1353,7 @@ virtual int OnDrawProperty(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pProp*<br/>

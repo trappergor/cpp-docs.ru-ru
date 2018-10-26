@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c78d95afbadb0d3612dcdbca1714ae8c3a06454
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 690e612201d0d3614b47c8baf7b5c46cb29d6140
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063046"
 ---
 # <a name="arrayview-class"></a>Класс array_view
 
@@ -103,7 +103,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 |Имя|Описание|
 |----------|-----------------|
-|[Operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|
+|[operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|
 |[оператор]](#operator_at)|Возвращает элемент, задаваемый параметрами.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `array_view` в данный объект.|
 
@@ -561,6 +561,7 @@ static const int rank = _Rank;
 ```
 void refresh() const restrict(cpu);
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 Повторная интерпретация array_view через одномерный array_view, который при необходимости может быть типом другим значением, отличным от исходного array_view.

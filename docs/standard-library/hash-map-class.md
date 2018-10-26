@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236040"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060114"
 ---
 # <a name="hashmap-class"></a>Класс hash_map
 
@@ -127,7 +127,7 @@ class hash_map
 *Key*<br/>
 Тип данных ключа для сохранения в hash_map.
 
-*Тип*<br/>
+*Type*<br/>
 Тип данных элемента для сохранения в hash_map.
 
 *Признаки*<br/>
@@ -277,7 +277,6 @@ const Type& at(const Key& key) const;
 ### <a name="remarks"></a>Примечания
 
 Если ключевое значение-аргумент не найдено, то функция выдает объект класса [класс out_of_range](../standard-library/out-of-range-class.md).
-
 
 ### <a name="example"></a>Пример
 
@@ -2688,9 +2687,9 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>Примечания
 
-Для hash_map *m*, если два элемента *e*1 *(k*1 *, d*1 *)* и *e*2 *(k*2 *, d*2 *)* являются объектами типа [value_type](#value_type), где *k*1 и *k*2 — их ключи типа [key_type](#key_type), а `d`1 и `d`2 — их данные типа [mapped_type](#mapped_type), то *m.*`value_comp`*( )(e*1 *, e*2 *)* эквивалентно *m.*`key_comp`*( ) (k*1 *, k*2 *)*. Сохраненный объект определяет функцию-член
+Для hash_map *m*, если два элемента *e1* (*k1*, *d1*) и *e2* (*k2*, *d2*) являются объектами типа [value_type](#value_type), где *k1* и *k2* их ключи типа [key_type](#key_type) и *d1* и *d2* являются данные типа [mapped_type](#mapped_type), затем `m.value_comp()(e1, e2)` эквивалентен `m.key_comp()(k1, k2)` . Сохраненный объект определяет функцию-член
 
-**bool operator**(**value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 которая возвращает **true**, если значение ключа `left` предшествует значению ключа `right` в порядке сортировки и не равно ему.
 

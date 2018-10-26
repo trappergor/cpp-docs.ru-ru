@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 718cc52175ff7d82527fd90486ee401c0e2ba80c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 89ff13a544e9b740dcb5420fb317103af8cf2ab3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375829"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072777"
 ---
 # <a name="cmapstringtostring-class"></a>Класс CMapStringToString
 
@@ -239,6 +239,4 @@ CPair* PLookup(LPCTSTR key);
 [Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
-
 

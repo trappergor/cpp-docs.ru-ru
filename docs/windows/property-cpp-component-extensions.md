@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328237"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075870"
 ---
 # <a name="property--ccli-and-ccx"></a>свойства (C + +/ CLI и C + +/ CX)
 
@@ -53,17 +53,17 @@ ms.locfileid: "49328237"
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -173,7 +173,6 @@ Get и set для свойства должны быть согласованн�
 
 **Свойство** является контекстно-зависимые ключевым словом.  Дополнительные сведения см. в разделе [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).
 
-
 ### <a name="requirements"></a>Требования
 
 Параметр компилятора: `/clr`
@@ -226,4 +225,4 @@ test
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

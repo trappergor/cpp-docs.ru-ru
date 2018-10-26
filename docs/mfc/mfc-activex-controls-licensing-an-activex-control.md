@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068779"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Элементы управления ActiveX в MFC. Лицензирование элемента управления ActiveX
 
@@ -84,15 +84,15 @@ ms.locfileid: "46381170"
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     Проверяет, что элемент управления допускает использование разработки путем проверки системы на наличие файла лицензии элемента управления. Эта функция вызывается платформой при обработке `IClassFactory2::GetLicInfo` и `IClassFactory::CreateInstanceLic`.
+   Проверяет, что элемент управления допускает использование разработки путем проверки системы на наличие файла лицензии элемента управления. Эта функция вызывается платформой при обработке `IClassFactory2::GetLicInfo` и `IClassFactory::CreateInstanceLic`.
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     Запрашивает уникальный ключ из элемента управления библиотеки DLL. Этот ключ внедренных в приложение-контейнер и более поздних версиях используется в сочетании с `VerifyLicenseKey`, для создания экземпляра элемента управления. Эта функция вызывается платформой при обработке `IClassFactory2::RequestLicKey`.
+   Запрашивает уникальный ключ из элемента управления библиотеки DLL. Этот ключ внедренных в приложение-контейнер и более поздних версиях используется в сочетании с `VerifyLicenseKey`, для создания экземпляра элемента управления. Эта функция вызывается платформой при обработке `IClassFactory2::RequestLicKey`.
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     Проверяет, что внедренный ключ и уникальные ключи элемента управления совпадают. Это позволяет контейнеру для создания экземпляра элемента управления для его использования. Эта функция вызывается платформой при обработке `IClassFactory2::CreateInstanceLic` и можно переопределить, указав настроенным проверочным лицензионного ключа. Реализация по умолчанию выполняет сравнение строк. Дополнительные сведения см. в разделе [Настройка Лицензирование элементов управления ActiveX](#_core_customizing_the_licensing_of_an_activex_control)далее в этой статье.
+   Проверяет, что внедренный ключ и уникальные ключи элемента управления совпадают. Это позволяет контейнеру для создания экземпляра элемента управления для его использования. Эта функция вызывается платформой при обработке `IClassFactory2::CreateInstanceLic` и можно переопределить, указав настроенным проверочным лицензионного ключа. Реализация по умолчанию выполняет сравнение строк. Дополнительные сведения см. в разделе [Настройка Лицензирование элементов управления ActiveX](#_core_customizing_the_licensing_of_an_activex_control)далее в этой статье.
 
 ###  <a name="_core_header_file_modifications"></a> Изменения файла заголовка
 

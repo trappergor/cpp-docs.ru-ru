@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050883"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056065"
 ---
 # <a name="run-time-type-information"></a>Сведения о типах времени выполнения
 
@@ -35,15 +35,15 @@ ms.locfileid: "46050883"
 
 - [Dynamic_cast](../cpp/dynamic-cast-operator.md) оператор.
 
-     Используется для преобразования полиморфных типов.
+   Используется для преобразования полиморфных типов.
 
 - [Typeid](../cpp/typeid-operator.md) оператор.
 
-     Используется для указания точного типа объекта.
+   Используется для указания точного типа объекта.
 
 - [Type_info](../cpp/type-info-class.md) класса.
 
-     Используется для хранения сведений, возвращаемых методом **typeid** оператор.
+   Используется для хранения сведений, возвращаемых методом **typeid** оператор.
 
 ## <a name="see-also"></a>См. также
 

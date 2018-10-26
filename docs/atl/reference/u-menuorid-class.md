@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044253"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052958"
 ---
 # <a name="umenuorid-class"></a>Класс _U_MENUorID
 
@@ -57,7 +57,7 @@ class _U_MENUorID
 
 Этот класс адаптера аргумент позволяет идентификаторы (единицы) или дескрипторы меню (HMENUs) для передачи в функцию без необходимости явного приведения, со стороны вызывающего объекта.
 
-Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) и [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).  
+Этот класс предназначен для реализации оболочки Windows API, особенно [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) и [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции, которые принимают аргумент дескриптора HMENU, возможно, дочернее окно идентификатор (целое число без знака), а не дескриптор меню. Например, можно увидеть этот класс используется в качестве параметра [CWindowImpl::Create](cwindowimpl-class.md#create).
 
 Этот класс определяет две перегрузки конструктора: один принимает аргумент целое число без знака, а другой принимает аргумент дескриптора HMENU. Целое число без знака аргумент просто привести к HMENU конструктора и результата, хранимого в единый данные-член класса, [m_hMenu](#_u_menuorid__m_hmenu). Аргумент для конструктора HMENU хранится непосредственно без преобразования.
 

@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433236"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070417"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>Стандартные программы обмена данных диалоговых окон
 
@@ -75,7 +75,7 @@ void AFXAPI DDX_CBIndex(
 
 Когда `DDX_CBIndex` вызове *индекс* присваивается индекс текущего выделенного фрагмента поле со списком. Если элемент не выбран, *индекс* имеет значение 0.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -110,7 +110,7 @@ void AFXAPI DDX_CBString(
 > [!NOTE]
 >  Если поле со списком поле с раскрывающимся списком, обмен значение не длиннее 255 символов.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -145,7 +145,7 @@ void AFXAPI DDX_CBStringExact(
 > [!NOTE]
 >  Если поле со списком поле с раскрывающимся списком, обмен значение не длиннее 255 символов.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -177,7 +177,7 @@ void AFXAPI DDX_Check(
 
 Когда `DDX_Check` вызове *значение* присваивается текущее состояние элемента управления "флажок". Список значений возможные состояния, см. в разделе [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) в пакете Windows SDK.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -209,7 +209,7 @@ void AFXAPI DDX_Control(
 
 *PDX* объект, предоставленный платформой при `DoDataExchange` вызове функции. Таким образом `DDX_Control` должен вызываться только в переопределении `DoDataExchange`.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -253,7 +253,7 @@ void AFXAPI DDX_DateTimeCtrl(
 
 В третьей версии выше `DDX_DateTimeCtrl` управляет передачей `CString` данных между датой время управления и [CString](../../atl-mfc-shared/reference/cstringt-class.md) элемент данных объекта представления элемента управления. Строка форматируется с использованием правил текущего языкового стандарта для форматирования значения даты и времени.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -268,10 +268,11 @@ void AFXAPI DDX_DateTimeCtrl(
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pDX*<br/>
@@ -297,8 +298,6 @@ void DDX_ManagedControl(
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,7 +334,7 @@ void AFXAPI DDX_IPAddress(
 
 При `DDX_IPAddress` вызове *значение* считывается либо из элемента управления IP-адрес или *значение* записывается в элемент управления, в зависимости от направления exchange.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -367,7 +366,7 @@ void AFXAPI DDX_LBIndex(
 
 Когда `DDX_LBIndex` вызове *индекс* присваивается индекс текущего выбора в списке. Если элемент не выбран, *индекс* устанавливается равным -1.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -404,7 +403,7 @@ void AFXAPI DDX_LBString(
 > [!NOTE]
 >  Если поле со списком поле с раскрывающимся списком, обмен значение не длиннее 255 символов.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -441,7 +440,7 @@ void AFXAPI DDX_LBStringExact(
 > [!NOTE]
 >  Если поле со списком поле с раскрывающимся списком, обмен значение не длиннее 255 символов.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -481,7 +480,7 @@ void AFXAPI DDX_MonthCalCtrl(
 
 Когда `DDX_MonthCalCtrl` вызове *значение* присваивается текущее состояние элемента управления calendar month.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -515,7 +514,7 @@ void AFXAPI DDX_Radio(
 
 Например, в случае, это первый переключатель в группе проверки (кнопка с стиля WS_GROUP) значение **int** член является 0, и т. д.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -547,7 +546,7 @@ void AFXAPI DDX_Scroll(
 
 Когда `DDX_Scroll` вызове *значение* присваивается текущее положение элемента управления thumb. Дополнительные сведения о значениях, связанных с текущей позиции элемента управления thumb, см. в разделе [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) в пакете Windows SDK.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -579,7 +578,7 @@ void AFXAPI DDX_Slider(
 
 При `DDX_Slider` вызове *значение* присваивается текущее положение элемента управления thumb, или значение Получает позицию, в зависимости от направления exchange.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Сведения об элементах управления "ползунок", см. в разделе [использование CSliderCtrl](../../mfc/using-csliderctrl.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Сведения об элементах управления "ползунок", см. в разделе [использование CSliderCtrl](../../mfc/using-csliderctrl.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -659,7 +658,7 @@ void AFXAPI DDX_Text(
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 

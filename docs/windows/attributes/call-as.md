@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7ca6336a79b3e218e1e3a68112f1c12d7e4822a4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: c8769b542fccd512c1c32b418ffc9f1ad5758628
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791129"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061551"
 ---
 # <a name="callas"></a>call_as
 
@@ -70,10 +70,10 @@ __interface IMInterface {
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
-[локальный](local-cpp.md)  
+[local](local-cpp.md)

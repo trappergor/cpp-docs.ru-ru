@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421262"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076065"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>Практическое руководство. Создание консольного приложения CLR (C++/CLI)
 
@@ -33,7 +33,7 @@ ms.locfileid: "46421262"
 
 - Ссылки на следующие пространства имен .NET Framework:
 
-   - [Система](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— содержит фундаментальные и базовые классы, определяющие часто используемые значения и ссылочные типы данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.
+   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— содержит фундаментальные и базовые классы, определяющие часто используемые типы значений и типы ссылочных данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.
 
    - mscorlib — библиотека DLL сборки, которая поддерживает разработку для .NET Framework.
 
@@ -67,7 +67,7 @@ ms.locfileid: "46421262"
 
 1. В поле **Имя** введите уникальное имя для приложения.
 
-     Можно указать другие параметры проекта и решения, но это не обязательно.
+   Можно указать другие параметры проекта и решения, но это не обязательно.
 
 1. Нажмите кнопку **ОК** .
 

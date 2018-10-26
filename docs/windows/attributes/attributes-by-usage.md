@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328185"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060433"
 ---
 # <a name="attributes-by-usage"></a>Список атрибутов по использованию
 
@@ -43,7 +43,7 @@ ms.locfileid: "49328185"
 
 ## <a name="module-attributes"></a>Атрибуты модуля
 Следующий атрибут может применяться только к [модуль](module-cpp.md) атрибута.
-  
+
 |Атрибут|Описание|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|Указывает имя библиотеки DLL для выполнения уточняющего запроса строки документа (локализации).|
@@ -85,7 +85,6 @@ ms.locfileid: "49328185"
 - Перегруженные методы не допускаются.
 
 Если не указать [uuid](uuid-cpp-attributes.md) атрибута и с использованием имени интерфейса в проектах другой атрибут, создается одинаковый идентификатор GUID.
-
 
 ## <a name="see-also"></a>См. также
 

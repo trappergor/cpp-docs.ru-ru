@@ -1,7 +1,7 @@
 ---
 title: Класс CMFCMenuBar | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aafffcdcfbab750215ccb968774d60259e03672
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93e9d1d148cc70ad0b83bb71565276baa5174afb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433658"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080875"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 
@@ -201,7 +201,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCMenuBar` класса. Пример показано, как задать стиль области, включить "настроить", окно справки, включить shadows контекстных меню и обновление строки меню. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCMenuBar` . Пример показано, как задать стиль области, включить "настроить", окно справки, включить shadows контекстных меню и обновление строки меню. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -254,7 +254,6 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -265,7 +264,6 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -274,15 +272,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Параметры
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout
-
 
 ```
 virtual CSize CalcLayout(
@@ -292,15 +290,15 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>Параметры
 
-*dwMode*<br/>
-[in] [in] *nLength*
+[in] *dwMode*<br/>
+
+[in] *nLength*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight
-
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -312,7 +310,6 @@ virtual int CalcMaxButtonHeight();
 
 ##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed
 
-
 ```
 virtual BOOL CanBeClosed() const;
 ```
@@ -322,7 +319,6 @@ virtual BOOL CanBeClosed() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored
-
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -487,7 +483,6 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize
 
-
 ```
 virtual int GetAvailableExpandSize() const;
 ```
@@ -497,7 +492,6 @@ virtual int GetAvailableExpandSize() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth
-
 
 ```
 virtual int GetColumnWidth() const;
@@ -541,21 +535,19 @@ UINT GetDefaultMenuResId() const;
 
 ##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection
 
-
 ```
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows
-
 
 ```
 BOOL GetForceDownArrows();
@@ -629,7 +621,6 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight
 
-
 ```
 virtual int GetRowHeight() const;
 ```
@@ -640,7 +631,6 @@ virtual int GetRowHeight() const;
 
 ##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton
 
-
 ```
 CMFCToolBarMenuButtonsButton* GetSystemButton(
     UINT uiBtn,
@@ -649,15 +639,15 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>Параметры
 
-*uiBtn*<br/>
-[in] [in] *bByCommand*
+[in] *uiBtn*<br/>
+
+[in] *bByCommand*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount
-
 
 ```
 int GetSystemButtonsCount() const;
@@ -668,7 +658,6 @@ int GetSystemButtonsCount() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu
-
 
 ```
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
@@ -696,7 +685,6 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 По умолчанию платформа не выделения пунктов меню недоступны, при наведении указателя мыши над ними.
 
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable
-
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -828,14 +816,13 @@ virtual BOOL LoadState(
 
 ##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot
 
-
 ```
 virtual void OnChangeHot(int iHot);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *iHot*
+[in] *iHot*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -858,14 +845,13 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 
 ##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand
 
-
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pButton*
+[in] *pButton*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -894,7 +880,6 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 
 ##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest
 
-
 ```
 virtual INT_PTR OnToolHitTest(
     CPoint point,
@@ -903,8 +888,9 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-[in] [in] *pTI*
+[in] *точки*<br/>
+
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -912,14 +898,13 @@ virtual INT_PTR OnToolHitTest(
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pMsg*
+[in] *pMsg*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -996,14 +981,13 @@ void SetDefaultMenuResId(UINT uiResId);
 
 ##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows
 
-
 ```
 void SetForceDownArrows(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bValue*
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>Примечания
 

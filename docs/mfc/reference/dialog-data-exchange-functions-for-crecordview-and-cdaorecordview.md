@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295e19d875585e0ea166dfce552866b8c1fc81b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392274"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070287"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 
@@ -98,7 +98,7 @@ void AFXAPI DDX_FieldCBIndex(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -146,7 +146,7 @@ void AFXAPI DDX_FieldCBString(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -194,7 +194,7 @@ void AFXAPI DDX_FieldCBStringExact(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -240,7 +240,7 @@ void AFXAPI DDX_FieldCheck(
 
 При `DDX_FieldCheck` вызове *значение* присваивается текущее состояние элемента управления "флажок", или состояние элемента управления имеет значение *значение*, в зависимости от направления передачи.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -284,7 +284,7 @@ void AFXAPI DDX_FieldLBIndex(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -332,7 +332,7 @@ void AFXAPI DDX_FieldLBString(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -380,7 +380,7 @@ void AFXAPI DDX_FieldLBStringExact(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -428,7 +428,7 @@ void AFXAPI DDX_FieldRadio(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -476,7 +476,7 @@ void AFXAPI DDX_FieldScroll(
 
 Используйте первой версии, если вы работаете с классы на основе ODBC. Во второй версии следует используйте при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
@@ -499,11 +499,12 @@ void AFXAPI DDX_FieldScroll(
        CRecordset* pRecordset );
 
 void AFXAPI DDX_FieldSlider(
-     CDataExchange* pDX,
-     int nIDC,
-     int& value,
-     CDaoRecordset* pRecordset );
+   CDataExchange* pDX,
+   int nIDC,
+   int& value,
+   CDaoRecordset* pRecordset );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *pDX*<br/>
@@ -526,7 +527,7 @@ void AFXAPI DDX_FieldSlider(
 
 Первое переопределение функции следует используйте, если вы работаете с классы на основе ODBC. Используйте второе переопределение с помощью классов на основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для `CRecordView` и `CDaoRecordView` поля, см. в разделе [представления записей](../../data/record-views-mfc-data-access.md). Сведения об элементах управления "ползунок", см. в разделе [использование CSliderCtrl](../using-csliderctrl.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для `CRecordView` и `CDaoRecordView` поля, см. в разделе [представления записей](../../data/record-views-mfc-data-access.md). Сведения об элементах управления "ползунок", см. в разделе [использование CSliderCtrl](../using-csliderctrl.md).
 
 ### <a name="example"></a>Пример
 
@@ -674,14 +675,13 @@ void AFXAPI DDX_FieldText(
 
 Использовать версии с [CRecordset](../../mfc/reference/crecordset-class.md) параметров при работе с классами основе ODBC. Использовать версии с [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) параметров при работе с классами основе DAO.
 
-Дополнительные сведения об DDX см. в разделе [обмен данными диалоговых окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
+Дополнительные сведения об DDX см [обмен данными окон и проверка](../../mfc/dialog-data-exchange-and-validation.md). Примеры и Дополнительные сведения об DDX для [CRecordView](../../mfc/reference/crecordview-class.md) и [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) поля, см. в статье [представления записей](../../data/record-views-mfc-data-access.md).
 
 ### <a name="example"></a>Пример
 
 Следующие `DoDataExchange` работать для [CRecordView](../../mfc/reference/crecordview-class.md) содержит `DDX_FieldText` функция вызывает для трех типов данных: `IDC_COURSELIST` является списком; другие два элемента управления, поля ввода. Для программирования DAO *m_pSet* параметр является указателем на [CRecordset](../../mfc/reference/crecordset-class.md) или [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md).
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
-
 
 ### <a name="requirements"></a>Требования
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3b02244e0576f99cc0a6940f2ee4a13511cfbe6f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ea3ece20ac6df0fab00f1e21d27c41ae6e115517
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791104"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065906"
 ---
 # <a name="dispinterface"></a>dispinterface
 
@@ -40,7 +40,7 @@ ms.locfileid: "48791104"
 
 Если не указать базовый класс, интерфейс диспетчеризации будет производным от `IDispatch`. Необходимо указать [идентификатор](id.md) для членов интерфейса диспетчеризации.
 
-Пример использования [disp-интерфейс](/windows/desktop/Midl/dispinterface) в документации MIDL:
+Пример использования [dispinterface](/windows/desktop/Midl/dispinterface) в документации MIDL:
 
 ```cpp
 dispinterface helloPro
@@ -51,7 +51,7 @@ dispinterface helloPro
 
 ## <a name="example"></a>Пример
 
-См. в примере [bindable](bindable.md) пример демонстрирует использование **disp-интерфейс**.
+Просмотрите пример с [bindable](bindable.md) , чтобы увидеть, как можно использовать **dispinterface**.
 
 ## <a name="requirements"></a>Требования
 
@@ -64,7 +64,7 @@ dispinterface helloPro
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|`dual`, `object`, `oleautomation`, `local`, `ms_union`|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
@@ -72,6 +72,6 @@ dispinterface helloPro
 [Список атрибутов по использованию](attributes-by-usage.md)<br/>
 [uuid](uuid-cpp-attributes.md)<br/>
 [dual](dual.md)<br/>
-[Custom](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [object](object-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

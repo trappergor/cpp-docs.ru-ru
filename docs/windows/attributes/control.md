@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 64c123784af81a534a6d6ff2a0fb3d2108ff6021
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: df3a3b17af4ccb55fffccdbe87c1ac8c39eba603
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057498"
 ---
 # <a name="control"></a>элемент управления
 
@@ -66,10 +66,10 @@ class CTest : public ICustom {};
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)

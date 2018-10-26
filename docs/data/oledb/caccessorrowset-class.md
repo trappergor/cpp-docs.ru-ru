@@ -41,131 +41,131 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: adb59e553565d9886cf27b55f2cfffb4cd0e7aa9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060160"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
-Инкапсулирует набор строк и его связанные методы доступа в одном классе.  
-  
+Инкапсулирует набор строк и его связанные методы доступа в одном классе.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-   template <typename T> class TRowset = CRowset>  
-class CAccessorRowset : public TAccessor, public TRowset<TAccessor>  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class TAccessor = CNoAccessor,
+   template <typename T> class TRowset = CRowset>
+class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
+```
+
+### <a name="parameters"></a>Параметры
 
 *TAccessor*<br/>
-Класс, метод доступа.  
-  
+Класс, метод доступа.
+
 *TRowset*<br/>
-Класс набора строк.  
+Класс набора строк.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[Bind](#bind)|Создает привязки (используется, когда `bBind` указывается как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md)).|  
-|[CAccessorRowset](#caccessorrowset)|Конструктор.|  
-|[Закрыть](#close)|Закрывает набор строк и все методы доступа.|  
-|[FreeRecordMemory](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые следует освободиться.|  
-|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704).|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldbcli.h
 
-Класс `TAccessor` управляет метода доступа. Класс *TRowset* управляет набора строк.  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[Bind](#bind)|Создает привязки (используется, когда `bBind` указывается как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[CAccessorRowset](#caccessorrowset)|Конструктор.|
+|[Закрыть](#close)|Закрывает набор строк и все методы доступа.|
+|[FreeRecordMemory](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые следует освободиться.|
+|[GetColumnInfo](#getcolumninfo)|Реализует [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704).|
+
+## <a name="remarks"></a>Примечания
+
+Класс `TAccessor` управляет метода доступа. Класс *TRowset* управляет набора строк.
 
 ## <a name="bind"></a> CAccessorRowset::Bind
 
-Создает привязки, если вы указали `bBind` как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md).  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-HRESULT Bind();  
-```  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+Создает привязки, если вы указали `bBind` как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md).
 
-Стандартный HRESULT.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+HRESULT Bind();
+```
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
 
 ## <a name="caccessorrowset"></a> CAccessorRowset::CAccessorRowset
 
-Инициализирует `CAccessorRowset` объекта.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Инициализирует `CAccessorRowset` объекта.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CAccessorRowset();  
-```  
+CAccessorRowset();
+```
 
 ## <a name="close"></a> CAccessorRowset::Close
 
-Освобождает все active методы доступа и набор строк.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Примечания  
+Освобождает все active методы доступа и набор строк.
 
-Освобождает все связанные памяти.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Примечания
+
+Освобождает все связанные памяти.
 
 ## <a name="freerecordmemory"></a> CAccessorRowset::FreeRecordMemory
 
-Освобождает все столбцы в текущей записи, которые следует освободиться.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Освобождает все столбцы в текущей записи, которые следует освободиться.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-void FreeRecordMemory();  
-```  
+void FreeRecordMemory();
+```
 
 ## <a name="getcolumninfo"></a> CAccessorRowset::GetColumnInfo
 
-Возвращает сведения о столбцах из открытого набора строк.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Возвращает сведения о столбцах из открытого набора строк.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT GetColumnInfo(DBORDINAL* pulColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
-   LPOLESTR* ppStrings) const; 
-    
-HRESULT GetColumnInfo(DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT GetColumnInfo(DBORDINAL* pulColumns,
+   DBCOLUMNINFO** ppColumnInfo,
+   LPOLESTR* ppStrings) const;
 
-См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+HRESULT GetColumnInfo(DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo);
+```
 
-Стандартный HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+#### <a name="parameters"></a>Параметры
 
-Пользователь должен освободить сведения возвращаемого столбца и строки буфера. Использовать второй версии этого метода при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и нужно переопределить привязок.  
-  
-Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *Справочник программиста OLE DB по*.  
-  
-## <a name="see-also"></a>См. также  
+См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Стандартный HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+Пользователь должен освободить сведения возвращаемого столбца и строки буфера. Использовать второй версии этого метода при использовании [CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) и нужно переопределить привязок.
+
+Дополнительные сведения см. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *Справочник программиста OLE DB по*.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

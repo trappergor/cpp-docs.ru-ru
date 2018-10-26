@@ -38,81 +38,81 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3a0b7bb8f430f2e132413fbb8bca2563c4fd7014
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cded311abd2956317861bac484e3c32a4e14f5cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072334"
 ---
 # <a name="icolumnsinfoimpl-class"></a>Класс IColumnsInfoImpl
 
-Предоставляет реализацию [IColumnsInfo](/previous-versions/windows/desktop/ms724541) интерфейс.  
-  
+Предоставляет реализацию [IColumnsInfo](/previous-versions/windows/desktop/ms724541) интерфейс.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IColumnsInfoImpl :   
-   public IColumnsInfo,    
-   public CDBIDOps  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T>
+class ATL_NO_VTABLE IColumnsInfoImpl :
+   public IColumnsInfo,  
+   public CDBIDOps
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `IColumnsInfoImpl`.  
+Ваш класс, производный от `IColumnsInfoImpl`.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[GetColumnInfo](#getcolumninfo)|Возвращает метаданные столбца, требуемые большинством объектов-получателей.|  
-|[MapColumnIDs](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldb.h
 
-Обязательный интерфейс для наборов строк и команд. Для изменения поведения вашего поставщика `IColumnsInfo` реализации, необходимо изменить сопоставление столбцов поставщика.  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[GetColumnInfo](#getcolumninfo)|Возвращает метаданные столбца, требуемые большинством объектов-получателей.|
+|[MapColumnIDs](#mapcolumnids)|Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.|
+
+## <a name="remarks"></a>Примечания
+
+Обязательный интерфейс для наборов строк и команд. Для изменения поведения вашего поставщика `IColumnsInfo` реализации, необходимо изменить сопоставление столбцов поставщика.
 
 ## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
 
-Возвращает метаданные столбца, требуемые большинством объектов-получателей.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,  
-   DBCOLUMNINFO** prgInfo,  
-   OLECHAR** ppStringsBuffer);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает метаданные столбца, требуемые большинством объектов-получателей.
 
-См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
+   DBCOLUMNINFO** prgInfo,
+   OLECHAR** ppStringsBuffer);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704) в *справочнике программиста OLE DB*.
 
 ## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
-Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,  
-   const DBID rgColumnIDs[],  
-   DBORDINAL rgColumns[]);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает массив порядковых номеров столбцов в наборе строк, которые идентифицируются по указанному столбцу идентификаторов.
 
-См. в разделе [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) в *справочнике программиста OLE DB*.  
-  
-## <a name="see-also"></a>См. также  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
+   const DBID rgColumnIDs[],
+   DBORDINAL rgColumns[]);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200) в *справочнике программиста OLE DB*.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

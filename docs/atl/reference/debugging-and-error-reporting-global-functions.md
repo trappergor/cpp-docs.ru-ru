@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019428"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069156"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>Отладка и глобальные функции отчетов об ошибках
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Примечания
 
-`AtlHresultFromLastError` вызовы `GetLastError` для получения последней ошибки и возвращает ошибку после его преобразования в значение HRESULT, с помощью макроса HRESULT_FROM_WIN32.  
+`AtlHresultFromLastError` вызовы `GetLastError` для получения последней ошибки и возвращает ошибку после его преобразования в значение HRESULT, с помощью макроса HRESULT_FROM_WIN32.
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlcomcli.h  
+**Заголовок:** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ AtlHresultFromWin32(DWORD error);
 Преобразует код ошибки Win32 в HRESULT, с помощью макроса HRESULT_FROM_WIN32.
 
 > [!NOTE]
->  Вместо использования `HRESULT_FROM_WIN32(GetLastError())`, используйте функцию [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).  
+>  Вместо использования `HRESULT_FROM_WIN32(GetLastError())`, используйте функцию [AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror).
 
 ### <a name="requirements"></a>Требования
 
-**Заголовок:** atlcomcli.h  
+**Заголовок:** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,7 +166,7 @@ HRESULT WINAPI AtlReportError(
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  Не используйте `AtlReportError` обработчики catch C++. Некоторые переопределения метода этих функций использовать макросы преобразования строк ATL, который в свою очередь, используют `_alloca` внутри функции. С помощью `AtlReportError` в блоке catch C++ обработчик может привести к исключениям в обработчики catch C++.  
+>  Не используйте `AtlReportError` обработчики catch C++. Некоторые переопределения метода этих функций использовать макросы преобразования строк ATL, который в свою очередь, используют `_alloca` внутри функции. С помощью `AtlReportError` в блоке catch C++ обработчик может привести к исключениям в обработчики catch C++.
 
 ### <a name="requirements"></a>Требования
 
@@ -203,11 +203,11 @@ __declspec(noreturn) inline void AtlThrow(HRESULT hr);
 
 ### <a name="example"></a>Пример
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atldef.h  
+**Заголовок:** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,7 +225,7 @@ inline void AtlThrowLastWin32();
 
 Если _ATL_NO_EXCEPTIONS не определен в проекте ATL, функция создает [CAtlException](../../atl/reference/catlexception-class.md).
 
-Если определен _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения вместо выдачи исключения.  
+Если определен _ATL_NO_EXCEPTIONS, функция вызывает сбой утверждения вместо выдачи исключения.
 
 ## <a name="requirements"></a>Требования
 

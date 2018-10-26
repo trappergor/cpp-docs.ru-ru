@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db431b80a569436aab477b89be447ee6df1932b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e3b91d0397b1eec53988e7acd5a5b7dce61db4ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424005"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059887"
 ---
 # <a name="cmfcrebar-class"></a>Класс CMFCReBar
 
@@ -81,7 +81,7 @@ class CMFCReBar : public CPane
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCReBar` класса. В примере показано создание элемента управления "Главная панель" и добавьте к нему полосе. Функции использования аппаратного контроллера, в качестве внутренних инструментов. Этот фрагмент кода является частью [пример главной панели теста](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCReBar` . В примере показано создание элемента управления "Главная панель" и добавьте к нему полосе. Функции использования аппаратного контроллера, в качестве внутренних инструментов. Этот фрагмент кода является частью [пример главной панели теста](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]
@@ -117,12 +117,14 @@ BOOL AddBar(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pBar* указатель к дочернему окну, которое должен быть вставлен в главной панели. Упоминаемый объект должен иметь **WS_CHILD** стиль окна.
+*pBar*<br/>
+[in, out] Указатель на дочернему окну, которое должен быть вставлен в главной панели. Упоминаемый объект должен иметь **WS_CHILD** стиль окна.
 
 *pszText*<br/>
 [in] Задает текст, появляющийся на главной панели. Текст не является частью дочернего окна. Вместо этого он отображается на главной панели, сам.
 
-[in] [out] *pbmp* Указывает битовую карту для отображения на заднем плане главной панели.
+*pbmp*<br/>
+[in, out] Указывает битовую карту для отображения на заднем плане главной панели.
 
 *dwStyle*<br/>
 [in] Содержит стиль, применяемый к полосе. Полный список стилей аппаратного контроллера управления, см. в описании для `fStyle` в [REBARBANDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagrebarbandinfoa) структуры в документации по Windows SDK.
@@ -151,7 +153,8 @@ BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pParentWnd* указатель на родительское окно элемента управления "Главная панель".
+*pParentWnd*<br/>
+[in, out] Указатель на родительское окно элемента управления "Главная панель".
 
 *dwCtrlStyle*<br/>
 [in] Задает стиль для элемента управления "Главная панель". Значение по умолчанию стиль — **RBS_BANDBORDERS**, который отображает ограничить строки для разделения смежные полосами в элементе управления "Главная панель". Список допустимых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в документации по Windows SDK.
@@ -186,7 +189,6 @@ CReBarCtrl& GetReBarCtrl() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCReBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -195,15 +197,14 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>Параметры
 
-*bStretch*<br/>
-[in] [in] *bHorz*
+[in] *bStretch*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="canfloat"></a>  CMFCReBar::CanFloat
-
 
 ```
 virtual BOOL CanFloat() const;
@@ -215,19 +216,17 @@ virtual BOOL CanFloat() const;
 
 ##  <a name="enabledocking"></a>  CMFCReBar::EnableDocking
 
-
 ```
 void EnableDocking(DWORD dwDockStyle);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *dwDockStyle*
+[in] *dwDockStyle*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="getrebarbandinfosize"></a>  CMFCReBar::GetReBarBandInfoSize
-
 
 ```
 UINT GetReBarBandInfoSize() const;
@@ -239,21 +238,19 @@ UINT GetReBarBandInfoSize() const;
 
 ##  <a name="onshowcontrolbarmenu"></a>  CMFCReBar::OnShowControlBarMenu
 
-
 ```
 virtual BOOL OnShowControlBarMenu(CPoint);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CPoint*
+[in] *CPoint*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="ontoolhittest"></a>  CMFCReBar::OnToolHitTest
-
 
 ```
 virtual INT_PTR OnToolHitTest(
@@ -263,15 +260,14 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-[in] [in] *pTI*
+[in] *точки*<br/>
+[in] *pTI*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="onupdatecmdui"></a>  CMFCReBar::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -281,13 +277,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>Параметры
 
-*pTarget*<br/>
-[in] [in] *bDisableIfNoHndler*
+[in] *pTarget*<br/>
+[in] *bDisableIfNoHndler*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="setpanealignment"></a>  CMFCReBar::SetPaneAlignment
-
 
 ```
 virtual void SetPaneAlignment(DWORD dwAlignment);
@@ -295,7 +290,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *dwAlignment*
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Примечания
 

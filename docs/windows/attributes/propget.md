@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 44a5b06a4d94bc431d33fa29cdcef4738e43ca54
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0afbd6943808099be62545cd872002040f03064b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062981"
 ---
 # <a name="propget"></a>propget
 
@@ -53,11 +53,11 @@ ms.locfileid: "48792400"
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|`propput`, `propputref`|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты метода](method-attributes.md)<br/>
 [propput](propput.md)<br/>
-[propputref](propputref.md)  
+[propputref](propputref.md)

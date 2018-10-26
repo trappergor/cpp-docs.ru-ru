@@ -24,102 +24,102 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4548e319d7a85c547b0e750d040bdc6b6d7bbba5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: dd9d3b291f967b98017e4136740628ef951ea12a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060134"
 ---
 # <a name="ctable-class"></a>Класс CTable
 
-Предоставляет средства для прямого доступа к простому набору строк (без параметров).  
-  
+Предоставляет средства для прямого доступа к простому набору строк (без параметров).
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class TAccessor = CNoAccessor, 
-            template <typename T> class TRowset = CRowset>  
-class CTable :  
-   public CAccessorRowset <TAccessor, TRowset>  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class TAccessor = CNoAccessor,
+            template <typename T> class TRowset = CRowset>
+class CTable :
+   public CAccessorRowset <TAccessor, TRowset>
+```
+
+### <a name="parameters"></a>Параметры
 
 *TAccessor*<br/>
-Класс, метод доступа.  
-  
+Класс, метод доступа.
+
 *TRowset*<br/>
-Класс набора строк.  
+Класс набора строк.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="methods"></a>Методы  
-  
-|||  
-|-|-|  
-|[Открыть](#open)|Открытие таблицы.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** atldbcli.h
 
-См. в разделе [CCommand](../../data/oledb/ccommand-class.md) сведения о том, как выполнить команду, чтобы получить доступ к набор строк.  
+## <a name="members"></a>Участники
+
+### <a name="methods"></a>Методы
+
+|||
+|-|-|
+|[Открыть](#open)|Открытие таблицы.|
+
+## <a name="remarks"></a>Примечания
+
+См. в разделе [CCommand](../../data/oledb/ccommand-class.md) сведения о том, как выполнить команду, чтобы получить доступ к набор строк.
 
 ## <a name="open"></a> CTable::Open
 
-Открытие таблицы.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Открытие таблицы.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-HRESULT Open(const CSession& session,  
-   LPCWSTR wszTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCWSTR wszTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   LPCSTR szTableName,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
+HRESULT Open(const CSession& session,
+   LPCSTR szTableName,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
 
-HRESULT Open(const CSession& session,  
-   DBID& dbid,  
-   DBPROPSET* pPropSet = NULL,  
-   ULONG ulPropSets = 0) throw ();  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+HRESULT Open(const CSession& session,
+   DBID& dbid,
+   DBPROPSET* pPropSet = NULL,
+   ULONG ulPropSets = 0) throw ();
+```
+
+#### <a name="parameters"></a>Параметры
 
 *Сеанс*<br/>
-[in] Сеанс, в течение которого открыт таблицы.  
-  
+[in] Сеанс, в течение которого открыт таблицы.
+
 *wszTableName*<br/>
-[in] Имя таблицы, передаваемое в виде строки Юникода.  
-  
+[in] Имя таблицы, передаваемое в виде строки Юникода.
+
 *szTableName*<br/>
-[in] Имя таблицы, переданного как строку ANSI.  
-  
+[in] Имя таблицы, переданного как строку ANSI.
+
 *dbid*<br/>
-[in] `DBID` Таблицы, чтобы открыть.  
-  
+[in] `DBID` Таблицы, чтобы открыть.
+
 *pPropSet*<br/>
-[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.  
-  
+[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.
+
 *ulPropSets*<br/>
-[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры, передаются в *pPropSet* аргумент.  
-  
-### <a name="return-value"></a>Возвращаемое значение  
+[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры, передаются в *pPropSet* аргумент.
 
-Стандартный HRESULT.  
-  
-### <a name="remarks"></a>Примечания  
+### <a name="return-value"></a>Возвращаемое значение
 
-Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *Справочник программиста OLE DB по*.  
-  
-## <a name="see-also"></a>См. также  
+Стандартный HRESULT.
+
+### <a name="remarks"></a>Примечания
+
+Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *Справочник программиста OLE DB по*.
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)   
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

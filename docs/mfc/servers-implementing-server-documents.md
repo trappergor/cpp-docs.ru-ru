@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b62de2a1e6cba6ecbb29521518f5442ab002ddf3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7907935971fae7d990c651410e5b76982b798075
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381950"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060524"
 ---
 # <a name="servers-implementing-server-documents"></a>Серверы. Реализация документов сервера
 
@@ -36,7 +36,7 @@ ms.locfileid: "46381950"
 
 1. Реализуйте `OnGetEmbeddedItem` функция-член класса документа сервера.
 
-     `OnGetEmbeddedItem` вызывается, когда пользователь приложения контейнер создает или изменяет внедренного элемента. Она должна вернуть элемент, представляющий весь документ. Это должен быть объект вашей `COleServerItem`-производного класса.
+   `OnGetEmbeddedItem` вызывается, когда пользователь приложения контейнер создает или изменяет внедренного элемента. Она должна вернуть элемент, представляющий весь документ. Это должен быть объект вашей `COleServerItem`-производного класса.
 
 1. Переопределить `Serialize` функция-член для сериализации содержимого документа. Необходимо сериализовать список элементов сервера, если вы не используете их для представления собственных данных в документе. Дополнительные сведения см. в разделе *элементы реализации сервера* в этой статье [серверов: элементы сервера](../mfc/servers-server-items.md).
 

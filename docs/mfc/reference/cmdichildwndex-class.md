@@ -1,7 +1,7 @@
 ---
 title: Класс CMDIChildWndEx | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -122,19 +122,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f52ce513f0a0d96fe2454397417f2f7885e2c2f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64e8b62f79a6294810fc30b1796958c6ca4a153a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441739"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073868"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 
 `CMDIChildWndEx` Класс предоставляет функциональные возможности Windows дочернего окна многодокументного интерфейса (MDI). Он расширяет функциональные возможности [класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.
 
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
-
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -193,7 +192,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|Вызывается платформой, когда это необходимо растянуть Битовая карта для Windows 7 панель задач вкладку эскиз дочерней MDI-формы.|
 |[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|Вызывается платформой для обновления заголовка фрейма. (Переопределяет `CMDIChildWnd::OnUpdateFrameTitle`.)|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|Возвращает область, содержащее заданную точку.|
-|`CMDIChildWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их отправкой к [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
+|`CMDIChildWndEx::PreTranslateMessage`|Используется классом [CWinApp](../../mfc/reference/cwinapp-class.md) для преобразования сообщений окна перед их передачей функциям Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) . (Переопределяет [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage).)|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|Повторно вычисляет макет окна.|
 |[CMDIChildWndEx::RegisterTaskbarTab](#registertaskbartab)|Регистрирует дочерней формы MDI с вкладками панели задач Windows 7.|
 |[CMDIChildWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|Удаляет панель из диспетчере закрепления.|
@@ -283,7 +282,6 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 [in] Дескриптор структуру позиции отложенного окна.
 
 ##  <a name="canshowonmditabs"></a>  CMDIChildWndEx::CanShowOnMDITabs
-
 
 ```
 virtual BOOL CanShowOnMDITabs();
@@ -411,7 +409,6 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ##  <a name="getdockingmanager"></a>  CMDIChildWndEx::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager();
 ```
@@ -502,7 +499,6 @@ CBasePane* GetPane(UINT nID);
 Указатель на область, если найден, в противном случае — NULL.
 
 ##  <a name="getrelatedtabgroup"></a>  CMDIChildWndEx::GetRelatedTabGroup
-
 
 ```
 CMFCTabCtrl* GetRelatedTabGroup();
@@ -770,19 +766,17 @@ void RemovePaneFromDockManager(
 
 ##  <a name="setrelatedtabgroup"></a>  CMDIChildWndEx::SetRelatedTabGroup
 
-
 ```
 void SetRelatedTabGroup(CMFCTabCtrl* p);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *p*
+[in] *p*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="showpane"></a>  CMDIChildWndEx::ShowPane
-
 
 ```
 void ShowPane(
@@ -794,10 +788,13 @@ void ShowPane(
 
 ### <a name="parameters"></a>Параметры
 
-*pBar*<br/>
-[in] [in] *bShow*
-*bDelay*<br/>
-[in] [in] *bActivate*
+[in] *pBar*<br/>
+
+[in] *bShow*<br/>
+
+[in] *bDelay*<br/>
+
+[in] *bActivate*<br/>
 
 ### <a name="remarks"></a>Примечания
 

@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030148"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078470"
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 
@@ -100,7 +100,7 @@ class CComSafeArray
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Приводит значение к `SAFEARRAY` указатель.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Получает элемент из массива.|
-|[CComSafeArray::operator =](#operator_eq)|Оператор присвоения.|  
+|[CComSafeArray::operator =](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
@@ -110,7 +110,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>Примечания
 
-`CComSafeArray` предоставляет оболочку для [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) класса, что просто создавать и управлять ими одно - и многомерных массивов практически любого поддерживаемого типа VARIANT типа.
+`CComSafeArray` предоставляет оболочку для класса [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , упрощая создание одно- и многомерных массивов практически любого поддерживаемого типа VARIANT и управление ими.
 
 `CComSafeArray` упрощает передачу массивов между процессами и обеспечивает дополнительную безопасность путем проверки значений индекса массива на соответствие верхней и нижней границам.
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>Параметры
 
 *psaSrc*<br/>
-Указатель на объект `SAFEARRAY`.
+Указатель на объект `SAFEARRAY` .
 
 *Инициализирует метод ulCount*<br/>
 Количество объектов, добавляемых в массив.
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>Параметры
 
 *pBound*<br/>
-Указатель на объект `SAFEARRAYBOUND`.
+Указатель на объект `SAFEARRAYBOUND` .
 
 *uDims*<br/>
 Число измерений в массиве.
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 Ссылка на объект `CComSafeArray`.
 
 *psaSrc*<br/>
-Указатель на объект `SAFEARRAY`.
+Указатель на объект `SAFEARRAY` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 

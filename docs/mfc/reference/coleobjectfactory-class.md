@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441906"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079705"
 ---
 # <a name="coleobjectfactory-class"></a>Coleobjectfactory-класс
 
@@ -132,7 +132,6 @@ COleObjectFactory(
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
 
-
 COleObjectFactory(
     REFCLSID clsid,
     CRuntimeClass* pRuntimeClass,
@@ -163,7 +162,7 @@ COleObjectFactory(
 
 - `afxRegFreeThreading` Задает модель потоков в реестре ThreadingModel = Free.
 
-     Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.
+   Вы можете объединить два флага `afxRegApartmentThreading` и `afxRegFreeThreading` присвоить ThreadingModel = Both. См. в разделе [InprocServer32](/windows/desktop/com/inprocserver32) в пакете SDK для Windows, Дополнительные сведения по использованию потоков регистрации модели.
 
 *lpszProgID*<br/>
 Указатель на строку, содержащую идентификатор устные программы, такие как «Microsoft Excel».
@@ -349,7 +348,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
 - **UpdateRegistry (** `bRegister` **)** эту форму функции является переопределяемым. Если *bЗарегистрируйтесь участия* имеет значение TRUE, это действие регистрирует функцию управления класса в системном реестре. В противном случае он отменяет регистрацию класса.
 
-     Если вы используете автоматически ActiveX MFC для создания проекта, автоматически предоставляет переопределение, чтобы этот чистой виртуальной функции.
+   Если вы используете автоматически ActiveX MFC для создания проекта, автоматически предоставляет переопределение, чтобы этот чистой виртуальной функции.
 
 ##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 

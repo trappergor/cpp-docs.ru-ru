@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: c9f17eea48e01d12df103382483b352e5dce46b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083649"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080563"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -134,14 +134,14 @@ class CAnimationController : public CObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет группы, к которой принадлежит контроллер анимации объекта анимации.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорного кадра.|
@@ -184,14 +184,14 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный объект, который очищает группе.|
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой, когда только что был запланирован анимацию для указанной группы.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Опорный кадр, представляющий начало раскадровки.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот элемент имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|
@@ -334,7 +334,6 @@ void CleanUpGroup(CAnimationGroup* pGroup);
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,
     CBaseTransition* pTransition);
-
 
 CKeyFrame* CreateKeyframe(
     UINT32 nGroupID,

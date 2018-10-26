@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889996"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074544"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>Элементы управления ActiveX в MFC. Создание сервера автоматизации
 
@@ -43,17 +43,17 @@ ms.locfileid: "48889996"
 
 1. В начале `InitInstance` функции, добавьте следующую строку:
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. В представлении классов щелкните правой кнопкой мыши узел проекта и выберите **добавления классов из typelib** импорт библиотеки типов.
 
-     Это добавит файлы с .cpp и .h расширения имени файла в проект.
+   Это добавит файлы с .cpp и .h расширения имени файла в проект.
 
 1. В файле заголовка класса, где будет вызываться один или несколько методов в элементе управления ActiveX, добавьте следующую строку: `#include filename.h`, где имя файла — это имя файла заголовка, который был создан во время импорта библиотеки типов.
 
 1. В функции, где будет вызов метода в элементе управления ActiveX добавьте код, создающий объект класса-оболочки элемента управления и создать объект ActiveX. Например, следующий код MFC создает `CCirc` Получает свойство заголовка элемента управления и отображает результат, когда нажата кнопка ОК в диалоговом окне:
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 При добавлении методов элемента управления ActiveX после использования его в приложении, можно начать использовать последнюю версию элемента управления в приложении, удалив файлы, которые были созданы при импорте библиотеки типов. Затем импортируйте библиотеку типов.
 

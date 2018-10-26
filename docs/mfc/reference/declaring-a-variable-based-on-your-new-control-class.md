@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e3cdf60f614b95c22b4b3c40b5528a7daf885bed
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d2e5e91465df0c3e7608b949c6e1f4b8dfc80bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388752"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064151"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Объявление переменной на основании нового класса элемента управления
 
@@ -37,7 +37,7 @@ ms.locfileid: "46388752"
 
 1. Удерживая нажатой клавишу CTRL, дважды щелкните элемент управления.
 
-     [Добавление переменной-члена](../../ide/add-member-variable-wizard.md) откроется диалоговое окно.
+   [Добавление переменной-члена](../../ide/add-member-variable-wizard.md) откроется диалоговое окно.
 
 1. В **доступа** окне выберите соответствующий тип доступа для элемента управления.
 

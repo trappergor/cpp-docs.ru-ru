@@ -1,7 +1,7 @@
 ---
 title: Класс multimap | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cde4954dd7222fbe9a406756a81466346f4dd01
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 9ae6c027947cf869a159b1561a7f7a3b853af0c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235936"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068939"
 ---
 # <a name="multimap-class"></a>Класс multimap
 
@@ -122,7 +122,7 @@ class multimap;
 *Key*<br/>
 Тип данных ключа для сохранения в контейнере multimap.
 
-*Тип*<br/>
+*Type*<br/>
 Тип данных элемента, который необходимо сохранить в контейнере multimap.
 
 *Признаки*<br/>
@@ -887,7 +887,6 @@ The multimap m2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1030,7 +1029,6 @@ size_type erase(
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1194,19 +1192,16 @@ int main( )
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1214,13 +1209,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2339,7 +2332,7 @@ value_compare value_comp() const;
 
 ### <a name="remarks"></a>Примечания
 
-Для мультиотображения *m*, если два элемента *e*1( *k*1, *d*1) и *e*2( *k*2, `d`2) являются объектами типа `value_type`, где *k*1 и *k*2 — их ключи типа `key_type`, а `d`1 и `d`2 — их данные типа `mapped_type`, то *m.*`value_comp`( *e*1, *e*2) эквивалентно *m.*`key_comp`( *k*1, *k*2).
+Для мультиотображении *m*, если два элемента *e1*(*k1*, *d1*) и *e2*(*k2*, *d2*) являются объектами типа `value_type`, где *k1* и *k2* их ключи типа `key_type` и *d1*  и *d2* являются данные типа `mapped_type`, затем `m.value_comp(e1, e2)` эквивалентен `m.key_comp(k1, k2)`.
 
 ### <a name="example"></a>Пример
 

@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042888"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071184"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -177,7 +177,7 @@ LONG Close() throw();
 Вызовите этот метод для создания указанным ключом, если он отсутствует в виде подраздела *hKeyParent*.
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ HKEY Detach() throw();
 Вызовите этот метод, чтобы пронумеровать подключи открыть раздел реестра.
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ LONG Flush() throw();
 Вызовите этот метод, чтобы извлечь копию дескриптора безопасности, защищающий ключ открыть реестр.
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 Этот метод уведомляет вызывающего о внесении изменений в атрибуты или содержимое открыть раздел реестра.
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ LONG NotifyChangeKeyValue(
 Вызовите этот метод, чтобы открыть указанный ключ и значение [m_hKey](#m_hkey) для обработки этого ключа.
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ CRegKey& operator= (CRegKey& key) throw();
 Этот метод используется для получения двоичных данных для имени указанного значения.
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ LONG QueryBinaryValue(
 Этот метод используется для получения данных DWORD для имени указанного значения.
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ LONG QueryDWORDValue(
 Этот метод используется для получения данных GUID для имени указанного значения.
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ LONG QueryGUIDValue(
 Этот метод используется для получения состоящие из нескольких строк данных для имени указанного значения.
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ LONG QueryMultiStringValue(
 Этот метод используется для получения данных QWORD для имени указанного значения.
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ LONG QueryQWORDValue(
 Этот метод используется для извлечения строковых данных для имени указанного значения.
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ LONG QueryStringValue(
 Вызовите этот метод для извлечения данных для поля указанное значение [m_hKey](#m_hkey). Более ранних версиях этот метод больше не поддерживаются и помечаются как ATL_DEPRECATED.
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 Вызовите этот метод, чтобы задать двоичное значение раздела реестра.
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 Этот метод используется для хранения данных в поле заданное значение указанного ключа.
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ QWORD данные, сохраняемые с именем указанного 
 Вызовите этот метод, чтобы задать строковое значение реестра.
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ LONG SetStringValue(
 Вызовите этот метод для хранения данных в поле указанного значения [m_hKey](#m_hkey). Более ранних версиях этот метод больше не поддерживаются и помечаются как ATL_DEPRECATED.
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

@@ -16,20 +16,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791258"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062851"
 ---
 # <a name="stand-alone-attributes"></a>Изолированные атрибуты
+
 Изолированный атрибут не работают с ключевым словом языка C++, но больше похожи на строки кода. Автономный атрибут инструкций требуется точку с запятой в конце строки.
-  
+
+## <a name="stand-alone-attribute-list"></a>Список атрибутов, изолированный
+
 |Атрибут|Описание|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Выдает заданную строку, без знаков кавычек в создаваемого файла заголовка.|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[db_command](db-command.md)|Создает команду OLE DB.|
 |[emitidl](emitidl.md)|Определяет, будет ли обработано и помещаются в созданного IDL-файла все последующие атрибуты IDL.|
 |[idl_module](idl-module.md)|Указывает точку входа в библиотеку DLL.|
@@ -40,10 +43,10 @@ ms.locfileid: "48791258"
 |[include](include-cpp.md)|Указывает один или несколько файлов заголовка для включения в созданного IDL-файла.|
 |[includelib](includelib-cpp.md)|В результате файл IDL или .h, должны быть включены в созданного IDL-файла.|
 |[library_block](library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|
-|[модуль](module-cpp.md)|Определяет блок библиотеки в IDL-файле.|
+|[module](module-cpp.md)|Определяет блок библиотеки в IDL-файле.|
 |[no_injected_text](no-injected-text.md)|Запрещает компилятору вставку кода в результате использования атрибута.|
 |[pragma](pragma.md)|Выдает заданную строку, без знаков кавычек в созданного IDL-файла.|
-  
+
 ## <a name="see-also"></a>См. также
 
 [Список атрибутов по использованию](attributes-by-usage.md)

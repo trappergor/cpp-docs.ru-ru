@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 89ab41c396f8602d16e2b2d88c3d83aeb7cdf21a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cdf77589ea39de4d17ccad1e3ef369cf4f0ca24d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018386"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080888"
 ---
 # <a name="naked-c"></a>naked (C++)
 
@@ -39,7 +39,6 @@ __declspec(naked) declarator
 ## <a name="remarks"></a>Примечания
 
 Так как **с атрибутом naked** атрибут относится только к определению функции и не является модификатором типа, функции с атрибутом naked необходимо использовать расширенный синтаксис атрибутов и [__declspec](../cpp/declspec.md) ключевое слово.
-
 
 Компилятор не может создать подставляемую функцию для функции, помеченной атрибутом naked, даже если функция помечена также [__forceinline](inline-functions-cpp.md) ключевое слово.
 

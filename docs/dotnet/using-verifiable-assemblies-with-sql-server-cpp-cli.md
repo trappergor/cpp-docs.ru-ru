@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410711"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063410"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Использование проверяемых сборок вместе с SQL Server (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server предоставляет расширения языка Transact-S
 
 - Неограниченный режим: выполнять код на свой страх и риск; не требуется быть проверяемый типобезопасный код.
 
-- Безопасный режим: запускает строго типизированный код; компилировать с/CLR: safe. 
+- Безопасный режим: запускает строго типизированный код; компилировать с/CLR: safe.
 
 > [!IMPORTANT]
 > Рекомендуется использовать Visual Studio 2015 и Visual Studio 2017 не поддерживает **/CLR: pure** и **/CLR: safe** Создание проверяемых проектов. Если вам требуется проверяемый код, мы рекомендуем перевести код на C#.
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>См. также
-
 
 [Классы и структуры](../cpp/classes-and-structs-cpp.md)

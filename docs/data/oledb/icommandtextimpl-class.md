@@ -33,94 +33,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a2ddd7e1a4397b36daba8b354c84941d0d1c4d0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057976"
 ---
 # <a name="icommandtextimpl-class"></a>Класс ICommandTextImpl
 
-Предоставляет реализацию для [ICommandText](/previous-versions/windows/desktop/ms714914) интерфейс.  
-  
+Предоставляет реализацию для [ICommandText](/previous-versions/windows/desktop/ms714914) интерфейс.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class T >  
-class ATL_NO_VTABLE ICommandTextImpl   
-   : public ICommandImpl<T, ICommandText>  
-```  
-  
-### <a name="parameters"></a>Параметры  
+template <class T >
+class ATL_NO_VTABLE ICommandTextImpl
+   : public ICommandImpl<T, ICommandText>
+```
+
+### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Команда класс, производный от `ICommandTextImpl`. 
+Команда класс, производный от `ICommandTextImpl`.
 
-## <a name="requirements"></a>Требования  
+## <a name="requirements"></a>Требования
 
-**Заголовок:** altdb.h  
-  
-## <a name="members"></a>Участники  
-  
-### <a name="interface-methods"></a>Методы интерфейса  
-  
-|||  
-|-|-|  
-|[GetCommandText](#getcommandtext)|Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|  
-|[SetCommandText](#setcommandtext)|Задает текст команды, заменив существующий текст команды.|  
-  
-### <a name="data-members"></a>Элементы данных  
-  
-|||  
-|-|-|  
-|[m_strCommandText](#strcommandtext)|Сохраняет текст команды.|  
-  
-## <a name="remarks"></a>Примечания  
+**Заголовок:** altdb.h
 
-Обязательный интерфейс на команды.  
- 
+## <a name="members"></a>Участники
+
+### <a name="interface-methods"></a>Методы интерфейса
+
+|||
+|-|-|
+|[GetCommandText](#getcommandtext)|Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).|
+|[SetCommandText](#setcommandtext)|Задает текст команды, заменив существующий текст команды.|
+
+### <a name="data-members"></a>Элементы данных
+
+|||
+|-|-|
+|[m_strCommandText](#strcommandtext)|Сохраняет текст команды.|
+
+## <a name="remarks"></a>Примечания
+
+Обязательный интерфейс на команды.
+
 ## <a name="getcommandtext"></a> ICommandTextImpl::GetCommandText
 
-Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Возвращает набор при последнем вызове для текста команд [SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md).
 
-См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) в *справочнике программиста OLE DB*. *PguidDialect* параметр игнорируется методом по умолчанию.  
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+   LPOLESTR * ppwszCommand);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825) в *справочнике программиста OLE DB*. *PguidDialect* параметр игнорируется методом по умолчанию.
 
 ## <a name="setcommandtext"></a> ICommandTextImpl::SetCommandText
 
-Задает текст команды, заменив существующий текст команды.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
-```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
-   LPCOLESTR pwszCommand);  
-```  
-  
-#### <a name="parameters"></a>Параметры  
+Задает текст команды, заменив существующий текст команды.
 
-См. в разделе [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) в *справочнике программиста OLE DB*. 
+### <a name="syntax"></a>Синтаксис
+
+```cpp
+STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+   LPCOLESTR pwszCommand);
+```
+
+#### <a name="parameters"></a>Параметры
+
+См. в разделе [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757) в *справочнике программиста OLE DB*.
 
 ## <a name="strcommandtext"></a> ICommandTextImpl::m_strCommandText
 
-Хранит строку текста команды.  
-  
-### <a name="syntax"></a>Синтаксис  
-  
+Хранит строку текста команды.
+
+### <a name="syntax"></a>Синтаксис
+
 ```cpp
-CComBSTR m_strCommandText;  
-```  
-  
-## <a name="see-also"></a>См. также  
+CComBSTR m_strCommandText;
+```
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [Архитектура шаблона поставщика OLE DB](../../data/oledb/ole-db-provider-template-architecture.md)

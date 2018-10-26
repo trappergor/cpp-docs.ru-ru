@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077768"
 ---
 # <a name="iview-interface"></a>Интерфейс IView
 
@@ -57,7 +57,6 @@ interface class IView
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-
 ## <a name="requirements"></a>Требования
 
 Заголовок: afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)
@@ -68,6 +67,7 @@ interface class IView
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>Параметры
 
 *активировать*<br/>
@@ -86,6 +86,7 @@ void OnInitialUpdate();
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Примечания
 
 Эта функция позволяет представлению обновления экрана для отражения изменений.

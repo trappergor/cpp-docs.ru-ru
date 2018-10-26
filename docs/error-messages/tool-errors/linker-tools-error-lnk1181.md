@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2eaa6ce8a1ca566fd3d585b5c457e1fb2829b0b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 787c6c35b698b5dce57c4aaf3acb4eca496ead95
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46016745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072165"
 ---
 # <a name="linker-tools-error-lnk1181"></a>Ошибка средств компоновщика LNK1181
 
@@ -42,8 +42,6 @@ ms.locfileid: "46016745"
 Другая возможная причина LNK1181 является то, что длинное имя файла имеет пробелы не было заключены в кавычки.  В этом случае только распознает имя файла до первого пробела компоновщик и следует предположить, расширение файла. obj.  Решение для этой ситуации является заключить длинное имя файла (путь и имя файла) в кавычки.
 
 Компиляция с [/P (Предварительная обработка в файл)](../../build/reference/p-preprocess-to-a-file.md) параметр может привести LNK1181, так как этот параметр отключает создание OBJ-файлы.
-
-
 
 ## <a name="see-also"></a>См. также
 

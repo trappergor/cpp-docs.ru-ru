@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a06353780b78339c39ebb20e9bc2f770694f47c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083617"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073258"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -65,7 +65,7 @@ ms.locfileid: "49083617"
 
 Используйте **db_column** в сочетании со [db_table](db-table.md) или [db_command](db-command.md) атрибуты.
 
-Когда поставщик атрибутов потребителя применяет этот атрибут к классу, компилятор переименует класс \_ *Имя_вашего_класса*метод доступа, где *Имя_вашего_класса* — это имя, присвоенное класс, компилятор также создаст класс с именем *Имя_вашего_класса*, который является производным от \_ *имя_класса*метода доступа.  В представлении классов отображаются оба класса.
+Если поставщик атрибутов потребителя применяет этот атрибут к классу, компилятор переименует класс в \_*YourClassName*Accessor, где *YourClassName* — это имя, которое вы присвоили классу. Также компилятор создаст класс с именем *YourClassName*, производный от \_*YourClassName*Accessor.  В представлении классов отображаются оба класса.
 
 Примеры использования этого атрибута, используемые в приложениях, см. Примеры [AtlAgent](https://github.com/Microsoft/VCSamples), и [MultiRead](https://github.com/Microsoft/VCSamples).
 
@@ -125,4 +125,4 @@ class CProducts {
 ## <a name="see-also"></a>См. также
 
 [Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)<br/>
-[Атрибуты классов](class-attributes.md)  
+[Атрибуты классов](class-attributes.md)

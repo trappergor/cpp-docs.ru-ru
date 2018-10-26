@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067817"
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 
@@ -535,7 +535,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCToolBar` класса. В примере показано задать текст окна метки элемента панели инструментов, границ, стиль области и включить **добавить или удалить кнопки** кнопка, которая появляется на панели инструментов в конец. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBar` . В примере показано задать текст окна метки элемента панели инструментов, границ, стиль области и включить **добавить или удалить кнопки** кнопка, которая появляется на панели инструментов в конец. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1068,7 +1068,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1092,7 +1092,7 @@ virtual BOOL DrawButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pButton*<br/>
@@ -1130,7 +1130,7 @@ virtual void DrawSeparator(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ BOOL IsOneRowWithSibling();
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2615,12 +2611,11 @@ virtual BOOL LoadBitmap(
 
 ### <a name="remarks"></a>Примечания
 
-[CMFCToolBar::LoadToolBarEx](#loadtoolbarex) метод вызывает этот метод, чтобы загрузить изображения, связанные с панелью инструментов. Переопределите этот метод для выполнения пользовательской загрузки графических ресурсов.
+Метод [CMFCToolBar::LoadToolBarEx](#loadtoolbarex) вызывает этот метод, чтобы загрузить изображения, связанные с панелью инструментов. Переопределите этот метод для выполнения пользовательской загрузки графических ресурсов.
 
 Вызовите метод `LoadBitmapEx` , чтобы загрузить дополнительные изображения после создания панели инструментов.
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
-
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>Параметры
 
-*params*<br/>
-[in] [in] *заблокирован*
+[in] *params*<br/>
+[in] *заблокирован*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lpszProfileName*
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2804,7 +2798,6 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ virtual void OnChangeHot(int iHot);
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2870,7 +2861,7 @@ virtual void OnFillBackground(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -2880,7 +2871,6 @@ virtual void OnFillBackground(CDC* pDC);
 Переопределите этот метод для рисования пользовательского фона в производных классах.
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
-
 
 ```
 virtual void OnGlobalFontsChanged();
@@ -2904,14 +2894,13 @@ virtual void OnReset();
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lVal*
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2969,7 +2958,6 @@ virtual BOOL OnUserToolTip(
 Переопределить `OnUserToolTip` для настройки всплывающие подсказки для кнопки панели инструментов. По умолчанию реализация вызывает [CMFCToolBar::OnUserToolTip](#onusertooltip) для получения текста подсказки.
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ static void __stdcall ResetAllImages();
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ virtual BOOL RestoreOriginalState();
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lpszProfileName*
+[in] *lpszProfileName*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3431,19 +3416,17 @@ void SetHeight(int cyHeight);
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bOn*
+[in] *bOn*<br/>
 
 ### <a name="remarks"></a>Примечания
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pMenuButton*
+[in] *pMenuButton*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3495,14 +3478,13 @@ static void SetHotTextColor(COLORREF clrText);
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bValue*
+[in] *bValue*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -3557,14 +3539,13 @@ void SetLockedSizes(
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bMasked*
+[in] *bMasked*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -3631,14 +3612,13 @@ void SetOneRowWithSibling();
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *lstOrigButtons*
+[in] *lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -3902,7 +3882,7 @@ int WrapToolBar(
 *nHeight*<br/>
 [in] Максимальная высота панели инструментов. Не используется, если плавающие панели инструментов.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства. Если значение равно NULL, используется контекст устройства для панели инструментов.
 
 *nColumnWidth*<br/>
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [Класс CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [Класс CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

@@ -1,7 +1,7 @@
 ---
 title: Использование нескольких методов доступа в наборе строк | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808463"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071051"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>Использование нескольких методов доступа в наборе строк
 
@@ -45,7 +45,7 @@ ms.locfileid: "49808463"
 
    Позволяет указать, является ли метод доступа является методом доступа автоматически аргумент.
 
-- **Несколько столбцов ISequentialStream.** В этом случае у вас есть более одного столбца, содержащего `ISequentialStream` данных. Тем не менее, каждый метод доступа доступен только один раз `ISequentialStream` потока данных. Чтобы решить эту проблему, настройте несколько методов доступа, каждое из которых имеет один `ISequentialStream` указатель.
+- **Несколько столбцов ISequentialStream.** В этом случае вы можете более одного столбца напряженной `ISequentialStream` данных. Тем не менее, каждый метод доступа доступен только один раз `ISequentialStream` потока данных. Чтобы решить эту проблему, настройте несколько методов доступа, каждое из которых имеет один `ISequentialStream` указатель.
 
 Обычно создается с помощью методов доступа [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md) и [END_ACCESSOR](../../data/oledb/end-accessor.md) макросы. Можно также использовать [db_accessor](../../windows/db-accessor.md) атрибута. (Методы доступа описаны далее в [записи пользователей](../../data/oledb/user-records.md).) Макросы или атрибут укажите, является ли метод доступа автоматическим или неавтоматический:
 

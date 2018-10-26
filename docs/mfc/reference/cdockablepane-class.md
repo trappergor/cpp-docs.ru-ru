@@ -1,7 +1,7 @@
 ---
 title: Класс CDockablePane | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078314"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pTabControlBarAttachTo* указывает целевой области, в которой к текущей области. Области целевой объект должен быть закрепляемую панель.
+*pTabControlBarAttachTo*<br/>
+[in, out] Указывает целевой области, в которой к текущей области. Области целевой объект должен быть закрепляемую панель.
 
 *dockMethod*<br/>
 [in] Задает метод закрепления.
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in] Задает имя окна.
 
-[in] [out] *pParentWnd* указывает родительского окна.
+*pParentWnd*<br/>
+[in, out] Указывает родительского окна.
 
 *Rect*<br/>
 [in] Указывает размер и положение окна, в клиентских координатах *pParentWnd*.
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in] Задает стиль дополнительные атрибуты.
 
-[in] [out] *pContext* указывает создать контекст окна.
+*pContext*<br/>
+[in, out] Указывает контекст создания окна.
 
 *lpszWindowName*<br/>
 [in] Задает имя окна.
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in] Задает имя окна.
 
-[in] [out] *pParentWnd* указывает родительского окна.
+*pParentWnd*<br/>
+[in, out] Указывает родительского окна.
 
 *Rect*<br/>
 [in] Указывает размер и положение окна, в клиентских координатах *pParentWnd*.
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in] Указывает атрибуты дополнительного стиля.
 
-[in] [out] *pContext* указывает создать контекст окна.
+*pContext*<br/>
+[in, out] Указывает контекст создания окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>Параметры
 
-[in] [out] *pTargetWindow* указывает закрепляемую панель закрепление этой панели на.
+*pTargetWindow*<br/>
+[in, out] Указывает закрепляемую панель закрепление этой панели на.
 
 *dwAlignment*<br/>
 [in] Задает выравнивание по закрепления для области. Может быть одним из CBRS_ALIGN_LEFT, CBRS_ALIGN_TOP, CBRS_ALIGN_RIGHT, CBRS_ALIGN_BOTTOM или CBRS_ALIGN_ANY. (Определяется в файле afxres.h).
@@ -870,7 +875,7 @@ virtual void DrawCaption(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Представляет контекст устройства, используемый для рисования.
 
 *rectCaption*<br/>
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *pWndOldParent*
+[in] *pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Примечания
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *dwAlignment*<br/>
 [in] Задает выравнивание автоматического скрытия панели, чтобы создать.
 
-[in] [out] *pCurrAutoHideBar* указатель на текущий автоматически скрываемой панели инструментов. Может иметь значение NULL.
+*pCurrAutoHideBar*<br/>
+[in, out] Указатель на текущий автоматически скрываемой панели инструментов. Может иметь значение NULL.
 
 *bUseTimer*<br/>
 [in] Указывает, следует ли использовать автоматическое скрытие эффекта, когда пользователь переключает область режим автоматического скрытия или скрыть область немедленно.

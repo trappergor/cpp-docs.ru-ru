@@ -66,7 +66,7 @@
 ###### [Чтение строк в поставщике OLE DB](reading-strings-into-the-ole-db-provider.md)
 ###### [Хранение строк в поставщике OLE DB](storing-strings-in-the-ole-db-provider.md)
 ##### [Усовершенствование простого поставщика только для чтения](enhancing-the-simple-read-only-provider.md)
-###### [Изменение порядка наследования класса RMyProviderRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [Изменение наследования RCustomRowset](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [Динамично определяемые столбцы, возвращенные объекту-получателю](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [Проверка поставщика в режиме "только для чтения"](testing-the-read-only-provider.md)
 #### [Создание поставщика с возможностью записи](creating-an-updatable-provider.md)

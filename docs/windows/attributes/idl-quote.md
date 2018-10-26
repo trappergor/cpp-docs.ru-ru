@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f4050e78e6313b77808c1a1ed790e2b7082122d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 31e06d83ce64675b5b1e8ac9cbb865bfb3eff334
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074167"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -93,9 +93,9 @@ __interface IStatic{
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Изолированные атрибуты](stand-alone-attributes.md)  
+[Изолированные атрибуты](stand-alone-attributes.md)

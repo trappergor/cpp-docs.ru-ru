@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381731"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083377"
 ---
 # <a name="collection-class-helpers"></a>Вспомогательные функции классов коллекции
 
@@ -152,7 +152,6 @@ void  AFXAPI DumpElements(
 `CArray::Dump`, `CList::Dump`, И `CMap::Dump` функции вызывают это, если глубина дампа больше 0.
 
 Реализация по умолчанию не выполняет никаких действий. Если элементы коллекции являются производными от `CObject`, переопределение обычно перебора элементов коллекции, вызов `Dump` для каждого элемента, в свою очередь.
-
 
 ### <a name="requirements"></a>Требования
 

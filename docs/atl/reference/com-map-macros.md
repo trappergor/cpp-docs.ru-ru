@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69838a690fcdddc58194caf38e3666fef023222c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 057652eaf1f188cfd61dcfa4a0d433a43ef8c56c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068896"
 ---
 # <a name="com-map-macros"></a>Макросы сопоставления COM
 
@@ -31,7 +31,7 @@ ms.locfileid: "46028055"
 |||
 |-|-|
 |[BEGIN_COM_MAP](#begin_com_map)|Отмечает начало карты записей интерфейс COM.|
-|[END_COM_MAP](#end_com_map)|Помечает конец интерфейса COM карты записей.|  
+|[END_COM_MAP](#end_com_map)|Помечает конец интерфейса COM карты записей.|
 
 ## <a name="requirements"></a>Требования
 
@@ -52,7 +52,7 @@ BEGIN_COM_MAP(x)
 
 ### <a name="remarks"></a>Примечания
 
-[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) возвращает только указатели для интерфейсов COM карты. Запустите схему интерфейсов макрос BEGIN_COM_MAP, добавьте записи для каждого из интерфейсов с [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) макрос или один из его варианты и выполнить сопоставление с [END_COM_MAP](#end_com_map) макрос.  
+[CComObjectRootEx::InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface) возвращает только указатели для интерфейсов COM карты. Запустите схему интерфейсов макрос BEGIN_COM_MAP, добавьте записи для каждого из интерфейсов с [COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry) макрос или один из его варианты и выполнить сопоставление с [END_COM_MAP](#end_com_map) макрос.
 
 ### <a name="example"></a>Пример
 

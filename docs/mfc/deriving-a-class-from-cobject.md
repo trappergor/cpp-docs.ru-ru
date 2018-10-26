@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f673f0212884fce33069f044b34d5396cf72b7c3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a102eae0dd5f96d74f7258c10c5bcce55c3a6443
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081940"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065374"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Наследование класса от CObject
 
@@ -65,9 +65,9 @@ ms.locfileid: "49081940"
 
 1. Использование обычного синтаксиса C++ ваш класс из `CObject` (или из класса, производного от `CObject`).
 
-     В следующем примере показан простейший случай, производный от класса `CObject`:
+   В следующем примере показан простейший случай, производный от класса `CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
+   [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
 Как правило, тем не менее, вы можете переопределить некоторые `CObject`в функции-члены для обработки особенности нового класса. Например, обычно можно переопределить `Dump` функции `CObject` для предоставления выходные данные отладки для содержимого вашего класса. Дополнительные сведения о том, как переопределить `Dump`, см. в статье [диагностики: формирование дампа объекта содержимое](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Может также потребоваться переопределить `AssertValid` функции `CObject` для предоставления настраиваемые тесты, чтобы проверить согласованность данных членов класса объектов. Описание того, как переопределить `AssertValid`, см. в разделе [MFC ASSERT_VALID и CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
 

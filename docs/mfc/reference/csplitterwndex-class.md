@@ -18,16 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a74691b17e04c20fa45045fa4105fd73925f19f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373486"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065399"
 ---
 # <a name="csplitterwndex-class"></a>Класс CSplitterWndEx
-
-
 
 Представляет настроенное окно-разделитель.
 
@@ -86,11 +84,11 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства. Если этот параметр имеет значение NULL, платформа перерисовывает активного окна.
 
 *nType*<br/>
-[in] Один из `CSplitterWnd::ESplitType` значений перечисления, задающее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection`, и `splitBorder`.
+[in] Один из `CSplitterWnd::ESplitType` значений перечисления, задающее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection` и `splitBorder`.
 
 *Rect*<br/>
 [in] Ограничивающий прямоугольник, который указывает размеры и расположение, чтобы нарисовать элемент window указанного разделителя.

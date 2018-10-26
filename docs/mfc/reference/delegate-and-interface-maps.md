@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423758"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065490"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423758"
 |[INTERFACE_PART](#interface_part)|Использовать между макрос BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, который будет поддерживать этот объект.|
 |[MAKE_DELEGATE](#make_delegate)|Присоединяет обработчик событий для элемента управления.|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 Начинает сопоставление делегатов.
@@ -44,6 +43,7 @@ ms.locfileid: "46423758"
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *КЛАСС*<br/>
@@ -70,6 +70,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *theClass*<br/>
@@ -97,6 +98,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
@@ -127,6 +129,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
@@ -172,7 +175,6 @@ END_DELEGATE_MAP();
 
 [Практическое руководство. Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Завершает схему интерфейсов в файле реализации.
@@ -196,7 +198,6 @@ END_INTERFACE_MAP( )
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_MAP](#begin_interface_map)
 
-
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
 Создает запись в сопоставлении делегата.
@@ -206,6 +207,7 @@ END_INTERFACE_MAP( )
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *ЧЛЕН*<br/>
@@ -242,7 +244,6 @@ END_DELEGATE_MAP()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
 
-
 ##  <a name="interface_part"></a>INTERFACE_PART
 
 Использовать между макрос BEGIN_INTERFACE_MAP и end_interface_map-макрос для каждого интерфейса, который будет поддерживать этот объект.
@@ -252,6 +253,7 @@ END_DELEGATE_MAP()
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *theClass*<br/>
@@ -271,7 +273,6 @@ INTERFACE_PART( theClass, iid, localClass)
 
 **Заголовок:** afxwin.h
 
-
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
 Присоединяет обработчик событий для элемента управления.
@@ -281,6 +282,7 @@ INTERFACE_PART( theClass, iid, localClass)
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *ДЕЛЕГАТ*<br/>
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

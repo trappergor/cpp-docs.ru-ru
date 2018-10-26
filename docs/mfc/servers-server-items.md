@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082909"
 ---
 # <a name="servers-server-items"></a>Серверы. Элементы сервера
 
@@ -43,7 +43,7 @@ ms.locfileid: "46438864"
 
 1. В производном классе, переопределить `OnDraw` функция-член.
 
-     Платформа вызывает `OnDraw` для отрисовки элемента OLE в метафайл. Приложение-контейнер использует этот метафайла для отрисовки элемента. Класс представления приложения также имеет `OnDraw` функцией-членом, которая используется для отрисовки элемента при активном серверное приложение.
+   Платформа вызывает `OnDraw` для отрисовки элемента OLE в метафайл. Приложение-контейнер использует этот метафайла для отрисовки элемента. Класс представления приложения также имеет `OnDraw` функцией-членом, которая используется для отрисовки элемента при активном серверное приложение.
 
 1. Реализовать переопределение `OnGetEmbeddedItem` для класса серверный документ. Для получения дополнительных сведений см. в статье [серверы: реализация документов сервера](../mfc/servers-implementing-server-documents.md) и образцом MFC OLE [HIERSVR](../visual-cpp-samples.md).
 

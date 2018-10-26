@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062617"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 
@@ -63,13 +63,13 @@ ms.locfileid: "47029571"
 
 1. Щелкните правой кнопкой мыши узел интерфейса для элемента управления.
 
-     Откроется контекстное меню.
+   Откроется контекстное меню.
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **добавить свойство**.
 
 1. Выберите одну из записей из **имя свойства** стрелку раскрывающегося списка. Например, можно выбрать **текст**.
 
-     Так как **текст** стандартное свойство **bindable** и **requestedit** атрибуты отмечены флажками.
+   Так как **текст** стандартное свойство **bindable** и **requestedit** атрибуты отмечены флажками.
 
 1. Установите следующие флажки из **атрибуты IDL** вкладку: **displaybind** и **defaultbind** добавить атрибуты к определению свойств в проекте. IDL-файла. Эти атрибуты сделать элемент управления видимым для пользователя и сделать стандартное свойство свойство привязки по умолчанию.
 
@@ -96,7 +96,7 @@ ms.locfileid: "47029571"
 
 1. Щелкните правой кнопкой мыши узел интерфейса для элемента управления.
 
-     Откроется контекстное меню.
+   Откроется контекстное меню.
 
 1. В контекстном меню, щелкните **добавить** и нажмите кнопку **добавить свойство**.
 
@@ -112,33 +112,33 @@ ms.locfileid: "47029571"
 
 11. Изменить текст `SetMyProp` работать так, чтобы он содержал следующий код:
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. Параметр, передаваемый `BoundPropertyChanged` и `BoundPropertyRequestEdit` "функции" — идентификатор dispid свойства, который является параметром, передаваемая атрибуту id() для свойства. IDL-файла.
 
 13. Изменить [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) , поэтому он содержит следующий код:
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. Изменить `OnDraw` работать так, чтобы он содержал следующий код:
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. В раздел public файла заголовка файла заголовка для класса элемента управления добавьте следующие определения переменных-членов (конструкторы):
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. Сделать следующую строку в последней строке `DoPropExchange` функции:
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. Изменить `OnResetState` работать так, чтобы он содержал следующий код:
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. Изменить `GetMyProp` работать так, чтобы он содержал следующий код:
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 Теперь можно создать проект, который будет зарегистрировать элемент управления. При вставке элемента управления в диалоговом окне **поля данных** и **источника данных** будут добавлены свойства, и теперь вы можете выбрать источник данных и поле для отображения в элементе управления.
 

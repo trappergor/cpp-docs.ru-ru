@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b229382a5d72607d8aa624002a88ead88800a028
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 98da12276e21a9619468cea3bbaba0190ac54e63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390842"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056871"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-класс
 
@@ -151,7 +151,6 @@ virtual void AdjustRect(
 ```
 CRectTracker();
 
-
 CRectTracker(
     LPCRECT lpSrcRect,
     UINT nStyle);
@@ -191,7 +190,7 @@ void Draw(CDC* pDC) const;
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства, на котором выполняется отрисовка.
 
 ### <a name="remarks"></a>Примечания
@@ -218,7 +217,7 @@ virtual void DrawTrackerRect(
 *pWndClipTo*<br/>
 Указатель на окно для использования в прямоугольник обрезки.
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства, на котором выполняется отрисовка.
 
 *pWnd*<br/>

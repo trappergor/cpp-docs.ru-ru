@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9bfe3858070f4dbbd226d46479609f5d0a630956
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 9934f1f66bf520e8da65953dc3355d447d1844e6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792396"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072964"
 ---
 # <a name="hidden"></a>hidden
 
@@ -53,11 +53,11 @@ ms.locfileid: "48792396"
 |**Обязательные атрибуты**|**Компонентный класс** (при применении к **класс** или **структуры**)|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты интерфейса](interface-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)<br/>
-[Атрибуты метода](method-attributes.md)  
+[Атрибуты метода](method-attributes.md)

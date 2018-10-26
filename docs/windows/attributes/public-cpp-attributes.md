@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 06948a41703377a3d0d09ed4d11792f0cf7d7c6c
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ddbd516421f72e1d6ee13a9c32fe90f99aec44e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067960"
 ---
 # <a name="public-c-attributes"></a>public (атрибуты C++)
 
@@ -67,9 +67,9 @@ __interface IFireTabCtrl : IDispatch
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения о контекстах атрибутов см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты IDL](idl-attributes.md)<br/>
-[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)  
+[Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)

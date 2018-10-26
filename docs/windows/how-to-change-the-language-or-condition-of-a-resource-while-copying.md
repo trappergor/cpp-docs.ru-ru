@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6239acd275d94eb2a59fe59882095d5106d3fc1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066569"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>Практическое: изменение языка или условий использования ресурса в процессе копирования (C++)
 
@@ -35,7 +35,7 @@ ms.locfileid: "46405740"
 Язык и условие ресурса отображаются в окне рабочей области в скобках после имени ресурса. В этом примере ресурс с именем IDD_AboutBox использует финский язык и его условие имеет значение XX33.
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Копирование существующего ресурса и изменение его языка или условия

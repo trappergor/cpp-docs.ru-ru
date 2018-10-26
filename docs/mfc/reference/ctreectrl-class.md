@@ -172,12 +172,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98dfdc792341d215830d46d078d9ece69419efed
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 79cc811464b4aa33ee11b480ec76c932b123f7da
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890846"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074375"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -193,13 +193,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Создает объект `CTreeCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Создает дерево и присоединяет его к `CTreeCtrl` объекта.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Создает растровое изображение перетаскивания для указанного представления элемента дерева.|
@@ -492,7 +492,7 @@ BOOL EndEditLabelNow(BOOL fCancelWithoutSave);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*fCancelWithoutSave*|[in] Значение TRUE, чтобы отменить изменения элемента представления дерева, прежде чем закончить операции редактирования, или значение FALSE, чтобы сохранить изменения для элемента представления дерева, прежде чем закончить операцию.|
 
@@ -816,7 +816,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 
@@ -893,7 +893,7 @@ BOOL GetItemPartRect(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*nPart*|[in] Идентификатор для части. Должно быть присвоено TVGIPR_BUTTON.|
@@ -987,7 +987,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 
@@ -1402,7 +1402,6 @@ HTREEITEM HitTest(TVHITTESTINFO* pHitTestInfo) const;
 ```
 HTREEITEM InsertItem(LPTVINSERTSTRUCT lpInsertStruct);
 
-
 HTREEITEM InsertItem(
     UINT nMask,
     LPCTSTR lpszItem,
@@ -1414,12 +1413,10 @@ HTREEITEM InsertItem(
     HTREEITEM hParent,
     HTREEITEM hInsertAfter);
 
-
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
     HTREEITEM hParent = TVI_ROOT,
     HTREEITEM hInsertAfter = TVI_LAST);
-
 
 HTREEITEM InsertItem(
     LPCTSTR lpszItem,
@@ -1508,7 +1505,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*uAccId*|[in] Идентификатор элемента в элементе представления дерева специальных возможностей.|
 
@@ -1544,7 +1541,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе *hItem* членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
 
@@ -1689,7 +1686,7 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*uPixelsPerSec*|[in] Количество пикселей, в секунду для прокрутки.|
 |*uUpdateTime*|[in] Интервал времени между обновлениями элемента управления.|
@@ -1785,7 +1782,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwExMask*|[in] Битовая маска, указывает, какие стили в текущий элемент управления представления дерева затрагиваются этим методом. Если этот параметр равен нулю, он игнорируется и значение *dwExStyles* присваивается элементу управления представления дерева.<br /><br /> Укажите ноль или побитовое сочетание (OR) стили, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles).|
 |*dwExStyles*|[in] Битовая маска, указывает, какие стили в виде дерева управления установите или снимите флажок.<br /><br /> Чтобы задать сочетание стили, укажите битовую комбинацию (OR) из стилей, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles). Чтобы очистить набор стилей, укажите ноль.|
@@ -1913,7 +1910,6 @@ COLORREF SetInsertMarkColor(COLORREF clrNew);
 ```
 BOOL SetItem(TVITEM* pItem);
 
-
 BOOL SetItem(
     HTREEITEM hItem,
     UINT nMask,
@@ -2006,7 +2002,7 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*iExpandedImage*|[in] Индекс изображения, отображаемого, если указанный элемент находится в развернутом состоянии.|
@@ -2136,7 +2132,7 @@ BOOL SetItemStateEx(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*uStateEx*|[in] Расширенные состояние элемента. Дополнительные сведения см. в разделе `uStateEx` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
@@ -2289,7 +2285,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе `hItem` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
 

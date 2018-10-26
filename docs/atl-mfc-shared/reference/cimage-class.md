@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890664"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064801"
 ---
 # <a name="cimage-class"></a>Класс CImage
 
@@ -88,13 +88,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.|
 |[CImage::Attach](#attach)|Присоединяет объект HBITMAP для `CImage` объекта. Можно использовать с точечные рисунки не DIB раздел или растровые изображения DIB раздела.|
@@ -138,7 +138,7 @@ class CImage
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CImage::operator HBITMAP](#operator_hbitmap)|Возвращает дескриптор Windows, подключенный к `CImage` объекта.|
 
@@ -172,7 +172,7 @@ class CImage
 
 ## <a name="example"></a>Пример
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-При использовании `CImage` в проект MFC, обратите внимание на то, какие функции-члены в вашем проекте требуется указатель на [CBitmap](../../mfc/reference/cbitmap-class.md) объекта. Если вы хотите использовать `CImage` с такие функции, как [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), использовать [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), передайте его в `CImage` HBITMAP и использовать возвращенный `CBitmap*`.  
+При использовании `CImage` в проект MFC, обратите внимание на то, какие функции-члены в вашем проекте требуется указатель на [CBitmap](../../mfc/reference/cbitmap-class.md) объекта. Если вы хотите использовать `CImage` с такие функции, как [CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu), использовать [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle), передайте его в `CImage` HBITMAP и использовать возвращенный `CBitmap*`.
 
 ## <a name="example"></a>Пример
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,8 +203,8 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 Можно использовать `CImage` из MFC или ATL.
 
 > [!NOTE]
-> При создании проекта с помощью `CImage`, необходимо определить `CString` перед включением `atlimage.h`. Если в проекте используется ATL без использования MFC, включают `atlstr.h` перед включением `atlimage.h`. Если в проекте используется MFC (или если это проект ATL с поддержкой MFC), включают `afxstr.h` перед включением `atlimage.h`.  
->   
+> При создании проекта с помощью `CImage`, необходимо определить `CString` перед включением `atlimage.h`. Если в проекте используется ATL без использования MFC, включают `atlstr.h` перед включением `atlimage.h`. Если в проекте используется MFC (или если это проект ATL с поддержкой MFC), включают `afxstr.h` перед включением `atlimage.h`.<br/>
+> <br/>
 > Аналогичным образом, необходимо включить `atlimage.h` перед включением `atlimpl.cpp`. В этой ситуации легко включать `atlimage.h` в вашей `stdafx.h`.
 
 ## <a name="requirements"></a>Требования
@@ -302,7 +302,7 @@ BOOL AlphaBlend(
 
 Точечные рисунки с альфа смешение поддерживает наложение цвета на основе каждого пикселя.
 
-Когда *bBlendOp* имеет значение по умолчанию AC_SRC_OVER, исходное растровое изображение наводится на основе альфа-значений точек исходный точечный рисунок назначения.  
+Когда *bBlendOp* имеет значение по умолчанию AC_SRC_OVER, исходное растровое изображение наводится на основе альфа-значений точек исходный точечный рисунок назначения.
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ BOOL CreateEx(
 
 ### <a name="example"></a>Пример
 
-В следующем примере создается 100 x 100 пикселей растрового изображения, с помощью 16 бит для кодирования каждого пикселя. В необходимом 16-разрядное биты 0-3 кодирование красного компонента, бит 4 – 7 кодируют зеленого и 8 11 бит кодируют синий. Оставшиеся 4 биты не используются.  
+В следующем примере создается 100 x 100 пикселей растрового изображения, с помощью 16 бит для кодирования каждого пикселя. В необходимом 16-разрядное биты 0-3 кодирование красного компонента, бит 4 – 7 кодируют зеленого и 8 11 бит кодируют синий. Оставшиеся 4 биты не используются.
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 Если этот параметр не является NULL, строка фильтра будет иметь один дополнительный фильтр в начале списка. Этот фильтр будет иметь текущее значение *pszAllFilesDescription* его описание и принимает файлы из любого расширения, поддерживаемый другие программы экспорта в списке.
 
-Пример:  
+Пример:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Набор битовые флаги, определяющие, какие типы файлов для исключения из списка. Разрешены такие флаги:
@@ -821,16 +820,15 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 Если этот параметр не является NULL, строка фильтра будет иметь один дополнительный фильтр в начале списка. Этот фильтр будет иметь текущее значение *pszAllFilesDescription* его описание и принимает файлы из любого расширения, поддерживаемый другие программы экспорта в списке.
 
-Пример:  
+Пример:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 Набор битовые флаги, определяющие, какие типы файлов для исключения из списка. Разрешены такие флаги:
@@ -1360,7 +1358,7 @@ HRESULT Save(
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 Задает пикселя в расположениях, указанных *x* и *y* цветами, обозначается *r*, *g*, и *b*, в красный, зеленый, синий изображение (RGB).
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ BOOL TransparentBlt(
 
 `TransparentBlt` поддерживается для растровых изображений источника 4 битов на пиксель и 8 бит на пиксель. Используйте [CImage::AlphaBlend](#alphablend) для указания 32 бита на пиксель точечные рисунки с прозрачностью.
 
-### <a name="example"></a>Пример  
+### <a name="example"></a>Пример
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>
 [Аппаратно независимых точечных рисунков](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

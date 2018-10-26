@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1d6e3af00bfe906a1954f7fc1d2b0af1ea52945e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dcd9edb155afa9138778f1d464a5e59a20dd7ffd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070035"
 ---
 # <a name="creating-a-256-color-icon-or-cursor-image-editor-for-icons"></a>Создание 256-цветного значка или курсора (редактор изображений для значков)
 
@@ -34,7 +34,7 @@ ms.locfileid: "46415919"
 
 1. В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши RC-файл, а затем выберите **Вставка ресурса** в контекстном меню. (При наличии существующего ресурса изображения в RC-файл, например курсор, вы можете просто щелкните правой кнопкой мыши **курсор** папку и выберите **вставки курсора** в контекстном меню.)
 
-   > [!NOTE] 
+   > [!NOTE]
    > Если в проекте еще нет RC-файла, см. раздел [Создание нового файла описания ресурсов](../windows/how-to-create-a-resource-script-file.md).
 
 2. В [Вставка ресурса-диалоговое окно](../windows/add-resource-dialog-box.md)выберите **значок** или **курсор** и нажмите кнопку **New**.

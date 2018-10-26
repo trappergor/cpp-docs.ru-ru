@@ -17,20 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250358"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060738"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>Мастер поставщика ATL OLE DB
 
 Этот мастер создает классы, составляющие поставщик OLE DB.
 
 > [!WARNING]
-> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
-
+> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
 
 ## <a name="remarks"></a>Примечания
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425019"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055226"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>Серверы. Реализация окон фрейма на месте
 
@@ -39,15 +39,15 @@ ms.locfileid: "46425019"
 
 1. Объявите `COleResizeBar` член в класс окна фрейма. Это требуется, если требуется поддержка изменения размера на месте в серверных приложениях.
 
-     Объявите `OnCreate` обработчик сообщений (с помощью **свойства** окна) и вызвать `Create` для вашей `COleResizeBar` члена, если она определена.
+   Объявите `OnCreate` обработчик сообщений (с помощью **свойства** окна) и вызвать `Create` для вашей `COleResizeBar` члена, если она определена.
 
 1. Если у вас есть панель инструментов, объявите `CToolBar` член в класс окна фрейма.
 
-     Переопределить `OnCreateControlBars` функцию-член для создания панели инструментов, когда сервер активен на месте. Пример:
+   Переопределить `OnCreateControlBars` функцию-член для создания панели инструментов, когда сервер активен на месте. Пример:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     См. в обсуждении этого кода, выполнив шаг 5.
+   См. в обсуждении этого кода, выполнив шаг 5.
 
 1. Включить файл заголовка для данного класса окна фрейма на месте в основной CPP-файле.
 

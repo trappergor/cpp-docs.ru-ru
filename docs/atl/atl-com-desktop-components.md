@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378cd6fd283cd36142e293b51fdb91527afb6f88
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: e5cce23d34c739ed6a3aca67e05b59c6cafd9191
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062305"
 ---
 # <a name="atl-com-desktop-components"></a>Компоненты ATL COM Desktop
 
@@ -61,4 +61,4 @@ ATL в справочных документах Active Template Library (ATL), 
 Пример кода, показывающий, как использовать библиотеку ATL для записи COM-объектов.
 
 [Шаблоны OLE DB](../data/oledb/ole-db-templates.md)<br/>
-Предоставляет справочные материалы по шаблонам клиента и поставщика OLE DB, набор классов, реализующих многие часто используемые интерфейсы OLE DB.  
+Предоставляет справочные материалы по шаблонам клиента и поставщика OLE DB, набор классов, реализующих многие часто используемые интерфейсы OLE DB.

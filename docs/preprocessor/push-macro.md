@@ -18,30 +18,30 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70b472ba11445cdc5aa2a192d02d82c51d724b8c
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: a6a389289f8849ac6155543299392586dcd389d2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538698"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078951"
 ---
 # <a name="pushmacro"></a>push_macro
-Сохраняет значение *имени-макроса* вершине стека этого макроса.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-#pragma push_macro("  
-macro_name  
-")  
-```  
-  
-## <a name="remarks"></a>Примечания  
- 
-Можно получить значение для *имени-макроса* с `pop_macro`.  
-  
-См. в разделе [pop_macro](../preprocessor/pop-macro.md) образец.  
-  
-## <a name="see-also"></a>См. также  
- 
+Сохраняет значение *имени-макроса* вершине стека этого макроса.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+#pragma push_macro("
+macro_name
+")
+```
+
+## <a name="remarks"></a>Примечания
+
+Можно получить значение для *имени-макроса* с `pop_macro`.
+
+См. в разделе [pop_macro](../preprocessor/pop-macro.md) образец.
+
+## <a name="see-also"></a>См. также
+
 [Директивы Pragma и ключевое слово __Pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

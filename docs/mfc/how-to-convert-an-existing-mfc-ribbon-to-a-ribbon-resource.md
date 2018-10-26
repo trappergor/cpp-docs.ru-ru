@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378115"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052555"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты
 
@@ -37,13 +37,13 @@ ms.locfileid: "46378115"
 
 ```
 
-     Save and close the file.
+   Сохраните и закройте файл.
 
 1. Построение и запуск приложения MFC, в блокноте откройте RibbonOutput.txt и скопируйте его содержимое.
 
 1. В Visual Studio на **проекта** меню, щелкните **добавить ресурс**. В **добавить ресурс** выберите **ленты** и нажмите кнопку **New**.
 
-     Visual Studio создает ресурс ленты и открывает его в режиме конструктора. Идентификатор ресурса ленты — IDR_RIBBON1, который отображается в **представление ресурсов**. Ленты, определяется в XML-файле ribbon1.mfcribbon-ms.
+   Visual Studio создает ресурс ленты и открывает его в режиме конструктора. Идентификатор ресурса ленты — IDR_RIBBON1, который отображается в **представление ресурсов**. Ленты, определяется в XML-файле ribbon1.mfcribbon-ms.
 
 1. В Visual Studio откройте ribbon1.mfcribbon-ms, удалите его содержимое и вставьте содержимое RibbonOutput.txt, который вы скопировали ранее. Сохраните и закройте ribbon1.mfcribbon-ms.
 

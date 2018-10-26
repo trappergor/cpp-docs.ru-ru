@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792377"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070040"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ ms.locfileid: "48792377"
 
 - `push` позволяет сохранить текущий **emitidl** параметры во внутренний **emitidl** стека, и `pop` позволяет задать **emitidl** любое значение, которое в верхней части внутренний **emitidl** стека.
 
-`defaultimports=`*логическое* \(необязательно)  
+`defaultimports=`*логическое* \(необязательно)
+
 - Если *логическое* — **true**, docobj.idl импортируется в созданного IDL-файла. Кроме того Если файл IDL-файле с тем же именем, что .h, который был `#include` в ваш исходный код находится в том же каталоге, что в h-файл, а затем для созданного IDL-файла содержит оператор импорта для этого IDL-файла.
 
 - Если *логическое* — **false**, docobj.idl не импортируется в созданного IDL-файла. Необходимо явно импортировать IDL-файлы с [импорта](import.md).
@@ -73,9 +74,9 @@ ms.locfileid: "48792377"
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|Нет|
 
-Дополнительные сведения см. в разделе [контексты атрибутов](cpp-attributes-com-net.md#contexts).
+Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
-[Изолированные атрибуты](stand-alone-attributes.md)  
+[Изолированные атрибуты](stand-alone-attributes.md)

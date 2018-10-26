@@ -1,7 +1,7 @@
 ---
 title: Выходные параметры | Документация Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a17ff7e6e78b21267b71ba495ba10a98e29cfe7
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: d37cd1cd1facbdba1aeb4c8bc7f655bc3df954c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073023"
 ---
 # <a name="output-parameters"></a>Выходные параметры
 
@@ -32,20 +32,20 @@ ms.locfileid: "49808860"
 
 В следующем примере хранимая процедура, первый "? «является возвращаемым значением (phone), а второй»?" является входным параметром (имя):
 
-```  
-DEFINE_COMMAND(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }")  
-```  
+```cpp
+DEFINE_COMMAND_EX(CMySProcAccessor, _T("{ ? = SELECT phone FROM shippers WHERE name = ? }"))
+```
 
 Необходимо указать входные и выходные параметры в сопоставлении параметров:
 
-```  
-BEGIN_PARAM_MAP(CMySProcAccessor)  
-   SET_PARAM_TYPE(DBPARAMIO_OUTPUT)  
+```cpp
+BEGIN_PARAM_MAP(CMySProcAccessor)
+   SET_PARAM_TYPE(DBPARAMIO_OUTPUT)
    COLUMN_ENTRY(1, m_Phone)   // Phone is the return value
-   SET_PARAM_TYPE(DBPARAMIO_INPUT)  
+   SET_PARAM_TYPE(DBPARAMIO_INPUT)
    COLUMN_ENTRY(2, m_Name)   // Name is the input parameter
-END_PARAM_MAP()  
-```  
+END_PARAM_MAP()
+```
 
 Приложение должно обрабатывать выходные данные, возвращаемые хранимыми процедурами. Различные поставщики OLE DB возвращают выходные параметры и возвращаемые значения на различных этапах обработки результатов. Например поставщик Microsoft OLE DB для SQL Server (SQLOLEDB) не предоставляет выходные параметры и коды возвращения до тех потребитель получит или отменено результирующие наборы, возвращаемые хранимой процедурой. Выходные данные возвращаются в последнем пакете потока табличных данных с сервера.
 
@@ -62,9 +62,9 @@ as
    select top 50 * from test
    @_rowcount = @@rowcount
 return 0
-```  
+```
 
-\@_Rowcount параметр сообщает, сколько строк были возвращены из тестовой таблицы. Тем не менее эта хранимая процедура ограничивает число строк до 50. Например если бы он был 100 строк в тесте, количество строк будет 50 (так как этот код извлекает только первые 50 строк). Если только 30 строк в таблице, количество строк будет 30. Не забудьте вызвать `Close` или `CloseAll` чтобы заполнить параметр до извлечения его значения.
+`@_rowcount` Параметр сообщает, сколько строк были возвращены из тестовой таблицы. Тем не менее эта хранимая процедура ограничивает число строк до 50. Например если бы он был 100 строк в тесте, количество строк будет 50 (так как этот код извлекает только первые 50 строк). Если только 30 строк в таблице, количество строк будет 30. Не забудьте вызвать `Close` или `CloseAll` чтобы заполнить параметр до извлечения его значения.
 
 ## <a name="see-also"></a>См. также
 

@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059861"
 ---
 # <a name="cnomultipleresults-class"></a>Класс CNoMultipleResults
 
-Используется в качестве аргумента шаблона (*тип TMultiple*) для [CCommand](../../data/oledb/ccommand-class.md) Создание оптимизированного команды, который обрабатывает один результат набора.  
-  
+Используется в качестве аргумента шаблона (*тип TMultiple*) для [CCommand](../../data/oledb/ccommand-class.md) Создание оптимизированного команды, который обрабатывает один результат набора.
+
 ## <a name="syntax"></a>Синтаксис
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Примечания  
+class CNoMultipleResults
+```
 
-Команды для обработки нескольких результирующих наборов, используйте [CMultipleResults](../../data/oledb/cmultipleresults-class.md) вместо этого.  
-  
-## <a name="requirements"></a>Требования  
+## <a name="remarks"></a>Примечания
 
-**Заголовок:** atldbcli.h  
-  
-## <a name="see-also"></a>См. также  
+Команды для обработки нескольких результирующих наборов, используйте [CMultipleResults](../../data/oledb/cmultipleresults-class.md) вместо этого.
+
+## <a name="requirements"></a>Требования
+
+**Заголовок:** atldbcli.h
+
+## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091833"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059822"
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 
@@ -119,7 +119,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 Этот метод реализует функцию Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 Этот метод реализует функцию Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 Вызывайте эту функцию, чтобы изменить меню вставки флаги, заданные *pInsertionAllowed*, для объекта оснастки.
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ void SetMenuInsertionFlags(
 Вызывайте эту функцию, чтобы изменить все стили кнопок панели инструментов, объекта оснастки, перед созданием панели инструментов.
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 Вызывайте эту функцию для изменения элемента меню перед его вставкой в контекстном меню объекта оснастки.
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

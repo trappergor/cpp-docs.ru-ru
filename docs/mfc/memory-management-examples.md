@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080460"
 ---
 # <a name="memory-management-examples"></a>Управление памятью. Примеры
 
@@ -52,19 +52,19 @@ ms.locfileid: "46391700"
 
 1. Определите массив, как показано в следующем примере кода. Массив автоматически удаляется и освобождения памяти, завершении ее область действия переменной массива.
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>Чтобы выделить память для массива байт (или любой тип-примитив) в куче
 
 1. Используйте **новый** оператора с помощью синтаксиса массива, показано в следующем примере:
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>Отменить выделение массивов из кучи
 
 1. Используйте **удалить** оператор следующим образом:
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> Распределение структуры данных
 
@@ -72,15 +72,15 @@ ms.locfileid: "46391700"
 
 1. Определите переменную структуры следующим образом:
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     Память, занятую структуре освобождается при выходе своей области.
+   Память, занятую структуре освобождается при выходе своей области.
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>Для выделения структуры данных в куче
 
 1. Используйте **новый** для выделения структуры данных в куче и **удалить** освободить их, как показано в следующих примерах:
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> Выделение объекта
 
@@ -88,25 +88,25 @@ ms.locfileid: "46391700"
 
 1. Объявите объект следующим образом:
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     Деструктор для объекта автоматически вызывается, когда объект выходит из своей области.
+   Деструктор для объекта автоматически вызывается, когда объект выходит из своей области.
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>Для выделения объекта в куче
 
 1. Используйте **новый** оператор, который возвращает указатель на объект, для выделения объектов в куче. Используйте **удалить** оператор для их удаления.
 
-     В следующих примерах кучи и кадра предполагается, что `CPerson` конструктор без аргументов.
+   В следующих примерах кучи и кадра предполагается, что `CPerson` конструктор без аргументов.
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     Если аргумент `CPerson` конструктор — это указатель на **char**, инструкция для выделение кадров:
+   Если аргумент `CPerson` конструктор — это указатель на **char**, инструкция для выделение кадров:
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     Оператор для выделения кучи является:
+   Оператор для выделения кучи является:
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>См. также
 

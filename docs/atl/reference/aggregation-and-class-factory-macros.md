@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073413"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>Агрегирование и макросов фабрики класса
 
@@ -51,7 +51,7 @@ ms.locfileid: "46043421"
 |[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|Объявляет, что ваш объект должен быть агрегатом.|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|Проверяет значение параметра внешняя Неизвестная строка и объявляет объект статистическую обработку или не подлежащий статистической обработке, соответствующим образом.|
 |[DECLARE_PROTECT_FINAL_CONSTRUCT](#declare_protect_final_construct)|Внешний объект защищает от удаления во время создания внутреннего объекта.|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|Указывает флаги, просмотр СОСТОЯНИЯ в контейнер.|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|Указывает флаги, просмотр СОСТОЯНИЯ в контейнер.|
 
 ## <a name="requirements"></a>Требования
 

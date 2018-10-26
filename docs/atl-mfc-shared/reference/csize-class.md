@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808502"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055233"
 ---
 # <a name="csize-class"></a>Класс CSize
 
@@ -35,7 +35,7 @@ ms.locfileid: "49808502"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>Участники
@@ -64,7 +64,7 @@ class CSize : public tagSIZE
 `cx` И `cy` членами `SIZE` (и `CSize`) являются открытыми. Кроме того `CSize` реализует функции-члены для управления `SIZE` структуры.
 
 > [!NOTE]
->  Дополнительные сведения о общие служебные классы (как `CSize`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).
+> Дополнительные сведения о общие служебные классы (как `CSize`), см. в разделе [общих классов](../../atl-mfc-shared/atl-mfc-shared-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -85,7 +85,7 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -117,8 +117,8 @@ DWORD используется для инициализации `CSize`. Мла
 
 Проверяет равенство двух размеров.
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -133,8 +133,8 @@ BOOL operator==(SIZE size) const throw();
 
 Проверяет неравенство двух размеров.
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -149,8 +149,8 @@ BOOL operator!=(SIZE size) const throw();
 
 Добавляет это размер `CSize`.
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Пример
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 Вычитает размер из этого `CSize`.
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>Пример
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 Добавьте эти операторы `CSize` задаваемое значение параметра.
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -197,11 +197,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 Первые три из этих операторов вычесть это `CSize` задаваемое значение параметра.
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Примечания

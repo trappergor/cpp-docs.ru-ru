@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429517"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068701"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 
@@ -79,7 +79,7 @@ ms.locfileid: "46429517"
 |[afxMemDF](#afxmemdf)|Глобальная переменная, которая управляет поведением отладочного распределителя памяти.|
 |[AfxCheckError](#afxcheckerror)|Глобальная переменная, используемая для проверки переданного SCODE ли является ошибкой, и если да, вызывается соответствующая ошибка.|
 |[AfxCheckMemory](#afxcheckmemory)|Проверяет целостность всей выделенной на текущий момент памяти.|
-|[AfxDebugBreak](#afxdebugbreak)|Вызывает прерывание выполнения.|
+|[Функция AfxDebugBreak](#afxdebugbreak)|Вызывает прерывание выполнения.|
 |[AfxDump](#cdumpcontext_in_mfc)|При вызове в отладчике записывает дамп состояния объекта в процессе отладки.|
 |[AfxDump](#afxdump)|Внутренняя функция, которая записывает дамп состояния объекта во время отладки.|
 |[AfxDumpStack](#afxdumpstack)|Создает образ текущего стека. Эта функция всегда компонуется статически.|
@@ -103,7 +103,6 @@ ms.locfileid: "46429517"
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|Подавляет предупреждения компилятора для использования устаревших функций MFC.|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 Подавляет предупреждения компилятора для использования устаревших функций MFC.
@@ -113,6 +112,7 @@ ms.locfileid: "46429517"
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>Пример
 
 Следующий код вызовет предупреждение компилятора, если _AFX_SECURE_NO_WARNINGS не определены.
@@ -129,7 +129,7 @@ char sz[256];
 pRichEdit->GetSelText(sz);
 ```
 
-## <a name="afxdebugbreak"></a> AfxDebugBreak
+## <a name="afxdebugbreak"></a> Функция AfxDebugBreak
 
 Вызывайте эту функцию для отменяется (в месте вызова `AfxDebugBreak`) при выполнении отладочной версии приложения MFC.
 
@@ -309,6 +309,7 @@ Debug_only-макрос эквивалентен вокруг *выражени�
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *booleanExpression*<br/>
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -450,7 +450,6 @@ CDumpContext  afxDump;
 
 **Заголовок:** afx.h
 
-
 ## <a name="afxdump"></a> AfxDump (внутренний)
 
 Внутренняя функция, которая использует MFC для помещения в дамп состояния объекта во время отладки.
@@ -460,6 +459,7 @@ CDumpContext  afxDump;
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>Параметры
 
 *почтовый ящик*<br/>
@@ -478,8 +478,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="see-also"></a>См. также
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -597,8 +595,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="see-also"></a>См. также
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 

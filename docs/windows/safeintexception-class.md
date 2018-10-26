@@ -1,7 +1,7 @@
 ---
 title: Класс SafeIntException | Документация Майкрософт
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -21,16 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ffd82f80b8af0b53ca86ca3daded84580e1e07b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a1890bc20c0737007075656dcbefa20ad81a9bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068064"
 ---
 # <a name="safeintexception-class"></a>Класс SafeIntException
 
 `SafeInt` Класс использует `SafeIntException` чтобы определить, почему не удается выполнить математическую операцию.
+
+> [!NOTE]
+> Последнюю версию этой библиотеки находится в [ https://github.com/dcleblanc/SafeInt ](https://github.com/dcleblanc/SafeInt).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -74,7 +77,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>Параметры
 
-*Код*<br/>
+*код*<br/>
 [in] Значение типа перечислимых данных, описывающее возникшую ошибку.
 
 ### <a name="remarks"></a>Примечания

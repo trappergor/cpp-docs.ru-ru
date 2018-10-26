@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ac2e56e4b13f739f61df5b37ab70689784a39882
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8d85767ad529cb54686ff2cde186bd4a681d3570
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077546"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063319"
 ---
 # <a name="device-context-global-functions"></a>Глобальные функции контекста устройства
 
@@ -53,7 +53,7 @@ HDC AtlCreateTargetDC(HDC hdc, DVTARGETDEVICE* ptd);
 
 Если структура имеет значение NULL и *hdc* имеет значение NULL, создает контекст устройства для устройства отображения по умолчанию.
 
-Если *hdc* не равно NULL и *ptd* имеет значение NULL, функция возвращает существующий *hdc*.  
+Если *hdc* не равно NULL и *ptd* имеет значение NULL, функция возвращает существующий *hdc*.
 
 ## <a name="requirements"></a>Требования
 
