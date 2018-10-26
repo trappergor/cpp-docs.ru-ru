@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02919e1e96717c1accc6343ecff32a66968cbcc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e84cfad5a11c0d691c56e6e7ddcca17ea87e3f02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378827"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082928"
 ---
 # <a name="nonamespace"></a>no_namespace
-**Конкретных C++**  
-  
-Указывает, что пространство имен не генерируется компилятором.  
-  
-## <a name="syntax"></a>Синтаксис  
-  
-```  
-no_namespace  
-```  
-  
-## <a name="remarks"></a>Примечания  
- 
-Содержимое библиотеки типов в файле заголовка `#import` обычно определяется в пространстве имен. Имя пространства имен, указанное в `library` инструкции исходного файла IDL. Если **no_namespace** атрибут указан, то это пространство имен не генерируется компилятором.  
-  
-Если вы хотите использовать другое имя пространства имен, используйте [rename_namespace](../preprocessor/rename-namespace.md) атрибутом.  
-  
-**КОНЕЦ конкретных C++**  
-  
-## <a name="see-also"></a>См. также  
- 
+**Конкретных C++**
+
+Указывает, что пространство имен не генерируется компилятором.
+
+## <a name="syntax"></a>Синтаксис
+
+```
+no_namespace
+```
+
+## <a name="remarks"></a>Примечания
+
+Содержимое библиотеки типов в файле заголовка `#import` обычно определяется в пространстве имен. Имя пространства имен, указанное в `library` инструкции исходного файла IDL. Если **no_namespace** атрибут указан, то это пространство имен не генерируется компилятором.
+
+Если вы хотите использовать другое имя пространства имен, используйте [rename_namespace](../preprocessor/rename-namespace.md) атрибутом.
+
+**КОНЕЦ конкретных C++**
+
+## <a name="see-also"></a>См. также
+
 [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [директива #import](../preprocessor/hash-import-directive-cpp.md)

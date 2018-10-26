@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebe324ce569077654db8d9462a9c32b570748bba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ecb6dc023b99964d5674e5f6f93cc21787de9af3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092405"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083503"
 ---
 # <a name="advanced-provider-techniques"></a>Дополнительные способы использования поставщика
 
-Дополнительные сведения о Дополнительные способы использования поставщика см. в разделах:  
-  
-- [Поддержка уведомлений](../../data/oledb/supporting-notifications.md)  
-  
-- [Поддержка наборов строк схемы](../../data/oledb/supporting-schema-rowsets.md)  
-  
-- [Поддержка закладок поставщиками](../../data/oledb/provider-support-for-bookmarks.md)  
-  
-- [Проверка на совместимость с OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)  
-  
-- [Создание пулов ресурсов и служб OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)  
-  
-## <a name="see-also"></a>См. также  
+Дополнительные сведения о Дополнительные способы использования поставщика см. в разделах:
+
+- [Поддержка уведомлений](../../data/oledb/supporting-notifications.md)
+
+- [Поддержка наборов строк схемы](../../data/oledb/supporting-schema-rowsets.md)
+
+- [Поддержка закладок поставщиками](../../data/oledb/provider-support-for-bookmarks.md)
+
+- [Проверка на совместимость с OLE DB](../../data/oledb/passing-ole-db-conformance-tests.md)
+
+- [Создание пулов ресурсов и служб OLE DB](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+## <a name="see-also"></a>См. также
 
 [Ссылка на шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)

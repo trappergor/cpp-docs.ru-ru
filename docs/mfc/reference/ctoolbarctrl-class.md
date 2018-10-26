@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890820"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083559"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 
@@ -213,13 +213,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Создает объект `CToolBarCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Добавляет один или несколько точечных рисунков кнопки в список изображений кнопок, доступных для элемента управления панели инструментов.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Добавляет одну или несколько кнопок в элемент управления toolbar.|
@@ -371,7 +371,6 @@ class CToolBarCtrl : public CWnd
 int AddBitmap(
     int nNumButtons,
     UINT nBitmapID);
-
 
 int AddBitmap(
     int nNumButtons,
@@ -554,7 +553,7 @@ BOOL ChangeBitmap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*idButton*|[in] Идентификатор команды кнопки, который принимает новое растровое изображение.|
 |*iBitmap*|[in] Отсчитываемый от нуля индекс изображения в список изображений для текущего элемента управления панели инструментов.|
@@ -912,7 +911,7 @@ CString GetButtonText(int idButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*idButton*|[in] Идентификатор для кнопки, извлечения, отображаемый текст.|
 
@@ -934,7 +933,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpColorScheme*|[out] Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структуру, которая получает сведения о схеме цвет. При возвращении данного метода структура описывает цветом и цветом тени панели инструментов.|
 
@@ -1168,7 +1167,7 @@ BOOL GetPadding(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pnHorzPadding*|[out] Целое число, Получает горизонтальный отступ элемента управления панели инструментов, в пикселях.|
 |*pnVertPadding*|[out] Целое число, Получает вертикальный отступ элемента управления панели инструментов, в пикселях.|
@@ -1589,7 +1588,7 @@ void LoadImages(
 *iBitmapID*<br/>
 Идентификатор растрового изображения с изображениями для загрузки. Чтобы указать собственные ресурса точечного рисунка, значение этого параметра идентификатор ресурса точечного рисунка, а значение *hInst* значение NULL. Растровое изображение ресурса добавляются к списку изображений в качестве одного образа. Можно добавить стандартные, системный точечные рисунки, установив *hinst* HINST_COMMCTRL и присвоить ему один из следующих идентификаторов:
 
-|Идентификатор растрового изображения|Описание:|
+|Идентификатор растрового изображения|Описание|
 |---------------|-----------------|
 |IDB_HIST_LARGE_COLOR|Точечные рисунки Explorer большого размера|
 |IDB_HIST_SMALL_COLOR|Обозреватель растровых изображений небольшого размера|
@@ -1719,7 +1718,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pReplaceBitmap*|[in] Указатель на [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) структура, описывающая точечный рисунок заменяемого и новая Битовая карта.|
 
@@ -1967,7 +1966,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpColorScheme*|[in] Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структура, описывающая цвет выделения и цвет тени элемента управления панели инструментов.|
 
@@ -2236,7 +2235,7 @@ DWORD SetPadding(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nHorzPadding*|[in] Указывает горизонтальное заполнение элемента управления панели инструментов, в пикселях.|
 |*nVertPadding*|[in] Задает вертикальный отступ элемента управления панели инструментов, в пикселях.|
@@ -2267,7 +2266,7 @@ CImagelist* SetPressedImageList(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iImageID*|[in] Отсчитываемый от нуля индекс списка изображений. Установите этот параметр равным нулю, если вы используете только один список изображений.|
 |*pImageList*|[in] Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий новый список изображений.|

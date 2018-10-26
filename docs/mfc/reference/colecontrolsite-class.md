@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29583218feeff997d30bfa2b16d35be45b25249
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5963bdd004bfbd242e00e8adac274f33949b08ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436303"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082419"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 
@@ -307,7 +307,6 @@ virtual HRESULT CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 virtual HRESULT CreateControl(
     CWnd* pWndCtrl,
@@ -573,7 +572,7 @@ virtual void GetProperty(
 Определяет идентификатор диспетчера свойства, найденных на элемента управления по умолчанию `IDispatch` интерфейс, должны быть получены.
 
 *vtProp*<br/>
-Тип извлекаемого свойства. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Тип извлекаемого свойства. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvProp*<br/>
 Адрес переменной, которая будет принимать значение свойства. Он должен соответствовать типа, заданного параметром *vtProp*.
@@ -637,13 +636,13 @@ virtual void AFX_CDECL InvokeHelper(
 Флаги, описывающие контекст вызова метода IDispatch::Invoke. Для возможности *wFlags* значения, см. в разделе `IDispatch::Invoke` в пакете Windows SDK.
 
 *vtRet*<br/>
-Указывает тип возвращаемого значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип возвращаемого значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Адрес переменной, которая будет принимать значение свойства или возвращаемое значение. Он должен соответствовать типа, заданного параметром *vtRet*.
 
 *pbParamInfo*<br/>
-Указатель на заканчивающуюся нулем строку байтов, определяющую типы параметров после *pbParamInfo*. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указатель на заканчивающуюся нулем строку байтов, определяющую типы параметров после *pbParamInfo*. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Переменный список параметров, типов, указанных в *pbParamInfo*.
@@ -652,7 +651,7 @@ virtual void AFX_CDECL InvokeHelper(
 
 *PbParamInfo* параметр указывает типы параметров, передаваемых в метод или свойство. Переменный список аргументов представлен... в объявлении синтаксиса.
 
-Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает `IDispatch::Invoke` метод в элементе управления. Если вызов `IDispatch::Invoke` завершается ошибкой, эта функция будет создано исключение. Если код состояния, возвращаемый `IDispatch::Invoke` — `DISP_E_EXCEPTION`, эта функция создает `COleDispatchException` объекта, в противном случае он вызывает `COleException`.
+Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает `IDispatch::Invoke` метод в элементе управления. Если вызов `IDispatch::Invoke` завершается сбоем, эта функция создает исключение. Если код состояния, возвращаемый `IDispatch::Invoke` — `DISP_E_EXCEPTION`, эта функция создает `COleDispatchException` объекта, в противном случае он вызывает `COleException`.
 
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV
 
@@ -677,13 +676,13 @@ virtual void InvokeHelperV(
 Флаги, описывающие контекст вызова метода IDispatch::Invoke.
 
 *vtRet*<br/>
-Указывает тип возвращаемого значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип возвращаемого значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *pvRet*<br/>
 Адрес переменной, которая будет принимать значение свойства или возвращаемое значение. Он должен соответствовать типа, заданного параметром *vtRet*.
 
 *pbParamInfo*<br/>
-Указатель на заканчивающуюся нулем строку байтов, определяющую типы параметров после *pbParamInfo*. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указатель на заканчивающуюся нулем строку байтов, определяющую типы параметров после *pbParamInfo*. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *argList*<br/>
 Указатель на список аргументов переменных.
@@ -1010,7 +1009,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 Определяет идентификатор диспетчера свойства или метода, найдено в элементе управления `IDispatch` интерфейс, устанавливаемое значение.
 
 *vtProp*<br/>
-Указывает тип свойства значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип свойства значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Один параметр типа, заданного параметром *vtProp*.
@@ -1095,7 +1094,7 @@ virtual void AFX_CDECL SetProperty(
 Определяет идентификатор диспетчера свойства или метода, найдено в элементе управления `IDispatch` интерфейс, устанавливаемое значение.
 
 *vtProp*<br/>
-Указывает тип свойства значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип свойства значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *...*<br/>
 Один параметр типа, заданного параметром *vtProp*.
@@ -1123,7 +1122,7 @@ virtual void SetPropertyV(
 Определяет идентификатор диспетчера свойства или метода, найдено в элементе управления `IDispatch` интерфейс, устанавливаемое значение.
 
 *vtProp*<br/>
-Указывает тип свойства значения. Возможные значения см. в разделе "Примечания" для [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
+Указывает тип свойства значения. Возможные значения см. в подразделе "Примечания" раздела [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper).
 
 *argList*<br/>
 Указатель на список аргументов.

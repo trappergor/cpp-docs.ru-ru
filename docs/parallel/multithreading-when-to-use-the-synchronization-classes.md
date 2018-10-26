@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443778"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083455"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Многопоточность: Использование классов синхронизации MFC
 
@@ -38,17 +38,17 @@ ms.locfileid: "46443778"
 
 1. Приложение нужно ждать, что-то произошло. Прежде чем он может получить доступ к ресурсу (например, данные должны быть получены из COM-портом перед его записью в файл)?
 
-     Если Да, используйте `CEvent`.
+   Если Да, используйте `CEvent`.
 
 2. Можно более одного потока в те же права доступа приложения этого ресурса за один раз (например, приложение позволяет windows до 5 с представлениями в том же документе)?
 
-     Если Да, используйте `CSemaphore`.
+   Если Да, используйте `CSemaphore`.
 
 3. Более одного приложения можно использовать этот ресурс (например, ресурс находится в библиотеке DLL)?
 
-     Если Да, используйте `CMutex`.
+   Если Да, используйте `CMutex`.
 
-     Если нет, используйте `CCriticalSection`.
+   Если нет, используйте `CCriticalSection`.
 
 `CSyncObject` никогда не используется напрямую. Это базовый класс для других четырех классов синхронизации.
 

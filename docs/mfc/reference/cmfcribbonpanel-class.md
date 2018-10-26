@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422230"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082584"
 ---
 # <a name="cmfcribbonpanel-class"></a>Класс CMFCRibbonPanel
 
 Реализует панель, содержащую набор элементов ленты. Если выводится панель, она отображает столько элементов, сколько возможно, учитывая ее размер.
 
 Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
-
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -540,7 +539,6 @@ LPCTSTR GetName() const;
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 Указатель на категорию ленты, содержащий этот панель ленты.
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ virtual BOOL IsMainPanel() const;
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nChar*
+[in] *nChar*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -866,7 +861,7 @@ int nHeight);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели ленты.
 
 *nHeight*<br/>
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in] Указывает отсчитываемый от нуля индекс заменяемого элемента.
 
-[in] [out] *pElem* допустимый указатель на элемент, который заменяет исходный элемент.
+*pElem*<br/>
+[in, out] Допустимый указатель на элемент, который заменяет исходный элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in] Указывает идентификатор команды элемента для замены.
 
-[in] [out] *pElem* допустимый указатель на элемент, который заменит исходный элемент.
+*pElem*<br/>
+[in, out] Допустимый указатель на элемент, который заменит исходный элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in] Указывает отсчитываемый от нуля индекс элемента ленты.
 
-[in] [out] *pRTC* указатель на сведения о классе среды выполнения для элемента ленты, который добавляется на панель ленты.
+*pRTC*<br/>
+[in, out] Указатель на сведения о классе среды выполнения для элемента ленты, который добавляется на панель ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in] Указывает идентификатор команды для добавления элемента ленты.
 
-[in] [out] *pRTC* указатель на сведения о классе среды выполнения, связанный с элементом ленты, который добавляется на панель ленты.
+*pRTC*<br/>
+[in, out] Указатель на сведения о классе среды выполнения, связанный с элементом ленты, который добавляется на панель ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 9414384c791abe0fca05f9e0919012736c1a9167
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083598"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 
@@ -365,13 +365,13 @@ class COleControl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Создает объект `COleControl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|
@@ -535,7 +535,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|
@@ -977,7 +977,7 @@ void DoSuperclassPaint(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства контейнера элемента управления.
 
 *rcBounds*<br/>
@@ -1001,7 +1001,7 @@ void DrawContent(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства.
 
 *Версия-кандидат*<br/>
@@ -1023,7 +1023,7 @@ void DrawMetafile(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства метафайла.
 
 *Версия-кандидат*<br/>
@@ -2393,7 +2393,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Контекст устройства, в котором происходит рисование.
 
 *rcBounds*<br/>
@@ -2418,7 +2418,7 @@ virtual void OnDrawMetafile(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Контекст устройства, в котором происходит рисование.
 
 *rcBounds*<br/>
@@ -3603,7 +3603,7 @@ int ReleaseDC(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Определяет контекст устройства контейнером снятия.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3709,7 +3709,7 @@ CFont* SelectFontObject(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на объект контекста устройства.
 
 *fontHolder*<br/>
@@ -3729,7 +3729,7 @@ CFont* SelectStockFont(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Контекст устройства, в который будет выбран шрифт.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4086,7 +4086,6 @@ void ThrowError(
     SCODE sc,
     UINT nDescriptionID,
     UINT nHelpID = -1);
-
 
 void ThrowError(
     SCODE sc,
