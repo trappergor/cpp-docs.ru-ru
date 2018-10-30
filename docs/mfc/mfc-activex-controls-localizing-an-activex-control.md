@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb31eb15a61f1d4cbee7ba7402de508a84124461
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053283"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204708"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Элементы управления ActiveX в MFC. Локализация элемента управления ActiveX
 
 В этой статье рассматриваются процедуры для локализации интерфейсов элемента управления ActiveX.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 Если вы хотите адаптировать элемент управления ActiveX для международного рынка, может потребоваться локализации элемента управления. Windows поддерживает множество языков, а также по умолчанию английский, немецкий, французский и шведский. Это может вызвать проблемы для элемента управления, если его интерфейс на английском языке только.
 

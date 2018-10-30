@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f684bbb287213ad0cbe6d490c1bef869f5ffc9db
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 9fc9b97e47b64f9f4d60bf45afe9628b11c657c8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077781"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204682"
 ---
 # <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Контейнеры элементов управления ActiveX. Включение вложения элемента управления ActiveX вручную
 
 Если не была включена поддержка элементов управления ActiveX, при использовании мастера приложений MFC для создания приложения, необходимо вручную добавить поддержку этих функций. В этой статье описывается процесс для вручную добавлять вложения элемента управления ActiveX в приложение контейнера OLE. Если заранее известно, что требуется поддержка элементов управления ActiveX в OLE-контейнер, ознакомьтесь со статьей [создание контейнеров элементов управления MFC ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 > [!NOTE]
 >  В этой статье используется на базе диалогового окна проекта элемента управления ActiveX контейнер с именем контейнера и внедренный элемент управления с именем Кр в качестве примеров в процедурах и кода.

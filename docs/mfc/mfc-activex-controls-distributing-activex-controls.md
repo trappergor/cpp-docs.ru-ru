@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d75f84a8cb5ca2cb5a867cc640410c7de978d4fc
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060316"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204669"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>Элементы управления ActiveX в MFC. Распространение элементов управления ActiveX
 
@@ -53,7 +53,7 @@ ms.locfileid: "50060316"
 - [Регистрация элементов управления](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI или Юникода управления версиями
 

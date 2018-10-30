@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401843"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204526"
 ---
 # <a name="mfc-activex-controls-serializing"></a>Элементы управления ActiveX в MFC. Сериализация
 
 В этой статье описывается сериализация элемента управления ActiveX. Сериализация — это процесс чтение или запись в среде постоянного хранения, например файл на диске. Библиотека Microsoft Foundation Class (MFC) предоставляет встроенную поддержку для сериализации в классе `CObject`. `COleControl` расширяет эту функцию на элементы управления ActiveX при помощи свойства механизм exchange.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 Сериализация для элементов управления ActiveX реализована путем переопределения [COleControl::DoPropExchange](../mfc/reference/colecontrol-class.md#dopropexchange). Эта функция вызывается во время загрузки и сохранения объекта элемента управления, хранит все свойства, реализовано с помощью переменную-член или переменную-член с уведомления об изменениях.
 

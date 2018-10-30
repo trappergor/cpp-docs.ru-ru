@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a4cdccf92df9681a85a03369ad0ba1792a6b25
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407157"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204734"
 ---
 # <a name="mfc-activex-control-wizard"></a>мастер элементов управления MFC ActiveX
 
 Элемент управления ActiveX имеет определенный тип [сервера автоматизации](../../mfc/automation-servers.md); это повторно используемый компонент. Приложение размещения элемента управления ActiveX [клиента автоматизации](../../mfc/automation-clients.md) этого элемента управления. Если вашей целью является создание повторно используемого компонента, затем используйте этот мастер для создания элемента управления. См. в разделе [элементы ActiveX в MFC](../../mfc/mfc-activex-controls.md) Дополнительные сведения.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](../activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](../activex-controls.md).
 
 Кроме того, можно создать автоматизации server MFC приложения с помощью [мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md).
 

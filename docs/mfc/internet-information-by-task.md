@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1070dbe1f912f8bb54092fdff4c32ed906100188
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78a7e7e17ce2958f0827041ec5ac31dc1a554fa2
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380520"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204500"
 ---
 # <a name="internet-information-by-task"></a>Сведения о работе с Интернетом по задачам
 
 Задачи, перечисленные в этом разделе сортируются в зависимости от задачи, которую вы хотите достичь.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 В этом разделе перечислены следующие категории задач.
 

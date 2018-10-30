@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441440"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204656"
 ---
 # <a name="cprintdialog-class"></a>Класс CPrintDialog
 
@@ -108,7 +108,7 @@ class CPrintDialog : public CCommonDialog
 > [!NOTE]
 >  `CPrintDialogEx` Класс инкапсулирует службы, предоставляемые вкладкой свойств печати Windows. Дополнительные сведения см. в разделе [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md) Обзор.
 
-`CPrintDialog`его функциональность является замененные по [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), разработанный для обеспечения общее диалоговое окно для обоих параметров печати и параметры страницы.
+`CPrintDialog`в функции, заменяется, [CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md), разработанный для обеспечения общее диалоговое окно для обоих параметров печати и параметры страницы.
 
 Можно положиться на платформу, чтобы заниматься многими аспектами процесс печати для вашего приложения. В этом случае платформа автоматически отображает Windows общее диалоговое окно для печати. Можно также иметь дескриптор framework печати для вашего приложения, но переопределить общее диалоговое окно печати с помощью собственных диалоговое окно печати. Дополнительные сведения об использовании платформой для обработки задач печати см. в статье [печати](../../mfc/printing.md).
 
