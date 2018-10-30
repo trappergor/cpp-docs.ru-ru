@@ -1,7 +1,7 @@
 ---
 title: Ключевые слова в C | Документы Майкрософт
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80c1f0d4ac5d843732771281202612e31a4073c2
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9a5255609c3abb4846ce08a2163407eee6f240c
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860892"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161909"
 ---
 # <a name="c-keywords"></a>Ключевые слова в C
 
@@ -48,17 +48,19 @@ ms.locfileid: "48860892"
 
 |||||
 |-|-|-|-|
-|**__asm**|**dllimport**<sup>2</sup>|**__int8**|**naked**<sup>2</sup>|
-|**__based**<sup>1</sup>|**__except**|**__int16**|**__stdcall**|
-|**__cdecl**|**__fastcall**|**__int32**|**thread**<sup>2</sup>|
-|**__declspec**|**__finally**|**__int64**|**__try**|
-|**dllexport**<sup>2</sup>|**__inline**|**__leave**||
+|**__asm**<sup>3</sup>|**dllimport**<sup>2</sup>|**__int8**<sup>3</sup>|**naked**<sup>2</sup>|
+|**__based**<sup>1, 3</sup>|**__except**<sup>3</sup>|**__int16**<sup>3</sup>|**__stdcall**<sup>3</sup>|
+|**__cdecl**<sup>3</sup>|**__fastcall**|**__int32**<sup>3</sup>|**thread**<sup>2</sup>|
+|**__declspec**<sup>3</sup>|**__finally**<sup>3</sup>|**__int64**<sup>3</sup>|**__try**<sup>3</sup>|
+|**dllexport**<sup>2</sup>|**__inline**<sup>3</sup>|**__leave**<sup>3</sup>||
 
 <sup>1</sup> Ключевое слово **__based** имеет ограниченное применение: в компиляциях для 32- и 64-разрядных платформ.
 
 <sup>2</sup> Если эти ключевые слова используются с ключевым словом **__declspec**, они являются особыми идентификаторами. В других контекстах они могут использоваться без ограничений.
 
-Расширения Microsoft по умолчанию включены. Для того чтобы ваши программы были полностью переносимы, расширения Microsoft можно отключить, установив во время компиляции параметр /Za (компилировать для совместимости с ANSI). При этом ключевые слова для систем Microsoft будут отключены.
+<sup>3</sup> Для совместимости с предыдущими версиями эти ключевые слова доступны как с двумя символами подчеркивания в начале, так и с одним при включении расширений Microsoft.
+
+Расширения Microsoft по умолчанию включены. Чтобы ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав во время компиляции параметр [/Za \(Отключить расширения языка) ](../build/reference/za-ze-disable-language-extensions.md). При этом некоторые ключевые слова для систем Microsoft будут отключены.
 
 Когда расширения Microsoft включены, в программах можно использовать перечисленные выше ключевые слова. Для совместимости со стандартом ANSI большинство этих ключевых слов начинаются с двух символов подчеркивания. Четыре исключения, **dllexport**, **dllimport**, **naked** и **thread**, используются только с ключевым словом **__declspec** и поэтому не требуют двойного знака подчеркивания. Для всех остальных ключевых слов поддерживаются версии с одним символом подчеркивания. Это сделано для обеспечения обратной совместимости.
 
