@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d7f9c3eeda36c6894103c96f1031f6770daf0c71
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068779"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204721"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>Элементы управления ActiveX в MFC. Лицензирование элемента управления ActiveX
 
 Поддержки лицензирования, дополнительный компонент элементы управления ActiveX, можно контролировать, кто может использовать или распространите элемент управления. (Подробное обсуждение проблем с лицензированием, см. в разделе проблем лицензирования в [обновление существующего элемента управления ActiveX](../mfc/upgrading-an-existing-activex-control.md).)
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 В этой статье рассматриваются следующие темы:
 

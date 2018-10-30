@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e103e43f23746f8274ad00da4d043e3446dfc706
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053032"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204307"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы управления ActiveX в MFC. Добавление стандартных методов
 
 Стандартный метод отличается от пользовательского метода, в том, что уже реализован классом [COleControl](../mfc/reference/colecontrol-class.md). Например `COleControl` содержит функцию стандартных элементов, которая поддерживает метод обновления для элемента управления. Запись сопоставления диспетчеризации для этого метода акций — DISP_STOCKFUNC_REFRESH.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 `COleControl` поддерживает два стандартных методов: DoClick и обновления. Обновления вызывается пользователем элемента управления, чтобы немедленно обновить внешний вид элемента управления; DoClick вызывается для запуска элемента управления щелкните событие.
 
