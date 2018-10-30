@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314707"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061564"
 ---
 # <a name="cc-properties-linux-c"></a>Свойства C/C++ (Linux)
 
@@ -85,4 +85,4 @@ ms.locfileid: "44314707"
 Компилировать как | Выбор языка компиляции C-файлов и CPP-файлов.  При использовании значения "по умолчанию" определение будет производиться по расширениям C и CPP. (-x c, -x c++) | **По умолчанию** — по умолчанию.<br/>**Компилировать как код C** — компилировать как код C.<br/>**Компилировать как код C++**  — компилировать как код C++.<br/>
 Принудительно включенные файлы | Один или несколько принудительно включенных файлов (-include [имя])
 
-## <a name="additional-options"></a>Дополнительные параметры 
+## <a name="additional-options"></a>Дополнительные параметры

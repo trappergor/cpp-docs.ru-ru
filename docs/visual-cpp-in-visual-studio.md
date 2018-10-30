@@ -14,20 +14,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae68abc0768c0a06526af6439a8a881684ecdb15
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821299"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067947"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
-> [!NOTE]  
-> Эта документация для разработчиков применима к Visual Studio 2015 и Visual Studio 2017. 
+> [!NOTE]
+> Эта документация для разработчиков применима к Visual Studio 2015 и Visual Studio 2017.
 
-> Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/download/) и введите в поле поиска **Visual C++**.  
-  
+> Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/download/) и введите в поле поиска **Visual C++**.
+
 
 Microsoft Visual C++ (обычно сокращают до Visual C++ или MSVC) является названием для библиотек и средств разработки на языке ассемблера, C++ и C, входящих в состав Visual Studio в Windows. Эти средства и библиотеки позволяют создавать приложения универсальной платформы Windows (UWP), собственные классические и серверные приложения Windows, кроссплатформенные библиотеки и приложения для Windows, Linux, Android и iOS, а также управляемые приложения и библиотеки, использующие платформу .NET Framework. С помощью Visual C++ можно разработать что угодно — от простых консольных приложений до самых сложных приложений для настольных систем Windows, от драйверов устройств и компонентов операционной системы до кроссплатформенных игр для мобильных устройств и от мельчайших устройств Интернета вещей до многосерверных высокопроизводительных вычислительных систем в облаке Azure.
 
