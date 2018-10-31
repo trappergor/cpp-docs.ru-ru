@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704890"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132157"
 ---
 # <a name="link-options"></a>Параметры ссылок
 
@@ -57,6 +57,7 @@ ms.locfileid: "34704890"
 |binmode.obj|pbinmode.obj|Устанавливает в качестве режима преобразования файлов по умолчанию двоичный режим. См. раздел [_fmode](../c-runtime-library/fmode.md).|
 |chkstk.obj|Н/Д|Обеспечивает поддержку проверки и распределения стека, если CRT не используется.|
 |commode.obj|pcommode.obj|Присваивает глобальному флагу фиксации значение "commit". См. раздел [fopen, _wfopen](../c-runtime-library/reference/fopen-wfopen.md) и [fopen_s, _wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md).|
+|exe_initialize_mta.lib|Н/Д|Инициализирует подразделение MTA во время запуска EXE-файла, который позволяет использовать COM-объекты в глобальных интеллектуальных указателях. Так как этот параметр выдает ссылку на подразделение MTA во время завершения работы, не используйте его для библиотек DLL. Ссылка эквивалентна включению combase.h и определению _EXE_INITIALIZE_MTA. |
 |fp10.obj|Н/Д|Изменяет управление точностью по умолчанию на 64 бита. См. раздел [Поддержка чисел с плавающей запятой](../c-runtime-library/floating-point-support.md).|
 |invalidcontinue.obj|pinvalidcontinue.obj|Определяет обработчик недопустимых параметров по умолчанию, который не делает ничего, т. е. недопустимые параметры, передаваемые в функции CRT, получают значение errno и возвращают ошибку.|
 |loosefpmath.obj|Н/Д|Гарантирует, что код с плавающей точкой кода допускает нестандартные значения.|

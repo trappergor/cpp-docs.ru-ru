@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072698"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
@@ -37,11 +37,11 @@ vcpkg — это диспетчер пакетов на базе командн
 
 [1] *Примечание. Для некоторых частных библиотек исходные файлы недоступны. В этих случаях vcpkg загрузит готовые совместимые двоичные файлы.*
 
-## <a name="installation"></a>Установка 
+## <a name="installation"></a>Установка
 
 Клонируйте репозиторий vcpkg из GitHub: https://github.com/Microsoft/vcpkg. Его можно загрузить в любую папку.
 
-Запустите начальный загрузчик в корневой папке. 
+Запустите начальный загрузчик в корневой папке.
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux, MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 Получив название библиотеки с помощью **vcpkg search**, воспользуйтесь **vcpkg install**, чтобы скачать библиотеку и скомпилировать ее. vcpkg использует файл портов (portfile) библиотеки в каталоге ports. Если триада не указана, vcpkg установит и скомпилирует триаду по умолчанию для целевой платформы: x86-windows, x64-linux.cmake или x64-osx.cmake.
 
-Для библиотек Linux vcpkg требует наличия установленного gcc на локальном компьютере. На MacOS vcpkg использует Clang. 
+Для библиотек Linux vcpkg требует наличия установленного gcc на локальном компьютере. На MacOS vcpkg использует Clang.
 
 Если portfile указывает зависимости, vcpkg скачивает и устанавливает и их. После загрузки vcpkg выполнит сборку библиотеки с помощью любой используемой библиотекой системы сборки. Предпочтительными являются проекты CMake и MSBuild (в Windows), но поддерживается также MAKE и любые другие системы сборки. Если vcpkg не удается найти указанную систему сборки на локальном компьютере, диспетчер скачивает и устанавливает ее.
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Пример:  
+Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Пример:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ zlib:x86-windows        1.2.11   A compression library
 1. Выполните **vcpkg install \<библиотека>**.
 1. Используйте **vcpkg integrate project** для создания пакета NuGet, который будет ссылаться на эту библиотеку для каждого конкретного проекта.
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Интеграция с Visual Studio Code (Linux и MacOS) 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Интеграция с Visual Studio Code (Linux и MacOS)
 
 Запустите **vcpkg integrate install** для настройки Visual Studio Code на Linux или MacOS с определением расположения vcpkg и включением технологии IntelliSense для исходных файлов.
 
 ## <a name="target-linux-from-windows-via-wsl"></a>Создание файлов для Linux из Windows посредством WSL
 
 Можно создавать двоичные файлы для Linux на компьютере с Windows с помощью подсистемы Windows для Linux (WSL). Следуйте инструкциям, чтобы [настроить WSL в Windows 10](/windows/wsl/install-win10) и настроить его работу с [расширением Visual Studio для Linux](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/). Можно разместить все библиотеки сборки для Windows и Linux в одной папке и обращаться к ней из Windows и WSL.
-
 
 ## <a name="export_binaries_per_project"></a> Экспорт скомпилированных двоичных файлов и файлов заголовков
 
