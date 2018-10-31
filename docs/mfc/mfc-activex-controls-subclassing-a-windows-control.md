@@ -26,19 +26,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 893d388975bf224a1444a233899ae3898d41865a
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081710"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204643"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>Элементы управления ActiveX в MFC. Создание подкласса элемента управления Windows
 
 В этой статье описывается процесс создания подклассов общего элемента управления Windows для создания элемента управления ActiveX. Использование подклассов существующих Windows управления — это быстрый способ создать элемент управления ActiveX. Новый элемент управления будет иметь возможности подкласса элемента управления Windows, такие как рисование и отвечать на щелчок мышью. Элементы ActiveX в MFC образец [кнопку](../visual-cpp-samples.md) является примером Создание подкласса элемента управления Windows.
 
 >[!IMPORTANT]
-> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, которые следуют за ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
+> ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения о современных технологий, заменяющие ActiveX, см. в разделе [элементы управления ActiveX](activex-controls.md).
 
 Подкласс элемента управления Windows выполните следующие задачи:
 

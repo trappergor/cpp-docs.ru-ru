@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057053"
 ---
 # <a name="crt-library-features"></a>Особенности библиотеки CRT
 
@@ -123,7 +123,6 @@ ms.locfileid: "46092250"
 Кроме того, вы можете избежать некоторых из этих проблем, если для всех образов в процессе будет использоваться одна и та же версия динамически загружаемой библиотеки CRT. Чтобы использовать для всех компонентов одну и ту же версию DLL библиотеки CRT, создайте их с помощью параметра **/MD** и примените одни и те же настройки параметров и набор инструментов компилятора.
 
 Необходимо соблюдать осторожность, если ваша программа передает некоторые объекты CRT (например, дескрипторы файлов, языковые стандарты и переменные среды) через границы библиотеки DLL даже при использовании одной и той же версии CRT. Дополнительные сведения о связанных проблемах и способах их устранения см. в разделе [Потенциальные ошибки при передаче объектов CRT через границы DLL](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md).
-
 
 ## <a name="see-also"></a>См. также
 

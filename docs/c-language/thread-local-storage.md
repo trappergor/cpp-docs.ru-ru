@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2884abbf02c9eb244d6fb446c7158b708c211557
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066457"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055259"
 ---
 # <a name="thread-local-storage"></a>локальное хранилище потока
 
@@ -94,7 +94,7 @@ __declspec( thread ) int tls_i = 1;
     Thread int tls_i = sizeof( tls_i )    /* Okay  */
     ```
 
-     Обратите внимание, что выражение sizeof, включающее инициализируемую переменную, не является ссылкой на себя и является допустимым.
+   Обратите внимание, что выражение sizeof, включающее инициализируемую переменную, не является ссылкой на себя и является допустимым.
 
 - Использование **__declspec(thread)** может повлиять на [отложенную загрузку](../build/reference/linker-support-for-delay-loaded-dlls.md) импортов DLL **.**
 

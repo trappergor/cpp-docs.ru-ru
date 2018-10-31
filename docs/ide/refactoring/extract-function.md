@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441373"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136124"
 ---
 # <a name="extract-function"></a>Извлечение функции
 **Что?** Вы можете преобразовать фрагмент кода в отдельную функцию.
@@ -41,7 +41,7 @@ ms.locfileid: "46441373"
 
 1. В окне **Извлечь функцию или метод (экспериментальная функция)** введите имя новой функции, укажите, куда нужно поместить код, и нажмите кнопку **ОК**.
 
-   ![Функция извлечения функции](images/extractfunction_dialog.png)
+   ![Диалоговое окно "Извлечь функцию"](images/extractfunction_dialog.png)
 
 1. Функция создается в указанном расположении, а прототип функции в соответствующем файле заголовка и исходный код изменяются для вызова этой функции.
 
