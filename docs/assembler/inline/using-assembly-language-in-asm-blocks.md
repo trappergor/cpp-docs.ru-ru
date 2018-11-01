@@ -1,33 +1,23 @@
 ---
-title: Использование языка ассемблера в блоках __asm | Документация Майкрософт
-ms.custom: ''
+title: Использование языка ассемблера в блоках __asm
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - assembly language [C++], features
 - assembly language [C++]
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c262296aaaea38cd91bb1d7bf5113a950629e34
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688531"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631430"
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Использование языка ассемблера в блоках __asm
 
 **Блок, относящийся только к системам Microsoft**
 
-Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование функций языка ассемблера в блоках `__asm`.
+Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование возможностей языка ассемблера в блоках `__asm`.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 

@@ -1,41 +1,31 @@
 ---
-title: Параметры компилятора в алфавитном | Документация Майкрософт
-ms.custom: ''
+title: Параметры компилятора в алфавитном порядке
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701862"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646736"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
-Ниже приведен полный список параметров компилятора в алфавитном порядке. Список см. в разделе [параметры компилятора, упорядоченные по категориям](compiler-options-listed-by-category.md).
+Ниже приведен полный список параметров компилятора в алфавитном порядке. Список параметров по категориям см. в разделе [Параметры компилятора по категориям](compiler-options-listed-by-category.md).
 
 |Параметр|Цель|
 |------------|-------------|
 |[@](at-specify-a-compiler-response-file.md)|Указывает файл ответа.|
 |[/?](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
 |[/AI](ai-specify-metadata-directories.md)|Указывает каталог поиска для разрешения ссылок на файлы, указанные в директиве [#using](../../preprocessor/hash-using-directive-cpp.md) .|
-|[/ analyze](analyze-code-analysis.md)|Включение анализа кода.|
-|[/ arch](arch-minimum-cpu-architecture.md)|Задает архитектуру для создания кода.|
+|[/analyze](analyze-code-analysis.md)|Включение анализа кода.|
+|[/arch](arch-minimum-cpu-architecture.md)|Задает архитектуру для создания кода.|
 |[/ await](await-enable-coroutine-support.md)|Включите расширения сопрограммы (возобновляемые функции).|
-|[/ bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Увеличивает число адресуемых секций в OBJ-файле.|
+|[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Увеличивает число адресуемых секций в OBJ-файле.|
 |[/C](c-preserve-comments-during-preprocessing.md)|Сохраняет комментарии на этапе предварительной обработки.|
 |[/c](c-compile-without-linking.md)|Задает компиляцию без компоновки.|
-|[/ cgthreads](cgthreads-code-generation-threads.md)|Задает число потоков cl.exe, используемых для оптимизации и создания кода.|
+|[/cgthreads](cgthreads-code-generation-threads.md)|Задает число потоков cl.exe, используемых для оптимизации и создания кода.|
 |[/clr](clr-common-language-runtime-compilation.md)|Создает выходной файл, предназначенный для выполнения в среде CLR.|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Управлять вычислением constexpr во время компиляции.|
 |[/D](d-preprocessor-definitions.md)|Определяет константы и макросы.|
@@ -44,19 +34,19 @@ ms.locfileid: "45701862"
 |[/E](e-preprocess-to-stdout.md)|Копирует выходные данные препроцессора в стандартный вывод.|
 |[/EH](eh-exception-handling-model.md)|Задает модель обработки исключений.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Копирует выходные данные препроцессора в стандартный вывод.|
-|[/ ERRORREPORT](errorreport-report-internal-compiler-errors.md)|Разрешает передавать данные о внутренних ошибках компилятора (ICE) непосредственно в группу Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Разрешает передавать данные о внутренних ошибках компилятора (ICE) непосредственно в группу Visual C++.|
 |[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Задание набора символов исполнения.|
 |[/F](f-set-stack-size.md)|Задает размер стека.|
-|[/ favor](favor-optimize-for-architecture-specifics.md)|Создает код, которая оптимизирована для конкретных x64 архитектуры или для специфики микроархитектур в AMD64 и расширенной памяти 64 архитектурах технологии (EM64T).|
+|[/favor](favor-optimize-for-architecture-specifics.md)|Создает код, которая оптимизирована для конкретных x64 архитектуры или для специфики микроархитектур в AMD64 и расширенной памяти 64 архитектурах технологии (EM64T).|
 |[/FA](fa-fa-listing-file.md)|Создает файл листинга.|
-|[/FA](fa-fa-listing-file.md)|Задает имя файла листинга.|
+|[/Fa](fa-fa-listing-file.md)|Задает имя файла листинга.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Вывод полного пути файлов исходного кода, переданных программе cl.exe, в диагностическом тексте.|
 |[/Fd](fd-program-database-file-name.md)|Переименовывает файл базы данных программы.|
-|[/FE](fe-name-exe-file.md)|Переименовывает исполняемый файл.|
+|[/Fe](fe-name-exe-file.md)|Переименовывает исполняемый файл.|
 |[/FI](fi-name-forced-include-file.md)|Выполняет предварительную обработку указанного включаемого файла.|
 |[/Fi](fi-preprocess-output-file-name.md)|Задает предобработанное имя выходного файла.|
-|[/FM](fm-name-mapfile.md)|Создает файл сопоставления.|
-|[/FO](fo-object-file-name.md)|Создает объектный файл.|
+|[/Fm](fm-name-mapfile.md)|Создает файл сопоставления.|
+|[/Fo](fo-object-file-name.md)|Создает объектный файл.|
 |[/fp](fp-specify-floating-point-behavior.md)|Задает поведение чисел с плавающей запятой.|
 |[/Fp](fp-name-dot-pch-file.md)|Задает имя файла предкомпилированного заголовка.|
 |[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|Создает файлы браузера. **/Fr** не рекомендуется к использованию.|
@@ -70,29 +60,29 @@ ms.locfileid: "45701862"
 |[/GH](gh-enable-pexit-hook-function.md)|Вызывает функцию-обработчик `_pexit`.|
 |[/Gh](gh-enable-penter-hook-function.md)|Вызывает функцию-обработчик `_penter`.|
 |[/GL](gl-whole-program-optimization.md)|Включает оптимизацию всей программы.|
-|[/GM](gm-enable-minimal-rebuild.md)|Включает минимальное перепостроение.|
+|[/Gm](gm-enable-minimal-rebuild.md)|Включает минимальное перепостроение.|
 |[/GR](gr-enable-run-time-type-information.md)|Включает информацию о типах во время выполнения (RTTI).|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__fastcall` (только архитектура x86).|
 |[/GS](gs-buffer-security-check.md)|Буферизует проверку безопасности.|
 |[/Gs](gs-control-stack-checking-calls.md)|Управляет стековыми зондами.|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|Поддерживает безопасность относительно волокон для данных, размещаемых с помощью статической локальной памяти потока.|
-|[/ Guard: CF](guard-enable-control-flow-guard.md)|Добавление проверок безопасности для защиты потока управления.|
+|[/guard:cf](guard-enable-control-flow-guard.md)|Добавление проверок безопасности для защиты потока управления.|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__vectorcall` . (только x86 и x64)|
 |[/Gw](gw-optimize-global-data.md)|Включает глобальную оптимизацию данных всей программы.|
-|[/GX](gx-enable-exception-handling.md)|Не рекомендуется. Включает синхронную обработку исключений. Используйте [/EH](eh-exception-handling-model.md) вместо этого.|
+|[/GX](gx-enable-exception-handling.md)|Не рекомендуется. Включает синхронную обработку исключений. Используйте вместо этого параметр [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Включает компоновку на уровне функций.|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Не рекомендуется. Совпадение с кодом [/RTC1](rtc-run-time-error-checks.md).|
-|[/GZ](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__stdcall` (только архитектура x86).|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Не рекомендуется. Аналогично [/RTC1](rtc-run-time-error-checks.md).|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__stdcall` (только архитектура x86).|
 |[/H](h-restrict-length-of-external-names.md)|Не рекомендуется. Ограничивает длину внешних (открытых) имен.|
-|[/ HELP](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
-|[/ homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для x64 компиляторы (собственные и кросс-компиляция).|
-|[/ hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ, допускающий горячее обновление.|
+|[/HELP](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
+|[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для x64 компиляторы (собственные и кросс-компиляция).|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ, допускающий горячее обновление.|
 |[/I](i-additional-include-directories.md)|Осуществляет поиск включаемых файлов в каталоге.|
 |[/J](j-default-char-type-is-unsigned.md)|Изменяет тип `char` по умолчанию.|
 |[/ JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Компилятор и компоновщик создадут двоичный файл для выполнения в ядре Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Создает библиотеку динамической компоновки.|
-|[/ LDd](md-mt-ld-use-run-time-library.md)|Создает отладочную библиотеку динамической компоновки.|
+|[/LDd](md-mt-ld-use-run-time-library.md)|Создает отладочную библиотеку динамической компоновки.|
 |[/link](link-pass-options-to-linker.md)|Передает указанный параметр в программу LINK.|
 |[/LN](ln-create-msil-module.md)|Создает модуль MSIL.|
 |[/MD](md-mt-ld-use-run-time-library.md)|Создает многопоточную библиотеку DLL с помощью библиотеки MSVCRT.lib.|
@@ -107,7 +97,7 @@ ms.locfileid: "45701862"
 |[/Od](od-disable-debug.md)|Отключает оптимизацию.|
 |[/Og](og-global-optimizations.md)|Не рекомендуется. Использует глобальную оптимизацию.|
 |[/Oi](oi-generate-intrinsic-functions.md)|Создает встроенные функции.|
-|[/ OpenMP](openmp-enable-openmp-2-0-support.md)|Включает прагма-директиву [#pragma omp](../../preprocessor/omp.md) в исходном коде.|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|Включает прагма-директиву [#pragma omp](../../preprocessor/omp.md) в исходном коде.|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет уменьшению размера кода.|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|Отдает приоритет быстрому коду.|
 |[/Ox](ox-full-optimization.md)|Использует максимальную оптимизацию (/Ob2gity /Gs).|
@@ -122,7 +112,7 @@ ms.locfileid: "45701862"
 |[/Qvec/report (уровень отчетности автоматического векторизатора)](qvec-report-auto-vectorizer-reporting-level.md)|Включает уровни отчетов для автоматической векторизации.|
 |[/RTC](rtc-run-time-error-checks.md)|Включает проверку ошибок во время выполнения.|
 |[/sdl](sdl-enable-additional-security-checks.md)|Включает дополнительные функции безопасности и предупреждения.|
-|[/ showincludes](showincludes-list-include-files.md)|Отображает список включаемых файлов во время компиляции.|
+|[/showIncludes](showincludes-list-include-files.md)|Отображает список включаемых файлов во время компиляции.|
 |[кодировки/Source](source-charset-set-source-character-set.md)|Задание исходной кодировки.|
 |[/std](std-specify-language-standard-version.md)|Селектор совместимости стандартной версии C++.|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|Указывает исходный файл на языке C.|
@@ -135,12 +125,12 @@ ms.locfileid: "45701862"
 |[/V](v-version-number.md)|Не рекомендуется. Задает строку версии OBJ-файла.|
 |[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
 |[/vd](vd-disable-construction-displacements.md)|Подавляет или включает скрытые vtordisp-члены класса.|
-|[/ vmb](vmb-vmg-representation-method.md)|Использует оптимальное основание для указателей на члены.|
-|[/ vmg](vmb-vmg-representation-method.md)|Использует полное обобщение для указателей на члены.|
-|[/ VMM](vmm-vms-vmv-general-purpose-representation.md)|Объявляет множественное наследование.|
-|[/ vms](vmm-vms-vmv-general-purpose-representation.md)|Объявляет одиночное наследование.|
-|[/ vmv](vmm-vms-vmv-general-purpose-representation.md)|Объявляет виртуальное наследование.|
-|[/ volatile](volatile-volatile-keyword-interpretation.md)|Выбирает способ интерпретации ключевого слова volatile.|
+|[/vmb](vmb-vmg-representation-method.md)|Использует оптимальное основание для указателей на члены.|
+|[/vmg](vmb-vmg-representation-method.md)|Использует полное обобщение для указателей на члены.|
+|[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Объявляет множественное наследование.|
+|[/vms](vmm-vms-vmv-general-purpose-representation.md)|Объявляет одиночное наследование.|
+|[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Объявляет виртуальное наследование.|
+|[/volatile](volatile-volatile-keyword-interpretation.md)|Выбирает способ интерпретации ключевого слова volatile.|
 |[/w](compiler-option-warning-level.md)|Отключает все предупреждения.|
 |[/W0, /W1, /W2, /W3, /W4](compiler-option-warning-level.md)|Задает уровень предупреждения для вывода.|
 |[/w1, /w2, /w3, /w4](compiler-option-warning-level.md)|Задает уровень для указанного предупреждения.|
@@ -148,18 +138,18 @@ ms.locfileid: "45701862"
 |[/wd](compiler-option-warning-level.md)|Отключает указанное предупреждение.|
 |[/we](compiler-option-warning-level.md)|Обрабатывает указанное предупреждение как ошибку.|
 |[/WL](wl-enable-one-line-diagnostics.md)|Включает однострочные диагностические сообщения об ошибках и предупреждения в ходе компиляции исходного кода C++ из командной строки.|
-|[/ WO](compiler-option-warning-level.md)|Отображает указанное предупреждение только один раз.|
+|[/wo](compiler-option-warning-level.md)|Отображает указанное предупреждение только один раз.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Является устаревшей. Выявляет проблемы 64-битной переносимости.|
 |[/Wv](compiler-option-warning-level.md)|Не отображает предупреждения, появившиеся после указанной версии компилятора.|
 |[/WX](compiler-option-warning-level.md)|Обрабатывает предупреждения как ошибки.|
 |[/X](x-ignore-standard-include-paths.md)|Пропускает стандартный каталог включаемых файлов.|
 |[/Y-](y-ignore-precompiled-header-options.md)|Пропускает все прочие параметры компилятора, относящиеся к предварительно скомпилированным заголовкам, в текущем построении.|
 |[/Yc](yc-create-precompiled-header-file.md)|Создает файл предкомпилированного заголовка.|
-|[/Yd](yd-place-debug-information-in-object-file.md)|Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. Используйте [/ZI](z7-zi-zi-debug-information-format.md) вместо этого.|
+|[/Yd](yd-place-debug-information-in-object-file.md)|Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. Используйте вместо этого параметр [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|Вводит ссылку PCH при создании отладочной библиотеки.|
 |[/Yu](yu-use-precompiled-header-file.md)|Использует файл предкомпилированного заголовка при построении.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Приводит к возникновению ошибки совместимости с C 7.0 отладочную информацию.|
-|[/ Za](za-ze-disable-language-extensions.md)|Отключает расширения языка.|
+|[/Za](za-ze-disable-language-extensions.md)|Отключает расширения языка.|
 |[/Zc](zc-conformance.md)|Задает стандартное поведение [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (отключить расширения языка)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
 |[/Zf](zf.md)|Улучшает время создания в параллельные сборки PDB-файла.|
