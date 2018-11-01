@@ -1,10 +1,6 @@
 ---
-title: Класс numeric_limits | Документы Майкрософт
-ms.custom: ''
+title: Класс numeric_limits
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - limits/std::numeric_limits
 - limits/std::numeric_limits::denorm_min
@@ -39,8 +35,6 @@ f1_keywords:
 - limits/std::numeric_limits::signaling_NaN
 - limits/std::numeric_limits::tinyness_before
 - limits/std::numeric_limits::traps
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::numeric_limits [C++]
 - std::numeric_limits [C++], denorm_min
@@ -76,16 +70,12 @@ helpviewer_keywords:
 - std::numeric_limits [C++], tinyness_before
 - std::numeric_limits [C++], traps
 ms.assetid: 9e817177-0e91-48e6-b680-0531c4b26625
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e6b38ef02bd97bb39bdd2ec69788027dcf59e5
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 861850f192281d64ef02ec4a241315c05cd3318f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235598"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564623"
 ---
 # <a name="numericlimits-class"></a>Класс numeric_limits
 
@@ -100,7 +90,7 @@ class numeric_limits
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*<br/>
+*Type*<br/>
 Базовый тип данных элемента, свойства которого проверяются, запрашиваются или устанавливаются.
 
 ## <a name="remarks"></a>Примечания

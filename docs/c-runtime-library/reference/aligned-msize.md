@@ -1,10 +1,6 @@
 ---
-title: _aligned_msize | Документы Майкрософт
-ms.custom: ''
+title: _aligned_msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_msize
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_msize
 - aligned_msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_msize function
 - _aligned_msize function
 ms.assetid: 10995edc-2110-4212-9ca9-5e0220a464f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2375ec8f61a95ec018ea55cc1f891ad8049748c9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97c739eed1f54f0c6705d37542eb13c6ec6879d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393109"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524879"
 ---
 # <a name="alignedmsize"></a>_aligned_msize
 
@@ -71,11 +61,11 @@ size_t _msize(
 
 ## <a name="remarks"></a>Примечания
 
-**_Aligned_msize** функция возвращает размер в байтах блока памяти, выделенной с помощью вызова [_aligned_malloc](aligned-malloc.md) или [_aligned_realloc](aligned-realloc.md). *Выравнивание* и *смещение* значения должны совпадать с именем значения, переданные функции, выделившей блок.
+**_Aligned_msize** функция возвращает размер в байтах блока памяти, выделенной с помощью вызова [_aligned_malloc](aligned-malloc.md) или [_aligned_realloc](aligned-realloc.md). *Выравнивание* и *смещение* значения должны быть так же, как значения, переданные функции, выделившей блок.
 
-Когда приложение связано с отладочной версией библиотеки времени выполнения C **_aligned_msize** разрешается [_aligned_msize_dbg](aligned-msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+Когда приложение связано с отладочной версией библиотек времени выполнения языка C, **_aligned_msize** разрешается [_aligned_msize_dbg](aligned-msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *memblock* является пустым указателем или *выравнивание* не является степенью 2, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров ](../../c-runtime-library/parameter-validation.md). Если ошибка будет обработана, функция устанавливает **errno** для **EINVAL** и возвращает значение -1.
+Эта функция проверяет свои параметры. Если *memblock* является пустым указателем или *выравнивание* не является степенью двойки, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров ](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает **errno** для **EINVAL** и возвращает – 1.
 
 ## <a name="requirements"></a>Требования
 

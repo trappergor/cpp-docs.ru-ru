@@ -1,10 +1,6 @@
 ---
-title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403200"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468917"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead, _ismbstrail, _ismbslead_l, _ismbstrail_l
 
@@ -100,13 +90,13 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbslead** возвращает -1, если символ является старшим байтом и **_ismbstrail** возвращает -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если аргумент не является **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **NULL** и задайте **errno** для **EINVAL**.
+**_ismbslead** возвращает -1, если символ является старшим байтом и **_ismbstrail** возвращает -1, если символ является младшим байтом. Если входные строки допустимы, но не являются старшим или младшим байтом, эти функции возвращают ноль. Если любой из аргументов оказывается **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **NULL** и задайте **errno** для **EINVAL**.
 
 ## <a name="remarks"></a>Примечания
 
-**_ismbslead** и **_ismbstrail** выполняются медленнее, чем **_ismbblead** и **_ismbbtrail** версий, так как они учитывает контекст строки.
+**_ismbslead** и **_ismbstrail** выполняются медленнее, чем **_ismbblead** и **_ismbbtrail** версии, так как они учитывает контекст строки.
 
-Версии этих функций, имеющих **_l** суффикс идентичны, за исключением того, что для их поведения, зависящего от языкового стандарта, они используют переданный языковой стандарт вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций с **_l** суффиксом идентичны, за исключением того, что для поведения, зависящего от языкового стандарта, они используют переданный им языковой стандарт вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

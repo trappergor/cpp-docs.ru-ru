@@ -1,10 +1,6 @@
 ---
-title: _pclose | Документы Майкрософт
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507722"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -58,18 +48,18 @@ FILE *stream
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
-Возвращаемое значение из предыдущего вызова **_popen**.
+*поток*<br/>
+Значение, возвращаемое из предыдущего вызова **_popen**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает состояние завершения завершающий обработчик команд, или значение -1 при возникновении ошибки. Формат возвращаемого значения является таким же, как для **_cwait**, за исключением младшие и старшие байты меняются местами. Если поток **NULL**, **_pclose** задает **errno** для **EINVAL** и возвращает значение -1.
+Возвращает состояние завершения завершающего обработчика команд или значение -1, если произошла ошибка. Формат возвращаемого значения совпадает со значением, для **_cwait**, за исключением, что байты низкого и высокого порядка меняются местами. Если поток имеет **NULL**, **_pclose** задает **errno** для **EINVAL** и возвращает – 1.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Pclose** функция находит идентификатор процесса, запущенную связанного обработчика команд (Cmd.exe) **_popen** вызов, выполняет [_cwait](cwait.md) вызвать для новой команды Процессор и закрывает поток связан канал.
+**_Pclose** функция ищет идентификатор процесса интерпретатор командной строки (Cmd.exe), запущенного связанным **_popen** вызова, выполняет [_cwait](cwait.md) вызвать для новой команды Процессор и закрывает поток по связанному каналу.
 
 ## <a name="requirements"></a>Требования
 

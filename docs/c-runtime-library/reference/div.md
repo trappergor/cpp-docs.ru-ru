@@ -1,10 +1,6 @@
 ---
-title: div, ldiv, lldiv | Документы Microsoft
-ms.custom: ''
+title: элемент DIV, ldiv, lldiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - div
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - div
-dev_langs:
-- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -31,18 +25,14 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba1625105adf6edbc6419bd4fdabc8bda5d0e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653431"
 ---
-# <a name="div-ldiv-lldiv"></a>div, ldiv, lldiv
+# <a name="div-ldiv-lldiv"></a>элемент DIV, ldiv, lldiv
 
 Вычисляет частное и остаток от деления двух целочисленных значений.
 
@@ -76,7 +66,7 @@ lldiv_t div(
 
 ### <a name="parameters"></a>Параметры
 
-*числа*<br/>
+*Число добавлений*<br/>
 Числитель.
 
 *denom*<br/>
@@ -84,13 +74,13 @@ lldiv_t div(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**div** вызывается с помощью аргументов типа **int** возвращает структуру типа **div_t**, который содержит частное и остаток. Возвращаемое значение функции с аргументами типа **длинные** — **ldiv_t**и возвращаемое значение функции с аргументами типа **длинные** **long** — **lldiv_t**. **div_t**, **ldiv_t**, и **lldiv_t** определены в \<stdlib.h >.
+**div** вызванная с использованием аргументов типа **int** возвращает структуру типа **div_t**, который состоит из частное и остаток. Возвращаемое значение с аргументами типа **long** — **ldiv_t**и возвращаемое значение с аргументами типа **long** **long** является **lldiv_t**. **div_t**, **ldiv_t**, и **lldiv_t** определяются в \<stdlib.h >.
 
 ## <a name="remarks"></a>Примечания
 
-**Div** функция разделяет *числа* по *denom* и тем самым Вычисляет частное и остаток. [Div_t](../../c-runtime-library/standard-types.md) структура содержит частное, **quot**и остаток, **rem**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
+**Div** функция делит *числа* по *denom* и тем самым Вычисляет частное и остаток. [Div_t](../../c-runtime-library/standard-types.md) структура содержит частное, **quot**и остаток, **rem**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
 
-Перегруженные версии **div** , принимающие аргументы типа **длинные** или **длинные** **длинные** доступны только в коде C++. Возвращаемые типы [ldiv_t](../../c-runtime-library/standard-types.md) и [lldiv_t](../../c-runtime-library/standard-types.md) содержит члены **quot** и **rem**, который имеет те же смысловые значения, что и члены **div_t**.
+Перегрузки **div** , принимающие аргументы типа **long** или **long** **long** доступны только для кода C++. Типы возврата [ldiv_t](../../c-runtime-library/standard-types.md) и [lldiv_t](../../c-runtime-library/standard-types.md) содержит члены **quot** и **rem**, которые имеют те же смысловые значения, что и члены **div_t**.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: strerror, _strerror, _wcserror, __wcserror | Документы Майкрософт
-ms.custom: ''
+title: strerror, _strerror, _wcserror, __wcserror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strerror
 - _strerror
@@ -33,8 +29,6 @@ f1_keywords:
 - _tcserror
 - _wcserror
 - tcserror
-dev_langs:
-- C++
 helpviewer_keywords:
 - strerror function
 - _strerror function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - __wcserror function
 - error messages, getting
 ms.assetid: 27b72255-f627-43c0-8836-bcda8b003e14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e89a5de45baeb9b3beea2aa538cb0a2168f3c5ed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4038fcc29c18e5d73024cbe5688c674e00d1409e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594653"
 ---
 # <a name="strerror-strerror-wcserror-wcserror"></a>strerror, _strerror, _wcserror, __wcserror
 
@@ -95,24 +85,24 @@ wchar_t * __wcserror(
 
 ## <a name="remarks"></a>Примечания
 
-**Strerror** функции карты *errnum* строку сообщения об ошибке и возвращает указатель на строку. Ни **strerror** , ни **_strerror** выполняют фактическую печать сообщения: для этого необходимо вызвать функцию вывода, таких как [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
+**Strerror** функции карты *errnum* строку сообщения об ошибке и возвращает указатель на строку. Ни **strerror** , ни **_strerror** фактическую печать сообщения: для этого необходимо вызвать функцию вывода, такие как [fprintf](fprintf-fprintf-l-fwprintf-fwprintf-l.md):
 
 ```C
 if (( _access( "datafile",2 )) == -1 )
    fprintf( stderr, _strerror(NULL) );
 ```
 
-Если *strErrMsg* передается в качестве **NULL**, **_strerror** возвращает указатель на строку, содержащую системное сообщение об ошибке для последнего вызова библиотеки, которая привела к ошибке. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *strErrMsg* не равно **NULL**, затем **_strerror** возвращает указатель на строку, содержащую (по порядку) сообщение строки, двоеточие, пробел, системная ошибка сообщение для последнего вызова библиотеки, которое формирует ошибку, а символ перевода строки. Длина сообщения строки не должна превышать 94 символа.
+Если *strErrMsg* передается в качестве **NULL**, **_strerror** возвращает указатель на строку, содержащую системное сообщение об ошибке для последнего вызова библиотеки, вызвавшего ошибку. Строка сообщения об ошибке оканчивается символом новой строки ('\n'). Если *strErrMsg* не равно **NULL**, затем **_strerror** возвращает указатель на строку, содержащую (в порядке) строку сообщения, двоеточие, пробел, системная ошибка сообщение для последнего вызова библиотеки, которая создает ошибку и символа новой строки. Длина сообщения строки не должна превышать 94 символа.
 
-Фактический номер ошибки для **_strerror** хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Чтобы обеспечить точные результаты, вызовите **_strerror** сразу же после подпрограмма библиотеки возвращает ошибку. В противном случае последующие вызовы метода **strerror** или **_strerror** может перезаписать **errno** значение.
+Фактический номер ошибки для **_strerror** хранится в переменной [errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Чтобы обеспечить точные результаты, вызовите **_strerror** сразу же после подпрограмма библиотеки возвращает ошибку. В противном случае последующие вызовы **strerror** или **_strerror** можно перезаписать **errno** значение.
 
-**_wcserror** и **__wcserror** — это двухбайтовая версии **strerror** и **_strerror**соответственно.
+**_wcserror** и **__wcserror** представляют собой двухбайтовые версии **strerror** и **_strerror**, соответственно.
 
-**_strerror**, **_wcserror**, и **__wcserror** не входят в определение ANSI; они являются расширениями Майкрософт, и мы рекомендуем не использовать их место переносимого кода. Для совместимости с ANSI, используйте **strerror** вместо него.
+**_strerror**, **_wcserror**, и **__wcserror** не являются частью определения ANSI; они являются расширениями Майкрософт, и мы рекомендуем не использовать их место переносимого кода. Для обеспечения совместимости с ANSI используйте **strerror** вместо этого.
 
 Для получения строк ошибок рекомендуется **strerror** или **_wcserror** вместо нерекомендуемых макросов [_sys_errlist](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и [_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) и внутренних функций **__sys_errlist** и **__sys_nerr**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

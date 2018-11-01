@@ -1,25 +1,15 @@
 ---
-title: x86 список встроенных объектов | Документация Майкрософт
-ms.custom: ''
+title: Список встроенных объектов x86
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3ae21e0c7f39ef1f4b2ab5379c556b987fcf37b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251e4741f069cf44376c2f6a7ed4e92aa949452b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448471"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560599"
 ---
 # <a name="x86-intrinsics-list"></a>Список встроенных объектов x86
 
@@ -31,9 +21,9 @@ ms.locfileid: "46448471"
 
 - [Руководство по встроенным функциям Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide/). Для поиска конкретных встроенных функций используйте поле поиска.
 
-- [Руководства для разработчиков Intel 64 и IA-32 архитектуры программного обеспечения](https://software.intel.com/articles/intel-sdm)
+- [Руководства для разработчиков программного обеспечения для архитектур Intel 64 и IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Справочник по программированию расширения набора инструкций архитектуры Intel](https://software.intel.com/isa-extensions)
+- [Справочник по программированию с использованием расширений набора инструкций архитектуры Intel](https://software.intel.com/isa-extensions)
 
 - [Введение в Intel векторные инструкции AVX](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1277,4 +1267,4 @@ ms.locfileid: "46448471"
 
 [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Встроенные объекты ARM](../intrinsics/arm-intrinsics.md)<br/>
-[x64 (amd64) встроенные функции](../intrinsics/x64-amd64-intrinsics-list.md)
+[Встроенные функции x64 (amd64)](../intrinsics/x64-amd64-intrinsics-list.md)

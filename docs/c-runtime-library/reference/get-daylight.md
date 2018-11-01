@@ -1,10 +1,6 @@
 ---
-title: _get_daylight | Документы Майкрософт
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398127"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444646"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -54,7 +44,7 @@ error_t _get_daylight( int* hours );
 
 ### <a name="parameters"></a>Параметры
 
-*Часы*<br/>
+*часы*<br/>
 Смещение перехода на зимнее время в часах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -63,11 +53,11 @@ error_t _get_daylight( int* hours );
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_daylight** функция получает количество часов на зимнее время в виде целого числа. Если действует переход на зимнее время, смещение по умолчанию составляет один час (хотя в некоторых регионах может применяться смещение на два часа).
+**_Get_daylight** функция получает количество часов на зимнее время в виде целого. Если действует переход на зимнее время, смещение по умолчанию составляет один час (хотя в некоторых регионах может применяться смещение на два часа).
 
-Если *часы* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если *часов* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
 
-Рекомендуется использовать эту функцию вместо макроса **_daylight** или нерекомендуемой функции **__daylight**.
+Мы рекомендуем использовать эту функцию вместо макроса **_daylight** или нерекомендуемой функции **__daylight**.
 
 ## <a name="requirements"></a>Требования
 

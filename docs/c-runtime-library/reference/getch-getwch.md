@@ -1,10 +1,6 @@
 ---
-title: _getch, _getwch | Документы Майкрософт
-ms.custom: ''
+title: _getch, _getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666314"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
@@ -66,11 +56,11 @@ wint_t _getwch( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_Getch** и **_getwch** функции производят чтение одного символа с помощью консоли без отображения символа. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
+**_Getch** и **_getwch** функции считывают один символ из консоли, но знак не. Эти функции нельзя использовать для считывания сочетания CTRL+C. При считывании функциональной клавиши или клавиши со стрелкой каждая из этих функций должна вызываться дважды. Первый вызов возвращает 0 или 0xE0, а второй вызов возвращает фактический код клавиши.
 
 Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующих версий см. в разделе [_getch_nolock, _getwch_nolock](getch-nolock-getwch-nolock.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

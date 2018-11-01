@@ -1,10 +1,6 @@
 ---
-title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l | Документы Майкрософт
-ms.custom: ''
+title: _mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539692"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower, _mbctolower_l, _mbctoupper, _mbctoupper_l
 
@@ -95,7 +85,7 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае возвращается символ *c* без изменений.
+Каждая из этих функций возвращает преобразованный символ *c*, если это возможно. В противном случае он возвращает символ *c* без изменений.
 
 ## <a name="remarks"></a>Примечания
 
@@ -106,11 +96,11 @@ unsigned int _mbctoupper_l(
 |**_mbctolower**, **_mbctolower_l**|Символ верхнего регистра в символ нижнего регистра.|
 |**_mbctoupper**, **_mbctoupper_l**|Символ нижнего регистра в символ верхнего регистра.|
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без **_l** суффикс использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии с **_l** суффикс идентичен, за исключением того, что он использует параметр языкового стандарта Переданный. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версия этой функции без **_l** суффикс использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; версии с **_l** суффикс идентична, за исключением того, что она использует параметр языкового стандарта переданный в качестве. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В предыдущих версиях **_mbctolower** был вызван **jtolower**, и **_mbctoupper** был вызван **jtoupper**. В новом коде используйте новые имена.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

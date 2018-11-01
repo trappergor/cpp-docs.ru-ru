@@ -1,28 +1,18 @@
 ---
-title: '&lt;hash_set&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;hash_set&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <hash_set>
 - std::<hash_set>
-dev_langs:
-- C++
 helpviewer_keywords:
 - hash_set header
 ms.assetid: 6b556967-c808-4869-9b4d-f9e030864435
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f163ef7d0e5ec05dd0f41c11ea77c558cfef4919
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: a9ed3cf90c4650683eac1c198a8b57614e96d759
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449469"
 ---
 # <a name="lthashsetgt"></a>&lt;hash_set&gt;
 
@@ -42,20 +32,20 @@ ms.locfileid: "38955708"
 
 ### <a name="operators"></a>Операторы
 
-|Версия hash_set|Версия hash_multiset|Описание:|
+|Версия hash_set|Версия hash_multiset|Описание|
 |-----------------------|----------------------------|-----------------|
 |[operator!= (hash_set)](../standard-library/hash-set-operators.md#op_neq)|[operator!= (hash_multiset)](../standard-library/hash-set-operators.md#op_neq)|Проверяет неравенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|
 |[operator== (hash_set)](../standard-library/hash-set-operators.md#op_eq_eq)|[operator== (hash_multiset)](../standard-library/hash-set-operators.md#op_eq_eq)|Проверяет равенство объекта hash_set или hash_multiset слева от оператора объекту hash_set или hash_multiset справа от оператора.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
-|Версия hash_set|Версия hash_multiset|Описание:|
+|Версия hash_set|Версия hash_multiset|Описание|
 |-----------------------|----------------------------|-----------------|
 |[swap (hash_set)](../standard-library/hash-set-functions.md#swap)|[swap (hash_multiset)](../standard-library/hash-set-functions.md#swap_hash_multiset)|Меняет местами элементы двух объектов hash_set или hash_multiset.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[Класс hash_compare](../standard-library/hash-compare-class.md)|Описывает объект, который может использоваться любым ассоциативным контейнером хэша — hash_map hash_multimap, hash_set или hash_multiset — по умолчанию `Traits` объект параметра для упорядочивания и хэширования элементов в них.|
 |[Класс hash_set](../standard-library/hash-set-class.md)|Используется для хранения и быстрого извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей.|

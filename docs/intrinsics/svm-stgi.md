@@ -1,28 +1,18 @@
 ---
-title: __svm_stgi | Документация Майкрософт
-ms.custom: ''
+title: __svm_stgi
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_stgi
-dev_langs:
-- C++
 helpviewer_keywords:
 - __svm_stgi intrinsic
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd4d2593621c7c2cc36f84580a757e98f5e48c92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9f7e35bbecf4051e4a47c32753b3a221dd2a4cc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494696"
 ---
 # <a name="svmstgi"></a>__svm_stgi
 
@@ -38,7 +28,7 @@ void __svm_stgi(void);
 
 ## <a name="remarks"></a>Примечания
 
-`__svm_stgi` Функция эквивалентна `STGI` инструкции компьютера. Флаг прерывания глобального определяет микропроцессора игнорирует, откладывающий или обрабатывает прерывания из-за события, такие как завершение ввода/вывода, температуры оповещение оборудования или исключение отладки.
+Функция `__svm_stgi` эквивалентна инструкции компьютера `STGI` . Флаг прерывания глобального определяет микропроцессора игнорирует, откладывающий или обрабатывает прерывания из-за события, такие как завершение ввода/вывода, температуры оповещение оборудования или исключение отладки.
 
 Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 

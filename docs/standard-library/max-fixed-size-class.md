@@ -1,10 +1,6 @@
 ---
-title: Класс max_fixed_size | Документы Майкрософт
-ms.custom: ''
+title: Класс max_fixed_size
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::max_fixed_size
 - allocators/stdext::max_fixed_size::allocated
@@ -12,8 +8,6 @@ f1_keywords:
 - allocators/stdext::max_fixed_size::full
 - allocators/stdext::max_fixed_size::released
 - allocators/stdext::max_fixed_size::saved
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::max_fixed_size
 - stdext::max_fixed_size [C++], allocated
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c691ce0896a5227e28db6ac8f684d712150e8861
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 08510ecc3b7469e8f88a61dcb0df28541e170892
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666458"
 ---
 # <a name="maxfixedsize-class"></a>Класс max_fixed_size
 
@@ -46,19 +36,19 @@ class max_fixed_size
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Max*|Класс max, который определяет максимальное количество элементов для хранения в `freelist`.|
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[max_fixed_size](#max_fixed_size)|Создает объект типа `max_fixed_size`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[allocated](#allocated)|Увеличивает счетчик выделенных блоков памяти.|
 |[deallocated](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
@@ -82,7 +72,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Nx*|Значение приращения.|
 
@@ -100,7 +90,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Nx*|Значение приращения.|
 

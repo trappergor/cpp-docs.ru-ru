@@ -1,10 +1,6 @@
 ---
-title: журнал, logf, logl, log10, log10f, log10l | Документы Microsoft
-ms.custom: ''
+title: log, logf, logl, log10, log10f, log10l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - log10f
 - logf
@@ -34,8 +30,6 @@ f1_keywords:
 - log10f
 - log10l
 - log10
-dev_langs:
-- C++
 helpviewer_keywords:
 - calculating logarithms
 - log10f function
@@ -46,18 +40,14 @@ helpviewer_keywords:
 - logf function
 - logarithms
 ms.assetid: 7adc77c2-04f7-4245-a980-21215563cfae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12f475cde27d4660f4b4936f3f7717a665b70e86
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8e3f73e61fefa7a39a6d53d63739b094d78c499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402846"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543303"
 ---
-# <a name="log-logf-logl-log10-log10f-log10l"></a>журнал, logf, logl, log10, log10f, log10l
+# <a name="log-logf-logl-log10-log10f-log10l"></a>log, logf, logl, log10, log10f, log10l
 
 Вычисляет логарифмы.
 
@@ -86,7 +76,7 @@ long double log10( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Журнала** функции возвращают натуральный логарифм (базовый *e*) из *x* в случае успешного выполнения. **Log10** функции возвращают десятичный логарифм. Если *x* является отрицательным, эти функции возвращают неопределенное (IND), по умолчанию. Если *x* равно 0, они возвращают бесконечность (INF).
+**Журнала** функции возвращают натуральный логарифм (базовый *e*) из *x* при успешном выполнении. **Log10** функции возвращают десятичный логарифм. Если *x* является отрицательным, эти функции возвращают неопределенное (IND), по умолчанию. Если *x* равно 0, возвращается бесконечность (INF).
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
@@ -94,11 +84,11 @@ long double log10( long double x );  // C++ only
 |± 0|ZERODIVIDE|_SING|
 |*x* < 0|INVALID|_DOMAIN|
 
-**Журнал** и **log10** реализации, использующий Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
+**Журнал** и **log10** иметь реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузки, поэтому можно вызывать перегрузки **журнала** и **log10** , принимающие и возвращающие **float** или **long double** значения. В программе на языке C **журнала** и **log10** всегда принимают и возвращают **двойные**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **журнала** и **log10** , принимающие и возвращающие **float** или **long double** значения. В программе на языке C **журнала** и **log10** всегда принимают и возвращают **двойные**.
 
 ## <a name="requirements"></a>Требования
 

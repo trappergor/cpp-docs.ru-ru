@@ -1,8 +1,6 @@
 ---
-title: Функции &lt;type_traits&gt; | Документы Майкрософт
-ms.custom: ''
+title: Функции &lt;type_traits&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_assignable
 - type_traits/std::is_copy_assignable
@@ -26,12 +24,12 @@ helpviewer_keywords:
 - std::is_trivially_copy_assignable
 - std::is_trivially_move_assignable
 - std::is_trivially_move_constructible
-ms.openlocfilehash: 551282b6d99491e49a185bab2ede2f775bb55498
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 05e72f07117cd5317dd0b8ea3590be9e87ae7b6d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707828"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653635"
 ---
 # <a name="lttypetraitsgt-functions"></a>Функции &lt;type_traits&gt;
 

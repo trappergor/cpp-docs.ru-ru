@@ -1,10 +1,6 @@
 ---
-title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbckata
 - _ismbchira_l
@@ -32,8 +28,6 @@ f1_keywords:
 - ismbchira_l
 - _ismbchira_l
 - _ismbchira
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbckata function
 - _ismbchira function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - Hiragana
 - ismbckata function
 ms.assetid: 2db388a2-be31-489b-81c8-f6bf3f0582d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fe2b9c824fcc45eb2d0fda82cd350d3a9435b94
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d2a5d0336e5ed4ad8bbb19f8a259128ab33d004e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403733"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506594"
 ---
 # <a name="ismbchira-ismbchiral-ismbckata-ismbckatal"></a>_ismbchira, _ismbchira_l, _ismbckata, _ismbckata_l
 
@@ -93,20 +83,20 @@ int _ismbckata_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и имеется соответствующий **_ismbb** процедура (например, **_ismbcalnum** соответствует **_ismbbalnum**), Результатом является возвращаемым значением соответствующего **_ismbb** подпрограммы.
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и есть соответствующая **_ismbb** подпрограммы (например, **_ismbcalnum** соответствует **_ismbbalnum**), результат является возвращаемым значением соответствующего **_ismbb** подпрограммы.
 
 ## <a name="remarks"></a>Примечания
 
 Каждая из этих функций проверяет определенный многобайтовый символ на соответствие заданному условию.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта для их поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 |Подпрограмма|Условие теста (только для кодовой страницы 932)|
 |-------------|-------------------------------------------|
-|**_ismbchira**|Двухбайтовые символы хирагана: 0x829F < =*c*< = 0x82F1.|
-|**_ismbchira_l**|Двухбайтовые символы хирагана: 0x829F < =*c*< = 0x82F1.|
-|**_ismbckata**|Катакана двухбайтовых: 0x8340 < =*c*< = 0x8396.|
-|**_ismbckata_l**|Катакана двухбайтовых: 0x8340 < =*c*< = 0x8396.|
+|**_ismbchira**|Двухбайтовые символы хираганы: 0x829F < =*c*< = 0x82F1.|
+|**_ismbchira_l**|Двухбайтовые символы хираганы: 0x829F < =*c*< = 0x82F1.|
+|**_ismbckata**|Двухбайтовые катаканы: 0x8340 < =*c*< = 0x8396.|
+|**_ismbckata_l**|Двухбайтовые катаканы: 0x8340 < =*c*< = 0x8396.|
 
 **Конец раздела для кодовой страницы 932**
 

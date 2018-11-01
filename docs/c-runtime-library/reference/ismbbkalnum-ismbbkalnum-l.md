@@ -1,10 +1,6 @@
 ---
-title: _ismbbkalnum, _ismbbkalnum_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbbkalnum, _ismbbkalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkalnum
 - _ismbbkalnum_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkalnum
 - ismbbkalnum_l
 - _ismbbkalnum_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkalnum_l function
 - ismbbkalnum_l function
 - _ismbbkalnum function
 - ismbbkalnum function
 ms.assetid: e1d70e7b-29d0-469c-9d93-442b99de22ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 62aa208085b3a295ef51f4aa5ecafd7e68bb4710
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4eca5738068dab7393f70edf619629b179637e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481059"
 ---
 # <a name="ismbbkalnum-ismbbkalnuml"></a>_ismbbkalnum, _ismbbkalnum_l
 
@@ -71,7 +61,7 @@ int _ismbbkalnum_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkalnum** возвращает ненулевое значение, если целое число *c* является не ASCII текстовый символ, символ пунктуации, или 0, если это не так. **_ismbbkalnum** использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. **_ismbbkalnum_l** идентична **_ismbbkalnum** за исключением того, что он принимает в качестве параметра языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkalnum** возвращает ненулевое значение, если целое число *c* представляет собой символ текста не ASCII символ пунктуации, или 0, если это не. **_ismbbkalnum** использует текущий языковой стандарт для сведений о символах, зависящих от языкового стандарта. **_ismbbkalnum_l** идентична **_ismbbkalnum** за исключением того, что принимает в качестве параметра языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

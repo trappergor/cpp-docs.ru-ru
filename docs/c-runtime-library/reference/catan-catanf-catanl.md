@@ -1,11 +1,6 @@
 ---
-title: catan, catanf, catanl | Документы Майкрософт
-ms.custom: ''
+title: catan, catanf, catanl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catan
 - catanf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catan
 - complex/catanf
 - complex/catanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catan function
 - catanf function
 - catanl function
 ms.assetid: 8415ed9c-7909-4d08-b532-4630bafdc7e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a66781ad1b9962a8d6a1792ad0b77abf853f2559
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 99acdccca1b83be2fa667b5e5ef6e5181dc1ba81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393941"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455228"
 ---
 # <a name="catan-catanf-catanl"></a>catan, catanf, catanl
 
-Возвращает арктангенс с порезов ветвь попадает в интервал [-1; + 1] по оси мнимой комплексного числа.
+Извлекает арктангенс комплексного числа узловые выходят за пределы интервала [-1; + 1] на мнимой оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -72,11 +61,11 @@ _Lcomplex catan( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арктангенс *z*, в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2; + π/2] вдоль оси real.
+Арктангенс *z*, в радианах. Результат неограничен на мнимой оси и находится в интервале [-π/2, + π/2] на реальной оси.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **catan** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **catan** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **catan** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **catan** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

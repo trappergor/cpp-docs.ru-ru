@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmresume | Документация Майкрософт
-ms.custom: ''
+title: __vmx_vmresume
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmresume
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmresume intrinsic
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02442fab506f867a682a68b49a6c573305075992
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 4be197566f32c5edf49a9036b1ac641416d28fc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820520"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616857"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
 
@@ -49,7 +39,7 @@ unsigned char __vmx_vmresume(
 
 Приложение может выполнять операцию VM-enter, используя функцию [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md) или `__vmx_vmresume` . Функцию `__vmx_vmlaunch` можно использовать только с VMCS, состояние запуска которой — `Clear`, а функцию `__vmx_vmresume` можно использовать только с VMCS, состояние запуска которой — `Launched`. Следовательно, используйте функцию [__vmx_vmclear](../intrinsics/vmx-vmclear.md) для задания состояния запуска VMCS `Clear`, а затем используйте функцию `__vmx_vmlaunch` для первой операции VM-enter и функцию `__vmx_vmresume` для последующих операций VM-enter.
 
-Функция `__vmx_vmresume` эквивалентна инструкции компьютера `VMRESUME` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения, PDF-документе, «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) сайта.
+Функция `__vmx_vmresume` эквивалентна инструкции компьютера `VMRESUME` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в PDF-документе Intel Virtualization Technical Specification for the IA-32 Intel Architecture (Техническая спецификация виртуализации Intel для архитектуры Intel IA-32); номер документа C97063-002, на сайте [корпорации Intel](https://software.intel.com/articles/intel-sdm) .
 
 ## <a name="requirements"></a>Требования
 

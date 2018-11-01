@@ -1,27 +1,17 @@
 ---
-title: '&lt;utility&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;utility&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <utility>
-dev_langs:
-- C++
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 84464f485d39f1146f55fb6b5b1970cf1c9321df
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 318cd86832875f3701c5d164ce9150e6adddb242
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858137"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467213"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -59,8 +49,8 @@ ms.locfileid: "33858137"
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](../standard-library/utility-operators.md#op_neq)|Проверяет неравенство объекта pair слева от оператора объекту pair справа от оператора.|
-|[оператор==](../standard-library/utility-operators.md#op_eq_eq)|Проверяет равенство объекта pair слева от оператора объекту pair справа от оператора.|
+|[operator!=](../standard-library/utility-operators.md#op_neq)|Проверяет неравенство объекта pair слева от оператора объекту pair справа от оператора.|
+|[operator==](../standard-library/utility-operators.md#op_eq_eq)|Проверяет равенство объекта pair слева от оператора объекту pair справа от оператора.|
 |[оператор<](../standard-library/utility-operators.md#op_lt)|Проверяет, меньше ли объект pair слева от оператора объекта pair справа от оператора.|
 |[operator\<=](../standard-library/utility-operators.md#op_gt_eq)|Проверяет, что объект pair слева от оператора меньше или равен объекту pair справа от оператора.|
 |[оператор>](../standard-library/utility-operators.md#op_gt)|Проверяет, больше ли объект pair слева от оператора объекта pair справа от оператора.|

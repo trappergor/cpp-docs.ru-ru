@@ -1,11 +1,6 @@
 ---
-title: trunc, truncf, truncl | Документы Майкрософт
-ms.custom: ''
+title: trunc, truncf, truncl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - trunc
 - truncf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/trunc
 - math/truncf
 - math/truncl
-dev_langs:
-- C++
 helpviewer_keywords:
 - trunc function
 - truncf function
 - truncl function
 ms.assetid: de2038ac-ac0b-483e-870c-e8992dcd4fd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67c179065a6b2c6fc10a4ba6ba87868c8306a2aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6e023b9d894ea1b40a0e056e73b7c32f1e3cbed7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519864"
 ---
 # <a name="trunc-truncf-truncl"></a>trunc, truncf, truncl
 
@@ -72,11 +61,11 @@ float trunc( float x ); //C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха возвращает целочисленное значение *x*, округленные к нулю.
+В случае успешного выполнения возвращает целое значение *x*, округленное в сторону нуля.
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблеми|Назад|
+|Проблемы|Назад|
 |-----------|------------|
 |*x* = ±INFINITY|x|
 |*x* = ±0|x|
@@ -86,7 +75,7 @@ float trunc( float x ); //C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **trunc** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **trunc** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **trunc** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **trunc** всегда принимает и возвращает **двойные**.
 
 Поскольку наибольшими значениями с плавающей запятой являются целые числа, эта функция не будет переполняться сама по себе. Тем не менее можно вызвать переполнение этой функции, возвращая значение в целочисленный тип.
 

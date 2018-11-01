@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532227"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,19 +102,19 @@ int _ismbcdigit_l
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c*< = 255 и имеется соответствующий **_ismbb** процедура (например, **_ismbcalnum** соответствует **_ismbbalnum**), Результатом является возвращаемым значением соответствующего **_ismbb** подпрограммы.
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c*< = 255 и есть соответствующая **_ismbb** подпрограммы (например, **_ismbcalnum** соответствует **_ismbbalnum**), результат является возвращаемым значением соответствующего **_ismbb** подпрограммы.
 
 ## <a name="remarks"></a>Примечания
 
 Каждая из этих подпрограмм проверяет определенный многобайтовый символ на соответствие заданному условию.
 
-Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта для их поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Буквенно-цифровой|Возвращает ненулевое значение, только если *c* является однобайтовое представление английской буквы ASCII: см. Примеры для **_ismbcdigit** и **_ismbcalpha**.|
-|**_ismbcalpha**, **_ismbcalpha_l**|По алфавиту|Возвращает ненулевое значение, только если *c* является однобайтовое представление английской буквы ASCII: 0x41 < =*c*< = 0x5A или 0x61 < =*c*< = 0x7A; или катакана буквы: 0xA6 < =*c*< = 0xDF.|
-|**_ismbcdigit**, **_ismbcdigit**|Цифровой|Возвращает ненулевое значение, только если *c* является однобайтовое представление цифры ASCII: 0x30 < =*c*< = 0x39.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Буквенно-цифровой|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление английской буквы ASCII: см. в примерах **_ismbcdigit** и **_ismbcalpha**.|
+|**_ismbcalpha**, **_ismbcalpha_l**|По алфавиту|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление английской буквы ASCII: 0x41 < =*c*< = 0x5A или 0x61 < =*c*< = 0x7A; или буква катаканы: 0xA6 < =*c*< = 0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|Цифровой|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление цифры ASCII: 0x30 < =*c*< = 0x39.|
 
 ## <a name="requirements"></a>Требования
 

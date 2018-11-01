@@ -1,31 +1,21 @@
 ---
-title: Предупреждение компилятора C4957 | Документы Microsoft
-ms.custom: ''
+title: Предупреждение компилятора C4957
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4957
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 60cf1c03ace94c866b77c5340e2a04a9d8190e4d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 9afdd213baadd907afacde0ff7f14f3c78bc60a5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705222"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528262"
 ---
 # <a name="compiler-warning-c4957"></a>Предупреждение компилятора C4957
 
-> "*приведения*": явное приведение "*cast_from*«to»*конечный_тип*" недоступен для проверки
+> "*приведения*": явное приведение из "*cast_from*«to»*конечный_тип*" недоступен
 
 ## <a name="remarks"></a>Примечания
 
@@ -35,7 +25,7 @@ ms.locfileid: "34705222"
 
 Дополнительные сведения см. в разделе [чистый и проверяемый код (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
-**/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+**/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
 Это предупреждение выдается в качестве ошибки, и его можно отключить с помощью прагмы [warning](../../preprocessor/warning.md) или параметра компилятора [/wd](../../build/reference/compiler-option-warning-level.md) .
 

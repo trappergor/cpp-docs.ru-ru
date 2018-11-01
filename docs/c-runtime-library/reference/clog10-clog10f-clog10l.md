@@ -1,11 +1,6 @@
 ---
-title: clog10, clog10f, clog10l | Документы Майкрософт
-ms.custom: ''
+title: clog10, clog10f, clog10l
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog10
 - clog10f
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog10
 - complex/clog10f
 - complex/clog10l
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog10 function
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81b082aff192a866ec46d22120806e6ba89379d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506916"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10, clog10f, clog10l
 
@@ -84,7 +73,7 @@ _Lcomplex clog10( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **clog10** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **clog10** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **clog10** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **clog10** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

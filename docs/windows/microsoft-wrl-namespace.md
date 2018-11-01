@@ -1,9 +1,6 @@
 ---
-title: Пространство имен Microsoft::WRL | Документация Майкрософт
-ms.custom: ''
+title: Пространство имен Microsoft::WRL
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL
@@ -14,22 +11,15 @@ f1_keywords:
 - ftm/Microsoft::WRL
 - client/Microsoft::WRL
 - corewrappers/Microsoft::WRL
-dev_langs:
-- C++
 helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a615e77c96901f2cdf211b9646b2b7b0512b99de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487455"
 ---
 # <a name="microsoftwrl-namespace"></a>Пространство имен Microsoft::WRL
 
@@ -89,7 +79,7 @@ namespace Microsoft::WRL;
 |Имя|Описание|
 |----------|-----------------|
 |[Функция AsWeak](../windows/asweak-function.md)|Извлекает слабую ссылку на определенный экземпляр.|
-|[Функция обратного вызова (WRL)](../windows/callback-function-wrl.md)|Создает объект, функция-член которого является методом обратного вызова.|
+|[Функция Callback (WRL)](../windows/callback-function-wrl.md)|Создает объект, функция-член которого является методом обратного вызова.|
 |[Функция CreateActivationFactory](../windows/createactivationfactory-function.md)|Создает фабрику, производящую экземпляры указанного класса, которые могут быть активированы средой выполнения Windows.|
 |[Функция CreateClassFactory](../windows/createclassfactory-function.md)|Создает фабрику, которая создает экземпляры указанного класса.|
 |[Функция Make](../windows/make-function.md)|Инициализирует указанный класс среды выполнения Windows.|

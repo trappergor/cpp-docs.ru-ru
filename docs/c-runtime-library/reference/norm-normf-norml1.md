@@ -1,11 +1,6 @@
 ---
-title: Норма, normf, norml | Документы Microsoft
-ms.custom: ''
+title: norm, normf, norml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - norm
 - normf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs:
-- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272f43a7b92c069da8fc4eda64a678ff38efd6ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628115"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -72,11 +61,11 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Квадрат величина *z*.
+Абсолютное значение в квадрате из *z*.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **norm** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **long double** значения. В программе на языке C **norm** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **norm** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long double** значения. В программе на языке C **norm** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -84,7 +73,7 @@ long double norm( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**Норма**, **normf**, **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**, **_Dcomplex**, и **_Lcomplex** типы являются эквивалентами характерные для Майкрософт нереализованные собственных типов C99 **float _Complex** , **двойные _Complex**, и **long double _Complex**соответственно.  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**_Fcomplex**, **_Dcomplex**, и **_Lcomplex** типы являются эквивалентами характерные для Майкрософт Нереализованная собственные типы C99 **float _Complex** , **double _Complex**, и **long double _Complex**, соответственно.  Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -1,10 +1,6 @@
 ---
-title: EXP, expf, реш | Документы Microsoft
-ms.custom: ''
+title: EXP, expf, новыми концепциями
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,18 +30,14 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396223"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596759"
 ---
-# <a name="exp-expf-expl"></a>EXP, expf, реш
+# <a name="exp-expf-expl"></a>EXP, expf, новыми концепциями
 
 Вычисляет экспоненту.
 
@@ -74,16 +64,16 @@ long double expl(
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-С плавающей запятой значение exponentiate натурального логарифма *e* по.
+С плавающей запятой значение exponentiate натуральный логарифм по основанию *e* по.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Exp** функции возвращают значение экспоненты с плавающей запятой параметра *x*, в случае успешного выполнения. Результатом является *e*<sup>*x*</sup>, где *e* является основанием натурального логарифма. На переполнение, функция возвращает INF (бесконечность) и потери значимости **exp** возвращает 0.
+**Exp** функции возвращают значение экспоненты параметра с плавающей запятой, *x*, при успешном выполнении. Результат является *e*<sup>*x*</sup>, где *e* является основанием натурального логарифма. В случае переполнения, функция возвращает INF (бесконечность), а также в случае переполнения **exp** возвращает 0.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± Несигнальным значением NaN, неопределенным|Нет|_DOMAIN|
-|Бесконечности ±|INVALID|_DOMAIN|
+|± Несигнальное значение NaN, неопределенным|Нет|_DOMAIN|
+|± Бесконечности|INVALID|_DOMAIN|
 |x ≥ 7.097827e+002|INEXACT+OVERFLOW|OVERFLOW|
 |X ≤ -7.083964e+002|INEXACT+UNDERFLOW|UNDERFLOW|
 
@@ -91,13 +81,13 @@ long double expl(
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузки, поэтому можно вызывать перегрузки **exp** , которые принимают **float** или **long double** аргумент. В программе на языке C **exp** всегда принимает и возвращает **двойные**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **exp** , принимающих **float** или **long double** аргумент. В программе на языке C **exp** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 
 |Функция|Обязательный заголовок C|Обязательный заголовок C++|
 |--------------|---------------------|---|
-|**EXP**, **expf**, **реш**|\<math.h>|\<cmath> или \<math.h>|
+|**EXP**, **expf**, **новыми концепциями**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -1,32 +1,22 @@
 ---
-title: Класс fpos | Документы Майкрософт
-ms.custom: ''
+title: Класс fpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iosfwd/std::fpos
 - iosfwd/std::fpos::seekpos
 - iosfwd/std::fpos::state
 - iosfwd/std::fpos::operator streamoff
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::fpos [C++]
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 914f3623e3ac288a27554edac848686efc025896
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: bf15cdf0ec4df1301b074ba2ae179dee3619d30d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105891"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564207"
 ---
 # <a name="fpos-class"></a>Класс fpos
 
@@ -67,12 +57,12 @@ class fpos
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](#op_neq)|Проверяет индикаторы положений в файлах на неравенство.|
+|[operator!=](#op_neq)|Проверяет индикаторы положений в файлах на неравенство.|
 |[operator+](#op_add)|Увеличивает значение положения в файле.|
 |[оператор+=](#op_add_eq)|Увеличивает значение положения в файле.|
 |[operator-](#operator-)|Уменьшает значение положения в файле.|
 |[оператор-=](#operator-_eq)|Уменьшает значение положения в файле.|
-|[оператор==](#op_eq_eq)|Проверяет индикаторы положений в файлах на равенство.|
+|[operator==](#op_eq_eq)|Проверяет индикаторы положений в файлах на равенство.|
 |[operator streamoff](#op_streamoff)|Приводит объект типа `fpos` к объекту типа `streamoff`.|
 
 ## <a name="requirements"></a>Требования

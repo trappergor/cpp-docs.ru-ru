@@ -1,11 +1,6 @@
 ---
-title: creal, crealf, creall | Документы Майкрософт
-ms.custom: ''
+title: creal, crealf, creall
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - creal
 - crealf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/creal
 - complex/crealf
 - complex/creall
-dev_langs:
-- C++
 helpviewer_keywords:
 - creal function
 - crealf function
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b8d3ca02aeb0f3f9b12c8b82cbb27d9bd3ad3aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400864"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604312"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -72,11 +61,11 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Действительная часть *z*.
+Вещественная часть *z*.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **creal** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **long double** значения. В программе на языке C **creal** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **creal** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long double** значения. В программе на языке C **creal** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 
@@ -84,7 +73,7 @@ long double creal( _Lcomplex z );  // C++ only
 |-------------|--------------|------------------|
 |**creal**, **crealf**, **creall**|\<complex.h>|\<ccomplex>|
 
-**_Fcomplex**, **_Dcomplex**, и **_Lcomplex** типы являются эквивалентами характерные для Майкрософт нереализованные собственных типов C99 **float _Complex** , **двойные _Complex**, и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**_Fcomplex**, **_Dcomplex**, и **_Lcomplex** типы являются эквивалентами характерные для Майкрософт Нереализованная собственные типы C99 **float _Complex** , **double _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

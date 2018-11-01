@@ -1,10 +1,6 @@
 ---
-title: _query_new_mode | Документы Майкрософт
-ms.custom: ''
+title: _query_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_mode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - query_new_mode
 - _query_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_mode function
 - handler modes
 - _query_new_mode function
 ms.assetid: e185c5f9-b73b-4257-8eff-b47648374768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8907b043e8b4441d6e5213a1d386dbc1a5a6910a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 327f22c847793316bd126721b4a66846d7da84dd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620029"
 ---
 # <a name="querynewmode"></a>_query_new_mode
 
@@ -55,11 +45,11 @@ int _query_new_mode(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает текущий новый режим обработки, а именно: 0 или 1, для **malloc**. Возвращаемое значение 1 указывает, что на сбои при выделении памяти, **malloc** вызывает новую подпрограмму обработчика; возвращаемое значение 0 указывает, что это не.
+Возвращает текущий новый режим обработчика, а именно, 0 или 1, для **malloc**. Возвращаемое значение 1 указывает, что в случае сбоя процесса выделения памяти, **malloc** вызывает новую подпрограмму обработчика; возвращаемое значение 0 указывает, что это не так.
 
 ## <a name="remarks"></a>Примечания
 
-C++ **_query_new_mode** функция возвращает целое число, указывающее новый режим обработки, который задается параметром C++ [_set_new_mode](set-new-mode.md) функции для [malloc](malloc.md). Новый режим обработки указывает, должна ли сбои при выделении памяти, **malloc** является вызов новую подпрограмму обработчика задается [_set_new_handler](set-new-handler.md). По умолчанию **malloc** не вызывать новую подпрограмму обработчика в случае ошибки. Можно использовать **_set_new_mode** Чтобы переопределить это поведение, поэтому, при сбое **malloc** вызывает новую подпрограмму обработчика так же, как **новый** делает оператор в случае сбоя на Выделите память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
+C++ **_query_new_mode** функция возвращает целое число, указывающее новый режим обработчика, заданный функцией C++ [_set_new_mode](set-new-mode.md) работать для [malloc](malloc.md). Новый режим обработки указывает, что в случае сбоя выделения памяти **malloc** должен вызывать новую подпрограмму обработчика, заданную функцией [_set_new_handler](set-new-handler.md). По умолчанию **malloc** не вызывает новую подпрограмму обработчика в случае сбоя. Можно использовать **_set_new_mode** Чтобы переопределить это поведение, так что, в случае сбоя **malloc** вызывала новую подпрограмму обработчика таким же образом, как **новый** делает оператор при возникновении ошибки Выделите память. Дополнительные сведения см. в разделе о [новых и удаленных операторах](../../cpp/new-and-delete-operators.md) справочника по языку C++.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: _memicmp, _memicmp_l | Документы Майкрософт
-ms.custom: ''
+title: _memicmp, _memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403057"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636817"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp, _memicmp_l
 
@@ -86,14 +76,14 @@ int _memicmp_l(
 |------------------|--------------------------------------------------------|
 |< 0|*buffer1* меньше, чем *buffer2*.|
 |0|*buffer1* идентичен *buffer2*.|
-|> 0|*buffer1* больше *buffer2*.|
+|> 0|*buffer1* больше, чем *buffer2*.|
 |**_NLSCMPERROR**|Произошла ошибка.|
 
 ## <a name="remarks"></a>Примечания
 
 **_Memicmp** функция сравнивает первые *число* символы двух буферов *buffer1* и *buffer2* байт за байтом. Сравнение выполняется без учета регистра.
 
-Если параметр *buffer1* или *buffer2* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** и задает **errno** для **EINVAL**.
+Если параметр *buffer1* или *buffer2* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **_NLSCMPERROR** и задает **errno** для **EINVAL**.
 
 **_memicmp** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_memicmp_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

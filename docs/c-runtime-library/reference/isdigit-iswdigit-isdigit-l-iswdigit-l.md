@@ -1,10 +1,6 @@
 ---
-title: isdigit, iswdigit, _isdigit_l, _iswdigit_l | Документы Майкрософт
-ms.custom: ''
+title: isdigit, iswdigit, _isdigit_l, _iswdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isdigit_l
 - iswdigit
@@ -30,8 +26,6 @@ f1_keywords:
 - isdigit
 - _istdigit
 - _istdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswdigit function
 - iswdigit_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _ismbcdigit_l function
 - _isdigit_l function
 ms.assetid: 350b0093-843a-47b0-954e-c1776e8a3853
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7701b287d6ec4de757249aca5ccd252b38c58267
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0bffe54bb68eaf7a26c338ad52522ff9b48335aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636583"
 ---
 # <a name="isdigit-iswdigit-isdigitl-iswdigitl"></a>isdigit, iswdigit, _isdigit_l, _iswdigit_l
 
@@ -88,13 +78,13 @@ int _iswdigit_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих процедур возвращает ненулевое значение, если *c* — конкретное представление десятичных цифр. **IsDigit** возвращает ненулевое значение, если *c* является десятичной цифрой (0 - 9). **iswdigit** возвращает ненулевое значение, если *c* является расширенным символом, соответствующий символу десятичной цифры. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление символа десятичной цифры. **IsDigit** возвращает ненулевое значение, если *c* является десятичной цифрой (0 - 9). **iswdigit** возвращает ненулевое значение, если *c* представляет собой расширенный символ, соответствующий символу десятичной цифры. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций, имеющих **_l** суффикс используют языковой стандарт, передаваемый в вместо текущего языкового стандарта для их поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций с **_l** суффикс используют языковой стандарт, переданный в вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isdigit** и **_isdigit_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+Поведение **isdigit** и **_isdigit_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

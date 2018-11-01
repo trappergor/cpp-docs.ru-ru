@@ -1,29 +1,19 @@
 ---
-title: Универсальные шаблоны (C + +/ CLI и C + +/ CX) | Документация Майкрософт
-ms.custom: ''
+title: Универсальные шаблоны (C + +/ CLI и C + +/ CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - generic_cpp
 - generic
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++]
 ms.assetid: c7ccc316-a411-4c00-b2e2-f0c0eadc6cfd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 5c00d8ece7d08adbb6e60cccd75cbe84487a9ecd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327679"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477614"
 ---
 # <a name="generics--ccli-and-ccx"></a>Универсальные шаблоны (C + +/ CLI и C + +/ CX)
 
@@ -36,10 +26,10 @@ ms.locfileid: "49327679"
 [Обзор универсальных типов в C + +/ CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 Сведения об универсальных шаблонах, причины использования возможности языка, определения терминов, используемых для описания универсальных шаблонов, и сведения об использовании ссылочных типов и типов значений в качестве параметров типа для универсальных шаблонов.
 
-[Универсальные интерфейсы (C + +/ CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[Универсальные интерфейсы (C++/CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных интерфейсов.
 
-[Универсальные делегаты (C + +/ CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
+[Универсальные делегаты (C++/CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 Сведения об определении и использовании универсальных делегатов.
 
 [Ограничения, применяемые к параметрам универсальных типов (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
@@ -48,7 +38,7 @@ ms.locfileid: "49327679"
 [Использование универсальных типов (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
 Сведения об использовании универсальных шаблонов, определенных в сборках .NET, возможно, созданных на других языках, в C + +/ CLI.
 
-[Универсальные типы и шаблоны (C + +/ CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[Универсальные и обычные шаблоны (C++/CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 Сравнение универсальных и обычных шаблонов, а также сведения о том, когда использовать каждый из них и как их эффективно объединять.
 
 ### <a name="supported-by-the-common-language-runtime"></a>Поддержка средой CLR
@@ -66,4 +56,4 @@ ms.locfileid: "49327679"
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для .NET и универсальной платформы Windows](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для .NET и UWP](../windows/component-extensions-for-runtime-platforms.md)

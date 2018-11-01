@@ -1,8 +1,6 @@
 ---
-title: Операторы &lt;forward_list&gt; | Документы Майкрософт
-ms.custom: ''
+title: Операторы &lt;forward_list&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - forward_list/std::operator!=
 - forward_list/std::operator==
@@ -10,8 +8,6 @@ f1_keywords:
 - forward_list/std::operatoroperator&gt=;
 - forward_list/std::operatoroperator&lt;
 - forward_list/std::operatoroperator&lt;=
-dev_langs:
-- C++
 ms.assetid: 57492e09-3836-4dbc-9ae5-78ecf506c190
 helpviewer_keywords:
 - std::operator!= (forward_list)
@@ -20,19 +16,19 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: f4dd02275364b611ef5f9011041840a10709aa3f
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605341"
 ---
 # <a name="ltforwardlistgt-operators"></a>Операторы &lt;forward_list&gt;
 
 ||||
 |-|-|-|
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[оператор==](#op_eq_eq)|
+|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_eq_eq"></a> operator==
 
@@ -46,7 +42,7 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|
@@ -67,7 +63,7 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|
@@ -92,7 +88,7 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|
@@ -117,7 +113,7 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|
@@ -142,7 +138,7 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|
@@ -167,7 +163,7 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Объект типа `forward_list`.|
 |*right*|Объект типа `forward_list`.|

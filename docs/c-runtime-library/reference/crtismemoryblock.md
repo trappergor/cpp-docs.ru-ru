@@ -1,10 +1,6 @@
 ---
-title: _CrtIsMemoryBlock | Документы Майкрософт
-ms.custom: ''
+title: _CrtIsMemoryBlock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsMemoryBlock
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsMemoryBlock
 - _CrtIsMemoryBlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsMemoryBlock function
 - CrtIsMemoryBlock function
 ms.assetid: f7cbbc60-3690-4da0-a07b-68fd7f250273
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45331186cca5aab3c7971ba404d7b6da98139130
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c4a85ebeb45552c6f5355853de2a45766d6bc984
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450736"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555771"
 ---
 # <a name="crtismemoryblock"></a>_CrtIsMemoryBlock
 
@@ -57,7 +47,7 @@ int _CrtIsMemoryBlock(
 
 ### <a name="parameters"></a>Параметры
 
-*Устойчивость данных пользователя*<br/>
+*userData*<br/>
 Указатель на начало блока памяти, требующего проверки.
 
 *size*<br/>
@@ -67,20 +57,20 @@ int _CrtIsMemoryBlock(
 Указатель на номер выделения блока или **NULL**.
 
 *filename*<br/>
-Указатель на имя исходного файла, который запросил блока или **NULL**.
+Указатель на имя исходного файла, который запрашивает блок или **NULL**.
 
 *linenumber*<br/>
 Указатель на номер строки в исходном файле или **NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_CrtIsMemoryBlock** возвращает **TRUE** Если указанный блок памяти находится в локальной куче и имеет допустимый отладочной кучи блок идентификатор типа; в противном случае функция возвращает значение **FALSE**.
+**_CrtIsMemoryBlock** возвращает **TRUE** Если указанный блок памяти находится в локальной куче и имеет допустимый идентификатор блока отладочной кучи типа; в противном случае функция в дополнительной возвращает **FALSE**.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtIsMemoryBlock** функция проверяет, находится ли указанный блок памяти в локальной куче приложения, содержащий идентификатор типа допустимым блоком. Эту функцию можно также использовать для получения порядкового номера распределения объекта, а также имени или номера строки исходного файла, содержащего исходный запрос на выделение блока памяти. Передача отличных**NULL** значения для *requestNumber*, *filename*, или *linenumber* параметры причины **_ CrtIsMemoryBlock** для этих параметров значения из заголовка отладки на блок памяти, при обнаружении блока в локальной куче. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtIsMemoryBlock** удаляются на этапе предварительной обработки.
+**_CrtIsMemoryBlock** функция проверяет, что указанный блок памяти находится в локальной куче и имеет допустимый идентификатор типа блока. Эту функцию можно также использовать для получения порядкового номера распределения объекта, а также имени или номера строки исходного файла, содержащего исходный запрос на выделение блока памяти. Передача отличных**NULL** значений в параметре *requestNumber*, *filename*, или *linenumber* причины параметры **_ CrtIsMemoryBlock** присваивать этим параметрам со значениями в заголовка отладки блока памяти, при обнаружении блока в локальной куче. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtIsMemoryBlock** удаляются во время предварительной обработки.
 
-Если **_CrtIsMemoryBlock** завершается ошибкой, возвращается **FALSE** и выходные параметры инициализируются значениями по умолчанию: *requestNumber* и **lineNumber**  равны 0 и *filename* равно **NULL**.
+Если **_CrtIsMemoryBlock** завершается ошибкой, возвращается **FALSE** и выходным параметрам присваиваются значения по умолчанию: *requestNumber* и **lineNumber**  присваиваются значения 0 и *filename* присваивается **NULL**.
 
 Так как эта функция возвращает значение **TRUE** или **FALSE**, ее можно передать в один из макросов [_ASSERT](assert-asserte-assert-expr-macros.md) для создания простого механизма обработки ошибок отладки. Приведенный ниже пример вызывает сбой утверждения, если указанный адрес находится не в локальной куче.
 
@@ -89,7 +79,7 @@ _ASSERTE( _CrtIsMemoryBlock( userData, size, &requestNumber,
           &filename, &linenumber ) );
 ```
 
-Дополнительные сведения о том, как **_CrtIsMemoryBlock** можно использовать с другими функциями и макросами отладки см. в разделе [макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о том, как **_CrtIsMemoryBlock** можно использовать с другими функциями и макросами отладки, см. в разделе [макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Требования
 

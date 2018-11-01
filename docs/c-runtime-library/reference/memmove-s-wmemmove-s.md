@@ -1,10 +1,6 @@
 ---
-title: memmove_s, wmemmove_s | Документы Майкрософт
-ms.custom: ''
+title: memmove_s, wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561191"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s, wmemmove_s
 
@@ -74,7 +64,7 @@ errno_t wmemmove_s(
 Исходный объект.
 
 *count*<br/>
-Число байтов (**memmove_s**) или знаков (**wmemmove_s**) для копирования.
+Число байтов (**memmove_s**) или символов (**wmemmove_s**) для копирования.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -82,17 +72,17 @@ errno_t wmemmove_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержимое *dest*|
+|*dest*|*numberOfElements*|*src*|Возвращаемое значение|Содержание *dest*|
 |------------|------------------------|-----------|------------------|------------------------|
 |**NULL**|any|any|**EINVAL**|не изменено|
 |any|any|**NULL**|**EINVAL**|не изменено|
-|any|< *Счетчик*|any|**ERANGE**|не изменено|
+|any|< *число*|any|**ERANGE**|не изменено|
 
 ## <a name="remarks"></a>Примечания
 
-Копирует *число* байт символов из *src* для *dest*. Если в некоторых регионах области источника и назначения перекрываются, **memmove_s** гарантирует, исходное исходные байты в области пересечения, копируются до перезаписи.
+Копирует *число* байтов символов из *src* для *dest*. Если отдельные области источника и назначения перекрывают, **memmove_s** гарантирует, что байты исходного объекта в перекрывающейся области будут скопированы, прежде чем будут перезаписаны.
 
-Если *dest* или если *src* является пустым указателем, или если строка назначения слишком мал, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
+Если *dest* или, если *src* является пустым указателем, или если строка назначения слишком мал, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
 
 ## <a name="requirements"></a>Требования
 

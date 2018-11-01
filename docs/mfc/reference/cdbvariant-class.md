@@ -1,10 +1,6 @@
 ---
-title: Класс CDBVariant | Документация Майкрософт
-ms.custom: ''
+title: CDBVariant-класс
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDBVariant
 - AFXDB/CDBVariant
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXDB/CDBVariant::m_pstring
 - AFXDB/CDBVariant::m_pstringA
 - AFXDB/CDBVariant::m_pstringW
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDBVariant [MFC], CDBVariant
 - CDBVariant [MFC], Clear
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringA
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2a600aa893ae86abebb4146eda4864e69da3c35c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50485310"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 
@@ -65,25 +55,25 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в настоящее время сохраненное значение. Введите `DWORD`.|
 
 ### <a name="public-union-members"></a>Открытые члены объединения
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **unsigned char**.|

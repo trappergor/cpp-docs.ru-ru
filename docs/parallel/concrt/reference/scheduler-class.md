@@ -1,10 +1,6 @@
 ---
-title: Класс Scheduler | Документация Майкрософт
-ms.custom: ''
+title: Класс Scheduler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - Scheduler
 - CONCRT/concurrency::Scheduler
@@ -22,21 +18,15 @@ f1_keywords:
 - CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
 - CONCRT/concurrency::Scheduler::ScheduleTask
 - CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
-dev_langs:
-- C++
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 745ab1f4f992591927be101521e0f2902af0ccd7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638273"
 ---
 # <a name="scheduler-class"></a>Класс Scheduler
 
@@ -66,7 +56,7 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписания в планировщике. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика.|
 |[GetPolicy](#getpolicy)|Возвращает копию объекта, планировщик, созданную с помощью политики.|
-|[Id](#id)|Возвращает уникальный идентификатор для планировщика.|
+|[Идентификатор](#id)|Возвращает уникальный идентификатор для планировщика.|
 |[IsAvailableLocation](#isavailablelocation)|Определяет, доступен ли заданное расположение в планировщике.|
 |[Ссылки](#reference)|Увеличивает значение счетчика ссылок планировщика.|
 |[RegisterShutdownEvent](#registershutdownevent)|Причины, переданный дескриптор события Windows `_Event` параметр сигнал, когда планировщик завершает работу и удаляет себя. В то время, когда событие получает сигнал завершена вся работа, запланированная на планировщик. Таким способом можно зарегистрировать несколько событий завершения работы.|

@@ -1,10 +1,6 @@
 ---
-title: _lrotl, _lrotr | Документы Майкрософт
-ms.custom: ''
+title: _lrotl, _lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518421"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl, _lrotr
 
@@ -73,7 +63,7 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 ## <a name="remarks"></a>Примечания
 
-**_Lrotl** и **_lrotr** циклически *значение* по *shift* bits. **_lrotl** выполняет циклический сдвиг влево в сторону более старшие разряды. **_lrotr** поворачивает сдвиг вправо, к менее важные биты. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
+**_Lrotl** и **_lrotr** повернуть функции *значение* по *shift* bits. **_lrotl** выполняет циклический сдвиг влево к больше значимых битов. **_lrotr** поворачивает сдвиг вправо, по направлению к менее значимых битов. Обе функции перемещают вытесненные с одного конца *value* биты в другой конец.
 
 ## <a name="requirements"></a>Требования
 

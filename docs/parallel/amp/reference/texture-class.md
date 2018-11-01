@@ -1,10 +1,6 @@
 ---
-title: Класс Texture | Документация Майкрософт
-ms.custom: ''
+title: Класс texture
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - texture
 - AMP_GRAPHICS/texture
@@ -20,19 +16,13 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::associated_accelerator_view
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
-dev_langs:
-- C++
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ae251ace53f8a2a591a311cd389f7084099988e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420143"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486598"
 ---
 # <a name="texture-class"></a>Класс texture
 
@@ -85,7 +75,7 @@ class texture;
 
 |Имя|Описание|
 |----------|-----------------|
-|[Operator()](#operator_call)|Возвращает значение элемента, который указан в параметрах.|
+|[operator()](#operator_call)|Возвращает значение элемента, который указан в параметрах.|
 |[оператор]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
 |[оператор=](#operator_eq)|Копирует указанный [текстуры](texture-class.md) в данный объект.|
 

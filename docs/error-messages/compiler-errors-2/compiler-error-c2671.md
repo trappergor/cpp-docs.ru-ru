@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2671 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2671
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2671
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2671
 ms.assetid: fc0ee40f-c8f3-408f-b89d-745d149c4169
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b37d9dc1e50da921bdbe758e73257100853517eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 92ed646b0e4c5d2bbc6556c2a7b1ef66d8192ec1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46026163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496035"
 ---
 # <a name="compiler-error-c2671"></a>Ошибка компилятора C2671
 

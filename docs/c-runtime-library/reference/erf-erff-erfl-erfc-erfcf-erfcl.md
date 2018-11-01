@@ -1,10 +1,6 @@
 ---
-title: erf, erff, erfl, erfc, erfcf, erfcl | Документы Майкрософт
-ms.custom: ''
+title: erf, erff, erfl, erfc, erfcf, erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396161"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450071"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf, erff, erfl, erfc, erfcf, erfcl
 
@@ -90,17 +80,17 @@ long double erfcl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Erf** функции возвращают Гаусса ошибок *x*. **Erfc** функции возвращают взаимодополняющие Гаусса ошибок *x*.
+**Erf** функции возвращают Гаусса функция ошибок от *x*. **Erfc** функции возвращают взаимодополняющие Гаусса функция ошибок от *x*.
 
 ## <a name="remarks"></a>Примечания
 
-**Erf** функции вычисляют функцию Гаусса ошибок из *x*, определяется как:
+**Erf** функции вычисляют функцией ошибок Гаусса из *x*, который определен как:
 
 ![Функция ошибок от x](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-Функция Гаусса ошибок определяется как 1 - erf(x). **Erf** функции возвращают значение в диапазоне от -1,0 до 1,0. Ошибка не возвращается. **Erfc** функции возвращают значение в диапазоне от 0 до 2. Если *x* слишком велик для **erfc**, **errno** присваивается переменной **ERANGE**.
+Функция Гаусса ошибок определяется как 1 - erf(x). **Erf** функции возвращают значение в диапазоне от -1.0 до версии 1.0. Ошибка не возвращается. **Erfc** функции возвращают значение в диапазоне от 0 до 2. Если *x* слишком велик для **erfc**, **errno** переменной присваивается **ERANGE**.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **erf** и **erfc** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **erf** и **erfc** всегда принимают и возвращают **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **erf** и **erfc** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **erf** и **erfc** всегда принимают и возвращают **двойные**.
 
 ## <a name="requirements"></a>Требования
 

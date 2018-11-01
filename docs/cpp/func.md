@@ -1,29 +1,19 @@
 ---
-title: __Func__ | Документы Microsoft
-ms.custom: ''
+title: __func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413599"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438588"
 ---
 # <a name="func"></a>__func__
 
-**(C ++ 11)**  Предопределенный идентификатор &#95; &#95;func&#95; &#95; неявно определяется как строка, которая содержит неполное и недекорируемое имя внешней функции. &#95;&#95;Func&#95; &#95; является обязательным компонентом стандарта C++ и не является расширением Майкрософт.
+**(C ++ 11)**  Предопределенный идентификатор &#95; &#95;func&#95; &#95; неявно определяется как строка, содержащая Неквалифицированное и недополненное имя включающей функции. &#95;&#95;Func&#95; &#95; является обязательным компонентом стандарта C++ и не является расширением Майкрософт.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает символом null const char массив символов, содержащий имя функции.
+Возвращает, заканчивающаяся нулевым символом const char массив символов, содержащий имя функции.
 
 ## <a name="example"></a>Пример
 

@@ -1,10 +1,6 @@
 ---
-title: _getdcwd, _wgetdcwd | Документы Майкрософт
-ms.custom: ''
+title: _getdcwd, _wgetdcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd
 - _wgetdcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689719"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677023"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -100,9 +90,9 @@ wchar_t *_wgetdcwd(
 
 Эта функция потокобезопасна, даже если она зависит от функции **GetFullPathName**, которая сама не потокобезопасна. Однако можно нарушить потокобезопасность, если многопоточное приложение вызывает оба этой функции и [GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea).
 
-Версия этой функции с **_nolock** суффикс ведет себя идентично этой функции за исключением того, что он не является поточно ориентированной и не защищены от помех со стороны других потоков. Дополнительные сведения см. в разделе [_getdcwd_nolock _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
+Версия этой функции с **_nolock** суффикс ведет себя идентично этой функции за исключением того, что он не является поточно ориентированной и не защищены от помех со стороны других потоков. Для получения дополнительной информации см. [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md).
 
-Когда **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, вызовы функций **_getdcwd** и **_wgetdcwd** заменяются вызовами функций для **_getdcwd_dbg** и **_wgetdcwd_dbg** таким образом, можно выполнять отладку выделения памяти. Дополнительные сведения см. в разделе [_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
+Когда **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, вызовы функций **_getdcwd** и **_wgetdcwd** заменяются вызовами функций для **_getdcwd_dbg** и **_wgetdcwd_dbg** таким образом, можно выполнять отладку выделения памяти. Дополнительные сведения см. в разделе[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 

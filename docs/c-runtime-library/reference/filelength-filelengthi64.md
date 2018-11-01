@@ -1,10 +1,6 @@
 ---
-title: _filelength, _filelengthi64 | Документы Майкрософт
-ms.custom: ''
+title: _filelength, _filelengthi64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _filelengthi64
 - _filelength
@@ -25,8 +21,6 @@ f1_keywords:
 - _filelength
 - _filelengthi64
 - filelengthi64
-dev_langs:
-- C++
 helpviewer_keywords:
 - filelengthi64 function
 - lengths, file
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33943eb81658b065116d30592f25ef004d4bfc1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5434a6ea2155b75f1c034202477a67db36da8b3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399336"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430490"
 ---
 # <a name="filelength-filelengthi64"></a>_filelength, _filelengthi64
 
@@ -68,7 +58,7 @@ __int64 _filelengthi64(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Оба **_filelength** и **_filelengthi64** возвращают длину файла в байтах целевого файла, связанного с *fd*. Если *fd* имеет недопустимый дескриптор файла, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, обе функции возвращают – 1 L указывает на ошибку, и задание **errno** для **EBADF**.
+Оба **_filelength** и **_filelengthi64** возвращают длину файла в байтах, целевой файл, связанный с *fd*. Если *fd* является недопустимым дескриптором файла, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, обе функции возвращают – 1 L указывает на ошибку и установить **errno** для **значение EBADF**.
 
 ## <a name="requirements"></a>Требования
 

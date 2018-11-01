@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc_dbg | Документы Майкрософт
-ms.custom: ''
+title: _aligned_offset_malloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc_dbg
 - aligned_offset_malloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd938b935ff5e69adf4d4e56cd70693cfd1a872d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451515"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507541"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -70,11 +60,11 @@ void * _aligned_offset_malloc_dbg(
 Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
 
 *linenumber*<br/>
-Номер строки в исходном файле, которой была запрошена операция выделения или **NULL**.
+Номер строки в файле источника, в которой была запрошена операция выделения или **NULL**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на блок памяти, которая была выделена или **NULL** при сбое операции.
+Указатель на блок памяти, которая была выделена или **NULL** Если произошел сбой операции.
 
 ## <a name="remarks"></a>Примечания
 
@@ -82,11 +72,11 @@ void * _aligned_offset_malloc_dbg(
 
 **_aligned_offset_malloc_dbg** выделяет блок памяти, добавив немного больше пространства, чем запрошено *размер*. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.
 
-**_aligned_offset_malloc_dbg** полезна в случаях, где необходимы выравнивание для вложенного элемента; например, если выравнивание требовалось на вложенный класс.
+**_aligned_offset_malloc_dbg** полезна в случаях, когда необходимо выравнивание вложенного элемента; например, если требуется выравнивание вложенного класса.
 
-**_aligned_offset_malloc_dbg** на основе **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
+**_aligned_offset_malloc_dbg** основан на **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
 
-Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, в разделе [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти, или если запрошенный размер был больше, чем **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 

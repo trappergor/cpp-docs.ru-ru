@@ -1,11 +1,6 @@
 ---
-title: cacos, cacosf, cacosl | Документы Майкрософт
-ms.custom: ''
+title: cacos, cacosf, cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543199"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos, cacosf, cacosl
 
-Возвращает арккосинус комплексного числа, с порезов ветвь попадает в интервал [-1, + 1] на реальных оси.
+Извлекает арккосинус комплексного числа, ветви выходят за пределы интервала [−1, + 1] на реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -72,11 +61,11 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арккосинус числа *z*, в радианах. На мнимой оси результат неограничен и находится в интервале [0, π] на реальной оси. Произойдет ошибка домена *z* не попадает в интервал [-1, + 1].
+Арккосинус *z*, в радианах. На мнимой оси результат неограничен и находится в интервале [0, π] на реальной оси. Если возникает ошибка домена *z* не попадает в интервал [−1, + 1].
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cacos** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cacos** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **cacos** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **cacos** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

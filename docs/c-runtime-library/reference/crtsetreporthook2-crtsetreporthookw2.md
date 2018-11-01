@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2, _CrtSetReportHookW2 | Документы Майкрософт
-ms.custom: ''
+title: _CrtSetReportHook2, _CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446778"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2, _CrtSetReportHookW2
 
@@ -67,19 +57,19 @@ int _CrtSetReportHookW2(
 Действие, выполняемое: **_CRT_RPTHOOK_INSTALL** или **_CRT_RPTHOOK_REMOVE**.
 
 *pfnNewHook*<br/>
-Обработчик для установки или удаления в узкие символьные или расширенных символов версия этой функции отчетов.
+Отчетные установки или удаления в обычными символами или двухбайтовая версия этой функции.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
--1, если произошла ошибка с **EINVAL** или **ENOMEM** ; в противном случае возвращает число ссылок *pfnNewHook* после вызова метода.
+-1, если произошла ошибка, с помощью **EINVAL** или **ENOMEM** задать; в противном случае возвращает число ссылок *pfnNewHook* после вызова метода.
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtSetReportHook2** и **_CrtSetReportHookW2** позволяют прикреплять или откреплять функцию, в то время как [_CrtSetReportHook](crtsetreporthook.md) позволяет только прикреплять функцию.
+**_CrtSetReportHook2** и **_CrtSetReportHookW2** позволяют прикреплять или откреплять функцию, тогда как [_CrtSetReportHook](crtsetreporthook.md) позволяет только прикреплять функцию.
 
-**_CrtSetReportHook2** или **_CrtSetReportHookW2** следует использовать вместо **_CrtSetReportHook** когда вызов обработчика производится в DLL и когда могут быть загружены несколько DLL и настраиваться собственные функции ловушек. В таком случае библиотеки DLL могут быть выгружены не в том порядке, в котором они были загружены, а функция-обработчик может продолжать указывать на выгруженную библиотеку DLL. Любой отладочный вывод вызывает сбой процесса, если функции-обработчики были добавлены с **_CrtSetReportHook**.
+**_CrtSetReportHook2** или **_CrtSetReportHookW2** следует использовать вместо **_CrtSetReportHook** когда вызов обработчика производится в DLL и когда могут быть загружены несколько DLL, а также настраиваться собственные функции-обработчики. В таком случае библиотеки DLL могут быть выгружены не в том порядке, в котором они были загружены, а функция-обработчик может продолжать указывать на выгруженную библиотеку DLL. Любой отладочный вывод вызывает сбой процесса, если функции-обработчики были добавлены с **_CrtSetReportHook**.
 
-Все добавлены с классом функции-обработчики **_CrtSetReportHook** вызываются, если нет никаких обработчиков функции добавлены с классом **_CrtSetReportHook2** или **_CrtSetReportHookW2** или если все ловушки функции, добавленные с **_CrtSetReportHook2** и **_CrtSetReportHookW2** возвращают **FALSE**.
+Все добавленные с помощью функции-обработчики **_CrtSetReportHook** , вызываются при отсутствии-обработчиков, добавлены функции с **_CrtSetReportHook2** или **_CrtSetReportHookW2** или если все-обработчики функции, добавленные с помощью **_CrtSetReportHook2** и **_CrtSetReportHookW2** возвращают **FALSE**.
 
 Доступна версия этой функции для расширенных символов. Функции-обработчики отчетов принимают строку, тип которой (расширенные или обычные символы) должен соответствовать версии используемой функции. Используйте следующий прототип функции для обработчиков отчетов, используемых с версией этой функции для расширенных символов:
 
@@ -93,10 +83,10 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-Эти функции проверяют свои параметры. Если *режим* или **pfnNewNook** является недопустимым, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1.
+Эти функции проверяют свои параметры. Если *режим* или **pfnNewNook** является недопустимым, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1.
 
 > [!NOTE]
-> Если приложение компилируется с **/CLR** и функция отчетов вызывается после выхода из приложения main, среда CLR вызывает исключение, если функция отчетов вызывает функции CRT.
+> Если приложение компилируется с **/CLR** и функция отчетов вызывается после выхода из приложения основной, CLR вызовет исключение, если функция отчетов вызывает функции CRT.
 
 ## <a name="requirements"></a>Требования
 

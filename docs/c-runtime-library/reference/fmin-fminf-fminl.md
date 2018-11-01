@@ -1,11 +1,6 @@
 ---
-title: fmin, fminf, fminl | Документы Microsoft
-ms.custom: ''
+title: fmin, fminf, fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464367"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin, fminf, fminl
 
@@ -89,19 +80,19 @@ long double fminl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успеха возвращает наименьшее значение из *x* или *y*.
+В случае успешного выполнения возвращает меньшее из *x* или *y*.
 
 |Входные данные|Результат|
 |-----------|------------|
 |*x* имеет значение NaN|*y*|
 |*y* имеет значение NaN|*x*|
-|*x* и *y* являются NaN|NaN|
+|*x* и *y* имеют значения NaN|NaN|
 
-Функция не вызывает [_matherr](matherr.md) должен быть вызван, вызвать любой исключений с плавающей запятой, или изменить значение **errno**.
+Функция не вызывает [_matherr](matherr.md) вызываемого, приводит к все исключения с плавающей запятой, или измените значение свойства **errno**.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **fmin** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **fmin** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **fmin** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **fmin** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

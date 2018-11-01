@@ -1,10 +1,6 @@
 ---
-title: _get_dstbias | Документы Майкрософт
-ms.custom: ''
+title: _get_dstbias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_dstbias
 - __dstbias
@@ -25,24 +21,18 @@ f1_keywords:
 - __dstbias
 - _get_dstbias
 - get_dstbias
-dev_langs:
-- C++
 helpviewer_keywords:
 - __dstbias
 - daylight saving time offset
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82e334c6fcb282bebb003992219f6cf215ab7437
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579114"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -56,7 +46,7 @@ error_t _get_dstbias( int* seconds );
 
 ### <a name="parameters"></a>Параметры
 
-*Секунд*<br/>
+*секунд*<br/>
 Смещение перехода на зимнее время в секундах.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -65,11 +55,11 @@ error_t _get_dstbias( int* seconds );
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_dstbias** функция извлекает количество секунд на зимнее время в виде целого числа. Если действует переход на зимнее время, смещение по умолчанию составляет 3600 секунд. Это число соответствует одному часу (хотя в некоторых регионах может применяться смещение на два часа).
+**_Get_dstbias** функция извлекает количество секунд на зимнее время в виде целого. Если действует переход на зимнее время, смещение по умолчанию составляет 3600 секунд. Это число соответствует одному часу (хотя в некоторых регионах может применяться смещение на два часа).
 
-Если *секунд* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если *секунд* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
 
-Рекомендуется использовать эту функцию вместо макроса **_dstbias** или нерекомендуемой функции **__dstbias**.
+Мы рекомендуем использовать эту функцию вместо макроса **_dstbias** или нерекомендуемой функции **__dstbias**.
 
 ## <a name="requirements"></a>Требования
 

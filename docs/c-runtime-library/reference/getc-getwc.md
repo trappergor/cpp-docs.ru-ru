@@ -1,10 +1,6 @@
 ---
-title: getc, getwc | Документы Майкрософт
-ms.custom: ''
+title: getc, getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664871"
 ---
 # <a name="getc-getwc"></a>getc, getwc
 
@@ -66,18 +56,18 @@ wint_t getwc(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Входной поток.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает считанный символ. Для указания ошибки чтения или условие end of file **getc** возвращает **EOF**, и **getwc** возвращает **WEOF**. Для **getc**, используйте **ferror** или **feof** для проверки для ошибку или конец файла. Если *поток* — **NULL**, **getc** и **getwc** вызывают обработчик недопустимого параметра, как описано в [параметр Проверка](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** (или **WEOF** для **getwc**) и задайте **errno** для  **EINVAL**.
+Возвращает считанный символ. Чтобы указать на ошибку чтения или конец файла, **getc** возвращает **EOF**, и **getwc** возвращает **WEOF**. Для **getc**, использовать **ferror** или **feof** для проверки наличия ошибки или достижение конца файла. Если *поток* — **NULL**, **getc** и **getwc** вызывают обработчик недопустимого параметра, как описано в [параметр Проверка](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** (или **WEOF** для **getwc**) и задайте **errno** для  **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Каждая подпрограмма считывает один символ из файла в текущей позиции и увеличивает связанный указатель файла (если он определен), чтобы он указывал на следующий символ. С которым связан файл *поток*.
+Каждая подпрограмма считывает один символ из файла в текущей позиции и увеличивает связанный указатель файла (если он определен), чтобы он указывал на следующий символ. Файл связан с *поток*.
 
 Эти функции блокируют вызывающий поток, поэтому они потокобезопасны. Описание неблокирующей версии см. в разделе [_getc_nolock, _getwc_nolock](getc-nolock-getwc-nolock.md).
 
@@ -85,10 +75,10 @@ wint_t getwc(
 
 |Подпрограмма|Примечания|
 |-------------|-------------|
-|**getc**|То же, что **fgetc**, но реализовано, как функция и как макрос.|
-|**getwc**|Версия с расширенными символами из **getc**. Считывает Многобайтовый символ или расширенный символ согласно ли *поток* открывается в текстовом или двоичном режиме.|
+|**getc**|Совпадение с кодом **fgetc**, но реализованный как функция и как макрос.|
+|**getwc**|Двухбайтовая версия **getc**. Считывает Многобайтовый или расширенный символ согласно ли *поток* открыт в текстовом или двоичном режиме.|
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

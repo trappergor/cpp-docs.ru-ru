@@ -1,27 +1,17 @@
 ---
-title: 'Практическое: использование параллельных контейнеров для повышения эффективности | Документация Майкрософт'
-ms.custom: ''
+title: Практическое руководство. Использование параллельных контейнеров для повышения эффективности
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71a4aee5664864b5a9c803ac5048e8e5b5eacf0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383315"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439186"
 ---
 # <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>Практическое руководство. Использование параллельных контейнеров для повышения эффективности
 

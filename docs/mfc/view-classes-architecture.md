@@ -1,30 +1,20 @@
 ---
-title: Просмотреть классы (архитектура) | Документация Майкрософт
-ms.custom: ''
+title: Классы представления (архитектура)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
-dev_langs:
-- C++
 helpviewer_keywords:
 - form and record views [MFC]
 - view classes [MFC]
 - control views [MFC]
 - view classes [MFC], architecture
 ms.assetid: 8894579a-1436-441e-b985-83711061e495
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12987a7563b685018de64201d60d0447d3a5d4cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7855f152e340b488d64f01dbf290034e1bdbc9b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647307"
 ---
 # <a name="view-classes-architecture"></a>Классы представления (архитектура)
 
@@ -44,7 +34,7 @@ ms.locfileid: "46393825"
 
 Представления записей являются производными от представления форм. Помимо шаблон диалогового окна они также иметь подключение к базе данных.
 
-[Класс CFormView](../mfc/reference/cformview-class.md)<br/>
+[CFormView](../mfc/reference/cformview-class.md)<br/>
 Представление прокрутки, макет которой определяется в шаблон диалогового окна. Наследуйте класс от `CFormView` для реализации пользовательского интерфейса, в зависимости от шаблона диалогового окна.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>

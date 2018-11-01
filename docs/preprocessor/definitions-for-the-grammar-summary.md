@@ -1,26 +1,16 @@
 ---
-title: Определения для сведения о грамматике | Документация Майкрософт
-ms.custom: ''
+title: Общие сведения об определениях для грамматики
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521130"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Общие сведения об определениях для грамматики
 
@@ -30,9 +20,9 @@ ms.locfileid: "43760823"
 
 `constant`, *константное_выражение*, *идентификатор*, *ключевое слово*, `operator`, `punctuator`
 
-Необязательный компонент указывается путем индексного <sub>opt</sub>. Например, ниже приведено необязательное выражение, заключенное в фигурные скобки:
+Необязательный компонент обозначается атрибутом <sub>opt</sub> в нижнем индексе. Например, ниже приведено необязательное выражение, заключенное в фигурные скобки:
 
-**{** *выражение*<sub>opt</sub> **}**
+**{** *expression*<sub>opt</sub> **}**
 
 ## <a name="see-also"></a>См. также
 

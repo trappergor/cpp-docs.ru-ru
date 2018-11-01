@@ -1,10 +1,6 @@
 ---
-title: logb, logbf, logbl, _logb, _logbf | Документы Майкрософт
-ms.custom: ''
+title: logb, logbf, logbl, _logb, _logbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - logb
 - _logb
@@ -30,8 +26,6 @@ f1_keywords:
 - _logb
 - _logbf
 - logbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _logbf function
 - mantissas, floating-point variables
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions, mantissa and exponent
 - exponents and mantissas
 ms.assetid: 780c4daa-6fe6-4fbc-9412-4c1ba1a1766f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f09a243994112c3ce19d72213391e09ba23c3c4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9f598eedaf30b1f2a1858129e648a117355d112e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402778"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466291"
 ---
 # <a name="logb-logbf-logbl-logb-logbf"></a>logb, logbf, logbl, _logb, _logbf
 
@@ -92,13 +82,13 @@ float _logbf(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**logb** возвращает значение экспоненты несмещенной для *x* как знаковое целое число, представленное в виде значения с плавающей запятой.
+**logb** возвращает несмещенной значение экспоненты для *x* как целое число со знаком, представленное в виде значения с плавающей запятой.
 
 ## <a name="remarks"></a>Примечания
 
-**Logb** функции извлечение экспоненциального значения аргумента с плавающей запятой *x*, как если бы *x* были представлены с бесконечной диапазона. Если аргумент *x* — Ненормализованный, он интерпретируется как ее нормализация.
+**Logb** функции извлекают экспоненциальное значение аргумента с плавающей запятой *x*, как если бы *x* было представлено с бесконечным диапазоном. Если аргумент *x* является денормализован, он интерпретируется как нормализованный.
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **logb** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **logb** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **logb** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **logb** всегда принимает и возвращает **двойные**.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|

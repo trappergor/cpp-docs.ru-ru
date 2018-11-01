@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidHeapPointer | Документы Майкрософт
-ms.custom: ''
+title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidHeapPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bc4be3f464cb48647985a96550a8b9ea13ce5ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662011"
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,7 +43,7 @@ int _CrtIsValidHeapPointer(
 
 ### <a name="parameters"></a>Параметры
 
-*Устойчивость данных пользователя*<br/>
+*userData*<br/>
 Указатель на начало выделенного блока памяти.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -62,7 +52,7 @@ int _CrtIsValidHeapPointer(
 
 ## <a name="remarks"></a>Примечания
 
-Использовать эту функцию не рекомендуется. Начиная с библиотеки CRT в Visual Studio 2010, все библиотеки CRT используют одну и ту же кучу операционной системы — *кучу процесса*. **_CrtIsValidHeapPointer** функция сообщает ли указатель был выделен в кучу CRT, но не, выделенной библиотекой CRT вызывающей программы. Возьмем для примера блок, выделенный с помощью библиотеки CRT в составе Visual Studio 2010. Если **_CrtIsValidHeapPointer** функции, экспортируемые в Visual Studio 2012 версии библиотек CRT проверит указатель, он возвращает значение TRUE. Необходимости в такой проверке больше нет. В версиях библиотеки CRT до Visual Studio 2010 эта функция используется для проверки наличия того или иного адреса памяти в локальной куче. Локальная куча обращается к куче, созданной и управляемой определенным экземпляром библиотеки среды выполнения C. Если библиотека динамической компоновки (DLL) содержит статическую ссылку на библиотеку среды выполнения, она имеет свой собственный экземпляр кучи среды выполнения, а значит и собственную кучу, не зависящую от локальной кучи приложения. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtIsValidHeapPointer** удаляются на этапе предварительной обработки.
+Использовать эту функцию не рекомендуется. Начиная с библиотеки CRT в Visual Studio 2010, все библиотеки CRT используют одну и ту же кучу операционной системы — *кучу процесса*. **_CrtIsValidHeapPointer** функция сообщает ли указатель был выделен в куче CRT, но не, он выделен библиотекой CRT вызывающей стороны. Возьмем для примера блок, выделенный с помощью библиотеки CRT в составе Visual Studio 2010. Если **_CrtIsValidHeapPointer** функцию, экспортированную в Visual Studio 2012 версии библиотеки CRT проверит указатель, он возвращает значение TRUE. Необходимости в такой проверке больше нет. В версиях библиотеки CRT до Visual Studio 2010 эта функция используется для проверки наличия того или иного адреса памяти в локальной куче. Локальная куча обращается к куче, созданной и управляемой определенным экземпляром библиотеки среды выполнения C. Если библиотека динамической компоновки (DLL) содержит статическую ссылку на библиотеку среды выполнения, она имеет свой собственный экземпляр кучи среды выполнения, а значит и собственную кучу, не зависящую от локальной кучи приложения. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtIsValidHeapPointer** удаляются во время предварительной обработки.
 
 Так как эта функция возвращает значение TRUE или FALSE, ее можно передать в один из макросов [_ASSERT](assert-asserte-assert-expr-macros.md) для создания простого механизма обработки ошибок отладки. Приведенный ниже пример вызывает сбой утверждения, если указанный адрес находится не в локальной куче.
 
@@ -70,7 +60,7 @@ int _CrtIsValidHeapPointer(
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-Дополнительные сведения о том, как **_CrtIsValidHeapPointer** можно использовать с другими функциями и макросами отладки см. в разделе [макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
+Дополнительные сведения о том, как **_CrtIsValidHeapPointer** можно использовать с другими функциями и макросами отладки, см. в разделе [макросы для создания отчетов](/visualstudio/debugger/macros-for-reporting). Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details).
 
 ## <a name="requirements"></a>Требования
 

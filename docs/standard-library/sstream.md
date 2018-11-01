@@ -1,27 +1,17 @@
 ---
-title: '&lt;sstream&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;sstream&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <sstream>
-dev_langs:
-- C++
 helpviewer_keywords:
 - sstream header
 ms.assetid: 56f55bc5-549d-4e7f-aaad-99e0ffa49c9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8801c41b23ab2c33e4c4e2df9cde8155c1eefafb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: cc08fb426df289b3478ad9d29b03f9a6dd5d3978
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605582"
 ---
 # <a name="ltsstreamgt"></a>&lt;sstream&gt;
 
@@ -80,7 +70,7 @@ void swap (
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*left*|Ссылка на объект `sstream`.|
 |*right*|Ссылка на объект `sstream`.|
@@ -91,7 +81,7 @@ void swap (
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[istringstream](../standard-library/sstream-typedefs.md#istringstream)|Создает тип `basic_istringstream` специализированный на **char** параметр шаблона.|
 |[ostringstream](../standard-library/sstream-typedefs.md#ostringstream)|Создает тип `basic_ostringstream` специализированный на **char** параметр шаблона.|
@@ -110,7 +100,7 @@ void swap (
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_stringbuf](../standard-library/basic-stringbuf-class.md)|Описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную в объекте массива, и из нее.|
 |[basic_istringstream](../standard-library/basic-istringstream-class.md)|Описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [basic_stringbuf](../standard-library/basic-stringbuf-class.md)<**Elem**, **Tr**, `Alloc`>, с элементами типа `Elem`, признаки символов определяются классом `Tr`, а элементы выделяются распределителем класса `Alloc`.|

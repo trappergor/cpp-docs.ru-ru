@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Документы Майкрософт
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550739"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
-Извлекает текущий определяемую приложением функцию для создания дампа **_CLIENT_BLOCK** текстовые блоки памяти (только отладочная версия).
+Извлекает текущий определяемую приложением функцию для дампа **_CLIENT_BLOCK** введите блоки памяти (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -55,7 +45,7 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtGetDumpClient** функция получает текущий функция-ловушка для дампа объектов, хранящихся в **_CLIENT_BLOCK** блоков памяти для среды выполнения C отладку процесса дампа памяти.
+**_CrtGetDumpClient** функция извлекает текущую функцию ловушка для дампа объектов, хранящихся в **_CLIENT_BLOCK** блоков памяти для выполнения C процесса дампа памяти отладки.
 
 Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Написание функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).
 

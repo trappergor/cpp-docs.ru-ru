@@ -1,31 +1,21 @@
 ---
-title: Класс cache_freelist | Документы Майкрософт
-ms.custom: ''
+title: Класс cache_freelist
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::cache_freelist
 - allocators/stdext::cache_freelist::allocate
 - allocators/stdext::cache_freelist::deallocate
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::cache_freelist
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3d3902d900e0dad5ec3e335e9c3424d58ee2674
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38960421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620094"
 ---
 # <a name="cachefreelist-class"></a>Класс cache_freelist
 
@@ -40,7 +30,7 @@ class cache_freelist
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*sz*|Число элементов в массиве, которые нужно выделить.|
 |*Max*|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
@@ -53,13 +43,13 @@ class cache_freelist
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[cache_freelist](#cache_freelist)|Создает объект типа `cache_freelist`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -80,7 +70,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*count*|Число элементов в массиве, которые нужно выделить.|
 
@@ -110,7 +100,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|

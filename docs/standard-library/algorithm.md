@@ -1,29 +1,19 @@
 ---
-title: '&lt;algorithm&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <algorithm>
-dev_langs:
-- C++
 helpviewer_keywords:
 - algorithm header [C++]
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9de7d5606d2bb178dd786d22bb0e5ab890fd16ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484075"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -53,7 +43,7 @@ ms.locfileid: "38964240"
 
 ### <a name="function-templates"></a>Шаблоны функций
 
-|Функции-шаблона|Описание:|
+|Функции-шаблона|Описание|
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Поиск двух соседних элементов, которые либо равны, либо удовлетворяют указанному условию.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Возвращает **true** когда условие выполняется каждым элементом заданного диапазона.|

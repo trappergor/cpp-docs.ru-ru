@@ -1,25 +1,15 @@
 ---
-title: Структура space_info | Документы Майкрософт
-ms.custom: ''
+title: Структура space_info
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::tr2::sys::space_info
-dev_langs:
-- C++
 ms.assetid: f2b35b42-06ff-45bd-8617-39a0f5358a54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b6998f4ac7ced2d85063186edbd47227b6d24ca5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559137"
 ---
 # <a name="spaceinfo-structure"></a>Структура space_info
 
@@ -40,7 +30,7 @@ struct space_info
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`unsigned long long capacity`|Представляет общее число байтов, которое может представлять том.|
 |`unsigned long long free`|Представляет число байтов, не используемых для представления данных в томе.|

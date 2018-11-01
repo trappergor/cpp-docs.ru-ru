@@ -1,10 +1,6 @@
 ---
-title: isnan, _isnan, _isnanf | Документы Майкрософт
-ms.custom: ''
+title: isnan, _isnan, _isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650870"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan, _isnan, _isnanf
 
@@ -81,17 +71,17 @@ bool isnan(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В языке C **isnan** макрос и **_isnan** и **_isnanf** функции возвращают ненулевое значение, если аргумент *x* является NAN; в противном случае они Возвращает значение 0.
+В языке C **isnan** макрос и **_isnan** и **_isnanf** функции возвращают ненулевое значение, если аргумент *x* имеет значение NAN; в противном случае они Возвращает значение 0.
 
-В C++ **isnan** шаблона функции возвращают **true** Если аргумент *x* имеет значение NAN; в противном случае они возвращают **false**.
+В C++ **isnan** шаблона функции возвращают **true** Если аргумент *x* является значением NAN в противном случае они возвращают **false**.
 
 ## <a name="remarks"></a>Примечания
 
-C **isnan** макрос и **_isnan** и **_isnanf** функции тестирования значение с плавающей запятой *x*, возвращает ненулевое значение, если *x* не является числом (NAN) значение. Значение NAN получается в том случае, если результат операции с плавающей запятой не удается представить в формате IEEE-754 с плавающей запятой для указанного типа. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
+C **isnan** макрос и **_isnan** и **_isnanf** функции проверяют значение с плавающей запятой *x*, возвращают ненулевое значение, если *x* не является числом (NAN) значение. Значение NAN получается в том случае, если результат операции с плавающей запятой не удается представить в формате IEEE-754 с плавающей запятой для указанного типа. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf](printf-printf-l-wprintf-wprintf-l.md).
 
-При компиляции как C++, **isnan** макрос не определен и **isnan** функция шаблона определена вместо него. Возвращает значение типа **bool** вместо целого числа.
+При компиляции как C++, **isnan** макрос не определен и **isnan** вместо этого определяется функция-шаблон. Он возвращает значение типа **bool** вместо integer.
 
-**_Isnan** и **_isnanf** функции — только к системам Майкрософт. **_Isnanf** функция доступна только при компиляции для x64.
+**_Isnan** и **_isnanf** функции только к системам Майкрософт. **_Isnanf** функция доступна только при компиляции для x64.
 
 ## <a name="requirements"></a>Требования
 

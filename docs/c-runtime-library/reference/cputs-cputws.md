@@ -1,10 +1,6 @@
 ---
-title: _cputs _cputws | Документы Майкрософт
-ms.custom: ''
+title: _cputs, _cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601179"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -76,11 +66,11 @@ int _cputws(
 
 ## <a name="remarks"></a>Примечания
 
-**_Cputs** функция записывает строку символом null, указывает *str* непосредственно в консоль. Сочетание символов возврата каретки и перевода строки (CR-LF) не добавляется к такой строке автоматически.
+**_Cputs** функция записывает заканчивающуюся нулем строку, которая указывает *str* напрямую на консоль. Сочетание символов возврата каретки и перевода строки (CR-LF) не добавляется к такой строке автоматически.
 
-Эта функция проверяет свои параметры. Если *str* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и возвращается значение -1.
+Эта функция проверяет свои параметры. Если *str* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и возвращается значение -1.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
