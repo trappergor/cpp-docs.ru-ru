@@ -1,35 +1,25 @@
 ---
-title: Предупреждение (уровень 4) C4233 компилятора | Документы Microsoft
-ms.custom: ''
+title: Предупреждение компилятора (уровень 4) C4233
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4233
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4233
 ms.assetid: 9aa51fc6-8ef3-43b5-bafb-c9333cf60de3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a933d41fd8e7cf3b94e458efff72193b8ce5e187
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 361e00b7361aab51ea077d7e248503f3654e5e58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33297840"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516523"
 ---
 # <a name="compiler-warning-level-4-c4233"></a>Предупреждение компилятора (уровень 4) C4233
 
 > использовано нестандартное расширение: "*ключевое слово*" поддерживается только в C++, C не ключевое слово
 
-Исходный код компилируется как C, а не в C++ и использовать ключевое слово, которое является допустимым только в C++. Компилятор компилирует файла исходного кода как C, если имеет расширение исходного файла c или использовании [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).
+Исходный код компилируется как C, а не C++, и вы использовали ключевое слово, которое является допустимым только в C++. Компилятор компилирует исходный файл как C, если имеет расширение исходного файла c или вы используете [/Tc](../../build/reference/tc-tp-tc-tp-specify-source-file-type.md).
 
-Это предупреждение автоматически повышается до ошибки. Если вы хотите изменить такое поведение, используйте [#pragma warning](../../preprocessor/warning.md). Например чтобы сделать C4233 в предупреждение уровня 4, добавьте эту строку в файле исходного кода:
+Это предупреждение автоматически повышается до ошибки. Если вы хотите изменить это поведение, используйте [#pragma warning](../../preprocessor/warning.md). Например чтобы сделать C4233 в предупреждение уровня 4, добавьте следующую строку в файле исходного кода:
 
 ```cpp
 #pragma warning(4:4233)
