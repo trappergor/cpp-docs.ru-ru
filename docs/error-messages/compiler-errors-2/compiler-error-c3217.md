@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C3217 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C3217
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3217
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3217
 ms.assetid: 99070417-c23a-4d82-bdd2-04be1a07adea
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c407e8f77990bdbeea143c252a27292ac282497e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bcb63c7025f0addda546379947e2e1f5c3afc545
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063493"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600363"
 ---
 # <a name="compiler-error-c3217"></a>Ошибка компилятора C3217
 

@@ -1,11 +1,6 @@
 ---
-title: casinh, casinhf, casinhl | Документы Майкрософт
-ms.custom: ''
+title: casinh, casinhf, casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580800"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh, casinhf, casinhl
 
-Возвращает обратный гиперболический синус комплексного числа, с порезов ветвь попадает в интервал [-i, + i] мнимой оси.
+Извлекает обратный гиперболический синус комплексного числа, с помощью узловые выходят за пределы интервала [-i, + i] на мнимой оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -79,11 +68,11 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обратный гиперболический синус *z*, в радианах. Результат отменяется привязка вдоль оси реальные и в интервале [-iπ/2 + iπ/2] мнимой оси.
+Обратный гиперболический синус *z*, в радианах. Результатом является свободной на реальной оси и находится в интервале [-iπ/2, + iπ/2] на мнимой оси.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **casinh** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **casinh** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **casinh** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **casinh** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

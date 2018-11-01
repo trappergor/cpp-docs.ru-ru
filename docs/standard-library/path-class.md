@@ -1,25 +1,15 @@
 ---
-title: Класс Path | Документы Майкрософт
-ms.custom: ''
+title: Класс path
 ms.date: 09/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618222"
 ---
 # <a name="path-class"></a>Класс path
 
@@ -63,10 +53,10 @@ class path;
 |[Расширение](#extension)|Возвращает суффикс `filename()`.|
 |[filename](#filename)|Возвращает компонент корневого каталога myname, а именно `empty() path() : *--end()`. Компонент может быть пустым.|
 |[generic_string](#generic_string)|Возвращает значение `this->string<Elem, Traits, Alloc>(al)` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
-|[generic_u16string](#generic_u16string)|Возвращает `u16string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
-|[generic_u32string](#generic_u32string)|Возвращает `u32string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
-|[generic_u8string](#generic_u8string)|Возвращает `u8string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
-|[generic_wstring](#generic_wstring)|Возвращает `wstring()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.|
+|[generic_u16string](#generic_u16string)|Возвращает значение `u16string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
+|[generic_u32string](#generic_u32string)|Возвращает значение `u32string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
+|[generic_u8string](#generic_u8string)|Возвращает значение `u8string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
+|[generic_wstring](#generic_wstring)|Возвращает значение `wstring()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.|
 |[has_extension](#has_extension)|Возвращает `!extension().empty()`.|
 |[has_filename](#has_filename)|Возвращает `!filename().empty()`.|
 |[has_parent_path](#has_parent_path)|Возвращает `!parent_path().empty()`.|
@@ -290,7 +280,7 @@ string generic_string() const;
 
 ## <a name="generic_u16string"></a> PATH::generic_u16string
 
-Возвращает `u16string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
+Возвращает значение `u16string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
 
 ```cpp
 u16string generic_u16string() const;
@@ -298,7 +288,7 @@ u16string generic_u16string() const;
 
 ## <a name="generic_u32string"></a> PATH::generic_u32string
 
-Возвращает `u32string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
+Возвращает значение `u32string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
 
 ```cpp
 u32string generic_u32string() const;
@@ -306,7 +296,7 @@ u32string generic_u32string() const;
 
 ## <a name="generic_u8string"></a> PATH::generic_u8string
 
-Возвращает `u8string()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
+Возвращает значение `u8string()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
 
 ```cpp
 string generic_u8string() const;
@@ -314,7 +304,7 @@ string generic_u8string() const;
 
 ## <a name="generic_wstring"></a> PATH::generic_wstring
 
-Возвращает `wstring()` с (в Windows) преобразованием любой обратной косой черты в прямую косую черту.
+Возвращает значение `wstring()` с (в Windows) любой обратной косой чертой, преобразованной в прямую косую черту.
 
 ```cpp
 wstring generic_wstring() const;

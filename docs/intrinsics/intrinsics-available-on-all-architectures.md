@@ -1,35 +1,25 @@
 ---
-title: Встроенные функции, доступные для всех архитектур | Документы Microsoft
-ms.custom: ''
+title: Встроенные функции, доступные для всех архитектур
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473285"
 ---
-# <a name="intrinsics-available-on-all-architectures"></a>Встроенные функции, доступные для всех архитектур.
+# <a name="intrinsics-available-on-all-architectures"></a>Встроенные функции, доступные для всех архитектур
 
-Компилятор Microsoft C/C++ и универсальная библиотека времени выполнения C (UCRT) предлагать некоторые встроенные функции для всех архитектур.
+Компилятор Microsoft C/C++ и универсальная библиотека среды выполнения C (UCRT) сделать некоторые встроенные функции доступными для всех архитектур.
 
 ## <a name="compiler-intrinsics"></a>Встроенные объекты компилятора
 
 Следующие встроенные функции, доступные в архитектурах x86, AMD64 и ARM:
 
-|Встроенная функция|Верхний колонтитул|
+|Встроенная функция|Header|
 |---------------|------------|
 |[_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)|intrin.h|
 |[_BitScanForward](../intrinsics/bitscanforward-bitscanforward64.md)|intrin.h|
@@ -101,7 +91,7 @@ ms.locfileid: "33340623"
 
 Следующие функции UCRT имеют встроенные формы для всех архитектур:
 
-|Встроенная функция|Верхний колонтитул|
+|Встроенная функция|Header|
 |---------------|------------|
 |[abs](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
 |[_abs64](../c-runtime-library/reference/abs-labs-llabs-abs64.md)|stdlib.h|
@@ -132,7 +122,7 @@ ms.locfileid: "33340623"
 |[cosl](../c-runtime-library/reference/cos-cosf-cosl.md)|math.h|
 |[exp](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[expf](../c-runtime-library/reference/exp-expf.md)|math.h|
-|[реш](../c-runtime-library/reference/exp-expf.md)|math.h|
+|[новыми концепциями](../c-runtime-library/reference/exp-expf.md)|math.h|
 |[fabs](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[fabsf](../c-runtime-library/reference/fabs-fabsf-fabsl.md)|math.h|
 |[floor](../c-runtime-library/reference/floor-floorf-floorl.md)|math.h|

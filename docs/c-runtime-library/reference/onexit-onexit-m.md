@@ -1,10 +1,6 @@
 ---
-title: _onexit, _onexit_m | Документы Майкрософт
-ms.custom: ''
+title: _onexit, _onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609614"
 ---
 # <a name="onexit-onexitm"></a>_onexit, _onexit_m
 
@@ -69,15 +59,15 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_onexit** возвращает указатель на функцию, в случае успешного выполнения или **NULL** Если нет места для хранения указателя на функцию.
+**_onexit** возвращает указатель на функцию, в случае успеха или **NULL** Если нет места для хранения указателя на функцию.
 
 ## <a name="remarks"></a>Примечания
 
-**_Onexit** функции передается адрес функции (*функция*) для вызова при завершении программы в обычном режиме. Последующие вызовы **_onexit** создают регистр функций, которые выполняются в порядке LIFO (последним в первым вышел). Передаваемые в функции **_onexit** не могут принимать параметры.
+**_Onexit** функции передается адрес функции (*функция*) вызывается при нормальном завершении программы. Последовательные вызовы **_onexit** создают регистр функций, которые выполняются в порядке LIFO (последним in-first-out). Передаваемые в функции **_onexit** не могут принимать параметры.
 
-В случае, когда **_onexit** вызывается из библиотеки DLL, подпрограммы, зарегистрированные с **_onexit** выгрузке после выполнения для библиотеки DLL **DllMain** вызывается с DLL_PROCESS_DETACH.
+В случае, когда **_onexit** вызывается из библиотеки DLL, подпрограммы, зарегистрированные с помощью **_onexit** выгрузке после выполнения для библиотеки DLL **DllMain** вызывается с DLL_PROCESS_DETACH.
 
-**_onexit** является расширением Майкрософт. Чтобы обеспечить переносимость ANSI, используйте функцию [atexit](atexit.md). **_Onexit_m** — версия функции для использования смешанного режима.
+**_onexit** является расширением Майкрософт. Чтобы обеспечить переносимость ANSI, используйте функцию [atexit](atexit.md). **_Onexit_m** версия функции для использования смешанного режима.
 
 ## <a name="requirements"></a>Требования
 

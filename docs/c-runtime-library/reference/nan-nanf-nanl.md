@@ -1,10 +1,6 @@
 ---
-title: nan, nanf, nanl | Документы Майкрософт
-ms.custom: ''
+title: nan, nanf, nanl
 ms.date: 94/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nanf
 - nan
@@ -26,23 +22,17 @@ f1_keywords:
 - nan
 - nanl
 - nanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - nan function
 - nanf function
 - nanl function
 ms.assetid: 790e9158-80ab-43e0-8f5a-096198553fd9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 204d59d88c97d9b0fa161fda6f64f31267c73fd5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22b0e14094a0b6f0f3571c4d7551552210177a22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610266"
 ---
 # <a name="nan-nanf-nanl"></a>nan, nanf, nanl
 
@@ -67,7 +57,7 @@ long double nanl( const char* input );
 
 ## <a name="remarks"></a>Примечания
 
-**Nan** функции возвращают значение с плавающей запятой, соответствующий NaN (не сигналов) скрытый. *Ввода* значение игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
+**Nan** функции возвращают значение с плавающей запятой, которое соответствует на значение NaN скрытый (несигнальному). *Ввода* значение игнорируется. Сведения о том, как значение NaN представляется для вывода, см. в разделе [printf, _printf_l, wprintf, _wprintf_l](printf-printf-l-wprintf-wprintf-l.md).
 
 ## <a name="requirements"></a>Требования
 

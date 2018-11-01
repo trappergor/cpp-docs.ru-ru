@@ -1,27 +1,17 @@
 ---
-title: Ошибка средств компоновщика LNK1313 | Документы Microsoft
-ms.custom: ''
+title: Ошибка средств компоновщика LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604234"
 ---
 # <a name="linker-tools-error-lnk1313"></a>Ошибка средств компоновщика LNK1313
 
@@ -29,9 +19,9 @@ ms.locfileid: "34705092"
 
 ## <a name="remarks"></a>Примечания
 
-Текущая версия Visual C++ не поддерживает связывание машинного или смешанного управляемого/неуправляемого OBJ-файлов с OBJ-файлы, скомпилированные с **/CLR: pure**.
+Текущая версия Visual C++ не поддерживает компоновку собственных или смешанных управляемых или собственных OBJ-файлов с OBJ-файлы, скомпилированные с использованием **/CLR: pure**.
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
 ## <a name="example"></a>Пример
 
