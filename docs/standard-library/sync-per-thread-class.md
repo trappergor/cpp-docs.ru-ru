@@ -1,33 +1,23 @@
 ---
-title: Класс sync_per_thread | Документы Майкрософт
-ms.custom: ''
+title: Класс sync_per_thread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::sync_per_thread
 - allocators/stdext::sync_per_thread::allocate
 - allocators/stdext::sync_per_thread::deallocate
 - allocators/stdext::sync_per_thread::equals
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::sync_per_thread
 - stdext::sync_per_thread [C++], allocate
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 956a18a477ca5a713f951da31ca276bc4e379727
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964136"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623266"
 ---
 # <a name="syncperthread-class"></a>Класс sync_per_thread
 
@@ -42,7 +32,7 @@ class sync_per_thread
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Тип кэша, связанный с фильтром синхронизации. Возможные типы: [cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
@@ -52,7 +42,7 @@ class sync_per_thread
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -74,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*count*|Число элементов в массиве, которые нужно выделить.|
 
@@ -92,7 +82,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
@@ -111,7 +101,7 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Объект кэша фильтра синхронизации.|
 |*Другое*|Объект кэша для сравнения на равенство.|

@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C3641 | Документы Microsoft
-ms.custom: ''
+title: Ошибка компилятора C3641
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3641
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648582"
 ---
 # <a name="compiler-error-c3641"></a>Ошибка компилятора C3641
 
@@ -29,9 +19,9 @@ ms.locfileid: "34704949"
 
 ## <a name="remarks"></a>Примечания
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
-Только [__clrcall](../../cpp/clrcall.md) соглашение о вызовах может использоваться с [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
+Только [__clrcall](../../cpp/clrcall.md) соглашение о вызовах разрешен с [/CLR: pure](../../build/reference/clr-common-language-runtime-compilation.md).
 
 ## <a name="example"></a>Пример
 

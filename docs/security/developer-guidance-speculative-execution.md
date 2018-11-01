@@ -1,12 +1,6 @@
 ---
-title: Материалы для разработчиков C++ для каналов на стороне упреждающего выполнения | Документация Майкрософт
-ms.custom: ''
+title: Материалы для разработчиков C++ для каналов на стороне упреждающего выполнения
 ms.date: 07/10/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, security
 - security [C++]
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821404"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631047"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Материалы для разработчиков C++ для каналов на стороне упреждающего выполнения
 
@@ -77,7 +67,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Следующая таблица предоставляет сводку моделей безопасности программного обеспечения, где разработчикам может потребоваться ли мои опасения возникновения уязвимости:
 
-|Граница доверия|Описание:|
+|Граница доверия|Описание|
 |----------------|----------------|
 |Граница виртуальной машины|Приложения, которые изоляции рабочих нагрузок на отдельных виртуальных машинах, которые получают непроверенных данных из другой виртуальной машины может находиться в опасности.|
 |Ядра границ|Драйвер устройства режима ядра, который получает непроверенных данных из процесса режим пользователь без прав администратора могут подвергаться опасности.|

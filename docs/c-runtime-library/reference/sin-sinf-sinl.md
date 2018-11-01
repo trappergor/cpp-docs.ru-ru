@@ -1,10 +1,6 @@
 ---
-title: sin, sinf, sinl | Документы Microsoft
-ms.custom: ''
+title: sin, sinf, sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430366"
 ---
 # <a name="sin-sinf-sinl"></a>sin, sinf, sinl
 
@@ -72,18 +62,18 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Sin** функции возвращают синус *x*. Если *x* больше или равно 263 или меньше чем или равно -263 потере значимости результата.
+**Sin** функции возвращают синус *x*. Если *x* больше или равно 263 или меньше или равно -263, происходит потеря значимости результата.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Нет|_DOMAIN|
+|± QNAN,IND|None|_DOMAIN|
 |± ∞ (sin, sinf, sinl)|INVALID|_DOMAIN|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sin** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **sin** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **sin** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **sin** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

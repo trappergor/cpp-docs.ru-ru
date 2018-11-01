@@ -1,36 +1,27 @@
 ---
-title: C3615 Ошибка компилятора | Документы Microsoft
+title: Ошибка компилятора C3615
 ms.date: 10/24/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3615
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3615
 ms.assetid: 5ce96ba9-3d31-49f3-9aa8-24e5cdf6dcfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1ab43f8e15535614cedf43dba42fef882bf87a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e966295b5ab63350828ddb73d6791a9e30bb5c59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33253399"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652222"
 ---
-# <a name="compiler-error-c3615"></a>C3615 ошибки компилятора
+# <a name="compiler-error-c3615"></a>Ошибка компилятора C3615
 
-> функция constexpr "*функция*" не может быть выражение константы
+> функция constexpr "*функция*" не может быть константным выражением
 
-Функция *функция* не может быть вычислено как `constexpr` во время компиляции. Чтобы быть `constexpr`, функция может вызывать только другой `constexpr` функции.
+Функция *функция* не может быть вычислено как `constexpr` во время компиляции. Чтобы быть `constexpr`, функцию можно вызывать только другой `constexpr` функции.
 
 ## <a name="example"></a>Пример
 
-Visual Studio 2017 г правильно выдает ошибку, если левый операнд в операции условно вычисление является недопустимым в `constexpr` контекста. Приведенный ниже код компилируется в Visual Studio 2015, но не в Visual Studio 2017 г.
+Visual Studio 2017 правильно выдает ошибку, если левый операнд операции условного вычисления является недопустимым в `constexpr` контекста. Следующий код компилируется в Visual Studio 2015, но не в Visual Studio 2017.
 
 ```cpp
 // C3615.cpp
@@ -48,4 +39,4 @@ constexpr bool f(const myarray<1> &arr)
 }
 ```
 
-Чтобы устранить эту проблему, объявите `array::size()` функционировать как `constexpr` или удалите `constexpr` квалификатор из `f`.
+Чтобы устранить эту проблему, либо объявить `array::size()` функционировать как `constexpr` или удалите `constexpr` квалификатора `f`.

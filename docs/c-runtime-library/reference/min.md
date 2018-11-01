@@ -1,10 +1,6 @@
 ---
-title: __min | Документы Майкрософт
-ms.custom: ''
+title: __min
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __min
 apilocation:
@@ -23,24 +19,18 @@ f1_keywords:
 - __min
 - min
 - _min
-dev_langs:
-- C++
 helpviewer_keywords:
 - __min macro
 - min macro
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cc69cb018cda6fc093c570dab86a8df4cf396b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617819"
 ---
 # <a name="min"></a>__min
 
@@ -55,7 +45,7 @@ ms.locfileid: "32399612"
 ### <a name="parameters"></a>Параметры
 
 *a*, *b*<br/>
-Значения любого типа, **<** занимается оператор.
+Значения любого типа, **<** оператор работает на.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -65,7 +55,7 @@ ms.locfileid: "32399612"
 
 **__Min** макрос сравнивает два значения и возвращает значение меньшего. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.
 
-Аргумента, возвращаемого вычисляется дважды макросом. Это может привести к непредвиденным результатам, если аргумент представляет собой выражение, изменяет его значение, когда оно вычисляется, такие как `*p++`.
+Аргумента, возвращаемого вычисляется дважды макросом. Это может привести к непредвиденным результатам, если аргумент является выражение, которое изменяет это значение, когда оно вычисляется, такие как `*p++`.
 
 ## <a name="requirements"></a>Требования
 
