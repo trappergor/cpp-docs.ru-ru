@@ -1,27 +1,17 @@
 ---
-title: '&lt;regex&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;regex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <regex>
-dev_langs:
-- C++
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ff0fffeffd10f382f4d0d4fe6361c2eddac55e3
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38963135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627348"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -47,7 +37,7 @@ ms.locfileid: "38963135"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_regex](../standard-library/basic-regex-class.md)|Создание оболочки для регулярного выражения.|
 |[match_results](../standard-library/match-results-class.md)|Содержит последовательность подстрок соответствия.|
@@ -85,7 +75,7 @@ ms.locfileid: "38963135"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[regex_match](../standard-library/regex-functions.md#regex_match)|Точно соответствует регулярному выражению.|
 |[regex_replace](../standard-library/regex-functions.md#regex_replace)|Заменяет соответствующие регулярные выражения.|
@@ -94,10 +84,10 @@ ms.locfileid: "38963135"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
-|[оператор==](../standard-library/regex-operators.md#op_eq_eq)|Сравнение различных объектов, равенство.|
-|[оператор!=](../standard-library/regex-operators.md#op_neq)|Сравнение различных объектов, неравенство.|
+|[operator==](../standard-library/regex-operators.md#op_eq_eq)|Сравнение различных объектов, равенство.|
+|[operator!=](../standard-library/regex-operators.md#op_neq)|Сравнение различных объектов, неравенство.|
 |[оператор<](../standard-library/regex-operators.md#op_lt)|Сравнение различных объектов, меньше.|
 |[operator\<=](../standard-library/regex-operators.md#op_gt_eq)|Сравнение различных объектов, меньше или равно.|
 |[оператор>](../standard-library/regex-operators.md#op_gt)|Сравнение различных объектов, больше.|

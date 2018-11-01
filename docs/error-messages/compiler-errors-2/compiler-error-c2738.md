@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2738 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2738
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2738
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2738
 ms.assetid: 896b4640-1ee0-4cd8-9910-de3efa30006a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78dad09ba06e3f78007125508aa11de1a76101a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8f8342f07d8062c5a1ec18d17423996c1b0dab39
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664661"
 ---
 # <a name="compiler-error-c2738"></a>Ошибка компилятора C2738
 

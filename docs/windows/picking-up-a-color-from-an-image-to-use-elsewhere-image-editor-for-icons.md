@@ -1,14 +1,8 @@
 ---
-title: Выбор изображении образца цвета из образа для использования в другом фрагменте (редактор изображений для значков) | Документация Майкрософт
-ms.custom: ''
+title: Выбор на изображении образца цвета для использования в другом фрагменте (редактор изображений для значков)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - colors [C++], image
 - images [C++], colors
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - Image editor [C++], colors
 - Select Color tool
 ms.assetid: b2753617-bde6-4e18-a441-20b9fa6d3cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b9f99170e41d3a436f0926e5a9bf59e1240335eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 65994c7242ffcc46cbb4eb23841f7269c9352400
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414034"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519682"
 ---
 # <a name="picking-up-a-color-from-an-image-to-use-elsewhere-image-editor-for-icons"></a>Выбор на изображении образца цвета для использования в другом фрагменте (редактор изображений для значков)
 

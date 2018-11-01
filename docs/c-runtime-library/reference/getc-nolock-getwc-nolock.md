@@ -1,10 +1,6 @@
 ---
-title: _getc_nolock, _getwc_nolock | Документы Майкрософт
-ms.custom: ''
+title: _getc_nolock, _getwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getc_nolock
 - _getwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - getwc_nolock
 - gettc_nolock
 - _getwc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _getc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - gettc_nolock function
 - _gettc_nolock function
 ms.assetid: eb37b272-e177-41c9-b077-12ce7ffd3b88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c727f43748be8beb327115350923ee3ea9994db
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 82c7e1f44dc3177985560319067f9114964218bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465355"
 ---
 # <a name="getcnolock-getwcnolock"></a>_getc_nolock, _getwc_nolock
 
@@ -69,7 +59,7 @@ wint_t _getwc_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Входной поток.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -80,7 +70,7 @@ wint_t _getwc_nolock(
 
 Эти функции аналогичны **getc** и **getwc** за исключением того, что они не блокируют вызывающий поток. Они могут выполняться быстрее, поскольку не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

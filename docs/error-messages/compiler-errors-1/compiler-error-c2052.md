@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2052 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2052
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2052
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2052
 ms.assetid: 922ca43b-b64b-4ef7-9611-c7313be3fd79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b078efbd0d0d99a145bcada6266f8e886e4251a2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2f7d77dbfcf8eb13b1c4b1a5f50750f954fd9281
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018683"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451445"
 ---
 # <a name="compiler-error-c2052"></a>Ошибка компилятора C2052
 

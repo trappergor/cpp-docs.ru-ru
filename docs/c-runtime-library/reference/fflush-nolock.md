@@ -1,10 +1,6 @@
 ---
-title: _fflush_nolock | Документы Майкрософт
-ms.custom: ''
+title: _fflush_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fflush_nolock
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fflush_nolock
 - _fflush_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fflush_nolock function
 - _fflush_nolock function
 - streams, flushing
 - flushing
 ms.assetid: 5e33c4a1-b10c-4001-ad01-210757919291
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 635d0339125483b385a49e8d42cc7c67b2fb92ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 721098899525df02dc3b3d121cf894f8056fcb98
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395595"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464107"
 ---
 # <a name="fflushnolock"></a>_fflush_nolock
 
@@ -56,7 +46,7 @@ int _fflush_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -65,7 +55,7 @@ int _fflush_nolock(
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция представляет собой версию неблокирующих **fflush**. Она идентична **fflush** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эта функция представляет собой неблокирующую версию **fflush**. Она идентична **fflush** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 

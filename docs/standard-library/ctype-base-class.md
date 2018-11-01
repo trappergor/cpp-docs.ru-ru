@@ -1,27 +1,17 @@
 ---
-title: Класс ctype_base | Документы Майкрософт
-ms.custom: ''
+title: Класс ctype_base
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::ctype_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3def685a8cd108666b3e1b8be9314fc7585a9837
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531135"
 ---
 # <a name="ctypebase-class"></a>Класс ctype_base
 
@@ -79,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph** (функция [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, это всегда имеет значение true, **alnum** == ( **альфа-канал** &#124; **цифра** \) и **graph** \= \= \( **alnum** &#124; **пунктуация**).
+Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, он всегда имеет значение true, **alnum** == ( **альфа-канал** &#124; **цифра** \) и **graph** \= \= \( **alnum** &#124; **punct**).
 
 ## <a name="requirements"></a>Требования
 

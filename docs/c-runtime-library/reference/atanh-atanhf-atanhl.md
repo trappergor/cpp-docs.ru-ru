@@ -1,10 +1,6 @@
 ---
-title: atanh, atanhf, atanhl | Документы Майкрософт
-ms.custom: ''
+title: atanh, atanhf, atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435365"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh, atanhf, atanhl
 
@@ -68,7 +58,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Atanh** функции возвращают обратный гиперболический тангенс (гиперболический арктангенс) *x*. Если *x* больше 1 или меньше -1, **errno** равно **EDOM** и результатом является несигнальным значением NaN. Если *x* будет равно 1 или -1, положительная или отрицательная бесконечность возвращается, соответственно, и **errno** равно **ERANGE**.
+**Atanh** функции возвращают обратный гиперболический тангенс (гиперболический арктангенс) *x*. Если *x* больше 1 или меньше -1, **errno** присваивается **EDOM** и результатом является несигнальное значение NaN. Если *x* будет равно 1 или -1, положительная или отрицательная бесконечность возвращается, соответственно, и **errno** присваивается **ERANGE**.
 
 |Входные данные|Исключение SEH|**Matherr** исключение|
 |-----------|-------------------|-------------------------|
@@ -77,7 +67,7 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **atanh** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **atanh** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **atanh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **atanh** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

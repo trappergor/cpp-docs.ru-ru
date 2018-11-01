@@ -1,10 +1,6 @@
 ---
-title: _aligned_offset_malloc | Документы Майкрософт
-ms.custom: ''
+title: _aligned_offset_malloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_offset_malloc
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_offset_malloc
 - aligned_offset_malloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_offset_malloc function
 - aligned_offset_malloc function
 ms.assetid: 447681a3-7c95-4655-86ba-fa3a4ca4c521
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8bcc5fe0d786c7fdb04455f231cc3c8e60b53a22
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 824edfd8bb96d805a030fb205dee62fa9eb4fd06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392849"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644643"
 ---
 # <a name="alignedoffsetmalloc"></a>_aligned_offset_malloc
 
@@ -67,17 +57,17 @@ void * _aligned_offset_malloc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Указатель на блок памяти, которая была выделена или **NULL** при сбое операции.
+Указатель на блок памяти, которая была выделена или **NULL** Если произошел сбой операции.
 
 ## <a name="remarks"></a>Примечания
 
-**_aligned_offset_malloc** полезна в случаях, где необходимы выравнивание для вложенного элемента; например, если выравнивание требовалось на вложенный класс.
+**_aligned_offset_malloc** полезна в случаях, когда необходимо выравнивание вложенного элемента; например, если требуется выравнивание вложенного класса.
 
-**_aligned_offset_malloc** на основе **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
+**_aligned_offset_malloc** основан на **malloc**; Дополнительные сведения см. в разделе [malloc](malloc.md).
 
-**_aligned_offset_malloc** помечен `__declspec(noalias)` и `__declspec(restrict)`, это означает, что функция гарантированно не изменит глобальные переменные и возвращаемого указателя не будет создан псевдоним. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
+**_aligned_offset_malloc** помечен `__declspec(noalias)` и `__declspec(restrict)`, это означает, что функция гарантированно не изменит глобальные переменные и для возвращаемого указателя не имеет псевдонима. Дополнительные сведения см. в разделах [noalias](../../cpp/noalias.md) и [restrict](../../cpp/restrict.md).
 
-Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти или если запрошенный размер был больше **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, в разделе [errno _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Эта функция задает **errno** для **ENOMEM** случае сбоя выделения памяти, или если запрошенный размер был больше, чем **_HEAP_MAXREQ**. Дополнительные сведения о **errno**, см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md). Кроме того **_aligned_offset_malloc** проверяет свои параметры. Если *выравнивание* не является степенью числа 2 или, если *смещение* больше или равно *размер* и не равно нулю, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция возвращает **NULL** и задает **errno** для **EINVAL**.
 
 ## <a name="requirements"></a>Требования
 

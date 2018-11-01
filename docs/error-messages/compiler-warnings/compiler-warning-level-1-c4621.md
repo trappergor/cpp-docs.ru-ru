@@ -1,27 +1,17 @@
 ---
-title: Предупреждение компилятора (уровень 1) C4621 | Документация Майкрософт
-ms.custom: ''
+title: Предупреждение компилятора (уровень 1) C4621
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4621
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4621
 ms.assetid: 40931bd9-cb89-497e-86f0-cec9f016c63c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70b9273e1c3a91db37be6bee2c1c33a0a4e30b17
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d35c4143d5b90c7a6a49337931dad4ba73804f20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555637"
 ---
 # <a name="compiler-warning-level-1-c4621"></a>Предупреждение компилятора (уровень 1) C4621
 
@@ -29,7 +19,7 @@ ms.locfileid: "46090832"
 
 Возникла не постфиксного оператора декремента, определенные для заданного типа. Компилятор использовал перегруженный префиксный оператор.
 
-Это предупреждение можно избежать, определив постфиксный `--` оператор. Создание двух аргументных версии `--` оператор, как показано ниже:
+Это предупреждение можно избежать, определив постфиксный оператор `--` . Создание двух аргументных версии `--` оператор, как показано ниже:
 
 ```
 // C4621.cpp
