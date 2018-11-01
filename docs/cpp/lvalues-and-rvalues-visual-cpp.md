@@ -1,26 +1,16 @@
 ---
-title: 'Значение категории: Значения lvalue и rvalue (Visual C++) | Документация Майкрософт'
-ms.custom: ''
+title: 'Значение категории: Значения lvalue и rvalue (Visual C++)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546358"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>Значения lvalue и rvalue (Visual C++)
 
@@ -30,7 +20,7 @@ ms.locfileid: "48866219"
 
 - Объект *glvalue* представляет собой выражение, вычисление которого определяет удостоверение объекта, битового поля или функции.
 - Объект *prvalue* представляет собой выражение, вычисление которого инициализирует объект или битовому полю или вычисляет значение операнда оператора, как указано в контексте, в котором он отображается.
-- *Xvalue* является glvalue, который обозначает объект или битового поля, ресурсы которых может многократно использоваться (обычно, поскольку он находится в конце его времени существования). [Пример: некоторые типы выражений, включающих ссылки rvalue (8.3.2) yield xvalues, такие как вызов функции, возвращаемый тип которых является ссылкой rvalue или преобразование в ссылочный тип rvalue. ]
+- *Xvalue* является glvalue, который обозначает объект или битового поля, ресурсы которых может многократно использоваться (обычно, поскольку он находится в конце его времени существования). [Пример: некоторые типы выражений, включающих ссылки rvalue (8.3.2) yield xvalues, такие как вызов функции, возвращаемый тип которых является ссылкой rvalue или преобразование в ссылочный тип rvalue. ]
 - *Lvalue* является glvalue, который не является xvalue.
 - *Rvalue* prvalue или xvalue.
 
