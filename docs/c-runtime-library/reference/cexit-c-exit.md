@@ -1,10 +1,6 @@
 ---
-title: _cexit _c_exit | Документы Майкрософт
-ms.custom: ''
+title: _cexit, _c_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _c_exit
 - _cexit
@@ -26,8 +22,6 @@ f1_keywords:
 - c_exit
 - _c_exit
 - cexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - cleanup operations during processes
 - cexit function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b0840ccec85d46a13984b65ebe99e53b968bedeb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395826"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495138"
 ---
 # <a name="cexit-cexit"></a>_cexit, _c_exit
 
@@ -59,7 +49,7 @@ void _c_exit( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_Cexit** вызовы функций, в последней в порядке поступления (LIFO), функции, зарегистрированные **atexit** и **_onexit**. Затем **_cexit** очищает все буферы ввода-вывода и закрытие всех открытых потоков перед возвратом. **_c_exit** совпадает со значением **_exit** , но возвращает вызывающему процессу без обработки **atexit** или **_onexit** или очистки буферов потока. Поведение **выхода**, **_exit**, **_cexit**, и **_c_exit** показано в следующей таблице.
+**_Cexit** вызовы функций, в последний на входе, порядка поступления (LIFO), функции, зарегистрированные **atexit** и **_onexit**. Затем **_cexit** очищает все буферы ввода-вывода и закрывает все открытые потоки перед возвратом. **_c_exit** совпадает со значением **_exit** , но возвращает вызывающему процессу без обработки **atexit** или **_onexit** либо очистки буферов потоков. Поведение **выйти из**, **_exit**, **_cexit**, и **_c_exit** показано в следующей таблице.
 
 |Функция|Поведение|
 |--------------|--------------|
