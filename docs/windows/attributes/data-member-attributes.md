@@ -1,28 +1,17 @@
 ---
-title: Атрибуты членов данных (C++ COM) | Документация Майкрософт
-ms.custom: ''
+title: Атрибуты членов данных (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 5019503bed9dd0012d8aafc1ade4abd3107335ac
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792168"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512935"
 ---
 # <a name="data-member-attributes"></a>Атрибуты членов данных
 
@@ -39,7 +28,7 @@ ms.locfileid: "48792168"
 |[defaultbind](defaultbind.md)|Указывает единственное свойство, представляющим объект наилучшим образом.|
 |[displaybind](displaybind.md)|Указывает свойство, которое должно отображаться пользователю как связываемая.|
 |[id](id.md)|Указывает идентификатор DISPID для функцию-член (свойство или метод, в интерфейс или диспетчерский интерфейс).|
-|[Диапазон](range-cpp.md)|Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.|
+|[range](range-cpp.md)|Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.|
 |[rdx](rdx.md)|Создает раздел реестра или изменяет существующий раздел реестра.|
 |[readonly](readonly-cpp.md)|Запрещает назначение элементу данных.|
 |[requestedit](requestedit.md)|Указывает, что свойство поддерживает `OnRequestEdit` уведомлений.|

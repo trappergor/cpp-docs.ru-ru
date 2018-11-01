@@ -1,10 +1,6 @@
 ---
-title: _close | Документы Майкрософт
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394201"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528028"
 ---
 # <a name="close"></a>_close
 
@@ -65,9 +55,9 @@ int _close(
 
 **_Close** функция закрывает файл, связанный с *fd*.
 
-Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, нет необходимости вызывать **CloseHandle** Если файл был открыт с помощью функции Win32 **CreateFile** и преобразуется в файле дескриптора с помощью **_open_osfhandle**.
+Дескриптор файла и соответствующий обработчик файлов операционной системы закрываются. Таким образом, нет необходимости вызывать **CloseHandle** Если файл был открыт с помощью функции Win32 **CreateFile** и преобразован в дескриптор файлов с помощью **_open_osfhandle**.
 
-Эта функция проверяет свои параметры. Если *fd* имеет недопустимый идентификатор файла, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и **errno** равно **EBADF**.
+Эта функция проверяет свои параметры. Если *fd* является недопустимым дескриптором, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают -1 и **errno** присваивается **значение EBADF**.
 
 ## <a name="requirements"></a>Требования
 

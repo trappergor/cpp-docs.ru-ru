@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcpy_s, _mbsnbcpy_s_l | Документы Майкрософт
-ms.custom: ''
+title: _mbsnbcpy_s, _mbsnbcpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcpy_s_l
 - _mbsnbcpy_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbcpy_s
 - mbsnbcpy_s
 - _mbsnbcpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsnbcpy_s function
 - tcsncpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _mbsnbcpy_s_l function
 - _tcsncpy_s function
 ms.assetid: dfff64ab-fe6f-49c4-99ba-75014e2b0cd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9475609d304b6a3e49c2f71073c4d06c0380160
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00f1fe7a6deb104a4f226e42858764f5649c52ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404121"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493500"
 ---
 # <a name="mbsnbcpys-mbsnbcpysl"></a>_mbsnbcpy_s, _mbsnbcpy_s_l
 
@@ -106,22 +96,22 @@ errno_t _mbsnbcpy_s_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль при успешном завершении; **EINVAL** Если был передан неправильный параметр.
+Нуль в случае успеха; **EINVAL** Если был передан недопустимый параметр.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsnbcpy_s** функции копии *число* байтов из *strSource* для *strDest*. Если *число* превышает размер *strDest*, либо входные строки является указателем null, или *sizeInBytes* или *число* равно 0, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **EINVAL**. Если строки источника и назначения перекрываются, то поведение **_mbsnbcpy_s** не определено.
+**_Mbsnbcpy_s** функции копий *число* байтов из *strSource* для *strDest*. Если *число* превышает размер *strDest*, либо из входных строк является указателем null или *sizeInBytes* или *число* равно 0, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **EINVAL**. Если строки источника и назначения перекрываются, поведение **_mbsnbcpy_s** не определено.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 > [!NOTE]
-> В отличие от версии небезопасные этой функции **_mbsnbcpy_s** не выполните null заполнения в строке, а значение всегда равно null завершает строку.
+> В отличие от от небезопасной версии этой функции **_mbsnbcpy_s** не выполняет заполнение значениями null и значение null, всегда завершает строку.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
