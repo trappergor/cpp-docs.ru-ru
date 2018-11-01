@@ -1,10 +1,6 @@
 ---
-title: exit, _Exit, _exit | Документы Майкрософт
-ms.custom: ''
+title: exit, _Exit, _exit
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _exit
 - exit
@@ -28,24 +24,18 @@ f1_keywords:
 - process/_Exit
 - stdlib/exit
 - stdlib/_Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - _exit function
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb5bd1ef619c899a6b0faab33104a579fdb9f1d0
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451757"
 ---
 # <a name="exit-exit-exit"></a>exit, _Exit, _exit
 
@@ -81,7 +71,7 @@ void _exit(
 
 **Выйти из**, **_Exit**, **_exit**, **quick_exit**, **_cexit**, и **_c_exit** функции ведут себя следующим образом.
 
-|Функция|Описание:|
+|Функция|Описание|
 |--------------|-----------------|
 |**exit**|Выполняет полные процедуры завершения библиотеки C, завершает процесс и предоставляет полученный код состояния среде узла.|
 |**_Exit**|Выполняет минимальные процедуры завершения библиотеки C, завершает процесс и предоставляет полученный код состояния среде узла.|
