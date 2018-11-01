@@ -1,11 +1,6 @@
 ---
-title: _fread_nolock_s2 | Документы Майкрософт
-ms.custom: ''
+title: _fread_nolock_s2
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _fread_nolock_s
 apilocation:
@@ -24,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398254"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580809"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -68,7 +57,7 @@ size_t _fread_nolock_s(
 *Значение elementCount*<br/>
 Максимальное число читаемых элементов.
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -77,7 +66,7 @@ size_t _fread_nolock_s(
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция представляет собой версию неблокирующих **fread_s**. Она идентична **fread_s** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эта функция представляет собой неблокирующую версию **fread_s**. Она идентична **fread_s** , но не защищены от помех со стороны других потоков. Эта функция может выполняться быстрее, поскольку она не создает дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эту функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 
