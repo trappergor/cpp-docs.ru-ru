@@ -1,27 +1,17 @@
 ---
-title: '&lt;fstream&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;fstream&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <fstream>
-dev_langs:
-- C++
 helpviewer_keywords:
 - fstream header
 ms.assetid: 660de351-0489-41df-b239-40e0cdcab46b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b716248c6fe9d0734cd580800c9254cf01f2a17
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: fcfb020bab2cb85b13caac9cdceee2359a7294d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38962878"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476574"
 ---
 # <a name="ltfstreamgt"></a>&lt;fstream&gt;
 
@@ -36,7 +26,7 @@ ms.locfileid: "38962878"
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[filebuf](../standard-library/fstream-typedefs.md#filebuf)|Тип `basic_filebuf` специализированный на **char** параметров шаблона.|
 |[fstream](../standard-library/fstream-typedefs.md#fstream)|Тип `basic_fstream` специализированный на **char** параметров шаблона.|
@@ -49,7 +39,7 @@ ms.locfileid: "38962878"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_filebuf](../standard-library/basic-filebuf-class.md)|Класс шаблона описывает буфер потока, который управляет передачей элементов типа `Elem`, признаки символов которого определяются с помощью класса `Tr`, в последовательность элементов, сохраненную во внешнем файле, и из нее.|
 |[basic_fstream](../standard-library/basic-fstream-class.md)|Класс шаблона описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [basic_filebuf](../standard-library/basic-filebuf-class.md)\<**Elem**,  **TR**>, с элементами типа `Elem`, признаки символов определяются классом `Tr`.|

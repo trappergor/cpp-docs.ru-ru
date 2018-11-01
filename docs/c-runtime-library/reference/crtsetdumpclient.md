@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDumpClient | Документы Майкрософт
-ms.custom: ''
+title: _CrtSetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDumpClient
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDumpClient
 - CrtSetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtSetDumpClient function
 - CrtSetDumpClient function
 ms.assetid: f3dd06d0-c331-4a12-b68d-25378d112033
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d5fecc90b4b7259f1440a0a0d86277c769c4e16
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09f319f6298dbec6b229b2923bd86fc9b50314de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397227"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50470752"
 ---
 # <a name="crtsetdumpclient"></a>_CrtSetDumpClient
 
-Устанавливает определяемую приложением функцию для помещения в дамп **_CLIENT_BLOCK** текстовые блоки памяти (только отладочная версия).
+Устанавливает определяемую приложением функцию для помещения в дамп **_CLIENT_BLOCK** введите блоки памяти (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -60,21 +50,21 @@ _CRT_DUMP_CLIENT _CrtSetDumpClient( _CRT_DUMP_CLIENT dumpClient );
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtSetDumpClient** функция позволяет приложению для вывода объектов, хранящихся в его собственную функцию-обработчик **_CLIENT_BLOCK** блоков памяти в C времени выполнения отладки процесса дампа памяти. В результате каждый раз, когда Отладка дампа функции, такие как [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) или [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) дампов **_CLIENT_BLOCK** блок памяти, приложения также вызывается функция дампа. **_CrtSetDumpClient** предоставляет приложению простой метод для обнаружения утечек памяти и проверке или содержимое данные, хранящиеся в reporting **_CLIENT_BLOCK** блоков. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtSetDumpClient** удаляются на этапе предварительной обработки.
+**_CrtSetDumpClient** функция позволяет приложению прикреплять собственную функцию для дампа объектов, хранящихся в **_CLIENT_BLOCK** блоках памяти времени выполнения C процесса дампа памяти отладки. Таким образом, каждый раз, когда отладки дампа функции, такие как [_CrtMemDumpAllObjectsSince](crtmemdumpallobjectssince.md) или [_CrtDumpMemoryLeaks](crtdumpmemoryleaks.md) дампов **_CLIENT_BLOCK** блок памяти, приложения также вызывается функция дампа. **_CrtSetDumpClient** предоставляет приложению простой метод для обнаружения утечек памяти и проверке или reporting содержимое данных, хранящихся в **_CLIENT_BLOCK** блоков. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtSetDumpClient** удаляются во время предварительной обработки.
 
-**_CrtSetDumpClient** функция устанавливает новые определяемые приложением дампа функции, указанной в *dumpClient* и возвращает дампа ранее определенную функцию. Пример функции дампа клиентского блока выглядит следующим образом:
+**_CrtSetDumpClient** функция устанавливает новую функцию дампа, определяемые приложением, указанную в *dumpClient* и возвращает функцию дампа, определенную ранее. Пример функции дампа клиентского блока выглядит следующим образом:
 
 ```C
 void DumpClientFunction( void *userPortion, size_t blockSize );
 ```
 
-*UserPortion* аргумент — указатель на начало данных пользовательской части блока памяти и *blockSize* указывает размер выделенной памяти блока в байтах. Клиентская функция дампа блок должен возвращать **void**. Указатель на функцию дампа клиента, передаваемое **_CrtSetDumpClient** относится к типу **_CRT_DUMP_CLIENT**, как определено в Crtdbg.h:
+*UserPortion* аргумент — указатель на начало данных пользовательской части блока памяти и *blockSize* определяет объем памяти, выделенного блока в байтах. Функция дампа клиентского блока должен возвращать **void**. Указатель на функцию, который передается **_CrtSetDumpClient** имеет тип **_CRT_DUMP_CLIENT**, как определено в Crtdbg.h:
 
 ```C
 typedef void (__cdecl *_CRT_DUMP_CLIENT)( void *, size_t );
 ```
 
-Дополнительные сведения о функциях, работающих на **_CLIENT_BLOCK** блоков памяти типа см. в разделе [функции ловушки клиентского блока](/visualstudio/debugger/client-block-hook-functions). Функцию [_CrtReportBlockType](crtreportblocktype.md) можно использовать для получения сведений о типах и подтипов блоков.
+Дополнительные сведения о функциях, работающих с **_CLIENT_BLOCK** блоков памяти типа, см. в разделе [функции-ловушки клиентского блока](/visualstudio/debugger/client-block-hook-functions). Функцию [_CrtReportBlockType](crtreportblocktype.md) можно использовать для получения сведений о типах и подтипов блоков.
 
 ## <a name="requirements"></a>Требования
 
