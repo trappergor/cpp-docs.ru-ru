@@ -1,27 +1,17 @@
 ---
-title: Использование списков изображений в элементе управления поля Расширенное поле со списком | Документация Майкрософт
-ms.custom: ''
+title: Использование списков изображений в элементе управления "Расширенное поле со списком"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - image lists [MFC], combo boxes
 - extended combo boxes [MFC], images
 - images [MFC], combo box items
 ms.assetid: dfff25fe-af70-47a2-8032-3901d1e6842d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15b069c1075a1b2b7db484da588684fca280ef29
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 38f51205eea7220f0efbc2d8821fcb2b423e0add
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50083403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504605"
 ---
 # <a name="using-image-lists-in-an-extended-combo-box-control"></a>Использование списков изображений в элементе управления "Расширенное поле со списком"
 

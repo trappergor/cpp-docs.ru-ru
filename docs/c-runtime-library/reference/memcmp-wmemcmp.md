@@ -1,10 +1,6 @@
 ---
-title: memcmp, wmemcmp | Документы Майкрософт
-ms.custom: ''
+title: memcmp, wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610478"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp, wmemcmp
 
@@ -69,21 +59,21 @@ int wmemcmp(
 Второй буфер.
 
 *count*<br/>
-Число сравниваемых символов. (Сравнивает байт для **memcmp**, расширенных символах для **wmemcmp**).
+Число сравниваемых символов. (Сравнивает байты для **memcmp**, расширенных символах для **wmemcmp**).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Возвращаемое значение показывает связь между буферами.
 
-|Возвращаемое значение|Связь между первым *число* символов buf1 и buf2|
+|Возвращаемое значение|Связь первого *число* байтами buf1 и buf2|
 |------------------|---------------------------------------------------------------|
 |< 0|*buffer1* меньше, чем *buffer2*|
 |0|*buffer1* идентичен *buffer2*|
-|> 0|*buffer1* больше *buffer2*|
+|> 0|*buffer1* больше, чем *buffer2*|
 
 ## <a name="remarks"></a>Примечания
 
-Сравнивает первые *число* символов *buffer1* и *buffer2* и возвращает значение, которое показывает их связь. Знак ненулевого возвращаемого значения соответствует знаку разности между первой отличающейся парой значений в буферах. Значения интерпретируются как **неподписанные** **char** для **memcmp**и в качестве **wchar_t** для **wmemcmp**.
+Сравнивает первые *число* символов *buffer1* и *buffer2* и возвращает значение, которое показывает их связь. Знак ненулевого возвращаемого значения соответствует знаку разности между первой отличающейся парой значений в буферах. Значения интерпретируются как **без знака** **char** для **memcmp**и в качестве **wchar_t** для **wmemcmp**.
 
 ## <a name="requirements"></a>Требования
 

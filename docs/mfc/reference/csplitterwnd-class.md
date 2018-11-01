@@ -1,10 +1,6 @@
 ---
-title: Класс CSplitterWnd | Документация Майкрософт
-ms.custom: ''
+title: Класс CSplitterWnd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CSplitterWnd
 - AFXEXT/CSplitterWnd
@@ -41,8 +37,6 @@ f1_keywords:
 - AFXEXT/CSplitterWnd::OnDraw
 - AFXEXT/CSplitterWnd::OnDrawSplitter
 - AFXEXT/CSplitterWnd::OnInvertTracker
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSplitterWnd [MFC], CSplitterWnd
 - CSplitterWnd [MFC], ActivateNext
@@ -78,16 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600516"
 ---
 # <a name="csplitterwnd-class"></a>Класс CSplitterWnd
 
@@ -103,13 +93,13 @@ class CSplitterWnd : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CSplitterWnd::CSplitterWnd](#csplitterwnd)|Вызов для создания `CSplitterWnd` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CSplitterWnd::ActivateNext](#activatenext)|Выполняет команды Next Pane и Previous Pane.|
 |[CSplitterWnd::CanActivateNext](#canactivatenext)|Проверяет, является ли команды Next Pane и Previous Pane сейчас невозможно.|
@@ -143,7 +133,7 @@ class CSplitterWnd : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CSplitterWnd::OnDraw](#ondraw)|Вызывается платформой для отрисовки окна разделителя.|
 |[CSplitterWnd::OnDrawSplitter](#ondrawsplitter)|Выполняет отрисовку рисунка окна разделителя.|
@@ -814,7 +804,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства, в котором выполняется отрисовка. Если *pDC* имеет значение NULL, затем [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) вызывается с платформой и не разбиение рисуется окна.
 
 *nType*<br/>
@@ -1039,7 +1029,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
