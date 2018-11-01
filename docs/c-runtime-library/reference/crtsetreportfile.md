@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportFile | Документы Майкрософт
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464250"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
-После использования [_CrtSetReportMode](crtsetreportmode.md) для указания **_CRTDBG_MODE_FILE**, можно указать дескриптор файла для получения текста сообщения. **_CrtSetReportFile** также используется [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) для указания назначения текста (только отладочная версия).
+После использования [_CrtSetReportMode](crtsetreportmode.md) для указания **_CRTDBG_MODE_FILE**, можно указать дескриптор файла для получения текста сообщения. **_CrtSetReportFile** также используется процедурой [_CrtDbgReport, _CrtDbgReportW](crtdbgreport-crtdbgreportw.md) для указания места назначения текста (только отладочная версия).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -54,21 +44,21 @@ _HFILE _CrtSetReportFile(
 
 ### <a name="parameters"></a>Параметры
 
-*reportType функции*<br/>
+*reportType*<br/>
 Тип отчета: **_CRT_WARN**, **_CRT_ERROR**, и **_CRT_ASSERT**.
 
 *reportFile*<br/>
-Новый файл отчета для *reportType функции*.
+Новый файл отчета для *reportType*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном завершении **_CrtSetReportFile** возвращает предыдущий файл отчета, определенный для типа отчета, указанного в *reportType функции*. Если передается недопустимое значение *reportType функции*, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **_CRTDBG_HFILE_ERROR**. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+При успешном завершении **_CrtSetReportFile** возвращает предыдущий файл отчета, определенная для типа отчета, указанного в *reportType*. Если передается недопустимое значение *reportType*, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает **_CRTDBG_HFILE_ERROR**. Дополнительные сведения см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtSetReportFile** используется с [_CrtSetReportMode](crtsetreportmode.md) для определения назначения (назначений) для определенного типа отчета созданные **_CrtDbgReport**. Когда **_CrtSetReportMode** был вызван для назначения **_CRTDBG_MODE_FILE** reporting режим для определенного типа отчета, **_CrtSetReportFile** следует вызвать для Определите конкретный файл или поток для использования в качестве назначения. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы **_CrtSetReportFile** удаляются на этапе предварительной обработки.
+**_CrtSetReportFile** используется с [_CrtSetReportMode](crtsetreportmode.md) функции для определения назначения (назначений) для определенного типа отчета созданные **_CrtDbgReport**. Когда **_CrtSetReportMode** был вызван для назначения **_CRTDBG_MODE_FILE** reporting режим для определенного типа отчета, **_CrtSetReportFile** затем должен быть вызван определения конкретного файла или потока, используемого в качестве места назначения. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtSetReportFile** удаляются во время предварительной обработки.
 
-В следующем списке приведены варианты для *reportFile* и соответствующее поведение функции **_CrtDbgReport**. Эти параметры задаются в виде битовых флагов в файле Crtdbg.h.
+В следующем списке приведены доступных вариантов для *reportFile* и соответствующее поведение функции **_CrtDbgReport**. Эти параметры задаются в виде битовых флагов в файле Crtdbg.h.
 
 - **Дескриптор файла**
 
@@ -88,7 +78,7 @@ _HFILE _CrtSetReportFile(
 
 - **_CRTDBG_FILE_STDERR**
 
-   Записывает сообщение в **stderr**, который может быть перенаправлен следующим образом:
+   Записывает сообщение в **stderr**, которое может быть переадресовано следующим образом:
 
    ```C
    freopen( "c:\\log2.txt", "w", stderr);
@@ -106,7 +96,7 @@ _HFILE _CrtSetReportFile(
 
    Возвращает текущий режим отчетов.
 
-Файлом отчета, используемым каждым типом отчетов, можно управлять отдельно. Например, можно указать, что *reportType функции* из **_CRT_ERROR** сообщает об **stderr**, пока *reportType функции* из **_CRT_ASSERT** отчеты для дескриптора файла, определяемых пользователем или поток.
+Файлом отчета, используемым каждым типом отчетов, можно управлять отдельно. Например, можно указать, что *reportType* из **_CRT_ERROR** будут передаваться **stderr**, хотя *reportType* из **_CRT_ASSERT** будут передаваться в дескриптор пользовательский файл или поток.
 
 ## <a name="requirements"></a>Требования
 
@@ -114,7 +104,7 @@ _HFILE _CrtSetReportFile(
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консоли, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 **Библиотеки:** только отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
 
