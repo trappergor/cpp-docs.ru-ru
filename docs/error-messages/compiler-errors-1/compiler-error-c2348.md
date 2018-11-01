@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2348 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2348
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2348
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2348
 ms.assetid: 4c4d701f-ccf1-46fe-9ddb-3f341684f269
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7d30253e23fd22ae721268f94a0fecf158a68c3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 379bcc7f37ff8942e4e45c6a6188438400937875
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105002"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50526445"
 ---
 # <a name="compiler-error-c2348"></a>Ошибка компилятора C2348
 

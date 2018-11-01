@@ -1,10 +1,6 @@
 ---
-title: _rmdir, _wrmdir | Документы Майкрософт
-ms.custom: ''
+title: _rmdir, _wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511128"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir, _wrmdir
 
@@ -67,7 +57,7 @@ int _wrmdir(
 
 ### <a name="parameters"></a>Параметры
 
-*каталог*<br/>
+*DirName*<br/>
 Путь к каталогу, который следует удалить.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -86,9 +76,9 @@ int _wrmdir(
 
 **_Rmdir** функция удаляет каталог, заданный параметром *dirname*. Каталог должен быть пустым и не должен являться текущим рабочим или корневым каталогом.
 
-**_wrmdir** — это двухбайтовая версия **_rmdir**; *dirname* аргумент **_wrmdir** представляет собой строку расширенных символов. **_wrmdir** и **_rmdir** ведут себя идентично.
+**_wrmdir** — это двухбайтовая версия **_rmdir**; *dirname* аргумент **_wrmdir** — строка расширенных символов. **_wrmdir** и **_rmdir** идентично в противном случае.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
