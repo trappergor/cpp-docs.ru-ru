@@ -1,10 +1,6 @@
 ---
-title: _execle, _wexecle | Документы Майкрософт
-ms.custom: ''
+title: _execle, _wexecle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execle
 - _wexecle
@@ -25,24 +21,18 @@ f1_keywords:
 - wexecle
 - _execle
 - _wexecle
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecle function
 - execle function
 - _wexecle function
 - _execle function
 ms.assetid: 75efa9c5-96b7-4e23-acab-06258901f63a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 519cdb78132c50513ae3197985de7faaceff7c91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbd84dd8d8e150a063dad4dc89a572c317bce544
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400646"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530524"
 ---
 # <a name="execle-wexecle"></a>_execle, _wexecle
 
@@ -75,7 +65,7 @@ intptr_t _wexecle(
 *cmdname*<br/>
 Путь к выполняемому файлу.
 
-*arg0*,... *argn*<br/>
+*заполнитель с номером 0*,... *argn*<br/>
 Список указателей на параметры.
 
 *envp*<br/>
@@ -83,7 +73,7 @@ intptr_t _wexecle(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку в этом случае **errno** имеет значение глобальной переменной.
+В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку, в этом случае **errno** устанавливается глобальная переменная.
 
 |**errno** значение|Описание|
 |-------------------|-----------------|
@@ -101,7 +91,7 @@ intptr_t _wexecle(
 
 Каждая из этих функций загружает и выполняет новый процесс и передает каждый аргумент командной строки как отдельный параметр, а также передает массив указателей на параметры среды.
 
-**_Execle** функции проверяют свои параметры. Если *cmdname* или *arg0* является нулевым указателем или пустой строкой, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1. Ни один новый процесс не запущен.
+**_Execle** функции проверяют свои параметры. Если *cmdname* или *заполнитель с номером 0* является пустым указателем или пустой строкой, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1. Ни один новый процесс не запущен.
 
 ## <a name="requirements"></a>Требования
 
