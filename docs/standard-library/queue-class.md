@@ -1,10 +1,6 @@
 ---
-title: Класс queue | Документы Майкрософт
-ms.custom: ''
+title: Класс queue
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - queue/std::queue::container_type
 - queue/std::queue::size_type
@@ -15,8 +11,6 @@ f1_keywords:
 - queue/std::queue::pop
 - queue/std::queue::push
 - queue/std::queue::size
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::queue [C++], container_type
 - std::queue [C++], size_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 20566e34200b5c0e89b532d7096821d58a5f564f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103707"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429735"
 ---
 # <a name="queue-class"></a>Класс queue
 
@@ -52,7 +42,7 @@ class queue
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*<br/>
+*Type*<br/>
 Тип данных элемента для сохранения в очереди.
 
 *Контейнер*<br/>
@@ -123,7 +113,7 @@ const_reference back() const;
 
 Если возвращаемое значение `back` присвоено `const_reference`, то объект очереди изменить нельзя. Если возвращаемое значение `back` назначается `reference`, то объект очереди можно изменить.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустой очереди возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустой очереди возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 
@@ -235,7 +225,7 @@ const_reference front() const;
 
 Функция-член возвращает `reference` на первый элемент управляемой последовательности, который не должен быть пустым.
 
-При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустой очереди возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Проверяемые итераторы](../standard-library/checked-iterators.md).
+При компиляции с помощью [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), для которого задано значение 1 или 2, при попытке доступа к элементу в пустой очереди возникнет ошибка времени выполнения.  Дополнительные сведения см. в разделе [Checked Iterators](../standard-library/checked-iterators.md) .
 
 ### <a name="example"></a>Пример
 

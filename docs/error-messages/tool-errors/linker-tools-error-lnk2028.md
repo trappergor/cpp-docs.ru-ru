@@ -1,41 +1,31 @@
 ---
-title: Ошибка средств компоновщика LNK2028 | Документы Microsoft
-ms.custom: ''
+title: Ошибка средств компоновщика LNK2028
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2028
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2028
 ms.assetid: e2b03293-6066-464d-a050-ce747bcf7f0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9c8eaa03927f51acd3c3d84731e9ef2b282b7c6
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ed2dc1a95d4dd7c447b360da21b5046e20f79083
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643681"
 ---
 # <a name="linker-tools-error-lnk2028"></a>Ошибка средств компоновщика LNK2028
 
-«*exported_function*» (*decorated_name*) ссылка в функции "*function_containing_function_call*» (*decorated_name*)
+"*exported_function*" (*decorated_name*) на которые ссылается функция "*function_containing_function_call*" (*decorated_name*)
 
 ## <a name="remarks"></a>Примечания
 
-При попытке импортировать собственную функцию в чистом образе, следует помнить, что неявные соглашения о вызовах различаются внутренней и чистой компиляции.
+При попытке импортировать неуправляемую функцию в чистом образе, помните, что неявные соглашения о вызовах различаются между внутренней и чистой компиляции.
 
-**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017 г.
+**/CLR: pure** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
 ## <a name="example"></a>Пример
 
-Этот пример кода приводит к возникновению ошибки компонента с экспортированного native, функции которого соглашение о вызовах является неявно [__cdecl](../../cpp/cdecl.md).
+Этот пример кода создает компонент с функцией экспортированного, native, которого соглашение о вызовах является неявно [__cdecl](../../cpp/cdecl.md).
 
 ```cpp
 // LNK2028.cpp
@@ -47,7 +37,7 @@ __declspec(dllexport) int func() {
 
 ## <a name="example"></a>Пример
 
-В следующем примере создается чистый клиент, использующий внутреннюю функцию. Тем не менее соглашение о вызовах в **/CLR: pure** — [__clrcall](../../cpp/clrcall.md). Следующий пример приводит к возникновению ошибки LNK2028.
+В следующем примере создается чистый клиент, использующий внутреннюю функцию. Тем не менее соглашение о вызовах в разделе **/CLR: pure** — [__clrcall](../../cpp/clrcall.md). Следующий пример приводит к возникновению ошибки LNK2028.
 
 ```cpp
 // LNK2028_b.cpp

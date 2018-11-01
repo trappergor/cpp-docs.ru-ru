@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l | Документы Майкрософт
-ms.custom: ''
+title: _vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628375"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p, _vsprintf_p_l, _vswprintf_p, _vswprintf_p_l
 
@@ -114,19 +104,19 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_vsprintf_p** и **_vswprintf_p** возвращают количество записанных символов, не включая завершающий символ null или отрицательное значение, если возникает ошибка вывода.
+**_vsprintf_p** и **_vswprintf_p** возвращают число записанных символов, не включая завершающий нуль-символ, или отрицательное значение, если произошла ошибка вывода.
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих функций принимает указатель на список аргументов и затем форматирует и записывает указанные данные в памяти, на который указывает *буфера*.
+Каждая из этих функций принимает указатель на список аргументов и затем форматирует и записывает указанные данные в память, на которые указывают *буфера*.
 
-Эти функции отличаются от **vsprintf_s** и **vswprintf_s** только в том, что они поддерживают позиционных параметров. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Эти функции отличаются от **vsprintf_s** и **vswprintf_s** только в том, что они поддерживают позиционные параметры. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-Если *буфера* или *формат* параметры **NULL** указатели, если число равно нулю, или если строка формата содержит недопустимое форматирование символов, недопустимый параметр вызывается обработчик, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Если *буфера* или *формат* параметры являются **NULL** указатели, если счетчик равен нулю, или если строка форматирования содержит недопустимые форматирования символов, недопустимых параметров вызывается обработчик, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
