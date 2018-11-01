@@ -1,10 +1,6 @@
 ---
-title: Класс CMFCRibbonBaseElement | Документация Майкрософт
-ms.custom: ''
+title: Класс CMFCRibbonBaseElement
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonBaseElement
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement
@@ -121,8 +117,6 @@ f1_keywords:
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::UpdateTooltipInfo
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnProcessKey
 - AFXBASERIBBONELEMENT/CMFCRibbonBaseElement::OnSetFocus
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], AddToKeyList
 - CMFCRibbonBaseElement [MFC], AddToListBox
@@ -238,16 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ac668ab85b9a76a5cc0101d0a373fa310128801
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514365"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 
@@ -404,7 +394,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonBaseElement` класса. В примере показано получение `CMFCRibbonBaseElement` объекта из `CMFCRibbonStatusBar` класса, задать описание элемента ленты, текст, задайте значение свойства keytip и текст подсказки для элемента ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonBaseElement` . В примере показано получение `CMFCRibbonBaseElement` объекта из `CMFCRibbonStatusBar` класса, задать описание элемента ленты, текст, задайте значение свойства keytip и текст подсказки для элемента ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]
@@ -587,7 +577,7 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *type*<br/>
@@ -695,7 +685,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -827,7 +817,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -858,7 +848,7 @@ virtual CRect GetKeyTipRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *bIsMenu*<br/>
@@ -882,7 +872,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1069,7 +1059,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1091,7 +1081,7 @@ virtual CSize GetSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1616,7 +1606,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -1649,7 +1639,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -1687,7 +1677,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1707,7 +1697,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1730,7 +1720,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *Rect*<br/>
@@ -1758,7 +1748,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для элемента ленты.
 
 *strText*<br/>
@@ -2245,7 +2235,7 @@ virtual BOOL StretchToWholeRow(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 *nHeight*<br/>
