@@ -1,29 +1,19 @@
 ---
-title: '&lt;языковой стандарт&gt; | Документация Майкрософт'
-ms.custom: ''
+title: '&lt;locale&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <locale>
 - locale/std::<locale>
 - std::<locale>
-dev_langs:
-- C++
 helpviewer_keywords:
 - locale header
 ms.assetid: ca56f9d2-7128-44da-8df1-f4c78c17fbf2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ee98361507236744608145dde6e326964a71b82
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 54d6f5306f4517c6450f36051df51385d8d8f578
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494308"
 ---
 # <a name="ltlocalegt"></a>&lt;locale&gt;
 
@@ -38,7 +28,7 @@ ms.locfileid: "38953581"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[has_facet](../standard-library/locale-functions.md#has_facet)|Тестирует наличие того или иного аспекта в указанном языковом стандарте.|
 |[isalnum](../standard-library/locale-functions.md#isalnum)|Проверяет, является ли элемент языкового стандарта буквенным или цифровым символом.|
@@ -58,7 +48,7 @@ ms.locfileid: "38953581"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[codecvt](../standard-library/codecvt-class.md)|Класс шаблона, который предоставляет аспект, применяемый для преобразования внутренней кодировки символов во внешнюю и наоборот.|
 |[codecvt_base](../standard-library/codecvt-base-class.md)|Базовый класс для класса codecvt, используемый для определения типа перечисления называются `result`, которое используется в качестве возвращаемого типа для функций-членов аспекта, чтобы показать результат преобразования.|
@@ -93,5 +83,5 @@ ms.locfileid: "38953581"
 ## <a name="see-also"></a>См. также
 
 [Кодовые страницы](../c-runtime-library/code-pages.md)<br/>
-[Имени языкового стандарта, языка и строк страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
+[Сведения о строках имени языкового стандарта, языка, а также страны или региона](../c-runtime-library/locale-names-languages-and-country-region-strings.md)<br/>
 [Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

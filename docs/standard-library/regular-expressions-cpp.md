@@ -1,27 +1,17 @@
 ---
-title: Регулярные выражения (C++) | Документы Майкрософт
-ms.custom: ''
+title: Регулярные выражения (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, regular expressions
 - regular expressions, Visual C++
 - regular expressions
 ms.assetid: aafe202a-1d96-4b36-a270-d676dfd3c51c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca3d636b1dffdb3237fb94fade41c90057543b9d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: dafbe7c7ba10db2b0f34fdc6065c1475d63be284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443472"
 ---
 # <a name="regular-expressions-c"></a>Регулярные выражения (C++)
 
@@ -253,7 +243,7 @@ ms.locfileid: "48861568"
 
 Класс символов в выражении в квадратных скобках добавляет все символы в именованном классе в набор символов, который определяется выражением в квадратных скобках. Чтобы создать класс символов, используйте символ"[:", после которого необходимо указать имя класса, а затем — символ ":]". На внутреннем уровне имена классов символов распознаются путем обращения к функции `id = traits.lookup_classname`. Символ `ch` принадлежит к одному классу, если `traits.isctype(ch, id)` возвращает значение "true". Шаблон `regex_traits` по умолчанию поддерживает имена классов в следующей таблице.
 
-|Имя класса|Описание:|
+|Имя класса|Описание|
 |----------------|-----------------|
 |"alnum"|строчные буквы, прописные буквы и цифры|
 |"alpha"|строчные буквы и прописные буквы|

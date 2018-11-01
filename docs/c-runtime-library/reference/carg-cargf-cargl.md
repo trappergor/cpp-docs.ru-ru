@@ -1,11 +1,6 @@
 ---
-title: carg, cargf, cargl | Документы Майкрософт
-ms.custom: ''
+title: carg, cargf, cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393476"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665599"
 ---
 # <a name="carg-cargf-cargl"></a>carg, cargf, cargl
 
@@ -79,11 +68,11 @@ long double cargl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Аргумент (этап) *z*. Результатом является в интервале [-π, + π].
+Аргумент (также известный как этап) *z*. Результат находится в интервале [-π, + π].
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **carg** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **длинные** **двойные** значения. В программе на языке C **carg** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **carg** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long** **двойные** значения. В программе на языке C **carg** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: _CrtDbgBreak | Документы Майкрософт
-ms.custom: ''
+title: _CrtDbgBreak
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDbgBreak
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtDbgBreak
 - CrtDbgBreak
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtDbgBreak function
 - _CrtDbgBreak function
 ms.assetid: 01f8b4a2-a2c7-4e1f-9f39-e573b4a7871f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2141b3c70755eb03e77c8f66feed482b5e86b529
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4cf64daaea3193f7cf6b3aaa0b1aab031f104704
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478307"
 ---
 # <a name="crtdbgbreak"></a>_CrtDbgBreak
 
@@ -55,7 +45,7 @@ void _CrtDbgBreak( void );
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtDbgBreak** функция задает точку останова для отладки в конкретной строке кода котором эта функция находится. Эта функция используется в режиме отладки только и зависит от **_DEBUG** предварительного определения.
+**_CrtDbgBreak** функция устанавливает точку останова отладки в той строке кода, где находится функция. Эта функция используется только в режиме отладки и зависит от **_DEBUG** определенного ранее.
 
 Дополнительные сведения о других допускающих подключение функциях среды выполнения и написании собственных определяемых клиентом функциях-ловушках см. в разделе [Запись собственных функций отладочных ловушек](/visualstudio/debugger/debug-hook-function-writing).
 

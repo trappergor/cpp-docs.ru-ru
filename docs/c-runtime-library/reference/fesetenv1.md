@@ -1,11 +1,6 @@
 ---
-title: fesetenv | Документы Microsoft
-ms.custom: ''
+title: fesetenv
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fesetenv
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - fesetenv
 - fenv/fesetenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - fesetenv function
 ms.assetid: ffc64fff-8ea7-4d59-9e04-ff96ef8cd012
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd761f505c602aad44c5e00df223d4a6c983e851
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c91bfbb89df964fed0a632d5fb5ebac47ebe948
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397250"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50436166"
 ---
 # <a name="fesetenv"></a>fesetenv
 
@@ -55,7 +44,7 @@ int fesetenv(
 ### <a name="parameters"></a>Параметры
 
 *penv*<br/>
-Указатель на **fenv_t** объект, содержащий среде с плавающей запятой в виде набора путем вызова [fegetenv](fegetenv1.md) или [feholdexcept](feholdexcept2.md). Можно также указать среду с плавающей запятой загрузки по умолчанию с помощью **FE_DFL_ENV** макрос.
+Указатель на **fenv_t** объект, который содержит среду с плавающей запятой в качестве набора путем вызова [fegetenv](fegetenv1.md) или [feholdexcept](feholdexcept2.md). Можно также указать среду с плавающей запятой по умолчанию с помощью **FE_DFL_ENV** макрос.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -65,7 +54,7 @@ int fesetenv(
 
 **Fesetenv** функция задает текущую среду с плавающей запятой из значения, хранящегося в **fenv_t** объекта, на который указывает *penv*. Среда с плавающей запятой представляет собой набор флагов состояний и режимов управления, влияющих на вычисления с плавающей запятой. Включает режим округления и флаги состояния для исключений с плавающей запятой.  Если *penv* не **FE_DFL_ENV** или не указывает на допустимый **fenv_t** объекта, последующее поведение не определено.
 
-Вызов этой функции задает исключение флаги состояния, которые находятся в *penv* , но не вызывает эти исключения.
+Вызов этой функции задает исключение флаги состояния, которые находятся в *penv* объект, но он не вызывает эти исключения.
 
 Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
 

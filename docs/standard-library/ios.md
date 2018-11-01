@@ -1,28 +1,18 @@
 ---
-title: '&lt;ios&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;ios&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <ios>
 - ios/std::<ios>
-dev_langs:
-- C++
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fce633707096db8913da6d3601da20d14d3704c7
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 321924a622c04b09c1b1fdb47aef0d67ab8e0080
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487741"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -49,7 +39,7 @@ istr>> noskipws;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Поддерживает класс ios из старой библиотеки iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Поддерживает внутренние операции.|
@@ -88,7 +78,7 @@ istr>> noskipws;
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Класс шаблона описывает хранилище и функции-члены, общие для обоих потоков (потока ввода — класс шаблона [basic_istream](../standard-library/basic-istream-class.md) и потока вывода — класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), зависящих от параметров шаблона.|
 |[fpos](../standard-library/fpos-class.md)|Класс шаблона описывает объект, который может хранить все сведения, необходимые для восстановления произвольного указателя позиции файла в любом потоке.|

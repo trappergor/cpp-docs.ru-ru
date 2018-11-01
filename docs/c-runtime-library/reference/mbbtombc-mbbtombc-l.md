@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc, _mbbtombc_l | Документы Майкрософт
-ms.custom: ''
+title: _mbbtombc, _mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401793"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547996"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc, _mbbtombc_l
 
@@ -74,15 +64,15 @@ unsigned int _mbbtombc_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если **_mbbtombc** успешно преобразовывает *c*, она возвращает Многобайтовый символ; в противном случае он возвращает *c*.
+Если **_mbbtombc** успешно преобразует *c*, она возвращает Многобайтовый символ; в противном случае он возвращает *c*.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbbtombc** функция преобразует определенный однобайтовый Многобайтовый символ в соответствующий двухбайтовый Многобайтовый символ. Символы должны быть в диапазоне от 0x20 — 0x7E или 0xA1 - 0xDF для преобразования.
+**_Mbbtombc** функция преобразует определенный однобайтовый Многобайтовый символ в соответствующий двухбайтовый Многобайтовый символ. Символы должны быть в диапазоне 0x20 – 0x7E или 0xA1 – 0xDF для преобразования.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md) для получения дополнительной информации. Версии этих функций идентичны, за исключением того, **_mbbtombc** использует текущий языковой стандарт для поведения, зависящего от языкового стандарта и **_mbbtombc_l** вместо этого использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта; см. описание [setlocale, _wsetlocale](setlocale-wsetlocale.md) Дополнительные сведения. Версии этих функций идентичны, за исключением того, что **_mbbtombc** использует текущий языковой стандарт для данного поведения, зависящего от языкового стандарта и **_mbbtombc_l** использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-В более ранних версиях **_mbbtombc** назывался **hantozen**. В новом коде используйте **_mbbtombc**.
+В более ранних версиях **_mbbtombc** назывался **hantozen**. В новом коде использовать **_mbbtombc**.
 
 ## <a name="requirements"></a>Требования
 
