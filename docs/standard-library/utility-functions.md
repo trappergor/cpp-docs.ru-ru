@@ -1,8 +1,6 @@
 ---
-title: Функции &lt;utility&gt; | Документы Майкрософт
-ms.custom: ''
+title: Функции &lt;utility&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - utility/std::exchange
 - utility/std::forward
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::make_pair [C++]
 - std::move [C++]
 - std::swap [C++]
-ms.openlocfilehash: 12e8b2c4dfb0d7d36974fb2e5979d82b69c89316
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7a061ede19c5c4c181b5fea912b9c6212c583267
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543914"
 ---
 # <a name="ltutilitygt-functions"></a>Функции &lt;utility&gt;
 
@@ -101,7 +99,7 @@ constexpr Type&& forward(typename remove_reference<Type>::type&& Arg) noexcept
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Тип*|Тип значения, передаваемого в *Arg*, который может отличаться от типа *Arg*. Как правило, определяется аргументом шаблона функции пересылки.|
+|*Type*|Тип значения, передаваемого в *Arg*, который может отличаться от типа *Arg*. Как правило, определяется аргументом шаблона функции пересылки.|
 |*Arg*|Аргумент для приведения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -277,7 +275,7 @@ constexpr typename remove_reference<Type>::type&& move(Type&& Arg) noexcept;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*Тип*|Тип, выведенный из типа аргумента, переданного в *Arg*вместе с правилами сворачивания ссылок.|
+|*Type*|Тип, выведенный из типа аргумента, переданного в *Arg*вместе с правилами сворачивания ссылок.|
 |*Arg*|Аргумент для приведения. Хотя тип *Arg* определен как ссылка rvalue, `move` также принимает аргументы lvalue, поскольку ссылки lvalue можно привязать к ссылкам rvalue.|
 
 ### <a name="return-value"></a>Возвращаемое значение

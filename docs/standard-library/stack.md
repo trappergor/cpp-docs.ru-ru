@@ -1,28 +1,18 @@
 ---
-title: '&lt;стек&gt; | Документы Microsoft'
-ms.custom: ''
+title: '&lt;stack&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <stack>
-dev_langs:
-- C++
 helpviewer_keywords:
 - stack, stack header
 - stack header
 ms.assetid: 89d8999e-c773-46f2-86c1-4b3b5aedb1c1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68f16523b1fda7b8b3d6b8dca5b4d1960c5c815f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 51e350169babc3d5247fbdabab2f3b9bda717d47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33861757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617058"
 ---
 # <a name="ltstackgt"></a>&lt;stack&gt;
 
@@ -39,10 +29,10 @@ ms.locfileid: "33861757"
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](../standard-library/stack-operators.md#op_neq)|Проверяет, не равен ли объект стека слева от оператора объекту стека справа от оператора.|
+|[operator!=](../standard-library/stack-operators.md#op_neq)|Проверяет, не равен ли объект стека слева от оператора объекту стека справа от оператора.|
 |[оператор<](../standard-library/stack-operators.md#op_lt)|Проверяет, меньше ли объект стека слева от оператора объекта стека справа от оператора.|
 |[operator\<=](../standard-library/stack-operators.md#op_lt_eq)|Проверяет, меньше или равен ли объект стека слева от оператора объекту стека справа от оператора.|
-|[оператор==](../standard-library/stack-operators.md#op_eq_eq)|Проверяет, равен ли объект стека слева от оператора объекту стека справа от оператора.|
+|[operator==](../standard-library/stack-operators.md#op_eq_eq)|Проверяет, равен ли объект стека слева от оператора объекту стека справа от оператора.|
 |[оператор>](../standard-library/stack-operators.md#op_gt)|Проверяет, больше ли объект стека слева от оператора объекта стека справа от оператора.|
 |[оператор>=](../standard-library/stack-operators.md#op_gt_eq)|Проверяет, больше или равен ли объект стека слева от оператора объекту стека справа от оператора.|
 

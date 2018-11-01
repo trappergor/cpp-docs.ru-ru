@@ -1,10 +1,6 @@
 ---
-title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l | Документы Майкрософт
-ms.custom: ''
+title: _scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9d912d039cc732ebfe5399a90422d8b68d51332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407217"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500858"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf, _scprintf_l, _scwprintf, _scwprintf_l
 
@@ -105,20 +95,20 @@ int _scwprintf_l(
 
 Возвращает число символов, которые были бы созданы, если строка была бы напечатана либо отправлена в файл или буфер с помощью указанных кодов форматирования. Возвращаемое значение не включает завершающий нуль-символ. **_scwprintf** выполняет ту же функцию для расширенных символов.
 
-Если *формат* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Если *формат* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Каждый *аргумент* (если есть) преобразуется согласно соответствующей спецификацией формата в *формат*. Формат состоит из обычных символов и имеет те же форму и функциональные возможности, что *формат* аргумент для [printf](printf-printf-l-wprintf-wprintf-l.md).
+Каждый *аргумент* (при наличии) преобразуется согласно соответствующей спецификации формата в *формат*. Формат состоит из обычных символов и имеет ту же форму и функциональные возможности, что и аргумент *format* для [printf](printf-printf-l-wprintf-wprintf-l.md).
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

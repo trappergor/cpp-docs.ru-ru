@@ -1,10 +1,6 @@
 ---
-title: _mkdir, _wmkdir | Документы Майкрософт
-ms.custom: ''
+title: _mkdir, _wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402144"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496623"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -68,14 +58,14 @@ int _wmkdir(
 
 ### <a name="parameters"></a>Параметры
 
-*каталог*<br/>
+*DirName*<br/>
 Путь для нового каталога.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая функция возвращает значение 0, если новый каталог успешно создан. На ошибку, функция возвращает -1 и задает **errno** следующим образом.
+Каждая функция возвращает значение 0, если новый каталог успешно создан. На ошибку, функция возвращает -1 и наборы **errno** следующим образом.
 
-**EEXIST** папка не была создана, так как *dirname* имя существующего файла, каталога или устройства.
+**EEXIST** каталог не был создан, так как *dirname* имя существующего файла, каталога или устройства.
 
 **ENOENT** путь не найден.
 
@@ -85,9 +75,9 @@ int _wmkdir(
 
 **_Mkdir** функция создает новый каталог с указанным *dirname.* **_mkdir** можно создать только один новый каталог на один вызов, поэтому только последний компонент *dirname* можно назвать новый каталог. **_mkdir** не преобразует разделители пути. В Windows NT оба символа, обратная косая черта (\\) и косая черта (/), являются допустимыми разделителями пути в строках символов в подпрограммах времени выполнения.
 
-**_wmkdir** — это двухбайтовая версия **_mkdir**; *dirname* аргумент **_wmkdir** представляет собой строку расширенных символов. **_wmkdir** и **_mkdir** ведут себя идентично.
+**_wmkdir** — это двухбайтовая версия **_mkdir**; *dirname* аргумент **_wmkdir** — строка расширенных символов. **_wmkdir** и **_mkdir** идентично в противном случае.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

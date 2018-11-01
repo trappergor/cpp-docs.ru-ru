@@ -1,31 +1,21 @@
 ---
-title: Класс cache_chunklist | Документы Майкрософт
-ms.custom: ''
+title: Класс cache_chunklist
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::cache_chunklist
 - allocators/stdext::cache_chunklist::allocate
 - allocators/stdext::cache_chunklist::deallocate
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::cache_chunklist
 - stdext::cache_chunklist [C++], allocate
 - stdext::cache_chunklist [C++], deallocate
 ms.assetid: af19eccc-4ae7-4a34-bbb2-81e397424cb9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 808340df89bb548fee57604f25409c117933cc4e
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 94ae4dfc8f5f9073c0a39f315adfbed3e5c14daf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594575"
 ---
 # <a name="cachechunklist-class"></a>Класс cache_chunklist
 
@@ -40,7 +30,7 @@ class cache_chunklist
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*sz*|Число элементов в массиве, которые нужно выделить.|
 
@@ -52,13 +42,13 @@ class cache_chunklist
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[cache_chunklist](#cache_chunklist)|Создает объект типа `cache_chunklist`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -79,7 +69,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*count*|Число элементов в массиве, которые нужно выделить.|
 
@@ -109,7 +99,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|

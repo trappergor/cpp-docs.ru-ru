@@ -1,29 +1,19 @@
 ---
-title: Перегрузка оператора &gt;&gt; для пользовательских классов | Документы Майкрософт
-ms.custom: ''
+title: Перегрузка оператора &gt;&gt; для собственных классов
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator>>
 - operator>>, overloading for your own classes
 - operator >>, overloading for your own classes
 ms.assetid: 40dab4e0-3f97-4745-9cc8-b86e740fa246
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d98372009090b0241d9f0190a1d53a9416bbd7ba
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 86b8af963345c8eb9b3f44cfb16332bc09420bf3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624959"
 ---
-# <a name="overloading-the-gtgt-operator-for-your-own-classes"></a>Перегрузка оператора &gt;&gt; для пользовательских классов
+# <a name="overloading-the-gtgt-operator-for-your-own-classes"></a>Перегрузка оператора &gt;&gt; для собственных классов
 
 Потоки ввода используют оператор извлечения (`>>`) для стандартных типов. Можно написать аналогичные операторы извлечения для собственных типов; успех зависит от правильности использования пустого пространства.
 

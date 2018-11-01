@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2200 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2200
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2200
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2200
 ms.assetid: a04139a6-ce18-404b-9bfd-2369fc0af3cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ecb7ac03ea6450b62d55bf2a6351eb994715e3c5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6aeaad159095625ed890864b2e6921da743bea68
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511752"
 ---
 # <a name="compiler-error-c2200"></a>Ошибка компилятора C2200
 
