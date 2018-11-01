@@ -1,25 +1,15 @@
 ---
-title: '&lt;future&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;future&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <future>
-dev_langs:
-- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555797"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -56,7 +46,7 @@ ms.locfileid: "38954022"
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс future](../standard-library/future-class.md)|Описывает асинхронный возвращаемый объект.|
 |[Класс future_error](../standard-library/future-error-class.md)|Описывает объект исключения, который можно вызывать методами типов, управляющих объектами `future`.|
@@ -66,14 +56,14 @@ ms.locfileid: "38954022"
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Структура is_error_code_enum](../standard-library/is-error-code-enum-structure.md)|Специализация, которая указывает, что `future_errc` подходит для хранения `error_code`.|
 |[Структура uses_allocator](../standard-library/uses-allocator-structure.md)|Специализация, которая всегда содержит значение true.|
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[async](../standard-library/future-functions.md#async)|Представляет асинхронного поставщика.|
 |[future_category](../standard-library/future-functions.md#future_category)|Возвращает ссылку на объект `error_category`, характеризующий ошибки, связанные с объектами `future`.|
@@ -83,7 +73,7 @@ ms.locfileid: "38954022"
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|Предоставляет символические имена для всех ошибок, о которых сообщает класс `future_error`.|
 |[future_status](../standard-library/future-enums.md#future_status)|Предоставляет символические имена по причинам, которые может возвращать привязанная по времени функция wait.|

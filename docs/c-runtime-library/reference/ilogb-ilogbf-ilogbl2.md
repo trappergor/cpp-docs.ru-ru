@@ -1,11 +1,6 @@
 ---
-title: ilogb, ilogbf, ilogbl2 | Документы Майкрософт
-ms.custom: ''
+title: ilogb, ilogbf, ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398183"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551987"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb, ilogbf, ilogbl
 
@@ -82,22 +73,22 @@ int ilogbl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает 2 в степени экспоненты *x* как со знаком **int** значение.
+В случае успешного выполнения возврат экспоненты по основанию 2 *x* как подписанный **int** значение.
 
 В противном случае возвращает одно из следующих значений, определенных в \<math.h>:
 
 |Входные данные|Результат|
 |-----------|------------|
 |±0|FP_ILOGB0|
-|±INF ±nan, не ограничена|FP_ILOGBNAN|
+|±INF ±nan, неопределенное|FP_ILOGBNAN|
 
 Сообщает об ошибках, как указано в [_matherr](matherr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **ilogb** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **ilogb** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **ilogb** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **ilogb** всегда принимает и возвращает **двойные**.
 
-Вызов этой функции аналогичен вызову эквивалент **logb** функция, а затем приведение возвращаемого значения **int**.
+Вызов этой функции аналогичен вызову эквивалентной **logb** функции, а затем приведение возвращаемое значение к **int**.
 
 ## <a name="requirements"></a>Требования
 

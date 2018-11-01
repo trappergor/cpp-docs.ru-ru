@@ -1,27 +1,16 @@
 ---
-title: Атрибуты (C++ COM) интерфейса | Документация Майкрософт
-ms.custom: ''
+title: Атрибуты интерфейса (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: cd12db4235d22245c3f31ce7dfe3fd2470133dfd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: d954b7622ac78142c84b40007ecda8138b1b8f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556654"
 ---
 # <a name="interface-attributes"></a>Атрибуты интерфейса
 
@@ -30,7 +19,7 @@ ms.locfileid: "48791277"
 |Атрибут|Описание|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|Указывает UUID, компилятор MIDL определить синхронные и асинхронные версии COM-интерфейса.|
-|[Custom](custom-cpp.md)|Позволяет определять собственные атрибуты.|
+|[custom](custom-cpp.md)|Позволяет определять собственные атрибуты.|
 |[dispinterface](dispinterface.md)|Помещает интерфейс в IDL-файл в качестве интерфейса диспетчеризации.|
 |[dual](dual.md)|Помещает интерфейс в IDL-файл как сдвоенный интерфейс.|
 |[export](export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
@@ -41,7 +30,7 @@ ms.locfileid: "48791277"
 |[helpstringdll](helpstringdll.md)|Указывает имя библиотеки DLL для выполнения уточняющего запроса строки документа (локализации).|
 |[hidden](hidden.md)|Указывает, что элемент существует, но не должен отображаться в пользовательском браузере.|
 |[library_block](library-block.md)|Помещает конструкцию внутри блока библиотеки в IDL-файл.|
-|[локальный](local-cpp.md)|Позволяет использовать в качестве генератор заголовка при использовании в заголовке интерфейс компилятора MIDL. При использовании в отдельной функции, обозначает локальной процедуры, для которого создаются без заглушек.|
+|[local](local-cpp.md)|Позволяет использовать в качестве генератор заголовка при использовании в заголовке интерфейс компилятора MIDL. При использовании в отдельной функции, обозначает локальной процедуры, для которого создаются без заглушек.|
 |[nonextensible](nonextensible.md)|Указывает, что `IDispatch` реализация содержит только свойства и методы, перечисленных в описании интерфейса и не может быть расширен с помощью дополнительных членов во время выполнения. Этот атрибут действителен только на [двойной](dual.md) интерфейс.|
 |[odl](odl.md)|Определяет интерфейс как интерфейс языка описания объекта (ODL).|
 |[object](object-cpp.md)|Определяет пользовательский интерфейс.|
