@@ -1,14 +1,8 @@
 ---
-title: ': Tn031 панели управления | Документация Майкрософт'
-ms.custom: ''
+title: TN031. Панели элементов управления
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
-dev_langs:
-- C++
 helpviewer_keywords:
 - control bars [MFC], styles
 - CStatusBar class [MFC], Tech Note 31 usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463316"
 ---
 # <a name="tn031-control-bars"></a>TN031. Панели элементов управления
 
@@ -74,7 +64,7 @@ ms.locfileid: "46390621"
 
 - поддержка реализации производных классов.
 
-Обычно объекты панели элементов управления C++ встраиваются как члены производного класса `CFrameWnd` и удаляются при уничтожении родительского элемента `HWND` и объекта. Если вам нужно выделить объект панели управления в куче, можно просто указать *m_bAutoDestruct* члена **TRUE** на панель элементов управления "**удалить этот**" при `HWND` уничтожается.
+Обычно объекты панели элементов управления C++ встраиваются как члены производного класса `CFrameWnd` и удаляются при уничтожении родительского элемента `HWND` и объекта. Если требуется выделить объект панели управления в куче, можно задать для члена *m_bAutoDestruct* значение **TRUE** , чтобы панель элементов управления выполняла действие**delete this**при удалении `HWND` .
 
 > [!NOTE]
 >  Если вы создаете собственный `CControlBar`-производного класса, а не с помощью одного из MFC производные классы, такие как `CStatusBar`, `CToolBar`, или `CDialogBar`, вам потребуется задать *m_dwStyle* данные-член. Это можно сделать в переопределении `Create`:

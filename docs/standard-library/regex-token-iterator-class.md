@@ -1,10 +1,6 @@
 ---
-title: Класс regex_token_iterator | Документы Майкрософт
-ms.custom: ''
+title: Класс regex_token_iterator
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_token_iterator
 - regex/std::regex_token_iterator::regex_type
@@ -18,8 +14,6 @@ f1_keywords:
 - regex/std::regex_token_iterator::operator*
 - regex/std::regex_token_iterator::operator->
 - regex/std::regex_token_iterator::operator++
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_token_iterator [C++]
 - std::regex_token_iterator [C++], regex_type
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 028d363b935ee48ef89c4d1ffdd7fa03ed714154
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473519"
 ---
 # <a name="regextokeniterator-class"></a>Класс regex_token_iterator
 
@@ -99,10 +89,10 @@ class regex_token_iterator
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](#op_neq)|Сравнивает итераторы на неравенство.|
+|[operator!=](#op_neq)|Сравнивает итераторы на неравенство.|
 |[оператор*](#op_star)|Обращается к заданной подстроке соответствия.|
 |[оператор++](#op_add_add)|Увеличивает значение итератора.|
-|[оператор==](#op_eq_eq)|Сравнивает итераторы на равенство.|
+|[operator==](#op_eq_eq)|Сравнивает итераторы на равенство.|
 |[оператор>](#op_arrow)|Обращается к заданной подстроке соответствия.|
 
 ## <a name="requirements"></a>Требования

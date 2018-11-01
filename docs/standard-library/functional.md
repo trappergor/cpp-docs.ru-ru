@@ -1,30 +1,20 @@
 ---
-title: '&lt;functional&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;functional&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <functional>
 - functional/std::<functional>
 - std::<functional>
-dev_langs:
-- C++
 helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6528cb1f3aa4da429cd27d1123536ab694f60ac6
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3e838bf10b710caf12b5dcd51cad4cf625d887e7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38961240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457321"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -86,7 +76,7 @@ ms.locfileid: "38961240"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Класс, который описывает исключение, указывающий, что вызов `operator()` в объекте-[function](../standard-library/function-class.md) завершился ошибкой, так как объект был пуст.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной бинарной функции.|
@@ -111,7 +101,7 @@ ms.locfileid: "38961240"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Привязывает аргументы к вызываемому объекту.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.|
@@ -160,10 +150,10 @@ ms.locfileid: "38961240"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
-|[оператор==](../standard-library/functional-operators.md#op_eq_eq)|Запрещает сравнение вызываемых объектов на равенство.|
-|[оператор!=](../standard-library/functional-operators.md#op_neq)|Запрещает сравнение вызываемых объектов на неравенство.|
+|[operator==](../standard-library/functional-operators.md#op_eq_eq)|Запрещает сравнение вызываемых объектов на равенство.|
+|[operator!=](../standard-library/functional-operators.md#op_neq)|Запрещает сравнение вызываемых объектов на неравенство.|
 
 ## <a name="see-also"></a>См. также
 
