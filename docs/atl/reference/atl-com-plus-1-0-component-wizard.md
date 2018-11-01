@@ -1,28 +1,18 @@
 ---
-title: Мастер компонентов ATL COM + 1.0 | Документация Майкрософт
-ms.custom: ''
+title: Мастер компонентов ATL COM+ 1.0
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding components
 - ATL COM+ 1.0 Component Wizard
 ms.assetid: 11670681-8671-4122-96a4-2e52f8dadce0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 227dda9518b67b410f52db8c6efb33bbc2c8f1b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513780"
 ---
 # <a name="atl-com-10-component-wizard"></a>Мастер компонентов ATL COM+ 1.0
 
@@ -31,7 +21,7 @@ ms.locfileid: "48250410"
 Можно указать, поддерживает ли объект сдвоенные интерфейсы и автоматизацию. Можно также задать поддержку интерфейса информации об ошибках, расширенного управления объектами, транзакций и асинхронные очереди сообщений.
 
 > [!WARNING]
-> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
+> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
 
 ## <a name="remarks"></a>Примечания
 
