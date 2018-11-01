@@ -1,35 +1,25 @@
 ---
-title: Класс recursive_mutex | Документы Майкрософт
-ms.custom: ''
+title: Класс recursive_mutex
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - mutex/std::recursive_mutex
 - mutex/std::recursive_mutex::recursive_mutex
 - mutex/std::recursive_mutex::lock
 - mutex/std::recursive_mutex::try_lock
 - mutex/std::recursive_mutex::unlock
-dev_langs:
-- C++
 ms.assetid: eb5ffd1b-7e78-4559-8391-bb220ead42fc
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::recursive_mutex [C++]
 - std::recursive_mutex [C++], recursive_mutex
 - std::recursive_mutex [C++], lock
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0c137183e396255d0a9f9d3c304273eda320c72
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955898"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534411"
 ---
 # <a name="recursivemutex-class"></a>Класс recursive_mutex
 
@@ -45,14 +35,14 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|Создает объект `recursive_mutex`.|
 |[Деструктор ~recursive_mutex](#dtorrecursive_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|
 |[try_lock](#try_lock)|Попытки получить права владельца мьютекса без блокировки.|
