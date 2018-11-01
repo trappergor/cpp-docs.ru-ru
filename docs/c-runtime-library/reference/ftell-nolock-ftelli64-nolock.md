@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock, _ftelli64_nolock | Документы Майкрософт
-ms.custom: ''
+title: _ftell_nolock, _ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580847"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock, _ftelli64_nolock
 
@@ -63,16 +53,16 @@ __int64 _ftelli64_nolock(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
-Целевой **ФАЙЛ** структуры.
+*поток*<br/>
+Целевой объект **ФАЙЛ** структуры.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-То же, что **ftell** и **_ftelli64**. Дополнительные сведения см. в разделе [ftell _ftelli64](ftell-ftelli64.md).
+Совпадение с кодом **ftell** и **_ftelli64**. Дополнительные сведения см. в разделе [ftell, _ftelli64](ftell-ftelli64.md).
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции являются неблокирующей версии **ftell** и **_ftelli64**соответственно. Они совпадают **ftell** и **_ftelli64** за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
+Эти функции представляют собой неблокирующие версии **ftell** и **_ftelli64**, соответственно. Они совпадают с **ftell** и **_ftelli64** за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
 ## <a name="requirements"></a>Требования
 

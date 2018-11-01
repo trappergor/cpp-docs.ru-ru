@@ -1,11 +1,6 @@
 ---
-title: fdim, fdimf, fdiml | Документы Майкрософт
-ms.custom: ''
+title: fdim, fdimf, fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515093"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim, fdimf, fdiml
 
@@ -92,7 +81,7 @@ long double fdiml(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает положительное разницу между *x* и *y*:
+Возвращает положительную разность между *x* и *y*:
 
 |Возвращаемое значение|Сценарий|
 |------------------|--------------|
@@ -101,7 +90,7 @@ long double fdiml(
 
 В случае неудачи может возвращать одну из следующих ошибок:
 
-|Проблеми|Назад|
+|Проблемы|Назад|
 |-----------|------------|
 |Ошибка переполнения диапазона|+HUGE_VAL, +HUGE_VALF или +HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления)|
@@ -111,9 +100,9 @@ long double fdiml(
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **fdim** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **fdim** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **fdim** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **fdim** всегда принимает и возвращает **двойные**.
 
-За исключением обработки NaN, эта функция эквивалентно `fmax(x - y, 0)`.
+За исключением обработки NaN, эта функция эквивалентна `fmax(x - y, 0)`.
 
 ## <a name="requirements"></a>Требования
 

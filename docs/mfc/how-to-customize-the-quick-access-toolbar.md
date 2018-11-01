@@ -1,25 +1,15 @@
 ---
-title: 'Практическое: Настройка панели быстрого доступа | Документация Майкрософт'
-ms.custom: ''
+title: Практическое руководство. Настройка панели быстрого доступа
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f3ec14971b69788892690c26ef2759f3b35d55f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9bdc523218c7fad217d066eabd518aaff011df3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558487"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Практическое руководство. Настройка панели быстрого доступа
 
@@ -41,7 +31,7 @@ ms.locfileid: "46419110"
 
 Следующая таблица определяет свойства быстрого доступа.
 
-|Свойство.|Определение|
+|Свойство|Определение|
 |--------------|----------------|
 |Положение QAT|Задает положение панели быстрого доступа, при запуске приложения. Положение может быть либо **выше** или **ниже** элемент управления на ленте.|
 |Элементы QAT|Задает команды, доступные для быстрого доступа.|

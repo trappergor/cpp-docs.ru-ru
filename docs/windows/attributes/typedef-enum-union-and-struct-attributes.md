@@ -1,27 +1,16 @@
 ---
-title: TypeDef, Enum, Union и Struct атрибуты (C++ COM) | Документация Майкрософт
-ms.custom: ''
+title: TypeDef, Enum, Union и Struct атрибуты (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631066"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Атрибуты Typedef, Enum, Union и Struct
 
@@ -32,7 +21,7 @@ ms.locfileid: "48792221"
 |Атрибут|Описание|
 |---------------|-----------------|
 |[case](case-cpp.md)|Используется с [switch_type](switch-type.md) атрибут в **объединение**.|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[export](export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
 |[first_is](first-is.md)|Указывает индекс первого элемента массива для передачи.|
 |[helpcontext](helpcontext.md)|Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в файле справки.|
@@ -51,7 +40,7 @@ ms.locfileid: "48792221"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[export](export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
 |[uuid](uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|
 |[v1_enum](v1-enum.md)|Указывает, что заданного перечислимого типа, передаваться в объект 32-разрядной, а не по умолчанию 16-разрядное.|
@@ -60,7 +49,7 @@ ms.locfileid: "48792221"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[export](export.md)|В результате структуру данных, должно быть помещено в IDL-файла.|
 |[first_is](first-is.md)|Указывает индекс первого элемента массива для передачи.|
 |[last_is](last-is.md)|Указывает индекс последнего элемента массива для передачи.|
@@ -84,10 +73,10 @@ ms.locfileid: "48792221"
 |[aggregatable](aggregatable.md)|Указывает, что класс поддерживает агрегирование.|
 |[aggregates](aggregates.md)|Указывает, что элемент управления использует статистическую функцию целевого класса.|
 |[appobject](appobject.md)|Идентифицирует сокласс как объект приложения, который связан с приложением полный .exe и указывает, что функциях и свойствах компонентного класса доступны глобально в этой библиотеки типов.|
-|[coclass](coclass.md)|Создает элемент управления ActiveX.|
-|[COM_INTERFACE_ENTRY](com-interface-entry-cpp.md)|Добавляет запись интерфейс COM карты.|
+|[кокласс](coclass.md)|Создает элемент управления ActiveX.|
+|[com_interface_entry](com-interface-entry-cpp.md)|Добавляет запись интерфейс COM карты.|
 |[control](control.md)|Указывает, что определяемый пользователем тип элемента управления.|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[db_column](db-column.md)|Связывает указанный столбец набора строк.|
 |[db_command](db-command.md)|Создает команду OLE DB.|
 |[db_param](db-param.md)|Связывает указанный член переменной с входным или выходным параметром и разделяет переменной.|
@@ -107,7 +96,7 @@ ms.locfileid: "48792221"
 |[requires_category](requires-category.md)|Указывает необходимый компонент категории целевого класса.|
 |[size_is](size-is.md)|Указывает объем памяти, выделенной для размера указатели, размер указателей на указатели по размеру и одно - или многомерные массивы.|
 |[source](source-cpp.md)|В классе, задает интерфейсы COM-объекта источника для точек подключения. На свойства или метода указывает, что член возвращает объект или переменная типа VARIANT, являющейся источником событий.|
-|[Работа с потоками](threading-cpp.md)|Указывает потоковую модель для COM-объекта.|
+|[threading](threading-cpp.md)|Указывает потоковую модель для COM-объекта.|
 |[unique](unique-cpp.md)|Указывает уникальный указатель.|
 |[uuid](uuid-cpp-attributes.md)|Указывает уникальный идентификатор для класса или интерфейса.|
 |[version](version-cpp.md)|Идентифицирует конкретную версию несколькими версиями класса.|

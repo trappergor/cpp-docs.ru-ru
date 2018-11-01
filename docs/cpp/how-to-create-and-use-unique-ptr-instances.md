@@ -1,23 +1,15 @@
 ---
-title: 'Практическое: Создание и использование экземпляров unique_ptr | Документация Майкрософт'
+title: Практическое руководство. Создание и использование экземпляров unique_ptr
 ms.custom: how-to
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb2599967462a02672dcb525f7e79243a7592acb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610253"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>Практическое руководство. Создание и использование экземпляров unique_ptr
 

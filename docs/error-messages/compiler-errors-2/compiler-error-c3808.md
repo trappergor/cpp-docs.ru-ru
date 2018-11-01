@@ -1,37 +1,27 @@
 ---
-title: Ошибка компилятора C3808 | Документы Microsoft
-ms.custom: ''
+title: Ошибка компилятора C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705209"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587737"
 ---
 # <a name="compiler-error-c3808"></a>Ошибка компилятора C3808
 
-> "*тип*": класс с атрибутом ComImport не может определить член "*член*", только абстрактного или функции dllimport разрешены
+> "*тип*": класс с атрибутом ComImport не может определять член "*член*", только абстрактный или функции dllimport разрешены
 
 ## <a name="remarks"></a>Примечания
 
 Тип, производный от <xref:System.Runtime.InteropServices.ComImportAttribute> невозможно определить *член*.
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
 ## <a name="example"></a>Пример
 

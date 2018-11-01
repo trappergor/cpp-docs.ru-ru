@@ -1,27 +1,17 @@
 ---
-title: 'Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++) | Документация Майкрософт'
+title: 'Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528390"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)
 
@@ -142,7 +132,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
    В этой функции можно написать код для обработки *сообщений* , приложение получает из Windows при *события* произойти. Например, если пользователь нажимает кнопку "ОК" в приложении, Windows отправит вам сообщение и вы можете написать код внутри вашей `WndProc` функцию, которая не подходит, независимо от работы. Он называется *обработка* событие. Можно обрабатывать только события, которые являются значимыми для приложения.
 
-   Дополнительные сведения см. в разделе [процедуры окна](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Дополнительные сведения см. в разделе [Процедуры окна](https://msdn.microsoft.com/library/windows/desktop/ms632593).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Добавление функциональных возможностей в функцию WinMain
 
@@ -167,7 +157,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
    Сведения о полях структуры выше, см. в разделе [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Зарегистрировать `WNDCLASSEX` с Windows, чтобы он знал о окна и как отправлять сообщения на него. Используйте [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) функции и передайте структуру класса окна в качестве аргумента. `_T` Макрос используется, так как мы используем `TCHAR` типа.
+1. Зарегистрировать `WNDCLASSEX` с Windows, чтобы он знал о окна и как отправлять сообщения на него. Воспользуйтесь функцией [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) и передайте структуру класса окна в качестве аргумента. `_T` Макрос используется, так как мы используем `TCHAR` типа.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    }
    ```
 
-1. Теперь можно создать окно. Используйте [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) функции.
+1. Теперь можно создать окно. Воспользуйтесь функцией [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) .
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -219,7 +209,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    }
    ```
 
-   Эта функция возвращает `HWND`, являющийся дескриптором окна. Дескриптор является подобно указатель, который использует Windows для отслеживания открытых окон. Дополнительные сведения см. в разделе [типы данных Windows](/windows/desktop/WinProg/windows-data-types).
+   Эта функция возвращает `HWND`, являющийся дескриптором окна. Дескриптор является подобно указатель, который использует Windows для отслеживания открытых окон. Дополнительные сведения см. в разделе [Типы данных Windows](/windows/desktop/WinProg/windows-data-types).
 
 1. На этом этапе будет создана окна, но мы по-прежнему должны сообщить Windows, чтобы сделать его видимым. Вот что делает этот код:
 
@@ -247,7 +237,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    return (int) msg.wParam;
    ```
 
-   Дополнительные сведения о структурах и функциях в цикл обработки сообщений, см. в разделе [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage), и [DispatchMessage ](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Дополнительные сведения о структурах и функциях, используемых в цикле обработки сообщений, см. в разделах, посвященных [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    На этом этапе функция `WinMain` должна напоминать приведенный ниже код.
 
@@ -342,7 +332,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
    Одно важное сообщение для обработки является [WM_PAINT](/windows/desktop/gdi/wm-paint) сообщения. Приложение получает `WM_PAINT` сообщение, когда часть его отображаемого окна должны быть обновлены. Событие может возникать, когда пользователь перемещает окно перед окна, а затем снова перемещает его сейчас, и приложение не знает, при возникновении этих событий. Только Windows знает, поэтому она выводит уведомление с `WM_PAINT`. При первом отображении окна его необходимо обновить.
 
-   Для обработки `WM_PAINT` сообщений, первый вызов [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), затем обработайте логику расположения текста, кнопок и других элементов управления в окне, а затем вызовите [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Приложения логика между начальным и конечным вызовами предполагает отображение строки «Hello, рабочий стол Windows!» "Hello, World!". В приведенном ниже коде Обратите внимание, что [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) функция используется для отображения строки.
+   Для обработки сообщения `WM_PAINT` сначала вызовите метод [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint), далее обработайте логику расположения текста, кнопок и других элементов управления в окне, а затем вызовите метод [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint). Приложения логика между начальным и конечным вызовами предполагает отображение строки «Hello, рабочий стол Windows!» "Hello, World!". В приведенном ниже коде обратите внимание, что функция [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) используется для отображения строки.
 
    ```cpp
    PAINTSTRUCT ps;

@@ -1,8 +1,6 @@
 ---
-title: Операторы &lt;regex&gt; | Документы Майкрософт
-ms.custom: ''
+title: Операторы &lt;regex&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - regex/std::operator!=
 - regex/std::operator>
@@ -11,23 +9,21 @@ f1_keywords:
 - regex/std::operator<=
 - regex/std::operator==
 - regex/std::operator<<
-dev_langs:
-- C++
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: 667de3f580734230cbc70afbe29c17aee8e35950
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e2c566a81bd8b67c0e34291d84182cacf1fc066a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552871"
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 
 ||||
 |-|-|-|
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
+|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[оператор==](#op_eq_eq)|
+|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=
 
