@@ -1,8 +1,6 @@
 ---
-title: Класс Platform::Agile | Документация Майкрософт
-ms.custom: ''
+title: Класс Platform::Agile
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471205"
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 
@@ -166,7 +158,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Эта операция освобождает текущее представление объекта типа `T`, если имеются; повторно инициализирует данные-члены объекта Agile; получает текущий контекст потока, а затем возвращает адрес переменной дескриптора для объекта, который может представлять Объект, отличный от agile. Чтобы экземпляр класса Agile для представления объекта, используйте оператор присваивания ([Agile::operator =](#operator-assign)) для назначения объекта экземпляру класса Agile.
+Эта операция освобождает текущее представление объекта типа `T` при его наличии, повторно инициализирует данные-члены объекта Agile, получает текущий контекст потока, а затем возвращает адрес переменной дескриптора для объекта, который может представлять объект, отличный от Agile. Чтобы экземпляр класса Agile для представления объекта, используйте оператор присваивания ([Agile::operator =](#operator-assign)) для назначения объекта экземпляру класса Agile.
 
 ## <a name="getaddressofforinout"></a>  Метод Agile::GetAddressOfForInOut
 

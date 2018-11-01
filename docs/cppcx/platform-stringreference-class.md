@@ -1,8 +1,6 @@
 ---
-title: Класс Platform::StringReference | Документация Майкрософт
-ms.custom: ''
+title: Класс Platform::StringReference
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::StringReference::StringReference
@@ -10,19 +8,13 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::Length
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
-dev_langs:
-- C++
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b177cf30b4eee49d144ddf3516a4bbf3da91c85
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105800"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50498388"
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 
@@ -72,7 +64,7 @@ class StringReference
 
 ## <a name="data"></a>  Метод StringReference::Data
 
-Возвращает содержимое данного `StringReference` как массив значений char16.
+Возвращает содержимое этой строки `StringReference` как массив значений char16.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -199,7 +191,7 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 
 ### <a name="remarks"></a>Примечания
 
-Первая версия этого конструктора является конструктором по умолчанию. Вторая версия инициализирует новый экземпляра класса `StringReference` из объекта, заданного параметром `__fstrArg`. Третья и четвертая перегрузки инициализируют новый `StringReference` экземпляр из массива значений char16. char16 представляет 16-разрядный текстовый символ ЮНИКОДА.
+Первая версия этого конструктора является конструктором по умолчанию. Вторая версия инициализирует новый экземпляра класса `StringReference` из объекта, заданного параметром `__fstrArg`. Третья и четвертая перегрузки инициализируют новый экземпляр класса `StringReference` из массива значений char16. char16 представляет 16-разрядный текстовый символ ЮНИКОДА.
 
 ## <a name="see-also"></a>См. также
 
