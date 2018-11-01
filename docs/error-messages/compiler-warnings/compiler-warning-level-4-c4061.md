@@ -1,31 +1,21 @@
 ---
-title: Предупреждение (уровень 4) C4061 компилятора | Документы Microsoft
-ms.custom: ''
+title: Предупреждение (уровень 4) C4061 компилятора
 ms.date: 11/30/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4061
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4061
 ms.assetid: a99cf88e-7941-4519-8b1b-f6889d914b2f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2d0086ea5e590c7183024bc4dcc93e2f2522f483
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8b730d561134b8b7ca4454ee74f99216fbc72cb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33292624"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453278"
 ---
 # <a name="compiler-warning-level-4-c4061"></a>Предупреждение (уровень 4) C4061 компилятора
 
-> Перечислитель "*идентификатор*«в switch с перечислением»*перечисления*" не обрабатывается явно меткой выбора
+> Перечислитель "*идентификатор*«в параметре перечисления»*перечисления*" не обрабатывается явно меткой выбора
 
 Перечислитель не имеет связанного обработчика `switch` инструкции.
 
@@ -33,7 +23,7 @@ ms.locfileid: "33292624"
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C4061; Добавление отсутствующих перечислителя Устранение случая:
+Следующий пример приводит к возникновению ошибки C4061; Добавьте запрос в службу отсутствует перечислитель для исправления:
 
 ```cpp
 // C4061.cpp

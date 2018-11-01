@@ -1,24 +1,16 @@
 ---
-title: Класс Platform::Box | Документация Майкрософт
-ms.custom: ''
+title: Класс Platform::Box
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429077"
 ---
 # <a name="platformbox-class"></a>Класс Platform::Box
 
@@ -38,7 +30,7 @@ ref class Box abstract;
 **Пространство имен:** Platform
 |Член|Описание|
 |------------|-----------------|
-|[Box](#ctor)|Создает `Box` который может инкапсулировать значение указанного типа.|
+|[Box](#ctor)|Создает объект `Box`, который может инкапсулировать значение указанного типа.|
 |[оператор поле&lt;const T&gt;^](#box-const-t)|Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`.|
 |[оператор поле&lt;const volatile T&gt;^](#box-const-volatile-t)|Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`. |
 |[оператор поле&lt;T&gt;^](#box-t)|Позволяет осуществлять преобразования-упаковки класса значений `T` в `Box<T>`.|

@@ -1,10 +1,6 @@
 ---
-title: Класс CMFCToolBarButton | Документация Майкрософт
-ms.custom: ''
+title: Класс CMFCToolBarButton
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarButton
 - AFXTOOLBARBUTTON/CMFCToolBarButton
@@ -85,8 +81,6 @@ f1_keywords:
 - AFXTOOLBARBUTTON/CMFCToolBarButton::m_nID
 - AFXTOOLBARBUTTON/CMFCToolBarButton::m_nStyle
 - AFXTOOLBARBUTTON/CMFCToolBarButton::m_strText
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarButton [MFC], CMFCToolBarButton
 - CMFCToolBarButton [MFC], CanBeDropped
@@ -166,16 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08f4c2e5497994cfcd7bf4aa4a0976f7dd3e0a3f
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 930434a6d1e447d38d5cec9a6b0b8adee8e37b81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438096"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 
@@ -191,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Создает и инициализирует объект `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно разместить кнопку на панели инструментов или меню во время настройки.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|
@@ -270,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Указывает, отображается ли изображение на кнопке.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Указывает, отображается ли текстовая метка на кнопке.|
@@ -1092,7 +1082,7 @@ virtual SIZE OnCalculateSize(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *sizeDefault*<br/>
@@ -1225,7 +1215,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *nCtlColor*<br/>
@@ -1301,7 +1291,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *Rect*<br/>
@@ -1342,7 +1332,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *Rect*<br/>

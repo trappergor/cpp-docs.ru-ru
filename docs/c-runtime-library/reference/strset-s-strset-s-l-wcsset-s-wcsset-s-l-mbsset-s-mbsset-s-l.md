@@ -1,10 +1,6 @@
 ---
-title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l | Документы Майкрософт
-ms.custom: ''
+title: _strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsset_s
 - _wcsset_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _strset_s_l
 - _tcsset_s_l
 - _tcsset_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsset_s_l function
 - wcsset_s function
@@ -63,23 +57,19 @@ helpviewer_keywords:
 - _tcsset_s function
 - mbsset_s function
 ms.assetid: dceb2909-6b41-4792-acb7-888e45bb8b35
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f632185a17bd02dfa837bae3605c51d27442772a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cb2e9a6ba4179f8e362749e01324fe7e38cf5eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452537"
 ---
 # <a name="strsets-strsetsl-wcssets-wcssetsl-mbssets-mbssetsl"></a>_strset_s, _strset_s_l, _wcsset_s, _wcsset_s_l, _mbsset_s, _mbsset_s_l
 
 Инициализирует символы строки в соответствии с указанным символом. Эти версии функций [_strset, _strset_l, _wcsset, _wcsset_l, _mbsset, _mbsset_l](strset-strset-l-wcsset-wcsset-l-mbsset-mbsset-l.md) отличаются повышенной безопасностью, как описано в разделе [Усовершенствования безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsset_s** и **_mbsset_s_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsset_s** и **_mbsset_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -137,17 +127,17 @@ errno_t _mbsset_s_l(
 
 Нуль в случае успешного выполнения; в противном случае — код ошибки.
 
-Эти функции проверяют свои аргументы. Если *str* является пустым указателем, или *numberOfElements* аргумента меньше или равно 0, или переданный в блок не символом null, то вызывается обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
+Эти функции проверяют свои аргументы. Если *str* является пустым указателем, или *numberOfElements* аргумент меньше или равно 0, или переданный блок не завершается символом null, то вызывается обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Strset_s** функция задает все символы *str* для *c* (преобразовать **char**), с учетом завершающего нуля, за исключением. **_wcsset_s** и **_mbsset_s** версии Юникода и многобайтовых символов **_strset_s**. Типы данных аргументов и возвращаемых значений изменяются соответствующим образом. В остальном эти функции ведут себя одинаково.
+**_Strset_s** функция устанавливает все символы строки *str* для *c* (преобразовать **char**), за исключением завершающего нуль-символа. **_wcsset_s** и **_mbsset_s** расширенных и многобайтовых символов версии **_strset_s**. Типы данных аргументов и возвращаемых значений изменяются соответствующим образом. В остальном эти функции ведут себя одинаково.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

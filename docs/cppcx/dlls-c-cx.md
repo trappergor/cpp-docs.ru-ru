@@ -1,20 +1,13 @@
 ---
-title: Библиотеки DLL (C + +/ CX) | Документация Майкрософт
-ms.custom: ''
+title: Библиотеки DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445712"
 ---
 # <a name="dlls-ccx"></a>Библиотеки DLL (C++/CX)
 
@@ -24,7 +17,7 @@ ms.locfileid: "43763637"
 
 Практически во всех случаях когда требуется создать библиотеку DLL для использовать в приложении универсальной платформы Windows, создайте его как в компонент среды выполнения Windows с помощью шаблона проекта этим именем. Для библиотек DLL, содержащих общедоступных или частных типов среды выполнения Windows, можно создать проект компонента среды выполнения Windows. Компонент среды выполнения Windows может осуществляться из приложений, написанных на любом языке, совместимом среды выполнения Windows. По умолчанию параметры компилятора для компонента среды выполнения Windows на проекта используйте **/ZW** переключения. WINMD-файл должен иметь одно имя с корневым пространством имен. Например, экземпляр класса с именем A.B.C.MyClass может быть создан, только если он определен в файле метаданных с именем A.winmd, A.B.winmd или A.B.C.winmd. Имя DLL-файла не обязательно должно соответствовать имени WINMD-файла.
 
-Дополнительные сведения см. в разделе [создание компонентов среды выполнения Windows в C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
+Для получения дополнительной информации см. [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>Для ссылки на двоичный файл в проекте стороннего компонента среды выполнения Windows
 
