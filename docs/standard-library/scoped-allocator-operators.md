@@ -1,26 +1,22 @@
 ---
-title: Операторы &lt;scoped_allocator&gt; | Документы Майкрософт
-ms.custom: ''
+title: Операторы &lt;scoped_allocator&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - scoped_allocator/std::operator!=
 - scoped_allocator/std::operator==
-dev_langs:
-- C++
 ms.assetid: 4dfe0805-cc6e-479f-887f-a1c164f73837
-ms.openlocfilehash: 0dda1415ea875b01c943a0a275122458f399f69c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7c9f2c3a2425bf3ac6e62ce7fcecfe9315c3e04e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105884"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512467"
 ---
 # <a name="ltscopedallocatorgt-operators"></a>Операторы &lt;scoped_allocator&gt;
 
 |||
 |-|-|
-|[оператор!=](#op_neq)|[оператор==](#op_eq_eq)|
+|[operator!=](#op_neq)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=
 

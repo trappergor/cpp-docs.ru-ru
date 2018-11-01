@@ -1,10 +1,6 @@
 ---
-title: _set_SSE2_enable | Документы Майкрософт
-ms.custom: ''
+title: _set_SSE2_enable
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_SSE2_enable
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _set_SSE2_enable
 - set_SSE2_enable
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_SSE2_enable function
 - Streaming SIMD Extensions 2 instructions
 - set_SSE2_enable function
 ms.assetid: 55db895d-fc1e-475a-9110-b781a9bb51c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f4ed5333dd8ae6bab6291233391884e4efc7ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c340423e93b6487a4a951e4b96055cba6e474269
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407855"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539338"
 ---
 # <a name="setsse2enable"></a>_set_SSE2_enable
 
@@ -64,7 +54,7 @@ int _set_SSE2_enable(
 
 ## <a name="remarks"></a>Примечания
 
-Следующие функции имеют реализации SSE2, которые могут быть включены с помощью **_set_SSE2_enable**:
+Следующие функции имеют реализации SSE2, которые можно включить с помощью **_set_SSE2_enable**:
 
 - [atan](atan-atanf-atanl-atan2-atan2f-atan2l.md)
 
@@ -85,7 +75,7 @@ int _set_SSE2_enable(
 SSE2-реализации этих функций могут предоставлять результаты, немного отличающиеся от результатов реализаций по умолчанию, поскольку промежуточными значениями SSE2 являются 64-разрядные числа с плавающей запятой, а промежуточные значения реализаций по умолчанию — 80-разрядные числа с плавающей запятой.
 
 > [!NOTE]
-> Если вы используете [/Oi (Создание встроенных функций)](../../build/reference/oi-generate-intrinsic-functions.md) параметр компилятора для компиляции проекта, может оказаться, что **_set_SSE2_enable** не делает ничего. **/Oi** параметр компилятора предоставляет компилятору полномочия на использование встроенных функций для замены вызовов CRT; это поведение переопределяет эффект **_set_SSE2_enable**. Чтобы гарантировать, что **/Oi** не переопределяет **_set_SSE2_enable**, используйте **/Oi-** компиляции проекта. Это также может быть хорошей методикой при использовании других параметров компилятора, подразумевающих **/Oi**.
+> Если вы используете [/Oi (Создание встроенных функций)](../../build/reference/oi-generate-intrinsic-functions.md) параметр компилятора для компиляции проекта, может оказаться, что **_set_SSE2_enable** не оказывает влияния. **/Oi** параметр компилятора предоставляет компилятору полномочия на использование встроенных функций для замены вызовов CRT; это поведение переопределяет эффект функции **_set_SSE2_enable**. Если вы хотите гарантировать, что **/Oi** не переопределяет **_set_SSE2_enable**, использовать **/Oi-** компиляции проекта. Это также может быть хорошей практикой при использовании других параметров компилятора, подразумевающих **/Oi**.
 
 Реализация SSE2 используется только в том случае, если все исключения маскированы. Используйте [_control87, _controlfp](control87-controlfp-control87-2.md) для маскирования исключений.
 
