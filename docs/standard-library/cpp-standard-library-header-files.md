@@ -1,12 +1,6 @@
 ---
-title: Файлы заголовков стандартных библиотек C++ | Документы Майкрософт
-ms.custom: ''
+title: Файлы заголовков стандартных библиотек C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - header files, C++ Standard Library
 - wrappers
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - C++ Standard Library, header files
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f177ebceff77aa9776ce2943ff5cb6176440ec3
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847004"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496360"
 ---
 # <a name="c-standard-library-header-files"></a>Файлы заголовков стандартных библиотек C++
 
@@ -40,7 +30,7 @@ ms.locfileid: "33847004"
 |Контейнеры последовательности|[\<array>](../standard-library/array.md), [\<deque>](../standard-library/deque.md), [<forward_list>](../standard-library/forward-list.md), [\<list>](../standard-library/list.md), [\<vector>](../standard-library/vector.md)|
 |Упорядоченные ассоциативные контейнеры| [\<map>](../standard-library/map.md), [\<set>](../standard-library/set.md)|
 |Неупорядоченные ассоциативные контейнеры|[<unordered_map>](../standard-library/unordered-map.md), [<unordered_set>](../standard-library/unordered-set.md)|
-|Адаптер контейнеров|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
+|Контейнеры адаптера|[\<queue>](../standard-library/queue.md), [\<stack>](../standard-library/stack.md)|
 |[Обработка ошибок и исключений](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md), [\<stdexcept>](../standard-library/stdexcept.md), [<system_error>](../standard-library/system-error.md)|
 |[Ввод-вывод и форматирование](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md), [\<fstream>](../standard-library/fstream.md), [\<iomanip>](../standard-library/iomanip.md), [\<ios>](../standard-library/ios.md), [\<iosfwd>](../standard-library/iosfwd.md), [\<iostream>](../standard-library/iostream.md), [\<istream>](../standard-library/istream.md), [\<ostream>](../standard-library/ostream.md), [\<sstream>](../standard-library/sstream.md), [\<streambuf>](../standard-library/streambuf.md), [\<strstream>](../standard-library/strstream.md)|
 |Итераторы|[\<iterator>](../standard-library/iterator.md)|
@@ -48,7 +38,7 @@ ms.locfileid: "33847004"
 |Математические и числовые значения|[\<complex>](../standard-library/complex.md), [\<limits>](../standard-library/limits.md), [\<numeric>](../standard-library/numeric.md), [\<random>](../standard-library/random.md), [\<ratio>](../standard-library/ratio.md), [\<valarray>](../standard-library/valarray.md)|
 |[Управление памятью](../cpp/smart-pointers-modern-cpp.md)|[\<allocators>](../standard-library/allocators-header.md), [\<memory>](../standard-library/memory.md), [\<new>](../standard-library/new.md), [<scoped_allocator>](../standard-library/scoped-allocator.md)|
 |Многопоточность|[\<atomic>](../standard-library/atomic.md), [<condition_variable>](../standard-library/condition-variable.md), [\<future>](../standard-library/future.md), [\<mutex>](../standard-library/mutex.md), [<shared_mutex>](../standard-library/shared-mutex.md), [\<thread>](../standard-library/thread.md)|
-|Служебные программы|[\<bitset>](../standard-library/bitset.md), [\<chrono>](../standard-library/chrono.md), [\<functional>](../standard-library/functional.md), [<initializer_list>](../standard-library/initializer-list.md), [\<tuple>](../standard-library/tuple.md), [<type_traits>](../standard-library/type-traits.md), [\<typeinfo>](../standard-library/typeinfo.md), [\<typeindex>](../standard-library/typeindex.md), [\<utility>](../standard-library/utility.md)|
+|Другие служебные программы|[\<bitset>](../standard-library/bitset.md), [\<chrono>](../standard-library/chrono.md), [\<functional>](../standard-library/functional.md), [<initializer_list>](../standard-library/initializer-list.md), [\<tuple>](../standard-library/tuple.md), [<type_traits>](../standard-library/type-traits.md), [\<typeinfo>](../standard-library/typeinfo.md), [\<typeindex>](../standard-library/typeindex.md), [\<utility>](../standard-library/utility.md)|
 |Строки и символьных данных|[\<regex>](../standard-library/regex.md), [\<string>](../standard-library/string.md)
 
 ## <a name="see-also"></a>См. также
