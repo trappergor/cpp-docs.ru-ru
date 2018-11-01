@@ -1,14 +1,8 @@
 ---
-title: Классы диалоговых окон | Документация Майкрософт
-ms.custom: ''
+title: Классы диалоговых окон
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.dialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - property sheet classes
 - dialog box classes
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - common dialog classes [MFC]
 - tab dialog boxes
 ms.assetid: db75da23-4eff-4c6c-beae-79cf046fbce9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 177e6f7ab0787ba3eccfe963f08963697747145e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3533a548f009a65462ce0d821d782db0ada9aa4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490013"
 ---
 # <a name="dialog-box-classes"></a>Классы диалоговых окон
 
@@ -127,7 +117,7 @@ OLE добавляет несколько окон для Windows. Эти кла
 [CDialogBar](../mfc/reference/cdialogbar-class.md)<br/>
 Панель элементов управления, основанный на шаблон диалогового окна.
 
-[Класс CFormView](../mfc/reference/cformview-class.md)<br/>
+[CFormView](../mfc/reference/cformview-class.md)<br/>
 Представление прокрутки, макет которой определяется в шаблон диалогового окна. Наследуйте класс от `CFormView` для реализации пользовательского интерфейса, в зависимости от шаблона диалогового окна.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>
