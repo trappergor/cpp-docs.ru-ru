@@ -1,10 +1,6 @@
 ---
-title: _configthreadlocale | Документы Майкрософт
-ms.custom: ''
+title: _configthreadlocale
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _configthreadlocale
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _configthreadlocale
 - configthreadlocale
-dev_langs:
-- C++
 helpviewer_keywords:
 - configthreadlocale function
 - locales, per-thread
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7531a5849bc1e86d469a12747b5c4648b76c9117
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395781"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648387"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -60,11 +50,11 @@ int _configthreadlocale( int per_thread_locale_type );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее состояние языкового стандарта отдельного потока (**_DISABLE_PER_THREAD_LOCALE** или **_ENABLE_PER_THREAD_LOCALE**), или значение -1 при сбое.
+Предыдущее состояние языкового стандарта отдельного потока (**_DISABLE_PER_THREAD_LOCALE** или **_ENABLE_PER_THREAD_LOCALE**), или значение -1 в случае сбоя.
 
 ## <a name="remarks"></a>Примечания
 
-**_Configurethreadlocale** функция используется для управления использованием языковых стандартов для конкретного потока. Используйте один из этих *per_thread_locale_type* параметры для задания или определения состояния языкового стандарта отдельного потока:
+**_Configurethreadlocale** функция используется для управления использованием языковых стандартов для конкретного потока. Использовать один из следующих *per_thread_locale_type* параметры для определения состояния языкового стандарта отдельного потока:
 
 |||
 |-|-|
@@ -72,11 +62,11 @@ int _configthreadlocale( int per_thread_locale_type );
 **_DISABLE_PER_THREAD_LOCALE**|В текущем потоке будет использоваться глобальный языковой стандарт. Последующие вызовы **setlocale** в этом потоке влияют на другие потоки, использующие глобальный языковой стандарт.
 **0**|Извлекает текущую настройку для данного потока.
 
-Эти функции влияют на поведение **setlocale**, **_tsetlocale**, **_wsetlocale**, и **_setmbcp**. Если языковой стандарт отдельного потока является отключено, любой последующий вызов **setlocale** или **_wsetlocale** изменяет языковой стандарт всех потоков, использующие глобальный языковой стандарт. Если языковой стандарт отдельного потока включен, **setlocale** или **_wsetlocale** влияет только на языковой стандарт текущего потока.
+Эти функции влияют на поведение **setlocale**, **_tsetlocale**, **_wsetlocale**, и **_setmbcp**. Если языковой стандарт отдельного потока — отключено, любой последующий вызов **setlocale** или **_wsetlocale** изменяет языковой стандарт всех потоков, использующих глобальный языковой стандарт. Если языковой стандарт отдельного потока включен, **setlocale** или **_wsetlocale** влияет только на языковой стандарт текущего потока.
 
-Если вы используете **_configurethreadlocale** включить языковой стандарт отдельного потока, рекомендуется вызывать **setlocale** или **_wsetlocale** для задания предпочтительного языкового стандарта в этом потоке сразу же после этого.
+Если вы используете **_configurethreadlocale** чтобы языкового стандарта отдельного потока, мы рекомендуем вызывать **setlocale** или **_wsetlocale** для задания предпочтительного языкового стандарта в этом потоке сразу же после этого.
 
-Если *per_thread_locale_type* не является одно из значений, перечисленных в таблице, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает значение -1.
+Если *per_thread_locale_type* не является одним из значений в списке в таблице, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает – 1.
 
 ## <a name="requirements"></a>Требования
 

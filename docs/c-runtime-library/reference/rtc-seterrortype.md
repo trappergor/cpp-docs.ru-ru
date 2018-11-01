@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorType | Документы Майкрософт
-ms.custom: ''
+title: _RTC_SetErrorType
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorType
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorType
 - _RTC_SetErrorType
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - RTC_SetErrorType function
 - _RTC_SetErrorType function
 ms.assetid: f5f99be7-d357-4b11-b8f5-ddd3428f2b06
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83395727b37ea3901e2e3c28d7adb6663f043d12
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 022079bd199477c8bca92e853ed66879c96428db
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406619"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635682"
 ---
 # <a name="rtcseterrortype"></a>_RTC_SetErrorType
 
@@ -59,13 +49,13 @@ int _RTC_SetErrorType(
 Число от нуля до единицы и меньше значения, возвращаемого [_RTC_NumErrors](rtc-numerrors.md).
 
 *ErrType*<br/>
-Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если вы используете **_CrtDbgReport** как обработчик ошибок, *ErrType* может быть только один из символов, определенных в [_CrtSetReportMode](crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.
+Значение, присваиваемое *errnum*. Например, можно использовать **_CRT_ERROR**. Если вы используете **_CrtDbgReport** как обработчика ошибок, *ErrType* может быть только один из символов, определенных в [_CrtSetReportMode](crtsetreportmode.md). Если у вас есть собственный обработчик ошибок ([_RTC_SetErrorFunc](rtc-seterrorfunc.md)), у вас может быть столько же *ErrType*, сколько *errnum*.
 
 *ErrType* для _RTC_ERRTYPE_IGNORE имеет специальное значение для **_CrtSetReportMode**; Ошибка игнорируется.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее значение для типа ошибки *типа*.
+Предыдущее значение для типа ошибки *тип*.
 
 ## <a name="remarks"></a>Примечания
 

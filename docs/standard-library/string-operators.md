@@ -1,8 +1,6 @@
 ---
-title: Операторы &lt;string&gt; | Документы Майкрософт
-ms.custom: ''
+title: Операторы &lt;string&gt;
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - string/std::operator!=
 - string/std::operator&gt;
@@ -13,8 +11,6 @@ f1_keywords:
 - string/std::operator&lt;=
 - string/std::operator+
 - string/std::operator==
-dev_langs:
-- C++
 ms.assetid: 33ce8f05-06c7-45d3-a0cb-bcd27cf93910
 helpviewer_keywords:
 - std::operator!= (string)
@@ -24,20 +20,20 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: 0b4ec7d6d79f70423b2d7c30e1de73e05eb04d9c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101814"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644827"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
 ||||
 |-|-|-|
-|[оператор!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
+|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
 |[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[оператор==](#op_eq_eq)|
+|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|[operator==](#op_eq_eq)|
 
 ## <a name="op_add"></a> operator+
 

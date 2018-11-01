@@ -1,12 +1,7 @@
 ---
-title: Ключевые слова (C++) | Документация Майкрософт
+title: Ключевые слова (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162455"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659320"
 ---
 # <a name="keywords-c"></a>Ключевые слова (C++)
 
@@ -85,7 +76,7 @@ ms.locfileid: "49162455"
 
 В Microsoft C++ идентификаторы с двумя начальными символами подчеркивания зарезервированы для реализаций компилятора. Таким образом, в Microsoft принято соглашение, что специфические ключевые слова для систем Microsoft должны начинаться с двух символов подчеркивания. Эти слова невозможно использовать как имена идентификаторов.
 
-Расширения Microsoft по умолчанию включены. Чтобы убедитесь, что ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав [/Za \(отключить расширения языка)](../build/reference/za-ze-disable-language-extensions.md) параметр во время компиляции. При этом некоторые ключевые слова систем Microsoft будут отключены.
+Расширения Microsoft по умолчанию включены. Чтобы ваши программы были полностью переносимы, расширения Microsoft можно отключить, указав во время компиляции параметр [/Za \(Отключить расширения языка) ](../build/reference/za-ze-disable-language-extensions.md). При этом некоторые ключевые слова для систем Microsoft будут отключены.
 
 Если расширения Microsoft включены, в программах можно использовать ключевые слова, специфические для систем Microsoft. Для совместимости со стандартом ANSI эти ключевые слова начинаются с двух символов подчеркивания. Для обеспечения обратной совместимости поддерживаются одним символом подчеркивания версий многих популярных подобна двойной ключевые слова. Кроме того **__cdecl** доступен без начальных символов подчеркивания.
 
