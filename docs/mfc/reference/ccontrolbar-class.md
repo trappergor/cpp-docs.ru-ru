@@ -1,10 +1,6 @@
 ---
-title: Класс CControlBar | Документация Майкрософт
-ms.custom: ''
+title: CControlBar Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CControlBar
 - AFXEXT/CControlBar
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXEXT/CControlBar::SetInPlaceOwner
 - AFXEXT/CControlBar::m_bAutoDelete
 - AFXEXT/CControlBar::m_pInPlaceOwner
-dev_langs:
-- C++
 helpviewer_keywords:
 - CControlBar [MFC], CControlBar
 - CControlBar [MFC], CalcDynamicLayout
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890535"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644396"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -75,13 +65,13 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Создает объект `CControlBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Возвращает размер панели динамических элементов управления как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
 |[CControlBar::CalcFixedLayout](#calcfixedlayout)|Возвращает размер панели элементов управления, как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
@@ -102,7 +92,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Если значение ненулевое, `CControlBar` объект удаляется при удалении панели элементов управления Windows.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Владелец на месте на панели управления.|
@@ -246,7 +236,7 @@ virtual void DoPaint(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указывает контекст устройства, используемого для отрисовки границ и захвата панели элементов управления.
 
 ### <a name="remarks"></a>Примечания
@@ -267,7 +257,7 @@ virtual void DrawBorders(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указывает контекст устройства, используемого для отрисовки границ элемента панели элементов управления.
 
 *Rect*<br/>
@@ -289,7 +279,7 @@ virtual void DrawGripper(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указывает контекст устройства, используемого для отрисовки захвата панели управления.
 
 *Rect*<br/>

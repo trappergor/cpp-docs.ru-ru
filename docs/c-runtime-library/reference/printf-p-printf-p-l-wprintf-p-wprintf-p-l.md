@@ -1,10 +1,6 @@
 ---
-title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l | Документы Майкрософт
-ms.custom: ''
+title: _printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660369"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -100,9 +90,9 @@ int _wprintf_p_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Printf_p** функции форматируют и выводят последовательности символов и значений в стандартный выходной поток **stdout**. Если следовать аргументы *формат* строку, *формат* строка должна содержать спецификации, которые определяют формат вывода для аргументов (см. [спозиционныепараметрыprintf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p** функция форматирует и печатает набор символов и значений в стандартный выходной поток **stdout**. Если следуют аргументы *формат* строку, *формат* строка должна содержать спецификации, которые определяют формат вывода для аргументов (см. в разделе [спозиционныепараметрыprintf_p](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-Разница между **_printf_p** и **printf_s** является то, что **_printf_p** поддерживает позиционные параметры, позволяющие определить порядок, в котором аргументы являются используется в строке форматирования. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
+Разница между **_printf_p** и **printf_s** является то, что **_printf_p** поддерживает позиционные параметры, позволяющие определить порядок, в котором аргументы используется в строке формата. Дополнительные сведения см. в разделе [Позиционные параметры printf_p](../../c-runtime-library/printf-p-positional-parameters.md).
 
 **_wprintf_p** — это двухбайтовая версия **_printf_p**; они ведут себя одинаково, если поток открыт в режиме ANSI. **_printf_p** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
 
@@ -111,9 +101,9 @@ int _wprintf_p_l(
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-Если *формат* или *аргумент* , **NULL**, или строка форматирования содержит недопустимые символы форматирования **_printf_p** и **_wprintf_p** функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает **errno** для **EINVAL**.
+Если *формат* или *аргумент* являются **NULL**, или строка форматирования содержит недопустимые символы форматирования, **_printf_p** и **_wprintf_p** функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает **errno** для **EINVAL**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -127,7 +117,7 @@ int _wprintf_p_l(
 |**_printf_p**, **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**, **_wprintf_p_l**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консоли, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 

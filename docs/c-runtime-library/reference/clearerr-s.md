@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Документы Майкрософт
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665027"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -54,18 +44,18 @@ errno_t clearerr_s(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на **ФАЙЛ** структуры
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль при успешном завершении; **EINVAL** Если *поток* — **NULL**.
+Нуль в случае успеха; **EINVAL** Если *поток* — **NULL**.
 
 ## <a name="remarks"></a>Примечания
 
-**Clearerr_s** функция сбрасывает индикатор ошибки и индикатор end of file для *поток*. Индикаторы ошибок, не удаляются автоматически; После задания индикатор ошибок для заданного потока операций в этом потоке продолжать возвращать значение ошибки до **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, или [rewind](rewind.md) вызывается.
+**Clearerr_s** функция сбрасывает индикатор ошибки и индикатор окончания файла для *поток*. Индикаторы ошибок автоматически не удаляются; После как индикатор ошибки для указанного потока будет задан, операции в этом потоке будут возвращать значение ошибки до **clearerr_s**, **clearerr**, [fseek](fseek-fseeki64.md), **fsetpos**, или [rewind](rewind.md) вызывается.
 
-Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
 
 ## <a name="requirements"></a>Требования
 

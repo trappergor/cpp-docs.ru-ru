@@ -1,10 +1,6 @@
 ---
-title: Класс CMFCRibbonCategory | Документация Майкрософт
-ms.custom: ''
+title: Класс CMFCRibbonCategory
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonCategory
 - AFXRIBBONCATEGORY/CMFCRibbonCategory
@@ -70,8 +66,6 @@ f1_keywords:
 - AFXRIBBONCATEGORY/CMFCRibbonCategory::SetKeys
 - AFXRIBBONCATEGORY/CMFCRibbonCategory::SetName
 - AFXRIBBONCATEGORY/CMFCRibbonCategory::SetTabColor
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonCategory [MFC], CMFCRibbonCategory
 - CMFCRibbonCategory [MFC], AddHidden
@@ -136,16 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1cc273274068e65bd5066a149f52d2f7cc39271
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b510befa8993337ce62b5bd3b00ea3f48091b0e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657357"
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonCategory
 
@@ -659,7 +649,7 @@ int GetMaxHeight(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1094,7 +1084,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для категорию ленты.
 
 ### <a name="remarks"></a>Примечания
@@ -1115,7 +1105,7 @@ virtual BOOL OnDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для образа.
 
 *Rect*<br/>
@@ -1151,7 +1141,7 @@ virtual void OnDrawMenuBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 *pMenuBar*<br/>
@@ -1300,7 +1290,7 @@ virtual void RecalcLayout(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для категорию ленты.
 
 ### <a name="remarks"></a>Примечания
@@ -1337,7 +1327,7 @@ virtual void ReposPanels(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для панели ленты, которые содержатся в категорию ленты.
 
 ### <a name="remarks"></a>Примечания

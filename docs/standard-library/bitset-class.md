@@ -1,10 +1,6 @@
 ---
-title: Класс bitset | Документы Майкрософт
-ms.custom: ''
+title: Класс bitset
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - bitset/std::bitset
 - bitset/std::bitset::element_type
@@ -21,8 +17,6 @@ f1_keywords:
 - bitset/std::bitset::to_ullong
 - bitset/std::bitset::to_ulong
 - bitset/std::bitset::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bitset [C++]
 - std::bitset [C++], element_type
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - std::bitset [C++], to_ulong
 - std::bitset [C++], reference
 ms.assetid: 28b86964-87b4-429c-8124-b6c251b6c50b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a385ac850148caab582821b039fece5709f75b6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5e5d1e14e6cdf35c907b2bb1f7816fc07bbd416f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562842"
 ---
 # <a name="bitset-class"></a>Класс bitset
 
@@ -112,11 +102,11 @@ class bitset
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](#op_neq)|Проверяет целевой объект `bitset` на неравенство относительно указанного объекта `bitset`.|
+|[operator!=](#op_neq)|Проверяет целевой объект `bitset` на неравенство относительно указанного объекта `bitset`.|
 |[оператор&=](#op_and_eq)|Выполняет побитовое сочетание битовых массивов с использованием логической операции `AND`.|
 |[оператор<<](#op_lshift)|Сдвигает биты в `bitset` влево на указанное число позиций и возвращает результат в новом объекте `bitset`.|
 |[оператор<<=](#op_lshift_eq)|Сдвигает биты в `bitset` влево на указанное число позиций и возвращает результат в целевом объекте `bitset`.|
-|[оператор==](#op_eq_eq)|Проверяет целевой объект `bitset` на равенство относительно указанного объекта `bitset`.|
+|[operator==](#op_eq_eq)|Проверяет целевой объект `bitset` на равенство относительно указанного объекта `bitset`.|
 |[оператор>>](#op_rshift)|Сдвигает биты в `bitset` вправо на указанное число позиций и возвращает результат в новом объекте `bitset`.|
 |[оператор>>=](#op_rshift_eq)|Сдвигает биты в `bitset` вправо на указанное число позиций и возвращает результат в целевом объекте `bitset`.|
 |[оператор&#91;&#93;](#op_at)|Возвращает ссылку на бит в указанной позиции в `bitset`, если `bitset` может быть изменен; в противном случае возвращается значение бита в этой позиции.|

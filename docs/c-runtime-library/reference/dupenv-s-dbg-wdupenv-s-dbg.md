@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s_dbg, _wdupenv_s_dbg | Документы Майкрософт
-ms.custom: ''
+title: _dupenv_s_dbg, _wdupenv_s_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
@@ -24,8 +20,6 @@ f1_keywords:
 - _tdupenv_s_dbg
 - _dupenv_s_dbg
 - _wdupenv_s_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tdupenv_s_dbg function
 - dupenv_s_dbg function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - wdupenv_s_dbg function
 - _dupenv_s_dbg function
 ms.assetid: e3d81148-e24e-46d0-a21d-fd87b5e6256c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ef129cec096734c23e911a5dc77bf3bd0b2df03
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 95d8c18a0ebc543304fdb6bf51c4adde589333aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404309"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579604"
 ---
 # <a name="dupenvsdbg-wdupenvsdbg"></a>_dupenv_s_dbg, _wdupenv_s_dbg
 
@@ -95,17 +85,17 @@ errno_t _wdupenv_s_dbg(
 
 Нуль при успешном выполнении, код ошибки при сбое.
 
-Эти функции проверяют свои параметры; Если *буфера* или *varname* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если продолжение выполнения разрешено, функции задают **errno** для **EINVAL** и возвращают **EINVAL**.
+Эти функции проверяют свои параметры. Если *буфера* или *varname* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функции задают **errno** для **EINVAL** и вернуть **EINVAL**.
 
-Если эти функции не может выделить достаточно памяти, они задают *буфера* для **NULL** и *numberOfElements* значение 0 и возвращают **ENOMEM**.
+Если эти функции не может выделить достаточно памяти, он устанавливать *буфера* для **NULL** и *numberOfElements* для 0 и возвращают **ENOMEM**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Dupenv_s_dbg** и **_wdupenv_s_dbg** идентичны **_dupenv_s** и **_wdupenv_s** за исключением того, что, когда **_DEBUG** будет определено, эти функции используют отладочную версию [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md)для выделения памяти для значения переменной среды. Сведения о компонентах отладки **_malloc_dbg**, в разделе [_malloc_dbg](malloc-dbg.md).
+**_Dupenv_s_dbg** и **_wdupenv_s_dbg** функции аналогичны **_dupenv_s** и **_wdupenv_s** за исключением того, что, когда **_DEBUG** будет определен, эти функции используют отладочную версию [malloc](malloc.md), [_malloc_dbg](malloc-dbg.md)для выделения памяти для значения переменной среды. Сведения о компонентах отладки **_malloc_dbg**, см. в разделе [_malloc_dbg](malloc-dbg.md).
 
-Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы **_dupenv_s** и **_wdupenv_s** сопоставляются с **_dupenv_s_dbg** и **_wdupenv_s_dbg**, соответственно, с *blockType* значение **_NORMAL_BLOCK**. Таким образом, не требуется явно вызывать эти функции, если только необходимости пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
+Как правило, явно вызывать эти функции не требуется. Вместо этого можно определить флаг **_CRTDBG_MAP_ALLOC**. Когда **_CRTDBG_MAP_ALLOC** определен, вызовы функций **_dupenv_s** и **_wdupenv_s** сопоставляются **_dupenv_s_dbg** и **_wdupenv_s_dbg**, соответственно, с помощью *blockType* присвоено **_NORMAL_BLOCK**. Таким образом, не нужно явно вызывать эти функции, если вы не хотите пометить блоки кучи как **_CLIENT_BLOCK**. Дополнительные сведения о типах блоков см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

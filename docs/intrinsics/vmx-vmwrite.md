@@ -1,28 +1,18 @@
 ---
-title: __vmx_vmwrite | Документация Майкрософт
-ms.custom: ''
+title: __vmx_vmwrite
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmwrite
-dev_langs:
-- C++
 helpviewer_keywords:
 - __vmx_vmwrite intrinsic
 - VMWRITE instruction
 ms.assetid: 88139792-fd3f-4210-97ca-9d84f43a0252
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f333a37972a31b5815a05797bfabb603f5a26947
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c5c6e0edcb3136986cfd8e05f3d5217b3d021fa7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820689"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529250"
 ---
 # <a name="vmxvmwrite"></a>__vmx_vmwrite
 
@@ -33,7 +23,7 @@ ms.locfileid: "48820689"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-unsigned char __vmx_vmwrite( 
+unsigned char __vmx_vmwrite( 
    size_t Field,
    size_t FieldValue
 );
@@ -41,7 +31,7 @@ unsigned char __vmx_vmwrite(
 
 #### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Поле*|[in] Поле VMCS для записи.|
 |*FieldValue*|[in] Значение для записи в поле VMCS.|
@@ -56,7 +46,7 @@ unsigned char __vmx_vmwrite(
 
 ## <a name="remarks"></a>Примечания
 
-`__vmx_vmwrite` Функция эквивалентна `VMWRITE` инструкции компьютера. Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.
+Функция `__vmx_vmwrite` эквивалентна инструкции компьютера `VMWRITE` . Значение `Field` параметр является индекс кодировке поля, который описан в документации Intel. Дополнительные сведения в документе «Intel Virtualization технические спецификации для архитектуры IA-32 Intel,» номер документа C97063-002, на [корпорации Intel](https://software.intel.com/articles/intel-sdm) к сайту, а затем изучите приложения C, документ.
 
 ## <a name="requirements"></a>Требования
 

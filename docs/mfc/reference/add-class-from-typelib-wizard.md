@@ -1,35 +1,25 @@
 ---
-title: Библиотеки типов мастер добавления классов из | Документация Майкрософт
-ms.custom: ''
+title: Мастер добавления классов из TypeLib
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.typelib
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654341"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Мастер добавления классов из TypeLib
 
 Этот мастер используется для добавления класса MFC из библиотеки типов, доступных. Мастер создает класс для каждого интерфейса, добавленные из выбранной библиотеки типов.
 
 > [!WARNING]
-> В Visual Studio 2017 версии 15.9 этот мастер кода устарела и будет удален в будущих версиях Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об этом об устаревании, заполните [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваши отзывы важным для нас.
+> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
 
 - **Добавить класс из**
 
@@ -69,7 +59,7 @@ ms.locfileid: "48250384"
 
 - **Класс**
 
-   Задает имя класса, выбранного в поле **Созданные классы**, который мастер добавляет при нажатии кнопки **Готово**. Можно изменить имя в **класс** поле.
+   Задает имя класса, выбранного в поле **Созданные классы**, который мастер добавляет при нажатии кнопки **Готово**. Можно изменить имя в поле **Класс**.
 
 - **Файл**
 

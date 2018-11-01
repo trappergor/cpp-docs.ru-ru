@@ -1,10 +1,6 @@
 ---
-title: modf, modff, modfl | Документы Майкрософт
-ms.custom: ''
+title: modf, modff, modfl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - modff
 - modf
@@ -30,23 +26,17 @@ f1_keywords:
 - math/modf
 - math/modff
 - math/modfl
-dev_langs:
-- C++
 helpviewer_keywords:
 - modf function
 - modff function
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87cddb8b565cdc369e6b1e9679583db64039bb49
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404835"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478069"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -79,11 +69,11 @@ long double modf( long double x, long double * intptr );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-**Modf** функции разбиения значение с плавающей запятой *x* в дробных частей целое число со знаком, каждый из которых имеет тот же знак, что и *x*. Знаком дробной части числа *x* возвращается. Целая часть результата сохраняется как значение с плавающей запятой в *intptr*.
+**Modf** функции разбить значение с плавающей запятой *x* на дробную и целую части, каждая из которых имеет тот же знак, что *x*. Со знаком дробной части числа *x* возвращается. Целая часть сохраняется как значение с плавающей запятой в *intptr*.
 
 **modf** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничения на использование реализации SSE2 см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-C++ допускает перегрузки, поэтому можно вызывать перегрузки **modf** , принимающие и возвращающие **float** или **длинные** **двойные** параметров. В программе на языке C **modf** всегда принимает два значения типа double и возвращает значение типа double.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **modf** , принимающие и возвращающие **float** или **long** **двойные** параметров. В программе на языке C **modf** всегда принимает два значения типа double и возвращает значение типа double.
 
 ## <a name="requirements"></a>Требования
 

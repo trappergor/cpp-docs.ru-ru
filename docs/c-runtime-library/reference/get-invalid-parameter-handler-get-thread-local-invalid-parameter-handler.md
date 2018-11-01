@@ -1,10 +1,6 @@
 ---
-title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler | Документы Майкрософт
-ms.custom: ''
+title: _get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
@@ -26,22 +22,16 @@ f1_keywords:
 - stdlib/_get_invalid_parameter_handler
 - _get_thread_local_invalid_parameter_handler
 - stdlib/_get_thread_local_invalid_parameter_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_thread_local_invalid_parameter_handler function
 - _get_invalid_parameter_handler function
 ms.assetid: a176da0e-38ca-4d99-92bb-b0e2b8072f53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0302f0ba8e7e34ca60ab73aa0193b48b8352bc77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7d1a87f9ade0845994918d5a4d59dc56e190d2b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623981"
 ---
 # <a name="getinvalidparameterhandler-getthreadlocalinvalidparameterhandler"></a>_get_invalid_parameter_handler, _get_thread_local_invalid_parameter_handler
 
@@ -60,7 +50,7 @@ _invalid_parameter_handler _get_thread_local_invalid_parameter_handler(void);
 
 ## <a name="remarks"></a>Примечания
 
-**_Get_invalid_parameter_handler** функция возвращает текущее обработчик глобального недопустимого параметра. Если глобальный обработчик недопустимого параметра не задан, возвращается указатель NULL. Аналогичным образом **_get_thread_local_invalid_parameter_handler** возвращает текущий обработчик недопустимого параметра локального потока вызывается для потока, или указатель null, если обработчик не был задан. Дополнительные сведения об установке глобального и локального для потока обработчика недопустимого параметра см. в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
+**_Get_invalid_parameter_handler** функция получает текущий языковой глобальный обработчик недопустимого параметра. Если глобальный обработчик недопустимого параметра не задан, возвращается указатель NULL. Аналогичным образом **_get_thread_local_invalid_parameter_handler** получает текущий обработчик недопустимых параметров локального потока он вызывается для потока, или указатель null, если обработчик не был задан. Дополнительные сведения об установке глобального и локального для потока обработчика недопустимого параметра см. в разделе [_set_invalid_parameter_handler, _set_thread_local_invalid_parameter_handler](set-invalid-parameter-handler-set-thread-local-invalid-parameter-handler.md).
 
 Возвращаемый указатель на функцию обработчика недопустимого параметра имеет следующий тип:
 
@@ -82,7 +72,7 @@ typedef void (__cdecl* _invalid_parameter_handler)(
 |-------------|---------------------|
 |**_get_invalid_parameter_handler**, **_get_thread_local_invalid_parameter_handler**|C: \<stdlib.h><br /><br /> C++: \<cstdlib> или \<stdlib.h>|
 
-**_Get_invalid_parameter_handler** и **_get_thread_local_invalid_parameter_handler** функции — только к системам Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**_Get_invalid_parameter_handler** и **_get_thread_local_invalid_parameter_handler** функции только к системам Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

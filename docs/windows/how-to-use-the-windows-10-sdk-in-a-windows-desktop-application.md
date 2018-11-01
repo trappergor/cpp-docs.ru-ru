@@ -1,24 +1,14 @@
 ---
-title: 'Практическое: использовать Windows 10 SDK в настольном приложении Windows | Документация Майкрософт'
+title: Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669122"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
 
@@ -26,7 +16,7 @@ ms.locfileid: "42611324"
 
 Если вы хотите более ранней версии пакета SDK, его можно открыть **проекта | Свойства** и выберите из версии пакета SDK, доступные в раскрывающемся списке версия пакета SDK для Windows.
 
-Начиная с Visual Studio 2015 и пакета SDK для Windows 10, библиотека CRT была разделена на две части, один (ucrtbase) содержит функции, которые являются допустимыми для использования в универсальных приложениях Windows, а тот, который содержит все остальное (vcruntime140). Поскольку пакет SDK для Windows 10 содержит новые функции, например многие функции C99, для их использования необходимо выполнить следующие действия. См. статью [CRT Library Features](../c-runtime-library/crt-library-features.md) (Функции библиотеки CRT).
+Начиная с Visual Studio 2015 и пакета SDK для Windows 10, библиотека CRT была разделена на две части, один (ucrtbase) содержит функции, которые являются допустимыми для использования в универсальных приложениях Windows, а тот, который содержит все остальное (vcruntime140). Поскольку пакет SDK для Windows 10 содержит новые функции, например многие функции C99, для их использования необходимо выполнить следующие действия. См. раздел [CRT Library Features](../c-runtime-library/crt-library-features.md).
 
 ### <a name="to-target-the-windows-10-sdk"></a>Изменение целевой платформы для пакета SDK для Windows 10
 

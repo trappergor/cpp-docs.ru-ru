@@ -1,11 +1,6 @@
 ---
-title: lgamma, lgammaf, lgammal | Документы Майкрософт
-ms.custom: ''
+title: lgamma, lgammaf, lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400256"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533488"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma, lgammaf, lgammal
 
@@ -72,9 +61,9 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения возвращает натуральный логарифм гамма-функции из абсолютное значение *x*.
+В случае успешного выполнения возвращает натуральный логарифм абсолютного значения гамма-функции для *x*.
 
-|Проблеми|Назад|
+|Проблемы|Назад|
 |-----------|------------|
 |*x* = NaN|NaN|
 |*x* = ±0|+INFINITY|
@@ -87,9 +76,9 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **lgamma** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **lgamma** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **lgamma** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **lgamma** всегда принимает и возвращает **двойные**.
 
-Если x является номером рациональное, эта функция возвращает логарифм факториала (x - 1).
+Если x является рациональным числом, эта функция возвращает логарифм факториала (x - 1).
 
 ## <a name="requirements"></a>Требования
 

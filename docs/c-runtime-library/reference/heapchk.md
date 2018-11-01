@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Документы Майкрософт
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399638"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580626"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -65,11 +55,11 @@ int _heapchk( void );
 **_HEAPEMPTY**|Куча не инициализирована.
 **_HEAPOK**|Вероятно, куча согласована.
 
-Кроме того, если происходит ошибка **_heapchk** задает **errno** для **ENOSYS**.
+Кроме того, если возникает ошибка **_heapchk** задает **errno** для **ENOSYS**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Heapchk** функция помогает при отладке проблемы с кучей, проверив минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** и задает **errno** для **ENOSYS**.
+**_Heapchk** функция помогает при отладке проблем с кучей путем проверки на предмет минимальной согласованности кучи. Если операционная система не поддерживает **_heapchk**(например, Windows 98), функция возвращает **_HEAPOK** и задает **errno** для **ENOSYS**.
 
 ## <a name="requirements"></a>Требования
 

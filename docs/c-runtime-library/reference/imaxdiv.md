@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Документы Майкрософт
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434462"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -53,7 +43,7 @@ imaxdiv_t imaxdiv(
 
 ### <a name="parameters"></a>Параметры
 
-*числа*<br/>
+*Число добавлений*<br/>
 Числитель.
 
 *denom*<br/>
@@ -65,7 +55,7 @@ imaxdiv_t imaxdiv(
 
 ## <a name="remarks"></a>Примечания
 
-**Imaxdiv** функция разделяет *числа* по *denom* и тем самым Вычисляет частное и остаток. **Imaxdiv_t** структура содержит частное, **intmax_t** **quot**и остаток, **intmax_t** **rem**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
+**Imaxdiv** функция делит *числа* по *denom* и тем самым Вычисляет частное и остаток. **Imaxdiv_t** структура содержит частное, **intmax_t** **quot**и остаток, **intmax_t** **rem**. Знак частного совпадает со знаком математического частного. Его абсолютное значение представляет собой наибольшее целое число, которое меньше абсолютного значения математического частного. Если знаменатель равен 0, выполнение программы прекратится и появится сообщение об ошибке.
 
 ## <a name="requirements"></a>Требования
 

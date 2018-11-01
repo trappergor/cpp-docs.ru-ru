@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l | Документы Майкрософт
-ms.custom: ''
+title: _cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606523"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s, _cprintf_s_l, _cwprintf_s, _cwprintf_s_l
 
@@ -107,18 +97,18 @@ int _cwprintf_s_l(
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль с помощью **_putch** функции (**_putwch** для **_cwprintf_s**) для вывода символы. Каждый *аргумент* (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в *формат*. Формат имеет те же форму и функциональные возможности, что *формат* параметр [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) функции. В отличие от **fprintf_s**, **printf_s**, и **sprintf_s** функции, ни **_cprintf_s** , ни **_cwprintf_s** транслирует символы перевода строки каретки сочетания канала для возврата строки (CR-LF) при выводе.
+Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль, используя **_putch** функция (**_putwch** для **_cwprintf_s**) выходные данные символы. Каждый *аргумент* (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в *формат*. Формат имеет те же форму и функционировать как *формат* параметр для [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md) функции. В отличие от **fprintf_s**, **printf_s**, и **sprintf_s** функции, ни **_cprintf_s** , ни **_cwprintf_s** преобразование символов перевода строки в сочетания символов возврата строки (CR-LF), веб-канал каретки при выводе.
 
-Важное отличие состоит в том **_cwprintf_s** показывает символы Юникода при использовании в Windows NT. В отличие от **_cprintf_s**, **_cwprintf_s** использует текущий языковой стандарт консоли
+Важное отличие заключается в том, что **_cwprintf_s** показывает символы Юникода при использовании в Windows NT. В отличие от **_cprintf_s**, **_cwprintf_s** использует текущий языковый стандарт консоли
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-Как и небезопасных версий (см. [_cprintf _cprintf_l, _cwprintf _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), если *формат* является пустым указателем. Эти функции отличаются от небезопасных версий тем, что также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции вызывают обработчик недопустимых параметров. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Как и небезопасные версии (см. в разделе [_cprintf, _cprintf_l, _cwprintf, _cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), если *формат* является пустым указателем. Эти функции отличаются от небезопасных версий тем, что также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции вызывают обработчик недопустимых параметров. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

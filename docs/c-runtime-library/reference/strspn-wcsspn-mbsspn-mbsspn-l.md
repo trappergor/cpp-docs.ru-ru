@@ -1,10 +1,6 @@
 ---
-title: strspn, wcsspn, _mbsspn, _mbsspn_l | Документы Майкрософт
-ms.custom: ''
+title: strspn, wcsspn, _mbsspn, _mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,23 +40,19 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415165"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477324"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn, wcsspn, _mbsspn, _mbsspn_l
 
 Возвращает индекс первого вхождения в строке символа, который не относится к набору символов.
 
 > [!IMPORTANT]
-> **_mbsspn** и **_mbsspn_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspn** и **_mbsspn_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -99,17 +89,17 @@ size_t _mbsspn_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает целочисленное значение, задающее длину подстроки в *str* , состоящий только из символов в *strCharSet*. Если *str* начинается со знака не поддерживается в *strCharSet*, функция возвращает значение 0.
+Возвращает целочисленное значение, задающее длину подстроки в *str* , состоящий только из символов в *strCharSet*. Если *str* начинается с символа не из *strCharSet*, функция возвращает значение 0.
 
 ## <a name="remarks"></a>Примечания
 
-**Strspn** функция возвращает индекс первого символа в *str* , не принадлежит набор символов в *strCharSet*. Поиск не включает завершающие нуль-символы.
+**Strspn** функция возвращает индекс первого символа в *str* , не принадлежит к набору символов в *strCharSet*. Поиск не включает завершающие нуль-символы.
 
-**wcsspn** и **_mbsspn** версии Юникода и многобайтовых символов **strspn**. Аргументы **wcsspn** являются двухбайтовые строки; аргументы **_mbsspn** представляют собой строки многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *strCharSet* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbspn** задает **errno** для **EINVAL** и возвращает 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+**wcsspn** и **_mbsspn** расширенных и многобайтовых символов версии **strspn**. Аргументы **wcsspn** являются двухбайтовые строки; аргументы **_mbsspn** представляют собой строки многобайтовых символов. **_mbsspn** проверяет свои параметры. Если *str* или *strCharSet* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, **_mbspn** задает **errno** для **EINVAL** и возвращает значение 0. **strspn** и **wcsspn** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

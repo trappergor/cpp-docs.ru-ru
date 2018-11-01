@@ -1,10 +1,6 @@
 ---
-title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l | Документы Майкрософт
-ms.custom: ''
+title: _strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset_s_l
 - _strnset_s
@@ -41,8 +37,6 @@ f1_keywords:
 - mbsnset_s_l
 - mbsnset_s
 - wcsnset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnset_s_l function
@@ -60,23 +54,19 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416025"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459999"
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s, _strnset_s_l, _wcsnset_s, _wcsnset_s_l, _mbsnset_s, _mbsnset_s_l
 
 Инициализирует символы строки в конкретный символ. Эти версии [_strnset _strnset_l, _wcsnset, _wcsnset_l, _mbsnset, _mbsnset_l](strnset-strnset-l-wcsnset-wcsnset-l-mbsnset-mbsnset-l.md) имеют усовершенствованную безопасность, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsnset_s** и **_mbsnset_s_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsnset_s** и **_mbsnset_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -143,19 +133,19 @@ errno_t _mbsnset_s_l(
 
 Нуль в случае успешного выполнения; в противном случае — код ошибки.
 
-Эти функции проверяют свои аргументы. Если *str* не является допустимой строкой с завершающим нулем или аргумент размера находится меньше или равно 0, то вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают код ошибки и набор **errno** к этому коду ошибки. Код ошибки по умолчанию — **EINVAL** Если более конкретное значение не применяется.
+Эти функции проверяют свои аргументы. Если *str* не является допустимой строкой с завершающим нулем, или аргумент размера находится меньше или равно 0, то вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают код ошибки и устанавливают **errno** к этому коду ошибки. Код ошибки по умолчанию- **EINVAL** Если не применяется более конкретное значение.
 
 ## <a name="remarks"></a>Примечания
 
-Более того, эти функции устанавливают первый *число* символов *str* для *c*. Если *число* больше, чем размер *str*, размер *str* используется вместо *число*. Если возникает ошибка *число* больше, чем *numberOfElements* и оба эти параметра больше, чем размер *str*.
+Эти функции устанавливают максимум, первый *число* символов *str* для *c*. Если *число* больше, чем размер *str*, размер *str* используется вместо *число*. Если возникает ошибка *число* больше, чем *numberOfElements* и оба этих параметра больше, чем размер *str*.
 
-**_wcsnset_s** и **_mbsnset_s** версии Юникода и многобайтовых символов **_strnset_s**. Строковый аргумент **_wcsnset_s** является двухбайтовые строки; **_mbsnset_s** amultibyte символьная строка. В остальном эти три функции ведут себя идентично.
+**_wcsnset_s** и **_mbsnset_s** расширенных и многобайтовых символов версии **_strnset_s**. Строковый аргумент **_wcsnset_s** — это двухбайтовая строка; **_mbsnset_s** — строка многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

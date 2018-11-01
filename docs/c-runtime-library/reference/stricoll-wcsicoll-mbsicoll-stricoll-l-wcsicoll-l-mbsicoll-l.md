@@ -1,10 +1,6 @@
 ---
-title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l | Документы Майкрософт
-ms.custom: ''
+title: _stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,23 +51,19 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416376"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579677"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll, _wcsicoll, _mbsicoll, _stricoll_l, _wcsicoll_l, _mbsicoll_l
 
 Сравнивает строки на основе данных языкового стандарта.
 
 > [!IMPORTANT]
-> **_mbsicoll** и **_mbsicoll_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsicoll** и **_mbsicoll_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -109,7 +99,7 @@ int _mbsicoll_l(
 
 ### <a name="parameters"></a>Параметры
 
-*string1*, *строка2*<br/>
+*string1*, *string2*<br/>
 Строки с завершающим нулем для сравнения.
 
 *locale*<br/>
@@ -121,22 +111,22 @@ int _mbsicoll_l(
 
 |Возвращаемое значение|Отношение string1 к string2|
 |------------------|----------------------------------------|
-|< 0|*string1* меньше, чем *строка2*|
-|0|*string1* идентичен *строка2*|
-|> 0|*string1* больше *строка2*|
+|< 0|*string1* меньше, чем *string2*|
+|0|*string1* идентичен *string2*|
+|> 0|*string1* больше, чем *string2*|
 |**_NLSCMPERROR**|Произошла ошибка.|
 
-Каждая из этих функций возвращает **_NLSCMPERROR**. Для использования **_NLSCMPERROR**, либо включить \<string.h > или \<mbstring.h >. **_wcsicoll** может завершиться ошибкой, если *string1* или *string2* содержит коды расширенных символов, за пределами домена упорядоченной последовательности. При возникновении ошибки **_wcsicoll** может задать **errno** для **EINVAL**. Для проверки ошибки во время вызова **_wcsicoll**, задайте **errno** 0 и проверьте **errno** после вызова **_wcsicoll**.
+Каждая из этих функций возвращает **_NLSCMPERROR**. Чтобы использовать **_NLSCMPERROR**, включают в себя \<string.h > или \<mbstring.h >. **_wcsicoll** может завершиться ошибкой, если *string1* или *string2* содержит коды расширенных символов, не последовательность сортировки. При возникновении ошибки, **_wcsicoll** может задать **errno** для **EINVAL**. Для проверки ошибки во время вызова **_wcsicoll**, задайте **errno** 0 и проверьте **errno** после вызова метода **_wcsicoll**.
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих функций выполняет сравнение без учета регистра *string1* и *string2* согласно кодовой странице в настоящий момент. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.
+Каждая из этих функций сравнивает без учета регистра строки *string1* и *string2* согласно кодовой странице в настоящий момент. Эти функции следует использовать только в том случае, когда есть различие между порядком символов в наборе и лексикографическим порядком символов в текущей кодовой странице и данное различие представляет интерес во время сравнения строк.
 
-**_stricmp** отличается от **_stricoll** в том, что **_stricmp** сравнения определяется **LC_CTYPE**, тогда как **_stricoll** сравнения с учетом **LC_CTYPE** и **LC_COLLATE** категории языкового стандарта. Дополнительные сведения о **LC_COLLATE** категории, в разделе [setlocale](setlocale-wsetlocale.md) и [категории языкового стандарта](../../c-runtime-library/locale-categories.md). Версии этих функций без **_l** используйте суффикс текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_stricmp** отличается от **_stricoll** в том, что **_stricmp** сравнения определяется **LC_CTYPE**, тогда как **_stricoll** сравнение осуществляется в соответствии с **LC_CTYPE** и **LC_COLLATE** категории языкового стандарта. Дополнительные сведения о **LC_COLLATE** категорию, см. в разделе [setlocale](setlocale-wsetlocale.md) и [категории языкового стандарта](../../c-runtime-library/locale-categories.md). В версиях этих функций без **_l** суффикс использования текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Все эти функции проверяют свои параметры. Если параметр *string1* или *string2* , **NULL** вызывается указатели, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **_NLSCMPERROR** и задайте **errno** для **EINVAL**.
+Все эти функции проверяют свои параметры. Если параметр *string1* или *string2* являются **NULL** вызывается указатели, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **_NLSCMPERROR** и задайте **errno** для **EINVAL**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

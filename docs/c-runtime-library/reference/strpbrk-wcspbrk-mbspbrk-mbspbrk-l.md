@@ -1,10 +1,6 @@
 ---
-title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l | Документы Майкрософт
-ms.custom: ''
+title: strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbspbrk
 - wcspbrk
@@ -31,8 +27,6 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181137"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468969"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk, wcspbrk, _mbspbrk, _mbspbrk_l
 
@@ -143,7 +133,7 @@ const unsigned char *_mbspbrk_l(
 
 `strpbrk` Функция возвращает указатель на первое вхождение символа в *str* , входящего в набор символов в *strCharSet*. Поиск не включает завершающие нуль-символы.
 
-Функции `wcspbrk` и `_mbspbrk` являются версиями функции `strpbrk` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcspbrk` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbspbrk` представляют собой многобайтовые строки.
+Функции`wcspbrk` и `_mbspbrk` are wide-character и multibyte-character versions of `strpbrk`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcspbrk` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbspbrk` представляют собой многобайтовые строки.
 
 `_mbspbrk` проверяет свои параметры. Если *str* или *strCharSet* имеет значение NULL, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, `_mbspbrk` возвращает значение NULL и задает `errno` для EINVAL. Функции `strpbrk` и `wcspbrk` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 

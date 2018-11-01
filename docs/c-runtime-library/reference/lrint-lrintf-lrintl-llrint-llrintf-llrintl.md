@@ -1,11 +1,6 @@
 ---
-title: lrint, lrintf, lrintl, llrint, llrintf, llrintl | Документы Майкрософт
-ms.custom: ''
+title: lrint, lrintf, lrintl, llrint, llrintf, llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401263"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500848"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -118,15 +107,15 @@ long long int llrintl(
 
 В случае успешного выполнения возвращает округленное целочисленное значение *x*.
 
-|Проблеми|Назад|
+|Проблемы|Назад|
 |-----------|------------|
-|*x* выходит за пределы типа возвращаемого значения<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Вызывает **FE_INVALID** и возвращает ноль (0).|
+|*x* находится вне диапазона типа возвращаемого значения<br /><br /> *x* = ±∞<br /><br /> *x* = NaN|Вызывает **FE_INVALID** и возвращает ноль (0).|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **lrint** и **llrint** , которые принимают **float** и **длинные**  **двойные** типов. В программе на языке C **lrint** и **llrint** всегда имеют **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **lrint** и **llrint** , принимающих **float** и **long**  **двойные** типов. В программе на языке C **lrint** и **llrint** всегда имеют **двойные**.
 
-Если *x* не представляет целочисленное значение, вызов этих функций с плавающей запятой эквивалент **FE_INEXACT**.
+Если *x* не представляет с плавающей запятой эквивалент целочисленного значения, эти функции вызывают **FE_INEXACT**.
 
 **Только для систем Майкрософт**. Если результат находится вне диапазона типа возвращаемого значения или параметр является значением NaN или бесконечностью, возвращаемое значение определяется реализацией. Компилятор Майкрософт возвращает нулевое значение (0).
 

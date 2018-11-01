@@ -1,27 +1,17 @@
 ---
-title: '&lt;unordered_set&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;unordered_set&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <unordered_set>
-dev_langs:
-- C++
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3dd54248b8781dfcd76ef8bcc13cd846af00e83f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 8e79d05512a53b8fc2d4cb305cecf8d9095a9728
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33855213"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602895"
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
 
@@ -44,11 +34,11 @@ ms.locfileid: "33855213"
 
 |Функция|Описание|
 |-|-|
-|[оператор!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
-|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_multiset в левой части объекту unordered_multiset в правой части.|
 |[swap](../standard-library/unordered-set-functions.md#swap_unordered_multiset)|Меняет местами два объекта multiset.|
-|[оператор!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
-|[оператор==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
+|[operator!=](../standard-library/unordered-set-operators.md#op_neq)|Проверяет, не равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
+|[operator==](../standard-library/unordered-set-operators.md#op_eq_eq)|Проверяет, равен ли объект unordered_set в левой части объекту unordered_set в правой части.|
 |[swap](../standard-library/unordered-set-functions.md#swap)|Меняет местами два сопоставления.|
 
 ## <a name="see-also"></a>См. также

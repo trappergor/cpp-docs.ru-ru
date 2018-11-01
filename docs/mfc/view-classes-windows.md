@@ -1,29 +1,19 @@
 ---
-title: Просмотр классов (Windows) | Документация Майкрософт
-ms.custom: ''
+title: Классы представления (Windows)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.view
-dev_langs:
-- C++
 helpviewer_keywords:
 - form and record views [MFC]
 - splitter window classes [MFC]
 - view classes [MFC], Windows
 ms.assetid: b11683fb-9f43-4de3-9499-2b55775f9870
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b347fcc14b477ab83a3bc0b6dfa2c0c80adeb791
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5fc08ec23e0a2b2ba105aa3a633ee862dc452450
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428880"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462309"
 ---
 # <a name="view-classes-windows"></a>Классы представления (Windows)
 
@@ -43,7 +33,7 @@ ms.locfileid: "46428880"
 
 Представления записей являются производными от представления форм. Помимо шаблон диалогового окна они также иметь подключение к базе данных.
 
-[Класс CFormView](../mfc/reference/cformview-class.md)<br/>
+[CFormView](../mfc/reference/cformview-class.md)<br/>
 Представление прокрутки, макет которой определяется в шаблон диалогового окна. Наследуйте класс от `CFormView` для реализации пользовательского интерфейса, в зависимости от шаблона диалогового окна.
 
 [CDaoRecordView](../mfc/reference/cdaorecordview-class.md)<br/>

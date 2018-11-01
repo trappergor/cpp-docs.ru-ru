@@ -1,10 +1,6 @@
 ---
-title: isalpha, iswalpha, _isalpha_l, _iswalpha_l | Документы Майкрософт
-ms.custom: ''
+title: isalpha, iswalpha, _isalpha_l, _iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401998"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591757"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha, iswalpha, _isalpha_l, _iswalpha_l
 
@@ -88,13 +78,13 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих процедур возвращает ненулевое значение, если *c* — конкретное представление буквы алфавита. **isalpha** возвращает ненулевое значение, если *c* находится в диапазоне A - Z или a - z. **iswalpha** возвращает ненулевое значение только для расширенных символов, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** имеет ненулевое значение, то есть для любого расширенных символов, один определяемый реализацией набор для которых ни одна из **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** имеет ненулевое значение. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление алфавитного символа. **isalpha** возвращает ненулевое значение, если *c* находится в диапазоне A - Z или a – z. **iswalpha** возвращает ненулевое значение только для расширенных символов, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) или **iswlower** не равно нулю; то есть любые расширенные символы, определяемые реализацией в набор для которых **iswcntrl**, **iswdigit**, **iswpunct**, или **iswspace** имеет ненулевое значение. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций, имеющих **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций с **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isalpha** и **_isalpha_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+Поведение **isalpha** и **_isalpha_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

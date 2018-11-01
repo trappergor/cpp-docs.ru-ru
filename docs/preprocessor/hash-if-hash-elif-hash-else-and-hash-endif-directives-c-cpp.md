@@ -1,10 +1,6 @@
 ---
-title: '#IF, #elif, #else и #endif (C/C++) | Документация Майкрософт'
-ms.custom: ''
+title: '#IF, #elif, #else и #endif (C/C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - '#else'
 - '#endif'
@@ -12,8 +8,6 @@ f1_keywords:
 - '#elif'
 - defined
 - __has_include
-dev_langs:
-- C++
 helpviewer_keywords:
 - '#elif directive'
 - conditional compilation, directives
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8dcacaab21ca763a9ce45a9ab6eb503cd6fc7b74
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753845"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520427"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>Директивы #if, #elif, #else и #endif (C/C++)
 
@@ -51,16 +41,16 @@ ms.locfileid: "43753845"
 &nbsp;&nbsp;&nbsp;&nbsp;*текст строки If*
 
 *строки IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***константного выражения* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***идентификатор* <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***идентификатор* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#if***константного выражения*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***идентификатор*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***идентификатор*
 
 *elif части* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif строка текста*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif части elif строка текста*
 
 *elif строка* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***константного выражения* 
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif***константного выражения*
 
 *Else часть* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*текст строки else*

@@ -1,10 +1,6 @@
 ---
-title: mbsinit | Документы Майкрософт
-ms.custom: ''
+title: mbsinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbsinit
 apilocation:
@@ -21,21 +17,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbsinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsinit function
 ms.assetid: 4618555b-baaa-4d04-93fa-36abae411034
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 413592bcf3af01c898a72d0ca70239364ee432f9
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8b467ae7f705fc2f4b2b38d3f76f3936f30ec15e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597240"
 ---
 # <a name="mbsinit"></a>mbsinit
 
@@ -56,11 +46,11 @@ int mbsinit(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если *ps* — **NULL** или, если не в процессе преобразования.
+Ненулевое значение *ps* — **NULL** или, если не в процессе преобразования.
 
 ## <a name="remarks"></a>Примечания
 
-При использовании одной из функций ANSI, который принимает **mbstate_t** указателя, передав адрес вашей **mbstate_t** будут возвращены сведения о ли преобразован получения последнего байта в буфере.
+При использовании одной из функций ANSI, который принимает **mbstate_t** указатель, передав адрес вашей **mbstate_t** будут возвращены сведения о том, был ли преобразован последний байт в буфере.
 
 Для поддержки многобайтовых символов должна быть установлена соответствующая кодовая страница.
 

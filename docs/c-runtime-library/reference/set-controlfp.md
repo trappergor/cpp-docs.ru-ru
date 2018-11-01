@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Документы Майкрософт
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499051"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -68,9 +58,9 @@ void __cdecl _set_controlfp(
 
 ## <a name="remarks"></a>Примечания
 
-**_Set_controlfp** функция подобна **_control87**, но только задает управляющее слово *newControl*. Биты в значениях показывают состояние элемента управления блоком операций с плавающей запятой. Состояние элемента управления блока операций с плавающей запятой разрешает программе изменять режимы точности, округления и бесконечности в пакете математических операций с числами с плавающей запятой. Можно также маскировать или снимите маску исключений с плавающей запятой с помощью **_set_controlfp**. Дополнительные сведения см. в разделе [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
+**_Set_controlfp** функция аналогична **_control87**, но она задает только управляющее слово *newControl*. Биты в значениях показывают состояние элемента управления блоком операций с плавающей запятой. Состояние элемента управления блока операций с плавающей запятой разрешает программе изменять режимы точности, округления и бесконечности в пакете математических операций с числами с плавающей запятой. Также можно скрыть или снять маску исключения с плавающей запятой с помощью **_set_controlfp**. Дополнительные сведения см. в разделе [_control87, _controlfp, \__control87_2](control87-controlfp-control87-2.md).
 
-Эта функция устарела, при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) Поскольку общеязыковая среда выполнения поддерживает только точность чисел с плавающей запятой по умолчанию.
+Эта функция устарела, при компиляции с параметром [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) так, как среда CLR поддерживает только точность чисел с плавающей запятой по умолчанию.
 
 ## <a name="requirements"></a>Требования
 

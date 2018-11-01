@@ -1,10 +1,6 @@
 ---
-title: toascii, __toascii | Документы Майкрософт
-ms.custom: ''
+title: toascii, __toascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __toascii
 apilocation:
@@ -25,24 +21,18 @@ f1_keywords:
 - toascii
 - ctype/toascii
 - ctype/__toascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - toascii function
 - string conversion, to ASCII characters
 - __toascii function
 - ASCII characters, converting to
 ms.assetid: a07c0608-b0e2-4da2-a20c-7b64d6a9b77c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead516a7e298e56d13d8f1a09a054057796ca64
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22f76bdbdb21eb5b3cc9a226c111e321ee2fd0ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578975"
 ---
 # <a name="toascii-toascii"></a>toascii, __toascii
 
@@ -68,9 +58,9 @@ int __toascii(
 
 ## <a name="remarks"></a>Примечания
 
-**__Toascii** подпрограммы преобразует данный символ в символ в кодировке ASCII, обрезано до 7 бит низкого порядка. Никакие другие преобразования не применяются.
+**__Toascii** подпрограмма Преобразует заданный символ в символ ASCII путем его усечения до 7 бит низкого порядка. Никакие другие преобразования не применяются.
 
-**__Toascii** определяется как макрос не определен макрос препроцессора _CTYPE_DISABLE_MACROS. Для обеспечения обратной совместимости **toascii** определяется как макрос только если [ &#95; &#95;директива STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определено или задано значение 0; в противном случае значение не определено.
+**__Toascii** подпрограмма определяется как макрос, если определен макрос препроцессора _CTYPE_DISABLE_MACROS. Для обеспечения обратной совместимости **toascii** определяется как макрос только тогда, когда [ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md) не определен или определен как 0; в противном случае оно будет неопределенным.
 
 ## <a name="requirements"></a>Требования
 
@@ -78,7 +68,7 @@ int __toascii(
 |-------------|---------------------|
 |**toascii**, **__toascii**|C: \<ctype.h><br /><br /> C++: \<cctype> или \<ctype.h>|
 
-**Toascii** макрос является расширением POSIX и **__toascii** является реализацией Майкрософт расширения POSIX. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**Toascii** макрос является расширением POSIX, и **__toascii** является реализацией Майкрософт расширения POSIX. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

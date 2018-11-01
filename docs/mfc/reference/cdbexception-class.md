@@ -1,33 +1,23 @@
 ---
-title: Класс CDBException | Документация Майкрософт
-ms.custom: ''
+title: Класс CDBException
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDBException
 - AFXDB/CDBException
 - AFXDB/CDBException::m_nRetCode
 - AFXDB/CDBException::m_strError
 - AFXDB/CDBException::m_strStateNativeOrigin
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDBException [MFC], m_nRetCode
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549517"
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 
@@ -43,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Содержит код возврата Open Database Connectivity (ODBC), типа RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Содержит строку с описанием ошибки в терминах буквенно-цифровых.|

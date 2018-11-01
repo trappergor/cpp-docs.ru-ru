@@ -1,27 +1,17 @@
 ---
-title: Параметры EDITBIN | Документация Майкрософт
-ms.custom: ''
+title: Параметры EDITBIN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - editbin
-dev_langs:
-- C++
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0850f242b8368a9592a5622e627c781b4df4cde5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 263cfb79897ae60daff64521928db865f1dcb874
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710142"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50540547"
 ---
 # <a name="editbin-options"></a>Параметры EDITBIN
 
@@ -43,11 +33,11 @@ ms.locfileid: "45710142"
 |[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Указывает, поддерживает ли библиотеки DLL или исполняемый образ файлами технологии с высокой энтропией (64-разрядная версия) адрес space layout randomization (ASLR).|
 |[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Указывает, нужно ли проверять цифровую подпись при загрузке.|
 |[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Указывает, поддерживает ли объект адреса, превышающие два гигабайта.|
-|[/ NOLOGO](../../build/reference/nologo-editbin.md)|Отключает загрузочный баннер (программа EDITBIN).|
+|[/NOLOGO](../../build/reference/nologo-editbin.md)|Отключает загрузочный баннер (программа EDITBIN).|
 |[/NXCOMPAT](../../build/reference/nxcompat.md)|Указывает, совместим ли исполняемый образ с предотвращением выполнения данных Windows.|
 |[/REBASE](../../build/reference/rebase.md)|Задает базовые адреса для указанных объектов.|
 |[/RELEASE](../../build/reference/release.md)|Задает контрольную сумму в заголовке.|
-|[/ SECTION](../../build/reference/section-editbin.md)|Переопределяет атрибуты секции.|
+|[/SECTION](../../build/reference/section-editbin.md)|Переопределяет атрибуты секции.|
 |[/STACK](../../build/reference/stack.md)|Задает размер стека исполняемый образ, в байтах.|
 |[/SUBSYSTEM](../../build/reference/subsystem.md)|Указывает среде выполнения.|
 |[/SWAPRUN](../../build/reference/swaprun.md)|Указывает исполняемый образ должен скопировать файл подкачки и запустите оттуда.|

@@ -1,10 +1,6 @@
 ---
-title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l | Документы Майкрософт
-ms.custom: ''
+title: strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strrchr
 - wcsrchr
@@ -30,8 +26,6 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03b0ce2c9bd205f9065c783a4ff4d7e50d0ff803
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: d07930f5e77d76ae950af1058c55e58cb296011b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607705"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -140,7 +130,7 @@ const unsigned char *_mbsrchr_l(
 
 `strrchr` Функция находит последнее вхождение *c* (преобразовать **char**) в *str*. Поиск включает завершающие нуль-символы.
 
-Функции `wcsrchr` и `_mbsrchr` являются версиями функции `strrchr` для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsrchr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsrchr` представляют собой многобайтовые строки.
+Функции`wcsrchr` и `_mbsrchr` are wide-character и multibyte-character versions of `strrchr`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsrchr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsrchr` представляют собой многобайтовые строки.
 
 В языке C, эти функции принимают **const** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** возвращает указатель на **const**; версия, которая принимает указатель на не -**const** возвращает указатель на не -**const** . _CRT_CONST_CORRECT_OVERLOADS макрос определен в том случае, если оба **const** и не-**const** доступны версии этих функций. Если вам требуется отличного**const** поведение для обеих перегрузок C++, определите символ _CONST_RETURN.
 
