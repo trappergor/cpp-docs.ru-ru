@@ -1,28 +1,17 @@
 ---
-title: Удаление меню и команды меню (C++) | Документация Майкрософт
-ms.custom: ''
+title: Удаление меню и команды меню (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, deleting
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: bdfd5b6e-3275-4597-a8bb-cd19bea9f9ad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a70c7f477e20aed50e20670b975174ac4a700c4f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc014494dc0ea3cddcc0bef84cb728be3b04207
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476340"
 ---
 # <a name="deleting-menus-and-menu-commands-c"></a>Удаление меню и команды меню (C++)
 ### <a name="to-delete-a-menu-or-menu-command"></a>Удаление меню или команды меню
