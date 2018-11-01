@@ -1,10 +1,6 @@
 ---
-title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l | Документы Майкрософт
-ms.custom: ''
+title: strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,23 +47,19 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500754"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s, _strncat_s_l, wcsncat_s, _wcsncat_s_l, _mbsncat_s, _mbsncat_s_l
 
 Присоединяет символы к строке. Эти версии функций [strncat, _strncat_l, wcsncat, _wcsncat_l, _mbsncat, _mbsncat_l](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) отличаются повышенной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncat_s** и **_mbsncat_s_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncat_s** и **_mbsncat_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -177,17 +167,17 @@ errno_t _mbsncat_s_l(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*strDestination*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержимое *strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержание *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Значение NULL,** и без него|any|any|**EINVAL**|не изменено|
+|**NULL** или без признака завершения|any|any|**EINVAL**|не изменено|
 |any|any|**NULL**|**EINVAL**|не изменено|
 |any|0 или слишком мал|any|**ERANGE**|не изменено|
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции пытаются добавить первые *D* символов *strSource* в конец *strDest*, где *D* , равно меньшему из *число* и длины *strSource*. Если их добавления *D* размерам символов *strDest* (, размер которого указан в качестве *numberOfElements*) и по-прежнему оставить место для завершающего нуль-символа, а затем эти символы добавляются, начиная с завершением null из исходного *strDest*, и новый завершающий нуль-символ присоединенных; в противном случае — *strDest*[0] имеет значение нуль-символ и недопустимый параметр вызывается обработчик, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md).
+Эти функции пытаются добавить первые *D* символов *strSource* в конец *strDest*, где *D* равно меньшему из *число* и длину *strSource*. Если эти *D* символов поместятся в *strDest* (размер которой задается как *numberOfElements*) и по-прежнему оставаться место для завершающего нуль, то эти символы добавляются, начиная с исходного нуль-символа *strDest*, и новый завершающий нуль-символ добавляется; в противном случае — *strDest*[0] имеет значение нуль-символ и недопустимого параметра вызывается обработчик, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md).
 
-Для вышеприведенного абзаца есть исключения. Если *число* — [_TRUNCATE](../../c-runtime-library/truncate.md) затем максимально возможную часть *strSource* как будет размеру добавляется к *strDest* по-прежнему предоставляя место для добавления Завершение значение null.
+Для вышеприведенного абзаца есть исключения. Если *число* — [_TRUNCATE](../../c-runtime-library/truncate.md) затем столько *strSource* будет добавляется *strDest* что останется место также для добавления нуль.
 
 Например, примененная к объекту директива
 
@@ -197,7 +187,7 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-означает, что мы просим **strncat_s** добавить три символа для двух символов в буфере пять символов; это не оставит места для завершающего нуль-символа, поэтому **strncat_s** нули строки и вызывает обработчик недопустимого параметра.
+означает, что мы просим **strncat_s** добавить три символа к двум символам в буфере длиной в пять символов; это не оставит места для завершающего, поэтому **strncat_s** нули строки и вызывает обработчик недопустимого параметра.
 
 Если требуется поведение усечения, используйте **_TRUNCATE** или настроить *размер* параметр соответствующим образом:
 
@@ -213,9 +203,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 Во всех случаях результирующая строка завершается нуль-символом. Если копирование производится между перекрывающимися строками, поведение не определено.
 
-Если *strSource* или *strDest* — **NULL**, или *numberOfElements* равен нулю, вызывается обработчик недопустимого параметра, как описано в [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **EINVAL** без изменения его параметров.
+Если *strSource* или *strDest* — **NULL**, или *numberOfElements* равен нулю, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функция возвращает **EINVAL** без изменения своих параметров.
 
-**wcsncat_s** и **_mbsncat_s** версии Юникода и многобайтовых символов **strncat_s**. Строковые аргументы и возвращаемое значение **wcsncat_s** являются двухбайтовые строки; аргументы **_mbsncat_s** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcsncat_s** и **_mbsncat_s** расширенных и многобайтовых символов версии **strncat_s**. Строковые аргументы и возвращаемое значение **wcsncat_s** являются двухбайтовые строки; аргументы **_mbsncat_s** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
@@ -223,7 +213,7 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
