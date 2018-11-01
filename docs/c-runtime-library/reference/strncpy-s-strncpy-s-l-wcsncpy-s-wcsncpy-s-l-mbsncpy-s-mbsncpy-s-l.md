@@ -1,10 +1,6 @@
 ---
-title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l | Документы Майкрософт
-ms.custom: ''
+title: strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsncpy_s_l
 - wcsncpy_s
@@ -33,8 +29,6 @@ f1_keywords:
 - _strncpy_s_l
 - wcsncpy_s
 - _tcsncpy_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsncpy_s_l function
 - _mbsnbcpy_s function
@@ -51,23 +45,19 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: add1f3ec75a3746d30e256ef32034b3d604f223a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430073"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s, _strncpy_s_l, wcsncpy_s, _wcsncpy_s_l, _mbsncpy_s, _mbsncpy_s_l
 
 Копирует символы одной строки в другую.  Эти версии функций [strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l](strncpy-strncpy-l-wcsncpy-wcsncpy-l-mbsncpy-mbsncpy-l.md) отличаются повышенной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbsncpy_s** и **_mbsncpy_s_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsncpy_s** и **_mbsncpy_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -171,22 +161,22 @@ errno_t _mbsncpy_s_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Ноль при успешном завершении, **STRUNCATE** Если произошло усечение, в противном случае — код ошибки.
+Нуль при успешном завершении, **STRUNCATE** Если произошло усечение, в противном случае — код ошибки.
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*strDest*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержимое *strDest*|
+|*strDest*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержание *strDest*|
 |---------------|------------------------|-----------------|------------------|---------------------------|
 |**NULL**|any|any|**EINVAL**|не изменено|
 |any|any|**NULL**|**EINVAL**|*strDest*[0] имеет значение 0|
 |any|0|any|**EINVAL**|не изменено|
-|Не **значение NULL**|слишком мало|any|**ERANGE**|*strDest*[0] имеет значение 0|
+|Не **NULL**|слишком мало|any|**ERANGE**|*strDest*[0] имеет значение 0|
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции будут пытаться скопировать первые *D* символов *strSource* для *strDest*, где *D* , равно меньшему из *count*  и длины *strSource*. Если эти *D* размерам символов *strDest* (, размер которого определяется как *numberOfElements*) и по-прежнему оставить место для завершающего нуль-символа, а затем копируются эти символы и добавляется завершающий нуль-символ; в противном случае *strDest*[0] имеет значение нуль-символ и недопустимого параметра вызывается обработчик, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md).
+Эти функции будут пытаться скопировать первые *D* символов *strSource* для *strDest*, где *D* , равно меньшему из *count*  и длину *strSource*. Если эти *D* символов поместятся в *strDest* (размер которой задается как *numberOfElements*) и по-прежнему оставаться место для завершающего, эти символы копируются и добавляется завершающий нуль-символ; в противном случае *strDest*[0] задается нуль-символ и недопустимого параметра вызывается обработчик, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md).
 
-Для вышеприведенного абзаца есть исключения. Если *число* — **_TRUNCATE**, затем максимально возможную часть *strSource* разместить в *strDest* по-прежнему предоставляя место для копирования Завершение неопределенное значение, которое всегда добавляются.
+Для вышеприведенного абзаца есть исключения. Если *число* — **_TRUNCATE**, а большая часть *strSource* будет заполнен в *strDest* копируется что останется место для Завершение неопределенное значение, которое всегда добавляются.
 
 Например, примененная к объекту директива
 
@@ -195,7 +185,7 @@ char dst[5];
 strncpy_s(dst, 5, "a long string", 5);
 ```
 
-означает, что мы просим **strncpy_s** требуется скопировать пять символов в буфер длиной пять байт; это не оставит места для завершающего нуль-символа, поэтому **strncpy_s** обнулит строку и вызывает недопустимо Обработчик параметров.
+означает, что мы просим **strncpy_s** требуется скопировать пять символов в буфер длиной пять байт; это не оставит места для завершающего, поэтому **strncpy_s** обнулит строку и вызывает Недопустимая подпись параметр обработчика.
 
 Если требуется поведение усечения, используйте **_TRUNCATE** или (*размер* - 1):
 
@@ -206,11 +196,11 @@ strncpy_s(dst, 5, "a long string", 4);
 
 Обратите внимание, что в отличие от **strncpy**, если *число* больше, чем длина *strSource*, строка назначения не заполняется символами null до длины *число*.
 
-Поведение **strncpy_s** при перекрытии исходного и конечного будет неопределенным.
+Поведение **strncpy_s** не определено, если строки источника и назначения перекрываются.
 
-Если *strDest* или *strSource* — **NULL**, или *numberOfElements* равно 0, вызывается обработчик недопустимого параметра. Если выполнение может быть продолжено, функция возвращает **EINVAL** и задает **errno** для **EINVAL**.
+Если *strDest* или *strSource* — **NULL**, или *numberOfElements* равен 0, вызывается обработчик недопустимого параметра. Если выполнение может быть продолжено, функция возвращает **EINVAL** и задает **errno** для **EINVAL**.
 
-**wcsncpy_s** и **_mbsncpy_s** версии Юникода и многобайтовых символов **strncpy_s**. Аргументы и возвращаемое значение **wcsncpy_s** и **mbsncpy_s** различаются соответственно. В остальном эти шесть функций ведут себя идентично.
+**wcsncpy_s** и **_mbsncpy_s** расширенных и многобайтовых символов версии **strncpy_s**. Аргументы и возвращаемое значение **wcsncpy_s** и **mbsncpy_s** изменяются соответствующим образом. В остальном эти шесть функций ведут себя идентично.
 
 Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
@@ -218,7 +208,7 @@ strncpy_s(dst, 5, "a long string", 4);
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -226,7 +216,7 @@ strncpy_s(dst, 5, "a long string", 4);
 |**_tcsncpy_s_l**|**_strncpy_s_l**|**_mbsnbcpy_s_l**|**_wcsncpy_s_l**|
 
 > [!NOTE]
-> **_strncpy_s_l**, **_wcsncpy_s_l** и **_mbsncpy_s_l** не зависят от языкового стандарта и они предназначены только для **_tcsncpy_s_l** и не предназначены для вызывается напрямую.
+> **_strncpy_s_l**, **_wcsncpy_s_l** и **_mbsncpy_s_l** не зависят от языкового стандарта и предназначены только для **_tcsncpy_s_l** и которые не должны быть вызывается непосредственно.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl | Документы Майкрософт
-ms.custom: ''
+title: nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - nextafterf
 - _nextafterf
@@ -42,8 +38,6 @@ f1_keywords:
 - math/nexttoward
 - math/nexttowardf
 - math/nexttowardl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _nextafter function
 - nextafter function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - nexttowardf function
 - nexttowardl function
 ms.assetid: 9785bfb9-de53-4bd0-9637-f05fa0c1f6ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c68d039ff1318ea082d409078a55c8d337a48de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0e0a60dc9f7c068d8c18c10f3c6b819b9e06d3b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444868"
 ---
 # <a name="nextafter-nextafterf-nextafterl-nextafter-nextafterf-nexttoward-nexttowardf-nexttowardl"></a>nextafter, nextafterf, nextafterl, _nextafter, _nextafterf, nexttoward, nexttowardf, nexttowardl
 
@@ -102,15 +92,15 @@ long double nexttoward( long double x, long double y ); /* C++ only, requires <c
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает следующий представимым значением с плавающей запятой типа возвращаемого значения после *x* в направлении *y*. Если *x* и *y* равны, функция возвращает *y*, преобразованным в тип возврата с исключений не запускается. Если *x* не равно *y*, и результатом является denormal, либо ноль **FE_UNDERFLOW** и **FE_INEXACT** состояний исключений с плавающей запятой заданы, и возвращается правильный результат. Если параметр *x* или *y* является NAN, то возвращаемое значение является одним из входных значений NaN. Если *x* имеет конечные размеры и результатом является бесконечной или не может быть представлен в типе, правильно подписанного infinity или NAN возвращается, **FE_OVERFLOW** и **FE_INEXACT** заданы состояний исключений с плавающей запятой, и **errno** равно **ERANGE**.
+Возвращает следующее представимое значение с плавающей запятой возвращаемого типа после *x* в направлении *y*. Если *x* и *y* равны, функция возвращает *y*, преобразованное в возвращаемый тип, с помощью исключение не запускается. Если *x* не равно *y*, а результатом является денормализованное число или нуль, **FE_UNDERFLOW** и **FE_INEXACT** состояний исключения с плавающей запятой заданы, и возвращается правильный результат. Если параметр *x* или *y* имеет значение NAN, то возвращаемое значение является одним из входных значений NaN. Если *x* является конечным и результат является бесконечным или не может быть представлен в типе, бесконечность со знаком возвращается значение NAN или, **FE_OVERFLOW** и **FE_INEXACT** задаются состояния исключения с плавающей запятой, и **errno** присваивается **ERANGE**.
 
 ## <a name="remarks"></a>Примечания
 
-**Nextafter** и **nexttoward** функции семейства эквивалентны, за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* преобразованы в тип возвращаемого значения.
+**Nextafter** и **nexttoward** семейства функций эквивалентны за исключением типа параметра *y*. Если *x* и *y* равны, возвращается значение *y* преобразуется в тип возвращаемого значения.
 
-Поскольку C++ допускает перегрузки, при включении \<cmath > можно вызывать перегрузки **nextafter** и **nexttoward** , возвращающее **float** и **long** **двойные** типов. В программе на языке C **nextafter** и **nexttoward** всегда возвращают **двойные**.
+Поскольку C++ допускает перегрузку, если включить \<cmath > можно вызывать перегрузки **nextafter** и **nexttoward** , которые возвращают **float** и **long** **двойные** типов. В программе на языке C **nextafter** и **nexttoward** всегда возвращать **двойные**.
 
-**_Nextafter** и **_nextafterf** функции — только к системам Майкрософт. **_Nextafterf** функция доступна только при компиляции для x64.
+**_Nextafter** и **_nextafterf** функции только к системам Майкрософт. **_Nextafterf** функция доступна только в том случае, при компиляции для x64.
 
 ## <a name="requirements"></a>Требования
 

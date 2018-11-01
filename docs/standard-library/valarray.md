@@ -1,27 +1,17 @@
 ---
-title: '&lt;valarray&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;valarray&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <valarray>
-dev_langs:
-- C++
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98ee264d019e89ef3fbdf299a58c972ad895caed
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954803"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447792"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -40,7 +30,7 @@ ms.locfileid: "38954803"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны абсолютному значению элементов входного valarray.|
 |[acos](../standard-library/valarray-functions.md#acos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арккосинусу элементов входного valarray.|
@@ -62,9 +52,9 @@ ms.locfileid: "38954803"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
-|[оператор!=](../standard-library/valarray-operators.md#op_neq)|Проверяет, не равны ли соответствующие элементы двух одинаковых по размеру valarray или не равны ли все элементы valarray указанному значению типа элемента valarray.|
+|[operator!=](../standard-library/valarray-operators.md#op_neq)|Проверяет, не равны ли соответствующие элементы двух одинаковых по размеру valarray или не равны ли все элементы valarray указанному значению типа элемента valarray.|
 |[оператор%](../standard-library/valarray-operators.md#op_mod)|Возвращает остаток от деления соответствующих элементов двух одинаковых по размеру valarray или от деления valarray на указанное значение типа элемента valarray или от деления указанного значения на valarray.|
 |[оператор&](../standard-library/valarray-operators.md#op_amp)|Получает результат применения побитовой операции `AND` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.|
 |[оператор&&](../standard-library/valarray-operators.md#op_amp_amp)|Получает результат применения логической операции `AND` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента valarray.|
@@ -78,14 +68,14 @@ ms.locfileid: "38954803"
 |[operator+](../standard-library/valarray-operators.md#op_add)|Получает результат поэлементной суммы соответствующих элементов двух одинаковых по размеру valarray или суммы valarray и указанного значения типа элемента valarray.|
 |[operator-](../standard-library/valarray-operators.md#operator-)|Получает результат поэлементного вычитания соответствующих элементов двух одинаковых по размеру valarray или вычитания valarray и указанного значения типа элемента valarray.|
 |[оператор/](../standard-library/valarray-operators.md#op_div)|Получает результат поэлементного деления соответствующих элементов двух одинаковых по размеру valarray или деления valarray на указанное значение типа элемента valarray.|
-|[оператор==](../standard-library/valarray-operators.md#op_eq_eq)|Проверяет, равны ли соответствующие элементы двух одинаковых по размеру valarray или равны ли все элементы valarray указанному значению типа элемента valarray.|
+|[operator==](../standard-library/valarray-operators.md#op_eq_eq)|Проверяет, равны ли соответствующие элементы двух одинаковых по размеру valarray или равны ли все элементы valarray указанному значению типа элемента valarray.|
 |[оператор^](../standard-library/valarray-operators.md#op_xor)|Получает результат применения побитовой эксклюзивной операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.|
 |[оператор|](../standard-library/valarray-operators.md#op_or)|Получает результат применения побитовой операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.|
 |[оператор||](../standard-library/valarray-operators.md#op_lor)|Получает результат применения логической операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента valarray.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[Класс gslice](../standard-library/gslice-class.md)|Служебный класс, используемый для определения многомерных срезов valarray.|
 |[Класс gslice_array](../standard-library/gslice-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает общие объекты срезов, предоставляя операции между массивами подмножеств, заданные общим срезом valarray.|
