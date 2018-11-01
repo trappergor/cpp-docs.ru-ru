@@ -1,29 +1,18 @@
 ---
-title: Преобразование проектов из смешанного режима в чистый промежуточный язык | Документация Майкрософт
-ms.custom: ''
+title: Преобразование проектов из смешанного режима в чистый промежуточный язык
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - intermediate language, mixed-mode applications
 - mixed-mode applications
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559683"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 
@@ -86,7 +75,7 @@ ms.locfileid: "49083467"
 
    Где это необходимо, замените неуправляемые типы ссылок на структуры из [системы](/dotnet/api/system) пространства имен. В следующей таблице перечислены распространенные управляемых типов.
 
-   |Структура|Описание:|
+   |Структура|Описание|
    |---------------|-----------------|
    |[Boolean](/dotnet/api/system.boolean)|Представляет логическое значение.|
    |[Byte](/dotnet/api/system.byte)|Представляет 8-битовое целое число без знака.|

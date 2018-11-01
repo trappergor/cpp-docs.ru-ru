@@ -1,11 +1,6 @@
 ---
-title: casin, casinf, casinl | Документы Майкрософт
-ms.custom: ''
+title: casin, casinf, casinl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casin
 - casinf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casin
 - complex/casinf
 - complex/casinl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casin function
 - casinf function
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c977430528d8fa5834d3959cbf0645bf68165f0f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394581"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539624"
 ---
 # <a name="casin-casinf-casinl"></a>casin, casinf, casinl
 
-Возвращает арксинус комплексного числа, с порезов ветвь попадает в интервал [-1, + 1] на реальных оси.
+Извлекает арксинус комплексного числа, ветви выходят за пределы интервала [−1, + 1] на реальной оси.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -79,11 +68,11 @@ _Lcomplex casinl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Арксинус числа *z*, в радианах. Результатом является unbounded мнимой оси, а также в интервале [-π/2 + π/2] вдоль оси real.
+Арксинус *z*, в радианах. Результат неограничен на мнимой оси и находится в интервале [-π/2, + π/2] на реальной оси.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **casin** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **casin** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **casin** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **casin** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

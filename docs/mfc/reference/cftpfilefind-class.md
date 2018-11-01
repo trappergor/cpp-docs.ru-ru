@@ -1,10 +1,6 @@
 ---
-title: Класс CFtpFileFind | Документация Майкрософт
-ms.custom: ''
+title: Класс CFtpFileFind
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFtpFileFind
 - AFXINET/CFtpFileFind
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXINET/CFtpFileFind::FindFile
 - AFXINET/CFtpFileFind::FindNextFile
 - AFXINET/CFtpFileFind::GetFileURL
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFtpFileFind [MFC], CFtpFileFind
 - CFtpFileFind [MFC], FindFile
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eaa080460a545e56fcb527f3b8bf4dc57e008e3c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548230"
 ---
 # <a name="cftpfilefind-class"></a>Класс CFtpFileFind
 
@@ -96,7 +86,7 @@ explicit CFtpFileFind(
 ### <a name="parameters"></a>Параметры
 
 *pConnection*<br/>
-Указатель на объект `CFtpConnection`. FTP-подключение можно получить, вызвав [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).
+Указатель на объект `CFtpConnection` . FTP-подключение можно получить, вызвав [CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection).
 
 *dwContext*<br/>
 Идентификатор контекста для `CFtpFileFind` объекта. См. в разделе **"Примечания"** Дополнительные сведения об этом параметре.
