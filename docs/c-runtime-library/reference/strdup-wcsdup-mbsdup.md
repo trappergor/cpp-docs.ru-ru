@@ -1,10 +1,6 @@
 ---
-title: _strdup, _wcsdup, _mbsdup | Документы Майкрософт
-ms.custom: ''
+title: _strdup, _wcsdup, _mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413516"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461520"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup, _wcsdup, _mbsdup
 
 Повторяющиеся строки.
 
 > [!IMPORTANT]
-> **_mbsdup** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsdup** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения см. в разделе [функции CRT не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -87,13 +77,13 @@ unsigned char *_mbsdup(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает указатель на место хранения для скопированной строки или **NULL** Если не удается выделить хранилище.
+Каждая из этих функций возвращает указатель на место хранения для скопированной строки или **NULL** Если не удается выделить память.
 
 ## <a name="remarks"></a>Примечания
 
-**_Strdup** вызовов функций [malloc](malloc.md) для выделения пространства под копию *strSource* , а затем копирование *strSource* для выделенное пространство.
+**_Strdup** вызовы функций [malloc](malloc.md) для выделения пространства под копию *strSource* и затем копирует *strSource* для выделенное пространство.
 
-**_wcsdup** и **_mbsdup** версии Юникода и многобайтовых символов **_strdup**. Аргументы и возвращаемое значение **_wcsdup** являются двухбайтовые строки; аргументы **_mbsdup** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**_wcsdup** и **_mbsdup** расширенных и многобайтовых символов версии **_strdup**. Аргументы и возвращаемое значение **_wcsdup** являются двухбайтовые строки; аргументы **_mbsdup** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -101,9 +91,9 @@ unsigned char *_mbsdup(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-Поскольку **_strdup** вызовы **malloc** для выделения пространства под копию *strSource*, рекомендуется освобождать память, вызвав [свободного](free.md) подпрограмму на указатель, возвращаемый вызовом **_strdup**.
+Так как **_strdup** вызовы **malloc** для выделения пространства под копию *strSource*, рекомендуется освобождать эту память путем вызова [бесплатный](free.md) подпрограмму на указатель, который возвращается вызовом **_strdup**.
 
-Если **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, **_strdup** и **_wcsdup** заменяются вызовами функций для **_strdup_dbg**  и **_wcsdup_dbg** чтобы разрешить отладку выделения памяти. Дополнительные сведения см. в разделе [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
+Если **_DEBUG** и **_CRTDBG_MAP_ALLOC** определены, **_strdup** и **_wcsdup** заменяются вызовами функций для **_strdup_dbg**  и **_wcsdup_dbg** чтобы разрешить отладку выделения памяти. Для получения дополнительной информации см. [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md).
 
 ## <a name="requirements"></a>Требования
 

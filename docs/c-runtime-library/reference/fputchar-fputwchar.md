@@ -1,10 +1,6 @@
 ---
-title: _fputchar, _fputwchar | Документы Майкрософт
-ms.custom: ''
+title: _fputchar, _fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477978"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar, _fputwchar
 
@@ -72,15 +62,15 @@ wint_t _fputwchar(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает записанный символ. Для **_fputchar**, возвращаемое значение **EOF** указывает на ошибку. Для **_fputwchar**, возвращаемое значение **WEOF** указывает на ошибку. В случае c **NULL**, эти функции создают исключение недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** (или **WEOF**) и задайте **errno** для **EINVAL**.
+Каждая из этих функций возвращает записанный символ. Для **_fputchar**, возвращаемое значение **EOF** указывает на ошибку. Для **_fputwchar**, возвращаемое значение **WEOF** указывает на ошибку. Если c является **NULL**, эти функции создают исключение недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** (или **WEOF**) и задайте **errno** для **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist, and _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Обе эти функции записывает отдельный знак *c* для **stdout** и перемещает индикатор соответствующим образом. **_fputchar** эквивалентно `fputc( stdout )`. Кроме того, это эквивалентно **putchar**, но реализован только как функция, а не как функция и макрос. В отличие от **fputc** и **putchar**, эти функции не совместимы со стандартом ANSI.
+Обе эти функции записывают один символ *c* для **stdout** и перемещает индикатор соответствующим образом. **_fputchar** эквивалентен `fputc( stdout )`. Кроме того, это эквивалентно **putchar**, но реализуется только как функция, а не как функция и макрос. В отличие от **fputc** и **putchar**, эти функции не совместимы со стандартом ANSI.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
@@ -93,7 +83,7 @@ wint_t _fputwchar(
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> или \<wchar.h>|
 
-Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, связанные с консолью —**stdin**, **stdout**, и **stderr**— необходимо перенаправить, чтобы функции времени выполнения C их можно использовать в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консолью —**stdin**, **stdout**, и **stderr**— необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="example"></a>Пример
 
