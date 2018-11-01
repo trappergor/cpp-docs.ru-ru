@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Документы Майкрософт
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488118"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -63,19 +53,19 @@ errno_t tmpfile_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*pFilePtr*|**Возвращаемое значение**|**Содержимое***pFilePtr* |
+|*pFilePtr*|**Возвращаемое значение**|**Содержание***pFilePtr* |
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|не изменено|
 
-Если возникает ошибка проверки приведенного выше параметра, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и возвращаемым значением является **EINVAL**.
+Если возникает ошибка проверки приведенного выше параметра, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и возвращается значение **EINVAL**.
 
 ## <a name="remarks"></a>Примечания
 
-**Tmpfile_s** функция создает временный файл и помещает указатель в поток в *pFilePtr* аргумент. Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tmpnam-s-wtmpnam-s.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
+**Tmpfile_s** функция создает временный файл и помещает указатель на этот поток в *pFilePtr* аргумент. Временный файл создается в корневом каталоге. Чтобы создать временный файл в каталоге, отличном от корневого, используйте [tmpnam_s](tmpnam-s-wtmpnam-s.md) или [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) в сочетании с [fopen](fopen-wfopen.md).
 
-Если не удается открыть файл, **tmpfile_s** записывает **NULL** для *pFilePtr* параметра. Этот временный файл удаляется автоматически при закрытии файла при завершении программы в обычном режиме, или когда **_rmtmp** вызывается, при условии, что текущий рабочий каталог не изменяется. Временный файл открыт в **w + b** режиме (двоичные чтение запись).
+Если не удается открыть файл, **tmpfile_s** записывает **NULL** для *pFilePtr* параметра. Этот временный файл удаляется автоматически при закрытии файла, при завершении программы в обычном режиме или когда **_rmtmp** вызывается, предполагая, что текущий рабочий каталог не изменяется. Временный файл открыт в **w + b** режиме (двоичные чтение и запись).
 
-Сбой может возникать при попытке более **TMP_MAX_S** (STDIO см. H) вызовов с **tmpfile_s**.
+Сбой может возникать при попытке более **TMP_MAX_S** (см. в разделе STDIO. H) вызовов с **tmpfile_s**.
 
 ## <a name="requirements"></a>Требования
 
@@ -88,7 +78,7 @@ errno_t tmpfile_s(
 ## <a name="example"></a>Пример
 
 > [!NOTE]
-> В этом примере могут потребоваться административные полномочия для запуска в Windows.
+> В этом примере может потребовать прав администратора, под управлением Windows.
 
 ```C
 // crt_tmpfile_s.c
