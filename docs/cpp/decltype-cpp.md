@@ -1,30 +1,20 @@
 ---
-title: decltype (C++) | Документация Майкрософт
-ms.custom: ''
+title: decltype (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - decltype_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - operators [C++], decltype
 - decltype operator
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6cab68cd351c64d65eeed1eeffda7bf49385aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50527950"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -93,7 +83,7 @@ UNKNOWN func(T&& t, U&& u){ return t + u; };
 
 **Автоматическое** *имя_функции* **(** *параметры*<sub>opt</sub> **)**  **const**<sub>opt</sub> **volatile**<sub>opt</sub> **->** **decltype (** *выражение* **)** **throw**<sub>opt</sub> **{** *function_body* **};**
 
-В следующем примере кода поздно заданный возвращаемый тип функции шаблона `myFunc` определяется типами аргументов шаблона `t` и `u`. Как лучшие методы программирования, в примере кода также используются ссылки rvalue и `forward` шаблон функции, которая поддерживает *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+В следующем примере кода поздно заданный тип возвращаемого значения функции шаблона `myFunc` определяется типами аргументов шаблона `t` и `u`. Как лучшие методы программирования, в примере кода также используются ссылки rvalue и `forward` шаблон функции, которая поддерживает *точную пересылку*. Дополнительные сведения см. в статье [Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ```cpp
 //C++11
@@ -115,7 +105,7 @@ decltype(auto) myFunc(T&& t, U&& u)
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода объявляется поздно заданный возвращаемый тип шаблонной функции `Plus()`. `Plus` Функция обрабатывает два свои операнда с **оператор +** перегрузки. Следовательно, интерпретация добавочного оператора (+) и возвращаемый тип функции `Plus` зависят от типов аргументов функции.
+В следующем примере кода объявляется поздно заданный тип возвращаемого значения шаблонной функции `Plus()`. `Plus` Функция обрабатывает два свои операнда с **оператор +** перегрузки. Следовательно, интерпретация добавочного оператора (+) и тип возвращаемого значения функции `Plus` зависят от типов аргументов функции.
 
 ```cpp
 // decltype_1.cpp
