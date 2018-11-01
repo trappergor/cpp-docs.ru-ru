@@ -1,28 +1,18 @@
 ---
-title: Структура duration_values | Документы Майкрософт
-ms.custom: ''
+title: Структура duration_values
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::duration_values
 - chrono/std::chrono::duration_values::max
 - chrono/std::chrono::duration_values::min
 - chrono/std::chrono::duration_values::zero
-dev_langs:
-- C++
 ms.assetid: 7f66d2e3-1faf-47c3-b47e-08f2a87f20e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d781d04097b205750e7ac65529cfa8ad7b37f9c7
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bc382bbc408b11cbc18210f3ab944dda39adc8f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33846016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653392"
 ---
 # <a name="durationvalues-structure"></a>Структура duration_values
 
@@ -43,7 +33,7 @@ struct duration_values;
 |----------|-----------------|
 |[max](#max)|Статический. Указывает верхний предел для значения типа `Rep`.|
 |[min](#min)|Статический. Указывает нижний предел для значения типа `Rep`.|
-|[Ноль](#zero)|Статический. Возвращает `Rep(0)`.|
+|[ноль](#zero)|Статический. Возвращает `Rep(0)`.|
 
 ## <a name="requirements"></a>Требования
 

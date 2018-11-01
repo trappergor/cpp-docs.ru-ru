@@ -1,10 +1,6 @@
 ---
-title: Функции _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l | Документы Майкрософт
-ms.custom: ''
+title: _strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strupr_s
 - _strupr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _wcsupr_s_l
 - _strupr_s
 - _strupr_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsupr_s_l function
 - strupr_s_l function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _strupr_s function
 - wcsupr_s function
 ms.assetid: 82d3a273-9f6f-4a26-9560-919d891e4581
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad2ff06320b3251e80935776246927e4cadb50c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fb0c7027ff53408ba981aa85f97c49dba054e21d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415664"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569706"
 ---
 # <a name="struprs-struprsl-mbsuprs-mbsuprsl-wcsuprs-wcsuprsl"></a>_strupr_s, _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l
 
 Преобразуют буквы в строке в прописные с использованием текущего или переданного языкового стандарта. Эти версии функций [_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr](strupr-strupr-l-mbsupr-mbsupr-l-wcsupr-l-wcsupr.md) отличаются повышенной безопасностью (см. раздел [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md)).
 
 > [!IMPORTANT]
-> **_mbsupr_s** и **_mbsupr_s_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr_s** и **_mbsupr_s_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -158,19 +148,19 @@ errno_t _mbsupr_s_l(
 
 Нуль в случае успеха или ненулевой код ошибки в случае ошибки.
 
-Эти функции проверяют свои параметры. Если *str* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функции возвращают **EINVAL** и задайте **errno** для **EINVAL**. Если *numberOfElements* меньше, чем длина строки, эти функции возвращают **ERANGE** и задайте **errno** для **ERANGE**.
+Эти функции проверяют свои параметры. Если *str* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, функции возвращают **EINVAL** и задайте **errno** для **EINVAL**. Если *numberOfElements* меньше, чем длина строки, функции возвращают **ERANGE** и задайте **errno** для **ERANGE**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Strupr_s** функция преобразует в месте, каждой буквы нижнего регистра в *str* в верхний регистр. **_wcsupr_s** — это двухбайтовая версия **_strupr_s**. **_mbsupr_s** версия Многобайтовый символ **_strupr_s**.
+**Функции _strupr_s** функция преобразует в месте, каждую строчную букву в *str* в верхний регистр. **_wcsupr_s** — это двухбайтовая версия **функции _strupr_s**. **_mbsupr_s** является версией многобайтовой кодировкой символов **функции _strupr_s**.
 
-Преобразование определяется **LC_CTYPE** категории языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**, в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без **_l** суффикс используется текущий языковой стандарт; концепции с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Преобразование определяется **LC_CTYPE** категории языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**, см. в разделе [setlocale](setlocale-wsetlocale.md). В версиях этих функций без **_l** суффикс использования текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|
@@ -181,7 +171,7 @@ errno_t _mbsupr_s_l(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**_strupr_s**, **_strupr_s_l**|\<string.h>|
+|**функции _strupr_s**, **_strupr_s_l**|\<string.h>|
 |**_wcsupr_s**, **_wcsupr_s_l**, **_mbsupr_s**, **_mbsupr_s_l**|\<string.h> или \<wchar.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
