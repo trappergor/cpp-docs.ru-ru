@@ -1,10 +1,6 @@
 ---
-title: Класс error_category | Документы Майкрософт
-ms.custom: ''
+title: Класс error_category
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::error_category
 - system_error/std::error_category::value_type
@@ -12,8 +8,6 @@ f1_keywords:
 - system_error/std::error_category::equivalent
 - system_error/std::error_category::message
 - system_error/std::error_category::name
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::error_category
 - std::error_category::value_type
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::error_category::message
 - std::error_category::name
 ms.assetid: e0a71e14-852d-4905-acd6-5f8ed426706d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f37029491c4a438f44c9f1bb27a9d192c14d1f12
-ms.sourcegitcommit: 76fd30ff3e0352e2206460503b61f45897e60e4f
+ms.openlocfilehash: 55ff55b2026b741a2b7062d815fe43d6d19b078b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/13/2018
-ms.locfileid: "39028233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451965"
 ---
 # <a name="errorcategory-class"></a>Класс error_category
 
@@ -49,13 +39,13 @@ class error_category;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[value_type](#value_type)|Тип, представляющий сохраненное значение кода ошибки.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[default_error_condition](#default_error_condition)|Сохраняет значение кода ошибки для объекта условия ошибки.|
 |[equivalent](#equivalent)|Возвращает значение, указывающее, эквивалентны ли объекты ошибок.|
@@ -64,10 +54,10 @@ class error_category;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
-|[оператор==](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
-|[оператор!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|
+|[operator==](#op_eq_eq)|Проверяет равенство между объектами `error_category`.|
+|[operator!=](#op_neq)|Проверяет неравенство между объектами `error_category`.|
 |[оператор<](#op_lt)|Проверяет, меньше ли объект [error_category](../standard-library/error-category-class.md) переданного для сравнения объекта `error_category`.|
 
 ## <a name="requirements"></a>Требования
@@ -86,7 +76,7 @@ virtual error_condition default_error_condition(int _Errval) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Errval*|Значение кода ошибки для хранения в [error_condition](../standard-library/error-condition-class.md).|
 
@@ -110,7 +100,7 @@ virtual bool equivalent(const error_code& _Code,
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Errval*|Значение кода ошибки для сравнения.|
 |*_Cond*|Объект [error_condition](../standard-library/error-condition-class.md) для сравнения.|
@@ -136,7 +126,7 @@ virtual string message(error_code::value_type val) const = 0;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Val*|Значение кода ошибки для описания.|
 
@@ -170,7 +160,7 @@ bool operator==(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на равенство.|
 
@@ -192,7 +182,7 @@ bool operator!=(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Объект для проверки на неравенство.|
 
@@ -214,7 +204,7 @@ bool operator<(const error_category& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*right*|Сравниваемый объект `error_category`.|
 

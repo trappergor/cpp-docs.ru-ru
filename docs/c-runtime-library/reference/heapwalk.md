@@ -1,10 +1,6 @@
 ---
-title: _heapwalk | Документы Майкрософт
-ms.custom: ''
+title: _heapwalk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapwalk
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - heapwalk
 - _heapwalk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - heapwalk function
 - _heapwalk function
 ms.assetid: 2df67649-fb00-4570-a8b1-a4eca5738744
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d98260ce281bc8773f597dae5897afe4beee0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cc2a49d9032746cc6c82c9dc401fc96baabbe2e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403405"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454903"
 ---
 # <a name="heapwalk"></a>_heapwalk
 
@@ -67,16 +57,16 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |-|-|
 |**_HEAPBADBEGIN**| Начальные сведения о заголовке недопустимы или не найдены.|
 |**_HEAPBADNODE**| Куча повреждена или обнаружен плохой узел.|
-|**_HEAPBADPTR**| **_Pentry** поле **_HEAPINFO** структура не содержит допустимый указатель на кучу или *entryinfo* является пустым указателем.|
+|**_HEAPBADPTR**| **_Pentry** поле **_HEAPINFO** структура не содержит допустимого указателя на кучу или *entryinfo* является пустым указателем.|
 |**_HEAPEND**| Успешно достигнут конец кучи.|
 |**_HEAPEMPTY**| Куча еще не инициализирована.|
-|**_HEAPOK**| Пока; без ошибок *entryinfo* обновляется информацией о следующей записи кучи.|
+|**_HEAPOK**| Пока; без ошибок *entryinfo* обновляется с учетом сведений о следующей записи кучи.|
 
-Кроме того, если происходит ошибка **_heapwalk** задает **errno** для **ENOSYS**.
+Кроме того, если возникает ошибка **_heapwalk** задает **errno** для **ENOSYS**.
 
 ## <a name="remarks"></a>Примечания
 
-**_Heapwalk** функция помогает при отладке проблемы с кучей в программах. Функция выполняет обход кучи, проходя по одной записи на один вызов и возвращает указатель на структуру типа **_HEAPINFO** , содержащий сведения о следующей записи кучи. **_HEAPINFO** типы, определенные в файле Malloc.h, содержит следующие элементы.
+**_Heapwalk** функция помогает при отладке в программах проблем, связанных с кучей. Функция выполняет обход кучи, проходя по одной записи на один вызов и возвращает указатель на структуру типа **_HEAPINFO** , содержащий сведения о следующей записи кучи. **_HEAPINFO** типы, определенные в файле Malloc.h, содержит следующие элементы.
 
 |Поле|Значение|
 |-|-|
@@ -84,9 +74,9 @@ int _heapwalk( _HEAPINFO *entryinfo );
 |`size_t _size`|Размер записи кучи.|
 |`int _useflag`|Флаг, указывающий, используется ли запись кучи.|
 
-Вызов **_heapwalk** , возвращающий **_HEAPOK** сохраняет размер записи в **ра_змер** и устанавливает **_useflag** поле либо **_FREEENTRY** или **_USEDENTRY** (оба являются константы, определенные в файле Malloc.h). Для получения этих сведений о первой записи в куче следует передать **_heapwalk** указатель **_HEAPINFO** структура которого **_pentry** член является **значение NULL** . Если операционная система не поддерживает **_heapwalk**(например, Windows 98), функция возвращает **_HEAPEND** и задает **errno** для **ENOSYS**.
+Вызов **_heapwalk** , возвращающий **_HEAPOK** сохраняет размер записи в **_размер** поля и наборы **_useflag** поле **_FREEENTRY** или **_USEDENTRY** (оба являются константы, определенные в файле Malloc.h). Для получения этих сведений о первой записи в куче следует передать **_heapwalk** указатель на **_HEAPINFO** структуры, **_pentry** член является **NULL** . Если операционная система не поддерживает **_heapwalk**(например, Windows 98), функция возвращает **_HEAPEND** и задает **errno** для **ENOSYS**.
 
-Эта функция проверяет свои параметры. Если *entryinfo* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **_HEAPBADPTR**.
+Эта функция проверяет свои параметры. Если *entryinfo* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает **_HEAPBADPTR**.
 
 ## <a name="requirements"></a>Требования
 

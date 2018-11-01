@@ -1,10 +1,6 @@
 ---
-title: _calloc_dbg | Документы Майкрософт
-ms.custom: ''
+title: _calloc_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _calloc_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _calloc_dbg
 - calloc_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _calloc_dbg function
 - calloc_dbg function
 ms.assetid: 7f62c42b-eb9f-4de5-87d0-df57036c87de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2759c19fb88b820fc346b5cf35e97522b7e74cb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c525aa2f19b39ba3cb8304c59c96196707ad859c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454396"
 ---
 # <a name="callocdbg"></a>_calloc_dbg
 
@@ -57,7 +47,7 @@ void *_calloc_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*Номер*<br/>
+*номер*<br/>
 Запрошенное число блоков памяти.
 
 *size*<br/>
@@ -72,17 +62,17 @@ void *_calloc_dbg(
 Указатель на имя исходного файла, который запросил операцию выделения или **NULL**.
 
 *linenumber*<br/>
-Номер строки в исходном файле, которой была запрошена операция выделения или **NULL**.
+Номер строки в файле источника, в которой была запрошена операция выделения или **NULL**.
 
-*Filename* и *linenumber* доступны, только если **_calloc_dbg** была явно вызвана или [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)определена константа препроцессора.
+*Filename* и *linenumber* параметры доступны только тогда, когда **_calloc_dbg** была явно вызвана или [_CRTDBG_MAP_ALLOC](../../c-runtime-library/crtdbg-map-alloc.md)определена константа препроцессора.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном выполнении эта функция возвращает указатель на пользовательскую часть последний выделенный блок памяти, вызывает новую функцию обработчика или возвращает **NULL**. Полное описание поведения возвращения см. в разделе "Примечания". Дополнительные сведения о том, как используется новая функция обработчика, см. в описании функции [calloc](calloc.md).
+При успешном выполнении эта функция возвращает указатель на пользовательская часть выделенного блока памяти, вызывает новую функцию обработчика или возвращает **NULL**. Полное описание поведения возвращения см. в разделе "Примечания". Дополнительные сведения о том, как используется новая функция обработчика, см. в описании функции [calloc](calloc.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_calloc_dbg** является отладочной версией [calloc](calloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_calloc_dbg** сокращается до вызова **calloc**. Оба **calloc** и **_calloc_dbg** выделить *номер* блоков памяти в основной куче, но **_calloc_dbg** предлагает несколько отладки функции:
+**_calloc_dbg** является отладочной версией [calloc](calloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_calloc_dbg** сокращается до вызова **calloc**. Оба **calloc** и **_calloc_dbg** выделить *номер* блоки памяти в основной куче, но **_calloc_dbg** предлагает несколько отладки функции:
 
 - Буферы с обеих сторон пользовательской части блока, которые необходимо проверить на наличие утечек.
 
@@ -92,7 +82,7 @@ void *_calloc_dbg(
 
 **_calloc_dbg** выделяет каждый блок памяти, добавив немного больше пространства, чем запрошено *размер*. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.
 
-**_calloc_dbg** задает **errno** для **ENOMEM** при сбое выделения памяти; **EINVAL** возвращается, если объем памяти (включая ранее упомянутую нагрузку) превышает **_HEAP_MAXREQ**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+**_calloc_dbg** задает **errno** для **ENOMEM** при сбое выделения памяти; **EINVAL** возвращается, если необходимый объем памяти (включая ранее упомянутую нагрузку) превышает **_HEAP_MAXREQ**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи см. в статье [Сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

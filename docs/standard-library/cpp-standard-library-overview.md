@@ -1,32 +1,22 @@
 ---
-title: Общие сведения о стандартной библиотеке C++ | Документы Майкрософт
-ms.custom: ''
+title: Общие сведения о стандартной библиотеке C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845324"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444997"
 ---
 # <a name="c-standard-library-overview"></a>Общие сведения о стандартной библиотеке C++
 
-Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map > и \<hash_set >, которые не требуются по стандарту C++. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
+Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map > и \<hash_set >, которые не требуются стандартом C++. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
 
 Автономная реализация библиотеки С++ предоставляет только подмножество этих заголовков:
 
