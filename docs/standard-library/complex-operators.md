@@ -1,8 +1,6 @@
 ---
-title: '&lt;операторы&gt; complex | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;операторы&gt; complex'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - xcomplex/std::operator!=
 - xcomplex/std::operator&gt;&gt;
@@ -12,27 +10,25 @@ f1_keywords:
 - xcomplex/std::operator-
 - xcomplex/std::operator/
 - xcomplex/std::operator==
-dev_langs:
-- C++
 ms.assetid: aa282604-dcb9-46a2-bf1d-34c50aa6c4ba
 helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: de26779c569326f46794ba76b7b886f994cd8b11
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c21a9869f8accd8794a552d76fae39615689c2a8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522516"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;операторы&gt; complex
 
 ||||
 |-|-|-|
-|[оператор!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
+|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
 |[оператор*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[оператор/](#op_div)|[оператор==](#op_eq_eq)|
+|[оператор/](#op_div)|[operator==](#op_eq_eq)|
 
 ## <a name="op_neq"></a> operator!=
 
