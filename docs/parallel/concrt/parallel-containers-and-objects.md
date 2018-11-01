@@ -1,27 +1,17 @@
 ---
-title: Параллельные контейнеры и объекты | Документация Майкрософт
-ms.custom: ''
+title: Параллельные контейнеры и объекты
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb06cf0c4e3e5868a0dadeefb30c2e75158d4e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542562"
 ---
 # <a name="parallel-containers-and-objects"></a>Параллельные контейнеры и объекты
 
@@ -285,7 +275,7 @@ ms.locfileid: "46433391"
 
 |Метод|Описание|
 |------------|-----------------|
-|[локальный](reference/combinable-class.md#local)|Извлекает ссылку на локальную переменную, которой сопоставлен текущий контекст потока.|
+|[local](reference/combinable-class.md#local)|Извлекает ссылку на локальную переменную, которой сопоставлен текущий контекст потока.|
 |[clear](reference/combinable-class.md#clear)|Удаляет все локальные переменные потока из `combinable` объекта.|
 |[combine](reference/combinable-class.md#combine)<br /><br /> [combine_each](reference/combinable-class.md#combine_each)|Использует предоставленную функцию combine для создания окончательного значения из набора всех локальных вычислений потока.|
 

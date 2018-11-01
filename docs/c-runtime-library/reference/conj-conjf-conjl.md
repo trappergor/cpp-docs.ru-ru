@@ -1,11 +1,6 @@
 ---
-title: conj, conjf, conjl | Документы Майкрософт
-ms.custom: ''
+title: conj, conjf, conjl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - conj
 - conjf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/conj
 - complex/conjf
 - complex/conjl
-dev_langs:
-- C++
 helpviewer_keywords:
 - conj function
 - conjf function
 - conjl function
 ms.assetid: 792fccfa-19c6-4890-99f9-a3b89effccd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb91b566c499ba9f34c7c67c9cdc24d67924601d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ed5e8570a3a2467bf7080524db9d1bef618091
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394325"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579963"
 ---
 # <a name="conj-conjf-conjl"></a>conj, conjf, conjl
 
@@ -79,11 +68,11 @@ _Lcomplex conjl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Сопряженное число комплексного *z*.  Результат имеет ту же часть вещественной и мнимой как *z*, но с противоположным знаком.
+Сопряженную величину *z*.  Результат имеет же действительную и мнимую части как *z*, но с противоположным знаком.
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **conj** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **conj** всегда принимает и возвращает **_Dcomplex** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **conj** , принимающие и возвращающие **_Fcomplex** и **_Lcomplex** значения. В программе на языке C **conj** всегда принимает и возвращает **_Dcomplex** значение.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l | Документы Майкрософт
-ms.custom: ''
+title: _cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534047"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf, _cprintf_l, _cwprintf, _cwprintf_l
 
@@ -105,18 +95,18 @@ int _cwprintf_l(
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль с помощью **_putch** функции (**_putwch** для **_cwprintf**) для вывода символов . Каждый аргумент в *argument_list* (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в *формат*. *Формат* использует аргумент [форматирования спецификация синтаксиса для функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от **fprintf**, **printf**, и **sprintf** функции, ни **_cprintf** , ни **_cwprintf**транслирует символы перевода строки каретки сочетания канала для возврата строки (CR-LF) при выводе.
+Эти функции форматируют и выводят последовательности символов и значений напрямую на консоль, используя **_putch** функция (**_putwch** для **_cwprintf**) для вывода символов . Каждый аргумент в *argument_list* (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в *формат*. *Формат* использует аргумент [синтаксис описания для функции printf и wprintf формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md). В отличие от **fprintf**, **printf**, и **sprintf** функции, ни **_cprintf** , ни **_cwprintf**преобразование символов перевода строки в сочетания символов возврата строки (CR-LF), веб-канал каретки при выводе.
 
-Важное отличие состоит в том **_cwprintf** показывает символы Юникода при использовании в Windows. В отличие от **_cprintf**, **_cwprintf** использует текущие параметры языкового стандарта консоли.
+Важное отличие заключается в том, что **_cwprintf** показывает символы Юникода при использовании в Windows. В отличие от **_cprintf**, **_cwprintf** использует текущие настройки языкового стандарта консоли.
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
-**_cprintf** проверяет *формат* параметра. Если *формат* является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает **errno** для **EINVAL**.
+**_cprintf** проверяет *формат* параметра. Если *формат* является пустым указателем, функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает -1 и устанавливает **errno** для **EINVAL**.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

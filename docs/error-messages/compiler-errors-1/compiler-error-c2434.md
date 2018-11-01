@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2434 | Документы Microsoft
-ms.custom: ''
+title: Ошибка компилятора C2434
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2434
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2434
 ms.assetid: 01329e26-7c74-4219-b74f-69e3a40c9738
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45f9ccdef84713883c53dab0e7caf3b1519628de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c73a8d4fcde945ddf2495cc2d0d7dc47216f2db3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587594"
 ---
 # <a name="compiler-error-c2434"></a>Ошибка компилятора C2434
 
@@ -29,13 +19,13 @@ ms.locfileid: "34704231"
 
 ## <a name="remarks"></a>Примечания
 
-**/CLR: pure** и **/CLR: safe** параметры компилятора являются устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017 г.
+**/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
-Невозможно динамически инициализировать внутрипроцессную переменную в списке **/CLR: pure**. Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [процесс](../../cpp/process.md).
+Невозможно динамически инициализировать переменную на уровне процесса, в разделе **/CLR: pure**. Дополнительные сведения см. в разделе [/CLR (компиляция CLR)](../../build/reference/clr-common-language-runtime-compilation.md) и [процесс](../../cpp/process.md).
 
 ## <a name="example"></a>Пример
 
-Следующий пример приводит к возникновению ошибки C2434. Чтобы устранить эту проблему, используйте константы для инициализации `process` переменных.
+Следующий пример приводит к возникновению ошибки C2434. Чтобы устранить эту проблему, используйте константы для инициализации `process` переменные.
 
 ```cpp
 // C2434.cpp
