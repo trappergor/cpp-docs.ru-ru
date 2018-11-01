@@ -1,26 +1,16 @@
 ---
-title: Справочник ERRLOOK | Документация Майкрософт
-ms.custom: ''
+title: Справочник ERRLOOK
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09db7dbb2af9294e215ab60c716f73eee821b29a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621472"
 ---
 # <a name="errlook-reference"></a>Справочник ERRLOOK
 
@@ -28,7 +18,7 @@ ms.locfileid: "46438578"
 
 Сочетания клавиш для копировать (CTRL + C), Вырезать (CTRL + X) и рабочих вставить (CTRL + V) для обоих **значение** и **сообщение об ошибке** редактирование элементов управления, если сначала выделить текст.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)<br/>
 Описание элемента управления, измените значение в ERRLOOK.

@@ -1,10 +1,6 @@
 ---
-title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcl2
 - _ismbcl1
@@ -38,8 +34,6 @@ f1_keywords:
 - _ismbcl0_l
 - _ismbcl2
 - ismbcl2_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcl0_l function
 - _ismbcl2 function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _ismbcl2_l function
 - _ismbcl0 function
 ms.assetid: ee15ebd1-462c-4a43-95f3-6735836d626a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29d80c6d26171d9ac347aae1ac488d1fcadb1fec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b4ea5a165e5fb06229c3fdf69c53cdf82c4f35f4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403161"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430892"
 ---
 # <a name="ismbcl0-ismbcl0l-ismbcl1-ismbcl1l-ismbcl2-ismbcl2l"></a>_ismbcl0, _ismbcl0_l, _ismbcl1, _ismbcl1_l, _ismbcl2, _ismbcl2_l
 
@@ -108,7 +98,7 @@ int _ismbcl2_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и имеется соответствующий **_ismbb** процедура (например, **_ismbcalnum** соответствует **_ismbbalnum**), Результатом является возвращаемым значением соответствующего **_ismbb** подпрограммы.
+Каждая из этих процедур возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и есть соответствующая **_ismbb** подпрограммы (например, **_ismbcalnum** соответствует **_ismbbalnum**), результат является возвращаемым значением соответствующего **_ismbb** подпрограммы.
 
 ## <a name="remarks"></a>Примечания
 
@@ -118,14 +108,14 @@ int _ismbcl2_l(
 
 |Подпрограмма|Условие теста (только для кодовой страницы 932)|
 |-------------|-------------------------------------------|
-|**_ismbcl0**|Не кандзи JIS: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl0_l**|Не кандзи JIS: 0x8140 < =*c*< = 0x889E.|
-|**_ismbcl1**|JIS уровня 1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl1_l**|JIS уровня 1: 0x889F < =*c*< = 0x9872.|
-|**_ismbcl2**|JIS уровня 2: 0x989F < =*c*< = 0xEAA4.|
-|**_ismbcl2_l**|JIS уровня 2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl0**|Не JIS кандзи: 0x8140 < =*c*< = 0x889E.|
+|**_ismbcl0_l**|Не JIS кандзи: 0x8140 < =*c*< = 0x889E.|
+|**_ismbcl1**|JIS уровень-1: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl1_l**|JIS уровень-1: 0x889F < =*c*< = 0x9872.|
+|**_ismbcl2**|JIS level-2: 0x989F < =*c*< = 0xEAA4.|
+|**_ismbcl2_l**|JIS level-2: 0x989F < =*c*< = 0xEAA4.|
 
-Функции убедитесь, что указанное значение *c* совпадений условия теста, описанные выше, но не проверяют, *c* имеет допустимый Многобайтовый символ. Если младший байт находится в диапазонах 0x00–0x3F, 0x7F или 0xFD–0xFF, эти функции возвращают ненулевое значение, указывающее, что символ удовлетворяет условию теста. Чтобы проверить, является ли символ многобайтовым, используйте [_ismbbtrail](ismbbtrail-ismbbtrail-l.md).
+Эти функции проверяют соответствие указанного значения *c* совпадения тестовых условий, описанных выше, но не убедитесь, что *c* является допустимым многобайтовым символом. Если младший байт находится в диапазонах 0x00–0x3F, 0x7F или 0xFD–0xFF, эти функции возвращают ненулевое значение, указывающее, что символ удовлетворяет условию теста. Чтобы проверить, является ли символ многобайтовым, используйте [_ismbbtrail](ismbbtrail-ismbbtrail-l.md).
 
 **Конец раздела для кодовой страницы 932**
 
