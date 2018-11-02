@@ -1,10 +1,6 @@
 ---
-title: пространство имен Concurrency | Документация Майкрософт
-ms.custom: ''
+title: Пространство имен concurrency
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concurrent_priority_queue/concurrency
 - agents/concurrency
@@ -21,21 +17,15 @@ f1_keywords:
 - concurrent_unordered_set/concurrency
 - pplconcrt/concurrency
 - internal_concurrent_hash/concurrency
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9d423d80606da9edcec2cb5f4da4d02e39213ba7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386032"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629857"
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 
@@ -155,7 +145,7 @@ namespace concurrency;
 |[Структура ITopologyExecutionResource](itopologyexecutionresource-structure.md)|Интерфейс для ресурса выполнения, как определено диспетчером ресурсов.|
 |[Структура ITopologyNode](itopologynode-structure.md)|Интерфейс для узла топологии, как определено диспетчером ресурсов. Узел содержит один или несколько ресурсов выполнения.|
 |[Структура IUMSCompletionList](iumscompletionlist-structure.md)|Представляет список выполнения UMS. Когда поток UMS блокируется, отправляется назначенный планировщиком контекст планирования для принятия решения о том, что нужно запланировать для корня базового виртуального процессора, пока исходный поток заблокирован. Когда снимается блокировка исходного потока, операционная система ставит его в очередь списка выполнения, который доступен через этот интерфейс. Планировщик может запросить список выполнения в назначенном контексте планирования или в другом месте, в котором он выполняет поиск работы.|
-|[Структура IUMSScheduler](iumsscheduler-structure.md)|Интерфейс абстракции планировщика, которому требуется, чтобы диспетчер ресурсов среды выполнения с параллелизмом передал ему потоки планировщика в пользовательском режиме (UMS). Диспетчер ресурсов среды выполнения с параллелизмом использует этот интерфейс для взаимодействия с планировщиками потоков UMS. Интерфейс `IUMSScheduler` наследует от интерфейса `IScheduler`.|
+|[Структура IUMSScheduler](iumsscheduler-structure.md)|Интерфейс абстракции планировщика, которому требуется, чтобы диспетчер ресурсов среды выполнения с параллелизмом передал ему потоки планировщика в пользовательском режиме (UMS). Диспетчер ресурсов среды выполнения с параллелизмом использует этот интерфейс для взаимодействия с планировщиками потоков UMS. Интерфейс `IUMSScheduler` наследует от интерфейса `IScheduler` .|
 |[Структура IUMSThreadProxy](iumsthreadproxy-structure.md)|Абстракция для потока выполнения. Если требуется предоставлять для планировщика потоки планировщика в пользовательском режиме (UMS), задайте для элемента политики планировщика `SchedulerKind` значение `UmsThreadDefault` и реализуйте интерфейс `IUMSScheduler`. Потоки UMS поддерживаются только в 64-разрядных операционных системах Windows 7 и более поздних версий.|
 |[Структура IUMSUnblockNotification](iumsunblocknotification-structure.md)|Представляет уведомление диспетчера ресурсов о том, что прокси-поток, который заблокировал и запустил возврат к заданному контексту планирования планировщика, разблокирован и готов для планирования. Этот интерфейс является недопустимым, когда связанный с прокси-потоком контекст выполнения, возвращенный из метода `GetContext`, переносится.|
 |[Структура IVirtualProcessorRoot](ivirtualprocessorroot-structure.md)|Абстракция для аппаратного потока, в котором может выполняться прокси-поток.|
@@ -188,7 +178,7 @@ namespace concurrency;
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|
 |[Функция cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|
-|[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Возвращаемый тип `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|
+|[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Тип возвращаемого значения `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|
 |[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект PPL [задачи](task-class.md) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|
 |[Функция CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Возвращает интерфейс, который представляет одноэлементный экземпляр диспетчера ресурсов среды выполнения с параллелизмом. Диспетчер ресурсов отвечает за назначение ресурсов планировщикам, которым требуется взаимодействовать друг с другом.|
 |[Функция DisableTracing](concurrency-namespace-functions.md#disabletracing)|Отключает трассировку в среде выполнения с параллелизмом. Эту функция не рекомендуется использовать, поскольку трассировка событий Windows по умолчанию не регистрируется.|
@@ -232,12 +222,12 @@ namespace concurrency;
 
 |Имя|Описание|
 |----------|-----------------|
-|[оператор!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
+|[operator!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая завершается успешно, если обе задачи, предоставленные в качестве аргументов, завершаются успешно.|
 |[оператор||](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
 |[оператор<](concurrency-namespace-operators.md#operator_lt)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
 |[оператор<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
-|[оператор==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
+|[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[оператор>](concurrency-namespace-operators.md#operator_gt)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
 |[оператор>=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет больше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
 

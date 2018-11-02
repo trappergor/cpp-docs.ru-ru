@@ -1,10 +1,6 @@
 ---
-title: _tell, _telli64 | Документы Майкрософт
-ms.custom: ''
+title: _tell, _telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660152"
 ---
 # <a name="tell-telli64"></a>_tell, _telli64
 
@@ -71,13 +61,13 @@ __int64 _telli64(
 
 Текущая позиция указателя файла. Для устройств, которые не поддерживают поиск, возвращаемое значение не определено.
 
-Возвращаемое значение-1 L указывает на ошибку. Если *обработки* имеет недопустимый дескриптор файла, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EBADF** и возвращают-1 L.
+Возвращаемое значение – 1 L указывает на ошибку. Если *обрабатывать* является недопустимым дескриптором, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **значение EBADF** и возвращают – 1 L.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) .
 
 ## <a name="remarks"></a>Примечания
 
-**_Tell** функция получает текущее положение указателя файла (если таковые имеются), связанного с *обработки* аргумент. Позиция выражается в виде количества байт от начала файла. Для **_telli64** функция, это значение выражается в виде 64-разрядное целое число.
+**_Tell** функция получает текущую позицию указателя файла (если таковые имеются), связанные с *обрабатывать* аргумент. Позиция выражается в виде количества байт от начала файла. Для **_telli64** функция, это значение выражается в виде 64-разрядное целое число.
 
 ## <a name="requirements"></a>Требования
 

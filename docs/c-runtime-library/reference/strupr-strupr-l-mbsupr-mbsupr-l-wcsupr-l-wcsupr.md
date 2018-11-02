@@ -1,10 +1,6 @@
 ---
-title: Функции _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr | Документы Майкрософт
-ms.custom: ''
+title: _strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,23 +60,19 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415388"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603649"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr, _strupr_l, _mbsupr, _mbsupr_l, _wcsupr_l, _wcsupr
 
 Преобразуют буквы в строке в прописные. Есть более безопасные версии этих функций. См. раздел [Функции _strupr_s _strupr_s_l, _mbsupr_s, _mbsupr_s_l, _wcsupr_s, _wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md).
 
 > [!IMPORTANT]
-> **_mbsupr** и **_mbsupr_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsupr** и **_mbsupr_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -151,15 +141,15 @@ unsigned char *_mbsupr_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Strupr** функция преобразует в месте, каждой буквы нижнего регистра в *str* в верхний регистр. Преобразование определяется **LC_CTYPE** категории языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**, в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без **_l** используйте суффикс текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_Strupr** функция преобразует в месте, каждую строчную букву в *str* в верхний регистр. Преобразование определяется **LC_CTYPE** категории языкового стандарта. Другие символы не изменяются. Дополнительные сведения о **LC_CTYPE**, см. в разделе [setlocale](setlocale-wsetlocale.md). В версиях этих функций без **_l** суффикс использования текущего языкового стандарта; версии с **_l** суффиксом идентичны, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-**_wcsupr** и **_mbsupr** версии Юникода и многобайтовых символов **_strupr**. Аргумент и возвращаемое значение **_wcsupr** являются двухбайтовые строки; аргументы **_mbsupr** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**_wcsupr** и **_mbsupr** расширенных и многобайтовых символов версии **_strupr**. Аргумент и возвращаемое значение **_wcsupr** являются двухбайтовые строки; аргументы **_mbsupr** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-Если *str* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают исходной строки и набор **errno** для **EINVAL**.
+Если *str* является пустым указателем, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md) . Если выполнение может быть продолжено, эти функции возвращают исходную строку и устанавливают **errno** для **EINVAL**.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

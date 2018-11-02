@@ -1,29 +1,19 @@
 ---
-title: Этот указатель | Документация Майкрософт
-ms.custom: ''
+title: Указатель this
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - this_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - nonstatic member functions [C++]
 - pointers, to class instance
 - this pointer
 ms.assetid: 92e3256a-4ad9-4d46-8be1-d77fad90791f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb7198b22491a94eb2f00fecec83ec296ce03450
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535009"
 ---
 # <a name="this-pointer"></a>Указатель this
 

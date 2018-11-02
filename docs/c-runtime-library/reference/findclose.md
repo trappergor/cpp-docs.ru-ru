@@ -1,10 +1,6 @@
 ---
-title: _findclose | Документы Майкрософт
-ms.custom: ''
+title: _findclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findclose
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _findclose
 - findclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _findclose function
 - findclose function
 ms.assetid: 9216c573-0878-444c-b5d7-cdaf16fb9163
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a25ed42f1a53eb81c834997f42db0154658f376
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29010f8a502d463eeb6ca98837a1b7dae9f5ae6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395690"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538116"
 ---
 # <a name="findclose"></a>_findclose
 
@@ -59,7 +49,7 @@ int _findclose(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **_findclose** возвращает 0. В противном случае возвращается значение -1 и задает **errno** для **ENOENT**, может быть найден, указывающее, что больше нет сопоставления файлов.
+В случае успешного выполнения **_findclose** возвращает 0. В противном случае возвращается значение -1 и задает **errno** для **ENOENT**, может быть найден, указывающее, что больше нет соответствующего файла.
 
 ## <a name="requirements"></a>Требования
 

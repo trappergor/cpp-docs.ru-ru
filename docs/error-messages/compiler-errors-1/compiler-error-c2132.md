@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2132 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2132
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2132
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2132
 ms.assetid: 32902472-49d1-4513-888f-b52d336839d5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: daae15b06ffb576df75859b1562fd4a895a45f6f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 532b38bcf59719bcad44b4114cbd193b62764452
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053970"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458348"
 ---
 # <a name="compiler-error-c2132"></a>Ошибка компилятора C2132
 

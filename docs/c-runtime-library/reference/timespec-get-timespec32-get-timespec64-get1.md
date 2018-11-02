@@ -1,11 +1,6 @@
 ---
-title: timespec_get, _timespec32_get, _timespec64_get1 | Документы Майкрософт
-ms.custom: ''
+title: timespec_get, _timespec32_get, _timespec64_get1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -33,23 +28,17 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00a59f8b5813398b47562b106f3ec0eff3363b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d0cbaf194060d816e31d397a9319ef47f75371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638455"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get, _timespec32_get, _timespec64_get
 
@@ -87,11 +76,11 @@ int _timespec64_get(
 
 ## <a name="remarks"></a>Примечания
 
-**Timespec_get** функции присваивает текущее время структуре, на который указывает *time_spec* аргумент. Все версии этой структуры имеют два члена **tv_sec** и **tv_nsec**. **Tv_sec** значение равно целому числу секунд и **tv_nsec** целое число наносекунд, округленное до разрешения системных часов с момента начала эпохи, указанной в *базового*.
+**Timespec_get** функции задают текущее время в структуре, на которые указывают *time_spec* аргумент. Все версии этой структуры имеют два члена: **tv_sec** и **tv_nsec**. **Tv_sec** имеет значение целому числу секунд и **tv_nsec** в целое число наносекунд, округленное до разрешения системных часов с начала эпохи, указанной по *базового*.
 
 **Блок, относящийся только к системам Microsoft**
 
-Эти функции поддерживают только **TIME_UTC** как *базового* значение. Это задает *time_spec* до числа секунд и наносекунд с начала эпохи запустить полуночи 1 января 1970 года, универсальное глобальное (UTC). В **структуры** **_timespec32**, **tv_sec** — **__time32_t** значение. В **структуры** **_timespec64**, **tv_sec** — **__time64_t** значение. В **структуры** **timespec**, **tv_sec** — **time_t** тип, который является 32-разрядный или 64 бита в длину в зависимости от того, следует ли препроцессор определен макрос _USE_32BIT_TIME_T. **Timespec_get** функция является встроенная функция, которая вызывает **_timespec32_get** Если определен макрос _USE_32BIT_TIME_T; в противном случае он вызывает метод **_timespec64_get**.
+Эти функции поддерживают только **TIME_UTC** как *базового* значение. Этот параметр задает *time_spec* число секунд и наносекунд с начала эпохи, полуночи 1 января 1970 года, время в формате UTC. В **структуры** **_timespec32**, **tv_sec** — **__time32_t** значение. В **структуры** **_timespec64**, **tv_sec** — **__time64_t** значение. В **структуры** **timespec**, **tv_sec** — **time_t** тип, который является 32-разрядный или 64 бита в длину в зависимости от того, следует ли препроцессора макрос _USE_32BIT_TIME_T определено. **Timespec_get** функция — это встраиваемая функция, которая вызывает **_timespec32_get** Если _USE_32BIT_TIME_T определено; в противном случае он вызывает **_timespec64_get**.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

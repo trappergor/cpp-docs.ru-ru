@@ -1,10 +1,6 @@
 ---
-title: _ismbbgraph, _ismbbgraph_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbbgraph, _ismbbgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbgraph_l
 - _ismbbgraph
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbgraph_l
 - ismbbgraph
 - ismbbgraph_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbgraph_l function
 - ismbbgraph_l function
 - _ismbbgraph function
 - ismbbgraph function
 ms.assetid: b60db718-134f-4796-acc1-592d0b9efbb7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6336beee17759ac01667d7c2aac65be419d9e170
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5b5dace39e674744148a1ddf0c692692fb889f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399255"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662886"
 ---
 # <a name="ismbbgraph-ismbbgraphl"></a>_ismbbgraph, _ismbbgraph_l
 

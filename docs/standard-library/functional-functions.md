@@ -1,10 +1,6 @@
 ---
-title: Функции &lt;functional&gt; | Документы Майкрософт
-ms.custom: ''
+title: Функции &lt;functional&gt;
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::bind
 - xfunctional/std::bind1st
@@ -22,8 +18,6 @@ f1_keywords:
 - xfunctional/std::ptr_fun
 - functional/std::ref
 - functional/std::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::bind [C++]
 - std::bind1st
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c93f32a7684d32cba0d2822571bd138f9206f46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 696f937686e9ff3a45f8132da8a8d79857d989da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107417"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585215"
 ---
 # <a name="ltfunctionalgt-functions"></a>Функции &lt;functional&gt;
 
@@ -169,7 +159,7 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="parameters"></a>Параметры
 
-*Func*<br/>
+*func*<br/>
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
 *left*<br/>
@@ -263,7 +253,7 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*Func*<br/>
+*func*<br/>
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
 *right*<br/>
@@ -408,7 +398,7 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*<br/>
+*Type*<br/>
 Тип, поддерживающий унарный `operator~`.
 
 *Справа*<br/>
@@ -898,7 +888,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Параметры
 
-*Func*<br/>
+*func*<br/>
 Бинарный предикат, знак которого должен быть изменен.
 
 ### <a name="return-value"></a>Возвращаемое значение

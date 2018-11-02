@@ -1,10 +1,6 @@
 ---
-title: SINH sinhf, sinhl | Документы Microsoft
-ms.custom: ''
+title: SINH, sinhf, sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,18 +31,14 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569810"
 ---
-# <a name="sinh-sinhf-sinhl"></a>SINH sinhf, sinhl
+# <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
 
 Вычисляет гиперболический синус.
 
@@ -83,7 +73,7 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **sinh** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **sinh** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **sinh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **sinh** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

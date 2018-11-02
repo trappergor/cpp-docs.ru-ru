@@ -1,27 +1,17 @@
 ---
-title: Алфавитный список встроенных функций | Документация Майкрософт
-ms.custom: ''
+title: Алфавитный список встроенных функций
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler intrinsics
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4de558e36fb0605096387164d2c9529582ad3911
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396770"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654772"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Алфавитный список встроенных функций
 

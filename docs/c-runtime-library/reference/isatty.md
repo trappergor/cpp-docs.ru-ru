@@ -1,10 +1,6 @@
 ---
-title: _isatty | Документы Майкрософт
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402463"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545591"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,13 +48,13 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_isatty** возвращает ненулевое значение, если дескриптор связан с символьное устройство. В противном случае **_isatty** возвращает 0.
+**_isatty** возвращает ненулевое значение, если дескриптор связан с устройством символьного ввода. В противном случае **_isatty** возвращает 0.
 
 ## <a name="remarks"></a>Примечания
 
-**_Isatty** функция определяет, является ли *fd* связан с символьное устройство (терминалов, консоли, принтер или последовательный порт).
+**_Isatty** функция определяет, является ли *fd* связан с устройством символьного ввода (терминал, консоль, принтер или последовательный порт).
 
-Эта функция проверяет *fd* параметра. Если *fd* является указатель файла с ошибками вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 и задает **errno** для **EBADF**.
+Эта функция проверяет *fd* параметра. Если *fd* является недопустимым указателем файла, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает 0 и устанавливает **errno** для **значение EBADF**.
 
 ## <a name="requirements"></a>Требования
 

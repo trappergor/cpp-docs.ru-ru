@@ -1,10 +1,6 @@
 ---
-title: _CrtMemCheckpoint | Документы Майкрософт
-ms.custom: ''
+title: _CrtMemCheckpoint
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemCheckpoint
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - CrtMemCheckpoint
 - _CrtMemCheckpoint
 - crtdbg/_CrtMemCheckpoint
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemCheckpoint function
 - _CrtMemCheckpoint function
 ms.assetid: f1bacbaa-5a0c-498a-ac7a-b6131d83dfbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e1418278f4b6756db4e747162f090545c3e9f3ae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ee435ba3e9e40795280dee0f97feaad32c8b0fc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589521"
 ---
 # <a name="crtmemcheckpoint"></a>_CrtMemCheckpoint
 
@@ -59,7 +49,7 @@ void _CrtMemCheckpoint(
 
 ## <a name="remarks"></a>Примечания
 
-**_CrtMemCheckpoint** функция создает моментальный снимок текущего состояния отладочной кучи в любой момент. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md), для обнаружения утечек памяти и других проблем. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemState** удаляются во время предварительной обработки.
+**_CrtMemCheckpoint** функция создает моментальный снимок текущего состояния отладочной кучи в любой момент. Этот моментальный снимок могут использовать другие функции управления состоянием кучи, такие как [_CrtMemDifference](crtmemdifference.md) , для обнаружения утечек памяти и других проблем. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, вызовы функций **_CrtMemState** удаляются во время предварительной обработки.
 
 Приложение должно передать указатель на ранее выделенный экземпляр **_CrtMemState** структуры, определенные в Crtdbg.h в *состояние* параметра. Если **_CrtMemCheckpoint** возникает ошибка во время создания контрольной точки, функция создает **_CRT_WARN** отладка отчет с описанием проблемы.
 

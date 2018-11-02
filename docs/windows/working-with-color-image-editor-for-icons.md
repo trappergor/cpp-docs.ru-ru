@@ -1,14 +1,8 @@
 ---
-title: Работа с цветом (редактор изображений для значков) | Документация Майкрософт
-ms.custom: ''
+title: Работа с цветом (редактор изображений для значков)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - images [C++], background colors
 - Image editor [C++], Colors Palette
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - foreground colors [C++], Image editor
 - colors [C++]
 ms.assetid: d34ff96f-241d-494f-abdd-13811ada8cd3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9c829d086198233f0149782f1cb4cb1780aec7ad
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 7103332d0b7c0f4756da9526290cabb79544617d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50054182"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610708"
 ---
 # <a name="working-with-color-image-editor-for-icons"></a>Работа с цветом (редактор изображений для значков)
 
@@ -65,7 +54,7 @@ ms.locfileid: "50054182"
 
 ## <a name="requirements"></a>Требования
 
-Нет
+None
 
 ## <a name="see-also"></a>См. также
 

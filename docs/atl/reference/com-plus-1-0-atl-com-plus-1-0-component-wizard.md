@@ -1,25 +1,15 @@
 ---
-title: COM + 1.0, мастер компонентов ATL COM + 1.0 | Документация Майкрософт
-ms.custom: ''
+title: COM+ 1.0, мастер компонентов ATL COM+ 1.0
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
-dev_langs:
-- C++
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562062"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0, мастер компонентов ATL COM+ 1.0
 
@@ -31,7 +21,7 @@ ms.locfileid: "48861789"
 
    Указывает тип интерфейса, поддерживаемого объектом. По умолчанию объект поддерживает сдвоенный интерфейс.
 
-   |Параметр|Описание:|
+   |Параметр|Описание|
    |------------|-----------------|
    |**Dual**|Указывает, что объект поддерживает сдвоенный интерфейс (его vtable имеет функции пользовательского интерфейса и позднее связывание `IDispatch` методов). Позволяет COM-клиентам и контроллеры автоматизации, доступ к объекту.|
    |**Пользовательский**|Указывает, что объект поддерживает пользовательский интерфейс (его vtable имеет функции пользовательского интерфейса). Пользовательский интерфейс может быть быстрее, чем сдвоенный интерфейс, особенно через границы процессов.<br /><br /> - **Совместимый с автоматизацией** добавляет Поддержка модели автоматизации пользовательского интерфейса. Для проектов с атрибутами, задает **oleautomation** атрибут в компонентного класса.|
@@ -44,7 +34,7 @@ ms.locfileid: "48861789"
 
    Указывает дополнительную поддержку Ошибка обработки и управления объектом.
 
-   |Параметр|Описание:|
+   |Параметр|Описание|
    |------------|-----------------|
    |**ISupportErrorInfo**|Создает поддержка [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) интерфейс, объект может возвращать сведения об ошибке клиенту.|
    |**IObjectControl**|Предоставляет доступ к три объекта [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol) методы: [активировать](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate), [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled), и [деактивировать](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate).|
@@ -54,7 +44,7 @@ ms.locfileid: "48861789"
 
    Указывает, что объект поддерживает транзакции. Включает файл mtxattr.h в IDL-файл (без атрибутов проекта).
 
-   |Параметр|Описание:|
+   |Параметр|Описание|
    |------------|-----------------|
    |**Поддерживается**|Указывает, что объект никогда не корне потока транзакций, добавив макрос атрибута компонента custom(TLBATTR_TRANS_SUPPORTED,0) в h-файл (с атрибутами проекта) или в IDL-файл (без атрибутов проекта).|
    |**Обязательное**|Указывает, что объект может или не может быть корнем потока транзакций, добавив макрос атрибута компонента custom(TLBATTR_TRANS_REQUIRED,0) в h-файл (с атрибутами проекта) или в IDL-файл (без атрибутов проекта).|

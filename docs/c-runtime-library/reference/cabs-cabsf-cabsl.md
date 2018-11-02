@@ -1,11 +1,6 @@
 ---
-title: cabs, cabsf, cabsl | Документы Майкрософт
-ms.custom: ''
+title: cabs, cabsf, cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623969"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs, cabsf, cabsl
 
@@ -83,13 +72,13 @@ long double cabsl(
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cabs** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **длинные** **двойные** значения. В программе на языке C **cabs** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **cabs** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long** **двойные** значения. В программе на языке C **cabs** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Заголовок C|Заголовок C++|
 |-------------|--------------|------------------|
-|**CAB-файлы**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
+|**cabs**, **cabsf**, **cabsl**|\<complex.h>|\<ccomplex>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

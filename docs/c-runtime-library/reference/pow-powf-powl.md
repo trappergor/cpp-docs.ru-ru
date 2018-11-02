@@ -1,10 +1,6 @@
 ---
-title: pow, powf, powl | Документы Майкрософт
-ms.custom: ''
+title: pow, powf, powl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - powl
 - pow
@@ -27,8 +23,6 @@ f1_keywords:
 - pow
 - _powl
 - powf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - powl function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - powf function
 - pow function
 ms.assetid: e75c33ed-2e59-48b1-be40-81da917324f1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5daf7348198cb6f3ba0186eb4586b2486548f6f5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: edf6116413caba52f9311f03bdfcc1d87e68a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452023"
 ---
 # <a name="pow-powf-powl"></a>pow, powf, powl
 
@@ -84,19 +74,19 @@ long double pow( long double x, int y );  // C++ only
 
 |Значения x и y|Возвращаемое значение функции pow|
 |-----------------------|-------------------------|
-|*x* ! = 0,0 и *y* == 0.0|1|
+|*x* ! = 0.0 и *y* == 0.0|1|
 |*x* == 0,0 и *y* == 0.0|1|
 |*x* == 0,0 и *y* < 0|INF|
 
 ## <a name="remarks"></a>Примечания
 
-**pow** не распознает целых значений с плавающей запятой больше, чем 2<sup>64</sup> (например, 1.0E100).
+**pow** не распознает целочисленных значений с плавающей запятой больше 2<sup>64</sup> (например, 1.0E100).
 
 **pow** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 
-Поскольку C++ допускает перегрузку, можно вызывать любую из перегрузок **pow**. В программе на языке C **pow** всегда принимает два **двойные** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать любые из различных перегрузок **pow**. В программе на языке C **pow** всегда принимает два **двойные** значения и возвращает **двойные** значение.
 
-Перегрузка `pow(int, int)` более не доступна. Если используется эта перегрузка, компилятор может выдавать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первого параметра в **двойные**, **float**, или **long** **двойные**.
+Перегрузка `pow(int, int)` более не доступна. При использовании этой перегрузки компилятор может выдать [C2668](../../error-messages/compiler-errors-2/compiler-error-c2668.md). Чтобы избежать этой проблемы, приведите первым параметром для **двойные**, **float**, или **long** **двойные**.
 
 ## <a name="requirements"></a>Требования
 

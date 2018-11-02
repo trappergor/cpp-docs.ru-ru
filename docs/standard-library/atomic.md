@@ -1,10 +1,6 @@
 ---
-title: '&lt;atomic&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;atomic&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -51,19 +47,13 @@ f1_keywords:
 - atomic/std::atomic_int8_t
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
-dev_langs:
-- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600490"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -162,14 +152,14 @@ ms.locfileid: "38966645"
 
 ## <a name="structs"></a>Структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Структура atomic](../standard-library/atomic-structure.md)|Описывает объект, который выполняет атомарные операции с сохраненным значением.|
 |[Структура atomic_flag](../standard-library/atomic-flag-structure.md)|Описывает объект, который автоматически устанавливает и очищает **bool** флаг.|
 
 ## <a name="enums"></a>перечислениям;
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Перечисление memory_order](../standard-library/atomic-enums.md#memory_order_enum)|Предоставляет символьные имена для операций синхронизации в областях памяти. Эти операции влияют на то, как присвоения в одном потоке становятся видимыми в другом.|
 
@@ -177,7 +167,7 @@ ms.locfileid: "38966645"
 
 В следующем списке функции, которые не заканчиваются на `_explicit`, имеют семантику соответствующего `_explicit`, за исключением того, что они имеют неявные аргументы [memory_order](../standard-library/atomic-enums.md#memory_order_enum) `memory_order_seq_cst`.
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|Выполняет *атомарную операцию сравнения и обмена*.|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|Выполняет *атомарную операцию сравнения и обмена*.|

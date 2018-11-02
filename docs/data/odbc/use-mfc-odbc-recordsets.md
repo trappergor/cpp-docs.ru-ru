@@ -1,33 +1,22 @@
 ---
-title: Использование набора записей MFC ODBC | Документация Майкрософт
-ms.custom: ''
+title: Использование набора записей MFC ODBC
 ms.date: 11/04/2016
-ms.technology:
-- cpp-data
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - recordsets, MFC ODBC
 - ODBC recordsets
 ms.assetid: ebde4180-e3de-474a-a5ab-6135e41763a7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- data-storage
-ms.openlocfilehash: 36683927d9bde9f36fdeab0746533af9143b0999
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 72e394ae8d8bef72acf62edd81b356b76b1b18c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567938"
 ---
 # <a name="use-mfc-odbc-recordsets"></a>Использование набора записей MFC ODBC
 
 В этих разделах объясняется, как работать с наборами записей ODBC через MFC.
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 ### <a name="general-recordset-tasks"></a>Общие задачи набора записей
 

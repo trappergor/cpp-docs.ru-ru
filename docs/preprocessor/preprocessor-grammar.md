@@ -1,27 +1,17 @@
 ---
-title: Грамматика препроцессора | Документация Майкрософт
-ms.custom: ''
+title: Грамматика препроцессора
 ms.date: 09/04/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56df4d0bfdaf87ace87a9f9dcbde85166929e642
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43766120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614192"
 ---
 # <a name="preprocessor-grammar"></a>Грамматика препроцессора
 
@@ -30,7 +20,7 @@ ms.locfileid: "43766120"
 &nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>идентификатор</em>**(** *идентификатор*<sub>opt</sub> **,** ... **,** *идентификатор*<sub>opt</sub> **)** *строке токена*<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *последовательность цифр***"** *filename* **"**<sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *последовательность цифр***"** *filename* **"**<sub>opt</sub><br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#undef** *идентификатор*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *строке токена*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *строке токена*
@@ -68,8 +58,8 @@ ms.locfileid: "43766120"
 &nbsp;&nbsp;&nbsp;&nbsp;**#endif**
 
 *последовательность цифр* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*цифра*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*последовательность цифр* *цифра*
+&nbsp;&nbsp;&nbsp;&nbsp;*digit*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*digit-sequence* *digit*
 
 *цифра* : один из<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**0 1 2 3 4 5 6 7 8 9**
@@ -78,11 +68,11 @@ ms.locfileid: "43766120"
 &nbsp;&nbsp;&nbsp;&nbsp;Строка токенов
 
 *токен* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Ключевое слово*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Идентификатор*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Константы*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Оператор*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*знак препинания*
+&nbsp;&nbsp;&nbsp;&nbsp;*keyword*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*constant*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*operator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*punctuator*
 
 *Имя файла* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;Имя файла юридические операционной системы

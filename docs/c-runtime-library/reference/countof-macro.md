@@ -1,10 +1,6 @@
 ---
-title: Макрос _countof | Документы Майкрософт
-ms.custom: ''
+title: Макрос _countof
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,22 +16,16 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536140"
 ---
 # <a name="countof-macro"></a>Макрос _countof
 
@@ -58,9 +48,9 @@ ms.locfileid: "32394747"
 
 ## <a name="remarks"></a>Примечания
 
-**_countof** реализуется в качестве макроса препроцессора подобный функции. Версия C++ имеет дополнительный шаблон механизмы для обнаружения во время компиляции, если передается указатель вместо статически объявленным массива.
+**_countof** реализуется как макрос препроцессора подобный функции. Версия C++ имеет дополнительный шаблон механизм для обнаружения во время компиляции, если вместо статически объявленным массива передается указатель.
 
-Убедитесь, что *массива* действительности представляет собой массив, не указатель. В языке C **_countof** дает ошибочные результаты, если *массива* является указателем. В C++ **_countof** возникает ошибка компиляции, если *массива* является указателем.  Массив передается в качестве параметра в функции *decays к указателю*, что означает, что в рамках этой функции нельзя использовать **_countof** чтобы определить область массива.
+Убедитесь, что *массива* фактически является массивом, а не указатель. В языке C **_countof** дает ошибочные результаты, если *массива* является указателем. В C++ **_countof** возникает ошибка компиляции, если *массива* является указателем.  Массив передается в качестве параметра в функции *decays к указателю*, что означает, что в функции, нельзя использовать **_countof** чтобы определить область массива.
 
 ## <a name="requirements"></a>Требования
 

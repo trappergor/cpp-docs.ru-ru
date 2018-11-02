@@ -1,28 +1,18 @@
 ---
-title: '&lt;string&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;string&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - string/std::<string>
 - <string>
-dev_langs:
-- C++
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e341b15baa54b57148582c92beb9d231da8c96bb
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954575"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50517914"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -46,7 +36,7 @@ ms.locfileid: "38954575"
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **char** как `string`.|
 |[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **wchar_t** как `wstring`.|
@@ -55,11 +45,11 @@ ms.locfileid: "38954575"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|
-|[оператор!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |
-|[оператор==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|
+|[operator!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |
+|[operator==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|
 |[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|
 |[оператор<=](../standard-library/string-operators.md#op_lt_eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|
 |[оператор<\<](../standard-library/string-operators.md#op_lt_lt)|Функция шаблона, вставляющая строку в выходной поток.|
@@ -84,13 +74,13 @@ ms.locfileid: "38954575"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[getline шаблона](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[Класс basic_string](../standard-library/basic-string-class.md)|Класс шаблона, описывающий объекты, которые могут хранить последовательность произвольных символьных объектов.|
 |[Структура char_traits](../standard-library/char-traits-struct.md)|Класс шаблона, описывающий атрибуты, связанные с символом типа CharType|

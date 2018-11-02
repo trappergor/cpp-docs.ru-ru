@@ -1,10 +1,6 @@
 ---
-title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l | Документы Майкрософт
-ms.custom: ''
+title: _cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cscanf_l
 - _cscanf
@@ -34,8 +30,6 @@ f1_keywords:
 - _cwscanf_l
 - cscanf_l
 - _tcscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwscanf function
 - data [C++], reading from the console
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468943"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf, _cscanf_l, _cwscanf, _cwscanf_l
 
@@ -109,13 +99,13 @@ int _cwscanf_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Cscanf** функция считывает данные непосредственно из консоли в расположениях, предоставленных *аргумент*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый дополнительный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формат*. Элементы управления форматированным интерпретацию входных данных, поля и имеет те же форму и функциональные возможности, что *формат* параметр [scanf](scanf-scanf-l-wscanf-wscanf-l.md) функции. Во время **_cscanf** обычно возвращает входного символа, она не делает случае последнего вызова **_ungetch**.
+**_Cscanf** функция считывает данные напрямую из консоли в места, указанные функцией *аргумент*. Функция [_Getche](getch-getwch.md) используется для чтения символов. Каждый необязательный параметр должен быть указателем на переменную с типом, который соответствует спецификатору типа в *формат*. Формат определяет толкование входных данных полей и имеет такую же форму и функцию как *формат* параметр для [scanf](scanf-scanf-l-wscanf-wscanf-l.md) функции. Хотя **_cscanf** обычно отображает введенный символ, она происходит, если последний вызов был для **_ungetch**.
 
-Эта функция проверяет свои параметры. Если формат **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **EOF**.
+Эта функция проверяет свои параметры. Если формат **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает **EOF**.
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

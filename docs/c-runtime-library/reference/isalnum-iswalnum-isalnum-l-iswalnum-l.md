@@ -1,10 +1,6 @@
 ---
-title: isalnum, iswalnum, _isalnum_l, _iswalnum_l | Документы Майкрософт
-ms.custom: ''
+title: isalnum, iswalnum, _isalnum_l, _iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401546"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456632"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum, iswalnum, _isalnum_l, _iswalnum_l
 
@@ -76,13 +66,13 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих процедур возвращает ненулевое значение, если *c* — конкретное представление алфавитно-цифрового символа. **isalnum** возвращает ненулевое значение, если **isalpha** или **isdigit** имеет ненулевое значение для *c*, то есть если *c* находится в пределах в диапазоне A - Z, a - z или 0 - 9. **iswalnum** возвращает ненулевое значение, если **iswalpha** или **iswdigit** имеет ненулевое значение для *c*. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление буквы или цифры. **isalnum** возвращает ненулевое значение, если **isalpha** или **isdigit** имеет ненулевое значение для *c*, то есть если *c* находится в пределах в диапазоне A - Z, a - z или 0 - 9. **iswalnum** возвращает ненулевое значение, если **iswalpha** или **iswdigit** имеет ненулевое значение для *c*. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций, имеющих **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций с **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **isalnum** и **_isalnum_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+Поведение **isalnum** и **_isalnum_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

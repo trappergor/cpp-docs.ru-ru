@@ -1,29 +1,18 @@
 ---
-title: версия (атрибут COM C++) | Документация Майкрософт
-ms.custom: ''
+title: версия (атрибут COM C++)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 95b30d65fe67f2647cb8ca50619f3ab13f167053
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 01c4cca846326d237fdacd19187a44e21bd15913
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50059003"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519318"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -57,7 +46,7 @@ ms.locfileid: "50059003"
 |**Применение**|**Класс**, **структуры**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|Нет|
+|**Недопустимые атрибуты**|None|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

@@ -1,28 +1,18 @@
 ---
-title: '&lt;Итератор&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;iterator&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iterator>
 - iterator/std::<iterator>
-dev_langs:
-- C++
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68d2ca3de8e6e3c05095580ce63a5bac253548c0
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 1582f6167d8aae3a9d5a318726cc7404c7e1ea62
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38955456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640366"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
@@ -55,7 +45,7 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|Увеличивает итератор на указанное количество позиций.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Создает итератор, может вставлять элементы с обратной стороны указанного контейнера.|
@@ -74,10 +64,10 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
-|[оператор!=](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|
-|[оператор==](../standard-library/iterator-operators.md#op_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|
+|[operator!=](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|
+|[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|
 |[оператор<](../standard-library/iterator-operators.md#op_lt)|Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.|
 |[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.|
 |[оператор>](../standard-library/iterator-operators.md#op_gt)|Определяет, верно ли, что объект итератора в левой части оператора больше объекта итератора в правой части.|
@@ -87,7 +77,7 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа `Container`, к которому обращается посредством защищенного `pointer` вызова объекта, он сохраняет контейнера.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой Двунаправленный итератор.|

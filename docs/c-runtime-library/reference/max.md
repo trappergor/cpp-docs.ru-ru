@@ -1,10 +1,6 @@
 ---
-title: __max | Документы Майкрософт
-ms.custom: ''
+title: __max
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __max
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs:
-- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d223f4288ccf40646e8f560cec7243b7e8f9f649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398423"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613763"
 ---
 # <a name="max"></a>__max
 
@@ -57,13 +47,13 @@ ms.locfileid: "32398423"
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**__max-** возвращает большее из его аргументов.
+**__max** возвращает большее из своих аргументов.
 
 ## <a name="remarks"></a>Примечания
 
-**__Max-** макрос сравнивает два значения и возвращает значение больше одного. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.
+**__Max** макрос сравнивает два значения и возвращает значение большего. Аргументы могут быть любого числового типа данных со знаком или без знака. Оба аргумента и возвращаемое значение должны принадлежать к одному типу данных.
 
-Аргумента, возвращаемого вычисляется дважды макросом. Это может привести к непредвиденным результатам, если аргумент представляет собой выражение, изменяет его значение, когда оно вычисляется, такие как `*p++`.
+Аргумента, возвращаемого вычисляется дважды макросом. Это может привести к непредвиденным результатам, если аргумент является выражение, которое изменяет это значение, когда оно вычисляется, такие как `*p++`.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,11 +1,6 @@
 ---
-title: _Cmulcc _FCmulcc, _LCmulcc | Документы Microsoft
-ms.custom: ''
+title: _Cmulcc, _FCmulcc, _LCmulcc
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cmulcc
 - _FCmulcc
@@ -30,24 +25,18 @@ f1_keywords:
 - complex/_Cmulcc
 - complex/_FCmulcc
 - complex/_LCmulcc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cmulcc function
 - _FCmulcc function
 - _LCmulcc function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1c4290c7e1f7a1ec917f2b2a197f787d28b9cd9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f81ccb641a80ab264e8bc54ba1987e2c2c8469f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656772"
 ---
-# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc _FCmulcc, _LCmulcc
+# <a name="cmulcc-fcmulcc-lcmulcc"></a>_Cmulcc, _FCmulcc, _LCmulcc
 
 Умножает два комплексных числа.
 
@@ -62,7 +51,7 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 ### <a name="parameters"></a>Параметры
 
 *x*<br/>
-Один из операндов сложный для умножения.
+Одно из сложных операнды для умножения.
 
 *y*<br/>
 Другие сложные операнд для умножения.
@@ -73,7 +62,7 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 
 ## <a name="remarks"></a>Примечания
 
-Так как встроенные арифметические операторы работают в реализации корпорацией Майкрософт, сложные типы **_Cmulcc**, **_FCmulcc**, и **_LCmulcc** функции Упростите умножения сложных типов.
+Так, как работают встроенные арифметические операторы в реализацией сложных типов, **_Cmulcc**, **_FCmulcc**, и **_LCmulcc** функции Упростите умножения сложных типов.
 
 ## <a name="requirements"></a>Требования
 
@@ -81,7 +70,7 @@ _Lcomplex _LCmulcc( _Lcomplex x, _Lcomplex y );
 |-------------|--------------|------------------|
 |**_Cmulcc**, **_FCmulcc**, **_LCmulcc**|\<complex.h>|\<complex.h>|
 
-Эти функции зависят от корпорации Майкрософт. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** , характерные для Майкрософт эквиваленты нереализованные C99 собственные типы **двойные _Complex** , **float _Complex**, и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции зависят от Microsoft. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** характерные для Майкрософт эквивалентов в Нереализованная собственные типы C99 **double _Complex** , **float _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

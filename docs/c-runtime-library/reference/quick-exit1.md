@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Документы Майкрософт
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405735"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429019"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,15 +49,15 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Quick_exit** функция не может возвращать вызывающему.
+**Quick_exit** функция не может возвращать его вызывающему.
 
 ## <a name="remarks"></a>Примечания
 
-**Quick_exit** функции приводит к завершению программы в обычном режиме. Он не вызывает функции, зарегистрированные с **atexit**, **_onexit** или обработчики сигналов, зарегистрированные с **сигнала** функции. Если поведение не определено **quick_exit** вызывается несколько раз или если **выхода** вызывается функция.
+**Quick_exit** функции приводит к завершению программы в обычном режиме. Он не вызывает функции, зарегистрированные с **atexit**, **_onexit** или обработчики сигналов, зарегистрированные с **сигнала** функции. Если поведение не определено **quick_exit** вызывается несколько раз или если **выйти из** вызывается функция.
 
-**Quick_exit** вызовы функций, в последней в порядке поступления (LIFO), функции, зарегистрированные **at_quick_exit**, за исключением того, для тех функций, которые уже вызывается, когда функция была зарегистрирована.  Поведение не определено, если вызов [longjmp](longjmp.md) осуществляется во время вызова зарегистрированной функции, который привел бы к прерыванию вызова функции.
+**Quick_exit** вызовы функций, в последний на входе, порядка поступления (LIFO), функции, зарегистрированные **at_quick_exit**, за исключением, что для этих функций, уже вызывается, когда функция была зарегистрирована.  Поведение не определено, если вызов [longjmp](longjmp.md) осуществляется во время вызова зарегистрированной функции, который привел бы к прерыванию вызова функции.
 
-После вызова зарегистрированных функций **quick_exit** вызывает **_Exit** с помощью *состояние* чтобы вернуть управление среде размещения.
+После вызова зарегистрированных функций **quick_exit** вызывает **_Exit** с помощью *состояние* значение, чтобы вернуть управление среде узла.
 
 ## <a name="requirements"></a>Требования
 

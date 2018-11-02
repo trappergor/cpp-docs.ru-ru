@@ -1,10 +1,6 @@
 ---
-title: Управление библиотекой | Документация Майкрософт
-ms.custom: ''
+title: Управление библиотекой
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.OVERWRITEAllDefaultLibraries
 - VC.Project.VCLibrarianTool.AdditionalDependencies
@@ -18,8 +14,6 @@ f1_keywords:
 - VC.Project.VCLibrarianTool.SubSystemVersion
 - VC.Project.VCLibrarianTool.OVERWRITEDefaultLibraryName
 - VC.Project.VCLibrarianTool.SubSystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - /LIBPATH library manager option
 - OUT library manager option
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - LIST library manager option
 - /CONVERT library manager option
 ms.assetid: f56a8b85-fbdc-4c09-8d8e-00f0ffe1da53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dd6fff812d200e16b82994f9f9bbe598aface547
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 69cd03e029d014b9b74a8688f155dfb1f023b55c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477068"
 ---
 # <a name="managing-a-library"></a>Управление библиотекой
 
@@ -82,7 +72,7 @@ LIB [options...] files...
 **/ NAME:** *имя файла*<br/>
 При создании библиотеки импорта, указывает имя библиотеки DLL, для которых создается библиотека импорта.
 
-**/ NODEFAULTLIB**<br/>
+**/NODEFAULTLIB**<br/>
 Удаляет один или несколько стандартных библиотек из списка библиотек, в которой выполняется поиск при разрешении внешних ссылок. См. в разделе [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md) Дополнительные сведения.
 
 **/ OUT:** *имя файла*<br/>

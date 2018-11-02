@@ -1,10 +1,6 @@
 ---
-title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l | Документы Майкрософт
-ms.custom: ''
+title: _strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635296"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp, _wcsspnp, _mbsspnp, _mbsspnp_l
 
 Возвращают указатель на первый символ в заданной строке, который отсутствует в другой заданной строке.
 
 > [!IMPORTANT]
-> **_mbsspnp** и **_mbsspnp_l** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbsspnp** и **_mbsspnp_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -102,21 +92,21 @@ unsigned char *_mbsspnp_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_strspnp**, **_wcsspnp**, и **_mbsspnp** возвращает указатель на первый символ в *str* , не принадлежит набор символов в *charset*. Каждая из этих функций возвращает **NULL** Если *str* состоит только из символов из *charset*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
+**_strspnp**, **_wcsspnp**, и **_mbsspnp** возвращают указатель на первый символ в *str* , не принадлежит к набору символов в *charset*. Каждая из этих функций возвращает **NULL** Если *str* состоит только из символов из *charset*. Для каждой из этих подпрограмм отсутствуют зарезервированные возвращаемые значения для указания ошибки.
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsspnp** функция возвращает указатель в Многобайтовый символ, который является первым символом в *str* , не принадлежит набор символов в *charset*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с [многобайтовой кодовой страницей](../../c-runtime-library/code-pages.md) в настоящий момент. Поиск не включает завершающие нуль-символы.
+**_Mbsspnp** функция возвращает указатель на Многобайтовый символ, который является первым символом в *str* , не принадлежит к набору символов в *charset*. **_mbsspnp** распознает последовательности многобайтовых символов в соответствии с [многобайтовую кодовую страницу](../../c-runtime-library/code-pages.md) в настоящий момент. Поиск не включает завершающие нуль-символы.
 
-Если параметр *str* или *charset* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **NULL** и задает **errno** для **EINVAL**.
+Если параметр *str* или *charset* является пустым указателем, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **NULL** и задает **errno** для **EINVAL**.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp** и **_wcsspnp** являются версиями расширенных символов и однобайтовых символов **_mbsspnp**. **_strspnp** и **_wcsspnp** ведут себя идентично **_mbsspnp** иначе; они предоставляются только для этого сопоставления и не должны использоваться по другой причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
+**_strspnp** и **_wcsspnp** однобайтовых символов и расширенных версиях **_mbsspnp**. **_strspnp** и **_wcsspnp** ведут себя идентично **_mbsspnp** иначе; они предназначены только для этого сопоставления и не следует использовать по любой другой причине. Дополнительные сведения см. в разделах [Использование универсальных текстовых сопоставлений](../../c-runtime-library/using-generic-text-mappings.md) и [Универсальные текстовые сопоставления](../../c-runtime-library/generic-text-mappings.md).
 
 **_mbsspnp_l** идентична за исключением того, что она использует переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 

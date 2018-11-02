@@ -1,26 +1,16 @@
 ---
-title: x64 (amd64) список встроенных объектов | Документация Майкрософт
-ms.custom: ''
+title: Список встроенных объектов x64 (amd64)
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 006b6ce67182b698a1f6d0bb5d87d8165fba9cde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28a1d01910fd996ea396d2fd3e845001fa208341
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406871"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491260"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>Список встроенных объектов x64 (amd64)
 
@@ -32,9 +22,9 @@ ms.locfileid: "46406871"
 
 - [Руководство по встроенным функциям Intel](https://software.intel.com/sites/landingpage/IntrinsicsGuide). Для поиска конкретных встроенных функций используйте поле поиска.
 
-- [Руководства для разработчиков Intel 64 и IA-32 архитектуры программного обеспечения](https://software.intel.com/articles/intel-sdm)
+- [Руководства для разработчиков программного обеспечения для архитектур Intel 64 и IA-32](https://software.intel.com/articles/intel-sdm)
 
-- [Справочник по программированию расширения набора инструкций архитектуры Intel](https://software.intel.com/isa-extensions)
+- [Справочник по программированию с использованием расширений набора инструкций архитектуры Intel](https://software.intel.com/isa-extensions)
 
 - [Введение в Intel векторные инструкции AVX](https://software.intel.com/articles/introduction-to-intel-advanced-vector-extensions)
 
@@ -1284,4 +1274,4 @@ ms.locfileid: "46406871"
 
 [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Встроенные объекты ARM](../intrinsics/arm-intrinsics.md)<br/>
-[x86 встроенные функции](../intrinsics/x86-intrinsics-list.md)
+[Встроенные объекты x86](../intrinsics/x86-intrinsics-list.md)

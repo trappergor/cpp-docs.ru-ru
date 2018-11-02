@@ -1,10 +1,6 @@
 ---
-title: _unlink, _wunlink | Документы Майкрософт
-ms.custom: ''
+title: _unlink, _wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544203"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -71,15 +61,15 @@ int _wunlink(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций при успешном выполнении возвращает 0. В противном случае функция возвращает -1 и наборы **errno** для **EACCES**, что означает путь указывает файл только для чтения, или **ENOENT**, означающее, что файл или путь не найден или путь указан каталог.
+Каждая из этих функций при успешном выполнении возвращает 0. В противном случае функция возвращает -1 и наборы **errno** для **EACCES**, что означает путь задает файл только для чтения, или к **ENOENT**, означающее, что файл или путь не найден или путь указывает каталог.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Unlink** функция удаляет файл, указанный параметром *filename*. **_wunlink** — это двухбайтовая версия **_unlink**; *filename* аргумент **_wunlink** представляет собой строку расширенных символов. В остальном эти функции ведут себя одинаково.
+**_Unlink** функция удаляет файл, указанный параметром *filename*. **_wunlink** — это двухбайтовая версия **_unlink**; *filename* аргумент **_wunlink** — строка расширенных символов. В остальном эти функции ведут себя одинаково.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

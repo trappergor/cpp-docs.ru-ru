@@ -1,10 +1,6 @@
 ---
-title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l | Документы Майкрософт
-ms.custom: ''
+title: iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iscntrl
 - _iswcntrl_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _iscntrl_l
 - iscntrl
 - _istcntrl
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscntrl function
 - _iscntrl_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - iswcntrl function
 - _istcntrl_l function
 ms.assetid: 616eebf9-aed4-49ba-ba2c-8677c8fe6fb5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c87745a4aa1c2e9d93f2c779e089e0bff6f66fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 150073e78426f5029dd46cbc6766fbd6a2a242e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401533"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506760"
 ---
 # <a name="iscntrl-iswcntrl-iscntrll-iswcntrll"></a>iscntrl, iswcntrl, _iscntrl_l, _iswcntrl_l
 
@@ -85,13 +75,13 @@ int _iswcntrl_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждый из этих процедур возвращает ненулевое значение, если *c* — конкретное представление управляющих символов. **iscntrl** возвращает ненулевое значение, если *c* управляющим символом (0x00 — 0x1F или 0x7F). **iswcntrl** возвращает ненулевое значение, если *c* — это элемент управления расширенный символ. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
+Каждый из этих подпрограмм возвращает ненулевое значение, если *c* — конкретное представление управляющего символа. **iscntrl** возвращает ненулевое значение, если *c* является управляющим символом (0x00 – 0x1F или 0x7F). **iswcntrl** возвращает ненулевое значение, если *c* представляет собой элемент управления расширенный символ. Каждая из этих подпрограмм возвращает 0, если *c* не удовлетворяет условию теста.
 
-Версии этих функций, имеющих **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+В версиях этих функций с **_l** суффикс используется переданный параметр языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Поведение **iscntrl** и **_iscntrl_l** не определено, если *c* не EOF или находится в диапазоне от 0 до 0xFF включительно. При использовании библиотеки отладки CRT и *c* является не один из этих значений, вызываемые функции утверждением.
+Поведение **iscntrl** и **_iscntrl_l** не определено, если *c* не является символом EOF или в диапазоне от 0 до 0xFF включительно. Если используется библиотека отладки CRT и *c* не является одним из следующих значений, функции вызывают утверждение.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

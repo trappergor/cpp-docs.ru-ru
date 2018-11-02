@@ -1,11 +1,6 @@
 ---
-title: cimag, cimagf, cimagl | Документы Майкрософт
-ms.custom: ''
+title: cimag, cimagf, cimagl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cimag
 - cimagf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cimagf
 - complex/cimagl
 - cimag
-dev_langs:
-- C++
 helpviewer_keywords:
 - cimag function
 - cimagf function
 - cimagl function
 ms.assetid: 0d8836f5-d61d-44cd-8731-6f75cb776def
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c466ad2373686d368cb29c46c68da3aabd68662f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f5067967aa62894abb5316f60074b5125b1cba1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394133"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572735"
 ---
 # <a name="cimag-cimagf-cimagl"></a>cimag, cimagf, cimagl
 
@@ -76,7 +65,7 @@ long double cimag( _Lcomplex z );  // C++
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cimag** , которые принимают **_Fcomplex** или **_Lcomplex** значений и возвращают **float** или **длинные** **двойные** значения. В программе на языке C **cimag** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **cimag** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long** **двойные** значения. В программе на языке C **cimag** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 

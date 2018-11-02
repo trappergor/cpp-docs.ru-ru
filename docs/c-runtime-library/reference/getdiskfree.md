@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Документы Майкрософт
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401621"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602284"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -65,15 +55,15 @@ unsigned _getdiskfree(
 Диск, для которого требуются сведения.
 
 *DriveInfo*<br/>
-Объект **_diskfree_t** структуру, которая будет заполнена сведениями о диске.
+Объект **_diskfree_t** структуру, которая будет заполняться сведениями о диске.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если вызов функции заканчивается удачно, возвращается нулевое значение. Если функция завершается с ошибкой, возвращается значение кода ошибки. Значение **errno** задать наличие ошибок, возвращаемых операционной системой. Дополнительные сведения об условиях ошибок, которые указаны в **errno**, в разделе [константы errno](../../c-runtime-library/errno-constants.md).
+Если вызов функции заканчивается удачно, возвращается нулевое значение. Если функция завершается с ошибкой, возвращается значение кода ошибки. Значение **errno** имеет значение ошибки, которые возвращаются операционной системой. Дополнительные сведения об условиях возникновения ошибок, отображаемых параметром **errno**, см. в разделе [константы errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="remarks"></a>Примечания
 
-**_Diskfree_t** структура определяется в Direct.h.
+**_Diskfree_t** структура определена в файле Direct.h.
 
 ```C
 struct _diskfree_t {
@@ -84,7 +74,7 @@ struct _diskfree_t {
 };
 ```
 
-Эта функция проверяет свои параметры. Если *driveinfo* указатель **NULL** или *диск* определяет недопустимый диск, эта функция вызывает обработчик недопустимого параметра, как описано в [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **EINVAL** и задает **errno** для **EINVAL**. Допустимый диапазон дисков: от 0 до 26. Объект *диск* значение 0, означает текущий диск; таким образом, числа сопоставляются с буквы английского алфавита, таких, что 1 указывает на диск А, 3 — на диск C и т. д.
+Эта функция проверяет свои параметры. Если *driveinfo* указатель находится **NULL** или *диск* определяет недопустимый диск, эта функция вызывает обработчик недопустимого параметра, как описано в разделе [ Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает **EINVAL** и задает **errno** для **EINVAL**. Допустимый диапазон дисков: от 0 до 26. Объект *диск* значение 0 означает текущий диск; таким образом, числа сопоставляются с буквы английского алфавита, 1 указывает на диск А, 3 — на диске C и т. д.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: _get_errno | Документы Майкрософт
-ms.custom: ''
+title: _get_errno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_errno
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _get_errno
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_errno function
 - errno global variable
 - _get_errno function
 ms.assetid: b3fd5ebc-f41b-4314-a2f4-2f2d79d6e740
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fec59334ff6585e2385295c58c284df7e602ca1c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6ffb76bb31fe1633af78ee73423bb06857e0b893
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535724"
 ---
 # <a name="geterrno"></a>_get_errno
 
@@ -47,23 +37,23 @@ ms.locfileid: "32397415"
 ## <a name="syntax"></a>Синтаксис
 
 ```C
-errno_t _get_errno( 
-   int * pValue 
+errno_t _get_errno( 
+   int * pValue 
 );
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *pValue*<br/>
-Указатель на целое число будет заполнена текущим значением **errno** переменной.
+Указатель на целое число, чтобы быть подставлено текущее значение **errno** переменной.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *pValue* — **NULL**, вызывается обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
+Возвращает нуль в случае успеха или код ошибки в случае ошибки. Если *pValue* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает **EINVAL**.
 
 ## <a name="remarks"></a>Примечания
 
-Возможные значения **errno** определенны в Errno.h. Также см. раздел [Константы errno](../../c-runtime-library/errno-constants.md).
+Возможные значения **errno** определяются в Errno.h. Также см. раздел [Константы errno](../../c-runtime-library/errno-constants.md).
 
 ## <a name="example"></a>Пример
 

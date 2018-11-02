@@ -1,27 +1,17 @@
 ---
-title: '&lt;queue&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;queue&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <queue>
-dev_langs:
-- C++
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ba139e2b50f1dd7c9887701a522a002173c21ee
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 4f22212819ddea6f851360f7534495b679160022
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653375"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
@@ -38,10 +28,10 @@ ms.locfileid: "33853681"
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[operator!=](../standard-library/queue-operators.md#op_neq)|Проверяет неравенство объекта queue слева от оператора объекту queue справа от оператора.|
 |[оператор<](../standard-library/queue-operators.md#op_lt)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора.|
 |[operator\<=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, меньше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
-|[оператор==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
+|[operator==](../standard-library/queue-operators.md#op_eq_eq)|Проверяет равенство объекта queue слева от оператора объекту queue справа от оператора.|
 |[оператор>](../standard-library/queue-operators.md#op_gt)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора.|
 |[оператор>=](../standard-library/queue-operators.md#op_gt_eq)|Проверяет, больше ли объект queue слева от оператора, чем объект queue справа от оператора, или равен ему.|
 

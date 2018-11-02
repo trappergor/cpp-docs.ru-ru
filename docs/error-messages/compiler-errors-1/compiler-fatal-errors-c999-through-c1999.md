@@ -1,10 +1,6 @@
 ---
-title: Компилятор неустранимые ошибки C999-C1999 | Документы Microsoft
-ms.custom: ''
+title: Неустранимые ошибки компилятора (C999-C1999)
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,23 +161,17 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237267"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677335"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Неустранимые ошибки компилятора (C999-C1999)
 
-Статьи в этом разделе документации объясняется подмножество сообщения об ошибках, которые создаются компилятором.
+Статьи в этом разделе документации объясняется подмножество сообщения об ошибках, создаваемых компилятором.
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -224,7 +214,7 @@ ms.locfileid: "33237267"
 |Неустранимая ошибка C1048|неизвестный параметр "*string*" в "*option*"|
 |Неустранимая ошибка C1049|недопустимый числовой аргумент "*value*"|
 |[Неустранимая ошибка C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|формат файла базы данных программы "*file*" устарел, удалите файл и повторите компиляцию|
-|[Неустранимая ошибка C1052](fatal-error-c1052.md)|файл базы данных программы, "*filename*", был сформирован компоновщиком с/debug: fastlink; компилятор не может обновить такой PDB-файл; удалите его или используйте параметр /Fd, чтобы указать другое имя файла PDB-файла|
+|[Неустранимая ошибка C1052](fatal-error-c1052.md)|файл базы данных программы, "*filename*", был создан компоновщиком с помощью/debug: fastlink; компилятор не может обновить такой PDB-файл; удалите его или используйте параметр /Fd для указания другое имя файла PDB-файла|
 |Неустранимая ошибка C1053|"*function*": слишком большая функция|
 |[Неустранимая ошибка C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|ограничение компилятора: недопустимая степень вложения инициализаторов|
 |[Неустранимая ошибка C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|ограничение компилятора: закончились ключи|

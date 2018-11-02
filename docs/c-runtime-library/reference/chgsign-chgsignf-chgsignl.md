@@ -1,10 +1,6 @@
 ---
-title: _chgsign, _chgsignf, _chgsignl | Документы Майкрософт
-ms.custom: ''
+title: _chgsign, _chgsignf, _chgsignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chgsignl
 - _chgsign
@@ -27,24 +23,18 @@ f1_keywords:
 - chgsign
 - _chgsignl
 - _chgsign
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chgsignl function
 - _chgsignf function
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 781359972b67b2634f8f762fac98bf9216ef5ab5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652638"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign, _chgsignf, _chgsignl
 
@@ -71,7 +61,7 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_Chgsign** функции возвращают значение, равное аргумент с плавающей запятой *x*, но с обратным знаком. Ошибка не возвращается.
+**_Chgsign** функции возвращают значение, равное аргументу с плавающей запятой *x*, но с противоположным знаком. Ошибка не возвращается.
 
 ## <a name="requirements"></a>Требования
 

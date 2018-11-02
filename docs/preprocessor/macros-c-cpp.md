@@ -1,27 +1,17 @@
 ---
-title: Макросы (C/C++) | Документация Майкрософт
-ms.custom: ''
+title: Макросы (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf97e61e68cd02891c738db5de8820924957fc56
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656304"
 ---
 # <a name="macros-cc"></a>Макросы (C/C++)
 Предварительной обработки макросы разворачиваются во всех строк, которые не являются директивами препроцессора (строки, у которых нет **#** как первый символ без пробелов) и в частях некоторых директив, которые не пропущены как часть Условная компиляция. Директивы условной компиляции позволяют подавлять компиляцию частей исходного файла путем проверки константного выражения или идентификатора для определения того, какие блоки текста передаются в компилятор, а какие блоки текста удаляются из исходного файла во время предварительной обработки.

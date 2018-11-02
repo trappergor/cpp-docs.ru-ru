@@ -1,14 +1,8 @@
 ---
-title: Редактор сочетаний клавиш (C++) | Документация Майкрософт
-ms.custom: ''
+title: Редактор сочетаний клавиш (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - tables [C++], accelerator key
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fdb2d9cf0954142da990a0a9f995cb482060345d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318802"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621498"
 ---
 # <a name="accelerator-editor-c"></a>Редактор сочетаний клавиш (C++)
 
@@ -34,7 +23,7 @@ ms.locfileid: "44318802"
 
 Обычно сочетания клавиш используются для ускорения доступа к командам программы, также доступным в меню или на панели инструментов. Но таблицу сочетаний клавиш можно также использовать, чтобы определить сочетания клавиш для команд, с которыми не связаны никакие объекты пользовательского интерфейса.
 
-Можно использовать [представление классов](/visualstudio/ide/viewing-the-structure-of-code) для подключения команд сочетаний клавиш к коду.
+Для подключения команд сочетаний клавиш к коду можно использовать [представление классов](/visualstudio/ide/viewing-the-structure-of-code) .
 
 С помощью **Accelerator** редактор, вы можете:
 

@@ -1,10 +1,6 @@
 ---
-title: memcpy_s, wmemcpy_s | Документы Майкрософт
-ms.custom: ''
+title: memcpy_s, wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607159"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s, wmemcpy_s
 
@@ -82,18 +72,18 @@ errno_t wmemcpy_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*dest*|*destSize*|*src*|*count*|Возвращаемое значение|Содержимое *dest*|
+|*dest*|*destSize*|*src*|*count*|Возвращаемое значение|Содержание *dest*|
 |------------|----------------|-----------|---|------------------|------------------------|
 |any|any|any|0|0|Без изменений|
 |**NULL**|any|any|ненулевое значение|**EINVAL**|Без изменений|
 |any|any|**NULL**|ненулевое значение|**EINVAL**|*dest* обнуляется|
-|any|< *Счетчик*|any|ненулевое значение|**ERANGE**|*dest* обнуляется|
+|any|< *число*|any|ненулевое значение|**ERANGE**|*dest* обнуляется|
 
 ## <a name="remarks"></a>Примечания
 
-**memcpy_s** копии *число* байтов из *src* для *dest*; **wmemcpy_s** копии *число* расширенных символов (два байта). Если источника и назначения перекрываются, то поведение **memcpy_s** не определено. Используйте **memmove_s** для обработки перекрывающихся областей.
+**memcpy_s** копий *число* байтов из *src* для *dest*; **wmemcpy_s** копий *число* расширенных символов (два байта). Если источника и назначения перекрываются, поведение **memcpy_s** не определено. Используйте **memmove_s** для обработки перекрывающихся областей.
 
-Эти функции проверяют свои параметры. Если *число* не равно нулю и *dest* или *src* является пустым указателем, или *destSize* меньше, чем *число*, эти функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** или **ERANGE** и задайте **errno** к возвращаемому значению.
+Эти функции проверяют свои параметры. Если *число* имеет ненулевое значение и *dest* или *src* является пустым указателем, или *destSize* меньше, чем *число*, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** или **ERANGE** и задайте **errno** к возвращаемому значению.
 
 ## <a name="requirements"></a>Требования
 

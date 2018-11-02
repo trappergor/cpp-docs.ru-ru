@@ -1,17 +1,11 @@
 ---
-title: Запуск программы LIB | Документация Майкрософт
-ms.custom: ''
+title: Запуск программы LIB
 ms.date: 09/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLibrarianTool.TargetMachine
 - Lib
 - VC.Project.VCLibrarianTool.PrintProgress
 - VC.Project.VCLibrarianTool.SuppressStartupBanner
-dev_langs:
-- C++
 helpviewer_keywords:
 - -MACHINE target platform option
 - command files, LIB
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5d8a221a829d3cded8d974c608bdd27edab07f60
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656980"
 ---
 # <a name="running-lib"></a>Запуск программы LIB
 
@@ -86,15 +76,15 @@ ms.locfileid: "48235426"
 
 В процессе сборки выходные данные LIB отправляется ссылка. СВЯЗЬ имеет свой собственный отдельный **/LTCG** параметр, который позволяет выполнять различные оптимизации, включая оптимизации всей программы и инструментирования профильной оптимизации (PGO). Дополнительные сведения о LINK-параметр, см. в разделе [/LTCG](ltcg-link-time-code-generation.md).
 
-> **/ MACHINE**
+> **/MACHINE**
 
 Указывает целевую платформу программы. Как правило вы не обязательно должны указать/Machine. Тип компьютера из OBJ-файлов определяется LIB. Однако в некоторых случаях LIB не удается определить тип компьютера и выдает предупреждение об ошибке. Если возникает такая ошибка, укажите/Machine. В режиме/EXTRACT этот параметр используется исключительно для проверки. Используйте `lib /?` из командной строки для просмотра доступных типов компьютеров.
 
-> **/ NOLOGO**
+> **/NOLOGO**
 
 Отключает отображение LIB уведомление об авторских правах и номере версии и отображение команд командные файлы.
 
-> **/ VERBOSE**
+> **/VERBOSE**
 
 Отображает подробные сведения о ходе выполнения сеанса, включая имена добавляемых OBJ-файлов. Эти сведения отправляются в стандартный вывод и могут быть перенаправлены в файл.
 

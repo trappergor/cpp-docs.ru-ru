@@ -1,10 +1,6 @@
 ---
-title: strcat, wcscat, _mbscat | Документы Майкрософт
-ms.custom: ''
+title: strcat, wcscat, _mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,23 +39,19 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413418"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546397"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat, wcscat, _mbscat
 
 Дополняет строку. Существуют более безопасные версии этих функций; см. раздел [strcat_s, wcscat_s, _mbscat_s](strcat-s-wcscat-s-mbscat-s.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -109,16 +99,16 @@ unsigned char *_mbscat(
 
 ## <a name="remarks"></a>Примечания
 
-**Strcat** добавляет функцию *strSource* для *strDestination* и завершает результирующая строка символом null. Буквы *strSource* перезаписывает завершающий нуль-символ из *strDestination*. Поведение **strcat** при перекрытии исходного и конечного будет неопределенным.
+**Strcat** функция добавляет *strSource* для *strDestination* и завершает результирующую строку нуль-символом. Начальный символ строки *strSource* перезаписывает завершающий нуль-символ из *strDestination*. Поведение **strcat** не определено, если строки источника и назначения перекрываются.
 
 > [!IMPORTANT]
-> Поскольку **strcat** не проверяет наличие достаточного места в *strDestination* перед добавлением *strSource*, это может стать причиной переполнения буфера. Рекомендуется использовать вместо нее функцию [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
+> Так как **strcat** не проверяет, достаточно ли места в *strDestination* перед добавлением *strSource*, это может возникнуть ошибка переполнения буфера. Рекомендуется использовать вместо нее функцию [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md).
 
-**wcscat** и **_mbscat** версии Юникода и многобайтовых символов **strcat**. Аргументы и возвращаемое значение **wcscat** являются двухбайтовые строки; аргументы **_mbscat** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcscat** и **_mbscat** расширенных и многобайтовых символов версии **strcat**. Аргументы и возвращаемое значение **wcscat** являются двухбайтовые строки; аргументы **_mbscat** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

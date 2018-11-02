@@ -1,10 +1,6 @@
 ---
-title: remove, _wremove | Документы Майкрософт
-ms.custom: ''
+title: remove, _wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406437"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613978"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -69,15 +59,15 @@ int _wremove(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается значение -1 и задает **errno** либо **EACCES** для указания, что путь указывает файл только для чтения или открыт файл, или к **ENOENT** указывает, что Имя файла или путь не найден, или что путь указывает каталог.
+Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается значение -1 и задает **errno** либо **EACCES** чтобы указать, что путь задает файл только для чтения, или файл открыт, или к **ENOENT** указывает, что Имя файла или путь не найден или путь задает каталог.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Функция **remove** удаляет файл, указанный в параметре *path.* **_wremove** — это двухбайтовая версия **уда_лить**; *путь* аргумент **_wremove** представляет собой строку расширенных символов. **_wremove** и **уда_лить** ведут себя идентично. Чтобы можно было удалить файл, все дескрипторы файлов должны быть закрыты.
+Функция **remove** удаляет файл, указанный в параметре *path.* **_wremove** — это двухбайтовая версия **_Удалить**; *путь* аргумент **_wremove** — строка расширенных символов. **_wremove** и **_Удалить** идентично в противном случае. Чтобы можно было удалить файл, все дескрипторы файлов должны быть закрыты.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

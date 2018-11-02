@@ -1,10 +1,6 @@
 ---
-title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l | Документы Майкрософт
-ms.custom: ''
+title: _snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf
 - _snscanf_l
@@ -35,8 +31,6 @@ f1_keywords:
 - sntscanf
 - snwscanf
 - snwscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - snscanf_l function
 - snwscanf function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - strings [C++], reading
 - _snscanf function
 ms.assetid: da1ac890-f905-4cd7-954b-3c90957b5551
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d5d99cc7465f88c92588983d5356a004da466de4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ba80bec70bbb96c383d0bbe73ed52f30fb90b7ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408348"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626893"
 ---
 # <a name="snscanf-snscanfl-snwscanf-snwscanfl"></a>_snscanf, _snscanf_l, _snwscanf, _snwscanf_l
 
@@ -119,19 +109,19 @@ int __cdecl _snwscanf_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Возвращает значение **EOF** при возникновении ошибки или при достижении конца строки до первого преобразования. Дополнительные сведения см. в разделе [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Каждая из этих функций возвращает количество полей, которые были успешно преобразованы и присвоены; возвращаемое значение не включает поля, которые были считаны, но не были присвоены. Возвращаемое значение 0 указывает, что поля не были назначены. Возвращает значение **EOF** при возникновении ошибки или достижения конца строки до первого преобразования. Дополнительные сведения см. в разделе [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
-Если *ввода* или *формат* — **NULL** указателя, или если *длина* меньше или равно нулю, вызывается обработчик недопустимого параметра, как описанные в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и задайте **errno** для **EINVAL**.
+Если *входной* или *формат* является **NULL** указателем, или если *длина* меньше или равен нулю, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EOF** и задайте **errno** для **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-Эта функция аналогична **sscanf** за исключением того, что она обеспечивает возможность задать фиксированное число символов для анализа входной строки. Дополнительные сведения см. в разделе [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
+Эта функция аналогична **sscanf** за исключением того, что предоставляет возможность задать фиксированное число символов для анализа из входной строки. Дополнительные сведения см. в разделе [sscanf](sscanf-sscanf-l-swscanf-swscanf-l.md).
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо языкового стандарта текущего потока.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

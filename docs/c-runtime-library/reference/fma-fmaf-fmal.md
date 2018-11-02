@@ -1,11 +1,6 @@
 ---
-title: fma, fmaf, fmal | Документы Майкрософт
-ms.custom: ''
+title: fma, fmaf, fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529952"
 ---
 # <a name="fma-fmaf-fmal"></a>fma, fmaf, fmal
 
@@ -104,12 +93,12 @@ long double fmal(
 
 В случае неудачи может возвращать одно из следующих значений:
 
-|Проблеми|Назад|
+|Проблемы|Назад|
 |-----------|------------|
-|*x* = бесконечность, *y* = 0 или<br /><br /> *x* = 0, *y* = бесконечность|NaN|
-|*x* или *y* = точное ± бесконечность, *z* = бесконечность с противоположным знаком|NaN|
+|*x* = INFINITY, *y* = 0 или<br /><br /> *x* = 0, *y* = INFINITY|NaN|
+|*x* или *y* = точное ± бесконечность, *z* = INFINITY с противоположным знаком|NaN|
 |*x* или *y* = NaN|NaN|
-|не (*x* = 0, *y*= не ограничена) и *z* = NaN<br /><br /> не (*x*= не ограничена, *y*= 0) и *z* = NaN|NaN|
+|не (*x* = 0, *y*= неопределенное) и *z* = NaN<br /><br /> не (*x*= неопределенное значение, *y*= 0) и *z* = NaN|NaN|
 |Ошибка переполнения диапазона|±HUGE_VAL, ±HUGE_VALF или ±HUGE_VALL|
 |Ошибка недостаточного заполнения диапазона|правильное значение (после округления).|
 
@@ -117,7 +106,7 @@ long double fmal(
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **fma** , принимающие и возвращающие **float** и **длинные** **двойные** типов. В программе на языке C **fma** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **fma** , принимающие и возвращающие **float** и **long** **двойные** типов. В программе на языке C **fma** всегда принимает и возвращает **двойные**.
 
 Эта функция вычисляет значение с бесконечной точностью, после чего округляет результат.
 

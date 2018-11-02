@@ -1,30 +1,19 @@
 ---
-title: Использование инструмента рисования (редактор изображений для значков) | Документация Майкрософт
-ms.custom: ''
+title: Использование инструмента рисования (редактор изображений для значков)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], selecting drawing tools
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0a95d246170776bab20f45e503ba01ca506ce670
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de6308ad396a9f9e355ecefdecca444c551d51f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677088"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>Использование инструмента рисования (редактор изображений для значков)
 
@@ -72,7 +61,7 @@ ms.locfileid: "46431545"
 
 ## <a name="requirements"></a>Требования
 
-Нет
+None
 
 ## <a name="see-also"></a>См. также
 
