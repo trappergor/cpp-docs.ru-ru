@@ -1,10 +1,6 @@
 ---
-title: _strdate, _wstrdate | Документы Майкрософт
-ms.custom: ''
+title: _strdate, _wstrdate
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate
 - _wstrdate
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate
 - _strdate
 - strdate
-dev_langs:
-- C++
 helpviewer_keywords:
 - strdate function
 - dates, copying
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrdate function
 - copying dates
 ms.assetid: de8e4097-58f8-42ba-9dcd-cb4d9a9f1696
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8924ac1ad29408dd1d69a68c6f31d9194831fbc2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4dc2ea7f25e644c9bf7a4ddca4a625991f37d912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411361"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639615"
 ---
 # <a name="strdate-wstrdate"></a>_strdate, _wstrdate
 
@@ -86,15 +76,15 @@ wchar_t *_wstrdate(
 
 Существуют более безопасные версии этих функций; см. статью [_strdate_s, _wstrdate_s](strdate-s-wstrdate-s.md). По возможности рекомендуется использовать более безопасные функции.
 
-**_Strdate** функция копирует текущую системную дату в буфер, который указывает *datestr*, в формате **мм**/**дд** / **гг**, где **мм** состоит из двух цифр, представляющее месяц, **дд** состоит из двух цифр, представляющее день, и **гг**  имеет две последние цифры года. Например, строка **12/05/99** представляет 5 декабря, 1999. Размер буфера должен быть не менее 9 байтов.
+**_Strdate** функция копирует текущую системную дату в буфер, на которые указывают *datestr*форматированное **мм**/**дд** / **гг**, где **мм** состоит из двух цифр, представляющих месяц, **дд** состоит из двух цифр, представляющих день, и **гг**  имеет две последние цифры года. Например, строка **12/05/99** представляет 5 декабря 1999 г. Размер буфера должен быть не менее 9 байтов.
 
-Если *datestr* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
+Если *datestr* — **NULL** вызывается указатель, обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают значение -1 и задайте **errno** для **EINVAL**.
 
 **_wstrdate** — это двухбайтовая версия **_strdate**; аргумент и возвращаемое значение **_wstrdate** представляют собой строки расширенных символов. В остальном эти функции ведут себя одинаково.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

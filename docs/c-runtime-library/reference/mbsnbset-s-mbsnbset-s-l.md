@@ -1,10 +1,6 @@
 ---
-title: _mbsnbset_s, _mbsnbset_s_l | Документы Майкрософт
-ms.custom: ''
+title: _mbsnbset_s, _mbsnbset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbset_s_l
 - _mbsnbset_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _mbsnbset_s_l
 - _mbsnbset_s
 - mbsnbset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnbset_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _tcsnset_s function
 - tcsnset_s_l function
 ms.assetid: 811f92c9-cc31-4bbd-8017-2d1bfc6fb96f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 07cbdc979ddd7ba240d9dcaf623d408b8c2681e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5d021f147ba407f5b0b7316afc7cfd79fe300997
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404738"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580980"
 ---
 # <a name="mbsnbsets-mbsnbsetsl"></a>_mbsnbset_s, _mbsnbset_s_l
 
@@ -110,19 +100,19 @@ errno_t _mbsnbset_s_l(
 
 ## <a name="remarks"></a>Примечания
 
-**_Mbsnbset_s** и **_mbsnbset_s_l** максимум, функции задают первый *число* байт *str* для *c*. Если *число* больше, чем длина *str*, длина *str* используется вместо *число*. Если *c* Многобайтовый символ и не может устанавливаться полностью в последний байт, который задается параметром *число*, последний байт дополняется символом пробела. **_mbsnbset_s** и **_mbsnbset_s_l** не добавляют завершающий символ null в конце *str*.
+**_Mbsnbset_s** и **_mbsnbset_s_l** функций устанавливают максимум, первый *число* байт *str* для *c*. Если *число* больше, чем длина *str*, длина *str* используется вместо *число*. Если *c* является многобайтовым символом и не может быть полностью в последний байт, который задается параметром *число*, последний байт дополняется символом пробела. **_mbsnbset_s** и **_mbsnbset_s_l** не добавляют завершающий символ null в конце *str*.
 
-**_mbsnbset_s** и **_mbsnbset_s_l** напоминают **_mbsnset**, за исключением того, что задают *число* байт вместо *число* символы *c*.
+**_mbsnbset_s** и **_mbsnbset_s_l** напоминают **_mbsnset**, за исключением того, что они *число* байт вместо *число* символы *c*.
 
-Если *str* — **NULL** или *число* равен нулю, эта функция создает исключение недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и функция возвращает **NULL**. Кроме того Если *c* не является допустимым многобайтовым символом, **errno** равно **EINVAL** и вместо него используется пробел.
+Если *str* — **NULL** или *число* равен нулю, эта функция создает исключение недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и функция возвращает **NULL**. Кроме того Если *c* не является допустимым многобайтовым символом, **errno** присваивается **EINVAL** и вместо него используется пробел.
 
-Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта см. в разделе [setlocale, _wsetlocale](setlocale-wsetlocale.md) для получения дополнительной информации. **_Mbsnbset_s** версия этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbsnbset_s_l** версии идентичен, за исключением того, что она использует параметр языкового стандарта с Переданный. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от настройки **LC_CTYPE** категории языкового стандарта; см. описание [setlocale, _wsetlocale](setlocale-wsetlocale.md) Дополнительные сведения. **_Mbsnbset_s** версия этой функции использует текущий языковой стандарт для поведения, зависящего от языкового стандарта; **_mbsnbset_s_l** версии идентичны, за исключением того, что она использует параметр языкового стандарта каталог Переданный. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 В C++ использование этих функций упрощено шаблонными перегрузками; перегрузки могут определить длину буфера автоматически, устранена необходимость указывать аргумент size. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|

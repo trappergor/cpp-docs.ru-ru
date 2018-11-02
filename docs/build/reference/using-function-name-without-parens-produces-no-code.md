@@ -1,25 +1,15 @@
 ---
-title: При использовании имен функций без () код не создается | Документация Майкрософт
-ms.custom: ''
+title: При использовании имен функций без скобок () код не создается
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], without parentheses
 ms.assetid: edf4a177-a160-44aa-8436-e077b5b27809
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 13ca43386c9ef46f526538781a91fd1a81ade537
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f68d2ab39ceacce5a74b033c061203b2b014284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710584"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534814"
 ---
 # <a name="using-function-name-without--produces-no-code"></a>При использовании имен функций без скобок () код не создается
 

@@ -1,27 +1,16 @@
 ---
-title: Атрибуты параметра (C++ COM) | Документация Майкрософт
-ms.custom: ''
+title: Атрибуты параметра (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 160e71111a9080367390302a59c41a53580ffe0b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791207"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619639"
 ---
 # <a name="parameter-attributes"></a>Атрибуты параметра
 
@@ -29,7 +18,7 @@ ms.locfileid: "48791207"
 
 |Атрибут|Описание|
 |---------------|-----------------|
-|[Custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[defaultvalue](defaultvalue.md)|Позволяет задавать значение по умолчанию для типизированного необязательного параметра.|
 |[first_is](first-is.md)|Указывает индекс первого элемента массива для передачи.|
 |[iid_is](iid-is.md)|Указывает индекс первого элемента массива для передачи.|
@@ -39,9 +28,9 @@ ms.locfileid: "48791207"
 |[lcid](lcid.md)|Позволяет передать код языка функции.|
 |[length_is](length-is.md)|Указывает количество элементов массива для передачи.|
 |[max_is](max-is.md)|Определяет максимальное значение для индекса допустимым массивом.|
-|[Необязательный](optional-cpp.md)|Задает необязательный параметр для функции-члена.|
+|[optional](optional-cpp.md)|Задает необязательный параметр для функции-члена.|
 |[out](out-cpp.md)|Определяет параметры-указатели, которые возвращаются из вызываемой процедуры в вызывающую (от сервера к клиенту).|
-|[Диапазон](range-cpp.md)|Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.|
+|[range](range-cpp.md)|Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.|
 |[ref](ref-cpp.md)|Определяет указатель ссылки.|
 |[retval](retval.md)|Назначает параметр, который получает возвращаемое значение члена.|
 |[satype](satype.md)|Указывает тип данных `SAFEARRAY` структуры.|
