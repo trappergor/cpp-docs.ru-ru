@@ -1,31 +1,21 @@
 ---
-title: Класс CMFCRibbonApplicationButton | Документация Майкрософт
-ms.custom: ''
+title: Класс CMFCRibbonApplicationButton
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b82e0da2ac080ea65807b92f7eab549fe3301bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6bf62cc414162a15ee685361cacad8d72fc41b06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600357"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>Класс CMFCRibbonApplicationButton
 
@@ -55,7 +45,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonApplicationButton` класса. В примере показано, как назначить изображение для кнопки приложения и как задать ее всплывающей подсказкой. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonApplicationButton` . В примере показано, как назначить изображение для кнопки приложения и как задать ее всплывающей подсказкой. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]

@@ -1,10 +1,6 @@
 ---
-title: floor, floorf, floorl | Документы Майкрософт
-ms.custom: ''
+title: floor, floorf, floorl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - floorf
 - floorl
@@ -27,24 +23,18 @@ f1_keywords:
 - floorl
 - _floorl
 - floorf
-dev_langs:
-- C++
 helpviewer_keywords:
 - floor function
 - floorf function
 - calculating floors of values
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83795c9388b3889f99c9283cbffd33755d63fcd8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399427"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647740"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -77,7 +67,7 @@ long double floorl(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Floor** функции возвращают значение с плавающей запятой, представляющий наибольшее целое число, меньшее или равное *x*. Ошибка не возвращается.
+**Floor** функции возвращают значение с плавающей запятой, которое представляет наибольшее целое число, меньшее или равное *x*. Ошибка не возвращается.
 
 |Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
@@ -87,7 +77,7 @@ long double floorl(
 
 ## <a name="remarks"></a>Примечания
 
-C++ допускает перегрузки, поэтому можно вызывать перегрузки **floor** , принимающие и возвращающие **float** и **длинные** **двойные** значения. В программе на языке C **floor** всегда принимает и возвращает **двойные**.
+C++ допускает перегрузку, поэтому можно вызывать перегрузки **floor** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **floor** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

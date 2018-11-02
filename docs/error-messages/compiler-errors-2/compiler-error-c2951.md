@@ -1,27 +1,17 @@
 ---
-title: Ошибка компилятора C2951 | Документация Майкрософт
-ms.custom: ''
+title: Ошибка компилятора C2951
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2951
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2951
 ms.assetid: c6f95aa2-c894-425b-a51c-d40d70c8daa1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6757256f08c5c1ed0a35fbf1c2a70776a4f2936
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: dbc7186edfce6cc12a38fb2fc1dda08ac4a181c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638702"
 ---
 # <a name="compiler-error-c2951"></a>Ошибка компилятора C2951
 

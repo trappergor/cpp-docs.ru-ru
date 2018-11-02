@@ -1,10 +1,6 @@
 ---
-title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l | Документы Майкрософт
-ms.custom: ''
+title: _atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,20 +49,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552039"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl, _atodbl_l, _atoldbl, _atoldbl_l, _atoflt, _atoflt_l
 
-Преобразует строку в значение типа double (**_atodbl**), long double (**_atoldbl**), или число с плавающей запятой (**_atoflt**).
+Преобразует строку в значение типа double (**_atodbl**), длинное двойное (**_atoldbl**), или число с плавающей запятой (**_atoflt**).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -98,11 +88,11 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции преобразуют строку в значение с плавающей запятой. Различие между этими функциями и **atof** — семейство функций, эти функции не создают код с плавающей запятой, а не вызовут исключения оборудования. Вместо этого условия ошибок помечаются как коды ошибок.
+Эти функции преобразуют строку в значение с плавающей запятой. Различие между этими функциями и **atof** может семейство функций, что эти функции не создают код с плавающей запятой и не вызывают исключения оборудования. Вместо этого условия ошибок помечаются как коды ошибок.
 
-Если строка не имеет допустимый Интерпретация как значение с плавающей запятой, *значение* установлено в ноль и возвращаемое значение равно нулю.
+Если строка не имеет допустимой интерпретации в виде значение с плавающей запятой *значение* равным нулю, а возвращаемое значение равно нулю.
 
-Версии этих функций, имеющих **_l** суффиксом идентичны версии без суффикса, за исключением того, что они используют *языкового стандарта* параметр, передаваемый в вместо текущего потока языковой стандарт.
+В версиях этих функций с **_l** суффиксом идентичны версии, не имеют суффикса, за исключением того, что они используют *языкового стандарта* параметр, передаваемый в вместо текущего потока языковой стандарт.
 
 ## <a name="requirements"></a>Требования
 

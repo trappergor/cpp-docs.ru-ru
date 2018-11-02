@@ -1,28 +1,18 @@
 ---
-title: Справочник по стандартной библиотеке C++ | Документы Майкрософт
-ms.custom: ''
+title: Справочник по стандартной библиотеке C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Standard Library, reference
 - C++ Standard Library
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27981084c79b5bf1347715df8945598c1e6683e4
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b6886f87aefdf57706a1850595986b779c1f2357
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575959"
 ---
 # <a name="c-standard-library-reference"></a>Справочник по стандартной библиотеке C++
 
@@ -30,7 +20,7 @@ ms.locfileid: "50071665"
 
 Дополнительные сведения о библиотеках времени выполнения Visual C++ см. в разделе [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md).
 
-## <a name="in-this-section"></a>В этом разделе
+## <a name="in-this-section"></a>в этом разделе
 
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
 Обзор реализации стандартной библиотеки C++ корпорации Майкрософт.

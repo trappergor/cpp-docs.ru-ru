@@ -1,10 +1,6 @@
 ---
-title: Класс CurrentScheduler | Документация Майкрософт
-ms.custom: ''
+title: Класс CurrentScheduler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -18,21 +14,15 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs:
-- C++
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27c295f1cf8c6d02721a999c46ce02d961cc3702
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419026"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619184"
 ---
 # <a name="currentscheduler-class"></a>Класс CurrentScheduler
 
@@ -56,7 +46,7 @@ class CurrentScheduler;
 |[Get](#get)|Возвращает указатель на планировщик, связанный с вызывающим контекстом, называемый также текущего планировщика.|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|Возвращает текущее число виртуальных процессоров для планировщика, связанного с вызывающим контекстом.|
 |[GetPolicy](#getpolicy)|Возвращает копию текущего планировщика был создан с помощью политики.|
-|[Id](#id)|Возвращает уникальный идентификатор для текущего планировщика.|
+|[Идентификатор](#id)|Возвращает уникальный идентификатор для текущего планировщика.|
 |[IsAvailableLocation](#isavailablelocation)|Определяет, доступно ли данное расположение в текущем планировщике.|
 |[RegisterShutdownEvent](#registershutdownevent)|Причины, переданный дескриптор события Windows `_ShutdownEvent` параметр сигнал, когда планировщик, связанный с текущим контекстом, завершает работу и удаляет себя. В то время, когда событие получает сигнал завершена вся работа, запланированная на планировщик. Таким способом можно зарегистрировать несколько событий завершения работы.|
 |[ScheduleTask](#scheduletask)|Перегружен. Планирует задачу упрощенная внутри планировщика, связанного с вызывающим контекстом. Упрощенная задача будет размещена в группе расписаний, определенной средой выполнения. Версия, принимающая параметр `_Placement`, склоняет задачу к выполнению в указанном расположении.|
@@ -222,7 +212,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Индикация доступности расположения, указанного параметром `_Placement`, в текущем планировщике.
+Индикация доступности расположения, указанного аргументом `_Placement`, в текущем планировщике.
 
 ### <a name="remarks"></a>Примечания
 

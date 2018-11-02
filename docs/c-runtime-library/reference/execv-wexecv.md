@@ -1,10 +1,6 @@
 ---
-title: _execv, _wexecv | Документы Майкрософт
-ms.custom: ''
+title: _execv, _wexecv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexecv
 - _execv
@@ -25,24 +21,18 @@ f1_keywords:
 - _execv
 - _wexecv
 - wexecv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wexecv function
 - _execv function
 - wexecv function
 - execv function
 ms.assetid: 8dbaf7bc-9040-4316-a0c1-db7e866b52af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8c6013e7d62b3738efe717c95e1464f31e2f0bc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fd0447e7863e25571a968a821b45614d5d76d1bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523955"
 ---
 # <a name="execv-wexecv"></a>_execv, _wexecv
 
@@ -74,7 +64,7 @@ intptr_t _wexecv(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку в этом случае **errno** имеет значение глобальной переменной.
+В случае успешного выполнения эти функции не возвращаются к вызывающему процессу. Возвращаемое значение-1 указывает на ошибку, в этом случае **errno** устанавливается глобальная переменная.
 
 |**errno** значение|Описание|
 |-------------------|-----------------|
@@ -92,7 +82,7 @@ intptr_t _wexecv(
 
 Каждая из этих функций загружает и выполняет новый процесс, передавая ему массив указателей на аргументы командной строки.
 
-**_Execv** функции проверяют свои параметры. Если *cmdname* является пустым указателем, или если *argv* является пустым указателем, указателем на пустой массив или массив содержит пустую строку в качестве первого аргумента **_execv** функции вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1. Ни один процесс не запущен.
+**_Execv** функции проверяют свои параметры. Если *cmdname* является пустым указателем, или если *argv* является пустым указателем, указателем на пустой массив, или если массив содержит пустую строку в качестве первого аргумента, **_execv** функции вызывают обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции устанавливают **errno** для **EINVAL** и возвращают -1. Ни один процесс не запущен.
 
 ## <a name="requirements"></a>Требования
 

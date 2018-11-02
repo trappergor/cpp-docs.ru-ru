@@ -1,11 +1,6 @@
 ---
-title: feholdexcept | Документы Microsoft
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397546"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525743"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -59,13 +48,13 @@ int feholdexcept(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает нуль только в том случае, если функция является возможность успешного включения обработки исключений с плавающей запятой без остановки.
+Возвращает ноль только в том случае, если функция способна успешно включить на обработку исключений с плавающей запятой без остановки.
 
 ## <a name="remarks"></a>Примечания
 
-**Feholdexcept** функция используется для хранения состояния текущей среде с плавающей точкой в **fenv_t** объекта, на который указывает *penv*и задать среду прерывает выполнение на исключений с плавающей запятой. Это называется режимом без остановки.  В этом режиме работа продолжается, пока среда не будет восстановлена с помощью функции [fesetenv](fesetenv1.md) или [feupdateenv](feupdateenv.md).
+**Feholdexcept** функция используется для сохранения состояния текущей среды с плавающей точкой в **fenv_t** объекта, на который указывает *penv*и задать среду не прерывать выполнение исключений с плавающей запятой. Это называется режимом без остановки.  В этом режиме работа продолжается, пока среда не будет восстановлена с помощью функции [fesetenv](fesetenv1.md) или [feupdateenv](feupdateenv.md).
 
-Эту функцию можно использовать в начале подпрограммы, который должна скрывать от вызывающей стороны одно или несколько исключений с плавающей запятой. Сообщения об исключении, можно просто удалить нежелательные исключения с помощью [feclearexcept,](feclearexcept1.md) и прекратите режиме без остановки с помощью вызова **feupdateenv**.
+Эту функцию можно использовать в начале подпрограммы, который должна скрывать от вызывающей стороны одно или несколько исключений с плавающей запятой. Чтобы сообщить об исключении, можно просто удалить нежелательные исключения с помощью [feclearexcept](feclearexcept1.md) и затем завершить режим без остановки с помощью вызова **feupdateenv**.
 
 Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
 

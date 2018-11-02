@@ -1,10 +1,6 @@
 ---
-title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l | Документы Майкрософт
-ms.custom: ''
+title: fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fprintf_s_l
 - fwprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _ftprintf_s
 - fprintf_s
 - fwprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftprintf_s_l function
 - ftprintf_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _fwprintf_s_l function
 - print formatted data to streams
 ms.assetid: 16067c3c-69ce-472a-8272-9aadf1f5beed
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ea8e9d28a960149d0f199b090daa98e76049f291
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05886dc4ce7de771749f157913a222b6b01a5c5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404221"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639430"
 ---
 # <a name="fprintfs-fprintfsl-fwprintfs-fwprintfsl"></a>fprintf_s, _fprintf_s_l, fwprintf_s, _fwprintf_s_l
 
@@ -85,14 +75,14 @@ int _fwprintf_s_l(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 *format*<br/>
 Строка управления форматом.
 
 *argument_list*<br/>
-Необязательные аргументы в строку формата.
+Необязательные аргументы строки формата.
 
 *locale*<br/>
 Используемый языковой стандарт.
@@ -103,18 +93,18 @@ int _fwprintf_s_l(
 
 ## <a name="remarks"></a>Примечания
 
-**fprintf_s** форматирует и выводит последовательность символов и значений в выходные данные *поток*. Каждый аргумент в *argument_list* (если есть) преобразуется и выводится согласно соответствующей спецификацией формата в *формат*. *Формат* использует аргумент [форматирования спецификация синтаксиса для функции printf и wprintf](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
+**fprintf_s** форматирует и печатает набор символов и значений в выходной поток *поток*. Каждый аргумент в *argument_list* (при наличии) преобразуется и выводится согласно соответствующей спецификации формата в *формат*. *Формат* использует аргумент [синтаксис описания для функции printf и wprintf формата](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md).
 
-**fwprintf_s** — это двухбайтовая версия **fprintf_s**, в **fwprintf_s**, *формат* представляет собой строку расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fprintf_s** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
+**fwprintf_s** — это двухбайтовая версия **fprintf_s**, в списке **fwprintf_s**, *формат* — строка расширенных символов. Эти функции ведут себя одинаково, если поток открыт в режиме ANSI. **fprintf_s** сейчас не поддерживает выходные данные в поток в кодировке Юникод.
 
 Версии этих функций с **_l** суффиксом идентичны, за исключением того, что они используют переданный параметр языкового стандарта вместо текущего языкового стандарта.
 
 > [!IMPORTANT]
 > Убедитесь, что *format* не является строкой, определяемой пользователем.
 
-Как и небезопасных версий (см. [fprintf _fprintf_l, fwprintf _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), если параметр *поток* или *формат* является пустым указателем. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Как и небезопасные версии (см. в разделе [fprintf, _fprintf_l, fwprintf, _fwprintf_l](fprintf-fprintf-l-fwprintf-fwprintf-l.md)), эти функции проверяют свои параметры и вызывают обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md), если параметр *поток* или *формат* является пустым указателем. Также проверяется сама строка формата. При наличии любых неизвестных или неправильно сформированных описателей форматирования эти функции создают исключение недопустимого параметра. Во всех случаях, если выполнение может быть продолжено, функции возвращают значение -1 и задайте **errno** для **EINVAL**. Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

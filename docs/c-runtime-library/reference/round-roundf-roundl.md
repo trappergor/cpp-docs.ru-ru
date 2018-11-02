@@ -1,10 +1,6 @@
 ---
-title: round, roundf, roundl | Документы Майкрософт
-ms.custom: ''
+title: round, roundf, roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407243"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591782"
 ---
 # <a name="round-roundf-roundl"></a>round, roundf, roundl
 
@@ -79,17 +69,17 @@ long double roundl(
 
 |Ввод|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|± **QNAN**, **IND**|Нет|**Д_ОМЕН ИМЯ**|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **округления** , принимающие и возвращающие **float** и **длинные** **двойные** значения. В программе на языке C **округления** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **округления** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **округления** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**округлить**, **roundf**, **roundl**|\<math.h>|
+|**Округление**, **roundf**, **roundl**|\<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

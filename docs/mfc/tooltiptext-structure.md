@@ -1,28 +1,18 @@
 ---
-title: Структура TOOLTIPTEXT | Документация Майкрософт
-ms.custom: ''
+title: Структура TOOLTIPTEXT
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - TOOLTIPTEXT
-dev_langs:
-- C++
 helpviewer_keywords:
 - TOOLTIPTEXT structure [MFC]
 - tool tips [MFC], notifications
 ms.assetid: 547591bf-80f5-400e-a2a7-0708cfffbb5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eeee8c7b0b3cd4977688b627cb27f73e39c7ea89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d184b1d507579309051cd6c70ea6525463c44881
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437096"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676516"
 ---
 # <a name="tooltiptext-structure"></a>Структура TOOLTIPTEXT
 
@@ -40,7 +30,7 @@ typedef struct {
 } TOOLTIPTEXT, FAR *LPTOOLTIPTEXT;
 ```
 
-*HDR*<br/>
+*hdr*<br/>
 Идентифицирует средство, которое требуется текст. Единственный член этой структуры, которые могут потребовать является идентификатор команды элемента управления. Идентификатор команды элемента управления будет находиться в *idFrom* членом **NMHDR** структуры, получить доступ с помощью синтаксиса `hdr.idFrom`. См. в разделе [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) обсуждение членами **NMHDR** структуры.
 
 *lpszText*<br/>

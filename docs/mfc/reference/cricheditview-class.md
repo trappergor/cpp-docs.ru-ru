@@ -1,10 +1,6 @@
 ---
-title: Класс CRichEditView | Документация Майкрософт
-ms.custom: ''
+title: Класс CRichEditView
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CRichEditView
 - AFXRICH/CRichEditView
@@ -55,8 +51,6 @@ f1_keywords:
 - AFXRICH/CRichEditView::WrapChanged
 - AFXRICH/CRichEditView::m_nBulletIndent
 - AFXRICH/CRichEditView::m_nWordWrap
-dev_langs:
-- C++
 helpviewer_keywords:
 - CRichEditView [MFC], CRichEditView
 - CRichEditView [MFC], AdjustDialogPosition
@@ -106,16 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81ecc91d8c942a36920368bdb4054ffc2145478d
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 2eebfe18275aa63ac26c0c898a5d796300860db8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890729"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476636"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -131,13 +121,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Создает объект `CRichEditView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Перемещает диалоговое окно, чтобы он не скрывать текущего выделения.|
 |[CRichEditView::CanPaste](#canpaste)|Указывает, содержит ли буфер данных, которая может быть вставлена в представлении rich edit.|
@@ -174,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Получает объект Clipboard для диапазона в этом представлении rich edit.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Получает контекстное меню для использования в правой-нажатия кнопки мыши.|
@@ -191,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Указывает отступ для маркированные списки.|
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|Указывает ограничения переноса слов.|
@@ -1056,7 +1046,7 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства для области вывода.
 
 *rectLayout*<br/>
@@ -1096,7 +1086,7 @@ long PrintPage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства для вывода страниц.
 
 *nIndexStart*<br/>
@@ -1236,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Параметры
 
-*Общая папка*<br/>
+*pf*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение

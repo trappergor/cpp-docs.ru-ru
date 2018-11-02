@@ -1,27 +1,16 @@
 ---
-title: Манифест ресурсов (C++) | Документация Майкрософт
-ms.custom: ''
+title: Ресурсы манифеста (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429569"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578286"
 ---
 # <a name="manifest-resources-c"></a>Ресурсы манифеста (C++)
 
@@ -43,7 +32,7 @@ ms.locfileid: "46429569"
 </dependency>
 ```
 
-Для приложений Windows XP или Windows Vista ресурс манифеста не только определяет приложение использовать последнюю версию общих элементов управления Windows (версии 6.0, см. выше), но также поддерживает [управления Syslink](/windows/desktop/Controls/syslink-overview).
+Для приложений Windows XP и Windows Vista ресурс манифеста не только определяет, что приложение должно использовать последнюю версию общих элементов управления Windows (версии 6.0, см. выше), но также поддерживает [элемент управления Syslink](/windows/desktop/Controls/syslink-overview).
 
 Чтобы узнать версию и введите сведения, содержащиеся в ресурсе манифеста, можно открыть файл в средстве просмотра XML или в текстовом редакторе Visual Studio. Дополнительные сведения см. в статье [Открытие ресурса манифеста в текстовом редакторе Visual Studio](../windows/how-to-open-a-manifest-resource.md).
 

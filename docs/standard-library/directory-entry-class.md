@@ -1,10 +1,6 @@
 ---
-title: Класс directory_entry | Документы Майкрософт
-ms.custom: ''
+title: Класс directory_entry
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry
 - filesystem/std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
@@ -21,11 +17,7 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_entry::operator&lt;=
 - filesystem/std::experimental::filesystem::directory_entry::operator&gt;
 - filesystem/std::experimental::filesystem::directory_entry::operator&gt;=
-dev_langs:
-- C++
 ms.assetid: 1827c67b-4137-4548-adb0-f955f7acaf08
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::experimental::filesystem::directory_entry
 - std::experimental::filesystem::directory_entry::operator const std::experimental::filesystem::path &
@@ -42,14 +34,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&lt;=
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 46a031b727f5c592925aaa4d343fc1299f6d4cdf
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701523"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533826"
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 
@@ -87,9 +77,9 @@ class directory_entry;
 
 |Оператор|Описание|
 |-|-|
-|[оператор!=](#op_neq)|Заменяет элементы списка копией другого списка.|
+|[operator!=](#op_neq)|Заменяет элементы списка копией другого списка.|
 |[оператор=](#op_as)|Операторы-члены присваивания по умолчанию работают корректно.|
-|[оператор==](#op_eq)|Возвращает `mypath == right.mypath`.|
+|[operator==](#op_eq)|Возвращает `mypath == right.mypath`.|
 |[оператор<](#op_lt)|Возвращает `mypath < right.mypath`.|
 |[оператор<=](#op_lteq)|Возвращает `!(right < *this)`.|
 |[оператор>](#op_gt)|Возвращает `right < *this`.|

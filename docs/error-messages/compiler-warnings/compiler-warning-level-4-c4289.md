@@ -1,27 +1,17 @@
 ---
-title: Предупреждение (уровень 4) C4289 компилятора | Документация Майкрософт
-ms.custom: ''
+title: Предупреждение компилятора (уровень 1) C4289
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4289
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4289
 ms.assetid: 0dbd2863-4cde-4e16-894b-104a2d5fa724
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35cb22c767c0ea64a1536bd4d02ad8653bb94250
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a997af466ddfdaaf4631afeb53d917ce0338c3b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46102844"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488820"
 ---
 # <a name="compiler-warning-level-4-c4289"></a>Предупреждение компилятора (уровень 1) C4289
 

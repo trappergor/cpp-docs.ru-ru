@@ -1,28 +1,18 @@
 ---
-title: Экспорт функций C++ для использования в исполняемых файлах языка C | Документация Майкрософт
-ms.custom: ''
+title: Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - functions [C++], C++ functions in C executables
 - exporting DLLs [C++], C++ functions in C executables
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abdc8dc0f853faf0649581d535cb631c232e8276
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eaa742fc2738ef4aeeb54bb8fd2b0da923ac57de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709947"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667432"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>Экспорт функций на языке C++ для использования в исполняемых модулях, исходный код которых написан на языке C
 

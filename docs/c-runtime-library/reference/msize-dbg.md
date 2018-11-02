@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Документы Майкрософт
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451762"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629129"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,11 +45,11 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>Параметры
 
-*Устойчивость данных пользователя*<br/>
+*userData*<br/>
 Указатель на блок памяти, размер которого необходимо определить.
 
 *blockType*<br/>
-Тип указанный блок памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
+Тип указанного блока памяти: **_CLIENT_BLOCK** или **_NORMAL_BLOCK**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -67,11 +57,11 @@ size_t _msize_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_msize_dbg** является отладочной версией функции _[msize](msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_msize_dbg** сокращается до вызова **_msize**. Оба **_msize** и **_msize_dbg** вычислить размер блока памяти в основной куче, но **_msize_dbg** добавляет две возможности отладки: он включает буферы на обеих сторонах пользователя часть блока памяти в возвращаемый размер и позволяет вычисления размера для определенного блока типов.
+**_msize_dbg** является отладочной версией функции _[msize](msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_msize_dbg** сокращается до вызова **_msize**. Оба **_msize** и **_msize_dbg** вычисляет размер блока памяти в основной куче, но **_msize_dbg** добавляет две функции отладки: буферы на обеих сторонах включает пользователя части блока памяти в возвращаемый размер и он позволяет рассчитать размер определенных типов блоков.
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 
-Эта функция проверяет свои параметры. Если *memblock* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка будет обработана, функция устанавливает **errno** для **EINVAL** и возвращает значение -1.
+Эта функция проверяет свои параметры. Если *memblock* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает **errno** для **EINVAL** и возвращает – 1.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: fsetpos | Документы Майкрософт
-ms.custom: ''
+title: fsetpos
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fsetpos
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - fsetpos
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, setting position indicators
 - fsetpos function
 ms.assetid: 6d19ff48-1a2b-47b3-9f23-ed0a47b5a46e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c381cf478a97d47efe10c68096fffe3d9fd8efdf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9854c71e381da6ec9a75d440b9588e2476bada7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399313"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528236"
 ---
 # <a name="fsetpos"></a>fsetpos
 
@@ -54,21 +44,21 @@ int fsetpos(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
-*POS*<br/>
+*торговых терминалов*<br/>
 Хранилище индикатора позиции.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения **fsetpos** возвращает 0. В случае неудачи, функция возвращает ненулевое значение и задает **errno** к одному из следующих манифеста констант (определенных в ERRNO. H): **EBADF**, это означает, что файл не доступен, или объект, *поток* указывает не является допустимым файлом структурой; или **EINVAL**, означающее недопустимое значение *поток* или *pos* был передан. Если передан недопустимый параметр, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
+В случае успешного выполнения **fsetpos** возвращает 0. В случае сбоя функция возвращает ненулевое значение и задает **errno** к одному из следующих констант манифеста (определяются в ERRNO. H): **значение EBADF**, что означает, что файл недоступен, или объект, *поток* точек не является допустимой файловой структурой; или **EINVAL**, означающее недопустимое значение для *поток* или *pos* был передан. Если передан недопустимый параметр, эти функции вызывают обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Fsetpos** функция задает для индикатора позиции файла *поток* значению *pos*, который получается в предыдущем вызове **fgetpos**от *поток*. Функция очищает индикатор end of file и отменяет последствия [ungetc](ungetc-ungetwc.md) на *поток*. После вызова метода **fsetpos**, следующая операция *поток* может быть либо входного или выходного.
+**Fsetpos** функция задает индикатор позиции файла для *поток* значению *pos*, которое было получено в предыдущем вызове **fgetpos**от *поток*. Функция удаляет индикатор окончания файла и отменяет все результаты выполнения [ungetc](ungetc-ungetwc.md) на *поток*. После вызова метода **fsetpos**, следующая операция в *поток* может быть либо входных или выходных данных.
 
 ## <a name="requirements"></a>Требования
 

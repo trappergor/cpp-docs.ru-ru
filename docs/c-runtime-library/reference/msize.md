@@ -1,10 +1,6 @@
 ---
-title: _msize | Документы Майкрософт
-ms.custom: ''
+title: _msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - msize
 - _msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9e27751072891bcabc0b068cb5ca57b571d35d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402157"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477276"
 ---
 # <a name="msize"></a>_msize
 
@@ -66,9 +56,9 @@ size_t _msize(
 
 **_Msize** функция возвращает размер в байтах блока памяти, выделенной с помощью вызова **calloc**, **malloc**, или **realloc**.
 
-Когда приложение связано с отладочной версией библиотеки времени выполнения C **_msize** разрешается [_msize_dbg](msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
+Когда приложение связано с отладочной версией библиотек времени выполнения языка C, **_msize** разрешается [_msize_dbg](msize-dbg.md). Дополнительные сведения об управлении кучей в процессе отладки см. в разделе [Куча отладки CRT](/visualstudio/debugger/crt-debug-heap-details).
 
-Эта функция проверяет свои параметры. Если *memblock* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка будет обработана, функция устанавливает **errno** для **EINVAL** и возвращает значение -1.
+Эта функция проверяет свои параметры. Если *memblock* является пустым указателем, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает **errno** для **EINVAL** и возвращает – 1.
 
 ## <a name="requirements"></a>Требования
 

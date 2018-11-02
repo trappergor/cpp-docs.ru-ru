@@ -1,8 +1,6 @@
 ---
-title: fpclassify | Документы Майкрософт
-ms.custom: ''
+title: fpclassify
 ms.date: 04/05/2018
-ms.topic: reference
 apiname:
 - fpclassify
 apilocation:
@@ -24,16 +22,12 @@ helpviewer_keywords:
 - fpclassify macro
 - fpclassify function
 ms.assetid: bf549499-7ff9-4a58-8692-f2d1cb6bab81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da55cb87804d178d5a305ed466aa498de4bc1ee5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 626e356cf61415e4f8212a8a12d90a72fe4576bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613880"
 ---
 # <a name="fpclassify"></a>fpclassify
 
@@ -67,7 +61,7 @@ int fpclassify(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице приведены возможные значения, возвращенные **fpclassify**, определенного в \<math.h >.
+**fpclassify** возвращает целочисленное значение, указывающее класс с плавающей запятой аргумента *x*. В этой таблице приведены возможные значения, возвращаемые **fpclassify**, определенный в \<math.h >.
 
 |Значение|Описание|
 |-----------|-----------------|
@@ -79,7 +73,7 @@ int fpclassify(
 
 ## <a name="remarks"></a>Примечания
 
-В языке C **fpclassify** представляет собой макрос; в C++ **fpclassify** — это функция, перегружен, с помощью аргумента типа **float**, **двойные**, или **длинные** **двойные**. В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, обычный **двойные** или **длинные** **двойные** значение может стать бесконечности, denormal или нуля значение, при преобразовании **float**.
+В языке C **fpclassify** представляет собой макрос, а в C++, **fpclassify** — это функция, перегружаемая с использованием аргументов типа **float**, **двойные**, или **long** **двойные**. В обоих случаях возвращаемое значение зависит от действительного типа выражения аргумента, а не от промежуточного представления. Например, обычный **двойные** или **long** **двойные** может становиться бесконечным, denormal или нулевым значением при преобразовании в значение **float**.
 
 ## <a name="requirements"></a>Требования
 
@@ -87,7 +81,7 @@ int fpclassify(
 |---------------------|---------------------------|-------------------------------|
 |**fpclassify**|\<math.h>|\<math.h> или \<cmath>|
 
-**Fpclassify** макрос и **fpclassify** функции соответствует ISO C99 и C ++ 11 спецификации. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+**Fpclassify** макрос и **fpclassify** функции соответствуют стандарту ISO C99 и C ++ 11 спецификаций. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

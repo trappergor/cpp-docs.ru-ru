@@ -1,10 +1,6 @@
 ---
-title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock | Документы Майкрософт
-ms.custom: ''
+title: _ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411300"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430307"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch, _ungetwch, _ungetch_nolock, _ungetwch_nolock
 
@@ -92,15 +82,15 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Обе функции возвращают символ *c* в случае успешного выполнения. Если возникает ошибка, **_ungetch** возвращает значение **EOF** и **_ungetwch** возвращает **WEOF**.
+Обе функции возвращают символ *c* при успешном выполнении. Если возникает ошибка, **_ungetch** возвращает значение **EOF** и **_ungetwch** возвращает **WEOF**.
 
 ## <a name="remarks"></a>Примечания
 
-Эти функции push-символ *c* обратно в консоль, вызывая *c* для следующего символа, считываемых **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** ошибкой, если они вызываются несколько раз до следующей операции ввода. *c* аргумент не может быть **EOF** (или **WEOF**).
+Эти функции помещают символ *c* обратно в консоль, вызывая *c* быть следующего символа, считываемые **_getch** или **_getche** (или **_getwch** или **_getwche**). **_ungetch** и **_ungetwch** ошибкой, если они вызываются несколько раз до следующего чтения. *c* аргумент не может быть **EOF** (или **WEOF**).
 
 Версии с суффиксом **_nolock** идентичны за исключением того, что они не защищены от помех со стороны других потоков. Они могут выполняться быстрее, так как не создают дополнительную нагрузку, связанную с блокировкой работы других потоков. Используйте эти функции только в потокобезопасных контекстах, например в однопоточных приложениях или если вызываемая область уже обрабатывает изоляцию потоков.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

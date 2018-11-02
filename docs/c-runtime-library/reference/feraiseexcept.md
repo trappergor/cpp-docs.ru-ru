@@ -1,11 +1,6 @@
 ---
-title: feraiseexcept | Документы Майкрософт
-ms.custom: ''
+title: feraiseexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feraiseexcept
 apilocation:
@@ -23,21 +18,15 @@ apitype: HeaderDef
 f1_keywords:
 - feraiseexcept
 - fenv/feraiseexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfd60612c92f8e3ff542fd22bbf5b4a01f7b7365
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532253"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -53,7 +42,7 @@ int feraiseexcept(
 
 ### <a name="parameters"></a>Параметры
 
-*excepts*<br/>
+*Кроме*<br/>
 Исключения с плавающей запятой, которые необходимо вызвать.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -62,7 +51,7 @@ int feraiseexcept(
 
 ## <a name="remarks"></a>Примечания
 
-**Feraiseexcept** функция пытается вызвать исключения с плавающей запятой, определяемое *excepts*.   **Feraiseexcept** функция поддерживает эти макросы исключений, определенных в \<fenv.h >:
+**Feraiseexcept** функция пытается вызывать исключения с плавающей запятой, заданные *кроме*.   **Feraiseexcept** функция поддерживает макросы исключений, определенные в \<fenv.h >:
 
 |Макрос исключения|Описание|
 |---------------------|-----------------|
@@ -73,11 +62,11 @@ int feraiseexcept(
 |FE_UNDERFLOW|Ранее выполненная операция с плавающей запятой возвратила слишком малое значение, которое не удается представить с полной точностью. Создано денормализованное значение.|
 |FE_ALLEXCEPT|Побитовая операция ИЛИ для всех поддерживаемых исключений с плавающей запятой.|
 
-*Excepts* аргумент может иметь ноль, один из значения макроса исключений или побитовое или двух или более макросов исключение поддерживается. Если один из указанных макросов исключений имеет значение FE_OVERFLOW или FE_UNDERFLOW, в качестве побочного эффекта может быть вызвано исключение FE_INEXACT.
+*Кроме* аргумент может иметь ноль, один значения макросов исключений, а также побитовой операции или двух или более из поддерживаемого макроса исключения. Если один из указанных макросов исключений имеет значение FE_OVERFLOW или FE_UNDERFLOW, в качестве побочного эффекта может быть вызвано исключение FE_INEXACT.
 
 Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
 
-**К системам Microsoft:** исключения, указанный в *excepts* вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Тем не менее, FE_INEXACT может возникнуть, когда происходит событие FE_OVERFLOW или FE_UNDERFLOW, даже если не указан в *excepts*. **Завершение блока, относящегося только к системам Майкрософт**
+**Систем Майкрософт:** исключения, указанные в *кроме* вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Тем не менее, FE_INEXACT может вызываться при возникновении FE_OVERFLOW или FE_UNDERFLOW, даже если не указан в *кроме*. **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="requirements"></a>Требования
 

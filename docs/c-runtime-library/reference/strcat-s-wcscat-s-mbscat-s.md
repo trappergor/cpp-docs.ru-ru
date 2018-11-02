@@ -1,10 +1,6 @@
 ---
-title: strcat_s, wcscat_s, _mbscat_s | Документы Майкрософт
-ms.custom: ''
+title: strcat_s, wcscat_s, _mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,23 +31,19 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414013"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621316"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s, wcscat_s, _mbscat_s
 
 Дополняет строку. Это версии функций [strcat, wcscat, _mbscat](strcat-wcscat-mbscat.md) с усовершенствованной безопасностью, как описано в разделе [Функции безопасности в CRT](../../c-runtime-library/security-features-in-the-crt.md).
 
 > [!IMPORTANT]
-> **_mbscat_s** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscat_s** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -107,15 +97,15 @@ errno_t _mbscat_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*strDestination*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержимое *strDestination*|
+|*strDestination*|*numberOfElements*|*strSource*|Возвращаемое значение|Содержание *strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
-|**Значение NULL,** и без него|any|any|**EINVAL**|не изменено|
+|**NULL** или без признака завершения|any|any|**EINVAL**|не изменено|
 |any|any|**NULL**|**EINVAL**|*strDestination*[0] имеет значение 0|
 |any|0 или слишком мал|any|**ERANGE**|*strDestination*[0] имеет значение 0|
 
 ## <a name="remarks"></a>Примечания
 
-**Strcat_s** добавляет функцию *strSource* для *strDestination* и завершает результирующая строка символом null. Буквы *strSource* перезаписывает завершающий нуль-символ из *strDestination*. Поведение **strcat_s** при перекрытии исходного и конечного будет неопределенным.
+**Strcat_s** функция добавляет *strSource* для *strDestination* и завершает результирующую строку нуль-символом. Начальный символ строки *strSource* перезаписывает завершающий нуль-символ из *strDestination*. Поведение **strcat_s** не определено, если строки источника и назначения перекрываются.
 
 Обратите внимание, что второй параметр — это общий размер буфера, а не оставшийся размер:
 
@@ -126,15 +116,15 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s** и **_mbscat_s** версии Юникода и многобайтовых символов **strcat_s**. Аргументы и возвращаемое значение **wcscat_s** являются двухбайтовые строки; аргументы **_mbscat_s** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcscat_s** и **_mbscat_s** расширенных и многобайтовых символов версии **strcat_s**. Аргументы и возвращаемое значение **wcscat_s** являются двухбайтовые строки; аргументы **_mbscat_s** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
-Если *strDestination* является пустым указателем, или не является нулевым байтом, или если *strSource* — **NULL** указателя, или если строка назначения слишком мал, недопустимый параметр вызывается обработчик, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
+Если *strDestination* является пустым указателем, или не является нулевым байтом, или если *strSource* — **NULL** указателем, или если строка назначения слишком мал, недопустимого параметра вызывается обработчик, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают **EINVAL** и задайте **errno** для **EINVAL**.
 
 В C++ использование данных функций упрощено наличием шаблонных перегрузок; перегруженные методы могут автоматически определять длину буфера (что исключает необходимость указания аргумента с размером буфера), а также они могут автоматически заменять более старые, незащищенные функции их новыми безопасными аналогами. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
 Отладочные версии этих функций сначала заполняют буфер значением 0xFD. Чтобы отключить это поведение, используйте [_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

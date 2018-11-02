@@ -1,10 +1,6 @@
 ---
-title: _resetstkoflw | Документы Майкрософт
-ms.custom: ''
+title: _resetstkoflw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _resetstkoflw
 apilocation:
@@ -22,24 +18,18 @@ apitype: DLLExport
 f1_keywords:
 - resetstkoflw
 - _resetstkoflw
-dev_langs:
-- C++
 helpviewer_keywords:
 - resetstkoflw function
 - stack overflow
 - stack, recovering
 - _resetstkoflw function
 ms.assetid: 319529cd-4306-4d22-810b-2063f3ad9e14
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 31d3f647d2d72cf96c9b935c33376aae698464c8
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ad8c9b470c33a4c84f46ac7758d368917e7938e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207580"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480552"
 ---
 # <a name="resetstkoflw"></a>_resetstkoflw
 
@@ -220,7 +210,7 @@ loop #10
 resetting stack overflow
 ```
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем примере показано рекомендуемое использование **_resetstkoflw** в программе, где структурированные исключения преобразуются в исключения C++.
 

@@ -1,28 +1,17 @@
 ---
-title: Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков) | Документация Майкрософт
-ms.custom: ''
+title: Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newimagetype
-dev_langs:
-- C++
 helpviewer_keywords:
 - New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 81a5c4cac614f70aa422e56a3c1c61fa2b6bd24e
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 3e1505013edd211a3d838bdfcc957877d767bb18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861919"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583863"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>Новый &lt;устройства&gt; изображение диалогового окна типа (C++) (редактор изображений для значков)
 
@@ -50,7 +39,7 @@ ms.locfileid: "48861919"
 
 ## <a name="requirements"></a>Требования
 
-Нет
+None
 
 ## <a name="see-also"></a>См. также
 

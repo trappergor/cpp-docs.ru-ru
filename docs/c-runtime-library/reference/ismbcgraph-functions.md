@@ -1,10 +1,6 @@
 ---
-title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l | Документы Майкрософт
-ms.custom: ''
+title: _ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcpunct_l
 - _ismbcblank
@@ -42,8 +38,6 @@ f1_keywords:
 - ismbcgraph_l
 - ismbcspace
 - ismbcpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcspace_l function
 - _ismbcprint_l function
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - _ismbcgraph_l function
 - _ismbcspace function
 ms.assetid: 8e0a5f47-ba64-4411-92a3-3c525d16e3be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da9231dcf64222aa075194f72892896972e2abf7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 05946def8c4d832751554a1653afa98c9965fee9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405501"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626217"
 ---
 # <a name="ismbcgraph-ismbcgraphl-ismbcprint-ismbcprintl-ismbcpunct-ismbcpunctl-ismbcblank-ismbcblankl-ismbcspace-ismbcspacel"></a>_ismbcgraph, _ismbcgraph_l, _ismbcprint, _ismbcprint_l, _ismbcpunct, _ismbcpunct_l, _ismbcblank, _ismbcblank_l, _ismbcspace, _ismbcspace_l
 
@@ -130,9 +120,9 @@ int _ismbcspace_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих подпрограмм возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и имеется соответствующий **_ismbb** процедура (например, **_ismbcalnum** соответствует **_ismbbalnum**), Результатом является возвращаемым значением соответствующего **_ismbb** подпрограммы.
+Каждая из этих подпрограмм возвращает ненулевое значение, если символ удовлетворяет условию теста, или 0, если не удовлетворяет. Если *c* < = 255 и есть соответствующая **_ismbb** подпрограммы (например, **_ismbcalnum** соответствует **_ismbbalnum**), результат является возвращаемым значением соответствующего **_ismbb** подпрограммы.
 
-Версии этих функций идентичны, за исключением тех, которые имеют **_l** суффикс использовать языкового стандарта, переданный для поведения, зависящего от языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Версии этих функций идентичны, за исключением тех, которые имеют **_l** суффикс используют языковой стандарт, переданный для поведения, зависящего от языкового стандарта вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -140,11 +130,11 @@ int _ismbcspace_l(
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcgraph**|Графические символы|Возвращает ненулевое значение, только если *c* является однобайтовое представление любых ASCII или катакана печатных символов, кроме пробел ().|
-|**_ismbcprint**|Печатные символы|Возвращает ненулевое значение, только если *c* является однобайтовое представление любых ASCII или катакана печатных символов, включая пробел ().|
-|**_ismbcpunct**|Пунктуация|Возвращает ненулевое значение, только если *c* является однобайтовое представление символа ASCII или катакана знаки препинания.|
+|**_ismbcgraph**|Графические символы|Возвращает ненулевое значение, только если *c* является однобайтовым представлением любого ASCII или катаканы печатного символа, за исключением пробел ().|
+|**_ismbcprint**|Печатные символы|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление любой ASCII или катаканы печатного символа, включая пробел ().|
+|**_ismbcpunct**|Пунктуация|Возвращает ненулевое значение, только если *c* является однобайтовым представлением любого знака препинания ASCII или катаканы.|
 |**_ismbcblank**|Пробелы или символы горизонтальной табуляции|Возвращает ненулевое значение, только если *c* является пробел или символ горизонтальной табуляции: *c*= 0x20 или *c*= 0x09.|
-|**_ismbcspace**|Пробел|Возвращает ненулевое значение, только если *c* символом пробела: *c*= 0x20 или 0x09 < =*c*< = 0x0D.|
+|**_ismbcspace**|Пробел|Возвращает ненулевое значение, только если *c* является символом пробела: *c*= 0x20 или 0x09 < =*c*< = 0x0D.|
 
 ## <a name="requirements"></a>Требования
 

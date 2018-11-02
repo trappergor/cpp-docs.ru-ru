@@ -1,26 +1,16 @@
 ---
-title: Параметры для средства элемента управления подсказки | Документация Майкрософт
-ms.custom: ''
+title: Параметры для элемента управления всплывающей подсказки
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - tool tips [MFC], activating
 - CToolTipCtrl class [MFC], settings
 ms.assetid: ff8c5c46-2047-403a-bd98-ffec3d21ee3a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d0adfd1c7a7ae1e1f36fa8dd53610d19ad8e7b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 99ad8b30599b4399e4574dea611991b4c8e1a8e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532682"
 ---
 # <a name="settings-for-the-tool-tip-control"></a>Параметры для элемента управления всплывающей подсказки
 

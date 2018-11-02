@@ -1,27 +1,17 @@
 ---
-title: Среда выполнения с параллелизмом | Документация Майкрософт
-ms.custom: ''
+title: Среда выполнения с параллелизмом
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413813"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495957"
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 
@@ -108,10 +98,10 @@ ms.locfileid: "46413813"
 
 |||
 |-|-|
-|[Шаблоны асинхронного программирования и советы по Hilo (приложения Windows Store с помощью C++ и XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Узнайте, как мы использовали среды выполнения с параллелизмом для реализации асинхронных операций в Hilo, приложении среды выполнения Windows на C++ и XAML.|
+|[Шаблоны асинхронного программирования и советы по Hilo (приложения Магазина Windows на C++ и XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Узнайте, как мы использовали среды выполнения с параллелизмом для реализации асинхронных операций в Hilo, приложении среды выполнения Windows на C++ и XAML.|
 |[Примеры кода для среды выполнения с параллелизмом и библиотеки параллельных шаблонов в Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Примеры приложений и утилит, демонстрирующих исполняющую среду с параллелизмом.|
-|[Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|
-|[Parallel Computing in C++ and Native Code форум](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|
+|[Блог Parallel Programming in Native Code](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|
+|[Форум Parallel Computing in C++ and Native Code](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|
 |[Параллельное программирование](/dotnet/standard/parallel-programming/index)|Содержит сведения о модель параллельного программирования, который доступен в .NET Framework.|
 
 ## <a name="see-also"></a>См. также

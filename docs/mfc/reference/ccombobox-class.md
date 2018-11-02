@@ -1,10 +1,6 @@
 ---
-title: Класс CComboBox | Документация Майкрософт
-ms.custom: ''
+title: CComboBox-класс
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CComboBox
 - AFXWIN/CComboBox
@@ -59,8 +55,6 @@ f1_keywords:
 - AFXWIN/CComboBox::SetMinVisibleItems
 - AFXWIN/CComboBox::SetTopIndex
 - AFXWIN/CComboBox::ShowDropDown
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComboBox [MFC], CComboBox
 - CComboBox [MFC], AddString
@@ -114,16 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890651"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641107"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -139,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в окне списка, поле со списком или в отсортированном позиции для поля списка CBS_SORT стиль.|
 |[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковое имеется, в элементе управления.|
@@ -675,7 +665,7 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpszText*|[out] Указатель на буфер, получающий текст баннера подсказки.|
 |*cchText*|[in] Размер буфера, *lpszText* указывает параметр.|
@@ -1201,7 +1191,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpszText*|[in] Указатель на буфер нулевым байтом, который содержит текст подсказки.|
 
@@ -1493,7 +1483,7 @@ BOOL SetMinVisibleItems(int iMinVisible);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iMinVisible*|[in] Указывает минимальное число видимых элементов.|
 

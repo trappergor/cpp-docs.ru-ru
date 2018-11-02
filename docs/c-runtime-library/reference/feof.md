@@ -1,10 +1,6 @@
 ---
-title: feof | Документы Майкрософт
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580704"
 ---
 # <a name="feof"></a>feof
 
@@ -53,20 +43,20 @@ int feof(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Feof** функция возвращает ненулевое значение, если операция чтения попытка чтения после окончания файла; в противном случае возвращается значение 0. Если указатель потока **NULL**, функция вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** равно **EINVAL** и **feof** возвращает 0.
+**Feof** функция возвращает ненулевое значение, если операция чтения пытается продолжить чтение после конца файла; в противном случае возвращает 0. Если указателем потока является **NULL**, функция вызывает обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **errno** присваивается **EINVAL** и **feof** возвращает 0.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Feof** подпрограммы (реализованный как функции и как макрос) определяет ли конец *поток* был передан. При передаче в конец файла, чтение операции возвращают индикатор end of file, пока поток закрыт или пока не [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), или  **clearerr** вызвана.
+**Feof** подпрограммы (реализованная и как функция и как макрос) определяет ли конец *поток* был передан. Если конец файла был передан, операции чтения возвращают индикатор окончания файла пока поток закрыт или пока не [rewind](rewind.md), **fsetpos**, [fseek](fseek-fseeki64.md), или  **clearerr** вызывается на ее основе.
 
-Например, если файл содержит 10 байт и прочитать 10 байт из файла **feof** возвращает 0, так как хотя указатель файла в конце файла, не была предпринята попытка чтения после конца. Только после попытки чтения 11 байт будет **feof** возвращают ненулевое значение.
+Например, если файл содержит 10 байт и прочитано 10 байт из файла **feof** возвращает 0, поскольку, несмотря на то, что указатель файла находится в конце файла, не была предпринята попытка чтения за пределами. Только после вы попытаетесь прочитать 11-й байт будет **feof** возвращают ненулевое значение.
 
 ## <a name="requirements"></a>Требования
 

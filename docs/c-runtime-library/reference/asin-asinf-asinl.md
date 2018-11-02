@@ -1,10 +1,6 @@
 ---
-title: asin, asinf, asinl | Документы Майкрософт
-ms.custom: ''
+title: asin, asinf, asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476054"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -70,19 +60,19 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Asin** функция возвращает арксинус (арксинус) *x* в диапазоне - π/2-π/2 радиан.
+**Asin** функция возвращает арксинус (функцию обратного синуса) *x* в диапазоне - π/2 до радианы π/2.
 
 По умолчанию если *x* меньше -1 или больше 1, **asin** возвращает неопределенное.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
-|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± ∞|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
+|± **QNAN**, **IND**|Нет|**Д_ОМЕН ИМЯ**|
+|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **asin** с **float** и **длинные** **двойные** значения. В программе на языке C **asin** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **asin** с **float** и **long** **двойные** значения. В программе на языке C **asin** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

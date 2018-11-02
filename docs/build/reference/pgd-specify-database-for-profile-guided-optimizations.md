@@ -1,32 +1,22 @@
 ---
-title: / PGD (Указание базы данных для профильной оптимизации) | Документы Microsoft
-ms.custom: ''
+title: /PGD (указание базы данных для профильной оптимизации)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.ProfileGuidedDatabase
-dev_langs:
-- C++
 helpviewer_keywords:
 - -PGD linker option
 - /PGD linker option
 ms.assetid: 9f312498-493b-461f-886f-92652257e443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7685f99137a1b599a5f9020fac9e3cae4ba3bc3c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 68d112c0a40289ba62e3fe5c37ae23f8f55f9209
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32378448"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601296"
 ---
 # <a name="pgd-specify-database-for-profile-guided-optimizations"></a>/PGD (указание базы данных для профильной оптимизации)
 
-**Параметр/PGD является устаревшим.** Начиная с Visual Studio 2015 предпочитают [/genprofile или/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) вместо параметров компоновщика. Этот параметр используется для указания имени PGD-файл, используемый процессом профильной оптимизации.
+**Параметр/PGD является устаревшим.** Начиная с Visual Studio 2015, предпочитать [/genprofile или/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) параметры компоновщика. Этот параметр используется для указания имени PGD-файла, используемые в процессе профильной оптимизации.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -35,19 +25,19 @@ ms.locfileid: "32378448"
 ## <a name="argument"></a>Аргумент
 
 *filename*<br/>
-Указывает имя PGD-файла, который используется для хранения сведений о выполняемой программы.
+Задает имя PGD-файла, который используется для хранения сведений о выполняемой программе.
 
 ## <a name="remarks"></a>Примечания
 
-При использовании устаревших [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) , используйте **/PGD** для указания нестандартным именем или расположением PGD-файла. Если вы не укажете **/PGD**, базовое имя файла .pgd совпадает имя выходного файла (.exe или .dll) базового и создается в том же каталоге, из которого был вызван по ссылке.
+При использовании устаревших [/LTCG: PGINSTRUMENT](../../build/reference/ltcg-link-time-code-generation.md) , используйте **/PGD** для указания нестандартным именем или расположением PGD-файла. Если вы не укажете **/PGD**, базовое имя файла .pgd совпадает со значением имени выходного файла (.exe или .dll) базового и создается в том же каталоге, из которого была вызвана ссылка.
 
-При использовании устаревших **/LTCG: PGOPTIMIZE** , используйте **/PGD** параметр, чтобы указать имя PGD-файл, используемый для создания оптимизированного образа. *Filename* аргумент должен соответствовать *filename* заданы для **/LTCG: PGINSTRUMENT**.
+При использовании устаревших **/LTCG: PGOPTIMIZE** , используйте **/PGD** параметр, чтобы указать имя PGD-файла, в которых будет производиться создание оптимизированного образа. *Filename* аргумент должен соответствовать *filename* заданное **/LTCG: PGINSTRUMENT**.
 
 Дополнительные сведения см. в разделе [профильной оптимизации](../../build/reference/profile-guided-optimizations.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [задание свойств проекта Visual C++](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **оптимизации** страницу свойств.
 

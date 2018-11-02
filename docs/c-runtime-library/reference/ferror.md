@@ -1,10 +1,6 @@
 ---
-title: ferror | Документы Майкрософт
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587893"
 ---
 # <a name="ferror"></a>ferror
 
@@ -54,18 +44,18 @@ int ferror(
 
 ### <a name="parameters"></a>Параметры
 
-*Поток*<br/>
+*поток*<br/>
 Указатель на структуру **FILE**.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Если ошибки не произошло в *поток*, **ferror** возвращает 0. В противном случае возвращается ненулевое значение. Если поток **NULL**, **ferror** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает 0.
+Если ошибки не произошло на *поток*, **ferror** возвращает 0. В противном случае возвращается ненулевое значение. Если поток имеет **NULL**, **ferror** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эта функция задает **errno** для **EINVAL** и возвращает значение 0.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 
-**Ferror** подпрограммы (реализованный как функции и как макрос) проверяет для чтения или записи ошибок в файле, связанном с *поток*. Если произошла ошибка, индикатор ошибки для потока остается установленным, пока поток будет закрыт или перемотан назад или пока не **clearerr** вызвана.
+**Ferror** (реализованная и как функция и как макрос) проверяет для чтения или записи ошибок в файле, связанном с *поток*. Если произошла ошибка, индикатор ошибки для потока остается установленным до закрытия или на начало потока или пока не **clearerr** вызывается на ее основе.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: strcpy, wcscpy, _mbscpy | Документы Майкрософт
-ms.custom: ''
+title: strcpy, wcscpy, _mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,23 +37,19 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413925"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640067"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy, wcscpy, _mbscpy
 
 Копирует строку. Существуют более безопасные версии этих функций; см. раздел [strcpy_s, wcscpy_s, _mbscpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
 > [!IMPORTANT]
-> **_mbscpy** не может использоваться в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscpy** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -107,16 +97,16 @@ unsigned char *_mbscpy(
 
 ## <a name="remarks"></a>Примечания
 
-**Strcpy** функции копии *strSource*, включая завершающий символ null, в расположение, который задается параметром *strDestination*. Поведение **strcpy** при перекрытии исходного и конечного будет неопределенным.
+**Strcpy** функции копий *strSource*, включая завершающий символ null, в расположение, которое определяется *strDestination*. Поведение **strcpy** не определено, если строки источника и назначения перекрываются.
 
 > [!IMPORTANT]
-> Поскольку **strcpy** не проверяет наличие достаточного места в *strDestination* перед копированием *strSource*, это может стать причиной переполнения буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
+> Так как **strcpy** не проверяет, достаточно ли места в *strDestination* перед копированием *strSource*, это может возникнуть ошибка переполнения буфера. Рекомендуем использовать вместо этой функции функцию [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md).
 
-**wcscpy** и **_mbscpy** представляют, соответственно, версии Юникода и многобайтовых символов **strcpy**. Аргументы и возвращаемое значение **wcscpy** являются двухбайтовые строки; аргументы **_mbscpy** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
+**wcscpy** и **_mbscpy** являются, соответственно, расширенных и многобайтовых символов версиях **strcpy**. Аргументы и возвращаемое значение **wcscpy** являются двухбайтовые строки; аргументы **_mbscpy** представляют собой строки многобайтовых символов. В остальном эти три функции ведут себя идентично.
 
 В C++ эти функции имеют шаблонные перегрузки, которые вызывают более новые и безопасные аналоги этих функций. Дополнительные сведения см. в разделе [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md).
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

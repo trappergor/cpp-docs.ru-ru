@@ -1,28 +1,18 @@
 ---
-title: Несколько базовых классов | Документация Майкрософт
-ms.custom: ''
+title: Несколько базовых классов
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b0dd2da0da84b6705fc1fdef2858cd45f181910
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483464"
 ---
 # <a name="multiple-base-classes"></a>Несколько базовых классов
 
@@ -41,7 +31,7 @@ class CollectionOfBook : public Book, public Collection {
 
 Порядок, в котором указываются базовые классы, не имеет значения, кроме некоторых случаев, когда вызываются конструкторы и деструкторы. В таких случаях порядок, в котором указываются базовые классы, влияет на следующее.
 
-- Порядок, в котором конструктор выполняет инициализацию. Если код основан на том, что инициализация части `Book` `CollectionOfBook` должна выполняться перед частью `Collection`, порядок указания важен. Инициализация выполняется в порядке, классы указываются в *базовый_список*.
+- Порядок, в котором конструктор выполняет инициализацию. Если код основан на том, что инициализация части `Book``CollectionOfBook` должна выполняться перед частью `Collection`, порядок указания важен. Инициализация выполняется в порядке, классы указываются в *базовый_список*.
 
 - Порядок, в котором вызываются деструкторы для очистки. Опять же, если определенная часть класса должна присутствовать, а другая часть должна быть удалена, порядок имеет значение. Деструкторы вызываются в порядке, обратном указанию классов в *базовый_список*.
 

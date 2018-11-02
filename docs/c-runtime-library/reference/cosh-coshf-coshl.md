@@ -1,10 +1,6 @@
 ---
-title: COSH, coshf, coshl | Документы Microsoft
-ms.custom: ''
+title: COSH, coshf, coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,24 +22,18 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609538"
 ---
 # <a name="cosh-coshf-coshl"></a>COSH, coshf, coshl
 
@@ -71,16 +61,16 @@ long double cosh( long double x );  // C++ only
 
 Гиперболический косинус *x*.
 
-По умолчанию, если результат слишком большой **cosh**, **coshf**, или **coshl** вызвать, функция возвращает **HUGE_VAL** и задает **errno** для **ERANGE**.
+По умолчанию, если результат слишком велик в **cosh**, **coshf**, или **coshl** вызвать, функция возвращает **HUGE_VAL** и задает **errno** для **ERANGE**.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|± **QNAN**, **IND**|Нет|**Д_ОМЕН ИМЯ**|
 |*x* ≥ 7.104760e + 002|**НЕТОЧНЫЙ**+**ПЕРЕПОЛНЕНИЯ**|**ПЕРЕПОЛНЕНИЕ**|
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **cosh** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **cosh** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **cosh** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **cosh** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 
@@ -92,7 +82,7 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="example"></a>Пример
 
-См. пример в [sinh sinhf, sinhl](sinh-sinhf-sinhl.md).
+Ознакомьтесь с примером в [sinh, sinhf, sinhl](sinh-sinhf-sinhl.md).
 
 ## <a name="see-also"></a>См. также
 

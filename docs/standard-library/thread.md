@@ -1,25 +1,15 @@
 ---
-title: '&lt;поток&gt; | Документация Майкрософт'
-ms.custom: ''
+title: '&lt;thread&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <thread>
-dev_langs:
-- C++
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef5470d7c7e83c260f44d723665d5d9c0a5ad061
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38953033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487520"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -42,19 +32,19 @@ ms.locfileid: "38953033"
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Класс thread](../standard-library/thread-class.md)|Определяет объект, который позволяет наблюдать и управлять потоком выполнения в приложении.|
 
 ### <a name="public-structures"></a>Открытые структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Структура hash (стандартная библиотека C++)](../standard-library/hash-structure-stl.md)|Определяет функцию-член, который возвращает значение, которое уникально определяется с помощью `thread::id`. Функция-член определяет [хэш](../standard-library/hash-class.md) функцию, которая подходит для сопоставления значений типа `thread::id` с распределением значений индекса.|
 
 ### <a name="public-functions"></a>Открытые функции
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[get_id](../standard-library/thread-functions.md#get_id)|Уникально идентифицирует текущий поток выполнения.|
 |[sleep_for](../standard-library/thread-functions.md#sleep_for)|Блокирует вызывающий поток.|
@@ -64,7 +54,7 @@ ms.locfileid: "38953033"
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[оператор > =-оператор](../standard-library/thread-operators.md#op_gt_eq)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|
 |[оператор > оператор](../standard-library/thread-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|

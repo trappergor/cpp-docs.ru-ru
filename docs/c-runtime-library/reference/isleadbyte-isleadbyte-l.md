@@ -1,10 +1,6 @@
 ---
-title: isleadbyte, _isleadbyte_l | Документы Майкрософт
-ms.custom: ''
+title: isleadbyte, _isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531893"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte, _isleadbyte_l
 
@@ -66,7 +56,7 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**isleadbyte** возвращает ненулевое значение, если аргумент удовлетворяет условию теста, или 0, если это не так. В языковом стандарте «C» и однобайтовые кодировки (SBCS) языковых стандартах **isleadbyte** всегда возвращает значение 0.
+**isleadbyte** возвращает ненулевое значение, если аргумент удовлетворяет условию теста, или 0, если это не так. В языковом стандарте «C» и в однобайтовой кодировки (SBCS) национальных настроек, **isleadbyte** всегда возвращает значение 0.
 
 ## <a name="remarks"></a>Примечания
 
@@ -74,9 +64,9 @@ int _isleadbyte_l( int c );
 
 Ожидаемый тип аргумента **isleadbyte** — **int**; Если передается символ со знаком, компилятор может преобразовать его в целое число по расширению знака, создавая непредсказуемые результаты.
 
-Версия этой функции с **_l** суффикс идентичен, за исключением того, что использует переданный параметр языкового стандарта вместо текущего языкового стандарта для поведения, зависящего от языкового стандарта.
+Версия этой функции с **_l** суффиксом идентичны, за исключением того, что она использует переданный параметр языкового стандарта вместо текущего языкового стандарта для его поведения, зависящего от языкового стандарта.
 
-### <a name="generic-text-routine-mappings"></a>Универсальное текстовое сопоставление функций
+### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
 |Подпрограмма TCHAR.H|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|------------------------------------|--------------------|-----------------------|

@@ -1,10 +1,6 @@
 ---
-title: tan, tanf, tanl | Документы Microsoft
-ms.custom: ''
+title: tan, tanf, tanl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tan
 - tanf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanf
 - _tanl
 - tanl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanl function
 - _tanl function
@@ -38,18 +32,14 @@ helpviewer_keywords:
 - tanf function
 - trigonometric functions
 ms.assetid: 36cc0ce8-9c80-4653-b354-ddb3b378b6bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6c0108e6d72e35a253e31df6ec96cbff19113c0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 79a374142a914e8c2c7cf5c094d443b16e4bce88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564032"
 ---
-# <a name="tan-tanf-tanl"></a>tan tanf, tanl
+# <a name="tan-tanf-tanl"></a>tan, tanf, tanl
 
 Вычисляет тангенс.
 
@@ -73,7 +63,7 @@ long double tan( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Tan** функции возвращают тангенс *x*. Если *x* больше или равно 263 или меньше чем или равно -263 потере значимости результата.
+**Tan** функции возвращают тангенс *x*. Если *x* больше или равно 263 или меньше или равно -263, происходит потеря значимости результата.
 
 |Входные данные|Исключение SEH|**Matherr** исключение|
 |-----------|-------------------|-------------------------|
@@ -82,7 +72,7 @@ long double tan( long double x );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **tan** , принимающие и возвращающие **float** или **длинные** **двойные** значения. В программе на языке C **tan** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **tan** , принимающие и возвращающие **float** или **long** **двойные** значения. В программе на языке C **tan** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

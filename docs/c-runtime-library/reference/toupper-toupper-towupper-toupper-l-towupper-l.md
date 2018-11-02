@@ -1,10 +1,6 @@
 ---
-title: toupper, _toupper, towupper, _toupper_l, _towupper_l | Документы Майкрософт
-ms.custom: ''
+title: toupper, _toupper, towupper, _toupper_l, _towupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _toupper_l
 - towupper
@@ -29,8 +25,6 @@ f1_keywords:
 - _toupper
 - _totupper
 - toupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - _toupper function
 - towupper function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73157691cc1635d038339d9fe707aa535e1df93f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608923"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper, _toupper, towupper, _toupper_l, _towupper_l
 
@@ -96,17 +86,17 @@ int _towupper_l(
 
 Каждая из этих подпрограмм преобразует копию *c*, если это возможно и возвращает результат.
 
-Если *c* — расширенный символ, для которого **iswlower** отлично от нуля и соответствующий расширенный символ, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) отлично от нуля, **towupper** возвращает соответствующий расширенный символ; в противном случае **towupper** возвращает *c* без изменений.
+Если *c* представляет собой расширенный символ, для которого **iswlower** имеет ненулевое значение и существует соответствующий расширенный символ, для которого [iswupper](isupper-isupper-l-iswupper-iswupper-l.md) не равно нулю, **towupper** возвращает соответствующий расширенный символ; в противном случае **towupper** возвращает *c* без изменений.
 
 Возвращаемое значение для указания ошибки не зарезервировано.
 
-Для того, **toupper** для предоставления ожидаемых результатов [__isascii](isascii-isascii-iswascii.md) и [islower](islower-iswlower-islower-l-iswlower-l.md) должны оба возвращают ненулевое значение.
+Чтобы **toupper** давала ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [islower](islower-iswlower-islower-l-iswlower-l.md) должны возвращать ненулевое значение.
 
 ## <a name="remarks"></a>Примечания
 
-Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование регистра **towupper** зависит от языкового стандарта. Изменяются только символы, соответствующие текущему языковому стандарту. Функции без **_l** суффикс используют текущий языковой языкового стандарта. Версии этих функций с **_l** суффикс принимают в качестве параметра языковой стандарт и использовать его вместо текущего языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Каждая из этих подпрограмм преобразует указанную строчную букву в прописную, если это возможно и уместно. Преобразование регистра **towupper** является языковым стандартом. Изменяются только символы, соответствующие текущему языковому стандарту. Функции, не имеющие **_l** суффикс используют текущий языковой языкового стандарта. Версии этих функций с **_l** суффикс, принимают языковой стандарт как параметр и использовать его вместо текущего языкового языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
-Для того, **toupper** для предоставления ожидаемых результатов [__isascii](isascii-isascii-iswascii.md) и [isupper](isupper-isupper-l-iswupper-iswupper-l.md) должны оба возвращают ненулевое значение.
+Чтобы **toupper** давала ожидаемые результаты, [__isascii](isascii-isascii-iswascii.md) и [isupper](isupper-isupper-l-iswupper-iswupper-l.md) должны возвращать ненулевое значение.
 
 [Процедуры преобразования данных](../../c-runtime-library/data-conversion.md)
 
@@ -118,7 +108,7 @@ int _towupper_l(
 |**_totupper_l**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l** и **_towupper_l** не зависят от языкового стандарта и не предназначен для непосредственного вызова. Они предназначены для внутреннего использования **_totupper_l**.
+> **_toupper_l** и **_towupper_l** не зависят от языкового стандарта и не предназначены для непосредственного вызова. Они предназначены для внутреннего использования **_totupper_l**.
 
 ## <a name="requirements"></a>Требования
 
