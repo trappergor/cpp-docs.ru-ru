@@ -1,10 +1,6 @@
 ---
-title: difftime, _difftime32, _difftime64 | Документы Майкрософт
-ms.custom: ''
+title: difftime, _difftime32, _difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398725"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505954"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime, _difftime32, _difftime64
 
@@ -71,15 +61,15 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**difftime** возвращает общее затраченное время в секундах от *значению timeStart* для *timeEnd*. Возвращаемое значение представляет собой число двойной точности с плавающей запятой. Возвращаемое значение может быть равно 0, что указывает на ошибку.
+**difftime** возвращает затраченное время в секундах от *значению timeStart* для *timeEnd*. Возвращаемое значение представляет собой число двойной точности с плавающей запятой. Возвращаемое значение может быть равно 0, что указывает на ошибку.
 
 ## <a name="remarks"></a>Примечания
 
-**Difftime** функция вычисляет разницу между двумя значениями времени, предоставленного *значению timeStart* и *timeEnd*.
+**Difftime** функция вычисляет разницу между двумя значениями времени, заданными *значению timeStart* и *timeEnd*.
 
-Указанное значение времени должен лежать в диапазоне от **time_t**. **time_t** — 64-разрядное значение. В связи с этим конец диапазона был увеличен с 23:59:59 18-го января 2038 года, UTC до 23:59:59 31-го декабря 3000 года. Ниже диапазона **time_t** по-прежнему полуночи 1 января 1970 года.
+Указанное значение времени должно попадать в диапазон **time_t**. **time_t** является 64-разрядное значение. В связи с этим конец диапазона был увеличен с 23:59:59 18-го января 2038 года, UTC до 23:59:59 31-го декабря 3000 года. Нижняя граница диапазона **time_t** по-прежнему полуночи 1 января 1970 года.
 
-**difftime** — это встраиваемая функция, результатом которого является либо **_difftime32** или **_difftime64** в зависимости от того, следует ли **_USE_32BIT_TIME_T** определен. _difftime32 и _difftime64 можно использовать для принудительного применения определенного размера типа времени.
+**difftime** — это встроенная функция, которая вычисляет либо **_difftime32** или **_difftime64** зависимости **_USE_32BIT_TIME_T** определен. _difftime32 и _difftime64 можно использовать для принудительного применения определенного размера типа времени.
 
 Эти функции проверяют свои параметры. Если один из параметров имеет нулевое или отрицательное значение, вызывается обработчик недопустимых параметров, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, эти функции возвращают 0 и задайте **errno** для **EINVAL**.
 
