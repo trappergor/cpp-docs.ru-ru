@@ -1,11 +1,6 @@
 ---
-title: _Cbuild _FCbuild, _LCbuild | Документы Microsoft
-ms.custom: ''
+title: _Cbuild, _FCbuild, _LCbuild
 ms.date: 03/30/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _Cbuild
 - _FCbuild
@@ -30,26 +25,20 @@ f1_keywords:
 - complex/_Cbuild
 - complex/_FCbuild
 - complex/_LCbuild
-dev_langs:
-- C++
 helpviewer_keywords:
 - _Cbuild function
 - _FCbuild function
 - _LCbuild function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c6d567dc02715b9e55644b755b6d7360f2fe3d37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5565c87a3cccd1715a1357f417238587f3fba4d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394391"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511804"
 ---
-# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild _FCbuild, _LCbuild
+# <a name="cbuild-fcbuild-lcbuild"></a>_Cbuild, _FCbuild, _LCbuild
 
-Строит комплексное число из вещественной и мнимой частей.
+Создает комплексное число из вещественной и мнимой частей.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -69,11 +58,11 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Объект **_Dcomplex**, **_Fcomplex**, или **_Lcomplex** структуру, которая представляет комплексное число (*реальные*, *мнимой*  \* я) для значения заданного типа с плавающей запятой.
+Объект **_Dcomplex**, **_Fcomplex**, или **_Lcomplex** структуру, которая представляет комплексное число (*реальных*, *мнимой*  \* я) для значений указанного типа с плавающей запятой.
 
 ## <a name="remarks"></a>Примечания
 
-**_Cbuild**, **_FCbuild**, и **_LCbuild** функции упрощают создание сложных типов. Используйте [creal crealf, creall](creal-crealf-creall.md) и [cimag cimagf, cimagl](cimag-cimagf-cimagl.md) функции для получения действительной и мнимой частей представленном комплексных чисел.
+**_Cbuild**, **_FCbuild**, и **_LCbuild** функции упрощают создание сложных типов. Используйте [creal, crealf, creall](creal-crealf-creall.md) и [cimag, cimagf, cimagl](cimag-cimagf-cimagl.md) функции извлечения и действительная и мнимая части представлен комплексных чисел.
 
 ## <a name="requirements"></a>Требования
 
@@ -81,7 +70,7 @@ _Lcomplex _LCbuild( long double real, long double imaginary );
 |-------------|--------------|------------------|
 |**_Cbuild**, **_FCbuild**, **_LCbuild**|\<complex.h>|\<ccomplex>|
 
-Эти функции зависят от корпорации Майкрософт. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** , характерные для Майкрософт эквиваленты нереализованные C99 собственные типы **двойные _Complex** , **float _Complex**, и **long double _Complex**соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
+Эти функции зависят от Microsoft. Типы **_Dcomplex**, **_Fcomplex**, и **_Lcomplex** характерные для Майкрософт эквивалентов в Нереализованная собственные типы C99 **double _Complex** , **float _Complex**, и **long double _Complex**, соответственно. Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

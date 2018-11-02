@@ -1,10 +1,6 @@
 ---
-title: Класс CWinThread | Документация Майкрософт
-ms.custom: ''
+title: Класс CWinThread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinThread
 - AFXWIN/CWinThread
@@ -30,8 +26,6 @@ f1_keywords:
 - AFXWIN/CWinThread::m_nThreadID
 - AFXWIN/CWinThread::m_pActiveWnd
 - AFXWIN/CWinThread::m_pMainWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinThread [MFC], CWinThread
 - CWinThread [MFC], CreateThread
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477328"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 
@@ -81,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Создает объект `CWinThread`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Функцию CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|
@@ -100,7 +90,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::PreTranslateMessage](#pretranslatemessage)|Фильтрует сообщения перед их отправкой в функции Windows [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).|
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|Перехватывает определенных сообщений, прежде чем они достигнут приложения.|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|Перехватывает все необработанные исключения, порождаемые потока сообщений и обработчиков команд.|
-|[CWinThread::PumpMessage](#pumpmessage)|содержит цикл обработки сообщений потока.|
+|[CWinThread::PumpMessage](#pumpmessage)|Содержит цикл обработки сообщений потока.|
 |[CWinThread::ResumeThread](#resumethread)|Счетчик приостановок уменьшающийся потока.|
 |[CWinThread::Run](#run)|Управление функции для потоков с помощью механизма обработки сообщений. Переопределите, чтобы настроить цикл обработки сообщений по умолчанию.|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|Задает приоритет текущего потока.|
@@ -108,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Указывает, следует ли уничтожать объект, находящийся в завершение потока.|
 |[CWinThread::m_hThread](#m_hthread)|Дескриптор текущего потока.|
@@ -545,7 +535,7 @@ virtual LRESULT ProcessWndProcException(
 
 ##  <a name="pumpmessage"></a>  CWinThread::PumpMessage
 
-содержит цикл обработки сообщений потока.
+Содержит цикл обработки сообщений потока.
 
 ```
 virtual BOOL PumpMessage();

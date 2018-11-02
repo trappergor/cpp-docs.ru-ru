@@ -1,27 +1,17 @@
 ---
-title: '&lt;forward_list&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;forward_list&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <forward_list>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a23fef80dd55e6c532df10cf64871849beda9bd
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33844475"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597695"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
@@ -37,8 +27,8 @@ ms.locfileid: "33844475"
 
 |Оператор|Описание|
 |-|-|
-|[оператор==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
-|[оператор!=](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
+|[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
+|[operator!=](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
 |[оператор<](../standard-library/forward-list-operators.md#op_lt)|Проверяет, меньше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|
 |[оператор<=](../standard-library/forward-list-operators.md#op_lt_eq)|Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.|
 |[оператор>](../standard-library/forward-list-operators.md#op_gt)|Проверяет, больше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.|

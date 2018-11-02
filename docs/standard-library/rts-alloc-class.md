@@ -1,33 +1,23 @@
 ---
-title: Класс rts_alloc | Документы Майкрософт
-ms.custom: ''
+title: Класс rts_alloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::rts_alloc
 - allocators/stdext::rts_alloc::allocate
 - allocators/stdext::rts_alloc::deallocate
 - allocators/stdext::rts_alloc::equals
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::rts_alloc
 - stdext::rts_alloc [C++], allocate
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4bff519ea12646e94e92cde219fa38e4009a767
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956462"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587269"
 ---
 # <a name="rtsalloc-class"></a>Класс rts_alloc
 
@@ -42,7 +32,7 @@ class rts_alloc
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Кэш*|Тип экземпляров кэша, содержащихся в массиве. Возможные типы: [Класс cache_chunklist](../standard-library/cache-chunklist-class.md), [cache_freelist](../standard-library/cache-freelist-class.md) или [cache_suballoc](../standard-library/cache-suballoc-class.md).|
 
@@ -52,7 +42,7 @@ class rts_alloc
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -74,7 +64,7 @@ void *allocate(std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*count*|Число элементов в массиве, которые нужно выделить.|
 
@@ -96,7 +86,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*ptr*|Указатель на первый объект, который необходимо освободить из хранилища.|
 |*count*|Количество объектов для освобождения из хранилища.|
@@ -115,7 +105,7 @@ bool equals(const sync<_Cache>& _Other) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*_Cache*|Объект кэша, связанный с фильтром.|
 |*_Другое*|Объект кэша для сравнения на равенство.|

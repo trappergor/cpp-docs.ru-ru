@@ -1,14 +1,8 @@
 ---
-title: 'Tn064 потоки изолированной: Потоковая модель с подразделением, в элементах управления ActiveX | Документация Майкрософт'
-ms.custom: ''
+title: TN064. Потоки изолированной модели в элементах управления ActiveX
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.activex
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE controls [MFC], container support
 - containers [MFC], multithreaded
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - multithread container [MFC]
 - apartment model threading [MFC]
 ms.assetid: b2ab4c88-6954-48e2-9a74-01d4a60df073
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e65396b4046ae6afc27e5de8223f6f46e274a10
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 37f8af1e4bd0fedf0b1ab14a90afdda3916c5391
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665565"
 ---
 # <a name="tn064-apartment-model-threading-in-activex-controls"></a>TN064. Потоки изолированной модели в элементах управления ActiveX
 

@@ -1,10 +1,6 @@
 ---
-title: rint, rintf, rintl | Документы Майкрософт
-ms.custom: ''
+title: rint, rintf, rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407292"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609486"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -68,7 +58,7 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**Rint** функции возвращают значение с плавающей запятой, представляющий ближайшее целое число *x*. Промежуточные значения округляются согласно текущей настройке с плавающей запятой режим округления, таким же, как **nearbyint** функции. В отличие от **nearbyint** функции, **rint** могут вызывать **FE_INEXACT** исключений с плавающей запятой, если результат отличается от аргумента. Ошибка не возвращается.
+**Rint** функции возвращают значение с плавающей запятой, представляющий ближайшее целое число *x*. Промежуточные значения округляются согласно текущей настройке с плавающей запятой режим округления, так же, как **nearbyint** функции. В отличие от **nearbyint** функции, **rint** могут вызывать **FE_INEXACT** исключения с плавающей запятой, если результат отличается в значении из аргумента. Ошибка не возвращается.
 
 |Ввод|Исключение SEH|**_matherr** исключение|
 |-----------|-------------------|--------------------------|
@@ -77,7 +67,7 @@ long double rint( long double x );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Поскольку C++ допускает перегрузку, можно вызывать перегрузки **rint** , принимающие и возвращающие **float** и **длинные** **двойные** значения. В программе на языке C **rint** всегда принимает и возвращает **двойные**.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **rint** , принимающие и возвращающие **float** и **long** **двойные** значения. В программе на языке C **rint** всегда принимает и возвращает **двойные**.
 
 ## <a name="requirements"></a>Требования
 

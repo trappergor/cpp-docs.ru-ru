@@ -1,31 +1,21 @@
 ---
-title: Двоичные выходные файлы | Документы Майкрософт
-ms.custom: ''
+title: Двоичные выходные файлы
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842356"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615650"
 ---
 # <a name="binary-output-files"></a>Двоичные выходные файлы
 
-Потоки изначально были разработаны для текста, поэтому по умолчанию установлен режим вывода текста. В текстовом режиме символ перевода строки (шестнадцатеричное 10) расширяется для возврата каретки (только 16-разрядный). Расширение может вызвать проблемы, как показано ниже:
+Потоки изначально были разработаны для текста, поэтому по умолчанию установлен режим вывода текста. В текстовом режиме символ перевода строки (шестнадцатеричное 10) расширяется возврата каретки (16-разрядная версия только). Расширение может вызвать проблемы, как показано ниже:
 
 ```cpp
 // binary_output_files.cpp

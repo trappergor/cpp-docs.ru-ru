@@ -1,28 +1,18 @@
 ---
-title: __svm_vmrun | Документация Майкрософт
-ms.custom: ''
+title: __svm_vmrun
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_vmrun
-dev_langs:
-- C++
 helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 718aba9b5ffe54edd3e9e960bd0530cd7b526b09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394842"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603567"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -48,7 +38,7 @@ void __svm_vmrun(
 
 `__svm_vmrun` Функция использует минимальный объем сведений в VMCB, чтобы начать выполнение кода гостевой виртуальной машины. Используйте [__svm_vmsave](../intrinsics/svm-vmsave.md) или [__svm_vmload](../intrinsics/svm-vmload.md) работать, если вам требуется больше информации для обработки сложных прерывания или переключиться на другой виртуальной машины.
 
-`__svm_vmrun` Функция эквивалентна `VMRUN` инструкции компьютера. Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Функция `__svm_vmrun` эквивалентна инструкции компьютера `VMRUN` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 

@@ -1,10 +1,6 @@
 ---
-title: towctrans | Документы Майкрософт
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561412"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -61,11 +51,11 @@ wint_t towctrans(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Символ *c*после того, как **towctrans** использовала правило преобразования в *категории*.
+Символ *c*после **towctrans** использовала правило преобразования в *категории*.
 
 ## <a name="remarks"></a>Примечания
 
-Значение *категории* должен быть возвращен с ранее успешного вызова [wctrans](wctrans.md).
+Значение *категории* должен быть возвращен с предыдущим успешным вызовом к [wctrans](wctrans.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -77,7 +67,7 @@ wint_t towctrans(
 
 ## <a name="example"></a>Пример
 
-В разделе **wctrans** пример, использующий **towctrans**.
+См. в разделе **wctrans** пример, использующий **towctrans**.
 
 ## <a name="see-also"></a>См. также
 

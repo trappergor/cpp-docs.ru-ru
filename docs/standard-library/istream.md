@@ -1,29 +1,19 @@
 ---
-title: '&lt;istream&gt; | Документы Майкрософт'
-ms.custom: ''
+title: '&lt;istream&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - istream/std::<istream>
 - <istream>
 - std::<istream>
-dev_langs:
-- C++
 helpviewer_keywords:
 - istream header
 ms.assetid: efcf24e4-05d1-4719-ab0b-9e7ebe845d89
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7000bd30e34836466e9f662f9b6b0dd8f2ecde4c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: b61b843d31afc5eab5ded14f633667ddefe1dbe7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38956558"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582290"
 ---
 # <a name="ltistreamgt"></a>&lt;istream&gt;
 
@@ -38,7 +28,7 @@ ms.locfileid: "38956558"
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[iostream](../standard-library/istream-typedefs.md#iostream)|Тип `basic_iostream` специализированный на **char**.|
 |[istream](../standard-library/istream-typedefs.md#istream)|Тип `basic_istream` специализированный на **char**.|
@@ -54,13 +44,13 @@ ms.locfileid: "38956558"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[оператор>>](../standard-library/istream-operators.md#op_gt_gt)|Извлекает символы и строки из потока.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[basic_iostream](../standard-library/basic-iostream-class.md)|Класс потока, поддерживающий ввод и вывод.|
 |[basic_istream](../standard-library/basic-istream-class.md)|Класс шаблона описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока с элементами типа `Elem`, также известных как [char_type](../standard-library/basic-ios-class.md#char_type), признаки символов определяются классом `Tr`, также известных как [traits_type](../standard-library/basic-ios-class.md#traits_type).|
