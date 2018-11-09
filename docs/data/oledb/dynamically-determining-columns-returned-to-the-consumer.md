@@ -5,33 +5,34 @@ helpviewer_keywords:
 - bookmarks [C++], dynamically determining columns
 - dynamically determining columns [C++]
 ms.assetid: 58522b7a-894e-4b7d-a605-f80e900a7f5f
-ms.openlocfilehash: 0d01fdac1a64bee62bd7227f4efac8650ff635b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7db319aa153cb281c8fd8b4eec16972f5ac0c2c9
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428384"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265182"
 ---
 # <a name="dynamically-determining-columns-returned-to-the-consumer"></a>Динамично определяемые столбцы, возвращенные объекту-получателю
 
 PROVIDER_COLUMN_ENTRY в обычном режиме обработки `IColumnsInfo::GetColumnsInfo` вызова. Тем не менее так как объект-получатель может предпочесть использование закладок, поставщик должен иметь возможность изменять столбцы, возвращаемые в зависимости от того, является ли потребитель запрашивает закладку.
 
-Для обработки `IColumnsInfo::GetColumnsInfo` вызова, удалите PROVIDER_COLUMN_MAP, которая определяет функцию `GetColumnInfo`, из `CAgentMan` пользователя записи в CustomRS.h и замените его определение собственных `GetColumnInfo` функции:
+Для обработки `IColumnsInfo::GetColumnsInfo` вызова, удалите PROVIDER_COLUMN_MAP, которая определяет функцию `GetColumnInfo`, из `CCustomWindowsFile` запись пользователя в *Custom*RS.h и замените его определение собственных `GetColumnInfo` функция:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // CustomRS.H
-class CAgentMan
+class CCustomWindowsFile
 {
 public:
    DWORD dwBookmark;
-   TCHAR szCommand[256];
-   TCHAR szText[256];
-   TCHAR szCommand2[256];
-   TCHAR szText2[256];
+   static const int iSize = 256;
+   TCHAR szCommand[iSize];
+   TCHAR szText[iSize];
+   TCHAR szCommand2[iSize];
+   TCHAR szText2[iSize];
   
    static ATLCOLUMNINFO* GetColumnInfo(void* pThis, ULONG* pcCols);
-   bool operator==(const CAgentMan& am)
+   bool operator==(const CCustomWindowsFile& am)
    {
       return (lstrcmpi(szCommand, am.szCommand) == 0);
    }
@@ -47,14 +48,14 @@ public:
 ```cpp
 ////////////////////////////////////////////////////////////////////
 // CustomRS.cpp
-ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
+ATLCOLUMNINFO* CCustomWindowsFile::GetColumnInfo(void* pThis, ULONG* pcCols)
 {
    static ATLCOLUMNINFO _rgColumns[5];
    ULONG ulCols = 0;
   
    // Check the property flag for bookmarks; if it is set, set the zero 
    // ordinal entry in the column map with the bookmark information.
-   CAgentRowset* pRowset = (CAgentRowset*) pThis;
+   CCustomRowset* pRowset = (CCustomRowset*) pThis;
    CComQIPtr<IRowsetInfo, &IID_IRowsetInfo> spRowsetProps = pRowset;
   
    CDBPropIDSet set(DBPROPSET_ROWSET);
@@ -75,7 +76,7 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
       if (SUCCEEDED(hr) && (var.boolVal == VARIANT_TRUE))
       {
          ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD), 
-         DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark, 
+         DBTYPE_BYTES, 0, 0, GUID_NULL, CCustomWindowsFile, dwBookmark, 
          DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
@@ -83,17 +84,17 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
   
    // Next, set the other columns up.
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command"), 1, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand)
+      GUID_NULL, CCustomWindowsFile, szCommand)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text"), 2, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText)
+      GUID_NULL, CCustomWindowsFile, szText)
    ulCols++;
   
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Command2"), 3, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szCommand2)
+      GUID_NULL, CCustomWindowsFile, szCommand2)
    ulCols++;
    ADD_COLUMN_ENTRY(ulCols, OLESTR("Text2"), 4, 256, DBTYPE_STR, 0xFF, 0xFF, 
-      GUID_NULL, CAgentMan, szText2)
+      GUID_NULL, CCustomWindowsFile, szText2)
    ulCols++;
   
    if (pcCols != NULL)
@@ -106,12 +107,43 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(void* pThis, ULONG* pcCols)
 В этом примере использует статического массива для хранения данных столбца. Если потребитель не столбец закладки, одна запись в массиве не используется. Обрабатывать эти данные, создайте два массива макроса: ADD_COLUMN_ENTRY и ADD_COLUMN_ENTRY_EX. ADD_COLUMN_ENTRY_EX дополнительным параметром, *флаги*, который требуется при указании столбца закладки.
 
 ```cpp
+////////////////////////////////////////////////////////////////////////  
+// CustomRS.h  
+  
+#define ADD_COLUMN_ENTRY(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = 0; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member);  
+  
+#define ADD_COLUMN_ENTRY_EX(ulCols, name, ordinal, colSize, type, precision, scale, guid, dataClass, member, flags) \  
+   _rgColumns[ulCols].pwszName = (LPOLESTR)name; \  
+   _rgColumns[ulCols].pTypeInfo = (ITypeInfo*)NULL; \  
+   _rgColumns[ulCols].iOrdinal = (ULONG)ordinal; \  
+   _rgColumns[ulCols].dwFlags = flags; \  
+   _rgColumns[ulCols].ulColumnSize = (ULONG)colSize; \  
+   _rgColumns[ulCols].wType = (DBTYPE)type; \  
+   _rgColumns[ulCols].bPrecision = (BYTE)precision; \  
+   _rgColumns[ulCols].bScale = (BYTE)scale; \  
+   _rgColumns[ulCols].cbOffset = offsetof(dataClass, member); \  
+   memset(&(_rgColumns[ulCols].columnid), 0, sizeof(DBID)); \  
+   _rgColumns[ulCols].columnid.uName.pwszName = (LPOLESTR)name;  
+```
+
+В `GetColumnInfo` функции, макрос закладки используется следующим образом:
+
+```cpp
 ADD_COLUMN_ENTRY_EX(ulCols, OLESTR("Bookmark"), 0, sizeof(DWORD),
    DBTYPE_BYTES, 0, 0, GUID_NULL, CAgentMan, dwBookmark,
    DBCOLUMNFLAGS_ISBOOKMARK)
 ```
 
-Теперь можно скомпилировать и запустить усовершенствованный поставщик. Чтобы протестировать поставщика, измените тестовый объект-получатель, как описано в [реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md). Выполните тестовый объект-получатель для поставщика. Убедитесь, что тестовый объект-получатель получает соответствующие строки от поставщика, при нажатии кнопки **запуска** кнопку **тестовый объект-получатель** диалоговое окно.
+Теперь можно скомпилировать и запустить усовершенствованный поставщик. Чтобы протестировать поставщика, измените тестовый объект-получатель, как описано в [реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md). Запустите тестовый объект-получатель с поставщиком и убедитесь, что тестовый объект-получатель получает соответствующие строки от поставщика.
 
 ## <a name="see-also"></a>См. также
 

@@ -1,12 +1,6 @@
 ---
-title: Хранение базовых типов | Документация Майкрософт
-ms.custom: ''
+title: Хранение базовых типов
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - specifiers [C++], type
 - integral types, storage
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - unsigned types [C++], storage
 - data types [C], storage
 ms.assetid: bd1f33c1-c6b9-4558-8a72-afb21aef3318
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 14c8483671e806adb9170429f2e17d4487de0cfd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fe6d3fb861143a44047e01f338282dbb0d10ffae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090494"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555003"
 ---
 # <a name="storage-of-basic-types"></a>Хранение базовых типов
 

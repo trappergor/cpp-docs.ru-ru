@@ -1,10 +1,6 @@
 ---
-title: __argc, __argv, __wargv | Документация Майкрософт
-ms.custom: ''
+title: __argc, __argv, __wargv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - __wargv
 - __argv
@@ -16,23 +12,17 @@ f1_keywords:
 - __argv
 - __argc
 - __wargv
-dev_langs:
-- C++
 helpviewer_keywords:
 - __argv
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fada373439f331ffc0db6af0972c77a92d6d5f57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062037"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575322"
 ---
 # <a name="argc-argv-wargv"></a>__argc, __argv, __wargv
 
@@ -64,7 +54,7 @@ extern wchar_t ** __wargv;
 |---------------------|---------------------|
 |`__argc`, `__argv`, `__wargv`|\<stdlib.h>, \<cstdlib> (C++)|
 
-`__argc`, `__argv` и `__wargv` являются расширениями Майкрософт. Дополнительные сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).
+`__argc`, `__argv` и `__wargv` являются расширениями Майкрософт. Сведения о совместимости см. в разделе [Совместимость](../c-runtime-library/compatibility.md).
 
 ## <a name="see-also"></a>См. также
 

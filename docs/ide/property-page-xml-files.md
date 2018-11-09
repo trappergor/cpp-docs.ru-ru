@@ -1,25 +1,15 @@
 ---
-title: XML-файлы правил для страниц свойств | Документы Майкрософт
-ms.custom: ''
+title: XML-файлы правил для страниц свойств
 ms.date: 04/27/2017
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page XML files
 ms.assetid: dd9d9734-4387-4098-8ba6-85b93507731d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28751a1e672c7b5dfcefe5f24a9248c9ded5ad82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2ce82cf13b9999102c5ac6df42ccb601e4e729
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467241"
 ---
 # <a name="property-page-xml-rule-files"></a>XML-файлы правил для страниц свойств
 

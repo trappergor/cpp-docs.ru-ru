@@ -4,47 +4,53 @@ ms.date: 10/26/2018
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: b1bc7ca74ce114f9d901fc5771a376df973f54a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54dfdb347c621cf6f8645feb6d13742f32503f9f
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652339"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264623"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Хранение строк в поставщике OLE DB
 
-В MyProviderRS.h **мастер поставщика ATL OLE DB** создает запись пользователя по умолчанию с именем `CWindowsFile`. Для обработки двух строк, измените `CWindowsFile` или добавьте собственную запись пользователя, как показано в следующем коде:
+В *Custom*RS.h, **мастер поставщика ATL OLE DB** создает запись пользователя по умолчанию с именем `CWindowsFile`. Для обработки двух строк, изменить `CWindowsFile` как показано в следующем коде:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
-class CAgentMan: 
+class CCustomWindowsFile:
    public WIN32_FIND_DATA
-   DWORD dwBookmark;              // Add this
-   TCHAR szCommand[256];          // Add this
-   TCHAR szText[256];             // Add this
-   TCHAR szCommand2[256];         // Add this
-   TCHAR szText2[256];            // Add this
-  
 {
 public:
-BEGIN_PROVIDER_COLUMN_MAP()
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command"), 1, 256, GUID_NULL, CAgentMan, szCommand)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text"), 2, 256, GUID_NULL, CAgentMan, szText) 
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Command2"), 3, 256, GUID_NULL, CAgentMan, szCommand2)
-   PROVIDER_COLUMN_ENTRY_STR(OLESTR("Text2"),4, 256, GUID_NULL, CAgentMan, szText2)
+DWORD dwBookmark;
+static const int iSize = 256;    // Add this
+TCHAR szCommand[iSize];          // Add this
+TCHAR szText[iSize];             // Add this
+TCHAR szCommand2[iSize];         // Add this
+TCHAR szText2[iSize];            // Add this
+
+BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+   PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
+   PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
+   PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
+   PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
+   PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
+
+   PROVIDER_COLUMN_ENTRY_STR("Command", 6, szCommand)    // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text", 7, szText)          // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Command2", 8, szCommand2)  // Add this
+   PROVIDER_COLUMN_ENTRY_STR("Text2", 9, szText2)        // Add this
 END_PROVIDER_COLUMN_MAP()
-   bool operator==(const CAgentMan& am) // This is optional 
+
+   bool operator==(const CCustomWindowsFile& am) // This is optional
    {
-      return (lstrcmpi(cFileName, wf.cFileName) == 0);
+      return (lstrcmpi(cFileName, am.cFileName) == 0);
    }
 };
 ```
 
 Члены данных `szCommand` и `szText` представляют две строки с `szCommand2` и `szText2` с дополнительными столбцами, при необходимости. Элемент данных `dwBookmark` не нужен для этого простого поставщика только для чтения, но будет использоваться позднее для добавления `IRowsetLocate` интерфейс; см. в разделе [Усовершенствование простого чтения только поставщика](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Оператор сравнивает экземпляры (реализация этот оператор является необязательным).
 
-Если это сделано, ваш поставщик должен быть готовым для компиляции и выполнения. Чтобы протестировать поставщика, требуется объект-получатель с соответствующими функциями. [Реализация простых объектов получателей](../../data/oledb/implementing-a-simple-consumer.md) показано создание объекта-получателя для тестирования. Выполните тестовый объект-получатель для поставщика. Убедитесь, что тестовый объект-получатель получает соответствующие строки от поставщика, при нажатии кнопки **запуска** кнопку **тестовый объект-получатель** диалоговое окно.
-
-После успешного тестирования поставщика можно расширить его функциональные возможности, реализовав дополнительные интерфейсы. Пример показан в [Усовершенствование простого поставщика только для чтения](../../data/oledb/enhancing-the-simple-read-only-provider.md).
+Если это сделано, можно добавить функциональные возможности [чтение строк в поставщике OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>См. также
 

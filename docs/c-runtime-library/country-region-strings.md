@@ -1,29 +1,19 @@
 ---
-title: Строки страны и региона | Документы Майкрософт
-ms.custom: ''
+title: Строки стран и регионов
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028393"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463470"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>строки страны и региона
 
 Строки страны и региона можно объединять со строкой с названием языка для создания спецификации языкового стандарта для функций `setlocale`, `_wsetlocale`, `_create_locale`и `_wcreate_locale` . Список названий стран и регионов, поддерживаемых разными версиями операционной системы Windows, см. в столбцах **Язык**, **Расположение** и **Тег языка** таблицы, которая приведена в [приложении A (поведение продуктов)](https://msdn.microsoft.com/library/cc233982.aspx) справочника по коду языка Windows. Пример кода для перечисления имен доступных языковых стандартов и связанных значений см. в руководстве по [многоязыковой поддержке с примером API на основе имени](/windows/desktop/intl/nls--name-based-apis-sample).
 

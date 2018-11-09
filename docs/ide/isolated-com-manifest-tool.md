@@ -1,28 +1,18 @@
 ---
-title: Свойства изолированной COM для инструмента манифеста (Visual C++) | Документы Майкрософт
-ms.custom: ''
+title: Свойства "Инструмент манифеста", "Изолированный COM" (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.RegistrarScriptFile
 - VC.Project.VCManifestTool.ComponentFileName
 - VC.Project.VCManifestTool.TypeLibraryFile
 - VC.Project.VCManifestTool.ReplacementsFile
-dev_langs:
-- C++
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb472ce082809a48dd3e42afd4481149eff3a28
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9eea3b2765bad6bd08cc9ee91a801e2b891511e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407562"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546535"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Диалоговое окно страниц свойств &lt;Имя_проекта&gt; "Свойства конфигурации", "Инструмент манифеста", "Изолированный COM"
 
@@ -55,6 +45,6 @@ ms.locfileid: "46407562"
 ## <a name="see-also"></a>См. также
 
 [Изолированные приложения](/windows/desktop/SbsCs/isolated-applications)<br>
-[Манифест приложения ClickOnce](/visualstudio/deployment/clickonce-application-manifest)<br>
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Страницы свойств инструмента манифеста](../ide/manifest-tool-property-pages.md)<br>
 [Работа со свойствами проектов](../ide/working-with-project-properties.md)

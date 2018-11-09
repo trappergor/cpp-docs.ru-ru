@@ -1,29 +1,19 @@
 ---
-title: Обработка файлов | Документы Майкрософт
-ms.custom: ''
+title: Обработка файлов
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.files
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], handling
 - files [C++], opening
 - files [C++], manipulating
 ms.assetid: 48119e2e-e94f-4602-b08b-b72440f731d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 085fc03677b4353aeb515a2f25dd0734935be442
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036362"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511882"
 ---
 # <a name="file-handling"></a>Обработка файлов
 
