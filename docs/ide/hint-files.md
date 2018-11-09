@@ -1,15 +1,9 @@
 ---
-title: Файлы указаний | Документы Майкрософт
-ms.custom: ''
+title: Файлы подсказок
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - cpp.hint
 - vc.hint.file
-dev_langs:
-- C++
 helpviewer_keywords:
 - stop file
 - cpp.hint
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b3ca7c6b09d85cddb519242e63af0b8097e3fec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558786"
 ---
 # <a name="hint-files"></a>Файлы подсказок
 
@@ -115,7 +105,7 @@ STDMETHOD(myMethod)(int parameter1);
 |`@>`|*Строка_замены* для конкретного файла указаний задает конец набора элементов схемы.|
 |`#undef` *имя_указания*|Директива препроцессора, удаляющая имеющее указание. Имя указания предоставляется идентификатором *имя_указания*.|
 |`//` *комментарий*|Однострочный комментарий.|
-|`/*` *comment* `*/`|Многострочный комментарий.|
+|`/*` *комментарий* `*/`|Многострочный комментарий.|
 
 ## <a name="what-macros-require-a-hint"></a>Каким макросам нужно указание?
 
