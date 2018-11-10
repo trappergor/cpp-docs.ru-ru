@@ -1,10 +1,6 @@
 ---
-title: Класс uniform_int_distribution | Документы Майкрософт
-ms.custom: ''
+title: Класс uniform_int_distribution
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::uniform_int_distribution
 - random/std::uniform_int_distribution::reset
@@ -19,8 +15,6 @@ f1_keywords:
 - random/std::uniform_int_distribution::param_type::b
 - random/std::uniform_int_distribution::param_type::operator==
 - random/std::uniform_int_distribution::param_type::operator!=
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::uniform_int_distribution [C++]
 - std::uniform_int_distribution [C++], reset
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c97b80031c60dabb22d3dfea905c9a46f7731f67
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716447"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676607"
 ---
 # <a name="uniformintdistribution-class"></a>Класс uniform_int_distribution
 

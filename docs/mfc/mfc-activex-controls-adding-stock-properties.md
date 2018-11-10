@@ -1,12 +1,6 @@
 ---
-title: 'Элементы ActiveX в MFC: Добавление стандартных свойств | Документация Майкрософт'
-ms.custom: ''
+title: Элементы управления ActiveX в MFC. Добавление стандартных свойств
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - BackColor property [MFC]
 - properties [MFC], adding stock
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055207"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607835"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы управления ActiveX в MFC. Добавление стандартных свойств
 
@@ -47,7 +37,7 @@ ms.locfileid: "50055207"
 
 ##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Используя мастер добавления свойства для добавления стандартных свойств
 
-Добавление стандартных свойств требует меньше кода, чем добавление пользовательских свойств, так как поддержка свойство обрабатывается автоматически в `COleControl`. Следующая процедура демонстрирует добавление хранения свойство Caption כולוםע סענףךעףנ элемента управления ActiveX и также может использоваться для добавления других стандартных свойств. Замените имя выбранного стандартное свойство для заголовка.
+Добавление стандартных свойств требует меньше кода, чем добавление пользовательских свойств, так как поддержка свойство обрабатывается автоматически в `COleControl`. Следующая процедура демонстрирует добавление хранения свойство Caption элемента управления ActiveX и также может использоваться для добавления других стандартных свойств. Замените имя выбранного стандартное свойство для заголовка.
 
 #### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Чтобы добавить стандартное свойство Caption, с помощью мастера добавления свойства
 
