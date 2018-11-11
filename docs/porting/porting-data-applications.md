@@ -1,12 +1,6 @@
 ---
-title: Перенос приложений для обработки данных | Microsoft Docs
-ms.custom: ''
+title: Перенос приложений для обработки данных
 ms.date: 05/12/2017
-ms.technology:
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51b041c60cd1bb8f866a6174e3cbb41ad613acc0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccdd4c05537991ab7605d29c6d2eba1a22851a10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078171"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663935"
 ---
 # <a name="porting-data-applications"></a>Перенос приложений для обработки данных
 С течением времени в Visual C++ появлялись различные способы работы с базами данных. В 2011 г. корпорация Майкрософт объявила о том, что интерфейс ODBC теперь станет предпочтительной технологией для доступа к продуктам SQL Server из машинного кода. ODBC является отраслевым стандартом, и его использование гарантирует максимально простой перенос кода под различные платформы и источники данных. ODBC поддерживается большинством продуктов SQL для работы с базами данных и многими продуктами NoSQL. Его можно использовать напрямую путем вызова низкоуровневых API-интерфейсов ODBC, либо можно использовать классы-оболочки MFC или сторонние библиотеки-оболочки C++.

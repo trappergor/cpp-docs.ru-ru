@@ -1,12 +1,6 @@
 ---
-title: Алгоритмы | Документы Майкрософт
-ms.custom: ''
+title: Алгоритмы
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648036"
 ---
 # <a name="algorithms"></a>Алгоритмы
 
@@ -35,7 +25,7 @@ ms.locfileid: "50063033"
 
 - Фраза "в диапазоне \[ *объект*, *B*)» означает последовательность из нуля или более дискретных значений, начиная с версии *объект* до, но не включая *B* . Диапазон является допустимым только если *B* доступен с *A;* можно хранить *объект* в объекте *N* (*N*  =  *Объект*), увеличить объект ноль или более раз (++*N*), и объект равны *B* после конечного числа увеличивает (*N*   ==  *B*).
 
-- Фраза "каждый *N* в диапазоне \[ *объект*, *B*)» означает, что *N* начинается со значения ** и приращивается ноль или более раз, пока не будет равно значению *B*. Случай N** == B* не находится в диапазоне.
+- Фраза "каждый *N* в диапазоне \[ *объект*, *B*)» означает, что *N* начинается со значения *A*и приращивается ноль или более раз, пока не будет равно значению *B*. Случай N* == *B* не находится в диапазоне.
 
 - Фраза "наименьшее значение *N* в диапазоне \[ *объект*, *B*) таким образом, чтобы *X*" означает, что условие *X* определяется для каждого *N* в диапазоне \[ *объект*, *B*) вплоть до выполнения условия *X*удовлетворяется.
 
