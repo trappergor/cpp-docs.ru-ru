@@ -1,27 +1,17 @@
 ---
-title: Диалоговое окно "Добавление класса" | Документы Майкрософт
-ms.custom: ''
+title: Диалоговое окно "Добавление класса"
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - vc.addclass
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add Class dialog box
 ms.assetid: 916259b8-8e5f-4267-bd10-313483beba67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f1eb848ae20ba9a587bfdf14881e1a3df3bbeb31
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 405f88f7f77ea75584ec3cfd76af1ea9a0457ed6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420287"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643200"
 ---
 # <a name="add-class-dialog-box"></a>Диалоговое окно "Добавление класса"
 
@@ -33,7 +23,7 @@ ms.locfileid: "46420287"
 
 - Автоматически создать новый класс, добавив в проект соответствующие файлы и исходный код.
 
-Перейти к диалоговому окну **Добавление класса** можно из меню **Проект**, **обозревателя решений** или [представления классов](/visualstudio/ide/viewing-the-structure-of-code).
+Перейти к диалоговому окну **Добавление класса** можно из меню **Проект** , **обозревателя решений**или [представления классов](/visualstudio/ide/viewing-the-structure-of-code).
 
 > [!NOTE]
 >  При попытке добавить класс, который не подходит для текущего проекта, вы получите сообщение об ошибке. Нажмите кнопку **ОК** , чтобы вернуться в диалоговое окно **Добавление класса** .
