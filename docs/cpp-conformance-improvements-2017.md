@@ -1,23 +1,19 @@
 ---
-title: Улучшения соответствия C++ | Документы Майкрософт
-ms.custom: ''
-ms.date: 08/15/2018
+title: Улучшение соответствия C++
+ms.date: 10/31/2018
 ms.technology:
 - cpp-language
-ms.topic: conceptual
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5661ff0debb3d06947e5b8ff686cc049ebe68fee
-ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
+ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50204747"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524257"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158)
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Улучшения соответствия C++ в Visual Studio 2017 версий 15.0, [15.3](#improvements_153), [15.5](#improvements_155), [15.6](#improvements_156), [15.7](#improvements_157), [15.8](#update_158), [15.9](#update_159)
 
 Благодаря поддержке обобщенных constexpr и NSDMI для статистических выражений, компилятор Microsoft Visual C++ теперь включает все функции, добавленные в стандарте C++14. Обратите внимание, что в компиляторе по-прежнему отсутствует несколько функций из стандартов C++11 и C++98. Сведения о текущем состоянии компилятора см. в статье [Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md).
 
@@ -227,9 +223,9 @@ B b(42L); // now calls B(int)
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +243,9 @@ Derived d2 {}; // OK in C++14: Calls Derived::Derived()
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -341,7 +337,7 @@ void bar(A<0> *p)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html). Изменения в функциях-членах `std::traits_type` `length`, `compare` и `find`, чтобы `std::string_view` можно было использовать в константных выражениях. (В Visual Studio 2017 версии 15.6 поддерживается только для Clang/LLVM. В версии 15.7, предварительная версия 2, почти полная поддержка и для ClXX.)
 
-## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-and-158update158"></a>Исправления ошибок в Visual Studio версий 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157) и [15.8](#update_158)
+## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Исправления ошибок в Visual Studio версий 15.0, [15.3](#update_153), [15.5](#update_155), [15.7](#update_157), [15.8](#update_158) и [15.9](#update_159)
 
 ### <a name="copy-list-initialization"></a>Инициализация копии списка
 
@@ -1375,7 +1371,7 @@ struct B : A {
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1604,7 +1600,6 @@ int main() {
     };
     return 0;
 }
-
 ```
 
 В Visual Studio 2017 версии 15.7 с обновлением 3 и более поздних версий в предыдущий пример добавляется *C2078 too many initializers*. В приведенном ниже примере показано, как исправить код. При инициализации `std::array`, когда используются вложенные списки инициализации в скобках, укажите для внутреннего массива собственный вложенный список в скобках:
@@ -1623,7 +1618,6 @@ int main() {
     }}; // note double braces
     return 0;
 }
-
 ```
 
 ## <a name="update_158"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 15.8
@@ -1679,7 +1673,6 @@ struct S : Base<T> {
         return base_value;
     }
 };
-
 ```
 
 Чтобы исправить эту ошибку, измените инструкцию `return` на `return this->base_value;`.
@@ -1832,6 +1825,155 @@ struct X : Base<T>
         Base<T>::template foo<int>();
     }
 };
+```
+## <a name="update_159"></a> Исправления ошибок и изменения в поведении в Visual Studio 2017 версии 15.9
+
+### <a name="identifiers-in-member-alias-templates"></a>Идентификаторы в шаблонах псевдонимов членов
+Идентификатор, используемый в определении шаблона псевдонима члена, должен быть объявлен до использования. 
+
+В предыдущих версиях компилятора допускался следующий код:
+
+```cpp
+template <typename... Ts>
+struct A
+{
+  public:
+    template <typename U>
+    using from_template_t = decltype(from_template(A<U>{}));
+
+  private:
+    template <template <typename...> typename Type, typename... Args>
+    static constexpr A<Args...> from_template(A<Type<Args...>>);
+
+};
+
+A<>::from_template_t<A<int>> a;
+```
+
+В Visual Studio 2017 версии 15.9 в режиме **/permissive-** выводится ошибка компилятора C3861: *from_template: идентификатор не найден*.d
+
+Чтобы устранить эту ошибку, объявите `A` перед `a`.
+
+### <a name="modules-changes"></a>Изменения модулей
+
+В Visual Studio 2017 версии 15.9 компилятор выводит ошибку C5050, если на сторонах создания и потребления используются несогласованные параметры командной строки для модулей. В следующем примере показаны две проблемы:
+
+- на стороне потребления (main.cpp) не указан параметр **/EHsc**;
+- на стороне создания используется версия C++ **/std:c++17**, а на стороне потребления — **/std:c++14**. 
+
+```cmd
+cl /EHsc /std:c++17 m.ixx /experimental:module
+cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
+```
+
+В обоих случаях компилятор выводит ошибку C5050: *Предупреждение C5050: возможна несовместимая среда при импорте модуля m: несоответствующие версии C++.  Несоответствие версий модуля — "201402" и "201703"*.
+
+Кроме того, компилятор выдает ошибку C7536 при каждом изменении IFC-файла. Заголовок интерфейса модуля содержит хэш SHA2 содержимого. При импорте IFC-файл хэшируется точно так же и проверяется на соответствие хэшу в заголовке. В случае несовпадения возникает ошибка C7536: *ifc не прошел проверку целостности.  Ожидаемый хэш SHA2: "66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6"*.
+
+### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>Частичное упорядочение с использованием псевдонимов и невыведенных контекстов
+
+В правилах частичного упорядочения, использующих псевдонимы в невыведенных контекстах, существует расхождение реализации. В следующем примере GCC и компилятор Microsoft C++ (в режиме **/permissive-**) выводят ошибку, тогда как Clang принимает код. 
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <class T, class Alloc>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
+```
+
+В предыдущем примере выводится ошибка C2668:
+
+```Output
+partial_alias.cpp(32): error C2668: 'f': ambiguous call to overloaded function
+partial_alias.cpp(18): note: could be 'int f<Alloc,void>(A<void> &,const AlignedBuffer<10,4> &)'
+partial_alias.cpp(12): note: or       'int f<Alloc,A<void>>(Alloc &,const AlignedBuffer<10,4> &)'
+        with
+        [
+            Alloc=A<void>
+        ]
+partial_alias.cpp(32): note: while trying to match the argument list '(A<void>, AlignedBuffer<10,4>)'
+```
+
+Расхождение реализации связано с регрессией формулировки стандарта, когда для устранения ошибки 2235 выполнялось удаление части текста, позволяющее упорядочить эти перегрузки. В текущем стандарте C++ отсутствует механизм для частичного упорядочения этих функций, поэтому они считаются неоднозначными.
+
+В качестве решения рекомендуется не применять частичное упорядочение, а использовать SFINAE для удаления определенных перегрузок. В следующем примере используется вспомогательный класс `IsA`, позволяющий удалять первую перегрузку, если `Alloc` является специализацией `A`:
+
+```cpp
+#include <utility>
+using size_t = std::size_t;
+
+template <typename T>
+struct A {};
+template <size_t, size_t>
+struct AlignedBuffer {};
+template <size_t len>
+using AlignedStorage = AlignedBuffer<len, 4>;
+
+template <typename T> struct IsA : std::false_type {};
+template <typename T> struct IsA<A<T>> : std::true_type {};
+
+template <class T, class Alloc, typename = std::enable_if_t<!IsA<Alloc>::value>>
+int f(Alloc &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 1;
+}
+
+template <class T, class Alloc>
+int f(A<Alloc> &alloc, const AlignedStorage<T::size> &buffer)
+{
+    return 2;
+}
+
+struct Alloc
+{
+    static constexpr size_t size = 10;
+};
+
+int main()
+{
+    A<void> a;
+    AlignedStorage<Alloc::size> buf;
+    if (f<Alloc>(a, buf) != 2)
+    {
+        return 1;
+    }
+
+    return 0;
+}
 ```
 
 ## <a name="see-also"></a>См. также
