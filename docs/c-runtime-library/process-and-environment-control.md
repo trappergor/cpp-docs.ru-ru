@@ -11,12 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-ms.openlocfilehash: 74194311eb33a23de5643b3cb956c2e3f752dea0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525623"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329414"
 ---
 # <a name="process-and-environment-control"></a>Управление процессами и средой
 
@@ -46,7 +46,7 @@ ms.locfileid: "50525623"
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|Вызывает функции, зарегистрированные с помощью **atexit** и **_onexit**, очищает все буферы, закрывает все открытые файлы и завершает процесс.|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|Завершает процесс немедленно без вызова **atexit** или **_onexit** либо очистки буферов.|
 |[getenv, _wgetenv](../c-runtime-library/reference/getenv-wgetenv.md), [getenv_s, _wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|Получает значение переменной среды.|
-|[_getpid](../c-runtime-library/reference/getpid.md)|Получает идентификатор процесса.|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|Получает идентификатор процесса.|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|Восстанавливает сохраненную среду стека и использует ее для выполнения нелокальной команды **goto**.|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|Подпрограммы расписания, которые следует выполнять при завершении программы. Используются для обеспечения совместимости с Microsoft C/C++ версии 7.0 и более ранними версиями.|
 |[_pclose](../c-runtime-library/reference/pclose.md)|Ожидает новый обработчик команд и закрывает поток по связанному каналу.|

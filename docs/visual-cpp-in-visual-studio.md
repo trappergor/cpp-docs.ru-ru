@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668342"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327191"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
 > [!NOTE]
 > Эта документация для разработчиков применима к Visual Studio 2015 и Visual Studio 2017.
-
+>
 > Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/download/) и введите в поле поиска **Visual C++**.
 
 
