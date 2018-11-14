@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542562"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333297"
 ---
 # <a name="parallel-containers-and-objects"></a>Параллельные контейнеры и объекты
 
@@ -95,15 +95,19 @@ ms.locfileid: "50542562"
 
 ||||
 |-|-|-|
-
-|[в](reference/concurrent-vector-class.md#at)|[окончания](reference/concurrent-vector-class.md#end)|[оператор&#91;&#93;](reference/concurrent-vector-class.md#operator_at)||[ Начать](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)||[ обратно](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)||[ емкость](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)||[ пустой](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[размер](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[begin](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[back](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
+|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
 Операции, которые среда выполнения предоставляет для обеспечения совместимости со стандартной библиотекой C++, например, `reserve`, не являются безопасными в режиме параллелизма. Ниже приведены наиболее распространенные методы и операторы, которые не являются безопасными в режиме параллелизма.
 
 |||
 |-|-|
-
-|[назначить](reference/concurrent-vector-class.md#assign)|[зарезервировать](reference/concurrent-vector-class.md#reserve)||[ Очистить](reference/concurrent-vector-class.md#clear)|[изменение размера](reference/concurrent-vector-class.md#resize)||[ оператор =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[assign](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
+|[оператор=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 Операции, которые изменяют значение существующих элементов не нарушающих параллельность. Использовать объект синхронизации, например [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md) объект для синхронизации одновременных потоков чтения и записи один и тот же элемент данных. Дополнительные сведения об объектах синхронизации см. в разделе [структуры данных синхронизации](../../parallel/concrt/synchronization-data-structures.md).
 

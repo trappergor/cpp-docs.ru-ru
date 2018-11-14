@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: d15807c7204841a436180d4da96357eba89dbb5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488183"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556485"
 ---
 # <a name="cstreamrowset-class"></a>Класс CStreamRowset
 
@@ -61,7 +61,7 @@ class CStreamRowset
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|Конструктор. Создает и инициализирует `CStreamRowset` объекта.|
-|[Закрыть](#close)|Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035) указатель на интерфейс в классе.|
+|[Закрыть](#close)|Выпуски [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) указатель на интерфейс в классе.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -94,7 +94,7 @@ CStreamRowset();
 
 ## <a name="close"></a> CStreamRowset::Close
 
-Выпуски [ISequentialStream](/previous-versions/windows/desktop/ms718035) указатель на интерфейс в классе.
+Выпуски [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) указатель на интерфейс в классе.
 
 ### <a name="syntax"></a>Синтаксис
 

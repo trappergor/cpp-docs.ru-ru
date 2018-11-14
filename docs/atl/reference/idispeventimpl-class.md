@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497471"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524304"
 ---
 # <a name="idispeventimpl-class"></a>Класс IDispEventImpl
 
@@ -151,7 +151,7 @@ HRESULT GetFuncInfoFromId(
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-Сопоставляет один элемент и необязательный набор имена аргументов с соответствующим набором целого числа DispId, которые могут использоваться при последующих вызовах [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
+Сопоставляет один элемент и необязательный набор имена аргументов с соответствующим набором целого числа DispId, которые могут использоваться при последующих вызовах [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke).
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IDispatch::GetIdsOfNames расширенное](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) в Windows SDK.
+См. в разделе [IDispatch::GetIdsOfNames расширенное](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) в Windows SDK.
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) в Windows SDK.
+См. в разделе [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) в Windows SDK.
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>Параметры
 
 *pTI*<br/>
-[in] Указатель на [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) интерфейса, содержащего определяемый пользователем тип.
+[in] Указатель на [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo) интерфейса, содержащего определяемый пользователем тип.
 
 *hrt*<br/>
 [in] Дескриптор для описания типа, который требуется получить.
@@ -215,7 +215,7 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ITypeInfo::GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
+См. в разделе [ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo).
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

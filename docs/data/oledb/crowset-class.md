@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 6af7b30ef7055fbf5b3c998dba6f3b84d0129c31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb2f66474f9700ed7bfdc2e1063865734e4e991a
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543072"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557015"
 ---
 # <a name="crowset-class"></a>Класс CRowset
 
@@ -273,16 +273,16 @@ class CRowset
 |-|-|
 |[AddRefRows](#addrefrows)|Увеличивает счетчик ссылок, связанный с текущей строкой.|
 |[Закрыть](#close)|Освобождает строк и текущий `IRowset` интерфейс.|
-|[Compare](#compare)|Сравнивает два закладки с помощью [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).|
+|[Compare](#compare)|Сравнивает два закладки с помощью [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Создает новый `CRowset` объекта, который (при необходимости) связывается с `IRowset` интерфейс, предоставляемый в качестве параметра.|
-|[Удалить](#delete)|Удаляет строки из набора строк с помощью [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)).|
+|[Удалить](#delete)|Удаляет строки из набора строк с помощью [IRowsetChange:DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)).|
 |[FindNextRow](#findnextrow)|Находит следующий совпадающей строки после указанной закладке.|
 |[GetApproximatePosition](#getapproximateposition)|Возвращает приблизительное позицию строка, соответствующая закладки.|
 |[GetData](#getdata)|Извлекает данные из копии строки в наборе строк.|
 |[GetDataHere](#getdatahere)|Извлекает данные из указанного буфера.|
 |[GetOriginalData](#getoriginaldata)|Извлекает данные, наиболее недавно извлечены из или передана в источник данных, игнорируя ожидающие изменения.|
 |[GetRowStatus](#getrowstatus)|Возвращает состояние всех строк.|
-|[Вставить](#insert)|Создает и вставляет новую строку, используя [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921).|
+|[Вставить](#insert)|Создает и вставляет новую строку, используя [IRowsetChange:InsertRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[IsSameRow](#issamerow)|Сравнивает указанной строки с текущей строкой.|
 |[MoveFirst](#movefirst)|Перемещает расположение next fetch в исходное положение.|
 |[MoveLast](#movelast)|Переход к последней записи.|
@@ -290,8 +290,8 @@ class CRowset
 |[MovePrev](#moveprev)|Переход к предыдущей записи.|
 |[Функции MoveToBookmark](#movetobookmark)|Получает строку, помеченную с закладкой или строки с указанным смещением из эту закладку.|
 |[MoveToRatio](#movetoratio)|Извлекает строки, начиная с долей позиции в наборе строк.|
-|[ReleaseRows](#releaserows)|Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) освободить дескриптор текущей строки.|
-|[SetData](#setdata)|Задает значения данных в один или несколько столбцов из строки с помощью [IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232).|
+|[ReleaseRows](#releaserows)|Вызовы [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) освободить дескриптор текущей строки.|
+|[SetData](#setdata)|Задает значения данных в один или несколько столбцов из строки с помощью [IRowsetChange:SetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85)).|
 |[Отменить](#undo)|Отменяет все изменения, внесенные в строку с последнего получения или [обновления](../../data/oledb/crowset-update.md).|
 |[Обновление](#update)|Передает все ожидающие изменения, внесенные в текущую строку с момента последнего получения или обновления.|
 |[UpdateAll](#updateall)|Передает все ожидающие изменения, внесенные во все строки с момента последнего получения или обновления.|
@@ -304,7 +304,7 @@ class CRowset
 
 ## <a name="addrefrows"></a> CRowset::AddRefRows
 
-Вызовы [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) приращения (один) счетчик ссылок, связанный с текущей дескриптор строки.
+Вызовы [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) приращения (один) счетчик ссылок, связанный с текущей дескриптор строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -322,7 +322,7 @@ HRESULT AddRefRows() throw();
 
 ## <a name="close"></a> CRowset::Close
 
-Освобождает строк и текущий [IRowset](/previous-versions/windows/desktop/ms720986) интерфейс.
+Освобождает строк и текущий [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) интерфейс.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -336,13 +336,13 @@ void Close() throw();
 
 ## <a name="compare"></a> CRowset::Compare
 
-Сравнивает два закладки с помощью [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539).
+Сравнивает два закладки с помощью [IRowsetLocate::Compare](https://docs.microsoft.com/previous-versions/windows/desktop/ms709539(v=vs.85)).
 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Compare(const CBookmarkBase& bookmark1, 
-   const CBookmarkBase& bookmark2, 
+HRESULT Compare(const CBookmarkBase& bookmark1,
+   const CBookmarkBase& bookmark2,
    DBCOMPARE* pComparison) const throw();
 ```
 
@@ -369,12 +369,12 @@ HRESULT Compare(const CBookmarkBase& bookmark1, 
 
 ## <a name="crowset"></a> CRowset::CRowset
 
-Создает новый `CRowset` объекта, который (при необходимости) связывается с [IRowset](/previous-versions/windows/desktop/ms720986) интерфейс, предоставляемый в качестве параметра.
+Создает новый `CRowset` объекта, который (при необходимости) связывается с [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) интерфейс, предоставляемый в качестве параметра.
 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-CRowset(); 
+CRowset();
 
 CRowset(IRowset* pRowset);
 ```
@@ -386,7 +386,7 @@ CRowset(IRowset* pRowset);
 
 ## <a name="delete"></a> CRowset::Delete
 
-Вызовы [IRowsetChange::DeleteRows](/previous-versions/windows/desktop/ms724362(v%3dvs.85)) для удаления текущей строки из набора строк.
+Вызовы [IRowsetChange::DeleteRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85)) для удаления текущей строки из набора строк.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -405,35 +405,35 @@ HRESULT Delete() const throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT FindNextRow(DBCOMPAREOP op, 
-   BYTE* pData, 
-   DBTYPE wType, 
-   DBLENGTH nLength, 
-   BYTE bPrecision, 
-   BYTE bScale, 
-   BOOL bSkipCurrent = TRUE, 
+HRESULT FindNextRow(DBCOMPAREOP op,
+   BYTE* pData,
+   DBTYPE wType,
+   DBLENGTH nLength,
+   BYTE bPrecision,
+   BYTE bScale,
+   BOOL bSkipCurrent = TRUE,
    CBookmarkBase* pBookmark = NULL) throw();
 ```
 
 #### <a name="parameters"></a>Параметры
 
 *op*<br/>
-[in] Операция для использования при сравнении значений строк. Значения, см. в разделе [IRowsetFind::FindNextRow](/previous-versions/windows/desktop/ms723091).
+[in] Операция для использования при сравнении значений строк. Значения, см. в разделе [IRowsetFind::FindNextRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms723091(v=vs.85)).
 
 *pData*<br/>
 [in] Указатель на значение для сравнения.
 
 *wType*<br/>
-[in] Указывает тип данных значение части буфера. Сведения об индикаторах типа, см. в разделе [типы данных](/previous-versions/windows/desktop/ms723969) в *Справочник программиста OLE DB по* в пакете Windows SDK.
+[in] Указывает тип данных значение части буфера. Сведения об индикаторах типа, см. в разделе [типы данных](https://docs.microsoft.com/previous-versions/windows/desktop/ms723969(v=vs.85)) в *Справочник программиста OLE DB по* в пакете Windows SDK.
 
 *nLength*<br/>
-[in] Длина в байтах, потребитель данных структуры, выделенной для значения данных. Дополнительные сведения см. в описании `cbMaxLen` в [структуры DBBINDING](/previous-versions/windows/desktop/ms716845) в *Справочник программиста OLE DB по.*
+[in] Длина в байтах, потребитель данных структуры, выделенной для значения данных. Дополнительные сведения см. в описании `cbMaxLen` в [структуры DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85)) в *Справочник программиста OLE DB по.*
 
 *bPrecision*<br/>
-[in] Максимальная точность, используемый при получении данных. Используется, только если *wType* является DBTYPE_NUMERIC. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) в *Справочник программиста OLE DB по*.
+[in] Максимальная точность, используемый при получении данных. Используется, только если *wType* является DBTYPE_NUMERIC. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 *bScale*<br/>
-[in] Масштаб, используемый при получении данных. Используется, только если *wType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](/previous-versions/windows/desktop/ms719714) в *Справочник программиста OLE DB по*.
+[in] Масштаб, используемый при получении данных. Используется, только если *wType* DBTYPE_NUMERIC или DBTYPE_DECIMAL. Дополнительные сведения см. в разделе [преобразования, включающие DBTYPE_NUMERIC или DBTYPE_DECIMAL](https://docs.microsoft.com/previous-versions/windows/desktop/ms719714(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 *bSkipCurrent*<br/>
 [in] Количество строк из закладки, с которого начинается поиск.
@@ -458,8 +458,8 @@ HRESULT FindNextRow(DBCOMPAREOP op, 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
-   DBCOUNTITEM* pPosition, 
+HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
+   DBCOUNTITEM* pPosition,
    DBCOUNTITEM* pcRows) throw();
 ```
 
@@ -491,7 +491,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark, 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT GetData() throw(); 
+HRESULT GetData() throw();
 
 HRESULT GetData(int nAccessor) throw();
 ```
@@ -516,7 +516,7 @@ HRESULT GetData(int nAccessor) throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT GetDataHere(int nAccessor, 
+HRESULT GetDataHere(int nAccessor,
    void* pBuffer) throw();
 ```
 
@@ -586,7 +586,7 @@ HRESULT GetRowStatus(DBPENDINGSTATUS* pStatus) const throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Insert(int nAccessor = 0, 
+HRESULT Insert(int nAccessor = 0,
    bool bGetHRow = false) throw();
 ```
 
@@ -633,7 +633,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартный HRESULT. Значение S_OK означает, что строки совпадают. Другие значения, см. в разделе [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629) в *Справочник программиста OLE DB по* в пакете Windows SDK.
+Стандартный HRESULT. Значение S_OK означает, что строки совпадают. Другие значения, см. в разделе [IRowsetIndentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) в *Справочник программиста OLE DB по* в пакете Windows SDK.
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
@@ -651,7 +651,7 @@ HRESULT MoveFirst() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) можно переместить расположение next fetch в первоначальную позицию (позиции, которая была next fetch расположение во время создания набора строк) и извлекает начальной строки.
+Вызовы [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) можно переместить расположение next fetch в первоначальную позицию (позиции, которая была next fetch расположение во время создания набора строк) и извлекает начальной строки.
 
 ## <a name="movelast"></a> CRowset::MoveLast
 
@@ -669,7 +669,7 @@ HRESULT MoveLast() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877) можно переместить расположение next fetch в последнюю позицию и извлекает последнюю строку.
+Вызовы [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) можно переместить расположение next fetch в последнюю позицию и извлекает последнюю строку.
 
 Этот метод, необходимо задать `DBPROP_CANSCROLLBACKWARDS` значение VARIANT_TRUE, перед вызовом метода `Open` для таблицы или команду, содержащую набор строк. (Для повышения производительности можно также задать `DBPROP_QUICKRESTART` значение VARIANT_TRUE.)
 
@@ -682,7 +682,7 @@ HRESULT MoveLast() throw();
 ```cpp
 HRESULT MoveNext() throw();
 
-HRESULT MoveNext(LONG lSkip, 
+HRESULT MoveNext(LONG lSkip,
    bool bForward= true) throw();
 ```
 
@@ -735,7 +735,7 @@ HRESULT MovePrev() throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
+HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
    LONG lSkip = 0) throw();
 ```
 
@@ -764,7 +764,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark, 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
+HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
    DBCOUNTITEM nDenominator,bool bForward = true) throw();
 ```
 
@@ -789,13 +789,13 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator, 
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](/previous-versions/windows/desktop/ms709602).
+Где `RowsetSize` — это размер набора строк, измеряется строками. Точность по этой формуле, зависит от определенного поставщика. Дополнительные сведения см. в разделе [IRowsetScroll::GetRowsAtRatio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85)).
 
 Этот метод требует дополнительный интерфейс `IRowsetScroll`, которой может не поддерживаться на всех поставщиков; Если это условие выполняется, метод возвращает E_NOINTERFACE. Необходимо также задать `DBPROP_IRowsetScroll` значение VARIANT_TRUE, перед вызовом метода `Open` для таблицы или команду, содержащую набор строк.
 
 ## <a name="releaserows"></a> CRowset::ReleaseRows
 
-Вызовы [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771) освободить дескриптор текущей строки.
+Вызовы [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) освободить дескриптор текущей строки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -814,7 +814,7 @@ HRESULT ReleaseRows() throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT SetData() const throw(); 
+HRESULT SetData() const throw();
 
 HRESULT SetData(int nAccessor) const throw();
 ```
@@ -843,8 +843,8 @@ HRESULT SetData(int nAccessor) const throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Undo(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -874,8 +874,8 @@ HRESULT Undo(DBCOUNTITEM* pcRows = NULL, 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
-   HROW* phRow = NULL, 
+HRESULT Update(DBCOUNTITEM* pcRows = NULL,
+   HROW* phRow = NULL,
    DBROWSTATUS* pStatus = NULL) throw();
 ```
 
@@ -907,8 +907,8 @@ HRESULT Update(DBCOUNTITEM* pcRows = NULL, 
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL, 
-   HROW** pphRow = NULL, 
+HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
+   HROW** pphRow = NULL,
    DBROWSTATUS** ppStatus = NULL) throw();
 ```
 

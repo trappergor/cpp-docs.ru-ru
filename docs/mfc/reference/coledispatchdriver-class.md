@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569238"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524941"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 Задает вызываемый метод или свойство.
 
 *wFlags*<br/>
-Флаги, описывающие контекст вызова `IDispatch::Invoke`. . Список возможных значений см. в разделе *wFlags* параметр в [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) в пакете Windows SDK.
+Флаги, описывающие контекст вызова `IDispatch::Invoke`. . Список возможных значений см. в разделе *wFlags* параметр в [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) в пакете Windows SDK.
 
 *vtRet*<br/>
 Указывает тип возвращаемого значения. Возможные значения см. в разделе "Примечания".
@@ -296,9 +296,9 @@ void AFX_CDECL InvokeHelper(
 
 *PbParamInfo* аргумент является разделенный пробелами список **VTS_** константы. Одно или несколько из этих значений, разделенных пробелами (не запятыми), составляют список параметров функции. Список возможных значений можно получить с помощью макроса [EVENT_CUSTOM](event-maps.md#event_custom) .
 
-Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) метод. Если вызов `Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объект; в противном случае создается исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
+Эта функция преобразует параметры в значения VARIANTARG, а затем вызывает [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) метод. Если вызов `Invoke` завершается сбоем, эта функция создает исключение. Если SCODE (код состояния), возвращаемый `IDispatch::Invoke` является DISP_E_EXCEPTION, эта функция создает [COleException](../../mfc/reference/coleexception-class.md) объект; в противном случае создается исключение [COleDispatchException](../../mfc/reference/coledispatchexception-class.md).
 
-Дополнительные сведения см. в разделе [VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), и [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.
+Дополнительные сведения см. в разделе [VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant), [реализация интерфейса IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface), [IDispatch::Invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke), и [структуры из кодов ошибок модели COM](/windows/desktop/com/structure-of-com-error-codes) в Windows SDK.
 
 ### <a name="example"></a>Пример
 

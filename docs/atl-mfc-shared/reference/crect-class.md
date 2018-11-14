@@ -1,6 +1,6 @@
 ---
 title: Класс CRect
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471491"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520040"
 ---
 # <a name="crect-class"></a>Класс CRect
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|Определяет, является ли `CRect` не равно прямоугольник.|
 |[CRect::operator &amp;](#operator_amp)|Создает пересечение `CRect` и прямоугольника и возвращает результат в виде `CRect`.|
 |[CRect::operator &amp;=](#operator_amp_eq)|Наборы `CRect` равным пересечение `CRect` и прямоугольник.|
-|[CRect::operator |](#operator_or)|Создает объединение `CRect` и прямоугольника и возвращает результат в виде `CRect`.|
-|[CRect::operator |=](#operator_or_eq)|Наборы `CRect` равным объединение `CRect` и прямоугольник.|
+|[CRect::operator&#124;](#operator_or)|Создает объединение `CRect` и прямоугольника и возвращает результат в виде `CRect`.|
+|[CRect::operator &#124;=](#operator_or_eq)|Наборы `CRect` равным объединение `CRect` и прямоугольник.|
 |[CRect::operator +](#operator_add)|Добавляет заданного смещения к `CRect` или увеличивает `CRect` и возвращает результат в виде `CRect`.|
 |[CRect::operator +=](#operator_add_eq)|Добавляет заданное смещение `CRect` или увеличивает `CRect`.|
 |[CRect::operator =](#operator_eq)|Копирует размеры прямоугольника для `CRect`.|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 Объект `CRect` объект можно передать как параметр функции везде, где `RECT` структуры, `LPCRECT`, или `LPRECT` могут передаваться.
 
 > [!NOTE]
->  Этот класс является производным от `tagRECT` структуры. (Имя `tagRECT` — это имя менее часто используемых `RECT` структуры.) Это означает, что члены данных (`left`, `top`, `right`, и `bottom`) из `RECT` структуры являются членами доступные данные `CRect`.
+> Этот класс является производным от `tagRECT` структуры. (Имя `tagRECT` — это имя менее часто используемых `RECT` структуры.) Это означает, что члены данных (`left`, `top`, `right`, и `bottom`) из `RECT` структуры являются членами доступные данные `CRect`.
 
 Объект `CRect` содержит переменные-члены, которые определяют точки левого верхнего и нижнего правого прямоугольника.
 
@@ -443,11 +443,11 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="example"></a>Пример
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ int Height() const throw();
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -578,7 +574,6 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ BOOL IsRectEmpty() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ BOOL IsRectNull() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ void MoveToX(int x) throw();
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ void MoveToXY(POINT point) throw();
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);

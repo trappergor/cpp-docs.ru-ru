@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517657"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326209"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011. Использование MFC как часть библиотеки DLL
 
@@ -33,7 +33,7 @@ ms.locfileid: "50517657"
 
 - С постоянные библиотеки DLL MFC, статической компоновке с MFC размер DLL зависит только от процедур среды выполнения MFC и C, используемых и связанной.
 
-- С помощью постоянные библиотеки DLL MFC, динамически связываются с MFC экономия в оперативной памяти при использовании общей версии MFC могут быть значительными. Тем не менее, необходимо распространить общих библиотек DLL Mfc*\<версии >* DLL и Msvvcrt*\<версии >*.dll, библиотеки DLL.
+- С помощью постоянные библиотеки DLL MFC, динамически связываются с MFC экономия в оперативной памяти при использовании общей версии MFC могут быть значительными. Тем не менее, необходимо распространить общих библиотек DLL Mfc\<*версии*> .dll и Msvvcrt\<*версии*> .dll, библиотеки DLL.
 
 - Проект библиотеки DLL не зависит от реализации классов. Проект библиотеки DLL экспортирует только к интерфейсам API, требуется. Таким образом при изменении реализации обычные библиотеки DLL MFC, остаются действительными.
 

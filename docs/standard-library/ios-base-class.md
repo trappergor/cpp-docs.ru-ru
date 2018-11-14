@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648673"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333362"
 ---
 # <a name="iosbase-class"></a>Класс ios_base
 
@@ -914,7 +914,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член эффективно вызывает [флаги](#flags)(_ *маска* &#124; \_ *флаги*) (значение выбранного bits) и затем возвращает предыдущий флаги формата. Вторая функция-член эффективно вызывает **флаги**(\_ *маска* **& fmtfl, флаги & ~**`_Mask`) (заменить выбранный bits под маской) и затем возвращает предыдущий флаги формата.
+Первая функция-член эффективно вызывает [флаги](#flags)(  *\_маска* &#124;  *\_флаги*) (значение выбранного bits) и затем возвращает Предыдущий флаги формата. Вторая функция-член эффективно вызывает `flags(_Mask & fmtfl, flags & ~_Mask)` (Замените выбранный bits под маской) и затем возвращает предыдущий флаги формата.
 
 ### <a name="example"></a>Пример
 

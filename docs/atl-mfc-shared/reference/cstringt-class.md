@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483412"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525500"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
@@ -94,13 +94,10 @@ ms.locfileid: "50483412"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>Параметры
@@ -117,19 +114,19 @@ public CSimpleStringT<BaseType,
 *StringTraits*<br/>
 Определяет, должен ли класс string поддержка библиотек времени выполнения C (CRT) и где расположены строковые ресурсы. Ниже указаны доступные значения.
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Требует поддержки CRT и поиск ресурсов строк в модуль, указанный параметром `m_hInstResource` (член класса модуля приложения).
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Класс не требуется поддержка CRT и поиск ресурсов строк в модуль, указанный параметром `m_hInstResource` (член класса модуля приложения).
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsCRT < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Класс требуется поддержка CRT и ищет строки ресурсов, используя стандартный алгоритм поиска MFC.
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR, ChTraitsOS < wchar_t** &#124; **char** &#124;  **TCHAR >>**
 
    Класс не требуется поддержка CRT и ищет строки ресурсов, используя стандартный алгоритм поиска MFC.
 
@@ -295,9 +292,9 @@ BSTR AllocSysString() const;
 
 В приложениях MFC [класс CMemoryException](../../mfc/reference/cmemoryexception-class.md) возникает исключение, если существует нехватки памяти. В программах ATL [CAtlException](../../atl/reference/catlexception-class.md) возникает исключение. Эта функция обычно используется для возврата строки для автоматизации.
 
-Обычно если эта строка передается в функцию COM как [in] параметр, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), как описано в пакете Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
+Обычно если эта строка передается в функцию COM как [in] параметр, то это требует, чтобы освободить строку участник. Это можно сделать с помощью [SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring), как описано в пакете Windows SDK. Дополнительные сведения см. в разделе [распределение и освобождение памяти для BSTR](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md).
 
-Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) в пакете Windows SDK.
+Дополнительные сведения о функции выделения OLE в Windows, см. в разделе [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 

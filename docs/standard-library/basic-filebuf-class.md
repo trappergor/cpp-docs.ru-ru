@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500533"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332651"
 ---
 # <a name="basicfilebuf-class"></a>Класс basic_filebuf
 
@@ -504,11 +504,11 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае возвращается **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_Meta*).
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная виртуальная функция-член помещает элемент обратно во входной буфер, а затем делает его текущим (на него указывает следующий указатель). Если _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), то элемент, который необходимо передать обратно, фактически уже находится в потоке перед текущим элементом. В противном случае этот элемент заменяется **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*). Функция может передать элемент обратно различными способами.
+Защищенная виртуальная функция-член помещает элемент обратно во входной буфер, а затем делает его текущим (на него указывает следующий указатель). Если  *\_Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof), элемент, который необходимо передать обратно, фактически уже в потоке перед текущим элементом. В противном случае этот элемент заменяется **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*). Функция может передать элемент обратно различными способами.
 
 - Если позиция возврата доступна и сохраненный там элемент оценивается как равный `ch`, функция может уменьшить следующий указатель для входного буфера.
 

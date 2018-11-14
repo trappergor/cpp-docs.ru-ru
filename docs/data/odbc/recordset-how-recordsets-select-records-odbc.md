@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618456"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329479"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Набор записей. Порядок выборки записей в наборе (ODBC)
 
@@ -61,9 +61,8 @@ ms.locfileid: "50618456"
 
 - [Сортировки](../../data/odbc/recordset-sorting-records-odbc.md) order для набора записей, если он имеется, содержится в [m_strSort](../../mfc/reference/crecordset-class.md#m_strsort) элемент данных. Инфраструктура использует эту строку для создания SQL **ORDER BY** предложение.
 
-
-    > [!TIP]
-    >  Для использования SQL **GROUP BY** предложение (и, возможно, **HAVING** предложение), добавьте предложения в конец строки фильтра.
+   > [!TIP]
+   > Для использования SQL **GROUP BY** предложение (и, возможно, **HAVING** предложение), добавьте предложения в конец строки фильтра.
 
 - Значения любого [параметризованные члены данных](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md) вами для класса. Значения параметров задаются только в том случае, перед вызовом метода `Open` или `Requery`. Значения параметров, автоматически связываются «?» заполнителей в строке SQL. Во время компиляции укажите строку с заполнителями. Во время выполнения автоматически заполняются на основе значений параметров, которые можно передать сведения.
 

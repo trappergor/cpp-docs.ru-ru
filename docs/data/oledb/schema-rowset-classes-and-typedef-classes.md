@@ -1072,12 +1072,12 @@ helpviewer_keywords:
 - m_szTableCatalog
 - m_szTableName
 ms.assetid: 4bd881b3-26ca-4bdb-9226-d67560864f29
-ms.openlocfilehash: 2af15d1cf3d42af82d2dc04901301f3f30ff9211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6899f6edf87f2d81f31fac40ac78ba5798d8d8c
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515119"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557106"
 ---
 # <a name="schema-rowset-classes-and-typedef-classes"></a>Классы схемы Rowset и Typedef
 
@@ -1085,42 +1085,42 @@ ms.locfileid: "50515119"
 
 Наборы строк схемы — это предопределенные наборы строк, представляющих метаданные. Наборы строк схемы, обычно используются в динамическое программирование, когда структура базы данных не известен во время компиляции. Эти наборы строк схемы можно использовать для получения сведений о базе данных во время выполнения.
 
-Используйте классы typedef для создания наборов строк схемы. Ниже перечислены соответствующие typedef и классы набора строк схемы. Необходимо вызвать [CRestrictions::Open](../../data/oledb/crestrictions-open.md) после создания экземпляра набора строк схемы. Этот метод возвращает результирующий набор, в соответствии с заданными ограничениями. См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) сведения о столбцах ограничений, связанных с каждого набора строк схемы.
+Используйте классы typedef для создания наборов строк схемы. Ниже перечислены соответствующие typedef и классы набора строк схемы. Необходимо вызвать [CRestrictions::Open](../../data/oledb/crestrictions-open.md) после создания экземпляра набора строк схемы. Этот метод возвращает результирующий набор, в соответствии с заданными ограничениями. См. в разделе [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) сведения о столбцах ограничений, связанных с каждого набора строк схемы.
 
 В следующей таблице приведены все OLE DB наборы строк схемы и соответствующим шаблоны OLE DB typedef-класс и класс info.
 
 |Набор строк схемы OLE DB|TypeDef-класс|Сведения о классе|
 |--------------------------|-------------------|----------------|
-|[УТВЕРЖДЕНИЯ](/previous-versions/windows/desktop/ms719776)|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
-|[КАТАЛОГИ](/previous-versions/windows/desktop/ms721241)|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
-|[CHARACTER_SETS](/previous-versions/windows/desktop/ms722638)|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
-|[ПАРАМЕТРЫ СОРТИРОВКИ](/previous-versions/windows/desktop/ms715783)|[CCollations](#collation)|[CCollationInfo](#collation)|
-|[COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800)|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
-|[СТОЛБЦЫ](/previous-versions/windows/desktop/ms723052)|[CColumns](#columns)|[CColumnsInfo](#columns)|
-|[CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522)|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
-|[CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms713710)|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
-|[CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845)|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
-|[COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240)|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
-|[FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276)|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
-|[ИНДЕКСЫ](/previous-versions/windows/desktop/ms709712)|[CIndexes](#index)|[CIndexInfo](#index)|
-|[KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990)|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
-|[PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362)|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
-|[ПРОЦЕДУРЫ](/previous-versions/windows/desktop/ms724021)|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
-|[PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092)|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
-|[PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623)|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
-|[PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785)|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
-|[REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737)|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
-|[СХЕМЫ](/previous-versions/windows/desktop/ms716887)|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
-|[SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374)|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
-|[СТАТИСТИКА](/previous-versions/windows/desktop/ms715957)|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
-|[TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921)|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
-|[ТАБЛИЦЫ](/previous-versions/windows/desktop/ms716980)|[CTables](#table)|[CTableInfo](#table)|
-|[TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428)|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
-|[ПЕРЕВОДЫ](/previous-versions/windows/desktop/ms725365)|[CTranslations](#translation)|[CTranslationInfo](#translation)|
-|[USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743)|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
-|[VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896)|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
-|[VIEWS](/previous-versions/windows/desktop/ms723122)|[CViews](#view)|[CViewInfo](#view)|
-|[VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727)|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
+|[УТВЕРЖДЕНИЯ](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85))|[CAssertions](#assertion)|[CAssertionInfo](#assertion)|
+|[КАТАЛОГИ](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85))|[CCatalogs](#catalog)|[CCatalogInfo](#catalog)|
+|[CHARACTER_SETS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85))|[CCharacterSets](#characterset)|[CCharacterSetInfo](#characterset)|
+|[ПАРАМЕТРЫ СОРТИРОВКИ](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85))|[CCollations](#collation)|[CCollationInfo](#collation)|
+|[COLUMN_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85))|[CColumnPrivileges](#columnprivilege)|[CColumnPrivilegeInfo](#columnprivilege)|
+|[СТОЛБЦЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85))|[CColumns](#columns)|[CColumnsInfo](#columns)|
+|[CONSTRAINT_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85))|[CConstraintColumnUsage](#constraintcolumnusage)|[CConstraintColumnUsageInfo](#constraintcolumnusage)|
+|[CONSTRAINT_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms713710(v=vs.85))|[CConstraintTableUsage](#constrainttableusage)|[CConstraintTableUsageInfo](#constrainttableusage)|
+|[CHECK_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85))|[CCheckConstraints](#checkconstraint)|[CCheckConstraintInfo](#checkconstraint)|
+|[COLUMN_DOMAIN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85))|[CColumnDomainUsage](#columndomainusage)|[CColumnDomainUsageInfo](#columndomainusage)|
+|[FOREIGN_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85))|[CForeignKeys](#foreignkeys)|[CForeignKeysInfo](#foreignkeys)|
+|[ИНДЕКСЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85))|[CIndexes](#index)|[CIndexInfo](#index)|
+|[KEY_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85))|[CKeyColumn](#keycolumn)|[CKeyColumnInfo](#keycolumn)|
+|[PRIMARY_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85))|[CPrimaryKeys](#primarykey)|[CPrimaryKeyInfo](#primarykey)|
+|[ПРОЦЕДУРЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85))|[CProcedures](#procedure)|[CProcedureInfo](#procedure)|
+|[PROCEDURE_COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85))|[CProcedureColumns](#procedurecolumn)|[CProcedureColumnInfo](#procedurecolumn)|
+|[PROCEDURE_PARAMETERS](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85))|[CProcedureParameters](#procedureparam)|[CProcedureParameterInfo](#procedureparam)|
+|[PROVIDER_TYPES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85))|[CProviderTypes](#provider)|[CProviderInfo](#provider)|
+|[REFERENTIAL_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85))|[CReferentialConstraints](#referentialconstraint)|[CReferentialConstraintInfo](#referentialconstraint)|
+|[СХЕМЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85))|[CSchemata](#schemata)|[CSchemataInfo](#schemata)|
+|[SQL_LANGUAGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85))|[CSQLLanguages](#sqllanguage)|[CSQLLanguageInfo](#sqllanguage)|
+|[СТАТИСТИКА](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85))|[CStatistics](#statistic)|[CStatisticInfo](#statistic)|
+|[TABLE_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85))|[CTableConstraints](#tableconstraint)|[CTableConstraintInfo](#tableconstraint)|
+|[ТАБЛИЦЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85))|[CTables](#table)|[CTableInfo](#table)|
+|[TABLE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85))|[CTablePrivileges](#tableprivilege)|[CTablePrivilegeInfo](#tableprivilege)|
+|[ПЕРЕВОДЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85))|[CTranslations](#translation)|[CTranslationInfo](#translation)|
+|[USAGE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85))|[CUsagePrivileges](#usageprivilege)|[CUsagePrivilegeInfo](#usageprivilege)|
+|[VIEW_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85))|[CViewColumnUsage](#viewcolumn)|[CViewColumnInfo](#viewcolumn)|
+|[VIEWS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85))|[CViews](#view)|[CViewInfo](#view)|
+|[VIEW_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85))|[CViewTableUsage](#viewtable)|[CViewTableInfo](#viewtable)|
 
 ## <a name="assertion"></a> CAssertions, CAssertionInfo
 
@@ -1132,7 +1132,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет утверждения, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса для `CAssertionInfo` и их соответствующих OLE DB столбцов. См. в разделе [УТВЕРЖДЕНИЯ строк](/previous-versions/windows/desktop/ms719776) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса для `CAssertionInfo` и их соответствующих OLE DB столбцов. См. в разделе [УТВЕРЖДЕНИЯ строк](https://docs.microsoft.com/previous-versions/windows/desktop/ms719776(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1153,7 +1153,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет физические атрибуты, связанные с каталогами, доступными из СУБД.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [КАТАЛОГОВ набора строк](/previous-versions/windows/desktop/ms721241) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [КАТАЛОГОВ набора строк](https://docs.microsoft.com/previous-versions/windows/desktop/ms721241(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1170,7 +1170,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет наборы символов, определенные в каталоге и доступные указанному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CHARACTER_SETS](/previous-versions/windows/desktop/ms722638) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CHARACTER_SETS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722638(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1193,7 +1193,7 @@ ms.locfileid: "50515119"
 
 Этот класс указывает проверочные ограничения, определенные в каталоге, принадлежащие данному пользователю. Ограничение check задает значения данных или форматы, допустимые для одного или нескольких столбцов в таблице.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк CHECK_CONSTRAINTS](/previous-versions/windows/desktop/ms712845) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк CHECK_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms712845(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1213,7 +1213,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет параметров сортировки символов, определенные в каталоге, которые доступны для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора параметров СОРТИРОВКИ строк](/previous-versions/windows/desktop/ms715783) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора параметров СОРТИРОВКИ строк](https://docs.microsoft.com/previous-versions/windows/desktop/ms715783(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1235,7 +1235,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы, определенные в каталоге, зависящие от домена определены в каталоге и принадлежат данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_DOMAIN_USAGE](/previous-versions/windows/desktop/ms711240) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_DOMAIN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms711240(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1259,7 +1259,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет права доступа к столбцам таблиц, определенные в каталоге, которые доступны или могут быть предоставлены данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_PRIVILEGES](/previous-versions/windows/desktop/ms715800) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк COLUMN_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms715800(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1284,7 +1284,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы таблиц, определенные в каталоге и доступные указанному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк COLUMNS](/previous-versions/windows/desktop/ms723052) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723052(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1327,7 +1327,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы, используемые ссылочные ограничения, ограничения unique, ограничения check и утверждения, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_COLUMN_USAGE](/previous-versions/windows/desktop/ms724522) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1351,7 +1351,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет таблицы используется ссылочные ограничения, ограничения unique, ограничения check и утверждения, определенные в каталоге и принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_TABLE_USAGE](/previous-versions/windows/desktop/ms724522) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк CONSTRAINT_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms724522(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1372,7 +1372,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы внешнего ключа, определенные в каталоге данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк FOREIGN_KEYS](/previous-versions/windows/desktop/ms711276) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк FOREIGN_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms711276(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1402,7 +1402,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет индексы, определенные в каталоге, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [наборе строк INDEXES](/previous-versions/windows/desktop/ms709712) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [наборе строк INDEXES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709712(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1441,7 +1441,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы, определенные в каталоге, которые являются ограниченными как ключи данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк KEY_COLUMN_USAGE](/previous-versions/windows/desktop/ms712990) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк KEY_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms712990(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1466,7 +1466,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы первичного ключа, определенные в каталоге данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк PRIMARY_KEYS](/previous-versions/windows/desktop/ms714362) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набор строк PRIMARY_KEYS](https://docs.microsoft.com/previous-versions/windows/desktop/ms714362(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1488,7 +1488,7 @@ ms.locfileid: "50515119"
 
 Этот класс возвращает сведения о столбцах наборов строк, возвращаемых процедурами.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк PROCEDURE_COLUMNS](/previous-versions/windows/desktop/ms723092) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк PROCEDURE_COLUMNS](https://docs.microsoft.com/previous-versions/windows/desktop/ms723092(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1519,7 +1519,7 @@ ms.locfileid: "50515119"
 
 Этот класс возвращает сведения о параметрах и кодах возврата процедур.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROCEDURE_PARAMETERS](/previous-versions/windows/desktop/ms713623) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROCEDURE_PARAMETERS](https://docs.microsoft.com/previous-versions/windows/desktop/ms713623(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1549,7 +1549,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет процедуры, определенные в каталоге, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк ПРОЦЕДУР](/previous-versions/windows/desktop/ms724021) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк ПРОЦЕДУР](https://docs.microsoft.com/previous-versions/windows/desktop/ms724021(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1570,7 +1570,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет типы (базовый) данных, поддерживаемые поставщиком данных.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROVIDER_TYPES](/previous-versions/windows/desktop/ms709785) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк PROVIDER_TYPES](https://docs.microsoft.com/previous-versions/windows/desktop/ms709785(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1605,7 +1605,7 @@ ms.locfileid: "50515119"
 
 Этот класс указывает ссылочные ограничения, определенные в каталоге, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк REFERENTIAL_CONSTRAINTS](/previous-versions/windows/desktop/ms719737) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк REFERENTIAL_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms719737(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1630,7 +1630,7 @@ ms.locfileid: "50515119"
 
 Этот класс указывает схемы, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк СХЕМЫ](/previous-versions/windows/desktop/ms716887) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк СХЕМЫ](https://docs.microsoft.com/previous-versions/windows/desktop/ms716887(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1651,7 +1651,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет уровни соответствия, параметры и диалекты, поддерживаемые данными обработки реализации SQL, определенные в каталоге.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк SQL_LANGUAGES](/previous-versions/windows/desktop/ms714374) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк SQL_LANGUAGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms714374(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1673,7 +1673,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет статистические данные, определенные в каталоге, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк СТАТИСТИКА](/previous-versions/windows/desktop/ms715957) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк СТАТИСТИКА](https://docs.microsoft.com/previous-versions/windows/desktop/ms715957(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1692,7 +1692,7 @@ ms.locfileid: "50515119"
 
 Этот класс указывает ограничения таблицы, определенные в каталоге, принадлежащие данному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_CONSTRAINTS](/previous-versions/windows/desktop/ms715921) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_CONSTRAINTS](https://docs.microsoft.com/previous-versions/windows/desktop/ms715921(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1717,7 +1717,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет таблицы, определены в каталоге и доступные указанному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_PRIVILEGES](/previous-versions/windows/desktop/ms725428) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк TABLE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms725428(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1739,7 +1739,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет права доступа к таблицам, определенные в каталоге, которые доступны или предоставлены данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк TABLES](/previous-versions/windows/desktop/ms716980) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [строк TABLES](https://docs.microsoft.com/previous-versions/windows/desktop/ms716980(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1760,7 +1760,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет преобразование символов, определенные в каталоге и доступные указанному пользователю.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [переводы строк](/previous-versions/windows/desktop/ms725365) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [переводы строк](https://docs.microsoft.com/previous-versions/windows/desktop/ms725365(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1784,7 +1784,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет привилегии USAGE для объектов, определенные в каталоге, которые доступны или предоставлены данным пользователем.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк USAGE_PRIVILEGES](/previous-versions/windows/desktop/ms722743) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк USAGE_PRIVILEGES](https://docs.microsoft.com/previous-versions/windows/desktop/ms722743(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1807,7 +1807,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет столбцы, на который просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_COLUMN_USAGE](/previous-versions/windows/desktop/ms714896) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_COLUMN_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms714896(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1831,7 +1831,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет таблицы на просматриваемые таблицы, определенные в каталоге и принадлежащие данному пользователю, зависят.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [ПРЕДСТАВЛЕНИЯ набора строк](/previous-versions/windows/desktop/ms723122) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [ПРЕДСТАВЛЕНИЯ набора строк](https://docs.microsoft.com/previous-versions/windows/desktop/ms723122(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|
@@ -1853,7 +1853,7 @@ ms.locfileid: "50515119"
 
 Этот класс определяет рассматриваемые таблицы, определенные в каталоге, которые доступны для данного пользователя.
 
-В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_TABLE_USAGE](/previous-versions/windows/desktop/ms719727) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
+В следующей таблице перечислены данные-члены класса и их соответствующих OLE DB столбцов. См. в разделе [набора строк VIEW_TABLE_USAGE](https://docs.microsoft.com/previous-versions/windows/desktop/ms719727(v=vs.85)) в *Справочник программиста OLE DB по* Дополнительные сведения о схеме и столбцы.
 
 |Элементы данных|Столбцы OLE DB|
 |------------------|--------------------|

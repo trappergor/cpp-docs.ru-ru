@@ -16,12 +16,12 @@ helpviewer_keywords:
 - NULL, character constant
 - wide characters, strings
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: 787756dd3e886afb6afa87ed3871158bddcbf3ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614595"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329843"
 ---
 # <a name="string-and-character-literals--c"></a>Строковые и символьные литералы (C++)
 
@@ -49,7 +49,7 @@ int main()
 
     // Raw string literals containing unescaped \ and "
     auto R0 =   R"("Hello \ world")"; // const char*
-    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
+    auto R1 = u8R"("Hello \ world")"; // const char*, encoded as UTF-8
     auto R2 =  LR"("Hello \ world")"; // const wchar_t*
     auto R3 =  uR"("Hello \ world")"; // const char16_t*, encoded as UTF-16
     auto R4 =  UR"("Hello \ world")"; // const char32_t*, encoded as UTF-32
@@ -106,15 +106,22 @@ int main()
 
 Существует три вида escape-последовательностей: простая, восьмеричная и шестнадцатеричная. Возможны следующие типы escape-последовательностей:
 
-|Значение|Escape-последовательность|Значение|Escape-последовательность|
-|-----------|---------------------|-----------|---------------------|
-|новая строка|\n|обратная косая черта|\\\|
-|горизонтальная табуляция|\t|вопросительный знак|? или \\?|
-|вертикальная табуляция|\v|одинарная кавычка|\\'|
-|стирание назад|\b|двойная кавычка|\\"|
-|возврат каретки|\r|нуль-символ|\0|
-|перевод страницы|\f|восьмеричный|\ooo|
-|оповещение (колокольчик)|\a|шестнадцатеричный|\xhhh|
+|Значение|Escape-последовательность|
+|-----------|---------------------|
+| новая строка | \\n |
+| обратная косая черта | \\\\ |
+| горизонтальная табуляция | \\t |
+| вопросительный знак | ? или \\? |
+| вертикальная табуляция | \\v |
+| одинарная кавычка | \\' |
+| стирание назад | \\b |
+| двойная кавычка | \\" |
+| возврат каретки | \\R |
+| нуль-символ | \\0 |
+| перевод страницы | \\F |
+| восьмеричный | \\ooo |
+| оповещение (колокольчик) | \\a |
+| шестнадцатеричный | \\xhhh |
 
 Приведенный ниже показаны некоторые примеры escape-символов, с помощью литералов обычный символ. Тот же самый синтаксис escape-последовательности является допустимым для других типов литерала символ.
 
@@ -253,7 +260,7 @@ auto s4 = U"hello"; // const char32_t*
 // represents the string: An unescaped \ character
 const char* raw_narrow = R"(An unescaped \ character)";
 const wchar_t* raw_wide = LR"(An unescaped \ character)";
-const char*       raw_utf8  = u8R"(An unescaped \ character)";
+const char*       raw_utf8  = u8R"(An unescaped \ character)";
 const char16_t* raw_utf16 = uR"(An unescaped \ character)";
 const char32_t* raw_utf32 = UR"(An unescaped \ character)";
 ```

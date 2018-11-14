@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586336"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519297"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -318,12 +318,12 @@ CFtpConnection* GetFtpConnection(
 *pstrPassword*<br/>
 Указатель на заканчивающуюся нулем строку, указывающее пароль, используемый для входа. Если оба *pstrPassword* и *pstrUserName* имеют значение NULL, анонимные пароль по умолчанию — имя электронной почты пользователя. Если *pstrPassword* имеет значение NULL (или пустую строку), но *pstrUserName* не равно NULL, используется пустой пароль. В следующей таблице описаны поведение четыре возможные параметры *pstrUserName* и *pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|Имя пользователя, отправляемые серверу FTP|Пароля, передаваемых на FTP-сервер|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|Значение NULL или ""|Значение NULL или ""|«anonymous»|Имя электронной почты пользователя|
-|НЕНУЛЕВЫЕ строковые|Значение NULL или ""|*pstrUserName*|" "|
-|NULL|НЕНУЛЕВЫЕ строковые|ОШИБКА|ОШИБКА||
-|НЕНУЛЕВЫЕ строковые|НЕНУЛЕВЫЕ строковые|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | Имя пользователя, отправляемые серверу FTP | Пароля, передаваемых на FTP-сервер |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   Значение NULL или ""   |   Значение NULL или ""   |         «anonymous»         |      Имя электронной почты пользователя      |
+| НЕНУЛЕВЫЕ строковые |   Значение NULL или ""   |       *pstrUserName*        |             " "             |
+|      NULL       | НЕНУЛЕВЫЕ строковые |            ОШИБКА            |            ОШИБКА            |
+| НЕНУЛЕВЫЕ строковые | НЕНУЛЕВЫЕ строковые |       *pstrUserName*        |       *pstrPassword*        |
 
 *nPort*<br/>
 Число, идентифицирующее порт TCP/IP, используемый на сервере.

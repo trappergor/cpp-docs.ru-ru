@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618495"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327555"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ ms.locfileid: "50618495"
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>Параметры
 
-<br/>
+*base*<br/>
 Начало целевого массива.
 
 *номер*<br/>
@@ -68,7 +68,7 @@ void qsort(
 **qsort** вызовы *сравнения* рутинных один или несколько раз во время сортировки и передает указатели на два элемента массива при каждом вызове.
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 Подпрограмма сравнивает элементы и возвращает одно из следующих значений.
@@ -81,7 +81,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 Массив сортируется по возрастанию, как определено функцией сравнения. Для сортировки массива по убыванию измените смысл значений "больше" и "меньше" на противоположный в функции сравнения.
 
-Эта функция проверяет свои параметры. Если *сравнения* или *номер* — **NULL**, или если *базового* — **NULL** и **номер* не равно нулю, или если *ширины* меньше нуля, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает и **errno** присваивается **EINVAL**.
+Эта функция проверяет свои параметры. Если *сравнения* или *номер* — **NULL**, или если *базового* — **NULL** и *номер* не равно нулю, или если *ширины* меньше нуля, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция возвращает и **errno** присваивается **EINVAL**.
 
 ## <a name="requirements"></a>Требования
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CTable class
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
-ms.openlocfilehash: 15081173edfae5ba0f881a6c1607a22e77a8a7c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7605d78a140a0f5353a16b9e22d5d618d29ff327
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452173"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556690"
 ---
 # <a name="ctable-class"></a>Класс CTable
 
@@ -95,10 +95,10 @@ HRESULT Open(const CSession& session,
 [in] `DBID` Таблицы, чтобы открыть.
 
 *pPropSet*<br/>
-[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.
+[in] Указатель на массив [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK. Значение NULL по умолчанию задает свойства отсутствуют.
 
 *ulPropSets*<br/>
-[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры, передаются в *pPropSet* аргумент.
+[in] Число [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -106,7 +106,7 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724) в *Справочник программиста OLE DB по*.
+Дополнительные сведения см. в разделе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 ## <a name="see-also"></a>См. также
 

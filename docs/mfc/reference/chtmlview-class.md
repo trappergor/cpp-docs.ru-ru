@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438120"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333645"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 Не каждый кадр будет срабатывать данное событие, но каждый кадр, который срабатывает [OnDownloadBegin](#ondownloadbegin) событие будет срабатывать соответствующий `OnDocumentComplete` событий.
 
-Указывает URL-адрес *lpszURL* может отличаться от URL-адрес, браузер посоветовали перехода, так как этот URL-адрес является канонический и полного URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет "http://www.microsoft.com/«. Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адрес перенаправления будут отражены здесь.
+Указывает URL-адрес *lpszURL* может отличаться от URL-адрес, браузер посоветовали перехода, так как этот URL-адрес является канонический и полного URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет "<http://www.microsoft.com/>«. Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адрес перенаправления будут отражены здесь.
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ virtual void OnNavigateComplete2(LPCTSTR strURL);
 
 Параметр URL-адреса может быть PIDL в случае сущности пространства имени оболочки, для которого никак не представлен URL-адрес.
 
-Обратите внимание, что URL-адрес содержится в *strURL* может отличаться от URL-адрес, браузер посоветовали перехода, так как этот URL-адрес является канонический и полного URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет "http://www.microsoft.com/«. Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адрес перенаправления будут отражены здесь.
+Обратите внимание, что URL-адрес содержится в *strURL* может отличаться от URL-адрес, браузер посоветовали перехода, так как этот URL-адрес является канонический и полного URL-адрес. Например, если приложение указывает URL-адрес «www.microsoft.com» в вызове к [Navigate](#navigate) или [Navigate2](#navigate2), URL-адрес, передаваемый по `OnNavigateComplete2` будет "<http://www.microsoft.com/>«. Кроме того Если сервер перенаправлен браузер другой URL-адрес, URL-адрес перенаправления будут отражены здесь.
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 

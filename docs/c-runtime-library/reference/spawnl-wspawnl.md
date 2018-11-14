@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnl function
 - process creation
 ms.assetid: dd4584c9-7173-4fc5-b93a-6e7d3c2316d7
-ms.openlocfilehash: 4dbc8fab611d98f7f87529196b0e10e85196faa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11ff3447487fcaf1a4225825c222b873005b2a1c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518083"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326983"
 ---
 # <a name="spawnl-wspawnl"></a>_spawnl, _wspawnl
 
@@ -83,11 +83,11 @@ intptr_t _wspawnl(
 
 |||
 |-|-|
-**E2BIG**|Длина списка аргументов превышает 1024 байта.
-**EINVAL**|*режим* аргумент является недопустимым.
-**ENOENT**|Файл или путь не найден.
-**ENOEXEC**|Указанный файл не является исполняемым или имеет недопустимый формат исполняемого файла.
-**ENOMEM**|Недостаточно памяти для выполнения нового процесса.
+| **E2BIG** | Длина списка аргументов превышает 1024 байта. |
+| **EINVAL** | *режим* аргумент является недопустимым. |
+| **ENOENT** | Файл или путь не найден. |
+| **ENOEXEC** | Указанный файл не является исполняемым или имеет недопустимый формат исполняемого файла. |
+| **ENOMEM** | Недостаточно памяти для выполнения нового процесса. |
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

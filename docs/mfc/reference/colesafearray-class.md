@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648101"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525409"
 ---
 # <a name="colesafearray-class"></a>Класс COleSafeArray
 
@@ -408,7 +408,7 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>Примечания
 
-Функция отсоединяет данные в безопасном массиве, задав VARTYPE объекта значение VT_EMPTY. Это обязанность вызывающего освобождение массива путем вызова функции Windows [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear).
+Функция отсоединяет данные в безопасном массиве, задав VARTYPE объекта значение VT_EMPTY. Это обязанность вызывающего освобождение массива путем вызова функции Windows [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear).
 
 В случае ошибки функция выдает [COleException](../../mfc/reference/coleexception-class.md).
 
@@ -674,7 +674,7 @@ void PutElement(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция автоматически вызывает функции Windows [SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock) и [SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.
+Эта функция автоматически вызывает функции Windows [SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock) и [SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock) до и после назначения элемента. Если строка, объект или вариант являются элементом данных, функция выполняет правильное копирование, а если существующим элементом — правильное удаление.
 
 Обратите внимание, для массива можно настроить несколько блокировок, поэтому вы можете поместить в него элементы, недоступные для других операций.
 
