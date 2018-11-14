@@ -31,12 +31,12 @@ helpviewer_keywords:
 - process creation
 - spawnvpe function
 ms.assetid: 3db6394e-a955-4837-97a1-fab1db1e6092
-ms.openlocfilehash: 88838352bb8c4677e8b6693811f8060f698ef47a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a98cc3c441261a92876b94e1231e66bb71e9d3d9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525883"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326606"
 ---
 # <a name="spawnvpe-wspawnvpe"></a>_spawnvpe, _wspawnvpe
 
@@ -82,11 +82,11 @@ intptr_t _wspawnvpe(
 
 |||
 |-|-|
-**E2BIG**|Длина списка аргументов превышает 1024 байта.
-**EINVAL**|*режим* аргумент является недопустимым.
-**ENOENT**|Файл или путь не найден.
-**ENOEXEC**|Указанный файл не является исполняемым или имеет недопустимый формат исполняемого файла.
-**ENOMEM**|Недостаточно памяти для выполнения нового процесса.
+| **E2BIG** | Длина списка аргументов превышает 1024 байта. |
+| **EINVAL** | *режим* аргумент является недопустимым. |
+| **ENOENT** | Файл или путь не найден. |
+| **ENOEXEC** | Указанный файл не является исполняемым или имеет недопустимый формат исполняемого файла. |
+| **ENOMEM** | Недостаточно памяти для выполнения нового процесса. |
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633589"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332391"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc, ungetwc
 
@@ -62,7 +62,7 @@ wint_t ungetwc(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном завершении, каждая из этих функций Возвращает аргумент символа *c*. Если *c* не удается отправить обратно или если ни один символ не считан, входной поток не меняется и **ungetc** возвращает ** EOF`; **ungetwc` возвращает **WEOF**. Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **EOF** или **WEOF** возвращается и **errno** присваивается **EINVAL**.
+При успешном завершении, каждая из этих функций Возвращает аргумент символа *c*. Если *c* не удается отправить обратно или если ни один символ не считан, входной поток не меняется и **ungetc** возвращает **EOF**; **ungetwc** возвращает **WEOF**. Если *поток* — **NULL**, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **EOF** или **WEOF** возвращается и **errno** присваивается **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

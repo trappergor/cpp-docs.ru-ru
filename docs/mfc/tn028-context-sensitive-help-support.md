@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: db20cb087d70284103cd02dcfa34b2089ae09821
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533423"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520160"
 ---
 # <a name="tn028-context-sensitive-help-support"></a>TN028. Поддержка контекстной справки
 
@@ -85,7 +85,6 @@ Microsoft Foundation Classes реализовать оба этих форм с�
 ```
 
 afx_msg LRESULT CWnd::OnCommandHelp(WPARAM wParam, LPARAM lParam)
-
 ```
 
 WM_COMMANDHELP является конфиденциального сообщения Windows MFC, получаемого окна справки при получении запроса. Когда окно получает это сообщение, оно может вызвать `CWinApp::WinHelp` с контекстом, который соответствует внутреннее состояние окна.

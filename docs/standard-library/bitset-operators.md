@@ -12,19 +12,19 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: c51bc5ecf2bc3a74b25a06320f0ca8fd64749f5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531150"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331741"
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 
 ||||
 |-|-|-|
 |[оператор&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[оператор^](#op_xor)|[оператор|](#op_or)|
+|[оператор^](#op_xor)|[оператор|](#op_or)| |
 
 ## <a name="op_amp"></a> operator&amp;
 
@@ -83,7 +83,6 @@ bitset 3: 0001
 Вставляет текстовое представление битовой последовательности в поток вывода.
 
 ```
-
 template <class CharType, class Traits, size_t N>
 basic_ostream<CharType, Traits>& operator<<(
     basic_ostream<CharType, Traits>& ostr,
@@ -141,7 +140,6 @@ int main( )
 Считывает строку битовых символов в битовый массив.
 
 ```
-
 template <class CharType, class Traits, size_t Bits>
 basic_istream<CharType, Traits>& operator>> (
     basic_istream<CharType, Traits>&
@@ -275,7 +273,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  оператор |
+## <a name="op_or"></a>  оператор|
 
 Выполняет побитовую операцию `OR` между двумя битовыми массивами.
 

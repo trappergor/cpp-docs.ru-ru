@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548543"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327139"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale, _wsetlocale
 
@@ -96,12 +96,12 @@ en-US
 
 |*Категория* флаг|Затрагивает|
 |-|-|
-**LC_ALL**|Все категории, перечисленные ниже.
-**LC_COLLATE**|**Strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_ strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, и **wcsxfrm** функции.
-**LC_CTYPE**|Функции обработки символов (за исключением **isdigit**, **isxdigit**, **mbstowcs**, и **mbtowc**, которые не затрагиваются).
-**LC_MONETARY**|Сведения форматировании денежных значений, возвращенных **localeconv** функции.
-**LC_NUMERIC**|Символ для процедур форматированного вывода десятичного разделителя (такие как **printf**), для процедур преобразования данных и неденежным форматирования сведения, возвращаемые **localeconv**. Помимо символа десятичного разделителя **LC_NUMERIC** задает разделитель тысяч и группирование управления строкой, возвращенной [localeconv](localeconv.md).
-**LC_TIME**|**Strftime** и **wcsftime** функции.
+| **LC_ALL** | Все категории, перечисленные ниже. |
+| **LC_COLLATE** | **Strcoll**, **_stricoll**, **wcscoll**, **_wcsicoll**, **strxfrm**, **_ strncoll**, **_strnicoll**, **_wcsncoll**, **_wcsnicoll**, и **wcsxfrm** функции. |
+| **LC_CTYPE** | Функции обработки символов (за исключением **isdigit**, **isxdigit**, **mbstowcs**, и **mbtowc**, которые не затрагиваются). |
+| **LC_MONETARY** | Сведения форматировании денежных значений, возвращенных **localeconv** функции. |
+| **LC_NUMERIC** | Символ для процедур форматированного вывода десятичного разделителя (такие как **printf**), для процедур преобразования данных и неденежным форматирования сведения, возвращаемые **localeconv**. Помимо символа десятичного разделителя **LC_NUMERIC** задает разделитель тысяч и группирование управления строкой, возвращенной [localeconv](localeconv.md). |
+| **LC_TIME** | **Strftime** и **wcsftime** функции. |
 
 Эта функция проверяет параметр категории. Если параметр категории не является одним из значений, приведенных в предыдущей таблице, вызывается обработчик недопустимого параметра, как описано в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, функция задает **errno** для **EINVAL** и возвращает **NULL**.
 

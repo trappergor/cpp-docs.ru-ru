@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677348"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521080"
 ---
 # <a name="concurrency-namespace-enums"></a>перечисления пространства имен Concurrency
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|Планировщик не выполняет сбор сведений о ходе выполнения. Перераспределения выполняется на основе исключительно на уровне подписки базовой аппаратный поток. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).<br /><br /> Это значение зарезервировано для использования средой выполнения.|
 |`ProgressFeedbackEnabled`|Планировщик собирает сведения о ходе выполнения и передает его в диспетчер ресурсов. Диспетчер ресурсов будет использовать эти статистические данные для балансировки ресурсов от имени планировщика в дополнение к базовой аппаратный поток уровня подписки. Дополнительные сведения об уровнях подписки см. в разделе [IExecutionResource::CurrentSubscriptionLevel](IExecutionResource-structure.md).|
+
 ##  <a name="join_type"></a>  Перечисление join_type
 
 Тип блока обмена сообщениями `join`.

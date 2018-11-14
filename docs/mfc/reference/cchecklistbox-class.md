@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533878"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327347"
 ---
 # <a name="cchecklistbox-class"></a>Класс CCheckListBox
 
@@ -80,13 +80,13 @@ class CCheckListBox : public CListBox
 
 Каждая запись схемы сообщений имеет следующий вид:
 
-**ON_** уведомления **(**`id`, `memberFxn` **)**
+**ON\_**_уведомления_ **(** _идентификатор_, _memberFxn_ **)**
 
 где `id` указывает идентификатор дочернего окна элемента управления, отправляющего уведомление и `memberFxn` имя функции-члена родительской вы написали для обработки уведомления.
 
 Родительский прототип функции выглядит следующим образом:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Имеется только одна запись схемы сообщений, относящихся конкретно к `CCheckListBox` (но см. также записи схемы сообщений для [CListBox](../../mfc/reference/clistbox-class.md)):
 

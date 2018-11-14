@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677179"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333219"
 ---
 # <a name="priorityqueue-class"></a>Класс priority_queue
 
@@ -224,9 +224,9 @@ After a pop, the element at the top of the priority_queue is 20.
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_ comp*<br/>
+*_comp*<br/>
 Функция сравнения типа **constTraits** для упорядочивания элементов в priority_queue, по умолчанию используется функция сравнения базового контейнера.
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ Priority_queue, для которой создаваемый набор стан
 
 Четвертый конструктор задает копию priority_queue *правой*.
 
-Последние три конструктора копируют диапазон [* первой, последней *) из контейнера и использовать значения, чтобы инициализировать priority_queue с повышением точности при указании типа функции сравнения класса **Traits** и `container_type`.
+Последние три конструктора копируют диапазон \[ *первый*, *последнего*) из контейнера и использовать значения, чтобы инициализировать priority_queue с повышением точности при указании типа функции сравнения класса `Traits` и `container_type`.
 
 ### <a name="example"></a>Пример
 

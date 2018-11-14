@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599677"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556924"
 ---
 # <a name="asyncbase-class"></a>AsyncBase - класс
 
@@ -116,7 +114,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [AsyncBase::put_Id](#put-id)                 | Задает дескриптор асинхронной операции.
 [AsyncBase::PutOnComplete](#putoncomplete)   | Задает адрес обработчик события завершения для указанного значения.
 [AsyncBase::PutOnProgress](#putonprogress)   | Задает адрес обработчика событий процесса выполнения указанное значение.
-[AsyncBase::Start](#start)                   | Начинает асинхронную операцию.
+
 
 ### <a name="protected-methods"></a>Защищенные методы
 
@@ -130,6 +128,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [AsyncBase::OnCancel](#oncancel)                                             | При переопределении в производном классе отменяет асинхронную операцию.
 [AsyncBase::OnClose](#onclose)                                               | При переопределении в производном классе, закрывает асинхронной операции.
 [AsyncBase::OnStart](#onstart)                                               | При переопределении в производном классе запускает асинхронную операцию.
+[AsyncBase::Start](#start)                                                   | Начинает асинхронную операцию.
 [AsyncBase::TryTransitionToCompleted](#trytransitiontocompleted)             | Указывает, завершена ли текущей асинхронной операции.
 [AsyncBase::TryTransitionToError](#trytransitiontoerror)                     | Указывает, является ли указанный код ошибки можно изменить внутреннее состояние ошибки.
 
@@ -504,7 +503,7 @@ STDMETHOD(
 
 ### <a name="remarks"></a>Примечания
 
-`Start()` — Это реализация по умолчанию `IAsyncInfo::Start`, а не фактические работает. Чтобы фактически запускает асинхронную операцию, переопределите `OnStart()` чисто виртуального метода.
+`Start()` — Это защищенный метод, который не видимый извне, поскольку асинхронные операции «"Горячий" start» перед возвратом вызывающей стороне.
 
 ## <a name="trytransitiontocompleted"></a>AsyncBase::TryTransitionToCompleted
 

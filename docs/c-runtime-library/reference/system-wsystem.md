@@ -29,12 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46c4949fcc8cfbe4a3477e66b57d8fc6fc97ed73
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624670"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328660"
 ---
 # <a name="system-wsystem"></a>system, _wsystem
 
@@ -65,10 +65,10 @@ int _wsystem(
 
 |||
 |-|-|
-**E2BIG**|Список аргументов (который зависит от системы) слишком велик.
-**ENOENT**|Интерпретатор команд не найден.
-**ENOEXEC**|Файл интерпретатора команд не может быть выполнен из-за недопустимого формата.
-**ENOMEM**|Недостаточно доступной памяти для выполнения команды; или доступная память повреждена; или существует недопустимый блок, что указывает на неправильное выделение памяти для процесса, который выполняет вызов.
+| **E2BIG** | Список аргументов (который зависит от системы) слишком велик. |
+| **ENOENT** | Интерпретатор команд не найден. |
+| **ENOEXEC** | Файл интерпретатора команд не может быть выполнен из-за недопустимого формата. |
+| **ENOMEM** | Недостаточно доступной памяти для выполнения команды; или доступная память повреждена; или существует недопустимый блок, что указывает на неправильное выделение памяти для процесса, который выполняет вызов. |
 
 Дополнительные сведения об этих кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

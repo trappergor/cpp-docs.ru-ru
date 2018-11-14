@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648192"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326021"
 ---
 # <a name="unarynegate-class"></a>Класс unary_negate
 
@@ -44,7 +44,7 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию объекта унарной функции _ *Func.* В нем определяется функция-член `operator()`, которая возвращает **!**\_ *Func(left).*
+Класс шаблона сохраняет копию объект унарной функции  *\_Func*. Он определяет свою функцию-член `operator()` как возвращающий `!_Func(left)`.
 
 Конструктор `unary_negate` редко используется напрямую. Вспомогательная функция [not1](../standard-library/functional-functions.md#not1) позволяет удобно объявить и использовать предикат адаптера **unary_negator**.
 

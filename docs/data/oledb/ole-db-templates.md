@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 2b8fd52dddcbf87b624d5bcc289d11b1f7ba5a3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 518697a35a51c75b76efd22ed55980c778f1f6c9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446011"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523784"
 ---
 # <a name="ole-db-templates"></a>Шаблоны OLE DB
 
@@ -30,7 +30,7 @@ ms.locfileid: "50446011"
 [Общие сведения о программировании OLE DB](../../data/oledb/ole-db-programming-overview.md)<br/>
 Описываются OLE DB — и универсального доступа к данным в OLE DB.
 
-[справочник программиста OLE DB](/previous-versions/windows/desktop/ms713643)<br/>
+[справочник программиста OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 Ссылки в документации пакета SDK для Windows OLE DB.
 
 [Примеры шаблонов OLE DB](../../visual-cpp-samples.md)<br/>

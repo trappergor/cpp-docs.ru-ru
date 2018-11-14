@@ -3,12 +3,12 @@ title: Тип системы C++ (современный C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba24a4a739e4eb13d983202943ca046f857422d2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602609"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521096"
 ---
 # <a name="c-type-system-modern-c"></a>Тип системы C++ (современный C++)
 
@@ -86,7 +86,6 @@ int maxValue;                // Not recommended! maxValue contains
 
 const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
-
 ```
 
 **Const** квалификатор широко используется в объявлениях функций и переменных и «правильности константы» является важным принципом в C++; по сути это означает использование **const** гарантировать во время компиляции значения не исключения непреднамеренного изменения. Дополнительные сведения см. в разделе [const](../cpp/const-cpp.md).

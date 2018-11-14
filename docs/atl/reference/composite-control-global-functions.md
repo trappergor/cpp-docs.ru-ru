@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525272"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524434"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK *: SDK Tools*.
+Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK: SDK Tools.
 
 Дополнительные сведения в диалоговых окнах в целом см. [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) и [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) в пакете Windows SDK.
 
@@ -160,7 +160,7 @@ ATLAPI AtlAxCreateControl(
 
 - CLSID, такие как «{8E27C92B-1264-101C-8A2F-040224009C02}»
 
-- URL-адрес, например "http://www.microsoft.com"
+- URL-адрес, например "<http://www.microsoft.com>"
 
 - Ссылку на активный документ, например, «file://\\\Documents\MyDoc.doc»
 
@@ -212,7 +212,7 @@ ATLAPI AtlAxCreateControlEx(
 
 - CLSID, такие как «{8E27C92B-1264-101C-8A2F-040224009C02}»
 
-- URL-адрес, например "http://www.microsoft.com"
+- URL-адрес, например "<http://www.microsoft.com>"
 
 - Ссылку на активный документ, например, «file://\\\Documents\MyDoc.doc»
 
@@ -271,7 +271,7 @@ ATLAPI AtlAxCreateControlLic(
 
 - CLSID, такие как «{8E27C92B-1264-101C-8A2F-040224009C02}»
 
-- URL-адрес, например "http://www.microsoft.com"
+- URL-адрес, например "<http://www.microsoft.com>"
 
 - Ссылку на активный документ, например, «file://\\\Documents\MyDoc.doc»
 
@@ -325,7 +325,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 - CLSID, такие как «{8E27C92B-1264-101C-8A2F-040224009C02}»
 
-- URL-адрес, например "http://www.microsoft.com"
+- URL-адрес, например "<http://www.microsoft.com>"
 
 - Ссылку на активный документ, например, «file://\\\Documents\MyDoc.doc»
 

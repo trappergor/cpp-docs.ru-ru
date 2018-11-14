@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603662"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518493"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 
@@ -45,7 +45,7 @@ ms.locfileid: "50603662"
 Имеется возможность создать стандартное свойство с привязкой к данным, несмотря на то, что более вероятно, что вы будете [метод привязываемых get и set](#vchowcreatingbindablegetsetmethod).
 
 > [!NOTE]
->  Стандартные свойства имеют `bindable` и `requestedit` атрибуты по умолчанию.
+> Стандартные свойства имеют `bindable` и `requestedit` атрибуты по умолчанию.
 
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>Чтобы добавить возможности связывания стандартное свойство с помощью мастера добавления свойства
 
@@ -74,7 +74,7 @@ ms.locfileid: "50603662"
 Помимо привязанный к данным метод get и set, можно также создать [привязываемых стандартное свойство](#vchowcreatingbindablestockproperty).
 
 > [!NOTE]
->  Подразумевается, что у вас есть элемент управления ActiveX проекта который наследуется от элемента управления Windows.
+> Подразумевается, что у вас есть элемент управления ActiveX проекта который наследуется от элемента управления Windows.
 
 #### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>Чтобы добавить метод привязываемых get и set, с помощью мастера добавления свойства
 
@@ -96,37 +96,37 @@ ms.locfileid: "50603662"
 
 1. В поле **Тип реализации**выберите **Методы Get/Set**.
 
-9. Установите следующие флажки на вкладке "атрибуты IDL": **bindable**, **requestedit**, **displaybind**, и **defaultbind** для добавления атрибуты для определения свойства в проекте. IDL-файла. Эти атрибуты сделать элемент управления видимым для пользователя и сделать стандартное свойство свойство привязки по умолчанию.
+1. Установите следующие флажки на вкладке "атрибуты IDL": **bindable**, **requestedit**, **displaybind**, и **defaultbind** для добавления атрибуты для определения свойства в проекте. IDL-файла. Эти атрибуты сделать элемент управления видимым для пользователя и сделать стандартное свойство свойство привязки по умолчанию.
 
-10. Нажмите кнопку **Готово**.
+1. Нажмите кнопку **Готово**.
 
-11. Изменить текст `SetMyProp` работать так, чтобы он содержал следующий код:
+1. Изменить текст `SetMyProp` работать так, чтобы он содержал следующий код:
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-12. Параметр, передаваемый `BoundPropertyChanged` и `BoundPropertyRequestEdit` "функции" — идентификатор dispid свойства, который является параметром, передаваемая атрибуту id() для свойства. IDL-файла.
+1. Параметр, передаваемый `BoundPropertyChanged` и `BoundPropertyRequestEdit` "функции" — идентификатор dispid свойства, который является параметром, передаваемая атрибуту id() для свойства. IDL-файла.
 
-13. Изменить [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) , поэтому он содержит следующий код:
+1. Изменить [OnOcmCommand](../mfc/mfc-activex-controls-subclassing-a-windows-control.md) , поэтому он содержит следующий код:
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-14. Изменить `OnDraw` работать так, чтобы он содержал следующий код:
+1. Изменить `OnDraw` работать так, чтобы он содержал следующий код:
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-15. В раздел public файла заголовка файла заголовка для класса элемента управления добавьте следующие определения переменных-членов (конструкторы):
+1. В раздел public файла заголовка файла заголовка для класса элемента управления добавьте следующие определения переменных-членов (конструкторы):
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-16. Сделать следующую строку в последней строке `DoPropExchange` функции:
+1. Сделать следующую строку в последней строке `DoPropExchange` функции:
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-17. Изменить `OnResetState` работать так, чтобы он содержал следующий код:
+1. Изменить `OnResetState` работать так, чтобы он содержал следующий код:
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-18. Изменить `GetMyProp` работать так, чтобы он содержал следующий код:
+1. Изменить `GetMyProp` работать так, чтобы он содержал следующий код:
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 

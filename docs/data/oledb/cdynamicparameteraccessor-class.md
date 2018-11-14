@@ -90,12 +90,12 @@ helpviewer_keywords:
 - SetParamStatus method
 - SetParamString method
 ms.assetid: 5f22626e-e80d-491f-8b3b-cedc50331960
-ms.openlocfilehash: b8c43a47eceb5213f292b825a771cd25e99efceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cc67e6e837844356a071aa362dcca85eca24e4
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592664"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556976"
 ---
 # <a name="cdynamicparameteraccessor-class"></a>Класс CDynamicParameterAccessor
 
@@ -147,9 +147,10 @@ class CDynamicParameterAccessor : public CDynamicAccessor
 
 ```cpp
 typedef CDynamicParameterAccessor _ParamClass;
-CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
-   DBLENGTH nBlobSize = 8000 )
-   : CDynamicAccessor(eBlobHandling, nBlobSize )
+CDynamicParameterAccessor(
+   DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFAULT,
+   DBLENGTH nBlobSize = 8000 )
+   : CDynamicAccessor(eBlobHandling, nBlobSize )
 ```
 
 #### <a name="parameters"></a>Параметры
@@ -171,10 +172,10 @@ CDynamicParameterAccessor(DBBLOBHANDLINGENUM eBlobHandling = DBBLOBHANDLING_DEFA
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-template <class ctype>bool GetParam(DBORDINAL nParam, 
+template <class ctype>bool GetParam(DBORDINAL nParam,
    ctype* pData) const throw();
 
-template <class ctype> bool GetParam(TCHAR* pParamName, 
+template <class ctype> bool GetParam(TCHAR* pParamName,
    ctype* pData) const throw();
 
 void* GetParam(DBORDINAL nParam) const throw();
@@ -223,7 +224,7 @@ DB_UPARAMS GetParamCount() const throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-bool GetParamIO(DBORDINAL nParam, 
+bool GetParamIO(DBORDINAL nParam,
    DBPARAMIO* pParamIO) const throw();
 ```
 
@@ -312,7 +313,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in] Параметр с номером (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером является индексом параметра, в зависимости от их порядка SQL или вызов хранимой процедуры. См. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) пример.
 
 *pStatus*<br/>
-[out] Указатель на переменную, содержащую DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
+[out] Указатель на переменную, содержащую DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
 
 ### <a name="remarks"></a>Примечания
 
@@ -424,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in] Указатель на буфер, содержащий данные для записи в буфер.
 
 *status*<br/>
-[in] DBSTATUS состояние столбца. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
+[in] DBSTATUS состояние столбца. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -472,7 +473,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in] Параметр с номером (начиная с 1). Параметр 0 зарезервирован для возвращаемых значений. Параметр с номером является индексом параметра, в зависимости от их порядка SQL или вызов хранимой процедуры. См. в разделе [SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md) пример.
 
 *status*<br/>
-[in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
+[in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
 
 ### <a name="remarks"></a>Примечания
 
@@ -485,10 +486,10 @@ bool SetParamStatus(DBORDINAL nParam,
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-bool SetParamString(DBORDINAL nParam, 
-   constCHAR* pString, 
-   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam, 
-   constWCHAR* pString, 
+bool SetParamString(DBORDINAL nParam,
+   constCHAR* pString,
+   DBSTATUS status = DBSTATUS_S_OK) throw();bool SetParamString(DBORDINAL nParam,
+   constWCHAR* pString,
    DBSTATUS status = DBSTATUS_S_OK) throw();
 ```
 
@@ -501,7 +502,7 @@ bool SetParamString(DBORDINAL nParam, 
 [in] Указатель на ANSI (**CHAR**) или Юникод (**WCHAR**) строковые данные указанного параметра. См. в разделе DBSTATUS в oledb.h.
 
 *status*<br/>
-[in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
+[in] DBSTATUS состояние указанного параметра. Дополнительные сведения о значениях DBSTATUS, см. в разделе [состояние](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*, или выполните поиск DBSTATUS в oledb.h.
 
 ### <a name="remarks"></a>Примечания
 

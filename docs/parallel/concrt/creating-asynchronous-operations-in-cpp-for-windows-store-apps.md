@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563206"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333336"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений универсальной платформы Windows
 
@@ -148,11 +148,10 @@ ms.locfileid: "50563206"
 В следующем разделе показано приложение, которое считывает файл с диска, находит наиболее распространенные слова в этом файле, а затем отображает результаты в пользовательском интерфейсе. Последняя операция, обновление пользовательского интерфейса, происходит в потоке ИП.
 
 > [!IMPORTANT]
->  Это поведение характерно для приложений универсальной платформы Windows. В приложениях для настольных систем не требуется контролировать, где выполняются продолжения. Вместо этого планировщик выбирает рабочий поток, в котором будет выполняться каждое продолжение.
+> Это поведение характерно для приложений универсальной платформы Windows. В приложениях для настольных систем не требуется контролировать, где выполняются продолжения. Вместо этого планировщик выбирает рабочий поток, в котором будет выполняться каждое продолжение.
 
 > [!IMPORTANT]
-
->  Не вызывайте [concurrency::task::wait](reference/task-class.md#wait) в теле продолжения, выполняемого в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) так как этот метод блокирует текущий поток и может вызвать зависание приложения. Тем не менее можно вызвать метод [concurrency::task::get](reference/task-class.md#get) для получения результата из предшествующей задачи в потоке задач.
+> Не вызывайте [concurrency::task::wait](reference/task-class.md#wait) в теле продолжения, выполняемого в STA. В противном случае среда выполнения создает [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) так как этот метод блокирует текущий поток и может вызвать зависание приложения. Тем не менее можно вызвать метод [concurrency::task::get](reference/task-class.md#get) для получения результата из предшествующей задачи в потоке задач.
 
 ##  <a name="example-app"></a> Пример: Управление выполнением в приложении среды выполнения Windows с помощью C++ и XAML
 

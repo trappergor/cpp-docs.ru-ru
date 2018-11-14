@@ -39,12 +39,12 @@ helpviewer_keywords:
 - strtoi64 function
 - wcstoi64_l function
 ms.assetid: ea2abc50-7bfe-420e-a46b-703c3153593a
-ms.openlocfilehash: a8097a31ebbc56281008f14da58671d5b2e4e8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5479448a4e3a3cedba3a62d9b12b0dbe4160f7c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490783"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331702"
 ---
 # <a name="strtoi64-wcstoi64-strtoi64l-wcstoi64l"></a>_strtoi64, _wcstoi64, _strtoi64_l, _wcstoi64_l
 
@@ -112,7 +112,7 @@ __int64 _wcstoi64_l(
 |**_tcstoi64**|**_strtoi64**|**_strtoi64**|**_wcstoi64**|
 |**_tcstoi64_l**|**_strtoi64_l**|**_strtoi64_l**|**_wcstoi64_l**|
 
-Языкового стандарта **LC_NUMERIC** параметр category определяет распознавание символа основания системы счисления в *strSource **;* Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции, не имеющие суффикса _l используют текущий языковой стандарт; **_strtoi64_l** и **_wcstoi64_l** идентичны соответствующей функции без **_l** суффикса, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Языкового стандарта **LC_NUMERIC** параметр category определяет распознавание символа основания системы счисления в *strSource*; Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции, не имеющие суффикса _l используют текущий языковой стандарт; **_strtoi64_l** и **_wcstoi64_l** идентичны соответствующей функции без **_l** суффикса, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Если *endptr* не **NULL**, указатель на символ, который останавливает сканирование, хранится в расположении, указанном *endptr*. Если преобразование не может быть выполнено (найдены нет допустимые цифры или указано недопустимое основание), значение *strSource* хранится в расположении, указанном *endptr*.
 
