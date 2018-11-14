@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: b6e7208628ee77df8647eaa46b00e6e22d294879
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdda18243366de059b26fd566b5eecb308cbed14
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529146"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556651"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
 
@@ -72,7 +72,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 ## <a name="remarks"></a>Примечания
 
-Использования потребителей OLE DB `DBPROPIDSET` структуры передается массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойств, идентифицированных в одном [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) структура принадлежат набору одно свойство.
+Использования потребителей OLE DB `DBPROPIDSET` структуры передается массив идентификаторов свойств, для которых необходимо получить сведения о свойстве. Свойств, идентифицированных в одном [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) структура принадлежат набору одно свойство.
 
 ## <a name="addpropertyid"></a> CDBPropIDSet::AddPropertyID
 
@@ -91,7 +91,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> CDBPropIDSet::CDBPropIDSet
 
-Конструктор. Инициализирует `rgProperties`, `cProperties`и (необязательно) `guidPropertySet` поля [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) структуры.
+Конструктор. Инициализирует `rgProperties`, `cProperties`и (необязательно) `guidPropertySet` поля [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) структуры.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -124,7 +124,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Параметры
 
 *Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](/previous-versions/windows/desktop/ms717981) структуры.
+[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms717981(v=vs.85)) структуры.
 
 ### <a name="remarks"></a>Примечания
 

@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 317e24708a6f4e5666c59c0db870440895173d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550323"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556794"
 ---
 # <a name="csession-class"></a>класс CSession
 
@@ -85,14 +85,14 @@ class CSession
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Abort(BOID* pboidReason = NULL, 
-   BOOL bRetaining = FALSE, 
+HRESULT Abort(BOID* pboidReason = NULL,
+   BOOL bRetaining = FALSE,
    BOOL bAsync = FALSE) const throw();
 ```
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ITransaction::Abort](/previous-versions/windows/desktop/ms709833) в *справочнике программиста OLE DB*.
+См. в разделе [ITransaction::Abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -119,14 +119,14 @@ void Close() throw();
 ### <a name="syntax"></a>Синтаксис
 
 ```cpp
-HRESULT Commit(BOOL bRetaining = FALSE, 
-   DWORD grfTC = XACTTC_SYNC, 
+HRESULT Commit(BOOL bRetaining = FALSE,
+   DWORD grfTC = XACTTC_SYNC,
    DWORD grfRM = 0) const throw();
 ```
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ITransaction::Commit](/previous-versions/windows/desktop/ms713008) в *справочнике программиста OLE DB*.
+См. в разделе [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -134,7 +134,7 @@ HRESULT Commit(BOOL bRetaining = FALSE, 
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [ITransaction::Commit](/previous-versions/windows/desktop/ms713008).
+Дополнительные сведения см. в разделе [ITransaction::Commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85)).
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) в *справочнике программиста OLE DB*.
+См. в разделе [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -156,7 +156,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975) в *Справочник программиста OLE DB по*.
+Дополнительные сведения см. в разделе [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 ## <a name="open"></a> CSession::Open
 
@@ -176,10 +176,10 @@ HRESULT Open(const CDataSource& ds,
 [in] Источник данных, для которого будет открыть сеанс.
 
 *pPropSet*<br/>
-[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696) в *справочнике программиста OLE DB* в Windows SDK.
+[in] Указатель на массив [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
 *ulPropSets*<br/>
-[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367) структуры, передаются в *pPropSet* аргумент.
+[in] Число [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786) в *справочнике программиста OLE DB*.
+См. в разделе [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -212,7 +212,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786) в *Справочник программиста OLE DB по*.
+Дополнительные сведения см. в разделе [ITransactionLocal::StartTransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 ## <a name="see-also"></a>См. также
 

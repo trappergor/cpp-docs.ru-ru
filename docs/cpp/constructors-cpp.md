@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91d85f62917ff722a61ecbc87c58379a00016b83
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460883"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523160"
 ---
 # <a name="constructors-c"></a>Конструкторы (C++)
 
@@ -127,7 +127,6 @@ int main() {
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 Конструктор по умолчанию, созданный компилятором будут определены как удаленные, если все члены класса не может быть конструируемым по умолчанию. Например все члены типа класса и их члены типа класса должен иметь конструктор по умолчанию и деструкторы, которые доступны. Все данные членов ссылочного типа, а также как **const** члены должны иметь инициализатор элементов по умолчанию.

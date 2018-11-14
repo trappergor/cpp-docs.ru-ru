@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617468"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326723"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol, wcstol, _strtol_l, _wcstol_l
 
@@ -108,7 +108,7 @@ long _wcstol_l(
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-Текущего языкового стандарта **LC_NUMERIC** параметр category определяет распознавание символа основания системы счисления в *strSource **;* Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции, не имеющие **_l** суффикс используют текущий языковой стандарт; **_strtol_l** и **_wcstol_l** идентичны соответствующим функциям без **_l** суффикса, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Текущего языкового стандарта **LC_NUMERIC** параметр category определяет распознавание символа основания системы счисления в *strSource*; Дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Функции, не имеющие **_l** суффикс используют текущий языковой стандарт; **_strtol_l** и **_wcstol_l** идентичны соответствующим функциям без **_l** суффикса, за исключением того, что они используют переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 Если *endptr* не **NULL**, указатель на символ, который останавливает сканирование, хранится в расположении, указанном *endptr*. Если преобразование не может быть выполнено (найдены нет допустимые цифры или указано недопустимое основание), значение *strSource* хранится в расположении, указанном *endptr*.
 

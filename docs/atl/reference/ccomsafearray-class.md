@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 3cbe0ed66addab9ab4ff7a6175083730a8702a31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548698"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521418"
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 
@@ -100,7 +100,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>Примечания
 
-`CComSafeArray` предоставляет оболочку для класса [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , упрощая создание одно- и многомерных массивов практически любого поддерживаемого типа VARIANT и управление ими.
+`CComSafeArray` предоставляет оболочку для класса [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) , упрощая создание одно- и многомерных массивов практически любого поддерживаемого типа VARIANT и управление ими.
 
 `CComSafeArray` упрощает передачу массивов между процессами и обеспечивает дополнительную безопасность путем проверки значений индекса массива на соответствие верхней и нижней границам.
 
@@ -662,7 +662,7 @@ HRESULT SetAt(LONG lIndex, const T& t, BOOL bCopy = TRUE);
 
 ## <a name="see-also"></a>См. также
 
-[SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
+[SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)<br/>
 [CComSafeArray::Create](#create)<br/>
 [CComSafeArray::Destroy](#destroy)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

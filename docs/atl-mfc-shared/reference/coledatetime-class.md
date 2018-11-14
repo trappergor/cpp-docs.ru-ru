@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505902"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525344"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` не имеет базового класса.
 
-Это одна из возможных типов для [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных OLE-автоматизации. Объект `COleDateTime` значение представляет абсолютное значение даты и времени.
+Это одна из возможных типов для [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) тип данных OLE-автоматизации. Объект `COleDateTime` значение представляет абсолютное значение даты и времени.
 
 `DATE` Тип реализован как значение с плавающей запятой. Дней в полночь отсчитывается от 30 декабря 1899 г. Ниже приведены некоторые даты и связанных с ними значений:
 
@@ -828,7 +828,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **оператор = (** `dateSrc` **)** значение и состояния операнда копируются в это `COleDateTime` объекта.
 
-- **оператор = (** *varSrc* **)** Если преобразование [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) значение (или [COleVariant](../../mfc/reference/colevariant-class.md) объект) для даты и времени (VT_ Дата) выполнена успешно, преобразованное значение копируется в данную коллекцию `COleDateTime` объекта и его состояние имеет значение на допустимое. Если преобразование не выполнено успешно, этот объект является значение ноль (30 декабря 1899 г., полночь) и его состояние на недопустимый.
+- **оператор = (** *varSrc* **)** Если преобразование [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) значение (или [COleVariant](../../mfc/reference/colevariant-class.md) объект) для даты и времени (VT_ Дата) выполнена успешно, преобразованное значение копируется в данную коллекцию `COleDateTime` объекта и его состояние имеет значение на допустимое. Если преобразование не выполнено успешно, этот объект является значение ноль (30 декабря 1899 г., полночь) и его состояние на недопустимый.
 
 - **оператор = (** `dtSrc` **)** `DATE` значение копируется в это `COleDateTime` объекта и его состояние имеет значение на допустимое.
 
@@ -836,11 +836,11 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **оператор = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.
 
-- **оператор = (** `udate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». См. в разделе функция [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) для получения дополнительных сведений.
+- **оператор = (** `udate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». См. в разделе функция [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) для получения дополнительных сведений.
 
 - **оператор = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
 
-Дополнительные сведения см. в разделе [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) запись в пакете Windows SDK.
+Дополнительные сведения см. в разделе [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) запись в пакете Windows SDK.
 
 Дополнительные сведения о `time_t` тип данных, см. в разделе [время](../../c-runtime-library/reference/time-time32-time64.md) работать в *Справочник по библиотеке времени выполнения*.
 
@@ -1083,7 +1083,7 @@ int SetDateTime(
 |*Nмин.*|0 - 59|
 |*nSec*|0 - 59|
 
-При переполнении числа месяца, оно преобразуется в правильный день следующего месяца и месяца и/или года увеличивается соответствующим образом. День нулевое значение указывает последний день предыдущего месяца. Поведение совпадает со значением [SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
+При переполнении числа месяца, оно преобразуется в правильный день следующего месяца и месяца и/или года увеличивается соответствующим образом. День нулевое значение указывает последний день предыдущего месяца. Поведение совпадает со значением [SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime).
 
 Если значение даты или времени, указанный параметрами не допускается, состояния этого объекта имеет значение недопустимо, а значение этого объекта не изменяется.
 

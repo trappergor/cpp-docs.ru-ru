@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLL version of MFC [MFC]
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
-ms.openlocfilehash: 89a9fddd6f12f92d18bcd6fc75f117beb14746f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ffc8b46060e742449c9612424b1cd06dd8a9d3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571825"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523972"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033. Версия библиотеки DLL MFC
 
@@ -174,7 +174,6 @@ protected: \
     public: \
     static AFX_DATA CRuntimeClass class##class_name; \
     virtual CRuntimeClass* GetRuntimeClass() const; \
-
 ```
 
 Строка, которая начинается «статический `AFX_DATA`"объявляет статический объект внутри класса. Для успешного выполнения экспорта этого класса и доступ к среде выполнения сведения от клиента. EXE-файла, необходимо экспортировать статический объект. Так как статический объект объявлен с модификатором `AFX_DATA`, необходимо определить `AFX_DATA` быть `__declspec(dllexport)` при построении библиотеки DLL и определяют его как `__declspec(dllimport)` при построении исполняемый файл клиента.

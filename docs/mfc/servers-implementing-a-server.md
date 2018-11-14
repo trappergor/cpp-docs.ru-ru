@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566764"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518967"
 ---
 # <a name="servers-implementing-a-server"></a>Серверы. Реализация сервера
 
@@ -22,11 +22,11 @@ ms.locfileid: "50566764"
 
 - Определение ресурсов сервера:
 
-   - Меню ресурса, используемого при сервер редактируется внедренного элемента в отдельном окне.
+  - Меню ресурса, используемого при сервер редактируется внедренного элемента в отдельном окне.
 
-   - Меню и панели инструментов ресурсов, используемых при сервер активен на месте.
+  - Меню и панели инструментов ресурсов, используемых при сервер активен на месте.
 
-   Дополнительные сведения об этих ресурсах см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
+  Дополнительные сведения об этих ресурсах см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
 
 - Определив элемент класс производным от `COleServerItem`. Дополнительные сведения для элементов сервера см. в разделе [серверов: элементы сервера](../mfc/servers-server-items.md).
 

@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: de000584ad0cb797886ac11d367940212aaa50e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eba534dd98e1687a7b1b66f037eed7e509b09c74
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495295"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333632"
 ---
 # <a name="hashmap-class"></a>Класс hash_map
 
@@ -648,7 +648,7 @@ size_type count(const Key& key) const;
 
 Функция-член возвращает количество элементов *x* в диапазоне
 
-[`lower_bound` (_ *Key*), `upper_bound` (\_ *Key*))
+\[ lower_bound (*ключ*), upper_bound (*ключ*))
 
 — 0 или 1 для hash_map, который является уникальным ассоциативным контейнером.
 

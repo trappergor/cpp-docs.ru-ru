@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596603"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520647"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>Шаблоны, атрибуты и другие реализации OLE DB
 
@@ -25,7 +25,7 @@ ms.locfileid: "50596603"
 
 - **Шаблоны поставщика OLE DB** используется для реализации приложения сервера (поставщик) OLE DB.
 
-Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643).
+Чтобы использовать шаблоны OLE DB, необходимо иметь навыки работы с шаблонами C++, COM и интерфейсами OLE DB. Если вы не знакомы с OLE DB, см. в разделе [Справочник программиста OLE DB по](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming).
 
 Дополнительные сведения вы можете:
 
@@ -37,7 +37,7 @@ ms.locfileid: "50596603"
 
 - См. в списке [примеры шаблонов OLE DB](https://github.com/Microsoft/VCSamples).
 
-- См. в разделе [справочнике программиста OLE DB](/previous-versions/windows/desktop/ms713643) (в Windows SDK).
+- См. в разделе [справочнике программиста OLE DB](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) (в Windows SDK).
 
 ## <a name="ole-db-attributes"></a>Атрибуты OLE DB
 
@@ -49,7 +49,7 @@ ms.locfileid: "50596603"
 
 ## <a name="ole-db-sdk-interfaces"></a>Интерфейсы OLE DB SDK
 
-В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](/previous-versions/windows/desktop/ms713643) в пакете Windows SDK.
+В случаях, когда шаблоны OLE DB не поддерживает функциональные возможности OLE DB необходимо использовать сами интерфейсы OLE DB. Дополнительные сведения см. в разделе [Справочник программиста OLE DB по](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming) в пакете Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

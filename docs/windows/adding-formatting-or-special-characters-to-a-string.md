@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493851"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328335"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>Добавление форматирования или специальных символов в строковый ресурс (C++)
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493851"
 
    |Чтобы получить это|Введите это|
    |-----------------|---------------|
-   |Новая строка|\n|
-   |Возврат каретки|\r|
-   |Tab|\t|
-   |Обратная косая черта (\\)|\\\|
-   |Символ ASCII|\ddd (восьмеричная)|
-   |оповещение (колокольчик)|\a|
+   | Новая строка | \\n |
+   | Возврат каретки | \\R |
+   | Tab | \\t |
+   | Обратная косая черта (\\) | \\\\ |
+   | Символ ASCII | \\ddd (восьмеричной нотации) |
+   | оповещение (колокольчик) | \\a |
 
 > [!NOTE]
 > **Строка** редактор не поддерживает полный набор символов ASCI ЦЕЛИКОМ. Можно использовать только перечисленных выше.

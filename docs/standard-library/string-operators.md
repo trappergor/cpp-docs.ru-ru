@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644827"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332222"
 ---
 # <a name="ltstringgt-operators"></a>Операторы &lt;string&gt;
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Примечания
 
-Эти функции перегружают `operator+` для объединения двух объектов класса шаблона [Класс basic_string](../standard-library/basic-string-class.md). Все они возвращают значение `basic_string`\< **CharType**, **Traits**, **Allocator**>(_ *Left*). [append](../standard-library/basic-string-class.md#append)(\_ *Right*).
+Эти функции перегружают `operator+` для объединения двух объектов класса шаблона [Класс basic_string](../standard-library/basic-string-class.md). Все они возвращают `basic_string< CharType, Traits, Allocator>(Left).append(right)`. Дополнительные сведения см. в разделе [append](../standard-library/basic-string-class.md#append).
 
 ### <a name="example"></a>Пример
 
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>Примечания
 
-Функция-шаблон перегружает **operator<<**, чтобы вставить объект _ *Str* класса шаблонов [basic_string](../standard-library/basic-string-class.md) в поток \_ *Ostr.* Эта функция фактически возвращает \_ *Ostr*. **write**( \_ *Str*. [c_str](../standard-library/basic-string-class.md#c_str), \_ *Str*. [size](../standard-library/basic-string-class.md#size)).
+Функция шаблона перегружает **оператор <<** для вставки объекта *str* шаблонного класса [basic_string](../standard-library/basic-string-class.md) в поток  *\_ Ostr*. Эта функция фактически возвращает `_Ostr.write( str.c_str, str.size )`.
 
 ## <a name="op_gt"></a> operator&gt;
 

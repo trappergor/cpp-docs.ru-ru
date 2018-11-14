@@ -7,16 +7,16 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f8c96021b93a35ae9fd10503e78401bbac8abeb7
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 6046bcb1b99e446974a3b4fae11d0021778bf526
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264896"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556885"
 ---
 # <a name="supporting-schema-rowsets"></a>Поддержка наборов строк схемы
 
-Наборы строк схемы позволяют пользователям получить сведения о хранилище данных, не зная ее базовую структуру, или схему. Например хранилище данных есть таблицы, упорядоченные в пользовательской иерархии, поэтому будет невозможно получить сведения о схеме, читая его. (Еще один пример мастера Visual C++ используйте наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю это сделать, объект сеанса поставщика представляет методы на [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) интерфейс. В приложениях Visual C++, используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класс для реализации `IDBSchemaRowset`.
+Наборы строк схемы позволяют пользователям получить сведения о хранилище данных, не зная ее базовую структуру, или схему. Например хранилище данных есть таблицы, упорядоченные в пользовательской иерархии, поэтому будет невозможно получить сведения о схеме, читая его. (Еще один пример мастера Visual C++ используйте наборы строк схемы для создания методов доступа для пользователя.) Чтобы разрешить пользователю это сделать, объект сеанса поставщика представляет методы на [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) интерфейс. В приложениях Visual C++, используйте [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md) класс для реализации `IDBSchemaRowset`.
 
 `IDBSchemaRowsetImpl` поддерживает следующие методы:
 
@@ -86,7 +86,7 @@ class CUpdateSessionTRSchemaRowset :
 
 `CUpdateSession` наследует от `IDBSchemaRowsetImpl`, поэтому он поддерживает все методы обработки ограничений. С помощью `CSchemaRowsetImpl`, объявляет три дочерних класса (перечислены в схеме выше): `CUpdateSessionTRSchemaRowset`, `CUpdateSessionColSchemaRowset`, и `CUpdateSessionPTSchemaRowset`. Каждый из этих дочерних классов имеет `Execute` метод, который обрабатывает соответствующий набор ограничений (критерии поиска). Каждый `Execute` метод сравнивает значения *cRestrictions* и *rgRestrictions* параметров. Описание этих параметров см. в разделе [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md).
 
-Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686) в **Справочник программиста OLE DB по** в пакете SDK для Windows .
+Дополнительные сведения о том, какие ограничения соответствуют определенному набору строк схемы, см. в таблице GUID наборов строк схем в [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) в **Справочник программиста OLE DB по** в пакете SDK для Windows .
 
 Например если ограничения TABLE_NAME поддерживается на DBSCHEMA_TABLES, то сделайте следующее:
 

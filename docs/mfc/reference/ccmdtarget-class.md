@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CCmdTarget [MFC], OnFinalRelease
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
-ms.openlocfilehash: 4d69b0b262ec53460d655a19cd421051f7177636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0415fb98cec6b1d92f6a5a43ff705f1b5a7cd348
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498873"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523823"
 ---
 # <a name="ccmdtarget-class"></a>Класс CCmdTarget
 
@@ -329,7 +329,7 @@ virtual UINT GetTypeInfoCount();
 
 ### <a name="remarks"></a>Примечания
 
-По сути, эта функция-член реализуется [IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
+По сути, эта функция-член реализуется [IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount).
 
 Производные классы должны переопределить эту функцию для возврата числа интерфейсов сведения о типе (0 или 1). Если не переопределен, `GetTypeInfoCount` возвращает 0. Для переопределения используйте [IMPLEMENT_OLETYPELIB](../../mfc/reference/type-library-access.md#implement_oletypelib) макросом, который также реализует `GetTypeLib` и `GetTypeLibCache`.
 

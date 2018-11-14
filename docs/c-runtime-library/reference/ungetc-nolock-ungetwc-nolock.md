@@ -32,12 +32,12 @@ helpviewer_keywords:
 - ungettc_nolock function
 - ungetc_nolock function
 ms.assetid: aa02d5c2-1be1-46d2-a8c4-b61269e9d465
-ms.openlocfilehash: 17fadee825aff7b691db74eaaa7b695ba5a49a42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55888f122af0848c92204168a23cca93e2517904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482866"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331507"
 ---
 # <a name="ungetcnolock-ungetwcnolock"></a>_ungetc_nolock, _ungetwc_nolock
 
@@ -66,7 +66,7 @@ wint_t _ungetwc_nolock(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-При успешном завершении, каждая из этих функций Возвращает аргумент символа *c*. Если *c* не удается отправить обратно или если ни один символ не считан, входной поток не меняется и **_ungetc_nolock** возвращает ** EOF`; **_ungetwc_nolock` возвращает **WEOF**. Если *поток* — **NULL**, **EOF** или **WEOF** возвращается и **errno** присваивается  **EINVAL**.
+При успешном завершении, каждая из этих функций Возвращает аргумент символа *c*. Если *c* не удается отправить обратно или если ни один символ не считан, входной поток не меняется и **_ungetc_nolock** возвращает **EOF**; **_ungetwc_nolock** возвращает **WEOF**. Если *поток* — **NULL**, **EOF** или **WEOF** возвращается и **errno** присваивается  **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

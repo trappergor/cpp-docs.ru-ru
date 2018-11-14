@@ -6,16 +6,16 @@ helpviewer_keywords:
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36769fa531decaee81c73a4751f5c6ed24008ffc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495577"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525019"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>Пошаговое руководство. Подключение с использованием задач и HTTP-запросов XML
 
-В этом примере показано, как использовать [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) интерфейсы вместе с задачами отправки запросов HTTP GET и POST для веб-службы в универсальной Windows платформы (UWP ) приложения. Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.
+В этом примере показано, как использовать [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2) и [IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) интерфейсы вместе с задачами отправки запросов HTTP GET и POST для веб-службы в универсальной Windows платформы (UWP ) приложения. Путем объединения `IXMLHTTPRequest2` с задачами, можно написать код, который объединяется с другими задачами. Например, можно использовать задачу загрузки в цепочке этих задач. Задача загрузки может также реагировать на отмену работы.
 
 > [!TIP]
 >  Можно также использовать C++ REST SDK для выполнения HTTP-запросов из приложения UWP с помощью приложения C++ или на рабочем столе приложения C++. Дополнительные сведения см. в разделе [C++ REST SDK (кодовое название «Casablanca»)](https://github.com/Microsoft/cpprestsdk).
@@ -69,35 +69,34 @@ ms.locfileid: "50495577"
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. В MainPage.xaml.h добавьте эту директиву `#include`:
+2. В MainPage.xaml.h добавьте эту директиву `#include`:
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. В MainPage.xaml.h добавьте следующие переменные-члены `private` в класс `MainPage`:
+3. В MainPage.xaml.h добавьте следующие переменные-члены `private` в класс `MainPage`:
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. В MainPage.xaml.h объявите `private` метод `ProcessHttpRequest`:
+4. В MainPage.xaml.h объявите `private` метод `ProcessHttpRequest`:
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. В MainPage.xaml.cpp добавьте эти операторы `using`:
+5. В MainPage.xaml.cpp добавьте эти операторы `using`:
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. В MainPage.xaml.cpp реализуйте методы `GetButton_Click`, `PostButton_Click` и `CancelButton_Click` класса `MainPage`.
+6. В MainPage.xaml.cpp реализуйте методы `GetButton_Click`, `PostButton_Click` и `CancelButton_Click` класса `MainPage`.
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  Если приложение не требует поддержки отмены, передайте [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) для `HttpRequest::GetAsync` и `HttpRequest::PostAsync` методы.
+   > [!TIP]
+   > Если приложение не требует поддержки отмены, передайте [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) для `HttpRequest::GetAsync` и `HttpRequest::PostAsync` методы.
 
 1. В MainPage.xaml.cpp реализуйте метод `MainPage::ProcessHttpRequest`.
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. В свойствах проекта в разделе **компоновщика**, **ввода**, укажите `shcore.lib` и `msxml6.lib`.
+8. В свойствах проекта в разделе **компоновщика**, **ввода**, укажите `shcore.lib` и `msxml6.lib`.
 
 Здесь приводится работающее приложение:
 
