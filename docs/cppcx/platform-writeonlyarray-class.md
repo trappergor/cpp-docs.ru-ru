@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651325"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330623"
 ---
 # <a name="platformwriteonlyarray-class"></a>Класс Platform::WriteOnlyArray
 
@@ -39,8 +39,12 @@ private ref class WriteOnlyArray<T, 1>
 
 |name|Описание|
 |----------|-----------------|
-
-|[WriteOnlyArray::begin](#begin)| Итератор, указывающий на первый элемент массива. | | [WriteOnlyArray::Data](#data)| Указатель на буфер данных. | | [WriteOnlyArray::end](#end)| Итератор, указывающий позицию, следующую за последним элементом в массиве. | | [WriteOnlyArray::FastPass](#fastpass)| Указывает, может ли массив использовать механизм FastPass, который является прозрачную оптимизацию, выполняемую системой. Не используйте его в коде | | [WriteOnlyArray::Length](#length)| Возвращает количество элементов в массиве. | | [WriteOnlyArray::set](#set)| Присваивает заданному элементу заданное значение. |
+|[WriteOnlyArray::begin](#begin)|Итератор, который указывает на первый элемент массива.|
+|[WriteOnlyArray::Data](#data)|Указатель на буфер данных.|
+|[WriteOnlyArray::end](#end)|Итератор, указывающий на элемент, следующий за последним элементом в массиве.|
+|[WriteOnlyArray::FastPass](#fastpass)|Указывает, сможет ли массив использовать механизм FastPass, то есть прозрачную оптимизацию, выполняемую системой. Не используйте его в коде|
+|[WriteOnlyArray::Length](#length)|Возвращает число элементов в массиве.|
+|[WriteOnlyArray::set](#set)|Присваивает заданному элементу заданное значение.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483363"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327061"
 ---
 # <a name="putchar-putwchar"></a>putchar, putwchar
 
@@ -57,7 +57,7 @@ wint_t putwchar(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает записанный символ. Чтобы указать ошибку или конец файла, **putc** и **putchar** возвращают ** EOF`; **putwc` и **putwchar** возвращают **WEOF**. Для всех четырех подпрограмм используйте [ferror](ferror.md) или [feof](feof.md) для проверки наличия ошибки или конца файла. Если передан пустой указатель *поток*, эти функции создают исключение недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** или **WEOF** и задайте **errno** для **EINVAL**.
+Возвращает записанный символ. Чтобы указать ошибку или конец файла, **putc** и **putchar** возвращают **EOF**; **putwc** и **putwchar** возвращают **WEOF**. Для всех четырех подпрограмм используйте [ferror](ferror.md) или [feof](feof.md) для проверки наличия ошибки или конца файла. Если передан пустой указатель *поток*, эти функции создают исключение недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, они возвращают **EOF** или **WEOF** и задайте **errno** для **EINVAL**.
 
 Дополнительные сведения об этих и других кодах ошибок см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

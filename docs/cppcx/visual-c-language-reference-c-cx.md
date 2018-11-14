@@ -2,12 +2,12 @@
 title: Справочник по языку C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 97d4f6391a02dd88e15c8fa4145539ab41a4dae3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8d73523a2b9ae577125975726f0072503f0e2e0
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600009"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330428"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Справочник по языку C++ (C++/CX)
 
@@ -15,7 +15,7 @@ C + +/ CX представляет собой набор расширений я
 
 > [!NOTE]
 > **[C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index) рекомендуется в качестве альтернативы к C + +/ CX**. Это новый "," стандартный C ++ 17 языковых проекции для API среды выполнения Windows, доступные в последний пакет SDK Windows 10 версии 1803 и далее. C + +/ WinRT реализуется полностью в файлах заголовков и предоставляющая с первоклассный доступ к современных API Windows.
-
+>
 > С использованием C + +/ WinRT, можно одновременно использовать и создавать интерфейсы API среды выполнения Windows, с помощью любой совместимый со стандартами C ++ 17 компилятор. C + +/ WinRT обычно работает быстрее и создает меньше двоичных файлов, чем любой другой параметр языка для среды выполнения Windows. Мы продолжим предоставлять поддержку C + +/ CX и WRL, но настоятельно рекомендуется, использовать новые приложения C + +/ WinRT. Дополнительные сведения см. в разделе [C + +/ WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index).
 
 С помощью C + +/ CX, можно создать:

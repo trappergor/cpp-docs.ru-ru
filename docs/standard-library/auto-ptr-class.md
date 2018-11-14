@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620952"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327126"
 ---
 # <a name="autoptr-class"></a>Класс auto_ptr
 
@@ -282,11 +282,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ссылка на объект типа `auto_ptr`\< **Type**>.
+Ссылка на объект типа `auto_ptr<Type>`.
 
 ### <a name="remarks"></a>Примечания
 
-Это присваивание вычисляет выражение `delete myptr`, но только если сохраненный указатель `myptr` изменяется в результате присваивания. Затем оно передает право владения указателем, сохраненным в_ *Right*, сохраняя \_ *Right*. [выпуск](#release) в `myptr`. Функция возвращает **\*this**.
+Это присваивание вычисляет выражение `delete myptr`, но только если сохраненный указатель `myptr` изменяется в результате присваивания. Затем он передает право владения указателем, сохраненным в *правой*, размещая *правой*.[ выпуск](#release) в `myptr`. Функция возвращает __\*this__.
 
 ### <a name="example"></a>Пример
 

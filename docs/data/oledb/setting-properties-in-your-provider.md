@@ -5,16 +5,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 8dfe69bd50918a9098e612cad892f1d832acb665
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
-ms.translationtype: HT
+ms.openlocfilehash: 149e6f37de64a1133258f5bbc550896a4fb22a9f
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51264909"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556664"
 ---
 # <a name="setting-properties-in-your-provider"></a>Установка свойств в поставщике
 
-Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](/previous-versions/windows/desktop/ms722734) в **Справочник программиста OLE DB по**.
+Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) в **Справочник программиста OLE DB по**.
 
 В код поставщика, созданного мастером содержатся в схеме сопоставления свойств, соответствующей той группе свойство. Имя группы свойств обычно соответствует имени объекта. Свойства команд и наборов строк можно найти в команду или набор строк; Свойства данных источника и инициализации можно найти в объекте источника данных.
 
@@ -22,7 +22,7 @@ ms.locfileid: "51264909"
 
 - Идентификатор свойства, соответствующий свойству. Удалите первые семь символов («DBPROP_») в начале имени свойства. Например, если вы хотите добавить `DBPROP_MAXROWS`, передайте `MAXROWS` как первый элемент. Если это пользовательское свойство, передать имя полный идентификатор GUID (например, `DBMYPROP_MYPROPERTY`).
 
-- Тип variant свойства (в [свойства OLE DB](/previous-versions/windows/desktop/ms722734) в **Справочник программиста OLE DB по**). Введите тип (например, VT_BOOL или VT_I2) VT_, соответствующий типу данных.
+- Тип variant свойства (в [свойства OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) в **Справочник программиста OLE DB по**). Введите тип (например, VT_BOOL или VT_I2) VT_, соответствующий типу данных.
 
 - Флаги, указывающие, является ли свойство для чтения и записи и группы, к которой он принадлежит. Например следующий код указывает свойство чтения/записи, входящей в группу строк:
 

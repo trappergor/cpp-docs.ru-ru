@@ -2,12 +2,12 @@
 title: Новые возможности Visual C++ 2003–2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499623"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520186"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -260,7 +260,7 @@ ms.locfileid: "50499623"
    Например, предположим, что код определяет как **размещаемый оператор new**, так и **размещаемый оператор delete**:
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ ms.locfileid: "50499623"
    теперь более полно соответствуют стандарту. Компилятор предыдущей версии создавал для анонимных объединений явный конструктор и деструктор. Они удалены из Visual Studio 2015.
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    Предыдущий код вызывает следующие ошибки в Visual Studio 2015:
@@ -328,14 +328,14 @@ ms.locfileid: "50499623"
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ ms.locfileid: "50499623"
     }
    ```
 
-  - или -
+  \-или-
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ ms.locfileid: "50499623"
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   Кроме того, хотя компилятор не выдает соответствующего диагностического сообщения, встроенный оператор new считается некорректным.
 
 - **Вызов "operator *тип*()" (пользовательское преобразование) для типов, не являющихся классами** Предыдущие версии компилятора разрешали вызов "operator *тип*()" для типов, не являющихся классами, при этом он игнорировался без вывода предупреждения. Это создавало риск создания некорректного кода и непредсказуемого поведения во время выполнения. Компилятор больше не принимает код, написанный таким образом, и выдает вместо этого ошибку C2228.
 
@@ -1673,10 +1673,10 @@ ms.locfileid: "50499623"
 - Поддержка ограниченных перечислений. Теперь поддерживается ключ перечисления класса перечисления C++. В следующем коде показано, чем этот ключ перечисления отличается от предыдущего поведения перечисления.
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Поддержка разработки приложений среды выполнения Windows

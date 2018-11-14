@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: 44123e3cbad3115dc990cd8dc9f1316994560656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580925"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524928"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>Размещение пользовательского элемента управления формы Windows Forms в диалоговом окне MFC
 
@@ -68,7 +68,7 @@ MFC представлен класс шаблона [CWinFormsDialog](../mfc/re
 
    Далее добавим код для отслеживания состояния элемента управления в формах Windows Forms из приложения MFC.
 
-9. Добавьте обработчик для OnInitDialog.
+1. Добавьте обработчик для OnInitDialog.
 
    Отображение **свойства** окно (F4). В **представление классов**, выберите класс CHostForWinForm. В **свойства** мыши выберите переопределяет и в строке OnInitDialog щелкните левый столбец и выберите пункт \< Добавить >. Это добавляет следующую строку в файл CHostForWinForm.h:
 
@@ -76,9 +76,9 @@ MFC представлен класс шаблона [CWinFormsDialog](../mfc/re
     virtual BOOL OnInitDialog();
     ```
 
-10. Определите обработчик событий OnInitDialog (в файле CHostForWinForm.cpp) следующим образом:
+1. Определите обработчик событий OnInitDialog (в файле CHostForWinForm.cpp) следующим образом:
 
-    ```
+    ```cpp
     BOOL CHostForWinForm::OnInitDialog() {
        CWinFormsDialog<WindowsControlLibrary1::UserControl1>::OnInitDialog();
        GetControl()->button1->Click += MAKE_DELEGATE(System::EventHandler, OnButton1);
@@ -86,9 +86,9 @@ MFC представлен класс шаблона [CWinFormsDialog](../mfc/re
     }
     ```
 
-11. Далее добавьте обработчик событий OnButton1. Добавьте следующие строки в раздел public класса CHostForWinForm в файле CHostForWinForm.h:
+1. Далее добавьте обработчик событий OnButton1. Добавьте следующие строки в раздел public класса CHostForWinForm в файле CHostForWinForm.h:
 
-    ```
+    ```cpp
     virtual void OnButton1( System::Object^ sender, System::EventArgs^ e );
 
     BEGIN_DELEGATE_MAP( CHostForWinForm )
@@ -98,41 +98,41 @@ MFC представлен класс шаблона [CWinFormsDialog](../mfc/re
 
    В файле CHostForWinForm.cpp добавьте следующее определение:
 
-    ```
+    ```cpp
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
     {
        System::Windows::Forms::MessageBox::Show("test");
     }
     ```
 
-12. Постройте и запустите проект. При нажатии кнопки, которая находится в форме Windows, будет выполняться код в приложении MFC.
+1. Постройте и запустите проект. При нажатии кнопки, которая находится в форме Windows, будет выполняться код в приложении MFC.
 
-   Далее добавим код для отображения кода MFC значение в текстовом поле в форме Windows.
+    Далее добавим код для отображения кода MFC значение в текстовом поле в форме Windows.
 
-13. В разделе открытого класса CHostForWinForm в файле CHostForWinForm.h добавьте следующее объявление:
+1. В разделе открытого класса CHostForWinForm в файле CHostForWinForm.h добавьте следующее объявление:
 
-    ```
+    ```cpp
     CString m_sEditBoxOnWinForm;
     ```
 
-14. В определении DoDataExchange в файле CHostForWinForm.cpp добавьте следующие три строки в конец функции:
+1. В определении DoDataExchange в файле CHostForWinForm.cpp добавьте следующие три строки в конец функции:
 
-    ```
+    ```cpp
     if (pDX->m_bSaveAndValidate)
        m_sEditBoxOnWinForm = CString( GetControl()->textBox1->Text);
     else
        GetControl()->textBox1->Text = gcnew System::String(m_sEditBoxOnWinForm);
     ```
 
-15. В определении событий OnButton1 в файле CHostForWinForm.cpp добавьте следующие три строки в конец функции:
+1. В определении событий OnButton1 в файле CHostForWinForm.cpp добавьте следующие три строки в конец функции:
 
-    ```
+    ```cpp
     this->UpdateData(TRUE);
     System::String ^ z = gcnew System::String(m_sEditBoxOnWinForm);
     System::Windows::Forms::MessageBox::Show(z);
     ```
 
-16. Постройте и запустите проект.
+1. Постройте и запустите проект.
 
 ## <a name="see-also"></a>См. также
 

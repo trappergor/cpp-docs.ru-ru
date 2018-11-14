@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662856"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333541"
 ---
 # <a name="cbutton-class"></a>Класс CButton
 
@@ -153,13 +153,13 @@ class CButton : public CWnd
 
 Каждая запись схемы сообщений имеет следующий вид:
 
-**ON_** уведомления **(**`id`, `memberFxn` **)**
+**ON\_**_уведомления_ **(** _идентификатор_, _memberFxn_ **)**
 
-где `id` указывает идентификатор дочернего окна элемента управления, отправляющего уведомление и `memberFxn` имя функции-члена родительской вы написали для обработки уведомления.
+где *идентификатор* указывает идентификатор дочернего окна элемента управления, отправляющего уведомление и *memberFxn* имя функции-члена родительской вы написали для обработки уведомления.
 
 Родительский прототип функции выглядит следующим образом:
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 Ниже приведены возможные записей карты.
 

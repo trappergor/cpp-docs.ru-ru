@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523274"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522497"
 ---
 # <a name="ccomvariant-class"></a>Класс CComVariant
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>Параметры
 
 *pSrc*<br/>
-[in] Указывает на [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для присоединения к объекту.
+[in] Указывает на [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для присоединения к объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>Параметры
 
 *pSrc*<br/>
-[in] Указатель на [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для копирования.
+[in] Указатель на [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) для копирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>Параметры
 
 *varSrc*<br/>
-[in] `CComVariant` Или [VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) присвоить `CComVariant` объекта. Содержимое данного типа источника копируются в место назначения без преобразования.
+[in] `CComVariant` Или [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) присвоить `CComVariant` объекта. Содержимое данного типа источника копируются в место назначения без преобразования.
 
 *bstrSrc*<br/>
 [in] BSTR, присваиваемое `CComVariant` объекта. Тип `CComVariant` объект будет VT_BSTR.

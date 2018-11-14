@@ -4,12 +4,12 @@ title: Документация по Visual C++
 description: Узнайте, как использовать C++ для разработки приложений, служб и средств для платформ и устройств.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b4e660af273fac320fcebed19c135d8e37d1a50f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b5629adf14e1ba5caad4157a28db65b4198b904
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677868"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328296"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -377,7 +377,7 @@ ms.locfileid: "50677868"
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Расширения компонентов</h3>
-                                                    <p>Расширения компонентов для C++: C++/CLI для программирования приложений .NET и C++/CX для программирования приложений UWP.</p>
+                                                    <p>Расширения компонентов для C++: C++/CLI для программирования .NET и C++/CX для программирования UWP.</p>
                                                 </div>
                                             </div>
                                         </div>
