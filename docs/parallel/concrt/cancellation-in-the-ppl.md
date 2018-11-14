@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b776aedb71f81d7dc27f9322ed87fd080c8819a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558734"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327425"
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 
@@ -90,13 +90,12 @@ ms.locfileid: "50558734"
 Функция `cancel_current_task` создает исключение, поэтому нет необходимости явно возвращаться из текущего цикла или функции.
 
 > [!TIP]
-
->  Кроме того, можно вызвать [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) вместо функции `cancel_current_task`.
+> Кроме того, можно вызвать [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point) вместо функции `cancel_current_task`.
 
 Необходимо вызвать `cancel_current_task` при реагировании на отмену, поскольку она переводит задачу в отмененное состояние. Если вы вернулись раньше вместо вызова `cancel_current_task`, операция переходит в состояние завершения, и все продолжения, основанные на значении, выполняются.
 
 > [!CAUTION]
->  Никогда не вызывайте исключение `task_canceled` из своего кода. Вместо него вызовите метод `cancel_current_task`.
+> Никогда не вызывайте исключение `task_canceled` из своего кода. Вместо него вызовите метод `cancel_current_task`.
 
 Когда задача завершается в отмененном состоянии, [Concurrency::Task:: Get](reference/task-class.md#get) вызывает метод [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md). (И наоборот, [Concurrency::Task:: wait](reference/task-class.md#wait) возвращает [task_status::canceled](reference/concurrency-namespace-enums.md#task_group_status) и не создает исключение.) В следующем примере показано такое поведение для продолжения на основе задачи. Продолжение на основе задачи вызывается всегда, даже если предшествующая задача отменяется.
 
@@ -107,8 +106,7 @@ ms.locfileid: "50558734"
 [!code-cpp[concrt-task-canceled#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_4.cpp)]
 
 > [!CAUTION]
-
->  Если вы не передаете токен отмены, который `task` конструктор или [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) функции, эта задача не будет поддерживать отмену. Кроме того необходимо передать один и тот же токен отмены конструктору всех вложенных задач (т. е. задач, которые создаются в теле другой задачи), чтобы отменить все задачи одновременно.
+> Если вы не передаете токен отмены, который `task` конструктор или [concurrency::create_task](reference/concurrency-namespace-functions.md#create_task) функции, эта задача не будет поддерживать отмену. Кроме того необходимо передать один и тот же токен отмены конструктору всех вложенных задач (т. е. задач, которые создаются в теле другой задачи), чтобы отменить все задачи одновременно.
 
 Может понадобиться выполнить собственный код, когда токен отмены отменен. Например, если пользователь выбирает **отменить** кнопку в пользовательском интерфейсе для отмены операции, может отключить эту кнопку, пока пользователь запускает другую операцию. В следующем примере показано, как использовать [Concurrency::cancellation_token:: register_callback](reference/cancellation-token-class.md#register_callback) метод, чтобы зарегистрировать функцию обратного вызова, который выполняется, когда токен отмены отменяется.
 
@@ -123,11 +121,10 @@ ms.locfileid: "50558734"
 Эти поведения не изменяются из-за сбоя задачи (той, которая создает исключение). В этом случае продолжение на основе значения отменяется, а продолжение на основе задачи не отменяется.
 
 > [!CAUTION]
->  Задача, которая создается внутри другой задачи (вложенная задача), не наследует токен отмены от родительской задачи. Только продолжение, основанное на значении, наследует токен отмены своей предшествующей задачи.
+> Задача, которая создается внутри другой задачи (вложенная задача), не наследует токен отмены от родительской задачи. Только продолжение, основанное на значении, наследует токен отмены своей предшествующей задачи.
 
 > [!TIP]
-
->  Используйте [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) метод при вызове конструктора или функции, которая принимает `cancellation_token` и объект, чтобы операция поддерживала отмену.
+> Используйте [concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none) метод при вызове конструктора или функции, которая принимает `cancellation_token` и объект, чтобы операция поддерживала отмену.
 
 Также можно предоставить токен отмены конструктору объекта `task_group` или `structured_task_group`. Важным аспектом является то, что дочерние группы задач наследуют этот токен отмены. Пример, демонстрирующий эту концепцию с помощью [concurrency::run_with_cancellation_token](reference/concurrency-namespace-functions.md#run_with_cancellation_token) функции для вызова `parallel_for`, см. в разделе [Отмена параллельных алгоритмов](#algorithms) ниже в этом документ.
 

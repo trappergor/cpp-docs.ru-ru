@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447545"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331091"
 ---
 # <a name="fseek-fseeki64"></a>fseek, _fseeki64
 
@@ -75,9 +75,9 @@ int _fseeki64(
 
 |Начальное значение|Значение|
 |-|-|
-**SEEK_CUR**|Текущая позиция файлового указателя.
-**SEEK_END**|Конец файла.
-**SEEK_SET**|Начало файла.
+| **SEEK_CUR** | Текущая позиция файлового указателя. |
+| **SEEK_END** | Конец файла. |
+| **SEEK_SET** | Начало файла. |
 
 Можно использовать **fseek** и **_fseeki64** можно переместить указатель в любое место в файле. Указатель также может быть размещен за пределами файла. **fseek** и **_fseeki64** удаляют индикатор окончания файла и отменяют эффект всех предыдущих [ungetc](ungetc-ungetwc.md) вызывает от *поток*.
 
