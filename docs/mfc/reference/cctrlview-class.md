@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: 26a61f7874efc6494b41d201323a0a2a2d78548a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc202afa357dcb9d75a0dd73a3128b7b3f0cc14e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511765"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693403"
 ---
 # <a name="cctrlview-class"></a>Класс CCtrlView
 
@@ -37,20 +37,20 @@ class CCtrlView : public CView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCtrlView::CCtrlView](#cctrlview)|Создает объект `CCtrlView`.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCtrlView::OnDraw](#ondraw)|Вызывается платформой для рисования с помощью заданного контекста устройств.|
 |[CCtrlView::PreCreateWindow](#precreatewindow)|Вызывается до создания окна Windows, присоединенного к данному объекту класса `CCtrlView`.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Содержит стиль по умолчанию для класса представления.|
 |[CCtrlView::m_strClass](#m_strclass)|Содержит имя класса Windows для класса представления.|
@@ -145,7 +145,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>Параметры
 
 *cs*<br/>
-Объект [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.
+Объект [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

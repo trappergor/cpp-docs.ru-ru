@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605092"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694859"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Конструктор.|
 |[CRegKey:: ~ CRegKey](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Вызовите этот метод для присоединения открываемый раздел HKEY `CRegKey` объекта, задав [m_hKey](#m_hkey) член дескриптор `hKey`.|
 |[CRegKey::Close](#close)|Вызовите этот метод для освобождения [m_hKey](#m_hkey) член обработки и ему присвоено значение NULL.|
@@ -106,14 +106,14 @@ class CRegKey
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Преобразует `CRegKey` объект HKEY.|
 |[CRegKey::operator =](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.|
 |[CRegKey::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
@@ -892,7 +892,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|Задает список управления доступом для ключа (DACL). Ключ должен иметь доступа WRITE_DAC или вызывающий процесс должен быть владельцем объекта.|
 |GROUP_SECURITY_INFORMATION|Задает ключ основной групповой идентификатор безопасности (SID). Ключ должен иметь доступ WRITE_OWNER или вызывающий процесс должен быть владельцем объекта.|
 |OWNER_SECURITY_INFORMATION|Задает владельца для ключа безопасности. Ключ должен иметь доступ WRITE_OWNER или вызывающий процесс должен быть владельцем объекта или иметь активировать права SE_TAKE_OWNERSHIP_NAME.|
-|SACL_SECURITY_INFORMATION|Задает список управления доступом (SACL) для ключа системы. Ключ должен иметь доступ ACCESS_SYSTEM_SECURITY. Правильный способ получить такой доступ является возможность SE_SECURITY_NAME [привилегий](https://msdn.microsoft.com/library/windows/desktop/aa379306) в вызывающей стороны текущего маркера доступа, открыть дескриптор ACCESS_SYSTEM_SECURITY доступ, а затем отключить привилегии.|
+|SACL_SECURITY_INFORMATION|Задает список управления доступом (SACL) для ключа системы. Ключ должен иметь доступ ACCESS_SYSTEM_SECURITY. Правильный способ получить такой доступ является возможность SE_SECURITY_NAME [привилегий](/windows/desktop/secauthz/privileges) в вызывающей стороны текущего маркера доступа, открыть дескриптор ACCESS_SYSTEM_SECURITY доступ, а затем отключить привилегии.|
 
 *PSD*<br/>
 Указатель на [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor) структура, задающая атрибуты безопасности для задания для указанного ключа.

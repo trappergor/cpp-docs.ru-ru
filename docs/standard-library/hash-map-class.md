@@ -88,12 +88,12 @@ helpviewer_keywords:
 - stdext::hash_map::upper_bound
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
-ms.openlocfilehash: eba534dd98e1687a7b1b66f037eed7e509b09c74
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333632"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678565"
 ---
 # <a name="hashmap-class"></a>Класс hash_map
 
@@ -158,13 +158,13 @@ hash_map:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[hash_map](#hash_map)|Создает контейнер `hash_map`, который является пустым или копией части или целого другого контейнера `hash_map`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `hash_map`.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать тот или иной элемент `const` в контейнере `hash_map`.|
@@ -184,7 +184,7 @@ hash_map:
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[at](#at)|Находит элемент в `hash_map` с указанным значением ключа.|
 |[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `hash_map`.|
@@ -215,7 +215,7 @@ hash_map:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Вставляет элемент в `hash_map` с заданным значением ключа.|
 |[hash_map::operator=](#op_eq)|Заменяет элементы `hash_map` копией другого `hash_map`.|
@@ -256,7 +256,7 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*key*|Значение ключа элемента, который требуется найти.|
 
@@ -889,7 +889,7 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 
@@ -948,7 +948,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1533,7 +1533,7 @@ hash_map(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Al*|Класс распределителя памяти для данного объекта hash_map, по умолчанию — `Allocator`.|
 |*Зап.*|Функция сравнения типа const `Traits` используется для упорядочения элементов в hash_map, чье значение по умолчанию — `hash_compare`.|
@@ -1591,7 +1591,7 @@ iterator insert(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента для вставки в hash_map, кроме случаев, когда hash_map уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -2019,7 +2019,7 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*key*|Ключевое значение элемента для вставки.|
 
@@ -2092,7 +2092,7 @@ int main( )
       cout << " " << pIter -> second;
    cout << "." << endl;
 
-   // opperator[] will also insert by moving a key
+   // operator[] will also insert by moving a key
    hash_map <string, int> hm2;
    string str("a");
    hm2[move(str)] = 1;
@@ -2116,7 +2116,7 @@ hash_map& operator=(hash_map&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*right*|[Класс hash_map](../standard-library/hash-map-class.md), который копируется в `hash_map`.|
 
@@ -2763,7 +2763,7 @@ int main( )
    hash_map <int, int> :: iterator pIter;
 
    // value_type can be used to pass the correct type
-   // explicitely to avoid implicit type conversion
+   // explicitly to avoid implicit type conversion
    hm1.insert ( hash_map <int, int> :: value_type ( 1, 10 ) );
 
    // Compare other ways to insert objects into a hash_map

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499700"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694547"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Создает объект `CFileDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Добавляет кнопку с галочкой в диалоговом окне.|
 |[CFileDialog::AddComboBox](#addcombobox)|Добавляет поле со списком в диалоговом окне.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Вызывается при нажатии кнопки.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Вызывается, когда флажок или снятии флажка.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` структуры. Предоставляет доступ к параметрам поле диалогового окна базовый файл.|
 
@@ -258,7 +258,7 @@ class CFileDialog : public CCommonDialog
 После инициализации элементов окна, вызовите [CFileDialog::DoModal](#domodal) метод для отображения диалогового окна поле, чтобы пользователь может ввести путь и имя файла. `DoModal` Возвращает, нажал ли пользователь кнопку ОК (IDOK) или кнопку Отмена (IDCANCEL). Если `DoModal` возвращает IDOK, можно использовать один из `CFileDialog` прописными открытыми функциями-членами для получения информации пользователем.
 
 > [!NOTE]
-> В Windows Vista или более поздней версии, несколько вызовов [IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980) приводит к ошибке. Второй вызов `SetFileTypes` для любого экземпляра `CFileDialog` возвратит E_UNEXPECTED в Windows Vista или более поздней версии. Некоторые `CFileDialog` метод функции вызывают `SetFileTypes`. Например, два вызова к `CFileDialog::DoModal` для одного экземпляра `CFileDialog` приводит к возникновению ошибки [ASSERT](diagnostic-services.md#assert).
+> В Windows Vista или более поздней версии, несколько вызовов [IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes) приводит к ошибке. Второй вызов `SetFileTypes` для любого экземпляра `CFileDialog` возвратит E_UNEXPECTED в Windows Vista или более поздней версии. Некоторые `CFileDialog` метод функции вызывают `SetFileTypes`. Например, два вызова к `CFileDialog::DoModal` для одного экземпляра `CFileDialog` приводит к возникновению ошибки [ASSERT](diagnostic-services.md#assert).
 
 `CFileDialog` включает в себя несколько защищенных членов, которые позволяют выполнять пользовательскую обработку нарушения общего ресурса, проверка правильности имени файла и уведомление об изменении списков. Эти защищенные члены являются функции обратного вызова, большинству приложений не требуется использовать, так как по умолчанию обработка выполняется автоматически. Записи схемы сообщений для этих функций не требуются, поскольку они являются стандартные виртуальные функции.
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 Используйте эту функцию только в Windows Vista или более поздней версии с объектом, который имеет *bVistaStyle принимал* присвоено значение TRUE. Эта функция возвращает значение NULL, если `CFileDialog` не **откройте** диалоговое окно или, если *bVistaStyle принимал* имеет значение FALSE. В нашем примере окончательный функция только возвращает значение NULL в режиме выпуска - в режиме отладки возникнет исключение утверждения.
 
-Дополнительные сведения о `IFileOpenDialog` интерфейсом, см. в разделе [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834).
+Дополнительные сведения о `IFileOpenDialog` интерфейсом, см. в разделе [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog).
 
 ### <a name="example"></a>Пример
 

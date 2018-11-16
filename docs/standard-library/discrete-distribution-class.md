@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464900"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693911"
 ---
 # <a name="discretedistribution-class"></a>Класс discrete_distribution
 
@@ -230,7 +230,7 @@ explicit discrete_distribution(const param_type& parm);
 
 Конструктор диапазона итератора с параметрами *firstW* и *lastW* создает объект распределения с помощью значений веса из итераторов в пределах последовательности интервала [*firstW*, *lastW*).
 
-Конструктор списка инициализаторов с параметром *weightlist* создает объект распределения с весами из списка инициализаторов *weightlist*.
+Конструктор списка инициализаторов с *weightlist* параметр создает объект распределения с весами из списка инициализаторов *weightlist*.
 
 Конструктор с параметрами *число*, *низкий*, *высокий* и *weightfunc* формирует объект распределения, инициализируемый на основе следующих правил:
 

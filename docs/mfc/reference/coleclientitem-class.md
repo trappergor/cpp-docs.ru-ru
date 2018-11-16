@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 706e7cd290e41ba9f3761f43688dc89fad5f3b74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579326"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678591"
 ---
 # <a name="coleclientitem-class"></a>Класс COleClientItem
 
@@ -185,13 +185,13 @@ class COleClientItem : public CDocItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Создает объект `COleClientItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Открывает элемент OLE для операции, а затем выполняет указанную команду.|
 |[COleClientItem::ActivateAs](#activateas)|Активирует элемент другого типа.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Вызывается платформой для определения допустимости активации на месте.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Вызывается платформой при изменении положения элемента.|

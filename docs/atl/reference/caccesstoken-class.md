@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661270"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694534"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
@@ -76,13 +76,13 @@ class CAccessToken
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAccessToken::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем дескриптора маркера доступ.|
 |[CAccessToken::CheckTokenMembership](#checktokenmembership)|Вызовите этот метод, чтобы определить, включен ли указанный идентификатор SID в `CAccessToken` объекта.|
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>Примечания
 
-`CreatePrimaryToken` вызовы [DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617) для создания нового основного маркера.
+`CreatePrimaryToken` вызовы [DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex) для создания нового основного маркера.
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ bool CreateProcessAsUser(
 Указатель на [STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa) структуру, которая указывает, как должно выглядеть главного окна для нового процесса.
 
 *dwCreationFlags*<br/>
-Задает дополнительные флаги, определяющие с приоритетом и создание процесса. Функция Win32 см. в разделе [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) список флагов.
+Задает дополнительные флаги, определяющие с приоритетом и создание процесса. Функция Win32 см. в разделе [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) список флагов.
 
 *bLoadProfile*<br/>
 Значение TRUE, если профиль пользователя загружен с [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
@@ -312,7 +312,7 @@ bool CreateProcessAsUser(
 
 ### <a name="remarks"></a>Примечания
 
-`CreateProcessAsUser` использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в контексте безопасности пользователя, представленного `CAccessToken` объекта. См. в описании [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429) функция полное описание параметров, необходимых.
+`CreateProcessAsUser` использует `CreateProcessAsUser` функцию Win32 для создания нового процесса, который выполняется в контексте безопасности пользователя, представленного `CAccessToken` объекта. См. в описании [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera) функция полное описание параметров, необходимых.
 
 Для успешного выполнения этого метода `CAccessToken` должен храниться в объекте AssignPrimaryToken (если он является ограниченным маркером) и IncreaseQuota привилегии.
 
@@ -348,7 +348,7 @@ bool CreateRestrictedToken(
 
 ### <a name="remarks"></a>Примечания
 
-`CreateRestrictedToken` использует [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.
+`CreateRestrictedToken` использует [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) функцию Win32 для создания нового `CAccessToken` объект с ограничениями.
 
 > [!IMPORTANT]
 >  При использовании `CreateRestrictedToken`, проверьте следующие: существующий маркер является допустимым (и не введенное пользователем) и *SidsToDisable* и *PrivilegesToDelete* допустимым (и не введенное пользователем). Если метод возвращает значение FALSE, запретите функциональные возможности.

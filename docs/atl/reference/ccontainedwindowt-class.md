@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: bbc1f7a5ff27fdb18b251b73d5b40e87f637ef21
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548529"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693977"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 
@@ -58,13 +58,13 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Конструктор. Инициализирует элементы данных, чтобы указать, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::Create](#create)|Создает окно.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|
@@ -77,7 +77,7 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Определяет, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Задает имя используемого существующий класс окон, на котором будет основан новый класс окна.|
@@ -274,7 +274,7 @@ LRESULT DefWindowProc(
 
 ### <a name="remarks"></a>Примечания
 
-По умолчанию `DefWindowProc` вызовы [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571) функцию Win32 для отправки сведений сообщение процедуре окна, указанный в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
+По умолчанию `DefWindowProc` вызовы [CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca) функцию Win32 для отправки сведений сообщение процедуре окна, указанный в [m_pfnSuperWindowProc](#m_pfnsuperwindowproc).
 
 ##  <a name="getcurrentmessage"></a>  CContainedWindowT::GetCurrentMessage
 

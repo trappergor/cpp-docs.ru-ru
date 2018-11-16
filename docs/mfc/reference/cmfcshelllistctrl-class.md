@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: bd978bfa65cc003bcb69a309b44254a6d36a2ebd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588637"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694209"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Класс CMFCShellListCtrl
 
@@ -63,7 +63,7 @@ class CMFCShellListCtrl : public CMFCListCtrl
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCShellListCtrl::DisplayFolder](#displayfolder)|Отображает список элементов, содержащихся в предоставленный папке.|
 |[CMFCShellListCtrl::DisplayParentFolder](#displayparentfolder)|Отображает список элементов, содержащихся в папке, который является родительским для текущей отображаемой папки.|
@@ -226,7 +226,7 @@ const IShellFolder* GetCurrentShellFolder() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [IShellFolder интерфейс](https://msdn.microsoft.com/library/windows/desktop/bb775075) для выбранного объекта.
+Указатель на [IShellFolder интерфейс](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ishellfolder) для выбранного объекта.
 
 ### <a name="remarks"></a>Примечания
 

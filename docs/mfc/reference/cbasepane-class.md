@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525422"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694794"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Конструктор по умолчанию.|
 |`CBasePane::~CBasePane`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|
 
@@ -726,7 +726,7 @@ virtual BOOL CreateEx(
 
 Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:
 
-|Стиль|Описание|
+|Стиль|Описание:|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Области может перемещаться.|
 |AFX_CBRS_AUTOHIDE|Область поддерживает режим автоматического скрытия|
@@ -1011,7 +1011,7 @@ virtual DWORD GetControlBarStyle() const
 
 Возвращаемое значение состоит из следующих значений.
 
-|Стиль|Описание|
+|Стиль|Описание:|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|
@@ -1566,7 +1566,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="remarks"></a>Примечания
 
-Если передать значение NULL как *hdwp* параметра, этот метод перемещает окно в обычном режиме. Если передается дескриптор, этот метод выполняет отложенного перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672) или сохранив возвращаемое значение из предыдущего вызова этого метода.
+Если передать значение NULL как *hdwp* параметра, этот метод перемещает окно в обычном режиме. Если передается дескриптор, этот метод выполняет отложенного перемещения. Дескриптор можно получить, вызвав [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos) или сохранив возвращаемое значение из предыдущего вызова этого метода.
 
 ##  <a name="onafterchangeparent"></a>  CBasePane::OnAfterChangeParent
 
@@ -1826,7 +1826,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 *dwNewStyle*<br/>
 [in] Побитовое или сочетание следующих значений.
 
-|Стиль|Описание|
+|Стиль|Описание:|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|

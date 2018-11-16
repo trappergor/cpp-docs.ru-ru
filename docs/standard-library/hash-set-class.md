@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 0668342468e30733f8257ccd2682bfe785551857
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333606"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678578"
 ---
 # <a name="hashset-class"></a>Класс hash_set
 
@@ -150,13 +150,13 @@ Hash_set Упорядочивает управляемую им последов
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[hash_set](#hash_set)|Создает контейнер `hash_set`, который является пустым или копией части или целого другого контейнера `hash_set`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `hash_set`.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать тот или иной элемент `const` в контейнере `hash_set`.|
@@ -176,7 +176,7 @@ Hash_set Упорядочивает управляемую им последов
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[begin](#begin)|Возвращает итератор, обращающийся к первому элементу в `hash_set`.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `hash_set`.|
@@ -206,7 +206,7 @@ Hash_set Упорядочивает управляемую им последов
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[hash_set::operator=](#op_eq)|Заменяет элементы `hash_set` копией другого `hash_set`.|
 
@@ -801,7 +801,7 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента для вставки в [hash_set](../standard-library/hash-set-class.md), если `hash_set` уже не содержит этот элемент, или, в более общем случае, элемент, ключ которого эквивалентно упорядочен.|
 
@@ -853,7 +853,7 @@ iterator emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента для вставки в [hash_set](../standard-library/hash-set-class.md), если `hash_set` уже не содержит этот элемент, или, в более общем случае, элемент, ключ которого эквивалентно упорядочен.|
 |*_Where*|Место начала поиска правильной точки вставки. (Вставка может происходить в амортизированном константном времени вместо логарифмического времени, если точка вставки следует сразу за *_Where*.)|
@@ -1419,7 +1419,7 @@ hash_set(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Al*|Класс распределителя памяти для использования с этим объектом `hash_set`. Значение по умолчанию — `Allocator`.|
 |*Зап.*|Функция сравнения типа `const Traits`, используемая для упорядочивания элементов в `hash_set`. Значение по умолчанию — `hash_compare`.|
@@ -1472,7 +1472,7 @@ void insert(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента для вставки в `hash_set`, кроме случая, когда `hash_set` уже содержит этот элемент или, в более общем смысле, элемент, чей ключ имеет эквивалентный порядок.|
 |*Where*|Место начала поиска правильной точки вставки. (Вставка может происходить в амортизированном константном времени вместо логарифмического времени, если точка вставки следует сразу за `_Where`.)|
@@ -1762,7 +1762,7 @@ hash_set& operator=(hash_set&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*right*|[Hash_set](../standard-library/hash-set-class.md), который будет копироваться в `hash_set`.|
 
@@ -1875,7 +1875,7 @@ int main( )
         << *hs1_rIter << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a hash_set in a forward order
+   // through a hash_set in a forward order
    cout << "The hash_set is: ";
    for ( hs1_Iter = hs1.begin( ) ; hs1_Iter != hs1.end( );
          hs1_Iter++ )
@@ -1883,7 +1883,7 @@ int main( )
    cout << endl;
 
    // rbegin can be used to start an iteration
-   // throught a hash_set in a reverse order
+   // through a hash_set in a reverse order
    cout << "The reversed hash_set is: ";
    for ( hs1_rIter = hs1.rbegin( ) ; hs1_rIter != hs1.rend( );
          hs1_rIter++ )
@@ -2010,7 +2010,7 @@ int main( )
         << *hs1_rIter << "." << endl;
 
    // end can be used to terminate an iteration
-   // throught a hash_set in a forward order
+   // through a hash_set in a forward order
    cout << "The hash_set is: ";
    for ( hs1_Iter = hs1.begin( ) ; hs1_Iter != hs1.end( );
          hs1_Iter++ )

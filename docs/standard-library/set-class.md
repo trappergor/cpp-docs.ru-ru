@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::set [C++], upper_bound
 - std::set [C++], value_comp
 ms.assetid: 8991f9aa-5509-4440-adc1-371512d32018
-ms.openlocfilehash: 1ee53f7fead721d32ddf4c519dc15c2e1f90fc28
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f4ad77c28b4643a979d7c3fb22e44e4aebd43dd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519830"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694742"
 ---
 # <a name="set-class"></a>Класс set
 
@@ -145,13 +145,13 @@ class set
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[set](#set)|Создает набор, который является пустым или копией части или целого другого набора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта набора.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** набора.|
@@ -171,7 +171,7 @@ class set
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[begin](#begin)|Возвращает итератор, обращающийся к первому элементу в наборе.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в наборе.|
@@ -201,7 +201,7 @@ class set
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#op_eq)|Заменяет элементы набора копией другого набора.|
 
@@ -701,7 +701,7 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента для вставки в набор, кроме случаев, когда сопоставление уже содержит элемент, значение которого правильным образом упорядочено.|
 
@@ -782,7 +782,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, который будет вставлен в набор, кроме ситуации, когда набор уже содержит этот элемент или, в более общем случае, кроме ситуации, когда набор уже содержит элемент, ключ которого правильно упорядочен.|
 |*where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1064,7 +1064,7 @@ int main()
     cout << "After the 2nd element is deleted, the set s1 is:" << endl;
     printset(s1);
 
-    // Fill in some data to test with, one at a time, using an intializer list
+    // Fill in some data to test with, one at a time, using an initializer list
     myset s2{ "meow", "hiss", "purr", "growl", "yowl" };
 
     cout << "Starting data of set s2 is:" << endl;
@@ -1303,7 +1303,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента, вставляемого в набор, если оно уже не содержит элемент, значение которого эквивалентно упорядочено.|
 |*Where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1672,7 +1672,7 @@ set& operator=(set&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*right*|`set`, предоставляющий новые элементы для назначения `set`.|
 
@@ -1781,14 +1781,14 @@ int main( )
         << *s1_rIter << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a set in a forward order
+   // through a set in a forward order
    cout << "The set is:";
    for ( s1_Iter = s1.begin( ) ; s1_Iter != s1.end( ); s1_Iter++ )
       cout << " " << *s1_Iter;
    cout << endl;
 
    // rbegin can be used to start an iteration
-   // throught a set in a reverse order
+   // through a set in a reverse order
    cout << "The reversed set is:";
    for ( s1_rIter = s1.rbegin( ) ; s1_rIter != s1.rend( ); s1_rIter++ )
       cout << " " << *s1_rIter;
@@ -1894,14 +1894,14 @@ int main() {
         << *s1_rIter << "." << endl;
 
    // end can be used to terminate an iteration
-   // throught a set in a forward order
+   // through a set in a forward order
    cout << "The set is: ";
    for ( s1_Iter = s1.begin( ) ; s1_Iter != s1.end( ); s1_Iter++ )
       cout << *s1_Iter << " ";
    cout << "." << endl;
 
    // rend can be used to terminate an iteration
-   // throught a set in a reverse order
+   // through a set in a reverse order
    cout << "The reversed set is: ";
    for ( s1_rIter = s1.rbegin( ) ; s1_rIter != s1.rend( ); s1_rIter++ )
       cout << *s1_rIter << " ";
@@ -1987,7 +1987,7 @@ set(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Al*|Класс распределителя памяти для данного объекта-набора, по умолчанию — `Allocator`.|
 |*Зап.*|Функция сравнения типа `const Traits` используется для упорядочивания элементов в наборе, который по умолчанию имеет значение `Compare`.|

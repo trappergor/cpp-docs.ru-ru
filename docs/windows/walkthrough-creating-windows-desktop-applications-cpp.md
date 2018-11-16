@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528390"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694053"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)
 
@@ -132,7 +132,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
    В этой функции можно написать код для обработки *сообщений* , приложение получает из Windows при *события* произойти. Например, если пользователь нажимает кнопку "ОК" в приложении, Windows отправит вам сообщение и вы можете написать код внутри вашей `WndProc` функцию, которая не подходит, независимо от работы. Он называется *обработка* событие. Можно обрабатывать только события, которые являются значимыми для приложения.
 
-   Дополнительные сведения см. в разделе [Процедуры окна](https://msdn.microsoft.com/library/windows/desktop/ms632593).
+   Дополнительные сведения см. в разделе [Процедуры окна](/windows/desktop/winmsg/window-procedures).
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Добавление функциональных возможностей в функцию WinMain
 
@@ -157,7 +157,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
    Сведения о полях структуры выше, см. в разделе [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
 
-1. Зарегистрировать `WNDCLASSEX` с Windows, чтобы он знал о окна и как отправлять сообщения на него. Воспользуйтесь функцией [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) и передайте структуру класса окна в качестве аргумента. `_T` Макрос используется, так как мы используем `TCHAR` типа.
+1. Зарегистрировать `WNDCLASSEX` с Windows, чтобы он знал о окна и как отправлять сообщения на него. Воспользуйтесь функцией [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) и передайте структуру класса окна в качестве аргумента. `_T` Макрос используется, так как мы используем `TCHAR` типа.
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    return (int) msg.wParam;
    ```
 
-   Дополнительные сведения о структурах и функциях, используемых в цикле обработки сообщений, см. в разделах, посвященных [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Дополнительные сведения о структурах и функциях, используемых в цикле обработки сообщений, см. в разделах, посвященных [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    На этом этапе функция `WinMain` должна напоминать приведенный ниже код.
 

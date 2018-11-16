@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523494"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694313"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
 
@@ -76,14 +76,14 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Создает структуру `AFX_GLOBAL_DATA` .|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|
@@ -125,7 +125,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport](#bisosalphablendingsupport)|Указывает, поддерживает ли текущая операционная система альфа-смешение.|
 |[AFX_GLOBAL_DATA::bIsWindows7](#biswindows7)|Указывает, выполняется ли приложение в ОС Windows 7 или более поздней версии.|
@@ -259,10 +259,10 @@ BOOL DrawTextOnGlass(
 [in] Указатель на контекст устройства.
 
 *iPartId*<br/>
-[in] Часть элемента управления, которая имеет нужный вид текста. Дополнительные сведения см. в столбце "Части" в таблице [Части и состояния](https://msdn.microsoft.com/library/windows/desktop/bb773210). Если это значение равно 0, текст рисуется с помощью шрифта по умолчанию или шрифта, выбранного в контексте устройства.
+[in] Часть элемента управления, которая имеет нужный вид текста. Дополнительные сведения см. в столбце "Части" в таблице [Части и состояния](/windows/desktop/controls/parts-and-states). Если это значение равно 0, текст рисуется с помощью шрифта по умолчанию или шрифта, выбранного в контексте устройства.
 
 *iStateId*<br/>
-[in] Состояние элемента управления, который содержит нужный вид текста. Дополнительные сведения см. в столбце "Состояния" в таблице [Части и состояния](https://msdn.microsoft.com/library/windows/desktop/bb773210).
+[in] Состояние элемента управления, который содержит нужный вид текста. Дополнительные сведения см. в столбце "Состояния" в таблице [Части и состояния](/windows/desktop/controls/parts-and-states).
 
 *strText*<br/>
 [in] Текст для рисования.
@@ -293,7 +293,7 @@ BOOL DrawTextOnGlass(
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Части и состояния](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[Части и состояния](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [Диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>Параметры
 
 *Сведения о*<br/>
-[in, out] Объект [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175) структуру, содержащую масштабируемой метрики, связанные с неклиентской области несвернутого окна.
+[in, out] Объект [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa) структуру, содержащую масштабируемой метрики, связанные с неклиентской области несвернутого окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -439,7 +439,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="see-also"></a>См. также
 
-[Структура NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[Структура NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

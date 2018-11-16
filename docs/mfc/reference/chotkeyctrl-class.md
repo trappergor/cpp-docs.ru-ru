@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ec5b734b23a27522fe430d24d2a65eebcca3dd3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452719"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694729"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 
@@ -43,13 +43,13 @@ class CHotKeyCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Создает объект `CHotKeyCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHotKeyCtrl::Create](#create)|Создает элемент управления "Горячий" ключа и присоединяет его к `CHotKeyCtrl` объекта.|
 |[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления "Горячий" ключа с указанным расширенные стили Windows и присоединяет его к `CHotKeyCtrl` объекта.|
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 Если пользователь выбрал сочетание клавиш, приложение можно извлекать заданное сочетание клавиш из элемента управления и настроить сочетания клавиш в системе с помощью WM_SETHOTKEY сообщения. Каждый раз, когда пользователь нажимает клавишу "Горячий" после этого из любой части системы, окна, указанную в сообщении WM_SETHOTKEY получает сообщение WM_SYSCOMMAND, указав SC_HOTKEY. Это сообщение активирует окно, которое получает его. Сочетания клавиш будет существовать до приложения, которое вызвало WM_SETHOTKEY завершает работу.
 
-Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327) функции.
+Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) функции.
 
 Дополнительные сведения об использовании `CHotKeyCtrl`, см. в разделе [элементов управления](../../mfc/controls-mfc.md) и [использование CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

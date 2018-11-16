@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: cb1143b51dafd9711e058134a9338e28ffcb44b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599892"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694366"
 ---
 # <a name="cmfcmenubar-class"></a>Класс CMFCMenuBar
 
@@ -128,7 +128,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCMenuBar::AdjustLocations](#adjustlocations)|(Переопределяет `CMFCToolBar::AdjustLocations`.)|
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|Указывает, может ли отображаться текстовые метки в списке изображений на кнопках панели инструментов. (Переопределяет [CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels).)|
@@ -391,7 +391,7 @@ virtual BOOL CreateEx(
 
 Следует использовать эту функцию вместо [CMFCMenuBar::Create](#create) при необходимости указать стили, кроме стиль панели инструментов. Некоторые часто используемые дополнительные стили: TBSTYLE_TRANSPARENT и CBRS_TOP.
 
-Список дополнительные стили, см. в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles), [общие стили элемента управления](/windows/desktop/Controls/common-control-styles), и [общие стили окна](https://msdn.microsoft.com/library/windows/desktop/ms632600).
+Список дополнительные стили, см. в разделе [панели инструментов и стили кнопок](/windows/desktop/Controls/toolbar-control-and-button-styles), [общие стили элемента управления](/windows/desktop/Controls/common-control-styles), и [общие стили окна](/windows/desktop/winmsg/window-styles).
 
 ### <a name="example"></a>Пример
 

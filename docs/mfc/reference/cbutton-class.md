@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 14018a1bf3265642f8ab06af51eea51eb1125dc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333541"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694807"
 ---
 # <a name="cbutton-class"></a>Класс CButton
 
@@ -95,13 +95,13 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CButton::CButton](#cbutton)|Создает объект `CButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CButton::Create](#create)|Создает элемент управления button в Windows и присоединяет его к `CButton` объекта.|
 |[CButton::DrawItem](#drawitem)|Переопределение для рисования, рисуемый владельцем, `CButton` объекта.|
@@ -384,7 +384,7 @@ BOOL GetIdealSize(SIZE* psize);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности BCM_GETIDEALSIZE сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.
+Эта функция-член эмулирует функциональные возможности BCM_GETIDEALSIZE сообщения, как описано в разделе [кнопки](/windows/desktop/controls/buttons) разделе пакета Windows SDK.
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности BCM_GETIMAGELIST сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.
+Эта функция-член эмулирует функциональные возможности BCM_GETIMAGELIST сообщения, как описано в разделе [кнопки](/windows/desktop/controls/buttons) разделе пакета Windows SDK.
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszNote*|[out] Указатель на буфер, который вызывающий объект отвечает за выделение и освобождение. Если возвращаемое значение равно TRUE, буфер содержит текст примечаний, который связан с текущий элемент управления command link; в противном случае буфера не изменяется.|
 |*cchNote*|[in, out] Указатель на переменную целого числа без знака.<br /><br /> При вызове этого метода, переменная содержит размер буфера, заданного *lpszNote* параметра.<br /><br /> Если этого метода завершается, если возвращаемое значение равно TRUE переменной содержит размер заметки, связанные с текущей элемент управления command link. Если возвращаемое значение равно FALSE, переменная содержит размер буфера, необходимый для размещения заметки.|
@@ -506,7 +506,7 @@ BOOL GetSplitInfo(PBUTTON_SPLITINFO pInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pInfo*|[out] Указатель на [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры, который получает сведения о текущем управления SplitButton. Вызывающий объект отвечает за распределение структуры.|
 
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pSize*|[out] Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает описание прямоугольника.|
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Битовое поле, которое содержит комбинацию значений, которые указывают текущее состояние элемента управления "Кнопка". В следующей таблице перечислены возможные значения.
 
-|Состояние кнопки|Значение|Описание|
+|Состояние кнопки|Значение|Описание:|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Начальное состояние.|
 |BST_CHECKED|0x0001|Элемент управления button проверяется.|
@@ -617,7 +617,7 @@ BOOL GetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности BCM_GETTEXTMARGIN сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.
+Эта функция-член эмулирует функциональные возможности BCM_GETTEXTMARGIN сообщения, как описано в разделе [кнопки](/windows/desktop/controls/buttons) разделе пакета Windows SDK.
 
 ##  <a name="setbitmap"></a>  CButton::SetBitmap
 
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fDropDown*|[in] Значение TRUE, чтобы задать состояние BST_DROPDOWNPUSHED; в противном случае — значение FALSE.|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fElevationRequired*|[in] Значение true, чтобы набор `elevation required` состояния; в противном случае — значение FALSE.|
 
@@ -870,7 +870,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности BCM_SETIMAGELIST сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.
+Эта функция-член эмулирует функциональные возможности BCM_SETIMAGELIST сообщения, как описано в разделе [кнопки](/windows/desktop/controls/buttons) разделе пакета Windows SDK.
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -882,7 +882,7 @@ BOOL SetNote(LPCTSTR lpszNote);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszNote*|[in] Указатель на строку Unicode, заданную в качестве текст заметки для элемент управления command link.|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*chGlyph*|[in] Символ, который указывает глиф для использования в качестве стрелку раскрывающегося списка кнопки разбиения.|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pSplitImageList*|[in] Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) для присваивания для текущего управления SplitButton.|
 
@@ -968,7 +968,7 @@ BOOL SetSplitInfo(PBUTTON_SPLITINFO pInfo);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pInfo*|[in] Указатель на [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структура, определяющая текущего управления SplitButton.|
 
@@ -1004,7 +1004,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pSize*|[in] Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структура, описывающая ограничивающего прямоугольника.|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*uSplitStyle*|[in] Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры.|
 
@@ -1112,7 +1112,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности BCM_SETTEXTMARGIN сообщения, как описано в разделе [кнопки](https://msdn.microsoft.com/library/windows/desktop/bb775943) разделе пакета Windows SDK.
+Эта функция-член эмулирует функциональные возможности BCM_SETTEXTMARGIN сообщения, как описано в разделе [кнопки](/windows/desktop/controls/buttons) разделе пакета Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

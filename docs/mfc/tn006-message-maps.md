@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463313"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693679"
 ---
 # <a name="tn006-message-maps"></a>TN006. Схемы сообщений
 
@@ -237,7 +237,7 @@ ON_CONTROL(wNotificationCode, id, memberFxn)
 > [!NOTE]
 > ClassWizard не поддерживает создание обработчика ON_CONTROL или ON_CONTROL_RANGE в пользовательском интерфейсе. Их необходимо вручную ввести в текстовом редакторе. ClassWizard проанализирует эти записи и позволяют просматривать их так же, как и любые другие записи схемы сообщений.
 
-Общие элементы управления Windows использовать более эффективный [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) для уведомлений сложного элемента управления. Эта версия MFC имеет прямую поддержку это новое сообщение с помощью макросов ON_NOTIFY и ON_NOTIFY_RANGE. Дополнительные сведения об этих макросах см.
+Общие элементы управления Windows использовать более эффективный [WM_NOTIFY](/windows/desktop/controls/wm-notify) для уведомлений сложного элемента управления. Эта версия MFC имеет прямую поддержку это новое сообщение с помощью макросов ON_NOTIFY и ON_NOTIFY_RANGE. Дополнительные сведения об этих макросах см.
 
 ## <a name="see-also"></a>См. также
 

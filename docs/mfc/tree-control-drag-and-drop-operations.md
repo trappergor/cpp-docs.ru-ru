@@ -6,12 +6,12 @@ helpviewer_keywords:
 - drag and drop [MFC], CTreeCtrl
 - tree controls [MFC], drag and drop operations
 ms.assetid: 3cf78b4c-4579-4fe1-9bc9-c5ab876e4af1
-ms.openlocfilehash: 5dc498008c6b019635cd361a950c6d2926e26541
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf0adce847c514a41389d3c6a0a86651ee9dc486
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519370"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693312"
 ---
 # <a name="tree-control-drag-and-drop-operations"></a>Операции перетаскивания древовидного элемента управления
 
@@ -19,7 +19,7 @@ ms.locfileid: "50519370"
 
 Получить изображение для отображения во время операции перетаскивания путем вызова [CreateDragImage](../mfc/reference/ctreectrl-class.md#createdragimage) функция-член. Дерево создает перетаскивания точечный рисунок, на основе метки перетаскиваемый элемент. Затем дерево создает список изображений, добавляет в него растрового изображения и возвращает указатель на [CImageList](../mfc/reference/cimagelist-class.md) объекта.
 
-Необходимо указать код, который фактически перетаскивает элемент. Это обычно включает в себя с помощью перетаскивания возможности функции списка изображений и обработки [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) и [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (или [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) сообщения, отправленные после начала операции перетаскивания. Дополнительные сведения о функции списка изображений, см. в разделе [CImageList](../mfc/reference/cimagelist-class.md) в *Справочник по библиотеке MFC* и [списки изображений](https://msdn.microsoft.com/library/windows/desktop/bb761389) в пакете Windows SDK. Дополнительные сведения о перетаскивании элемента управления дерева, см. в разделе [перетаскивания элемента представления дерева](/windows/desktop/Controls/tree-view-controls), также в пакете Windows SDK.
+Необходимо указать код, который фактически перетаскивает элемент. Это обычно включает в себя с помощью перетаскивания возможности функции списка изображений и обработки [WM_MOUSEMOVE](/windows/desktop/inputdev/wm-mousemove) и [WM_LBUTTONUP](/windows/desktop/inputdev/wm-lbuttonup) (или [WM_RBUTTONUP](/windows/desktop/inputdev/wm-rbuttonup)) сообщения, отправленные после начала операции перетаскивания. Дополнительные сведения о функции списка изображений, см. в разделе [CImageList](../mfc/reference/cimagelist-class.md) в *Справочник по библиотеке MFC* и [списки изображений](/windows/desktop/controls/image-lists) в пакете Windows SDK. Дополнительные сведения о перетаскивании элемента управления дерева, см. в разделе [перетаскивания элемента представления дерева](/windows/desktop/Controls/tree-view-controls), также в пакете Windows SDK.
 
 Если элементы в виде дерева быть целевыми для операции перетаскивания и вставки, необходимо знать, когда указатель мыши находится на целевой элемент. Чтобы узнать, вызвав [HitTest](../mfc/reference/ctreectrl-class.md#hittest) функция-член. Укажите точку и целое число или адрес [TVHITTESTINFO будет СОДЕРЖАТЬ](/windows/desktop/api/commctrl/ns-commctrl-tagtvhittestinfo) структуру, содержащую текущие координаты курсора мыши. При возврате функции, целое число или структура содержит флаг, указывающий расположение указателя мыши относительно элемента управления дерева. Если курсор находится над элементом в элементе управления иерархического представления, эта структура содержит дескриптор элемента, а также.
 
