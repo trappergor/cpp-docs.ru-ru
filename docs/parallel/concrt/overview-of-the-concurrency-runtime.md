@@ -7,14 +7,15 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: c1b9f9ca0565bfb04c3bff56b23ea1ef1dfa42d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613672"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693661"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>Общие сведения о среде выполнения с параллелизмом
+
 В этом документе содержатся общие сведения о среде выполнения с параллелизмом. Здесь рассматриваются преимущества среды выполнения с параллелизмом, указывается, когда следует ее использовать, и описывается, как ее компоненты взаимодействуют друг с другом, с операционной системой и приложениями.
 
 ##  <a name="top"></a> Разделы

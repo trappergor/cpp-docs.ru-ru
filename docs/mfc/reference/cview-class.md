@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: f325423c940df46940d7074c599eb8e502e90586
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694391"
 ---
 # <a name="cview-class"></a>Класс CView
 
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CView::CView](#cview)|Создает объект `CView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CView::DoPreparePrinting](#doprepareprinting)|Отображает диалоговое окно печати и создает контекст устройства принтера; При переопределении вызывать `OnPreparePrinting` функция-член.|
 |[CView::GetDocument](#getdocument)|Возвращает документ, связанный с представлением.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Вызывается, когда фрейм окна, содержащего представление активируется или деактивируется.|
 |[CView::OnActivateView](#onactivateview)|Вызывается при активации представления.|
@@ -548,7 +548,7 @@ virtual DROPEFFECT OnDropEx(
 
 Переопределите эту функцию для реализации эффект правой кнопки мыши операции перетаскивания. Перетаскивания правой кнопки мыши обычно отображает меню вариантов при отпускании правой кнопки мыши.
 
-Переопределенный `OnDropEx` необходимо запросить правой кнопки мыши. Можно вызвать [GetKeyState](https://msdn.microsoft.com/library/windows/desktop/ms646301) или сохранить состояние правой кнопки мыши с вашей [OnDragEnter](#ondragenter) обработчика.
+Переопределенный `OnDropEx` необходимо запросить правой кнопки мыши. Можно вызвать [GetKeyState](/windows/desktop/api/winuser/nf-winuser-getkeystate) или сохранить состояние правой кнопки мыши с вашей [OnDragEnter](#ondragenter) обработчика.
 
 - Если правой кнопки мыши не работает, переопределение должно отображаться в контекстном меню, которая предлагает поддержку эффектов перетаскивания источником перетаскивания.
 

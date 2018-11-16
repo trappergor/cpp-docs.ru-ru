@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1b901ef26c61adbedb3bbe56808cd94bdfad30d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677127"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694651"
 ---
 # <a name="paintstruct-structure"></a>Структура PAINTSTRUCT
 
@@ -36,7 +36,7 @@ typedef struct tagPAINTSTRUCT {
 Идентифицирует контекста отображения, используемый для рисования.
 
 *fErase*<br/>
-Указывает, должен ли фон перерисовку. Это не 0, если приложение перерисовывать в фоновом режиме. Приложение отвечает за рисование фона, если класс окна Windows создается без кисть фона (см. в описании `hbrBackground` членом [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры в пакете SDK для Windows).
+Указывает, должен ли фон перерисовку. Это не 0, если приложение перерисовывать в фоновом режиме. Приложение отвечает за рисование фона, если класс окна Windows создается без кисть фона (см. в описании `hbrBackground` членом [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) структуры в пакете SDK для Windows).
 
 *rcPaint*<br/>
 Указывает в верхнем левом углу и снижайте правой углов прямоугольника, в котором запрашивается заливку.

@@ -19,13 +19,15 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: 79bab3c41df2f3cbc5b11522b394a2785e64cddc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495242"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694755"
 ---
+# <a name="unboundedbuffer-class"></a>Класс unbounded_buffer
+
 Блок обмена сообщениями `unbounded_buffer` — это упорядоченный блок `propagator_block` с несколькими целями и несколькими источниками, который может хранить неограниченное число сообщений.
 
 ## <a name="syntax"></a>Синтаксис
@@ -46,21 +48,21 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[unbounded_buffer](#ctor)|Перегружен. Создает `unbounded_buffer` блок обмена сообщениями.|
 |[~ unbounded_buffer деструктор](#dtor)|Уничтожает `unbounded_buffer` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[dequeue](#dequeue)|Удаляет элемент из `unbounded_buffer` блок обмена сообщениями.|
 |[enqueue](#enqueue)|Добавляет элемент в коллекцию `unbounded_buffer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `unbounded_buffer` блок обмена сообщениями, передача вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `unbounded_buffer` блоке сообщений и зарезервированных целевым объектом, передавая владение вызывающему объекту.|

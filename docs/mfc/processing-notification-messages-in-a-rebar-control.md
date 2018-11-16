@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RBN_ notification messages [MFC]
 - notifications [MFC], CReBarCtrl
 ms.assetid: 40f43a60-0c18-4d8d-8fab-213a095624f9
-ms.openlocfilehash: 8cbe9849e16e8bfa9c0d0ce1f96e846bffaab2ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c35a1efb1c93aecf17e8f57b9e96c033aa4334a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621836"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693188"
 ---
 # <a name="processing-notification-messages-in-a-rebar-control"></a>Обработка уведомляющих сообщений в элементах управления главной панели
 
@@ -38,7 +38,7 @@ ms.locfileid: "50621836"
 
 - RBN_LAYOUTCHANGED посылается элементом управления "Главная панель" когда пользователь изменяет макет элемента управления зоны.
 
-Дополнительные сведения об этих уведомлений, см. в разделе [ссылки на элемент управления главной панели](https://msdn.microsoft.com/library/windows/desktop/bb774375) в пакете Windows SDK.
+Дополнительные сведения об этих уведомлений, см. в разделе [ссылки на элемент управления главной панели](/windows/desktop/controls/rebar-control-reference) в пакете Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

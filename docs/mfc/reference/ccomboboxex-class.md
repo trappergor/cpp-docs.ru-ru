@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501638"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694248"
 ---
 # <a name="ccomboboxex-class"></a>Класс CComboBoxEx
 
@@ -57,13 +57,13 @@ class CComboBoxEx : public CComboBox
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComboBoxEx::CComboBoxEx](#ccomboboxex)|Создает объект `CComboBoxEx`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComboBoxEx::Create](#create)|Создает поле со списком и присоединяет его к `CComboBoxEx` объекта.|
 |[CComboBoxEx::CreateEx](#createex)|Создает поле со списком с указанным расширенные стили Windows и присоединяет его к `ComboBoxEx` объекта.|
@@ -247,7 +247,7 @@ int DeleteItem(int iIndex);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член реализует функциональные возможности сообщения [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), как описано в пакете Windows SDK. При вызове DeleteItem, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщение с уведомлением CBEN_DELETEITEM будут отправляться в родительское окно.
+Эта функция-член реализует функциональные возможности сообщения [CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem), как описано в пакете Windows SDK. При вызове DeleteItem, [WM_NOTIFY](/windows/desktop/controls/wm-notify) сообщение с уведомлением CBEN_DELETEITEM будут отправляться в родительское окно.
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>Примечания
 
-При вызове `InsertItem`, [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) сообщений с [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) уведомление будет отправлено в родительское окно.
+При вызове `InsertItem`, [WM_NOTIFY](/windows/desktop/controls/wm-notify) сообщений с [CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem) уведомление будет отправлено в родительское окно.
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

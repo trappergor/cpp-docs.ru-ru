@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694458"
 ---
 # <a name="cmdichildwnd-class"></a>Класс CMDIChildWnd
 
@@ -43,13 +43,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Создает объект `CMDIChildWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMDIChildWnd::Create](#create)|Создает дочернее окно Windows MDI, связанные с `CMDIChildWnd` объекта.|
 |[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Возвращает родительский объект фрейма MDI клиентского окна MDI.|
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>Параметры
 
 *lpszClassName*<br/>
-Указывает на строку нуль-символом, который содержит класс Windows ( [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) структуры). Имя класса может быть любое имя, зарегистрированное [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции. Должен иметь значение NULL для стандартного `CMDIChildWnd`.
+Указывает на строку нуль-символом, который содержит класс Windows ( [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) структуры). Имя класса может быть любое имя, зарегистрированное [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass) глобальной функции. Должен иметь значение NULL для стандартного `CMDIChildWnd`.
 
 *lpszWindowName*<br/>
 Указывает символ, завершающаяся нулем строка, представляющая имя окна. Используется в качестве текста для заголовка окна.

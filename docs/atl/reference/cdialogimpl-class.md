@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572109"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693685"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 
@@ -93,7 +93,7 @@ template <class T,
 |Создание элементов управления|[Учебник по ATL](../../atl/active-template-library-atl-tutorial.md)|
 |С помощью диалоговых окон в ATL|[Классы окон ATL](../../atl/atl-window-classes.md)|
 |Мастер проектов ATL|[Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)|
-|Диалоговые окна|[Диалоговые окна](https://msdn.microsoft.com/library/windows/desktop/ms632588) и последующие разделы в пакете SDK для Windows|
+|Диалоговые окна|[Диалоговые окна](/windows/desktop/dlgbox/dialog-boxes) и последующие разделы в пакете SDK для Windows|
 
 ## <a name="requirements"></a>Требования
 
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>Параметры
 
 *hWndParent*<br/>
-[in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) функции Win32.
+[in] Дескриптор окна-владельца. Значение по умолчанию — возвращаемое значение [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) функции Win32.
 
 *dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.

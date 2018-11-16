@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 59258864eddb251b24f2e191d309707abf3736a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441110"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694599"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -177,13 +177,13 @@ class CWindow
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::ArrangeIconicWindows](#arrangeiconicwindows)|Упорядочивает все свернутые дочерние окна.|
 |[CWindow::Attach](#attach)|Прикрепляет окно к `CWindow` объекта.|
@@ -331,14 +331,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|
 |[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|
 |[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|
@@ -388,7 +388,7 @@ UINT ArrangeIconicWindows() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ArrangeIconicWindows](https://msdn.microsoft.com/library/windows/desktop/ms632671) в Windows SDK.
+См. в разделе [ArrangeIconicWindows](/windows/desktop/api/winuser/nf-winuser-arrangeiconicwindows) в Windows SDK.
 
 ##  <a name="attach"></a>  CWindow::Attach
 
@@ -433,7 +433,7 @@ BOOL BringWindowToTop() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673) в Windows SDK.
+См. в разделе [BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -509,7 +509,7 @@ HWND ChildWindowFromPoint(POINT point) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ChildWindowFromPoint](https://msdn.microsoft.com/library/windows/desktop/ms632676) в Windows SDK.
+См. в разделе [ChildWindowFromPoint](/windows/desktop/api/winuser/nf-winuser-childwindowfrompoint) в Windows SDK.
 
 ##  <a name="childwindowfrompointex"></a>  CWindow::ChildWindowFromPointEx
 
@@ -578,7 +578,7 @@ HWND Create(
 [in] Переменная типа [_U_MENUorID](../../atl/reference/u-menuorid-class.md) указывать дескриптор меню или идентификатор окна. Значение по умолчанию — 0U.
 
 *lpCreateParam*<br/>
-Указатель на окно создания данных, содержащихся в [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603) структуры.
+Указатель на окно создания данных, содержащихся в [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -813,7 +813,7 @@ BOOL EnableWindow(BOOL bEnable = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) в Windows SDK.
+См. в разделе [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -857,7 +857,7 @@ BOOL GetClientRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [метода GetClientRect](https://msdn.microsoft.com/library/windows/desktop/ms633503) в Windows SDK.
+См. в разделе [метода GetClientRect](/windows/desktop/api/winuser/nf-winuser-getclientrect) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1109,7 +1109,7 @@ HWND GetLastActivePopup() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetLastActivePopup](https://msdn.microsoft.com/library/windows/desktop/ms633507) в Windows SDK.
+См. в разделе [GetLastActivePopup](/windows/desktop/api/winuser/nf-winuser-getlastactivepopup) в Windows SDK.
 
 ##  <a name="getmenu"></a>  CWindow::GetMenu
 
@@ -1157,7 +1157,7 @@ HWND GetParent() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetParent](https://msdn.microsoft.com/library/windows/desktop/ms633510) в Windows SDK.
+См. в разделе [GetParent](/windows/desktop/api/winuser/nf-winuser-getparent) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1268,7 +1268,7 @@ HWND GetTopWindow() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetTopWindow](https://msdn.microsoft.com/library/windows/desktop/ms633514) в Windows SDK.
+См. в разделе [GetTopWindow](/windows/desktop/api/winuser/nf-winuser-gettopwindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1363,7 +1363,7 @@ LONG_PTR GetWindowLongPtr(int nIndex) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms633585) в Windows SDK.
+См. в разделе [GetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-getwindowlongptra) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1384,7 +1384,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT FAR* lpwndpl) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633518) в Windows SDK.
+См. в разделе [GetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-getwindowplacement) в Windows SDK.
 
 ##  <a name="getwindowprocessid"></a>  CWindow::GetWindowProcessID
 
@@ -1396,7 +1396,7 @@ DWORD GetWindowProcessID() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) в Windows SDK.
+См. в разделе [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1412,7 +1412,7 @@ BOOL GetWindowRect(LPRECT lpRect) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowRect](https://msdn.microsoft.com/library/windows/desktop/ms633519) в Windows SDK.
+См. в разделе [GetWindowRect](/windows/desktop/api/winuser/nf-winuser-getwindowrect) в Windows SDK.
 
 ##  <a name="getwindowrgn"></a>  CWindow::GetWindowRgn
 
@@ -1470,7 +1470,7 @@ int GetWindowTextLength() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowTextLength](https://msdn.microsoft.com/library/windows/desktop/ms633521) в Windows SDK.
+См. в разделе [GetWindowTextLength](/windows/desktop/api/winuser/nf-winuser-getwindowtextlengtha) в Windows SDK.
 
 ##  <a name="getwindowthreadid"></a>  CWindow::GetWindowThreadID
 
@@ -1482,7 +1482,7 @@ DWORD GetWindowThreadID() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowThreadProcessID](https://msdn.microsoft.com/library/windows/desktop/ms633522) в Windows SDK.
+См. в разделе [GetWindowThreadProcessID](/windows/desktop/api/winuser/nf-winuser-getwindowthreadprocessid) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1599,7 +1599,7 @@ BOOL IsChild(const HWND hWnd) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsChild](https://msdn.microsoft.com/library/windows/desktop/ms633524) в Windows SDK.
+См. в разделе [IsChild](/windows/desktop/api/winuser/nf-winuser-ischild) в Windows SDK.
 
 ##  <a name="isdialogmessage"></a>  CWindow::IsDialogMessage
 
@@ -1635,7 +1635,7 @@ BOOL IsIconic() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsIconic](https://msdn.microsoft.com/library/windows/desktop/ms633527) в Windows SDK.
+См. в разделе [IsIconic](/windows/desktop/api/winuser/nf-winuser-isiconic) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1663,7 +1663,7 @@ BOOL IsWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindow](https://msdn.microsoft.com/library/windows/desktop/ms633528) в Windows SDK.
+См. в разделе [IsWindow](/windows/desktop/api/winuser/nf-winuser-iswindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1679,7 +1679,7 @@ BOOL IsWindowEnabled() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowEnabled](https://msdn.microsoft.com/library/windows/desktop/ms646303) в Windows SDK.
+См. в разделе [IsWindowEnabled](/windows/desktop/api/winuser/nf-winuser-iswindowenabled) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1695,7 +1695,7 @@ BOOL IsWindowVisible() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowVisible](https://msdn.microsoft.com/library/windows/desktop/ms633530) в Windows SDK.
+См. в разделе [IsWindowVisible](/windows/desktop/api/winuser/nf-winuser-iswindowvisible) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1711,7 +1711,7 @@ BOOL IsWindowUnicode() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsWindowUnicode](https://msdn.microsoft.com/library/windows/desktop/ms633529) в Windows SDK.
+См. в разделе [IsWindowUnicode](/windows/desktop/api/winuser/nf-winuser-iswindowunicode) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1727,7 +1727,7 @@ BOOL IsZoomed() const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IsZoomed](https://msdn.microsoft.com/library/windows/desktop/ms633531) в Windows SDK.
+См. в разделе [IsZoomed](/windows/desktop/api/winuser/nf-winuser-iszoomed) в Windows SDK.
 
 ##  <a name="killtimer"></a>  CWindow::KillTimer
 
@@ -1739,7 +1739,7 @@ BOOL KillTimer(UINT nIDEvent) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [KillTimer](https://msdn.microsoft.com/library/windows/desktop/ms644903) в Windows SDK.
+См. в разделе [KillTimer](/windows/desktop/api/winuser/nf-winuser-killtimer) в Windows SDK.
 
 ##  <a name="lockwindowupdate"></a>  CWindow::LockWindowUpdate
 
@@ -1978,7 +1978,7 @@ BOOL PostMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [PostMessage](https://msdn.microsoft.com/library/windows/desktop/ms644944) в Windows SDK.
+См. в разделе [PostMessage](/windows/desktop/api/winuser/nf-winuser-postmessagea) в Windows SDK.
 
 Возвращает, не ждет поток для обработки сообщения.
 
@@ -2206,7 +2206,7 @@ static LRESULT SendMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SendMessage](https://msdn.microsoft.com/library/windows/desktop/ms644950) в Windows SDK.
+См. в разделе [SendMessage](/windows/desktop/api/winuser/nf-winuser-sendmessage) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2255,7 +2255,7 @@ BOOL SendNotifyMessage(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SendNotifyMessage](https://msdn.microsoft.com/library/windows/desktop/ms644953) в Windows SDK.
+См. в разделе [SendNotifyMessage](/windows/desktop/api/winuser/nf-winuser-sendnotifymessagea) в Windows SDK.
 
 Если был создан окно вызывающим потоком `SendNotifyMessage` не завершается, пока сообщение процедуре окна обработано. В противном случае возвращается немедленно.
 
@@ -2269,7 +2269,7 @@ HWND SetActiveWindow() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646311) в Windows SDK.
+См. в разделе [SetActiveWindow](/windows/desktop/api/winuser/nf-winuser-setactivewindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2285,7 +2285,7 @@ HWND SetCapture() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetCapture](https://msdn.microsoft.com/library/windows/desktop/ms646262) в Windows SDK.
+См. в разделе [SetCapture](/windows/desktop/api/winuser/nf-winuser-setcapture) в Windows SDK.
 
 ##  <a name="setclipboardviewer"></a>  CWindow::SetClipboardViewer
 
@@ -2353,7 +2353,7 @@ HWND SetFocus() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) в Windows SDK.
+См. в разделе [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2441,7 +2441,7 @@ HWND SetParent(HWND hWndNewParent) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetParent](https://msdn.microsoft.com/library/windows/desktop/ms633541) в Windows SDK.
+См. в разделе [SetParent](/windows/desktop/api/winuser/nf-winuser-setparent) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2527,7 +2527,7 @@ UINT SetTimer(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetTimer](https://msdn.microsoft.com/library/windows/desktop/ms644906) в Windows SDK.
+См. в разделе [SetTimer](/windows/desktop/api/winuser/nf-winuser-settimer) в Windows SDK.
 
 ##  <a name="setwindowcontexthelpid"></a>  CWindow::SetWindowContextHelpId
 
@@ -2566,7 +2566,7 @@ LONG_PTR SetWindowLongPtr(int nIndex, LONG_PTR dwNewLong) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowLongPtr](https://msdn.microsoft.com/library/windows/desktop/ms644898) в Windows SDK.
+См. в разделе [SetWindowLongPtr](/windows/desktop/api/winuser/nf-winuser-setwindowlongptra) в Windows SDK.
 
 Эта функция заменяет `CWindow::SetWindowLong` метод. Чтобы написать код, который совместим с 32-разрядных и 64-разрядных версиях Windows, используйте `CWindow::SetWindowLongPtr`.
 
@@ -2580,7 +2580,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowPlacement](https://msdn.microsoft.com/library/windows/desktop/ms633544) в Windows SDK.
+См. в разделе [SetWindowPlacement](/windows/desktop/api/winuser/nf-winuser-setwindowplacement) в Windows SDK.
 
 ##  <a name="setwindowpos"></a>  CWindow::SetWindowPos
 
@@ -2673,7 +2673,7 @@ BOOL ShowOwnedPopups(BOOL bShow = TRUE) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowOwnedPopups](https://msdn.microsoft.com/library/windows/desktop/ms633547) в Windows SDK.
+См. в разделе [ShowOwnedPopups](/windows/desktop/api/winuser/nf-winuser-showownedpopups) в Windows SDK.
 
 ##  <a name="showscrollbar"></a>  CWindow::ShowScrollBar
 
@@ -2697,7 +2697,7 @@ BOOL ShowWindow(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowWindow](https://msdn.microsoft.com/library/windows/desktop/ms633548) в Windows SDK.
+См. в разделе [ShowWindow](/windows/desktop/api/winuser/nf-winuser-showwindow) в Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2713,7 +2713,7 @@ BOOL ShowWindowAsync(int nCmdShow) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ShowWindowAsync](https://msdn.microsoft.com/library/windows/desktop/ms633549) в Windows SDK.
+См. в разделе [ShowWindowAsync](/windows/desktop/api/winuser/nf-winuser-showwindowasync) в Windows SDK.
 
 ##  <a name="updatewindow"></a>  CWindow::UpdateWindow
 

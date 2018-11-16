@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: 85bda6747c4ef6bed87b7a2ef30a3ef06bdfe29e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517862"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694274"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 
@@ -53,14 +53,14 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Создает объект `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CKeyboardManager::CleanUp](#cleanup)|Очистка таблиц ключа ярлыка.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Получает сочетание клавиш по умолчанию для указанной команды и окна.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Определяет, обрабатывается ли ключ в таблице сочетаний клавиш.|
@@ -171,7 +171,7 @@ static BOOL __stdcall IsKeyHandled(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*nKey*|[in] Проверяемая клавиша.|
 |*fVirt*|[in] Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
 |*pWndFrame*|[in] Окно фрейма. Этот метод определяет, обрабатывается ли сочетания клавиш в данном фрейме.|
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*NChar*|[in] Символ, этот метод проверяет.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,7 +206,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод завершается ошибкой, если в вызове [GetKeyboardState](https://msdn.microsoft.com/library/windows/desktop/ms646299) завершается ошибкой.
+Этот метод завершается ошибкой, если в вызове [GetKeyboardState](/windows/desktop/api/winuser/nf-winuser-getkeyboardstate) завершается ошибкой.
 
 ##  <a name="isshowallaccelerators"></a>  CKeyboardManager::IsShowAllAccelerators
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524434"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694183"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -490,7 +490,7 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция просто вызывает [UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) как описано в пакете Windows SDK.
+Эта функция просто вызывает [UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) как описано в пакете Windows SDK.
 
 Вызывайте эту функцию для очистки после всех существующих окон узла уничтожены, если вызван [AtlAxWinInit](#atlaxwininit) и больше не требуется создавать узла windows. Если вы не вызываете эту функцию, класс окна будет отменена автоматически при прекращении процесса.
 

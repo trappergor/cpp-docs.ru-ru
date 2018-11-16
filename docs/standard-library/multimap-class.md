@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multimap [C++], upper_bound
 - std::multimap [C++], value_comp
 ms.assetid: 8796ae05-37c4-475a-9e61-75fde9d4a463
-ms.openlocfilehash: 0373543dcc47425f5d89ee3a85940c619bfc6182
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: caffa84052f774803b92730f7906bf53cb3c824a
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525435"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678526"
 ---
 # <a name="multimap-class"></a>Класс multimap
 
@@ -153,13 +153,13 @@ class multimap;
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[multimap](#multimap)|Создает контейнер `multimap`, который является пустым или копией части или целого другого контейнера `multimap`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `multimap`.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может читать **const** элемент `multimap`.|
@@ -179,7 +179,7 @@ class multimap;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `multimap`.|
 |[cbegin](#cbegin)|Возвращает итератор const, обращающийся к первому элементу в `multimap`.|
@@ -209,7 +209,7 @@ class multimap;
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[оператор=](#op_eq)|Заменяет элементы `multimap` копией другого `multimap`.|
 
@@ -735,7 +735,7 @@ iterator emplace(Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|
 
@@ -805,7 +805,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*аргументы*|Аргументы, передаваемые для создания элемента, вставляемого в мультиотображение.|
 |*where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1211,7 +1211,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Val*|Значение элемента, вставляемого в множественное сопоставление.|
 |*Where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1651,7 +1651,7 @@ multimap(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Al*|Класс распределителя памяти для использования для этого объекта-мультиотображения. Значение по умолчанию — Allocator.|
 |*Зап.*|Функция сравнения типа `constTraits` для использования при упорядочивании элементов в сопоставлении. Значение по умолчанию — `Traits`.|
@@ -1703,7 +1703,7 @@ int main()
     m1.insert(Int_Pair(4, 40));
 
     // Create an empty multimap m2 with the key comparison
-    // function of geater than, then insert 2 elements
+    // function of greater than, then insert 2 elements
     multimap <int, int, less<int> > m2;
     m2.insert(Int_Pair(1, 10));
     m2.insert(Int_Pair(2, 20));
@@ -1798,7 +1798,7 @@ multimap& operator=(multimap&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*right*|[Мультиотображение](../standard-library/multimap-class.md), которое будет копироваться в `multimap`.|
 
@@ -1906,14 +1906,14 @@ int main( )
         << m1_rIter -> first << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a multimap in a forward order
+   // through a multimap in a forward order
    cout << "The multimap is: ";
    for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
       cout << m1_Iter -> first << " ";
       cout << "." << endl;
 
    // rbegin can be used to start an iteration
-   // throught a multimap in a reverse order
+   // through a multimap in a reverse order
    cout << "The reversed multimap is: ";
    for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
       cout << m1_rIter -> first << " ";
@@ -2046,14 +2046,14 @@ int main( )
         << m1_rIter -> first << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a multimap in a forward order
+   // through a multimap in a forward order
    cout << "The multimap is: ";
    for ( m1_Iter = m1.begin( ) ; m1_Iter != m1.end( ); m1_Iter++)
       cout << m1_Iter -> first << " ";
       cout << "." << endl;
 
    // rbegin can be used to start an iteration
-   // throught a multimap in a reverse order
+   // through a multimap in a reverse order
    cout << "The reversed multimap is: ";
    for ( m1_rIter = m1.rbegin( ) ; m1_rIter != m1.rend( ); m1_rIter++)
       cout << m1_rIter -> first << " ";
@@ -2287,7 +2287,7 @@ int main( )
            << m1_RcIter -> second << "." << endl;
 
    // The element at a specific location in the multimap can be
-   // found using a derefenced iterator addressing the location
+   // found using a dereferenced iterator addressing the location
    m1_AcIter = m1.begin( );
    m1_RcIter = m1.upper_bound( m1_AcIter -> first );
    cout << "The first element of m1 with a key greater than\n"
@@ -2397,7 +2397,7 @@ int main( )
    multimap <int, int> :: iterator pIter;
 
    // value_type can be used to pass the correct type
-   // explicitely to avoid implicit type conversion
+   // explicitly to avoid implicit type conversion
    m1.insert ( multimap <int, int> :: value_type ( 1, 10 ) );
 
    // Compare another way to insert objects into a hash_multimap

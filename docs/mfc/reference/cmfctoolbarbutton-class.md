@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 930434a6d1e447d38d5cec9a6b0b8adee8e37b81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438096"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694664"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 
@@ -181,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Создает и инициализирует объект `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно разместить кнопку на панели инструментов или меню во время настройки.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Указывает, отображается ли изображение на кнопке.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Указывает, отображается ли текстовая метка на кнопке.|
@@ -467,7 +467,7 @@ virtual void EnableWindow(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод `EnableWindow` функция для включения или отключения входных данных. Дополнительные сведения см. в разделе [EnableWindow](https://msdn.microsoft.com/library/windows/desktop/ms646291) в пакете Windows SDK.
+Этот метод вызывает метод `EnableWindow` функция для включения или отключения входных данных. Дополнительные сведения см. в разделе [EnableWindow](/windows/desktop/api/winuser/nf-winuser-enablewindow) в пакете Windows SDK.
 
 ##  <a name="exporttomenubutton"></a>  CMFCToolBarButton::ExportToMenuButton
 

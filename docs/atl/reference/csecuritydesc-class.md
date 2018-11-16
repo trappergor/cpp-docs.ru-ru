@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605811"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694079"
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 
@@ -58,14 +58,14 @@ class CSecurityDesc
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Конструктор.|
 |[CSecurityDesc:: ~ CSecurityDesc](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSecurityDesc::FromString](#fromstring)|Преобразует формат строки дескриптора безопасности в дескриптор допустимый, функциональной безопасности.|
 |[CSecurityDesc::GetControl](#getcontrol)|Извлекает контролировать данные из дескриптора безопасности.|
@@ -96,7 +96,7 @@ class CSecurityDesc
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Возвращает указатель на `SECURITY_DESCRIPTOR` структуры.|
 |[CSecurityDesc::operator =](#operator_eq)|Оператор присвоения.|
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647).
+Этот метод вызывает метод [GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol).
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>Параметры
 
 *ControlBitsOfInterest*<br/>
-Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Маска SECURITY_DESCRIPTOR_CONTROL, которая указывает управляющие биты для задания. Список флагов, которые можно задать, см. в разделе [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 *ControlBitsToSet*<br/>
 SECURITY_DESCRIPTOR_CONTROL маску, которая указывает новые значения управляющих битов, заданных *ControlBitsOfInterest* маски. Этот параметр может быть сочетанием флагов, указанных для *ControlBitsOfInterest* параметра.
@@ -564,7 +564,7 @@ SECURITY_DESCRIPTOR_CONTROL маску, которая указывает нов
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582).
+Этот метод вызывает метод [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol).
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
