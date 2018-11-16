@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447961"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694586"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 
@@ -104,20 +104,20 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComControlBase::AppearanceType](#appearancetype)|Переопределить, если ваш `m_nAppearance` не стандартное свойство типа **короткие**.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Конструктор.|
 |[CComControlBase:: ~ CComControlBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).|
@@ -168,7 +168,7 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComControlBase::m_bAutoSize](#m_bautosize)|Флаг, указывающий, что элемент управления не может быть любой другой размер.|
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.|
@@ -1547,7 +1547,7 @@ BOOL SetControlFocus(BOOL bGrab);
 
 ### <a name="remarks"></a>Примечания
 
-Для оконного элемента управления, функции Windows API [SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312) вызывается. Для элемента управления без окон [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) вызывается. Через этот вызов безоконный элемент управления получает фокус клавиатуры и может отвечать на сообщения окна.
+Для оконного элемента управления, функции Windows API [SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus) вызывается. Для элемента управления без окон [IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus) вызывается. Через этот вызов безоконный элемент управления получает фокус клавиатуры и может отвечать на сообщения окна.
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 
