@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 707287ea7abe255409911f5388cd1f96d976802b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454643"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326736"
 ---
 # <a name="ismbc-routines"></a>Процедуры _ismbc
 
@@ -42,7 +42,7 @@ ms.locfileid: "50454643"
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum, _ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Буквенно-цифровой|Возвращает отличное от нуля значение только в том случае, если `c` — однобайтовое представление английской буквы в коде ASCII: см. примеры для `_ismbcdigit` и `_ismbcalpha`.|
-|[_ismbcalpha, _ismbcalpha\_](../c-runtime-library/reference/ismbcalnum-functions.md)|По алфавиту|Возвращает отличное от нуля значение только в том случае, если `c` — однобайтовое представление английской буквы в коде ASCII: см. примеры для `_ismbcupper` и `_ismbclower`; или буква катаканы: 0xA6<=`c`<=0xDF.|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|По алфавиту|Возвращает отличное от нуля значение только в том случае, если `c` — однобайтовое представление английской буквы в коде ASCII: см. примеры для `_ismbcupper` и `_ismbclower`; или буква катаканы: 0xA6<=`c`<=0xDF.|
 |[_ismbcdigit, _ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|Цифровой|Возвращает отличное от нуля значение только в том случае, если `c` — однобайтовое представление цифры в коде ASCII: 0x30<=`c`<=0x39.|
 |[_ismbcgraph, _ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Графические символы|Возвращает ненулевое значение только в том случае, если `c` является однобайтовым представлением любого печатного символа ASCII или катаканы, кроме пробела ( ). См. примеры для `_ismbcdigit`, `_ismbcalpha` и `_ismbcpunct`.|
 |[_ismbclegal, _ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|Допустимый многобайтовый символ|Возвращает ненулевое значение только в том случае, если первый байт `c` находится в диапазонах 0x81–0x9F или 0xE0–0xFC, а второй — в диапазонах 0x40–0x7E или 0x80–FC.|
