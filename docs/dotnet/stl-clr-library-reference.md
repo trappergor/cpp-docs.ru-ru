@@ -7,16 +7,16 @@ helpviewer_keywords:
 - STL/CLR, redistribution
 - cliext directory
 ms.assetid: a9d9ca00-7bf2-48c1-b205-3ae6f8c25f82
-ms.openlocfilehash: b1628ebc315dd0e94b54f6d0c7847d46e002351e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6914b61597e38c94a214089ecc3aeed17aec46d3
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539468"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949522"
 ---
 # <a name="stlclr-library-reference"></a>Справочник по библиотеке STL/CLR
 
-Библиотека STL/CLR предоставляет интерфейсом, похожим на контейнеры стандартной библиотеки C++ для использования с C++ и .NET Framework common language runtime (CLR). STL/CLR никак не связано с реализацией библиотеки C++ Standard. STL/CLR, сохранено для поддержки прежних версий, но не обновляются стандарту C++. Мы настоятельно рекомендуем использовать собственные [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md) контейнеров вместо STL/CLR, когда это возможно.
+Библиотека STL/CLR предоставляет интерфейсом, похожим на контейнеры стандартной библиотеки C++ для использования с C++ и .NET Framework common language runtime (CLR). STL/CLR никак не связано с реализацией стандартной библиотеки C++. STL/CLR, сохранено для поддержки прежних версий, но не обновляются стандарту C++. Мы настоятельно рекомендуем использовать собственные [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md) контейнеров вместо STL/CLR, когда это возможно.
 
 Использование STL/CLR:
 
