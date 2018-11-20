@@ -4,7 +4,7 @@
 ## [Совместимость на уровне двоичного кода на C++ между версиями 2015 и 2017](binary-compat-2015-2017.md)
 ## [Общие сведения о возможных проблемах, возникающих при обновлении (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [Перенос сторонних библиотек](porting-third-party-libraries.md)
-## [Перенос приложений для обработки данных](porting-data-applications.md)
+## [Перенос приложений для обработки данных](../data/data-access-programming-mfc-atl.md)
 ## [Перенос и обновление: примеры и конкретные случаи](porting-and-upgrading-examples-and-case-studies.md)
 ### [Руководство по переносу: MFC Scribble](porting-guide-mfc-scribble.md)
 ### [Руководство по переносу: COM Spy](porting-guide-com-spy.md)
