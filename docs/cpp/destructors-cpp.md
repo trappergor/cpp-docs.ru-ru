@@ -1,6 +1,6 @@
 ---
 title: Деструкторы (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - objects [C++], destroying
 - Visual C++, destructors
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - destructors, about destructors
 - destructors, C++
 ms.assetid: afa859b0-f3bc-4c4d-b250-c68b335b6004
-ms.openlocfilehash: 5c56a6ffc43f8fa00ffd540a5922d8ac279475ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f26f797da75f0d7d7aa6f6849c9484cea35fb125
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586021"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175877"
 ---
 # <a name="destructors-c"></a>Деструкторы (C++)
 
@@ -152,9 +152,8 @@ B1 dtor
 
 Деструкторы для виртуальных базовых классов вызываются в порядке, обратном их указанию в направленном ациклическом графе (в глубину, слева направо, обход в обратном порядке). На следующем рисунке представлен граф наследования.
 
-![Граф наследования, показывающий виртуальные базовые классы](../cpp/media/vc392j1.gif "vc392J1")
-
-Граф наследования, представляющий виртуальные базовые классы
+![Граф наследования, показывающий виртуальные базовые классы](../cpp/media/vc392j1.gif "граф наследования, показывающий виртуальные базовые классы") <br/>
+Граф наследования, показывающий виртуальные базовые классы
 
 Ниже перечислены заголовки классов, представленных на рисунке.
 

@@ -1,13 +1,13 @@
 ---
 title: Получение указателей на буферы данных (C++/CX)
-ms.date: 12/30/2016
+ms.date: 11/19/2018
 ms.assetid: db4f9370-dd95-4896-b5b8-4b202284f579
-ms.openlocfilehash: 6fc136af4098659779b4b4ff7fb8878e1cea6590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2cd99019d75272f4362518de78b729cd7a2549f3
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514274"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175110"
 ---
 # <a name="obtaining-pointers-to-data-buffers-ccx"></a>Получение указателей на буферы данных (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50514274"
 
 На следующей схеме показан элемент изображения XAML, источником которого является [Windows::UI::Xaml::Media::Imaging WriteableBitmap](https://msdn.microsoft.com/%20library/windows/apps/windows.ui.xaml.media.imaging.writeablebitmap.aspx). Клиентские приложения, написанные на любом языке, могут передавать ссылку на `WriteableBitmap` в код C++, а затем код C++ может использовать эту ссылку для обращения к соответствующему буферу. В приложении универсальной платформы Windows, которое создается на языке C++ можно использовать функцию в следующем примере непосредственно в исходном коде без упаковки в компонент среды выполнения Windows.
 
-![C&#43; &#43; кодом, напрямую обращается к данным пикселя](../cppcx/media/ibufferbyteaccessdiagram.png "IBufferByteAccessDiagram")
+![C&#43; &#43; код, который напрямую обращается к данным пикселя](../cppcx/media/ibufferbyteaccessdiagram.png "C&#43; &#43; код, который напрямую обращается к данным пикселя")
 
 ## <a name="getpointertopixeldata"></a>GetPointerToPixelData
 

@@ -1,6 +1,6 @@
 ---
 title: Оператор try-finally
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326928"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175929"
 ---
 # <a name="try-finally-statement"></a>Оператор try-finally
 
@@ -68,7 +68,8 @@ ms.locfileid: "51326928"
 
 Например, предположим, ряд вызовов функций связывает функцию А с функцией D, как показано на следующем рисунке. Каждая функция имеет один обработчик завершения. Если исключение создается в функции D и обрабатывается в функции А, обработчики завершения вызываются в том порядке, в котором система освобождает стек: D, C и B.
 
-![Порядок прекращения&#45;выполнения обработчика](../cpp/media/vc38cx1.gif "vc38CX1") порядок выполнения обработчика завершения
+![Порядок прекращения&#45;выполнения обработчика](../cpp/media/vc38cx1.gif "порядок прекращения&#45;выполнения обработчика") <br/>
+Порядок выполнения обработчиков завершения
 
 > [!NOTE]
 > Поведение оператора try-finally отличается от некоторых других языков, которые поддерживают использование **наконец**, например C#.  Один **__try** , возможно, но не оба объекта **__finally** и **__except**.  Если оба следует использовать одновременно, оператор try-except должен включать внутренней оператор try-finally.  Правила,задающие время выполнения каждого блока, также различаются.

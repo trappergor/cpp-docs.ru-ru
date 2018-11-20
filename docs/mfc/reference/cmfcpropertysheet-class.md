@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCPropertySheet
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531616"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176410"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 
@@ -61,14 +61,14 @@ class CMFCPropertySheet : public CPropertySheet
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|
@@ -112,15 +112,15 @@ class CMFCPropertySheet : public CPropertySheet
 
 На следующем рисунке показана таблица свойств в стиле встроенной панели инструментов Microsoft Outlook. Панель инструментов Outlook отображается с левой стороны таблицы свойств.
 
-![Элементы управления цветов CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![Элементы управления цветов CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_color.png "элементы управления цветов CMFCPropertySheet")
 
 На следующем рисунке показана таблица свойств содержит [класс CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md) объекта. Этот объект является таблицей свойств в стиле стандартной страницы свойств общих элементов управления.
 
-![Элементы управления свойств и списков CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![Элементы управления свойств и списков CMFCPropertySheet](../../mfc/reference/media/cmfcpropertysheet_list.png "управления свойств и списков CMFCPropertySheet")
 
 На следующем рисунке показана таблица свойств в стиле элемента управления «Дерево».
 
-![Дерево](../../mfc/reference/media/proptree.png "proptree")
+![Свойство дерева](../../mfc/reference/media/proptree.png "дерева свойства")
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -465,7 +465,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Идентификатор ресурса из списка изображений.
 
-*CX*<br/>
+*cx*<br/>
 [in] Ширина в пикселях значки в списке изображений.
 
 *clrTransparent*<br/>
@@ -508,7 +508,7 @@ void SetLook(
 
 В следующей таблице перечислены значения перечисления, которые могут быть указаны в *выглядеть* параметра.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладки для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если есть несколько вкладок, чем может поместиться в одну строку.|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле Microsoft Outlook линейки с левой стороны страницы свойств. Каждой кнопке в списке соответствует страницы свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой части списка, платформа отображает стрелки прокрутки.|

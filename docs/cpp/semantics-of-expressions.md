@@ -1,18 +1,18 @@
 ---
 title: Семантика выражений
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490965"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175796"
 ---
 # <a name="semantics-of-expressions"></a>Семантика выражений
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![Порядок вычисления в выражении](../cpp/media/vc38zv1.gif "vc38ZV1") порядок вычисления выражений
+![Порядок вычисления в выражении](../cpp/media/vc38zv1.gif "порядок вычисления в выражении") <br/>
+Порядок вычисления выражений
 
 Порядок, в котором оценивается выражение, показанное на рисунке выше, определяется приоритетностью и ассоциативностью операторов.
 
@@ -55,7 +56,8 @@ int main()
 
 Если для группировки вложенных выражений используются скобки, они меняют приоритет и порядок оценки выражения, как показано на следующем рисунке.
 
-![Порядок вычисления выражения со скобками](../cpp/media/vc38zv2.gif "vc38ZV2") порядок вычисления выражений со скобками
+![Порядок вычисления выражения со скобками](../cpp/media/vc38zv2.gif "порядок вычисления выражения со скобками") <br/>
+Порядок вычисления выражений со скобками
 
 Выражения, такие как на рисунке выше, оцениваются исключительно для побочного эффекта, в данном случае — для переноса информации на стандартное устройство вывода.
 
@@ -68,7 +70,7 @@ int main()
 |Требуется тип|Допускаются типы|
 |-------------------|-------------------|
 |*type*|`const` *Тип*<br /> `volatile` *Тип*<br /> *Тип*&<br /> `const` *Тип*&<br /> `volatile` *Тип*&<br /> `volatile const` *Тип*<br /> `volatile const` *Тип*&|
-|*Тип*\*|*Тип*\*<br /> `const` *Тип*\*<br /> `volatile` *Тип*\*<br /> `volatile const` *Тип*\*|
+|*Тип* \*|*Тип* \*<br /> `const` *Тип* \*<br /> `volatile` *Тип* \*<br /> `volatile const` *Тип* \*|
 |`const` *Тип*|*type*<br /> `const` *Тип*<br />`const` *Тип*&|
 |`volatile` *Тип*|*type*<br /> `volatile` *Тип*<br /> `volatile` *Тип*&|
 

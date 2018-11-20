@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCColorPickerCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519058"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176930"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс CMFCColorPickerCtrl
 
@@ -61,13 +61,13 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Создает объект `CMFCColorPickerCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Получает цвет, выбранного пользователем.|
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлекает значения оттенка, освещенности и насыщенность цвета, выбранного пользователем.|
@@ -87,7 +87,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызвано структурой перед отображением курсор, указывающий на выбранный цвет.|
 
@@ -97,7 +97,7 @@ class CMFCColorPickerCtrl : public CButton
 
 На следующем рисунке показано несколько `CMFCColorPickerCtrl` объектов.
 
-![Диалоговое окно для CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "colorpicker")
+![Диалоговое окно для CMFCColorPickerCtrl](../../mfc/reference/media/colorpicker.png "диалоговое окно для CMFCColorPickerCtrl")
 
 `CMFCColorPickerCtrl` Поддерживает две пары стили. Стили ШЕСТНАДЦАТЕРИЧНЫЕ и HEX_GREYSCALE подходят для стандартный цвет выделения. Средство ВЫБОРА и ЯРКОСТЬЮ стили подходят для выбора пользовательский цвет.
 
@@ -159,7 +159,7 @@ virtual void DrawCursor(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает прямоугольную область вокруг выбранного цвета.
 
 ### <a name="remarks"></a>Примечания

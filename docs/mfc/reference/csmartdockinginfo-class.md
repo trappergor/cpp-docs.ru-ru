@@ -1,6 +1,6 @@
 ---
 title: Класс CSmartDockingInfo
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524670"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176774"
 ---
 # <a name="csmartdockinginfo-class"></a>Класс CSmartDockingInfo
 
@@ -47,19 +47,19 @@ class CSmartDockingInfo : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CSmartDockingInfo::CSmartDockingInfo`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSmartDockingInfo::CopyTo](#copyto)|Копирует текущие смарт-закрепления параметры info в предоставленный [CSmartDockingInfo](../../mfc/reference/csmartdockinginfo-class.md) объекта.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CSmartDockingInfo::m_bUseThemeColorInShading](#m_busethemecolorinshading)|Указывает, следует ли использовать текущий цвет темы, когда платформа отображает интеллектуальных маркеров закрепления.|
 |[CSmartDockingInfo::m_clrBaseBackground](#m_clrbasebackground)|Задает цвет фона базовый вид интеллектуальных маркеров закрепления.|
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 Framework маркеры смарт-закрепления маркеры внутренним образом. На следующем рисунке показан стандартные интеллектуальные маркеры стыковки:
 
-![Стандартные маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![Стандартные маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkers.png "стандартные маркеры смарт-закрепления")
 
 На этом рисунке на рисунке слева показано центральная группа смарт-закрепления маркер, который не поддерживает закрепление на вкладку включена. На рисунке в середине показан маркер смарт-закрепления правого края. Изображение справа показан центральная группа смарт-закрепления маркер, услугам закрепляемые вкладку "включено". Центральная группа смарт-закрепления маркер имеет Битовая карта основной и пять смарт-закрепления растровые изображения маркера.
 
@@ -93,7 +93,7 @@ Framework маркеры смарт-закрепления маркеры вну
 
 Ниже показан пример вид интеллектуальных маркеров закрепления, настроенные:
 
-![Пользовательские маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![Пользовательские маркеры смарт-закрепления](../../mfc/reference/media/nextsdmarkerscustom.png "пользовательские маркеры смарт-закрепления")
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

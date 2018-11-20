@@ -1,15 +1,15 @@
 ---
 title: Реализация страницы свойств (ATL)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: 6eb65ca3ddff79262c2f2b53d84d2f964f273c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a76a0f49e8b0ec7458b781785cd5030d2c523f0b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669096"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176475"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример: Реализация страницы свойств
 
@@ -58,7 +58,7 @@ ms.locfileid: "50669096"
 
 Теперь, когда создан страницы свойств, необходимо добавить несколько элементов управления в ресурс диалогового окна, представляющий страницу. Добавьте поле ввода статического текста и типа "флажок" и задайте их идентификаторы, как показано ниже:
 
-![Изменение ресурса диалогового окна](../atl/media/ppgresourcelabeled.gif "ppgresourcelabeled")
+![Изменение ресурса диалогового окна](../atl/media/ppgresourcelabeled.gif "изменение ресурса диалогового окна")
 
 Эти элементы управления будет использоваться для отображения имени файла документа и его состояние только для чтения.
 

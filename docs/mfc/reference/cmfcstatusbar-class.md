@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCStatusBar
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCStatusBar
 - AFXSTATUSBAR/CMFCStatusBar
@@ -72,18 +72,18 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: bd63ee83412c3f89b6eea755c0b0a213b1dcc2e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498050"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176579"
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 
 `CMFCStatusBar` Класс реализует строку состояния, аналогичную `CStatusBar` класса. Однако класс `CMFCStatusBar` не содержит функции, предоставляемые классом `CStatusBar` , такие как возможность отображать изображения, анимации и индикаторы выполнения, а также возможность реагировать на двойные нажатия мыши.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -95,7 +95,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||
@@ -132,7 +132,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Вызывается платформой, когда он перерисовывает панели строки состояния.|
 
@@ -140,7 +140,7 @@ class CMFCStatusBar : public CPane
 
 На следующей схеме показаны рис строки состояния из [состояние панели демонстрационного](../../visual-cpp-samples.md) приложения.
 
-![Пример cmfcstatusbar](../../mfc/reference/media/cmfcstatusbar.png "cmfcstatusbar")
+![Пример cmfcstatusbar](../../mfc/reference/media/cmfcstatusbar.png "пример cmfcstatusbar")
 
 ## <a name="example"></a>Пример
 
@@ -620,7 +620,7 @@ void SetPaneBackgroundColor(
 [in] Указывает индекс области, для которого требуется задать новый цвет фона.
 
 *clrBackground*<br/>
-[in] Указывает новый цвет фона.
+[in] Задает новый цвет фона.
 
 *bСтратегии обновлениями*<br/>
 [in] Если значение равно TRUE, немедленно обновите содержимое области. В противном случае не обновить содержимое области, пока не становится недействительным области с помощью другого метода.
@@ -783,7 +783,7 @@ void SetPaneWidth(
 *nIndex*<br/>
 [in] Индекс панели строки состояния, для которого требуется задать новую ширину.
 
-*CX*<br/>
+*cx*<br/>
 [in] Новая ширина панели строки состояния, в пикселях.
 
 ##  <a name="settiptext"></a>  CMFCStatusBar::SetTipText

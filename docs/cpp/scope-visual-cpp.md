@@ -1,6 +1,6 @@
 ---
 title: Область (C++)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506617"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176761"
 ---
 # <a name="scope-c"></a>Область (C++)
 
@@ -41,7 +41,8 @@ ms.locfileid: "50506617"
 
 Можно скрыть имя, объявив его в закрытом блоке. На следующем рисунке `i` повторно объявляется во внутреннем блоке, таким образом скрывая переменную, связанную с `i` во внешней области видимости блока.
 
-![Блок&#45;область скрытии имен](../cpp/media/vc38sf1.png "vc38SF1") области видимости блока и скрытие имя
+![Блок&#45;область скрытии имен](../cpp/media/vc38sf1.png "блок&#45;область скрытии имен") <br/>
+Область видимости блока и скрытие имен
 
 Выходные данные программы, представленной на рисунке, выглядят следующим образом.
 

@@ -1,6 +1,6 @@
 ---
 title: CRectTracker-класс
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473376"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176514"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-класс
 
@@ -59,13 +59,13 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRectTracker::CRectTracker](#crecttracker)|Создает объект `CRectTracker`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRectTracker::AdjustRect](#adjustrect)|Вызывается, когда изменяются размеры прямоугольника.|
 |[CRectTracker::Draw](#draw)|Отрисовывает прямоугольник.|
@@ -81,7 +81,7 @@ class CRectTracker
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Определяет размер маркеров изменения размера.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Текущий style(s) средства отслеживания.|
@@ -237,7 +237,7 @@ virtual UINT GetHandleMask() const;
 
 Прямоугольник имеет 8 маркеров изменения размера с номерами от 0 до 7. Каждый маркер изменения размера представленный бита в маске; значение бита равно 2 ^ *n*, где *n* — номер маркер изменения размера. Биты 0-3 соответствуют угловые маркеры изменения размера, начиная с верхней левой перемещение по часовой стрелке. Бит 4 – 7 соответствуют на стороне изменить размер маркеров, начиная сверху перемещение по часовой стрелке. На следующем рисунке показано маркеры изменения размера прямоугольника и соответствующие им изменения размера дескриптор числа и значения:
 
-![Количества маркеров изменения размера](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![Количества маркеров изменения размера](../../mfc/reference/media/vc35dp1.gif "числа маркера изменения размера")
 
 Реализация по умолчанию `GetHandleMask` возвращает маске биты, чтобы появились маркеры изменения размера. Если один бит включен, будет отображен соответствующий маркер изменения размера.
 
@@ -270,7 +270,7 @@ int HitTest(CPoint point) const;
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Точка, в координатах устройства, для тестирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -424,7 +424,7 @@ BOOL Track(
 *pWnd*<br/>
 Объект окна, содержащей прямоугольник.
 
-*точка*<br/>
+*point*<br/>
 Координаты устройства текущее положение указателя мыши относительно клиентской области.
 
 *bAllowInvert*<br/>
@@ -461,7 +461,7 @@ BOOL TrackRubberBand(
 *pWnd*<br/>
 Объект окна, содержащей прямоугольник.
 
-*точка*<br/>
+*point*<br/>
 Координаты устройства текущее положение указателя мыши относительно клиентской области.
 
 *bAllowInvert*<br/>

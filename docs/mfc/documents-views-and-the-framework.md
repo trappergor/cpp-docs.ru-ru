@@ -1,6 +1,6 @@
 ---
 title: Документы, представления и платформа
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662375"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175760"
 ---
 # <a name="documents-views-and-the-framework"></a>Документы, представления и платформа
 
@@ -59,7 +59,8 @@ ms.locfileid: "50662375"
 
 В запущенном приложении эти объекты совместно реагировать на действия пользователя, связанные с помощью команды и другие сообщения. Объект одного приложения управляет один или несколько шаблонов документов. Каждый шаблон документа создает и управляет один или несколько документов (в зависимости от приложения SDI или MDI). Пользователь просматривает и управляет документа с помощью представления, содержащиеся внутри окна фрейма. На следующем рисунке показана отношения между этими объектами возможно для приложения SDI.
 
-![Объекты в запущенном приложении SDI](../mfc/media/vc386v1.gif "vc386v1") объектов в приложении SDI под управлением
+![Объекты в запущенном приложении SDI](../mfc/media/vc386v1.gif "объекты в запущенном приложении SDI") <br/>
+Объекты в выполняющемся приложении SDI
 
 Остальная часть этот сборник статей объясняется, как средства framework, мастер приложений MFC и редакторы ресурсов, создать эти объекты, как они работают вместе и как их использовать в программирования. Документы, представления и окна фрейма рассматриваются более подробно в [объектов окна](../mfc/window-objects.md) и [архитектуры Document/View](../mfc/document-view-architecture.md).
 

@@ -1,16 +1,16 @@
 ---
 title: Элементы интерфейса
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 564f0baa34cfb0fe682c2a761fcf8c0d41cd6cb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668693"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175903"
 ---
 # <a name="interface-elements"></a>Элементы интерфейса
 
@@ -18,7 +18,7 @@ ms.locfileid: "50668693"
 
 Ниже показано приложение, созданное с помощью новых элементов интерфейса.
 
-![Приложение примера MFC Feature Pack](../mfc/media/mfc_featurepack.png "mfc_featurepack")
+![Приложение примера MFC Feature Pack](../mfc/media/mfc_featurepack.png "приложение примера MFC Feature Pack")
 
 ## <a name="window-docking"></a>Закрепление окон
 

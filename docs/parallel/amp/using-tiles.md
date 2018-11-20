@@ -1,13 +1,13 @@
 ---
 title: Использование плиток
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588522"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176098"
 ---
 # <a name="using-tiles"></a>Использование плиток
 
@@ -27,7 +27,7 @@ ms.locfileid: "50588522"
 
 Следующая схема представляет матрица 8 x 9 данные, которые расположены в плитки 2 x 3.
 
-![8&#45;по&#45;матрицы 9 разделить на 2&#45;по&#45;3 плитки](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;по&#45;матрицы 9 разделить на 2&#45;по&#45;3 плитки](../../parallel/amp/media/usingtilesmatrix.png "8&#45;по&#45;матрицы 9 разделить на 2&#45;по&#45;плиток 3")
 
 В следующем примере показаны глобальные, мозаичные и локальные индексы в данной мозаичной матрице. `array_view` Объекта создается с помощью элементов типа `Description`. `Description` Содержит глобального, мозаичного и локального индексов элемента в матрице. Код в вызове `parallel_for_each` устанавливает значения глобального, мозаичного и локального индексов каждого элемента. В выходных данных отображаются значения в `Description` структуры.
 

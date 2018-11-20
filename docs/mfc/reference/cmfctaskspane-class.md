@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCTasksPane
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,16 +194,16 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563661"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176813"
 ---
 # <a name="cmfctaskspane-class"></a>Класс CMFCTasksPane
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 Класс `CMFCTasksPane` реализует список доступных для щелчка элементов (задач).
 
@@ -217,13 +217,13 @@ class CMFCTasksPane : public CDockablePane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTasksPane::CMFCTasksPane](#cmfctaskspane)|Создает объект `CMFCTasksPane`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTasksPane::AddGroup](#addgroup)|Добавляет новую группу задач для элемента управления области задач.|
 |[CMFCTasksPane::AddLabel](#addlabel)|Добавляет новую статическую подпись в указанную группу задач.|
@@ -320,7 +320,7 @@ class CMFCTasksPane : public CDockablePane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTasksPane::OnActivateTasksPanePage](#onactivatetaskspanepage)|Вызывается платформой при активации новой страницы области задач.|
 
@@ -350,11 +350,11 @@ class CMFCTasksPane : public CDockablePane
 
 На следующем рисунке показан стандартный элемент управления области задач. Первая группа является *специальные* , ее заголовок выделен более темным цветом. Третья группа свернута. Последняя группа расположена в нижней части области задач и не имеет заголовка. Последняя задача в этой группе — простая метка:
 
-![Пример области задач](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![Пример области задач](../../mfc/reference/media/nexttaskpane.png "пример области задач")
 
 Внешний вид области задач можно настроить, перемещая различные поля и меняя смещения. На следующем рисунке разъясняется значение этих переменных:
 
-![Пользовательская группа задач](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![Пользовательская группа задач](../../mfc/reference/media/nexttaskgrpcustom.png "настраиваемая группа задач")
 
 ## <a name="example"></a>Пример
 
@@ -1720,7 +1720,7 @@ BOOL SetGroupTextColor(
 *Разгруппировать*<br/>
 [in] Указывает отсчитываемый от нуля индекс группы.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Задает цвет текста.
 
 *colorHot*<br/>
@@ -1786,7 +1786,7 @@ void SetIconsList(HIMAGELIST hIcons);
 *uiImageListResID*<br/>
 [in] Указывает идентификатор ресурса для списка изображений.
 
-*CX*<br/>
+*cx*<br/>
 [in] Указывает размер значков в списке изображений.
 
 *clrTransparent*<br/>
@@ -1914,7 +1914,7 @@ BOOL SetTaskTextColor(
 *nTask*<br/>
 [in] Указывает отсчитываемый от нуля индекс задачи.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Задает цвет текста для задачи.
 
 *colorHot*<br/>

@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Создание сети обработки изображений
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643642"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176176"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Пошаговое руководство. Создание сети обработки изображений
 
@@ -116,7 +116,7 @@ ms.locfileid: "50643642"
 
 Следующая таблица описывает члены сети.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |`load_bitmap`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) объект, который загружает `Bitmap` с диска и добавляет запись в `map` для связи с исходным именем файла изображения.|
 |`loaded_bitmaps`|Объект [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объект, отправляющий загруженные изображения фильтрам обработки изображений.|
@@ -134,7 +134,7 @@ ms.locfileid: "50643642"
 
 На следующем рисунке показан сеть обработки изображений:
 
-![Сеть обработки изображений](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![Сеть обработки изображений](../../parallel/concrt/media/concrt_imageproc.png "сеть обработки изображений")
 
 `countdown_event` Объект в этом примере включает сеть обработки изображений для информирования основного приложения, когда будут обработаны все образы. `countdown_event` Класс использует [concurrency::event](../../parallel/concrt/reference/event-class.md) объекта, чтобы сообщить, что значение счетчика достигло нуля. Основное приложение увеличивает значение счетчика, каждый раз, что он отправляет имя файла в сети. Конечный узел сети уменьшает счетчик после обработки каждого изображения. После основного приложения проходит через указанный каталог, он ожидает `countdown_event` чтобы сообщить, что его счетчика равно нулю.
 
@@ -152,7 +152,7 @@ ms.locfileid: "50643642"
 
 Ниже показан пример выходных данных. Исходные изображения расположены над соответствующими измененными изображениями.
 
-![Пример выходных данных для примера](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![Пример выходных данных для примера](../../parallel/concrt/media/concrt_imageout.png "пример выходных данных для примера")
 
 `Lighthouse` созданные пользователем Tom Alphin и таким образом, преобразуется в оттенки серого. `Chrysanthemum`, `Desert`, `Koala`, и `Tulips` красный базового цвета и таким образом быть удалены компоненты сине-зеленый цвет и затемняются. `Hydrangeas`, `Jellyfish`, и `Penguins` соответствующие критериям по умолчанию и, следовательно, сепия toned.
 

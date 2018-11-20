@@ -1,16 +1,16 @@
 ---
 title: Создание асинхронных операций в C++ для приложений универсальной платформы Windows
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 4824180ec0ff9f7adb7c2d0a9b505a2abb58c20b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333336"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176956"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений универсальной платформы Windows
 
@@ -124,7 +124,7 @@ ms.locfileid: "51333336"
 
 На следующем рисунке показано приложение `Primes` после выбора каждого параметра.
 
-![Приложение Primes среды выполнения Windows](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Приложение Primes для среды выполнения Windows](../../parallel/concrt/media/concrt_windows_primes.png "приложение Primes для среды выполнения Windows")
 
 Дополнительную информацию о примерах, которые применяют `create_async` для создания асинхронных задач, которые могут использоваться другими языками, см. в разделе [Использование C++ в примере Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) и [Асинхронные операции в Windows 8 в C++ с PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
@@ -186,7 +186,7 @@ ms.locfileid: "51333336"
 
 На следующем рисунке показаны результаты выполнения приложения `CommonWords` .
 
-![Приложение CommonWords среды выполнения Windows](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Приложение CommonWords среды выполнения Windows](../../parallel/concrt/media/concrt_windows_common_words.png "Windows приложение CommonWords среды выполнения")
 
 В этом примере можно поддерживать отмену, поскольку объекты `task` , которые поддерживают `create_async` , используют неявный токен отмены. Определите свою рабочую функцию для приема объекта `cancellation_token` , если задачи должны отвечать на отмену в режиме совместной работы. Дополнительные сведения об отмене в PPL см. в разделе [Cancellation in the PPL](cancellation-in-the-ppl.md).
 

@@ -1,6 +1,6 @@
 ---
 title: 'Элементы управления MFC ActiveX: использование шрифтов'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608948"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175825"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>Элементы управления MFC ActiveX: использование шрифтов
 
@@ -204,7 +204,8 @@ ms.locfileid: "50608948"
 
 Если элемент управления использует свойство Font, его уведомления обрабатываются `OnFontChanged` функцию-член `COleControl`. При добавлении свойства пользовательского шрифта, возможно они используют ту же реализацию. В примере выше это осуществлялось путем передачи &*m_xFontNotification* при инициализации *m_fontHeading* переменной-члена.
 
-![Реализация нескольких интерфейсов объекта шрифта](../mfc/media/vc373q1.gif "vc373q1") реализация нескольких интерфейсов объекта шрифта
+![Реализация нескольких интерфейсов объекта шрифта](../mfc/media/vc373q1.gif "реализация нескольких интерфейсов объекта шрифта") <br/>
+Реализация нескольких интерфейсов объекта шрифта
 
 Сплошные линии на рисунке выше показано, что оба объекта font при использовании же реализации `IFontNotification`. Это может вызвать проблемы, если требуется различать, изменить шрифт.
 

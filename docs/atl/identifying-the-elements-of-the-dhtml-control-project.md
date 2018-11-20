@@ -1,16 +1,16 @@
 ---
 title: Определение элементов для проекта элемента управления DHTML
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533696"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175717"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>Определение элементов для проекта элемента управления DHTML
 
@@ -26,7 +26,7 @@ ms.locfileid: "50533696"
 
 Приведенный ниже рисунок иллюстрирует связь между библиотеки DLL, элемент управления DHTML, веб-браузер и HTML-ресурса.
 
-![Элементы проекта элемента управления DHTML](../atl/media/vc52en1.gif "vc52en1")
+![Элементы проекта элемента управления DHTML](../atl/media/vc52en1.gif "элементы проекта элемента управления DHTML")
 
 > [!NOTE]
 >  Имена на этом рисунке представляют собой заполнители. Имена HTML ресурс и интерфейсы, предоставляемые в элементе управления основаны на имена, назначаемые в мастер элементов управления ATL.
@@ -47,7 +47,7 @@ ms.locfileid: "50533696"
 
 Мастер элементов управления ATL создается элемент управления с кодом по умолчанию в HTML-ресурса и CPP-файл. Можно скомпилировать и запустить элемент управления, создаваемый мастером и просмотрите элемент управления в веб-браузера или тестовый контейнер элементов управления ActiveX. На рисунке ниже показаны управления DHTML в ATL по умолчанию с помощью трех кнопок, отображаемых в тестовом контейнере:
 
-![Элемент управления DHTML в ATL](../atl/media/vc52en2.gif "vc52en2")
+![Элемент управления DHTML в ATL](../atl/media/vc52en2.gif "управления DHTML в ATL")
 
 См. в разделе [Создание элемента управления DHTML в ATL](../atl/creating-an-atl-dhtml-control.md) можно приступить к сборке элемента управления DHTML. См. в разделе [тестирование свойств и событий с использованием тестового контейнера](../mfc/testing-properties-and-events-with-test-container.md) сведения о том, как получить доступ к контейнеру теста.
 

@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCImageEditorDialog
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503068"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175077"
 ---
 # <a name="cmfcimageeditordialog-class"></a>Класс CMFCImageEditorDialog
 
@@ -29,7 +29,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCImageEditorDialog::CMFCImageEditorDialog](#cmfcimageeditordialog)|Создает объект `CMFCImageEditorDialog`.|
 
@@ -47,7 +47,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 Ниже показан редактор изображений диалоговое окно.
 
-![Диалоговое окно CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "imageedit")
+![Диалоговое окно CMFCImageEditorDialog](../../mfc/reference/media/imageedit.png "диалоговое окно CMFCImageEditorDialog")
 
 Один из способов использования `CMFCImageEditorDialog` объекта является его передача `CBitmap` изображение для редактирования. Не создавайте большое изображение, так как область редактирования изображения имеет ограниченный размер и размер в логических пикселях корректируется по ее размерам. Вызовите `DoModal` метод, чтобы запустить модальное диалоговое окно.
 

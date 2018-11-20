@@ -1,6 +1,6 @@
 ---
 title: Инициализаторы
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544668"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176293"
 ---
 # <a name="initializers"></a>Инициализаторы
 
@@ -528,7 +528,8 @@ int main()
 
 При инициализации переменной ссылочного типа компилятор с помощью графа принятия решений, показанного на следующем рисунке, выбирает между созданием ссылки на объект и созданием временного объекта, на который указывает ссылка.
 
-![Граф принятия решений для инициализации типов ссылок](../cpp/media/vc38s71.gif "vc38S71") графа принятия решений для инициализации ссылочных типов
+![Графы решений для инициализации ссылочных типов](../cpp/media/vc38s71.gif "графы решений для инициализации ссылочных типов") <br/>
+Графы решений для инициализации ссылочных типов
 
 Ссылки на **volatile** типы (объявленные как **volatile** *typename* <strong>&</strong> *идентификатор*) можно инициализировать с помощью **volatile** объектов одного типа или с объектами, которые не были объявлены как **volatile**. Они не может, тем не менее, инициализировать с помощью **const** объектов этого типа. Аналогично, ссылки на **const** типы (объявленные как **const** *typename* <strong>&</strong> *идентификатор* ) можно инициализировать с помощью **const** объекты одного типа (или все, что имеется преобразование к этому типу или с объектами, которые не были объявлены как **const**). Они не может, тем не менее, инициализировать с помощью **volatile** объектов этого типа.
 

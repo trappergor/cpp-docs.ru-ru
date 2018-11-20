@@ -1,15 +1,15 @@
 ---
 title: Практическое руководство. Создание и использование экземпляров shared_ptr
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606652"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176280"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>Практическое руководство. Создание и использование экземпляров shared_ptr
 
@@ -17,33 +17,33 @@ ms.locfileid: "50606652"
 
 На следующем рисунке показаны несколько `shared_ptr` экземпляров, которые указывают в одном расположении.
 
-[![Общий указатель](../cpp/media/shared_ptr.png "shared_ptr")]
+![Общий указатель схеме](../cpp/media/shared_ptr.png "схема общий указатель")
 
-## <a name="example"></a>Пример
+## <a name="example-1"></a>Пример 1
 
 По возможности используйте [make_shared](../standard-library/memory-functions.md#make_shared) функцию для создания `shared_ptr` при создании ресурсов памяти в первый раз. `make_shared` — безопасный в отношении исключений. Он использует тот же вызов, чтобы выделить память для блок управления и ресурс и тем самым сократить издержки конструкции. Если вы не используете `make_shared`, вам необходимо будет использовать для создания объекта, прежде чем передать его в новый явное выражение `shared_ptr` конструктор. В следующем примере показаны различные способы объявления и инициализации `shared_ptr` вместе с нового объекта.
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-2"></a>Пример 2
 
 В следующем примере показано, как объявить и инициализировать `shared_ptr` экземпляров, которые принимают на общее владение объект, который уже выделен другой `shared_ptr`. Предполагается, что `sp2` является инициализированный `shared_ptr`.
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-3"></a>Пример 3
 
 `shared_ptr` можно использовать в контейнеры стандартной библиотеки C++ при использовании алгоритмов, которые копируются элементы. Можно создать оболочку элементов в `shared_ptr`, а затем скопируйте их в другие контейнеры, с учетом того, что основная память является допустимым до тех пор, пока он вам нужен и больше не. В следующем примере показано, как использовать `replace_copy_if` алгоритм на `shared_ptr` экземпляров в векторе.
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-4"></a>Пример 4
 
 Можно использовать `dynamic_pointer_cast`, `static_pointer_cast`, и `const_pointer_cast` для приведения `shared_ptr`. Эти функции похожи `dynamic_cast`, `static_cast`, и `const_cast` операторы. Приведенный ниже показано, как протестировать производный тип каждого элемента в вектор `shared_ptr` из базовых классов, а затем копируются элементы и отображения сведений о них.
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>Пример
+## <a name="example-5"></a>Пример 5
 
 Вы можете передать `shared_ptr` в другую функцию следующим образом:
 
@@ -59,7 +59,7 @@ ms.locfileid: "50606652"
 
 - В некоторых случаях для примера в `std:vector<shared_ptr<T>>`, может потребоваться передать каждый `shared_ptr` тело лямбда-выражения или объекта функции по имени. Если лямбда-выражения или функции не хранит указатель, то передайте `shared_ptr` по ссылке, чтобы избежать вызова конструктора копии для каждого элемента.
 
-## <a name="example"></a>Пример
+## <a name="example-6"></a>Пример 6
 
 В следующем примере показан как `shared_ptr` перегружает различные операторы сравнения, чтобы включить Сравнение указателей в памяти, который принадлежит `shared_ptr` экземпляров.
 

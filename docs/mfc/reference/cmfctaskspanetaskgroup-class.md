@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCTasksPaneTaskGroup
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539611"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176592"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>Класс CMFCTasksPaneTaskGroup
 
@@ -45,20 +45,20 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::CMFCTasksPaneTaskGroup](#cmfctaskspanetaskgroup)|Создает объект `CMFCTasksPaneTaskGroup`.|
 |`CMFCTasksPaneTaskGroup::~CMFCTasksPaneTaskGroup`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::SetACCData](#setaccdata)|Определяет, какие данные специальных возможностей для текущей группы задач.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCTasksPaneTaskGroup::m_bIsBottom](#m_bisbottom)|Определяет, выровнены ли группа задач в нижней части элемента управления области задач.|
 |[CMFCTasksPaneTaskGroup::m_bIsCollapsed](#m_biscollapsed)|Определяет, свернута ли группа задач.|
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 На следующем рисунке показан группу расширенные задачи:
 
-![Развернутая группа задач](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![Развернутая группа задач](../../mfc/reference/media/nexttaskgrpexpand.png "Развернутая группа задач")
 
 На следующем рисунке показан свернутая группа задач:
 
-![Свернутая группа задач](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![Группа задач Collapsed](../../mfc/reference/media/nexttaskgrpcollapse.png "свернутые группы задач")
 
 На следующем рисунке показан группа задач без заголовка:
 
-![Группа задач без заголовка](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![Группа задач без заголовка](../../mfc/reference/media/nexttaskgrpnocapt.png "группа задач без заголовка")
 
 Ниже показаны две группы задач. Первая группа задач, задав помечается как специальные `m_bIsSpecial` флаг значение TRUE, а вторая группа задач не является особенным. Обратите внимание, что заголовок для первой группы задач темнее, чем вторая группа задач:
 
-![Специальная группа задач](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![Специальная группа задач](../../mfc/reference/media/nexttaskgrpspecial.png "специальная группа задач")
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

@@ -1,29 +1,34 @@
 ---
 title: Диспетчер визуализации
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521376"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175578"
 ---
 # <a name="visualization-manager"></a>Диспетчер визуализации
 
 Наглядный диспетчер — это объект, который определяет отображение всего приложения. Он действует как отдельный класс, позволяющий поместить весь код рисования для вашего приложения. Библиотека MFC содержит несколько диспетчеров визуального представления. Можно также создать свои собственные наглядный диспетчер, если вы хотите создать пользовательское представление для вашего приложения. На рисунках ниже показаны того же приложения, когда включены различные диспетчеров визуального представления:
 
-![MyApp, преобразованный CMFCVisualManagerWindows](../mfc/media/vmwindows.png "vmwindows") MyApp, который использует диспетчер visual CMFCVisualManagerWindows
+![MyApp, преобразованный CMFCVisualManagerWindows](../mfc/media/vmwindows.png "MyApp, преобразованный CMFCVisualManagerWindows") <br/>
+MyApp, который использует диспетчер visual CMFCVisualManagerWindows
 
-![MyApp, преобразованный CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "vmvs2005") MyApp, который использует диспетчер visual CMFCVisualManagerVS2005
+![MyApp, преобразованный CMFCVisualManagerVS2005](../mfc/media/vmvs2005.png "MyApp, преобразованный CMFCVisualManagerVS2005") <br/>
+MyApp, который использует диспетчер visual CMFCVisualManagerVS2005
 
-![MyApp, преобразованный CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "vmofficexp") MyApp, который использует диспетчер visual CMFCVisualManagerOfficeXP
+![MyApp, преобразованный CMFCVisualManagerOfficeXP](../mfc/media/vmofficexp.png "MyApp, преобразованный CMFCVisualManagerOfficeXP") <br/>
+MyApp, который использует диспетчер visual CMFCVisualManagerOfficeXP
 
-![MyApp, преобразованный CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp, который использует диспетчер visual CMFCVisualManagerOffice2003
+![MyApp, преобразованный CMFCVisualManagerOffice2003](../mfc/media/vmoffice2003.png "MyApp, преобразованный CMFCVisualManagerOffice2003") <br/>
+MyApp, который использует диспетчер visual CMFCVisualManagerOffice2003
 
-![MyApp, преобразованный CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "msoffice2007") MyApp, который использует диспетчер visual CMFCVisualManagerOffice2007
+![MyApp, преобразованный CMFCVisualManagerOffice2007](../mfc/media/msoffice2007.png "MyApp, преобразованный CMFCVisualManagerOffice2007") <br/>
+MyApp, который использует диспетчер visual CMFCVisualManagerOffice2007
 
 По умолчанию наглядный диспетчер поддерживает код прорисовки для нескольких элементов графического пользовательского интерфейса. Чтобы предоставить элементы пользовательского интерфейса, необходимо переопределить соответствующие методы рисования visual диспетчера. Список этих методов, см. в разделе [класс CMFCVisualManager](../mfc/reference/cmfcvisualmanager-class.md). Методы, которые можно переопределить, чтобы задать внешний вид, все методы, которые начинаются с `OnDraw`.
 

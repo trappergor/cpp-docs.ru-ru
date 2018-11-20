@@ -1,13 +1,13 @@
 ---
 title: Коллекции (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531599"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176397"
 ---
 # <a name="collections-ccx"></a>Коллекции (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "50531599"
 
 Среда выполнения Windows определены интерфейсы коллекций и связанных типов и C + +/ CX предоставлены конкретные реализации C++ в файле заголовка collection.h. На этой иллюстрации показаны связи между типами коллекций:
 
-![C&#43;&#43;&#47;дерево наследования CX для типов коллекций](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;дерево наследования CX для типов коллекций](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;дерево наследования CX для типов коллекций")
 
 - [Класс Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) похож на [класс std::vector](../standard-library/vector-class.md).
 
@@ -63,7 +63,7 @@ ms.locfileid: "50531599"
 
 На следующем рисунке показан цикл `range for` с контейнерами `IVector<Person^>`. Обратите внимание, что выполнение прекращается в точке останова на строке 64. В окне **Быстрая проверка** показано, что переменная итератора `p` , по сути, является объектом `VectorProxy<Person^>` с переменными-членами `m_v` и `m_i` . Однако при вызове `GetType` для этой переменной она возвращает идентичный тип в экземпляр `Person` `p2`. Отсюда вывод: несмотря на то что `VectorProxy` и `ArrowProxy` могут отображаться в разделе **Быстрая проверка**, отладчик устраняет некоторые ошибки в компиляторе или других местах, для которых, как правило, не нужно явно создавать код.
 
-![VectorProxy в диапазоне&#45;цикла for](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![VectorProxy в диапазоне&#45;цикла for](../cppcx/media/vectorproxy-1.png "VectorProxy в диапазоне&#45;цикла for")
 
 Один из сценариев, в котором необходимо создать код для прокси-объекта, заключается в следующем: необходимо выполнить операцию `dynamic_cast` с элементами, например при поиске объектов XAML определенного типа в коллекции элементов `UIElement` . В этом случае необходимо сначала привести элемент к [Platform::Object](../cppcx/platform-object-class.md)^, а затем выполнить динамическое приведение.
 
