@@ -1,18 +1,18 @@
 ---
 title: Производные схемы сообщений
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662531"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175609"
 ---
 # <a name="derived-message-maps"></a>Производные схемы сообщений
 
@@ -20,7 +20,8 @@ ms.locfileid: "50662531"
 
 Имейте в виду, что `CView`, базовый класс `CMyView`, в свою очередь наследуется из `CWnd`. Таким образом `CMyView` *—* `CView` и *—* `CWnd`. Каждый из этих классов имеет собственную схему сообщений. Рисунок, «просмотр иерархии» ниже показано иерархические отношения из классов, но имейте в виду, что `CMyView` объект представляет собой один объект, который имеет характеристики всех трех классов.
 
-![Иерархия представления](../mfc/media/vc38621.gif "vc38621") представление иерархии
+![Иерархия представления](../mfc/media/vc38621.gif "иерархия представления") <br/>
+Просмотр иерархии
 
 Таким образом, если сообщение не может быть сопоставлен в классе `CMyView`в схему сообщений, платформы, кроме того, выполняет сопоставление сообщений свой непосредственный базовый класс. `BEGIN_MESSAGE_MAP` Макрос в начале сообщений указывает два имени класса как аргументы:
 

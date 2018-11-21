@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCPropertyGridCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertyGridCtrl
 - AFXPROPERTYGRIDCTRL/CMFCPropertyGridCtrl
@@ -150,16 +150,16 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 764a1fc33d91888c8c32111eca41666d9d0abbd7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557330"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177060"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 Поддерживает изменение элемента управления сетки свойств, который может отображать свойства в алфавитном или иерархическом порядке.
 
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Создает объект `CMFCPropertyGridCtrl`.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Вызывается платформой для получения текущего положения указанного объекта на экране. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Перерисовывает элемента управления сетки свойств и его свойства.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Вызывается элементом управления сетки свойств сортировки свойств.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 В следующей таблице перечислены четыре типа свойства выбора:
 
-|Класс|Описание|
+|Класс|Описание:|
 |-----------|-----------------|
 |[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Свойство общего назначения, которое используется для указания значения строки, логические значения, дат и т. д.|
 |[Класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Свойство, которое используется для выбора значения цвета.|
@@ -293,7 +293,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 Следующие иллюстрации отображения элемента управления сетки свойств, который отображает свойства двумя способами. Первой иллюстрацией отображает свойства иерархически и вторая отображает свойства по алфавиту.
 
-![Лист свойств списка свойство](../../mfc/reference/media/proplist.png "proplist")
+![Лист свойств списка свойство](../../mfc/reference/media/proplist.png "лист свойств списка свойств")
 
 ## <a name="example"></a>Пример
 
@@ -434,7 +434,7 @@ virtual int CompareProps(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-|Возвращаемое значение|Описание|
+|Возвращаемое значение|Описание:|
 |------------------|-----------------|
 |< 0|Имя *pProp1* параметра меньше, чем имя *pProp2* параметра.|
 |0|Имя *pProp1* совпадают имя *pProp2* параметра.|
@@ -461,7 +461,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Побитовое сочетание (OR) [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Координаты ограничивающего прямоугольника, который определяет размер и положение окна, в клиенте *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1253,7 +1253,7 @@ virtual void OnChangeSelection(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pNewSel*|[in] Указатель на только что выбранного свойства.|
 |*pOldSel*|[in] Указатель на ранее выбранного свойства.|
@@ -1272,7 +1272,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка, в координатах клиентской области окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1309,7 +1309,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает место для прорисовки области описания.
 
 ### <a name="remarks"></a>Примечания
@@ -1608,7 +1608,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета RGB.
 
 ### <a name="remarks"></a>Примечания
@@ -1625,7 +1625,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pProp*|[in] Указатель на свойство. Этот параметр не используется.|
 

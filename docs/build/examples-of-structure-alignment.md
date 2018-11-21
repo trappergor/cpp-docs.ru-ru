@@ -1,16 +1,16 @@
 ---
 title: Примеры выравнивания структуры
-ms.date: 03/26/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c4b3ae29674e9c4fc27e8e175867339001b9a0d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466252"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175344"
 ---
 # <a name="examples-of-structure-alignment"></a>Примеры выравнивания структуры
 
@@ -26,7 +26,7 @@ _declspec(align(2)) struct {
 }
 ```
 
-![Пример преобразования AMD](../build/media/vcamd_conv_ex_1_block.png "vcAmd_conv_ex_1")
+![Пример 1. Структура AMD преобразование макета](../build/media/vcamd_conv_ex_1_block.png "структуре пример 1 преобразования AMD")
 
 ## <a name="example-2"></a>Пример 2
 
@@ -40,7 +40,7 @@ _declspec(align(8)) struct {
 }
 ```
 
-![Пример преобразования AMD](../build/media/vcamd_conv_ex_2_block.png "vcAmd_conv_ex_2")
+![Пример 2 структура AMD преобразование макета](../build/media/vcamd_conv_ex_2_block.png "структуре пример 2 преобразования AMD")
 
 ## <a name="example-3"></a>Пример 3
 
@@ -55,7 +55,7 @@ _declspec(align(4)) struct {
 }
 ```
 
-![Пример преобразования AMD](../build/media/vcamd_conv_ex_3_block.png "vcAmd_conv_ex_3")
+![Пример 2 структура AMD преобразование макета](../build/media/vcamd_conv_ex_3_block.png "структуре пример 2 преобразования AMD")
 
 ## <a name="example-4"></a>Пример 4
 
@@ -69,7 +69,7 @@ _declspec(align(8)) union {
 }
 ```
 
-![Пример преобразования AMD](../build/media/vcamd_conv_ex_4_block.png "vcAmd_conv_ex_4")
+![Layouit объединения 4 пример преобразования AMD](../build/media/vcamd_conv_ex_4_block.png "layouit объединения 4 пример преобразования AMD")
 
 ## <a name="see-also"></a>См. также
 

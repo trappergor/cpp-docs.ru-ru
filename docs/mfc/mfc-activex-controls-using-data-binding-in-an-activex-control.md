@@ -1,6 +1,6 @@
 ---
 title: Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518493"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175812"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>Элементы управления ActiveX в MFC. Использование привязки данных в элементе управления ActiveX
 
@@ -30,7 +30,8 @@ ms.locfileid: "51518493"
 
 В этой статье рассматриваются задачи на стороне элемента управления. Реализация взаимодействия привязки данных с базой данных отвечает за контейнера элемента управления. Как управлять взаимодействие с базой данных в контейнере выходит за рамки данной документации. В оставшейся части этой статьи объясняется способ подготовки элемента управления для привязки данных.
 
-![Концептуальная схема данных&#45;связанного элемента управления](../mfc/media/vc374v1.gif "vc374v1") концептуальная схема элемента управления с привязкой данных
+![Концептуальная схема данных&#45;связанного элемента управления](../mfc/media/vc374v1.gif "концептуальная схема данных&#45;связанного элемента управления") <br/>
+Концептуальная схема элемента управления с привязкой данных
 
 `COleControl` Класс предоставляет две функции-члены, которые делают просто реализовать привязку данных. Первая функция, [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit), используемый для запроса разрешения на изменение значения свойства. [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged), вторая функция вызывается после успешного изменения значения свойства.
 

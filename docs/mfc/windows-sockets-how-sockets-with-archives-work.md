@@ -1,6 +1,6 @@
 ---
 title: Сокеты Windows. Работа сокетов с архивами
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows Sockets [MFC], synchronous
 - sockets [MFC], synchronous operation
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: e87ee1467946003580ffa75e36e39b2c747892b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510764"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174916"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Сокеты Windows. Работа сокетов с архивами
 
@@ -30,7 +30,8 @@ ms.locfileid: "50510764"
 
 На следующем рисунке показана отношения между этими объектами на обеих сторонах связи.
 
-![CArchive, CSocketFile и CSocket](../mfc/media/vc38ia1.gif "vc38ia1") CArchive, CSocketFile и CSocket
+![CArchive, CSocketFile и CSocket](../mfc/media/vc38ia1.gif "CArchive, CSocketFile и CSocket") <br/>
+CArchive, CSocketFile и CSocket
 
 Это излишне сложный предназначена для позволит предотвратить необходимость самостоятельного управления сведениях сокета. Создать сокет "," файл "и" архив и затем начать отправку или получение данных путем вставки его в архив или извлечении его из архива. [CArchive](../mfc/reference/carchive-class.md), [CSocketFile](../mfc/reference/csocketfile-class.md), и [CSocket](../mfc/reference/csocket-class.md) управлять сведениями за кулисами.
 
@@ -41,7 +42,7 @@ ms.locfileid: "50510764"
 Если `CSocket` не были реализованы в виде двух состояний объекта, можно получать дополнительные уведомления для одного вида событий во время предыдущего уведомления обрабатывалась. Например, может появиться `OnReceive` уведомления при обработке `OnReceive`. В приведенном выше фрагменте кода, извлечение `str` из архива может привести к рекурсии. Путем переключения состояний, `CSocket` предотвращает рекурсии, предотвращая дополнительные уведомления. Общее правило состоит в уведомления, не в уведомлениях.
 
 > [!NOTE]
->  Объект `CSocketFile` можно также использовать как файл (ограниченная) без `CArchive` объекта. По умолчанию `CSocketFile` конструктора *bArchiveCompatible* параметр **TRUE**. Это указывает, что объект файла для использования с архивом. Чтобы использовать объект файла без архив, передайте **FALSE** в *bArchiveCompatible* параметра.
+> Объект `CSocketFile` можно также использовать как файл (ограниченная) без `CArchive` объекта. По умолчанию `CSocketFile` конструктора *bArchiveCompatible* параметр **TRUE**. Это указывает, что объект файла для использования с архивом. Чтобы использовать объект файла без архив, передайте **FALSE** в *bArchiveCompatible* параметра.
 
 В режиме «архив compatible» `CSocketFile` объект обеспечивает более высокую производительность и уменьшает риск «взаимоблокировка». Взаимоблокировка возникает, когда отправки и получения сокеты ожидают друг друга или общий ресурс. Это может произойти, если `CArchive` объект работали с `CSocketFile` так, как с помощью `CFile` объекта. С помощью `CFile`, архива можно предположить, что при получении меньшее число байтов, чем она запрошена, конец файла был достигнут. С помощью `CSocketFile`, тем не менее, данные сообщение в зависимости; буфер может содержать несколько сообщений, поэтому получение меньше количества запрошенных байтов не подразумевает, что конец файла. Приложение не будет блокировать в данном случае, как это может быть с `CFile`, и может продолжить чтение сообщений из буфера, пока буфер пуст. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) работать в `CArchive` полезны для мониторинга состояния буфера архива в этом случае.
 
@@ -51,4 +52,3 @@ ms.locfileid: "50510764"
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

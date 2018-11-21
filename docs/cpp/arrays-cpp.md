@@ -1,17 +1,17 @@
 ---
 title: Массивы (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550674"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176883"
 ---
 # <a name="arrays-c"></a>Массивы (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 Он указывает массив объектов типа **int**, по существу размещенный в двумерной матрице, состоящей из пяти строк и семи столбцов, как показано на следующем рисунке:
 
-![Концептуальная раскладка комплексных&#45;одномерным массивом](../cpp/media/vc38rc1.gif "vc38RC1") концептуальной макета многомерного массива
+![Концептуальная раскладка комплексных&#45;одномерным массивом](../cpp/media/vc38rc1.gif "концептуальная раскладка комплексных&#45;одномерным массивом.") <br/>
+Концептуальная структура многомерного массива
 
 В объявлениях многомерных массивов, содержащих список инициализаторов (как описано в разделе [инициализаторы](../cpp/initializers.md)), константное выражение, задающее границы первого измерения можно опустить. Пример:
 

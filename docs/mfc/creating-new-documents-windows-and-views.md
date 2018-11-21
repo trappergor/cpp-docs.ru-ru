@@ -1,6 +1,6 @@
 ---
 title: Создание новых документов, окон и представлений
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643902"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175396"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>Создание новых документов, окон и представлений
 
@@ -37,11 +37,14 @@ ms.locfileid: "50643902"
 
 По завершении этого процесса совместно действующих объектов существует и сохранения указателей на друг с другом. Ниже приведена последовательность, в которой создаются объекты. Вы можете следовать последовательности из рис на рис.
 
-![Последовательность создания документа](../mfc/media/vc387l1.gif "vc387l1") последовательности в Создание документа
+![Последовательность создания документа](../mfc/media/vc387l1.gif "последовательность создания документа") <br/>
+Последовательность создания документа
 
-![Последовательность создания окна фрейма](../mfc/media/vc387l2.png "vc387l2") последовательность создания окна фрейма
+![Последовательность создания окна фрейма](../mfc/media/vc387l2.png "последовательность создания окна фрейма") <br/>
+Последовательность создания окна фрейма
 
-![Последовательность создания представления](../mfc/media/vc387l3.gif "vc387l3") последовательности в создании представления
+![Последовательность создания представления](../mfc/media/vc387l3.gif "последовательность создания представления") <br/>
+Последовательность создания представления
 
 Сведения о как платформа Инициализирует новый документ, представления и окна фрейма объектов, см. в разделе классы [CDocument](../mfc/reference/cdocument-class.md), [CView](../mfc/reference/cview-class.md), [CFrameWnd](../mfc/reference/cframewnd-class.md), [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md), и [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) справочника по библиотеке MFC. Также см. в разделе [технические 22 Примечание](../mfc/tn022-standard-commands-implementation.md), где объясняется процесс создания и инициализации дополнительных его рассматриваются стандартные команды платформы для **New** и **откройте** элементам на **файл** меню.
 

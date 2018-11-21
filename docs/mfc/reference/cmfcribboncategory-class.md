@@ -1,6 +1,6 @@
 ---
 title: Класс CMFCRibbonCategory
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCRibbonCategory
 - AFXRIBBONCATEGORY/CMFCRibbonCategory
@@ -130,12 +130,12 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetName
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
-ms.openlocfilehash: b510befa8993337ce62b5bd3b00ea3f48091b0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a3351656807fa841661ec9f082bb4255d5136a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657357"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176618"
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonCategory
 
@@ -151,13 +151,13 @@ class CMFCRibbonCategory : public CObject
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Добавляет скрытый элемент в категорию ленты.|
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Добавляет новую область категорию ленты.|
@@ -244,7 +244,7 @@ CMFCRibbonPanel* pPanel = pCategory->AddPanel (
 
 На следующей схеме показано рис домашней категории из примера приложения RibbonApp.
 
-![Изображение CMFCRibbonCategory](../../mfc/reference/media/cmfcribboncategory.png "cmfcribboncategory")
+![Домашний категории из примера приложения RibbonApp](../../mfc/reference/media/cmfcribboncategory.png "домашней категории из примера приложения RibbonApp")
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -717,7 +717,7 @@ CMFCRibbonPanel* GetPanelFromPoint(CPoint point) const;
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -909,7 +909,7 @@ CMFCRibbonPanel* HighlightPanel(
 *pHLPanel*<br/>
 [in] Указатель на панель ленты, чтобы выделить.
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -932,7 +932,7 @@ CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя мыши относительно левого верхнего угла окна.
 
 *bCheckPanelCaption*<br/>
@@ -956,7 +956,7 @@ int HitTestEx(CPoint point) const;
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя мыши относительно левого верхнего угла окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -977,7 +977,7 @@ CMFCRibbonBaseElement* HitTestScrollButtons(CPoint point) const;
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1108,7 +1108,7 @@ virtual BOOL OnDrawImage(
 *pDC*<br/>
 [in] Указатель на контекст устройства для образа.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Отображаемый прямоугольник для изображения.
 
 *pElement*<br/>
@@ -1176,7 +1176,7 @@ virtual CMFCRibbonBaseElement* OnLButtonDown(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя мыши относительно левого верхнего угла окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1195,7 +1195,7 @@ virtual void OnLButtonUp(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1210,7 +1210,7 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1416,7 +1416,7 @@ void SetTabColor(AFX_RibbonCategoryColor color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Указывает новый цвет категории ленты.
 
 ### <a name="remarks"></a>Примечания

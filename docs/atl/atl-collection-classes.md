@@ -1,6 +1,6 @@
 ---
 title: Классы коллекций ATL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DestructElements function
 - collection classes, choosing
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CTraits classes
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
-ms.openlocfilehash: dcb784fe2df8383382c7a9d184e9f241684bf931
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24e5f7dd2ffa4eb5992362aee18a78fb0000aa9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474828"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176709"
 ---
 # <a name="atl-collection-classes"></a>Классы коллекций ATL
 
@@ -110,7 +110,7 @@ Ctraits-классы, аналогично, но более гибкие, чем
 
 Следующая диаграмма показывает иерархию классов для ctraits-классы.
 
-![Иерархия характеристик классов коллекции](../atl/media/vctraitscollectionclasseshierarchy.gif "vctraitscollectionclasseshierarchy")
+![Иерархия характеристик классов коллекции](../atl/media/vctraitscollectionclasseshierarchy.gif "иерархия характеристик классов коллекции")
 
 ## <a name="collection-classes-samples"></a>Примеры классов коллекции
 
@@ -128,4 +128,3 @@ Ctraits-классы, аналогично, но более гибкие, чем
 
 [Основные понятия](../atl/active-template-library-atl-concepts.md)<br/>
 [Классы коллекций](../atl/collection-classes.md)
-

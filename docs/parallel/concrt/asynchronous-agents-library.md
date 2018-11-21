@@ -1,16 +1,16 @@
 ---
 title: библиотеку асинхронных агентов
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629285"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175864"
 ---
 # <a name="asynchronous-agents-library"></a>библиотеку асинхронных агентов
 
@@ -26,7 +26,7 @@ ms.locfileid: "50629285"
 
 Ниже показан как два агента, используйте блоки сообщений и функции передачи сообщений для обмена данными. На этом рисунке `agent1` отправляет сообщение `agent2` с помощью [concurrency::send](reference/concurrency-namespace-functions.md#send) функции и [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объекта. `agent2` использует [concurrency::receive](reference/concurrency-namespace-functions.md#receive) функция для чтения сообщения. `agent2` использует тот же метод для отправки сообщения `agent1`. Пунктирные стрелки показывают поток данных между агентами. Сплошные стрелки соединиться блоков сообщений, которые они записи или чтения из агентов.
 
-![Компоненты библиотеки агентов](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![Компоненты библиотеки агентов](../../parallel/concrt/media/agent_librarycomp.png "компоненты библиотеки агентов")
 
 Пример кода, который реализует на этом рисунке показан далее в этом разделе.
 

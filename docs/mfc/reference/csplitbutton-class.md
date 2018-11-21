@@ -1,6 +1,6 @@
 ---
 title: Класс CSplitButton
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547281"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176632"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 
@@ -35,20 +35,20 @@ class CSplitButton : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitButton::CSplitButton](#csplitbutton)|Создает объект `CSplitButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitButton::Create](#create)|Создает элемент управления split button с указанными стилями и присоединяет его к текущему `CSplitButton` объекта.|
 |[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Задает раскрывающемся меню, которое отображается, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitButton::OnDropDown](#ondropdown)|Обрабатывает уведомление BCN_DROPDOWN, система отправляет, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|
 
@@ -58,7 +58,7 @@ class CSplitButton : public CButton
 
 На следующем рисунке представлен диалоговое окно, которое содержит элемент управления страничного навигатора и элемент управления button (1) разбиения. (2) стрелку раскрывающегося списка уже был выполнен щелчок, и отображается меню (3).
 
-![Диалоговое окно с элементом управления splitbutton и на пейджер. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Диалоговое окно с элементом управления splitbutton и на пейджер. ](../../mfc/reference/media/splitbutton_pager.png "Диалоговое окно с элементом управления splitbutton и на пейджер.")
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -94,10 +94,10 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwStyle*|[in] Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
+|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
 |*pParentWnd*|[in] Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -120,7 +120,7 @@ CSplitButton(CMenu* pMenu)
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*nMenuId*|[in] Идентификатор ресурса меню.|
 |*nSubMenuId*|[in] Идентификатор ресурса меню.|
@@ -142,7 +142,7 @@ afx_msg void OnDropDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pNMHDR*|[in] Указатель на [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую сведения о [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|
 |*pResult*|[out] (Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|
@@ -176,7 +176,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*nMenuId*|[in] Идентификатор ресурса меню.|
 |*nSubMenuId*|[in] Идентификатор ресурса меню.|
@@ -188,7 +188,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 На следующем рисунке представлен диалоговое окно, которое содержит элемент управления страничного навигатора и элемент управления button (1) разбиения. (2) стрелку раскрывающегося списка уже был выполнен щелчок, и отображается меню (3).
 
-![Диалоговое окно с элементом управления splitbutton и на пейджер. ](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Диалоговое окно с элементом управления splitbutton и на пейджер. ](../../mfc/reference/media/splitbutton_pager.png "Диалоговое окно с элементом управления splitbutton и на пейджер.")
 
 ### <a name="example"></a>Пример
 

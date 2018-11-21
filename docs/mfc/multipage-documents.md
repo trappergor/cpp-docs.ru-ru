@@ -1,6 +1,6 @@
 ---
 title: Многостраничные документы
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587672"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176384"
 ---
 # <a name="multipage-documents"></a>Многостраничные документы
 
@@ -68,7 +68,8 @@ ms.locfileid: "50587672"
 
 На следующем рисунке показана последовательность действий, участвующие в процессе печати и показано, где каждый из `CView`для печати члена при вызове функций для работы. В оставшейся части этой статьи приводится объяснение для большинства из этих действий более подробно. В этой статье описаны дополнительные части процесса печати [выделение ресурсов GDI](../mfc/allocating-gdi-resources.md).
 
-![Процесс цикла печати](../mfc/media/vc37c71.gif "vc37c71") цикла печати
+![Процесс цикла печати](../mfc/media/vc37c71.gif "процесс цикла печати") <br/>
+Цикла печати
 
 ##  <a name="_core_pagination"></a> Разбиение на страницы
 

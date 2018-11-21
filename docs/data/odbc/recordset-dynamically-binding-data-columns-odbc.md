@@ -1,6 +1,6 @@
 ---
 title: Набор записей. Динамическая привязка столбцов данных (ODBC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469685"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175669"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>Набор записей. Динамическая привязка столбцов данных (ODBC)
 
@@ -78,7 +78,7 @@ ms.locfileid: "50469685"
 
    Один из способов — создать один или несколько динамических списков: один для имен новых столбцов, другой для их результирующих значений, а третий для их типы данных (при необходимости). Эти списки, в частности список значений, предоставляют сведения и хранилище для привязки. На следующем рисунке показано, построение списков.
 
-   ![Построение списков столбцов для динамической привязки](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![Построение списков столбцов для динамической привязки](../../data/odbc/media/vc37w61.gif "построение списков столбцов для динамической привязки")<br/>
    Построение списков столбцов для динамической привязки
 
 1. Добавьте вызов функции RFX к основному набору записей `DoFieldExchange` функцию для каждого добавленного столбца. Эти вызовы выполняют работу по выборке записи, включая дополнительные столбцы и связав столбцы элементов данных набора записей или к динамическому хранилищу для них.

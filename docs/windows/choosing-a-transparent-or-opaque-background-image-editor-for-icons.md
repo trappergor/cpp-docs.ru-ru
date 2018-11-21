@@ -1,6 +1,6 @@
 ---
 title: Выбор прозрачного и непрозрачного фона (Редактор изображений для значков)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653535"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175435"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>Выбор прозрачного и непрозрачного фона (Редактор изображений для значков)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50653535"
 
 Можно переключиться с прозрачным фоном (по умолчанию) на непрозрачный фон и обратно. При использовании инструмента выделения, **прозрачный фон** и **непрозрачный фон** параметры отображаются в **параметр** селектор на **редактор изображений** панели инструментов (как показано ниже).
 
-![Параметры фона &#45; прозрачный или непрозрачный](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![Фон параметров &#45; прозрачный или непрозрачный](../windows/media/vcimageeditoropaqtranspback.gif "фоновых параметры &#45; прозрачности и непрозрачности")<br/>
 **Параметры прозрачности и непрозрачности** на **панель инструментов редактора изображений**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>Для переключения между прозрачного и непрозрачного фона
@@ -32,9 +32,9 @@ ms.locfileid: "50653535"
 
    - `Transparent Background (T)`: Существующее изображение видно части этого выбора, которые соответствуют текущим цветом фона.
 
-\- или -
+   \- или -
 
-- На **изображение** меню, установите или снимите **непрозрачный**.
+1. На **изображение** меню, установите или снимите **непрозрачный**.
 
 Можно изменить цвет фона, выбор во время эффект, который требуется изменить, какие части изображения являются прозрачными.
 

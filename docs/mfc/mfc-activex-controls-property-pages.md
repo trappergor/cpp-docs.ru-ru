@@ -1,6 +1,6 @@
 ---
 title: Элементы управления ActiveX в MFC. Страницы свойств
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - DDP_ functions [MFC]
 - MFC ActiveX controls [MFC], properties
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CPropertyPageDialog class [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 1506f87a-9fd6-4505-8380-0dbc9636230e
-ms.openlocfilehash: 764590b5d7162d7f10a60dda24649adde9e090c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7027a58960e07903c9d774e07379c8050bc489b8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656187"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176462"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>Элементы управления ActiveX в MFC. Страницы свойств
 
@@ -32,7 +32,8 @@ ms.locfileid: "50656187"
 
 Диалоговое окно свойств (как показано на рисунке ниже) состоит из области для отображения текущей страницы свойств, вкладки для переключения между страницы свойств, а коллекция кнопок, общие задачи, например, закрыть диалоговое окно страницы свойств, Отмена изменения, выполненные или немедленно, применяя любые изменения в элемент управления ActiveX.
 
-![Диалоговое окно свойств для Circ3](../mfc/media/vc373i1.gif "vc373i1") диалоговое окно «Свойства»
+![Диалоговое окно свойств для Circ3](../mfc/media/vc373i1.gif "диалоговое окно свойств Circ3") <br/>
+Диалоговое окно «Свойства»
 
 В этой статье рассматриваются темы, связанные с помощью страниц свойств в элементе управления ActiveX. Сюда входит следующее.
 

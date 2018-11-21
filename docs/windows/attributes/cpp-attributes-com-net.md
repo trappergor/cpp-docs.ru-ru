@@ -1,17 +1,17 @@
 ---
 title: Атрибуты C++ для COM и .NET
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589284"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175776"
 ---
 # <a name="c-attributes-for-com-and-net"></a>Атрибуты C++ для COM и .NET
 
@@ -55,7 +55,7 @@ class CMyReceiver
 
 На следующем рисунке показано отношение между компилятор и поставщик атрибутов.
 
-![Взаимодействие атрибутов компонентов](../media/vccompattrcomm.gif "vcCompAttrComm")
+![Взаимодействие атрибутов компонентов](../media/vccompattrcomm.gif "взаимодействие атрибутов компонента")
 
 > [!NOTE]
 > Использование атрибута не изменяет содержимое исходного файла. Код создаваемого атрибута является видимым только один раз — во время сеансов отладки. Кроме того для каждого исходного файла в проекте, можно создать текстовый файл, который отображает результаты замены атрибута. Дополнительные сведения об этой процедуре см. в разделе [/Fx (слияние подставляемого кода)](../../build/reference/fx-merge-injected-code.md) и [отладка внедренного кода](/visualstudio/debugger/how-to-debug-injected-code).

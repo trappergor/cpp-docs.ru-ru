@@ -1,18 +1,18 @@
 ---
 title: Стили для элемента управления "Индикатор выполнения"
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451731"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174958"
 ---
 # <a name="styles-for-the-progress-control"></a>Стили для элемента управления "Индикатор выполнения"
 
@@ -34,11 +34,11 @@ ms.locfileid: "50451731"
 
 Без pbs_smooth-стиль:
 
-![Стандартный стиль индикатора выполнения](../mfc/media/vc4ruw1.gif "vc4ruw1")
+![Стандартный стиль индикатора выполнения](../mfc/media/vc4ruw1.gif "стандартный стиль индикатора выполнения")
 
 С помощью PBS_SMOOTH и PBS_VERTICAL стили:
 
-![Стиль, гладкий и вертикальный индикатор выполнения](../mfc/media/vc4ruw2.gif "vc4ruw2")
+![Стиль, гладкий и вертикальный индикатор выполнения](../mfc/media/vc4ruw2.gif "стиль, гладкий и вертикальный индикатор выполнения")
 
 Дополнительные сведения см. в разделе [стили окна](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc) в *Справочник по библиотеке MFC*.
 

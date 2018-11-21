@@ -1,6 +1,6 @@
 ---
 title: Методы доступа и наборы строк
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651260"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175723"
 ---
 # <a name="accessors-and-rowsets"></a>Методы доступа и наборы строк
 
@@ -34,7 +34,7 @@ ms.locfileid: "50651260"
 
 Ниже показаны типы методов доступа.
 
-![Типы методов доступа](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![Типы методов доступа](../../data/oledb/media/vcaccessortypes.gif "типы методов доступа")<br/>
 Классы методов доступа
 
 - [CAccessor](../../data/oledb/caccessor-class.md) используйте этот метод доступа в том случае, если вы знаете структуры базы данных-источника во время разработки. `CAccessor` статически связывает запись в базе данных, который содержит буфер, к источнику данных.
@@ -63,7 +63,7 @@ ms.locfileid: "50651260"
 
 Ниже показаны типы наборов строк.
 
-![График RowsetType](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![График RowsetType](../../data/oledb/media/vcrowsettypes.gif "график RowsetType")<br/>
 Классы набора строк
 
 [Наборы строк схемы](../../data/oledb/obtaining-metadata-with-schema-rowsets.md) не доступа в данных хранилища данных, но вместо этого доступ к сведениям о хранилище данных, называемые метаданными. Наборы строк схемы обычно используются в ситуациях, в которых структуру базы данных не известен во время компиляции и должен быть получен во время выполнения.

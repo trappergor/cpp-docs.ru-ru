@@ -1,16 +1,16 @@
 ---
 title: Асинхронные агенты
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467604"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176540"
 ---
 # <a name="asynchronous-agents"></a>Асинхронные агенты
 
@@ -22,11 +22,11 @@ ms.locfileid: "50467604"
 
 Агенты имеют заданный жизненный цикл. [Concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status) перечисление определяет различные состояния агента. На следующем рисунке показан диаграмму состояния, который показан переход агентов из одного состояния в другое. На этом рисунке сплошные линии представляют методы, вызываемые из приложения; пунктирные линии обозначают методы, вызываемые из среды выполнения.
 
-![Схема состояния агента](../../parallel/concrt/media/agentstate.png "agentstate")
+![Схема состояния агента](../../parallel/concrt/media/agentstate.png "схема состояния агента")
 
 В следующей таблице описаны каждого штата `agent_status` перечисления.
 
-|Состояние агента|Описание|
+|Состояние агента|Описание:|
 |-----------------|-----------------|
 |`agent_created`|Агент не был запланирован для выполнения.|
 |`agent_runnable`|Среда выполнения планирует агент для выполнения.|
@@ -42,7 +42,7 @@ ms.locfileid: "50467604"
 
 В следующей таблице показаны некоторые важные методы, принадлежащие `agent` класса. Дополнительные сведения обо всех `agent` методы класса, см. в разделе [класс agent](../../parallel/concrt/reference/agent-class.md).
 
-|Метод|Описание|
+|Метод|Описание:|
 |------------|-----------------|
 |[start](reference/agent-class.md#start)|Расписания `agent` объект для выполнения и заменяет его на `agent_runnable` состояние.|
 |[run](reference/agent-class.md#run)|Выполняет задачу, которая должна быть выполнена путем `agent` объекта.|

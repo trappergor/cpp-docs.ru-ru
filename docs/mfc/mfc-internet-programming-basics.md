@@ -1,6 +1,6 @@
 ---
 title: Основы программирования для интернет-решений MFC
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ISAPI extensions, programming with ISAPI
 - Internet applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 9d44d78474ccb030184c6e79ed2f257ffb00a068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb6a1d379ed754ed96637dfe5b3e4da983edb9f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509465"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175591"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
@@ -30,7 +30,7 @@ ms.locfileid: "50509465"
 >[!IMPORTANT]
 > ActiveX — это устаревшая технология, которая не следует использовать для разработки новых приложений. Дополнительные сведения см. в разделе [элементы управления ActiveX](activex-controls.md).
 
-![Клиентские и серверные приложения](../mfc/media/vc38bq1.gif "vc38bq1")
+![Клиентские и серверные приложения](../mfc/media/vc38bq1.gif "клиентские и серверные приложения")
 
 MFC предоставляет классы, поддерживающие программирование для Интернета. Можно использовать [COleControl](../mfc/reference/colecontrol-class.md) и [CDocObjectServer](../mfc/reference/cdocobjectserver-class.md) и связанных классов MFC для создания элементов управления ActiveX и активные документы. Можно использовать классы MFC, такие как [CInternetSession](../mfc/reference/cinternetsession-class.md), [CFtpConnection](../mfc/reference/cftpconnection-class.md), и [CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md) для извлечения файлов и данных с помощью протоколов Интернета, таких как FTP, HTTP и gopher.
 

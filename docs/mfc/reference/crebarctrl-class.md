@@ -1,6 +1,6 @@
 ---
 title: Класс CReBarCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 - AFXCMN/CReBarCtrl
@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: ec3dcec2aa122f44c2b9aa6083f6faaa64157770
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502535"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177034"
 ---
 # <a name="crebarctrl-class"></a>Класс CReBarCtrl
 
@@ -119,13 +119,13 @@ class CReBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CReBarCtrl::BeginDrag](#begindrag)|Помещает элемент управления "Главная панель" в режим перетаскивания и вставки.|
 |[CReBarCtrl::Create](#create)|Создает элемент управления "Главная панель" и присоединяет его к `CReBarCtrl` объекта.|
@@ -189,7 +189,7 @@ class CReBarCtrl : public CWnd
 
 - Аппаратного контроллера управления 2 содержит поле со списком и четыре стандартных кнопок.
 
-     ![Пример меню "Главная панель"](../../mfc/reference/media/vc4scc1.gif "vc4scc1")
+   ![Пример меню "Главная панель"](../../mfc/reference/media/vc4scc1.gif "пример меню \"Главная панель\"")
 
 ## <a name="rebar-control"></a>Главной панели управления
 
@@ -254,7 +254,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает сочетание стилей элемента управления "Главная панель" применен к элементу управления. См. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в пакете SDK Windows для получения списка поддерживаемых стили.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которая является положение и размер элемента управления "Главная панель".
 
 *pParentWnd*<br/>
@@ -302,7 +302,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает сочетание стилей элемента управления "Главная панель" применен к элементу управления. Список поддерживаемых стили, см. в разделе [стили элемента управления главной панели](/windows/desktop/Controls/rebar-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -860,7 +860,7 @@ BOOL SetBandWidth(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*uBand*|[in] Отсчитываемый от нуля индекс зону главной панели.|
 |*cxWidth*|[in] Новая ширина элемента зону главной панели, в пикселях.|
@@ -916,7 +916,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Значение COLORREF, представляющий новый цвет фона по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -956,7 +956,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwMask*|[in] Побитовое сочетание (OR) флагов, определяющих, какие флаги в *dwStyleEx* применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображать разделителя внизу в режиме по горизонтали, а справа в режиме по вертикали.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) родительское окно.|
 |*dwStyleEx*|[in] Побитовое сочетание (OR) флагов, которые определяют стили для применения. Чтобы задать стиль, укажите флаг, используемый в *dwMask* параметра. Чтобы сбросить стиль, укажите двоичный нуль.|
@@ -1041,7 +1041,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Цвет значение COLORREF, представляющий новый текст в `CReBarCtrl` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1122,7 +1122,7 @@ BOOL SizeToRect(CRect& rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий прямоугольник, который следует задавать элемент управления "Главная панель".
 
 ### <a name="return-value"></a>Возвращаемое значение

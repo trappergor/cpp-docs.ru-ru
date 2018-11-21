@@ -1,6 +1,6 @@
 ---
 title: CReBar-класс
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBar
 - AFXEXT/CReBar
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 6a63440f5f415901128a09c7b5f34e73539fc3e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648829"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175890"
 ---
 # <a name="crebar-class"></a>CReBar-класс
 
@@ -33,7 +33,7 @@ class CReBar : public CControlBar
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|Добавляет полосу элемент управления главной панели.|
 |[CReBar::Create](#create)|Создает элемент управления "Главная панель" и присоединяет его к `CReBar` объекта.|
@@ -43,7 +43,7 @@ class CReBar : public CControlBar
 
 Объект "Главная панель" может содержать множество дочерних окон, обычно другие элементы управления, включая поля ввода, панелей инструментов и списки. Объект "Главная панель" можно отобразить его дочерних окон на указанном точечном рисунке. Приложение может автоматически изменить размер главной панели, или пользователя можно вручную изменить размер главной панели, щелкните и перетащите его полосу захвата.
 
-![Пример меню rebarmenu](../../mfc/reference/media/vc4sc61.gif "vc4sc61")
+![Пример меню rebarmenu](../../mfc/reference/media/vc4sc61.gif "пример меню rebarmenu")
 
 ## <a name="rebar-control"></a>Главной панели управления
 

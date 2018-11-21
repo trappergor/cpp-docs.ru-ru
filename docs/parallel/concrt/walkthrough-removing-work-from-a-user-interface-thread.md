@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Удаление задач из потоков пользовательского интерфейса
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 85622b68f94342ece2c9fc666b9ff6d515cfe10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472441"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176319"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Пошаговое руководство. Удаление задач из потоков пользовательского интерфейса
 
@@ -104,11 +104,11 @@ ms.locfileid: "50472441"
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-9. Убедитесь, что приложение было успешно обновлено путем создания и выполнения его.
+1. Убедитесь, что приложение было успешно обновлено путем создания и выполнения его.
 
 На следующем рисунке результаты приложение "Мандельброт".
 
-![Приложение "Мандельброт"](../../parallel/concrt/media/mandelbrot.png "\"Мандельброт\"")
+![Приложение "Мандельброт"](../../parallel/concrt/media/mandelbrot.png "приложение \"Мандельброт\"")
 
 Потому что вычисления для каждого пикселя требует больших затрат, в потоке пользовательского интерфейса не удается обработать дополнительные сообщения, пока не завершится общее вычисление. Это может снизить скорость ответа приложения. Тем не менее вы сможете уменьшить эту проблему путем удаления работы из потока пользовательского интерфейса.
 

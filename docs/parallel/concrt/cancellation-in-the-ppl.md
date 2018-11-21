@@ -1,6 +1,6 @@
 ---
 title: Отмена в библиотеке параллельных шаблонов
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms, canceling [Concurrency Runtime]
 - canceling parallel algorithms [Concurrency Runtime]
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: b1a762f97cf144c39043203dbf68d927b2cbd0e4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327425"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177021"
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 
@@ -57,7 +57,7 @@ ms.locfileid: "51327425"
 
 В PPL для управления детализированными задачами и вычислениями используются задачи и группы задач. Можно вложить группы задач для формирования *деревьев* параллельной работы. На следующем рисунке показано дерево параллельной работы. На этом рисунке `tg1` и `tg2` представляют группы задач; `t1`, `t2`, `t3`, `t4` и `t5` представляют работы, которые выполняют группы задач.
 
-![Дерево параллельной работы](../../parallel/concrt/media/parallelwork_trees.png "parallelwork_trees")
+![Дерево параллельной работы](../../parallel/concrt/media/parallelwork_trees.png "дерево параллельной работы")
 
 В следующем примере показан код, который необходим для создания дерева на рисунке. В этом примере `tg1` и `tg2` являются [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) объектов; `t1`, `t2`, `t3`, `t4`, и `t5` являются [concurrency::task_handle](../../parallel/concrt/reference/task-handle-class.md) объектов.
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание|
+|Заголовок|Описание:|
 |-----------|-----------------|
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Показывается, как использовать отмену для реализации алгоритма параллельного поиска.|
 |[Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь приводятся способы использования класса `task_group` для записи алгоритма поиска для базовой структуры дерева.|

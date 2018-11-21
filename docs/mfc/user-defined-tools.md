@@ -1,15 +1,15 @@
 ---
 title: Инструменты, определяемые пользователем
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607081"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175734"
 ---
 # <a name="user-defined-tools"></a>Инструменты, определяемые пользователем
 
@@ -17,7 +17,8 @@ MFC поддерживает определенные пользователем
 
 Если вы включили поддержку определенные пользователем инструменты, диалоговое окно настройки автоматически включает в себя **средства** вкладки. На следующем рисунке показано **средства** страницы.
 
-![Вкладки средства в диалоговом окне настройки](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab") настройки вкладки диалогового окна "Сервис"
+![Вкладки средства в диалоговом окне настройки](../mfc/media/custdialogboxtoolstab.png "вкладки \"Сервис\" в диалоговом окне настройки") <br/>
+Настройка вкладки диалогового окна "Сервис"
 
 ## <a name="enabling-user-defined-tools-support"></a>Включение пользовательских средств поддержки
 
@@ -57,4 +58,3 @@ MFC поддерживает определенные пользователем
 [Класс CUserTool](../mfc/reference/cusertool-class.md)<br/>
 [Класс CUserToolsManager](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [Класс CWinAppEx](../mfc/reference/cwinappex-class.md)
-

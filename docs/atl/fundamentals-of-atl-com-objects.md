@@ -1,24 +1,24 @@
 ---
 title: Основы COM-объектов ATL
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - COM, and ATL
 - ATL, COM
 - ATL COM objects
 - COM objects, ATL
 ms.assetid: 0f9c9d98-cc28-45da-89ac-dc94cee422fe
-ms.openlocfilehash: 243b7f84fc20e1c002e866ae0720ab9521d24748
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af732b381ab0c6c507d1d651b096e3976ab2d4b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437256"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176501"
 ---
 # <a name="fundamentals-of-atl-com-objects"></a>Основы COM-объектов ATL
 
 На следующем рисунке показана связь между классы и интерфейсы, которые используются для определения ATL COM-объекта.
 
-![Структура ATL](../atl/media/vc307y1.gif "vc307y1")
+![Структура ATL](../atl/media/vc307y1.gif "структура ATL")
 
 > [!NOTE]
 >  На этой схеме показано, что `CComObject` является производным от `CYourClass` то время как `CComAggObject` и `CComPolyObject` включают `CYourClass` как переменную-член.

@@ -1,6 +1,6 @@
 ---
 title: Класс CVSListBox
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513767"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176216"
 ---
 # <a name="cvslistbox-class"></a>Класс CVSListBox
 
@@ -49,14 +49,14 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CVSListBox::CVSListBox](#cvslistbox)|Создает объект `CVSListBox`.|
 |`CVSListBox::~CVSListBox`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CVSListBox::AddItem](#additem)|Добавляет строку в элементе управления списком. (Переопределяет `CVSListBoxBase::AddItem`.)|
 |[CVSListBox::EditItem](#edititem)|Начинает операцию изменения текста элемента управления списка. (Переопределяет `CVSListBoxBase::EditItem`.)|
@@ -71,7 +71,7 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CVSListBox::GetListHwnd](#getlisthwnd)|Возвращает дескриптор текущего элемента управления представления внедренным списком.|
 
@@ -81,7 +81,7 @@ class CVSListBox : public CVSListBoxBase
 
 Ниже приведен рисунок редактирования элемента управления. Вторая запись списка, который называется «Item2», выбран для редактирования.
 
-![Элемент управления CVSListBox](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![Элемент управления CVSListBox](../../mfc/reference/media/cvslistbox.png "управления CVSListBox")
 
 При использовании редактора ресурсов для добавления элемента управления редактирования списка, обратите внимание, что **элементов** панели редактора не поддерживает элемент управления стандартного списка редактируемой. Вместо этого добавьте статический элемент управления, такие как **группа** элемента управления. Инфраструктура использует статический элемент управления как заполнитель, чтобы указать размер и положение элемента управления редактирования списка.
 

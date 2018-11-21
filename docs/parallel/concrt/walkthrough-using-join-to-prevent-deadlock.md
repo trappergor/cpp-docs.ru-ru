@@ -1,18 +1,18 @@
 ---
 title: Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498836"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175925"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки
 
@@ -48,7 +48,7 @@ ms.locfileid: "50498836"
 
 Проблема обедающих философов показано, как взаимоблокировка происходит в приложении. В эту проблему пять философов сидят за круглым столом. Каждый философ переключается между мышления и еды. Каждый философ должны совместно использовать палочка с соседом слева, а другой — с соседом справа. Ниже показан этот макет.
 
-![Проблемы философов обеда](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![Проблема обедающих философов](../../parallel/concrt/media/dining_philosophersproblem.png "примере проблемы обедающих философов")
 
 Для еды каждому философу нужно две палочки. Если каждый философ содержит только один палочка и ожидает еще один, затем не сможет поесть и все незадействованным.
 
@@ -124,7 +124,7 @@ ms.locfileid: "50498836"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 Ниже приведен полный пример, использующий нежадном `join` объектов, чтобы исключить риск взаимоблокировки.
 
