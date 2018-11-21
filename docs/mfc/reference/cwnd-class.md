@@ -1,6 +1,6 @@
 ---
 title: Класс CWnd
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694898"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177112"
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 
@@ -1816,7 +1816,7 @@ CWnd* ChildWindowFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Указывает клиентских координат точки проверяется.
 
 *nflags*<br/>
@@ -1923,7 +1923,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Побитовое сочетание (OR) [стили окна](styles-used-by-mfc.md#window-styles). Параметр WS_POPUP не является допустимое значение стиля.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Размер и расположение окна относительно верхнего левого угла родительского окна.
 
 *pParentWnd*<br/>
@@ -2060,7 +2060,7 @@ BOOL CreateControl(
 *dwStyle*<br/>
 Стили Windows. Доступные стили, перечислены в разделе "Примечания".
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [структура RECT](../../mfc/reference/rect-structure1.md).
 
 *PPT*<br/>
@@ -2175,7 +2175,7 @@ virtual BOOL CreateEx(
 *lpParam*<br/>
 Указатель на пользовательские данные, передаваемые [CWnd::OnCreate](#oncreate) метод в *lpCreateParams* поля.
 
-*Rect*<br/>
+*rect*<br/>
 Размер и расположение окна относительно экрана или родительского окна.
 
 *pParentWnd*<br/>
@@ -5688,10 +5688,10 @@ int MessageBox(
 
 |||
 |-|-|
-|![Остановить &#40;x&#41; значок](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND MB_ICONSTOP и MB_ICONERROR|
-|![Справка &#40; &#41; значок](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![Важные &#40; &#33; &#41; значок](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION и MB_ICONWARNING|
-|![Сведения о &#40;я&#41; значок](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK и MB_ICONINFORMATION|
+|![Остановить &#40;x&#41; значок](../../mfc/reference/media/vc364f1.gif "остановить &#40;x&#41; значок")|MB_ICONHAND MB_ICONSTOP и MB_ICONERROR|
+|![Справка &#40;? &#41; значок](../../mfc/reference/media/vc364f2.gif "помочь &#40;?&#41; значок")|MB_ICONQUESTION|
+|![Важные &#40; &#33; &#41; значок](../../mfc/reference/media/vc364f3.gif "важные &#40; &#33; &#41; значок")|MB_ICONEXCLAMATION и MB_ICONWARNING|
+|![Сведения о &#40;я&#41; значок](../../mfc/reference/media/vc364f4.gif "сведения &#40;я&#41; значок")|MB_ICONASTERISK и MB_ICONINFORMATION|
 
 ### <a name="example"></a>Пример
 
@@ -6713,7 +6713,7 @@ virtual void OnDrawIconicThumbnailOrLivePreview(
 *dc*<br/>
 Указывает контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 Указывает ограничивающий прямоугольник области для подготовки к просмотру.
 
 *szRequiredThumbnailSize*<br/>
@@ -7497,7 +7497,7 @@ afx_msg void OnLButtonDblClk(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7532,7 +7532,7 @@ afx_msg void OnLButtonDown(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7563,7 +7563,7 @@ afx_msg void OnLButtonUp(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7596,7 +7596,7 @@ afx_msg void OnMButtonDblClk(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7631,7 +7631,7 @@ afx_msg void OnMButtonDown(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7662,7 +7662,7 @@ afx_msg void OnMButtonUp(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -7964,7 +7964,7 @@ afx_msg void OnMouseHover(
 |Параметр|Описание:|
 |---------------|-----------------|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -8051,7 +8051,7 @@ afx_msg void OnMouseMove(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -8257,7 +8257,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Содержит x и y координаты курсора. Эти координаты всегда являются экранных координатах.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8284,7 +8284,7 @@ afx_msg void OnNcLButtonDblClk(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8309,7 +8309,7 @@ afx_msg void OnNcLButtonDown(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8334,7 +8334,7 @@ afx_msg void OnNcLButtonUp(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8359,7 +8359,7 @@ afx_msg void OnNcMButtonDblClk(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8382,7 +8382,7 @@ afx_msg void OnNcMButtonDown(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8405,7 +8405,7 @@ afx_msg void OnNcMButtonUp(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8428,7 +8428,7 @@ afx_msg void OnNcMouseHover(
 |Параметр|Описание:|
 |---------------|-----------------|
 |*nHitTest*|[in] Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -8467,7 +8467,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8506,7 +8506,7 @@ afx_msg void OnNcRButtonDblClk(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8529,7 +8529,7 @@ afx_msg void OnNcRButtonDown(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8552,7 +8552,7 @@ afx_msg void OnNcRButtonUp(
 *nHitTest*<br/>
 Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
 
-*точка*<br/>
+*point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -8598,7 +8598,7 @@ void OnNcXButtonDblClk(
 |---------------|-----------------|
 |*nHitTest*|[in] Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |*nButton*|[in] Значение XBUTTON1 при двойном щелчке по первой кнопки Microsoft Intellimouse X или xbutton2, когда если второй кнопки X выполнен двойной щелчок.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -8624,7 +8624,7 @@ afx_msg void OnNcXButtonDown(
 |---------------|-----------------|
 |*nHitTest*|[in] Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |*nButton*|[in] Значение XBUTTON1, если нажата первая кнопка мыши X или xbutton2, когда при втором нажатии кнопки X.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -8650,7 +8650,7 @@ afx_msg void OnNcXButtonUp(
 |---------------|-----------------|
 |*nHitTest*|[in] Значение проверки нажатия, возвращенное [CWnd::DefWindowProc](#defwindowproc) функционировать в результате обработки [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) сообщения.|
 |*nButton*|[in] Значение XBUTTON1 Если выпущена первая кнопка мыши X или xbutton2, когда если второй кнопки мыши X.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты курсора относительно верхнего левого угла экрана.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -9043,7 +9043,7 @@ afx_msg void OnRButtonDblClk(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координаты курсора. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -9078,7 +9078,7 @@ afx_msg void OnRButtonDown(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координаты курсора. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -9108,7 +9108,7 @@ afx_msg void OnRButtonUp(
 
 - MK_SHIFT задайте, если нажата клавиша SHIFT.
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координаты курсора. Эти координаты всегда относительны в левом верхнем углу окна.
 
 ### <a name="remarks"></a>Примечания
@@ -9350,7 +9350,7 @@ afx_msg void OnSize(
 
 - SIZE_MAXSHOW сообщение отправляется для всех всплывающих окон, при некоторых других окно восстановлено первоначального размера.
 
-*CX*<br/>
+*cx*<br/>
 Задает новую ширину клиентской области.
 
 *CY*<br/>
@@ -9860,7 +9860,7 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Указывает x и y координату в курсор. Эти координаты всегда указываются относительно левого верхнего угла окна
 
 *pTI*<br/>
@@ -10312,7 +10312,7 @@ afx_msg void OnXButtonDblClk(
 |---------------|-----------------|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |*nButton*|[in] Значение XBUTTON1 при двойном щелчке по первой кнопки Microsoft Intellimouse X или xbutton2, когда если второй кнопки X выполнен двойной щелчок.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -10350,7 +10350,7 @@ afx_msg void OnXButtonDown(
 |---------------|-----------------|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |*nButton*|[in] Значение XBUTTON1, если была нажата первая кнопка Microsoft Intellimouse X или xbutton2, когда если второй была нажата кнопка X.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -10388,7 +10388,7 @@ afx_msg void OnXButtonUp(
 |---------------|-----------------|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, которое указывает, какие клавиши-модификаторы нажаты. Например флаг MK_CONTROL указывает, что нажата клавиша CTRL.|
 |*nButton*|[in] Значение XBUTTON1, если первая кнопка Microsoft Intellimouse X был выполнен двойной щелчок или xbutton2, когда если второй кнопки X был выполнен двойной щелчок.|
-|*точка*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
+|*point*|[in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий *x* и *y* координаты указателя относительно левого верхнего угла клиентской области.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -11261,7 +11261,7 @@ static void PASCAL SetCaretPos(POINT point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Указывает новый x и y координаты курсора (в координатах клиентской области окна).
 
 ### <a name="remarks"></a>Примечания
@@ -11852,7 +11852,7 @@ BOOL SetWindowPos(
 *y*<br/>
 Задает новое положение верхней части окна.
 
-*CX*<br/>
+*cx*<br/>
 Задает новую ширину окна.
 
 *CY*<br/>
@@ -12341,7 +12341,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Указывает [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта или [ТОЧКИ](../../mfc/reference/point-structure1.md) структура данных, которая определяет точку, для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
