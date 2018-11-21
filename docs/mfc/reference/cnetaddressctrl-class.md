@@ -1,6 +1,6 @@
 ---
 title: Класс CNetAddressCtrl
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654689"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176242"
 ---
 # <a name="cnetaddressctrl-class"></a>Класс CNetAddressCtrl
 
@@ -41,13 +41,13 @@ class CNetAddressCtrl : public CEdit
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CNetAddressCtrl::CNetAddressCtrl](#cnetaddressctrl)|Создает объект `CNetAddressCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CNetAddressCtrl::Create](#create)|Создает элемент управления network address с указанными стилями и присоединяет его к текущему `CNetAddressCtrl` объекта.|
 |[CNetAddressCtrl::CreateEx](#createex)|Создает элемент управления network address с указанным расширенные стили и присоединяет его к текущему `CNetAddressCtrl` объекта.|
@@ -64,7 +64,7 @@ class CNetAddressCtrl : public CEdit
 
 На следующем рисунке представлен диалог, содержащий элемент управления network address. Текстовое поле (1) для управления сетевым адресом содержит недопустимый сетевой адрес. (2) сообщения всплывающая подсказка отображается в том случае, если сетевой адрес является недопустимым.
 
-![Диалоговое окно с элементом управления сетевым адресом и подсказкой. ](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![Диалоговое окно с элементом управления сетевым адресом и подсказкой. ](../../mfc/reference/media/cnetaddctrl.png "Диалоговое окно с элементом управления сетевым адресом и подсказкой.")
 
 ## <a name="example"></a>Пример
 
@@ -124,10 +124,10 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwStyle*|[in] Побитовое сочетание стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
+|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
 |*pParentWnd*|[in] Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -150,11 +150,11 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwExStyle*|[in] Побитовое сочетание (OR) расширенные стили для применения к элементу управления. Дополнительные сведения см. в разделе *dwExStyle* параметр [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции.|
 |*dwStyle*|[in] Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [изменить стили](../../mfc/reference/styles-used-by-mfc.md#edit-styles).|
-|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
+|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
 |*pParentWnd*|[in] Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -231,7 +231,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwAddrMask*|[in] Побитовое сочетание (OR) флагов, указывающее типы адресов, которые может поддерживать элемент управления сетевым адресом. Дополнительные сведения см. в разделе [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586).|
 
