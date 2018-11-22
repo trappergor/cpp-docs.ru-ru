@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: 23b7d0237562324ddae2207435b2071e8d66e572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb3cd3447b500517150f0c7f50a5431730b414b
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596824"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281965"
 ---
 # <a name="runtimeclass-class"></a>Класс RuntimeClass
 
@@ -64,14 +64,14 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-| Имя                                               | Описание                                                     |
+| Имя                                               | Описание:                                                     |
 | -------------------------------------------------- | --------------------------------------------------------------- |
 | [RuntimeClass::RuntimeClass](#runtimeclass)        | Инициализирует текущий экземпляр `RuntimeClass` класса.   |
 | [RuntimeClass:: ~ RuntimeClass](#tilde-runtimeclass) | Деинициализирует текущий экземпляр `RuntimeClass` класса. |
 
 ### <a name="public-methods"></a>Открытые методы
 
-| Имя                                                      | Описание                                                                                        |
+| Имя                                                      | Описание:                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [RuntimeClass::AddRef](#addref)                           | Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.                              |
 | [RuntimeClass::DecrementReference](#decrementreference)   | Уменьшает счетчик ссылок для текущего `RuntimeClass` объекта.                              |
