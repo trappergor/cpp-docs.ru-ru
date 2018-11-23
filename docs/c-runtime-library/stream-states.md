@@ -1,21 +1,21 @@
 ---
 title: Состояния потока
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-ms.openlocfilehash: d51f24b82c10d58e91f5d20b6656eb16621004ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481176"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175565"
 ---
 # <a name="stream-states"></a>Состояния потока
 
 Допустимые состояния и переходы состояний для потока показаны на следующем рисунке.
 
-![Поток](../c-runtime-library/media/stream.gif "поток")
+![Схема состояний потока](../c-runtime-library/media/stream.gif "Схема состояний потока")
 
 Каждый из кругов обозначает устойчивое состояние. Каждая из линий задает переход, который может возникать в результате вызова функции, работающей в потоке. Пять групп функций могут вызвать переходы состояний.
 
