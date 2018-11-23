@@ -1,13 +1,13 @@
 ---
 title: 'Руководство по переносу: MFC Scribble'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: b41689b1e0207029f4494cfd91c261705789a733
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539767"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175656"
 ---
 # <a name="porting-guide-mfc-scribble"></a>Руководство по переносу: MFC Scribble
 
@@ -31,7 +31,7 @@ MFC Scribble — это широко известный пример, котор
 
 При открытии старого файла проекта в Visual Studio 2017 система предлагает преобразовать этот файл в самую последнюю принятую версию. Появляется следующее диалоговое окно:
 
-![Анализ изменений проекта и решения](../porting/media/scribbleprojectupgrade.PNG "ScribbleProjectUpgrade")
+![Просмотр изменений проекта и решения](../porting/media/scribbleprojectupgrade.PNG "Просмотр изменений проекта и решения")
 
 Произошла ошибка, указывающая, что целевой объект Itanium недоступен и не будет преобразован.
 
@@ -43,7 +43,7 @@ Platform 'Itanium' is missing from this project. All the configurations and thei
 
 Затем Visual Studio отображает отчет о миграции, в котором указываются все проблемы со старым файлом проекта.
 
-![Отчет об обновлении](../porting/media/scribblemigrationreport.PNG "ScribbleMigrationReport")
+![Отчет об обновлении](../porting/media/scribblemigrationreport.PNG "Отчет об обновлении")
 
 В этом случае проблемами были все предупреждения, а программа Visual Studio внесла соответствующие изменения в файл проекта. Применительно к проекту существенная разница заключается в том, что изменился инструмент сборки: вместо vcbuild применяется msbuild. Это изменение впервые появилось в Visual Studio 2010. К другим изменениям относится другая последовательность элементов в самом файле проекта. Никакие другие проблемы применительно к этому простому проекту рассматривать не нужно.
 
