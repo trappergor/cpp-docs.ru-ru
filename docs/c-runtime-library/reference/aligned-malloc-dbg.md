@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631876"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977814"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ void * _aligned_malloc_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_aligned_malloc_dbg** является отладочной версией [_aligned_malloc](aligned-malloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_malloc_dbg** сокращается до вызова `_aligned_malloc`. Оба `_aligned_malloc` и **_aligned_malloc_dbg** выделить блок памяти в основной куче, но **_aligned_malloc_dbg** включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, и *filename*/*linenumber* сведения для определения источника запросов на выделение.
+**_aligned_malloc_dbg** является отладочной версией [_aligned_malloc](aligned-malloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_malloc_dbg** сокращается до вызова `_aligned_malloc`. Оба `_aligned_malloc` и **_aligned_malloc_dbg** выделить блок памяти в основной куче, но **_aligned_malloc_dbg** включает различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, и *filename*/*linenumber* сведения для определения источника запросов на выделение. Отслеживание конкретных типов выделения с параметр типа блока не является компонентом поддерживаемых отладки для выровненные распределения. Выровненные распределения будут отображаться как _NORMAL_BLOCK тип блока.
 
 **_aligned_malloc_dbg** выделяет блок памяти, добавив немного больше пространства, чем запрошено *размер*. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.
 

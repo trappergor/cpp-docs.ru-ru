@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507541"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977723"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_aligned_offset_malloc_dbg** является отладочной версией [_aligned_offset_malloc](aligned-offset-malloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_offset_malloc_dbg** сокращается до вызова **_aligned_offset_malloc**. Оба **_aligned_offset_malloc** и **_aligned_offset_malloc_dbg** выделить блок памяти в основной куче, но **_aligned_offset_malloc_dbg** предлагает несколько вариантов возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, и *filename*/*linenumber* сведения для определения источника запросов на выделение.
+**_aligned_offset_malloc_dbg** является отладочной версией [_aligned_offset_malloc](aligned-offset-malloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_offset_malloc_dbg** сокращается до вызова **_aligned_offset_malloc**. Оба **_aligned_offset_malloc** и **_aligned_offset_malloc_dbg** выделить блок памяти в основной куче, но **_aligned_offset_malloc_dbg** предлагает несколько вариантов возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, и *filename*/*linenumber* сведения для определения источника запросов на выделение. Отслеживание конкретных типов выделения с параметр типа блока не является компонентом поддерживаемых отладки для выровненные распределения. Выровненные распределения будут отображаться как _NORMAL_BLOCK тип блока.
 
 **_aligned_offset_malloc_dbg** выделяет блок памяти, добавив немного больше пространства, чем запрошено *размер*. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. При выделении блока пользовательская часть блока заполняется значением 0xCD, а все буферы перезаписи — значением 0xFD.
 
