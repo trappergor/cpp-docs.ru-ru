@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_offset_recalloc_dbg function
 - _aligned_offset_recalloc_dbg function
 ms.assetid: 7ab719c3-77e0-4d2e-934f-01529d062fbf
-ms.openlocfilehash: 0b314b4aca080877b4e41723a8d2010fd8e835ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 671635e6cdc0f3f9bcd140de40500ed49beb4a8f
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627972"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977801"
 ---
 # <a name="alignedoffsetrecallocdbg"></a>_aligned_offset_recalloc_dbg
 
@@ -76,7 +76,7 @@ void * _aligned_offset_recalloc_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_aligned_offset_realloc_dbg** является отладочной версией [_aligned_offset_recalloc](aligned-offset-recalloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_offset_recalloc_dbg** сокращается до вызова **_aligned_offset_recalloc**. Оба **_aligned_offset_recalloc** и **_aligned_offset_recalloc_dbg** выполняют перераспределение блока памяти в основной куче, но **_aligned_offset_recalloc_dbg** разместить различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, параметр типа блока для отслеживания конкретных типов выделения, и *filename*/*linenumber*  сведения для определения источника запросов на выделение.
+**_aligned_offset_realloc_dbg** является отладочной версией [_aligned_offset_recalloc](aligned-offset-recalloc.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_offset_recalloc_dbg** сокращается до вызова **_aligned_offset_recalloc**. Оба **_aligned_offset_recalloc** и **_aligned_offset_recalloc_dbg** выполняют перераспределение блока памяти в основной куче, но **_aligned_offset_recalloc_dbg** разместить различные возможности отладки: буферы на обеих сторонах пользовательской части блока для тестирования утечек, и *filename*/*linenumber* сведения для определения источника запросов на выделение. Отслеживание конкретных типов выделения с параметр типа блока не является компонентом поддерживаемых отладки для выровненные распределения. Выровненные распределения будут отображаться как _NORMAL_BLOCK тип блока.
 
 **_aligned_offset_realloc_dbg** перераспределяет указанный блок памяти с немного больше пространства, чем запрошено *newSize*. *newSize* может быть больше или меньше размера первоначально выделенного блока памяти. Дополнительное пространство используется диспетчером кучи отладки, чтобы связать блоки памяти отладки и предоставить приложению сведения о заголовке отладки и буферы перезаписи. Перераспределение может привести к перемещению исходного блока памяти в другое расположение в куче, а также к изменению размера блока памяти. Если блок памяти перемещен, содержимое исходного блока перезаписывается.
 
