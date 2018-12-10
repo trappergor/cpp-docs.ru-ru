@@ -1,6 +1,6 @@
 # [Visual C++ в Visual Studio 2017](visual-cpp-in-visual-studio.md)
 # [Новые возможности Visual C++ в Visual Studio 2017](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Руководство по Visual C++](build/vscpp-step-0-installation.md)
+# Руководство по Visual C++
 ## [Установка поддержки С++ в Visual Studio](build/vscpp-step-0-installation.md)
 ## [Создание проекта консольного приложения С++](build/vscpp-step-1-create.md)
 ## [Создание и запуск проекта консольного приложения C++](build/vscpp-step-2-build.md)
