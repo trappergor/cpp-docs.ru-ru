@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542367"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178945"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -347,7 +347,7 @@ class CWinApp : public CWinThread
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname) получает указатель на строку, содержащую имя приложения. Кроме того Если у вас есть указатель на `CWinApp` , используйте `m_pszExeName` для получения имени приложения.
 
-См. в разделе [CWinApp: класс приложений](../../mfc/cwinapp-the-application-class.md) дополнительную информацию о `CWinApp` класса, включая общие сведения о следующих:
+См. в разделе [CWinApp: Класс приложения](../../mfc/cwinapp-the-application-class.md) дополнительную информацию о `CWinApp` класса, включая общие сведения о следующих:
 
 - `CWinApp`-производные код, написанный с помощью мастера приложений.
 
@@ -1060,7 +1060,7 @@ virtual BOOL InitInstance();
 
 Концептуально инициализации приложения состоит из двух разделов: инициализации одноразовый приложения, которая выполняется в первый раз программа запускается, а инициализацию экземпляра, который выполняется каждый раз копии программа запускается в том числе в первый раз. Реализация платформы `WinMain` вызывает эту функцию.
 
-Переопределить `InitInstance` для инициализации каждого нового экземпляра приложения под управлением Windows. Как правило, можно переопределить `InitInstance` для создания объекта главного окна и задания `CWinThread::m_pMainWnd` данные-член для указания этого окна. Дополнительные сведения о переопределении эта функция-член, см. в разделе [CWinApp: класс приложений](../../mfc/cwinapp-the-application-class.md).
+Переопределить `InitInstance` для инициализации каждого нового экземпляра приложения под управлением Windows. Как правило, можно переопределить `InitInstance` для создания объекта главного окна и задания `CWinThread::m_pMainWnd` данные-член для указания этого окна. Дополнительные сведения о переопределении эта функция-член, см. в разделе [CWinApp: Класс приложения](../../mfc/cwinapp-the-application-class.md).
 
 > [!NOTE]
 > MFC-приложения должны инициализироваться как однопотоковое подразделение (STA). При вызове метода [CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) в вашей `InitInstance` переопределения, укажите COINIT_APARTMENTTHREADED (а не COINIT_MULTITHREADED).
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Как правило этот элемент данных рассматривается как доступный только для чтения.
 
-- Значение хранится в раздел реестра. Имя параметра профиля приложения добавляется следующий раздел реестра: HKEY_CURRENT_USER/Software/LocalAppWizard-созданный /.
+- Значение хранится в раздел реестра. Имя параметра профиля приложения добавляется следующий раздел реестра: HKEY_CURRENT_USER/Software/LocalAppWizard созданный /.
 
 Если присвоить значение `m_pszRegistryKey`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Параметры
 
 *pMsg*<br/>
-Указатель на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.
+Указатель на [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) структуру, содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
 *lpMsg*<br/>
-Указатель на Windows [MSG](../../mfc/reference/msg-structure1.md) структуры.
+Указатель на Windows [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 Указатель на неперехваченное исключение.
 
 *pMsg*<br/>
-Объект [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сведения о сообщения windows, которое вызвало платформа для создания исключения.
+Объект [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) структуру, содержащую сведения о сообщения windows, которое вызвало платформа для создания исключения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2086,7 +2086,7 @@ BOOL RunEmbedded();
 
 ### <a name="remarks"></a>Примечания
 
-Если он присутствует, параметр удаляется из командной строки. Дополнительные сведения о внедрении см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md).
+Если он присутствует, параметр удаляется из командной строки. Дополнительные сведения о внедрении см. в статье [серверов: Реализация сервера](../../mfc/servers-implementing-a-server.md).
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>Параметры
 
 *hDevNames*<br/>
-Дескриптор [DEVNAMES](../../mfc/reference/devnames-structure.md) структура, определяющая драйвера, устройства, а также имена портов выходные данные конкретного принтера.
+Дескриптор [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структура, определяющая драйвера, устройства, а также имена портов выходные данные конкретного принтера.
 
 *hDevMode*<br/>
 Дескриптор [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) структуру, которая указывает сведения об инициализации устройства и среде принтера.
@@ -2168,7 +2168,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция задает *m_pszRegistryKey*, который затем используется `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, и `WriteProfileString` функциями-членами `CWinApp`. Если эта функция был вызван, список последних использованных файлов (MRU) также хранится в реестре. Раздел реестра обычно является имя компании. Он хранится в ключе следующего вида: HKEY_CURRENT_USER\Software\\< название_организации\>\\< имя_приложения\>\\< имя раздела\>\\< значение имя\>.
+Эта функция задает *m_pszRegistryKey*, который затем используется `GetProfileInt`, `GetProfileString`, `WriteProfileInt`, и `WriteProfileString` функциями-членами `CWinApp`. Если эта функция был вызван, список последних использованных файлов (MRU) также хранится в реестре. Раздел реестра обычно является имя компании. Он хранится в ключе следующего вида: Раздел HKEY_CURRENT_USER\Software\\< название_организации\>\\< имя_приложения\>\\< имя раздела\>\\< имя значения\>.
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [Класс CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Практическое руководство. Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)
+[Инструкции: Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)

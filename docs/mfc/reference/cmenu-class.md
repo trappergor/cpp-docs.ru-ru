@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613685"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178930"
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 
@@ -322,7 +322,7 @@ UINT CheckMenuItem(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Предыдущее состояние элемента: MF_CHECKED или MF_UNCHECKED, или 0xFFFFFFFF, если элемент меню не существует.
+Предыдущее состояние элемента: MF_CHECKED или MF_UNCHECKED или 0xFFFFFFFF, если элемент меню не существует.
 
 ### <a name="remarks"></a>Примечания
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDrawItemStruct*<br/>
-Указатель на [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе документа требуется.
+Указатель на [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структуру, содержащую сведения о типе документа требуется.
 
 ### <a name="remarks"></a>Примечания
 

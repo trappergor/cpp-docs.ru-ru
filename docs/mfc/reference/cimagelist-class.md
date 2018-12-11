@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: d311c064d9b91967a60823fc3fd0e43f22a119c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500767"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178594"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 
@@ -348,7 +348,7 @@ BOOL Create(CImageList* pImageList);
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Размеры каждого изображения в пикселях.
 
 *CY*<br/>
@@ -479,7 +479,7 @@ static BOOL PASCAL DragEnter(
 *pWndLock*<br/>
 Указатель на окно, которому принадлежит изображение перетаскивания.
 
-*точка*<br/>
+*point*<br/>
 Позиция, в котором будет отображаться изображение перетаскивания. Координаты указываются относительно верхнего левого угла окна (не клиентской области).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -694,7 +694,7 @@ BOOL DrawIndirect(
 Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-где рисуется изображение.
 
 *sz*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структура, указывающая размер изображения для отрисовки.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структура, указывающая размер изображения для отрисовки.
 
 *ptOrigin*<br/>
 Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-указание верхнего левого угла операции рисования по отношению к само изображение. Изображения, которые расположены слева координаты x и более поздних версий координату по оси y не пикселов.

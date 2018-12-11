@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534138"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179023"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 
@@ -556,7 +556,7 @@ class COleControl : public CWnd
 
 Объекты OLE-элемент управления можно также создать окно, только в том случае, когда они становятся активными, но возрастает объем работы, необходимой для перехода неактивные — активный и скорость перехода выходит из строя. Бывают случаи, когда это проблема: например, рассмотрим таблицу текстовых полей. Когда курсора вверх и вниз в столбце, каждый элемент управления должен быть на месте активируются и деактивируются затем. Скорость перехода неактивные/активный непосредственно влияют на скорость прокрутки.
 
-Дополнительные сведения о разработке платформу управления OLE, см. в статьях [элементы ActiveX в MFC](../../mfc/mfc-activex-controls.md) и [Обзор: создание программы управления MFC ActiveX](../../mfc/reference/mfc-activex-control-wizard.md). Сведения об оптимизации элементов управления OLE, включая элементы управления без окон и без мелькания, см. в разделе [элементы ActiveX в MFC: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Дополнительные сведения о разработке платформу управления OLE, см. в статьях [элементы ActiveX в MFC](../../mfc/mfc-activex-controls.md) и [Обзор: Создание программы элемента управления ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md). Сведения об оптимизации элементов управления OLE, включая элементы управления без окон и без мелькания, см. в разделе [элементы управления MFC ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-На входе, указатель на [RECT](../../mfc/reference/rect-structure1.md) структуру, содержащую курсор области скорректирована. На выводе области скорректированное курсор или значение NULL, если прямоугольник курсор полностью входят.
+На входе, указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру, содержащую курсор области скорректирована. На выводе области скорректированное курсор или значение NULL, если прямоугольник курсор полностью входят.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -934,7 +934,7 @@ void DoClick();
 
 Переопределяемый `COleControl::OnClick` функция-член будет вызываться и акции щелкните событие активируется, если поддерживается элементом управления.
 
-Эта функция поддерживается `COleControl` базовый класс как биржевые метод, называемый DoClick. Дополнительные сведения см. в статье [элементы управления ActiveX: методы](../../mfc/mfc-activex-controls-methods.md).
+Эта функция поддерживается `COleControl` базовый класс как биржевые метод, называемый DoClick. Дополнительные сведения см. в статье [элементы управления ActiveX: Методы](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 Эта функция обычно выполняет вызовы **PX_** семейству функций, чтобы загрузить или сохранить определенные пользовательские свойства элемента управления OLE.
 
-Если мастер элементов управления используется для создания проекта элемента управления OLE, переопределенная версия этой функции будет сериализовать стандартных свойств, поддерживаемых `COleControl` с помощью вызова функции базового класса, `COleControl::DoPropExchange`. При добавлении пользовательских свойств в элемент управления OLE, вам потребуется изменить эту функцию для сериализации нового свойства. Дополнительные сведения о сериализации см. в статье [элементы управления ActiveX: сериализация](../../mfc/mfc-activex-controls-serializing.md).
+Если мастер элементов управления используется для создания проекта элемента управления OLE, переопределенная версия этой функции будет сериализовать стандартных свойств, поддерживаемых `COleControl` с помощью вызова функции базового класса, `COleControl::DoPropExchange`. При добавлении пользовательских свойств в элемент управления OLE, вам потребуется изменить эту функцию для сериализации нового свойства. Дополнительные сведения о сериализации см. в статье [элементы управления ActiveX: Сериализация](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -1099,7 +1099,7 @@ BOOL ExchangeVersion(
 
 Как правило, это будет Первая функция вызывается переопределение элемента управления `COleControl::DoPropExchange`. При загрузке, эта функция считывает число версий постоянных данных и устанавливает атрибут версии [CPropExchange](../../mfc/reference/cpropexchange-class.md) объекта соответствующим образом. При сохранении, эта функция записывает номер версии постоянных данных.
 
-Дополнительные сведения о сохраняемости и управления версиями, см. в статье [элементы управления ActiveX: сериализация](../../mfc/mfc-activex-controls-serializing.md).
+Дополнительные сведения о сохраняемости и управления версиями, см. в статье [элементы управления ActiveX: Сериализация](../../mfc/mfc-activex-controls-serializing.md).
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1690,7 +1690,7 @@ enum ControlFlags {
 |`windowlessActivate`|Если установлено, указывает на элемент управления использует активации без окна.|
 |`canOptimizeDraw`|Если установлено, указывает, что элемент управления будет выполнять оптимизированное Рисование, если контейнер поддерживает его.|
 
-Дополнительные сведения о `GetControlFlags` и другие виды оптимизации, элементов управления OLE, см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Дополнительные сведения о `GetControlFlags` и другие виды оптимизации, элементов управления OLE, см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1808,7 +1808,7 @@ LPFONTDISP GetFont();
 
 ### <a name="remarks"></a>Примечания
 
-Обратите внимание на то, что вызывающий объект должен освободить объект после завершения. В рамках реализации элемента управления, использовать `InternalGetFont` для доступа к объекту акций шрифта для элемента управления. Дополнительные сведения об использовании шрифтов в элементе управления, см. в статье [элементы управления ActiveX: использование шрифтов в элементе управления ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
+Обратите внимание на то, что вызывающий объект должен освободить объект после завершения. В рамках реализации элемента управления, использовать `InternalGetFont` для доступа к объекту акций шрифта для элемента управления. Дополнительные сведения об использовании шрифтов в элементе управления, см. в статье [элементы управления ActiveX: Использование шрифтов в элементе управления ActiveX](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция поддерживается `COleControl` базовый класс как биржевые метод, называемый обновления. Это позволяет пользователям вашего элемента управления OLE для перерисовки элемента управления в определенное время. Дополнительные сведения об этом методе см. в статье [элементы управления ActiveX: методы](../../mfc/mfc-activex-controls-methods.md).
+Эта функция поддерживается `COleControl` базовый класс как биржевые метод, называемый обновления. Это позволяет пользователям вашего элемента управления OLE для перерисовки элемента управления в определенное время. Дополнительные сведения об этом методе см. в статье [элементы управления ActiveX: Методы](../../mfc/mfc-activex-controls-methods.md).
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Примечания
 
-Свойства являются: внешний вид, BackColor, BorderStyle, заголовок, Enabled, шрифт, цвет переднего плана, hWnd и текст. Описание стандартных свойств, см. в разделе [элементы управления ActiveX: Добавление свойства запасов](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Это следующие свойства: Внешний вид, BackColor, BorderStyle, заголовок, Enabled, шрифт, цвет переднего плана, hWnd и текст. Описание стандартных свойств, см. в разделе [элементы управления ActiveX: Добавление стандартных свойств](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Можно повысить производительность двоичных инициализации элемента управления с помощью `ResetStockProps` и `ResetVersion` для переопределения `COleControl::OnResetState`. См. следующий пример. Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Можно повысить производительность двоичных инициализации элемента управления с помощью `ResetStockProps` и `ResetVersion` для переопределения `COleControl::OnResetState`. См. следующий пример. Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Пример
 
@@ -3659,7 +3659,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ### <a name="remarks"></a>Примечания
 
-Можно повысить производительность двоичных инициализации элемента управления с помощью `ResetVersion` и `ResetStockProps` для переопределения `COleControl::OnResetState`. См. пример в [ResetStockProps](#resetstockprops). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Можно повысить производительность двоичных инициализации элемента управления с помощью `ResetVersion` и `ResetStockProps` для переопределения `COleControl::OnResetState`. См. пример в [ResetStockProps](#resetstockprops). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ void SerializeExtent(CArchive& ar);
 
 ### <a name="remarks"></a>Примечания
 
-Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeExtent`, `SerializeStockProps`, и `SerializeVersion` для переопределения `COleControl::Serialize`. См. следующий пример. Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeExtent`, `SerializeStockProps`, и `SerializeVersion` для переопределения `COleControl::Serialize`. См. следующий пример. Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ### <a name="example"></a>Пример
 
@@ -3749,7 +3749,7 @@ void SerializeExtent(CArchive& ar);
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-Выполняет сериализацию или инициализирует состояние объекта `COleControl` стандартные свойства: внешний вид, BackColor, BorderStyle, заголовок, Enabled, шрифт, цвет переднего плана и текста.
+Выполняет сериализацию или инициализирует состояние объекта `COleControl` стандартные свойства: Внешний вид, BackColor, BorderStyle, заголовок, включена, шрифт, цвет переднего плана и текста.
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ void SerializeStockProps(CArchive& ar);
 
 ### <a name="remarks"></a>Примечания
 
-Описание стандартных свойств, см. в разделе [элементы управления ActiveX: Добавление свойства запасов](../../mfc/mfc-activex-controls-adding-stock-properties.md).
+Описание стандартных свойств, см. в разделе [элементы управления ActiveX: Добавление стандартных свойств](../../mfc/mfc-activex-controls-adding-stock-properties.md).
 
-Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeStockProps`, `SerializeExtent`, и `SerializeVersion` для переопределения `COleControl::Serialize`. Например, см. в разделе кода, в [SerializeExtent](#serializeextent). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeStockProps`, `SerializeExtent`, и `SerializeVersion` для переопределения `COleControl::Serialize`. Например, см. в разделе кода, в [SerializeExtent](#serializeextent). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ DWORD SerializeVersion(
 
 ### <a name="remarks"></a>Примечания
 
-Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeVersion`, `SerializeExtent`, и `SerializeStockProps` для переопределения `COleControl::Serialize`. Например, см. в разделе кода, в [SerializeExtent](#serializeextent). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Можно повысить производительность двоичных сохраняемости элемента управления с помощью `SerializeVersion`, `SerializeExtent`, и `SerializeStockProps` для переопределения `COleControl::Serialize`. Например, см. в разделе кода, в [SerializeExtent](#serializeextent). Дополнительные сведения об оптимизации инициализации см. в разделе [элементы управления ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ void SetAppearance (short sAppearance);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о стандартных свойств, см. в разделе [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).
+Дополнительные сведения о стандартных свойств, см. в разделе [элементы управления ActiveX: Свойства](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).
+Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: Свойства](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3873,7 +3873,7 @@ BOOL SetControlSize(int cx, int cy);
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Ширина нового элемента управления в пикселях.
 
 *CY*<br/>
@@ -3952,7 +3952,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: свойства](../../mfc/mfc-activex-controls-properties.md).
+Дополнительные сведения об использовании этого свойства и других связанных свойств, см. в статье [элементы управления ActiveX: Свойства](../../mfc/mfc-activex-controls-properties.md).
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию указывает два формата: CF_METAFILEPICT и свойство постоянное значение.
+Реализация по умолчанию задает два формата: CF_METAFILEPICT и свойство постоянное значение.
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 
@@ -3978,7 +3978,7 @@ void SetInitialSize(
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Начальная ширина элемента управления OLE в пикселях.
 
 *CY*<br/>

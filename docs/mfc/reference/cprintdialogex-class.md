@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543329"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178451"
 ---
 # <a name="cprintdialogex-class"></a>Класс CPrintDialogEx
 
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-Создает контекст устройства принтера (DC) из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.
+Создает контекст устройства принтера (DC) из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структуры.
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ BOOL GetDefaults();
 
 ### <a name="remarks"></a>Примечания
 
-Создает контекст устройства принтера (DC) из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.
+Создает контекст устройства принтера (DC) из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структуры.
 
-`GetDefaults` не отображать окно свойств печати. Вместо этого он задает `hDevNames` и `hDevMode` членами [m_pdex](#m_pdex) для дескрипторов к [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структур, которые были инициализированы для принтер по умолчанию системы. Оба `hDevNames` и `hDevMode` должен иметь значение NULL, или `GetDefaults` завершается ошибкой.
+`GetDefaults` не отображать окно свойств печати. Вместо этого он задает `hDevNames` и `hDevMode` членами [m_pdex](#m_pdex) для дескрипторов к [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структур, которые были инициализированы для принтер по умолчанию системы. Оба `hDevNames` и `hDevMode` должен иметь значение NULL, или `GetDefaults` завершается ошибкой.
 
 Если флаг PD_RETURNDC установлен, эта функция не только возвращает `hDevNames` и `hDevMode` (расположенный в `m_pdex.hDevNames` и `m_pdex.hDevMode`) вызывающей стороне, но также возвратит принтера в `m_pdex.hDC`. Он отвечает за вызывающему объекту удалить принтер DC и вызывать Windows [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree) функция дескрипторах при завершении работы с `CPrintDialogEx` объекта.
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694196"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178425"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 
@@ -71,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Создает объект `CWinThread`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Функцию CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Указывает, следует ли уничтожать объект, находящийся в завершение потока.|
 |[CWinThread::m_hThread](#m_hthread)|Дескриптор текущего потока.|
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 Вместо вызова метода `AfxBeginThread`, можно создать `CWinThread`-производного объекта, а затем вызовите метод `CreateThread`. Этот метод конструкции двухэтапное полезен, если вы хотите повторно использовать `CWinThread` объекта между последовательными создания и прерывания потока выполнения.
 
-Дополнительные сведения о `CWinThread`, см. в статьях [многопоточность с помощью C++ и MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Многопоточность: создание потоков пользовательского интерфейса](../../parallel/multithreading-creating-user-interface-threads.md), [Многопоточность: Создание рабочей роли Потоки](../../parallel/multithreading-creating-worker-threads.md), и [многопоточности: Практическое использование классов синхронизации](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
+Дополнительные сведения о `CWinThread`, см. в статьях [многопоточность с помощью C++ и MFC](../../parallel/multithreading-with-cpp-and-mfc.md), [Многопоточность: Создание потоков пользовательского интерфейса](../../parallel/multithreading-creating-user-interface-threads.md), [многопоточности: Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md), и [многопоточности: Практическое использование классов синхронизации](../../parallel/multithreading-how-to-use-the-synchronization-classes.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Параметры
 
 *pMsg*<br/>
-Указывает на [структурой MSG](../../mfc/reference/msg-structure1.md) содержащий сообщение для обработки.
+Указывает на [структурой MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) содержащий сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 Указывает код обработчика. Эта функция-член использует код для определения способа обработки *lpMsg.*
 
 *lpMsg*<br/>
-Указатель на Windows [структурой MSG](../../mfc/reference/msg-structure1.md).
+Указатель на Windows [структурой MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 Указывает необработанное исключение.
 
 *pMsg*<br/>
-Указывает на [структурой MSG](../../mfc/reference/msg-structure1.md) информацией о сообщения windows, которое вызвало платформа для создания исключения.
+Указывает на [структурой MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) информацией о сообщения windows, которое вызвало платформа для создания исключения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

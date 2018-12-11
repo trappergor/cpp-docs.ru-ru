@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437808"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178929"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 
@@ -325,7 +325,7 @@ virtual HRESULT CreateControl(
 *dwStyle*<br/>
 Стили Windows. Доступные стили отображаются в категории **"Примечания"** раздел.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления. Может быть либо `CRect` объекта или `RECT` структуры.
 
 *nID*<br/>
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-Указывает, следует ли включить или отключить окно: значение TRUE, если окно ввода включена, в противном случае — значение FALSE.
+Указывает, следует ли включить или отключить окно: Значение TRUE, если ввода в окне должна быть включена, в противном случае — значение FALSE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>Параметры
 
 *lpmsg*<br/>
-Указатель на [структурой MSG](../../mfc/reference/msg-structure1.md). Эта структура содержит сообщение Windows вызывающей срабатывание триггера `SetFocus` запроса для элемента управления, содержащихся в текущем узле элемента управления.
+Указатель на [структурой MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg). Эта структура содержит сообщение Windows вызывающей срабатывание триггера `SetFocus` запроса для элемента управления, содержащихся в текущем узле элемента управления.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1148,7 +1148,7 @@ virtual BOOL SetWindowPos(
 *y*<br/>
 Новое положение верхней части окна.
 
-*CX*<br/>
+*cx*<br/>
 Новая ширина окна
 
 *CY*<br/>

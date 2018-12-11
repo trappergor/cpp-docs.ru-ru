@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656096"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178620"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 
@@ -339,7 +339,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Показывает относительное положение двух элементов, описанных в [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) структуры. Это может быть любой из следующих значений:
+Показывает относительное положение двух элементов, описанных в [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) структуры. Это может быть любой из следующих значений:
 
 |Значение|Значение|
 |-----------|-------------|
@@ -374,7 +374,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль окна списка. Применить любое сочетание [стили списков](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) в поле.
 
-*Rect*<br/>
+*rect*<br/>
 Указывает список размер и положение. Может быть либо `CRect` объекта или `RECT` структуры.
 
 *pParentWnd*<br/>
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDeleteItemStruct*<br/>
-Длинный указатель на Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) структуру, содержащую сведения о удаляемого элемента.
+Длинный указатель на Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) структуру, содержащую сведения о удаляемого элемента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDrawItemStruct*<br/>
-Длинный указатель на [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе документа требуется.
+Длинный указатель на [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структуру, содержащую сведения о типе документа требуется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -770,7 +770,7 @@ int GetItemRect(
 Указывает отсчитываемый от нуля индекс элемента.
 
 *lpRect*<br/>
-Указывает, длинный указатель на [структура RECT](../../mfc/reference/rect-structure1.md) , получающий список клиентских координат элемента.
+Указывает, длинный указатель на [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect) , получающий список клиентских координат элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -991,7 +991,7 @@ int InitStorage(
 
 Эта функция помогает ускорить инициализации списка полей, имеющих большое количество элементов (более 100). Он выделяет указанный объем памяти, чтобы последующие [AddString](#addstring), [InsertString](#insertstring), и [Dir](#dir) функции принимают кратчайшие сроки. Оценки можно использовать для параметров. Если вы пересмотреть, выделения дополнительной памяти; Если вы недооцените требования, обычного выделения используется для элементов, которые вычитаются из суммы предварительно.
 
-Windows 95/98 только: *nItems* ограничен 16-разрядных значений. Это означает, что списки с множественным не может содержать более 32 767 элементы. Несмотря на то, что количество элементов является ограниченным, общий размер элементов в поле со списком ограничено только объемом доступной памяти.
+Windows 95/98 только: *NItems* ограничен 16-разрядных значений. Это означает, что списки с множественным не может содержать более 32 767 элементы. Несмотря на то, что количество элементов является ограниченным, общий размер элементов в поле со списком ограничено только объемом доступной памяти.
 
 ### <a name="example"></a>Пример
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpMeasureItemStruct*<br/>
-Длинный указатель на [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.
+Длинный указатель на [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) структуры.
 
 ### <a name="remarks"></a>Примечания
 

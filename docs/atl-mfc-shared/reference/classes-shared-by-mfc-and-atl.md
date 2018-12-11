@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583876"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177919"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Классы, совместно используемые MFC и ATL
 
@@ -23,10 +23,10 @@ ms.locfileid: "50583876"
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|Предоставляет улучшенную поддержку растровых изображений, включая возможность загрузки и сохранения изображений в формате JPEG, GIF, BMP и Portable Network Graphics (PNG).|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|Инкапсулирует тип данных даты, используемый в OLE-автоматизации.|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|Представляет относительное время, период времени.|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Класс, аналогичный Windows [ТОЧКИ](../../mfc/reference/point-structure.md) структура также включает функции-члены для управления `CPoint` и `POINT` структур.|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Класс, аналогичный Windows [RECT](../../mfc/reference/rect-structure.md) структура также включает функции-члены для управления `CRect` объекты и Windows `RECT` структуры.|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Класс, аналогичный Windows [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структура также включает функции-члены для управления `CPoint` и `POINT` структур.|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Класс, аналогичный Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структура также включает функции-члены для управления `CRect` объекты и Windows `RECT` структуры.|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|Представляет `CSimpleStringT` объекта.|atlsimpstr.h|
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Класс, аналогичную структуре размер Windows, реализующий относительные координаты или положение.|atltypes.h|
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Класс, аналогичный Windows [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры, реализующий относительные координаты или положение.|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|Обеспечивает автоматическое освобождение ресурстов для `GetBuffer` и `ReleaseBuffer` вызывает на имеющихся `CStringT` объекта.|atlsimpstr.h|
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|Представляет данные строкового объекта.|atlsimpstr.h|
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|Представляет `CStringT` объекта.|atlstr.h CStringT.h (зависит от MFC) (независимые от MFC)|

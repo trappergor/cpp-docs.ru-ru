@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: cff81b7d260749d5be344edf3e0401a473b4f9e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508827"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178529"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 
@@ -157,7 +157,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает сочетание стилей элемента управления даты-времени. См. в разделе [стили даты и времени средство выбора элемента управления](/windows/desktop/Controls/date-and-time-picker-control-styles) в пакете SDK для Windows, Дополнительные сведения о стилях средство выбора даты и времени.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которая является положение и размер элемента управления выбора даты и времени.
 
 *pParentWnd*<br/>
@@ -381,7 +381,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*psize*|[out] Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, содержащую идеального размера для элемента управления.|
+|*psize*|[out] Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуру, содержащую идеального размера для элемента управления.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

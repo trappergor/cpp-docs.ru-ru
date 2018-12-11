@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471816"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178308"
 ---
 # <a name="cmetafiledc-class"></a>Cmetafiledc-класс
 
@@ -186,7 +186,7 @@ BOOL CreateEnhanced(
 Указывает строку символов с завершающим нулем. Указывает имя файла для расширенного метафайла должен быть создан. Если этот параметр имеет значение NULL, расширенный метафайл является память базе и его содержимое потеряны при уничтожении объекта или Win32 `DeleteEnhMetaFile` функция вызывается.
 
 *lpBounds*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуру данных или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, который задает размеры в единицах HIMETRIC (шагом.01 миллиметр) изображения для сохранения в расширенный метафайл.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру данных или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, который задает размеры в единицах HIMETRIC (шагом.01 миллиметр) изображения для сохранения в расширенный метафайл.
 
 *lpszDescription*<br/>
 Указывает нулем строка, указывающая имя приложения, создавшего рисунок, а также изображения заголовка.

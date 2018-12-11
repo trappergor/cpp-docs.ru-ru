@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694339"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178347"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -114,7 +114,7 @@ RUNTIME_CLASS объекта, производного от [CWinThread](../../m
 
 Многопоточность должна быть включена приложением; в противном случае функция завершится ошибкой. Дополнительные сведения о включении многопоточности см [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) под *параметры компилятора Visual C++*.
 
-Дополнительные сведения о `AfxBeginThread`, см. в статьях [Многопоточность: создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md) и [Многопоточность: создание потоков пользовательского интерфейса](../../parallel/multithreading-creating-user-interface-threads.md).
+Дополнительные сведения о `AfxBeginThread`, см. в статьях [Многопоточность: Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md) и [многопоточности: Создание потоков пользовательского интерфейса](../../parallel/multithreading-creating-user-interface-threads.md).
 
 ### <a name="example"></a>Пример
 
@@ -567,9 +567,9 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 - Текущий каталог.
 
-- **Windows 95/98:** системном каталоге Windows. **Windows NT:** системный каталог Windows 32-разрядной. Этот каталог называется SYSTEM32.
+- **Windows 95/98:** Системный каталог Windows. **Windows NT:** Системный каталог Windows 32-разрядной. Этот каталог называется SYSTEM32.
 
-- **Только для Windows NT:** 16-разрядных Windows системный каталог. Нет функции Win32, который получает путь к каталогу, в этом, но в ней выполнялся поиск. Этот каталог называется системы.
+- **Windows NT:** 16-разрядное системный каталог Windows. Нет функции Win32, который получает путь к каталогу, в этом, но в ней выполнялся поиск. Этот каталог называется системы.
 
 - Каталог Windows.
 
@@ -715,7 +715,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 
 Если вы вызываете `AfxRegisterWndClass` для нескольких классы, производные от CWnd, с идентичными параметрами, вместо получения класса отдельное окно для каждого класса, каждый класс использует один класс. Это может вызвать проблемы, если используется стиль класса CS_CLASSDC. Вместо нескольких классов окон CS_CLASSDC вы получите один класс CS_CLASSDC окна и всех windows на C++, использующих этот общий ресурс класса одного контроллера домена. Чтобы избежать этой проблемы, вызовите [AfxRegisterClass](#afxregisterclass) для регистрации класса.
 
-См. в техническом примечании [TN001: регистрация класса Window](../../mfc/tn001-window-class-registration.md) Дополнительные сведения о регистрации класса окна и `AfxRegisterWndClass` функции.
+См. в техническом примечании [TN001: Регистрация класса Window](../../mfc/tn001-window-class-registration.md) Дополнительные сведения о регистрации класса окна и `AfxRegisterWndClass` функции.
 
 ### <a name="example"></a>Пример
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>Параметры
 
 *lpwsaData*<br/>
-Указатель на [WSADATA](../../mfc/reference/wsadata-structure.md) структуры. Если *lpwsaData* не равно NULL, то адрес `WSADATA` структура заполнена, путем вызова `WSAStartup`. Эта функция также гарантирует, что `WSACleanup` вызывается автоматически перед завершением работы приложения.
+Указатель на [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata) структуры. Если *lpwsaData* не равно NULL, то адрес `WSADATA` структура заполнена, путем вызова `WSAStartup`. Эта функция также гарантирует, что `WSACleanup` вызывается автоматически перед завершением работы приложения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

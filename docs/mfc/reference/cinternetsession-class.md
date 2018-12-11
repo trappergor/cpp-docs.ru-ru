@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519297"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178165"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -101,7 +101,7 @@ class CInternetSession : public CObject
 Дополнительные сведения об основных задачах программирования Интернета см. в статье [Internet первые шаги: WinInet](../../mfc/wininet-basics.md). Общие сведения об использовании классов MFC WinInet см. в статье [Internet программирование с использованием WinInet](../../mfc/win32-internet-extensions-wininet.md).
 
 > [!NOTE]
-> `CInternetSession` вызывает исключение [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) для типов службы не поддерживается. В настоящее время поддерживаются только следующих типов служб: FTP, HTTP, gopher и файл.
+> `CInternetSession` вызывает исключение [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception) для типов службы не поддерживается. В настоящее время поддерживаются только следующие типы службы: FTP, HTTP, gopher и файл.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -457,7 +457,7 @@ virtual void OnStatusCallback(
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|Поиск IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
 |INTERNET_STATUS_NAME_RESOLVED|Успешно найден IP-адрес с именем, содержащимся в *lpvStatusInformation*.|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|Подключение к адреса сокета ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)), на которые указывают *lpvStatusInformation*.|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|Подключение к адреса сокета ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)), на которые указывают *lpvStatusInformation*.|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|Успешно подключились к адреса сокета (SOCKADDR), на которые указывают *lpvStatusInformation*.|
 |INTERNET_STATUS_SENDING_REQUEST|Отправляет запрос информации на сервер. *LpvStatusInformation* параметр имеет значение NULL.|
 |INTERNET_STATUS_ REQUEST_SENT|Успешно отправлен запрос информации на сервер. *LpvStatusInformation* параметр имеет значение NULL.|

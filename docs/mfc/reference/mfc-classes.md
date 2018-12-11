@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525280"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178958"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 
@@ -1099,7 +1099,7 @@ ms.locfileid: "51525280"
 Представление, которое отображает записи базы данных в элементах управления.
 
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Аналогичную Windows [структура RECT](rect-structure.md).
+Аналогичную Windows [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 [Класс CRectTracker](../../mfc/reference/crecttracker-class.md)<br/>
 Позволяет отображать и перемещать элемент, а также различными способами изменять его размеры.
@@ -1165,7 +1165,7 @@ ms.locfileid: "51525280"
 Инкапсулирует переход с синусоидальной скоростью, амплитуда которого определяется начальной скоростью переменной анимации.
 
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Аналог структуры [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) в ОС Windows, реализующий относительные координаты или положение.
+Аналог структуры [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) в ОС Windows, реализующий относительные координаты или положение.
 
 [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)<br/>
 Предоставляет функциональные возможности стандартного элемента управления "ползунок" Windows.

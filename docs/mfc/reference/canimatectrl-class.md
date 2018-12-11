@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608433"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178266"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl-класс
 
@@ -151,8 +151,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления анимации. Применить любое сочетание windows, стили, описанные в разделе «Примечания» и стили элемента управления анимации, описано в разделе [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
-Указывает положение и размер элемента управления анимации. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.
+*rect*<br/>
+Указывает положение и размер элемента управления анимации. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента управления анимации, обычно `CDialog`. Он не должен иметь значение NULL.
@@ -205,7 +205,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль элемента управления анимации. Применить любое сочетание окна и Стили анимации элемента управления, описанных в [стили элемента управления анимации](/windows/desktop/Controls/animation-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
