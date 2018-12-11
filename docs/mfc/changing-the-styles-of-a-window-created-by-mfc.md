@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: ebef671a34d2b50bd547a2fd9e484581df8ee3e8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693222"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177913"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Изменение стилей окна, созданного MFC
 
@@ -46,7 +46,7 @@ ms.locfileid: "51693222"
 
 При изменении атрибутов окна в существующем приложении, выполните инструкции в оставшейся части этой статьи.
 
-Чтобы изменить атрибуты окна по умолчанию, используемый приложением framework, созданных с помощью мастера приложений, переопределите окна [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) виртуальная функция-член. `PreCreateWindow` позволяет приложению получить доступ к процесс создания, обычно управляется внутренне [CDocTemplate](../mfc/reference/cdoctemplate-class.md) класса. Платформа вызывает `PreCreateWindow` непосредственно перед Создание окна. Изменив [CREATESTRUCT](../mfc/reference/createstruct-structure.md) структуры передается `PreCreateWindow`, приложение может изменить атрибуты, используемые для создания окна. Например чтобы убедиться, что окно не использует заголовок, используйте следующие побитовой операции:
+Чтобы изменить атрибуты окна по умолчанию, используемый приложением framework, созданных с помощью мастера приложений, переопределите окна [PreCreateWindow](../mfc/reference/cwnd-class.md#precreatewindow) виртуальная функция-член. `PreCreateWindow` позволяет приложению получить доступ к процесс создания, обычно управляется внутренне [CDocTemplate](../mfc/reference/cdoctemplate-class.md) класса. Платформа вызывает `PreCreateWindow` непосредственно перед Создание окна. Изменив [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) структуры передается `PreCreateWindow`, приложение может изменить атрибуты, используемые для создания окна. Например чтобы убедиться, что окно не использует заголовок, используйте следующие побитовой операции:
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 

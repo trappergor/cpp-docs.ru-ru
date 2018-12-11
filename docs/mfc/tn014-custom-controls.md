@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178412"
 ---
 # <a name="tn014-custom-controls"></a>TN014. Пользовательские элементы управления
 
@@ -88,7 +88,7 @@ MFC предоставляет реализацию по умолчанию (в 
     // insert code to delete an item from this combo box
     ```
 
-Дополнительные сведения о структуре пользовательской отрисовки ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md), [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md), [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md), и [DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) см. в документации MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, и `CWnd::OnDeleteItem` соответственно.
+Дополнительные сведения о структуре пользовательской отрисовки ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct), [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct), [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct), и [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) см. в документации MFC `CWnd::OnDrawItem`, `CWnd::OnMeasureItem`, `CWnd::OnCompareItem`, и `CWnd::OnDeleteItem` соответственно.
 
 ## <a name="using-self-draw-controls-and-menus"></a>С помощью самостоятельно рисования элементов управления и меню
 

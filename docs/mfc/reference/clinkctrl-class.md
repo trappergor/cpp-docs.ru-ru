@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597565"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178049"
 ---
 # <a name="clinkctrl-class"></a>Класс CLinkCtrl
 
@@ -133,8 +133,8 @@ virtual BOOL Create(DWORD dwStyle,
 *dwStyle*<br/>
 Задает стиль ссылки элемента управления. Примените любое сочетание стилей элемента управления. См. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в `Windows SDK` Дополнительные сведения.
 
-*Rect*<br/>
-Задает размер и положение элемента управления ссылки. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.
+*rect*<br/>
+Задает размер и положение элемента управления ссылки. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента связи. Он не должен иметь значение NULL.
@@ -195,8 +195,8 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 *dwStyle*<br/>
 Задает стиль ссылки элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
-Задает размер и положение элемента управления ссылки. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.
+*rect*<br/>
+Задает размер и положение элемента управления ссылки. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента связи. Он не должен иметь значение NULL.
@@ -245,7 +245,7 @@ int GetIdealSize(
 |Параметр|Описание|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] Максимальная ширина ссылки, в пикселях.|
-|[out] \* *pSize*|Указатель на Windows [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|
+|[out] \* *pSize*|Указатель на Windows [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

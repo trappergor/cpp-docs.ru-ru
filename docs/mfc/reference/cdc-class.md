@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176920"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179062"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Создает объект `CDC`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Завершает текущее задание печати, удаляя все, что приложение написано на устройстве с момента последнего вызова из `StartDoc` функция-член.|
 |[CDC::AbortPath](#abortpath)|Закрывает и удаляет все пути в контексте устройства.|
@@ -629,13 +629,13 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDC::operator HDC](#operator_hdc)|Извлекает дескриптор контекста устройства.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDC::m_hAttribDC](#m_hattribdc)|Контекст атрибута устройства, используемые этим объектом `CDC` объекта.|
 |[CDC::m_hDC](#m_hdc)|Контекст устройства вывода, используемые этим объектом `CDC` объекта.|
@@ -913,7 +913,7 @@ BOOL Arc(
 Указывает ограничивающий прямоугольник (в логических единицах). Можно передать либо LPRECT или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
 
 *ptStart*<br/>
-Указывает, что x и y координаты точки, определяет дуги начальную точку (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает, что x и y координаты точки, определяет дуги начальную точку (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 *ptEnd*<br/>
 Указывает x - и y координаты точки, которая определяет конечную точку дуги (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или `POINT` структуры или `CPoint` объект для этого параметра.
@@ -980,10 +980,10 @@ BOOL ArcTo(
 Задает координату по оси y точки, который определяет конечную точку дуги (в логических единицах). Эта точка не нужно находиться точно в дуги.
 
 *lpRect*<br/>
-Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](../../mfc/reference/rect-structure1.md) структуру данных или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
+Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру данных или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
 
 *ptStart*<br/>
-Указывает, что x и y координаты точки, определяет дуги начальную точку (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](../../mfc/reference/point-structure1.md) структуру данных или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает, что x и y координаты точки, определяет дуги начальную точку (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуру данных или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 *ptEnd*<br/>
 Указывает x - и y координаты точки, которая определяет конечную точку дуги (в логических единицах). Эта точка не нужно находиться точно в дуги. Можно передать или `POINT` структуру данных или `CPoint` объект для этого параметра.
@@ -1169,7 +1169,7 @@ BOOL Chord(
 Указывает, что x и y координаты точки, определяет хордой начальную точку (в логических единицах). Эта точка не нужно находиться точно в хордой. Можно передать или `POINT` структуры или `CPoint` объект для этого параметра.
 
 *ptEnd*<br/>
-Указывает x и y координаты точки, определяет chord конечной точки (в логических единицах). Эта точка не нужно находиться точно в хордой. Можно передать или [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает x и y координаты точки, определяет chord конечной точки (в логических единицах). Эта точка не нужно находиться точно в хордой. Можно передать или [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Параметры
 
 *lpSize*<br/>
-Указывает на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Указывает на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объектов.
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объектов.
 
 *nCount*<br/>
 Количество точек в массиве.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта. Этот параметр используется для простой пример преобразования один прямоугольник из точек устройства в логические точки.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта. Этот параметр используется для простой пример преобразования один прямоугольник из точек устройства в логические точки.
 
 *lpSize*<br/>
-Указывает на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Указывает на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
+Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
 
 *clrTopLeft*<br/>
 Задает цвет верхней и левой сторон трехмерного прямоугольника.
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты прямоугольника, в данном случае конечное положение объекта прямоугольника.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты прямоугольника, в данном случае конечное положение объекта прямоугольника.
 
 *size*<br/>
 Указывает смещение от верхнего левого угла внешней границы для верхнего левого угла внутреннее границы прямоугольника (то есть толщину границы).
 
 *lpRectLast*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты положения прямоугольника — в данном случае исходной позиции перерисовываться прямоугольника.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты положения прямоугольника — в данном случае исходной позиции перерисовываться прямоугольника.
 
 *sizeLast*<br/>
 Указывает смещение от верхнего левого угла внешней границы для верхнего левого угла внутреннее границы исходный прямоугольник перерисовываться (то есть толщину границы).
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты прямоугольника для отрисовки.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий логические координаты прямоугольника для отрисовки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1675,7 +1675,7 @@ BOOL DrawIcon(
 Определяет дескриптор значка для отрисовки.
 
 *point*<br/>
-Указывает логический x и y координаты верхнего левого угла значка. Вы можете передать [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает логический x и y координаты верхнего левого угла значка. Вы можете передать [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1833,7 +1833,7 @@ int DrawText(
 Указывает число символов в строке. Если *nCount* равно -1, затем *lpszString* предполагается, что длинный указатель на заканчивающуюся нулем строку и `DrawText` автоматически вычисляет количество символов.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий прямоугольник (в логических координатах), в котором текст должен быть в формате.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий прямоугольник (в логических координатах), в котором текст должен быть в формате.
 
 *str*<br/>
 Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) , содержащий указанные символы для отрисовки.
@@ -1890,7 +1890,7 @@ int DrawTextEx(
 Указывает число символов в строке. Если *nCount* равно -1, затем *lpszString* предполагается, что длинный указатель на заканчивающуюся нулем строку и `DrawText` автоматически вычисляет количество символов.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий прямоугольник (в логических координатах), в котором текст должен быть в формате.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий прямоугольник (в логических координатах), в котором текст должен быть в формате.
 
 *str*<br/>
 Объект [CString](../../atl-mfc-shared/reference/cstringt-class.md) , содержащий указанные символы для отрисовки.
@@ -2301,7 +2301,7 @@ BOOL ExtTextOut(
 - ETO_OPAQUE указывает, что текущий цвет фона заполняет прямоугольник. (Вы можете задать и запрашивать текущий цвет фона с [SetBkColor](#setbkcolor) и [GetBkColor](#getbkcolor) функций-членов.)
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуру, которая указывает размеры прямоугольника. Этот параметр может иметь значение NULL. Вы также можете передать [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру, которая указывает размеры прямоугольника. Этот параметр может иметь значение NULL. Вы также можете передать [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
 
 *lpszString*<br/>
 Указывает на строку указанный символ для отображения. Вы также можете передать [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для этого параметра.
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуру, которая содержит логические координаты прямоугольника, который должен быть заполнен. Вы также можете передать [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру, которая содержит логические координаты прямоугольника, который должен быть заполнен. Вы также можете передать [CRect](../../atl-mfc-shared/reference/crect-class.md) объект для этого параметра.
 
 *pBrush*<br/>
 Определяет кисть, которая используется для заполнения прямоугольника.
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](../../mfc/reference/rect-structure1.md) структуру данных или `CRect` объект для этого параметра.
+Указывает ограничивающий прямоугольник (в логических единицах). Можно передать указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру данных или `CRect` объект для этого параметра.
 
 *CLR* задает цвет, используемый для заполнения прямоугольника.
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий логические координаты верхнего левого и правого нижнего углов прямоугольника. Вы также можете передать `CRect` объект для этого параметра.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , содержащий логические координаты верхнего левого и правого нижнего углов прямоугольника. Вы также можете передать `CRect` объект для этого параметра.
 
 *pBrush*<br/>
 Определяет кисть, которая должна использоваться для кадрирования прямоугольника.
@@ -2767,10 +2767,10 @@ BOOL GetCharABCWidths(
 Указывает последний символ в диапазоне символов из текущего шрифта, для которого возвращаются ширины символов.
 
 *lpabc*<br/>
-Указывает на массив из [ABC](../../mfc/reference/abc-structure.md) структур, которые получают ширины символов, при возврате функции. Этот массив должен содержать по крайней мере столько `ABC` структуры, выступающие в диапазоне, определяемом присутствуют символы *nFirstChar* и *nLastChar* параметров.
+Указывает на массив из [ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc) структур, которые получают ширины символов, при возврате функции. Этот массив должен содержать по крайней мере столько `ABC` структуры, выступающие в диапазоне, определяемом присутствуют символы *nFirstChar* и *nLastChar* параметров.
 
 *lpABCF*<br/>
-Указывает буфер, предоставляемую приложением, с массивом [ABCFLOAT](../../mfc/reference/abcfloat-structure.md) структур для получения ширины символов, при возврате функции. Значения ширины, возвращенной этой функцией, в формате с плавающей запятой IEEE.
+Указывает буфер, предоставляемую приложением, с массивом [ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat) структур для получения ширины символов, при возврате функции. Значения ширины, возвращенной этой функцией, в формате с плавающей запятой IEEE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, который должен получить размеры прямоугольника.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, который должен получить размеры прямоугольника.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>Параметры
 
 *lpColorAdjust*<br/>
-Указывает на [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) структуру данных для получения значения цвета коррекции.
+Указывает на [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) структуру данных для получения значения цвета коррекции.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры данных или `CPoint` помещаются объекты, где конечные точки линии и кривой контрольные точки.
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры данных или `CPoint` помещаются объекты, где конечные точки линии и кривой контрольные точки.
 
 *lpTypes*<br/>
 Указывается массив байтов, где будут размещаться типы вершин. Значения: одно из следующих:
@@ -3531,7 +3531,7 @@ int GetPath(
 - PT_CLOSEFIGURE указывает, что автоматически замкнутой после соответствующей строки или кривой. Фигура замыкается путем рисования линии из линий или кривых конечной точки к точке, соответствующее последней PT_MOVETO.
 
 *nCount*<br/>
-Указывает общее число [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры данных, которые могут быть помещены в *lpPoints* массива. Это значение должно быть таким же, как количество байтов, могут быть помещены в *lpTypes* массива.
+Указывает общее число [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры данных, которые могут быть помещены в *lpPoints* массива. Это значение должно быть таким же, как количество байтов, могут быть помещены в *lpTypes* массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3578,7 +3578,7 @@ COLORREF GetPixel(POINT point) const;
 
 Не все устройства поддерживают функцию `GetPixel`. Дополнительные сведения см. в разделе возможность растровых RC_BITBLT под [GetDeviceCaps](#getdevicecaps) функция-член.
 
-`GetPixel` Функция-член имеет две формы. Первая принимает два значения координат; Вторая принимает либо [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+`GetPixel` Функция-член имеет две формы. Первая принимает два значения координат; Вторая принимает либо [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3841,7 +3841,7 @@ BOOL GetTextExtentExPointI(
 Указатель на массив целых чисел, получающий экстентов частичного глифа. Каждый элемент в массиве дает расстояние в логических единицах между началом массива индексов глифов и одно из глифы, помещается в место, определяемое *nMaxExtent*. Несмотря на то, что этот массив должен иметь по крайней мере столько же элементов, как индексы глифов, определяемое *cgi*, функция заполняет массив с экстентами, только для столько индексы глифов, как задаются *lpnFit*. Если *lpnDx* имеет значение NULL, функция не вычисляет ширину частичную строку.
 
 *lpSize*<br/>
-Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, который получает размеры глифа массив, в логических единицах. Это значение не может иметь значение NULL.
+Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры, который получает размеры глифа массив, в логических единицах. Это значение не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3871,7 +3871,7 @@ BOOL GetTextExtentPointI(
 Указывает число глифов в массиве, на которые указывают *pgiIn*.
 
 *lpSize*<br/>
-Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, который получает размеры глифа массив, в логических единицах. Это значение не может иметь значение NULL.
+Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры, который получает размеры глифа массив, в логических единицах. Это значение не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Параметры
 
 *lpSize*<br/>
-Указывает на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Указывает на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Параметры
 
 *lpSize*<br/>
-Указывает на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Указывает на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает массив точек. Каждая точка в массиве является [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+Указывает массив точек. Каждая точка в массиве является [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 *nCount*<br/>
 Количество точек в массиве.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта. Этот параметр используется для сопоставления прямоугольник из логической единицы устройства распространенный случай.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта. Этот параметр используется для сопоставления прямоугольник из логической единицы устройства распространенный случай.
 
 *lpSize*<br/>
-Указывает на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Указывает на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -4713,7 +4713,7 @@ BOOL Pie(
 Указывает ограничивающий прямоугольник. Можно передать или `CRect` объект или указатель на `RECT` структуры для этого параметра.
 
 *ptStart*<br/>
-Указывает начальную точку дуги. Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает начальную точку дуги. Эта точка не нужно находиться точно в дуги. Можно передать или [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 *ptEnd*<br/>
 Указывает конечную точку дуги. Эта точка не нужно находиться точно в дуги. Можно передать или `POINT` структуры или `CPoint` объект для этого параметра.
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры данных, которые содержат конечные точки и контрольные точки из spline(s).
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры данных, которые содержат конечные точки и контрольные точки из spline(s).
 
 *nCount*<br/>
 Указывает количество точек в *lpPoints* массива. Это значение должно быть одно более трех раз номер сплайнов для отрисовки, так как каждый сплайна Bzier требуется две контрольные точки и конечной точки и начальной сплайн необходима начальную точку.
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) указывает структур данных, который содержит конечные точки и управления.
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) указывает структур данных, который содержит конечные точки и управления.
 
 *nCount*<br/>
 Указывает количество точек в *lpPoints* массива. Это значение должно быть три раза число сплайны для отрисовки, так как каждый Bzier сплайн требует двух контрольных точек и конечной точки.
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры данных, содержащий конечные точки для каждого сегмента и конечные точки и контрольные точки для каждого Bzier сплайна.
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры данных, содержащий конечные точки для каждого сегмента и конечные точки и контрольные точки для каждого Bzier сплайна.
 
 *lpTypes*<br/>
 Указывает на массив, указывающее, как каждая точка в *lpPoints* используется массив. Значения могут быть одно из следующих значений:
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>Параметры
 
 *lpPoints*<br/>
-Указывает на массив из [ТОЧКИ](../../mfc/reference/point-structure1.md) структуры данных, которые содержит вершины строки.
+Указывает на массив из [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры данных, которые содержит вершины строки.
 
 *nCount*<br/>
 Указывает количество точек в массиве.
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>Параметры
 
 *lpColorAdjust*<br/>
-Указывает на [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md) структуру данных, содержащую значение коррекции цвета.
+Указывает на [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment) структуру данных, содержащую значение коррекции цвета.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -6219,7 +6219,7 @@ BOOL SetPixelV(
 Задает цвет, используемый для закрашивания точку.
 
 *point*<br/>
-Указывает логических x и y координаты точки, чтобы задать. Можно передать или [ТОЧКИ](../../mfc/reference/point-structure1.md) структуру данных или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
+Указывает логических x и y координаты точки, чтобы задать. Можно передать или [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуру данных или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объект для этого параметра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -6322,16 +6322,16 @@ int SetStretchBltMode(int nStretchMode);
 *nStretchMode*<br/>
 Указывает режим растягивания. Это может быть любой из следующих значений:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |BLACKONWHITE|Выполняет операцию логического и с помощью значения цветов для точек исключенные и существующих. Если точечный рисунок монохромную битовую карту, этот режим сохраняет области черных пикселей за счет белые пиксели.|
 |COLORONCOLOR|Удаляет пиксели. Этот режим удаляет все исключенные строки пикселей, не пытаясь сохранить свои данные.|
 |ПОЛУТОНОВЫЕ|Сопоставляет пикселов из исходного прямоугольника блоки пикселов в прямоугольник назначения. Средний цвет на конечном блоке пикселей аппроксимирует цвет пикселей источника.|
 ||После установки РАСТР растягивания режим, приложение должно вызвать функцию Win32 [SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex) для настройки начала координат кистей. Если не удается сделать это, возникает рассогласование кисти.|
-|STRETCH_ANDSCANS|**Windows 95/98**: совпадение с кодом BLACKONWHITE|
-|STRETCH_DELETESCANS|**Windows 95/98**: совпадение с кодом COLORONCOLOR|
-|STRETCH_HALFTONE|**Windows 95/98**: совпадение с кодом ПОЛУТОНОВЫЕ.|
-|STRETCH_ORSCANS|**Windows 95/98**: совпадение с кодом WHITEONBLACK|
+|STRETCH_ANDSCANS|**Windows 95/98**: Так же, как BLACKONWHITE|
+|STRETCH_DELETESCANS|**Windows 95/98**: Так же, как COLORONCOLOR|
+|STRETCH_HALFTONE|**Windows 95/98**: Совпадает со значением ПОЛУТОНОВЫЕ.|
+|STRETCH_ORSCANS|**Windows 95/98**: Так же, как WHITEONBLACK|
 |WHITEONBLACK|Выполняет операцию логического или с помощью значения цветов для точек исключенные и существующих. Если точечный рисунок монохромную битовую карту, этот режим сохраняет белые пиксели за счет области черных пикселей.|
 
 ### <a name="return-value"></a>Возвращаемое значение

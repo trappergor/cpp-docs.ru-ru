@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463015"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178984"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 
@@ -626,7 +626,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления панели инструментов. Панели инструментов всегда должен иметь стиль WS_CHILD. Кроме того, можно указать любое сочетание стили окна и панели инструментов, как описано в разделе **"Примечания"**.
 
-*Rect*<br/>
+*rect*<br/>
 При необходимости указывает размер и положение элемента управления панели инструментов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
 
 *pParentWnd*<br/>
@@ -680,7 +680,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль элемента управления панели инструментов. Панели инструментов всегда должен иметь стиль WS_CHILD. Кроме того, можно указать любое сочетание стили окна и панели инструментов, как описано в разделе **"Примечания"** раздел [создать](#create).
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>Параметры
 
 *pSize*<br/>
-Указатель на [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуру, которая получает размер элементов.
+Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуру, которая получает размер элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1247,7 +1247,7 @@ int GetState(int nID) const;
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция особенно полезна в том случае, если вы хотите получить более чем одно из состояний кнопки. Чтобы просто получить одно состояние, используйте один из следующих функций-членов: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden ](#isbuttonhidden), или [IsButtonIndeterminate](#isbuttonindeterminate). Тем не менее `GetState` функция-член является единственным способом для обнаружения состояния кнопки TBSTATE_WRAP.
+Эта функция особенно полезна в том случае, если вы хотите получить более чем одно из состояний кнопки. Чтобы просто получить одно состояние, используйте один из следующих функций-членов: [IsButtonEnabled](#isbuttonenabled), [IsButtonChecked](#isbuttonchecked), [IsButtonPressed](#isbuttonpressed), [IsButtonHidden](#isbuttonhidden), или [IsButtonIndeterminate](#isbuttonindeterminate). Тем не менее `GetState` функция-член является единственным способом для обнаружения состояния кнопки TBSTATE_WRAP.
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ BOOL SetState(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция особенно полезна в том случае, если вы хотите установить более одного из состояний кнопки. Чтобы просто задать одно состояние, используйте один из следующих функций-членов: [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [не определено](#indeterminate), или [PressButton](#pressbutton).
+Эта функция особенно полезна в том случае, если вы хотите установить более одного из состояний кнопки. Чтобы просто задать одно состояние, используйте один из следующих функций-членов. [EnableButton](#enablebutton), [CheckButton](#checkbutton), [HideButton](#hidebutton), [неопределенном](#indeterminate), или [PressButton](#pressbutton).
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

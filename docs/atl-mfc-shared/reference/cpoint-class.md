@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 5df8dbe03a59f899f2157eff842218e91e8f40dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500624"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178073"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -55,9 +55,9 @@ class CPoint : public tagPOINT
 
 ## <a name="remarks"></a>Примечания
 
-Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](../../mfc/reference/point-structure.md) структуры.
+Он также включает функции-члены для управления `CPoint` и [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры.
 
-Объект `CPoint` объект можно использовать везде, где `POINT` используется структура. Операторы этого класса, которые взаимодействуют с «размер» допускает оба [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры, так как они взаимозаменяемы.
+Объект `CPoint` объект можно использовать везде, где `POINT` используется структура. Операторы этого класса, которые взаимодействуют с «размер» допускает оба [CSize](../../atl-mfc-shared/reference/csize-class.md) объектов или [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры, так как они взаимозаменяемы.
 
 > [!NOTE]
 >  Этот класс является производным от `tagPOINT` структуры. (Имя `tagPOINT` представляет собой наименее часто используемым `POINT` структуры.) Это означает, что данные-члены `POINT` структуры, `x` и `y`, являются членами доступные данные `CPoint`.
@@ -96,10 +96,10 @@ CPoint(LPARAM dwPoint) throw();
 Определяет значение члена `y` структуры `CPoint`.
 
 *initPt*<br/>
-[ТОЧКА](../../mfc/reference/point-structure.md) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.
+[ТОЧКА](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` , определяет значения, используемые для инициализации `CPoint`.
 
 *initSize*<br/>
-[РАЗМЕР](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , определяет значения, используемые для инициализации `CPoint`.
+[РАЗМЕР](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) , определяет значения, используемые для инициализации `CPoint`.
 
 *dwPoint*<br/>
 Наборы `x` члена младшее слово из *dwPoint* и `y` член для старшего слова из *dwPoint*.
@@ -153,11 +153,11 @@ void Offset(SIZE size) throw();
 *Смещение*<br/>
 Указывает величина смещения `y` членом `CPoint`.
 
-*точка*<br/>
-Указывает объем ( [ТОЧКИ](../../mfc/reference/point-structure.md) или `CPoint`) смещения `CPoint`.
+*point*<br/>
+Указывает объем ( [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) или `CPoint`) смещения `CPoint`.
 
 *size*<br/>
-Указывает объем ( [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.
+Указывает объем ( [размер](/windows/desktop/api/windef/ns-windef-tagsize) или [CSize](../../atl-mfc-shared/reference/csize-class.md)) смещения `CPoint`.
 
 ### <a name="example"></a>Пример
 
@@ -173,8 +173,8 @@ BOOL operator==(POINT point) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или `CPoint` объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -194,8 +194,8 @@ BOOL operator!=(POINT point) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или `CPoint` объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -217,10 +217,10 @@ void operator+=(POINT point) throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -246,10 +246,10 @@ void operator-=(POINT point) throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -276,13 +276,13 @@ CRect operator+(const RECT* lpRect) const throw();
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 *lpRect*<br/>
-Содержит указатель на [RECT](../../mfc/reference/rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+Содержит указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -311,14 +311,14 @@ CPoint operator-() const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
+*point*<br/>
+Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) объекта.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.
 
 *lpRect*<br/>
-Указатель на [RECT](../../mfc/reference/rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
+Указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -344,7 +344,7 @@ CPoint operator-() const throw();
 
 [Пример MFC MDI](../../visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Структура POINT](../../mfc/reference/point-structure.md)<br/>
+[Структура POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)
 

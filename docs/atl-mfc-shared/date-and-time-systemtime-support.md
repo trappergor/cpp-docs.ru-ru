@@ -1,5 +1,5 @@
 ---
-title: 'Дата и время: поддержка SYSTEMTIME'
+title: 'Дата и время: Поддержка SYSTEMTIME'
 ms.date: 11/04/2016
 f1_keywords:
 - SYSTEMTIME
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - dates [C++], MFC
 - formatting [C++], time
 ms.assetid: 201528e4-2ffa-48fc-af8f-203aa86d942a
-ms.openlocfilehash: 6074eff2db45bfa69f83d7c45be1203dd19cc987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: db19d236d0f0d8672f08c808237de471bf5bc64d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549920"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177737"
 ---
-# <a name="date-and-time-systemtime-support"></a>Дата и время: поддержка SYSTEMTIME
+# <a name="date-and-time-systemtime-support"></a>Дата и время: Поддержка SYSTEMTIME
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md) класс содержит конструкторы, которые принимают время системы и файлов из Win32. Если вы используете в этих целях объекты `CTime`, вам следует соответствующим образом изменить их инициализацию, следуя указаниям из данной статьи.
 
-Сведения о структуре SYSTEMTIME см. в разделе [SYSTEMTIME](../mfc/reference/systemtime-structure.md). Сведения о структуре FILETIME см. в разделе [FILETIME](../mfc/reference/filetime-structure.md).
+Сведения о структуре SYSTEMTIME см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950). Сведения о структуре FILETIME см. в разделе [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284).
 
 MFC все еще предоставляет конструкторы `CTime`, которые принимают аргументы в стиле MS-DOS, но, начиная с MFC версии 3.0, класс `CTime` также поддерживает конструктор, который принимает структуру `SYSTEMTIME` Win32, и другой конструктор, который принимает структуру `FILETIME` Win32.
 

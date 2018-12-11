@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 9489e1a36eac89ccff510c3c0fae467c2bb2deab
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694625"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179010"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 
@@ -199,7 +199,7 @@ class CFrameWndEx : public CFrameWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Настраивает макет элемент клиента OLE и клиентской области рамки.|
 |`CFrameWndEx::AddDockSite`|Этот метод не используется.|
@@ -767,7 +767,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Позиция точки.
 
 *dwBarAlignment*<br/>
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpCreateStruct*<br/>
-[in] Указатель на [структура CREATESTRUCT](../../mfc/reference/createstruct-structure.md) для нового кадра.
+[in] Указатель на [структура CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) для нового кадра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1240,7 +1240,7 @@ afx_msg void OnLButtonDown(
 *nFlags*<br/>
 [in] Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONDOWN уведомления](/windows/desktop/inputdev/wm-lbuttondown).
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает координат x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1260,7 +1260,7 @@ afx_msg void OnLButtonUp(
 *nFlags*<br/>
 [in] Указывает, нажал ли пользователь клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_LBUTTONUP уведомления](/windows/desktop/inputdev/wm-lbuttonup).
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает координат x и y указателя, относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1338,7 +1338,7 @@ afx_msg void OnMouseMove(
 *nFlags*<br/>
 [in] Указывает, является ли пользователь нажал клавиши-модификаторы. Возможные значения см. параметр *wParam* в [WM_MOUSEMOVE уведомления](/windows/desktop/inputdev/wm-mousemove).
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает x и y координаты указателя относительно верхнего левого угла окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1411,7 +1411,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Расположение указателя в координатах экрана.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1435,7 +1435,7 @@ afx_msg void OnNcMouseMove(
 *nHitTest*<br/>
 [in] Указатель попадание перечисляемое значение. Список возможных значений см. в разделе [уведомлением WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest).
 
-*точка*<br/>
+*point*<br/>
 [in] Расположение указателя в координатах экрана.
 
 ### <a name="remarks"></a>Примечания
@@ -1680,7 +1680,7 @@ afx_msg void OnSize(
 *nType*<br/>
 [in] Тип изменения размера. Возможные значения см. параметр *wParam* в [уведомлений WM_SIZE](/windows/desktop/winmsg/wm-size).
 
-*CX*<br/>
+*cx*<br/>
 [in] Новая ширина окна в пикселях.
 
 *CY*<br/>
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in] Край кадра, который перемещается. См. параметр *wParam* в [WM_SIZING уведомления](/windows/desktop/winmsg/wm-sizing).
 
 *pRect*<br/>
-[in, out] Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](../../mfc/reference/rect-structure1.md) структура, содержащая координаты экрана.
+[in, out] Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структура, содержащая координаты экрана.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>Параметры
 
 *lpwndpos*<br/>
-[in] Указатель на [WINDOWPOS](../../mfc/reference/windowpos-structure1.md) структуру, содержащую новый размер и положение.
+[in] Указатель на [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos) структуру, содержащую новый размер и положение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1898,7 +1898,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты экрана точки для проверки.
 
 *nSensitivity*<br/>
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>Параметры
 
 *pMsg*<br/>
-[in] Указатель на [MSG](../../mfc/reference/msg-structure1.md) структуру, содержащую сообщение для обработки.
+[in] Указатель на [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) структуру, содержащую сообщение для обработки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

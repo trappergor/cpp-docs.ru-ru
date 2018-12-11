@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 91cf9b2035bf24c16007ed6021772c7d5344fc68
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333271"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178783"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpCompareItemStruct*<br/>
-Длинный указатель на [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md) структуры.
+Длинный указатель на [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -382,8 +382,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль поля со списком. Применить любое сочетание [поле со списком стилей](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) в поле.
 
-*Rect*<br/>
-Указывает положение и размер поля со списком. Может быть [структура RECT](../../mfc/reference/rect-structure1.md) или `CRect` объекта.
+*rect*<br/>
+Указывает положение и размер поля со списком. Может быть [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect` объекта.
 
 *pParentWnd*<br/>
 Указывает поле со списком родительского окна (обычно `CDialog`). Он не должен иметь значение NULL.
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDeleteItemStruct*<br/>
-Длинный указатель на Windows [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md) структуру, содержащую сведения о удаляемого элемента. См. в разделе [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) описание этой структуры.
+Длинный указатель на Windows [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct) структуру, содержащую сведения о удаляемого элемента. См. в разделе [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem) описание этой структуры.
 
 ### <a name="remarks"></a>Примечания
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDrawItemStruct*<br/>
-Указатель на [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе документа требуется.
+Указатель на [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структуру, содержащую сведения о типе документа требуется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>Параметры
 
 *lprect*<br/>
-Указывает на [структура RECT](../../mfc/reference/rect-structure1.md) который используется для отправки координаты.
+Указывает на [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect) который используется для отправки координаты.
 
 ### <a name="example"></a>Пример
 
@@ -1028,7 +1028,7 @@ int InitStorage(
 
 Вызывайте эту функцию перед добавлением большое число элементов в списке часть `CComboBox`.
 
-Windows 95/98 только: *wParam* ограничен 16-разрядных значений. Это означает, что списки с множественным не может содержать более 32 767 элементы. Несмотря на то, что количество элементов является ограниченным, общий размер элементов в поле со списком ограничено только объемом доступной памяти.
+Windows 95/98 только: *WParam* ограничен 16-разрядных значений. Это означает, что списки с множественным не может содержать более 32 767 элементы. Несмотря на то, что количество элементов является ограниченным, общий размер элементов в поле со списком ограничено только объемом доступной памяти.
 
 Эта функция помогает ускорить инициализации списка полей, имеющих большое количество элементов (более 100). Он выделяет указанный объем памяти, чтобы последующие [AddString](#addstring), [InsertString](#insertstring), и [Dir](#dir) функции принимают кратчайшие сроки. Оценки можно использовать для параметров. Если вы пересмотреть, выделения дополнительной памяти; Если вы недооцените требования, обычного выделения используется для элементов, которые вычитаются из суммы предварительно.
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpMeasureItemStruct*<br/>
-Длинный указатель на [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.
+Длинный указатель на [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) структуры.
 
 ### <a name="remarks"></a>Примечания
 

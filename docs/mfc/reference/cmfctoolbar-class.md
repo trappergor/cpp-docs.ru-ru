@@ -311,18 +311,18 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524674"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178971"
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 
 `CMFCToolBar` Класс похож на [класс CToolBar](../../mfc/reference/ctoolbar-class.md), но обеспечивает дополнительную поддержку возможностей пользовательского интерфейса. Они включают плоские панели инструментов, панели инструментов с наиболее часто используемыми изображениями, крупные значки, кнопки пролистывания страниц, заблокированные панели инструментов, элементы управления главной панели, текст под изображениями, фоновые изображения и панели инструментов с вкладками. Класс `CMFCToolBar` также содержит встроенную поддержку пользовательской настройки панелей инструментов и меню, перетаскивания между панелями элементов и меню, кнопки поля со списком, кнопки редактируемых полей, различных палитр и кнопок сворачивания.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -519,7 +519,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 1. Вызовите [CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking) указывать стиль закрепления.
 
-Чтобы вставить отдельную кнопку, например, поле со списком или раскрывающемся списке панели инструментов, зарезервировать фиктивный кнопки в родительский ресурс и заменить фиктивные кнопки во время выполнения с помощью [CMFCToolBar::ReplaceButton](#replacebutton). Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../walkthrough-putting-controls-on-toolbars.md).
+Чтобы вставить отдельную кнопку, например, поле со списком или раскрывающемся списке панели инструментов, зарезервировать фиктивный кнопки в родительский ресурс и заменить фиктивные кнопки во время выполнения с помощью [CMFCToolBar::ReplaceButton](#replacebutton). Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение элементов управления на панели инструментов](../walkthrough-putting-controls-on-toolbars.md).
 
 `CMFCToolBar` является базовым классом для классов библиотеки MFC [класс CMFCMenuBar](../../mfc/reference/cmfcmenubar-class.md), [класс CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md), и [класс CMFCDropDownToolBar](../../mfc/reference/cmfcdropdowntoolbar-class.md).
 
@@ -1123,7 +1123,7 @@ virtual void DrawSeparator(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, расположения, где рисуется разделителя в пикселях.
 
 *bHorz*<br/>
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 Вызовите этот метод, чтобы включить отражение команды для кнопки панели инструментов, которые содержат внедренные элементы управления, такие как поля со списком.
 
-Дополнительные сведения об отражении команду см. в разделе [TN062: отражения для Windows Управление сообщениями](../../mfc/tn062-message-reflection-for-windows-controls.md).
+Дополнительные сведения об отражении команду см. в разделе [TN062: Сообщения отражение для элементов управления Windows](../../mfc/tn062-message-reflection-for-windows-controls.md).
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -1271,7 +1271,7 @@ static CMFCToolBar* __stdcall FromHandlePermanent(HWND hwnd);
 
 ### <a name="parameters"></a>Параметры
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Дескриптор окна для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2146,7 +2146,7 @@ virtual int HitTest(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка, которое необходимо проверить, в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2491,7 +2491,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод получает указатель на [структурой MSG](../../mfc/reference/msg-structure1.md) путем вызова `CWnd::GetCurrentMessage`. Затем он сравнивает HWND кнопки с `MSG::lParam` и `MSG::hwnd` элементов и проверяет, была ли кнопки источник команды.
+Этот метод получает указатель на [структурой MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg) путем вызова `CWnd::GetCurrentMessage`. Затем он сравнивает HWND кнопки с `MSG::lParam` и `MSG::hwnd` элементов и проверяет, была ли кнопки источник команды.
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 

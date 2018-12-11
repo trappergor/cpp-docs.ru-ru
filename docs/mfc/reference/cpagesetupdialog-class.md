@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544889"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178086"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION отключает элемент управления диалогового окна ориентации страницы.
 
-- Вызывает PSD_RETURNDEFAULT `CPageSetupDialog` для возврата [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структур, которые были инициализированы для на принтере по умолчанию без отображения диалоговое окно. Предполагается, что оба `hDevNames` и `hDevMode` имеют значение NULL; в противном случае функция возвращает ошибку. Если на принтере по умолчанию поддерживается старый драйвер принтера (более ранних, чем Windows версии 3.0), только `hDevNames` возвращается; `hDevMode` имеет значение NULL.
+- Вызывает PSD_RETURNDEFAULT `CPageSetupDialog` для возврата [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структур, которые были инициализированы для на принтере по умолчанию без отображения диалоговое окно. Предполагается, что оба `hDevNames` и `hDevMode` имеют значение NULL; в противном случае функция возвращает ошибку. Если на принтере по умолчанию поддерживается старый драйвер принтера (более ранних, чем Windows версии 3.0), только `hDevNames` возвращается; `hDevMode` имеет значение NULL.
 
 - PSD_DISABLEPAPER отключает элемент управления для выбора бумаги.
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-Создает контекст устройства принтера из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](../../mfc/reference/devnames-structure.md) структуры.
+Создает контекст устройства принтера из [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea) и [DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames) структуры.
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>Параметры
 
 *lpRectMargins*<br/>
-Указатель на [RECT](rect-structure.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий (в дюймах 1/1000 или 1/100 мм) поля печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
+Указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , описывающий (в дюймах 1/1000 или 1/100 мм) поля печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
 
 *lpRectMinMargins*<br/>
 Указатель на `RECT` структуры или `CRect` , описывающий (в дюймах 1/1000 или 1/100 мм) минимальный размер полей печати для выбранного принтера. Передайте NULL для этого параметра, если вы не заинтересованы в этот прямоугольник.
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - Область WM_PSD_YAFULLPAGERECT представление обратный адрес. Эта область распространяется на краю области страницы примера.
 
 *lpRect*<br/>
-Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](rect-structure.md) объект, содержащий координаты области рисования.
+Указатель на [CRect](../../atl-mfc-shared/reference/crect-class.md) или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) объект, содержащий координаты области рисования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

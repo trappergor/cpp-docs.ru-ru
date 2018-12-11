@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547320"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178468"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 
@@ -563,11 +563,11 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ссылка на прямоугольник, ограничивающий кнопки.
 
 *uiState*<br/>
-[in] Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [drawitemstruct-структура](../../mfc/reference/drawitemstruct-structure.md) раздела.
+[in] Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [drawitemstruct-структура](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) раздела.
 
 ### <a name="remarks"></a>Примечания
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in] Ссылка на прямоугольник, ограничивающий кнопки.
 
 *uiState*<br/>
-[in] Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [drawitemstruct-структура](../../mfc/reference/drawitemstruct-structure.md) раздела.
+[in] Текущее состояние кнопки. Дополнительные сведения см. в разделе `itemState` членом [drawitemstruct-структура](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) раздела.
 
 ### <a name="remarks"></a>Примечания
 
@@ -639,7 +639,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ссылка на прямоугольник, ограничивающий кнопки.
 
 *strText*<br/>

@@ -34,16 +34,16 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: f2ecaeb4f3b434ef7b57573f2ea379719aebcbff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520040"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178757"
 ---
 # <a name="crect-class"></a>Класс CRect
 
-Аналогичную Windows [RECT](../../mfc/reference/rect-structure.md) структуры.
+Аналогичную Windows [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -120,7 +120,7 @@ class CRect : public tagRECT
 
 Будьте осторожны при обработке `CRect` с [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp) и [CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp) функций-членов. Таким образом, что области y имеет отрицательное значение, как в случае режима сопоставления для контекста отображения `MM_LOENGLISH`, затем `CDC::DPtoLP` преобразует `CRect` таким образом, больше, чем нижней его свойство top. Функции, такие как `Height` и `Size` будет возвращать отрицательные значения высоты преобразованный `CRect`, и прямоугольник будет не было нормализовано.
 
-Когда с помощью перегружены `CRect` операторы, первый операнд должен иметь `CRect`; второй может быть либо [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` объекта.
+Когда с помощью перегружены `CRect` операторы, первый операнд должен иметь `CRect`; второй может быть либо [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` объекта.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>Параметры
 
 *lpSrcRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` объект, который требуется скопировать.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` объект, который требуется скопировать.
 
 ### <a name="example"></a>Пример
 
@@ -301,12 +301,12 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 Указывает нижней части `CRect`.
 
 *srcRect*<br/>
-Ссылается на [RECT](../../mfc/reference/rect-structure.md) структуру с координаты `CRect`.
+Ссылается на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуру с координаты `CRect`.
 
 *lpSrcRect*<br/>
 Указывает на `RECT` структуру с координаты `CRect`.
 
-*точка*<br/>
+*point*<br/>
 Указывает исходную точку для прямоугольника для отправки. Соответствует верхнего левого угла.
 
 *size*<br/>
@@ -382,10 +382,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 Указывает количество единиц для deflate верхней и нижней части `CRect`.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц для deflate `CRect`. `cx` Значение указывает количество единиц для deflate левую и правую части и `cy` значение указывает количество единиц для deflate сверху и снизу.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) или [CSize](csize-class.md) , указывающий число единиц для deflate `CRect`. `cx` Значение указывает количество единиц для deflate левую и правую части и `cy` значение указывает количество единиц для deflate сверху и снизу.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , указывающее количество единиц для каждой стороны deflate.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , указывающее количество единиц для каждой стороны deflate.
 
 *l*<br/>
 Указывает количество единиц в левой части deflate `CRect`.
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , содержащий координаты верхнего левого и правого нижнего угла прямоугольника.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , содержащий координаты верхнего левого и правого нижнего угла прямоугольника.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -508,10 +508,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 Указывает количество единиц, на которую увеличится верхней и нижней части `CRect`.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) или [CSize](csize-class.md) , указывающий число единиц, на которую увеличится `CRect`. `cx` Значение указывает количество единиц, на которую увеличится левую и правую части и `cy` значение указывает количество единиц, на которую увеличится сверху и снизу.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) или [CSize](csize-class.md) , указывающий число единиц, на которую увеличится `CRect`. `cx` Значение указывает количество единиц, на которую увеличится левую и правую части и `cy` значение указывает количество единиц, на которую увеличится сверху и снизу.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , указывающий число единиц, на которую увеличится каждой стороны.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , указывающий число единиц, на которую увеличится каждой стороны.
 
 *l*<br/>
 Указывает количество единиц, на которую увеличится в левой части `CRect`.
@@ -552,7 +552,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Параметры
 
 *lpRect1*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` объект, который содержит исходный прямоугольник.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` объект, который содержит исходный прямоугольник.
 
 *lpRect2*<br/>
 Указывает на `RECT` структуры или `CRect` объект, который содержит исходный прямоугольник.
@@ -696,7 +696,7 @@ void MoveToXY(POINT point) throw();
 *y*<br/>
 Абсолютный Координата y верхнего левого угла прямоугольника.
 
-*точка*<br/>
+*point*<br/>
 Объект `POINT` структуры, указывающий абсолютный верхнего левого угла прямоугольника.
 
 ### <a name="example"></a>Пример
@@ -746,7 +746,7 @@ void NormalizeRect() throw();
 Прямоугольник нормализуется для позиционирования квадрантами четвертый, которой обычно используется Windows для координат. `NormalizeRect` Сравнивает значения верхней и нижней и меняет местами, если он больше нижней. Аналогичным образом он меняет местами значения левого и правого, слева больше значения справа. Эта функция полезна при работе с режимами другого сопоставления и обращена прямоугольники.
 
 > [!NOTE]
-> Следующие `CRect` функции-члены требуют нормализованное прямоугольники для правильной работы: [высота](#height), [ширины](#width), [размер](#size), [ IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [ SubtractRect](#subtractrect), [оператор ==](#operator_eq_eq), [оператор! =](#operator_neq), [оператор &#124; ](#operator_or), [оператор &#124;=](#operator_or_eq), [оператор &](#operator_amp), и [оператор & =](#operator_amp_eq).
+> Следующие `CRect` функции-члены требуют нормализованное прямоугольники для правильной работы: [Высота](#height), [ширины](#width), [размер](#size), [IsRectEmpty](#isrectempty), [PtInRect](#ptinrect), [EqualRect](#equalrect), [UnionRect](#unionrect), [IntersectRect](#intersectrect), [SubtractRect](#subtractrect), [оператор ==](#operator_eq_eq), [оператор! =](#operator_neq), [оператор &#124; ](#operator_or), [оператор &#124;=](#operator_or_eq), [оператор &](#operator_amp), и [оператор & =](#operator_amp_eq).
 
 ### <a name="example"></a>Пример
 
@@ -776,11 +776,11 @@ void OffsetRect(SIZE size) throw();
 *y*<br/>
 Указывает степень перемещения вверх или вниз. Оно должно быть отрицательным для перемещения вверх.
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](cpoint-class.md) объект, указывающий обоим измерениям, которое требуется переместить.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](cpoint-class.md) объект, указывающий обоим измерениям, которое требуется переместить.
 
 *size*<br/>
-Содержит [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) объект, указывающий обоим измерениям, которое требуется переместить.
+Содержит [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](csize-class.md) объект, указывающий обоим измерениям, которое требуется переместить.
 
 ### <a name="remarks"></a>Примечания
 
@@ -833,7 +833,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>Параметры
 
 *srcRect*<br/>
-Ссылается на исходный прямоугольник. Может быть [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+Ссылается на исходный прямоугольник. Может быть [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="example"></a>Пример
 
@@ -855,8 +855,8 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
-Ссылается на исходный прямоугольник. Может быть [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+*rect*<br/>
+Ссылается на исходный прямоугольник. Может быть [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -895,8 +895,8 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
-Ссылается на исходный прямоугольник. Может быть [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+*rect*<br/>
+Ссылается на исходный прямоугольник. Может быть [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -937,14 +937,14 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.
+*point*<br/>
+Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороне `CRect`.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороне `CRect`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -975,14 +975,14 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.
+*point*<br/>
+Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения прямоугольника.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения прямоугольника.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , содержащий число единиц для каждой из сторон deflate `CRect`.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , содержащий число единиц для каждой из сторон deflate `CRect`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1011,8 +1011,8 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
-Содержит [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+*rect*<br/>
+Содержит [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1035,8 +1035,8 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
-Содержит `CRect` или [RECT](../../mfc/reference/rect-structure.md).
+*rect*<br/>
+Содержит `CRect` или [RECT](/windows/desktop/api/windef/ns-windef-tagrect).
 
 ### <a name="remarks"></a>Примечания
 
@@ -1068,14 +1068,14 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения возвращаемое значение.
+*point*<br/>
+Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](cpoint-class.md) , указывающий число единиц для перемещения возвращаемое значение.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения возвращаемое значение.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или [CSize](csize-class.md) , указывающий число единиц для перемещения возвращаемое значение.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороны возвращаемого значения.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , содержащий число единиц, на которую увеличится каждой стороны возвращаемого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1111,14 +1111,14 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Объект [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или `CPoint` , указывающий число единиц для перемещения возвращаемое значение.
+*point*<br/>
+Объект [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или `CPoint` , указывающий число единиц для перемещения возвращаемое значение.
 
 *size*<br/>
-Объект [размер](https://msdn.microsoft.com/library/windows/desktop/dd145106) структуры или `CSize` , указывающий число единиц для перемещения возвращаемое значение.
+Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры или `CSize` , указывающий число единиц для перемещения возвращаемое значение.
 
 *lpRect*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` , содержащий число единиц для deflate каждой стороны возвращаемого значения.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` , содержащий число единиц для deflate каждой стороны возвращаемого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1153,7 +1153,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>Параметры
 
 *rect2*<br/>
-Содержит [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+Содержит [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1190,7 +1190,7 @@ rect2) const throw();
 ### <a name="parameters"></a>Параметры
 
 *rect2*<br/>
-Содержит [RECT](../../mfc/reference/rect-structure.md) или `CRect`.
+Содержит [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1225,8 +1225,8 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
-Содержит [ТОЧКИ](../../mfc/reference/point-structure.md) структуры или [CPoint](cpoint-class.md) объекта.
+*point*<br/>
+Содержит [ТОЧКИ](/windows/desktop/api/windef/ns-windef-tagpoint) структуры или [CPoint](cpoint-class.md) объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1353,7 +1353,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>Параметры
 
 *lpRectSrc1*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) структуры или `CRect` объект, из которого необходимо вычесть прямоугольник.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или `CRect` объект, из которого необходимо вычесть прямоугольник.
 
 *lpRectSrc2*<br/>
 Указывает на `RECT` структуры или `CRect` объекта, которое необходимо вычесть из прямоугольника, на который указывает *lpRectSrc1* параметра.
@@ -1441,7 +1441,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>Параметры
 
 *lpRect1*<br/>
-Указывает на [RECT](../../mfc/reference/rect-structure.md) или `CRect` , содержащий исходный прямоугольник.
+Указывает на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или `CRect` , содержащий исходный прямоугольник.
 
 *lpRect2*<br/>
 Указывает на `RECT` или `CRect` , содержащий исходный прямоугольник.
@@ -1503,5 +1503,5 @@ int Width() const throw();
 
 [Класс CPoint](cpoint-class.md)<br/>
 [Класс CSize](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure.md)
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)
 

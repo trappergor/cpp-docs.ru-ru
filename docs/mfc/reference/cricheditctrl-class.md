@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 756f50afd9b67e4895d8d1b15652602630c24918
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949548"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178997"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Создает объект `CRichEditCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Определяет, если содержимое буфера обмена, можно вставить в этот элемент управления форматированным редактированием.|
 |[CRichEditCtrl::CanRedo](#canredo)|Определяет, есть ли каких-либо действий в очереди повторов элемента управления.|
@@ -427,7 +427,7 @@ virtual BOOL Create(
 Задает стиль элемента управления поля ввода. Применить сочетание стилей окна, перечисленных в **"Примечания"** разделе ниже, и [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles), описанные в пакете Windows SDK.
 
 *rect*<br/>
-Задает размер и положение элемента управления поля ввода. Может быть [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.
+Задает размер и положение элемента управления поля ввода. Может быть [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента редактирования (часто [CDialog](../../mfc/reference/cdialog-class.md)). Он не должен иметь значение NULL.
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>Параметры
 
 *pDisplayRect*<br/>
-Указатель на [RECT](../../mfc/reference/rect-structure1.md) или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, указывающий область устройства для отображения текста.
+Указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) или [CRect](../../atl-mfc-shared/reference/crect-class.md) объект, указывающий область устройства для отображения текста.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](../../mfc/reference/rect-structure1.md) для получения прямоугольника форматирования данного `CRichEditCtrl` объекта.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) для получения прямоугольника форматирования данного `CRichEditCtrl` объекта.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>Параметры
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](../../mfc/reference/rect-structure1.md) указывает новые границы для прямоугольника форматирования.
+[CRect](../../atl-mfc-shared/reference/crect-class.md) или указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) указывает новые границы для прямоугольника форматирования.
 
 ### <a name="remarks"></a>Примечания
 

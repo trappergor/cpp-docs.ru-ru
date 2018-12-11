@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CRgn [MFC], RectInRegion
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
-ms.openlocfilehash: 9c08b679f1423b499a5b95b260fd0fac9ddeaf9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74ee046e81e0f55e5550220166c957317c2bf6cd
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467990"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178555"
 ---
 # <a name="crgn-class"></a>Crgn-класс
 
@@ -78,13 +78,13 @@ class CRgn : public CGdiObject
 |[CRgn::CombineRgn](#combinergn)|Наборы `CRgn` таким образом, чтобы она эквивалентна объединение двух указанных `CRgn` объектов.|
 |[CRgn::CopyRgn](#copyrgn)|Наборы `CRgn` таким образом, чтобы он является копией указанного `CRgn` объекта.|
 |[CRgn::CreateEllipticRgn](#createellipticrgn)|Инициализирует `CRgn` объекта с регионом эллипса.|
-|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Инициализирует `CRgn` объект с эллиптической области, определяемой [RECT](../../mfc/reference/rect-structure1.md) структуры.|
+|[CRgn::CreateEllipticRgnIndirect](#createellipticrgnindirect)|Инициализирует `CRgn` объект с эллиптической области, определяемой [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.|
 |[CRgn::CreateFromData](#createfromdata)|Создает область из заданного региона и преобразования данных.|
 |[CRgn::CreateFromPath](#createfrompath)|Создает область из пути, который выбран в контексте данного устройства.|
 |[CRgn::CreatePolygonRgn](#createpolygonrgn)|Инициализирует `CRgn` объекта с кусочно-линейной регионом. Система закрывает многоугольника автоматически, при необходимости, нарисовав линию от последнее вершины, к первому.|
 |[CRgn::CreatePolyPolygonRgn](#createpolypolygonrgn)|Инициализирует `CRgn` объекта в заданной области, состоящее из последовательности закрытых многоугольников. Возможно, многоугольников перекрытия, или они могут перекрываться.|
 |[CRgn::CreateRectRgn](#createrectrgn)|Инициализирует `CRgn` объект с прямоугольной области.|
-|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Инициализирует `CRgn` объект с прямоугольной области, определяемой [RECT](../../mfc/reference/rect-structure1.md) структуры.|
+|[CRgn::CreateRectRgnIndirect](#createrectrgnindirect)|Инициализирует `CRgn` объект с прямоугольной области, определяемой [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.|
 |[CRgn::CreateRoundRectRgn](#createroundrectrgn)|Инициализирует `CRgn` объект с прямоугольную область со скругленными углами.|
 |[CRgn::EqualRgn](#equalrgn)|Проверяет два `CRgn` объектов, чтобы определить, являются ли они равными.|
 |[CRgn::FromHandle](#fromhandle)|Возвращает указатель на `CRgn` объект для заданного дескриптора в регионе Windows.|
@@ -297,13 +297,13 @@ BOOL CreateFromData(
 ### <a name="parameters"></a>Параметры
 
 *lpXForm*<br/>
-Указывает на [XFORM](../../mfc/reference/xform-structure.md) структуру данных, который определяет преобразование для выполнения в области. Если этот указатель имеет значение NULL, используется единичное преобразование.
+Указывает на [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform) структуру данных, который определяет преобразование для выполнения в области. Если этот указатель имеет значение NULL, используется единичное преобразование.
 
 *nCount*<br/>
 Указывает число байтов, на которые указывают *pRgnData*.
 
 *pRgnData*<br/>
-Указывает на [RGNDATA](../../mfc/reference/rgndata-structure.md) структуру данных, содержащую данные этой области.
+Указывает на [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) структуру данных, содержащую данные этой области.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -631,7 +631,7 @@ int GetRegionData(
 ### <a name="parameters"></a>Параметры
 
 *lpRgnData*<br/>
-Указывает на [RGNDATA](../../mfc/reference/rgndata-structure.md) структура данных, которая получает информацию. Если этот параметр имеет значение NULL, возвращаемое значение содержит число байтов, необходимых для области данных.
+Указывает на [RGNDATA](/windows/desktop/api/wingdi/ns-wingdi-_rgndata) структура данных, которая получает информацию. Если этот параметр имеет значение NULL, возвращаемое значение содержит число байтов, необходимых для области данных.
 
 *nCount*<br/>
 Задает размер в байтах, *lpRgnData* буфера.
@@ -705,7 +705,7 @@ int OffsetRgn(POINT point);
 *y*<br/>
 Указывает количество единиц для перемещения вверх или вниз.
 
-*точка*<br/>
+*point*<br/>
 Координата по оси x *точки* указывает количество единиц для перемещения влево или вправо. Координата по оси y *точки* число единиц для перемещения вверх или вниз. *Точки* параметр может быть либо `POINT` структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -768,7 +768,7 @@ BOOL PtInRegion(POINT point) const;
 *y*<br/>
 Указывает логическую координату y точки для проверки.
 
-*точка*<br/>
+*point*<br/>
 X-y координаты и *точки* укажите x и y координаты точки для проверки значения. *Точки* параметр может быть `POINT` структуры или `CPoint` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение

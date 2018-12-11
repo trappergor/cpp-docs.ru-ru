@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: be9ecf2eaabb51f4c2dffd996bca76bd3f4c9128
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512873"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178634"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
 
@@ -270,7 +270,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 
 ## <a name="example"></a>Пример
 
-Следующий пример является производным от класса `CMDIFrameWndEx`. Этот фрагмент кода поступает из [Пример DrawClient: MFC Ribbon-Based OLE объект приложения для рисования](../../visual-cpp-samples.md).
+Следующий пример является производным от класса `CMDIFrameWndEx`. Этот фрагмент кода поступает из [Пример DrawClient: Приложение для рисования объекта MFC с лентой OLE](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 [out] Указатель на целочисленную переменную, указывающее, какие функции были включены:
 
-- 0: все функции будут отключены.
+- 0: Все функции будут отключены.
 
-- 1: включена вкладок MDI.
+- 1: Включен вкладок MDI.
 
-- 2: включена групп с вкладками MDI.
+- 2: Включен групп с вкладками MDI.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -449,7 +449,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `CreateDocumentWindow` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `CreateDocumentWindow` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 В этом примере `g_strStartViewName` может быть имя «виртуального документа» (например, «Начальная страница»), фактически не загружается из файла на диске. Поэтому нам нужен, специальная обработка, обрабатывать такую ситуацию.
 
@@ -505,7 +505,7 @@ void DockPane(
 
 ### <a name="example"></a>Пример
 
-В следующем примере иллюстрируется использование метода `DockPane`. Этот фрагмент кода поступает из [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере иллюстрируется использование метода `DockPane`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `DockPaneLeftOf` метод используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `DockPaneLeftOf` метод используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnableAutoHidePanes` метод используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `EnableAutoHidePanes` метод используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnableDocking` метод используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `EnableDocking` метод используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ void EnableMDITabbedGroups(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnableMDITabbedGroups` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `EnableMDITabbedGroups` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ void EnableMDITabs(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnableMDITabs` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).
+В следующем примере показан как `EnableMDITabs` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -807,7 +807,7 @@ void EnablePaneMenu(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnablePaneMenu` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `EnablePaneMenu` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ void EnableWindowsDialog(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `EnableWindowsDialog` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `EnableWindowsDialog` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1132,7 +1132,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указанную точку в экранных координатах.
 
 *dwBarAlignment*<br/>
@@ -1224,7 +1224,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `LoadMDIState` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `LoadMDIState` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `MDITabNewGroup` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `MDITabNewGroup` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_bCanCovertControlBarToMDIChild` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `m_bCanCovertControlBarToMDIChild` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1322,7 +1322,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-[in, out] Указатель на [структура RECT](../../mfc/reference/rect-structure1.md) или [класс CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий координаты границы.
+[in, out] Указатель на [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect) или [класс CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий координаты границы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1592,7 +1592,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Расположение меню в экранных координатах.
 
 *dwAllowedItems*<br/>
@@ -1621,7 +1621,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `OnShowMDITabContextMenu` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `OnShowMDITabContextMenu` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1745,7 +1745,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка (в экранных координатах).
 
 *nSensitivity*<br/>
@@ -1856,7 +1856,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `SaveMDIState` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `SaveMDIState` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ void ShowPane(
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `ShowPane` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `ShowPane` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `ShowWindowsDialog` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `ShowWindowsDialog` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ virtual BOOL TabbedDocumentToControlBar(CMDIChildWndEx* pMDIChildWnd);
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `TabbedDocumentToControlBar` используется в [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показан как `TabbedDocumentToControlBar` используется в [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 

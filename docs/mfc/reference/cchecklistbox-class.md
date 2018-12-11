@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327347"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177840"
 ---
 # <a name="cchecklistbox-class"></a>Класс CCheckListBox
 
@@ -145,8 +145,8 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль поля со списком. Стиль должен быть LBS_HASSTRINGS и LBS_OWNERDRAWFIXED (все элементы в списке имеют одинаковую высоту) или LBS_OWNERDRAWVARIABLE (элементы в списке являются различной высоты). Этот стиль можно объединять с другими [стили списков](../../mfc/reference/styles-used-by-mfc.md#list-box-styles) LBS_USETABSTOPS, за исключением.
 
-*Rect*<br/>
-Указывает поле контрольного списка размер и положение. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](../../mfc/reference/rect-structure1.md) структуры.
+*rect*<br/>
+Указывает поле контрольного списка размер и положение. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры.
 
 *pParentWnd*<br/>
 Указывает поле контрольного списка родительского окна (обычно `CDialog` объекта). Он не должен иметь значение NULL.
@@ -193,7 +193,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpDrawItemStruct*<br/>
-Длинный указатель на [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md) структуру, содержащую сведения о типе документа требуется.
+Длинный указатель на [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct) структуру, содержащую сведения о типе документа требуется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -290,7 +290,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>Параметры
 
 *lpMeasureItemStruct*<br/>
-Длинный указатель на [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md) структуры.
+Длинный указатель на [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct) структуры.
 
 ### <a name="remarks"></a>Примечания
 

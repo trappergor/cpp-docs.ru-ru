@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547489"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178243"
 ---
 # <a name="cwinformscontrol-class"></a>Класс CWinFormsControl
 
@@ -113,8 +113,8 @@ inline BOOL CreateManagedControl(
 *dwStyle*<br/>
 Стиль окна, чтобы применить к элементу управления. Укажите сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). В настоящее время поддерживаются только следующие стили: WS_TABSTOP, WS_VISIBLE, WS_DISABLED и WS_GROUP.
 
-*Rect*<br/>
-Объект [структура RECT](../../mfc/reference/rect-structure1.md) , определяющий координаты верхнего левого и правого нижнего углов элемента управления (первая перегрузка только).
+*rect*<br/>
+Объект [структура RECT](/windows/desktop/api/windef/ns-windef-tagrect) , определяющий координаты верхнего левого и правого нижнего углов элемента управления (первая перегрузка только).
 
 *nPlaceHolderID*<br/>
 Дескриптор элемента управления держатель статический месте помещаются в редакторе ресурсов. Вновь созданный элемент управления Windows Forms заменяет статический элемент управления, при условии, что его позиции z порядок и стили (вторая перегрузка только).

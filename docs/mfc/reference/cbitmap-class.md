@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624605"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178178"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 После завершения работы с объектом `CBitmap` , созданным функцией `CreateBitmap` , сначала выберите битовую карту из контекста устройства, а затем удалите объект `CBitmap` .
 
-Дополнительные сведения см. в описании `bmBits` в `BITMAP` структуры. Структура [BITMAP](../../mfc/reference/bitmap-structure.md) рассматривается в описании функции-члена [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
+Дополнительные сведения см. в описании `bmBits` в `BITMAP` структуры. Структура [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) рассматривается в описании функции-члена [CBitmap::CreateBitmapIndirect](#createbitmapindirect) .
 
 ##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>Параметры
 
 *lpBitmap*<br/>
-Указывает на [точечного РИСУНКА](../../mfc/reference/bitmap-structure.md) структуру, содержащую сведения о растрового изображения.
+Указывает на [точечного РИСУНКА](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) структуру, содержащую сведения о растрового изображения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>Параметры
 
 *pBitMap*<br/>
-Указатель на [структуру ТОЧЕЧНОГО](../../mfc/reference/bitmap-structure.md) структуры, который будет получать свойства изображения. Этот параметр не должен иметь значение NULL.
+Указатель на [точечного РИСУНКА](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) структуры, который будет получать свойства изображения. Этот параметр не должен иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

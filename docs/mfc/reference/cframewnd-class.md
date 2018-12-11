@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481449"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178796"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 
@@ -329,7 +329,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает окно [стиля](../../mfc/reference/styles-used-by-mfc.md#window-styles) атрибуты. Включите заголовок окна, чтобы автоматически отобразить имя документа, представленного в окне FWS_ADDTOTITLE стиль.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
 
 *pParentWnd*<br/>
@@ -475,7 +475,7 @@ void FloatControlBar(
 *pBar*<br/>
 Указывает на панели элементов управления, можно оставить плавающим.
 
-*точка*<br/>
+*point*<br/>
 Расположение, в экранных координатах, где будут размещаться в верхний левый угол панели элементов управления.
 
 *dwStyle*<br/>
@@ -844,7 +844,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-Указатель на [RECT](../../mfc/reference/rect-structure1.md) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий координаты границы.
+Указатель на [RECT](/windows/desktop/api/windef/ns-windef-tagrect) структуры или [CRect](../../atl-mfc-shared/reference/crect-class.md) , указывающий координаты границы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>Параметры
 
 *lpcs*<br/>
-Указатель на Windows [CREATESTRUCT](../../mfc/reference/createstruct-structure.md) структуры.
+Указатель на Windows [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa) структуры.
 
 *pContext*<br/>
 Указатель на [CCreateContext](../../mfc/reference/ccreatecontext-structure.md) структуры.
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>Параметры
 
 *tbpFlags*<br/>
-Флаги, определяющие состояние кнопки хода выполнения. Укажите только одно из следующих флагов, так как все состояния являются взаимоисключающими: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
+Флаги, определяющие состояние кнопки хода выполнения. Так как все состояния являются взаимоисключающими, укажите только один из следующих флагов: TBPF_NOPROGRESS, TBPF_INDETERMINATE, TBPF_NORMAL, TBPF_ERROR, TBPF_PAUSED.
 
 ### <a name="remarks"></a>Примечания
 
