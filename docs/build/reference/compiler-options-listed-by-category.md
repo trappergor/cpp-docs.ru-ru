@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598825"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248576"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -62,7 +62,7 @@ ms.locfileid: "51598825"
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для x64 компиляторы (собственные и кросс-компиляция).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ, допускающий горячее обновление.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Создает быстрые трансцендентные функции.|
-|[QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Подавляет вызов вспомогательной функции `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип. (только x86)|
+|[/QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Подавляет вызов вспомогательной функции `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип. (только x86)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Удаляет команды `fwait` внутри блоков `try` .|
 |[/Qpar](qpar-auto-parallelizer.md)|Включает автоматическую параллелизацию циклов.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Включает уровни отчетов для автоматической параллелизации.|
@@ -207,7 +207,7 @@ ms.locfileid: "51598825"
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Не рекомендуется. Включает быстрые проверки. Используйте вместо этого параметр [/RTC1](rtc-run-time-error-checks.md) .|
 |[/H](h-restrict-length-of-external-names.md)|Не рекомендуется. Ограничивает длину внешних (открытых) имен.|
 |[/Og](og-global-optimizations.md)|Не рекомендуется. Использует глобальную оптимизацию.|
-|[QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Используется один раз для указания способа преобразования типа с плавающей запятой в целочисленный тип.|
+|[/QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Используется один раз для указания способа преобразования типа с плавающей запятой в целочисленный тип.|
 |[/V](v-version-number.md)|Не рекомендуется. Задает строку версии OBJ-файла.|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|Является устаревшей. Выявляет проблемы 64-битной переносимости.|
 |[/Yd](yd-place-debug-information-in-object-file.md)|Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. Используйте вместо этого параметр [/Zi](z7-zi-zi-debug-information-format.md) .|

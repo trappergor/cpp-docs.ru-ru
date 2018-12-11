@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 3b01c58349aa1dff1c782b051156250fd495df91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460012"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178100"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -19,7 +19,7 @@ ms.locfileid: "50460012"
 
 ## <a name="samples"></a>Примеры
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Примеры кода от разработчиков](https://code.msdn.microsoft.com/)|Содержит загружаемые примеры кода от Microsoft и участников сообщества.|
 
@@ -40,9 +40,9 @@ ms.locfileid: "50460012"
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Блог команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/)|Содержит записи, создаваемые экспертами из группы разработчиков Visual C++ по различным темам.|
 |[Канал 9](https://channel9.msdn.com/)|Содержит видеоинтервью и лекции. Используйте поле поиска на домашней странице канала 9 для поиска содержимого по C++.|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Содержит статьи и новости о Visual Studio и связанных средствах разработки.|
-|[Форумы MSDN](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc) и [сообщество разработчиков](https://developercommunity.visualstudio.com)|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|
+|[Форумы MSDN](https://social.msdn.microsoft.com/Forums/home?category=visualc) и [сообщество разработчиков](https://developercommunity.visualstudio.com)|Официальные форумы Майкрософт, где можно размещать вопросы по C++ и получать ответы от представителей Майкрософт и специалистов сообщества.|
