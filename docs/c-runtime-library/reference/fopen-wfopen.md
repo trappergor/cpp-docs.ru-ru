@@ -143,7 +143,7 @@ FILE *_wfopen(
 
 Если **t** или **b** не имеет *режим*, режим преобразования по умолчанию определяется глобальной переменной [_fmode](../../c-runtime-library/fmode.md). Если **t** или **b** добавляется префикс аргумента, функции и возвращает **NULL**.
 
-Дополнительные сведения об использовании текстового и двоичного режимов в Юникоде, а также многобайтового потока ввода-вывода см. в статьях [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
+Дополнительные сведения об использовании текстового и двоичного режимов в Юникоде, а также многобайтового потока ввода-вывода см. в статьях [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) и [Ввод-вывод в поток в кодировке Юникод в текстовом и двоичном режиме](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md).
 
 Следующие параметры, которые могут добавляться к *режим* чтобы указать дополнительные поведения.
 
