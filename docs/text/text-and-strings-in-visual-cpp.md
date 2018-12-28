@@ -24,12 +24,12 @@ helpviewer_keywords:
 - portability [C++], character sets
 - MBCS [C++], international programming
 ms.assetid: a1bb27ac-abe5-4c6b-867d-f761d4b93205
-ms.openlocfilehash: bb658db157433aadce183e7fab437f15251ff54c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6083fcf9db8236df15d1cb5e7de4cc15fe5916e
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631300"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626725"
 ---
 # <a name="text-and-strings-in-visual-c"></a>Текст и строки в Visual C++
 
@@ -46,7 +46,7 @@ ms.locfileid: "50631300"
 [Поддержка многобайтовых кодировок (MBCS)](../text/support-for-multibyte-character-sets-mbcss.md)<br/>
 Описание MBCS, вместо Юникода для поддержки кодировок, подобных японской и китайской, которые не могут быть представлены одним байтом.
 
-[Универсальные текстовые сопоставления в файле Tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
+[Универсальные текстовые сопоставления в файле tchar.h](../text/generic-text-mappings-in-tchar-h.md)<br/>
 Предоставляет характерные для Майкрософт универсальные текстовые сопоставления для многих типов данных, подпрограмм и других объектов.
 
 [Практическое руководство. Преобразование различных типов строк](../text/how-to-convert-between-various-string-types.md)<br/>

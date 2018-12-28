@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 31eec71dd134a5c675f70070ce1457462d10b739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509374"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657595"
 ---
 # <a name="concurrentunorderedmap-class"></a>Класс concurrent_unordered_map
 
@@ -67,7 +67,7 @@ false>>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -88,13 +88,13 @@ false>>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[concurrent_unordered_map](#ctor)|Перегружен. Создает параллельный не упорядоченный сопоставление.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[at](#at)|Перегружен. Находит элемент в `concurrent_unordered_map` с указанным значением ключа... Этот метод безопасен в режиме параллелизма.|
 |[hash_function](#hash_function)|Получает сохраненный объект хэш-функции.|
@@ -105,9 +105,9 @@ false>>;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[operator[]](#operator_at)|Перегружен. Находит или вставляет элемент с указанным ключом. Этот метод безопасен в режиме параллелизма.|
+|[operator\[\]](#operator_at)|Перегружен. Находит или вставляет элемент с указанным ключом. Этот метод безопасен в режиме параллелизма.|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_unordered_map` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 
 ## <a name="remarks"></a>Примечания
@@ -425,7 +425,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 Тип значения, вставляемого в схеме.
 
-*значение*<br/>
+*value*<br/>
 Вставляемое значение.
 
 *_Where*<br/>

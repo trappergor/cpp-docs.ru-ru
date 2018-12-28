@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::vector [C++], size
 - std::vector [C++], swap
 ms.assetid: a3e0a8f8-7565-4fe0-93e4-e4d74ae1b70d
-ms.openlocfilehash: 849a7ba3c004263dc2f03adc301e5533bd8a2304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 80416e3af18774a7a8bf64264dca2906995ae202
+ms.sourcegitcommit: 185b8ee6dd4e10045df730c5b957b9729813da2d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525201"
+ms.lasthandoff: 12/14/2018
+ms.locfileid: "53411966"
 ---
 # <a name="vector-class"></a>Класс vector
 
@@ -126,13 +126,13 @@ class vector
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[vector](#vector)|Создает вектор определенного размера, вектор с элементами определенного значения, вектор с определенным `allocator`, или вектор как копию какого-либо другого вектора.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта вектора.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий итератор произвольного доступа, который может читать элемент **const** в векторе.|
@@ -149,7 +149,7 @@ class vector
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[assign](#assign)|Удаляет вектор и копирует указанные элементы в пустой вектор.|
 |[at](#at)|Возвращает ссылку на элемент в заданном положении в векторе.|
@@ -183,7 +183,7 @@ class vector
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Возвращает ссылку на элемент вектора в указанной позиции.|
 |[оператор=](#op_eq)|Заменяет элементы вектора копией другого вектора.|
@@ -895,7 +895,7 @@ iterator emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*_Where*|Позиция в [векторе](../standard-library/vector-class.md), куда вставляется первый элемент.|
 |*Val*|Значение элемента, вставляемого в `vector`.|
@@ -961,7 +961,7 @@ void emplace_back(Types&&... _Args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*_Args*|Аргументы конструктора. Функция определяет перегрузку конструктора, которую нужно вызвать, на основе переданных аргументов.|
 
@@ -1078,7 +1078,7 @@ iterator erase(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*_Where*|Положение элемента, удаляемого из вектора.|
 |*Первый*|Положение первого элемента, удаляемого из вектора.|
@@ -1245,7 +1245,7 @@ void insert(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*_Where*|Позиция в векторе, куда вставляется первый элемент.|
 |*Val*|Значение элемента, вставляемого в вектор.|
@@ -1296,7 +1296,8 @@ int main( )
       cout << " " << *Iter;
    cout << endl;
 
-   v1.insert( v1.begin( )+1, v1.begin( )+2, v1.begin( )+4 );
+   const auto v2 = v1;
+   v1.insert( v1.begin( )+1, v2.begin( )+2, v2.begin( )+4 );
    cout << "v1 =";
    for (Iter = v1.begin( ); Iter != v1.end( ); Iter++ )
       cout << " " << *Iter;
@@ -1308,7 +1309,6 @@ int main( )
    vv1.insert( vv1.begin(), move( v1 ) );
    if ( vv1.size( ) != 0 && vv1[0].size( ) != 0 )
       {
-      vector < vector <int> >::iterator Iter;
       cout << "vv1[0] =";
       for (Iter = vv1[0].begin( ); Iter != vv1[0].end( ); Iter++ )
          cout << " " << *Iter;
@@ -1384,7 +1384,7 @@ const_reference operator[](size_type Pos) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*торговых терминалов*|Позиция элемента вектора.|
 
@@ -1431,7 +1431,7 @@ vector& operator=(vector&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*right*|[Вектор](../standard-library/vector-class.md) копируется в `vector`.|
 
@@ -2096,7 +2096,7 @@ vector(InputIterator First, InputIterator Last, const Allocator& Al);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |*Al*|Класс распределителя для использования с данным объектом. [get_allocator](#get_allocator) возвращает класс распределителя для объекта.|
 |*Количество*|Количество элементов в создаваемом векторе.|

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multibyte characters [C++]
 - MBCS [C++]
 ms.assetid: b498733c-a1e1-45e3-8f26-d6da3cb5f2dd
-ms.openlocfilehash: b6c8dc5548eb1082866b7a069fb38fd329effc75
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f309f6d7147b37691564d3d72c151da90055c6a
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437274"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627349"
 ---
 # <a name="support-for-multibyte-character-sets-mbcss"></a>Поддержка многобайтовых кодировок
 
@@ -46,7 +46,7 @@ ms.locfileid: "50437274"
 
 ### <a name="mbcsunicode-portability"></a>Переносимость MBSC и Юникода
 
-С помощью файла заголовка Tchar.h можно создавать приложения, работающие с однобайтовыми, многобайтовыми кодировками и Юникодом из одних источников. В файле Tchar.h определяются макросы с префиксом *_tcs* , которые сопоставляются `str`, `_mbs`, или `wcs` соответствующие функции. Для использования mbsc определите символ `_MBCS`. Для использования Юникода определите символ `_UNICODE`. По умолчанию `_MBCS` определяется для приложений MFC. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+С помощью файла заголовка tchar.h, можно построить однобайтовые, многобайтовой Кодировки и Юникода приложений тот же источник. В файле Tchar.h определяются макросы с префиксом *_tcs* , которые сопоставляются `str`, `_mbs`, или `wcs` соответствующие функции. Для использования mbsc определите символ `_MBCS`. Для использования Юникода определите символ `_UNICODE`. По умолчанию `_UNICODE` определяется для приложений MFC. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 > [!NOTE]
 >  Поведение не определено, если указать одновременно `_UNICODE` и `_MBCS`.

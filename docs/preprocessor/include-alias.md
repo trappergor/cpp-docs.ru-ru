@@ -1,6 +1,6 @@
 ---
 title: include_alias
-ms.date: 11/04/2016
+ms.date: 12/16/2018
 f1_keywords:
 - vc-pragma.include_alias
 - include_alias_CPP
@@ -8,25 +8,25 @@ helpviewer_keywords:
 - pragmas, include_alias
 - include_alias pragma
 ms.assetid: 3256d589-12b3-4af0-a586-199e96eabacc
-ms.openlocfilehash: 616672d713a9f0ac6eab4be8bce9b178d2510723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d32cad2533b6044348651797d0278bcbebcafd6
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573177"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587880"
 ---
 # <a name="includealias"></a>include_alias
 
-Указывает, что *кратким_именем_файла* будет использоваться в качестве псевдонима для *длинное_имя_файла*.
+Указывает, что при *alias_filename* находится в `#include` директив, компилятор заменяет *actual_filename* на его месте.
 
 ## <a name="syntax"></a>Синтаксис
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива #pragma include_alias («*длинное_имя_файла*","*кратким_именем_файла*")
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>Директива #pragma include_alias (*длинное_имя_файла*, *кратким_именем_файла*)
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>Директива #pragma include_alias («*alias_filename*","*actual_filename*")
+> #<a name="pragma-includealiasaliasfilename-actualfilename"></a>Директива #pragma include_alias (\<*alias_filename*>, \< *actual_filename*>)
 
 ## <a name="remarks"></a>Примечания
 
-Некоторые файловые системы поддерживают более длинные имена файлов заголовков, чем допускается ограничением файловой системы FAT (8 символов в имени файла и 3 символа в расширении). Компилятор не может просто усечь более длинные имена до этого стандарта, поскольку первые восемь символов в длинных именах файлов заголовков могут быть неуникальными. Каждый раз, когда компилятор обнаруживает *длинное_имя_файла* строку, он подставляет *кратким_именем_файла*и выполняет поиск файла заголовка *кратким_именем_файла* вместо этого. Эта директива pragma должна располагаться до соответствующей директивы `#include`. Пример:
+**Include_alias** директиву pragma позволяет заменить файлы, имеющие разные имена или путей для имен файлов, включенных в исходные файлы. Например некоторые файловые системы поддерживают длинных именах файлов заголовков, чем системное ограничение для файла FAT 8.3. Компилятор не может просто усечь более длинные имена до этого стандарта, поскольку первые восемь символов в длинных именах файлов заголовков могут быть неуникальными. Когда компилятор встречает *alias_filename* строку, он подставляет *actual_filename*и выполняет поиск файла заголовка *actual_filename* вместо этого. Эта директива pragma должна располагаться до соответствующей директивы `#include`. Пример:
 
 ```cpp
 // First eight characters of these two files not unique.
@@ -83,8 +83,8 @@ ms.locfileid: "50573177"
 Обратите внимание, что имя файла не сообщали о в сообщениях об ошибках, или в качестве значения из предварительно определенных `__FILE__` макрос, является имя файла, после выполнения подстановки. Например см. в разделе выходных данных после следующие директивы:
 
 ```cpp
-#pragma include_alias( "VeryLongFileName.H", "myfile.h" )
-#include "VeryLongFileName.H"
+#pragma include_alias( "VERYLONGFILENAME.H", "myfile.h" )
+#include "VERYLONGFILENAME.H"
 ```
 
 Ошибка в VERYLONGFILENAME. H выдает следующее сообщение об ошибке:
@@ -101,7 +101,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-В этом случае компилятор будет искать файл TWO.H, а не THREE.H.
+Компилятор выполняет поиск файл two.h, а не three.h.
 
 ## <a name="see-also"></a>См. также
 

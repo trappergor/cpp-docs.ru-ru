@@ -1,18 +1,18 @@
 ---
 title: align (C++)
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - align_cpp
 helpviewer_keywords:
 - align __declspec keyword
 - __declspec keyword [C++], align
 ms.assetid: 9cb63f58-658b-4425-ac47-af8eabfc5878
-ms.openlocfilehash: f5353354a334f6ee597bca3e49dfa2b4f98a0005
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfe6e7a4646be8cea622078b4d85f20f458e1c5
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440447"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627336"
 ---
 # <a name="align-c"></a>align (C++)
 
@@ -78,9 +78,9 @@ __declspec(align(32)) struct Str1{
 
 - [Использование align с упаковкой данных](#vclrfhowalignworkswithdatapacking)
 
-- [Примеры выравнивания структуры](../build/examples-of-structure-alignment.md) (x64 конкретных)
+- [Примеры выравнивания структуры](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 конкретных)
 
-##  <a name="vclrfalignexamples"></a> Примеры использования align
+## <a name="vclrfalignexamples"></a> Примеры использования align
 
 В следующих примерах показано, как `__declspec(align(#))` влияет на размер и выравнивание структур данных. В примерах допускаются следующие определения.
 
@@ -171,7 +171,7 @@ void fn() {
 
 Выравнивание при выделении памяти в куче зависит от того, какая функция выделения вызвана.  Например, если используется `malloc`, результат зависит от размера операнда. Если *arg* > = 8, возвращаемая память выравнивается по 8 байтам. Если *arg* < 8, то память выравнивается представляет собой первую степень 2 меньше, чем *arg*. Например, если использовать malloc(7), выравнивание выполняется по 4 байтам.
 
-##  <a name="vclrf_declspecaligntypedef"></a> Определение новых типов с помощью __declspec(align(#))
+## <a name="vclrf_declspecaligntypedef"></a> Определение новых типов с помощью __declspec(align(#))
 
 Можно определить тип с характеристикой выравнивания.
 
@@ -184,7 +184,7 @@ typedef __declspec(align(32)) struct aType bType;
 
 Теперь `aType` и `bType` одинаковый размер (8 байт), но переменные типа `bType` являются 32-байтовой границе.
 
-##  <a name="vclrfthreadlocalstorageallocation"></a> Выравнивание данных в локальном хранилище потока
+## <a name="vclrfthreadlocalstorageallocation"></a> Выравнивание данных в локальном хранилище потока
 
 Статическое локальное хранилище потока (TLS), созданное с помощью атрибута `__declspec(thread)` и помещенное в раздел TLS образа, обеспечивает выравнивание так же, как стандартные статические данные. Для создания данных TLS операционная система выделяет память в размере раздела TLS и сохраняет атрибут выравнивания раздела TLS.
 
@@ -207,7 +207,7 @@ struct CACHE_ALIGN S9 {
 __declspec(thread) struct S9 a;
 ```
 
-##  <a name="vclrfhowalignworkswithdatapacking"></a> Использование align с упаковкой данных
+## <a name="vclrfhowalignworkswithdatapacking"></a> Использование align с упаковкой данных
 
 `/Zp` Параметр компилятора и `pack` pragma иметь влияние на упаковку данных для членов структуры и объединения. В этом примере показано, как `/Zp` и `__declspec(align(#))` совместной работы:
 
@@ -244,4 +244,4 @@ struct S {
 
 [__declspec](../cpp/declspec.md)<br/>
 [Обзор соглашений ABI ARM](../build/overview-of-arm-abi-conventions.md)<br/>
-[Общие сведения о соглашениях о вызовах для архитектуры x64](../build/overview-of-x64-calling-conventions.md)
+[x64 программные соглашения](../build/x64-software-conventions.md)

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - optimization, linker
 - /OPT linker option
 ms.assetid: 8f229863-5f53-48a8-9478-243a647093ac
-ms.openlocfilehash: ad89dfa29df6e4ef500e01e53f203fa3c401602b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6fa8b9c923ff697831c29b8004ce360baf7d77
+ms.sourcegitcommit: ae2f71fe0d64f1a90ef722759fe93c82abc064ab
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638234"
+ms.lasthandoff: 12/18/2018
+ms.locfileid: "53587893"
 ---
 # <a name="opt-optimizations"></a>Параметр /OPT (оптимизация)
 
@@ -67,7 +67,7 @@ ms.locfileid: "50638234"
 
 ## <a name="remarks"></a>Примечания
 
-При использовании в командной строке, по умолчанию используется компоновщик **LBR предотвратят ICF,**. Если **/DEBUG** указан, по умолчанию используется **NOLBR /OPT:NOREF NOICR,**.
+При использовании в командной строке, по умолчанию используется компоновщик **LBR предотвратят ICF,**. Если **/DEBUG** указан, по умолчанию используется **NOLBR /OPT:NOREF NOICF,**.
 
 **/OPT** оптимизаций обычно уменьшить размер образа и повысить производительность программы. Эти улучшения могут быть существенными в более крупных программ, поэтому они включены по умолчанию в розничных сборках.
 

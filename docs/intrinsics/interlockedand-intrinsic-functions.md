@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: b789679366a364197936db338d468862323749a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70e618944ddac3468c0e49443cde116c8496df7c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559735"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626772"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>Встроенные функции _InterlockedAnd
 
@@ -172,7 +172,7 @@ __int64 _InterlockedAnd64_rel(
 
 #### <a name="parameters"></a>Параметры
 
-*значение*<br/>
+*value*<br/>
 [in, out] Указатель на первый операнд заменяется результатом.
 
 *Маска*<br/>
@@ -230,4 +230,4 @@ int main()
 ## <a name="see-also"></a>См. также
 
 [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Конфликты с 32-разрядным (x86) компилятором](../build/conflicts-with-the-x86-compiler.md)
+[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

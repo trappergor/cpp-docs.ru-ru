@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions
 ms.assetid: 11b1e45c-8fd1-420b-bca0-a19e294c1d85
-ms.openlocfilehash: 9aa25598674aa52502d5d3619e5015eb13b6fff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc79a0636f900aa49e31f0dc35ee19657c3e1ccb
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532789"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626738"
 ---
 # <a name="calling-conventions"></a>Соглашения о вызовах
 
@@ -17,13 +17,13 @@ ms.locfileid: "50532789"
 
 В разделах, посвященных этой теме, говорится о том, чем различаются эти соглашения о вызовах, как передаются аргументы и как функции возвращают значения. Кроме того, в них рассматриваются вызовы возможностей с атрибутом naked — дополнительная возможность, благодаря которой вы сможете создавать собственный код пролога и эпилог.
 
-Сведения о соглашениях о вызовах для x64 процессоров, см. в разделе [соглашение о вызовах](../build/calling-convention.md).
+Сведения о соглашениях о вызовах для x64 процессоров, см. в разделе [соглашение о вызовах](../build/x64-calling-convention.md).
 
 ## <a name="topics-in-this-section"></a>Подразделы в этом разделе
 
 - [Передача аргументов и соглашения об именовании](../cpp/argument-passing-and-naming-conventions.md) (`__cdecl`, `__stdcall`, `__fastcall`и другие)
 
-- [Пример вызова. Прототип и вызов функции](../cpp/calling-example-function-prototype-and-call.md)
+- [Пример вызова. Прототип функции и вызова](../cpp/calling-example-function-prototype-and-call.md)
 
 - [Использование вызовы функций naked для написания кода пролога и эпилога](../cpp/naked-function-calls.md)
 

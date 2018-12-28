@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS [C++], enabling
 - Unicode [C++], enabling
 ms.assetid: b077f4ca-5865-40ef-a46e-d9e4d686ef21
-ms.openlocfilehash: 4476b0805c8806d344a9290ba190aed7c7697a8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51d85991fdab273d1cdad4e99400d1ad8ed6324c
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514638"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627468"
 ---
 # <a name="international-enabling"></a>Использование на международном уровне
 
@@ -27,7 +27,7 @@ ms.locfileid: "50514638"
 
    - Используйте же переносимые функции времени выполнения, которые делают MFC переносимой в различные среды.
 
-   - Необходимо сделать строковые литералы и знаки переносимыми для любой среды с помощью `_T` макрос. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+   - Необходимо сделать строковые литералы и знаки переносимыми для любой среды с помощью `_T` макрос. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    - Примите меры предосторожности при синтаксическом анализе строки в MBCS. Эти меры предосторожности не требуются в Юникод. Дополнительные сведения см. в разделе [советы по программированию многобайтовой Кодировки](../text/mbcs-programming-tips.md).
 
