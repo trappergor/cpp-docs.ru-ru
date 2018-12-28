@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTypedPtrArray [MFC], SetAt
 - CTypedPtrArray [MFC], SetAtGrow
 ms.assetid: e3ecdf1a-a889-4156-92dd-ddbd36ccd919
-ms.openlocfilehash: da31f6eef95364ad010d9c9aeb19225d42a42283
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 767d4782ec637a0404051e6871d584f73cefdcd2
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452329"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657478"
 ---
 # <a name="ctypedptrarray-class"></a>CTypedPtrArray-класс
 
@@ -52,7 +52,7 @@ class CTypedPtrArray : public BASE_CLASS
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CTypedPtrArray::Add](#add)|Добавляет новый элемент в конец массива. Растет массива, при необходимости|
 |[CTypedPtrArray::Append](#append)|Добавляет содержимое одного массива в конец другого. Растет массива, при необходимости|
@@ -65,9 +65,9 @@ class CTypedPtrArray : public BASE_CLASS
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[[CTypedPtrArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|
+|[CTypedPtrArray::operator \[ \]](#operator_at)|Получает или задает элемент с указанным индексом.|
 
 ## <a name="remarks"></a>Примечания
 

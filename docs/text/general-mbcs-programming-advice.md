@@ -9,18 +9,18 @@ helpviewer_keywords:
 - MBCS [C++], programming
 - dialog boxes [C++], fonts
 ms.assetid: 7b541235-f3e5-4af0-b2c2-a0112cd5fbfb
-ms.openlocfilehash: 0ff15244f4e93ecd2913fa825e8b5c351c7ff84d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 800e94bfb8a52b806ad45368499f126fbf163389
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501846"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626699"
 ---
 # <a name="general-mbcs-programming-advice"></a>Общие советы по программированию многобайтовой кодировки
 
 Следуйте приведенным ниже советам:
 
-- Для обеспечения гибкости, использовать макросы во время выполнения, например `_tcschr` и `_tcscpy` по возможности. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Для обеспечения гибкости, использовать макросы во время выполнения, например `_tcschr` и `_tcscpy` по возможности. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
 - Использование времени выполнения C `_getmbcp` функцию, чтобы получить сведения о текущей кодовой странице.
 

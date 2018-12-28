@@ -1,6 +1,6 @@
 ---
 title: pack
-ms.date: 09/17/2018
+ms.date: 12/17/2018
 f1_keywords:
 - pack_CPP
 - vc-pragma.pack
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, pack
 - pack pragma
 ms.assetid: e4209cbb-5437-4b53-b3fe-ac264501d404
-ms.openlocfilehash: 0067b30c5c2eae9391defeea11c722d455ec8f1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b959c161a933cc76590cfbd65d295aad36f07d7
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507605"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627518"
 ---
 # <a name="pack"></a>pack
 Задает выравнивание упаковки для членов структуры, объединения и класса.
@@ -57,7 +57,7 @@ ms.locfileid: "50507605"
 
 - [__unaligned](../cpp/unaligned.md)
 
-- [Примеры выравнивания структуры](../build/examples-of-structure-alignment.md) (x64 конкретных)
+- [Примеры выравнивания структуры](../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 конкретных)
 
    > [!WARNING]
    > Обратите внимание, что в Visual Studio 2015 и более поздних версиях можно использовать стандартные операторы alignas и alignof, которые в отличие от `__alignof` и `declspec( align )` могут переноситься между компиляторами. Стандарт C++ не предусматривает упаковки, поэтому необходимо использовать **пакет** (или соответствующие расширения для других компиляторов) чтобы указать выравнивания меньшие, чем размер слова целевой архитектуры.

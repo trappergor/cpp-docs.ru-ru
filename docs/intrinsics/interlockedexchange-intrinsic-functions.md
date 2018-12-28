@@ -1,6 +1,6 @@
 ---
 title: Встроенные функции _InterlockedExchange
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: 034e0bb0c8c3f60d0686a5f88ee4b19ed473d72d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450691"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627180"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
 
@@ -186,4 +186,4 @@ __int64 _InterlockedExchange64_rel(
 
 [Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Конфликты с 32-разрядным (x86) компилятором](../build/conflicts-with-the-x86-compiler.md)
+[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

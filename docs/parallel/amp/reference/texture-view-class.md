@@ -14,12 +14,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c76f1f9b00ea6e44f69f98286b83d4a84f12cac1
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544460"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657504"
 ---
 # <a name="textureview-class"></a>Класс texture_view
 
@@ -52,7 +52,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`value_type`|Тип элементов в агрегатах текстур.|
 |`coordinates_type`|Тип координаты, используемой для определения текселя в `texture_view`— то есть `short_vector` , имеет один и тот же ранг, связанной текстурой, имеющий тип значения `float`.|
@@ -60,14 +60,14 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор texture_view](#ctor)|Перегружен. Создает `texture_view` экземпляра.|
 |[~ texture_view деструктор](#ctor)|Уничтожает `texture_view` экземпляра.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[gather_alpha](#gather_alpha)|Перегружен. Создает пример текстуры в заданных координатах с помощью определенной конфигурации выборки и возвращает альфа (w) компоненты четыре текселей.|
 |[gather_blue](#gather_blue)|Перегружен. Создает пример текстуры в заданных координатах с помощью определенной конфигурации выборки и возвращает четыре текселей компоненты синего цвета (z).|
@@ -79,15 +79,15 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator()](#operator_call)|Перегружен. Получает значение элемента по индексу.|
-|[оператор]](#operator_at)|Перегружен. Получает значение элемента по индексу.|
+|[operator\[\]](#operator_at)|Перегружен. Получает значение элемента по индексу.|
 |[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[value_type](#value_type)|Тип значения элементов `texture_view`.|
 
@@ -473,7 +473,7 @@ void set(
 *_Index*<br/>
 Индекс элемента, который требуется задать, возможно многомерный.
 
-*значение*<br/>
+*value*<br/>
 Задаваемое значение элемента.
 
 ##  <a name="value_type"></a> value_type

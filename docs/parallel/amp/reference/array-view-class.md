@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: a0d8fa733a5da14e8ee16acf2623df07c9974893
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523381"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657491"
 ---
 # <a name="arrayview-class"></a>Класс array_view
 
@@ -65,14 +65,14 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор array_view](#ctor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы могут выполняться только на ЦП и не может быть выполнена на целевом объекте Direct3D.|
 |[~ array_view, деструктор](#ctor)|Уничтожает `array_view` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует содержимое объекта `array_view` объект в указанное место назначения путем вызова `copy(*this, dest)`.|
 |[data](#data)|Возвращает указатель на необработанные данные `array_view`.|
@@ -91,21 +91,21 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|
-|[оператор[]](#operator_at)|Возвращает элемент, задаваемый параметрами.|
+|[operator\[\]](#operator_at)|Возвращает элемент, задаваемый параметрами.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `array_view` в данный объект.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Ранг константа](#rank)|Хранит ранг объекта `array_view` объекта.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[extent](#extent)|Получает объект `extent`, который определяет форму объекта `array_view`.|
 |[source_accelerator_view](#source_accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится|
@@ -151,7 +151,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 **Заголовок** : amp.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** параллелизм
 
 ##  <a name="dtor"></a> ~ array_view
 

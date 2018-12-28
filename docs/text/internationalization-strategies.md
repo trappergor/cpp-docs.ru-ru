@@ -11,12 +11,12 @@ helpviewer_keywords:
 - character sets [C++], international programming strategies
 - localization [C++], character sets
 ms.assetid: b09d9854-0709-4b9a-a00c-b0b8bc4199b1
-ms.openlocfilehash: 615ad42d5a1e4cb6076877e1d1b5de4bd11fdf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f4805152944202b7d3f7f45fce494f7e9d81af
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501326"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53626686"
 ---
 # <a name="internationalization-strategies"></a>Стратегии международного использования
 
@@ -30,7 +30,7 @@ ms.locfileid: "50501326"
 
    Используется функциональность многобайтовой. Строки могут содержать символы однобайтовые и двухбайтовые символы. Библиотеки времени выполнения C предоставляет функции, макросы и типы данных только для многобайтовой Кодировки для программирования. MFC – полностью многобайтовую.
 
-- Исходный код для приложения, написанные для полной переносимости — путем перекомпиляции с символом `_UNICODE` или символ `_MBCS` определены, можно создавать версии, использующие любой. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле Tchar.h](../text/generic-text-mappings-in-tchar-h.md).
+- Исходный код для приложения, написанные для полной переносимости — путем перекомпиляции с символом `_UNICODE` или символ `_MBCS` определены, можно создавать версии, использующие любой. Дополнительные сведения см. в разделе [универсальные текстовые сопоставления в файле tchar.h](../text/generic-text-mappings-in-tchar-h.md).
 
    Использовании полностью перенести C времени выполнения функции, макросы и типы данных. MFC поддерживает любой из этих стратегий.
 

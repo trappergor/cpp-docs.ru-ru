@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 675112e108f57ad5208899005865570491e0d055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486598"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657543"
 ---
 # <a name="texture-class"></a>Класс texture
 
@@ -47,21 +47,21 @@ class texture;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`scalar_type`|Скалярные типы.|
 |`value_type`|Типы значений.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор текстуры](#ctor)|Инициализирует новый экземпляр класса `texture`.|
 |[~ texture деструктор](#ctor)|Уничтожает `texture` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует `texture` в место назначения, выполнив глубокое копирование.|
 |[data](#data)|Возвращает указатель ЦП на необработанные данные этой текстуры.|
@@ -73,21 +73,21 @@ class texture;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator()](#operator_call)|Возвращает значение элемента, который указан в параметрах.|
-|[оператор]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
+|[operator\[\]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
 |[оператор=](#operator_eq)|Копирует указанный [текстуры](texture-class.md) в данный объект.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Ранг константа](#rank)|Получает ранг объекта `texture` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[associated_accelerator_view](#associated_accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) то есть предпочтительным целевым объектом для копирования для этой текстуры.|
 |[depth_pitch](#depth_pitch)|Возвращает число байтов между каждым срезом глубины в трехмерной промежуточной текстуре ЦП.|
@@ -103,7 +103,7 @@ class texture;
 
 **Заголовок:** amp_graphics.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="dtor"></a> ~ текстуры
 
@@ -335,7 +335,7 @@ void set(
 *_Rank*<br/>
 Ранг индекса.
 
-*значение*<br/>
+*value*<br/>
 Новое значение элемента.
 
 ##  <a name="ctor"></a> Текстуры

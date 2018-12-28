@@ -1,6 +1,6 @@
 ---
 title: Передача аргументов и соглашения именования
-ms.date: 11/04/2016
+ms.date: 12/17/2018
 helpviewer_keywords:
 - argument passing [C++], conventions
 - arguments [C++], widening
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - passing arguments [C++], conventions
 - conventions [C++], argument names
 ms.assetid: de468979-eab8-4158-90c5-c198932f93b9
-ms.openlocfilehash: 735e703e3e7d3ddb55a04fb0d29b3899682fe24e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca09d31d3d8d50ca94543c5e02262edd7b2deefc
+ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473298"
+ms.lasthandoff: 12/19/2018
+ms.locfileid: "53627245"
 ---
 # <a name="argument-passing-and-naming-conventions"></a>Передача аргументов и соглашения именования
 
@@ -31,11 +31,11 @@ ms.locfileid: "50473298"
 Компилятор создает код пролога и эпилога для сохранения и восстановления регистров ESI, EDI, EBX и EBP, если они используются в функции.
 
 > [!NOTE]
->  Если функция возвращает структуру, объединение или класс по значению, все определения типа должны быть одинаковыми, в противном случае программа завершается сбоем в среде выполнения.
+> Если функция возвращает структуру, объединение или класс по значению, все определения типа должны быть одинаковыми, в противном случае программа завершается сбоем в среде выполнения.
 
 Сведения об определении собственного кода пролога и эпилога функции см. в разделе [с атрибутом Naked вызовы функций](../cpp/naked-function-calls.md).
 
-Сведения о по умолчанию соглашения о вызовах в коде, который платформ целевых объектов x64, см. в разделе [обзором x64 соглашения о вызовах](../build/overview-of-x64-calling-conventions.md). Дополнительные сведения о вызове соглашение о проблемах в коде, предназначенных для платформ ARM, см. в разделе [Visual C++ ARM затруднения](../build/common-visual-cpp-arm-migration-issues.md).
+Сведения о по умолчанию соглашения о вызовах в коде, который платформ целевых объектов x64, см. в разделе [x64 соглашение о вызовах](../build/x64-calling-convention.md). Дополнительные сведения о вызове соглашение о проблемах в коде, предназначенных для платформ ARM, см. в разделе [Visual C++ ARM затруднения](../build/common-visual-cpp-arm-migration-issues.md).
 
 Компилятор Visual C/C++ поддерживает следующие соглашения о вызовах.
 

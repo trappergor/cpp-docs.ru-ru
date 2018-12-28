@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 27894efd-2370-4776-9ed9-24a98492af17
-ms.openlocfilehash: 255928fd767dab36404af561f9dda2c1115fc30f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031f163a5a4b5663b296dc6615712fe7dd5dbc56
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508268"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657608"
 ---
 # <a name="cobarray-class"></a>Класс CObArray
 
@@ -63,13 +63,13 @@ class CObArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObArray::CObArray](#cobarray)|Создает пустой массив для `CObject` указатели.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObArray::Add](#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
 |[CObArray::Append](#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
@@ -91,9 +91,9 @@ class CObArray : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[[CObArray::operator]](#operator_at)|Получает или задает элемент с указанным индексом.|
+|[CObArray::operator \[ \]](#operator_at)|Получает или задает элемент с указанным индексом.|
 
 ## <a name="remarks"></a>Примечания
 

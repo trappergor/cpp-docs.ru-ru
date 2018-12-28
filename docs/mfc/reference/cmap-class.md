@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 3991ae4c7455aa8e6eb377112cb89c057e9567e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88ca218d4cb4e70dcc46ba04bbdfb7a9d12eb808
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627322"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657582"
 ---
 # <a name="cmap-class"></a>Класс CMap
 
@@ -73,19 +73,19 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 ### <a name="public-structures"></a>Открытые структуры
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Вложенные структуру, содержащую ключевое значение и значение из связанного объекта.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Создает коллекцию, которая сопоставляет значения ключей.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Возвращает число элементов в данном сопоставлении.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Возвращает число элементов в хэш-таблице.|
@@ -104,9 +104,9 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[[CMap::operator]](#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|
+|[CMap::operator \[ \]](#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|
 
 ## <a name="remarks"></a>Примечания
 
