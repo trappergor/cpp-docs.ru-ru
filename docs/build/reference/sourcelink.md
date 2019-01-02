@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - /SOURCELINK linker option
 - /SOURCELINK
-ms.openlocfilehash: 5c742a37803f450aa6084c862800583f70bcedde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5a01ca56a49791a608c5c836312c7728e9328c3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480994"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978287"
 ---
-# <a name="sourcelink-include-sourcelink-file-in-pdb"></a>/ SOURCELINK (Sourcelink включить файл в PDB-ФАЙЛ)
+# <a name="sourcelink-include-source-link-file-in-pdb"></a>/ SOURCELINK (включить ссылку на исходный файл в PDB-ФАЙЛ)
 
-Указывает файл конфигурации SourceLink для включения в PDB-файла компоновщиком.
+Указывает файл конфигурации, ссылки на источник для включения в PDB-файла компоновщиком.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,7 +28,7 @@ ms.locfileid: "50480994"
 
 ## <a name="remarks"></a>Примечания
 
-SourceLink — система зависит от языка - и системы управления версиями для предоставления отладки исходного кода для двоичных файлов. SourceLink поддерживается начиная с Visual Studio 2017 версии 15.8 двоичные файлы машинного кода C++. Обзор SourceLink, см. в разделе [ссылки на источник](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Сведения об использовании SourceLink в проектах и как для создания файла SourceLink как часть проекта, см. в разделе [SourceLink с помощью](https://github.com/dotnet/sourcelink#using-sourcelink).
+Ссылка на источник — система зависит от языка - и системы управления версиями для предоставления отладки исходного кода для двоичных файлов. Ссылка на источник поддерживается для собственных двоичных файлов C++, начиная с Visual Studio 2017 версии 15.8. Обзор ссылки на источник, см. в разделе [ссылки на источник](https://github.com/dotnet/designs/blob/master/accepted/diagnostics/source-link.md). Сведения об использовании ссылки на источник в проектах и как для создания файла SourceLink как часть проекта, см. в разделе [с помощью ссылки на источник](https://github.com/dotnet/sourcelink#using-source-link-in-c-projects).
 
 ### <a name="to-set-the-sourcelink-linker-option-in-visual-studio"></a>Установка параметра компоновщика /SOURCELINK в Visual Studio
 
