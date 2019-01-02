@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Преобразование различных типов строк
+title: Как выполнить Преобразование различных типов строк
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 8ee8790e960c05827404d932a2305a7de79cbced
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b211f32ac2eac114245f8e9fcaeae6bebba5a3
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443359"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978274"
 ---
-# <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
+# <a name="how-to-convert-between-various-string-types"></a>Как выполнить Преобразование различных типов строк
 
 В этом разделе показано, как для преобразования различных типов строк Visual C++ в другие строки. Рассматриваемые типы строк включают `char *`, `wchar_t*`, [_bstr_t](../cpp/bstr-t-class.md), [CComBSTR](../atl/reference/ccombstr-class.md), [CString](../atl-mfc-shared/using-cstring.md), [basic_string](../standard-library/basic-string-class.md), и <xref:System.String?displayProperty=fullName>. В любом случае будет создана копия строки при преобразовании в новый тип. Любые изменения, внесенные в новой строке не влияет на исходную строку и наоборот.
 
@@ -22,7 +22,7 @@ ms.locfileid: "50443359"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `char *` в строки других типов, перечисленных выше. Объект `char *` строке (также называется строкой формата C) используется символ null для обозначения конца строки. В строках формата C обычно требуется один байт на символ, но также можно использовать два байта. В приведенных ниже примерах `char *` строк, иногда называются строками многобайтовых знаков из-за строковых данных, получаемых при преобразовании из строк формата Юникод. Единый однобайтовых и многобайтовых (`MBCS`) можно использовать функции `char *` строк.
 
@@ -83,7 +83,7 @@ int main()
         cout << printstr << endl;
     }
 
-    // Convert the C style string to a CstringA and display it.
+    // Convert the C style string to a CStringA and display it.
     CStringA cstringa(orig);
     cstringa += " (CStringA)";
     cout << cstringa << endl;
@@ -123,7 +123,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `wchar_t *` в строки других типов, перечисленных выше. Несколько типов строк, включая `wchar_t *`, реализуют форматы расширенных символов. Для преобразования строк многобайтовых и формат расширенных символов, можно использовать один вызов функции например `mbstowcs_s` или вызов конструктора для класса, например `CStringA`.
 
@@ -247,7 +247,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `_bstr_t` в строки других типов, перечисленных выше. `_bstr_t` Объект является способ инкапсуляции расширенный символ `BSTR` строк. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -347,7 +347,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `CComBSTR` в строки других типов, перечисленных выше. Как _bstr_t `CComBSTR` объект является способ инкапсуляции строк расширенных символов BSTR. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -457,7 +457,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `CString` в строки других типов, перечисленных выше. `CString` основан на типе данных TCHAR, который в свою очередь, зависит ли символ `_UNICODE` определен. Если `_UNICODE` не определена, `TCHAR` определяется как char и `CString` содержит строку многобайтовых символов; Если `_UNICODE` определен, `TCHAR` определяется как `wchar_t` и `CString` содержит расширенный символ Строка.
 
@@ -605,7 +605,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `basic_string` в строки других типов, перечисленных выше.
 
@@ -701,7 +701,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать строку расширенных символов (Юникод) [System::String](assetId:///System::String?qualifyHint=True&autoUpgrade=True) в строки других типов, перечисленных выше.
 
@@ -736,7 +736,7 @@ int main()
     // while we call native functions.
     pin_ptr<const wchar_t> wch = PtrToStringChars(orig);
 
-    // Make a copy of the system string as a multibyte
+    // Make a copy of the System::String as a multibyte
     // char* string. Allocate two bytes in the multibyte
     // output string for every wide character in the input
     // string, including space for a terminating null.
@@ -747,20 +747,20 @@ int main()
     wcstombs_s(&convertedChars, nstring, newsize, wch, _TRUNCATE);
     cout << nstring << " (char *)" << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character wchar_t* string.
     const size_t newsizew = origsize;
     wchar_t *wcstring = new wchar_t[newsizew];
     wcscpy_s(wcstring, newsizew, wch);
     wcout << wcstring << _T(" (wchar_t *)") << endl;
 
-    // Convert a wide character system string to a
+    // Convert a wide character System::String to a
     // wide character _bstr_t string.
     _bstr_t bstrt(wch);
     bstrt += " (_bstr_t)";
     cout << bstrt << endl;
 
-    // Convert a wide character system string
+    // Convert a wide character System::String
     // to a wide character CComBSTR string.
     CComBSTR ccombstr(wch);
     if (ccombstr.Append(_T(" (CComBSTR)")) == S_OK)
@@ -810,7 +810,7 @@ Hello, World! (basic_string)
 [Операции CString, связанные со строками в стиле C](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 [Практическое руководство. Преобразование стандартной строки к типу System::String](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
 [Практическое руководство. Преобразование строки System::String в стандартную строку](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
-[Практическое: преобразование типа System::String к wchar_t * или char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
+[Практическое руководство. Преобразование типа System::String к wchar_t * или char\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [Программирование с использованием CComBSTR](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s, _mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
