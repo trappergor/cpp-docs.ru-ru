@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 43e6b9320fb52fc17f65b27b06e2c6f4d4851528
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7170fe3ae058f832e452089021d9f863f1791f14
+ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496438"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53657517"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Пошаговое руководство. Развертывание программы (C++)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496438"
 
 1. В **обозревателе решений** выберите проект **Установщик игры**,  а затем **Представление** > **Окно "Свойства"** или нажмите клавишу  **F4**, чтобы открыть окно **Свойства**.
 
-1. Укажите дополнительные сведения, которые вы хотите отображать в установщике.  Например, укажите *Contoso* в поле **Производитель**, *Установщик игры* в поле **Название продукта** и *http://www.contoso.com* в поле **SupportUrl** (URL-адрес поддержки).
+1. Укажите дополнительные сведения, которые вы хотите отображать в установщике.  Например, укажите *Contoso* в поле **Производитель**, *Установщик игры* в поле **Название продукта** и *http\://www.contoso.com* в поле **SupportUrl** (URL-адрес поддержки).
 
 1. В строке меню последовательно выберите пункты **Сборка** > **Диспетчер конфигураций**. В таблице **Проект** установите флажок в столбце **Сборка** для элемента **Установщик игры**. Нажмите кнопку **Закрыть**.
 
@@ -72,7 +72,7 @@ ms.locfileid: "50496438"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Предыдущий:** [Пошаговое руководство. Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Предыдущая статья:** [Пошаговое руководство. Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 

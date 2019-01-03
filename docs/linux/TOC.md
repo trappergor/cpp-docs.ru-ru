@@ -12,5 +12,6 @@
 ## [Свойства C/C++ (Linux)](prop-pages/c-cpp-linux.md)
 ## [Свойства компоновщика (Linux)](prop-pages/linker-linux.md)
 ## [Свойства событий сборки (Linux)](prop-pages/build-events-linux.md)
-## [Свойства настраиваемого этапа сборки (Linux)](prop-pages/custom-build-step-linux.md) 
+## [Свойства настраиваемого этапа сборки (Linux)](prop-pages/custom-build-step-linux.md)
 ## [Свойства проекта Makefile (Linux)](prop-pages/makefile-linux.md)
+## [Свойства удаленного архива (Linux)](prop-pages/remote-ar-linux.md)
