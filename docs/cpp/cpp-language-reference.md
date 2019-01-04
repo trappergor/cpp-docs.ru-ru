@@ -8,16 +8,16 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 69b244a1559a4570cc00a72d86426a7929ffc474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469385"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031269"
 ---
 # <a name="c-language-reference"></a>Справочник по языку C++
 
-В этом справочнике описывается язык программирования С++ в том виде, в котором он реализован в Microsoft Visual C++. На основе организации *справочное руководство по C++ с заметками* Маргарет Эллис (Margaret Ellis) и (Bjarne Stroustrup) и ANSI/ISO C++ международный стандарт (ISO/IEC FDIS 14882). Включены реализации компонентов языка С++ корпорацией Майкрософт.
+В этом справочнике описывается язык программирования С++ в том виде, в котором он реализован в Microsoft Visual C++. На основе организации [ *справочное руководство по C++ с заметками* ](http://www.stroustrup.com/arm.html) Маргарет Эллис (Margaret Ellis) и (Bjarne Stroustrup) и ANSI/ISO C++ международный стандарт (ISO/IEC FDIS 14882). Включены реализации компонентов языка С++ корпорацией Майкрософт.
 
 Обзор приемов программирования современный C++, см. в разделе [возвращением в C++](welcome-back-to-cpp-modern-cpp.md).
 
@@ -27,7 +27,7 @@ ms.locfileid: "50469385"
 
 - [Операторы C++](../cpp/cpp-built-in-operators-precedence-and-associativity.md)
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Лексические соглашения](../cpp/lexical-conventions.md)<br/>
 Основные лексические элементы программ на C++: токены, комментарии, операторы, ключевые слова, знаки пунктуации, литералы. Кроме того, трансляция файлов, приоритет и ассоциативность операторов.

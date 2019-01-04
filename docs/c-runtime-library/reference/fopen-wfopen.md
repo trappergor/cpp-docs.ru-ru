@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: 1397f3b3513fc9a3e93a69841a93b40c16e490cf
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
+ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333232"
+ms.lasthandoff: 01/04/2019
+ms.locfileid: "54031295"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -97,7 +97,7 @@ FILE *_wfopen(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Кодирования, используемые на основе CCS-флага и метки BOM
 
-|флаг CCS|Нет метки BOM (или новый файл)|BOM: UTF-8|BOM: UTF-16|
+|флаг CCS|Нет метки BOM (или новый файл)|СПЕЦИФИКАЦИИ: UTF-8|СПЕЦИФИКАЦИИ: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**ЮНИКОД**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -160,25 +160,25 @@ FILE *_wfopen(
 
 Допустимые символы для *режим* строку, используемую в **fopen** и **_fdopen** соответствуют *oflag* аргументы, которые используются в [_open](open-wopen.md) и [_sopen](sopen-wsopen.md), как показано ниже.
 
-|Символы в *режим* строки|Эквивалентное *oflag* значение _open/_sopen|
+|Символы в *режим* строки|Эквивалентное *oflag* значение \_открыть /\_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (обычно **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (обычно **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
-|**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (обычно **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (обычно **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
-|**b**|**_O_BINARY**|
-|**t**|**_O_TEXT**|
+|**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (обычно  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
+|**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (обычно  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
+|**r**|**\_O\_: RDONLY**|
+|**r +**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (обычно  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (обычно  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
+|**b**|**\_O\_ДВОИЧНЫЕ**|
+|**t**|**\_O\_ТЕКСТА**|
 |**c**|Нет|
 |**n**|Нет|
-|**S**|**_O_SEQUENTIAL**|
-|**R**|**_O_RANDOM**|
-|**T**|**_O_SHORTLIVED**|
-|**D**|**_O_TEMPORARY**|
-|**CCS = ЮНИКОДА**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**S**|**\_O\_SEQUENTIAL**|
+|**R**|**\_O\_RANDOM**|
+|**T**|**\_O\_SHORTLIVED**|
+|**D**|**\_O\_ВРЕМЕННЫЙ**|
+|**CCS = ЮНИКОДА**|**\_O\_WTEXT**|
+|**CCS = UTF-8**|**\_O\_UTF8**|
+|**CCS = UTF-16LE**|**\_O\_UTF16**|
 
 Если вы используете **rb** режим, у вас нет перенести код, и если ожидается, что будет прочитана большая часть крупного файла или не интересует производительность сети, возможно, стоит ли использовать сопоставленные памяти файлы Win32 свободен.
 
