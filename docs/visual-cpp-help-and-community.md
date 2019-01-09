@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 40983509aa9c97cbbd6b778282720c45416ec525
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178100"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978261"
 ---
 # <a name="visual-c-help-and-community"></a>Справка и сообщество Visual C++
 
@@ -25,10 +25,10 @@ ms.locfileid: "53178100"
 
 ## <a name="product-documentation"></a>Документация по продукту
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Содержит общую и справочную документацию по Visual C++. Часть библиотеки MSDN.|
-|[Центр разработчиков для Windows](https://developer.microsoft.com/windows/)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 8. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
+|[Центр разработчиков для Windows](https://developer.microsoft.com/windows/)|Содержит сведения об использовании C++ и других языков для разработки приложений для Windows 10. Часть центра разработчиков Windows; содержимое по C++ находится в разделе Документы > Справочник по языку.|
 
 ### <a name="online-and-offline-documentation"></a>Документация, доступная в сети и вне сети
 
