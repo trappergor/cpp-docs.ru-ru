@@ -3,12 +3,12 @@ title: Настройка проекта Linux CMake в Visual Studio
 description: Настройка проекта Linux CMake в Visual Studio
 ms.date: 07/20/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 32d69e28c0991adc6117b7f9496eeb1022943ef2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28902f0a2938fe653eb4dfbb6e512367b1052b8c
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585046"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978326"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
@@ -18,7 +18,7 @@ ms.locfileid: "50585046"
 В этом разделе предполагается, что вы уже знакомы с поддержкой CMake в Visual Studio. Дополнительные сведения см. в разделе [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md). Дополнительные сведения о CMake см. на странице [Сборка, тестирование и упаковка программного обеспечения с помощью CMake](https://cmake.org/).
 
 > [!NOTE]
-> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). В Visual Studio 2019 предварительно созданные двоичные файлы можно развернуть автоматически (см. раздел [Скачивание предварительно созданных двоичных файлов CMake](#download-prebuilt-cmake-binaries)).
 
 ## <a name="open-a-folder"></a>Открытие папки
 
@@ -110,7 +110,10 @@ add_executable(hello-cmake hello.cpp)
 
 В дистрибутиве Linux может быть более ранняя версия CMake. Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
-## <a name="see-also"></a>См. также
+**Visual Studio 2019**<br/>
+Если допустимый файл CMake не будет найден на удаленном компьютере, появится информационная панель и вам будет предоставлена возможность автоматически развернуть предварительно созданные двоичные файлы CMake. Двоичные файлы установятся в папку `~/.vs/cmake`. После развертывания двоичных файлов проект будет повторно создан автоматически. Обратите внимание, что если файл CMake, указанный в поле `cmakeExecutable` в `CMakeSettings.json`, является недопустимым (файл не существует или версия файла не поддерживается), то при наличии предварительно созданных двоичных файлов Visual Studio проигнорирует `cmakeExecutable` и будет использовать эти предварительно созданные двоичные файлы.
+
+## <a name="see-also"></a>См. также раздел
 
 [Работа со свойствами проектов](../ide/working-with-project-properties.md)<br/>
 [Инструменты CMake для Visual C++](../ide/cmake-tools-for-visual-cpp.md)
