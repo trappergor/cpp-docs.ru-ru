@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание и использование экземпляров unique_ptr
+title: Как выполнить Создание и использование экземпляров unique_ptr
 ms.custom: how-to
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174899"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220586"
 ---
-# <a name="how-to-create-and-use-uniqueptr-instances"></a>Практическое руководство. Создание и использование экземпляров unique_ptr
+# <a name="how-to-create-and-use-uniqueptr-instances"></a>Как выполнить Создание и использование экземпляров unique_ptr
 
 Объект [unique_ptr](../standard-library/unique-ptr-class.md) не предоставляет общий доступ к указателю. Не может быть скопирован в другое `unique_ptr`, передаваемые по значению функции или использовать в любом алгоритме стандартной библиотеки C++, предполагающем создание копий. `unique_ptr` можно только переместить. Это означает, что владение ресурсов памяти переносится в другое `unique_ptr` и оригинал `unique_ptr` больше им не владеет. Рекомендуется ограничить объект одним владельцем, поскольку множественное владение усложняет логику программы. Поэтому при необходимости интеллектуального указателя для простого объекта C++, используйте `unique_ptr`, и при построении `unique_ptr`, использовать [make_unique](../standard-library/memory-functions.md#make_unique) вспомогательную функцию.
 
@@ -53,5 +53,5 @@ ms.locfileid: "52174899"
 
 ## <a name="see-also"></a>См. также
 
-[Интеллектуальные указатели](../cpp/smart-pointers-modern-cpp.md)<br/>
+[Интеллектуальные указатели (современный C++)](../cpp/smart-pointers-modern-cpp.md)<br/>
 [make_unique](../standard-library/memory-functions.md#make_unique)
