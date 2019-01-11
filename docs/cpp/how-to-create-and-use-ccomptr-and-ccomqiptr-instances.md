@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
+title: Как выполнить Создание и использование экземпляров CComPtr и CComQIPtr
 ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: b0356cfb-12cc-4ee8-b988-8311ed1ab5e0
-ms.openlocfilehash: 8065e0b8782c1c28d83aa6fc9690150793fe51ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bcabfe80185939b899c84fc44f71b98608fc3c7
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518707"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220556"
 ---
-# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Практическое руководство. Создание и использование экземпляров CComPtr и CComQIPtr
+# <a name="how-to-create-and-use-ccomptr-and-ccomqiptr-instances"></a>Как выполнить Создание и использование экземпляров CComPtr и CComQIPtr
 
 В классическом программировании Windows библиотеки часто реализуются как COM-объекты (или, более точно, как COM-серверы). Многие компоненты операционной системы Windows реализованы в виде COM-серверов, и большинство разработчиков предоставляют библиотеки в этой форме. Сведения об основах COM см. в разделе [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal).
 
@@ -39,4 +39,4 @@ ms.locfileid: "50518707"
 
 ## <a name="see-also"></a>См. также
 
-[Интеллектуальные указатели](../cpp/smart-pointers-modern-cpp.md)
+[Интеллектуальные указатели (современный C++)](../cpp/smart-pointers-modern-cpp.md)
