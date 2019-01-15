@@ -12,19 +12,18 @@ helpviewer_keywords:
 - _WAIT_CHILD constant
 - _WAIT_GRANDCHILD constant
 ms.assetid: 7acd96fa-d118-4339-bb00-e5afaf286945
-ms.openlocfilehash: 714b4e79f1c229817a12908aad0d726f74023036
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b484f068ce94ab7a2a637723641e1206072cf24b
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524395"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220274"
 ---
 # <a name="waitchild-waitgrandchild"></a>_WAIT_CHILD, _WAIT_GRANDCHILD
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <process.h>
 ```
 
@@ -37,7 +36,7 @@ ms.locfileid: "51524395"
 |`_WAIT_CHILD`|Вызывающий процесс ожидает завершения указанного нового процесса.|
 |`_WAIT_GRANDCHILD`|Вызывающий процесс ожидает завершения указанного нового процесса и всех процессов, созданных этим новым процессом.|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_cwait](../c-runtime-library/reference/cwait.md)<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)

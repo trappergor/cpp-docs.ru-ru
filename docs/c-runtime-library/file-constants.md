@@ -25,19 +25,18 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-ms.openlocfilehash: 672297b2a1d6466f28a7addf74b8d88e2460b15e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2dc473db50b1835d4e1495ce255c0a826563b70a
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51517590"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220443"
 ---
 # <a name="file-constants"></a>Константы файлов
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <fcntl.h>
 ```
 
@@ -47,7 +46,7 @@ ms.locfileid: "51517590"
 
 Константы файла выглядят следующим образом:
 
-|Константа|Описание:|
+|Константа|Описание|
 |-|-|
 | `_O_APPEND`  | Перемещает файловый указатель в конец файла перед каждой операцией записи.  |
 | `_O_CREAT`  | Создает новый файл и открывает его для записи. Игнорируется, если уже существует файл, заданный параметром *filename*.  |
@@ -57,7 +56,7 @@ ms.locfileid: "51517590"
 | `_O_TRUNC`  | Открывает и усекает до нулевой длины существующий файл; файл должен иметь разрешение на запись. Содержимое файла уничтожается. Если задан этот флаг, задать `_O_RDONLY` нельзя.  |
 | `_O_WRONLY`  | Открывает файл только для записи; если задан этот флаг, нельзя задать `_O_RDONLY`, ни `_O_RDWR`.  |
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
