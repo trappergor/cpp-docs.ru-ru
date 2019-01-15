@@ -9,12 +9,12 @@ helpviewer_keywords:
 - floating-point constants, about floating-point constants
 - double data type, floating-point constants
 ms.assetid: e1bd9b44-d6ab-470c-93e5-07142c7a2062
-ms.openlocfilehash: d7879f3382016e098db0c8073322b99d596e8f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bde8ecdfa7e93160a86829c466ab9a78b71d48e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664923"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220378"
 ---
 # <a name="c-floating-point-constants"></a>Константы с плавающей запятой в C
 
@@ -48,7 +48,7 @@ ms.locfileid: "50664923"
 
 В следующих примерах показаны некоторые формы констант и выражений с плавающей запятой.
 
-```
+```C
 15.75
 1.575E1   /* = 15.75   */
 1575e-2   /* = 15.75   */
@@ -58,24 +58,24 @@ ms.locfileid: "50664923"
 
 Константы с плавающей запятой имеют положительное значение, если перед ними не стоит знак "минус" (**-**). А этом случае знак "минус" интерпретируется как унарный арифметический оператор изменения знака. Константы с плавающей запятой относятся к типу `float`, `double` или `long double`.
 
-Константы с плавающей запятой без суффикса **f**, **F**, **l** или **L** относятся к типу `double`. Если суффикс представлен буквой **f** или **F**, константа относится к типу `float`. Если суффикс представлен буквой **l** или **L**, константа относится к типу `long double`. Пример:
+Константы с плавающей запятой без суффикса **f**, **F**, **l** или **L** относятся к типу `double`. Если суффикс представлен буквой **f** или **F**, константа относится к типу `float`. Если суффикс представлен буквой **l** или **L**, константа относится к типу `long double`. Например:
 
-```
-100L  /* Has type long double  */
-100F  /* Has type float        */
+```C
+10.0L  /* Has type long double  */
+10.0F  /* Has type float        */
 ```
 
 Обратите внимание, что компилятор Майкрософт для C внутренне представляет `long double` так же, как и тип `double`. Дополнительные сведения о типах `double`, `float` и `long double` см. в статье [Storage of Basic Types](../c-language/storage-of-basic-types.md) (Хранилище базовых типов).
 
 Целочисленную часть константы с плавающей запятой можно опустить, как показано в следующих примерах. Число .75 можно выразить несколькими способами, включая следующие:
 
-```
+```C
 .0075e2
 0.075e1
 .075e1
 75e-2
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Константы в C](../c-language/c-constants.md)

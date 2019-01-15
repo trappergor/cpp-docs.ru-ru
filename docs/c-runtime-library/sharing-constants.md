@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _SH_DENYNO constant
 - SH_COMPAT constant
 ms.assetid: 95fadc3a-55dc-473d-98b5-e8211900465d
-ms.openlocfilehash: ecc7e5fc5afaf1d6d97f3ab46be3b1ed3001d8e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 5bcebc4f9321ebf3f85bdd757118f779a759fc62
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519546"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220521"
 ---
 # <a name="sharing-constants"></a>Совместное использование констант
 
@@ -34,7 +34,6 @@ ms.locfileid: "51519546"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <share.h>
 ```
 
@@ -52,7 +51,7 @@ ms.locfileid: "51519546"
 |`_SH_DENYNO`|Разрешает доступ для чтения и записи|
 |`_SH_SECURE`|Устанавливает безопасный режим (совместный доступ для чтения, монопольный доступ для записи)|
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>
 [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md)<br/>

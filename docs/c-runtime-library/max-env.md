@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MAX_ENV constant
 - _MAX_ENV constant
 ms.assetid: 66f0683e-6132-4297-b99b-6940534898b5
-ms.openlocfilehash: 726175f395843d77c6128f6b27b72aed71aacb9a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f9035ee0dfa660b3c6eaa3fdac3ce5167312ad9e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524876"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220014"
 ---
 # <a name="maxenv"></a>_MAX_ENV
 
@@ -22,11 +22,10 @@ ms.locfileid: "51524876"
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <stdio.h>
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Константы среды](../c-runtime-library/environmental-constants.md)<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)

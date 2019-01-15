@@ -6,19 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - BUFSIZ constant
 ms.assetid: 94ac04a3-d154-476b-bd89-eefbc7b949ae
-ms.openlocfilehash: a7f702c7ed2d01e2074fe0998edda3d5de6cf83d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cbbced7a2678fe0671516d351a66d091b0136180
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485410"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220339"
 ---
 # <a name="bufsiz"></a>BUFSIZ
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <stdio.h>
 ```
 
@@ -26,7 +25,7 @@ ms.locfileid: "50485410"
 
 `BUFSIZ` — это обязательный буфер, выделяемый пользователем для подпрограммы [setvbuf](../c-runtime-library/reference/setvbuf.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Потоковый ввод-вывод](../c-runtime-library/stream-i-o.md)<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)
