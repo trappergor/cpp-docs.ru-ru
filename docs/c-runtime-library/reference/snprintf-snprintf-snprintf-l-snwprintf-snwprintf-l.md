@@ -1,4 +1,4 @@
----
+﻿---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
 apiname:

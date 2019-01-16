@@ -1,4 +1,4 @@
----
+﻿---
 title: Оператор for (C++)
 ms.date: 11/04/2016
 helpviewer_keywords:

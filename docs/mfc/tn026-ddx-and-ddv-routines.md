@@ -1,4 +1,4 @@
----
+﻿---
 title: TN026. Процедуры DDX и DDV
 ms.date: 06/28/2018
 f1_keywords:
