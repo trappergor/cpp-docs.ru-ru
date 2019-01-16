@@ -41,19 +41,18 @@ helpviewer_keywords:
 - EXDEV constant
 - EILSEQ constant
 ms.assetid: 47089258-d5a5-4cd8-b193-223894dea0cf
-ms.openlocfilehash: c7c623b81d626b3d653dbd731521ffe2649671ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d092f9c1626f48dcdb006e18ece2a45bfeed36e
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645605"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220612"
 ---
 # <a name="errno-constants"></a>Константы errno
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <errno.h>
 ```
 
@@ -67,7 +66,7 @@ ERRNO.H содержит определения для значений **errno*
 
 Поддерживаются следующие значения **errno**:
 
-|Константа|Описание:|
+|Константа|Описание|
 |-|-|
 |**ECHILD**|Нет порожденных процессов.|
 |**EAGAIN**|Нет больше процессов. Попытка создать новый процесс завершилась ошибкой, поскольку больше нет слотов для процессов, недостаточно памяти или достигнут максимальный уровень вложенности.|
@@ -172,6 +171,6 @@ ERRNO.H содержит определения для значений **errno*
 #define EXDEV /* cross device link */
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Глобальные константы](../c-runtime-library/global-constants.md)

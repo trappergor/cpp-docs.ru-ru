@@ -21,19 +21,18 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 841ff5a31bfe9ee5513f76970d3b834f698b92cc
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521359"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220196"
 ---
 # <a name="locale-categories"></a>Категории языковых стандартов
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <locale.h>
 ```
 
@@ -45,7 +44,7 @@ ms.locfileid: "51521359"
 |---------------------|-------------------------------|
 |`LC_ALL`|Любое применение языкового стандарта (все категории)|
 |`LC_COLLATE`|Поведение функций `strcoll` и `strxfrm`|
-|`LC_CTYPE`|Поведение функций обработки символов (за исключением **isdigit**, `isxdigit`, `mbstowcs` и `mbtowc`)|
+|`LC_CTYPE`|Поведение функций обработки символов (за исключением `isdigit`, `isxdigit`, `mbstowcs` и `mbtowc`)|
 |`LC_MAX`|Аналогично `LC_TIME`|
 |`LC_MIN`|Аналогично `LC_ALL`|
 |`LC_MONETARY`|Информация о форматировании денежных значений, возвращаемая функцией `localeconv`|
@@ -54,7 +53,7 @@ ms.locfileid: "51521359"
 
 См. пример в описании функций [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [localeconv](../c-runtime-library/reference/localeconv.md)<br/>
 [setlocale, _wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

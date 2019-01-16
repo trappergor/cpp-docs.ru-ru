@@ -25,19 +25,18 @@ helpviewer_keywords:
 - _A_HIDDEN constant
 - _A_RDONLY constant
 ms.assetid: 8dc8ccb9-99f5-446b-876c-7ebecc2f764f
-ms.openlocfilehash: 9aceef7f9c28da3ed3d0d98f4fc579a3c17480e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90aacc1e1e8c45f739c1f6aec973f55e7fab67d9
+ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660347"
+ms.lasthandoff: 01/11/2019
+ms.locfileid: "54220183"
 ---
 # <a name="file-attribute-constants"></a>Константы атрибутов файлов
 
 ## <a name="syntax"></a>Синтаксис
 
 ```
-
 #include <io.h>
 ```
 
@@ -47,7 +46,7 @@ ms.locfileid: "50660347"
 
 Атрибуты представлены следующими константами манифеста.
 
-|Константа|Описание:|
+|Константа|Описание|
 |-|-|
 |`_A_ARCH`| Архив. Устанавливается при любом изменении файла и очищается командой BACKUP. Значение: 0x20|
 |`_A_HIDDEN`| Скрытый файл. Такой файл не отображается командой DIR, если не указан параметр /AH. Возвращает сведения об обычных файлах и файлах, имеющих этот атрибут. Значение: 0x02|
@@ -58,7 +57,7 @@ ms.locfileid: "50660347"
 
 Вы можете объединить несколько констант с помощью оператора OR (&#124;).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Функции поиска имени файла](../c-runtime-library/filename-search-functions.md)<br/>
 [Глобальные константы](../c-runtime-library/global-constants.md)
