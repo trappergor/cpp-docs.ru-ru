@@ -71,7 +71,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 
 ### <a name="public-methods"></a>Открытые методы
 
-| Имя                                                      | Описание:                                                                                        |
+| Имя                                                      | Описание                                                                                        |
 | --------------------------------------------------------- | -------------------------------------------------------------------------------------------------- |
 | [RuntimeClass::AddRef](#addref)                           | Увеличивает счетчик ссылок для текущего `RuntimeClass` объекта.                              |
 | [RuntimeClass::DecrementReference](#decrementreference)   | Уменьшает счетчик ссылок для текущего `RuntimeClass` объекта.                              |

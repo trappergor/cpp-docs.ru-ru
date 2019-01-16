@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
-ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
+ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597568"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334681"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
 
@@ -432,7 +432,7 @@ bool binary_search(
 *последний*<br/>
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*значение*<br/>
+*value*<br/>
 Значение должно соответствовать значению элемента или удовлетворять условию со значением элемента, заданному двоичным предикатом.
 
 *Зап.*<br/>
@@ -3104,7 +3104,7 @@ ForwardIterator lower_bound(
 *последний*<br/>
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*значение*<br/>
+*value*<br/>
 Значение, чья первая позиция или возможная первая позиция ищется в упорядоченном диапазоне.
 
 *Зап.*<br/>
@@ -5561,7 +5561,7 @@ int main() {
 
 ## <a name="random_shuffle"></a>  random_shuffle
 
-Функция std:: random_shuffle() является устаревшим, заменены [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Дополнительные сведения и пример кода см. в разделе [ \<случайных >](../standard-library/random.md) и учет Stackoverflow [почему методы std::random_shuffle удалены устарели в C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
+Функция std:: random_shuffle() является устаревшим, заменены [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Дополнительные сведения и пример кода см. в разделе [ \<случайных >](../standard-library/random.md) и запись Stack Overflow [почему методы std::random_shuffle удалены устарели в C ++ 14?](http://go.microsoft.com/fwlink/p/?linkid=397954).
 
 ## <a name="remove"></a>  remove
 
@@ -8597,7 +8597,7 @@ template<class ForwardIterator, class Type, class Predicate>
 *последний*<br/>
 Позиция, следующая за последним элементом в диапазоне для поиска.
 
-*значение*<br/>
+*value*<br/>
 Значение в упорядоченном диапазоне, которое должно превышаться значением элемента, указанного возвращенным итератором.
 
 *Зап.*<br/>

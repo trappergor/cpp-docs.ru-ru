@@ -3,12 +3,12 @@ title: Возвращение к C++ (современный C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: a7d82a65141e402e779a428ba32d15ddd70016c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
+ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454639"
+ms.lasthandoff: 01/16/2019
+ms.locfileid: "54334629"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>Возвращение к C++ (современный C++)
 
@@ -125,7 +125,7 @@ C++ переживает возрождение, потому что мощно�
 
 - [Переносимость на границах API](../cpp/portability-at-abi-boundaries-modern-cpp.md)
 
-Дополнительные сведения см. в статье StackOverflow [какие идиомы C++ являются нерекомендуемыми в C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
+Дополнительные сведения см. в статье на сайте Stack Overflow [идиом с ++ которого являются нерекомендуемыми в C ++ 11](https://stackoverflow.com/questions/9299101/which-c-idioms-are-deprecated-in-c11).
 
 ## <a name="see-also"></a>См. также
 
