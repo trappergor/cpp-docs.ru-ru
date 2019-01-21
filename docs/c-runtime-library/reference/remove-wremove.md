@@ -30,12 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05f1c5b6760520e5a982777faa903b3c5116ad05
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613978"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417607"
 ---
 # <a name="remove-wremove"></a>remove, _wremove
 
@@ -59,7 +59,7 @@ int _wremove(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается значение -1 и задает **errno** либо **EACCES** чтобы указать, что путь задает файл только для чтения, или файл открыт, или к **ENOENT** указывает, что Имя файла или путь не найден или путь задает каталог.
+Каждая из этих функций возвращает 0, если файл был успешно удален. В противном случае возвращается значение -1 и задает **errno** либо **EACCES** для указания, что путь задает файл только для чтения, указывает каталог или файл открыт, или к **ENOENT** Чтобы указать, что имя файла или путь не найден.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 

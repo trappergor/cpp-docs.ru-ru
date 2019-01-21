@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec59a02f1302fe4a2149889cf1b48090d061d6b2
+ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544203"
+ms.lasthandoff: 01/21/2019
+ms.locfileid: "54417620"
 ---
 # <a name="unlink-wunlink"></a>_unlink, _wunlink
 
@@ -61,7 +61,7 @@ int _wunlink(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Каждая из этих функций при успешном выполнении возвращает 0. В противном случае функция возвращает -1 и наборы **errno** для **EACCES**, что означает путь задает файл только для чтения, или к **ENOENT**, означающее, что файл или путь не найден или путь указывает каталог.
+Каждая из этих функций при успешном выполнении возвращает 0. В противном случае функция возвращает -1 и наборы **errno** для **EACCES**, что означает путь указывает файл, доступный только для чтения или каталог, или к **ENOENT**, означающее, что файл или путь не найден.
 
 Дополнительные сведения об этих и других кодах возврата см. в разделе [_doserrno, errno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
