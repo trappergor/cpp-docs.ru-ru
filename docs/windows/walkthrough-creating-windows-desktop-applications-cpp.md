@@ -1,19 +1,19 @@
 ---
-title: 'Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)'
+title: Пошаговое руководство. Создание традиционного приложения рабочего стола Windows (C++)
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 07da91ea092b4e7bee974b0387e72ea0cacaec8e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694053"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893903"
 ---
-# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство: Создание традиционного приложения рабочего стола Windows (C++)
+# <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство. Создание традиционного приложения рабочего стола Windows (C++)
 
 В этом пошаговом руководстве показано, как создать традиционное классическое приложение Windows в Visual Studio. Вы создадите пример приложения использует Windows API для отображение «Hello, рабочий стол Windows!» "Hello, World!". Код, созданный в этом пошаговом руководстве, можно использовать в качестве шаблона для создания других классических приложений Windows.
 
@@ -107,7 +107,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    );
    ```
 
-   Сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе [точка входа WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559).
+   Сведения о параметрах и значениях, возвращаемых этой функцией, см. в разделе [точка входа WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
    > [!NOTE]
    > Что такое этих дополнительных слов, таких как `CALLBACK`, или `HINSTANCE`, или `_In_`? Традиционные API Windows использует определения типов и макросы препроцессора широко, чтобы абстрагироваться от конкретных некоторые из сведений о типах и платформой кодов, таких как соглашения о вызовах, **__declspec** объявления и директив pragma для компилятора. В Visual Studio можно использовать IntelliSense [краткие сведения](/visualstudio/ide/using-intellisense#quick-info) возможность, чтобы узнать, что определение этих определений typedef и макросы. Наведите указатель мыши над словом интерес, или выберите его и нажмите клавишу **Ctrl**+**K**, **Ctrl**+**я** для небольшое всплывающее окно с определением. Дополнительные сведения см. в статье [Using IntelliSense](/visualstudio/ide/using-intellisense) (Использование IntelliSense). Параметры и возвращаемые типы часто используют *примечания SAL* помогут вам catch ошибок программирования. Дополнительные сведения см. в разделе [использование аннотаций SAL для сокращения количества дефектов кода C/C++](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects).
@@ -136,7 +136,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>Добавление функциональных возможностей в функцию WinMain
 
-1. В `WinMain` функции, заполнить структуру типа [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577). Структура содержит сведения об окне, например, значок приложения, цвет фона окна, имя, отображаемое в строке заголовка и, что важно, указатель на функцию в процедуре окна. В приведенном ниже примере показана типичная структура `WNDCLASSEX` .
+1. В `WinMain` функции, заполнить структуру типа [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa). Структура содержит сведения об окне, например, значок приложения, цвет фона окна, имя, отображаемое в строке заголовка и, что важно, указатель на функцию в процедуре окна. В приведенном ниже примере показана типичная структура `WNDCLASSEX` .
 
    ```cpp
    WNDCLASSEX wcex;
@@ -155,7 +155,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   Сведения о полях структуры выше, см. в разделе [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577).
+   Сведения о полях структуры выше, см. в разделе [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa).
 
 1. Зарегистрировать `WNDCLASSEX` с Windows, чтобы он знал о окна и как отправлять сообщения на него. Воспользуйтесь функцией [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) и передайте структуру класса окна в качестве аргумента. `_T` Макрос используется, так как мы используем `TCHAR` типа.
 
@@ -237,7 +237,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    return (int) msg.wParam;
    ```
 
-   Дополнительные сведения о структурах и функциях, используемых в цикле обработки сообщений, см. в разделах, посвященных [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
+   Дополнительные сведения о структурах и функциях, используемых в цикле обработки сообщений, см. в разделах, посвященных [MSG](/windows/desktop/api/winuser/ns-winuser-msg), [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage), [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage).
 
    На этом этапе функция `WinMain` должна напоминать приведенный ниже код.
 

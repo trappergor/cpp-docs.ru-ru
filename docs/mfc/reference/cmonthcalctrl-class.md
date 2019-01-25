@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 26a0feadfd6603f74ce222e4850f0da9cf71e7d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509596"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894202"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMonthCalCtrl::Create](#create)|Создает элемент управления calendar month и присоединяет его к `CMonthCalCtrl` объекта.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Получает ширину границы элемента управления calendar текущего месяца.|
@@ -226,7 +226,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает сочетание Windows стили, примененный к элементу управления Календарь месяца. См. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles) в пакете SDK для Windows, Дополнительные сведения о стилях.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Содержит положение и размер элемента управления calendar month.
 
 *pt*<br/>
@@ -412,7 +412,7 @@ BOOL GetCurSel(LPSYSTEMTIME pDateTime) const;
 Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) объекта или [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта. Получает текущее время.
 
 *pDateTime*<br/>
-Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры, который будет получать сведения о дате, выбранных в настоящий момент. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
+Указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры, который будет получать сведения о дате, выбранных в настоящий момент. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -579,7 +579,7 @@ int GetMonthRange(
 Ссылку на `COleDateTime` или `CTime` объект, содержащий Максимальная допустимая дата.
 
 *pMinRange*<br/>
-Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую даты в наименьшее конец диапазона.
+Указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую даты в наименьшее конец диапазона.
 
 *pMaxRange*<br/>
 Указатель на `SYSTEMTIME` структуру, содержащую дату, указанную в наибольшее конец диапазона.
@@ -625,10 +625,10 @@ DWORD GetRange(
 ### <a name="parameters"></a>Параметры
 
 *pMinRange*<br/>
-Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую даты в наименьшее конец диапазона.
+Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую даты в наименьшее конец диапазона.
 
 *pMaxRange*<br/>
-Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату, указанную в наибольшее конец диапазона.
+Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую дату, указанную в наибольшее конец диапазона.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -674,7 +674,7 @@ BOOL GetSelRange(
 Ссылку на `COleDateTime` или `CTime` объект, содержащий Максимальная допустимая дата.
 
 *pMinRange*<br/>
-Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую даты в наименьшее конец диапазона.
+Указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую даты в наименьшее конец диапазона.
 
 *pMaxRange*<br/>
 Указатель на `SYSTEMTIME` структуру, содержащую дату, указанную в наибольшее конец диапазона.
@@ -705,7 +705,7 @@ BOOL GetToday(LPSYSTEMTIME pDateTime) const;
 Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , указывающий текущий день.
 
 *pDateTime*<br/>
-Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры, который будет получать сведения о дате. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
+Указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры, который будет получать сведения о дате. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -814,7 +814,7 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*cxyBorder*|[in] Ширина границы в пикселях.|
 
@@ -951,9 +951,9 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
-|*dwNewView*|[in] Одно из следующих значений, указывающих ежемесячно, ежегодно, десять лет или представления века.<br /><br /> MCMV_MONTH: Представление за месяц<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десятилетие<br /><br /> MCMV_CENTURY: Представление века|
+|*dwNewView*|[in] Одно из следующих значений, указывающих ежемесячно, ежегодно, десять лет или представления века.<br /><br /> MCMV_MONTH: Представление за месяц.<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десять лет<br /><br /> MCMV_CENTURY: Представление веке|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -979,7 +979,7 @@ BOOL SetCurSel(const CTime& refDateTime);
 Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) или [CTime](../../atl-mfc-shared/reference/ctime-class.md) , указывающий элемент управления calendar month, выбранных в настоящий момент.
 
 *pDateTime*<br/>
-Указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую дату в качестве текущего выделения.
+Указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую дату в качестве текущего выделения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1164,7 +1164,7 @@ BOOL SetRange(
 ### <a name="parameters"></a>Параметры
 
 *pMinRange*<br/>
-Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую даты в наименьшее конец диапазона.
+Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую даты в наименьшее конец диапазона.
 
 *pMaxRange*<br/>
 Указатель на `COleDateTime` объекта, `CTime` объекта, или `SYSTEMTIME` структуру, содержащую дату, указанную в наибольшее конец диапазона.
@@ -1202,7 +1202,7 @@ BOOL SetSelRange(
 ### <a name="parameters"></a>Параметры
 
 *pMinRange*<br/>
-Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую даты в наименьшее конец диапазона.
+Указатель на `COleDateTime` объекта, `CTime` объекта, или [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую даты в наименьшее конец диапазона.
 
 *pMaxRange*<br/>
 Указатель на `COleDateTime` объекта, `CTime` объекта, или `SYSTEMTIME` структуру, содержащую дату, указанную в наибольшее конец диапазона.
@@ -1231,7 +1231,7 @@ void SetToday(const CTime* pDateTime);
 Ссылку на [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md) , содержащий текущую дату.
 
 *pDateTime*<br/>
-Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, содержащий сведения о текущей дате. В третьей версии, указатель на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, содержащую сведения о текущей дате.
+Во второй версии, указатель на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объект, содержащий сведения о текущей дате. В третьей версии, указатель на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, содержащую сведения о текущей дате.
 
 ### <a name="remarks"></a>Примечания
 

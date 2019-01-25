@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 5d3c81a31d49a2817b4605f734d5348dc518076a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614231"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893942"
 ---
 # <a name="cfiletime-class"></a>Класс CFileTime
 
@@ -41,13 +41,13 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileTime::CFileTime](#cfiletime)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileTime::GetCurrentTime](#getcurrenttime)|Вызовите эту статическую функцию для получения `CFileTime` объект, представляющий текущую системную дату и время.|
 |[CFileTime::GetTime](#gettime)|Вызовите этот метод, чтобы получить время из `CFileTime` объекта.|
@@ -73,7 +73,7 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CFileTime::Day](#day)|Статические данные-член хранить число 100-наносекундных интервалов, составляющих один день.|
 |[CFileTime::Hour](#hour)|Статические данные-член хранить число 100-наносекундных интервалов, составляющих один час.|
@@ -92,7 +92,7 @@ class CFileTime :  public FILETIME
 
 |Переменная-член|Число 100-наносекундных интервалов|
 |---------------------|-----------------------------------------|
-|Millisecond|10,000|
+|Millisecond|10 000|
 |Second|Миллисекунды \* 1000|
 |Minute|Второй \* 60|
 |Hour|Минуты \* 60|
@@ -124,7 +124,7 @@ CFileTime(ULONGLONG nTime) throw();
 ### <a name="parameters"></a>Параметры
 
 *FT*<br/>
-Объект [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуры.
+Объект [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуры.
 
 *nTime*<br/>
 Дата и время, выраженное как 64-разрядное значение.
@@ -475,7 +475,7 @@ static const ULONGLONG Week = Day* 7;
 
 ## <a name="see-also"></a>См. также
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [Класс CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

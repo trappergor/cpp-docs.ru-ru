@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26d8d004c933e48833047f85727ae6282c4b43d7
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694183"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893864"
 ---
 # <a name="composite-control-global-functions"></a>Глобальные функции составного элемента управления
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in] Определяет окно, которому принадлежит диалоговое окно.
 
 *lpDialogProc*<br/>
-[in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-Дополнительные сведения о редактировании ресурсов см. в разделе [как: открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK: SDK Tools.
+Дополнительные сведения о редактировании ресурсов см. в разделе [как: Открытие файла описания ресурсов в текстовом формате](../../windows/how-to-open-a-resource-script-file-in-text-format.md). Дополнительные сведения об инструкциях определения ресурсов элемента управления, см. в разделе [общих параметров управления](/windows/desktop/menurc/common-control-parameters) в разделе Windows SDK: SDK Tools.
 
 Дополнительные сведения в диалоговых окнах в целом см. [DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa) и [CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) в пакете Windows SDK.
 
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in] Определяет окно, которому принадлежит диалоговое окно.
 
 *lpDialogProc*<br/>
-[in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](https://msdn.microsoft.com/library/windows/desktop/ms645469).
+[in] Указывает процедуру диалогового окна. Дополнительные сведения о процедуру диалогового окна см. в разделе [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc).
 
 *dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.

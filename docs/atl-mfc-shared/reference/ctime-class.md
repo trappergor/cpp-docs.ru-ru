@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: cedd1bfd4ea955f920e13b5d01beb3a478656b69
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178126"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893981"
 ---
 # <a name="ctime-class"></a>Класс CTime
 
@@ -52,12 +52,12 @@ class CTime
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CTime::Format](#format)|Преобразует `CTime` объекта в форматированную строку, в зависимости от местного часового пояса.|
 |[CTime::FormatGmt](#formatgmt)|Преобразует `CTime` объекта в форматированную строку — исчисляется по UTC.|
 |[CTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Преобразует время сведениями, хранящимися в `CTime` объекта на структуру Win32-совместимых DBTIMESTAMP.|
-|[CTime::GetAsSystemTime](#getassystemtime)|Преобразует время сведениями, хранящимися в `CTime` в Win32-совместимый [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.|
+|[CTime::GetAsSystemTime](#getassystemtime)|Преобразует время сведениями, хранящимися в `CTime` в Win32-совместимый [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры.|
 |[CTime::GetCurrentTime](#getcurrenttime)|Создает `CTime` объект, представляющий текущее время (статическая функция-член).|
 |[CTime::GetDay](#getday)|Возвращает день представлен `CTime` объекта.|
 |[CTime::GetDayOfWeek](#getdayofweek)|Возвращает день недели, представленный `CTime` объекта.|
@@ -169,10 +169,10 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 Значения даты и времени MS-DOS, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
 *ST*<br/>
-Объект [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
+Объект [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
 *FT*<br/>
-Объект [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
+Объект [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `CTime` объекта.
 
 *DBTS*<br/>
 Ссылка на структуру DBTIMESTAMP, содержащую текущее местное время.
@@ -209,7 +209,7 @@ CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
    > [!NOTE]
    > В конструктор с помощью `DBTIMESTAMP` параметр доступен только в случае, если включен OLEDB.h.
 
-Дополнительные сведения см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуры в пакете Windows SDK. Также см. в разделе [MS-DOS даты и времени](/windows/desktop/SysInfo/ms-dos-date-and-time) запись в пакете Windows SDK.
+Дополнительные сведения см. в разделе [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) и [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуры в пакете Windows SDK. Также см. в разделе [MS-DOS даты и времени](/windows/desktop/SysInfo/ms-dos-date-and-time) запись в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -304,7 +304,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ##  <a name="getassystemtime"></a>  CTime::GetAsSystemTime
 
-Вызовите эту функцию-член для преобразования времени информацию, хранящуюся в `CTime` в Win32-совместимый [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.
+Вызовите эту функцию-член для преобразования времени информацию, хранящуюся в `CTime` в Win32-совместимый [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры.
 
 ```
 bool GetAsSystemTime(SYSTEMTIME& st) const throw();
@@ -313,7 +313,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 ### <a name="parameters"></a>Параметры
 
 *timeDest*<br/>
-Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, которая будет хранить значение преобразованного даты и времени `CTime` объекта.
+Ссылку на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, которая будет хранить значение преобразованного даты и времени `CTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

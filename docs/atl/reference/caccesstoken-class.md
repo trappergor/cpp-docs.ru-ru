@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: e53160860211ba09114f2d4d101a2eaaf7de941f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694534"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894250"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
@@ -78,7 +78,7 @@ class CAccessToken
 
 |Имя|Описание:|
 |----------|-----------------|
-|[CAccessToken:: ~ CAccessToken](#dtor)|Деструктор|
+|[CAccessToken::~CAccessToken](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -224,7 +224,7 @@ bool CreateImpersonationToken(
 
 ### <a name="remarks"></a>Примечания
 
-`CreateImpersonationToken` вызовы [DuplicateToken](https://msdn.microsoft.com/library/windows/desktop/aa446616) создать новый маркер олицетворения.
+`CreateImpersonationToken` вызовы [DuplicateToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetoken) создать новый маркер олицетворения.
 
 ##  <a name="createprimarytoken"></a>  CAccessToken::CreatePrimaryToken
 
@@ -661,7 +661,7 @@ bool GetProcessToken(DWORD dwDesiredAccess, HANDLE hProcess = NULL) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [OpenProcessToken](https://msdn.microsoft.com/library/aa379295) функции Win32.
+Вызовы [OpenProcessToken](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-openprocesstoken) функции Win32.
 
 ##  <a name="getprofile"></a>  CAccessToken::GetProfile
 
@@ -1093,7 +1093,7 @@ bool PrivilegeCheck(
 
 ### <a name="remarks"></a>Примечания
 
-Когда `PrivilegeCheck` возвращении `Attributes` члены каждой [подробности](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) структуры присваивается SE_PRIVILEGE_USED_FOR_ACCESS, если включен соответствующий привилегий. Этот метод вызывает метод [PrivilegeCheck](https://msdn.microsoft.com/library/windows/desktop/aa379304) функции Win32.
+Когда `PrivilegeCheck` возвращении `Attributes` члены каждой [подробности](/windows/desktop/api/winnt/ns-winnt-_luid_and_attributes) структуры присваивается SE_PRIVILEGE_USED_FOR_ACCESS, если включен соответствующий привилегий. Этот метод вызывает метод [PrivilegeCheck](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-privilegecheck) функции Win32.
 
 ##  <a name="revert"></a>  CAccessToken::Revert
 

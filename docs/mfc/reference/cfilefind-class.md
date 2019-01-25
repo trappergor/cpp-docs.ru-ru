@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CFileFind [MFC], CloseContext
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
-ms.openlocfilehash: 983c8c46100312947f9b5c357df23b51d6eaabc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9eb192e546bcfbba385beea4f1716ce03bbc8ade
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462162"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894059"
 ---
 # <a name="cfilefind-class"></a>Класс CFileFind
 
@@ -83,7 +83,7 @@ class CFileFind : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileFind::Close](#close)|Закрывает этот запрос поиска.|
 |[CFileFind::FindFile](#findfile)|Осуществляет поиск указанного имени файла в каталоге.|
@@ -116,7 +116,7 @@ class CFileFind : public CObject
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CFileFind::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|
 
@@ -208,7 +208,7 @@ virtual BOOL FindFile(
 Указатель на строку, содержащую имя файла для поиска. Если передается значение NULL *pstrName*, `FindFile` подстановочный знак (*.\*) поиска.
 
 *dwUnused*<br/>
-Зарезервированные, чтобы сделать `FindFile` полиморфным производных классов. Должно быть 0.
+Зарезервированные, чтобы сделать `FindFile` полиморфным производных классов. Должен быть равен 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -332,7 +332,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Параметры
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время создания файла.
 
 *refTime*<br/>
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.
@@ -473,7 +473,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время последнего доступа к файлу.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -502,7 +502,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Параметры
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время последней операции записи файла.
 
 *refTime*<br/>
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.

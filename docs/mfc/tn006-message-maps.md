@@ -1,5 +1,5 @@
 ---
-title: TN006. Схемы сообщений
+title: 'TN006: Схемы сообщений'
 ms.date: 06/25/2018
 f1_keywords:
 - vc.messages.maps
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3536cb215da04fb7114853d3fa5d764585cbb58e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693679"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894085"
 ---
-# <a name="tn006-message-maps"></a>TN006. Схемы сообщений
+# <a name="tn006-message-maps"></a>TN006: Схемы сообщений
 
 Эта заметка описывает функцию сопоставления сообщений MFC.
 
@@ -121,7 +121,7 @@ pWnd->SendMessage(WM_MYMESSAGE);
 
 ## <a name="registered-windows-messages"></a>Сообщения зарегистрированных Windows
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) функция используется для определения нового сообщения окна, гарантированно будет уникальным во всей системе. Макрос ON_REGISTERED_MESSAGE используется для обработки этих сообщений. Этот макрос принимает имя *целое число без знака РЯДОМ* переменную, которая содержит идентификатор сообщения зарегистрированных windows. Пример
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) функция используется для определения нового сообщения окна, гарантированно будет уникальным во всей системе. Макрос ON_REGISTERED_MESSAGE используется для обработки этих сообщений. Этот макрос принимает имя *целое число без знака РЯДОМ* переменную, которая содержит идентификатор сообщения зарегистрированных windows. Пример
 
 ```cpp
 class CMyWnd : public CMyParentWndClass
@@ -213,7 +213,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
-Опытные пользователи могут обрабатывать широкий набор команд с помощью один обработчик команды: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) или ON_COMMAND_RANGE_EX. Дополнительные сведения об этих макросах см.
+Опытные пользователи могут обрабатывать широкий набор команд, используя один обработчик команды. [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range) или ON_COMMAND_RANGE_EX. Дополнительные сведения об этих макросах см.
 
 > [!NOTE]
 > ClassWizard поддерживает создание ON_COMMAND и ON_UPDATE_COMMAND_UI обработчики, но он не поддерживает создание ON_COMMAND_EX или ON_COMMAND_RANGE обработчиков. Тем не менее мастер классов проанализирует и позволяют просматривать все варианты обработчик четыре команды.

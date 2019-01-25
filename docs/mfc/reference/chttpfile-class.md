@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 1fa1b63ed045c176841565473476185bb15999e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564467"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893656"
 ---
 # <a name="chttpfile-class"></a>Класс CHttpFile
 
@@ -293,7 +293,7 @@ BOOL QueryInfo(
 
 - HTTP_QUERY_FLAG_REQUEST_HEADERS как правило, приложение запрашивает заголовки ответа, но приложения можно также запрашивать заголовки запроса с помощью этого флага.
 
-- HTTP_QUERY_FLAG_SYSTEMTIME для заголовков, значение которого является строка даты и времени, например «Last-Modified-Time,» этот флаг возвращает значение заголовка как стандартный Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру, которая не требует приложению синтаксический анализ данных. Если вы используете этот флаг, может потребоваться использовать `SYSTEMTIME` переопределения функции.
+- HTTP_QUERY_FLAG_SYSTEMTIME для заголовков, значение которого является строка даты и времени, например «Last-Modified-Time,» этот флаг возвращает значение заголовка как стандартный Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру, которая не требует приложению синтаксический анализ данных. Если вы используете этот флаг, может потребоваться использовать `SYSTEMTIME` переопределения функции.
 
 - HTTP_QUERY_FLAG_NUMBER для заголовков, значение которого является число, например код состояния, этот флаг возвращает данные, в виде 32-разрядное число.
 
@@ -315,7 +315,7 @@ BOOL QueryInfo(
 Значение индекса. См. в разделе *lpdwIndex*.
 
 *pSysTime*<br/>
-Указатель на Win32 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуры.
+Указатель на Win32 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

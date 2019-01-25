@@ -2,78 +2,18 @@
 title: Описание
 ms.date: 11/04/2016
 ms.assetid: b7858099-7d7f-4cd9-9fa0-fba4832f2dd2
-ms.openlocfilehash: 13f2d0700f4200caee0b87e1923711fef5e7ae14
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 2cc9ff535939a3da623b99b769e520b739aabc8c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397294"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894384"
 ---
 # <a name="contents"></a>Описание
 
 [1. Введение](../../parallel/openmp/1-introduction.md)
 
 [2. Директивы](../../parallel/openmp/2-directives.md)
-
-[2.1 Формат директивы](../../parallel/openmp/2-1-directive-format.md)
-
-[2.2 Условная компиляция](../../parallel/openmp/2-2-conditional-compilation.md)
-
-[2.3 Конструкция parallel](../../parallel/openmp/2-3-parallel-construct.md)
-
-[2.4 Конструкции совместной работы](../../parallel/openmp/2-4-work-sharing-constructs.md)
-
-[2.4.1 Конструкция for](../../parallel/openmp/2-4-1-for-construct.md)
-
-[2.4.2 Конструкция sections](../../parallel/openmp/2-4-2-sections-construct.md)
-
-[2.4.3 Конструкция single](../../parallel/openmp/2-4-3-single-construct.md)
-
-[2.5 Комбинированные параллельные конструкции совместной работы](../../parallel/openmp/2-5-combined-parallel-work-sharing-constructs.md)
-
-[2.5.1 Конструкция parallel for](../../parallel/openmp/2-5-1-parallel-for-construct.md)
-
-[2.5.2 Конструкция parallel sections](../../parallel/openmp/2-5-2-parallel-sections-construct.md)
-
-[2.6 Ведущие директивы и директивы синхронизации](../../parallel/openmp/2-6-master-and-synchronization-directives.md)
-
-[2.6.1 Конструкция master](../../parallel/openmp/2-6-1-master-construct.md)
-
-[2.6.2 Конструкция critical](../../parallel/openmp/2-6-2-critical-construct.md)
-
-[2.6.3 Директива barrier](../../parallel/openmp/2-6-3-barrier-directive.md)
-
-[2.6.4 Конструкция atomic](../../parallel/openmp/2-6-4-atomic-construct.md)
-
-[2.6.5 Директива flush](../../parallel/openmp/2-6-5-flush-directive.md)
-
-[2.6.6 Конструкция ordered](../../parallel/openmp/2-6-6-ordered-construct.md)
-
-[2.7 Среда данных](../../parallel/openmp/2-7-data-environment.md)
-
-[2.7.1 Директива threadprivate](../../parallel/openmp/2-7-1-threadprivate-directive.md)
-
-[2.7.2 Предложения атрибутов совместного использования данных](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md)
-
-[2.7.2.1 private](../../parallel/openmp/2-7-2-1-private.md)
-
-[2.7.2.2 firstprivate](../../parallel/openmp/2-7-2-2-firstprivate.md)
-
-[2.7.2.3 lastprivate](../../parallel/openmp/2-7-2-3-lastprivate.md)
-
-[2.7.2.4 shared](../../parallel/openmp/2-7-2-4-shared.md)
-
-[2.7.2.5 default](../../parallel/openmp/2-7-2-5-default.md)
-
-[2.7.2.6 reduction](../../parallel/openmp/2-7-2-6-reduction.md)
-
-[2.7.2.7 copyin](../../parallel/openmp/2-7-2-7-copyin.md)
-
-[2.7.2.8 copyprivate](../../parallel/openmp/2-7-2-8-copyprivate.md)
-
-[2.8 Привязка директив](../../parallel/openmp/2-8-directive-binding.md)
-
-[2.9 Директива Nesting](../../parallel/openmp/2-9-directive-nesting.md)
 
 [3. Функции библиотеки среды выполнения](../../parallel/openmp/3-run-time-library-functions.md)
 

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CGopherFileFind [MFC], GetScreenName
 - CGopherFileFind [MFC], IsDots
 ms.assetid: 8465a979-6323-496d-ab4b-e81383fb999d
-ms.openlocfilehash: 7d5c8ceeaeb87b2e0f099ac027bbacc744598e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dafa313d9d2c7aae13e83a891c79d437ac276e08
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662414"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894501"
 ---
 # <a name="cgopherfilefind-class"></a>Класс CGopherFileFind
 
@@ -191,7 +191,7 @@ virtual BOOL GetCreationTime(CTime& refTime) const;
 ### <a name="parameters"></a>Параметры
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время создания файла.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время создания файла.
 
 *refTime*<br/>
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.
@@ -222,7 +222,7 @@ virtual BOOL GetLastAccessTime(FILETIME* pTimeStamp) const;
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последнего доступа к файлу.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время последнего доступа к файлу.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -247,7 +247,7 @@ virtual BOOL GetLastWriteTime(CTime& refTime) const;
 ### <a name="parameters"></a>Параметры
 
 *pTimeStamp*<br/>
-Указатель на [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структуру, содержащую время последней операции записи файла.
+Указатель на [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структуру, содержащую время последней операции записи файла.
 
 *refTime*<br/>
 Ссылку на [CTime](../../atl-mfc-shared/reference/ctime-class.md) объекта.

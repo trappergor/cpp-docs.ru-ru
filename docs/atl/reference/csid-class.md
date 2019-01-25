@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 57edb46047021d0ede04164584e79748028e05b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465368"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894319"
 ---
 # <a name="csid-class"></a>Класс CSid
 
@@ -45,20 +45,20 @@ class CSid
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSid::CSidArray](#csidarray)|Массив объектов `CSid`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSid::CSid](#csid)|Конструктор.|
 |[CSid::~CSid](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSid::AccountName](#accountname)|Возвращает имя учетной записи, связанной с `CSid` объекта.|
 |[CSid::Domain](#domain)|Возвращает имя домена, связанного с `CSid` объекта.|
@@ -232,7 +232,7 @@ bool EqualPrefix(const CSid& rhs) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [EqualPrefixSid](https://msdn.microsoft.com/library/windows/desktop/aa446621) в пакете SDK Windows для получения дополнительных сведений.
+См. в разделе [EqualPrefixSid](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-equalprefixsid) в пакете SDK Windows для получения дополнительных сведений.
 
 ##  <a name="getlength"></a>  CSid::GetLength
 
@@ -556,7 +556,7 @@ SID_NAME_USE SidNameUse() const throw();
 
 Возвращает значение элемента данных, который хранит значение, описывающее состояние `CSid` объекта.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |SidTypeUser|Указывает пользователя `SID` (идентификатором безопасности).|
 |SidTypeGroup|Указывает группу `SID`.|
@@ -577,4 +577,4 @@ SID_NAME_USE SidNameUse() const throw();
 [Образец безопасности](../../visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)<br/>
-[Операторы](../../atl/reference/atl-operators.md)
+[Инструкции](../../atl/reference/atl-operators.md)

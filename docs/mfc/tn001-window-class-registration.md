@@ -1,5 +1,5 @@
 ---
-title: TN001. Регистрация класса Window
+title: 'TN001: Регистрация класса Window'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.registration
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 4ae94d1c9c57f6c315ae482e44576ae25194c00f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693873"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894267"
 ---
-# <a name="tn001-window-class-registration"></a>TN001. Регистрация класса Window
+# <a name="tn001-window-class-registration"></a>TN001: Регистрация класса Window
 
 Эта заметка описывает процедуры MFC, зарегистрировать специальную [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es, необходимые для Microsoft Windows. Определенные `WNDCLASS` рассматриваются атрибуты, используемые MFC и Windows.
 
@@ -31,7 +31,7 @@ ms.locfileid: "51693873"
 
 - Явно, путем вызова MFC [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) или [AfxRegisterClass](../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-- Явно, путем вызова подпрограммы Windows [RegisterClass](https://msdn.microsoft.com/library/windows/desktop/ms633586).
+- Явно, путем вызова подпрограммы Windows [RegisterClass](/windows/desktop/api/winuser/nf-winuser-registerclassa).
 
 ## <a name="wndclass-fields"></a>Например, WNDCLASS поля
 

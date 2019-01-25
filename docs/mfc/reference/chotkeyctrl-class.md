@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0b673c873f773844c13894d3f0448536f297dc53
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178139"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894514"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 
@@ -49,7 +49,7 @@ class CHotKeyCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHotKeyCtrl::Create](#create)|Создает элемент управления "Горячий" ключа и присоединяет его к `CHotKeyCtrl` объекта.|
 |[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления "Горячий" ключа с указанным расширенные стили Windows и присоединяет его к `CHotKeyCtrl` объекта.|
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 Если пользователь выбрал сочетание клавиш, приложение можно извлекать заданное сочетание клавиш из элемента управления и настроить сочетания клавиш в системе с помощью WM_SETHOTKEY сообщения. Каждый раз, когда пользователь нажимает клавишу "Горячий" после этого из любой части системы, окна, указанную в сообщении WM_SETHOTKEY получает сообщение WM_SYSCOMMAND, указав SC_HOTKEY. Это сообщение активирует окно, которое получает его. Сочетания клавиш будет существовать до приложения, которое вызвало WM_SETHOTKEY завершает работу.
 
-Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309) и [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) функции.
+Этот механизм отличается от "Горячий" Поддержка ключа, зависящий от сообщения WM_HOTKEY и Windows [RegisterHotKey](/windows/desktop/api/winuser/nf-winuser-registerhotkey) и [UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey) функции.
 
 Дополнительные сведения об использовании `CHotKeyCtrl`, см. в разделе [элементов управления](../../mfc/controls-mfc.md) и [использование CHotKeyCtrl](../../mfc/using-chotkeyctrl.md).
 

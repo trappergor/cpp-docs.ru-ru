@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: dc59a300fc48f180fb593500ed85ee1a4c34c07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468930"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894163"
 ---
 # <a name="cfiletimespan-class"></a>Класс CFileTimeSpan
 
@@ -32,20 +32,20 @@ class CFileTimeSpan
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileTimeSpan::CFileTimeSpan](#cfiletimespan)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileTimeSpan::GetTimeSpan](#gettimespan)|Вызовите этот метод для получения интервал времени из `CFileTimeSpan` объекта.|
 |[CFileTimeSpan::SetTimeSpan](#settimespan)|Вызовите этот метод, чтобы задать временной период из `CFileTimeSpan` объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileTimeSpan::operator-](#operator_-)|Выполняет вычитание на `CFileTimeSpan` объекта.|
 |[CFileTimeSpan::operator! =](#operator_neq)|Проверяет неравенство двух объектов `CFileTimeSpan`.|
@@ -307,7 +307,7 @@ void SetTimeSpan(LONGLONG nSpan) throw();
 
 ## <a name="see-also"></a>См. также
 
-[FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)<br/>
+[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)<br/>
 [Класс CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)

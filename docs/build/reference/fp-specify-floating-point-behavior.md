@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: 77e6d0c97f1d0381fe32ae23f8d7e8bd02ddf219
-ms.sourcegitcommit: 22f7c4a9b4fc2158fb5283810f15275803cafe10
+ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/21/2019
-ms.locfileid: "54417646"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894098"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (определение поведения с плавающей запятой)
 
@@ -77,7 +77,7 @@ ms.locfileid: "54417646"
 |-|-|-|-|-|
 |**/fp:fast**|Отключение|Отключение|Отключение|вкл.|
 |**/ fp: точное**|вкл.|Отключение|Отключение|вкл.|
-|**/ fp: except**|вкл.|вкл.|вкл.|Отключение|
+|**/ fp: strict**|вкл.|вкл.|вкл.|Отключение|
 
 ### <a name="the-default-floating-point-environment"></a>Точка среда с плавающей запятой по умолчанию
 

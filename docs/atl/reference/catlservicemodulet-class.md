@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: b577ee002e34fa051b6e1dd5ffca71f935d93433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad682980fbc885d79598b41a5dcc094bb65db8cf
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619145"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893539"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 
@@ -68,7 +68,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Конструктор.|
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Флаг, указывающий, что программа выполняется как служба.|
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Переменная-член хранения идентификатор потока.|
@@ -432,7 +432,7 @@ HRESULT Run(int nShowCmd = SW_HIDE) throw();
 ### <a name="parameters"></a>Параметры
 
 *nShowCmd*<br/>
-Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел. Значение по умолчанию — SW_HIDE.
+Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) раздел. Значение по умолчанию — SW_HIDE.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -492,7 +492,7 @@ HRESULT Start(int nShowCmd) throw();
 ### <a name="parameters"></a>Параметры
 
 *nShowCmd*<br/>
-Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.
+Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) раздел.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -553,7 +553,7 @@ int WinMain(int nShowCmd) throw();
 ### <a name="parameters"></a>Параметры
 
 *nShowCmd*<br/>
-Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559) раздел.
+Определяет, как будет отображаться окно. Этот параметр может принимать одно из значений, рассматриваемые в [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain) раздел.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

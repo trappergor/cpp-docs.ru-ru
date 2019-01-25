@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
-ms.openlocfilehash: 71b3b8621f4148f680337e9bce6ef469b90de746
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12a8159cbf28c64efe36357761f4f404ccff9541
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614387"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894020"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс CAtlFileMappingBase
 
@@ -40,14 +40,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Конструктор.|
 |[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Этот метод используется для копирования из объекта сопоставления файлов.|
 |[CAtlFileMappingBase::GetData](#getdata)|Этот метод используется для получения данных из объекта сопоставления файлов.|
@@ -60,7 +60,7 @@ class CAtlFileMappingBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlFileMappingBase::operator =](#operator_eq)|Задает текущий объект сопоставления файлов на другой объект сопоставления файлов.|
 
@@ -193,7 +193,7 @@ HRESULT MapFile(
 Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) в пакете Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
+Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -201,7 +201,7 @@ HRESULT MapFile(
 
 ### <a name="remarks"></a>Примечания
 
-После создания объект сопоставления файлов, размер файла не должен превышать размер объекта сопоставления файлов; в этом случае не все содержимое файла будут доступны для совместного использования. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) и [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
+После создания объект сопоставления файлов, размер файла не должен превышать размер объекта сопоставления файлов; в этом случае не все содержимое файла будут доступны для совместного использования. Дополнительные сведения см. в разделе [CreateFileMapping](/windows/desktop/api/winbase/nf-winbase-createfilemappinga) и [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -239,7 +239,7 @@ HRESULT MapSharedMem(
 Защита, требуемого для представления файла, при сопоставлении файла. См. в разделе *flProtect* в `CreateFileMapping` в пакете Windows SDK.
 
 *dwViewDesiredAccess*<br/>
-Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
+Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -273,7 +273,7 @@ HRESULT OpenMapping(
 Смещение файла, в котором начинается сопоставление. Значение смещения должно быть кратно гранулярность выделения памяти системы.
 
 *dwViewDesiredAccess*<br/>
-Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](https://msdn.microsoft.com/library/windows/desktop/aa366763) в пакете Windows SDK.
+Указывает тип доступа для представления файла и, следовательно, защиту страниц, сопоставляемый с помощью файла. См. в разделе *dwDesiredAccess* в [MapViewOfFileEx](/windows/desktop/api/memoryapi/nf-memoryapi-mapviewoffileex) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -314,7 +314,7 @@ HRESULT Unmap() throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [UnmapViewOfFile](https://msdn.microsoft.com/library/windows/desktop/aa366882) в пакете SDK Windows для получения дополнительных сведений.
+См. в разделе [UnmapViewOfFile](/windows/desktop/api/memoryapi/nf-memoryapi-unmapviewoffile) в пакете SDK Windows для получения дополнительных сведений.
 
 ## <a name="see-also"></a>См. также
 

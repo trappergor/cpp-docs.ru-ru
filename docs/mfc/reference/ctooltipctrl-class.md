@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 808d8b5f023e88b67458c514e871692aac94ccd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 177f6eeada942440c33f7dd0a0cbc6d9e59d867c
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500416"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894150"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -99,7 +99,7 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CToolTipCtrl::Activate](#activate)|Активирует и деактивирует всплывающая подсказка.|
 |[CToolTipCtrl::AddTool](#addtool)|Регистрирует средство управления всплывающей подсказки.|
@@ -287,7 +287,7 @@ virtual BOOL Create(CWnd* pParentWnd, DWORD dwStyle = 0);
 
 При создании `CToolTipCtrl` в два этапа. Во-первых, вызовите конструктор для создания `CToolTipCtrl` объекта, а затем вызвать `Create` для создания всплывающая подсказка и присоединить его к `CToolTipCtrl` объекта.
 
-*DwStyle* параметр может быть любое сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). Кроме того, элемент управления всплывающей подсказки имеет два стиля данного класса: TTS_ALWAYSTIP и TTS_NOPREFIX.
+*DwStyle* параметр может быть любое сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). Кроме того элемент управления всплывающей подсказки имеет два стиля данного класса: TTS_ALWAYSTIP и TTS_NOPREFIX.
 
 |Стиль|Значение|
 |-----------|-------------|
@@ -397,7 +397,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpToolInfo*|[out] Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры, который получает сведения о текущем окне всплывающей подсказки.|
 
@@ -550,7 +550,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pttgt*|[out] Указатель на [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структуру, содержащую сведения об элементе управления ToolTip. При возвращении данного метода *pszTitle* членом [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структура указывает на текст заголовка.|
 
@@ -693,7 +693,7 @@ void RelayEvent(LPMSG lpMsg);
 ### <a name="parameters"></a>Параметры
 
 *lpMsg*<br/>
-Указатель на [MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958) структуру, содержащую сообщения для ретрансляции.
+Указатель на [MSG](/windows/desktop/api/winuser/ns-winuser-msg) структуру, содержащую сообщения для ретрансляции.
 
 ### <a name="remarks"></a>Примечания
 
@@ -784,7 +784,7 @@ void SetTipBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Новый цвет фона.
 
 ### <a name="remarks"></a>Примечания
@@ -801,7 +801,7 @@ void SetTipTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Новый цвет текста.
 
 ### <a name="remarks"></a>Примечания

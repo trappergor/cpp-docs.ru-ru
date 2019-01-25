@@ -1,5 +1,5 @@
 ---
-title: Функция main. Запуск программы
+title: 'основной: Запуск программы'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.main.startup
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - startup code, main function
 - main function, program startup
 ms.assetid: f9581cd6-93f7-4bcd-99ec-d07c3c107dd4
-ms.openlocfilehash: 76c580d4b48e1651803ae9bf62f0e2346e19e06c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 358ae8ec88281bab741393b1196ee2a1e615e896
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603285"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894306"
 ---
-# <a name="main-program-startup"></a>Функция main. Запуск программы
+# <a name="main-program-startup"></a>основной: Запуск программы
 
 Это специальная функция с именем **основной** является начальной точкой выполнения для всех программ C и C++. Написание кода, который соответствует модели программирования Юникода можно использовать `wmain`, которая является версией Юникода **основной**.
 
@@ -51,7 +51,7 @@ int wmain( );
 int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 ```
 
-Можно также использовать функцию `_tmain`, определенную в файле TCHAR.h. `_tmain` разрешается **основной** Если определяется _UNICODE. В противном случае функция `_tmain` разрешается в функцию `wmain`.
+Можно также использовать `_tmain`, который определен в файле tchar.h. `_tmain` разрешается **основной** Если определяется _UNICODE. В противном случае функция `_tmain` разрешается в функцию `wmain`.
 
 Кроме того **основной** и `wmain` функции могут быть объявлены как возвращающий **void** (без возвращаемого значения). При объявлении **основной** или `wmain` как возвращающий **void**, код выхода не может вернуться к родительскому процессу или операционной системы с помощью [возвращают](../cpp/return-statement-in-program-termination-cpp.md) инструкции. Для возврата кода завершения, когда **основной** или `wmain` объявляется как **void**, необходимо использовать [выйти из](../cpp/exit-function.md) функции.
 

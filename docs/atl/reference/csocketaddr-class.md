@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketAddr class
 ms.assetid: 2fb2d8a7-899e-4a36-a342-cc9f4fcdd68c
-ms.openlocfilehash: 9ab0367d5a83096c1bb6e9166ee2b43fe2000ab4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cc0c5f0abc125138c5068682c828a3438dec5102
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570460"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893357"
 ---
 # <a name="csocketaddr-class"></a>Класс CSocketAddr
 
@@ -34,13 +34,13 @@ class CSocketAddr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSocketAddr::CSocketAddr](#csocketaddr)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSocketAddr::FindAddr](#findaddr)|Вызовите этот метод, чтобы преобразовать указанное имя узла в адрес узла.|
 |[CSocketAddr::FindINET4Addr](#findinet4addr)|Этот метод используется для преобразования имени узла IPv4 в адрес узла.|
@@ -204,7 +204,7 @@ addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ### <a name="parameters"></a>Параметры
 
 *nIndex*<br/>
-Ссылка на определенный элемент в [addrinfo](https://msdn.microsoft.com/library/windows/desktop/ms737530) списка.
+Ссылка на определенный элемент в [addrinfo](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa) списка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель в связанный список из одного или нескольких `addrinfo` структур, содержащий ответ сведения об узле. Дополнительные сведения см. в разделе [addrinfo структуры](https://msdn.microsoft.com/library/windows/desktop/ms737530).
+Указатель в связанный список из одного или нескольких `addrinfo` структур, содержащий ответ сведения об узле. Дополнительные сведения см. в разделе [addrinfo структуры](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa).
 
 ## <a name="see-also"></a>См. также
 

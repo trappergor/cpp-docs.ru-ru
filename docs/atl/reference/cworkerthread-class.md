@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
-ms.openlocfilehash: 9469770dc0538b968cfaafa2de45f28bd864193c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ecde92cbd9fb9e028e79c9a0ce75859ce85790a
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532006"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893461"
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
 
@@ -58,7 +58,7 @@ class CWorkerThread
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод, чтобы добавить маркер этот объект в данный список рабочим потоком.|
 |[CWorkerThread::AddTimer](#addtimer)|Вызовите этот метод, чтобы добавить этот таймер в данный список рабочим потоком.|
@@ -248,7 +248,7 @@ Handle для удаления.
 
 ### <a name="remarks"></a>Примечания
 
-При удалении дескриптор [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, который был передан [AddHandle](#addhandle). Если этот вызов завершается неудачно, `CWorkerThread` будет вызывать Windows [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) функции с дескриптором.
+При удалении дескриптор [IWorkerThreadClient::CloseHandle](../../atl/reference/iworkerthreadclient-interface.md#closehandle) будет вызываться для связанного объекта, который был передан [AddHandle](#addhandle). Если этот вызов завершается неудачно, `CWorkerThread` будет вызывать Windows [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) функции с дескриптором.
 
 ##  <a name="shutdown"></a>  CWorkerThread::Shutdown
 
@@ -277,5 +277,5 @@ HRESULT Shutdown(DWORD dwWait = ATL_WORKER_THREAD_WAIT) throw();
 
 [DefaultThreadTraits](atl-typedefs.md#defaultthreadtraits)<br/>
 [Классы](../../atl/reference/atl-classes.md)<br/>
-[Многопоточность. Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md)<br/>
+[Реализация многопоточности на языке: Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md)<br/>
 [Интерфейс IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)

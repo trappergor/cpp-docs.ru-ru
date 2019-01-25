@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: e891a6694f0a85715a7d76d196865e3238695753
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571188"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894410"
 ---
 # <a name="cfindreplacedialog-class"></a>Класс CFindReplaceDialog
 
@@ -59,7 +59,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFindReplaceDialog::Create](#create)|Создает и отображает `CFindReplaceDialog` диалоговое окно.|
 |[CFindReplaceDialog::FindNext](#findnext)|Вызывайте эту функцию, чтобы определить, является ли пользователь хочет найти следующее вхождение строки поиска.|
@@ -75,13 +75,13 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFindReplaceDialog::m_fr](#m_fr)|Структура, используемая для настройки `CFindReplaceDialog` объекта.|
 
 ## <a name="remarks"></a>Примечания
 
-В отличие от других Windows окон `CFindReplaceDialog` объекты являются немодальным, что позволяет пользователям взаимодействовать с другими окнами, находящихся на экране. Существует два типа из `CFindReplaceDialog` объектов: поиск диалоговые окна и диалоговые окна поиска и замены. Несмотря на то, что диалоговые окна разрешить пользователю ввода поиска и поиска и замены строк, они не выполняют поиск и замена функции. Необходимо добавить их в приложение.
+В отличие от других Windows окон `CFindReplaceDialog` объекты являются немодальным, что позволяет пользователям взаимодействовать с другими окнами, находящихся на экране. Существует два типа из `CFindReplaceDialog` объектов: Найти диалоговые окна и диалоговые окна поиска и замены. Несмотря на то, что диалоговые окна разрешить пользователю ввода поиска и поиска и замены строк, они не выполняют поиск и замена функции. Необходимо добавить их в приложение.
 
 Для создания `CFindReplaceDialog` объекта, использование предоставленного конструктора (который не содержит аргументов). Так как это немодального диалогового окна, выделить объект в куче с использованием **новый** оператор, а не в стеке.
 
@@ -89,7 +89,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 Используйте [m_fr](#m_fr) структуры для инициализации диалогового перед вызовом `Create`. `m_fr` Структуры имеет тип [FINDREPLACE](/windows/desktop/api/commdlg/ns-commdlg-tagfindreplacea). Дополнительные сведения об этой структуре см. в разделе Windows SDK.
 
-Чтобы родительского окна получать уведомления о запросах поиска и замены, необходимо использовать Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) работать и использовать [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) макрос схемы сообщений в кадре окно, которое обрабатывает это зарегистрированных сообщение.
+Чтобы родительского окна получать уведомления о запросах поиска и замены, необходимо использовать Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) работать и использовать [ON_REGISTERED_MESSAGE](message-map-macros-mfc.md#on_registered_message) макрос схемы сообщений в кадре окно, которое обрабатывает это зарегистрированных сообщение.
 
 Можно определить, приняла ли пользователь для завершения диалоговое окно с `IsTerminating` функция-член.
 
@@ -175,7 +175,7 @@ virtual BOOL Create(
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы родительского окна получать уведомления о запросах поиска и замены, необходимо использовать Windows [RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947) функции, возвращаемое значение которой является номер сообщения, уникальный для экземпляра приложения. Фрейма окна должны иметь запись сопоставления сообщений, в которой объявляется функция обратного вызова ( `OnFindReplace` в следующем примере), обрабатывает это зарегистрированных сообщение. В следующем фрагменте кода приведен пример того, как это сделать для окна фрейма класс с именем `CMyRichEditView`:
+Чтобы родительского окна получать уведомления о запросах поиска и замены, необходимо использовать Windows [RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea) функции, возвращаемое значение которой является номер сообщения, уникальный для экземпляра приложения. Фрейма окна должны иметь запись сопоставления сообщений, в которой объявляется функция обратного вызова ( `OnFindReplace` в следующем примере), обрабатывает это зарегистрированных сообщение. В следующем фрагменте кода приведен пример того, как это сделать для окна фрейма класс с именем `CMyRichEditView`:
 
 [!code-cpp[NVC_MFCDocView#171](../../mfc/codesnippet/cpp/cfindreplacedialog-class_2.h)]
 

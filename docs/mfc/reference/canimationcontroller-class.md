@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: bd0bdd1a3f423257b2f73745d7260d1fac12a0d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556667"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894137"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -124,14 +124,14 @@ class CAnimationController : public CObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|
 |[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет группы, к которой принадлежит контроллер анимации объекта анимации.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорного кадра.|
@@ -174,7 +174,7 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный объект, который очищает группе.|
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой, когда только что был запланирован анимацию для указанной группы.|
@@ -419,7 +419,7 @@ virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);
 
 ### <a name="remarks"></a>Примечания
 
-Если обработчик установлен (включен) анимации Windows вызывает следующие виртуальные методы в зависимости от dwHandlerType: OnHasPriorityCancel, OnHasPriorityConclude, OnHasPriorityTrim, OnHasPriorityCompress. dwHandler может представлять собой сочетание следующих флагов: UI_ANIMATION_PHT_NONE - выпуске все обработчики UI_ANIMATION_PHT_CANCEL - значение "Отмена" Сравнение обработчик UI_ANIMATION_PHT_CONCLUDE - задать обработчик сравнения Conclude UI_ANIMATION_PHT_COMPRESS — задать Обработчик сравнения compress UI_ANIMATION_PHT_TRIM - обработчик Trim сравнения UI_ANIMATION_PHT_CANCEL_REMOVE - удалить обработчик отмены сравнения UI_ANIMATION_PHT_CONCLUDE_REMOVE - удалить обработчик сравнения Conclude UI_ANIMATION_PHT_COMPRESS_ УДАЛИТЬ — удаление обработчика сравнения Compress UI_ANIMATION_PHT_TRIM_REMOVE - удалить обработчик Trim сравнения
+При наборе (включено) анимации Windows вызывает следующие виртуальные методы в зависимости от dwHandlerType в обработчик: OnHasPriorityCancel OnHasPriorityConclude OnHasPriorityTrim, OnHasPriorityCompress. dwHandler может представлять собой сочетание следующих флагов: UI_ANIMATION_PHT_NONE - выпуске все обработчики UI_ANIMATION_PHT_CANCEL - значение "Отмена" Сравнение обработчик UI_ANIMATION_PHT_CONCLUDE - задайте Conclude сравнения обработчик UI_ANIMATION_PHT_COMPRESS - задать обработчик сравнения Compress UI_ANIMATION_PHT_TRIM — задать Обрезать сравнения обработчик UI_ANIMATION_PHT_CANCEL_REMOVE - удалить Отмена сравнения обработчик UI_ANIMATION_PHT_CONCLUDE_REMOVE - remove обработчик сравнения Conclude UI_ANIMATION_PHT_COMPRESS_REMOVE - удалить обработчик сравнения Compress UI_ANIMATION_PHT _TRIM_REMOVE - удалить обработчик Trim сравнения
 
 ##  <a name="enablestoryboardeventhandler"></a>  CAnimationController::EnableStoryboardEventHandler
 
@@ -871,7 +871,7 @@ virtual BOOL OnHasPriorityCancel(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CANCEL. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -901,7 +901,7 @@ virtual BOOL OnHasPriorityCompress(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_COMPRESS. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -931,7 +931,7 @@ virtual BOOL OnHasPriorityConclude(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_CONCLUDE. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -961,7 +961,7 @@ virtual BOOL OnHasPriorityTrim(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](https://msdn.microsoft.com/library/dd371759).
+Этот метод вызывается, если задействовать события сравнения приоритета с помощью метода CAnimationController::EnablePriorityComparisonHandler и указать UI_ANIMATION_PHT_TRIM. Для выполнения действий, характерных для конкретного приложения, его можно переопределить в производном классе. Документация по API анимации Windows чтения Дополнительные сведения о [управление конфликтами](/windows/desktop/api/uianimation/nf-uianimation-iuianimationprioritycomparison-haspriority).
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

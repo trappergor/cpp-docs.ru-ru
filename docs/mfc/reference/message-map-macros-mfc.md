@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6c6364dcf5d558bcdd25a2957721df1863d1f73f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327451"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893669"
 ---
 # <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
 
@@ -252,16 +252,16 @@ ON_COMMAND_EX(id, memberFxn);
 
 Расширенную форму обработчики сообщений команда доступна для сложных вариантов использования. On_command_ex-макрос используется для таких обработчиков сообщений и предоставляет надмножество [ON_COMMAND](message-map-macros-mfc.md#on_command) функциональные возможности. Функции-члены расширенного обработчика команд принимать один параметр, целое число без знака, содержащее идентификатор команды и возвращают Логическое значение. Возвращаемое значение должно быть значение TRUE указывает, что команда должен быть обработан; в противном случае маршрутизации продолжит другие целевые объекты команды.
 
-Дополнительные сведения см. в разделе техническое Примечание [TN006: схемы сообщений] tm006-сообщение maps.md).
+Дополнительные сведения см. в разделе техническое Примечание [TN006: Схемы сообщений] tm006-сообщение maps.md).
 
 ### <a name="requirements"></a>Требования
 
-Файл заголовка: afxmsg_.h
+Header file: afxmsg_.h
 
 ### <a name="see-also"></a>См. также
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006. Схемы сообщений](../tn006-message-maps.md)
+[TN006: Схемы сообщений](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -383,25 +383,25 @@ ON_OLECMD( pguid, olecmdid, id )
 
 `IOleCommandTarget` Команд стандартного меню с MFC в реализованы следующие макросы:
 
-**ON_OLECMD_CLEARSELECTION)**
+**ON_OLECMD_CLEARSELECTION( )**
 
 Отправляет команду Изменить очистить. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_CLEARSELECTION, ID_EDIT_CLEAR)`
 
-**ON_OLECMD_COPY)**
+**ON_OLECMD_COPY( )**
 
 Отправляет команду Правка копии. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_COPY, ID_EDIT_COPY)`
 
-**ON_OLECMD_CUT)**
+**ON_OLECMD_CUT( )**
 
 Отправляет команду Изменить Вырезать. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_CUT, ID_EDIT_CUT)`
 
-**ON_OLECMD_NEW)**
+**ON_OLECMD_NEW( )**
 
 Отправляет команды создания файла. Реализованы в виде:
 
@@ -413,67 +413,67 @@ ON_OLECMD( pguid, olecmdid, id )
 
 `ON_OLECMD(NULL, OLECMDID_OPEN, ID_FILE_OPEN)`
 
-**ON_OLECMD_PAGESETUP)**
+**ON_OLECMD_PAGESETUP( )**
 
 Отправляет команду настройки файла страницы. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_PAGESETUP, ID_FILE_PAGE_SETUP)`
 
-**ON_OLECMD_PASTE)**
+**ON_OLECMD_PASTE( )**
 
 Отправляет команду Изменить вставки. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_PASTE, ID_EDIT_PASTE)`
 
-**ON_OLECMD_PASTESPECIAL)**
+**ON_OLECMD_PASTESPECIAL( )**
 
 Отправляет команду Специальная вставка. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_PASTESPECIAL, ID_EDIT_PASTE_SPECIAL)`
 
-**ON_OLECMD_PRINT)**
+**ON_OLECMD_PRINT( )**
 
 Отправляет команды Печать файла. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_PRINT, ID_FILE_PRINT)`
 
-**ON_OLECMD_PRINTPREVIEW)**
+**ON_OLECMD_PRINTPREVIEW( )**
 
 Отправляет команду Предварительный просмотр печати файла. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_PRINTPREVIEW, ID_FILE_PRINT_PREVIEW)`
 
-**ON_OLECMD_REDO)**
+**ON_OLECMD_REDO( )**
 
 Отправляет команду Изменить повтора. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_REDO, ID_EDIT_REDO)`
 
-**ON_OLECMD_SAVE)**
+**ON_OLECMD_SAVE( )**
 
 Отправляет команду сохранения файла. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_SAVE, ID_FILE_SAVE)`
 
-**ON_OLECMD_SAVE_AS)**
+**ON_OLECMD_SAVE_AS( )**
 
 Отправляет команды Сохранить как файл. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_SAVEAS, ID_FILE_SAVE_AS)`
 
-**ON_OLECMD_SAVE_COPY_AS)**
+**ON_OLECMD_SAVE_COPY_AS( )**
 
 Отправляет файл сохранить копию как команду. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_SAVECOPYAS, ID_FILE_SAVE_COPY_AS)`
 
-**ON_OLECMD_SELECTALL)**
+**ON_OLECMD_SELECTALL( )**
 
 Отправляет команду Изменить выделить все. Реализованы в виде:
 
 `ON_OLECMD(NULL, OLECMDID_SELECTALL, ID_EDIT_SELECT_ALL)`
 
-**ON_OLECMD_UNDO)**
+**ON_OLECMD_UNDO( )**
 
 Отправляет команды Отменить изменение. Реализованы в виде:
 
@@ -528,7 +528,7 @@ END_MESSAGE_MAP()
 
 ### <a name="see-also"></a>См. также
 
-[RegisterWindowMessage](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
+[RegisterWindowMessage](/windows/desktop/api/winuser/nf-winuser-registerwindowmessagea)<br/>
 [Пользовательские обработчики](user-defined-handlers.md)
 
 ## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
@@ -627,10 +627,10 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Параметры
 
-*ID1*<br/>
+*id1*<br/>
 Идентификатор команды в начале непрерывный диапазон идентификаторов команд.
 
-*ID2*<br/>
+*id2*<br/>
 Идентификатор команды в конце непрерывный диапазон идентификаторов команд.
 
 *memberFxn*<br/>
@@ -682,10 +682,10 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 ### <a name="parameters"></a>Параметры
 
-*ID1*<br/>
+*id1*<br/>
 Идентификатор команды в начале непрерывный диапазон идентификаторов команд.
 
-*ID2*<br/>
+*id2*<br/>
 Идентификатор команды в конце непрерывный диапазон идентификаторов команд.
 
 *memberFxn*<br/>
@@ -716,10 +716,10 @@ ON_CONTROL_RANGE( wNotifyCode, id1, id2, memberFxn )
 *wNotifyCode*<br/>
 Код уведомления, к которой отвечает Ваш обработчик.
 
-*ID1*<br/>
+*id1*<br/>
 Идентификатор команды в начале непрерывный диапазон идентификаторов элементов управления.
 
-*ID2*<br/>
+*id2*<br/>
 Идентификатор команды в конце непрерывный диапазон идентификаторов элементов управления.
 
 *memberFxn*<br/>

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CSnapInItemImpl class
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
-ms.openlocfilehash: 19c957ae80267efda89a3b151f57c453ecb935bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff7336d393ca4680b4d448b9c775888063125b86
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609423"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893617"
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 
@@ -60,7 +60,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Конструктор.|
 
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Имя объекта оснастки.|
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows `RESULTDATAITEM` структуру, используемую `CSnapInItemImpl` объекта.|
@@ -106,7 +106,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ##  <a name="addmenuitems"></a>  CSnapInItemImpl::AddMenuItems
 
-Этот метод реализует функцию Win32 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841).
+Этот метод реализует функцию Win32 [IExtendContextMenu::AddMenuItems](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-addmenuitems).
 
 ```
 AddMenuItems(
@@ -144,7 +144,7 @@ AddMenuItems(
 
 ##  <a name="command"></a>  CSnapInItemImpl::Command
 
-Этот метод реализует функцию Win32 [IExtendContextMenu::Command](https://msdn.microsoft.com/library/aa814842).
+Этот метод реализует функцию Win32 [IExtendContextMenu::Command](/windows/desktop/api/mmc/nf-mmc-iextendcontextmenu-command).
 
 ```
 Command(long lCommandID, DATA_OBJECT_TYPES type);
@@ -168,7 +168,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 
 ##  <a name="createpropertypages"></a>  CSnapInItemImpl::CreatePropertyPages
 
-Этот метод реализует функцию Win32 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846).
+Этот метод реализует функцию Win32 [IExtendPropertySheet::CreatePropertyPages](/windows/desktop/api/mmc/nn-mmc-iextendpropertysheet2).
 
 ```
 CreatePropertyPages(
@@ -294,7 +294,7 @@ SCOPEDATAITEM m_scopeDataItem;
 
 ##  <a name="m_resultdataitem"></a>  CSnapInItemImpl::m_resultDataItem
 
-[RESULTDATAITEM](https://msdn.microsoft.com/library/aa815165) структуру объекта данных оснастки.
+[RESULTDATAITEM](/windows/desktop/api/mmc/ns-mmc-resultdataitem) структуру объекта данных оснастки.
 
 ```
 RESULTDATAITEM m_resultDataItem;

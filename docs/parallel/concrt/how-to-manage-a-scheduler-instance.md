@@ -1,22 +1,22 @@
 ---
-title: Практическое руководство. Управление экземпляром планировщика
+title: Как выполнить Управление экземпляром планировщика
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: 8c19eb801c7761b85580526e1ff8bed89112cc5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437821"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54893994"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Практическое руководство. Управление экземпляром планировщика
+# <a name="how-to-manage-a-scheduler-instance"></a>Как выполнить Управление экземпляром планировщика
 
 Экземпляры планировщика позволяют связывать конкретные политики планирования с различными видами рабочих нагрузок. В этом разделе содержит две простые примеры, демонстрирующие создание и управление экземпляром планировщика.
 
-В примерах создаются планировщики, использующих политики планировщика по умолчанию. Пример создания планировщика, который использует пользовательскую политику, см. в разделе [как: укажите конкретные политики планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
+В примерах создаются планировщики, использующих политики планировщика по умолчанию. Пример создания планировщика, который использует пользовательскую политику, см. в разделе [как: Задание определенных политик планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md).
 
 ### <a name="to-manage-a-scheduler-instance-in-your-application"></a>Управление экземпляром планировщика в приложении
 
@@ -38,7 +38,7 @@ ms.locfileid: "50437821"
 
 1. Передайте дескриптор события [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) функции для ожидания завершения работы планировщика.
 
-1. Вызовите [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211) функцию, чтобы закрыть дескриптор объекта события.
+1. Вызовите [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) функцию, чтобы закрыть дескриптор объекта события.
 
 ## <a name="example"></a>Пример
 

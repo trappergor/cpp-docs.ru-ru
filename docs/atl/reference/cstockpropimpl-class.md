@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: ff7610d85d73a99d55d6181fad178d0b12be0c32
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: a22a419018f3f4b2b7e6cee2471bf0f162b65f2e
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332430"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894007"
 ---
 # <a name="cstockpropimpl-class"></a>Класс CStockPropImpl
 
@@ -559,7 +559,7 @@ HRESULT STDMETHODCALLTYPE get_Picture(IPictureDisp** ppPicture);
 ### <a name="parameters"></a>Параметры
 
 *ppPicture*<br/>
-Переменная, которая получает указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
+Переменная, которая получает указатель на свойствах изображения. См. в разделе [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1005,7 +1005,7 @@ HRESULT STDMETHODCALLTYPE put_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Параметры
 
 *pPicture*<br/>
-Указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
+Указатель на свойствах изображения. См. в разделе [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1153,7 +1153,7 @@ HRESULT STDMETHODCALLTYPE putref_Picture(IPictureDisp* pPicture);
 ### <a name="parameters"></a>Параметры
 
 *pPicture*<br/>
-Указатель на свойствах изображения. См. в разделе [IPictureDisp](https://msdn.microsoft.com/library/windows/desktop/ms680762) для получения дополнительных сведений.
+Указатель на свойствах изображения. См. в разделе [IPictureDisp](/windows/desktop/api/ocidl/nn-ocidl-ipicturedisp) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

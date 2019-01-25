@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: 4ce3c93c7cb8c26ae6008516c93faa8c8a5b37fb
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f420715f0e90cbdf811d9a4f731885bd4f382d11
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694599"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894462"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -331,14 +331,14 @@ class CWindow
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::operator HWND](#operator_hwnd)|Преобразует `CWindow` объект HWND.|
 |[CWindow::operator =](#operator_eq)|Назначает HWND для `CWindow` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::m_hWnd](#m_hwnd)|Дескриптор окна, связанный с `CWindow` объекта.|
 |[CWindow::rcDefault](#rcdefault)|Содержит размеры окна по умолчанию.|
@@ -521,7 +521,7 @@ HWND ChildWindowFromPoint(POINT point, UINT uFlags) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ChildWindowFromPointEx](https://msdn.microsoft.com/library/windows/desktop/ms632677) в Windows SDK.
+См. в разделе [ChildWindowFromPointEx](/windows/desktop/api/winuser/nf-winuser-childwindowfrompointex) в Windows SDK.
 
 ##  <a name="clienttoscreen"></a>  CWindow::ClientToScreen
 
@@ -562,7 +562,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Дескриптор окна родительского или владельца.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Переменная типа [_U_RECT](../../atl/reference/u-rect-class.md) задают позицию окна. Значение по умолчанию имеет значение NULL. Если данный аргумент принимает значение NULL, значение `CWindow::rcDefault` используется.
 
 *szWindowName*<br/>
@@ -669,7 +669,7 @@ HDWP DeferWindowPos(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [DeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632681) в Windows SDK.
+См. в разделе [DeferWindowPos](/windows/desktop/api/winuser/nf-winuser-deferwindowpos) в Windows SDK.
 
 ##  <a name="destroywindow"></a>  CWindow::DestroyWindow
 
@@ -1456,7 +1456,7 @@ BSTR, в котором для хранения текста окна.
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [GetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633520) в Windows SDK.
+См. в разделе [GetWindowText](/windows/desktop/api/winuser/nf-winuser-getwindowtexta) в Windows SDK.
 
 Вторая версия этого метода позволяет сохранять текст в строке BSTR; Третья версия позволяет хранить результат в [CString](../../atl-mfc-shared/reference/cstringt-class.md), так как `CSimpleString` является базовым классом для `CString`.
 
@@ -2629,7 +2629,7 @@ BOOL SetWindowText(LPCTSTR lpszString) throw();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [SetWindowText](https://msdn.microsoft.com/library/windows/desktop/ms633546) в Windows SDK.
+См. в разделе [SetWindowText](/windows/desktop/api/winuser/nf-winuser-setwindowtexta) в Windows SDK.
 
 ### <a name="example"></a>Пример
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70d2fb0ecb647d4854a6277d6c69cd9886e072f
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626789"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894215"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread, _beginthreadex
 
@@ -121,7 +121,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 Можно вызвать [_endthread](endthread-endthreadex.md) или **_endthreadex** явным образом, чтобы завершить поток; Однако **_endthread** или **_endthreadex** называется автоматически при возврате потока из процедуры, что передается в качестве параметра. Завершение потока вызовом **_endthread** или **_endthreadex** помогает обеспечить правильное восстановление ресурсов, выделяемых для потока.
 
-**_endthread** автоматически закрывает дескриптор потока, тогда как **_endthreadex** — нет. Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](https://msdn.microsoft.com/library/windows/desktop/ms724211.aspx) API. Это поведение отличается от функции API Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) .
+**_endthread** автоматически закрывает дескриптор потока, тогда как **_endthreadex** — нет. Таким образом, при использовании **_beginthread** и **_endthread**, не следует явно закрывать дескриптор потока вызовом Win32 [CloseHandle](/windows/desktop/api/handleapi/nf-handleapi-closehandle) API. Это поведение отличается от функции API Win32 [ExitThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-exitthread) .
 
 > [!NOTE]
 > Для исполняемого файла, связанного с Libcmt.lib, не следует вызывать Win32 **ExitThread** API, чтобы не помешать системе времени выполнения освобождать выделенные ресурсы. **_endthread** и **_endthreadex** освобождают выделенные ресурсы потока и затем вызвать **ExitThread**.

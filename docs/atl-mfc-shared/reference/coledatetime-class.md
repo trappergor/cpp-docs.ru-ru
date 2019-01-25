@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a49b886bcf9c25642b1f7b8e843be11baf2d2d00
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525344"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894111"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -55,17 +55,17 @@ class COleDateTime
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDateTime::COleDateTime](#coledatetime)|Создает объект `COleDateTime`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDateTime::Format](#format)|Создает форматированное строковое представление `COleDateTime` объекта.|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде `DBTIMESTAMP` структуру данных.|
-|[COleDateTime::GetAsSystemTime](#getassystemtime)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру данных.|
+|[COleDateTime::GetAsSystemTime](#getassystemtime)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру данных.|
 |[COleDateTime::GetAsUDATE](#getasudate)|Вызовите этот метод для получения времени в `COleDateTime` как `UDATE` структуру данных.|
 |[COleDateTime::GetCurrentTime](#getcurrenttime)|Создает `COleDateTime` объект, представляющий текущее время (статическая функция-член).|
 |[COleDateTime::GetDay](#getday)|Возвращает день, это `COleDateTime` представляет (1-31).|
@@ -85,7 +85,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDateTime::operator == COleDateTime::operator < и т. д.](#coledatetime_relational_operators)|Сравнение двух `COleDateTime` значения.|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Добавление и вычитание `COleDateTime` значения.|
@@ -138,7 +138,7 @@ class COleDateTime
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** ATLComTime.h
+**Заголовок.** ATLComTime.h
 
 ##  <a name="coledatetime_relational_operators"></a>  Операторы отношения COleDateTime
 
@@ -264,7 +264,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 Дополнительные сведения о `time_t` тип данных, см. в разделе [время](../../c-runtime-library/reference/time-time32-time64.md) работать в *Справочник по библиотеке времени выполнения*.
 
-Дополнительные сведения см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.
+Дополнительные сведения см. в разделе [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) и [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структур в пакете Windows SDK.
 
 Дополнительные сведения о граничные значения для `COleDateTime` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
 
@@ -372,7 +372,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 ### <a name="parameters"></a>Параметры
 
 *sysTime*<br/>
-Ссылку на [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
+Ссылку на [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -834,17 +834,17 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **оператор = (** `timeSrc` **)** `time_t` или `__time64_t` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.
 
-- **оператор = (** *systimeSrc* **)** [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.
+- **оператор = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.
 
 - **оператор = (** `udate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». См. в разделе функция [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) для получения дополнительных сведений.
 
-- **оператор = (** `filetimeSrc` **)** [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
+- **оператор = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
 
 Дополнительные сведения см. в разделе [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) запись в пакете Windows SDK.
 
 Дополнительные сведения о `time_t` тип данных, см. в разделе [время](../../c-runtime-library/reference/time-time32-time64.md) работать в *Справочник по библиотеке времени выполнения*.
 
-Дополнительные сведения см. в разделе [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950) и [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284) структур в пакете Windows SDK.
+Дополнительные сведения см. в разделе [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) и [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) структур в пакете Windows SDK.
 
 Дополнительные сведения о граничные значения для `COleDateTime` значения, см. в статье [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).
 
