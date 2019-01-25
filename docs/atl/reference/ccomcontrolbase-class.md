@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 67d2be23aa6209c36b1a72eca3322efd1e977447
+ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694586"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54894436"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 
@@ -117,14 +117,14 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).|
 |[CComControlBase::DoesVerbUIActivate](#doesverbuiactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` заставляет элемент управления пользовательского интерфейса для активации и возвращает значение TRUE.|
 |[CComControlBase::DoVerbProperties](#doverbproperties)|Отображает страницы свойств элемента управления.|
 |[CComControlBase::FireViewChange](#fireviewchange)|Вызовите этот метод, чтобы указать контейнер для перерисовки элемента управления или уведомлять зарегистрированных advise, приемники представление элемента управления изменилось.|
-|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Извлекает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.|
+|[CComControlBase::GetAmbientAppearance](#getambientappearance)|Получает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.|
 |[CComControlBase::GetAmbientAutoClip](#getambientautoclip)|Извлекает DISPID_AMBIENT_AUTOCLIP, флаг, указывающий, поддерживает ли контейнер автоматического обрезки отображаемой области элемента управления.|
 |[CComControlBase::GetAmbientBackColor](#getambientbackcolor)|Извлекает DISPID_AMBIENT_BACKCOLOR, цвет фона окружения для всех элементов управления, определенные с помощью контейнера.|
 |[CComControlBase::GetAmbientCharSet](#getambientcharset)|Извлекает DISPID_AMBIENT_CHARSET окружения кодировки для всех элементов управления, определенные с помощью контейнера.|
@@ -143,7 +143,7 @@ class ATL_NO_VTABLE CComControlBase
 |[CComControlBase::GetAmbientShowGrabHandles](#getambientshowgrabhandles)|Извлекает DISPID_AMBIENT_SHOWGRABHANDLES, флаг, указывающий, допускает ли контейнер элемента управления для отображения маркеров захвата для себя в активном состоянии.|
 |[CComControlBase::GetAmbientShowHatching](#getambientshowhatching)|Извлекает DISPID_AMBIENT_SHOWHATCHING, флаг, указывающий, допускает ли контейнер элемента управления для отображения окна с заштрихованный шаблон при активном пользовательского интерфейса.|
 |[CComControlBase::GetAmbientSupportsMnemonics](#getambientsupportsmnemonics)|Извлекает DISPID_AMBIENT_SUPPORTSMNEMONICS, флаг, указывающий, поддерживает ли контейнер клавиши.|
-|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Извлекает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.|
+|[CComControlBase::GetAmbientTextAlign](#getambienttextalign)|Получает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.|
 |[CComControlBase::GetAmbientTopToBottom](#getambienttoptobottom)|Извлекает DISPID_AMBIENT_TOPTOBOTTOM, направление, в котором содержимое отображается в контейнере.|
 |[CComControlBase::GetAmbientUIDead](#getambientuidead)|Извлекает DISPID_AMBIENT_UIDEAD, флаг, указывающий, требуется ли контейнер элемента управления реагировать на действия пользовательского интерфейса.|
 |[CComControlBase::GetAmbientUserMode](#getambientusermode)|Извлекает DISPID_AMBIENT_USERMODE, флаг, указывающий, является ли контейнер в режиме выполнения (TRUE) или в режиме конструктора (FALSE).|
@@ -358,7 +358,7 @@ HRESULT FireViewChange();
 
 ##  <a name="getambientappearance"></a>  CComControlBase::GetAmbientAppearance
 
-Извлекает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.
+Получает DISPID_AMBIENT_APPEARANCE, текущий внешний вид, установка для элемента управления: 0 для неструктурированных и 1 для 3D.
 
 ```
 HRESULT GetAmbientAppearance(short& nAppearance);
@@ -511,7 +511,7 @@ HRESULT GetAmbientFontDisp(IFontDisp** ppFont);
 ### <a name="parameters"></a>Параметры
 
 *ppFont*<br/>
-Указатель на контейнер окружения [IFontDisp](https://msdn.microsoft.com/library/windows/desktop/ms692695) интерфейс диспетчеризации.
+Указатель на контейнер окружения [IFontDisp](/windows/desktop/api/ocidl/nn-ocidl-ifontdisp) интерфейс диспетчеризации.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -704,7 +704,7 @@ HRESULT GetAmbientSupportsMnemonics(BOOL& bSupportsMnemonics);
 
 ##  <a name="getambienttextalign"></a>  CComControlBase::GetAmbientTextAlign
 
-Извлекает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.
+Получает DISPID_AMBIENT_TEXTALIGN, предпочитаемый контейнер выравнивание текста: 0 для общего выравнивания (числа, текста справа налево), 1 для выравнивание по левому краю, 2 для выравнивание по центру и 3 для выравнивание по правому краю.
 
 ```
 HRESULT GetAmbientTextAlign(short& nTextAlign);
