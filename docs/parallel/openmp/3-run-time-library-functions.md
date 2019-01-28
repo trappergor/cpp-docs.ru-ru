@@ -2,12 +2,12 @@
 title: 3. Функции библиотеки времени выполнения
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 7d48338683037c06ca208bff32c5c2e9b546a9fe
-ms.sourcegitcommit: 774db6a005a85e2a1268ca34309b993792701819
+ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55065026"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087318"
 ---
 # <a name="3-run-time-library-functions"></a>3. Функции библиотеки времени выполнения
 
@@ -49,7 +49,7 @@ ms.locfileid: "55065026"
 void omp_set_num_threads(int num_threads);
 ```
 
-Значение параметра *num_threads* должно быть положительным целым числом. Ее результат зависит от того, включен ли динамическую настройку количество потоков. Доступен широкий набор правил о взаимодействии между `omp_set_num_threads` функция и динамическую настройку потоков, см. в разделе 2.3.
+Значение параметра *num_threads* должно быть положительным целым числом. Ее результат зависит от того, включен ли динамическую настройку количество потоков. Доступен широкий набор правил о взаимодействии между `omp_set_num_threads` функция и динамическую настройку потоков, см. в разделе [разделе 2.3](2-directives.md#23-parallel-construct).
 
 Эта функция имеет эффекты, описанных выше, при вызове из части программы где `omp_in_parallel` функция возвращает нуль. Если он вызывается из части программы где `omp_in_parallel` функция возвращает ненулевое значение, то поведение этой функции не определено.
 
@@ -60,7 +60,7 @@ void omp_set_num_threads(int num_threads);
 - [omp_set_dynamic](#317-omp_set_dynamic-function) функции
 - [omp_get_dynamic](#318-omp_get_dynamic-function) функции
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) переменной среды
-- [num_threads](2-3-parallel-construct.md) предложение
+- [num_threads](2-directives.md#23-parallel-construct) предложение
 
 ### <a name="312-ompgetnumthreads-function"></a>3.1.2 функция omp_get_num_threads
 
@@ -78,8 +78,8 @@ int omp_get_num_threads(void);
 #### <a name="cross-references"></a>Перекрестные ссылки
 
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)
-- [num_threads](2-3-parallel-construct.md)
-- [parallel](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
+- [parallel](2-directives.md#23-parallel-construct)
 
 ### <a name="313-ompgetmaxthreads-function"></a>3.1.3 функция omp_get_max_threads
 
@@ -107,7 +107,7 @@ threads-used-for-next-team
 - [omp_get_num_threads](#312-omp_get_num_threads-function)
 - [omp_set_num_threads](#311-omp_set_num_threads-function)
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
-- [num_threads](2-3-parallel-construct.md)
+- [num_threads](2-directives.md#23-parallel-construct)
 
 ### <a name="314-ompgetthreadnum-function"></a>3.1.4 функция omp_get_thread_num
 

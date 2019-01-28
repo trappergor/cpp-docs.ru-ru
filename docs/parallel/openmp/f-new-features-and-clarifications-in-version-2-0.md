@@ -1,40 +1,40 @@
 ---
 title: Е. Новые функции и разъяснения в версии 2.0
-ms.date: 11/04/2016
+ms.date: 01/22/2019
 ms.assetid: 0d4beb66-f2d5-468c-8cd3-4b00dcbab061
-ms.openlocfilehash: c8a597c6af397bd162d92a945d96409b1839e2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e186bbc82f4f43e831dd05cdded2a9e946d1dd2
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657158"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087214"
 ---
 # <a name="f-new-features-and-clarifications-in-version-20"></a>Е. Новые функции и разъяснения в версии 2.0
 
 В этом приложении приведены ключевые изменения, внесенные в спецификации OpenMP C/C++ при переходе с версии 1.0 до версии 2.0. Ниже перечислены новые возможности, которые добавлены в спецификации:
 
-- Запятые, разрешены в директивы OpenMP ([разделе 2.1](../../parallel/openmp/2-1-directive-format.md) на странице 7).
+- В OpenMP допускаются запятые [директивы](2-directives.md#21-directive-format).
 
-- Добавление `num_threads` предложение. Это предложение позволяет пользователю запросить определенное количество потоков для параллельной конструкции ([разделе 2.3](../../parallel/openmp/2-3-parallel-construct.md) на странице "8").
+- Добавление `num_threads` предложение. Это предложение позволяет пользователю запросить определенное количество потоков для [параллельной конструкции](2-directives.md#23-parallel-construct).
 
-- `threadprivate` Директива была расширена для приема переменные статические области видимости блока ([разделе 2.7.1](../../parallel/openmp/2-7-1-threadprivate-directive.md) на стр. 23).
+- [Threadprivate](2-directives.md#271-threadprivate-directive) директива была расширена для приема переменные статические области видимости блока.
 
-- Массивы переменной длины C99 являются полными типами и таким образом можно указать в любом полными типами разрешены, например в списках `private`, `firstprivate`, и `lastprivate` предложений ([разделе 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) на стр. 25).
+- Массивы переменной длины C99 являются полными типами и могут быть указаны в любом полными типами, разрешенных, например списки `private`, `firstprivate`, и `lastprivate` предложений (см. в разделе [разделе 2.7.2](2-directives.md#272-data-sharing-attribute-clauses)).
 
-- Частную переменную в параллельной области можно пометить как частные еще раз в директиве вложенных ([разделе 2.7.2.1](../../parallel/openmp/2-7-2-1-private.md) на стр. 25).
+- Можно пометить частную переменную в параллельной области [частного](2-directives.md#2721-private) попытку через вложенные директивы.
 
-- `copyprivate` Было добавлено предложение. Он предоставляет механизм использовать частную переменную для рассылки значение из одного членом команды с другими элементами. Это альтернатива использованию общей переменной для значения, когда предоставляя общей переменной будет трудно (например, в рекурсии, требуя отдельную переменную на каждом уровне). `copyprivate` Предложение может находиться только в **единый** директива ([разделе 2.7.2.8](../../parallel/openmp/2-7-2-8-copyprivate.md) на странице 32).
+- `copyprivate` Было добавлено предложение. Он предоставляет механизм использовать частную переменную для рассылки значение из одного членом команды с другими элементами. Это альтернатива использованию общей переменной для значения, когда предоставляя общей переменной будет трудно (например, в рекурсии, требуя отдельную переменную на каждом уровне). [Copyprivate](2-directives.md#2728-copyprivate) предложение может находиться только в `single` директива.
 
-- Добавление процедуры расписания `omp_get_wtick` и `omp_get_wtime` аналогичную подпрограммы MPI. Эти функции необходимы для выполнения временных интервалов времени по часам ([разделу 3.3.1](../../parallel/openmp/3-3-1-omp-get-wtime-function.md) на странице 44 и [раздел 3.3.2](../../parallel/openmp/3-3-2-omp-get-wtick-function.md) на стр. 45).
+- Добавление процедуры расписания [omp_get_wtick](3-run-time-library-functions.md#332-omp_get_wtick-function) и [omp_get_wtime](3-run-time-library-functions.md#331-omp_get_wtime-function) аналогичную подпрограммы MPI. Эти функции необходимы для wall временных интервалов времени.
 
-- Приложение со списком поведения, определяемые реализацией в OpenMP C/C++ была добавлена. Определить и задокументировать его поведение в этих случаях необходима реализация ([приложение E](../../parallel/openmp/e-implementation-defined-behaviors-in-openmp-c-cpp.md) на стр. 97).
+- Приложение со списком [поведения, определяемые реализацией](e-implementation-defined-behaviors-in-openmp-c-cpp.md) была добавлена в OpenMP C/C++. Реализация является обязательным для определения и документировать ее поведение в таких случаях.
 
 - Для уточнения или исправления функции в предыдущем спецификации OpenMP API C/C++ служат следующие изменения:
 
-   - Уточнено, что поведение `omp_set_nested` и `omp_set_dynamic` при `omp_in_parallel` возвращает ненулевое значение не определено ([разделе 3.1.7](../../parallel/openmp/3-1-7-omp-set-dynamic-function.md) на стр. 39, и [разделе 3.1.9](../../parallel/openmp/3-1-9-omp-set-nested-function.md) на странице 40).
+  - Уточнено, что поведение [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) и [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) при `omp_in_parallel` возвращает ненулевое значение не определено.
 
-   - Уточнено директива nesting при использовании вложенных параллельных ([раздела 2.9](../../parallel/openmp/2-9-directive-nesting.md) на стр. 33).
+  - Уточнено [директива nesting](2-directives.md#29-directive-nesting) при использовании вложенных параллельных.
 
-   - Функции блокировки инициализации и блокировка удаления может вызываться в параллельной области ([разделе 3.2.1](../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md) на странице 42 и [разделе 3.2.2](../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md) на странице 42).
+  - [Блокировки инициализации](3-run-time-library-functions.md#321-omp_init_lock-and-omp_init_nest_lock-functions) и [заблокировать уничтожения](3-run-time-library-functions.md#322-omp_destroy_lock-and-omp_destroy_nest_lock-functions) функции могут быть вызваны в параллельной области.
 
-   - Были добавлены новые примеры ([приложение А](../../parallel/openmp/a-examples.md) на стр. 51).
+  - Были добавлены новые примеры [приложение А](a-examples.md).

@@ -2,12 +2,12 @@
 title: 2. Директивы
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894254"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087344"
 ---
 # <a name="2-directives"></a>2. Директивы
 
@@ -60,7 +60,7 @@ iam = omp_get_thread_num() + index;
 - `default(shared | none)`
 - `shared(` *переменная list* `)`
 - `copyin(` *переменная list* `)`
-- `reduction(` *оператор* `:` *переменной list*  `)`
+- `reduction(` *оператор* `:` *переменной list* `)`
 - `num_threads(` *integer-expression* `)`
 
 Если поток получает к параллельной конструкции, группу потоков создается в том случае, если выполняется одно из следующих случаев:
@@ -111,12 +111,12 @@ iam = omp_get_thread_num() + index;
 ### <a name="cross-references"></a>Перекрестные ссылки
 
 - `private`, `firstprivate`, `default`, `shared`, `copyin`, и `reduction` предложений ([разделе 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md) переменной среды
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) функции библиотеки
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) переменной среды
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) функции
-- [OMP_NESTED](4-4-omp-nested.md) переменной среды
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) функции библиотеки
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) переменной среды
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) функции библиотеки
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) переменной среды
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) функции
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested) переменной среды
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) функции библиотеки
 
 ## <a name="24-work-sharing-constructs"></a>2.4 конструкции совместной работы
 
@@ -227,7 +227,7 @@ OpenMP определяет следующие конструкции совме
 #### <a name="cross-references"></a>Перекрестные ссылки
 
 - `private`, `firstprivate`, `lastprivate`, и `reduction` предложений ([разделе 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md) переменной среды
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule) переменной среды
 - [упорядоченные](#266-ordered-construct) построения
 - [расписание](d-using-the-schedule-clause.md) предложение
 
@@ -250,7 +250,7 @@ OpenMP определяет следующие конструкции совме
 - `private(` *переменная list* `)`
 - `firstprivate(` *переменная list* `)`
 - `lastprivate(` *переменная list* `)`
-- `reduction(` *оператор* `:` *переменной list*  `)`
+- `reduction(` *оператор* `:` *переменной list* `)`
 - `nowait`
 
 В каждом разделе предшествует `section` директивы, несмотря на то что `section` директива не является обязательным для первого раздела. `section` Директивы необходимо заключать в лексическую область `sections` директива. Есть неявное барьер в конце `sections` создать, если не `nowait` указан.
@@ -520,7 +520,7 @@ if (x!=0) {
 
 В этом разделе описываются директивы и несколько предложений для управления средой данных во время выполнения параллельных регионов следующим образом:
 
-- Объект `threadprivate` директива (см. в следующем разделе) позволяет сделать области видимости файла, область пространства имен или переменные статические области видимости блока локального для потока.
+- Объект [threadprivate](#271-threadprivate-directive) директива позволяет сделать области видимости файла, область пространства имен или переменные статические области видимости блока локального для потока.
 
 - Предложения, которые могут быть указаны в директивы для управления доступом атрибуты переменных в течение конструкции параллельного или совместной работы описаны в [разделе 2.7.2](#272-data-sharing-attribute-clauses).
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>Перекрестные ссылки
 
-- [динамические потоки](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md) переменной среды
+- [динамические потоки](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic) переменной среды
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 данных предложения атрибутов совместного использования
 

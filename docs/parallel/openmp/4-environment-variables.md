@@ -2,12 +2,12 @@
 title: 4. Переменные среды
 ms.date: 01/16/2019
 ms.assetid: 4ec7ed81-e9ca-46a1-84f8-8f9ce4587346
-ms.openlocfilehash: 5d08031c252d1f3c45fc45c021d24476b393fe33
-ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.openlocfilehash: 558b835c36253fb67339fba9b46cb0170dd6d1d0
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/18/2019
-ms.locfileid: "54397333"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087201"
 ---
 # <a name="4-environment-variables"></a>4. Переменные среды
 
@@ -46,14 +46,14 @@ setenv OMP_SCHEDULE "dynamic"
 
 ### <a name="cross-references"></a>Перекрестные ссылки
 
-- [для](2-4-1-for-construct.md) директива
-- [Параллельные для](2-5-1-parallel-for-construct.md) директива
+- [для](2-directives.md#241-for-construct) директива
+- [Параллельные для](2-directives.md#251-parallel-for-construct) директива
 
 ## <a name="42-ompnumthreads"></a>4.2 OMP_NUM_THREADS
 
 `OMP_NUM_THREADS` Переменной среды задает количество потоков, используемых во время выполнения по умолчанию. `OMP_NUM_THREADS` учитывается, если это число изменяется явно, вызвав `omp_set_num_threads` подпрограмма библиотеки. Он также учитывается, если явно `num_threads` предложение на `parallel` директива.
 
-Значение `OMP_NUM_THREADS` переменной среды должно быть положительным целым числом. Ее результат зависит от того, включен ли динамическую настройку количество потоков. Доступен широкий набор правил о взаимодействии между `OMP_NUM_THREADS` среды переменных и динамические коррекции потоков, см. в разделе разделе 2.3.
+Значение `OMP_NUM_THREADS` переменной среды должно быть положительным целым числом. Ее результат зависит от того, включен ли динамическую настройку количество потоков. Доступен широкий набор правил о взаимодействии между `OMP_NUM_THREADS` среды переменных и динамические коррекции потоков, см. в разделе [разделе 2.3](2-directives.md#23-parallel-construct).
 
 Количество потоков, используемых определяется от реализации, если:
 
@@ -69,9 +69,9 @@ setenv OMP_NUM_THREADS 16
 
 ### <a name="cross-references"></a>Перекрестные ссылки
 
-- [num_threads](2-3-parallel-construct.md) предложение
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md) функции
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) функции
+- [num_threads](2-directives.md#23-parallel-construct) предложение
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function) функции
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) функции
 
 ## <a name="43-ompdynamic"></a>4.3 OMP_DYNAMIC
 
@@ -87,8 +87,8 @@ setenv OMP_DYNAMIC TRUE
 
 ### <a name="cross-references"></a>Перекрестные ссылки
 
-- [Параллельных регионов](2-3-parallel-construct.md)
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md) функции
+- [Параллельных регионов](2-directives.md#23-parallel-construct)
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function) функции
 
 ## <a name="44-ompnested"></a>4.4 OMP_NESTED
 
@@ -102,4 +102,4 @@ setenv OMP_NESTED TRUE
 
 ### <a name="cross-reference"></a>Перекрестные ссылки
 
-- [omp_set_nested](3-1-9-omp-set-nested-function.md) функции
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function) функции
