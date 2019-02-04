@@ -1,9 +1,10 @@
 ---
-title: strcmp, wcscmp, _mbscmp
-ms.date: 11/04/2016
+title: strcmp, wcscmp, _mbscmp, _mbscmp_l
+ms.date: 01/22/2019
 apiname:
 - wcscmp
 - _mbscmp
+- _mbscmp_l
 - strcmp
 apilocation:
 - msvcrt.dll
@@ -23,6 +24,7 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _mbscmp
+- _mbscmp_l
 - wcscmp
 - strcmp
 - _tcscmp
@@ -34,24 +36,25 @@ helpviewer_keywords:
 - mbscmp function
 - string comparison [C++]
 - _mbscmp function
+- _mbscmp_l function
 - wcscmp function
 - _tcscmp function
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dae5e04809ac7312097cb418ab5ffd561fdbd1d1
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600529"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703159"
 ---
-# <a name="strcmp-wcscmp-mbscmp"></a>strcmp, wcscmp, _mbscmp
+# <a name="strcmp-wcscmp-mbscmp-mbscmpl"></a>strcmp, wcscmp, _mbscmp, _mbscmp_l
 
 Сравнивают строки.
 
 > [!IMPORTANT]
-> **_mbscmp** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
+> **_mbscmp** и **_mbscmp_l** нельзя использовать в приложениях, выполняемых в среде выполнения Windows. Дополнительные сведения: [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -68,12 +71,20 @@ int _mbscmp(
    const unsigned char *string1,
    const unsigned char *string2
 );
+int _mbscmp_l(
+   const unsigned char *string1,
+   const unsigned char *string2,
+   _locale_t locale
+);
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *string1*, *string2*<br/>
 Строки с завершающим нулем для сравнения.
+
+*locale*<br/>
+Используемый языковой стандарт.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -85,11 +96,11 @@ int _mbscmp(
 |0|*string1* идентична *string2*|
 |> 0|*string1* больше, чем *string2*|
 
-При ошибке проверки параметра **_mbscmp** возвращает **_NLSCMPERROR**, который определен в \<string.h > и \<mbstring.h >.
+При ошибке проверки параметра **_mbscmp** и **_mbscmp_l** возвращают **_NLSCMPERROR**, который определен в \<string.h > и \< Mbstring.h >.
 
 ## <a name="remarks"></a>Примечания
 
-**Strcmp** функция выполняет порядковое сравнение *string1* и *string2* и возвращает значение, которое показывает их связь. **wcscmp** и **_mbscmp** являются, соответственно, расширенных и многобайтовых символов версиях **strcmp**. **_mbscmp** распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой кодовой страницей и возвращает **_NLSCMPERROR** при возникновении ошибки. Дополнительные сведения см. в разделе [Кодовые страницы](../../c-runtime-library/code-pages.md). Кроме того Если *string1* или *string2* является пустым указателем, **_mbscmp** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbscmp** возвращает **_NLSCMPERROR** и задает **errno** для **EINVAL**. **strcmp** и **wcscmp** не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
+**Strcmp** функция выполняет порядковое сравнение *string1* и *string2* и возвращает значение, которое показывает их связь. **wcscmp** и **_mbscmp** являются, соответственно, расширенных и многобайтовых символов версиях **strcmp**. **_mbscmp** распознает последовательности многобайтовых символов в соответствии с текущей многобайтовой кодовой страницей и возвращает **_NLSCMPERROR** при возникновении ошибки. **_mbscmp_l** действует так же, но использует переданный параметр языкового стандарта вместо текущего языкового стандарта. Дополнительные сведения см. в разделе [Кодовые страницы](../../c-runtime-library/code-pages.md). Кроме того Если *string1* или *string2* является пустым указателем, **_mbscmp** вызывает обработчик недопустимого параметра, как описано в [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, **_mbscmp** и **_mbscmp_l** возвращают **_NLSCMPERROR** и задайте **errno** для **EINVAL** . **strcmp** и **wcscmp** не проверяют свои параметры. В остальном эти функции ведут себя одинаково.
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
@@ -103,7 +114,7 @@ int _mbscmp(
 
 В языковых стандартах, которых набор символов и лексикографическим порядком символов различаются, можно использовать **strcoll** вместо **strcmp** для лексикографического сравнения строк. Кроме того, можно использовать **strxfrm** на исходных строк, а затем использовать **strcmp** для результирующих строк.
 
-**Strcmp** именах функций учитывается регистр. **_stricmp**, **_wcsicmp**, и **_mbsicmp** сравнения строк, сначала следует преобразовать их в нижнем регистре формы. Две строки, содержащие символы, которые расположены между «Z» и «» в таблице ASCII ("[«,»\\", "]", "^", «_» и "\`") сравниваются по-разному, в зависимости от их регистра. Например, две строки «ABCDE» и «ABCD ^» сравниваются с одним результатом, если сравнение производится в нижнем регистре («abcde» > «abcd ^») и с другим («ABCDE» < «ABCD ^»), если сравнение производится в верхнем регистре.
+**Strcmp** именах функций учитывается регистр. **\_stricmp**,  **\_wcsicmp**, и  **\_mbsicmp** сравнения строк, сначала следует преобразовать их в нижнем регистре формы. Две строки, содержащие символы, которые расположены между «Z» и «» в таблице ASCII ("[«,»\\", "]", "^", «_» и "\`") сравниваются по-разному, в зависимости от их регистра. Например, две строки «ABCDE» и «ABCD ^» сравниваются с одним результатом, если сравнение производится в нижнем регистре («abcde» > «abcd ^») и с другим («ABCDE» < «ABCD ^»), если сравнение производится в верхнем регистре.
 
 ## <a name="requirements"></a>Требования
 

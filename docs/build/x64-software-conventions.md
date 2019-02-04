@@ -5,12 +5,12 @@ helpviewer_keywords:
 - x64 coding conventions
 - Visual C++, x64 calling conventions
 ms.assetid: 750f3d97-1706-4840-b2fc-41a007329a08
-ms.openlocfilehash: eea2059a8c06a8ba4d032b87fb41d7d51bc8eac2
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 55be8f381b39ee566b389350ff70a9b0a3fe7694
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627310"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702072"
 ---
 # <a name="x64-software-conventions"></a>x64 программные соглашения
 
@@ -59,7 +59,7 @@ ms.locfileid: "53627310"
 |**FP64 (двойная точность)**|**double**|8|Quadword|
 |**УКАЗАТЕЛЬ**|__\*__|8|Quadword|
 |**__m64**|**__m64 структуры**|8|Quadword|
-|**__m128**|**__m128 структуры**|16|Octaword|
+|**__m128**|**struct __m128**|16|Octaword|
 
 ### <a name="aggregates-and-unions"></a>Статические выражения и объединения
 
@@ -94,7 +94,7 @@ ms.locfileid: "53627310"
 |**FP64 (двойная точность)**|**double**|Quadword|
 |**УКАЗАТЕЛЬ**|<strong>\*</strong>|Quadword|
 |**__m64**|**__m64 структуры**|Quadword|
-|**__m128**|**__m128 структуры**|Octaword|
+|**__m128**|**struct __m128**|Octaword|
 
 Применяются следующие правила выравнивания статистических выражений.
 
@@ -141,7 +141,7 @@ _declspec(align(8)) struct {
 #### <a name="example-3"></a>Пример 3
 
 ```C
-// Total size = 22 bytes, alignment = 4 bytes (doubleword).
+// Total size = 12 bytes, alignment = 4 bytes (doubleword).
 
 _declspec(align(4)) struct {
     char a;       // +0; size = 1 byte

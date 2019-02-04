@@ -16,6 +16,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-stdio-l1-1-0.dll
+- api-ms-win-crt-environment-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - wgetdcwd
@@ -33,12 +34,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 464a254775d9a1d2488247d6dafb4b85cd763f10
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677023"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702938"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd, _wgetdcwd
 
@@ -64,7 +65,7 @@ wchar_t *_wgetdcwd(
 *Диск*<br/>
 Неотрицательное целое число, которое определяет диск (0 — диск по умолчанию, 1 — A, 2 — B и т. д.).
 
-Если указанный диск недоступен или невозможно определить тип диска (например, съемный, жесткий, компакт-диск, электронный диск или сетевой диск), вызывается обработчик недопустимых параметров, как описано в разделе [Parameter Validation](../../c-runtime-library/parameter-validation.md).
+Если указанный диск недоступен, или тип диска (например, съемный, жесткий, компакт-диск, ЭЛЕКТРОННЫЙ диск или сетевой диск) не может быть определен, вызывается обработчик недопустимых параметров. Дополнительные сведения см. в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
 *buffer*<br/>
 Место хранения для пути или **NULL**.
@@ -74,13 +75,13 @@ wchar_t *_wgetdcwd(
 *MaxLen*<br/>
 Ненулевое положительное целое число, указывающее максимальную длину пути в символах: **char** для **_getdcwd** и **wchar_t** для **_wgetdcwd**.
 
-Если *maxlen* не больше нуля, обработчик недопустимых параметров, который описан в [проверка параметров](../../c-runtime-library/parameter-validation.md), вызывается.
+Если *maxlen* меньше или равен нулю, вызывается обработчик недопустимых параметров. Дополнительные сведения см. в разделе [Проверка параметров](../../c-runtime-library/parameter-validation.md).
 
 ## <a name="return-value"></a>Возвращаемое значение
 
 Указатель на строку, представляющую полный путь текущего рабочего каталога на указанном диске или **NULL**, который указывает на ошибку.
 
-Если *буфера* указывается как **NULL** и недостаточно памяти для выделения *maxlen* символы, возникает ошибка и **errno** — значение **ENOMEM**. Если длина пути, включая завершающий нуль-символ, превышает *maxlen*, возникает ошибка и **errno** присваивается **ERANGE**. Дополнительные сведения об этих кодах ошибки см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
+Если *буфера* указывается как **NULL** и недостаточно памяти для выделения *maxlen* символы, возникает ошибка и **errno** — значение **ENOMEM**. Если длина пути, включая завершающий символ null превышает *maxlen*, возникает ошибка, и **errno** присваивается **ERANGE**. Дополнительные сведения об этих кодах ошибки см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
 
 ## <a name="remarks"></a>Примечания
 

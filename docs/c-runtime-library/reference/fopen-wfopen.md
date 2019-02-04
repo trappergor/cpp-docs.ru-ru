@@ -32,12 +32,12 @@ helpviewer_keywords:
 - files [C++], opening
 - fopen function
 ms.assetid: e868993f-738c-4920-b5e4-d8f2f41f933d
-ms.openlocfilehash: fb5f78411521dcbaddefda6c621b7fe44ce91736
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 9c7a7fed8eabc38f1a0a67587d495e75ba8fa3d8
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031295"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702912"
 ---
 # <a name="fopen-wfopen"></a>fopen, _wfopen
 
@@ -82,7 +82,7 @@ FILE *_wfopen(
 
 **fopen** поддерживает файловые потоки Юникода. Чтобы открыть файл в кодировке Юникод, передайте **ccs** флаг, указывающий кодировку для **fopen**, как показано ниже.
 
-> **ФАЙЛ *fp = fopen ("newfile.txt", "rt + ccs =**_кодирование_**");**
+> **FILE \*fp = fopen("newfile.txt", "rt+, ccs=**_encoding_**");**
 
 Допустимые значения *кодирование* являются **ЮНИКОДА**, **UTF-8**, и **UTF-16LE**.
 
@@ -165,9 +165,9 @@ FILE *_wfopen(
 |**a**|**\_O\_WRONLY** &#124;  **\_O\_APPEND** (обычно  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_APPEND**)|
 |**+**|**\_O\_RDWR** &#124;  **\_O\_APPEND** (обычно  **\_O\_RDWR** &#124;  **\_ O\_APPEND** &#124;  **\_O\_CREAT** )|
 |**r**|**\_O\_: RDONLY**|
-|**r +**|**\_O\_RDWR**|
-|**w**|**\_O\_WRONLY** (обычно  **\_O\_WRONLY** &#124;  **\_O\_CREAT** &#124;  **\_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (обычно  **\_O\_RDWR** &#124;  **\_O\_CREAT** &#124;  **\_ O\_TRUNC**)|
+|**r+**|**\_O\_RDWR**|
+|**w**|**\_O\_WRONLY** (usually **\_O\_WRONLY** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (usually **\_O\_RDWR** &#124; **\_O\_CREAT** &#124; **\_O\_TRUNC**)|
 |**b**|**\_O\_ДВОИЧНЫЕ**|
 |**t**|**\_O\_ТЕКСТА**|
 |**c**|Нет|
@@ -176,9 +176,9 @@ FILE *_wfopen(
 |**R**|**\_O\_RANDOM**|
 |**T**|**\_O\_SHORTLIVED**|
 |**D**|**\_O\_ВРЕМЕННЫЙ**|
-|**CCS = ЮНИКОДА**|**\_O\_WTEXT**|
-|**CCS = UTF-8**|**\_O\_UTF8**|
-|**CCS = UTF-16LE**|**\_O\_UTF16**|
+|**ccs=UNICODE**|**\_O\_WTEXT**|
+|**ccs=UTF-8**|**\_O\_UTF8**|
+|**ccs=UTF-16LE**|**\_O\_UTF16**|
 
 Если вы используете **rb** режим, у вас нет перенести код, и если ожидается, что будет прочитана большая часть крупного файла или не интересует производительность сети, возможно, стоит ли использовать сопоставленные памяти файлы Win32 свободен.
 

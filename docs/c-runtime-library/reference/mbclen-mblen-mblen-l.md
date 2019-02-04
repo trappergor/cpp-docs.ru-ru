@@ -1,10 +1,11 @@
 ---
-title: _mbclen, mblen, _mblen_l
-ms.date: 11/04/2016
+title: _mbclen, mblen, _mblen_l, _mbclen_l
+ms.date: 01/22/2019
 apiname:
 - _mbclen
 - mblen
 - _mblen_l
+- _mbclen_l
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -23,6 +24,7 @@ f1_keywords:
 - mblen
 - ftclen
 - _mbclen
+- _mbclen_l
 - tclen
 - _ftclen
 - _tclen
@@ -33,17 +35,18 @@ helpviewer_keywords:
 - _tclen function
 - mblen_l function
 - _mbclen function
+- _mbclen_l function
 - mbclen function
 - mblen function
 ms.assetid: d5eb92a0-b7a3-464a-aaf7-9890a8e3ed70
-ms.openlocfilehash: dddf7d3a1705460d2c8d42cc1b36230d7bdaf942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7888b0b8c87a632dcbb63f54ade11080c7a309a
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434390"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702964"
 ---
-# <a name="mbclen-mblen-mblenl"></a>_mbclen, mblen, _mblen_l
+# <a name="mbclen-mblen-mblenl-mbclenl"></a>_mbclen, mblen, _mblen_l, _mbclen_l
 
 Получает длину многобайтового символа и определяет его допустимость.
 
@@ -55,6 +58,10 @@ ms.locfileid: "50434390"
 ```C
 size_t _mbclen(
    const unsigned char *c
+);
+size_t _mbclen_l(
+   unsigned char const* c,
+   _locale_t locale
 );
 int mblen(
    const char *mbstr,
@@ -83,7 +90,7 @@ int _mblen_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_mbclen** возвращает 1 или 2, в соответствии с, следует ли Многобайтовый символ *c* 1 или 2 байта. Отсутствуют ошибки, возвращаемое для **_mbclen**. Если *mbstr* не **NULL**, **mblen** возвращает длину в байтах, многобайтового символа. Если *mbstr* — **NULL** или указывает на нуль-символ Юникода, **mblen** возвращает 0. Если объект, *mbstr* точек не образует допустимый Многобайтовый символ в первых *число* символов, **mblen** возвращает -1.
+**_mbclen** возвращает 1 или 2, в соответствии с, следует ли Многобайтовый символ *c* 1 или 2 байта. Отсутствуют ошибки, возвращаемое для **_mbclen**. Если *mbstr* не **NULL**, **mblen** возвращает длину в байтах, многобайтового символа. Если *mbstr* — **NULL** или указывает на нуль-символ Юникода, **mblen** возвращает 0. При объекта, *mbstr* точек не образует допустимый Многобайтовый символ в первых *число* символов, **mblen** возвращает -1.
 
 ## <a name="remarks"></a>Примечания
 
@@ -91,7 +98,7 @@ int _mblen_l(
 
 **mblen** возвращает длину в байтах *mbstr* Если это допустимый Многобайтовый символ и определяет допустимость многобайтовых символов в соответствии с кодовой страницей. **mblen** проверяет *число* или меньшее число байтов, содержащихся в *mbstr*, но не более чем **MB_CUR_MAX** байт.
 
-Выходное значение зависит от настройки категории **LC_CTYPE** языкового стандарта; дополнительные сведения см. в разделе [setlocale](setlocale-wsetlocale.md). Версии этих функций без суффикса **_l** используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта; версии с суффиксом **_l** идентичны, за исключением того, что они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+Выходное значение зависит от **LC_CTYPE** категории языкового стандарта; см. описание [setlocale](setlocale-wsetlocale.md) Дополнительные сведения. В версиях этих функций без **_l** суффикс используют текущий языковой стандарт для данного поведения, зависящего от языкового стандарта. **_L** суффиксами версии работают так же, но они используют переданный параметр языкового стандарта. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
