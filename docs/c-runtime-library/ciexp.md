@@ -11,6 +11,7 @@ apilocation:
 - msvcrt.dll
 - msvcr110_clr0400.dll
 - msvcr90.dll
+- api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - CIexp
@@ -19,12 +20,12 @@ helpviewer_keywords:
 - CIexp intrinsic
 - _CIexp intrinsic
 ms.assetid: f8a3e3b7-fa57-41a3-9983-6c81914cbb55
-ms.openlocfilehash: e71f85cf987ba02d888c0920933033400543d795
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa608af9406dc03047ff9f113ac648e215b0d117
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432069"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703289"
 ---
 # <a name="ciexp"></a>_CIexp
 
@@ -46,7 +47,7 @@ void __cdecl _CIexp();
 
 **Платформа:** x86
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Алфавитный указатель функций](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [exp, expf, expl](../c-runtime-library/reference/exp-expf.md)
