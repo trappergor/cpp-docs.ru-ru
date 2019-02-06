@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481826"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764016"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 
@@ -124,7 +124,7 @@ void AFXAPI DDX_FieldCBString(
 *nIDC*<br/>
 Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -172,7 +172,7 @@ void AFXAPI DDX_FieldCBStringExact(
 *nIDC*<br/>
 Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -220,7 +220,7 @@ void AFXAPI DDX_FieldCheck(
 *nIDC*<br/>
 Идентификатор ресурса элемента управления "флажок", связанного со свойством элемента управления.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на переменную-член диалоговое окно, представлении формы или объекте представления элемента управления, обмен данными с помощью которого осуществляется.
 
 *pRecordset*<br/>
@@ -310,7 +310,7 @@ void AFXAPI DDX_FieldLBString(
 *nIDC*<br/>
 Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -358,7 +358,7 @@ void AFXAPI DDX_FieldLBStringExact(
 *nIDC*<br/>
 Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -406,7 +406,7 @@ void AFXAPI DDX_FieldRadio(
 *nIDC*<br/>
 Идентификатор первого в группе (с помощью стиля WS_GROUP) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -454,7 +454,7 @@ void AFXAPI DDX_FieldScroll(
 *nIDC*<br/>
 Идентификатор первого в группе (с помощью стиля WS_GROUP) смежные переключателей в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта.
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ void AFXAPI DDX_FieldScroll(
 
   **Заголовок** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>Имя = «ddx_fieldslider» ></a> DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider` Функция синхронизирует позицию бегунка элемента управления "ползунок" в представлении записей и **int** элемента данных поля в наборе записей, связанного с представлением записи (или любой целочисленной переменной, выберите его, чтобы сопоставить).
 
 ### <a name="syntax"></a>Синтаксис
@@ -503,7 +503,7 @@ void AFXAPI DDX_FieldSlider(
 *nIDC*<br/>
 Идентификатор ресурса элемента управления "ползунок".
 
-*значение*<br/>
+*value*<br/>
 Ссылка на значение для обмена. Этот параметр содержит или будет использоваться для установки текущую позицию бегунка элемента управления "ползунок".
 
 *pRecordset*<br/>
@@ -653,7 +653,7 @@ void AFXAPI DDX_FieldText(
 *nIDC*<br/>
 Идентификатор элемента управления в [CRecordView](../../mfc/reference/crecordview-class.md) или [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) объекта.
 
-*значение*<br/>
+*value*<br/>
 Ссылка на член поля данных в связанном `CRecordset` или `CDaoRecordset` объекта. Тип данных значения зависит от того, какие из перегруженных версий `DDX_FieldText` использовании.
 
 *pRecordset*<br/>

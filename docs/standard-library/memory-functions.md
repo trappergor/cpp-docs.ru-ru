@@ -1,6 +1,6 @@
 ---
 title: Функции &lt;memory&gt;
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519182"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763938"
 ---
 # <a name="ltmemorygt-functions"></a>Функции &lt;memory&gt;
 
@@ -327,7 +327,7 @@ dynamic_pointer_cast(const shared_ptr<Other>& sp);
 *Другое*<br/>
 Тип, управляемый общим указателем на аргумент.
 
-*SP*<br/>
+*sp*<br/>
 Общий указатель на аргумент.
 
 ### <a name="remarks"></a>Примечания
@@ -387,7 +387,7 @@ D* get_deleter(const shared_ptr<Ty>& sp);
 *Ty*<br/>
 Тип, управляемый общим указателем.
 
-*SP*<br/>
+*sp*<br/>
 Общий указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -519,7 +519,7 @@ make_shared(Types&&... _Args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*_Args*|Без аргументов или несколько аргументов конструктора. Функция определяет перегрузку конструктора, которую нужно вызвать, на основе переданных аргументов.|
 
@@ -647,13 +647,13 @@ make_unique(Types&&...) = delete;
 
 ### <a name="remarks"></a>Примечания
 
-Первая перегрузка используется для одиночных объектов, вторая перегрузка вызывается для массивов, а третья перегрузка не позволяет указывать размер массива в аргументе type (make_unique\<T[N]>); эта конструкция не поддерживается текущим стандартом. При использовании `make_unique` для создания `unique_ptr` в массив требуется инициализировать элементы массива отдельно. Если вы рассматриваете возможность использования этой перегрузки, возможно, лучше будет использовать [std::vector](../standard-library/vector-class.md).
+Первая перегрузка используется для отдельных объектов, вторая перегрузка вызывается для массивов, а третья перегрузка не позволяет указывать размер массива в аргументе типа (make_unique\<T [N] >); эта конструкция не поддерживается в текущем объекте стандарт. При использовании `make_unique` для создания `unique_ptr` в массив требуется инициализировать элементы массива отдельно. Если вы рассматриваете возможность использования этой перегрузки, возможно, лучше будет использовать [std::vector](../standard-library/vector-class.md).
 
 Так как `make_unique` тщательно реализована для безопасности исключений, рекомендуется использовать `make_unique` вместо прямого вызова конструкторов `unique_ptr`.
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано, как использовать `make_unique`. Дополнительные примеры см. в разделе [Примеры: создание и использование экземпляров unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
+В следующем примере показано, как использовать `make_unique`. Дополнительные примеры см. в статье [Практическое руководство. Создание и использование экземпляров unique_ptr](../cpp/how-to-create-and-use-unique-ptr-instances.md).
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Параметры
 
-*_слева*<br/>
+*_left*<br/>
 Общий или слабый указатель.
 
 *right*<br/>
