@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event map macros [MFC]
 - interface map macros [MFC]
 ms.assetid: 3840e642-ff7d-4bdc-998b-c7d8fc50890e
-ms.openlocfilehash: cd1f38236baf2caca9f2a2a426f28f797291fb13
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8f48b916f7130551fc8d4da5bb2ebc75d8d728d5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524655"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850207"
 ---
 # <a name="delegate-and-interface-map-macros"></a>Макросы сопоставления делегата и интерфейса
 
@@ -50,10 +50,6 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** msclr\event.h
-
-### <a name="see-also"></a>См. также
-
-[Практическое руководство. Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
 
 ##  <a name="begin_interface_map"></a>BEGIN_INTERFACE_MAP
 
@@ -102,17 +98,13 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 Этот делегат регистрируется источник команды методы обратного вызова. При добавлении делегат исходный объект команды, метод обратного вызова становится обработчик команд, поступающих из указанного источника.
 
-Дополнительные сведения см. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Дополнительные сведения см. в разделе [Как Добавление команды управления маршрутизации в Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)
-
-### <a name="see-also"></a>См. также
-
-[Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)
 
 ##  <a name="commanduihandler"></a>CommandUIHandler
 
@@ -142,11 +134,6 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 **Заголовок:** afxwinforms.h (определенных в сборке atlmfc\lib\mfcmifc80.dll)
 
-### <a name="see-also"></a>См. также
-
-[Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
-[CommandHandler](#commandhandler)
-
 ##  <a name="end_delegate_map"></a>END_DELEGATE_MAP
 
 Завершает карту делегата.
@@ -165,10 +152,6 @@ END_DELEGATE_MAP();
 
 **Заголовок:** msclr\event.h
 
-### <a name="see-also"></a>См. также
-
-[Практическое руководство. Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
 Завершает схему интерфейсов в файле реализации.
@@ -186,11 +169,6 @@ END_INTERFACE_MAP( )
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxwin.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[BEGIN_INTERFACE_MAP](#begin_interface_map)
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -219,7 +197,7 @@ EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано, как использовать для создания записи в карте делегат для EVENT_DELEGATE_ENTRY `OnClick` обработчик событий; см; также в примере кода в MAKE_DELEGATE. Дополнительные сведения см. в разделе [как: приемника событий для Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+В следующем примере кода показано, как использовать для создания записи в карте делегат для EVENT_DELEGATE_ENTRY `OnClick` обработчик событий; см; также в примере кода в MAKE_DELEGATE. Дополнительные сведения см. в разделе [Как Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 BEGIN_DELEGATE_MAP(CMyView)
@@ -230,12 +208,6 @@ END_DELEGATE_MAP()
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** msclr\event.h
-
-### <a name="see-also"></a>См. также
-
-[MAKE_DELEGATE](#make_delegate)<br/>
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -290,7 +262,7 @@ MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано, как вызвать `MAKE_DELEGATE` для присоединения `OnClick` обработчик событий к элементу управления MFC `MyControl`. Более широкие объяснение того, как работает этот макрос в приложении MFC, см. в разделе [как: приемника событий для Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
+В следующем примере кода показано, как вызвать `MAKE_DELEGATE` для присоединения `OnClick` обработчик событий к элементу управления MFC `MyControl`. Более широкие объяснение того, как работает этот макрос в приложении MFC, см. в разделе [как: Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md).
 
 ```cpp
 // CMyView derives from CWinFormsView.
@@ -306,9 +278,8 @@ void CMyView::OnInitialUpdate()
 
 **Заголовок:** msclr\event.h
 
-### <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
-[BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
-[END_DELEGATE_MAP](#end_delegate_map)<br/>
-[EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
+[Практическое руководство. Получение событий Windows Forms из собственных классов C++](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)<br/>
+[Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>

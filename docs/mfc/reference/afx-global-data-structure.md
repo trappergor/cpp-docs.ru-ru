@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694313"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850328"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA - структура
 
@@ -76,14 +76,14 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`AFX_GLOBAL_DATA::AFX_GLOBAL_DATA`|Создает структуру `AFX_GLOBAL_DATA` .|
 |`AFX_GLOBAL_DATA::~AFX_GLOBAL_DATA`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::Cleanup](#cleanup)|Освобождает ресурсы, выделенные платформой, например кисти, шрифты и библиотеки DLL.|
 |[AFX_GLOBAL_DATA::D2D1MakeRotateMatrix](#d2d1makerotatematrix)|Создает преобразование вращения, осуществляющее поворот на указанный угол вокруг указанной точки.|
@@ -117,7 +117,7 @@ struct AFX_GLOBAL_DATA
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Включает или отключает поддержку Microsoft Active Accessibility. Active Accessibility предлагает надежные методы для предоставления информации об элементах пользовательского интерфейса.|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Указывает, включена ли поддержка Microsoft Active Accessibility.|
@@ -153,11 +153,6 @@ struct AFX_GLOBAL_DATA
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxglobals.h
-
-### <a name="see-also"></a>См. также
-
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Структуры, стили, обратные вызовы и схемы сообщений](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
@@ -267,7 +262,7 @@ BOOL DrawTextOnGlass(
 *strText*<br/>
 [in] Текст для рисования.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Границы области, в которой рисуется заданный текст.
 
 *dwFlags*<br/>
@@ -289,16 +284,6 @@ BOOL DrawTextOnGlass(
 
 Тема определяет визуальный стиль приложения. Тема не используется для рисования текста, если *hTheme* параметра равно NULL, или если [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex) метод не поддерживается, или если [диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview) композиции (DWM) отключен.
 
-### <a name="see-also"></a>См. также
-
-[Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[Части и состояния](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[Диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)<br/>
-[Включение и контроль композиции DWM](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 Включает или отключает поддержку Microsoft Active Accessibility.
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility — это технология, основанная на модели COM, которая улучшает программами и совместно продуктов поддержки специальных возможностей операционной системы Windows. Он предоставляет надежные методы для предоставления информации об элементах пользовательского интерфейса. Тем не менее доступна новая модель специальных возможностей, называется Microsoft UI Automation. Сравнение этих двух технологий, см. в разделе [модели автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility).
 
 Используйте [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) метод, чтобы определить, включена ли поддержка Microsoft Active Accessibility.
-
-### <a name="see-also"></a>См. также
-
-[Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ BOOL ExcludeTag(
 
 |Символ|Escape-символ|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
-|_T ("\\\n")|_T("\n")|
-|_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
-|_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\t")|_T("\t")|
+|_T("\\\n")|_T("\n")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ COLORREF GetColor(int nColor);
 ### <a name="remarks"></a>Примечания
 
 Если *nColor* параметра выходит за пределы диапазона, возвращаемое значение равно нулю. Поскольку нуль также является допустимое значение RGB, нельзя использовать этот метод, чтобы определить, поддерживается ли текущая операционная система системного цвета. Вместо этого используйте [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush) метод, который возвращает значение NULL, если цвет не поддерживается.
-
-### <a name="see-also"></a>См. также
-
-[Функция GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -436,10 +410,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
-
-### <a name="see-also"></a>См. также
-
-[Структура NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility был предыдущее решение по �
 
 Используйте [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport) метод, чтобы включить или отключить поддержку Active Accessibility.
 
-### <a name="see-also"></a>См. также
-
-[Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 Определяет, был ли инициализирован D2D
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE, если [диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview) составное включена; в противном случае — значение FALSE.
-
-### <a name="see-also"></a>См. также
-
-[Диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)<br/>
-[Включение и контроль композиции DWM](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 Возвращаемое значение — это список разделенных запятой *lpszClassNamePrefix* строки параметра, а также шестнадцатеричное текстовое представления дескрипторов текущего экземпляра приложения; курсор приложения, который представляет стрелку курсор, идентификатор которого равен IDC_ARROW; и кисть фона. Дополнительные сведения о регистрации классов окна MFC см. в разделе [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass).
 
-### <a name="see-also"></a>См. также
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Повторно инициализирует Внутренние указатели функции, которые обращаются к методам, которые поддерживают Windows темы и стили оформления.
@@ -778,7 +734,7 @@ BOOL SetLayeredAttrib(
 
 ### <a name="parameters"></a>Параметры
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Дескриптор многослойные окна.
 
 *crKey*<br/>
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
-
-### <a name="see-also"></a>См. также
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Целочисленное значение, закодированное флаги, определяющие расположение автоматическое скрытие полос. Комбинирует следующие значения: AFX_AUTOHIDE_BOTTOM, AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT, AFX_AUTOHIDE_RIGHT.
+Целочисленное значение, закодированное флаги, определяющие расположение автоматическое скрытие полос. Комбинирует следующие значения: AFX_AUTOHIDE_BOTTOM AFX_AUTOHIDE_TOP, AFX_AUTOHIDE_LEFT AFX_AUTOHIDE_RIGHT.
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ HRESULT ShellCreateItemFromParsingName(
 
 Возвращает значение S_OK, если выполнение прошло успешно; в противном случае значение ошибки.
 
+## <a name="see-also"></a>См. также
+
+[Диаграмма иерархии](../hierarchy-chart.md)<br/>
+[Структуры, стили, обратные вызовы и схемы сообщений](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[Части и состояния](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[Диспетчер окон рабочего стола](/windows/desktop/dwm/dwm-overview)<br/>
+[Включение и контроль композиции DWM](/windows/desktop/dwm/composition-ovw)<br/>
+[Модель автоматизации пользовательского интерфейса и Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[Функция GetSysColor](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[Структура NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)

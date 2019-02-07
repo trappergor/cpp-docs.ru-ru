@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: b05c86148014a4a34d852d1a00caeb71ee136548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521389"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849480"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -41,6 +41,7 @@ void __fastfail(unsigned int code);
 |x86|int 0x29|ecx|
 |X64|int 0x29|rcx|
 |ARM|Код операции 0xDEFB|r0|
+|ARM64|Код операции 0xF003|x0|
 
 Запрос быстрого сбоя является самодостаточным и обычно требует только две команды для выполнения. После выполнения запроса быстрого сбоя ядро предпринимает соответствующие действия. В коде пользовательского режима отсутствуют зависимости памяти за пределами самого указателя инструкций, когда происходит событие быстрого сбоя. Это увеличивает его надежность, даже в случае серьезного повреждения памяти.
 
@@ -56,7 +57,7 @@ void __fastfail(unsigned int code);
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`__fastfail`|x86, x 64, ARM|
+|`__fastfail`|x86, x 64, ARM, ARM64|
 
 **Файл заголовка** \<intrin.h >
 

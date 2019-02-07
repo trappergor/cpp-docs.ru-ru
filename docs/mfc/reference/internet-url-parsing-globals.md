@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 8765a0712fc79ee60041f9142fbd25f744246ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477159"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850138"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>Глобальные объекты разбора URL-адреса Интернета и вспомогательные методы
 
@@ -214,10 +214,6 @@ BOOL AFXAPI AfxParseURLEx(
 
   **Заголовок** afxinet.h
 
-## <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxgetinternethandletype"></a>  AfxGetInternetHandleType
 
 Используйте эту глобальную функцию для определения типа дескриптора Интернета.
@@ -274,11 +270,6 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 **Заголовок:** afxinet.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-
 ## <a name="afxthrowinternetexception"></a>  AfxThrowInternetException
 
 Создает исключение, Интернет.
@@ -308,9 +299,9 @@ DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 
 **Заголовок:** afxinet.h
 
-### <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [Класс CInternetException](cinternetexception-class.md)<br/>
-[THROW](#throw)
+[AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
 

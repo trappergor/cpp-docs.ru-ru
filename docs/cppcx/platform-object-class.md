@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493617"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850095"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 
@@ -33,7 +33,7 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|
 
@@ -124,12 +124,6 @@ Object::GetType();
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>См. также
-
-[Класс Platform::Type](../cppcx/platform-type-class.md)<br/>
-[Пространство имен Platform](../cppcx/platform-namespace-c-cx.md)<br/>
-[Система типов] (.. /cppcx/Type-System-c-CX.md
-
 ## <a name="ctor"></a>  Конструктор Object::Object
 
 Инициализирует новый экземпляр класса Object.
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Пространство имен Platform](platform-namespace-c-cx.md)
+[Пространство имен Platform](platform-namespace-c-cx.md)<br/>
+[Класс Platform::Type](platform-type-class.md)<br/>
+[Система типов](type-system-c-cx.md)

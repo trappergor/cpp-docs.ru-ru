@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522094"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851686"
 ---
 # <a name="exception-processing"></a>Обработка исключений
 
@@ -372,12 +372,6 @@ void AfxThrowInvalidArgException( );
 
 **Заголовок:** afx.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[Класс CInvalidArgException](cinvalidargexception-class.md)<br/>
-[THROW](#throw)
-
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
 Исключение памяти.
@@ -527,7 +521,7 @@ void AFXAPI AfxThrowDaoException(
 
 Платформа также вызывает `AfxThrowDaoException`. При выполнении вызова можно передать один из параметров или оба. Например, если вы хотите вызвать один из ошибок, определенные в **CDaoException::nAfxDaoError** , но вы не важна *scode* параметра, передайте допустимый код в *nAfxDaoError* параметр и примите значение по умолчанию для *scode*.
 
-Сведения об исключениях, связанные с классами MFC DAO см. в разделе класса `CDaoException` в этой книге и в статье [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).
+Сведения об исключениях, связанные с классами MFC DAO см. в разделе класса `CDaoException` в этой книге и в статье [исключения: Базы данных исключений](../../mfc/exceptions-database-exceptions.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -549,7 +543,7 @@ void AfxThrowDBException(
 *nRetCode*<br/>
 Значение типа RETCODE, определяющий тип ошибки, вызвавшей исключение.
 
-*PDB-файл*<br/>
+*pdb*<br/>
 Указатель на `CDatabase` объект, представляющий соединение с источником данных с которым связано исключение.
 
 *HSTMT*<br/>
@@ -587,5 +581,6 @@ void  AfxAbort();
 
 ## <a name="see-also"></a>См. также
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Класс CException](../../mfc/reference/cexception-class.md)
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
+[Класс CException](cexception-class.md)<br/>
+[Класс CInvalidArgException](cinvalidargexception-class.md)

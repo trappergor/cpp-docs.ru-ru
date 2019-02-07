@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: 5e4610af199f1fd19c1edd71a8fd67bd82ab9a8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624839"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849757"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC. Использование классов базы данных с документами и представлениями
 
@@ -31,7 +31,7 @@ ms.locfileid: "50624839"
 
 - [Дополнительные рекомендации](#_core_other_factors).
 
-Альтернативные способы, см. в разделе [MFC: использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md).
+Альтернативные способы, см. в разделе [MFC: Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ##  <a name="_core_writing_a_form.2d.based_application"></a> Создание приложения на основе форм
 
@@ -63,14 +63,14 @@ ms.locfileid: "50624839"
 
 ##  <a name="_core_other_factors"></a> Другие факторы
 
-Приложения на основе форм, обычно не требуется для документа механизм сериализации, поэтому может потребоваться удаление, отключение или замена **New** и **откройте** команд на **Файл** меню. См. в статье [сериализации: vs сериализации. Базы данных ввода вывода](../mfc/serialization-serialization-vs-database-input-output.md).
+Приложения на основе форм, обычно не требуется для документа механизм сериализации, поэтому может потребоваться удаление, отключение или замена **New** и **откройте** команд на **Файл** меню. См. в статье [сериализации: Vs сериализации. Базы данных ввода вывода](../mfc/serialization-serialization-vs-database-input-output.md).
 
 Также может потребоваться внести использовать многочисленные возможности пользовательского интерфейса, которые может поддерживать платформы. Например, можно использовать несколько `CRecordView` объектов в окне разделителя, открыть несколько наборов записей в разных несколько дочерних окон интерфейса (MDI) документа и т. д.
 
 Может потребоваться реализация функций печати в представлении, будь то форма, реализованная с помощью `CRecordView` или что-то другое. Так как классы, производные от `CFormView`, `CRecordView` поддерживают печать, но вы можете переопределить `OnPrint` функция-член можно разрешить печать. Дополнительные сведения см. в разделе класса [CFormView](../mfc/reference/cformview-class.md).
 
-Можно не использовать вообще документов и представлений. В этом случае см. в разделе [MFC: использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md).
+Можно не использовать вообще документов и представлений. В этом случае см. в разделе [MFC: Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md).
 
 ## <a name="see-also"></a>См. также
 
-[Классы баз данных MFC (.. / data/mfc-database-classes-odbc-and-dao.md)
+[MFC-классы баз данных](../data/mfc-database-classes-odbc-and-dao.md)

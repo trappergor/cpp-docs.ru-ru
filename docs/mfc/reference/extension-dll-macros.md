@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 66c3477c7f2901cd9986a8b52e3d9287191e7b4b
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329596"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850220"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Макросы и функции для управления библиотеки DLL
 
@@ -85,10 +85,6 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **Заголовок:** afxstat_.h
 
-### <a name="see-also"></a>См. также
-
-[AfxGetStaticModuleState](#afxgetstaticmodulestate)
-
 ## <a name="a-nameafxoleinitmodulea-afxoleinitmodule"></a><a name="afxoleinitmodule"><a/> AfxOleInitModule
 
 Для поддержки OLE из обычной библиотеки DLL MFC, динамически компонуемые с MFC, эта функция библиотеки регулярных DLL MFC `CWinApp::InitInstance` функцию для инициализации OLE библиотеки DLL MFC.
@@ -109,11 +105,6 @@ MFC Библиотеки OLE является расширением MFC DLL. в
 
 **Заголовок**: \<afxdll_.h >
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
-
 ## <a name="afxnetinitmodule"></a>  AfxNetInitModule
 
 Для сокетов MFC поддерживает регулярных DLL MFC, динамически компонуемые с MFC, добавьте вызов данной функции в библиотеке регулярных DLL MFC `CWinApp::InitInstance` функцию для инициализации библиотеки DLL MFC сокетов.
@@ -131,11 +122,6 @@ void AFXAPI AfxNetInitModule( );
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** \<afxdll_.h >
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)
 
 ## <a name="afxgetambientactctx"></a> AfxGetAmbientActCtx
 
@@ -162,13 +148,6 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxcomctl32.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Управление данными состояния модулей MFC](../managing-the-state-data-of-mfc-modules.md)<br/>
-[AfxSetAmbientActCtx](#setambientactctx)
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
@@ -259,11 +238,6 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 **Заголовок:** afxdll_.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[Функцию AfxTermExtensionModule](#afxtermextensionmodule)
-
 ## <a name="afxsetambientactctx"></a>  AfxSetAmbientActCtx
 
 Эту функцию можно используйте для установки состояния флага-module, влияющий на поведение WinSxS MFC.
@@ -298,13 +272,6 @@ BOOL CMFCListViewApp::InitInstance()
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxcomctl32.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxGetAmbientActCtx](#afxgetambientactctx)<br/>
-[AFX_MANAGE_STATE](#afx_manage_state)<br/>
-[Управление данными состояния модулей MFC](../managing-the-state-data-of-mfc-modules.md)
 
 ## <a name="afxtermextensionmodule"></a>  Функцию AfxTermExtensionModule
 
@@ -366,7 +333,8 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 
 **Заголовок:** afxdll_.h
 
-### <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxInitExtensionModule](#afxinitextensionmodule)
+[AfxMessageBox](cstring-formatting-and-message-box-display.md#afxmessagebox)<br/>
+[Управление данными состояния модулей MFC](../managing-the-state-data-of-mfc-modules.md)<br/>
