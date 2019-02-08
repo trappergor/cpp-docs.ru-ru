@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178347"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850302"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **Заголовок:** afxcontextmenumanager.h
 
-### <a name="see-also"></a>См. также
-
-[Класс CContextMenuManager](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 Вызывайте эту функцию на завершение текущего потока.
@@ -209,10 +205,6 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxwin.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
@@ -490,11 +482,6 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 **Заголовок:** afxpriv.h
 
-### <a name="see-also"></a>См. также
-
-[Класс CWnd](cwnd-class.md)<br/>
-[Класс CFrameWndEx](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 Определяет, является ли заданное окно объект панели инструментов.
@@ -522,11 +509,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 **Заголовок:** afxpriv.h
 
-### <a name="see-also"></a>См. также
-
-[Класс CWnd](cwnd-class.md)<br/>
-[Класс CMFCToolBar](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 Указатель на глобальную [manager клавиатуры](ckeyboardmanager-class.md).
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы, глобальные функции и глобальные переменные](mfc-macros-and-globals.md)<br/>
-[Класс CKeyboardManager](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **Заголовок:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>См. также
-
-[Класс CMenuTearOffManager](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 Указатель на глобальную [manager мыши](cmousemanager-class.md).
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxmousemanager.h
-
-### <a name="see-also"></a>См. также
-
-[Класс CMouseManager](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -787,10 +756,6 @@ CShellManager* afxShellManager;
 
 **Заголовок:** afxshellmanager.h
 
-### <a name="see-also"></a>См. также
-
-[Класс CShellManager](cshellmanager-class.md)
-
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 Вызовите эту функцию в вашей `CWinApp::InitInstance` переопределение, чтобы инициализировать Windows Sockets.
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>См. также
-
-[Класс CUserToolsManager](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ BOOL AFXAPI AfxWinInit(
 
 ## <a name="see-also"></a>См. также
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[Класс CWinApp](../../mfc/reference/cwinapp-class.md)
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
+[Класс CWinApp](cwinapp-class.md)<br/>
+[Класс CContextMenuManager](ccontextmenumanager-class.md)<br/>
+[Класс CWnd](cwnd-class.md)<br/>
+[Класс CFrameWndEx](cframewndex-class.md)<br/>
+[Класс CMFCToolBar](cmfctoolbar-class.md)<br/>
+[Класс CKeyboardManager](ckeyboardmanager-class.md)<br/>
+[Класс CMenuTearOffManager](cmenutearoffmanager-class.md)<br/>
+[Класс CMouseManager](cmousemanager-class.md)<br/>
+[Класс CShellManager](cshellmanager-class.md)<br/>
+[Класс CUserToolsManager](cusertoolsmanager-class.md)

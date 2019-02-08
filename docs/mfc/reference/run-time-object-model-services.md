@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519214"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850289"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -25,7 +25,7 @@ ms.locfileid: "51519214"
 
 Ниже перечислены макросы MFC, которые поддерживают сведения о классе среды выполнения, сериализации и динамическое создание.
 
-Дополнительные сведения об этих служб объектов времени выполнения и сериализации см. в статье [класс CObject: доступ к сведениям о классе среды выполнения](../../mfc/accessing-run-time-class-information.md).
+Дополнительные сведения об этих служб объектов времени выполнения и сериализации см. в статье [класс CObject: Доступ к сведениям о классе среды выполнения](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="run-time-object-model-services-macros"></a>Макросы служб времени выполнения объектной модели
 
@@ -79,11 +79,6 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 afxcomctl32.h, afxcomctl32.inl
 
-### <a name="see-also"></a>См. также
-
-[Изоляция библиотеки общих элементов управления MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 Определяет, реализует ли библиотеки стандартных элементов управления указанный API (это версия Юникода [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)).
@@ -106,11 +101,6 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 ### <a name="requirements"></a>Требования
 
 afxcomctl32.h, afxcomctl32.inl
-
-### <a name="see-also"></a>См. также
-
-[Изоляция библиотеки общих элементов управления MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -200,10 +190,6 @@ DECLARE_OLECTLTYPE( class_name )
 
 **Заголовок:** afxctl.h
 
-### <a name="see-also"></a>См. также
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
-
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
 Объявляет, что элемент управления OLE предоставляет список страниц свойств для отображения его свойств.
@@ -223,16 +209,11 @@ DECLARE_PROPPAGEIDS( class_name )
 
 Используйте `DECLARE_PROPPAGEIDS` макрос в конце объявления класса. Затем в CPP-файле, который определяет функции-члены класса, используйте `BEGIN_PROPPAGEIDS` макрос, макрос записи для каждой из страниц свойств элемента управления и `END_PROPPAGEIDS` макрос для объявления в конец списка страницы свойств.
 
-Дополнительные сведения о страницах свойств см. в статье [элементы управления ActiveX: страницы свойств](../mfc-activex-controls-property-pages.md).
+Дополнительные сведения о страницах свойств см. в статье [элементы управления ActiveX: Страницы свойств](../mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxctl.h
-
-### <a name="see-also"></a>См. также
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -382,12 +363,6 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 **Заголовок:** afxdisp.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[Раздел CLSID](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 Реализует `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
@@ -416,16 +391,11 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 `GetUserTypeNameID` Функция-член возвращает строку ресурса, которая определяет класса элемента управления. `GetMiscStatus` Возвращает OLEMISC разряда для элемента управления. Это перечисление определяет коллекцию параметров, определяющих различные характеристики вашего элемента управления. Полное описание параметров OLEMISC, см. в разделе [OLEMISC](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc) в пакете Windows SDK.
 
 > [!NOTE]
->  Параметры по умолчанию, используемые автоматически ActiveX: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, установке OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE и OLEMISC_RECOMPOSEONRESIZE.
+>  Параметры по умолчанию, используемые автоматически ActiveX являются: OLEMISC_ACTIVATEWHENVISIBLE, OLEMISC_SETCLIENTSITEFIRST, установке OLEMISC_INSIDEOUT, OLEMISC_CANTLINKINSIDE и OLEMISC_RECOMPOSEONRESIZE.
 
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afxctl.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -549,5 +519,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ## <a name="see-also"></a>См. также
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
+[Изоляция библиотеки общих элементов управления MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[Раздел CLSID](/windows/desktop/com/clsid-key-hklm)
 
