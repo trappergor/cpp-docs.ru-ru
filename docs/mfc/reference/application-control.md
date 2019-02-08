@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - application control [MFC]
 ms.assetid: c1f69f15-e0fe-4515-9f36-d63d31869deb
-ms.openlocfilehash: 55a5dcad21502e7aff7427dbdad41d25298356e7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e4944c1cf1114bbd009ebc62b776628ba86b3b4d
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518922"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850315"
 ---
 # <a name="application-control"></a>Управление приложением
 
@@ -212,11 +212,6 @@ AfxOleLockControl(_T("MSCAL.Calendar"));
 
 **Заголовок:** afxwin.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxOleUnlockControl](#afxoleunlockcontrol)
-
 ##  <a name="afxoleregisterserverclass"></a>  AfxOleRegisterServerClass
 
 Эта функция позволяет зарегистрировать сервер в системном реестре OLE.
@@ -333,10 +328,6 @@ void AFXAPI AfxOleSetEditMenu(
 
 **Заголовок**: afxole.h
 
-## <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
-
 ## <a name="afxoleunlockcontrol"></a> AfxOleUnlockControl
 
 Разблокирует фабрики класса указанного элемента управления.
@@ -376,8 +367,6 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 **Заголовок:** afxwin.h
 
-### <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также
 
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[AfxOleLockControl](#afxolelockcontrol)
-

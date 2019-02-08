@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764016"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850039"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
 
@@ -527,10 +527,6 @@ void AFXAPI DDX_FieldSlider(
 
 **Заголовок:** afxdao.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)
-
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText
 
 `DDX_FieldText` Функция управляет передачей **int**, **короткие**, **long**, параметр DWORD под [CString](../../atl-mfc-shared/reference/cstringt-class.md), **float**, **двойные**, **BOOL**, или **БАЙТОВ** данных между элементом управления поля ввода и элементами данных полей набора записей.
@@ -679,4 +675,4 @@ void AFXAPI DDX_FieldText(
 
 ## <a name="see-also"></a>См. также
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)

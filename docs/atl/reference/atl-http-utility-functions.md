@@ -2,12 +2,12 @@
 title: Служебные функции HTTP ATL
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481722"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849652"
 ---
 # <a name="atl-http-utility-functions"></a>Служебные функции HTTP ATL
 
@@ -75,10 +75,6 @@ ATL_URL флагов управления поведением этой функ
 ### <a name="remarks"></a>Примечания
 
 Ведет себя как текущая версия [InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) , но не требует WinInet или Internet Explorer, должны быть установлены.
-
-### <a name="see-also"></a>См. также
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
 
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
@@ -250,7 +246,7 @@ bool inline RGBToHtml(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Значение цвета RGB.
 
 *pbOut*<br/>
@@ -287,5 +283,6 @@ inline void SystemTimeToHttpDate(
 
 ## <a name="see-also"></a>См. также
 
-[Основные понятия](../../atl/active-template-library-atl-concepts.md)<br/>
-[Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)
+[Основные понятия](../active-template-library-atl-concepts.md)<br/>
+[Компоненты ATL COM Desktop](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

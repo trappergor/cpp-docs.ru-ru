@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657634"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850444"
 ---
 # <a name="diagnostic-services"></a>Диагностические службы
 
@@ -320,12 +320,6 @@ ENSURE_VALID вызывает макрос ASSERT_VALID (который оказ
 
 **Заголовок:** afx.h
 
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 Имя файла, скомпилированного при развертывании.
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afx.h
-
-### <a name="see-also"></a>См. также
-
-[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -464,10 +452,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>Требования
 
 **Заголовок:** afx.h
-
-### <a name="see-also"></a>См. также
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -582,10 +566,6 @@ void AfxDump(const CObject* pOb);
 
 **Заголовок:** afx.h
 
-### <a name="see-also"></a>См. также
-
-[CObject::Dump](cobject-class.md#dump)
-
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
 Этой глобальной функции можно создавать образ текущего стека.
@@ -643,7 +623,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 
 Например в следующей таблице описаны первая часть приведенных выше выходных данных:
 
-|Вывод|Описание:|
+|Вывод|Описание|
 |------------|-----------------|
 |`00427D55:`|Обратный адрес последнего вызова функции.|
 |`DUMP2\DEBUG\DUMP2.EXE!`|Полный путь имя модуля, содержащего вызов функции.|
@@ -942,4 +922,5 @@ void AfxDoForAllObjects(
 
 ## <a name="see-also"></a>См. также
 
-[Макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md)
+[Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

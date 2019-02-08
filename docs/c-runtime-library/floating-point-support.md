@@ -1,6 +1,6 @@
 ---
 title: Поддержка математических функций для чисел с плавающей запятой
-ms.date: 04/06/2018
+ms.date: 01/31/2019
 f1_keywords:
 - c.math
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - math routines
 - floating-point numbers
 ms.assetid: e4fcaf69-5c8e-4854-a9bb-1f412042131e
-ms.openlocfilehash: 9e1baeb7236e5b1144b52df0bd83cc0f4a4b7796
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d03333dee12989af5897c34ba96484930a39673
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558240"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55703133"
 ---
 # <a name="math-and-floating-point-support"></a>Поддержка математических функций для чисел с плавающей запятой
 
@@ -69,7 +69,6 @@ ms.locfileid: "50558240"
 [fesetround](../c-runtime-library/reference/fegetround-fesetround2.md)|Задает режим округления указанных чисел с плавающей запятой
 [fetestexcept](../c-runtime-library/reference/fetestexcept1.md)|Определяет, какие флаги состояния исключения с плавающей запятой заданы
 [feupdateenv](../c-runtime-library/reference/feupdateenv.md)|Восстанавливает среду с плавающей запятой, а затем вызывает предыдущее исключение
-[_finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Определяет, является ли значение конечным
 [floor, floorf, floorl](../c-runtime-library/reference/floor-floorf-floorl.md)|Вычисляет с округлением вниз
 [fma, fmaf, fmal](../c-runtime-library/reference/fma-fmaf-fmal.md)|Вычисляет склеенную операцию умножения-сложения
 [fmax, fmaxf, fmaxl](../c-runtime-library/reference/fmax-fmaxf-fmaxl.md)|Вычисляет максимальное значение аргументов
@@ -87,7 +86,11 @@ ms.locfileid: "50558240"
 [ilogb, ilogbf, ilogbl](../c-runtime-library/reference/ilogb-ilogbf-ilogbl2.md)|Вычисляет показатель степени целого числа по основанию 2
 [imaxabs](../c-runtime-library/reference/imaxabs.md)|Вычисляет абсолютное значение целого числа
 [imaxdiv](../c-runtime-library/reference/imaxdiv.md)|Вычисляет частное и остаток от деления двух целочисленных значений
+[isfinite, _finite, _finitef](../c-runtime-library/reference/finite-finitef.md)|Определяет, является ли значение конечным
+[isgreater, isgreaterequal, isless, islessequal, islessgreater, isunordered](../c-runtime-library/reference/floating-point-ordering.md)|Сравнивает порядок двух значений с плавающей запятой
+[isinf](../c-runtime-library/reference/isinf.md)|Определяет, является ли значение с плавающей запятой бесконечным
 [isnan, _isnan, _isnanf](../c-runtime-library/reference/isnan-isnan-isnanf.md)|Проверяет значение с плавающей запятой для NaN
+[isnormal](../c-runtime-library/reference/isnormal.md)|Проверяет, является ли значение с плавающей запятой конечным и не субнормальным
 [_j0, _j1, _jn](../c-runtime-library/reference/bessel-functions-j0-j1-jn-y0-y1-yn.md)|Вычисляет функцию Бесселя
 [ldexp, ldexpf, ldexpl](../c-runtime-library/reference/ldexp.md)|Вычисляет x*2<sup>n</sup>
 [lgamma, lgammaf, lgammal](../c-runtime-library/reference/lgamma-lgammaf-lgammal.md)|Вычисляет натуральный логарифм абсолютного значения гамма-функции
@@ -118,6 +121,7 @@ ms.locfileid: "50558240"
 [scalbn, scalbnf, scalbnl, scalbln, scalblnf, scalblnl](../c-runtime-library/reference/scalbn-scalbnf-scalbnl-scalbln-scalblnf-scalblnl.md)|Умножает число с плавающей запятой на целую степень числа **FLT_RADIX**
 [_set_controlfp](../c-runtime-library/reference/set-controlfp.md)|Задает управляющее слово блока операций с плавающей запятой
 [_set_SSE2_enable](../c-runtime-library/reference/set-sse2-enable.md)|Включает или отключает инструкции SSE2
+[signbit](../c-runtime-library/reference/signbit.md)|Проверяет знаковый бит значения с плавающей запятой
 [sin, sinf, sinl](../c-runtime-library/reference/sin-sinf-sinl.md)|Вычисляет синус
 [sinh, sinhf, sinhl](../c-runtime-library/reference/sinh-sinhf-sinhl.md)|Вычисляет гиперболический синус
 [sqrt, sqrtf, sqrtl](../c-runtime-library/reference/sqrt-sqrtf-sqrtl.md)|Вычисляет квадратный корень
@@ -134,3 +138,4 @@ ms.locfileid: "50558240"
 ## <a name="see-also"></a>См. также
 
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Примитивы с плавающей запятой](../c-runtime-library/reference/floating-point-primitives.md)<br/>
