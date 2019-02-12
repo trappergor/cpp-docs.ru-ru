@@ -1,6 +1,6 @@
 ---
 title: Макросы для шаблонов поставщика OLE DB
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557055"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151121"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>Макросы для шаблонов поставщика OLE DB
 
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [входные данные] Значение [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) , которое может использоваться вместе с GUID набора свойств для идентификации свойства.
 
-*значение*<br/>
+*value*<br/>
 [входные данные] Значение свойства с типом `DWORD`.
 
 #### <a name="remarks"></a>Примечания
@@ -583,9 +583,9 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>См. также
+#### <a name="remarks"></a>Примечания
 
-[Класс IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)
+Дополнительные сведения см. в разделе [класс IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md).
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 
