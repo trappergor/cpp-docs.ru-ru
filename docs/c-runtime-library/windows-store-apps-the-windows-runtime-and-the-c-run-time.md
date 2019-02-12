@@ -1,13 +1,13 @@
 ---
 title: Приложения UWP, среда выполнения Windows и среда выполнения C
-ms.date: 11/04/2016
+ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ea6e3e5017fcbef997a1e844e9f84e9c385bd31d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441136"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763899"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>Приложения UWP, среда выполнения Windows и среда выполнения C
 
@@ -25,10 +25,6 @@ ms.locfileid: "50441136"
 
    Однако тексты Юникод и ANSI поддерживаются.
 
-- Консольные приложения и аргументы командной строки.
-
-   Однако классические приложения по-прежнему поддерживают консоль и аргументы командной строки.
-
 - Переменные среды.
 
 - Понятие текущего рабочего каталога.
@@ -43,8 +39,9 @@ ms.locfileid: "50441136"
 
 Полный список функций CRT, которые недоступны в приложениях UWP, и предлагаемые альтернативы см. в статье [Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md).
 
-## <a name="see-also"></a>См. также
+## <a name="see-also"></a>См. также раздел
 
 [Совместимость](../c-runtime-library/compatibility.md)<br/>
 [Функции CRT, которые не поддерживаются средой выполнения Windows](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>
 [Универсальные подпрограммы среды выполнения C по категориям](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[Создание консольного приложения для универсальной платформы Windows](/windows/uwp/launch-resume/console-uwp)
