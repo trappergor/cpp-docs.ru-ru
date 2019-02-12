@@ -1,14 +1,14 @@
 ---
 title: Установка рабочей нагрузки Linux для проектов C++ в Visual Studio
 description: Скачивание, установка и настройка рабочей нагрузки Linux для проектов C++ в Visual Studio.
-ms.date: 10/12/2018
+ms.date: 02/06/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: 2fa4036ece6dd161c73a5176740870c5593f4669
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c01c8ddeeb8439a7610c0f6c7c11b608ab3675d8
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441929"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763896"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Загрузка, установка и настройка рабочей нагрузки Linux
 
@@ -16,7 +16,7 @@ Visual Studio IDE в Windows можно использовать для созд
 
 ## <a name="visual-studio-setup"></a>Установка Visual Studio
 
-1. В поле поиска Windows введите Visual Studio Installer: ![поле поиска Windows](media/visual-studio-installer-search.png)
+1. В поле поиска Windows введите "Visual Studio Installer": ![Поле поиска Windows](media/visual-studio-installer-search.png)
 2. Найдите установщик в разделе **Приложения** и дважды щелкните его. Когда откроется установщик, щелкните **Изменить** и перейдите на вкладку **Рабочие нагрузки**. Прокрутите вниз до раздела **Другие наборы инструментов** и выберите рабочую нагрузку **Разработка для Linux на C++**.
 
    ![Рабочая нагрузка "Разработка на Visual C++ для Linux"](media/linuxworkload.png)
@@ -27,11 +27,11 @@ Visual Studio IDE в Windows можно использовать для созд
 
 ## <a name="options-for-creating-a-linux-environment"></a>Варианты создания среды Linux
 
-Если у вас нет компьютера Linux, можно создать виртуальную машину Linux в Azure. Дополнительные сведения см. в статье [Краткое руководство. Создание виртуальной машины под управлением Linux на портале Azure](/azure/virtual-machines/linux/quick-create-portal).
+Если у вас нет компьютера Linux, можно создать виртуальную машину Linux в Azure. Дополнительные сведения см. в разделе [Краткое руководство. Создание виртуальной машины Linux на портале Azure](/azure/virtual-machines/linux/quick-create-portal).
 
 Еще один вариант — активировать в Windows 10 подсистему Windows для Linux. Дополнительные сведения см. в [руководстве по установке Windows 10](/windows/wsl/install-win10).
 
-## <a name="linux-setup-ubuntu"></a>Настройка Linux Ubuntu
+## <a name="linux-setup-ubuntu"></a>Установка Linux: Ubuntu
 
 На целевом компьютере Linux должны быть установлены **openssh-server**, **g++**, **gdb** и **gdbserver** и запущена управляющая программа SSH. **ZIP** необходим для автоматической синхронизации удаленных заголовков на локальном компьютере, чтобы обеспечить поддержку Intellisense. Если эти приложения отсутствуют, их можно установить следующим образом.
 
@@ -47,13 +47,13 @@ Visual Studio IDE в Windows можно использовать для созд
 
    Эта команда запустит службу в фоновом режиме в режиме готовности к принятию подключений.
 
-## <a name="linux-setup-fedora"></a>Настройка Linux Fedora
+## <a name="linux-setup-fedora"></a>Установка Linux: Fedora
 
 На целевой машине под управлением Fedora используются установщик пакетов **dnf**. Чтобы скачать **openssh-server**, **g ++**, **gdb**, **gdbserver** и **zip**, а затем перезапустить ssh управляющую программу, сделайте следующее:
 
 1. В командной строке оболочки на компьютере Linux выполните следующую команду:
 
-   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+   `sudo dnf install openssh-server gcc-g++ gdb gdb-gdbserver zip`
 
    Для выполнения команды sudo вам может быть предложено ввести пароль учетной записи root.  Введите его и продолжите. После завершения будут установлены требуемые службы и средства.
 
