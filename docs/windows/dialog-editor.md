@@ -4,18 +4,31 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
+- vc.editors.dialog
 helpviewer_keywords:
 - resource editors [C++], Dialog editor
 - editors, dialog boxes
 - Dialog editor
 - dialog boxes [C++], editing
+- controls [C++], showing or hiding Dialog editor toolbar
+- toolbars [C++], showing
+- toolbars [C++], hiding
+- Dialog Editor [C++], showing or hiding toolbar
+- events [C++], viewing for controls
+- Windows messages [C++], controls
+- messages [C++], viewing for dialog boxes
+- Dialog Editor [C++], accessing code
+- code [C++], switching from Dialog Editor
+- controls [C++], jumping to code
+- Dialog Editor [C++], switching between controls and code
+- Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 9ca532e1691a5d92280c89067a943b7d2e27e3f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540885"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264898"
 ---
 # <a name="dialog-editor-c"></a>Редактор диалоговых окон (C++)
 
@@ -35,17 +48,11 @@ ms.locfileid: "50540885"
 
 - [Создание диалогового окна, из которого пользователи не могут выйти во время выполнения](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
 
-- [Отображение и скрытие панели инструментов в редакторе диалоговых окон](../windows/showing-or-hiding-the-dialog-editor-toolbar.md)
-
-- [Переключение между редактором диалоговых окон и кода](../windows/switching-between-dialog-box-controls-and-code.md)
-
 - [Элементы управления в диалоговых окнах](../windows/controls-in-dialog-boxes.md)
 
 - [Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)
 
 - [Проверка диалогового окна](../windows/testing-a-dialog-box.md)
-
-- [Сочетания клавиш для редактора диалоговых окон](../windows/accelerator-keys-for-the-dialog-editor.md)
 
 - [Устранение неполадок редактора диалоговых окон](../windows/troubleshooting-the-dialog-editor.md)
 
@@ -54,6 +61,73 @@ ms.locfileid: "50540885"
 
 Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
+## <a name="dialog-editor-toolbar"></a>Панель инструментов редактора диалоговых окон
+
+При открытии **диалоговое окно** редактора в проекте C++ **редактор диалоговых окон** панель инструментов автоматически отображается в верхней части решения.
+
+|Значок|Значение|Значок|Значение|
+|----------|-------------|----------|-------------|
+|![Кнопка "Проверить диалоговое окно"](../mfc/media/vcdialogeditortestdialog.png "vcDialogEditorTestDialog")|Диалоговое окно «Тестирование»|![Кнопка задавать интервалы по горизонтали](../mfc/media/vcdialogeditoracross.png "vcDialogEditorAcross")|По горизонтали|
+|![Выровнять левые границы кнопки](../mfc/media/vcdialogeditoralignlefts.png "vcDialogEditorAlignLefts")|Выравнивание левых границ|![Задать интервалы по вертикали кнопку](../mfc/media/vcdialogeditordown.png "vcDialogEditorDown")|Вниз|
+|![Кнопка выровнена относительно кнопки права](../mfc/media/vcdialogeditoralignrights.png "vcDialogEditorAlignRights")|Выравнивание правых границ|![Создание ту же ширину кнопки](../mfc/media/vcdialogeditorsamewidth.png "vcDialogEditorSameWidth")|Приведение к одной ширине|
+|![Выравнивание верхних границ кнопки](../mfc/media/vcdialogeditoraligntops.png "vcDialogEditorAlignTops")|Выравнивание верхних границ|![Создание ту же высоту кнопки](../mfc/media/vcdialogeditormakesameheight.png "vcDialogEditorMakeSameHeight")|Приведение к одной высоте|
+|![Выравнивание нижних границ кнопки](../mfc/media/vcdialogeditoralignbottoms.png "vcDialogEditorAlignBottoms")|Выравнивание нижних границ|![Сделать одного размера кнопки](../mfc/media/vcdialogeditorsamesize.png "vcDialogEditorSameSize")|Приведение к одному размеру|
+|![Кнопка "Центрировать по вертикали"](../mfc/media/vcdialogeditorvertical.png "vcDialogEditorVertical")|Вертикально|![Сетка выключатель](../mfc/media/vcdialogeditortogglegrid.png "vcDialogEditorToggleGrid")|Сетка|
+|![Кнопка "Центрировать по горизонтали"](../mfc/media/vcdialogeditorhorizontal.png "vcDialogEditorHorizontal")|Горизонтально|![Руководства по выключатель](../mfc/media/vcdialogeditortoggleguides.png "vcDialogEditorToggleGuides")|Направляющие|
+
+**Редактор диалоговых окон** панель инструментов содержит кнопки для упорядочения макет элементов управления в диалоговом окне, например размер и выравнивание. **Редактор диалоговых окон** соответствующие команды на **формат** меню.
+
+Когда вы будете в **диалоговое окно** редактора, можно включить отображение **редактор диалоговых окон** панели инструментов, выбрав его из списка доступных панелей и windows.
+
+- Отображение или скрытие панели инструментов редактора диалогового окна на **представление** меню, выберите **панелей инструментов**, нажмите кнопку **редактор диалоговых окон** в подменю.
+
+   > [!NOTE]
+   > **Редактор диалоговых окон** панели инструментов отображается по умолчанию при открытии ресурс в редакторе диалоговых окон; тем не менее, если вы явно закрыть панель инструментов, необходимо будет вызывать его при следующем открытии ресурс.
+
+## <a name="switch-between-dialog-box-controls-and-code"></a>Переключение между элементами управления диалогового окна и кода
+
+В приложениях MFC можно дважды щелкнуть поле элементов управления диалоговых окон для перехода к их код обработчика или быстро создать заглушку функции обработчика.
+
+С выбранным элементом управления, нажмите кнопку **события элемента управления** кнопку или **сообщений** кнопку [окно "Свойства"](/visualstudio/ide/reference/properties-window) Чтобы просмотреть полный список сообщений Windows и событий доступные для выбранного элемента. Выберите из списка, чтобы создать или изменить функции обработчика.
+
+- Чтобы перейти к коду из редактора диалоговых окон, дважды щелкните элемент управления в диалоговое окно, чтобы перейти к объявлению для его последней реализации функции обработки сообщений. (Для классы диалоговых окон на основе ATL, вы всегда сразу перейти к определению конструктора.)
+
+- Чтобы просмотреть события для элемента управления, выбрав элемент управления, выберите **события элемента управления** кнопку [окно "Свойства"](/visualstudio/ide/reference/properties-window).
+
+   > [!NOTE]
+   > Выбор **события элемента управления** кнопка, если *диалоговое окно* имеет фокус предоставляет список всех элементов управления в диалоговом окне, который можно развернуть, чтобы изменить события для отдельных элементов управления.
+
+   Когда один элемент управления имеет фокус в диалоговом окне, можно его правой кнопкой мыши и выбрать **добавить обработчик событий** в контекстном меню. Это позволяет указывать класс, к которому добавляется обработчик. Дополнительные сведения см. в разделе [Добавление обработчика событий](../ide/adding-an-event-handler-visual-cpp.md).
+
+- Чтобы просмотреть сообщения для диалогового окна, с диалоговым окном выбран, выберите **сообщений** кнопку [окно "Свойства"](/visualstudio/ide/reference/properties-window).
+
+## <a name="accelerator-keys"></a>Сочетания клавиш
+
+Ниже перечислены стандартные сочетания клавиш для команд редактора диалоговых окон. Чтобы изменить сочетания клавиш, выберите **параметры** на **средства** меню, затем выберите **клавиатуры** в разделе **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+
+> [!NOTE]
+> Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+
+|Команда|Клавиши|Описание|
+|-------------|----------|-----------------|
+|Format.AlignBottoms|**CTRL** + **Shift** + **стрелка вниз**|Выравнивание по нижнему краю выбранных элементов управления с помощью главного элемента управления|
+|Format.AlignCenters|**SHIFT** + **F9**|Вертикальное выравнивание элементов управления с помощью главного элемента управления|
+|Format.AlignLefts|**CTRL** + **Shift** + **стрелка влево**|Выравнивает по левому краю выбранных элементов управления с помощью главного элемента управления|
+|Format.AlignMiddles|**F9**|Горизонтальное выравнивание элементов управления с помощью главного элемента управления|
+|Format.AlignRights|**CTRL** + **Shift** + **Стрелка вправо**|Выравнивает по правому краю выбранных элементов управления с помощью главного элемента управления|
+|Format.AlignTops|**CTRL** + **Shift** + **стрелка вверх**|Выравнивание верхних границ элементов управления с помощью главного элемента управления|
+|Format.ButtonBottom|**CTRL** + **B**|Размещение выбранных кнопок вдоль снизу по центру диалогового окна|
+|Format.ButtonRight|**Ctrl** + **R**|Размещение выбранных кнопок в правом верхнем углу диалогового окна|
+|Format.CenterHorizontal|**CTRL** + **Shift** + **F9**|Выравнивание элементов управления по горизонтали в диалоговом окне|
+|Format.CenterVertical|**CTRL** + **F9**|Выравнивание элементов управления по вертикали в диалоговом окне|
+|Format.CheckMnemonics|**Ctrl** + **M**|Проверка уникальности назначенные клавиши|
+|Format.SizeToContent|**SHIFT** + **F7**|Изменяет размер выбранных элементов управления в соответствии с текстом заголовка|
+|Format.SpaceAcross|**ALT** + **СТРЕЛКА ВЛЕВО**|Выравнивание интервалов выбранных элементов управления по горизонтали|
+|Format.SpaceDown|**ALT** + **стрелка вниз**|Выравнивание интервалов выбранных элементов управления по вертикали|
+|Format.TabOrder|**CTRL** + **D**|Задает порядок элементов управления в диалоговом окне|
+|Format.TestDialog|**CTRL** + **T**|Запускает диалоговое окно, чтобы проверить внешний вид и поведение|
+|Format.ToggleGuides|**CTRL** + **G**|Переключение между не сетки, рекомендации и сетки для диалогового окна редактирования|
+
 ## <a name="requirements"></a>Требования
 
 Win32
@@ -61,6 +135,8 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Редакторы ресурсов](../windows/resource-editors.md)<br/>
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
+[Практическое руководство. Создание ресурса](../windows/how-to-create-a-resource.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)<br/>
 [Классы элементов управления](../mfc/control-classes.md)<br/>
 [Классы диалоговых окон](../mfc/dialog-box-classes.md)<br/>

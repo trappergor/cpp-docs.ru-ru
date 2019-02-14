@@ -1,19 +1,26 @@
 ---
 title: Элементы управления в диалоговых окнах (C++) | Документация Майкрософт
 ms.date: 11/04/2016
+f1_keywords:
+- Custom Control
 helpviewer_keywords:
 - controls [C++], dialog boxes
 - dialog box controls [C++], about dialog box controls
 - dialog box controls
+- controls [C++], templates
+- custom controls [C++], dialog boxes
+- custom controls [C++]
+- dialog box controls [C++], custom (user) controls
+- Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 3f559a82d7c73dd8050f23e0b3af34f0bcb410c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644890"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264846"
 ---
-# <a name="controls-in-dialog-box-ces"></a>Управляет es, в диалоговом окне (C++)
+# <a name="controls-in-dialog-boxes-c"></a>Элементы управления в диалоговых окнах (C++)
 
 Можно добавить элементы управления в диалоговое окно с помощью [вкладка диалогового окна редактора](../windows/dialog-editor-tab-toolbox.md) в [окно панели элементов](/visualstudio/ide/reference/toolbox), что позволяет выбрать элемент управления и перетащите его в диалоговом окне. По умолчанию окно панели элементов будет присвоено автоматического скрытия. Он отображается как вкладка в левой области решения, когда открыт редактор диалоговых окон. Тем не менее, вы можете закрепить **элементов** в позиции, щелкнув окно **автоматическое скрытие** кнопки в правом верхнем углу окна. Дополнительные сведения о том, как управлять поведением этого окна см. в разделе [Управление окнами](/visualstudio/ide/customizing-window-layouts-in-visual-studio).
 
@@ -39,11 +46,70 @@ ms.locfileid: "50644890"
 
 - [Расположение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Пользовательские элементы управления в редакторе диалоговых окон](custom-controls-in-the-dialog-editor.md)
-
 - [Определение клавиш доступа](../windows/defining-mnemonics-access-keys.md)
 
 - [Задание местоположения и размера диалогового окна](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+
+Стандартные элементы управления в **элементов** имеет значения по умолчанию события являются:
+
+|Имя элемента управления|Событие по умолчанию|
+|---|---|
+|[Элемент управления Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Элемент управления "флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Поле со списком](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Изменение элемента управления](../mfc/reference/cedit-class.md)|СОБЫТИЕ EN_CHANGE|
+|Группа|(Неприменимо)|
+|[Окно списка](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
+|[Управления "переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Статический элемент управления текст](../mfc/reference/cstatic-class.md)|(Неприменимо)|
+|[Управления изображения](../mfc/reference/cpictureholder-class.md)|(Неприменимо)|
+|[Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)|СОБЫТИЕ EN_CHANGE|
+|[Полосы прокрутки](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+
+Дополнительные сведения об использовании **RichEdit 1.0** управления с MFC, см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) и [примеры элемента управления Правка Rich](../mfc/rich-edit-control-examples.md).
+
+[Стандартных элементов управления Windows](../mfc/controls-mfc.md) в **элементов** предоставить расширенные функциональные возможности в приложении. В их число входят следующее.
+
+|Имя элемента управления|Событие по умолчанию|
+|---|---|
+|[Элемент управления "ползунок"](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Элемент управления "Счетчик"](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Элемент управления хода выполнения](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|["Горячий" ключа управления](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Управления "список"](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Дерево](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Набор вкладок](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Анимация элемента управления](../mfc/using-an-animation-control.md)|ACN_START|
+|[Элемент управления даты средство выбора времени](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[Элемент управления месячного календаря](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[IP-адрес управления](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Расширенного элемента управления списком](../mfc/creating-an-extended-combo-box-control.md)||
+|Пользовательский элемент управления|TTN_GETDISPINFO|
+
+Дополнительные сведения см. в разделе [классы элементов управления](../mfc/control-classes.md), [классы диалоговых окон](../mfc/dialog-box-classes.md), и [стили полосы прокрутки](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
+
+## <a name="custom-controls"></a>Пользовательские элементы управления
+
+Редактор диалоговых окон позволяет использовать существующую «custom» или «user» элементы управления в шаблон диалогового окна.
+
+> [!NOTE]
+> Не следует путать с элементами управления ActiveX являются пользовательские элементы управления в этом смысле. Элементы управления ActiveX иногда называют пользовательских элементов управления OLE. Кроме того не следует путать эти элементы управления с пользовательскими элементами управления в Windows.
+
+Эта функция позволяет использовать элементы управления, кроме тех, предоставляемые Windows. Во время выполнения элемент управления, связанный с класс окна (который отличается от класса C++). Для установки любого элемента управления, таких как статический элемент управления диалогового окна является более распространенный способ выполнения той же задачи. Затем во время выполнения, в [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog) функционировать, удалите этот элемент управления и замените его собственный пользовательский элемент управления.
+
+Это техника устарела. Сегодня рекомендуется в большинстве случаев для записи элемент управления ActiveX или подкласс общего элемента управления Windows.
+
+Для этих пользовательских элементов управления можно использовать:
+
+- Задание расположения в диалоговом окне.
+
+- Введите заголовок.
+
+- Определяющий имя класса элемента управления Windows (код приложения должен зарегистрировать элемент управления с таким именем).
+
+- Введите 32-разрядное шестнадцатеричное значение, которое задает стиль элемента управления.
+
+- Установив расширенный стиль.
 
 Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
@@ -55,4 +121,5 @@ Win32
 
 [Добавление обработчиков событий для элементов управления диалоговых окон](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)<br/>
-[Редактор диалоговых окон](../windows/dialog-editor.md)
+[Редактор диалоговых окон](../windows/dialog-editor.md)<br/>
+[Элементы управления](../mfc/controls-mfc.md)<br/>
