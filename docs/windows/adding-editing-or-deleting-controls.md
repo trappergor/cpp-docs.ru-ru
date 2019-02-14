@@ -36,13 +36,19 @@ helpviewer_keywords:
 - variables, dialog box control member variables
 - controls [C++], member variables
 - Dialog Editor [C++], defining member variables for controls
+- controls [C++], troubleshooting
+- Dialog Editor [C++], troubleshooting
+- dialog boxes [C++], troubleshooting
+- InitCommonControls
+- RichEdit 1.0 control
+- rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: b4edb5b7a51e4f6d368759ebc2e05a1cc585f19a
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: 648ac3329409ba221881f75eaa51e1779091b0f0
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742756"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264872"
 ---
 # <a name="adding-editing-or-deleting-controls"></a>Добавление, изменение и удаление элементов управления
 
@@ -51,44 +57,6 @@ ms.locfileid: "55742756"
 **Редактор диалоговых окон** отображается вкладка [окно панели элементов](/visualstudio/ide/reference/toolbox) при работе **диалоговое окно** редактора. Вы также можете настроить **элементов** окно, чтобы упростить работу. Дополнительные сведения см. в разделе [с помощью панели элементов](/visualstudio/ide/using-the-toolbox) и [отображать или скрывать окно панели элементов](showing-or-hiding-the-dialog-editor-toolbar.md).
 
 Можно использовать контекстное меню в **диалоговое окно** редактор, чтобы быстро добавить зарегистрированных элементов управления ActiveX в диалоговое окно, а также можно добавить элементы управления ActiveX для **элементов** для быстрого доступа.
-
-Стандартные элементы управления в **элементов** имеет значения по умолчанию события являются:
-
-|Имя элемента управления|Событие по умолчанию|
-|---|---|
-|[Элемент управления Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Элемент управления "флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Поле со списком](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Изменение элемента управления](../mfc/reference/cedit-class.md)|СОБЫТИЕ EN_CHANGE|
-|Группа|(Неприменимо)|
-|[Окно списка](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Управления "переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Статический элемент управления текст](../mfc/reference/cstatic-class.md)|(Неприменимо)|
-|[Управления изображения](../mfc/reference/cpictureholder-class.md)|(Неприменимо)|
-|[Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)|СОБЫТИЕ EN_CHANGE|
-|[Полосы прокрутки](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
-
-Дополнительные сведения об использовании **RichEdit 1.0** управления с MFC, см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) и [примеры элемента управления Правка Rich](../mfc/rich-edit-control-examples.md).
-
-[Стандартных элементов управления Windows](../mfc/controls-mfc.md) в **элементов** предоставить расширенные функциональные возможности в приложении. В их число входят следующее.
-
-|Имя элемента управления|Событие по умолчанию|
-|---|---|
-|[Элемент управления "ползунок"](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Элемент управления "Счетчик"](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Элемент управления хода выполнения](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|["Горячий" ключа управления](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Управления "список"](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Дерево](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Набор вкладок](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Анимация элемента управления](../mfc/using-an-animation-control.md)|ACN_START|
-|[Элемент управления даты средство выбора времени](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Элемент управления месячного календаря](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[IP-адрес управления](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Расширенного элемента управления списком](../mfc/creating-an-extended-combo-box-control.md)||
-|[Пользовательский элемент управления](custom-controls-in-the-dialog-editor.md)|TTN_GETDISPINFO|
-
-Дополнительные сведения см. в разделе [классы элементов управления](../mfc/control-classes.md), [классы диалоговых окон](../mfc/dialog-box-classes.md), и [стили полосы прокрутки](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles).
 
 Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
@@ -239,14 +207,53 @@ ms.locfileid: "55742756"
    > [!TIP]
    > При использовании **диалоговое окно** редактора во многих случаях можно щелкнуть правой кнопкой мыши, чтобы вывести контекстное меню с часто используемыми командами.
 
+## <a name="known-issue"></a>Известная проблема
+
+После добавления общего элемента управления или элемента управления форматированным редактированием в диалоговое окно, он не будет отображаться при тестировании диалоговое окно или диалоговое окно, сам не будет отображаться.
+
+Чтобы увидеть пример проблемы:
+
+1. Создайте проект Win32, измените параметры приложения, поэтому создается приложение Windows (не консольное приложение).
+
+1. В [представление ресурсов](../windows/resource-view-window.md), дважды щелкните RC-файл.
+
+1. В разделе диалоговое окно, дважды щелкните **о** поле.
+
+1. Добавить **контроль IP-адресов** в диалоговое окно.
+
+1. Сохранить и **перестроить все**.
+
+1. Запустите программу.
+
+1. В диалоговом окне **помочь** меню, щелкните **о** командной; диалоговое окно не появляется.
+
+В настоящее время **диалоговое окно** редактор не добавляет автоматически код в проект при перетаскивании следующие общие элементы управления или элементов управления в диалоговое окно "rich edit". И не Visual Studio обеспечивает ошибку или предупреждение при возникновении этой проблемы. Чтобы устранить проблему, вручную добавьте код для элемента управления.
+
+||||
+|-|-|-|
+|Элемент управления «Ползунок»|Дерево|Элемент управления "Выбор даты и времени"|
+|Элемент управления "Счетчик"|Набор вкладок|Календарь месяца|
+|Элемент управления хода выполнения|Анимация элемента управления|Контроль IP-адресов|
+|Сочетания клавиш|Элемент управления "Rich Edit"|Расширенное поле со списком поле|
+|Управления "список"|Элемент управления Rich Edit 2.0|Пользовательский элемент управления|
+
+Чтобы использовать стандартные элементы управления в диалоговом окне, необходимо вызвать [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) или `AFXInitCommonControls` перед созданием диалоговое окно.
+
+Для использования элементов управления RichEdit, необходимо вызвать `LoadLibrary`. Дополнительные сведения см. в разделе [о элементами управления Rich Edit](/windows/desktop/Controls/about-rich-edit-controls) в пакете SDK для Windows и [Обзор элемента управления Rich Edit](../mfc/overview-of-the-rich-edit-control.md).
+
+> [!NOTE]
+> Чтобы использовать элемент управления RichEdit с MFC, необходимо сначала вызвать [AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2) загрузить элемент управления RichEdit 2.0 (библиотеки RICHED20. Библиотека DLL), или вызвать [AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit) для загрузки более старых элемента управления RichEdit 1.0 (RICHED32. БИБЛИОТЕКА DLL).
+>
+> Вы можете использовать текущий [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md) класса с помощью более старых элемента управления RichEdit 1.0, но `CRichEditCtrl` предназначена только для поддержки управления RichEdit 2.0. Поскольку RichEdit 1.0 и RichEdit 2.0 похожи, большинство методов будет работать. Тем не менее Обратите внимание, что существуют некоторые различия между 1.0 и 2.0 элементы управления, поэтому некоторые методы могут работать неправильно или вообще не работать.
+
 ## <a name="requirements"></a>Требования
 
 Win32
 
 ## <a name="see-also"></a>См. также
 
+[Редактор диалоговых окон](../windows/dialog-editor.md)<br/>
 [Элементы управления в диалоговых окнах](controls-in-dialog-boxes.md)<br/>
-[Элементы управления "Диалоговое окно" и типы переменных](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 
 <!-- excluded links
