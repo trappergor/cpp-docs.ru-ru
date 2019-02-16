@@ -1,6 +1,6 @@
 ---
 title: Сочетания клавиш (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232127"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320514"
 ---
 # <a name="accelerator-keys-c"></a>Сочетания клавиш (C++)
-
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
 
 ## <a name="predefined-accelerator-keys"></a>Стандартные сочетания клавиш
 
@@ -79,7 +77,7 @@ ms.locfileid: "55232127"
 |VK_XBUTTON1|Windows: Кнопка мыши X1|
 |VK_XBUTTON2|Windows: Кнопка мыши X2|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>Привязка сочетания клавиш к пункту меню
+## <a name="accelerator-key-association"></a>Сопоставление ключа сочетаний клавиш
 
 Во многих случаях требуется, чтобы пункт меню и сочетание клавиш выдавали одну и ту же команду. Это делается путем назначения одного и того же идентификатора ресурса (ID) пункту меню и записи в таблице сочетаний клавиш приложения. Затем можно изменить заголовок пункта меню, чтобы показать имя сочетания клавиш. Дополнительные сведения о пунктах меню и сочетаний клавиш см. в разделе [связывание пункта меню с сочетанием клавиш](../windows/associating-a-menu-command-with-an-accelerator-key.md).
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Редактор сочетаний клавиш](../windows/accelerator-editor.md)<br/>
-[Редакторы ресурсов](../windows/resource-editors.md)
