@@ -1,16 +1,16 @@
 ---
 title: Предопределенные символы ATL
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 37d24dcfb65566b2b13c8b1ba8c826ec68271477
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654406"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320462"
 ---
 # <a name="atl-predefined-symbols"></a>Предопределенные символы ATL
 
@@ -18,16 +18,16 @@ ms.locfileid: "50654406"
 
 |||
 |-|-|
-|IDABORT|Управления: Кнопка прерывания полю диалоговое окно|
-|IDC_STATIC|Элемента управления: Статический элемент управления|
-|IDCANCEL|Элемент управления: Кнопки диалогового окна "Отмена"|
-|IDIGNORE|Элемента управления: Кнопка Пропустить поле диалогового окна|
-|IDNO|Элемент управления: Диалоговое окно кнопка "Нет"|
-|IDOK|Управления: Кнопки ОК поле диалогового окна|
-|IDR_ACCELERATOR1|Ресурсов: Таблицы сочетаний клавиш|
-|IDRETRY|Элемента управления: Кнопка повтора поле диалогового окна|
-|IDS_PROJNAME|Строка: Имя текущего приложения|
-|IDYES|Управления: Диалоговое окно Да кнопку|
+|IDABORT|Элемент управления: Кнопка прерывания поле диалогового окна|
+|IDC_STATIC|Элемент управления: Статический элемент управления|
+|IDCANCEL|Элемент управления: Диалоговое окно кнопку "Отмена" в окне|
+|IDIGNORE|Элемент управления: Кнопка Пропустить поле диалогового окна|
+|IDNO|Элемент управления: Диалоговое окно, кнопка "Нет"|
+|IDOK|Элемент управления: Диалоговое окно кнопку в окне ОК|
+|IDR_ACCELERATOR1|Ресурс: Таблица сочетаний клавиш|
+|IDRETRY|Элемент управления: Диалоговое окно кнопку "Повторить" в окне|
+|IDS_PROJNAME|Строковый тип данных: Имя текущего приложения|
+|IDYES|Элемент управления: Диалоговое окно кнопку "Да"|
 
 ## <a name="requirements"></a>Требования
 
@@ -36,4 +36,5 @@ ATL
 ## <a name="see-also"></a>См. также
 
 [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)<br/>
-[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)
+[Предопределенные символы MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Предопределенные символы Win32](../windows/win32-predefined-symbols.md)<br/>

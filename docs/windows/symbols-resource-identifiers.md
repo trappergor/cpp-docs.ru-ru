@@ -1,6 +1,6 @@
 ---
-title: 'Символы: Идентификаторы ресурсов (C++)'
-ms.date: 11/04/2016
+title: Идентификаторы ресурсов (символы) (C++)
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.identifiers
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7359fdfd1007cb49025908ffea51093622943052
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530004"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320501"
 ---
-# <a name="symbols-resource-identifiers-c"></a>Символы: Идентификаторы ресурсов (C++)
+# <a name="resource-identifiers-symbols-c"></a>Идентификаторы ресурсов (символы) (C++)
 
 Символ представляет собой идентификатор ресурса, состоящий из двух частей: текстовой строки (имени символа), сопоставленной с целочисленным значением (значением символа). Пример:
 
@@ -36,27 +36,11 @@ IDC_EDITNAME = 5100
 
 Соответственно тому, как увеличивается размер приложения и сложность его структуры, растет количество ресурсов и символов. Отслеживание большого количества символов, разбросанных по нескольким файлам, может оказаться трудоемкой задачей. Диалоговое окно [Символы ресурсов](../windows/resource-symbols-dialog-box.md) упрощает управление символами, позволяя выполнять следующие действия:
 
-- [просмотр символов ресурсов;](../windows/viewing-resource-symbols.md)
+- [Создание символов](../windows/creating-new-symbols.md)
 
-- [создание символов;](../windows/creating-new-symbols.md)
-
-- [изменение неназначенных символов;](../windows/changing-unassigned-symbols.md)
-
-- [удаление неназначенных символов;](../windows/deleting-unassigned-symbols.md)
-
-- [открытие редактора ресурсов для заданного символа;](../windows/opening-the-resource-editor-for-a-given-symbol.md)
-
-- [изменение символа или символьного имени (идентификатора);](../windows/changing-a-symbol-or-symbol-name-id.md)
-
-- [изменение числового значения символа;](../windows/changing-a-symbol-s-numeric-value.md)
-
-- [изменение имен файлов заголовков символов;](../windows/changing-the-names-of-symbol-header-files.md)
-
-- [включение общих (доступных только для чтения) или вычисляемых символов;](../windows/including-shared-read-only-or-calculated-symbols.md)
+- [Управление символы](../windows/changing-a-symbol-or-symbol-name-id.md)
 
 - [просмотр предопределенных идентификаторов символов.](../windows/predefined-symbol-ids.md)
-
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Требования
 
@@ -64,6 +48,6 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Практическое руководство. Поиск символов в ресурсах](../windows/how-to-search-for-symbols-in-resources.md)<br/>
+[Работа с файлами ресурсов](../windows/working-with-resource-files.md)<br/>
+[Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
 [Редакторы ресурсов](../windows/resource-editors.md)<br/>
-[Файлы ресурсов](../windows/resource-files-visual-studio.md)

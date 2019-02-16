@@ -1,17 +1,17 @@
 ---
 title: Предопределенные символы Win32
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 helpviewer_keywords:
 - Win32 [C++], predefined symbols
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-ms.openlocfilehash: 703e00ebcf50c987fe3a0a9399cd7497bb9c95f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b282db2680b2459fdbece41d3c0e0d15f523e44
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434701"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320449"
 ---
 # <a name="win32-predefined-symbols"></a>Предопределенные символы Win32
 
@@ -19,20 +19,20 @@ ms.locfileid: "50434701"
 
 |||
 |-|-|
-|IDABORT|Управления: Кнопка прерывания полю диалоговое окно|
+|IDABORT|Элемент управления: Кнопка прерывания поле диалогового окна|
 |IDC_STATIC|Элемент управления: Статический текст в диалоговом окне|
-|IDCANCEL|Элемент управления: Кнопки диалогового окна "Отмена"|
-|IDD_ABOUTBOX|Диалогового окна: Продукт диалоговое окно «о продукте»|
+|IDCANCEL|Элемент управления: Диалоговое окно кнопку "Отмена" в окне|
+|IDD_ABOUTBOX|Диалоговое окно: Продукт о диалоговое окно|
 |IDI_PROJECTNAME|Значок: Значок текущего проекта|
 |IDI_SMALL|Значок: Маленький значок текущего проекта|
 |IDIGNORE|Элемент управления: Используется с кнопкой "Ignore," о диалоговых окнах|
 |IDM_ABOUT|Пункт меню: Используется с помощью... О...|
 |IDM_EXIT|Пункт меню: Используется с файлом... Выход...|
-|IDNO|Элемент управления: Диалоговое окно кнопка "Нет"|
-|IDOK|Управления: Кнопки ОК поле диалогового окна|
-|IDRETRY|Элемента управления: Кнопка повтора поле диалогового окна|
-|IDS_APP_TITLE|Строка: Имя текущего приложения|
-|IDYES|Управления: Диалоговое окно Да кнопку|
+|IDNO|Элемент управления: Диалоговое окно, кнопка "Нет"|
+|IDOK|Элемент управления: Диалоговое окно кнопку в окне ОК|
+|IDRETRY|Элемент управления: Диалоговое окно кнопку "Повторить" в окне|
+|IDS_APP_TITLE|Строковый тип данных: Имя текущего приложения|
+|IDYES|Элемент управления: Диалоговое окно кнопку "Да"|
 
 ## <a name="requirements"></a>Требования
 
@@ -41,4 +41,5 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Стандартные идентификаторы символов](../windows/predefined-symbol-ids.md)<br/>
-[Символы: идентификаторы ресурсов](../windows/symbols-resource-identifiers.md)
+[Предопределенные символы MFC](../windows/mfc-predefined-symbols.md)<br/>
+[Предопределенные символы ATL](../windows/atl-predefined-symbols.md)<br/>
