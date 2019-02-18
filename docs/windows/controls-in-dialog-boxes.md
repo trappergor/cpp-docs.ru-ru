@@ -1,6 +1,6 @@
 ---
 title: Элементы управления в диалоговых окнах (C++) | Документация Майкрософт
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264846"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336518"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>Элементы управления в диалоговых окнах (C++)
 
@@ -30,25 +30,11 @@ ms.locfileid: "56264846"
 
 После добавления элемента управления в диалоговое окно, можно изменить свойства, такие как фактически [окно "Свойства"](/visualstudio/ide/reference/properties-window). Можно выбрать несколько элементов управления и изменить их свойства одновременно.
 
-- [Добавление, изменение и удаление элементов управления](adding-editing-or-deleting-controls.md)
+- [Практическое руководство. Добавление, редактирование или удаление элементов управления](adding-editing-or-deleting-controls.md)
 
-- [Выбор элементов управления](../windows/selecting-controls.md)
+- [Практическое руководство. Размещение элементов управления](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [Изменение размера отдельных элементов управления](../windows/sizing-individual-controls.md)
-
-- [Выравнивание элементов управления по размеру](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [Задание размера для поля со списком и соответствующего раскрывающегося списка](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [Добавление значений в элемент управления "Поле со списком"](../windows/adding-values-to-a-combo-box-control.md)
-
-- [Задание ширины горизонтальной полосы прокрутки](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [Расположение элементов управления в диалоговых окнах](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [Определение клавиш доступа](../windows/defining-mnemonics-access-keys.md)
-
-- [Задание местоположения и размера диалогового окна](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [Практическое руководство. Определить управление доступом и значения](../windows/defining-mnemonics-access-keys.md)
 
 Стандартные элементы управления в **элементов** имеет значения по умолчанию события являются:
 
@@ -110,8 +96,6 @@ ms.locfileid: "56264846"
 - Введите 32-разрядное шестнадцатеричное значение, которое задает стиль элемента управления.
 
 - Установив расширенный стиль.
-
-Сведения о добавлении ресурсов в управляемые проекты см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*. Сведения о вручную добавлять файлы ресурсов в управляемые проекты, осуществлять доступ к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Сведения о глобализации и локализации ресурсов в управляемых приложениях, см. в разделе [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index).
 
 ## <a name="requirements"></a>Требования
 
