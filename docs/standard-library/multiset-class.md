@@ -86,12 +86,12 @@ helpviewer_keywords:
 - std::multiset [C++], upper_bound
 - std::multiset [C++], value_comp
 ms.assetid: 630e8c10-0ce9-4ad9-8d79-9e91a600713f
-ms.openlocfilehash: 8d2e298a2e4c6eb16a1851b3a9ce7ddc886a76f2
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 3b059db877d24f5e4414745ba6c2f9ee4f6591e7
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678474"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418722"
 ---
 # <a name="multiset-class"></a>Класс multiset
 
@@ -771,7 +771,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*аргументы*|Аргументы, которые передаются для создания элемента, который вставляется в мультинабор.|
 |*where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1166,7 +1166,7 @@ IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в мультинабор.|
 |*Where*|Место начала поиска правильной точки вставки. (Если этой точки непосредственно предшествует *где*, вставка может происходить в амортизированном константном времени вместо логарифмического времени.)|
@@ -1929,7 +1929,7 @@ int main() {
       cout << *ms1_Iter << " ";
    cout << "." << endl;
 
-   // rend can be used to terminate an interation
+   // rend can be used to terminate an iteration
    // through a multiset in a reverse order
    cout << "The reversed multiset is: ";
    for ( ms1_rIter = ms1.rbegin( ) ; ms1_rIter != ms1.rend( ); ms1_rIter++ )
