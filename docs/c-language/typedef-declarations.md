@@ -6,12 +6,12 @@ helpviewer_keywords:
 - typedef declarations
 - types [C], declarations
 ms.assetid: e92a3b82-9269-4bc6-834a-6f431ccac83e
-ms.openlocfilehash: 6493c5240ca66fc1f12c9617e05072f8399d4786
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4bf7bc82cdf792e5a23f6d5533cc4d800fe4252
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468904"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149626"
 ---
 # <a name="typedef-declarations"></a>Объявления Typedef
 
@@ -51,7 +51,7 @@ ms.locfileid: "50468904"
 
 Обратите внимание, что объявление typedef не создает типы. Оно создает синонимы для существующих типов или имена для типов, которые могут определяться другими способами. Если имя typedef используется как спецификатор типа, его можно использовать в сочетании с определенными спецификаторами типа (но нельзя использовать с другими спецификаторами). К допустимым модификаторам относятся **const** и `volatile`.
 
-Имена Typedef используют то же пространство имен, что и обычные идентификаторы (дополнительные сведения см. в статье [Пространства имен](../c-language/name-spaces.md)). Поэтому в программе может присутствовать имя typedef и идентификатор с тем же именем в локальной области. Пример:
+Имена Typedef используют то же пространство имен, что и обычные идентификаторы (дополнительные сведения см. в статье [Пространства имен](../c-language/name-spaces.md)). Поэтому в программе может присутствовать имя typedef и идентификатор с тем же именем в локальной области. Например:
 
 ```C
 typedef char FlagType;

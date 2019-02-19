@@ -7,12 +7,12 @@ helpviewer_keywords:
 - expanding wildcard arguments
 - wildcards, expanding
 ms.assetid: 80a11c4b-0199-420e-a342-cf1d803be5bc
-ms.openlocfilehash: 2224d01eeb3ec54a9c0ff895dfa45574135f7c0c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1fb964fe98223fb7187b83c7101027ed1f9cbea
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443424"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149054"
 ---
 # <a name="expanding-wildcard-arguments"></a>Расширение аргументов заполнителей
 
@@ -22,7 +22,7 @@ ms.locfileid: "50443424"
 
 По умолчанию подстановочные знаки в аргументах командной строки не разворачиваются. Вы можете заменить обычную процедуру загрузки вектора аргументов `argv` на версию, которая разворачивает подстановочные знаки, используя компоновку с файлом setargv.obj или wsetargv.obj. Если программа использует функцию `main` , скомпонуйте ее с файлом setargv.obj. Если программа использует функцию `wmain` , скомпонуйте ее с файлом wsetargv.obj. Они оба реализуют эквивалентное поведение.
 
-Чтобы скомпоновать программу с файлом setargv.obj или wsetargv.obj, используйте параметр **/link** . Пример:
+Чтобы скомпоновать программу с файлом setargv.obj или wsetargv.obj, используйте параметр **/link** . Например:
 
 **cl example.c /link setargv.obj**
 
