@@ -6,18 +6,18 @@ helpviewer_keywords:
 - declarators, definition
 - declaring variables, declaration statements
 ms.assetid: 5fd67a6a-3a6a-4ec9-b257-3f7390a48d40
-ms.openlocfilehash: 711c0eb4e0b652f86de74803d5725c5dc3054b31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 928de4b1724577a9fdb282f5109b4b5d0b31c4e6
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562790"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147494"
 ---
 # <a name="declarators-and-variable-declarations"></a>Деклараторы и объявления переменных
 
 В остальной части данного раздела описывается форма и значение объявлений для переменных типов, включенных в этот список. В частности, в остальных разделах объясняется, как объявить следующие объекты.
 
-|Тип переменной|Описание:|
+|Тип переменной|Описание|
 |----------------------|-----------------|
 |[Простые переменные](../c-language/simple-variable-declarations.md)|Однозначные переменные целочисленного типа или типа с плавающей запятой|
 |[Массивы](../c-language/array-declarations.md)|Переменные, состоящие из коллекции элементов того же типа|

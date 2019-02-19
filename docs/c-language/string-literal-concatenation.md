@@ -5,12 +5,12 @@ helpviewer_keywords:
 - concatenating strings
 - strings [C++], concatenating
 ms.assetid: 51486b1f-4b1e-4061-9add-1aa38c6cdb3c
-ms.openlocfilehash: 167ebd2cf9f7f8f2f073b5de68f36aebd1a3951a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdd9a7811635bf43cd76ecbc84d8ab364e7f9dab
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654506"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152577"
 ---
 # <a name="string-literal-concatenation"></a>Объединение строковых литералов
 
@@ -35,7 +35,7 @@ ken into two or more pieces."
 "Enter a number between 1 and 100\nOr press Return"
 ```
 
-Поскольку строки могут начинаться в любом столбце исходного кода и длинные строки можно продолжать в любом столбце последующей строки, строки можно позиционировать для повышения удобства чтения исходного кода. В любом случае их представление на экране при выводе результата не затрагивается. Пример:
+Поскольку строки могут начинаться в любом столбце исходного кода и длинные строки можно продолжать в любом столбце последующей строки, строки можно позиционировать для повышения удобства чтения исходного кода. В любом случае их представление на экране при выводе результата не затрагивается. Например:
 
 ```
 printf_s ( "This is the first half of the string, "
