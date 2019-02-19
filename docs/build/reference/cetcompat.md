@@ -1,17 +1,17 @@
 ---
 title: / CETCOMPAT (совместим с технологии применения потока управления)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703463"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418696"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/ CETCOMPAT (совместим с технологии применения потока управления)
 
@@ -24,7 +24,7 @@ ms.locfileid: "55703463"
 ## <a name="arguments"></a>Аргументы
 
 **НЕТ**<br/>
-Указывает, что executalbe не должен быть помечен как совместим с центральноевропейское время.
+Указывает, что исполняемый файл не следует помечать совместим с центральноевропейское время.
 
 ## <a name="remarks"></a>Примечания
 
@@ -44,7 +44,7 @@ ms.locfileid: "55703463"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
-- Этот параметр не поддерживает программный эквивалент.
+Этот параметр не поддерживает программный эквивалент.
 
 ## <a name="see-also"></a>См. также
 
