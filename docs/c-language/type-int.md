@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 6391e167ad214bb793b8d6b3b62637a113039afc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437197"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150016"
 ---
 # <a name="type-int"></a>Тип int
 
@@ -22,7 +22,7 @@ ms.locfileid: "50437197"
 
 **Блок, относящийся только к системам Microsoft**
 
-Знаковые целочисленные типы представлены в форме дополнительного кода. В старшем разряде содержится знак: 1 означает отрицательные числа, 0 — положительные числа и ноль. Диапазон значений описывается в статье [Пределы целых чисел в C++](../c-language/cpp-integer-limits.md). Пределы определены в файле заголовка LIMITS.H.
+Знаковые целочисленные типы представлены в форме дополнительного кода. В старшем бите содержится следующий знак: 1 означает отрицательные числа, 0 — положительные числа и ноль. Диапазон значений описывается в статье [Пределы целых чисел в C++](../c-language/cpp-integer-limits.md). Пределы определены в файле заголовка LIMITS.H.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
