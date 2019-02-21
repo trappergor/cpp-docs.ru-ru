@@ -22,7 +22,7 @@ ms.locfileid: "50430463"
 |[. (поле)](operator-dot.md)|[/ (деление)](operator-subtract-1.md)|[&#91;&#93;(индекс)](operator-brackets.md)|
 |[MOD (остаток от деления)](operator-mod.md)|||
 
-## <a name="control-flow"></a>Управление ходом выполнения
+## <a name="control-flow"></a>Поток управления
 
 ||||
 |-|-|-|
