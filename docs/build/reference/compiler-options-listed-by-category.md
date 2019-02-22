@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248576"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676504"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
 Эта статья содержит сортированный по категориям список параметров компилятора. Сортированный в алфавитном порядке список см. в разделе [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md).
 
-### <a name="optimization"></a>Оптимизация
+## <a name="optimization"></a>Оптимизация
 
 |Параметр|Цель|
 |------------|-------------|
@@ -31,7 +31,7 @@ ms.locfileid: "53248576"
 |[/Oy](oy-frame-pointer-omission.md)|Пропускает указатель на фрейм. (только x86)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Создает код, который оптимизирован для конкретной архитектуры или диапазона архитектур.|
 
-### <a name="code-generation"></a>Создание кода
+## <a name="code-generation"></a>Создание кода
 
 |Параметр|Цель|
 |------------|-------------|
@@ -72,7 +72,7 @@ ms.locfileid: "53248576"
 |[/RTC](rtc-run-time-error-checks.md)|Включает проверку ошибок во время выполнения.|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|Выбирает способ интерпретации ключевого слова volatile.|
 
-### <a name="output-files"></a>Выходные файлы
+## <a name="output-files"></a>Выходные файлы
 
 |Параметр|Назначение|
 |------------|-------------|
@@ -87,7 +87,7 @@ ms.locfileid: "53248576"
 |[/Fp](fp-name-dot-pch-file.md)|Задает имя файла предкомпилированного заголовка.|
 |[/ FR, /Fr](fr-fr-create-dot-sbr-file.md)|Создать имя SBR-файлы браузера.|
 
-### <a name="preprocessor"></a>Препроцессор
+## <a name="preprocessor"></a>Препроцессор
 
 |Параметр|Цель|
 |------------|-------------|
@@ -105,7 +105,7 @@ ms.locfileid: "53248576"
 |[/u](u-u-undefine-symbols.md)|Удаляет все предварительно определенные макросы.|
 |[/X](x-ignore-standard-include-paths.md)|Пропускает стандартный каталог включаемых файлов.|
 
-### <a name="language"></a>Язык
+## <a name="language"></a>Язык
 
 |Параметр|Цель|
 |------------|-------------|
@@ -129,7 +129,7 @@ ms.locfileid: "53248576"
 |[/Zs](zs-syntax-check-only.md)|Проверяет только синтаксис.|
 |[/ZW](zw-windows-runtime-compilation.md)|Создает выходной файл для запуска в среде выполнения Windows.|
 
-### <a name="linking"></a>Компоновка
+## <a name="linking"></a>Компоновка
 
 |Параметр|Цель|
 |------------|-------------|
@@ -143,7 +143,7 @@ ms.locfileid: "53248576"
 |[/MT](md-mt-ld-use-run-time-library.md)|Компилирует для создания многопотокового исполняемого файла с помощью библиотеки LIBCMT.lib.|
 |[/MTd](md-mt-ld-use-run-time-library.md)|Компилирует для создания отладочного многопотокового исполняемого файла с помощью библиотеки LIBCMTD.lib.|
 
-### <a name="miscellaneous"></a>Прочее
+## <a name="miscellaneous"></a>Прочее
 
 |Параметр|Цель|
 |------------|-------------|
@@ -159,7 +159,7 @@ ms.locfileid: "53248576"
 |[/H](h-restrict-length-of-external-names.md)|Не рекомендуется. Ограничивает длину внешних (открытых) имен.|
 |[/HELP](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
 |[/J](j-default-char-type-is-unsigned.md)|Изменяет тип `char` по умолчанию.|
-|[/ JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
+|[/JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Компилятор и компоновщик создадут двоичный файл для выполнения в ядре Windows.|
 |[/MP](mp-build-with-multiple-processes.md)|Параллельное построение нескольких исходных файлов.|
 |[/nologo](nologo-suppress-startup-banner-c-cpp.md)|Подавление отображения приветствия.|
@@ -190,12 +190,12 @@ ms.locfileid: "53248576"
 |[кодировки/Source](source-charset-set-source-character-set.md)|Задание исходной кодировки.|
 |[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Задание набора символов исполнения.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Набор источника и выполнения кодировки UTF-8.|
-|[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
 |[/ Diagnostics](diagnostics-compiler-diagnostic-options.md)|Определяет формат диагностических сообщений.|
 |[/ permissive-](permissive-standards-conformance.md)|Режим соответствия standard.|
 |[/std](std-specify-language-standard-version.md)|Селектор совместимости стандартной версии C++.|
 
-### <a name="deprecated-and-removed-compiler-options"></a>Нерекомендуемые и удаленные параметры компилятора
+## <a name="deprecated-and-removed-compiler-options"></a>Нерекомендуемые и удаленные параметры компилятора
 
 |Параметр|Цель|
 |------------|-------------|
