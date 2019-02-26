@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334655"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809702"
 ---
 # <a name="platformguid-value-class"></a>Класс значения Platform::Guid
 
@@ -28,7 +28,7 @@ public value struct Guid
 
 `Platform::Guid` имеет `Equals()`, `GetHashCode()`, и `ToString()` методы, производных от [Platform::Object Class](../cppcx/platform-object-class.md)и `GetTypeCode()` метод, производный от [класс Platform::Type](../cppcx/platform-type-class.md). `Platform::Guid` также имеет следующие члены.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[Guid](#ctor)|Инициализирует новый экземпляр класса `Platform::Guid`.|
 |[operator==](#operator-equality)|Оператор равенства.|
@@ -38,7 +38,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>Примечания
 
-Пример того, как создать новый `Platform::Guid` с помощью функции Windows [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid), см. в разделе [компонент WinRT: Как создать GUID?](https://www.eternalcoding.com/?p=383)
+Чтобы создать новый `Platform::Guid`, использовать [Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid) статический метод.
 
 ### <a name="requirements"></a>Требования
 
@@ -141,6 +141,10 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение true, если два `Platform::Guid` они равны.
+
+### <a name="remarks"></a>Примечания
+
+Предпочитаете использовать `==` оператор вместо [Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals) статический метод.
 
 ## <a name="operator-inequality"></a> GUID::operator! =-оператор
 
