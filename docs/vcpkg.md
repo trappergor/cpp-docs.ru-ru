@@ -3,18 +3,17 @@ title: vcpkg — диспетчер пакетов C++ для Windows, Linux и 
 description: vcpkg — это диспетчер пакетов на базе командной строки, который существенно упрощает получение и установку библиотек C++ с открытым исходным кодом в Windows.
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518688"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809715"
 ---
-# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
+# <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: диспетчер пакетов C++ для Windows, Linux и MacOS
 
 vcpkg — это диспетчер пакетов на базе командной строки, который существенно упрощает получение и установку сторонних библиотек в Windows, Linux и MacOS. Если в вашем проекте используются сторонние библиотеки, рекомендуем использовать vcpkg для их установки. Диспетчер vcpkg поддерживает как библиотеки с открытым исходным кодом, так и закрытые библиотеки. Все библиотеки в каталоге vcpkg для Windows были протестированы на совместимость с Visual Studio 2015 и Visual Studio 2017. По состоянию на май 2018 года в каталоге Windows содержится более 900 библиотек и более 350 библиотек в каталоге Linux и MacOS. Сообщество C++ постоянно добавляет новые библиотеки в оба каталога.
 
@@ -32,7 +31,7 @@ vcpkg — это диспетчер пакетов на базе командн
 
 ## <a name="installation"></a>Установка
 
-Клонируйте репозиторий vcpkg из GitHub: https://github.com/Microsoft/vcpkg. Его можно загрузить в любую папку.
+Клонируйте репозиторий vcpkg из GitHub: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg). Его можно загрузить в любую папку.
 
 Запустите начальный загрузчик в корневой папке.
 
@@ -82,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Пример:
+Для проектов CMAKE используйте CMAKE_TOOLCHAIN_FILE, чтобы сделать библиотеки доступными через `find_package()`. Например:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -207,7 +206,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ## <a name="command-line-reference"></a>Справочник по командной строке
 
-|Команда|Описание:|
+|Команда|Описание|
 |---------|---------|
 |**vcpkg search [путь]**|Поиск пакетов, доступных для установки|
 |**vcpkg install \<пакет>...**|Установка пакета|
@@ -229,7 +228,7 @@ If you are sure you want to rebuild the above packages, run this command with th
 
 ### <a name="options"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------|---------|
 |**--triplet \<t>**|Указание триады значений для целевой архитектуры (по умолчанию: `%VCPKG_DEFAULT_TRIPLET%`, см. также **vcpkg help triplet**)|
 |**--vcpkg-root \<путь>**|Указание корневого каталога vcpkg (по умолчанию: `%VCPKG_ROOT%`)|

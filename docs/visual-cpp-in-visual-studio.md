@@ -2,18 +2,17 @@
 title: Visual C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
 ms.date: 09/26/2018
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327191"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809656"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
@@ -159,7 +158,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="third-party-open-source-c-libraries"></a>Сторонние библиотеки C++ с открытым исходным кодом
 
-Кроссплатформенная программа командной строки **vcpkg** значительно упрощает обнаружение и установку более чем 900 библиотек C++ с открытым исходным кодом. См. раздел [vcpkg: диспетчер пакетов C++ для Windows](vcpkg.md).
+Кроссплатформенная программа командной строки **vcpkg** значительно упрощает обнаружение и установку более чем 900 библиотек C++ с открытым исходным кодом. См. раздел [vcpkg: диспетчер пакетов C++ для Windows](vcpkg.md).
 
 ## <a name="feedback-and-community"></a>Обратная связь и сообщество
 
