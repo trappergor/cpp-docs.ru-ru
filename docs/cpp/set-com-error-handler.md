@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - _set_com_error_handler function
 ms.assetid: 49fe4fca-5e37-4d83-abaf-15be5ce37f94
-ms.openlocfilehash: 7c7c9d572dcb8e1323df003e15e44adc8491c058
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 864236e86b4aeb6ce7b3315df57af1b577693c26
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567795"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954943"
 ---
 # <a name="setcomerrorhandler"></a>_set_com_error_handler
 
@@ -90,7 +90,7 @@ Exception raised: Unable to establish the connection!
 
 **Заголовок:** \<comdef.h >
 
-**LIB:** Если **wchar_t — собственный тип** включен параметр компилятора, используйте comsuppw.lib или comsuppwd.lib. Если **wchar_t — собственный тип** отключен, используйте comsupp.lib. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+**LIB:** Если **/Zc: wchar_t** указан параметр компилятора (по умолчанию), используйте comsuppw.lib или comsuppwd.lib. Если **/Zc:wchar_t-** указан параметр компилятора, используйте comsupp.lib. Дополнительные сведения, включая задание этого параметра в интегрированной среде разработки, см. в разделе [/Zc: wchar_t (wchar_t — собственный тип)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 ## <a name="see-also"></a>См. также
 

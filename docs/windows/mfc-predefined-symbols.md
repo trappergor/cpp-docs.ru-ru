@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320865"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954956"
 ---
 # <a name="mfc-predefined-symbols"></a>Предопределенные символы MFC
 
@@ -23,12 +23,12 @@ ms.locfileid: "56320865"
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-Файлы заголовков, которые содержат значения Идентификаторов символов для общих значений MFC. Эти символы доступны только при работе в проекте MFC. Префикс AFX_ следуют стандартные префиксы имени символа.
+Файлы заголовков, которые содержат значения Идентификаторов символов для общих значений MFC. Эти символы доступны только при работе в проекте MFC. `AFX_` За префиксом следует стандартные префиксы имени символа.
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ ms.locfileid: "56320865"
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>символы программирования базы данных MFC
+## <a name="mfc-database-programming"></a>MFC программирование баз данных
 
 Символы в этой таблице появляются только в проекте MFC при была добавлена поддержка баз данных. Они поддерживают подключение MFC для серверов SQL Server и программирования базы данных.
 
@@ -232,9 +232,11 @@ ms.locfileid: "56320865"
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>Символы программирования MFC Windows
+## <a name="mfc-windows-programming"></a>Программирование MFC Windows
 
-Эти символы также являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются с меню. При работе с меню в **редактор меню**, эти символы будут отображаться в **окно свойств** распространенные команды меню. Например если приложение имеет **файл** меню с **выхода** команды, что команда будет связана с символом ID_APP_EXIT в [окно "Свойства"](/visualstudio/ide/reference/properties-window).
+Эти символы также являются частью файлов поддержки MFC, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются с меню.
+
+При работе с меню в **редактор меню**, эти символы будут отображаться в **окно свойств** распространенные команды меню. Например если приложение имеет **файл** меню с **выхода** команды, что команда будет связана с символом ID_APP_EXIT в [окно "Свойства"](/visualstudio/ide/reference/properties-window).
 
 ||||
 |-|-|-|
