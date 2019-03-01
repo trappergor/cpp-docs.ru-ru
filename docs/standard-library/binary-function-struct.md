@@ -1,21 +1,21 @@
 ---
 title: Структура binary_function
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466772"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006272"
 ---
 # <a name="binaryfunction-struct"></a>Структура binary_function
 
-Пустая базовая структура, определяющая типы, которые могут наследоваться производными классами, предоставляющими объект бинарной функции.
+Пустая базовая структура, определяющая типы, которые могут наследоваться производными классами, предоставляющими объект бинарной функции. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,7 +31,7 @@ struct binary_function {
 
 Структура шаблона выступает в качестве основы для классов, в которых определяются функции-члены в виде:
 
-> *result_type* ** operator() (const ** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**&) const**
+> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
 
 Все такие бинарные функции могут ссылаться на тип своего первого аргумента как *first_argument_type*, тип второго аргумента как *second_argument_type* и возвращаемый тип как *result_type*.
 

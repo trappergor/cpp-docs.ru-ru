@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514690"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006734"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-Определяет шаблон, предоставляющий константы, которые содержат информацию о свойствах аргументов их типа или создают преобразованные типы.
+Определяет шаблон для константы времени компиляции, которые предоставляют сведения о свойствах аргументов их типа или создают преобразованные типы.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,29 +26,33 @@ ms.locfileid: "50514690"
 
 ## <a name="remarks"></a>Примечания
 
-Классы и шаблоны в \<type_traits > используются для поддержки вывода типа, классификации и преобразования во время компиляции, для обнаружения ошибок, связанных с типом и для оптимизации универсального кода. Эти классы и шаблоны включают унарные признаки типов, которые описывают свойство типа, двоичные признаки типов, которые описывают связь между типами, и признаки преобразования, изменяющие свойство типа.
+Классы и шаблоны в \<type_traits > используются для поддержки вывода типа, классификации и преобразования во время компиляции. Они также используются для обнаружения ошибок, связанных с типом и для оптимизации универсального кода. Унарные признаки типов описывают свойство типа, двоичные признаки типов описывают связь между типами и признаки преобразования изменения свойства типа.
 
-Для поддержки признаков типа определен вспомогательный класс `integral_constant`. Он имеет специализации шаблона `true_type` и `false_type`, формирующие базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если предикат типа *имеет значение true*, он является открыто производным (явно или косвенно) от [true_type](../standard-library/type-traits-typedefs.md#true_type). Если значение предиката типа равно *false*, он является открыто производным (явно или косвенно) от [false_type](../standard-library/type-traits-typedefs.md#false_type).
+Вспомогательный класс `integral_constant` и его специализаций шаблона `true_type` и `false_type` формирующие базовые классы для предикатов типа. *Предикат типа* — это шаблон, принимающий один или несколько аргументов типа. Если значение предиката типа равно *справедливо*, он является открыто производным, прямо или косвенно, из [true_type](../standard-library/type-traits-typedefs.md#true_type). Если значение предиката типа равно *содержит значение false*, он является открыто производным, прямо или косвенно, из [false_type](../standard-library/type-traits-typedefs.md#false_type).
 
 *Модификатор типа* или *признак преобразования* — это шаблон, принимающий один или несколько аргументов шаблона и имеющий один член (`type`), который является синонимом для измененного типа.
 
 ### <a name="alias-templates"></a>Шаблоны псевдонимов
 
-Чтобы упростить выражения с признаками типов, предоставляются [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type`, где "`some_trait`" — это имя класса шаблонов. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
+Чтобы упростить выражения с признаками типов, [шаблоны псевдонимов](../cpp/aliases-and-typedefs-cpp.md) для `typename some_trait<T>::type` предоставляются, где *some_trait* — это имя класса шаблона. Например, [add_const](../standard-library/add-const-class.md) имеет шаблон псевдонима для своего типа, `add_const_t`, определяемого следующим образом.
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+Это предоставленный псевдонимы для `type` члены:
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>Классы
 
@@ -133,6 +137,10 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Проверяет, является ли тип назначаемым с использованием типа перемещения и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Проверяет, является ли тип уничтожаемым и известно ли, что деструктор не создаст исключения.|
 |`has_virtual_destructor`|Проверяет, есть ли у типа виртуальный деструктор.|
+| [is_invocable](is-invocable-classes.md) | Проверяет, является ли вызываемый тип можно вызывать с помощью указанных типов аргументов.<br/> Добавлен в C ++ 17. |
+| [is_invocable_r](is-invocable-classes.md) | Проверяет ли вызываемый тип может вызываться с помощью указанных типов аргументов и результат может быть преобразован в указанный тип.<br/> Добавлен в C ++ 17. |
+| [is_nothrow_invocable](is-invocable-classes.md) | Проверяет ли вызываемый тип может вызываться с помощью указанного аргумента типы и известен не могут вызывать исключения.<br/> Добавлен в C ++ 17. |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | Проверяет ли вызываемый тип может вызываться с помощью указанных типов аргументов и известен не будет выдавать исключения и результат преобразуется к указанному типу.<br/> Добавлен в C ++ 17. |
 
 Запросы свойств типов
 
@@ -200,7 +208,8 @@ using add_const_t = typename add_const<T>::type;
 |[conditional](../standard-library/conditional-class.md)|Если условие имеет значение true, создает первый заданный тип; в противном случае — второй заданный тип.|
 |[decay](../standard-library/decay-class.md)|Создает тип в качестве передаваемого значения. Создает нессылочный, неконстантный или долговременный тип либо указатель на тип.|
 |[enable_if](../standard-library/enable-if-class.md)|Если условие имеет значение true, создает заданный тип; в противном случае — не создает тип.|
-|[result_of](../standard-library/result-of-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов.|
+|[invoke_result](invoke-result-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлен в C ++ 17. |
+|[result_of](../standard-library/result-of-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлена в C ++ 14, устаревшим в C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Создает базовый целочисленный тип для типа перечисления.|
 
 ## <a name="see-also"></a>См. также

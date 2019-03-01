@@ -1,21 +1,21 @@
 ---
 title: Класс binder2nd
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder2nd
+- functional/std::binder2nd
 helpviewer_keywords:
 - binder2nd class
 ms.assetid: b2a9c1d1-dfc4-4ca9-a10e-ae84e195a62d
-ms.openlocfilehash: bb7b867be4ef7ff0f5bcd9ad54538bf449ccd071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8c1ed74da939c5f5cc83a2a109d32b43b5ac7f41
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464666"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006491"
 ---
 # <a name="binder2nd-class"></a>Класс binder2nd
 
-Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению.
+Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
