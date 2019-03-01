@@ -1,21 +1,21 @@
 ---
 title: Класс binder1st
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439641"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006634"
 ---
 # <a name="binder1st-class"></a>Класс binder1st
 
-Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.
+Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению. Нерекомендуемыми в C ++ 11 для [привязать](functional-functions.md#bind)и удалены в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*Func*<br/>
+*binary_fn*<br/>
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
 *left*<br/>
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию объекта бинарной функции *Func* в `op`и копия *левой* в `value`. Он определяет свою функцию-член `operator()` как возвращающую **op**( **value**, `right`).
+Класс шаблона сохраняет копию объекта бинарной функции *binary_fn* в `op`и копия *левой* в `value`. Он определяет свою функцию-член `operator()` как возвращающий `op( value, right )`.
 
-Если *Func* — это объект типа `Operation` и `c` — константа, то [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`, `c` ) эквивалентен `binder1st` конструктора класса `binder1st` \< **Операции**> ( `Func`, `c` ) и является более удобным.
+Если *binary_fn* — это объект типа `Operation` и `c` — константа, то `bind1st( binary_fn, c )` является более удобным эквивалентно `binder1st<Operation>( binary_fn, c )`. Дополнительные сведения см. в разделе [bind1st](../standard-library/functional-functions.md#bind1st).
 
 ## <a name="example"></a>Пример
 

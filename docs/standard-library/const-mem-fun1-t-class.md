@@ -1,21 +1,21 @@
 ---
 title: Класс const_mem_fun1_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_t
+- functional/std::const_mem_fun1_t
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: 53724c3d9b795d8cbde7a4bcda3531e43d41c4a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548792"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006361"
 ---
 # <a name="constmemfun1t-class"></a>Класс const_mem_fun1_t
 
-Класс адаптера, который позволяет вызывать функцию-член **const**, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя.
+Класс адаптера, который позволяет вызывать функцию-член **const**, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,21 +23,21 @@ ms.locfileid: "50548792"
 template <class Result, class Type, class Arg>
 class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 {
-    explicit const_mem_fun1_t(Result (Type::* _Pm)(Arg) const);
-    Result operator()(const Type* _Pleft, Arg right) const;
+    explicit const_mem_fun1_t(Result (Type::* member_ptr)(Arg) const);
+    Result operator()(const Type* left, Arg right) const;
 };
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Pm*<br/>
+*member_ptr*<br/>
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*_Pleft*<br/>
-**Const** объекта, *_Pm* вызывается функция-член.
+*left*<br/>
+**Const** объекта, *member_ptr* вызывается функция-член.
 
 *right*<br/>
-Аргумент, который передается в *_Pm*.
+Аргумент, который передается в *member_ptr*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -45,11 +45,11 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию *_Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( *_Pleft*->\*<em>Pm</em>) ( *правой* ) **const**.
+Класс шаблона сохраняет копию *member_ptr*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающий `(left->member_ptr)(right) const`.
 
 ## <a name="example"></a>Пример
 
-Конструктор `const_mem_fun1_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun`. Пример использования адаптера функции-члена см. в разделе [mem_fun](../standard-library/functional-functions.md#mem_fun).
+Конструктор `const_mem_fun1_t` редко используется напрямую. `mem_fn` используется для адаптации функций-членов. См. в разделе [mem_fn](../standard-library/functional-functions.md#mem_fn) пример того, как использовать адаптеры функций-членов.
 
 ## <a name="requirements"></a>Требования
 

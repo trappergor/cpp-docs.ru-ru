@@ -1,21 +1,21 @@
 ---
 title: Класс const_mem_fun_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun_t
+- functional/std::const_mem_fun_t
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 16169c094e74178f5a2dd67f70bf75c1f3ee8d87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563596"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006465"
 ---
 # <a name="constmemfunt-class"></a>Класс const_mem_fun_t
 
-Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с ссылочным аргументом.
+Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с ссылочным аргументом. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
