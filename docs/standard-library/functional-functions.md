@@ -29,12 +29,12 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 559110361b9d3d8c66ff261860f8885ff56d44d5
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: 352efc31010a9fe665348ca35adfd68835407e67
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006738"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210997"
 ---
 # <a name="ltfunctionalgt-functions"></a>Функции &lt;functional&gt;
 
@@ -63,16 +63,16 @@ ms.locfileid: "57006738"
 Привязывает аргументы к вызываемому объекту.
 
 ```cpp
-template <class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 
-template <class Ret, class Fty, class T1, class T2, ..., class TN>
-unspecified bind(Fty fn, T1 t1, T2 t2, ..., TN tN);
+template <class RTy, class FT, class T1, class T2, ..., class TN>
+unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Fty*<br/>
+*Fey*<br/>
 Тип объекта для вызова.
 
 *TN*<br/>
@@ -86,11 +86,11 @@ N-й аргумент вызова.
 
 ### <a name="remarks"></a>Примечания
 
-Типы `Fty, T1, T2, ..., TN` должны быть конструируемыми по копии, а `INVOKE(fn, t1, ..., tN)` должен быть действительным выражением для некоторых значений `w1, w2, ..., wN`.
+Типы `FT, T1, T2, ..., TN` должен быть конструируемым копирования, и `INVOKE(fn, t1, ..., tN)` должен быть допустимым выражением для некоторых значений `w1, w2, ..., wN`.
 
-Первая шаблонная функция возвращает пересылающую оболочку вызова `g` со слабым типом результата. Последствия `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<Fty cv (V1, V2, ..., VN)>::type)`, где `cv` — cv квалификаторы `g` и значения, так и типы привязанных аргументов `v1, v2, ..., vN` определяются как указано ниже. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов.
+Первая шаблонная функция возвращает пересылающую оболочку вызова `g` со слабым типом результата. Последствия `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, ` [invoke_result](../standard-library/invoke-result-class.md)`<FT cv (V1, V2, ..., VN)>::type)`, где `cv` — cv квалификаторы `g` и значения, так и типы привязанных аргументов `v1, v2, ..., vN` определяются как указано ниже. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов.
 
-Вторая шаблонная функция возвращает пересылающую оболочку вызова `g` с вложенным типом `result_type`, который является синонимом для `Ret`. Эффект `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, Ret)`, где `cv` — CV-квалификаторы `g`, а значения и типы привязанных аргументов `v1, v2, ..., vN` определяются следующим образом. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов и заданным типом возвращаемого значения.
+Вторая шаблонная функция возвращает пересылающую оболочку вызова `g` с вложенным типом `result_type`, который является синонимом для `RTy`. Эффект `g(u1, u2, ..., uM)` — `INVOKE(f, v1, v2, ..., vN, RTy)`, где `cv` — CV-квалификаторы `g`, а значения и типы привязанных аргументов `v1, v2, ..., vN` определяются следующим образом. Его можно использовать для привязки к вызываемому объекту, чтобы создать вызываемый объект с адаптированным списком аргументов и заданным типом возвращаемого значения.
 
 Значения привязанных аргументов `v1, v2, ..., vN` и их соответствующие типы `V1, V2, ..., VN` зависят от типа соответствующего аргумента `ti` типа `Ti` в вызове функции `bind` и CV-квалификаторах `cv` оболочки вызова `g` следующим образом:
 
@@ -98,15 +98,15 @@ N-й аргумент вызова.
 
 Если значение `std::is_bind_expression<Ti>::value` — **true** аргумент `vi` — `ti(u1, u2, ..., uM)` и его тип `Vi` — `result_of<Ti` `cv` `(U1&, U2&, ..., UN&>::type`;
 
-если значение `j` для `std::is_placeholder<Ti>::value` отлично от нуля, аргумент `vi` имеет значение `uj`, и его тип `Vi` — `Uj&`;
+Если значение `j` из `std::is_placeholder<Ti>::value` не нулевой аргумент `vi` — `uj` и его тип `Vi` является `Uj&`;
 
 в противном случае аргумент `vi` имеет значение `ti`, а его тип `Vi` — `Ti` `cv` `&`.
 
 Например, в случае функции `f(int, int)` выражение `bind(f, _1, 0)` возвращает пересылающую оболочку вызова `cw`, чтобы `cw(x)` вызывал `f(x, 0)`. Выражение `bind(f, 0, _1)` возвращает пересылающую оболочку вызова `cw`, чтобы `cw(x)` вызывал `f(0, x)`.
 
-Число аргументов в вызове в `bind` помимо аргумента `fn` должно быть равно числу аргументов, которые могут быть переданы в вызываемый объект `fn`. Таким образом, `bind(cos, 1.0)` верно, а `bind(cos)` и `bind(cos, _1, 0.0)` неверны.
+Число аргументов в вызове `bind` и аргумент `fn` должно быть равно числу аргументов, которые могут быть переданы в вызываемый объект `fn`. Например `bind(cos, 1.0)` указан правильно и оба `bind(cos)` и `bind(cos, _1, 0.0)` неверны.
 
-Число аргументов в вызове функции, отправляемом в оболочку вызова, возвращаемом методом `bind`, должен быть не меньше наивысшего нумерованного значения `is_placeholder<PH>::value` для всех аргументов-местозаполнителей в вызове в `bind`. Таким образом, `bind(cos, _2)(0.0, 1.0)` верно (и возвращает `cos(1.0)`), а `bind(cos, _2)(0.0)` неверно.
+Число аргументов в вызове функции, отправляемом в оболочку вызова, возвращаемом методом `bind`, должен быть не меньше наивысшего нумерованного значения `is_placeholder<PH>::value` для всех аргументов-местозаполнителей в вызове в `bind`. Например `bind(cos, _2)(0.0, 1.0)` правильный (и возвращает `cos(1.0)`), и `bind(cos, _2)(0.0)` неверен.
 
 ### <a name="example"></a>Пример
 
@@ -161,7 +161,7 @@ int main()
 
 ## <a name="bind1st"></a> bind1st
 
-Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
+Вспомогательная функция шаблона, создает адаптер для преобразования объекта бинарной функции в объект унарной функции. Он выполняет привязку первый аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -182,9 +182,9 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 ### <a name="remarks"></a>Примечания
 
-Модули привязки функций — это разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в композициях функций некоторого типа для создания более сложных и мощных выражений.
+Модули привязки функций представляют собой разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в определенных типах Композиция функций для создания более сложных и мощных выражений.
 
-Если *func* — это объект типа `Operation` и `c` — константа, то `bind1st` ( `func`, `c`) эквивалентен [binder1st](../standard-library/binder1st-class.md) конструктора класса `binder1st` <  `Operation`> ( `func`, `c`) и является более удобным.
+Если *func* — это объект типа `Operation` и `c` — константа, то `bind1st( func, c )` совпадает со значением [binder1st](../standard-library/binder1st-class.md) конструктор класса `binder1st<Operation>( func, c )`и является более удобным для используете.
 
 ### <a name="example"></a>Пример
 
@@ -255,7 +255,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bind2nd"></a> bind2nd
 
-Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
+Вспомогательная функция шаблона, создает адаптер для преобразования объекта бинарной функции в объект унарной функции. Он выполняет привязку второй аргумент бинарной функции к указанному значению. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ```cpp
 template <class Operation, class Type>
@@ -272,13 +272,13 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект унарной функции, полученный в результате привязки второго аргумента объекта бинарной функции к значению *правой*.
+Объект функции унарный результат привязки второго аргумента объекта бинарной функции к *правой*.
 
 ### <a name="remarks"></a>Примечания
 
-Модули привязки функций — это разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в композициях функций некоторого типа для создания более сложных и мощных выражений.
+Модули привязки функций представляют собой разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в определенных типах Композиция функций для создания более сложных и мощных выражений.
 
-Если *func* — это объект типа `Operation` и `c` — константа, то `bind2nd` ( `func`, `c` ) эквивалентен [binder2nd](../standard-library/binder2nd-class.md) конструктора класса **binder2nd\<операции >** ( `func`, `c` ) и является более удобным.
+Если *func* — это объект типа `Operation` и `c` — константа, то `bind2nd( func, c )` совпадает со значением [binder2nd](../standard-library/binder2nd-class.md) конструктор класса `binder2nd<Operation>( func, c )`и является более удобным для использования.
 
 ### <a name="example"></a>Пример
 
@@ -349,7 +349,7 @@ The number of elements in v1 less than 10 is: 2.
 
 ## <a name="bit_and"></a> bit_and
 
-Стандартный объект функции, который выполняет над своими аргументами побитовую операцию И (бинарная `operator&`).
+Стандартный объект функции, выполняет операцию побитового и (двоичный `operator&`) к своим аргументам.
 
 ```cpp
 template <class Type = void>
@@ -389,7 +389,7 @@ struct bit_and<void>
 
 ## <a name="bit_not"></a> bit_not
 
-Стандартный объект функции, который выполняет над своими аргументами операцию побитового дополнения (НЕ) (бинарная `operator~`). Добавлен в C ++ 14.
+Стандартный объект функции, выполняющий побитовое дополнение операции (не) (унарный `operator~`) над своими аргументами. Добавлен в C ++ 14.
 
 ```cpp
 template <class Type = void>
@@ -425,7 +425,7 @@ struct bit_not<void>
 
 ## <a name="bit_or"></a> bit_or
 
-Стандартный объект функции, который применяет побитовую операцию ИЛИ (`operator|`) к своим аргументам.
+Стандартный объект функции, выполняет операцию побитового или (`operator|`) к своим аргументам.
 
 ```cpp
 template <class Type = void>
@@ -465,7 +465,7 @@ struct bit_or<void>
 
 ## <a name="bit_xor"></a> bit_xor
 
-Стандартный объект функции, который применяет побитовую операцию "исключающее ИЛИ" (бинарное `operator^`) к своим аргументам.
+Стандартный объект функции, выполняет операцию побитового исключающего или (двоичный `operator^`) к своим аргументам.
 
 ```cpp
 template <class Type = void>
@@ -620,50 +620,61 @@ struct Demo
 
     Demo(int const n) : n_{n} {}
 
-    void operator()(int const i, int const j) const
+    void operator()( int const i, int const j ) const
     {
         std::cout << "Demo operator( " << i << ", "
-            << j << " ) is " << i * j << std::endl;
+            << j << " ) is " << i * j << "\n";
     }
 
-    void difference(int const i) const 
+    void difference( int const i ) const
     {
         std::cout << "Demo.difference( " << i << " ) is "
-            << n_ - i << std::endl;
+            << n_ - i << "\n";
     }
 };
 
 void divisible_by_3(int const i)
 {
-    std::cout << i;
-    (i % 3) ? std::cout << " isn't divisible by 3."
-        : std::cout << " is divisible by 3.";
-    std::cout << std::endl;
+    std::cout << i << ( i % 3 == 0 ? " is" : " isn't" )
+        << " divisible by 3.\n";
 }
 
 int main()
 {
-    // Invoke a function object (call operator).
     Demo d{ 42 };
+    Demo * pd{ &d };
+
+    // Invoke a function object (call operator).
     std::invoke( d, 3, -7 );
 
-    // Invoke a member function.
-    std::invoke(&Demo::difference, d, 29);
+    // Invoke a member function or pointer to member function:
+    std::invoke( &Demo::difference, d, 29 );
+    std::invoke( &Demo::difference, pd, 13 );
 
-    // Invoke a data member.
-    std::cout << "n_: " << std::invoke(&Demo::n_, d) << '\n';
+    // Invoke a data member on an object or pointer to object:
+    std::cout << "d.n_: " << std::invoke( &Demo::n_, d ) << "\n";
+    std::cout << "pd->n_: " << std::invoke( &Demo::n_, pd ) << "\n";
 
-    // Invoke a stand-alone (free) function.
+    // Invoke a stand-alone (free) function:
     std::invoke( divisible_by_3, 42 );
 
-    // Invoke a lambda.
-    std::invoke( [](int const i){
-        std::cout << i; 
-        (i % 7) ? std::cout << " isn't divisible by 7."
-            : std::cout << " is divisible by 7.";
-        std::cout << std::endl;
-    }, 42 );
+    // Invoke a lambda:
+    auto divisible_by_7 = []( int const i ) {
+        std::cout << i << ( i % 7 == 0 ? " is" : " isn't" )
+            << " divisible by 7.\n";
+        };
+    std::invoke( divisible_by_7, 42 );
 }
+```
+
+```Output
+Demo operator( 3, -7 ) is -21
+Demo.difference( 29 ) is 13
+Demo.difference( 13 ) is 29
+d.n_: 42
+pd->n_: 42
+42 is divisible by 3.
+42 is divisible by 7.
 ```
 
 ## <a name="mem_fn"></a> mem_fn
@@ -671,13 +682,13 @@ int main()
 Создает простую оболочку вызова.
 
 ```cpp
-template <class Ret, class Ty>
-unspecified mem_fn(Ret Ty::*pm);
+template <class RTy, class Ty>
+unspecified mem_fn(RTy Ty::*pm);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*код возврата:*<br/>
+*Клона*<br/>
 Тип возвращаемого значения функции в оболочке.
 
 *Ty*<br/>
@@ -685,11 +696,11 @@ unspecified mem_fn(Ret Ty::*pm);
 
 ### <a name="remarks"></a>Примечания
 
-Шаблонная функция возвращает простую оболочку вызова `cw` со слабым типом результата, чтобы выражение `cw(t, a2, ..., aN)` было эквивалентно `INVOKE(pm, t, a2, ..., aN)`. Она не вызывает исключения.
+Функция шаблона возвращает простую оболочку вызова `cw`, со слабым типом результата, таким образом, чтобы выражение `cw(t, a2, ..., aN)` совпадает со значением `INVOKE(pm, t, a2, ..., aN)`. Он не создает исключений.
 
-Возвращаемая оболочка вызова является производным от `std::unary_function<cv Ty*, Ret>` (поэтому используется определение вложенного типа `result_type` как синоним для *Ret* и вложенного типа `argument_type` как синоним для `cv Ty*`) только если тип  *Ty* является указателем на функцию-член с cv квалификатором `cv` , не принимающим аргументы.
+Возвращаемая оболочка вызова является производным от `std::unary_function<cv Ty*, RTy>` (и определение вложенного типа `result_type` как синоним для *RTy* и вложенного типа `argument_type` как синоним для `cv Ty*`) только если тип *за этот год*  является указателем на функцию-член с cv квалификатором `cv` , не принимающим аргументы.
 
-Возвращаемая оболочка вызова является производным от `std::binary_function<cv Ty*, T2, Ret>` (поэтому используется определение вложенного типа `result_type` как синоним для *Ret*, вложенный тип `first argument_type` как синоним для `cv Ty*`, а вложенный тип `second argument_type`как синоним для `T2`) только если тип *Ty* является указателем на функцию-член с cv квалификатором `cv` , принимающий один аргумент типа `T2`.
+Возвращаемая оболочка вызова является производным от `std::binary_function<cv Ty*, T2, RTy>` (и определение вложенного типа `result_type` как синоним для *RTy*, вложенный тип `first argument_type` как синоним для `cv Ty*`, а вложенный тип `second argument_type` как синоним для `T2`) только если тип *Ty* является указателем на функцию-член с cv квалификатором `cv` , принимающий один аргумент типа `T2`.
 
 ### <a name="example"></a>Пример
 
@@ -735,16 +746,16 @@ int main()
 
 ```cpp
 template <class Result, class Type>
-mem_fun_t<Result, Type> mem_fun (Result(Type::* pmem)());
+mem_fun_t<Result, Type> mem_fun (Result(Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg));
+mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pmem)() const);
+const_mem_fun_t<Result, Type> mem_fun(Result (Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pmem)(Arg) const);
+const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -822,16 +833,16 @@ int main( )
 
 ```cpp
 template <class Result, class Type>
-mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pmem)());
+mem_fun_ref_t<Result, Type> mem_fun_ref(Result (Type::* pMem)());
 
 template <class Result, class Type, class Arg>
-mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pmem)(Arg));
+mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (Type::* pMem)(Arg));
 
 template <class Result, class Type>
-const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pmem)() const);
+const_mem_fun_ref_t<Result, Type> mem_fun_ref(Result Type::* pMem)() const);
 
 template <class Result, class Type, class Arg>
-const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pmem)(Arg) const);
+const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) const);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -923,16 +934,16 @@ With the even numbers removed, the remaining values are: 1 3 5 7 9 11 13
 
 ## <a name="not1"></a> not1
 
-Возвращает дополнение унарного предиката. Не рекомендуется, вместо него используется [not_fn](#not_fn) в C ++ 17.
+Возвращает дополнение унарного предиката. Устаревшие компоненты для [not_fn](#not_fn) в C ++ 17.
 
 ```cpp
 template <class UnaryPredicate>
-unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
+unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Пред*<br/>
+*предикат*<br/>
 Унарный предикат, знак которого должен быть изменен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -941,7 +952,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& pred);
 
 ### <a name="remarks"></a>Примечания
 
-Если `unary_negate` создан на основе унарного предиката **Pred**( *x*), то он возвращает **!Pred**( *x*).
+Если `unary_negate` создан на основе унарного предиката `predicate( x )`, то он возвращает `!predicate( x )`.
 
 ### <a name="example"></a>Пример
 
@@ -995,7 +1006,7 @@ The number of elements in v1 not greater than 10 is: 3.
 
 ## <a name="not2"></a> not2
 
-Возвращает дополнение бинарного предиката. Не рекомендуется, вместо него используется [not_fn](#not_fn) в C ++ 17.
+Возвращает дополнение бинарного предиката. Устаревшие компоненты для [not_fn](#not_fn) в C ++ 17.
 
 ```cpp
 template <class BinaryPredicate>
@@ -1013,7 +1024,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="remarks"></a>Примечания
 
-Если `binary_negate` создан на основе бинарного предиката **BinPred**( *x*, *y*), то он возвращает ! **BinPred**( *x*, *y*).
+Если `binary_negate` создан на основе бинарного предиката `binary_predicate( x, y )`, то он возвращает `!binary_predicate( x, y )`.
 
 ### <a name="example"></a>Пример
 
@@ -1085,7 +1096,7 @@ template <class Callable>
 
 ### <a name="remarks"></a>Примечания
 
-Функция шаблона Возвращает эквивалентный оболочкой вызова `return call_wrapper(std::forward<Callable>(func))` на основе данного класса только для надстройках:
+Функция шаблона возвращает оболочкой вызова как `return call_wrapper(std::forward<Callable>(func))`в зависимости от этого класса доступны только для надстройках:
 
 ```cpp
 class call_wrapper
@@ -1116,7 +1127,7 @@ private:
 
 Явный конструктор в вызываемый объект *func* требуется тип `std::decay_t<Callable>` для удовлетворения требований `MoveConstructible`, и `is_constructible_v<FD, Callable>` должен иметь значение true. Он инициализирует упакованного вызываемого объекта `fd` из `std::forward<Callable>(func)`и выдает любое исключение, вызванное конструкции `fd`.
 
-Оболочка предоставляет отличить по lvalue или rvalue Справочник по категории и const квалификации, как показано ниже, операторы вызова
+Оболочка предоставляет операторы вызова отличить по категории ссылку lvalue или rvalue и const квалификации, как показано ниже:
 
 ```cpp
 template<class... Args> auto operator()(Args&&... args) & -> decltype(!declval<invoke_result_t<FD&(Args...)>>());
@@ -1125,7 +1136,7 @@ template<class... Args> auto operator()(Args&&... args) && -> decltype(!declval<
 template<class... Args> auto operator()(Args&&... args) const&& -> decltype(!declval<invoke_result_t<FD const(Args...)>>());
 ```
 
-Первые два — эквивалентно `return !INVOKE(fd, std::forward<Args>(args)...)`, и Вторые два эквивалентны `return !INVOKE(std::move(fd), std::forward<Args>(args)...)`.
+Первые два — так же, как `return !std::invoke(fd, std::forward<Args>(args)...)`. Вторые два аналогичны `return !std::invoke(std::move(fd), std::forward<Args>(args)...)`.
 
 ### <a name="example"></a>Пример
 
@@ -1194,7 +1205,7 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="remarks"></a>Примечания
 
-Указатель на функцию является объектом функции и может передаваться в любой алгоритм стандартной библиотеки C++, ожидающий унарную функцию в качестве параметра, но не является адаптируемым. Для использования его с адаптером, например привязка к нему значения или использование его с инвертором, он должен передаваться с вложенными типами, что делает возможной такую адаптацию. Преобразование указателей на унарные и бинарные функции с помощью вспомогательной функции `ptr_fun` позволяет адаптерам функций работать с такими указателями.
+Указатель на функцию является объектом функции. Может передаваться в любой алгоритм, который ожидает, что функцию в качестве параметра, но это не адаптируемых. Сведения о вложенных типов является обязательным для использования с адаптером, например, для привязки к нему значения или для ее устранения. Преобразование указателей на унарные и бинарные функции с помощью вспомогательной функции `ptr_fun` позволяет адаптерам функций работать с такими указателями.
 
 ### <a name="example"></a>Пример
 
@@ -1297,13 +1308,13 @@ tiger cougar
 Меняет местами два объекта `function`.
 
 ```cpp
-template <class Fty>
-void swap(function<Fty>& f1, function<Fty>& f2);
+template <class FT>
+void swap(function<FT>& f1, function<FT>& f2);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Fty*<br/>
+*FT*<br/>
 Тип, управляемый объектами функции.
 
 *f1*<br/>

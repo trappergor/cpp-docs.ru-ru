@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _fstrncpy
@@ -61,12 +62,12 @@ helpviewer_keywords:
 - tcsncpy function
 - _strncpy_l function
 ms.assetid: ac4345a1-a129-4f2f-bb8a-373ec58ab8b0
-ms.openlocfilehash: 5260d120fe1e5826bb4b9ebc8410a8bd1040ff3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ca1f0b689e68008b3b5a57d01e626ee92a60b9
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507744"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210436"
 ---
 # <a name="strncpy-strncpyl-wcsncpy-wcsncpyl-mbsncpy-mbsncpyl"></a>strncpy, _strncpy_l, wcsncpy, _wcsncpy_l, _mbsncpy, _mbsncpy_l
 
@@ -207,7 +208,7 @@ unsigned char *_mbsncpy_l(
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано использование **strncpy** и как он потенциально может спровоцировать злоупотребления для ошибки и проблемы безопасности. Компилятор выдает предупреждение для каждого вызова **strncpy** аналогичную **crt_strncpy_x86.c(15): warning C4996: 'strncpy': Эта функция или переменная может быть небезопасным. Consider using strncpy_s instead. Чтобы отключить сообщения об устаревании, используйте _CRT_SECURE_NO_WARNINGS. See online help for details.** (Функция или переменная может быть небезопасной. Используйте strncpy_s. Дополнительные сведения см. в справке.)
+В следующем примере показано использование **strncpy** и как он потенциально может спровоцировать злоупотребления для ошибки и проблемы безопасности. Компилятор выдает предупреждение для каждого вызова **strncpy** аналогичную **crt_strncpy_x86.c(15): warning C4996: 'strncpy': Эта функция или переменная может быть небезопасной. Consider using strncpy_s instead. Чтобы отключить сообщения об устаревании, используйте _CRT_SECURE_NO_WARNINGS. See online help for details.** (Функция или переменная может быть небезопасной. Используйте strncpy_s. Дополнительные сведения см. в справке.)
 
 ```C
 // crt_strncpy_x86.c
