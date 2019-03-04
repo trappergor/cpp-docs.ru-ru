@@ -1,21 +1,21 @@
 ---
 title: Класс const_mem_fun1_ref_t
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516453"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006452"
 ---
 # <a name="constmemfun1reft-class"></a>Класс const_mem_fun1_ref_t
 
-Класс адаптера, который позволяет вызывать функцию-член **const**, принимающую один аргумент, как объект бинарной функции при инициализации с ссылочным аргументом.
+Класс адаптера, который позволяет вызывать функцию-член **const**, принимающую один аргумент, как объект бинарной функции при инициализации с ссылочным аргументом. Рекомендуется использовать в C ++ 11, удалено в C ++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,7 +46,7 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет функцию-член `operator()` как возвращающую ( `left`.\* Pm)( `right`) **const**.
+Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет функцию-член `operator()` как возвращающую ( `left`.\* *Pm*)( `right`) **const**.
 
 ## <a name="example"></a>Пример
 
