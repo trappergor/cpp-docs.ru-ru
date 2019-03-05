@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
-ms.openlocfilehash: 6b0c37f61ef437662a4e624c3a81edb526e7464c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263082"
 ---
 # <a name="message-class"></a>Класс message
 
@@ -35,17 +35,17 @@ class message : public ::Concurrency::details::_Runtime_object;
 *T*<br/>
 Тип данных полезных данных в сообщении.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[message](#ctor)|Перегружен. Создает объект `message`.|
 |[~ сообщений деструктор](#dtor)|Уничтожает `message` объекта.|
@@ -60,7 +60,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[полезные данные](#payload)|Полезные данные `message` объекта.|
 

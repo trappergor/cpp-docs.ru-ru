@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259027"
 ---
 # <a name="array-class"></a>Класс array
 
@@ -48,7 +48,7 @@ friend class array;
 *_Rank*<br/>
 Ранг массива.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -82,13 +82,13 @@ friend class array;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[Ранг константа](#rank)|Хранит ранг массива.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[accelerator_view](#accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где размещен массив. Это свойство может осуществляться только на ЦП.|
 |[associated_accelerator_view](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) объект, который передается в качестве параметра при вызове промежуточного конструктора для создания экземпляра `array` объекта.|
@@ -121,7 +121,7 @@ friend class array;
 
 **Заголовок** : amp.h
 
-**Пространство имен:** параллелизм
+**Пространство имен:** Параллельность
 
 ##  <a name="dtor"></a> ~ array
 
@@ -560,7 +560,7 @@ operator std::vector<value_type>() const restrict(cpu);
 
 Объект типа `vector<T>` объект, содержащий копию данных, содержащихся в массиве.
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Возвращает значение элемента, который указан в параметрах.
 

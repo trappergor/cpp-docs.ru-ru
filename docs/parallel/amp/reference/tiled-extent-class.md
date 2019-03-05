@@ -13,12 +13,12 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264339"
 ---
 # <a name="tiledextent-class"></a>Класс tiled_extent
 
@@ -57,17 +57,17 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 *_Dim2*<br/>
 Длина наименее значительного измерения.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор tiled_extent](#ctor)|Инициализирует новый экземпляр класса `tiled_extent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[get_tile_extent](#get_tile_extent)|Возвращает `extent` объект, который фиксирует значения `tiled_extent` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|
 |[Панель](#pad)|Возвращает новый `tiled_extent` объекта с экстентами максимально возможное нацело делиться с размерами.|
@@ -75,13 +75,13 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `tiled_index` в данный объект.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Константа tile_dim0](#tile_dim0)|Хранит длину наиболее значительного измерения.|
 |[Константа tile_dim1](#tile_dim1)|Хранит длину измерения, следующего за самым значительным измерением.|
@@ -89,7 +89,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Получает `extent` объект, который фиксирует значения `tiled_extent` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|
 
@@ -103,7 +103,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 **Заголовок** : amp.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** Параллельность
 
 ## <a name="ctor"> </a>  Конструктор tiled_extent
 

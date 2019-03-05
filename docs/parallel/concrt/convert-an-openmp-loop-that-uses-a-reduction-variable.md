@@ -5,12 +5,12 @@ helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d75e115bdb1d13c9e8f45ed67d0f3993eac1b387
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257323"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего переменную сокращения для использования среды выполнения с параллелизмом
 
@@ -41,10 +41,9 @@ The sum of the first 35 Fibonacci numbers is 14930351.
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `concrt-omp-fibonacci-reduction.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**CL.exe/EHsc/OpenMP concrt-omp-fibonacci-reduction.cpp**
+**cl.exe /EHsc /openmp concrt-omp-fibonacci-reduction.cpp**
 
 ## <a name="see-also"></a>См. также
 
 [Переход от OpenMP к среде выполнения с параллелизмом](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)
-

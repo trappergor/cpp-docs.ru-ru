@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBarPane [MFC], StopAnimation
 - CMFCRibbonStatusBarPane [MFC], OnFinishAnimation
 ms.assetid: 5d034c3c-ecca-4267-b88c-0f55a2884dd0
-ms.openlocfilehash: 183fd879b09595dda1dcd6caa8a8299debb20b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9911672ec139ab1598db8005e9b7b909e85dd33d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449339"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265734"
 ---
 # <a name="cmfcribbonstatusbarpane-class"></a>Класс CMFCRibbonStatusBarPane
 
@@ -49,17 +49,17 @@ ms.locfileid: "50449339"
 class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|Создает и инициализирует объект `CMFCRibbonStatusBarPane`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonStatusBarPane::GetAlmostLargeText](#getalmostlargetext)|Возвращает строку, определяющую самая длинная текстовая строка, который может быть отображен в области без усечения.|
 |[CMFCRibbonStatusBarPane::GetTextAlign](#gettextalign)|Возвращает текущее значение параметра Выравнивание текста.|
@@ -75,7 +75,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonStatusBarPane::OnFinishAnimation](#onfinishanimation)|Вызывается платформой при остановке анимации, присвоенный области.|
 
@@ -215,7 +215,7 @@ BOOL IsExtended() const;
 
 ##  <a name="ondrawborder"></a>  CMFCRibbonStatusBarPane::OnDrawBorder
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual void OnDrawBorder(CDC*);
@@ -229,7 +229,7 @@ virtual void OnDrawBorder(CDC*);
 
 ##  <a name="onfillbackground"></a>  CMFCRibbonStatusBarPane::OnFillBackground
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual COLORREF OnFillBackground(CDC* pDC);

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: bc202afa357dcb9d75a0dd73a3128b7b3f0cc14e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5cb68ab46e2cac8b2f1dcc13989077e32480a2c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693403"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259572"
 ---
 # <a name="cctrlview-class"></a>Класс CCtrlView
 
@@ -33,11 +33,11 @@ ms.locfileid: "51693403"
 class CCtrlView : public CView
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CCtrlView::CCtrlView](#cctrlview)|Создает объект `CCtrlView`.|
 
@@ -50,7 +50,7 @@ class CCtrlView : public CView
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCtrlView::m_dwDefaultStyle](#m_dwdefaultstyle)|Содержит стиль по умолчанию для класса представления.|
 |[CCtrlView::m_strClass](#m_strclass)|Содержит имя класса Windows для класса представления.|

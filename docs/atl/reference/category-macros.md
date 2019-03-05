@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ee6ab07ee72155acae552da933167b56af72a17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263849"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -149,7 +149,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий
 
-|Описание|Символ|Реестр GUID|
+|Описание:|Символ|Реестр GUID|
 |-----------------|------------|-------------------|
 |Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

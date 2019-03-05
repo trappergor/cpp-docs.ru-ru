@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260014"
 ---
 # <a name="casyncsocket-class"></a>Класс CAsyncSocket
 
@@ -91,7 +91,7 @@ ms.locfileid: "53179036"
 class CAsyncSocket : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -872,7 +872,7 @@ BOOL IOCtl(
 
 ### <a name="remarks"></a>Примечания
 
-Эта процедура может использоваться на любой сокета в любом состоянии. Он используется для получения или извлечение работы параметров, связанную с сокетом, независимо от подсистемы протокола и коммуникаций. Поддерживаются следующие команды:
+Эта процедура может использоваться на любой сокета в любом состоянии. Он используется для получения или извлечение работы параметров, связанную с сокетом, независимо от подсистемы протокола и коммуникаций. Поддерживаются следующие команды.
 
 - Fionbio СПЕЦИФИКАЦИИ включить или отключить неблокирующем режиме на сокете. *LpArgument* указывает на параметр `DWORD`, который является ненулевым, если требуется включить неблокирующем режиме, и нуль, если это требуется отключить. Если `AsyncSelect` была выполнена на сокете, то любая попытка использовать `IOCtl` присвоить сокет обратно в блокирующем режиме завершится с WSAEINVAL. Чтобы задать сокет обратно в режим блокировки, ошибка не WSAEINVAL приложения необходимо сначала отключить `AsyncSelect` путем вызова `AsyncSelect` с *lEvent* параметра равно 0, затем вызвать `IOCtl`.
 

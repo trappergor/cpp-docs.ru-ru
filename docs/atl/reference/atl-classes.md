@@ -5,18 +5,18 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, classes
 ms.assetid: 7da42e2d-ac84-4506-92bd-502a86d68bdc
-ms.openlocfilehash: 937edb799729005619325cda15f5a720264e9bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 561d6cb41ca066f5a2435b4eb1e8710ccaa99ea1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265578"
 ---
 # <a name="atl-classes-and-structs"></a>Классы ATL и структуры
 
 Active Template Library (ATL) включает следующие классы и структуры. Чтобы найти конкретный класс по категориям, см. в разделе [Обзор класса ATL](../../atl/atl-class-overview.md).
 
-|Класс или структура|Описание|Файл заголовка|
+|Класс или структура|Описание:|Файл заголовка|
 |-----------|-----------------|-----------------|
 |[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)|Содержит сведения, используемые для подготовки к просмотру в различные целевые объекты, такие как принтер, метафайла или элемент управления ActiveX.|atlctl.h|
 |[_AtlCreateWndData](../../atl/reference/atlcreatewnddata-structure.md)|Содержит данные экземпляра класса в коде управления окнами в ATL|atlbase.h|
@@ -226,4 +226,3 @@ Active Template Library (ATL) включает следующие классы �
 [Глобальные переменные](../../atl/reference/atl-global-variables.md)<br/>
 [Typedefs](../../atl/reference/atl-typedefs.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)
-

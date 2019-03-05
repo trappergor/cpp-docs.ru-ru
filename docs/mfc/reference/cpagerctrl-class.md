@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: cd3eed89753031de64d35a2b3602b1fb42356123
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270726"
 ---
 # <a name="cpagerctrl-class"></a>Класс CPagerCtrl
 
@@ -65,17 +65,17 @@ ms.locfileid: "50613542"
 class CPagerCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Создает объект `CPagerCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPagerCtrl::Create](#create)|Создает элемент управления страничного навигатора с указанными стилями и присоединяет его к текущему `CPagerCtrl` объекта.|
 |[CPagerCtrl::CreateEx](#createex)|Создает элемент управления страничного навигатора с указанным расширенные стили и присоединяет его к текущему `CPagerCtrl` объекта.|
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |Параметр|Описание|
 |---------------|-----------------|
 |*dwStyle*|[in] Побитовое сочетание (OR) [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles) для применения к элементу управления.|
-|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в координатах клиентской области окна.|
+|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в координатах клиентской области окна.|
 |*pParentWnd*|[in] Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления. Этот параметр не может иметь значение NULL.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in] Побитовое сочетание расширенные стили для применения к элементу управления. Дополнительные сведения см. в разделе *dwExStyle* параметр [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции.|
 |*dwStyle*|[in] Побитовое сочетание (OR) [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles) для применения к элементу управления.|
-|*Rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в координатах клиентской области окна.|
+|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления в координатах клиентской области окна.|
 |*pParentWnd*|[in] Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления. Этот параметр не может иметь значение NULL.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -208,7 +208,7 @@ void ForwardMouse(BOOL bForward);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*bForward*|[in] Значение true, чтобы сообщения мыши вперед, или FALSE не перенаправлять сообщения мыши.|
 
@@ -288,7 +288,7 @@ DWORD GetButtonState(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -372,7 +372,7 @@ BOOL IsButtonGrayed(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -394,7 +394,7 @@ BOOL IsButtonHot(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -416,7 +416,7 @@ BOOL IsButtonInvisible(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -446,7 +446,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -520,7 +520,7 @@ int SetBorder(int iBorder);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iBorder*|[in] Новый размер границы, измеряется в пикселах. Если *iBorder* параметр имеет отрицательное значение, размер границы, равным нулю.|
 
@@ -548,7 +548,7 @@ int SetButtonSize(int iButtonSize);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iButtonSize*|[in] Новый размер кнопок, измеряется в пикселах.|
 
@@ -617,4 +617,3 @@ void SetScrollPos(int iPos);
 [Класс CPagerCtrl](../../mfc/reference/cpagerctrl-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Элементы управления страничного навигатора](/windows/desktop/Controls/pager-controls)
-

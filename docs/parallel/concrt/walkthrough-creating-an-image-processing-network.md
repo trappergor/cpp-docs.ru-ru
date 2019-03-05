@@ -5,12 +5,12 @@ helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176176"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262822"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Пошаговое руководство. Создание сети обработки изображений
 
@@ -28,7 +28,7 @@ ms.locfileid: "52176176"
 
 - [Практическое руководство. Использование фильтра блоков сообщений](../../parallel/concrt/how-to-use-a-message-block-filter.md)
 
-- [Пошаговое руководство. Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
+- [Пошаговое руководство: Создание агента для обработки потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)
 
 Также рекомендуется разобраться в основах GDI +, прежде чем приступать к этому руководству.
 
@@ -162,7 +162,7 @@ ms.locfileid: "52176176"
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `image-processing-network.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**CL.exe /DUNICODE/EHsc/Link изображение processing-network.cpp gdiplus.lib**
+**cl.exe /DUNICODE /EHsc image-processing-network.cpp /link gdiplus.lib**
 
 ## <a name="see-also"></a>См. также
 

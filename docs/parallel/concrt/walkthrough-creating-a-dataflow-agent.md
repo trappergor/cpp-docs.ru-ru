@@ -5,12 +5,12 @@ helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 26ea7d520c3dbc4935699e5d52871d21739a3d88
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: bba72404b1c39ef1835b0c96883154b385181b6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176085"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266761"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>Пошаговое руководство. Создание агента потоков данных
 
@@ -88,7 +88,7 @@ ms.locfileid: "52176085"
 
 Следующая таблица описывает члены сети.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |`increment_active`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) объект, который увеличивает значение счетчика активных событий и передает входное значение к остальной части сети.|
 |`negatives`, `positives`|[Concurrency::Call](../../parallel/concrt/reference/call-class.md) объекты, увеличивающие счетчик чисел и уменьшает значение счетчика активных событий. Все объекты используют фильтр принимать отрицательные или положительные числа.|
@@ -147,11 +147,10 @@ info: ===Logging finished.===
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `log-filter.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe log-filter.cpp**
+**cl.exe /EHsc log-filter.cpp**
 
 [[В начало](#top)]
 
 ## <a name="see-also"></a>См. также
 
 [Пошаговые руководства по среде выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-walkthroughs.md)
-

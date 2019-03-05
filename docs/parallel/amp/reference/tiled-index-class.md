@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619834"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257908"
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 
@@ -63,11 +63,11 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 *_Dim2*<br/>
 Длина наименее значительного измерения.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[tiled_index конструктор](#ctor)|Инициализирует новый экземпляр класса `tile_index`.|
 
@@ -79,7 +79,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Барьер константа](#tiled_index__barrier)|Магазины [tile_barrier](tile-barrier-class.md) , представляющий барьер в текущей мозаике потоков.|
 |||
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Получает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|
 
@@ -108,7 +108,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **Заголовок** : amp.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** Параллельность
 
 ## <a name="tiled_index__ctor"></a>  tiled_index конструктор
 
@@ -152,7 +152,7 @@ tiled_index(
 
 |||
 |-|-|
-|name|Описание|
+|Имя|Описание|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` класс из индекса плитки в глобальных координатах и относительной позиции в плитке в локальных координатах. `_Global` И `_Tile_origin` вычисляются параметры.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` посредством копирования указанного `tiled_index` объекта.|
 

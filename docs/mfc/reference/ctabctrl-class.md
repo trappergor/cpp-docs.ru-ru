@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259546"
 ---
 # <a name="ctabctrl-class"></a>Класс CTabCtrl
 
@@ -89,17 +89,17 @@ ms.locfileid: "50621433"
 class CTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CTabCtrl::CTabCtrl](#ctabctrl)|Создает объект `CTabCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CTabCtrl::AdjustRect](#adjustrect)|Вычисляет область отображения элемента управления вкладки, указанным прямоугольником окна или вычисляет окно прямоугольник, который будет соответствовать область заданного отображения.|
 |[CTabCtrl::Create](#create)|Создает набор вкладок и присоединяет его к экземпляру `CTabCtrl` объекта.|
@@ -113,7 +113,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetExtendedStyle](#getextendedstyle)|Извлекает расширенные стили, которые в настоящее время используются для вкладок.|
 |[CTabCtrl::GetImageList](#getimagelist)|Извлекает список изображений, связанный с элементом управления tab.|
 |[CTabCtrl::GetItem](#getitem)|Извлекает сведения о вкладке вкладок.|
-|[CTabCtrl::GetItemCount](#getitemcount)|Получает количество вкладок в элементе управления tab.|
+|[CTabCtrl::GetItemCount](#getitemcount)|Извлекает число вкладок в наборе вкладок.|
 |[CTabCtrl::GetItemRect](#getitemrect)|Получает ограничивающий прямоугольник для вкладки в наборе вкладок.|
 |[CTabCtrl::GetItemState](#getitemstate)|Получает состояние элемента управления указанной вкладки.|
 |[CTabCtrl::GetRowCount](#getrowcount)|Извлекает текущее количество строк вкладок в наборе вкладок.|
@@ -193,7 +193,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления tab. Применить любое сочетание [вкладке Стили элемента управления](/windows/desktop/Controls/tab-control-styles), описанные в пакете Windows SDK. См. в разделе **"Примечания"** список стилей окна, которые также можно применить к элементу управления.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления tab. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
 
 *pParentWnd*<br/>
@@ -249,7 +249,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль элемента управления tab. Применить любое сочетание [вкладке Стили элемента управления](/windows/desktop/Controls/tab-control-styles), описанные в пакете Windows SDK. См. в разделе **"Примечания"** в [создать](#create) список стилей окна, которые также можно применить к элементу управления.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -457,7 +457,7 @@ BOOL GetItem(int nItem,   TCITEM* pTabCtrlItem) const;
 
 ##  <a name="getitemcount"></a>  CTabCtrl::GetItemCount
 
-Получает количество вкладок в элементе управления tab.
+Извлекает число вкладок в наборе вкладок.
 
 ```
 int GetItemCount() const;
@@ -517,7 +517,7 @@ DWORD GetItemState(
 
 Ссылка на значение DWORD, получение сведений о состоянии. Может принимать одно из следующих значений:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|Элемент управления вкладки выбран.|
 |TCIS_HIGHLIGHTED|Будет выделен элемент управления вкладки и вкладка и тексты отрисовываются с использованием текущего цвета выделения. При использовании цветом, это будет значение true, интерполяции, не сглаженный цвет.|
@@ -877,7 +877,7 @@ int SetMinTabWidth(int cx);
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Минимальная ширина должен быть задан для элемента управления. Если этот параметр имеет значение-1, элемент управления будет использовать ширину вкладку по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение

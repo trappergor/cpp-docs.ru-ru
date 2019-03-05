@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271402"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -179,7 +179,7 @@ ms.locfileid: "50477952"
 class CTreeCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -189,7 +189,7 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Создает дерево и присоединяет его к `CTreeCtrl` объекта.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Создает растровое изображение перетаскивания для указанного представления элемента дерева.|
@@ -314,7 +314,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления иерархического представления. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
 
 *pParentWnd*<br/>
@@ -360,7 +360,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль элемента управления иерархического представления. Применение стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)и любое сочетание [стили элемента управления представления дерева](/windows/desktop/Controls/tree-view-control-window-styles) как описано в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -806,7 +806,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 
@@ -977,7 +977,7 @@ UINT GetItemStateEx(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 
@@ -1495,7 +1495,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*uAccId*|[in] Идентификатор элемента в элементе представления дерева специальных возможностей.|
 
@@ -1713,7 +1713,7 @@ COLORREF SetBkColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Значение COLORREF, содержащее новый цвет фона. Если это значение равно -1, элемент управления вернется к использованию системный цвет для фона.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1992,7 +1992,7 @@ BOOL SetItemExpandedImageIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*iExpandedImage*|[in] Индекс изображения, отображаемого, если указанный элемент находится в развернутом состоянии.|
@@ -2229,7 +2229,7 @@ COLORREF SetTextColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Значение COLORREF, содержащее новый цвет текста. Если этот аргумент равен -1, элемент управления будет вернуться к использованию системный цвет для цвета текста.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2275,7 +2275,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе `hItem` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
 

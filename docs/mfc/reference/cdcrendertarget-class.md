@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], GetDCRenderTarget
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
-ms.openlocfilehash: e172d175bba5b4c379f7cd29451d7ad4215d9c68
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268282"
 ---
 # <a name="cdcrendertarget-class"></a>Класс CDCRenderTarget
 
@@ -37,7 +37,7 @@ ms.locfileid: "50541717"
 class CDCRenderTarget : public CRenderTarget;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -47,7 +47,7 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDCRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
 |[CDCRenderTarget::BindDC](#binddc)|Связывает целевой объект отрисовки на контекст устройства, к которому она выдает команд рисования|
@@ -57,13 +57,13 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Возвращает интерфейс ID2D1DCRenderTarget|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Указатель на объект ID2D1DCRenderTarget.|
 
@@ -107,7 +107,7 @@ BOOL BindDC(
 *dc*<br/>
 Контекст устройства, в которую целевой объект отрисовки выдает команд рисования
 
-*Rect*<br/>
+*rect*<br/>
 Размеры дескриптор контекста устройства (HDC), к которому привязан целевой объект отрисовки
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Afx naming convention
 - macros
 ms.assetid: add4e33f-0e62-4d27-be14-896cb8675d22
-ms.openlocfilehash: 2dfb2c1c5062f742b728ea651a292be84e33f6d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27664d4e48c0c4e09439f9e970ded9f2a630d90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566781"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268191"
 ---
 # <a name="mfc-macros-and-globals"></a>Макросы и глобальные объекты MFC
 
@@ -128,4 +128,3 @@ ms.locfileid: "50566781"
 ## <a name="see-also"></a>См. также
 
 [Общие сведения о классе](../../mfc/class-library-overview.md)
-
