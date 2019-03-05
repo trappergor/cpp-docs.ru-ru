@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ActiveX control containers [MFC]
 - OLE controls [MFC], containers
 ms.assetid: 0eb1a713-e607-4c79-a0c7-67c5f1fd5fab
-ms.openlocfilehash: 3356c5d94eaf4cef0b44c509144d0de4a5d42abf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8340acafc81447052fcb8d90df8997e81dc4117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549120"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296505"
 ---
 # <a name="activex-control-containers"></a>Контейнеры для элементов управления ActiveX
 
@@ -33,19 +33,19 @@ ActiveX, контейнер элементов управления взаимо
 
 - [Контейнеры для элементов ActiveX](../mfc/containers-for-activex-controls.md)
 
-- [Контейнеры элементов ActiveX. Включение вложения элемента ActiveX вручную](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
+- [Контейнеры элементов ActiveX. Включение вложения элемента управления ActiveX вручную](../mfc/activex-control-containers-manually-enabling-activex-control-containment.md)
 
 - [Контейнеры элементов ActiveX. Вставка элемента управления в приложение контейнера элемента управления](../mfc/inserting-a-control-into-a-control-container-application.md)
 
-- [Контейнеры элементов ActiveX. Соединение элемента ActiveX с переменной-членом](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
+- [Контейнеры элементов ActiveX. Соединение элемента управления ActiveX с переменной-членом](../mfc/activex-control-containers-connecting-an-activex-control-to-a-member-variable.md)
 
-- [Контейнеры элементов ActiveX: Обработка событий из ActiveX управления](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
+- [Контейнеры элементов ActiveX. Обработка событий из элемента управления ActiveX](../mfc/activex-control-containers-handling-events-from-an-activex-control.md)
 
 - [Контейнеры элементов ActiveX. Просмотр и изменение свойств элементов управления](../mfc/activex-control-containers-viewing-and-modifying-control-properties.md)
 
-- [Контейнеры элементов ActiveX. Программирование элементов ActiveX в контейнере элементов ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
+- [Контейнеры элементов ActiveX. Программирование элементов управления ActiveX в контейнере элементов управления ActiveX](../mfc/programming-activex-controls-in-a-activex-control-container.md)
 
-- [Контейнеры элементов ActiveX. Использование элементов управления в контейнере без диалоговых окон](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
+- [Контейнеры элементов ActiveX. С помощью элементов управления в контейнере без диалоговых окон](../mfc/activex-control-containers-using-controls-in-a-non-dialog-container.md)
 
 Дополнительные сведения об использовании элементов управления ActiveX в диалоговом окне см. в разделе [редактор диалоговых окон](../windows/dialog-editor.md) разделы.
 
@@ -54,4 +54,3 @@ ActiveX, контейнер элементов управления взаимо
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

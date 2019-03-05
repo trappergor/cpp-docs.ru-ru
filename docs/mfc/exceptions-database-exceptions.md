@@ -1,5 +1,5 @@
 ---
-title: Исключения. Исключения баз данных
+title: 'Исключения: Исключения базы данных'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285559"
 ---
-# <a name="exceptions-database-exceptions"></a>Исключения. Исключения баз данных
+# <a name="exceptions-database-exceptions"></a>Исключения: Исключения базы данных
 
 В этой статье объясняется, как обрабатывать исключения базы данных. Большая часть материала в данной статье применяется при работе с классами MFC для Open Database Connectivity (ODBC) или классов MFC для объектов доступа к данным (DAO). Материалы, относящиеся к одной или другой моделью явно помечен. Ниже приведен список разделов.
 
@@ -77,4 +77,3 @@ DAO пример аналогичен примеру для ODBC, но обыч�
 ## <a name="see-also"></a>См. также
 
 [Обработка исключений](../mfc/exception-handling-in-mfc.md)
-

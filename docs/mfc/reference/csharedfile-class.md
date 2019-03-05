@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSharedFile [MFC], Detach
 - CSharedFile [MFC], SetHandle
 ms.assetid: 5d000422-9ede-4318-a8c9-f7412b674f39
-ms.openlocfilehash: 188330317a8d65060d0aad0e1617365723f4f928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e86e64c1de232aba0c17a0fdfb3600e480567a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476496"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273079"
 ---
 # <a name="csharedfile-class"></a>Класс CSharedFile
 
@@ -29,17 +29,17 @@ ms.locfileid: "50476496"
 class CSharedFile : public CMemFile
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSharedFile::CSharedFile](#csharedfile)|Создает объект `CSharedFile`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSharedFile::Detach](#detach)|Закрывает файл общей памяти и возвращает дескриптор блока памяти.|
 |[CSharedFile::SetHandle](#sethandle)|Вложения файла в общей памяти блок памяти.|

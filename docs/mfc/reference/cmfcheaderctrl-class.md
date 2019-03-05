@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnDrawSortArrow
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
-ms.openlocfilehash: 10d7dda39223e1d6206d2ede96874d9d546c8776
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269439"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -47,11 +47,11 @@ ms.locfileid: "50538506"
 class CMFCHeaderCtrl : public CHeaderCtrl
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Создает объект `CMFCHeaderCtrl`.|
 |`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Деструктор.|
@@ -118,11 +118,11 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 |Переменная-член|Значение|
 |---------------------|-----------|
-|`m_bIsMousePressed`|false|
-|`m_bMultipleSort`|false|
-|`m_bAscending`|true|
+|`m_bIsMousePressed`|FALSE|
+|`m_bMultipleSort`|FALSE|
+|`m_bAscending`|TRUE|
 |`m_nHighlightedItem`|-1|
-|`m_bTracked`|false|
+|`m_bTracked`|FALSE|
 |`m_bIsDlgControl`|FALSE|
 |`m_hFont`|NULL|
 
@@ -249,7 +249,7 @@ virtual void OnDrawItem(
 *iItem*<br/>
 [in] Отсчитываемый от нуля индекс элемента для рисования.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для рисования элемента.
 
 *bIsPressed*<br/>

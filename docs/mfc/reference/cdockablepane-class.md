@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: 657f71e5d89f7d91d8b44836b4d478b41d041f88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271918"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -149,17 +149,17 @@ ms.locfileid: "50623019"
 class CDockablePane : public CPane
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Создает и инициализирует объект `CDockablePane`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Присоединяет панели на другую панель. При этом создается области с вкладками.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Возвращает размер области прямоугольника.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Определяет, скрыт ли закрепляемой области (в режиме автоматического скрытия).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Определяет, когда автоматическое скрытие закрепляемой области следует остановить скользящий.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Определяет поведение области, если панель находится в режиме автоматического скрытия.|
@@ -595,7 +595,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in, out] Указывает родительского окна.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Указывает размер и положение окна, в клиентских координатах *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -700,7 +700,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 [in, out] Указывает родительского окна.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Указывает размер и положение окна, в клиентских координатах *pParentWnd*.
 
 *bHasGripper*<br/>
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment* может быть любым из следующих значений:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Контейнер закрепляется в верхней части области.|
 |CBRS_ALIGN_BOTTOM|Контейнер закрепляется в нижней части области.|
@@ -1108,7 +1108,7 @@ virtual int HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает точки для проверки.
 
 *bDetectCaption*<br/>
@@ -1326,7 +1326,7 @@ AFX_IMPORT_DATA static int m_nSlideSteps;
 
 ##  <a name="onafterchangeparent"></a>  CDockablePane::OnAfterChangeParent
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual void OnAfterChangeParent(CWnd* pWndOldParent);

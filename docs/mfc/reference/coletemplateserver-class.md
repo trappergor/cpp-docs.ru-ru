@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: f66936c597b8c595dc21ae6994d7af0477e8d2aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528652"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302888"
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 
@@ -31,7 +31,7 @@ ms.locfileid: "50528652"
 class COleTemplateServer : public COleObjectFactory
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -41,7 +41,7 @@ class COleTemplateServer : public COleObjectFactory
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Подключается к основной шаблон документа `COleObjectFactory` объекта.|
 |[COleTemplateServer::Unregister](#unregister)|Отменяет регистрацию шаблона связанный документ.|
@@ -53,7 +53,7 @@ class COleTemplateServer : public COleObjectFactory
 
 `COleTemplateServer` переопределяет `OnCreateInstance` определяется функция-член `COleObjectFactory`. Эта функция-член вызывается платформой для создания объекта C++ соответствующего типа.
 
-Дополнительные сведения о серверах см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md).
+Дополнительные сведения о серверах см. в статье [серверов: Реализация сервера](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

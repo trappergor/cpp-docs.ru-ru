@@ -344,18 +344,18 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294335"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 
 Обеспечивает поддержку изменению внешнего вида приложений на глобальном уровне. Класс `CMFCVisualManager` работает совместно с классом, предоставляющим инструкции по рисованию элементов управления графического интерфейса пользователя приложения с использованием последовательного стиля. Эти другие классы называются визуальными диспетчерами и наследуются от `CMFCBaseVisualManager`.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -363,17 +363,17 @@ ms.locfileid: "50653054"
 class CMFCVisualManager : public CMFCBaseVisualManager
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
@@ -895,7 +895,7 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CMFCVisualManager` .
+Указатель на объект `CMFCVisualManager`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1816,7 +1816,7 @@ virtual BOOL OnDrawBrowseButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который задает границу для кнопки "Обзор".
 
 *pEdit*<br/>
@@ -1856,7 +1856,7 @@ virtual void OnDrawButtonBorder(
 *pButton*<br/>
 [in] Указатель на кнопку панели инструментов. Платформа рисовал границу этой кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки панели инструментов.
 
 *state*<br/>
@@ -1910,7 +1910,7 @@ virtual void OnDrawCaptionBarBorder(
 *pBar*<br/>
 [in] Указатель на `CMFCCaptionBar` объект. Платформа рисует этот заголовок.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы заголовка окна.
 
 *clrBarBorder*<br/>
@@ -2074,7 +2074,7 @@ virtual void OnDrawComboBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства, кнопки поля со списком.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки поля со списком.
 
 *bDisabled*<br/>
@@ -2112,7 +2112,7 @@ virtual void OnDrawComboDropButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки «drop».
 
 *bDisabled*<br/>
@@ -2195,7 +2195,7 @@ virtual void OnDrawEditBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы `CMFCToolBarEditBoxButton` объекта.
 
 *bDisabled*<br/>
@@ -2285,7 +2285,7 @@ virtual void OnDrawHeaderCtrlBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы элемента управления заголовка.
 
 *bIsPressed*<br/>
@@ -2318,7 +2318,7 @@ virtual void OnDrawHeaderCtrlSortArrow(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы стрелки сортировки.
 
 *bIsUp*<br/>
@@ -2364,7 +2364,7 @@ virtual void OnDrawMenuBorder(
 *pMenu*<br/>
 [in] Указатель на `CMFCPopupMenu` объект. Платформа рисует границу вокруг этого во всплывающем меню.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы во всплывающем меню.
 
 ### <a name="remarks"></a>Примечания
@@ -2466,7 +2466,7 @@ virtual void OnDrawMenuScrollButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки прокрутки.
 
 *bIsScrollDown*<br/>
@@ -2532,7 +2532,7 @@ virtual void OnDrawMenuSystemButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки.
 
 *uiSystemCommand*<br/>
@@ -2640,7 +2640,7 @@ virtual void OnDrawPaneBorder(
 *pBar*<br/>
 [in] Указатель на область. Наглядный диспетчер рисует границу в этой области.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы области.
 
 ### <a name="remarks"></a>Примечания
@@ -2849,7 +2849,7 @@ virtual void OnDrawRibbonCaption(
 *pBar*<br/>
 [in] Указатель на панель ленты. Наглядный диспетчер рисует этот панель ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который задает границы панели ленты.
 
 *rectText*<br/>
@@ -3162,7 +3162,7 @@ virtual void OnDrawRibbonLabel(
 *pLabel*<br/>
 [in] Указатель на [CMFCRibbonLabel](../../mfc/reference/cmfcribbonlabel-class.md) объекта. Платформа рисует эту метку ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который задает границы панели ленты.
 
 ### <a name="remarks"></a>Примечания
@@ -3210,7 +3210,7 @@ virtual void OnDrawRibbonMainPanelFrame(
 *pPanel*<br/>
 [in] Указатель на `CMFCRibbonMainPanel`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы `CMFCRibbonMainPanel`.
 
 ### <a name="remarks"></a>Примечания
@@ -3347,7 +3347,7 @@ virtual void OnDrawRibbonQuickAccessToolBarSeparator(
 *pSeparator*<br/>
 [in] Указатель на [CMFCRibbonSeparator](../../mfc/reference/cmfcribbonseparator-class.md) объекта. Платформа рисует этот разделитель ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы разделителя.
 
 ### <a name="remarks"></a>Примечания
@@ -3373,7 +3373,7 @@ virtual void OnDrawRibbonRecentFilesFrame(
 *pPanel*<br/>
 [in] Указатель на **Main** панели на ленте.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы рамки для списка последних файлов.
 
 ### <a name="remarks"></a>Примечания
@@ -3399,7 +3399,7 @@ virtual void OnDrawRibbonSliderChannel(
 *pSlider*<br/>
 [in] Указатель на объект CMFCRibbonSlider. Платформа рисует канала для данного ползунка ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы для канала "ползунок" ленты.
 
 ### <a name="remarks"></a>Примечания
@@ -3428,7 +3428,7 @@ virtual void OnDrawRibbonSliderThumb(
 *pSlider*<br/>
 [in] Указатель на `CMFCRibbonSlider`. Платформа рисует бегунка этот ползунок ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы ползунка полосы прокрутки для "ползунок" ленты.
 
 *bIsHighlighted*<br/>
@@ -3467,7 +3467,7 @@ virtual void OnDrawRibbonSliderZoomButton(
 *pSlider*<br/>
 [in] Указатель на `CMFCRibbonSlider` объект. Платформа Рисует ползунок этой ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки масштаба на ползунке ленты.
 
 *bIsZoomOut*<br/>
@@ -3587,7 +3587,7 @@ virtual void OnDrawSeparator(
 *pBar*<br/>
 [in] Указатель на область, содержащая разделитель.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы разделителя.
 
 *bIsHoriz*<br/>
@@ -3679,7 +3679,7 @@ virtual void OnDrawSplitterBorder(
 *pSplitterWnd*<br/>
 [in] Указатель на окно-разделитель. Платформа рисует границу для этого окна.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы окна разделителя.
 
 ### <a name="remarks"></a>Примечания
@@ -3705,7 +3705,7 @@ virtual void OnDrawSplitterBox(
 *pSplitterWnd*<br/>
 [in] Указатель на окно-разделитель. Платформа Рисует поле для этого окна разделителя.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы окна разделителя.
 
 ### <a name="remarks"></a>Примечания
@@ -3877,7 +3877,7 @@ virtual void OnDrawTabCloseButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы **закрыть** кнопки.
 
 *pTabWnd*<br/>
@@ -3952,7 +3952,7 @@ virtual void OnDrawTabsButtonBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки вкладки.
 
 *pButton*<br/>
@@ -4021,7 +4021,7 @@ virtual void OnDrawTasksGroupAreaBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы области группы в области задач.
 
 *bSpecial*<br/>
@@ -4109,7 +4109,7 @@ virtual void OnDrawTearOffCaption(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы заголовка.
 
 *bIsActive*<br/>
@@ -4195,7 +4195,7 @@ virtual void OnEraseTabsArea(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы области вкладок.
 
 *pTabWnd*<br/>
@@ -4224,7 +4224,7 @@ virtual void OnEraseTabsButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки вкладки.
 
 *pButton*<br/>
@@ -4255,7 +4255,7 @@ virtual BOOL OnEraseTabsFrame(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы вкладки окна.
 
 *pTabWnd*<br/>
@@ -4285,7 +4285,7 @@ virtual void OnFillAutoHideButtonBackground(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки автоматического скрытия.
 
 *pButton*<br/>
@@ -4355,7 +4355,7 @@ virtual void OnFillButtonInterior(
 *pButton*<br/>
 [in] Указатель на [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md). Автоматически заполняются фона для данной кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки панели инструментов.
 
 *state*<br/>
@@ -4412,7 +4412,7 @@ virtual COLORREF OnFillCommandsListBackground(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки.
 
 *bIsSelected*<br/>
@@ -4445,7 +4445,7 @@ virtual void OnFillHeaderCtrlBackground(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы элемента управления заголовка.
 
 ### <a name="remarks"></a>Примечания
@@ -4530,7 +4530,7 @@ virtual void OnFillOutlookPageButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы кнопки страницы Outlook.
 
 *bIsHighlighted*<br/>
@@ -4561,7 +4561,7 @@ virtual void OnFillPopupWindowBackground(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы всплывающего окна.
 
 ### <a name="remarks"></a>Примечания
@@ -4619,7 +4619,7 @@ virtual void OnFillRibbonEdit(
 *pEdit*<br/>
 [in] Указатель на `CMFCRibbonRichEditCtrl` объект. Платформа заполняет внутреннюю часть данное поле ввода.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы элемента управления.
 
 *bIsHighlighted*<br/>
@@ -4691,7 +4691,7 @@ virtual void OnFillRibbonMenuFrame(
 *pPanel*<br/>
 [in] Указатель на экземпляр [класс CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md). Автоматически заполняются кадра меню для этой панели ленты.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы рамки меню.
 
 ### <a name="remarks"></a>Примечания
@@ -4734,7 +4734,7 @@ virtual void OnFillSplitterBackground(
 *pSplitterWnd*<br/>
 [in] Указатель на экземпляр [CSplitterWndEx класс](csplitterwndex-class.md). Автоматически заполняются фона для данного окна разделителя.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы окна разделителя.
 
 ### <a name="remarks"></a>Примечания
@@ -4795,7 +4795,7 @@ virtual void OnFillTasksGroupInterior(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который указывает границы группы задач.
 
 *bSpecial*<br/>
@@ -4847,7 +4847,7 @@ virtual void OnHighlightMenuItem(
 *pButton*<br/>
 [in] Указатель на [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) объект для отображения. Реализация по умолчанию этот параметр не используется.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, который задает границы данного элемента меню.
 
 *clrText*<br/>
@@ -5098,4 +5098,3 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [Диспетчер визуализации](../../mfc/visualization-manager.md)
-

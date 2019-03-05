@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 97012e1d8cdc36f080245243c5f099b340225fc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293489"
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
 
@@ -61,7 +61,7 @@ ms.locfileid: "50533865"
 class CMFCColorButton : public CMFCButton
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Указывает, отображается ли кнопка текущего цвета в визуальном стиле Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Вызвано структурой для отображения изображения кнопки.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`m_bAltColorDlg`|Логическое значение. Если значение равно TRUE, платформа отображает [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) цвет-диалоговое окно при *других* кнопки, или если значение равно FALSE, система цвета диалоговое окно. Значение по умолчанию — TRUE. Дополнительные сведения см. в разделе [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Логическое значение. Значение TRUE, если framework устанавливает фокус на меню «цвет», когда меню отображается, или если значение равно FALSE, не изменяет фокус. Значение по умолчанию — TRUE.|
@@ -263,7 +263,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Указывает контекст устройства, который используется для отрисовки изображения кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для этого кнопку.
 
 *uiState*<br/>
@@ -355,7 +355,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение RGB.
 
 ### <a name="remarks"></a>Примечания
@@ -372,7 +372,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета RGB.
 
 *strName*<br/>
@@ -465,7 +465,7 @@ virtual void UpdateColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Цвет, выбранный пользователем.
 
 ### <a name="remarks"></a>Примечания

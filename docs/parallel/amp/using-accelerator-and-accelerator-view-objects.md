@@ -2,12 +2,12 @@
 title: Использование объектов accelerator и accelerator_view
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668602"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272908"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Использование объектов accelerator и accelerator_view
 
@@ -168,11 +168,11 @@ bool pick_accelerator()
 
 Пути трех специальных ускорителей доступны как свойства `accelerator` класса:
 
-- [Элемент данных Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): этот однопоточный ускоритель использует программное обеспечение на ЦП для эмуляции универсальной видеокарты. Он используется по умолчанию для отладки, но не имеет смысла в рабочей среде, так как он выполняется медленнее, чем аппаратные ускорители. Кроме того он доступен только в DirectX SDK и пакет SDK для Windows, и маловероятно, должны быть установлены на компьютерах клиентов. Дополнительные сведения см. в разделе [отладка кода GPU](/visualstudio/debugger/debugging-gpu-code).
+- [элемент данных Accelerator::direct3d_ref](reference/accelerator-class.md#direct3d_ref): Этот однопоточный ускоритель использует программное обеспечение на ЦП для эмуляции универсальной видеокарты. Он используется по умолчанию для отладки, но не имеет смысла в рабочей среде, так как он выполняется медленнее, чем аппаратные ускорители. Кроме того он доступен только в DirectX SDK и пакет SDK для Windows, и маловероятно, должны быть установлены на компьютерах клиентов. Дополнительные сведения см. в разделе [отладка кода GPU](/visualstudio/debugger/debugging-gpu-code).
 
-- [Элемент данных Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): этот ускоритель предоставляет резервное решение для выполнения кода C++ AMP на многоядерных процессорах, использующих Streaming SIMD Extensions (SSE).
+- [элемент данных Accelerator::direct3d_warp](reference/accelerator-class.md#direct3d_warp): Этот ускоритель предоставляет резервное решение для выполнения кода C++ AMP на многоядерных процессорах, использующих Streaming SIMD Extensions (SSE).
 
-- [элемент данных Accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): этот ускоритель можно использовать для установки массивов промежуточного хранения. Он не может выполнять код C++ AMP. Дополнительные сведения см. в разделе [Staging Arrays in C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) блоге по параллельному программированию в блоге машинного кода.
+- [элемент данных Accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator): Это решение можно использовать для установки массивов промежуточного хранения. Он не может выполнять код C++ AMP. Дополнительные сведения см. в разделе [Staging Arrays in C++ AMP](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/) блоге по параллельному программированию в блоге машинного кода.
 
 ## <a name="interoperability"></a>Взаимодействие
 

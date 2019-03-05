@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - connection points [C++], global functions
 ms.assetid: bcb4bf50-2155-4e20-b8bb-f2908b03a6e7
-ms.openlocfilehash: 200300eaea2bc98f1d87e2c1859610df8d0cb03b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0313e93ee82bb96f3bfe08e45f70ccfee30dbee6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263888"
 ---
 # <a name="connection-point-global-functions"></a>Глобальные функции точек подключения
 
@@ -58,7 +58,7 @@ HRESULT    AtlAdvise(
 *IID*<br/>
 [in] Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
 
-*PDW*<br/>
+*pdw*<br/>
 [out] Указатель на файл cookie, который однозначно идентифицирует соединение.
 
 ### <a name="return-value"></a>Возвращаемое значение

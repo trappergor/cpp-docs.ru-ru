@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455813"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289966"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -111,7 +111,7 @@ ms.locfileid: "50455813"
 class CEdit : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -121,7 +121,7 @@ class CEdit : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|Определяет, можно ли отменить операцию управления ввода.|
 |[CEdit::CharFromPos](#charfrompos)|Возвращает индексы строки и символ для символа, ближайшего к заданной позиции.|
@@ -348,7 +348,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления поля ввода. Применить любое сочетание [изменение стилей](styles-used-by-mfc.md#edit-styles) к элементу управления.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления поля ввода. Может быть `CRect` объекта или `RECT` структуры.
 
 *pParentWnd*<br/>
@@ -547,7 +547,7 @@ BOOL GetHighlight(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pichStart*|[out] Отсчитываемый от нуля индекс первого символа в диапазоне текста, который будет выделен.|
 |*pichEnd*|[out] Отсчитываемый от нуля индекс последнего символа в диапазоне текста, который будет выделен.|
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Отсчитываемый от нуля индекс заданного символа.
 
 ### <a name="return-value"></a>Возвращаемое значение

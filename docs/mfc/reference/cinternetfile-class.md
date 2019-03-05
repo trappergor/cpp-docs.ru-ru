@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586879"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279982"
 ---
 # <a name="cinternetfile-class"></a>Класс CInternetFile
 
@@ -49,7 +49,7 @@ ms.locfileid: "50586879"
 class CInternetFile : public CStdioFile
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -59,7 +59,7 @@ class CInternetFile : public CStdioFile
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CInternetFile::Abort](#abort)|Закрывает файл, игнорируя все предупреждения и ошибки.|
 |[CInternetFile::Close](#close)|Закрывает `CInternetFile` и освобождает его ресурсы.|
@@ -75,13 +75,13 @@ class CInternetFile : public CStdioFile
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CInternetFile::operator HINTERNET](#operator_hinternet)|Оператор приведения для Интернет-дескриптор.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CInternetFile::m_hFile](#m_hfile)|Дескриптор файла.|
 

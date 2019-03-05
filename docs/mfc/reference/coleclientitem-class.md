@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295361"
 ---
 # <a name="coleclientitem-class"></a>Класс COleClientItem
 
@@ -181,7 +181,7 @@ ms.locfileid: "51678591"
 class COleClientItem : public CDocItem
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Вызывается платформой для определения допустимости активации на месте.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Вызывается платформой при изменении положения элемента.|
@@ -287,7 +287,7 @@ class COleClientItem : public CDocItem
 
 `COleClientItem` можно использовать с любым [COleDocument](../../mfc/reference/coledocument-class.md), [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md), или [COleServerDoc](../../mfc/reference/coleserverdoc-class.md) класса. Чтобы использовать `COleClientItem`, создать класс, производный от него и реализовать [OnChange](#onchange) функцией-членом, которая определяет, как контейнер будет реагировать на изменения, внесенные в элемент. Для поддержки активации на месте, переопределить [OnGetItemPosition](#ongetitemposition) функция-член. Эта функция предоставляет сведения о позиции отображаемого объекта OLE.
 
-Дополнительные сведения об использовании интерфейса контейнера см. в статьях [контейнеры: реализация контейнера](../../mfc/containers-implementing-a-container.md) и [активации](../../mfc/activation-cpp.md).
+Дополнительные сведения об использовании интерфейса контейнера см. в статьях [контейнеров: Реализация контейнера](../../mfc/containers-implementing-a-container.md) и [активации](../../mfc/activation-cpp.md).
 
 > [!NOTE]
 >  Пакет SDK Windows ссылается на внедренные и связанные элементы, как «объекты» и ссылается на типы элементов в виде «классы». Эта ссылка используется термин «элемент» для различения объект OLE, соответствующий объект C++ и термин «type» для различения категории OLE из класса C++.
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект `COleClientItem::ItemState` перечисленное значение, которое может принимать одно из следующих: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Сведения об этих состояниях см. в статье [контейнеры: состояния элементов клиентов](../../mfc/containers-client-item-states.md).
+Объект `COleClientItem::ItemState` перечисленное значение, которое может принимать одно из следующих: `emptyState`, `loadedState`, `openState`, `activeState`, `activeUIState`. Сведения об этих состояниях см. в статье [контейнеров: Состояния элементов клиентов](../../mfc/containers-client-item-states.md).
 
 ### <a name="remarks"></a>Примечания
 
 Чтобы получать уведомления при изменении состояния объекта OLE, использовать [OnChange](#onchange) функция-член.
 
-Дополнительные сведения см. в статье [контейнеры: состояния элементов клиентов](../../mfc/containers-client-item-states.md).
+Дополнительные сведения см. в статье [контейнеров: Состояния элементов клиентов](../../mfc/containers-client-item-states.md).
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 Указывает на пустое меню.
 
 *lpMenuWidths*<br/>
-Указывает на массив значений шесть LONG, указывающее, сколько меню в каждом из следующих групп меню: файл, изменить, контейнер, объект, в окне справки. Приложение-контейнер отвечает за файл, контейнер и окно группы меню, соответствующие элементам, 0, 2 и 4 этого массива.
+Указывается массив значений шесть LONG, указывающее, сколько меню в каждом из следующих групп меню: Файл, изменить, контейнер, объект, в окне справки. Приложение-контейнер отвечает за файл, контейнер и окно группы меню, соответствующие элементам, 0, 2 и 4 этого массива.
 
 ### <a name="remarks"></a>Примечания
 

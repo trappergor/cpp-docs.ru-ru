@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6423220d8203b0d0fba73a4888f967e159db26de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508918"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326742"
 ---
 # <a name="double3-class"></a>Класс double_3
 
@@ -89,23 +89,23 @@ ms.locfileid: "50508918"
 class double_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |value_type||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор double_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |double_3::get_x||
 |double_3::get_xy||
@@ -150,22 +150,22 @@ class double_3;
 |----------|-----------------|
 |double_3::operator-||
 |double_3::operator--||
-|double_3::operator * =||
-|double_3::operator / =||
+|double_3::operator*=||
+|double_3::operator/=||
 |double_3::operator ++||
-|double_3::operator +=||
-|double_3::operator =||
+|double_3::operator+=||
+|double_3::operator=||
 |double_3::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[размер константа](#double_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |double_3::b||
 |double_3::BG||
@@ -173,22 +173,22 @@ class double_3;
 |double_3::br||
 |double_3::brg||
 |double_3::g||
-|double_3::GB||
-|double_3::GBR||
-|double_3::GR||
+|double_3::gb||
+|double_3::gbr||
+|double_3::gr||
 |double_3::grb||
 |double_3::r||
 |double_3::RB||
 |double_3::rbg||
 |double_3::RG||
-|double_3::RGB||
+|double_3::rgb||
 |double_3::x||
-|double_3::XY||
+|double_3::xy||
 |double_3::xyz||
 |double_3::xz||
 |double_3::xzy||
 |double_3::y||
-|double_3::YX||
+|double_3::yx||
 |double_3::yxz||
 |double_3::yz||
 |double_3::yzx||
@@ -206,7 +206,7 @@ class double_3;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> double_3
 

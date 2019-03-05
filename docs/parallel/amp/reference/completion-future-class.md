@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535298"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272923"
 ---
 # <a name="completionfuture-class"></a>Класс completion_future
 
@@ -30,7 +30,7 @@ ms.locfileid: "50535298"
 class completion_future;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -53,7 +53,7 @@ class completion_future;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор std::shared_future\<void >](#operator_shared_future)|Неявно преобразует `completion_future` объект `std::shared_future` объекта.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `completion_future` в данный объект.|
@@ -91,7 +91,7 @@ completion_future(
 
 ### <a name="overloads-list"></a>Список перегрузок
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`completion_future();`|Инициализирует новый экземпляр класса `completion_future` класса|
 |`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр класса `completion_future` путем копирования конструктором.|
@@ -107,7 +107,7 @@ completion_future(
 void get() const;
 ```
 
-## <a name="operator_shared_future"></a> оператор std::shared_future<void>
+## <a name="operator_shared_future"></a> operator std::shared_future<void>
 
 Неявно преобразует `completion_future` объект `std::shared_future` объекта.
 
@@ -143,7 +143,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ## <a name="overloads-list"></a>Список перегрузок
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного объекта `completion_future` объекта в данный помощи глубокого копирования.|
 |`completion_future& operator=(completion_future&& _Other);`|Копирует содержимое указанного объекта `completion_future` объекта в данный помощи присваивания с перемещением.|
@@ -277,7 +277,7 @@ std::future_status::future_status wait_until(
 
 1. `std::future_status::timeout` Если заданный период времени истек.
 
-## <a name="dtor"></a> ~ completion_future
+## <a name="dtor"></a> ~completion_future
 
 Уничтожает `completion_future` объекта.
 

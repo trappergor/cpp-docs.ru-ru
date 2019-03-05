@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456827"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302017"
 ---
 # <a name="catlmodule-class"></a>Класс CAtlModule
 
@@ -37,18 +37,18 @@ ms.locfileid: "50456827"
 class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlModule::CAtlModule](#catlmodule)|Конструктор.|
 |[CAtlModule:: ~ CAtlModule](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)|Переопределите этот метод, чтобы добавить параметры к схеме замены компонент реестра ATL (регистратор).|
 |[CAtlModule::AddTermFunc](#addtermfunc)|Добавляет новую функцию, вызываемый при завершении работы модуля.|
@@ -63,7 +63,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlModule::m_libid](#m_libid)|Содержит идентификатор GUID для текущего модуля.|
 |[CAtlModule::m_pGIT](#m_pgit)|Указатель на глобальной таблицы интерфейсов.|

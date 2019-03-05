@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178594"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298924"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 
@@ -91,17 +91,17 @@ ms.locfileid: "53178594"
 class CImageList : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CImageList::CImageList](#cimagelist)|Создает объект `CImageList`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CImageList::Add](#add)|Добавляет изображения или изображения к списку изображений.|
 |[CImageList::Attach](#attach)|Присоединяет список изображений для `CImageList` объекта.|
@@ -138,13 +138,13 @@ class CImageList : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CImageList::operator HIMAGELIST](#operator_himagelist)|Возвращает HIMAGELIST подключен к `CImageList`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CImageList::m_hImageList](#m_himagelist)|Дескриптор, содержащий список изображений, присоединенного к этому объекту.|
 
@@ -402,7 +402,7 @@ BOOL Create(CImageList* pImageList);
 Смещение ось y второе изображение в связи с первого изображения в пикселях.
 
 *pImageList*<br/>
-Указатель на объект `CImageList` .
+Указатель на объект `CImageList`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -593,7 +593,7 @@ BOOL Draw(
 
 |Значение|Значение|
 |-----------|-------------|
-|ILD_BLEND25 ILD_FOCUS|Рисует изображение наложения 25 процентов с системным цветом выделения. Если список изображений не содержит маску, это значение игнорируется.|
+|ILD_BLEND25, ILD_FOCUS|Рисует изображение наложения 25 процентов с системным цветом выделения. Если список изображений не содержит маску, это значение игнорируется.|
 |ILD_BLEND50, ILD_SELECTED, ILD_BLEND|Рисует изображение наложения 50 процентов с системным цветом выделения. Если список изображений не содержит маску, это значение игнорируется.|
 |ILD_MASK|Рисует маски.|
 |ILD_NORMAL|Рисует изображение, используя цвет фона для списка изображений. Если цвет фона имеет значение CLR_NONE, рисуется изображение явным образом с помощью маски.|

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMultiPageDHtmlDialog [MFC], CMultiPageDHtmlDialog
 ms.assetid: 971accc1-824d-4df4-b4c1-b1a20e0f7e4f
-ms.openlocfilehash: 680c485241b7a377d1c6f0ec2785dbbade01ed3f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 66ab996a810c7409d689d600758828130d4237f1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443555"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283752"
 ---
 # <a name="cmultipagedhtmldialog-class"></a>Класс CMultiPageDHtmlDialog
 
@@ -25,14 +25,14 @@ ms.locfileid: "50443555"
 class CMultiPageDHtmlDialog : public CDHtmlDialog
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMultiPageDHtmlDialog::CMultiPageDHtmlDialog](#cmultipagedhtmldialog)|Создает объект диалогового окна DHTML многостраничной (мастер в стиле).|
-|[CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничной DHTML-диалоговое окно.|
+|[CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog](#cmultipagedhtmldialog__~cmultipagedhtmldialog)|Уничтожает объект многостраничной DHTML-диалоговое окно.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -111,7 +111,7 @@ CMultiPageDHtmlDialog();
 *nHtmlResID*<br/>
 Содержит идентификатор ресурса HTML.
 
-##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog:: ~ CMultiPageDHtmlDialog
+##  <a name="_dtorcmultipagedhtmldialog"></a>  CMultiPageDHtmlDialog::~CMultiPageDHtmlDialog
 
 Уничтожает объект многостраничной DHTML-диалоговое окно.
 

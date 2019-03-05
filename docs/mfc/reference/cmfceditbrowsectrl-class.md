@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643305"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273287"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс CMFCEditBrowseCtrl
 
@@ -43,7 +43,7 @@ ms.locfileid: "50643305"
 class CMFCEditBrowseCtrl : public CEdit
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -88,7 +88,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
    Диалоговое окно выбора стандартные папки отображается в том случае, когда пользователь нажимает кнопку обзора.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Практическое руководство: Укажите элемент управления редактированием обзора
+## <a name="how-to-specify-an-edit-browse-control"></a>Практическое руководство. Укажите элемент управления редактированием обзора
 
 Выполните следующие действия, чтобы включить элемент управления редактирования обзора в приложении.
 
@@ -207,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 В следующей таблице перечислены возможные возвращаемые значения.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |`BrowseMode_Default`|**пользовательский режим**. Действия, определяемые программистом выполняются.|
 |`BrowseMode_File`|**режим файла**. Откроется диалоговое окно браузера стандартный файл.|
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 Указатель на контекст устройства.
 
-*Rect*<br/>
+*Прямоугольник*<br/>
 Ограничивающий прямоугольник кнопку обзора.
 
 *bIsButtonPressed*<br/>

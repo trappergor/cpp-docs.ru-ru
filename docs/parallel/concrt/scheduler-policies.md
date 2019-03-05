@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668745"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298142"
 ---
 # <a name="scheduler-policies"></a>Политики планировщика
 
@@ -26,7 +26,7 @@ ms.locfileid: "50668745"
 
 [Concurrency::PolicyElementKey](reference/concurrency-namespace-enums.md#policyelementkey) перечисление определяет ключи политики, связанные с планировщиком задач. Ниже перечислены ключи политики и значение по умолчанию, используемые средой выполнения для каждого из них.
 
-|Ключ политики|Описание|Значение по умолчанию|
+|Ключ политики|Описание:|Значение по умолчанию|
 |----------------|-----------------|-------------------|
 |`SchedulerKind`|Объект [concurrency::SchedulerType](reference/concurrency-namespace-enums.md#schedulertype) значение, указывающее тип потоков, используемых для планирования задач.|`ThreadScheduler` (используйте стандартные потоки). Это единственное допустимое значение для этого ключа.|
 |`MaxConcurrency`|`unsigned int` Значение, указывающее максимальное количество ресурсов параллелизма, которые использует планировщик.|[Concurrency::MaxExecutionResources](reference/concurrency-namespace-constants1.md#maxexecutionresources)|
@@ -49,11 +49,10 @@ ms.locfileid: "50668745"
 
 ## <a name="example"></a>Пример
 
-Чтобы изучить примеры, в которых конкретные политики планировщика используются для контроля поведения планировщика, см. в разделе [как: укажите конкретные политики планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) и [как: создание агентов, использовать определенные политики планировщика](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
+Чтобы изучить примеры, в которых конкретные политики планировщика используются для контроля поведения планировщика, см. в разделе [как: Задание определенных политик планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md) и [как: Создание агентов, использующих определенные политики планировщика](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md).
 
 ## <a name="see-also"></a>См. также
 
 [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Практическое руководство. Задание определенных политик планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [Практическое руководство. Создание агентов, использующих определенные политики планировщика](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261704"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 
@@ -40,13 +40,13 @@ class CComPtrBase
 *T*<br/>
 Тип объекта, на которые ссылается интеллектуального указателя.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CComPtrBase:: ~ CComPtrBase](#dtor)|Деструктор|
+|[CComPtrBase::~CComPtrBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -66,17 +66,17 @@ class CComPtrBase
 
 |Имя|Описание|
 |----------|-----------------|
-|[CComPtrBase::operator T *](#operator_t_star)|Оператор приведения типов.|
-|[CComPtrBase::operator!](#operator_not)|Оператор NOT.|
+|[CComPtrBase::operator T*](#operator_t_star)|Оператор приведения типов.|
+|[CComPtrBase::operator !](#operator_not)|Оператор NOT.|
 |[CComPtrBase::operator &](#operator_amp)|& Оператор.|
 |[CComPtrBase::operator *](#operator_star)|Оператор \*.|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|Меньше-оператор «больше».|
 |[CComPtrBase::operator ==](#operator_eq_eq)|Оператор равенства.|
-|[CComPtrBase::operator "->"](#operator_ptr)|Оператор указателя на элементы.|
+|[CComPtrBase::operator ->](#operator_ptr)|Оператор указателя на элементы.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Указатель данных переменная-член.|
 
@@ -107,7 +107,7 @@ HRESULT Advise(
 *IID*<br/>
 Идентификатор GUID точки подключения. Как правило это так же, как выходящего интерфейса, управляемого с использованием точки подключения.
 
-*PDW*<br/>
+*pdw*<br/>
 Указатель на файл cookie, который однозначно идентифицирует соединение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -135,7 +135,7 @@ void Attach(T* p2) throw();
 
 `Attach` вызовы [CComPtrBase::Release](#release) в существующем [CComPtrBase::p](#p) переменной-члена, а затем назначает *p2* для `CComPtrBase::p`. Когда `CComPtrBase` объект принимает владение указатель, он будет автоматически вызывать `Release` на указатель, который приведет к удалению указатель и любые выделенных данных, если счетчик ссылок на объект становится равным 0.
 
-##  <a name="dtor"></a>  CComPtrBase:: ~ CComPtrBase
+##  <a name="dtor"></a>  CComPtrBase::~CComPtrBase
 
 Деструктор
 
@@ -243,7 +243,7 @@ bool IsEqualObject(IUnknown* pOther) throw();
 
 Возвращает значение true, если объекты идентичны.
 
-##  <a name="operator_not"></a>  CComPtrBase::operator!
+##  <a name="operator_not"></a>  CComPtrBase::operator !
 
 Оператор NOT.
 
@@ -298,7 +298,7 @@ bool operator== (T* pT) const throw();
 
 Возвращает значение true, если `CComPtrBase` и *pT* указывал тот же объект, значение false в противном случае.
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
 
 Оператор указателя на член.
 

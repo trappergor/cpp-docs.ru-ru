@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 48b02843cc957994aa3f3109a82cb2188dd9acff
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894202"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303674"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 
@@ -107,11 +107,11 @@ ms.locfileid: "54894202"
 class CMonthCalCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|
 
@@ -450,11 +450,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 |Значение|День недели|
 |-----------|---------------------|
-|0|понедельник|
+|0|Понедельник|
 |1|Вторник|
-|2|среда|
+|2|Среда|
 |3|Четверг|
-|4|пятница|
+|4|Пятница|
 |5|Суббота|
 |6|Воскресенье|
 
@@ -814,7 +814,7 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*cxyBorder*|[in] Ширина границы в пикселях.|
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 64c2cb1531d9330e075a06c65ff022115d0fb6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499922"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292904"
 ---
 # <a name="chandle-class"></a>Класс CHandle
 
@@ -29,18 +29,18 @@ ms.locfileid: "50499922"
 class CHandle
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Конструктор.|
 |[CHandle:: ~ CHandle](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHandle::Attach](#attach)|Вызовите этот метод для присоединения `CHandle` объект для существующего дескриптора.|
 |[CHandle::Close](#close)|Вызовите этот метод, чтобы закрыть `CHandle` объекта.|

@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259884"
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 
@@ -131,11 +131,11 @@ ms.locfileid: "50588647"
 class CRenderTarget : public CObject;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Создает объект CRenderTarget.|
 |[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|
@@ -196,19 +196,19 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRenderTarget::VerifyResource](#verifyresource)|Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Возвращает интерфейс ID2D1RenderTarget|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Список указателей на объекты CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Указатель на объект ID2D1RenderTarget.|
@@ -263,7 +263,7 @@ void Clear(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Цвет, для которой очищается области рисования.
 
 ##  <a name="colorref_to_d2dcolor"></a>  CRenderTarget::COLORREF_TO_D2DCOLOR
@@ -278,7 +278,7 @@ static D2D1_COLOR_F COLORREF_TO_D2DCOLOR(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Значение RGB.
 
 *nAlpha*
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Размеры прямоугольника для рисования в аппаратно независимых пикселях
 
 *pBrush*<br/>
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Указатель на массив знаков Юникода для рисования.
 
-*Rect*<br/>
+*rect*<br/>
 Размер и положение области, в которой рисуется текст.
 
 *pForegroundBrush*<br/>
@@ -720,7 +720,7 @@ void FillRectangle(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Измерение прямоугольника для рисования в аппаратно независимых пикселях.
 
 *pBrush*<br/>
@@ -955,7 +955,7 @@ ID2D1RenderTarget* m_pRenderTarget;
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 Возвращает интерфейс ID2D1RenderTarget
 

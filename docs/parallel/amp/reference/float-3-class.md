@@ -74,12 +74,12 @@ f1_keywords:
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-ms.openlocfilehash: ca8da31f37c74f80579a59fc77bec522e1ff9fe9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff9d9391efaeef5051424675dacf1f14c35b30df
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275806"
 ---
 # <a name="float3-class"></a>Класс float_3
 
@@ -91,9 +91,9 @@ ms.locfileid: "50609442"
 class float_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
 |Имя|Описание|
 |----------|-----------------|
@@ -101,7 +101,7 @@ class float_3;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор float_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
@@ -152,45 +152,45 @@ class float_3;
 |----------|-----------------|
 |float_3::operator-||
 |float_3::operator--||
-|float_3::operator * =||
-|float_3::operator / =||
+|float_3::operator*=||
+|float_3::operator/=||
 |float_3::operator ++||
-|float_3::operator +=||
-|float_3::operator =||
+|float_3::operator+=||
+|float_3::operator=||
 |float_3::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[размер константа](#float_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |float_3::b||
-|float_3::BG||
+|float_3::bg||
 |float_3::bgr||
 |float_3::br||
 |float_3::brg||
 |float_3::g||
-|float_3::GB||
-|float_3::GBR||
-|float_3::GR||
+|float_3::gb||
+|float_3::gbr||
+|float_3::gr||
 |float_3::grb||
 |float_3::r||
-|float_3::RB||
+|float_3::rb||
 |float_3::rbg||
 |float_3::rg||
 |float_3::rgb||
 |float_3::x||
-|float_3::XY||
+|float_3::xy||
 |float_3::xyz||
 |float_3::xz||
 |float_3::xzy||
 |float_3::y||
-|float_3::YX||
+|float_3::yx||
 |float_3::yxz||
 |float_3::yz||
 |float_3::yzx||
@@ -208,7 +208,7 @@ class float_3;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> float_3
 

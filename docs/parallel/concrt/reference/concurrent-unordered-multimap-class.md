@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
-ms.openlocfilehash: e1a477e278de2e8ba0f1af43dfdb6081206d86e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450912"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294360"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Класс concurrent_unordered_multimap
 
@@ -62,11 +62,11 @@ true>>;
 *_Allocator_type*<br/>
 Тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти для параллельного вектора. Этот аргумент является необязательным и значение по умолчанию — `std::allocator<std::pair<K`, `_Element_type>>`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -87,13 +87,13 @@ true>>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[concurrent_unordered_multimap](#ctor)|Перегружен. Создает параллельное неупорядоченное мультисопоставление.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|
 |[insert](#insert)|Перегружен. Добавляет элементы `concurrent_unordered_multimap` объекта.|
@@ -103,7 +103,7 @@ true>>;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_unordered_multimap` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 
@@ -224,7 +224,7 @@ concurrent_unordered_multimap(
 *Н_ачать*<br/>
 Положение первого элемента в диапазоне копируемых элементов.
 
-*_Окончания*<br/>
+*_End*<br/>
 Положение первого элемента после диапазона копируемых элементов.
 
 *_Umap*<br/>
@@ -397,7 +397,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 Тип значения, вставляемого в схеме.
 
-*значение*<br/>
+*value*<br/>
 Вставляемое значение.
 
 *_Where*<br/>
@@ -724,4 +724,3 @@ size_type unsafe_max_bucket_count() const;
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
-

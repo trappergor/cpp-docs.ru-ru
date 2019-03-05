@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177034"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304562"
 ---
 # <a name="crebarctrl-class"></a>Класс CReBarCtrl
 
@@ -115,11 +115,11 @@ ms.locfileid: "52177034"
 class CReBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CReBarCtrl::CReBarCtrl](#crebarctrl)|Создает объект `CReBarCtrl`.|
 
@@ -956,9 +956,9 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
-|*dwMask*|[in] Побитовое сочетание (OR) флагов, определяющих, какие флаги в *dwStyleEx* применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображать разделителя внизу в режиме по горизонтали, а справа в режиме по вертикали.<br /><br /> RBS_EX_TRANSPARENT: Пересылать [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) родительское окно.|
+|*dwMask*|[in] Побитовое сочетание (OR) флагов, определяющих, какие флаги в *dwStyleEx* применить параметр. Используйте один или несколько из следующих значений:<br /><br /> RBS_EX_SPLITTER: По умолчанию отображать разделителя внизу в режиме по горизонтали, а справа в режиме по вертикали.<br /><br /> RBS_EX_TRANSPARENT: Вперед [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd) родительское окно.|
 |*dwStyleEx*|[in] Побитовое сочетание (OR) флагов, которые определяют стили для применения. Чтобы задать стиль, укажите флаг, используемый в *dwMask* параметра. Чтобы сбросить стиль, укажите двоичный нуль.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1137,4 +1137,3 @@ BOOL SizeToRect(CRect& rect);
 
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 3b6803b0ddfe09feb37a6e0d3072d8afa422de8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476659"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270193"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 
@@ -39,19 +39,19 @@ class extent;
 
 **Заголовок** : amp.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** Параллельность
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[область конструктора](#ctor)|Инициализирует новый экземпляр класса `extent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Содержит](#contains)|Проверяет, что указанный `extent` объект с указанным рангом.|
 |[size](#size)|Возвращает полный линейный размер области памяти (в единицах элементов).|
@@ -59,7 +59,7 @@ class extent;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator-](#operator_min)|Возвращает новый `extent` объект, созданный путем вычитания `index` элементы из соответствующих `extent` элементов.|
 |[оператор--](#operator_min_min)|Уменьшает каждый элемент `extent` объекта.|
@@ -75,7 +75,7 @@ class extent;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Ранг константа](#rank)|Получает ранг объекта `extent` объекта.|
 

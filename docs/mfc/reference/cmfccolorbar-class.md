@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: 6e6ce3f48e2b0a7b0aa8396047eb4a52015f364d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283258"
 ---
 # <a name="cmfccolorbar-class"></a>Класс CMFCColorBar
 
@@ -91,7 +91,7 @@ ms.locfileid: "51694846"
 class CMFCColorBar : public CMFCPopupMenuBar
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -123,7 +123,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCColorBar::AdjustLocations](#adjustlocations)|Регулирует положение кнопки цветов на цветовой панели управления.|
 |[CMFCColorBar::AllowChangeTextLabels](#allowchangetextlabels)|Указывает, можно ли изменить текстовую метку из кнопок цвет.|
@@ -144,7 +144,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|Имя|Описание:|
 |----------|-----------------|
 |`m_bInternal`|Логическое поле, которое определяет, обрабатываются ли события мыши. Как правило события мыши обрабатываются, когда это поле имеет значение TRUE и FALSE — режим настройки.|
 |`m_bIsEnabled`|Логическое значение, указывающее, включен ли элемент управления.|
@@ -333,7 +333,7 @@ CMFCColorBar(
 *Цвета*<br/>
 [in] Массив цветов, отображаемых на цветовой панели управления структурой.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Изначально выбранного цвета.
 
 *lpszAutoColor*<br/>
@@ -388,7 +388,7 @@ void ContextToSize(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*bSquareButtons*|[in] Значение TRUE, чтобы указать, что фигуры кнопок на элементе управления полосы цвета квадрата; в противном случае — значение FALSE. Значение по умолчанию — TRUE.|
 |*bCenterButtons*|[in] Значение TRUE, чтобы указать, что содержимое на поверхности нажимаемой кнопки управления цветовой полосы выравнивается по центру; в противном случае — значение FALSE. Значение по умолчанию — TRUE.|
@@ -425,13 +425,13 @@ virtual BOOL Create(
 [in] Указатель на палитру цветов. Значение по умолчанию имеет значение NULL.
 
 *nColumns*<br/>
-[in] Число столбцов в элементе управления цветовой полосы. Значение по умолчанию — 0.
+[in] Число столбцов в элементе управления цветовой полосы. Значение по умолчанию — 0.
 
 *nRowsDockHorz*<br/>
-[in] Число строк в элементе управления цветовой панели, когда она закреплена горизонтально. Значение по умолчанию — 0.
+[in] Число строк в элементе управления цветовой панели, когда она закреплена горизонтально. Значение по умолчанию — 0.
 
 *nColDockVert*<br/>
-[in] Число столбцов в элементе управления цветовой панели, когда она закреплена по вертикали. Значение по умолчанию — 0.
+[in] Число столбцов в элементе управления цветовой панели, когда она закреплена по вертикали. Значение по умолчанию — 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -459,7 +459,7 @@ virtual BOOL CreateControl(
 *pParentWnd*<br/>
 [in] Указатель на родительское окно. Не может принимать значение NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, указывающий, куда нарисуйте элемент управления цветовой полосы.
 
 *nID*<br/>
@@ -666,7 +666,7 @@ static int InitColors(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pPalette*|[in] Указатель на объект в палитре, или значение NULL. Если этот параметр имеет значение NULL, этот метод использует палитры по умолчанию операционной системы.|
 |*arColors*|[in] Массив цветов.|
@@ -701,7 +701,7 @@ virtual BOOL OnKey(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Виртуальная клавиша код для ключа, который пользователь нажал клавиши.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -718,7 +718,7 @@ virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pButton*|[in] Указатель на элемент управления, находящийся на панели инструментов.|
 
@@ -790,7 +790,7 @@ CPalette* SelectPalette(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pDC*|[in] Указатель на контекст устройства кнопки родительского текущего элемента управления цветовой полосы.|
 
@@ -808,7 +808,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета RGB.
 
 ##  <a name="setcolorname"></a>  CMFCColorBar::SetColorName
@@ -823,7 +823,7 @@ static void SetColorName(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета RGB.
 
 *strName*<br/>

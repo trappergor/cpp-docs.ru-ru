@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: a4846fb8ea34a3d6a83ae892eabee74f4a48cd6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284870"
 ---
 # <a name="cd2dresource-class"></a>Класс CD2DResource
 
@@ -39,7 +39,7 @@ ms.locfileid: "50586385"
 class CD2DResource : public CObject;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -50,7 +50,7 @@ class CD2DResource : public CObject;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DResource::CREATE](#create)|Создает CD2DResource.|
 |[CD2DResource::destroy](#destroy)|Уничтожает объект CD2DResource.|
@@ -65,7 +65,7 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет destoyed владельцем (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Указатель на родительский CRenderTarget)|

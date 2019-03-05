@@ -7,16 +7,16 @@ helpviewer_keywords:
 - threading [C++], troubleshooting
 - troubleshooting [C++], multithreading
 ms.assetid: 06cc231d-bb5a-409d-8bd3-676c9e2a8c5b
-ms.openlocfilehash: 598758a4ceb0a12640faf2832f9f03cd1e44ef9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ceae832599243ffa0aad2b6fa67148e7ea30510
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461650"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288194"
 ---
 # <a name="avoiding-problem-areas-with-multithread-programs"></a>Устранение потенциальных проблем при работе с многопотоковыми программами
 
-Существует несколько проблем, которые могут возникнуть в создании, связывание или выполнении многопоточной программы на C. В следующей таблице описываются некоторые из наиболее распространенных проблем. (Описание аналогичных проблем с точки зрения MFC см. в разделе [Многопоточность: советы по программированию](multithreading-programming-tips.md).)
+Существует несколько проблем, которые могут возникнуть в создании, связывание или выполнении многопоточной программы на C. В следующей таблице описываются некоторые из наиболее распространенных проблем. (Описание аналогичных проблем с точки зрения MFC см. в разделе [Многопоточность: Советы по программированию](multithreading-programming-tips.md).)
 
 |Проблема|Возможная причина|
 |-------------|--------------------|

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650508"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273401"
 ---
 # <a name="options-atl-simple-object-wizard"></a>Параметры, мастер простых объектов ATL
 
@@ -37,7 +37,7 @@ ms.locfileid: "50650508"
 
    Указывает, использует ли объект [статистической обработки](/windows/desktop/com/aggregation). Агрегатный объект выбирает, какие интерфейсы предоставлять клиентам и интерфейсы представленная в виде агрегатного объекта реализовывать их. Клиенты агрегатного объекта обмениваться данными только с помощью агрегатного объекта.
 
-   |Параметр|Описание|
+   |Параметр|Описание:|
    |------------|-----------------|
    |**Да**|Указывает, что объект может быть агрегировано. По умолчанию.|
    |**No**|Указывает, что объект не является агрегатом.|
@@ -56,7 +56,7 @@ ms.locfileid: "50650508"
 
    Указывает дополнительную поддержку для объекта.
 
-   |Параметр|Описание|
+   |Параметр|Описание:|
    |------------|-----------------|
    |**ISupportErrorInfo**|Создает поддержка [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) интерфейс, объект может возвращать сведения об ошибке клиенту.|
    |**Точки подключения**|Включает точки соединения для объекта, сделав являются производными от класса объекта [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
@@ -68,4 +68,3 @@ ms.locfileid: "50650508"
 [Мастер простых объектов ATL](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [Простой объект ATL](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [Внутрипроцессный сервер потоками](/windows/desktop/com/in-process-server-threading-issues)
-

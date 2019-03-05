@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462a4aa04ddc542db8aba734ed93ab0fae905dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573385"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283843"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>Класс CMFCRibbonMiniToolBar
 
@@ -33,11 +33,11 @@ ms.locfileid: "50573385"
 class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCRibbonMiniToolBar::CMFCRibbonMiniToolBar`|Конструктор по умолчанию.|
 |`CMFCRibbonMiniToolBar::~CMFCRibbonMiniToolBar`|Деструктор.|
@@ -168,7 +168,7 @@ BOOL ShowWithContextMenu(
 
 ##  <a name="iscontextmenumode"></a>  CMFCRibbonMiniToolBar::IsContextMenuMode
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 BOOL IsContextMenuMode() const;
@@ -180,7 +180,7 @@ BOOL IsContextMenuMode() const;
 
 ##  <a name="isribbonminitoolbar"></a>  CMFCRibbonMiniToolBar::IsRibbonMiniToolBar
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual BOOL IsRibbonMiniToolBar() const;

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - frame windows [MFC], using
 - MFC, frame windows
 ms.assetid: 4d773238-11f6-4ccf-8114-57310c5aaa2d
-ms.openlocfilehash: 1ce23633310482c52f60a591452e3d20ac10c706
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba304bce5bd0d91f4db8372b087c42c98b9c103d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676386"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259663"
 ---
 # <a name="using-frame-windows"></a>Использование окон фрейма
 
@@ -44,4 +44,3 @@ ms.locfileid: "50676386"
 ## <a name="see-also"></a>См. также
 
 [Окна фрейма](../mfc/frame-windows.md)
-

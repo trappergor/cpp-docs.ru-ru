@@ -10,20 +10,19 @@ helpviewer_keywords:
 - frame windows [MFC], dragging and dropping files in
 - drag and drop [MFC], Windows Explorer
 ms.assetid: 85560fe9-121b-4105-bd7b-216b966e19fa
-ms.openlocfilehash: 34fb6ec6d57bcf8bc1cf51a3ac0c0db5203b3ffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0129b939e0fe2afd5dd29623bb44418bfd16c20d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260419"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>Перетаскивание файлов в окне фрейма
 
 Окна фрейма управляет связь с помощью проводника или диспетчера файлов.
 
-Путем добавления нескольких инициализация вызывает в переопределении `CWinApp` функция-член `InitInstance`, как описано в [CWinApp: класс приложения](../mfc/cwinapp-the-application-class.md), может иметь фрейма окна косвенно открывать файлы, перетащить из файла Проводник или диспетчер файлов и удалить в окне фрейма. См. в разделе [перетаскивание диспетчера файлов](../mfc/special-cwinapp-services.md).
+Путем добавления нескольких инициализация вызывает в переопределении `CWinApp` функция-член `InitInstance`, как описано в [CWinApp: Класс приложения](../mfc/cwinapp-the-application-class.md), вы можете косвенно открывать файлы из проводника или диспетчер файлов перетащен фрейм окна фрейма окна. См. в разделе [перетаскивание диспетчера файлов](../mfc/special-cwinapp-services.md).
 
 ## <a name="see-also"></a>См. также
 
 [Использование окон фрейма](../mfc/using-frame-windows.md)
-

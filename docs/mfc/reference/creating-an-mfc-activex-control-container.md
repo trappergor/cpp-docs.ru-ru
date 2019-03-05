@@ -9,12 +9,12 @@ helpviewer_keywords:
 - containers [MFC], creating
 - OLE controls [MFC], containers
 ms.assetid: ec70e137-7c14-4940-bd0e-fd4edcc63ea5
-ms.openlocfilehash: 04c271db18bc8d8ba273f16f7493bbbb1da96421
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0d5fe419375535ab8c52378b9005df88634e99a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544993"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275900"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>Создание контейнеров элементов управления MFC ActiveX
 
@@ -27,7 +27,7 @@ ms.locfileid: "50544993"
 
 - **Новое приложение MFC**. Чтобы создать новую программу MFC, включает автоматизацию, Визуальное редактирование, составные файлы или поддержку элементов управления, используйте мастер приложений MFC и выбрать соответствующие варианты автоматизации.
 
-- **Существующее приложение MFC**. При добавлении вложения элемента управления в существующее приложение MFC, см. в разделе [контейнеры элементов управления: вручную Включение OLE вложении элементов управления](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
+- **Существующее приложение MFC**. При добавлении вложения элемента управления в существующее приложение MFC, см. в разделе [контейнеры элементов управления: Включение вложения элемента управления OLE вручную](../../mfc/activex-control-containers-manually-enabling-activex-control-containment.md).
 
 ### <a name="to-create-an-activex-container-for-any-of-the-following-types-of-applications"></a>Чтобы создать контейнер ActiveX для любого из следующих типов приложений
 
@@ -40,4 +40,3 @@ ms.locfileid: "50544993"
 ## <a name="see-also"></a>См. также
 
 [Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)
-

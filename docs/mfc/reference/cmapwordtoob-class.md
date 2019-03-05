@@ -34,16 +34,16 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 9c9bcd76-456f-4cf9-b03c-dd28b49d5e4f
-ms.openlocfilehash: c449fd6e2d2dc1b8d912724d9888b432a2809427
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 42c41407b86705e46d43113326d15f1ef3271d1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657309"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300707"
 ---
 # <a name="cmapwordtoob-class"></a>Класс CMapWordToOb
 
-Поддерживает сопоставления указателей `CObject` , зашифрованных 16-разрядными словами.
+Поддерживает сопоставления указателей `CObject`, зашифрованных 16-разрядными словами.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,7 +51,7 @@ ms.locfileid: "53657309"
 class CMapWordToOb : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 Функции-члены `CMapWordToOb` похожи на функции-члены класса [CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CMapStringToOb`. Если вы видите `CString` или **const** указатель на **char** как параметр функции или возвращаемое значение, замените слово.
 
@@ -63,7 +63,7 @@ class CMapWordToOb : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
@@ -115,4 +115,3 @@ class CMapWordToOb : public CObject
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

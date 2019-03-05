@@ -12,12 +12,12 @@ helpviewer_keywords:
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614738"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269829"
 ---
 # <a name="cadapt-class"></a>Класс CAdapt
 
@@ -35,17 +35,17 @@ class CAdapt
 *T*<br/>
 Адаптированный тип.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAdapt::CAdapt](#cadapt)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAdapt::operator const T &](#operator_const_t_amp)|Возвращает **const** ссылка `m_T`.|
 |[CAdapt::operator T &](#operator_t_amp)|Возвращает ссылку на `m_T`.|
@@ -55,7 +55,7 @@ class CAdapt
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAdapt::m_T](#m_t)|Адаптируемые данные.|
 

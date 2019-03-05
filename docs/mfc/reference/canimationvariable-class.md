@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269036"
 ---
 # <a name="canimationvariable-class"></a>Класс CAnimationVariable
 
@@ -61,7 +61,7 @@ ms.locfileid: "50559566"
 class CAnimationVariable;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -72,7 +72,7 @@ class CAnimationVariable;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationVariable::AddTransition](#addtransition)|Добавляет переход.|
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Добавляет переходы из внутреннего списка, чтобы раскадровка.|
@@ -89,19 +89,19 @@ class CAnimationVariable;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Задает связь между переменной анимации и объекта анимации.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, должен ли быть удален переход на связанные объекты.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Указывает значение по умолчанию, которое распространяется на IUIAnimationVariable.|
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Содержит список переходов, анимация этой переменной анимации.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - command handling [MFC], routing commands
 - overriding, standard command routing
 ms.assetid: 872b698a-7432-40c4-9008-68721e8effa5
-ms.openlocfilehash: 132831939c05f7e8f84c306f5d08bba9cd5e8ea4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5383c1053894d44e23baf51b19ac3df4e60158e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277954"
 ---
 # <a name="overriding-the-standard-command-routing"></a>Переопределение стандартной маршрутизации команд
 
@@ -27,4 +27,3 @@ ms.locfileid: "50648450"
 ## <a name="see-also"></a>См. также
 
 [Вызовы обработчика со стороны платформы](../mfc/how-the-framework-calls-a-handler.md)
-

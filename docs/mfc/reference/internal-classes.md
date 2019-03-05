@@ -307,12 +307,12 @@ helpviewer_keywords:
 - CMenuImages class [MFC]
 - CleanUp method [MFC]
 ms.assetid: 3e2276aa-b02a-4781-97ba-ea074045e9e2
-ms.openlocfilehash: 706ba4cdd1a8f9d77857c52898058aa62fcca8c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae35aefefe548990eeb7fbe637839e475036c2bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300093"
 ---
 # <a name="internal-classes"></a>Внутренние классы
 
@@ -320,12 +320,12 @@ ms.locfileid: "50435494"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-|Класс|Описание|
+|Класс|Описание:|
 |-----------|-----------------|
 |`CCommandManager Class`|`CCommandManager` Класс управляет команд и их связи с изображениями.|
 |`CDialogImpl Class (MFC)`|Содержит подробные сведения о реализации классы на базе диалоговых окон, таких как `CDialogEx`.|
 |`CDocumentAdapter Class`|Реализует IDocument интерфейс, необходимый для поиска и организовать обработчиков.|
-|`CFrameImpl Class`|`CFrameImpl` Класс обрабатывает настройки панели инструментов для следующие классы окна фрейма: [класс CFrameWndEx](../../mfc/reference/cframewndex-class.md), [класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), и [класс COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
+|`CFrameImpl Class`|`CFrameImpl` Класс обрабатывает настройки панели инструментов для следующие классы окна фрейма: [Класс CFrameWndEx](../../mfc/reference/cframewndex-class.md), [класс CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md), и [класс COleIPFrameWndEx](../../mfc/reference/coleipframewndex-class.md).|
 |`CFullScreenImpl Class`|Реализует весь экран функции, общие для приложения SDI и MDI.|
 |`CMDIClientAreaWnd Class`|`CMDIClientAreaWnd` Класс — это вспомогательный класс, который упрощает реализацию вкладок MDI и групп с вкладками MDI.|
 |`CMemDC Class`|Вспомогательный класс для контекста устройства памяти. Контекст устройства памяти поддерживает созданного рисунка.|
@@ -412,4 +412,3 @@ ms.locfileid: "50435494"
 ## <a name="see-also"></a>См. также
 
 [Приложения MFC для рабочего стола](../../mfc/mfc-desktop-applications.md)
-

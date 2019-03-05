@@ -3,12 +3,12 @@ title: Добавление события (учебник ATL, часть 5)
 ms.custom: get-started-article
 ms.date: 09/27/2018
 ms.assetid: 2de12022-3148-4ce3-8606-8a9d4274f0e9
-ms.openlocfilehash: 4576af12f73e907fa8826ad71185a42ed9b9308e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57fc2adaadcca52cfc25736b5f9010fcb65a2ff0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643047"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278643"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>Добавление события (учебник ATL, часть 5)
 
@@ -158,4 +158,4 @@ ms.locfileid: "50643047"
 
 ## <a name="see-also"></a>См. также
 
-[Учебник](../atl/active-template-library-atl-tutorial.md)
+[Руководство](../atl/active-template-library-atl-tutorial.md)

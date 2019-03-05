@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CStringElementTraitsI class
 ms.assetid: c23f92b1-91e5-400f-96ed-258b02622b7a
-ms.openlocfilehash: 35215546268c4c48f913e7aef763768fffc76d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77357aa2be326ebebaaf5a8614faaf88a0c3c06b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276147"
 ---
 # <a name="cstringelementtraitsi-class"></a>Класс CStringElementTraitsI
 
@@ -35,18 +35,18 @@ class CStringElementTraitsI : public CElementTraitsBase<T>
 *T*<br/>
 Тип данных, хранимых в коллекции.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStringElementTraitsI::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
 |[CStringElementTraitsI::OUTARGTYPE](#outargtype)|Тип данных, который нужно использовать для извлечения элементов из объекта класса коллекции.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStringElementTraitsI::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства, без учета различий в регистре.|
 |[CStringElementTraitsI::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух строковых элементов, без учета различий в регистре.|

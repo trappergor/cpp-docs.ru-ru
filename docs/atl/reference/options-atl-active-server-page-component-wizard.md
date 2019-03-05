@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Active Server Page Component Wizard, options
 ms.assetid: 54f34e26-53c7-4456-9675-cb86e356bde0
-ms.openlocfilehash: d8d8eaa6190bd04d626b9a23c9d27d1f9daeb003
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e9740a67f265484c349a4df644be882dba30c13
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595641"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280242"
 ---
 # <a name="options-atl-active-server-page-component-wizard"></a>Параметры, мастер компонентов страницы активного сервера ATL
 
@@ -25,7 +25,7 @@ ms.locfileid: "50595641"
 
    См. в разделе [указание потоковой модели проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) Дополнительные сведения.
 
-   |Параметр|Описание|
+   |Параметр|Описание:|
    |------------|-----------------|
    |**Single**|Указывает, что объект использует единый потоковой модели. В модели потоков единый объект всегда выполняется в основном потоке COM. См. в разделе [однопотокового подразделения](/windows/desktop/com/single-threaded-apartments) и [InprocServer32](/windows/desktop/com/inprocserver32) Дополнительные сведения.|
    |**Подразделения**|Указывает, что объект использует потоковое. Равнозначен однопотоковое подразделение. Каждый объект компонента с потоковым подразделением назначается подразделение для его потока, в течение жизненного цикла объекта. Тем не менее несколько потоков может использоваться для нескольких объектов. Каждое подразделение привязано к конкретному потоку и имеет цикл обработки сообщений Windows (по умолчанию).<br /><br /> См. в разделе [однопотокового подразделения](/windows/desktop/com/single-threaded-apartments) Дополнительные сведения.|
@@ -37,7 +37,7 @@ ms.locfileid: "50595641"
 
    Указывает, использует ли объект [статистической обработки](/windows/desktop/com/aggregation). Агрегатный объект выбирает, какие интерфейсы предоставлять клиентам и интерфейсы представленная в виде агрегатного объекта реализовывать их. Клиенты агрегатного объекта обмениваться данными только с помощью агрегатного объекта.
 
-   |Параметр|Описание|
+   |Параметр|Описание:|
    |------------|-----------------|
    |**Да**|Указывает, что объект может быть агрегировано. По умолчанию.|
    |**No**|Указывает, что объект не является агрегатом.|
@@ -47,7 +47,7 @@ ms.locfileid: "50595641"
 
    Дополнительные варианты поддержки:
 
-   |Параметр|Описание|
+   |Параметр|Описание:|
    |------------|-----------------|
    |**ISupportErrorInfo**|Создает поддержка [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md) интерфейс, объект может возвращать сведения об ошибке клиенту.|
    |**Точки подключения**|Включает точки соединения для объекта, сделав являются производными от класса объекта [IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md).|
@@ -57,4 +57,3 @@ ms.locfileid: "50595641"
 
 [Мастер ASP-компонента ATL](../../atl/reference/atl-active-server-page-component-wizard.md)<br/>
 [ASP-компонента ATL](../../atl/reference/adding-an-atl-active-server-page-component.md)
-

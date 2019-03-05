@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ISpecifyPropertyPages
 - ISpecifyPropertyPagesImpl class
 ms.assetid: 4e4b9795-b656-4d56-9b8c-85941e7731f9
-ms.openlocfilehash: fcabbcd2d5977a28f46b3d8ebfc47e8fd978f3cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f5db65d1c318677a630307f44533e51d63ec44d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272013"
 ---
 # <a name="ispecifypropertypagesimpl-class"></a>Класс ISpecifyPropertyPagesImpl
 
@@ -37,11 +37,11 @@ class ATL_NO_VTABLE ISpecifyPropertyPagesImpl
 *T*<br/>
 Ваш класс, производный от `ISpecifyPropertyPagesImpl`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[ISpecifyPropertyPagesImpl::GetPages](#getpages)|Заполняет значения подсчета массив UUID. Каждый UUID соответствует CLSID для одного из страницы свойств, которые могут отображаться в окне свойств объекта.|
 

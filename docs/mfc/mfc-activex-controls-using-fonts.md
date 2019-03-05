@@ -1,5 +1,5 @@
 ---
-title: 'Элементы управления MFC ActiveX: использование шрифтов'
+title: Элементы ActiveX в MFC. Использование шрифтов
 ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ce1e913bb3bd1c3b74db43dc02d9d360b9cfd00c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175825"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271311"
 ---
-# <a name="mfc-activex-controls-using-fonts"></a>Элементы управления MFC ActiveX: использование шрифтов
+# <a name="mfc-activex-controls-using-fonts"></a>Элементы ActiveX в MFC. Использование шрифтов
 
 Если элемент управления ActiveX отображает текст, можно разрешить пользователю изменять внешний вид текста путем изменения свойства шрифта элемента управления. Свойства шрифта, реализуются в виде объектов шрифта и может принимать одно из двух типов: стандартный или пользовательский. Стандартные свойства шрифта являются свойства preimplemented шрифтов, которые могут быть добавлены с помощью мастера добавления свойства. Пользовательские свойства шрифта не являются preimplemented и разработчик элемента управления определяет свойства поведения и использования.
 
@@ -42,7 +42,7 @@ ms.locfileid: "52175825"
 
 Доступ к объекту шрифта, используя [GetFont](../mfc/reference/colecontrol-class.md#getfont), [SetFont](../mfc/reference/colecontrol-class.md#setfont), и [InternalGetFont](../mfc/reference/colecontrol-class.md#internalgetfont) функции `COleControl`. Элемент управления пользователя будет доступ к объекту шрифта через `GetFont` и `SetFont` функций в так же, как любое другое свойство Get и Set. Если требуется доступ к объекту шрифта из внутри элемента управления, используйте `InternalGetFont` функции.
 
-Как уже говорилось в [элементы управления MFC ActiveX: свойства](../mfc/mfc-activex-controls-properties.md), добавление стандартных свойств упрощается благодаря [мастер добавления свойств](../ide/names-add-property-wizard.md). Выберите свойство Font и мастер добавления свойств автоматически вставляет акций запись шрифта в диспетчерскую карту элемента управления.
+Как уже говорилось в [элементы управления MFC ActiveX: Свойства](../mfc/mfc-activex-controls-properties.md), добавление стандартных свойств упрощается благодаря [мастер добавления свойств](../ide/names-add-property-wizard.md). Выберите свойство Font и мастер добавления свойств автоматически вставляет акций запись шрифта в диспетчерскую карту элемента управления.
 
 #### <a name="to-add-the-stock-font-property-using-the-add-property-wizard"></a>Чтобы добавить свойство Font с помощью мастера добавления свойства
 
@@ -236,6 +236,5 @@ ms.locfileid: "52175825"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Использование изображений в элементе ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
+[Элементы ActiveX в MFC. Использование изображений в элементе управления ActiveX](../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md)<br/>
 [Элементы ActiveX в MFC. Использование стандартных страниц свойств](../mfc/mfc-activex-controls-using-stock-property-pages.md)
-

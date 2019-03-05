@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dialog classes [MFC], common
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
-ms.openlocfilehash: 9e0ee68970b9ee3255ae72699dc185fc5de5a0f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577244"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303077"
 ---
 # <a name="common-dialog-classes"></a>Классы общих диалоговых окон
 
@@ -24,7 +24,7 @@ ms.locfileid: "50577244"
 
 ### <a name="common-dialog-classes"></a>Классы общих диалоговых окон
 
-|Диалоговое окно производного класса|Цель|
+|Диалоговое окно производного класса|Назначение|
 |--------------------------|-------------|
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|Позволяет пользователю выберите цвета.|
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|Позволяет пользователю выбрать имя файла для открытия или сохранения.|
@@ -42,4 +42,3 @@ ms.locfileid: "50577244"
 [Диалоговые окна](../mfc/dialog-boxes.md)<br/>
 [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [Диалоговые окна в OLE](../mfc/dialog-boxes-in-ole.md)
-

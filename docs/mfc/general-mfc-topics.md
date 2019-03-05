@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270973"
 ---
 # <a name="general-mfc-topics"></a>Общие разделы по MFC
 
@@ -33,7 +33,7 @@ ms.locfileid: "50564727"
 
 [Сборка в платформе](../mfc/building-on-the-framework.md)
 
-[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)
+[CWinApp: Класс приложений](../mfc/cwinapp-the-application-class.md)
 
 [Шаблоны документов и процесс создания документов и представлений](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -58,4 +58,3 @@ ms.locfileid: "50564727"
 ## <a name="see-also"></a>См. также
 
 [Работа с объектами окон](../mfc/working-with-window-objects.md)
-

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178178"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296739"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -51,17 +51,17 @@ ms.locfileid: "53178178"
 class CBitmap : public CGdiObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Создает объект `CBitmap`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Инициализирует объект с зависящие от устройства памяти растрового изображения, который имеет заданную ширину, высоту и битовый шаблон.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Инициализирует объект с точечным рисунком ширину, высоту и битовый шаблон (если оно указано), заданный в `BITMAP` структуры.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBitmap::operator HBITMAP](#operator_hbitmap)|Возвращает дескриптор Windows, подключенный к `CBitmap` объекта.|
 
@@ -524,4 +524,3 @@ GDI не использует эти значения, за исключение
 [Пример MFC MDI](../../visual-cpp-samples.md)<br/>
 [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

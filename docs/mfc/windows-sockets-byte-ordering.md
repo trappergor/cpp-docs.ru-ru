@@ -6,16 +6,16 @@ helpviewer_keywords:
 - sockets [MFC], byte order issues
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
-ms.openlocfilehash: 74d3b53ae3ab476ef1224caed91f31929fcce1ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278097"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Сокеты Windows. Порядок байтов
 
-В этой статье и в двух других статьях приведены некоторые проблемы в программировании сокетов Windows. В этой статье рассматривается порядок байтов. Другие проблемы описанные в статьях: [Windows Sockets: блокирует](../mfc/windows-sockets-blocking.md) и [Windows Sockets: преобразование строк](../mfc/windows-sockets-converting-strings.md).
+В этой статье и в двух других статьях приведены некоторые проблемы в программировании сокетов Windows. В этой статье рассматривается порядок байтов. Другие проблемы описанные в статьях: [Сокеты Windows. Блокировка](../mfc/windows-sockets-blocking.md) и [сокеты Windows: Преобразование строк](../mfc/windows-sockets-converting-strings.md).
 
 Если вы используете или являются производными от класса [CAsyncSocket](../mfc/reference/casyncsocket-class.md), вам потребуется самостоятельно управлять эти проблемы. Если вы используете или являются производными от класса [CSocket](../mfc/reference/csocket-class.md), MFC автоматически управляет ими.
 
@@ -57,7 +57,7 @@ ms.locfileid: "50453956"
 Является идеальным случаем использования сокетов MFC, при написании обе взаимодействующие стороны: с помощью MFC на обоих концах. Если вы создаете приложение, которое будет взаимодействовать с приложениями, не являющихся MFC, например FTP-сервера, может потребоваться управлять Смена байтов самостоятельно прежде чем передать данные в объект архив, с помощью процедуры преобразования Windows Sockets **ntohs**, **ntohl**, **htons**, и **htonl**. Пример этих функций, использовать для связи с приложением не MFC появляется далее в этой статье.
 
 > [!NOTE]
->  При другом конце связи не приложения MFC, следует избегать потоковой передачи объектов C++, производных от `CObject` в архива, так как получатель, не смогут их обработать. См. в примечании [Windows Sockets: с помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md).
+>  При другом конце связи не приложения MFC, следует избегать потоковой передачи объектов C++, производных от `CObject` в архива, так как получатель, не смогут их обработать. См. в примечании [сокеты Windows: Использование сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md).
 
 Дополнительные сведения о заказах байтов см. в спецификации Windows Sockets, доступны в пакете SDK для Windows.
 
@@ -83,7 +83,7 @@ ms.locfileid: "50453956"
 
 ### <a name="windows-sockets-byte-order-conversion-functions"></a>Функции преобразования порядка следования байтов сокеты Windows
 
-|Функция|Цель|
+|Функция|Назначение|
 |--------------|-------------|
 |**ntohs**|Преобразуйте 16-разрядное число из сетевого байтового формата узла порядка байтов (big-Endian для прямой порядок байтов).|
 |**ntohl**|Преобразуйте 32-разрядное число из сетевого байтового формата узла порядка байтов (big-Endian для прямой порядок байтов).|
@@ -96,17 +96,16 @@ ms.locfileid: "50453956"
 
 где `pMsg` — это указатель на объект с ++, производный от класса `CObject`. Это будет отправлять дополнительную информацию MFC, связанные с объектами и сервера, не может понять, как если бы он был в приложении MFC.
 
-Дополнительные сведения:
+Дополнительные сведения см. в следующих разделах.
 
 - [Сокеты Windows. Использование класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>См. также
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
-

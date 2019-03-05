@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465992"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293450"
 ---
 # <a name="cdrawingmanager-class"></a>Класс CDrawingManager
 
@@ -73,18 +73,18 @@ ms.locfileid: "50465992"
 class CDrawingManager : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Создает объект `CDrawingManager`.|
 |`CDrawingManager::~CDrawingManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Создает 32-разрядных аппаратно независимых точечный рисунок (DIB), приложения могут записывать данные в напрямую.|
 |[CDrawingManager::DrawAlpha](#drawalpha)|Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.|
@@ -156,7 +156,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*size*|[in] Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) параметр, указывающий размер растрового изображения.|
 |*pBits*|[out] Значения битов в указатель на указатель на данные, получающий расположение DIB.|
 |*Точечный рисунок*|Дескриптор для исходного растрового изображения|
@@ -213,7 +213,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, ограничивающий эллипс.
 
 *clrFill*<br/>
@@ -243,7 +243,7 @@ BOOL DrawGradientRing(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Объект [CRect](../../atl-mfc-shared/reference/crect-class.md) параметр, который задает границу для градиента кольца.
 
 *colorStart*<br/>
@@ -296,7 +296,7 @@ void DrawLineA(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*x1*|[in] Координата x, в которой начинается строка.|
 |*y1*|[in] Координата y, в которой начинается строка.|
 |*x2*|[in] Координата x, которой заканчивается строке.|
@@ -320,7 +320,7 @@ void DrawRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Границы для прямоугольника.
 
 *clrFill*<br/>
@@ -351,7 +351,7 @@ BOOL DrawShadow(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область в приложении. Рисования manager будет нарисовать тень под этой области.
 
 *nDepth*<br/>
@@ -410,7 +410,7 @@ void Fill4ColorsGradient(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольника для заливки.
 
 *colorStart1*<br/>
@@ -453,7 +453,7 @@ void FillGradient(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область для заливки.
 
 *colorStart*<br/>
@@ -491,7 +491,7 @@ void FillGradient2 (
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область для заливки.
 
 *colorStart*<br/>
@@ -527,7 +527,7 @@ BOOL GrayRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область для заливки.
 
 *nPercentage*<br/>
@@ -564,7 +564,7 @@ BOOL HighlightRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область, чтобы выделить.
 
 *nPercentage*<br/>
@@ -668,7 +668,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*H*|[in] Число от 0 до 360, указывающее оттенок цвета.|
 |*S*|[in] Число от 0 до 1, указывающее насыщенность цвета.|
 |*V*|[in] Число от 0 до 1, определяющее значение цвета.|
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] См. в разделе "Примечания".
 
-*концентратор*<br/>
+*rh*<br/>
 [in] См. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -745,7 +745,7 @@ void MirrorRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник области, чтобы отразить.
 
 *bHorz*<br/>
@@ -921,7 +921,7 @@ static void __stdcall SetAlphaPixel(
 *pBits*<br/>
 [in] Указатель на битовые значения для растрового изображения.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольная область в приложении. Диспетчер рисования рисует тень снизу и справа от этой области.
 
 *x*<br/>
@@ -966,13 +966,13 @@ static void __stdcall SetPixel(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pBits*|[in] Указатель на битовые значения растрового изображения.|
-|*CX*|[in] Общая ширина растрового изображения.|
+|*cx*|[in] Общая ширина растрового изображения.|
 |*CY*|[in] Общая высота растрового изображения.|
 |*x*|[in] Координата x пикселя в точечном рисунке для изменения.|
 |*y*|[in] Координата по оси y пикселя в точечном рисунке для изменения.|
-|*Цвет*|[in] Новый цвет пикселя, с предоставленным координатами.|
+|*color*|[in] Новый цвет пикселя, с предоставленным координатами.|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors
 
@@ -991,12 +991,12 @@ static COLORREF __stdcall SmartMixColors(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*color1*|[in] Первый цвет смешивания.|
 |*цвет2*|[in] Второй цвет смешивания.|
 |*dblLumRatio*|[in] Отношение для нового цвета яркость. `SmartMixColors` Умножает яркость цвета смешанной перед определением окончательный цвет этого отношения.|
-|*K1*|[in] Взвешенное отношение для первого цвета.|
-|*K2*|[in] Взвешенное отношение для второй цвет.|
+|*k1*|[in] Взвешенное отношение для первого цвета.|
+|*k2*|[in] Взвешенное отношение для второй цвет.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

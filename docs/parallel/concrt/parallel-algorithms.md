@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262874"
 ---
 # <a name="parallel-algorithms"></a>Параллельные алгоритмы
 
@@ -78,7 +78,7 @@ ms.locfileid: "52176449"
 
 Так как `parallel_for` алгоритм воздействующей на каждый элемент в параллельном режиме, зависит от порядка, в котором значения выводятся в консоль.
 
-Полный пример, использующий `parallel_for` алгоритм, см. в разделе [как: написание цикла parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
+Полный пример, использующий `parallel_for` алгоритм, см. в разделе [как: Написание цикла parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md).
 
 [[В начало](#top)]
 
@@ -104,7 +104,7 @@ ms.locfileid: "52176449"
 
 Так как `parallel_for_each` алгоритм воздействующей на каждый элемент в параллельном режиме, зависит от порядка, в котором значения выводятся в консоль.
 
-Полный пример, использующий `parallel_for_each` алгоритм, см. в разделе [как: написание цикла parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
+Полный пример, использующий `parallel_for_each` алгоритм, см. в разделе [как: Написание цикла parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md).
 
 [[В начало](#top)]
 
@@ -128,7 +128,7 @@ ms.locfileid: "52176449"
 108 11.2 HelloHello
 ```
 
-Полные примеры, использующие `parallel_invoke` алгоритм, см. в разделе [как: использование функции parallel_invoke для написания параллельного сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) и [как: использование функции parallel_invoke для выполнения параллельных операций](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
+Полные примеры, использующие `parallel_invoke` алгоритм, см. в разделе [как: Использование функции parallel_invoke для написания параллельного сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md) и [как: Использование функции parallel_invoke для выполнения параллельных операций](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md).
 
 [[В начало](#top)]
 
@@ -189,7 +189,7 @@ ms.locfileid: "52176449"
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-Еще один пример, который выполняет карту и уменьшить количество операций в параллельном режиме, см. в разделе [как: выполнения сопоставления и уменьшения параллельные операции](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Еще один пример, который выполняет карту и уменьшить количество операций в параллельном режиме, см. в разделе [как: Выполните карты и уменьшить объем операций в параллельном режиме](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 [[В начало](#top)]
 
@@ -199,16 +199,16 @@ ms.locfileid: "52176449"
 
 Алгоритмы `parallel_for`, `parallel_for_each` и `parallel_transform` предоставляют перегруженные версии, принимающие дополнительный параметр `_Partitioner`. Этот параметр определяет тип разделителя, разделяющий работу. Ниже указаны типы разделителей, которые определяет PPL.
 
-[Concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
+[concurrency::affinity_partitioner](../../parallel/concrt/reference/affinity-partitioner-class.md)<br/>
 Разделяет нагрузку на фиксированное число диапазонов (обычно число рабочих потоков, доступных для работы в цикле). Этот тип разделителя напоминает `static_partitioner`, но повышает степень сходства кэша путем сопоставления диапазонов рабочим потокам. Такой тип разделителя может повысить производительность, если цикл выполняется над одним и тем же набором данных несколько раз (например, цикл в цикле) и данные размещаются в кэше. Этот разделитель не полностью участвует в отмене. Он также не использует согласованную семантику блокировки и поэтому не может использоваться с параллельными циклами, имеющими прямую зависимость.
 
-[Concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
+[concurrency::auto_partitioner](../../parallel/concrt/reference/auto-partitioner-class.md)<br/>
 Разделяет нагрузку на начальное число диапазонов (обычно число рабочих потоков, доступных для работы в цикле). Среда выполнения использует этот тип по умолчанию, если не вызывается перегруженный параллельный алгоритм, принимающий параметр `_Partitioner`. Каждый диапазон можно разделить на поддиапазоны, что обеспечивает распределение нагрузки. Когда диапазон работы завершается, среда выполнения перераспределяет поддиапазоны работы с других потоков в этот поток. Используйте этот разделитель, если рабочая нагрузка не попадает в другие категории или требуется полная поддержка отмены или совместной блокировки.
 
-[Concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
+[concurrency::simple_partitioner](../../parallel/concrt/reference/simple-partitioner-class.md)<br/>
 Разделяет нагрузку на диапазоны так, чтобы каждый диапазон содержал по крайней мере такое число итераций, которое определено заданным размером блока. Этот тип разделителя участвует в распределении нагрузки; однако среда выполнения не делит диапазоны на поддиапазоны. Для каждого рабочего потока среда выполнения проверяет запрос отмены и выполняет распределение нагрузки после завершения числа итераций, определенных параметром `_Chunk_size`.
 
-[Concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
+[concurrency::static_partitioner](../../parallel/concrt/reference/static-partitioner-class.md)<br/>
 Разделяет нагрузку на фиксированное число диапазонов (обычно число рабочих потоков, доступных для работы в цикле). Этот разделитель может повысить производительность, поскольку не использует перенос нагрузки и, следовательно, содержит меньше побочной нагрузки. Используйте его, если при каждой итерации параллельного цикла выполняется фиксированный и одинаковый объем работы и нет необходимости поддержки отмены или прямой совместной блокировки.
 
 > [!WARNING]
@@ -317,12 +317,12 @@ PPL поддерживает три алгоритма сортировки: [co
 |[Практическое руководство. Написание цикла parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Демонстрируется использование `parallel_for_each` алгоритм для вычисления количества простых чисел в [std::array](../../standard-library/array-class-stl.md) объекта в параллельном режиме.|
 |[Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|Показывается, как использовать алгоритм `parallel_invoke` для повышения производительности алгоритма битонной сортировки.|
 |[Практическое руководство. Использование функции parallel_invoke для выполнения параллельных операций](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|Показывается, как использовать алгоритм `parallel_invoke` для повышения производительности программы, выполняющей несколько операций с общим источником данных.|
-|[Практическое руководство. Параллельное выполнение операций сопоставления и сокращения числа элементов](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Демонстрируется использование алгоритмов `parallel_transform` и `parallel_reduce` для выполнения операций сопоставления и редукции, которые подсчитывают вхождения слов в файлах.|
+|[Практическое руководство. Параллельное выполнение операций сопоставления и редукции числа элементов](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|Демонстрируется использование алгоритмов `parallel_transform` и `parallel_reduce` для выполнения операций сопоставления и редукции, которые подсчитывают вхождения слов в файлах.|
 |[Библиотека параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Описывается Библиотека PPL, которая предоставляет императивную модель программирования, обеспечивающую масштабируемость и простота в использовании разработки параллельных приложений.|
 |[Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)|Объясняет роль отмены в PPL, как отменить параллельную работу и как определить, когда группа задач отменяется.|
 |[Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Объясняется роль обработки исключений в среде выполнения с параллелизмом.|
 
-## <a name="reference"></a>Ссылка
+## <a name="reference"></a>Ссылки
 
 [Функция parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
 
@@ -343,4 +343,3 @@ PPL поддерживает три алгоритма сортировки: [co
 [Функция parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [Функция parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

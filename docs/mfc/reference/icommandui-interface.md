@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467113"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268178"
 ---
 # <a name="icommandui-interface"></a>Интерфейс ICommandUI
 
@@ -31,11 +31,11 @@ ms.locfileid: "50467113"
 interface class ICommandUI
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[icommandui__Check](#check)|Задает элемент пользовательского интерфейса для этой команды соответствующий проверки состояния.|
 |[ICommandUI::ContinueRouting](#continuerouting)|Указывает механизму маршрутизации команд продолжать маршрутизацию текущее сообщение по цепочке обработчиков.|
@@ -51,7 +51,7 @@ interface class ICommandUI
 
 `ICommandUI` используется в обработчике ON_UPDATE_COMMAND_UI в [ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-производного класса. При активации пользователем приложения (выбирает или щелчков мыши) меню, а каждый пункт меню отображается как включена или отключена. Целевой объект каждой команды меню предоставляет эти сведения, реализация обработчика ON_UPDATE_COMMAND_UI. Для каждого из объектов пользовательского интерфейса команды в приложении используйте окно свойств для создания записи схемы сообщений и прототип функции для каждого обработчика.
 
-Дополнительные сведения о том, как `ICommandUI` в маршрутизации команд используется интерфейс, см. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Дополнительные сведения о том, как `ICommandUI` в маршрутизации команд используется интерфейс, см. в разделе [как: Добавление команды управления маршрутизации в Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Примечания
 
-Это функция дополнительный член, который должен использоваться в сочетании с обработчик ON_COMMAND_EX, который возвращает значение FALSE. Дополнительные сведения см. в разделе технических TN006 Примечание: схемы сообщений.
+Это функция дополнительный член, который должен использоваться в сочетании с обработчик ON_COMMAND_EX, который возвращает значение FALSE. Дополнительные сведения см. в разделе технических TN006 Примечание: Схемы сообщений.
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

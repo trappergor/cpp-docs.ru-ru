@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179023"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283427"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 
@@ -351,7 +351,7 @@ ms.locfileid: "53179023"
 class COleControl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -361,7 +361,7 @@ class COleControl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|
@@ -738,7 +738,7 @@ short AmbientTextAlign();
 |------------------|-------------|
 |0|Общего выравнивания (номера для текста, справа, слева).|
 |1|Выровнять по левому краю|
-|2|Center|
+|2|Центр|
 |3|Выравнивание по правому краю|
 
 ### <a name="remarks"></a>Примечания
@@ -947,7 +947,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1083,7 +1083,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 *dwVersionDefault*<br/>
 Текущий номер версии элемента управления.
@@ -1192,7 +1192,7 @@ void AFX_CDECL FireEvent(
 |VTS_FONT|`IFontDisp*`|
 |VTS_HANDLE|HWND|
 |VTS_PICTURE|`IPictureDisp*`|
-|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE *|
+|VTS_OPTEXCLUSIVE|OLE_OPTEXCLUSIVE*|
 |VTS_TRISTATE|OLE_TRISTATE|
 |VTS_XPOS_HIMETRIC|OLE_XPOS_HIMETRIC|
 |VTS_YPOS_HIMETRIC|OLE_YPOS_HIMETRIC|
@@ -2936,7 +2936,7 @@ virtual void OnKeyDownEvent(
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Значение виртуального кода клавиши нажатой клавише. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h
 
 *nShiftState*<br/>
@@ -2962,7 +2962,7 @@ virtual void OnKeyPressEvent(USHORT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Содержит значение виртуального кода клавиши нажатой клавиши. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h
 
 ### <a name="remarks"></a>Примечания
@@ -2983,7 +2983,7 @@ virtual void OnKeyUpEvent(
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Значение виртуального кода клавиши нажатой клавише. Список стандартных коды виртуальных клавиш см. в разделе Winuser.h
 
 *nShiftState*<br/>

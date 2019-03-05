@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DSolidColorBrush [MFC], m_colorSolid
 - CD2DSolidColorBrush [MFC], m_pSolidColorBrush
 ms.assetid: d4506637-acce-4f74-8a9b-f0a45571a735
-ms.openlocfilehash: fa2114df914af07dd9baa140cc96cc94eaea6a91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41d1d1b8c28335ae6207e41d696359295a83e646
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291240"
 ---
 # <a name="cd2dsolidcolorbrush-class"></a>Класс CD2DSolidColorBrush
 
@@ -43,7 +43,7 @@ ms.locfileid: "50521775"
 class CD2DSolidColorBrush : public CD2DBrush;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -54,11 +54,11 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DSolidColorBrush::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
-|[CD2DSolidColorBrush::CREATE](#create)|Создает CD2DSolidColorBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DSolidColorBrush::destroy](#destroy)|Уничтожает объект CD2DSolidColorBrush. (Переопределяет [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
+|[CD2DSolidColorBrush::Create](#create)|Создает CD2DSolidColorBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DSolidColorBrush::Destroy](#destroy)|Уничтожает объект CD2DSolidColorBrush. (Переопределяет [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 |[CD2DSolidColorBrush::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
 |[CD2DSolidColorBrush::Get](#get)|Возвращает интерфейс ID2D1SolidColorBrush|
 |[CD2DSolidColorBrush::GetColor](#getcolor)|Получает цвет Одноцветная кисть|
@@ -66,13 +66,13 @@ class CD2DSolidColorBrush : public CD2DBrush;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush *](#operator_id2d1solidcolorbrush_star)|Возвращает интерфейс ID2D1SolidColorBrush|
+|[CD2DSolidColorBrush::operator ID2D1SolidColorBrush*](#operator_id2d1solidcolorbrush_star)|Возвращает интерфейс ID2D1SolidColorBrush|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DSolidColorBrush::m_colorSolid](#m_colorsolid)|Одноцветная кисть.|
 |[CD2DSolidColorBrush::m_pSolidColorBrush](#m_psolidcolorbrush)|Содержит указатель на объект ID2D1SolidColorBrush.|
@@ -136,7 +136,7 @@ CD2DSolidColorBrush(
 *pParentTarget*<br/>
 Указатель на целевой объект отрисовки.
 
-*Цвет*<br/>
+*color*<br/>
 Значения красного, зеленого, синего и альфа-цвета кисти.
 
 *pBrushProperties*<br/>
@@ -148,7 +148,7 @@ CD2DSolidColorBrush(
 *nAlpha*<br/>
 Прозрачность цвет кисти.
 
-##  <a name="create"></a>  CD2DSolidColorBrush::CREATE
+##  <a name="create"></a>  CD2DSolidColorBrush::Create
 
 Создает CD2DSolidColorBrush.
 
@@ -247,7 +247,7 @@ void SetColor(D2D1_COLOR_F color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Цвет этой кисти сплошным цветом
 
 ## <a name="see-also"></a>См. также

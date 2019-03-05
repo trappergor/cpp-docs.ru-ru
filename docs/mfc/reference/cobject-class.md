@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304071"
 ---
 # <a name="cobject-class"></a>Класс CObject
 
@@ -37,17 +37,17 @@ ms.locfileid: "50584019"
 class AFX_NOVTABLE CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObject::CObject](#cobject)|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObject::AssertValid](#assertvalid)|Проверяет целостность этого объекта.|
 |[CObject::Dump](#dump)|Создает дамп диагностики этого объекта.|
@@ -58,7 +58,7 @@ class AFX_NOVTABLE CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Удалить CObject::operator](#operator_delete)|Специальные **удалить** оператор.|
 |[Новый CObject::operator](#operator_new)|Специальные **новый** оператор.|
@@ -366,7 +366,7 @@ virtual void Serialize(CArchive& ar);
 
 `Serialize` вызывается [CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject) и [CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject). Эти функции связаны с `CArchive` оператор вставки ( **< \<**) и оператор извлечения ( **>>**).
 
-Примеры сериализации см. в статье [сериализации: сериализация объекта](../../mfc/serialization-serializing-an-object.md).
+Примеры сериализации см. в статье [сериализации: Сериализация объекта](../../mfc/serialization-serializing-an-object.md).
 
 ### <a name="example"></a>Пример
 
@@ -377,4 +377,3 @@ virtual void Serialize(CArchive& ar);
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

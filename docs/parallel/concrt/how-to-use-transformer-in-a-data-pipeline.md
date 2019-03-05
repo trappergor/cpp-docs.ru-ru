@@ -6,16 +6,16 @@ helpviewer_keywords:
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291475"
 ---
 # <a name="how-to-use-transformer-in-a-data-pipeline"></a>Практическое руководство. Использование преобразователя в конвейере данных
 
-В этом разделе содержится базовый пример, показывающий, как использовать [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) класс в конвейере данных. Более полный пример, в котором для выполнения обработки изображений используется конвейер данных, см. в разделе [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+В этом разделе содержится базовый пример, показывающий, как использовать [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) класс в конвейере данных. Более полный пример, в котором для выполнения обработки изображений используется конвейер данных, см. в разделе [Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 *Конвейеризация данных* — это общий шаблон в программировании параллельной обработки. Конвейер данных состоит из ряда этапов, где каждый этап выполняет работу и затем передает результат такой работы на следующий этап. `transformer` Является ключевым компонентом в данных конвейеров, так как он получает входное значение, класс выполняет работу на основе этого значения, а затем создает результат для другим компонентом.
 
@@ -58,5 +58,4 @@ The result is -42.
 
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
-[Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-
+[Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)

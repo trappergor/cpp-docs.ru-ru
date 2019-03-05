@@ -9,18 +9,18 @@ helpviewer_keywords:
 - functions [MFC], callback
 - callback functions [MFC]
 ms.assetid: b2a6857c-fdd3-45ec-8fd8-2e71fac77582
-ms.openlocfilehash: acb7b6c677d03ef1320e24373671a7577c2ccda8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e3440530dfe30b6667012c76b2904dbb2786c199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178438"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262302"
 ---
 # <a name="callback-functions-used-by-mfc"></a>Функции обратного вызова, используемые MFC
 
 Отобразятся три функции обратного вызова в библиотеке Microsoft Foundation Class. Эти функции обратного вызова передаются [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects), [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring), и [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc). Обратите внимание на то, что все функции обратного вызова должен перехват исключений MFC перед возвратом к Windows, так как исключения не может вызываться через границы обратного вызова. Дополнительные сведения об исключениях см. в статье [исключения](../../mfc/exception-handling-in-mfc.md).
 
-|name||
+|Имя||
 |----------|-----------------|
 |[Функция обратного вызова для CDC::EnumObjects](#enum_objects)||
 |[Функция обратного вызова для CDC::GrayString](#graystring)||
@@ -124,4 +124,3 @@ BOOL CALLBACK EXPORT AbortFunc(
 [CDC::EnumObjects](../../mfc/reference/cdc-class.md#enumobjects)<br/>
 [CDC::SetAbortProc](../../mfc/reference/cdc-class.md#setabortproc)<br/>
 [CDC::GrayString](../../mfc/reference/cdc-class.md#graystring)
-

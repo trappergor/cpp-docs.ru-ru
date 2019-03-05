@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
-ms.openlocfilehash: 3e0cc066e39cc71833e2061a1964619d04a80be3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291396"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 
@@ -39,7 +39,7 @@ ms.locfileid: "50580301"
 
 При включении настройки, вы создаете **Настройка** диалоговое окно, в обработчике настройки `OnViewCustomize` с помощью [класс CMFCToolBarsCustomizeDialog](../mfc/reference/cmfctoolbarscustomizedialog-class.md) класса. Прежде чем использовать **Настройка** диалоговое окно, вызвав [CMFCToolBarsCustomizeDialog::Create](../mfc/reference/cmfctoolbarscustomizedialog-class.md#create), вызовите [CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton) для замены стандартной кнопки с помощью нового элемента управления.
 
-## <a name="example-creating-a-find-combo-box"></a>Пример: Создание поле со списком поиска
+## <a name="example-creating-a-find-combo-box"></a>Пример Создание поля со списком поиска
 
 В этом разделе описывается создание **найти** поле со списком, содержащие строки поиска последних использовавшихся отображается на панели инструментов. Пользователь может введите строку в элементе управления и затем нажмите клавишу ВВОД для поиска документа или нажмите клавишу ESC для возвращения фокуса в главном фрейме. В этом примере предполагается, что документ отображается в [класс CEditView](../mfc/reference/ceditview-class.md)-производным представления.
 

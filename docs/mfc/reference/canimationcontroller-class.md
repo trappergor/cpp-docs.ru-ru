@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 93189c5c9301e513cfbdf110cf7753e211420fef
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894137"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270284"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -120,7 +120,7 @@ ms.locfileid: "54894137"
 class CAnimationController : public CObject;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -131,7 +131,7 @@ class CAnimationController : public CObject;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет группы, к которой принадлежит контроллер анимации объекта анимации.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорного кадра.|
@@ -174,14 +174,14 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный объект, который очищает группе.|
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой, когда только что был запланирован анимацию для указанной группы.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Опорный кадр, представляющий начало раскадровки.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот элемент имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|

@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::xz
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
-ms.openlocfilehash: c3588ccfc1e775ebecc245c055f600da4d2652ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440538"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266852"
 ---
 # <a name="int3-class"></a>Класс int_3
 
@@ -89,9 +89,9 @@ ms.locfileid: "50440538"
 class int_3;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
-### <a name="public-typedefs"></a>Общедоступные определения типов
+### <a name="public-typedefs"></a>Общедоступные Typedefs
 
 |Имя|Описание|
 |----------|-----------------|
@@ -99,13 +99,13 @@ class int_3;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор int_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -150,10 +150,10 @@ class int_3;
 |----------|-----------------|
 |int_3::operator-||
 |int_3::operator--||
-|int_3::operator % =||
-|int_3::operator & =||
-|int_3::operator * =||
-|int_3::operator / =||
+|int_3::operator%=||
+|int_3::operator&=||
+|int_3::operator*=||
+|int_3::operator/=||
 |int_3::operator ^ =||
 |int_3::operator&#124;=||
 |int_3::operator ~||
@@ -166,13 +166,13 @@ class int_3;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[размер константа](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||
@@ -213,7 +213,7 @@ class int_3;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ## <a name="ctor"></a> int_3
 

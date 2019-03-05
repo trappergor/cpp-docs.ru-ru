@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - event handling, implementing
 ms.assetid: e8b47ef0-0bdc-47ff-9dd6-34df11dde9a2
-ms.openlocfilehash: e2b17e7b6849163ee0e8e12696df25169e2773cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e3a47719e3160170ed1bfa64b315415ddc7a1c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654874"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265357"
 ---
 # <a name="atl-event-handling-summary"></a>Сводка по обработке событий ATL
 
@@ -49,4 +49,3 @@ ms.locfileid: "50654874"
 
 [Обработка событий](../atl/event-handling-and-atl.md)<br/>
 [Поддержка IDispEventImpl](../atl/supporting-idispeventimpl.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176696"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286917"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Пошаговое руководство. Отладка приложения C++ AMP
 
@@ -36,7 +36,7 @@ ms.locfileid: "52176696"
 
 - Чтение [Обзор C++ AMP](../../parallel/amp/cpp-amp-overview.md).
 
-- Убедитесь, что в этой строке отображаются числа в текстовом редакторе. Дополнительные сведения см. в разделе [как: отображение номеров строк в редакторе](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
+- Убедитесь, что в этой строке отображаются числа в текстовом редакторе. Дополнительные сведения см. в разделе [Как Отображение номеров строк в редакторе](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
 - Убедитесь, что вы используете Windows 8 или Windows Server 2012 для поддержки отладки в эмуляторе программного обеспечения.
 
@@ -220,7 +220,7 @@ ms.locfileid: "52176696"
 
 2. В **страницы свойств** диалогового **свойства конфигурации**, выберите **Отладка**.
 
-3. В **отладчик для запуска** выберите **локальный отладчик Windows**.
+3. В списке **Загружаемый отладчик** выберите **Локальный отладчик Windows**.
 
 4. В **тип отладчика** списке, убедитесь, что **автоматически** выбран.
 
@@ -335,7 +335,7 @@ ms.locfileid: "52176696"
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>Замораживание и размораживание потоков GPU
 
-Можно закрепить (приостанавливать) и размораживать (возобновлять) GPU потоки либо из **потоки GPU** окна или **контроль параллельных данных** окна. Можно заморозить или Разморозить потоки ЦП одинаково. сведения см. в разделе [как: использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window).
+Можно закрепить (приостанавливать) и размораживать (возобновлять) GPU потоки либо из **потоки GPU** окна или **контроль параллельных данных** окна. Можно заморозить или Разморозить потоки ЦП одинаково. сведения см. в разделе [как: Использование окна потоков](/visualstudio/debugger/how-to-use-the-threads-window).
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>Чтобы заморозить и Разморозить потоки GPU
 
@@ -387,6 +387,6 @@ ms.locfileid: "52176696"
 
 [Общие сведения о C++ AMP](../../parallel/amp/cpp-amp-overview.md)<br/>
 [Отладка кода GPU](/visualstudio/debugger/debugging-gpu-code)<br/>
-[Практическое руководство. Использование окна потоков GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[Практическое руководство. использование окна потоков GPU](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
 [Практическое руководство. Использование окна контроля параллельных данных](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [Анализ кода C++ AMP с Визуализатором параллелизма](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

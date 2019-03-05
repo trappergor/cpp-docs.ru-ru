@@ -8,12 +8,12 @@ helpviewer_keywords:
 - sockets [MFC], operations
 - stream sockets [MFC]
 ms.assetid: 43ce76f5-aad3-4247-b8a6-16cc7d012796
-ms.openlocfilehash: 98d06e005a09825d53f22330d6b0b58ccb2069fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f9fd339fdbdfee9381ea693568f40473c2397e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265552"
 ---
 # <a name="windows-sockets-sequence-of-operations"></a>Сокеты Windows. Последовательность операций
 
@@ -25,7 +25,7 @@ ms.locfileid: "50578646"
 
 ### <a name="setting-up-communication-between-a-server-and-a-client"></a>Настройка обмена данными между клиентом и сервером
 
-|Сервер|"Клиент";|
+|базы данных|Клиент|
 |------------|------------|
 |`// construct a socket`<br /><br /> `CSocket sockSrvr;`|`// construct a socket`<br /><br /> `CSocket sockClient;`|
 |`// create the SOCKET`<br /><br /> `sockSrvr.Create(nPort);`1,2|`// create the SOCKET`<br /><br /> `sockClient.Create( );`2|
@@ -36,7 +36,7 @@ ms.locfileid: "50578646"
 |`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - или -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - или обоих-|`// construct an archive`<br /><br /> `CArchive arIn(&file, CArchive::load);`<br /><br /> - или -<br /><br /> `CArchive arOut(&file, CArchive::store);`<br /><br /> - или обоих-|
 |`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - или -<br /><br /> `arOut << dwValue;`6|`// use the archive to pass data:`<br /><br /> `arIn >> dwValue;`<br /><br /> - или -<br /><br /> `arOut << dwValue;`6|
 
-1. Где *nPort* — это номер порта. См. в разделе [Windows Sockets: порты и адреса сокета](../mfc/windows-sockets-ports-and-socket-addresses.md) Дополнительные сведения о портах.
+1. Где *nPort* — это номер порта. См. в разделе [сокеты Windows: Порты и адреса сокета](../mfc/windows-sockets-ports-and-socket-addresses.md) Дополнительные сведения о портах.
 
 2. Сервер всегда необходимо указать порт, чтобы клиенты могли подключаться. `Create` Вызовов иногда также указывает адрес. На стороне клиента можно используете параметры по умолчанию, которые запрашиваются MFC использовать любой доступный порт.
 
@@ -54,7 +54,7 @@ ms.locfileid: "50578646"
 
 [CSocketFile](../mfc/reference/csocketfile-class.md) не поддерживает все `CFile`его функциональности. `CFile` такие элементы, как `Seek`, который не имеет смысла для подключения сокета, будут недоступны. По этой причине некоторые по умолчанию MFC `Serialize` функции не совместимы с `CSocketFile`. Это особенно верно для `CEditView` класса. Не следует пытаться сериализации `CEditView` данных с помощью `CArchive` объект присоединен к `CSocketFile` с помощью `CEditView::SerializeRaw`; используйте `CEditView::Serialize` вместо (не документировано). [SerializeRaw](../mfc/reference/ceditview-class.md#serializeraw) функция ожидает, что файл, который имеют функции, такие как `Seek`, в котором `CSocketFile` не поддерживает.
 
-Дополнительные сведения:
+Дополнительные сведения см. в следующих разделах.
 
 - [Сокеты Windows. Использование сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50578646"
 
 - [Сокеты Windows. Порты и адреса сокета](../mfc/windows-sockets-ports-and-socket-addresses.md)
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -72,4 +72,3 @@ ms.locfileid: "50578646"
 [Класс CSocket](../mfc/reference/csocket-class.md)<br/>
 [CAsyncSocket::Create](../mfc/reference/casyncsocket-class.md#create)<br/>
 [CAsyncSocket::Close](../mfc/reference/casyncsocket-class.md#close)
-

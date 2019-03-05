@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CDaoException [MFC], m_pErrorInfo
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
-ms.openlocfilehash: 224ce79094b174d0bd011bd89afbcfe6fb7735d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289004"
 ---
 # <a name="cdaoexception-class"></a>Класс CDaoException
 
@@ -35,11 +35,11 @@ ms.locfileid: "50585921"
 class CDaoException : public CException
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|Создает объект `CDaoException`.|
 
@@ -71,7 +71,7 @@ class CDaoException : public CException
 
 Коды ошибок DAO см. в файле DAOERR. З. Дополнительные сведения см. в разделе «Перехватываемая данных доступа ошибки» в справке DAO.
 
-Дополнительные сведения об обработке исключений в общие или о `CDaoException` объектов, см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md). Во второй статье содержится пример кода, демонстрируется обработка исключений в DAO.
+Дополнительные сведения об обработке исключений в общие или о `CDaoException` объектов, см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключения: Базы данных исключений](../../mfc/exceptions-database-exceptions.md). Во второй статье содержится пример кода, демонстрируется обработка исключений в DAO.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -113,7 +113,7 @@ CDaoException();
 
 1. Если вы создан объект исключения в куче, удалите его, используя **удалить** оператора после завершения.
 
-Дополнительные сведения об обработке ошибок в классах MFC DAO см. в статье [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).
+Дополнительные сведения об обработке ошибок в классах MFC DAO см. в статье [исключения: Базы данных исключений](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="geterrorcount"></a>  CDaoException::GetErrorCount
 
@@ -163,7 +163,7 @@ void GetErrorInfo(int nIndex);
 
 `GetErrorInfo` Эти сведения хранятся в объекте исключения `m_pErrorInfo` элемент данных. Краткое описание сведений, возвращаемых, см. в разделе [m_pErrorInfo](#m_perrorinfo). Если производится перехват исключения с типом `CDaoException` выводится MFC, `m_pErrorInfo` член будет уже указано. Если вы решили вызов DAO напрямую, необходимо вызвать объект исключения `GetErrorInfo` функция-член для заполнения `m_pErrorInfo`. Более подробное описание см. в разделе [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) структуры.
 
-Сведения об исключениях DAO и пример кода см. в статье [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).
+Сведения об исключениях DAO и пример кода см. в статье [исключения: Базы данных исключений](../../mfc/exceptions-database-exceptions.md).
 
 ##  <a name="m_nafxdaoerror"></a>  CDaoException::m_nAfxDaoError
 
@@ -195,7 +195,7 @@ void GetErrorInfo(int nIndex);
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Код ошибки|Код ошибки DAO|
 |`m_strSource`|Исходный код|Имя объекта или приложения, вызвавшего ошибку|
-|`m_strDescription`|Описание|Строку описания, связанный с ошибкой|
+|`m_strDescription`|Описание:|Строку описания, связанный с ошибкой|
 |`m_strHelpFile`|Файл справки|Путь к файлу справки Windows, в котором пользователь может получить информацию о проблеме|
 |`m_lHelpContext`|Контекст справки|Идентификатор контекста для раздела в файле справки DAO|
 
