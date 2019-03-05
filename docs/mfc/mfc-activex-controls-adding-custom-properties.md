@@ -1,18 +1,18 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление пользовательских свойств
+title: Элементы ActiveX в MFC. Добавление пользовательских свойств
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 - properties [MFC], custom
 ms.assetid: 85af5167-74c7-427b-b8f3-e0d7b73942e5
-ms.openlocfilehash: 2cc9cfa1886c6ba8e714736e0192b56bf3b154f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e02d5523b894f89aa93c8d2765a128920afa2353
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284207"
 ---
-# <a name="mfc-activex-controls-adding-custom-properties"></a>Элементы управления ActiveX в MFC. Добавление пользовательских свойств
+# <a name="mfc-activex-controls-adding-custom-properties"></a>Элементы ActiveX в MFC. Добавление пользовательских свойств
 
 Пользовательские свойства отличаются от стандартных свойств, что пользовательские свойства уже не реализованы в `COleControl` класса. Пользовательское свойство используется для предоставления состояние или внешний вид элемента управления ActiveX, программисту, использование элемента управления.
 
@@ -22,7 +22,7 @@ ms.locfileid: "50496428"
 
 - [Добавьте изменения мастер свойств для пользовательских свойств](#_core_classwizard_changes_for_custom_properties)
 
-Пользовательские свойства бывают четыре вида реализация: переменной-члена, переменной-члена с уведомлением, методы Get и Set и параметризованные.
+Пользовательские свойства могут быть четыре разновидности реализации: Переменная-член, переменная-член с уведомлением, методы Get и Set и параметрами.
 
 - Реализация переменной члена
 

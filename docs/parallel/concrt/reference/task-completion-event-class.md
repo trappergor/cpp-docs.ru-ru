@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_completion_event class
 ms.assetid: fb19ed98-f245-48dc-9ba5-487ba879b28a
-ms.openlocfilehash: ae4cce94dd7b36cebadea5f6d05890d979cce474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ab271b20eb02c1dc4cb8e54cf2632eead4325
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498960"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293892"
 ---
 # <a name="taskcompletionevent-class"></a>Класс task_completion_event
 
@@ -40,13 +40,13 @@ class task_completion_event<void>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[task_completion_event](#ctor)|Создает объект `task_completion_event`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[set](#set)|Перегружен. Задает событие завершения задачи.|
 |[set_exception](#set_exception)|Перегружен. Распространяет исключение для всех задач, связанных с этим событием.|
@@ -108,7 +108,7 @@ __declspec(noinline) bool set_exception(std::exception_ptr _ExceptionPtr) const 
 *_E*<br/>
 Тип исключения.
 
-*_Except.*<br/>
+*_Except*<br/>
 Исключение, чтобы задать.
 
 *_ExceptionPtr*<br/>

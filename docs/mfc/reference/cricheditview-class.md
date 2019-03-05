@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178744"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259520"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -121,7 +121,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Создает объект `CRichEditView`.|
 
@@ -164,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Получает объект Clipboard для диапазона в этом представлении rich edit.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Получает контекстное меню для использования в правой-нажатия кнопки мыши.|
@@ -181,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Указывает отступ для маркированные списки.|
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|Указывает ограничения переноса слов.|

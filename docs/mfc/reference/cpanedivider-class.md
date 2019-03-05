@@ -84,16 +84,16 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: e3abda8326d6f89939b9aa41cf2282496d5974d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273638"
 ---
 # <a name="cpanedivider-class"></a>Класс CPaneDivider
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 `CPaneDivider` Класса делит две области, делит две группы областей или отделяет группу областей от клиентской области окна главного фрейма.
 
@@ -152,14 +152,14 @@ class CPaneDivider : public CBasePane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPaneDivider::GetPanes](#getpanes)|Возвращает список панелей, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|
 |[CPaneDivider::GetPaneDividers](#getpanedividers)|Возвращает список панели разделители, которые находятся в [класс CPaneContainer](../../mfc/reference/cpanecontainer-class.md). Этот метод должен вызываться только для разделителей области по умолчанию.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CPaneDivider::m_nDefaultWidth](#m_ndefaultwidth)|Задает ширину по умолчанию в точках все разделители панели в приложении.|
 |[CPaneDivider::m_pSliderRTC](#m_psliderrtc)|Содержит указатель на сведения о классе среды выполнения о `CPaneDivider`-объект, производный от.|

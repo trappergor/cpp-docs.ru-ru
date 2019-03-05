@@ -1,19 +1,19 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление стандартных методов
+title: Элементы ActiveX в MFC. Добавление стандартных методов
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], stock methods
 - MFC ActiveX controls [MFC], methods
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
-ms.openlocfilehash: 1e47e45efe27c9562cf8500f8941bcf0e259448a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305215"
 ---
-# <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы управления ActiveX в MFC. Добавление стандартных методов
+# <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы ActiveX в MFC. Добавление стандартных методов
 
 Стандартный метод отличается от пользовательского метода, в том, что уже реализован классом [COleControl](../mfc/reference/colecontrol-class.md). Например `COleControl` содержит функцию стандартных элементов, которая поддерживает метод обновления для элемента управления. Запись сопоставления диспетчеризации для этого метода акций — DISP_STOCKFUNC_REFRESH.
 
@@ -24,8 +24,8 @@ ms.locfileid: "50585033"
 
 |Метод|Запись сопоставления диспетчеризации|Комментарий|
 |------------|------------------------|-------------|
-|`DoClick`|**(DISP_STOCKPROP_DOCLICK)**|Запускает событие Click.|
-|`Refresh`|**(DISP_STOCKPROP_REFRESH)**|Немедленное обновление внешнего вида элемента управления.|
+|`DoClick`|**DISP_STOCKPROP_DOCLICK( )**|Запускает событие Click.|
+|`Refresh`|**DISP_STOCKPROP_REFRESH( )**|Немедленное обновление внешнего вида элемента управления.|
 
 ##  <a name="_core_adding_a_stock_method_using_classwizard"></a> Добавить метод с помощью мастер добавления метода
 
@@ -64,4 +64,3 @@ ms.locfileid: "50585033"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

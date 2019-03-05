@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603015"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274990"
 ---
 # <a name="colecontrolcontainer-class"></a>Класс COleControlContainer
 
@@ -126,7 +126,7 @@ class COleControlContainer : public CCmdTarget
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleControlContainer::m_crBack](#m_crback)|Цвет фона контейнера.|
 |[COleControlContainer::m_crFore](#m_crfore)|Цвет переднего плана для контейнера.|
@@ -311,7 +311,7 @@ BOOL CreateControl(
 *dwStyle*<br/>
 Стили Windows. Доступные стили отображаются в категории **"Примечания"** раздел.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления. Может быть либо `CRect` объекта или `RECT` структуры.
 
 *nID*<br/>

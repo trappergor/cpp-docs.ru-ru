@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482086"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289303"
 ---
 # <a name="task-class-concurrency-runtime"></a>Класс task (среда выполнения с параллелизмом)
 
@@ -56,7 +56,7 @@ class task;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[task](#ctor)|Перегружен. Создает объект `task`.|
 
@@ -73,7 +73,7 @@ class task;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Перегружен. Определяет, представляют ли два объекта `task` различные внутренние задачи.|
 |[оператор=](#operator_eq)|Перегружен. Заменяет содержимое одного объекта `task` другим.|

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - message_processor class
 ms.assetid: 23afb052-daa7-44ed-bf24-d2513db748da
-ms.openlocfilehash: d6e45613e0b412b6b94dba3c4a435115e32c7d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be6cb1c614a41919663a4cc063da66679556e498
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295244"
 ---
 # <a name="messageprocessor-class"></a>Класс message_processor
 
@@ -38,13 +38,13 @@ class message_processor;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[async_send](#async_send)|При переопределении в производном классе размещает сообщения в блок асинхронно.|
 |[sync_send](#sync_send)|При переопределении в производном классе размещает сообщения в блок синхронно.|
@@ -52,7 +52,7 @@ class message_processor;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[process_incoming_message](#process_incoming_message)|При переопределении в производном классе, выполняет прямой обработку сообщений в блок. Вызывается один раз при каждом добавлении нового сообщения и очередь оказывается пустой.|
 

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526429"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290434"
 ---
 # <a name="cspinbuttonctrl-class"></a>Класс CSpinButtonCtrl
 
@@ -53,7 +53,7 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Создает объект `CSpinButtonCtrl`.|
 
@@ -119,7 +119,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль элемента управления "Счетчик". Любое сочетание стили элемента управления "Счетчик" примените к элементу управления. Эти стили описаны в [стили элемента управления вверх-вниз](/windows/desktop/Controls/up-down-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления "Счетчик". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры
 
 *pParentWnd*<br/>
@@ -159,7 +159,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль элемента управления "Счетчик". Любое сочетание стили элемента управления "Счетчик" примените к элементу управления. Эти стили описаны в [стили элемента управления вверх-вниз](/windows/desktop/Controls/up-down-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>

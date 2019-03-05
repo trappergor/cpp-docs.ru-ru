@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: d637d524d37dc466e15aed3b571cccf24c18216d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305007"
 ---
 # <a name="allocating-gdi-resources"></a>Выделение ресурсов GDI
 
@@ -26,10 +26,9 @@ ms.locfileid: "50505733"
 
 Чтобы использовать созданные объекты GDI, выберите их в контекст устройства принтера в [OnPrint](../mfc/reference/cview-class.md#onprint) функция-член. Если требуются различные объекты GDI для разных страниц документа, можно изучить `m_nCurPage` членом [CPrintInfo](../mfc/reference/cprintinfo-structure.md) структурировать и выбрать объект GDI соответствующим образом. Если вам требуется объект GDI для нескольких последовательных страниц, в Windows необходимо выбирать его в контексте устройства при каждом вызове `OnPrint`.
 
-Чтобы освободить эти объекты GDI, переопределите [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) функция-член. Платформа вызывает эту функцию в конце каждой задачи печати, что дает вам возможность освободить объекты GDI для печати перед возвратом приложения к другим задачам.
+Чтобы освободить эти объекты GDI, переопределите [OnEndPrinting](../mfc/reference/cview-class.md#onendprinting) функция-член. Платформа вызывает эту функцию в конце каждого задания печати, что дает вам возможность освободить объекты GDI для печати перед возвратом приложения к другим задачам.
 
 ## <a name="see-also"></a>См. также
 
 [Печать](../mfc/printing.md)<br/>
 [Печать по умолчанию](../mfc/how-default-printing-is-done.md)
-

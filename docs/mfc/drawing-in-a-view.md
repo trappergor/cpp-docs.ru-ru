@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: da1729834076ebc62eee9e482934f9410c03e78c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651861"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280775"
 ---
 # <a name="drawing-in-a-view"></a>Рисование в представлении
 
@@ -47,4 +47,3 @@ ms.locfileid: "50651861"
 ## <a name="see-also"></a>См. также
 
 [Использование представлений](../mfc/using-views.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Объекты и источники данных. Манипуляция
+title: 'Объекты данных и источников данных: Манипуляции'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data objects [MFC], manipulating
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - delayed rendering [MFC]
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
-ms.openlocfilehash: ee5cb320cb07a656675bd6735d6761cb69573d0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286755"
 ---
-# <a name="data-objects-and-data-sources-manipulation"></a>Объекты и источники данных. Манипуляция
+# <a name="data-objects-and-data-sources-manipulation"></a>Объекты данных и источников данных: Манипуляции
 
 После создания объекта данных или источник данных можно выполнить ряд определенных распространенные операции с данным, таких как вставка и удаление данных, перечисления форматов, ваши данные, и многое другое. В этой статье описаны методы, необходимые для выполнения наиболее распространенных операций. Ниже приведен список разделов.
 
@@ -67,7 +67,7 @@ ms.locfileid: "50636154"
 
    - Вызовите объект данных `BeginEnumFormats` функция-член перечисление форматов данных в буфере обмена. Затем вызовите `GetNextFormat` до возврата буфера обмена ваше приложение поддерживает формат или что нет Дополнительные форматы.
 
-Если вы используете **ON_UPDATE_COMMAND_UI**, теперь можно включить вставить и, возможно, Специальная вставка элементов в меню "Правка". Чтобы сделать это, вызовите `CMenu::EnableMenuItem` или `CCmdUI::Enable`. Дополнительные сведения о какой контейнер приложений следует сделать с помощью пунктов меню и когда, см. в разделе [меню и ресурсы: добавление контейнеров](../mfc/menus-and-resources-container-additions.md).
+Если вы используете **ON_UPDATE_COMMAND_UI**, теперь можно включить вставить и, возможно, Специальная вставка элементов в меню "Правка". Чтобы сделать это, вызовите `CMenu::EnableMenuItem` или `CCmdUI::Enable`. Дополнительные сведения о какой контейнер приложений следует сделать с помощью пунктов меню и когда, см. в разделе [меню и ресурсы: Добавление контейнеров](../mfc/menus-and-resources-container-additions.md).
 
 ##  <a name="_core_retrieving_data_from_a_data_object"></a> Извлечение данных из объекта данных
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - AMP_GRAPHICS/Concurrency
 ms.assetid: 4529d3b1-d7da-4ffb-82bf-080915e0f23e
-ms.openlocfilehash: 5bff3bbba3c2ba9e6c51ee20c8701c80a557707f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef61c93e062b375377a0afe62aa7f622f6c0d4ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500494"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326543"
 ---
 # <a name="concurrencygraphics-namespace"></a>Пространство имен Concurrency::graphics
 
@@ -25,19 +25,19 @@ namespace graphics;
 
 ### <a name="namespaces"></a>Пространства имен
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Пространство имен Concurrency::graphics::direct3d](concurrency-graphics-direct3d-namespace.md)|Предоставляет функции для взаимодействия Direct3D.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`uint`|Тип элемента для [класс uint_2](uint-2-class.md), [класс uint_3](uint-3-class.md), и [класс uint_4](uint-4-class.md). Определяется как `typedef unsigned int uint;`.|
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[Перечисление address_mode](concurrency-graphics-namespace-enums.md#address_mode).|Задает режимы адреса, поддерживаемые для дискретизации текстур.|
 |[Перечисление filter_mode](concurrency-graphics-namespace-enums.md#filter_mode)|Задает режимы фильтра, поддерживаемые для дискретизации текстур.|
@@ -73,7 +73,7 @@ namespace graphics;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[copy](concurrency-graphics-namespace-functions.md#copy)|Перегружен. Копирует содержимое исходной текстуры в буфер узла назначения.|
 |[copy_async](concurrency-graphics-namespace-functions.md#copy_async)|Перегружен. Асинхронно копирует содержимое исходной текстуры в буфер узла назначения.|
@@ -82,7 +82,7 @@ namespace graphics;
 
 **Заголовок:** amp_graphics.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** параллелизм
 
 ## <a name="see-also"></a>См. также
 

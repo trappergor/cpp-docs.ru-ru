@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeU [MFC], CD2DSizeU
 - CD2DSizeU [MFC], IsNull
 ms.assetid: 6e679ba8-2112-43c3-8275-70b660856f02
-ms.openlocfilehash: bad73a53eabe0a4c75483e9871a4fdc4a361449b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6b0bc12933100c6f2401f4f4cb9e1fae52dda65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278656"
 ---
 # <a name="cd2dsizeu-class"></a>Класс CD2DSizeU
 
@@ -37,9 +37,9 @@ class CD2DSizeU : public D2D1_SIZE_U;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CD2DSizeU::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
+|[CD2DSizeU::IsNull](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
 
 ### <a name="public-operators"></a>Открытые операторы
 
@@ -76,13 +76,13 @@ CD2DSizeU(
 *size*<br/>
 Размер источника
 
-*CX*<br/>
+*cx*<br/>
 исходная ширина
 
 *CY*<br/>
 Исходная высота
 
-##  <a name="isnull"></a>  CD2DSizeU::ISNULL
+##  <a name="isnull"></a>  CD2DSizeU::IsNull
 
 Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456216"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258792"
 ---
 # <a name="cstdiofile-class"></a>Класс CStdioFile
 
@@ -45,7 +45,7 @@ class CStdioFile : public CFile
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStdioFile::Open](#open)|Перегружен. Открыть предназначен для использования со значением по умолчанию `CStdioFile` конструктор (переопределяет [CFile::Open](../../mfc/reference/cfile-class.md#open)).|
 |[CStdioFile::ReadString](#readstring)|Читает одну строку текста.|
@@ -54,7 +54,7 @@ class CStdioFile : public CFile
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStdioFile::m_pStream](#m_pstream)|Содержит указатель на открытый файл.|
 
@@ -240,11 +240,11 @@ virtual ULONGLONG Seek(
 *nFrom*<br/>
 Режим перемещения указателя. Должен принимать одно из следующих значений:
 
-- `CFile::begin`: Переместить указатель файла *lOff* байтов вперед от начала файла.
+- `CFile::begin`: Переместите указатель файла *lOff* байтов вперед от начала файла.
 
-- `CFile::current`: Переместить указатель файла *lOff* байтов из текущей позиции в файле.
+- `CFile::current`: Переместите указатель файла *lOff* байтов из текущей позиции в файле.
 
-- `CFile::end`: Переместить указатель файла *lOff* байтах от конца файла. Обратите внимание, что *lOff* должен быть отрицательное значение для поиска в существующий файл; положительные значения вызовет переход за пределами файла.
+- `CFile::end`: Переместите указатель файла *lOff* байтах от конца файла. Обратите внимание, что *lOff* должен быть отрицательное значение для поиска в существующий файл; положительные значения вызовет переход за пределами файла.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

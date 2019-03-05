@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Использование лимита подписки для устранения задержек
+title: Практическое руководство. Использование лимита подписки для задержек
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653080"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257947"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>Практическое руководство. Использование лимита подписки для устранения задержек
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>Практическое руководство. Использование лимита подписки для задержек
 
 Превышение лимита подписки может повысить общую эффективность некоторых приложений, которые содержат задачи, которые имеют большой объем задержки. В этом разделе описывается использование лимита подписки для смещения задержки, вызванной чтение данных из сетевого подключения.
 
@@ -82,4 +82,3 @@ Downloaded 1801040 bytes in 3276 ms.
 
 [Контексты](../../parallel/concrt/contexts.md)<br/>
 [Метод Context::Oversubscribe](reference/context-class.md#oversubscribe)
-

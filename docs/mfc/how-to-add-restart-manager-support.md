@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Restart manager [MFC]
 - C++, application crash support
 ms.assetid: 7f3f5867-d4bc-4ba8-b3c9-dc1e7be93642
-ms.openlocfilehash: 77267cdad1fa976d73381ca798ca5002c09dc7ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23f860c43c63e3153f4b87f8eaf05d61709af82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565151"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279788"
 ---
 # <a name="how-to-add-restart-manager-support"></a>Практическое руководство. Добавление поддержки диспетчера перезапуска
 
@@ -37,7 +37,7 @@ ms.locfileid: "50565151"
     m_dwRestartManagerSupportFlags = AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS;
 ```
 
-1. Убедитесь, что метод `InitInstance` приложения вызывает родительский метод `InitInstance` : [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) или `CWinAppEx::InitInstance`. `InitInstance` Метод отвечает за проверку *m_dwRestartManagerSupportFlags* параметра.
+1. Убедитесь, что `InitInstance` метод приложения вызывает родительский `InitInstance` метод: [CWinApp::InitInstance](../mfc/reference/cwinapp-class.md#initinstance) или `CWinAppEx::InitInstance`. `InitInstance` Метод отвечает за проверку *m_dwRestartManagerSupportFlags* параметра.
 
 1. Скомпилируйте и запустите приложение.
 
@@ -48,4 +48,3 @@ ms.locfileid: "50565151"
 [Класс CWinApp](../mfc/reference/cwinapp-class.md)<br/>
 [CWinApp::m_nAutosaveInterval](../mfc/reference/cwinapp-class.md#m_nautosaveinterval)<br/>
 [CDocument::OnDocumentEvent](../mfc/reference/cdocument-class.md#ondocumentevent)
-

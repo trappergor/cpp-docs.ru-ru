@@ -1,19 +1,19 @@
 ---
-title: Элементы управления ActiveX в MFC. Создание сервера автоматизации
+title: Элементы ActiveX в MFC. Создание сервера автоматизации
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation servers [MFC], MFC ActiveX controls
 - ActiveX controls [MFC], Automation server
 - MFC ActiveX controls [MFC], Automation server
 ms.assetid: e0c24ed2-d61c-49ad-a4fa-4e1098d1d39b
-ms.openlocfilehash: 6861d8b0798ece957c84f52a15032052aa83b9c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01f0162e124c5c49d45ce4a90f5243c88b09b5a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50448130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303733"
 ---
-# <a name="mfc-activex-controls-creating-an-automation-server"></a>Элементы управления ActiveX в MFC. Создание сервера автоматизации
+# <a name="mfc-activex-controls-creating-an-automation-server"></a>Элементы ActiveX в MFC. Создание сервера автоматизации
 
 Вы можете разрабатывать элемента управления MFC ActiveX как сервера автоматизации для программного включения этого элемента управления в другом приложении и вызов методов в элементе управления из приложения. Такой элемент управления по-прежнему доступен для размещения в контейнере элементов управления ActiveX.
 
@@ -50,4 +50,3 @@ ms.locfileid: "50448130"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

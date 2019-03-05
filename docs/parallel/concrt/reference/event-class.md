@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480110"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264677"
 ---
 # <a name="event-class"></a>Класс event
 
@@ -33,13 +33,13 @@ class event;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[~ событий деструктор](#dtor)|Уничтожает событие.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[reset](#reset)|Сбрасывает события в сигнальное состояние.|
 |[set](#set)|Сигнализирует о событии.|
@@ -48,7 +48,7 @@ class event;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[timeout_infinite](#timeout_infinite)|Значение, указывающее, что время ожидания никогда не должно истечь.|
 
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>Параметры
 
-*_Время ожидания*<br/>
+*_Timeout*<br/>
 Указывает количество миллисекунд до истечения срока ожидания. Значение `COOPERATIVE_TIMEOUT_INFINITE` означает, что время ожидания отсутствует.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -159,7 +159,7 @@ static size_t __cdecl wait_for_multiple(
 *_FWaitAll*<br/>
 Если присвоено значение **true**, параметр указывает, что все события в массиве, предоставленный в `_PPEvents` параметра должны принять сигнал, чтобы удовлетворить ожидания. Если присвоено значение **false**, он указывает, что любое событие в массиве, предоставленный в `_PPEvents` параметр сигнал будет удовлетворять ожидание.
 
-*_Время ожидания*<br/>
+*_Timeout*<br/>
 Указывает количество миллисекунд до истечения срока ожидания. Значение `COOPERATIVE_TIMEOUT_INFINITE` означает, что время ожидания отсутствует.
 
 ### <a name="return-value"></a>Возвращаемое значение

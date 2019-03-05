@@ -10,12 +10,12 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277785"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Сокеты Windows. Порты и адреса сокета
 
@@ -46,11 +46,10 @@ ms.locfileid: "50631365"
 
 - [Сокеты Windows. Работа сокетов с архивами](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>См. также
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
-

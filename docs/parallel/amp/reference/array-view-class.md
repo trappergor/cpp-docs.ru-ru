@@ -26,12 +26,12 @@ f1_keywords:
 helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
-ms.openlocfilehash: d33c54e82e9bc228b97bff4802c9231a98f51033
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268477"
 ---
 # <a name="arrayview-class"></a>Класс array_view
 
@@ -72,7 +72,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует содержимое объекта `array_view` объект в указанное место назначения путем вызова `copy(*this, dest)`.|
 |[data](#data)|Возвращает указатель на необработанные данные `array_view`.|
@@ -105,7 +105,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[extent](#extent)|Получает объект `extent`, который определяет форму объекта `array_view`.|
 |[source_accelerator_view](#source_accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) где источник данных `array_view` находится|
@@ -153,7 +153,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 **Пространство имен:** параллелизм
 
-##  <a name="dtor"></a> ~ array_view
+##  <a name="dtor"></a> ~array_view
 
 Уничтожает `array_view` объекта.
 
@@ -330,7 +330,7 @@ array_view(
 *_Arr_type*<br/>
 Тип элементов массива C-стиля, из которого данные передаются.
 
-*To _Container*<br/>
+*_Container*<br/>
 Аргумент шаблона, который должен определить линейный контейнер, поддерживающий `data()` и `size()` членов.
 
 *_E0*<br/>
@@ -443,7 +443,7 @@ accelerator_view get_source_accelerator_view() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_call"></a> Operator()
+##  <a name="operator_call"></a> operator()
 
 Возвращает значение элемента, который задается параметром или параметрами.
 

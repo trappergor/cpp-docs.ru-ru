@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614205"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296979"
 ---
 # <a name="coledatasource-class"></a>Класс COleDataSource
 
@@ -130,7 +130,7 @@ void CacheData(
 
 После вызова `CacheData` `ptd` членом `lpFormatEtc` и содержание *lpStgMedium* принадлежат объекту данных, не вызывающим объектом.
 
-Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Дополнительные сведения см. в разделе [STGMEDIUM](/windows/desktop/api/objidl/ns-objidl-tagstgmedium) и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структур в пакете Windows SDK.
 
@@ -162,7 +162,7 @@ void CacheGlobalData(
 
 Эта функция предоставляет данные с помощью интерпретации визуализации, поэтому данные необходимо предоставить при вызове функции; данные кэшируются, пока они не понадобятся. Используйте `CacheData` функция-член, если вы указали большой объем данных или если требуется средний структурированного хранилища.
 
-Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Чтобы использовать отложенной подготовки к просмотру, вызовите [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.
 
@@ -198,7 +198,7 @@ void DelayRenderData(
 
 Эта функция предоставляет данные с помощью отложенной обработки, поэтому данные не предоставляются немедленно. [OnRenderData](#onrenderdata) или [OnRenderGlobalData](#onrenderglobaldata) функция-член вызывается для запроса данных.
 
-Используйте эту функцию, если вы не собираетесь предоставлять данные с помощью `CFile` объекта. Если вы собираетесь предоставить данные через `CFile` , вызовите [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Используйте эту функцию, если вы не собираетесь предоставлять данные с помощью `CFile` объекта. Если вы собираетесь предоставить данные через `CFile` , вызовите [DelayRenderFileData](#delayrenderfiledata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функция-член.
 
@@ -228,7 +228,7 @@ void DelayRenderFileData(
 
 Эта функция предоставляет данные с помощью отложенной обработки, поэтому данные не предоставляются немедленно. [OnRenderFileData](#onrenderfiledata) функция-член вызывается для запроса данных.
 
-Используйте эту функцию, если вы собираетесь использовать `CFile` объект в качестве источника данных. Если вы не собираетесь использовать `CFile` , вызовите [DelayRenderData](#delayrenderdata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Используйте эту функцию, если вы собираетесь использовать `CFile` объект в качестве источника данных. Если вы не собираетесь использовать `CFile` , вызовите [DelayRenderData](#delayrenderdata) функция-член. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Чтобы использовать немедленное отрисовки, вызовите [CacheData](#cachedata) или [CacheGlobalData](#cacheglobaldata) функция-член.
 
@@ -310,7 +310,7 @@ DROPEFFECT DoDragDrop(
 
 Для перетащите Дополнительные сведения о том, как задержки сведения хранятся в реестре или. INI-файл, см. в разделе [WriteProfileString](/windows/desktop/api/winbase/nf-winbase-writeprofilestringa) в пакете Windows SDK.
 
-Дополнительные сведения см. в статье [путем перетаскивания: реализация источника Drop](../../mfc/drag-and-drop-implementing-a-drop-source.md).
+Дополнительные сведения см. в статье [путем перетаскивания: Реализация источника сброса](../../mfc/drag-and-drop-implementing-a-drop-source.md).
 
 ##  <a name="empty"></a>  COleDataSource::Empty
 
@@ -374,7 +374,7 @@ virtual BOOL OnRenderData(
 
 ### <a name="remarks"></a>Примечания
 
-Указанный формат входит один ранее размещен в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член для отложенной подготовки к просмотру. Реализация по умолчанию эта функция будет вызывать [OnRenderFileData](#onrenderfiledata) или [OnRenderGlobalData](#onrenderglobaldata) если предоставленный среда хранения представляет собой файл или в памяти, соответственно. Если не указано ни одно из этих форматов, реализация по умолчанию возвращает значение 0 и не выполнять никаких действий. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Указанный формат входит один ранее размещен в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) или [DelayRenderFileData](#delayrenderfiledata) функция-член для отложенной подготовки к просмотру. Реализация по умолчанию эта функция будет вызывать [OnRenderFileData](#onrenderfiledata) или [OnRenderGlobalData](#onrenderglobaldata) если предоставленный среда хранения представляет собой файл или в памяти, соответственно. Если не указано ни одно из этих форматов, реализация по умолчанию возвращает значение 0 и не выполнять никаких действий. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Если *lpStgMedium*-> *tymed* является TYMED_NULL, `STGMEDIUM` должен быть выделяется объектом и заполняется в соответствии с *lpFormatEtc "->" tymed*. Если это не TYMED_NULL, `STGMEDIUM` должно быть заполнено на месте с данными.
 
@@ -408,7 +408,7 @@ virtual BOOL OnRenderFileData(
 
 Указанный формат входит один ранее размещен в `COleDataSource` с помощью [DelayRenderData](#delayrenderdata) функция-член для отложенной подготовки к просмотру. Реализация по умолчанию эта функция просто возвращает значение FALSE.
 
-Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить `OnRenderFileData`. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить `OnRenderFileData`. Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в пакете Windows SDK.
 
@@ -440,7 +440,7 @@ virtual BOOL OnRenderGlobalData(
 
 Если *phGlobal* имеет значение NULL, то новый HGLOBAL должен выделить и возвращены в *phGlobal*. В противном случае HGLOBAL определяемое *phGlobal* должно быть заполнено данными. Объем данных, помещаются в HGLOBAL не должен превышать текущий размер блока памяти. Кроме того блок не может быть перемещен большего размера.
 
-Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить [OnRenderFileData](#onrenderfiledata). Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Существует расширенная переопределяемый. Переопределите эту функцию для предоставления данных в затребованном формате и средний. В зависимости от данных может потребоваться переопределить один из других версий эта функция вместо этого. Если вы хотите обрабатывать несколько носителей, переопределить [OnRenderData](#onrenderdata). Если данные находятся в файле, или имеет переменный размер, переопределить [OnRenderFileData](#onrenderfiledata). Дополнительные сведения о отложенной подготовки к просмотру как обработанное в MFC, см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Дополнительные сведения см. в разделе [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры и [IDataObject::GetData](/windows/desktop/api/objidl/nf-objidl-idataobject-getdata) в пакете Windows SDK.
 

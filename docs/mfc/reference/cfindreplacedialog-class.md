@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], SearchDown
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
-ms.openlocfilehash: abf230f8c9e68365f8d1db8b654174ad3e152862
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: de48d8f495802bdf1c5f69e7a4edc41153c9599f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264629"
 ---
 # <a name="cfindreplacedialog-class"></a>Класс CFindReplaceDialog
 
@@ -53,7 +53,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Вызывайте эту функцию для создания `CFindReplaceDialog` объекта.|
 
@@ -75,7 +75,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFindReplaceDialog::m_fr](#m_fr)|Структура, используемая для настройки `CFindReplaceDialog` объекта.|
 

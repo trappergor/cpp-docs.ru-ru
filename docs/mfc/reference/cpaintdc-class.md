@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178334"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274431"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc-класс
 
@@ -33,7 +33,7 @@ class CPaintDC : public CDC
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPaintDC::CPaintDC](#cpaintdc)|Создает `CPaintDC` подключен к указанным [CWnd](../../mfc/reference/cwnd-class.md).|
 
@@ -45,7 +45,7 @@ class CPaintDC : public CDC
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|HWND, к которому `CPaintDC` объект присоединен.|
 
@@ -131,4 +131,3 @@ PAINTSTRUCT m_ps;
 [Пример MFC MDI](../../visual-cpp-samples.md)<br/>
 [Класс CDC](../../mfc/reference/cdc-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

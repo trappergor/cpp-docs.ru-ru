@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677192"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262705"
 ---
 # <a name="cthreadpool-class"></a>Класс CThreadPool
 
@@ -50,14 +50,14 @@ class CThreadPool : public IThreadPoolConfig
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Конструктор для пула потоков.|
 |[CThreadPool:: ~ CThreadPool](#dtor)|Деструктор для пула потоков.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CThreadPool::AddRef](#addref)|Реализация `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Вызовите этот метод, чтобы получить число потоков в пуле.|

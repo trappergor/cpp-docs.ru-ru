@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303611"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 
@@ -53,7 +53,7 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Имя|Описание:|
+|Имя|Описание|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Создает объект `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
@@ -139,7 +139,7 @@ static BOOL FindDefaultAccelerator(
 [in] Идентификатор команды.
 
 *str*<br/>
-[out] Ссылку на `CString` объекта.
+[out] Ссылка на объект `CString`.
 
 *pWndFrame*<br/>
 [in] Указатель на фрейм окна.
@@ -171,7 +171,7 @@ static BOOL __stdcall IsKeyHandled(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*nKey*|[in] Проверяемая клавиша.|
 |*fVirt*|[in] Задает поведение сочетания клавиш. Список возможных значений см. в разделе [УСКОРЕНИЕ структуры](/windows/desktop/api/winuser/ns-winuser-tagaccel).|
 |*pWndFrame*|[in] Окно фрейма. Этот метод определяет, обрабатывается ли сочетания клавиш в данном фрейме.|
@@ -198,7 +198,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 |||
 |-|-|
 |Параметр|Описание:|
-|*NChar*|[in] Символ, этот метод проверяет.|
+|*nChar*|[in] Символ, этот метод проверяет.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -326,7 +326,7 @@ static UINT TranslateCharToUpper(const UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Знак для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -382,4 +382,3 @@ BOOL UpdateAccelTable(
 [Класс CWinAppEx](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [Настройка мыши и клавиатуры](../../mfc/keyboard-and-mouse-customization.md)
-

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176956"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302277"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений универсальной платформы Windows
 
@@ -37,7 +37,7 @@ ms.locfileid: "52176956"
 
 - [Создание асинхронных операций](#create-async)
 
-- [Пример: создание компонента среды выполнения Windows на C++](#example-component)
+- [Пример: Создание компонента среды выполнения Windows на C++](#example-component)
 
 - [Управление потоком выполнения](#exethread)
 
@@ -54,7 +54,7 @@ ms.locfileid: "52176956"
 [Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 Представляет асинхронное действие.
 
-[Windows::Foundation:: iasyncactionwithprogress\<TProgress >](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
+[Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
 Представляет асинхронное действие, сообщающее о ходе выполнения.
 
 [Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
@@ -70,7 +70,7 @@ ms.locfileid: "52176956"
 
 Возвращаемый тип `create_async` определяется типом аргументов. Например, если рабочая функция не возвращает значение и не сообщает о ходе выполнения, `create_async` возвращает `IAsyncAction`. Если рабочая функция не возвращает значение и сообщает о ходе выполнения, `create_async` возвращает `IAsyncActionWithProgress`. Чтобы сообщить о ходе выполнения, укажите объект [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) в качестве параметра рабочей функции. Возможность уведомления о ходе выполнения позволяет отчитываться о выполненном объеме работы и оставшемся объеме (например, в процентах). Это также позволяет сообщать о результатах, как только они становятся доступными.
 
-Интерфейсы `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, `IAsyncActionOperationWithProgress<TProgress, TProgress>` предоставляют метод `Cancel` , позволяющий отменить асинхронную операцию. Класс `task` работает с токенами отмены. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Уже выполняющаяся работа может отслеживать свой токен отмены и останавливаться, когда имеет такую возможность. Этот механизм описан подробнее в документе [Cancellation in the PPL](cancellation-in-the-ppl.md). Можно связать отмену задач со средой выполнения Windows`Cancel` методы двумя способами. Во-первых, можно определить рабочую функцию, передаваемую `create_async` для получения объекта [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Когда метод `Cancel` вызывается, этот токен отмены отменяется, и обычные правила отмены применяются к основному объекту `task` , поддерживающему вызов метода `create_async` . Если объект `cancellation_token` не предоставляется, базовый объект `task` определит его неявно. Определите объект `cancellation_token` при необходимости совместно реагировать на отмену в вашей рабочей функции. Разделе [пример: управление выполнением в приложении среды выполнения Windows с помощью C++ и XAML](#example-app) показан пример того, как выполнить отмену в приложении универсальной платформы Windows (UWP) с помощью C# и XAML, которые используют настраиваемые C++ среды выполнения Windows компонент.
+Интерфейсы `IAsyncAction`, `IAsyncActionWithProgress<TProgress>`, `IAsyncOperation<TResult>`, `IAsyncActionOperationWithProgress<TProgress, TProgress>` предоставляют метод `Cancel` , позволяющий отменить асинхронную операцию. Класс `task` работает с токенами отмены. При использовании токена отмены, чтобы отменить работу, среда выполнения не запускает новую работу, которая подписывается на этот токен. Уже выполняющаяся работа может отслеживать свой токен отмены и останавливаться, когда имеет такую возможность. Этот механизм описан подробнее в документе [Cancellation in the PPL](cancellation-in-the-ppl.md). Можно связать отмену задач со средой выполнения Windows`Cancel` методы двумя способами. Во-первых, можно определить рабочую функцию, передаваемую `create_async` для получения объекта [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) . Когда метод `Cancel` вызывается, этот токен отмены отменяется, и обычные правила отмены применяются к основному объекту `task` , поддерживающему вызов метода `create_async` . Если объект `cancellation_token` не предоставляется, базовый объект `task` определит его неявно. Определите объект `cancellation_token` при необходимости совместно реагировать на отмену в вашей рабочей функции. Разделе [пример: Управление выполнением в приложении среды выполнения Windows с помощью C++ и XAML](#example-app) показан пример того, как выполнить отмену в приложении универсальной платформы Windows (UWP) с C# и XAML, который использует пользовательский компонент C++ среды выполнения Windows.
 
 > [!WARNING]
 >  В цепочке продолжений задач всегда очищайте состояние, а затем вызывайте метод [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) , когда токен отмены отменяется. Если возврат выполняется раньше вместо вызова `cancel_current_task`, операция переходит в состояние завершения вместо состояния отмены.
@@ -90,7 +90,7 @@ ms.locfileid: "52176956"
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> Пример. Создание компонента среды выполнения Windows на C++ и его использования в коде C#
+##  <a name="example-component"></a> Пример: Создание компонента среды выполнения Windows на C++ и использовании ее изC#
 
 Рассмотрим приложение, которое использует XAML и C# для определения пользовательского интерфейса и в компонент среды выполнения Windows на C++ для выполнения ресурсоемких вычислительных операций. В этом примере компонент C++ обнаруживает простые числа в заданном диапазоне. Чтобы увидеть различия между 4 интерфейсами асинхронных задач среды выполнения Windows, начните работу в Visual Studio, создав **пустое решение** и назовите его `Primes`. Затем добавьте в решение проект **Компонент среды выполнения Windows** и назовите его `PrimesLibrary`. Добавьте следующий код в создаваемый файл заголовка C++ (в примере Class1.h переименовывается в Primes.h). Каждый метод `public` определяет один из 4 асинхронных интерфейсов. Методы, возвращающие значение, возвращают [Windows::Foundation:: Collections::\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) объекта. Методы, которые уведомляют о ходе выполнения, генерируют значения `double` , которые показывают, какой процент общей работы завершен.
 

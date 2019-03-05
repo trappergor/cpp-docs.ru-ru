@@ -1,5 +1,5 @@
 ---
-title: TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC
+title: 'TN048: Написание программ настройки ODBC и администрирования для приложений баз данных MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.odbc
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ODBC, and MFC
 - MFC, database applications
 ms.assetid: d456cdd4-0513-4a51-80c0-9132b66115ce
-ms.openlocfilehash: b31ceb8bfc48decb5387d386ee8e8b64822f72ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2904ceb626fd1bfad0b24026deb08f2c5dcbcd4a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283895"
 ---
-# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC
+# <a name="tn048-writing-odbc-setup-and-administration-programs-for-mfc-database-applications"></a>TN048: Написание программ настройки ODBC и администрирования для приложений баз данных MFC
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -57,4 +57,3 @@ API-интерфейса установщика ODBC можно использо
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Серверы. Элементы сервера
+title: 'серверы: Элементы сервера'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262289"
 ---
-# <a name="servers-server-items"></a>Серверы. Элементы сервера
+# <a name="servers-server-items"></a>серверы: Элементы сервера
 
 Когда контейнер запускает сервер таким образом, пользователь может изменить элемент внедренных или связанных OLE, серверное приложение создает «элемент-server». Серверный элемент, который является объектом класса, производного от `COleServerItem`, предоставляет интерфейс между серверного документа и приложения-контейнера.
 
@@ -35,7 +35,7 @@ ms.locfileid: "50453694"
 
    Платформа вызывает `OnDraw` для отрисовки элемента OLE в метафайл. Приложение-контейнер использует этот метафайла для отрисовки элемента. Класс представления приложения также имеет `OnDraw` функцией-членом, которая используется для отрисовки элемента при активном серверное приложение.
 
-1. Реализовать переопределение `OnGetEmbeddedItem` для класса серверный документ. Для получения дополнительных сведений см. в статье [серверы: реализация документов сервера](../mfc/servers-implementing-server-documents.md) и образцом MFC OLE [HIERSVR](../visual-cpp-samples.md).
+1. Реализовать переопределение `OnGetEmbeddedItem` для класса серверный документ. Для получения дополнительных сведений см. в статье [серверов: Реализация документов сервера](../mfc/servers-implementing-server-documents.md) и образцом MFC OLE [HIERSVR](../visual-cpp-samples.md).
 
 1. Реализовать классу элемента сервера `OnGetExtent` функция-член. Платформа вызывает эту функцию для определения размера элемента. Реализация по умолчанию не выполняет никаких действий.
 
@@ -52,4 +52,3 @@ ms.locfileid: "50453694"
 ## <a name="see-also"></a>См. также
 
 [Серверы](../mfc/servers.md)
-

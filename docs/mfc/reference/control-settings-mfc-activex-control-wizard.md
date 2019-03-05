@@ -6,26 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289641"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>Страница "Параметры элемента управления" мастера элементов управления ActiveX MFC
 
 Эта страница мастера используется для указания того, как будет вести себя элемент управления. Например базовый элемент управления на стандартные типы элементов управления Windows, оптимизировать свое поведение и внешний вид или указывают, что элемент управления может выступать в качестве контейнера для других элементов управления.
 
-Дополнительные сведения о том, как выбрать параметры на этой странице для обеспечения максимальной эффективности управления, см. в разделе [элементы ActiveX в MFC: оптимизация](../../mfc/mfc-activex-controls-optimization.md).
+Дополнительные сведения о том, как выбрать параметры на этой странице для обеспечения максимальной эффективности управления, см. в разделе [элементы управления MFC ActiveX: Оптимизация](../../mfc/mfc-activex-controls-optimization.md).
 
 ## <a name="uielement-list"></a>Список элементов пользовательского интерфейса
 
 - **Создание элемента управления на основе**
 
-   В этом списке можно выбрать тип элемента управления, из которого должны наследовать элемент управления. Список — это подмножество классы элементов управления, доступные для `CreateWindowEx` и дополнительные общие элементы управления, которые указаны в файле commctrl.h. Сделанный выбор определяет стиль элемента управления в `PreCreateWindow` работать в *ProjName*Ctrl.cpp файл. Дополнительные сведения см. в разделе [элементы ActiveX в MFC: Создание подкласса элемента управления Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+   В этом списке можно выбрать тип элемента управления, из которого должны наследовать элемент управления. Список — это подмножество классы элементов управления, доступные для `CreateWindowEx` и дополнительные общие элементы управления, которые указаны в файле commctrl.h. Сделанный выбор определяет стиль элемента управления в `PreCreateWindow` работать в *ProjName*Ctrl.cpp файл. Дополнительные сведения см. в разделе [элементы управления MFC ActiveX: Создание подкласса элемента управления Windows](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
-   |Элемент управления|Описание|
+   |Элемент управления|Описание:|
    |-------------|-----------------|
    |**КНОПКА**|Элемент управления button в Windows|
    |**ПОЛЕ СО СПИСКОМ**|Поле со списком Windows|
@@ -98,4 +98,3 @@ ms.locfileid: "50548243"
 [Мастер элементов ActiveX MFC](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [Параметры приложения, мастер элементов ActiveX MFC](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [Имена элементов управления, мастер элементов ActiveX MFC](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

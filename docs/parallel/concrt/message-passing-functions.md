@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
-ms.openlocfilehash: e258a73723e78090f61230555748e109c28cf01c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476028"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303954"
 ---
 # <a name="message-passing-functions"></a>Функции передачи сообщений
 
@@ -51,7 +51,7 @@ ms.locfileid: "50476028"
 
 - [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)
 
-- [Практическое руководство. Реализация различных шаблонов "источник-приемник"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
+- [Практическое руководство. Реализация различных шаблонов "объект-источник — объект-получатель"](../../parallel/concrt/how-to-implement-various-producer-consumer-patterns.md)
 
 - [Практическое руководство. Предоставление рабочих функций классам call и transformer](../../parallel/concrt/how-to-provide-work-functions-to-the-call-and-transformer-classes.md)
 
@@ -73,4 +73,3 @@ ms.locfileid: "50476028"
 [Функция asend](reference/concurrency-namespace-functions.md#asend)<br/>
 [Функция Receive](reference/concurrency-namespace-functions.md#receive)<br/>
 [Функция try_receive](reference/concurrency-namespace-functions.md#try_receive)
-

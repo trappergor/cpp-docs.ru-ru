@@ -5,12 +5,12 @@ helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e0383fc8d16f3eeb6e43e59424ab0984ee5c14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642315"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284363"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>Практическое руководство. Использование групп планирования для определения порядка выполнения
 
@@ -112,4 +112,3 @@ group 1,
 
 [Группы планирования](../../parallel/concrt/schedule-groups.md)<br/>
 [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)
-

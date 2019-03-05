@@ -6,12 +6,12 @@ helpviewer_keywords:
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295266"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Сокеты Windows. Пример сокетов с использованием архивов
 
@@ -43,7 +43,7 @@ ms.locfileid: "50436274"
 В этой модели взаимодействия, слово «Received», сообщение отправлено *strText* переменной, предназначена для отображения на другом конце связи, поэтому он для получателя указывает, что определенное число пакетов данных были Получено. Получатель отправляет ответ с аналогичной строкой, говорит: «Sent», для отображения на экране отправителя. Получение обе строки указывает, что произошло успешной связи.
 
 > [!CAUTION]
->  При написании программы MFC клиента для взаимодействия с серверами установленного (не MFC), не отправляйте объектов C++ с помощью архива. Не является приложение MFC, распознаваемые типы объектов, которые вы хотите отправить, оно может принимать и десериализации объектов. Пример в этой статье [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md) приведена схема обмена данными этого типа.
+>  При написании программы MFC клиента для взаимодействия с серверами установленного (не MFC), не отправляйте объектов C++ с помощью архива. Не является приложение MFC, распознаваемые типы объектов, которые вы хотите отправить, оно может принимать и десериализации объектов. Пример в этой статье [сокеты Windows: Порядок байтов](../mfc/windows-sockets-byte-ordering.md) приведена схема обмена данными этого типа.
 
 Дополнительные сведения см. в разделе спецификации Windows Sockets: **htonl**, **htons**, **ntohl**, **ntohs**. Кроме того Дополнительные сведения см. в разделе:
 
@@ -61,4 +61,3 @@ ms.locfileid: "50436274"
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::Flush](../mfc/reference/carchive-class.md#flush)<br/>
 [CObject::Serialize](../mfc/reference/cobject-class.md#serialize)
-

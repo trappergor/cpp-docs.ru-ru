@@ -1,5 +1,5 @@
 ---
-title: Перетаскивание. Настройка
+title: 'Путем перетаскивания: Настройка'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - drag and drop [MFC], implementing in non-OLE applications
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - drag and drop [MFC], calling DoDragDrop
 - OLE drag and drop [MFC], customizing behavior
 ms.assetid: 03369d3e-46bf-4140-b58c-d0c9657cf38a
-ms.openlocfilehash: d97bebce3ec7935dba7a9eca02a21be749efbec7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4749f8d45c962f8b9217e4c6367538d3e6a3608
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262601"
 ---
-# <a name="drag-and-drop-customizing"></a>Перетаскивание. Настройка
+# <a name="drag-and-drop-customizing"></a>Путем перетаскивания: Настройка
 
 Реализация по умолчанию функции и перетаскивать достаточно для большинства приложений. Однако некоторым приложениям может понадобиться изменить это стандартное поведение. Здесь объясняются действия, необходимые изменить эти значения по умолчанию. Кроме того этот метод можно использовать для установки приложений, которые не поддерживают составные документы в качестве источников перетаскивания.
 

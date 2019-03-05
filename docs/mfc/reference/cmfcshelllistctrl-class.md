@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302550"
 ---
 # <a name="cmfcshelllistctrl-class"></a>Класс CMFCShellListCtrl
 
@@ -177,7 +177,7 @@ BOOL GetCurrentFolder(CString& strPath) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае 0.
+Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -198,7 +198,7 @@ BOOL GetCurrentFolderName(CString& strName) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае 0.
+Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -252,7 +252,7 @@ BOOL GetItemPath(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если выполнение прошло успешно; Значение FALSE в противном случае.
+Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
@@ -288,7 +288,7 @@ BOOL IsDesktop() const;
 
 ##  <a name="oncompareitems"></a>  CMFCShellListCtrl::OnCompareItems
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual int OnCompareItems(

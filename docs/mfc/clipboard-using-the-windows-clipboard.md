@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Clipboard [MFC]
 - Clipboard [MFC], Windows Clipboard API
 ms.assetid: 24415b42-9301-4a70-b69a-44c97918319f
-ms.openlocfilehash: 67bc337af2cf55a4f39698f730ce14a3369ef742
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49111e4efd2a12264d61030fe038d80b974514c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460701"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264798"
 ---
 # <a name="clipboard-using-the-windows-clipboard"></a>Буфер обмена. Использование буфера обмена Windows
 
@@ -30,7 +30,7 @@ ms.locfileid: "50460701"
 
 Команды вырезания, копирования и вставки важны только в определенных контекстах. Команды вырезания и копирования должен быть включен только в том случае, если что-то выбран, и команда "Вставить", только когда что-то в буфер обмена. Это поведение можно указать путем определения функции обработчика обновления, включающие или отключающие эти команды в зависимости от контекста. Дополнительные сведения см. в разделе [обновление объектов пользовательского интерфейса](../mfc/how-to-update-user-interface-objects.md).
 
-Библиотеки Microsoft Foundation Class поддерживают буфер обмена текста при редактировании с `CEdit` и `CEditView` классы. Классы OLE упрощают реализацию операции с буфером обмена, включающие элементы OLE. Дополнительные сведения о классы OLE, см. в разделе [буфер обмена: использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
+Библиотеки Microsoft Foundation Class поддерживают буфер обмена текста при редактировании с `CEdit` и `CEditView` классы. Классы OLE упрощают реализацию операции с буфером обмена, включающие элементы OLE. Дополнительные сведения о классы OLE, см. в разделе [буфер обмена: Использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md).
 
 Реализация других изменить меню команд, таких как отмены (**ID_EDIT_UNDO**) и повтора (**ID_EDIT_REDO**), вам также остается. Если приложение не поддерживает эти команды, их можно легко удалить из файла ресурсов с помощью редакторы ресурсов Visual C++.
 
@@ -43,4 +43,3 @@ ms.locfileid: "50460701"
 ## <a name="see-also"></a>См. также
 
 [Буфер обмена](../mfc/clipboard.md)
-

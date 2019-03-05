@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304786"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Класс concurrent_priority_queue
 
@@ -51,7 +51,7 @@ template <typename T,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди с приоритетом.|
 |`const_reference`|Тип, представляющий константную ссылку на элемент типа, хранящийся в параллельной очереди с приоритетом.|
@@ -61,13 +61,13 @@ template <typename T,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[concurrent_priority_queue](#ctor)|Перегружен. Создает параллельную очередь с приоритетом.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[clear](#clear)|Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.|
 |[empty](#empty)|Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Этот метод безопасен в режиме параллелизма.|
@@ -155,7 +155,7 @@ concurrent_priority_queue(
 *Н_ачать*<br/>
 Положение первого элемента в диапазоне копируемых элементов.
 
-*_Окончания*<br/>
+*_End*<br/>
 Положение первого элемента после диапазона копируемых элементов.
 
 *_Src*<br/>
@@ -283,4 +283,3 @@ bool try_pop(reference _Elem);
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
-

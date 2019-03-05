@@ -1,5 +1,5 @@
 ---
-title: Контейнеры элементов управления ActiveX. Использование элементов управления в контейнере без диалоговых окон
+title: Контейнеры элементов ActiveX. С помощью элементов управления в контейнере без диалоговых окон
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Create method [MFC], ActiveX controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX control containers [MFC], non-dialog containers
 - ActiveX control containers [MFC], inserting controls
 ms.assetid: 46f195b0-b8ca-4409-8cca-fbfaf2c9ab9f
-ms.openlocfilehash: b31581b77743104a92236336c4db380f1693ea55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70a67a6952d5361177b89e3ba514d7036b5799b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538792"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284246"
 ---
-# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Контейнеры элементов управления ActiveX. Использование элементов управления в контейнере без диалоговых окон
+# <a name="activex-control-containers-using-controls-in-a-non-dialog-container"></a>Контейнеры элементов ActiveX. С помощью элементов управления в контейнере без диалоговых окон
 
 В некоторых приложений, таких как приложении SDI или MDI-приложения требуется внедрить элемент управления в окне приложения. **Создать** функции-члена класса-оболочки, вставленные Visual C++, можно создать экземпляр элемента управления динамически, без необходимости для диалогового окна.
 
@@ -27,7 +27,7 @@ ms.locfileid: "50538792"
 *dwStyle*<br/>
 Стили Windows. Полный список см. в разделе [CWnd::CreateControl](../mfc/reference/cwnd-class.md#createcontrol).
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение элемента управления.
 
 *pParentWnd*<br/>
@@ -64,4 +64,3 @@ ms.locfileid: "50538792"
 ## <a name="see-also"></a>См. также
 
 [Контейнеры для элементов ActiveX](../mfc/activex-control-containers.md)
-

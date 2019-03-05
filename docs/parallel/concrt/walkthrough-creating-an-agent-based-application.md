@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290096"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>Пошаговое руководство. Создание приложения на основе агента
 
@@ -180,7 +180,7 @@ Adler-32 sum is fefb0d75
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Еще одним примером приложения на основе агентов, см. в разделе [Пошаговое руководство: использование класса join для предотвращения взаимоблокировки](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
+Еще одним примером приложения на основе агентов, см. в разделе [Пошаговое руководство: Использование класса join для предотвращения взаимоблокировки](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -188,5 +188,4 @@ Adler-32 sum is fefb0d75
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Функции передачи сообщений](../../parallel/concrt/message-passing-functions.md)<br/>
 [Структуры данных синхронизации](../../parallel/concrt/synchronization-data-structures.md)<br/>
-[Пошаговое руководство. Использование класса join для предотвращения взаимоблокировки](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-
+[Пошаговое руководство: Использование класса join для предотвращения взаимных блокировок](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)

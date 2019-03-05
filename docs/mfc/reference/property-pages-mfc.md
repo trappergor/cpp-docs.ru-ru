@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269218"
 ---
 # <a name="property-pages-mfc"></a>Страницы свойств (MFC)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50620913"
 |[DDP_Radio](#ddp_radio)|Ссылки группы переключателей на странице свойств элемента управления со свойством элемента управления.|
 |[DDP_Text](#ddp_text)|Связывает элемент управления на странице свойств элемента управления со свойством элемента управления. Эта функция обрабатывает несколько различных типов свойств, таких как **двойные**, **короткие**, BSTR, и **long**.|
 
-Дополнительные сведения о `DoDataExchange` страницы функций и свойств, см. в статье [элементы управления ActiveX: страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).
+Дополнительные сведения о `DoDataExchange` страницы функций и свойств, см. в статье [элементы управления ActiveX: Страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).
 
 Ниже приведен список макросов, используемый для создания и управления ими страницы свойств для элемента управления OLE.
 
@@ -438,7 +438,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 В файле реализации (CPP), который определяет функции-члены класса запуск списке страницы свойств с begin_proppageids-макрос, а затем добавить макрос записи для каждой из страниц свойств и завершения списка страницу свойств с помощью END_PROPPAGEIDS макрос.
 
-Дополнительные сведения о страницах свойств см. в статье [элементы управления ActiveX: страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).
+Дополнительные сведения о страницах свойств см. в статье [элементы управления ActiveX: Страницы свойств](../../mfc/mfc-activex-controls-property-pages.md).
 
 ### <a name="requirements"></a>Требования
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 7f1ca94423cb1ef269c7556be25b1926fa42d2a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274548"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -43,13 +43,13 @@ class CSettingsStore : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSettingsStore::CSettingsStore](#csettingsstore)|Создает объект `CSettingsStore`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSettingsStore::Close](#close)|Закрывает открыть раздел реестра.|
 |[CSettingsStore::CreateKey](#createkey)|Открывает указанный ключ, или создает ее, если она не существует.|
@@ -176,7 +176,7 @@ virtual BOOL DeleteValue(LPCTSTR pszValue);
 
 ### <a name="parameters"></a>Параметры
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 [in] Задает поле значений для удаления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -299,7 +299,7 @@ virtual BOOL Read(
 *lpPoint*<br/>
 [out] Ссылка на указатель на `POINT` структуры, который получает значение, чтение из реестра.
 
-*Rect*<br/>
+*rect*<br/>
 [out] Ссылка на [CRect](../../atl-mfc-shared/reference/crect-class.md) переменную, которая получает значение, чтение из реестра.
 
 *ppData*<br/>
@@ -417,7 +417,7 @@ virtual BOOL Write(
 *wcArray*<br/>
 [in] Ссылка на переменную массива 16-разрядное слово, которая содержит сохраняемые данные.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ссылка на [CRect](../../atl-mfc-shared/reference/crect-class.md) переменную, содержащую данные для хранения.
 
 *lpPoint*<br/>

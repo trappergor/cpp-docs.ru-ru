@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496022"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261353"
 ---
 # <a name="cheaderctrl-class"></a>Класс CHeaderCtrl
 
@@ -85,13 +85,13 @@ class CHeaderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHeaderCtrl::CHeaderCtrl](#cheaderctrl)|Создает объект `CHeaderCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHeaderCtrl::ClearAllFilters](#clearallfilters)|Удаляет все фильтры для заголовка элемента управления.|
 |[CHeaderCtrl::ClearFilter](#clearfilter)|Удаляет фильтр для заголовка элемента управления.|
@@ -230,7 +230,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль заголовка элемента управления. Описание заголовка стили элемента управления, см. в разделе [стили элемента управления заголовка](/windows/desktop/Controls/header-control-styles) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение заголовка элемента управления. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
 
 *pParentWnd*<br/>
@@ -300,7 +300,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Стиль заголовка элемента управления. Описание заголовка стили элемента управления, см. в разделе [стили элемента управления заголовка](/windows/desktop/Controls/header-control-styles) в пакете Windows SDK. См. в разделе [создать](#create) список дополнительные стили.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -540,7 +540,7 @@ BOOL GetItemDropDownRect(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iItem*|[in] Отсчитываемый от нуля индекс, стиль которого является HDF_SPLITBUTTON ю элемента заголовка. Дополнительные сведения см. в разделе `fmt` членом [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema) структуры.|
 |*lpRect*|[out] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру для получения ограничивающего прямоугольника сведения.|
@@ -823,7 +823,7 @@ BOOL SetFocusedItem(int iItem);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iItem*|[in] Отсчитываемый от нуля индекс элемента заголовка.|
 

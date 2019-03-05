@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: 7248c86f71780ef1867a1ce7edf871f27fc67643
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642186"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259079"
 ---
 # <a name="cjumplist-class"></a>Класс CJumpList
 
@@ -57,12 +57,12 @@ class CJumpList;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|Создает объект `CJumpList`.|
 |[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|Уничтожает объект `CJumpList`.|
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CJumpList::AbortList](#abortlist)|Прерывает транзакцию список стандартных без фиксации.|
 |[CJumpList::AddDestination](#adddestination)|Перегружен. Добавляет в список назначения.|

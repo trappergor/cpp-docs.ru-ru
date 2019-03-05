@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: e31e7d68676a40da51f214496a13072d0d4d2b28
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178958"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288658"
 ---
 # <a name="mfc-classes"></a>Классы MFC
 
@@ -1306,4 +1306,3 @@ ms.locfileid: "53178958"
 
 [Приложения MFC для рабочего стола](../../mfc/mfc-desktop-applications.md)<br/>
 Содержит ссылки на разделы о классах, глобальных функциях, глобальных переменных и макросах, составляющих библиотеку MFC.
-

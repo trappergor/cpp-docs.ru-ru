@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452680"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294607"
 ---
 # <a name="cmfckeymapdialog-class"></a>Класс CMFCKeyMapDialog
 
@@ -47,13 +47,13 @@ class CMFCKeyMapDialog : public CDialogEx
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCKeyMapDialog::CMFCKeyMapDialog](#cmfckeymapdialog)|Создает объект `CMFCKeyMapDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCKeyMapDialog::DoModal](#domodal)|Отображает диалоговое окно сопоставления клавиатуры.|
 
@@ -213,7 +213,7 @@ virtual int OnPrintHeader(
 *nPage*<br/>
 [in] Номер страницы для печати.
 
-*CX*<br/>
+*cx*<br/>
 [in] Горизонтальное смещение заголовка в пикселях.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -248,7 +248,7 @@ virtual int OnPrintItem(
 *y*<br/>
 [in] Вертикальное смещение между верхней частью страницы и положение элемента.
 
-*CX*<br/>
+*cx*<br/>
 [in] Горизонтальное смещение между левой части страницы и положение элемента.
 
 *bCalcHeight*<br/>

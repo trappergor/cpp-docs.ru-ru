@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481800"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284844"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Функции пространства имен Concurrency (AMP)
 
@@ -79,7 +79,7 @@ inline bool atomic_compare_exchange(
 *_Expected_value*<br/>
 Расположение, из которого считываются второе значение для сравнения.
 
-*значение*<br/>
+*value*<br/>
 Значение для сохранения в область памяти, заданные в `_Dest` Если `_Dest` равен `_Expected_value`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -112,7 +112,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 Указатель на расположение адрес назначения.
 
-*значение*<br/>
+*value*<br/>
 Новое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -140,7 +140,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 Указатель на область памяти.
 
-*значение*<br/>
+*value*<br/>
 Добавляемое значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -168,7 +168,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 Указатель на область памяти.
 
-*значение*<br/>
+*value*<br/>
 Значение, используемое в побитовое и вычисления.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -235,7 +235,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 Расположение, из которых используется один из сравниваемых значений считывается, и к которой будет храниться максимальное из двух значений.
 
-*значение*<br/>
+*value*<br/>
 Значение для сравнения со значением в указанном расположении.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -263,7 +263,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 Расположение, из которых используется один из сравниваемых значений считывается, и к которой будет храниться минимальное из двух значений.
 
-*значение*<br/>
+*value*<br/>
 Значение для сравнения со значением в указанном расположении.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -291,7 +291,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 Указатель на область памяти.
 
-*значение*<br/>
+*value*<br/>
 Значение для использования в расчете побитового OR.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -319,7 +319,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 Указатель на расположение адрес назначения.
 
-*значение*<br/>
+*value*<br/>
 Значение для вычитания.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -347,7 +347,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 Указатель на область памяти.
 
-*значение*<br/>
+*value*<br/>
 Значение, используемое в вычислении исключающего логического Сложения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -546,7 +546,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-Прерывает выполнение функции с предложением ограничения `restrict(amp)` . Когда среда выполнения AMP обнаруживает вызов, она порождает исключение [runtime_exception](runtime-exception-class.md) с таким сообщением об ошибке: "Средство программной прорисовки: обнаружена инструкция прекращения работы шейдера".
+Прерывает выполнение функции с предложением ограничения `restrict(amp)` . Когда среда выполнения AMP обнаруживает вызов, он вызывает [runtime_exception](runtime-exception-class.md) исключение с сообщением об ошибке «программной прорисовки: Прекращения работы шейдера инструкции».
 
 ```
 void direct3d_abort() restrict(amp);

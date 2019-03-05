@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275367"
 ---
 # <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 
@@ -43,7 +43,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|
 
@@ -51,7 +51,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Увеличивает на единицу счетчик, который связан с заданной команде.|
 |[CMFCCmdUsageCount::GetCount](#getcount)|Получает счетчик использования, который сопоставлен заданному идентификатору команды.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, собираются ли этот объект минимальный объем данных отслеживания.|
@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|name|Описание|
+|name|Описание:|
 |`m_CmdUsage`|Объект `CMap` объект, который сопоставляет команды их счетчики использования.|
 |`m_nMinUsagePercentage`|Процент минимального срока использования команды часто использоваться.|
 |`m_nStartCount`|Счетчик начала, который используется для определения того, собираются ли этот объект минимальный объем данных отслеживания.|
@@ -98,7 +98,7 @@ void AddCmd(UINT uiCmd);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*uiCmd*|[in] Указывает команду счетчик будет изменяться.|
 
 ### <a name="remarks"></a>Примечания
@@ -125,7 +125,7 @@ UINT GetCount(UINT uiCmd) const;
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*uiCmd*|[in] Идентификатор счетчика команду для извлечения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -162,7 +162,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*uiCmd*|[in] Указывает команду, чтобы проверить.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 Этот метод сериализует структуре карты счетчиков команда `m_CmdUsage`и об использовании общее команды, `m_nTotalUsage`, счетчик, в указанный архив или из него.
 
-Примеры сериализации см. в разделе [сериализации: сериализация объекта](../../mfc/serialization-serializing-an-object.md).
+Примеры сериализации см. в разделе [сериализации: Сериализация объекта](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 
@@ -222,7 +222,7 @@ static BOOL __stdcall SetOptions(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*nStartCount*|[in] Новый исходное количество всех отслеживаемых команд.|
 |*nMinUsagePercentage*|[in] Новый процент минимального срока использования.|
 

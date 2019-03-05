@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: 19ff4e41f3b8c73e7ae62fbf264ea955b42bbc1a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177913"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294165"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Изменение стилей окна, созданного MFC
 
@@ -83,4 +83,3 @@ ms.locfileid: "53177913"
 ## <a name="see-also"></a>См. также
 
 [Стили окна фрейма](../mfc/frame-window-styles-cpp.md)
-

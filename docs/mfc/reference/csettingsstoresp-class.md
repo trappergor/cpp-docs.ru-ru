@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CSettingsStoreSP [MFC], Create
 - CSettingsStoreSP [MFC], SetRuntimeClass
 ms.assetid: bcd37f40-cfd4-4d17-a5ce-3bfabe995dcc
-ms.openlocfilehash: f6bcbce291aec1941359504518e26ca936edb9e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c7a992b983552340ebe21e59d2ee9a667841ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604481"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275198"
 ---
 # <a name="csettingsstoresp-class"></a>Класс CSettingsStoreSP
 
@@ -33,27 +33,27 @@ class CSettingsStoreSP
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSettingsStoreSP::CSettingsStoreSP](#csettingsstoresp)|Создает объект `CSettingsStoreSP`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSettingsStoreSP::Create](#create)|Создает экземпляр класса, который является производным от `CSettingsStore`.|
 |[CSettingsStoreSP::SetRuntimeClass](#setruntimeclass)|Задает класс среды выполнения. `Create` Метод использует класс среды выполнения, чтобы определить, какой класс объектов для создания.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |`m_dwUserData`|Пользовательские данные, хранящиеся в `CSettingsStoreSP` объекта. Вы указали эти данные в конструкторе класса `CSettingsStoreSP` объекта.|
 |`m_pRegistry`|`CSettingsStore`-Производного объекта, `Create` методом.|
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать `CSettingsStoreSP` перенаправить все операции с реестром MFC в другие расположения, например XML-файл или базу данных. Для этого выполните следующие действия:
+Можно использовать `CSettingsStoreSP` перенаправить все операции с реестром MFC в другие расположения, например XML-файл или базу данных. Для этого выполните следующие действия.
 
 1. Создайте класс (такие как `CMyStore`) и сделайте его производным от `CSettingsStore`.
 

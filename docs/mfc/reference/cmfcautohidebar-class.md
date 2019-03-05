@@ -38,18 +38,18 @@ helpviewer_keywords:
 - CMFCAutoHideBar [MFC], UpdateVisibleState
 - CMFCAutoHideBar [MFC], m_nShowAHWndDelay
 ms.assetid: 54c8d84f-de64-4efd-8a47-3ea0ade40a70
-ms.openlocfilehash: 8592a5485afedab075a21215e1ffa140a8c66e28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b40e4d48e8204824375630f7517ff3f5aa5108d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619457"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291422"
 ---
 # <a name="cmfcautohidebar-class"></a>Класс CMFCAutoHideBar
 
 Класс `CMFCAutoHideBar` — это специальный класс панели инструментов, реализующий возможность автоматического скрытия.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,13 +61,13 @@ class CMFCAutoHideBar : public CPane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCAutoHideBar::CMFCAutoHideBar](#cmfcautohidebar)||
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||
 |[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|
@@ -211,7 +211,7 @@ virtual BOOL Create(
 
 *dwStyle*<br/>
 
-*Rect*<br/>
+*rect*<br/>
 
 *pParentWnd*<br/>
 

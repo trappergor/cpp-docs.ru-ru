@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604138"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270557"
 ---
 # <a name="coleserveritem-class"></a>Класс COleServerItem
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Создает объект `COleServerItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Помещает форматов представления и преобразования в `COleDataSource` объекта.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Копирование элемента в буфер обмена.|
@@ -155,7 +155,7 @@ class COleServerItem : public CDocItem
 
 Чтобы использовать `COleServerItem`, создать класс, производный от него и реализовать [OnDraw](#ondraw) и [Serialize](../../mfc/reference/cobject-class.md#serialize) функций-членов. `OnDraw` Функция предоставляет представление элемента, позволяя, чтобы он отображался в открывшемся составной документ приложения-контейнера в метафайл. `Serialize` Функции `CObject` предоставляет собственное представление элемента, благодаря чему embedded могут передаваться между приложениями, сервера и контейнера. [OnGetExtent](#ongetextent) предоставляет размеру элемента в контейнер, включение контейнера для определения размера элемента.
 
-Дополнительные сведения о серверах и щелкните ссылку, см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md) и «Создание контейнера и сервера приложений» в статье [контейнеры: Дополнительные функции](../../mfc/containers-advanced-features.md).
+Дополнительные сведения о серверах и щелкните ссылку, см. в статье [серверов: Реализация сервера](../../mfc/servers-implementing-a-server.md) и «Создание контейнера и сервера приложений» в статье [контейнеров: Дополнительные возможности](../../mfc/containers-advanced-features.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

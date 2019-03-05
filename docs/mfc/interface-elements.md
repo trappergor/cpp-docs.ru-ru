@@ -5,12 +5,12 @@ helpviewer_keywords:
 - architecture [MFC], MFC Feature Pack
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
-ms.openlocfilehash: 9cf38d3d469da181d15a10434525b3aca63969f0
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262887"
 ---
 # <a name="interface-elements"></a>Элементы интерфейса
 
@@ -46,7 +46,7 @@ ms.locfileid: "52175903"
 
 ## <a name="mini-frame-windows"></a>Области Windows
 
-Плавающую панель находится в окне области. Окна, представляются двумя классами: [класс CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (который может содержать только одну область) и [класс CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (который может содержать несколько областей). Чтобы перемещаться в области в коде, вызовите [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). После отображается панель, платформа автоматически создает окна области и этого окна минифрейма становится родительской области с плавающей запятой. Закрепляет область с плавающей запятой, платформа сбрасывает его родительского и становится плавающую панель закрепления строки (для панели инструментов) или (для изменяемого размера области) сайта закрепления.
+Плавающую панель находится в окне области. Окна представлены два класса: [Класс CMDITabInfo](../mfc/reference/cmditabinfo-class.md) (который может содержать только одну область) и [класс CMultiPaneFrameWnd](../mfc/reference/cmultipaneframewnd-class.md) (который может содержать несколько областей). Чтобы перемещаться в области в коде, вызовите [CBasePane::FloatPane](../mfc/reference/cbasepane-class.md#floatpane). После отображается панель, платформа автоматически создает окна области и этого окна минифрейма становится родительской области с плавающей запятой. Закрепляет область с плавающей запятой, платформа сбрасывает его родительского и становится плавающую панель закрепления строки (для панели инструментов) или (для изменяемого размера области) сайта закрепления.
 
 ## <a name="pane-dividers"></a>Разделители области
 
@@ -69,4 +69,3 @@ ms.locfileid: "52175903"
 ## <a name="see-also"></a>См. также
 
 [Основные понятия](../mfc/mfc-concepts.md)
-

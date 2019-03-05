@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: e84ceb11ad789ef3bd6933292030ef2af6f1d817
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299079"
 ---
 # <a name="cdocument-class"></a>Класс CDocument
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Создает объект `CDocument`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Присоединяет представление документа.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Инициализирует Фрагментирование чтения.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocument::OnFileSendMail](#onfilesendmail)|Отправляет сообщение электронной почты с вложенным документом.|
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Включает команду Отправить почту, если присутствует поддержка электронной почты.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Указывает, что `CDocument` объект был создан при dllhost для эскизов. Должен быть установлен в `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Указывает, что `CDocument` объект был создан при prevhost для `Rich Preview`. Должен быть установлен в `CView::OnDraw`.|
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Указывает ширину и высоту растрового изображения.
 
 *phbmp*<br/>

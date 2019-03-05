@@ -1,19 +1,19 @@
 ---
-title: Элементы управления ActiveX в MFC. Реализация расширенных свойств
+title: Элементы ActiveX в MFC. Реализация расширенных свойств
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
 - properties [MFC], ActiveX controls
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
-ms.openlocfilehash: d26dbcb1c18c3c939214051d9010cb5b6db90929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568029"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266969"
 ---
-# <a name="mfc-activex-controls-advanced-property-implementation"></a>Элементы управления ActiveX в MFC. Реализация расширенных свойств
+# <a name="mfc-activex-controls-advanced-property-implementation"></a>Элементы ActiveX в MFC. Реализация расширенных свойств
 
 В этой статье описываются разделы, относящиеся к реализации дополнительных свойств в элементе управления ActiveX.
 
@@ -69,7 +69,7 @@ ms.locfileid: "50568029"
 > [!NOTE]
 >  `ThrowError` предназначен для использования только с точки зрения сообщение об ошибке из внутри свойства Get или Set функция или метод автоматизации. Это только те представления времени, которые будут соответствующему обработчику исключений в стеке.
 
-Дополнительные сведения о reporting исключения в других областях кода, см. в разделе [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) и разделе [обработка ошибок в ваш элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в этой статье элементы управления ActiveX: Дополнительно Разделы.
+Дополнительные сведения о reporting исключения в других областях кода, см. в разделе [COleControl::FireError](../mfc/reference/colecontrol-class.md#fireerror) и разделе [обработка ошибок в ваш элемент управления ActiveX](../mfc/mfc-activex-controls-advanced-topics.md) в этой статье элементы управления ActiveX: Дополнительные разделы.
 
 ## <a name="see-also"></a>См. также
 

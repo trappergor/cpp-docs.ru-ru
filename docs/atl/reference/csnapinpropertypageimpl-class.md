@@ -25,12 +25,12 @@ helpviewer_keywords:
 - property pages, ATL
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
-ms.openlocfilehash: ea79a5624937b27fe69be2c15bac3a0c40592252
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272182"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Класс CSnapInPropertyPageImpl
 
@@ -55,7 +55,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Изменяет состояние **ОК** и **отменить** кнопки.|
 |[CSnapInPropertyPageImpl::Create](#create)|Инициализирует только что созданный объект `CSnapInPropertyPageImpl` объекта.|

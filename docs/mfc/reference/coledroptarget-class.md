@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300131"
 ---
 # <a name="coledroptarget-class"></a>Класс COleDropTarget
 
@@ -45,13 +45,13 @@ class COleDropTarget : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Создает объект `COleDropTarget`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|Вызывается, когда указатель мыши впервые входит окна.|
 |[COleDropTarget::OnDragLeave](#ondragleave)|Вызывается, когда курсор перемещается за пределы окна.|
@@ -115,9 +115,9 @@ virtual DROPEFFECT OnDragEnter(
 Указывает объект данных, содержащий данные, которые могут быть удалены.
 
 *dwKeyState*<br/>
-Содержит состояние клавиши-модификаторы. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
+Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
 
-*точка*<br/>
+*point*<br/>
 Содержит текущее положение курсора в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,9 +180,9 @@ virtual DROPEFFECT OnDragOver(
 Указывает объект данных, содержащий данные для удаления.
 
 *dwKeyState*<br/>
-Содержит состояние клавиши-модификаторы. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
+Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
 
-*точка*<br/>
+*point*<br/>
 Содержит текущее положение курсора в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -226,9 +226,9 @@ virtual DROPEFFECT OnDragScroll(
 Указывает на окно, которое наведен курсор.
 
 *dwKeyState*<br/>
-Содержит состояние клавиши-модификаторы. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
+Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
 
-*точка*<br/>
+*point*<br/>
 Содержит расположение курсора, в пикселях, относительно экрана.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -278,7 +278,7 @@ virtual BOOL OnDrop(
 
 - Будет установлено DROPEFFECT_LINK ссылку по почте из перенесенных данных с исходными данными.
 
-*точка*<br/>
+*point*<br/>
 Содержит расположение курсора, в пикселях, относительно экрана.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -320,7 +320,7 @@ virtual DROPEFFECT OnDropEx(
 *из раскрывающегося списка*<br/>
 Список эффектов перетаскивания, поддерживаемый источником перетаскивания. Значения эффект перетаскивания могут быть объединены с помощью побитовой операции или (**&#124;**) операции. Эффекты перетаскивания рассматриваются в разделе "Примечания".
 
-*точка*<br/>
+*point*<br/>
 Содержит расположение курсора, в пикселях, относительно экрана.
 
 ### <a name="return-value"></a>Возвращаемое значение

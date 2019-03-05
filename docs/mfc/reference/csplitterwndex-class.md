@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSplitterWndEx [MFC], OnDrawSplitter
 ms.assetid: 33e5eef3-05e1-4a07-a968-bf9207ce8598
-ms.openlocfilehash: fa58dbffc3e6416c18b8124f8e5edfe1ce987815
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dedad4e99a37b13dc618859c8e6d8a83a65ea76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265149"
 ---
 # <a name="csplitterwndex-class"></a>Класс CSplitterWndEx
 
@@ -29,7 +29,7 @@ class CSplitterWndEx : public CSplitterWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CSplitterWndEx::CSplitterWndEx`|Конструктор по умолчанию.|
 |`CSplitterWndEx::~CSplitterWndEx`|Деструктор.|
@@ -80,7 +80,7 @@ virtual void OnDrawSplitter(
 *nType*<br/>
 [in] Один из `CSplitterWnd::ESplitType` значений перечисления, задающее элемент окна разделителя для рисования. Допустимые значения: `splitBox`, `splitBar`, `splitIntersection` и `splitBorder`.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, который указывает размеры и расположение, чтобы нарисовать элемент window указанного разделителя.
 
 ### <a name="remarks"></a>Примечания

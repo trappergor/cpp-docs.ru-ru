@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525805"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276992"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Обновление существующего элемента управления ActiveX
 
@@ -28,7 +28,7 @@ ms.locfileid: "50525805"
 
 При использовании элемента управления на веб-странице, существует ряд дополнительных рекомендаций. Соответствующий файл и все вспомогательные файлы должны быть на конечном компьютере или загрузить через Интернет. В результате размер кода и важно учитывать время загрузки. Файлы для загрузки можно упаковать в подписанные CAB-файл. Можно пометить как безопасные для использования, а также как безопасный для инициализации элемента управления.
 
-В этой статье рассматриваются следующие темы:
+Темы этой статьи:
 
 - [Упаковка кода для загрузки](#_core_packaging_code_for_downloading)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50525805"
 
 - [Уровни безопасности обозревателя Internet Explorer и поведение элемента управления](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-Можно также добавить оптимизации, как описано в разделе [элементы управления ActiveX: оптимизация](../mfc/mfc-activex-controls-optimization.md). Можно использовать моникеры для загрузки свойства и большие двоичные объекты асинхронно, как описано в разделе [элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md).
+Можно также добавить оптимизации, как описано в разделе [элементы управления ActiveX: Оптимизация](../mfc/mfc-activex-controls-optimization.md). Можно использовать моникеры для загрузки свойства и большие двоичные объекты асинхронно, как описано в разделе [элементы управления ActiveX в Интернете](../mfc/activex-controls-on-the-internet.md).
 
 ##  <a name="_core_packaging_code_for_downloading"></a> Упаковка кода для загрузки
 
@@ -274,5 +274,4 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 [Задачи программирования для интернет-решений MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Элементы ActiveX в MFC. Лицензирование элемента ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[Элементы ActiveX в MFC. Лицензирование элемента управления ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

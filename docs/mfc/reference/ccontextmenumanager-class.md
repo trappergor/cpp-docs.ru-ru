@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 49e9b1cd12bee562daaf4ffb40492c80d8549ec3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639350"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304341"
 ---
 # <a name="ccontextmenumanager-class"></a>Класс CContextMenuManager
 
@@ -49,14 +49,14 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Создает объект `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CContextMenuManager::AddMenu](#addmenu)|Добавляет новый контекстное меню.|
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Возвращает дескриптор для меню, связанное с идентификатором предоставленного ресурса.|

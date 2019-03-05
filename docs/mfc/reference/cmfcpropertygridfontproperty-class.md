@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetColor
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
-ms.openlocfilehash: 40f49e7e22b3e1c81e69b9b1f6b02789165dc5eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ab4f43b2b12dff88148097e2961f235669aaa62
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631723"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295673"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>Класс CMFCPropertyGridFontProperty
 
@@ -33,14 +33,14 @@ class CMFCPropertyGridFontProperty : public CMFCPropertyGridProperty
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridFontProperty::CMFCPropertyGridFontProperty](#cmfcpropertygridfontproperty)|Создает объект `CMFCPropertyGridFontProperty`.|
 |`CMFCPropertyGridFontProperty::~CMFCPropertyGridFontProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCPropertyGridFontProperty::FormatProperty`|Форматирует текстовое представление значения свойства. (Переопределяет [CMFCPropertyGridProperty::FormatProperty](../../mfc/reference/cmfcpropertygridproperty-class.md#formatproperty).)|
 |[CMFCPropertyGridFontProperty::GetColor](#getcolor)|Возвращает цвет шрифта, выбранного пользователем в диалоговом окне шрифта.|
@@ -93,7 +93,7 @@ CMFCPropertyGridFontProperty(
 *dwData*<br/>
 [in] Данные приложения, такие как целое число или указатель с другими данными, который связан со свойством. Значение по умолчанию — 0.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Цвет шрифта. Значением по умолчанию является цвет по умолчанию.
 
 ### <a name="remarks"></a>Примечания

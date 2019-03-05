@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: d0da6ebcb178735fc25c656241fe23497d941ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631157"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258480"
 ---
 # <a name="compiler-options-macros"></a>Макросы для параметров компилятора
 
@@ -32,7 +32,7 @@ ms.locfileid: "50631157"
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Символ, который включает ошибки в проектах, преобразованные из предыдущих версий ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Определите, если один или несколько объектов использовать потоковое.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Гарантирует `CString` конструкторы, explicit, предотвращая все непреднамеренного преобразования.|
-|[ТАКЖЕ БИБЛИОТЕКАХ](#_atl_enable_ptm_warning)|Задать этот макрос, чтобы использовать C++ standard совместимый синтаксис, который создает ошибку компилятора C4867, когда не стандартный синтаксис, используемый для инициализации указателя на функцию-член.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Задать этот макрос, чтобы использовать C++ standard совместимый синтаксис, который создает ошибку компилятора C4867, когда не стандартный синтаксис, используемый для инициализации указателя на функцию-член.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Определите, если один или несколько объектов используйте бесплатную или нейтральным работа с потоками.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Символ, указывающий проект будет иметь объектов, помеченных как, бесплатный "или" Neutral. Макрос [_ATL_FREE_THREADED](#_atl_free_threaded) должны использоваться вместо нее.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Символ, который не позволяет использовать по умолчанию пространство имен в качестве ATL.|
@@ -103,7 +103,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 С помощью макрос _T на все строковые аргументы конструктора, можно определить _ATL_CSTRING_EXPLICIT_CONSTRUCTORS и избежать ошибок компиляции, независимо от того, определен ли _UNICODE.
 
-##  <a name="_atl_enable_ptm_warning"></a>  ТАКЖЕ БИБЛИОТЕКАХ
+##  <a name="_atl_enable_ptm_warning"></a>  _ATL_ENABLE_PTM_WARNING
 
 Задать этот макрос, чтобы принудительно использовать синтаксис стандартные, совместимые с ANSI C++ для указателей на функции-члены. Использование этого макроса вызовет ошибку компилятора C4867 стеком нестандартный синтаксис используется для инициализации указателя на функцию-член.
 

@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179062"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305085"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Создает объект `CDC`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Завершает текущее задание печати, удаляя все, что приложение написано на устройстве с момента последнего вызова из `StartDoc` функция-член.|
 |[CDC::AbortPath](#abortpath)|Закрывает и удаляет все пути в контексте устройства.|
@@ -551,7 +551,7 @@ class CDC : public CObject
 |[CDC::LPtoHIMETRIC](#lptohimetric)|Преобразует логические устройства в единицы HIMETRIC.|
 |[CDC::MaskBlt](#maskblt)|Объединяет данные о цвете для исходного и конечного точечных рисунков, с помощью заданной маске и выполнению растровую операцию.|
 |[CDC::ModifyWorldTransform](#modifyworldtransform)|Изменяет мировое преобразование для контекста устройства, используя указанный режим.|
-|[CDC::moveTo](#moveto)|Перемещает текущую позицию.|
+|[CDC::MoveTo](#moveto)|Перемещает текущую позицию.|
 |[CDC::OffsetClipRgn](#offsetcliprgn)|Перемещает отсеченную область данного устройства.|
 |[CDC::OffsetViewportOrg](#offsetviewportorg)|Изменяет начало координат окна просмотра относительно координат текущее исходное окно просмотра.|
 |[CDC::OffsetWindowOrg](#offsetwindoworg)|Изменяет начало координат окна относительно координат текущее исходное окно.|
@@ -629,7 +629,7 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDC::operator HDC](#operator_hdc)|Извлекает дескриптор контекста устройства.|
 
@@ -661,7 +661,7 @@ class CDC : public CObject
 
 Бывают случаи, когда может потребоваться информация метрика текст из обоих `m_hDC` и `m_hAttribDC` контексты устройств. Следующие пары функций обеспечения этой возможности:
 
-|Использует m_hAttribDC|Использует m_hDC|
+|Использует m_hAttribDC|Uses m_hDC|
 |-----------------------|-----------------|
 |[GetTextExtent](#gettextextent)|[GetOutputTextExtent](#getoutputtextextent)|
 |[GetTabbedTextExtent](#gettabbedtextextent)|[GetOutputTabbedTextExtent](#getoutputtabbedtextextent)|
@@ -3171,7 +3171,7 @@ DWORD GetGlyphOutline(
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Определяет символ, для которого будет возвращаться сведения.
 
 *nFormat*<br/>
@@ -3732,7 +3732,7 @@ UINT GetTextAlign() const;
 
     - TA_BASELINE TA_BOTTOM и TA_TOP
 
-    - TA_NOUPDATECP и TA_UPDATECP
+    - TA_NOUPDATECP and TA_UPDATECP
 
 1. Применить побитового- и оператор результат и возвращаемое значение `GetTextAlign`.
 
@@ -5699,7 +5699,7 @@ virtual CGdiObject* SelectStockObject(int nIndex);
 
 - Зависящие от OEM OEM_FIXED_FONT исправлена шрифта.
 
-- SYSTEM_FONT системного шрифта. По умолчанию Windows использует системный шрифт для рисования меню, элементам управления диалогового окна и другой текст. Рекомендуется, однако не должны полагаться на SYSTEM_FONT для получения шрифта диалоговых окон и окон. Вместо этого используйте `SystemParametersInfo` функцию с параметром SPI_GETNONCLIENTMETRICS для получения текущего шрифта. `SystemParametersInfo` учитывает текущую тему и предоставляет информацию о шрифте для заголовков, меню и диалоговые окна сообщения.
+- SYSTEM_FONT The system font. По умолчанию Windows использует системный шрифт для рисования меню, элементам управления диалогового окна и другой текст. Рекомендуется, однако не должны полагаться на SYSTEM_FONT для получения шрифта диалоговых окон и окон. Вместо этого используйте `SystemParametersInfo` функцию с параметром SPI_GETNONCLIENTMETRICS для получения текущего шрифта. `SystemParametersInfo` учитывает текущую тему и предоставляет информацию о шрифте для заголовков, меню и диалоговые окна сообщения.
 
 - SYSTEM_FIXED_FONT фиксированной ширины системного шрифта, используемый в Windows до версии 3.0. Этот объект доступен для совместимости с предыдущими версиями Windows.
 
@@ -5775,7 +5775,7 @@ int SetArcDirection(int nArcDirection);
 
 Направление по умолчанию — против часовой стрелки. `SetArcDirection` Функция указывает направление, в котором следующие функции draw:
 
-|Дуги|Круговая|
+|Дуги|Круговая диаграмма|
 |---------|---------|
 |`ArcTo`|`Rectangle`|
 |`Chord`|`RoundRect`|
@@ -6508,7 +6508,7 @@ CSize SetViewportExt(SIZE size);
 
 |MM_HIENGLISH|MM_LOMETRIC|
 |-------------------|------------------|
-|MM_HIMETRIC|РЕЖИМ MM_TEXT|
+|MM_HIMETRIC|MM_TEXT|
 |MM_LOENGLISH|MM_TWIPS|
 
 Если задан режим MM_ISOTROPIC, приложение должно вызвать `SetWindowExt` перед вызовом функции-члена `SetViewportExt`.
@@ -6595,7 +6595,7 @@ CSize SetWindowExt(SIZE size);
 
 - MM_LOMETRIC
 
-- РЕЖИМ MM_TEXT
+- MM_TEXT
 
 - MM_TWIPS
 

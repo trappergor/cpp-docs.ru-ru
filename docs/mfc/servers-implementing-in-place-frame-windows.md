@@ -1,5 +1,5 @@
 ---
-title: Серверы. Реализация окон фрейма на месте
+title: 'серверы: Реализация Windows фрейма на месте'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - frame windows [MFC], implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - frame windows [MFC], in-place
 - in-place frame windows
 ms.assetid: 09bde4d8-15e2-4fba-8d14-9b954d926b92
-ms.openlocfilehash: 4973db6274ce800e8e1fc413ffbfd44a107a64b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 887de747ced25d427b82e528a3b85634fabff4d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278994"
 ---
-# <a name="servers-implementing-in-place-frame-windows"></a>Серверы. Реализация окон фрейма на месте
+# <a name="servers-implementing-in-place-frame-windows"></a>серверы: Реализация Windows фрейма на месте
 
 В этой статье объясняется, что необходимо сделать для реализации окон фрейма на месте в приложении сервер визуального редактирования, если вы не используете мастер приложений для создания серверного приложения. Вместо выполнив процедуру, описанную в этой статье, можно использовать существующий класс окна фрейма на месте из мастера создания приложений приложения или пример, в состав Visual C++.
 
@@ -52,7 +52,6 @@ ms.locfileid: "50637636"
 ## <a name="see-also"></a>См. также
 
 [Серверы](../mfc/servers.md)<br/>
-[Серверы. Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
-[Серверы. Реализация документов сервера](../mfc/servers-implementing-server-documents.md)<br/>
-[Серверы. Элементы сервера](../mfc/servers-server-items.md)
-
+[серверы: Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
+[серверы: Реализация документов сервера](../mfc/servers-implementing-server-documents.md)<br/>
+[серверы: Элементы сервера](../mfc/servers-server-items.md)

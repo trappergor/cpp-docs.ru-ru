@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178783"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304474"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -129,7 +129,7 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|
 
@@ -214,7 +214,7 @@ class CComboBox : public CWnd
 
 Родительский прототип функции выглядит следующим образом:
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 Порядок, в котором некоторые уведомления будут отправляться, предсказать нельзя. В частности CBN_SELCHANGE уведомление может возникнуть до или после CBN_CLOSEUP уведомление.
 
@@ -665,7 +665,7 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszText*|[out] Указатель на буфер, получающий текст баннера подсказки.|
 |*cchText*|[in] Размер буфера, *lpszText* указывает параметр.|
@@ -1191,7 +1191,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszText*|[in] Указатель на буфер нулевым байтом, который содержит текст подсказки.|
 

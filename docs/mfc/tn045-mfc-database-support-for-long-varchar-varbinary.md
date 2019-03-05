@@ -1,5 +1,5 @@
 ---
-title: 'TN045: Поддержка MFC и баз данных для Long Varchar и Varbinary'
+title: 'TN045: Поддержка MFC и баз данных Long Varchar и Varbinary'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567042"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260118"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045. Поддержка MFC и баз данных для типов Long Varchar и Varbinary
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045: Поддержка MFC и баз данных для типов Long Varchar и Varbinary
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -101,7 +101,7 @@ ClassWizard привяжет **SQL_LONGVARCHAR** или **SQL_LONGVARBINARY** д
 
 При обновлении `CLongBinary` поле, классы баз данных используйте ODBC **DATA_AT_EXEC** механизм (см. в разделе документации по ODBC на `SQLSetPos`в rgbValue аргумент). Когда платформа готовится инструкции insert или update, а не указывает на `HGLOBAL` данными, *адрес* из `CLongBinary` задается как *значение* столбца Вместо этого и признак длины, равным **значение SQL_DATA_AT_EXEC**. Позже, когда инструкция update отправляется к источнику данных, `SQLExecDirect` вернет **SQL_NEED_DATA**. Это предупреждение о структуре что param для этого столбца значение фактически адрес `CLongBinary`. Платформа вызывает `SQLGetData` один раз с небольшим буфером, ожидается драйвер возвращает фактическую длину данных. Если драйвер возвращает фактическую длину большой двоичный объект (BLOB), MFC перераспределяет столько же места, при необходимости для получения большого двоичного ОБЪЕКТА. Если источник данных возвращает **SQL_NO_TOTAL**, указывающее, что он не может определить размер большого двоичного ОБЪЕКТА, MFC создаст небольших блоков. Исходный размер по умолчанию составляет 64 КБ, а последующие блоки будут два раза больше; Например второй будет равен 128 КБ, третий — 256 КБ и т. д. Настраивается исходный размер.
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Привязка не: Извлечение и передачу данных непосредственно из ODBC с SQLGetData
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>Не привязки: Получение или отправка данных непосредственно из ODBC с SQLGetData
 
 С помощью этого метода вы полностью обойти классы баз данных и работать со столбцом данных большой длины.
 
@@ -122,4 +122,3 @@ ClassWizard привяжет **SQL_LONGVARCHAR** или **SQL_LONGVARBINARY** д
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleConvertDialog [MFC], GetSelectionType
 - COleConvertDialog [MFC], m_cv
 ms.assetid: a7c57714-31e8-4b78-834d-8ddd1b856a1c
-ms.openlocfilehash: e1e13f96eb90c81127723afcacf463478b75a894
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d0d2f83a6340224cf0fd6318e470fcfae103d72b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569758"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267736"
 ---
 # <a name="coleconvertdialog-class"></a>Класс COleConvertDialog
 
@@ -43,13 +43,13 @@ class COleConvertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleConvertDialog::COleConvertDialog](#coleconvertdialog)|Создает объект `COleConvertDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleConvertDialog::DoConvert](#doconvert)|Выполняет преобразование, указанных в диалоговом окне.|
 |[COleConvertDialog::DoModal](#domodal)|Отображает диалоговое окно элементов OLE изменений.|
@@ -60,7 +60,7 @@ class COleConvertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleConvertDialog::m_cv](#m_cv)|Структура, которая управляет поведением окна.|
 

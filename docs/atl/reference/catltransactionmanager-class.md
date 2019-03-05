@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270206"
 ---
 # <a name="catltransactionmanager-class"></a>Класс CAtlTransactionManager
 
@@ -49,9 +49,9 @@ class CAtlTransactionManager;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[~ CAtlTransactionManager](#dtor)|Деструктор CAtlTransactionManager.|
+|[~CAtlTransactionManager](#dtor)|Деструктор CAtlTransactionManager.|
 |[CAtlTransactionManager](#catltransactionmanager)|Конструктор CAtlTransactionManager.|
 
 ### <a name="public-methods"></a>Открытые методы
@@ -194,7 +194,7 @@ inline HANDLE CreateFile(
 Доступ к объекту, который сформулировать чтение, запись, оба или ни одного (ноль). Наиболее часто используемые значения GENERIC_READ и GENERIC_WRITE: GENERIC_READ &#124; GENERIC_WRITE.
 
 *dwShareMode*<br/>
-Режим общего доступа объектом, который может быть чтение, запись и оба, удалить, все они или нет: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
+Режим общего доступа объекта, который может быть чтение, запись и оба, удаление, все они или нет: 0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 Указатель на структуру SECURITY_ATTRIBUTES, которая содержит дескриптор безопасности необязательно, а также определяет, может ли возвращаемый дескриптор быть унаследован дочерними процессами. Параметр может иметь значение NULL.
@@ -402,7 +402,7 @@ inline LSTATUS RegCreateKeyEx(
 Пользовательский класс этот ключ. Этот параметр могут игнорироваться. Этот параметр может иметь значение NULL.
 
 *dwOptions*<br/>
-Этот параметр может принимать одно из следующих значений: REG_OPTION_BACKUP_RESTORE, REG_OPTION_NON_VOLATILE или REG_OPTION_VOLATILE.
+Этот параметр может принимать одно из следующих значений: REG_OPTION_BACKUP_RESTORE REG_OPTION_NON_VOLATILE и REG_OPTION_VOLATILE.
 
 *samDesired*<br/>
 Маска, которая указывает права доступа для ключа.
@@ -414,7 +414,7 @@ inline LSTATUS RegCreateKeyEx(
 Указатель на переменную, которая получает дескриптор открыт или созданный ключ. Если ключ не является одним из предопределенных реестра, вызвать `RegCloseKey` функционировать после завершения использования дескриптора.
 
 *lpdwDisposition*<br/>
-Указатель на переменную, которая получает один из следующих значений disposition: REG_CREATED_NEW_KEY или REG_OPENED_EXISTING_KEY.
+Указатель на переменную, которая получает один из следующих методов обработки значений: REG_CREATED_NEW_KEY или REG_OPENED_EXISTING_KEY.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -434,7 +434,7 @@ inline LSTATUS RegDeleteKeyEx(HKEY hKey, LPCTSTR lpSubKey);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*открываемый раздел hKey*|Дескриптор, чтобы открыть раздел реестра.|
 |*lpSubKey*|Имя ключа для удаления.|

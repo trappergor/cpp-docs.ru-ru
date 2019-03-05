@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589453"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298936"
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 
@@ -55,13 +55,13 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComModule::GetClassObject](#getclassobject)|Создает объект с заданным идентификатором CLSID. Для DLL.|
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Возвращает `m_hInst`.|
 |[CComModule::GetResourceInstance](#getresourceinstance)|Возвращает `m_hInstResource`.|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|Возвращает `m_hInstTypeLib`.|
-|[Выполнения](#init)|Инициализирует данные-члены.|
+|[CComModule::Init](#init)|Инициализирует данные-члены.|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|Вводит регистрации стандартный класс объекта в системном реестре.|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|Регистрирует объект класса. EXE-файлами только.|
 |[CComModule::RegisterServer](#registerserver)|Обновляет системного реестра для каждого объекта в карте объектов.|
@@ -76,7 +76,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComModule::m_csObjMap](#m_csobjmap)|Гарантирует синхронизированного доступа к сведениям объекта карты.|
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Гарантирует синхронизированного доступа к информации о библиотеке типов.|

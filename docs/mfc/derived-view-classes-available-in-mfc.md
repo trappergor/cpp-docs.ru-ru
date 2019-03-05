@@ -7,12 +7,12 @@ helpviewer_keywords:
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594509"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269296"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>Производные классы представлений, доступные в MFC
 
@@ -20,7 +20,7 @@ ms.locfileid: "50594509"
 
 ### <a name="view-classes"></a>Классы представления
 
-|Класс|Описание|
+|Класс|Описание:|
 |-----------|-----------------|
 |[CView](../mfc/reference/cview-class.md)|Базовый класс для всех представлений.|
 |[CCtrlView](../mfc/reference/cctrlview-class.md)|Базовый класс `CTreeView`, `CListView`, `CEditView`, и `CRichEditView`. Эти классы позволяют использовать архитектуры document/view с указанной Общие элементы управления Windows.|
@@ -38,9 +38,8 @@ ms.locfileid: "50594509"
 > [!NOTE]
 >  Начиная с версии 4.0, MFC `CEditView` является производным от `CCtrlView`.
 
-Для использования этих классов в приложении, производных классов представления приложения от них. Дополнительные сведения см. в разделе [прокрутка и масштабирование представления](../mfc/scrolling-and-scaling-views.md). Дополнительные сведения о классы баз данных, см. в разделе [Обзор: программирования баз данных,](../data/data-access-programming-mfc-atl.md).
+Для использования этих классов в приложении, производных классов представления приложения от них. Дополнительные сведения см. в разделе [прокрутка и масштабирование представления](../mfc/scrolling-and-scaling-views.md). Дополнительные сведения о классы баз данных, см. в разделе [Обзор: Программирование баз данных](../data/data-access-programming-mfc-atl.md).
 
 ## <a name="see-also"></a>См. также
 
 [Использование представлений](../mfc/using-views.md)
-

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260274"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 
@@ -69,7 +69,7 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CProgressCtrl::Create](#create)|Создает элемент управления хода выполнения и присоединяет его к `CProgressCtrl` объекта.|
 |[CProgressCtrl::CreateEx](#createex)|Создает элемент управления хода выполнения с указанной расширенные стили Windows и присоединяет его к `CProgressCtrl` объекта.|
@@ -148,7 +148,7 @@ virtual BOOL Create(
 
 - Отображает PBS_SMOOTH постепенного, плавное заполнение индикатора. Без этого флага элемент управления будет заполнить блоки.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение окна хода выполнения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Так как элемент управления должен быть дочернего окна, указанной координаты указываются относительно клиентской области *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -190,7 +190,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -439,7 +439,7 @@ BOOL SetMarquee(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] Значение true, чтобы включить режим бегущей строки Вкл "или" значение FALSE, чтобы отключить режим бегущей строки.|
 |*nInterval*|[in] Время в миллисекундах между обновлениями анимации области выделения.|
@@ -531,7 +531,7 @@ int SetState(int iState);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iState*|[in] Состояние, устанавливаемое для индикатора. Необходимо использовать одно из следующих значений.<br /><br /> -PBST_NORMAL - выполняется<br />-PBST_ERROR - ошибка<br />-PBST_PAUSED - приостановлена|
 
@@ -607,4 +607,3 @@ int StepIt();
 [Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

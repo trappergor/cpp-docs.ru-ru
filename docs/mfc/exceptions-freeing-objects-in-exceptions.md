@@ -1,5 +1,5 @@
 ---
-title: Исключения. Высвобождение объектов в исключениях
+title: 'Исключения: Высвобождение объектов в исключениях'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298140"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>Исключения. Высвобождение объектов в исключениях
+# <a name="exceptions-freeing-objects-in-exceptions"></a>Исключения: Высвобождение объектов в исключениях
 
 Эта статья объясняет необходимость и способ освобождение объектов, при возникновении исключения. Ниже приведен список разделов.
 
@@ -62,9 +62,8 @@ ms.locfileid: "50442475"
 
 При вызове функции, которые могут создавать исключения, можно использовать **try/catch** блоки, чтобы убедиться в том, что перехватывать исключения и возможность удалить все объекты, созданные. В частности Имейте в виду, что многие функции MFC могут вызывать исключения.
 
-Дополнительные сведения см. в разделе [исключений: исключения для перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Дополнительные сведения см. в разделе [исключения: Перехват и удаление исключений](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 ## <a name="see-also"></a>См. также
 
 [Обработка исключений](../mfc/exception-handling-in-mfc.md)
-

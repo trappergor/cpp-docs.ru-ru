@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CAnimationRect [MFC], m_szInitial
 - CAnimationRect [MFC], m_topValue
 ms.assetid: 0294156d-241e-4a57-92b2-31234fe557d6
-ms.openlocfilehash: 4e782a9325360b69e33dfaf6a3b0649d9368b32b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 84c4cf92894a9ece2021417445c9d7ab94ee6bdf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259494"
 ---
 # <a name="canimationrect-class"></a>Класс CAnimationRect
 
@@ -59,13 +59,13 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationRect::CAnimationRect](#canimationrect)|Перегружен. Создает объект rect анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationRect::AddTransition](#addtransition)|Добавляет переходов слева, сверху, справа и нижней координат.|
 |[CAnimationRect::GetBottom](#getbottom)|Предоставляет доступ к CAnimationVariable, представляющий Нижняя координата.|
@@ -84,20 +84,20 @@ class CAnimationRect : public CAnimationBaseObject;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationRect::operator RECT](#operator_rect)|Преобразует CAnimationRect параметра RECT.|
 |[CAnimationRect::operator =](#operator_eq)|Назначает rect CAnimationRect.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationRect::m_bFixedSize](#m_bfixedsize)|Указывает, является ли прямоугольник фиксированный размер.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CAnimationRect::m_bottomValue](#m_bottomvalue)|Инкапсулированный анимации переменной, представляющей нижней границы анимации прямоугольника.|
 |[CAnimationRect::m_leftValue](#m_leftvalue)|Инкапсулированный анимации переменной, представляющей слева граница анимации прямоугольника.|
@@ -183,7 +183,7 @@ CAnimationRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Указывает прямоугольник по умолчанию.
 
 *nGroupID*<br/>
@@ -322,7 +322,7 @@ BOOL GetValue(CRect& rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Выходные данные. Содержит текущее значение при возвращении данного метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -411,7 +411,7 @@ void operator=(const RECT& rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Новое значение анимации прямоугольника.
 
 ### <a name="remarks"></a>Примечания
@@ -428,7 +428,7 @@ void SetDefaultValue(const CRect& rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Задает новые значения по умолчанию для левую, сверху, справа и снизу.
 
 ### <a name="remarks"></a>Примечания

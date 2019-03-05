@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSyncObject [MFC], Unlock
 - CSyncObject [MFC], m_hObject
 ms.assetid: c62ea6eb-a17b-4e01-aed4-321fc435a5f4
-ms.openlocfilehash: d72d167be874d0776ce8da02784c2e0c267c9175
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 842ff5f98f05425fbbb511d112ae3e4fd65ff076
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547437"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263721"
 ---
 # <a name="csyncobject-class"></a>Класс CSyncObject
 
@@ -35,26 +35,26 @@ class CSyncObject : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSyncObject::CSyncObject](#csyncobject)|Создает объект `CSyncObject`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSyncObject::Lock](#lock)|Прирост доступ к объекту синхронизации.|
 |[CSyncObject::Unlock](#unlock)|Прирост доступ к объекту синхронизации.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSyncObject::operator ДЕСКРИПТОР](#operator_handle)|Предоставляет доступ к объекту синхронизации.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSyncObject::m_hObject](#m_hobject)|Дескриптор к базовому объекту синхронизации.|
 
@@ -163,4 +163,3 @@ virtual BOOL Unlock() = 0; virtual BOOL Unlock(
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

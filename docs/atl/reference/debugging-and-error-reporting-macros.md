@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 5de597484db727646b80bd522f11465f442393fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287327"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчеты об ошибках
 
@@ -226,7 +226,7 @@ ATLTRACE2(
 
 ### <a name="atl-trace-flags"></a>Флаги трассировки ATL
 
-|Категории ATL|Описание|
+|Категории ATL|Описание:|
 |------------------|-----------------|
 |`atlTraceGeneral`|Отчеты на все приложения ATL. По умолчанию.|
 |`atlTraceCOM`|Сообщает об методы COM.|
@@ -244,7 +244,7 @@ ATLTRACE2(
 
 ### <a name="mfc-trace-flags"></a>Флаги трассировки MFC
 
-|Категория MFC|Описание|
+|Категория MFC|Описание:|
 |------------------|-----------------|
 |`traceAppMsg`|Общего назначения сообщения MFC. Рекомендуется всегда использовать.|
 |`traceDumpContext`|Сообщения от [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - sockets [MFC], asynchronous operation
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
-ms.openlocfilehash: abce497f49347719af08e71a75afa12cb99507f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263117"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Сокеты Windows. Использование класса CAsyncSocket
 
@@ -24,7 +24,7 @@ ms.locfileid: "50459297"
 
 `CAsyncSocket` описан в *Справочник по библиотеке MFC*. Visual C++ также предоставляет спецификации Windows Sockets, расположенный в пакете SDK для Windows. Сведения о которых возлагается на вас. Visual C++ не предоставляет образец приложения для `CAsyncSocket`.
 
-Если вы не очень разбираются в сети и простое решение, используйте класс [CSocket](../mfc/reference/csocket-class.md) с `CArchive` объекта. См. в разделе [Windows Sockets: с помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md) Дополнительные сведения.
+Если вы не очень разбираются в сети и простое решение, используйте класс [CSocket](../mfc/reference/csocket-class.md) с `CArchive` объекта. См. в разделе [сокеты Windows: Использование сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md) Дополнительные сведения.
 
 В этой статье рассматриваются следующие действия:
 
@@ -62,7 +62,7 @@ ms.locfileid: "50459297"
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-   Термины «порт» и «адрес сокета» описаны в [Windows Sockets: порты и адреса сокета](../mfc/windows-sockets-ports-and-socket-addresses.md).
+   Термины «порт» и «адрес сокета» описаны в [сокеты Windows: Порты и адреса сокета](../mfc/windows-sockets-ports-and-socket-addresses.md).
 
 1. Если сокет является клиентом, подключить объект сокета к серверу сокетов, с помощью [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
@@ -73,7 +73,7 @@ ms.locfileid: "50459297"
    После принятия запроса на подключения, можно выполнить такие задачи, как проверки паролей.
 
     > [!NOTE]
-    >  `Accept` Функция-член принимает ссылку на новую, пустую `CSocket` объект в качестве параметра. Этот объект необходимо создать перед вызовом метода `Accept`. Если этот объект сокета выходит за пределы области, закрывает соединение. Не вызывайте `Create` для этого нового объекта сокета. Например, см. в статье [Windows Sockets: операции последовательности](../mfc/windows-sockets-sequence-of-operations.md).
+    >  `Accept` Функция-член принимает ссылку на новую, пустую `CSocket` объект в качестве параметра. Этот объект необходимо создать перед вызовом метода `Accept`. Если этот объект сокета выходит за пределы области, закрывает соединение. Не вызывайте `Create` для этого нового объекта сокета. Например, см. в статье [сокеты Windows: Последовательность операций](../mfc/windows-sockets-sequence-of-operations.md).
 
 1. Выполнять обмен данными с другими сокетов, вызывая `CAsyncSocket` функций-членов объекта, которые инкапсулируют функций API сокетов Windows.
 
@@ -85,7 +85,7 @@ ms.locfileid: "50459297"
 
    Деструктор вызывает объекта [закрыть](../mfc/reference/casyncsocket-class.md#close) функция-член перед удалением объекта.
 
-Пример этой последовательности в коде (фактически для `CSocket` объекта), см. в разделе [Windows Sockets: операции последовательности](../mfc/windows-sockets-sequence-of-operations.md).
+Пример этой последовательности в коде (фактически для `CSocket` объекта), см. в разделе [сокеты Windows: Последовательность операций](../mfc/windows-sockets-sequence-of-operations.md).
 
 ##  <a name="_core_your_responsibilities_with_casyncsocket"></a> Ваши обязанности с CAsyncSocket
 
@@ -97,7 +97,7 @@ ms.locfileid: "50459297"
 
 - Преобразование между Юникодом и многобайтовой набора строк (MBCS).
 
-Определения этих терминов и Дополнительные сведения см. в разделе [Windows Sockets: блокирует](../mfc/windows-sockets-blocking.md), [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md), [Windows Sockets: преобразование строк](../mfc/windows-sockets-converting-strings.md) .
+Определения этих терминов и Дополнительные сведения см. в разделе [сокеты Windows: Блокировка](../mfc/windows-sockets-blocking.md), [сокеты Windows: Порядок байтов](../mfc/windows-sockets-byte-ordering.md), [сокеты Windows: Преобразование строк](../mfc/windows-sockets-converting-strings.md).
 
 Несмотря на эти проблемы класса `CAsycnSocket` может быть правильным выбором для вас, если приложению требуется гибкость и управления, можно получить. Если нет, можно использовать класс `CSocket` вместо этого. `CSocket` скрывает много подробных сведений от вас: направляет сообщения во время блокирующих вызовов Windows, а также предоставляет доступ к ИТ `CArchive`, который управляет различия порядок байтов и преобразования строк для вас.
 
@@ -105,11 +105,10 @@ ms.locfileid: "50459297"
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>См. также
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)
-

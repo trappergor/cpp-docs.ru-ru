@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: 6bff87cd7648e1e5f4e0391a0a7fc1a1455a51f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599658"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296765"
 ---
 # <a name="cbitmapbutton-class"></a>Класс CBitmapButton
 
@@ -35,13 +35,13 @@ class CBitmapButton : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBitmapButton::CBitmapButton](#cbitmapbutton)|Создает объект `CBitmapButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBitmapButton::AutoLoad](#autoload)|Связывает кнопку в диалоговом окне с объектом класса `CBitmapButton` классом, загружает bitmap(s) по имени и изменяет размер кнопки в соответствии с растрового изображения.|
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Инициализирует объект путем загрузки один или несколько ресурсов именованный растрового изображения из файла ресурсов приложения и присоединение точечные рисунки в объект.|
@@ -179,7 +179,7 @@ BOOL LoadBitmaps(
 ### <a name="parameters"></a>Параметры
 
 *lpszBitmapResource*<br/>
-Указатель на заканчивающуюся нулем строку, содержащая имя точечного рисунка для растрового изображения кнопки normal или состояние «вверх». Обязательно.
+Указатель на заканчивающуюся нулем строку, содержащая имя точечного рисунка для растрового изображения кнопки normal или состояние «вверх». Обязательный.
 
 *lpszBitmapResourceSel*<br/>
 Указывает, заканчивающуюся нулем строку, содержащая имя точечного рисунка, для выбранного кнопка с рисунком или состояние «вниз». Может иметь значение NULL.
@@ -191,7 +191,7 @@ BOOL LoadBitmaps(
 Указатель на заканчивающуюся нулем строку, содержащая имя точечного рисунка для кнопки растрового изображения при отключенном состоянии. Может иметь значение NULL.
 
 *nIDBitmapResource*<br/>
-Указывает идентификатор ресурса точечного рисунка для кнопки точечного рисунка normal или «up» состояние ресурсов. Обязательно.
+Указывает идентификатор ресурса точечного рисунка для кнопки точечного рисунка normal или «up» состояние ресурсов. Обязательный.
 
 *nIDBitmapResourceSel*<br/>
 Указывает идентификатор ресурса точечного рисунка ресурса для выбранного кнопка с рисунком или состояние «вниз». Может быть равно 0.
@@ -227,4 +227,3 @@ void SizeToContent();
 [Пример MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
 [Класс CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

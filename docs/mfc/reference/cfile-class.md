@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289884"
 ---
 # <a name="cfile-class"></a>Класс CFile
 
@@ -81,7 +81,7 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFile::CFile](#cfile)|Создает `CFile` объекта из дескриптора путь или файл.|
 
@@ -121,14 +121,14 @@ class CFile : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFile::hFileNull](#hfilenull)|Определяет, если `CFile` объект имеет допустимый дескриптор.|
 |[CFile::m_hFile](#m_hfile)|Обычно содержит дескриптор файла операционной системы.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|
 
@@ -238,7 +238,7 @@ CAtlTransactionManager* pTM);
 
 Выберите первый или и первый, и второй из следующих параметров режима создания файла. Режим создания по умолчанию — `CFile::modeNoTruncate`, т. е. открывается существующий файл.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |`CFile::modeCreate`|Создает новый файл, если файл не существует. Если файл уже существует, перезаписываются и задано значение нулевой длины.|
 |`CFile::modeNoTruncate`|Создает файл, если он не существует. В противном случае файл присоединяется к объекту `CFile`.|

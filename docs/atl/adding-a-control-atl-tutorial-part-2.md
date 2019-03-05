@@ -3,12 +3,12 @@ title: Добавление элемента управления (учебни�
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428656"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283232"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>Добавление элемента управления (учебник ATL, часть 2)
 
@@ -81,7 +81,7 @@ ms.locfileid: "50428656"
 
 Мастер создания элемента управления, как произошло несколько изменений кода и добавление файлов. Были созданы следующие файлы:
 
-|Файл|Описание|
+|Файл|Описание:|
 |----------|-----------------|
 |PolyCtl.h|Содержит большую часть реализации класса C++ `CPolyCtl`.|
 |PolyCtl.cpp|Содержит оставшиеся части `CPolyCtl`.|
@@ -118,4 +118,4 @@ ms.locfileid: "50428656"
 
 ## <a name="see-also"></a>См. также
 
-[Учебник](../atl/active-template-library-atl-tutorial.md)
+[Руководство](../atl/active-template-library-atl-tutorial.md)

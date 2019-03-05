@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Управление экземпляром планировщика
+title: Практическое руководство. Управление экземпляром планировщика
 ms.date: 11/04/2016
 helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276172"
 ---
-# <a name="how-to-manage-a-scheduler-instance"></a>Как выполнить Управление экземпляром планировщика
+# <a name="how-to-manage-a-scheduler-instance"></a>Практическое руководство. Управление экземпляром планировщика
 
 Экземпляры планировщика позволяют связывать конкретные политики планирования с различными видами рабочих нагрузок. В этом разделе содержит две простые примеры, демонстрирующие создание и управление экземпляром планировщика.
 
@@ -79,4 +79,3 @@ Current scheduler id: 0
 
 [Экземпляры планировщика](../../parallel/concrt/scheduler-instances.md)<br/>
 [Практическое руководство. Задание определенных политик планировщика](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-

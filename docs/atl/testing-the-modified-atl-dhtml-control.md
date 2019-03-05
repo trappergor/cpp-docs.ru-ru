@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 55cdaba64ccb95ee5695c082a5e146b1e7dc2cf3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277242"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>Тестирование элемента управления измененный DHTML в ATL
 
@@ -23,7 +23,7 @@ ms.locfileid: "51330974"
 
    Размер элемента управления для отображения всех кнопок, вы добавили.
 
-1. Изучите две кнопки, которые были вставлены путем изменения HTML-код. Каждой кнопки есть метки, определенного в [изменение элемента управления ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **обновить** и **HelloHTML**.
+1. Изучите две кнопки, которые были вставлены путем изменения HTML-код. Каждой кнопки есть метки, определенного в [изменение элемента управления ATL DHTML](../atl/modifying-the-atl-dhtml-control.md): **Обновить** и **HelloHTML**.
 
 1. Протестируйте две новые кнопки, чтобы увидеть, как они работают.
 

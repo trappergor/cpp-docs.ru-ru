@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectGlobal class
 ms.assetid: 79bdee55-66e4-4536-b5b3-bdf09f78b9a6
-ms.openlocfilehash: ebaec439393a67331293cbf47abd08a5e7e416af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec3abd04ce72cce98dae72a1ed8cbb8d9fe72079
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485570"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267437"
 ---
 # <a name="ccomobjectglobal-class"></a>Класс CComObjectGlobal
 
@@ -39,10 +39,10 @@ class CComObjectGlobal : public Base
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComObjectGlobal::CComObjectGlobal](#ccomobjectglobal)|Конструктор.|
-|[CComObjectGlobal:: ~ CComObjectGlobal](#dtor)|Деструктор|
+|[CComObjectGlobal::~CComObjectGlobal](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -54,7 +54,7 @@ class CComObjectGlobal : public Base
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComObjectGlobal::m_hResFinalConstruct](#m_hresfinalconstruct)|Содержит значение HRESULT, возвращенное во время создания `CComObjectGlobal` объекта.|
 
@@ -102,7 +102,7 @@ CComObjectGlobal(void* = NULL));
 
 Если не производного базового класса из [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md), необходимо создать собственные `FinalConstruct` метод. Деструктор вызывает `FinalRelease`.
 
-##  <a name="dtor"></a>  CComObjectGlobal:: ~ CComObjectGlobal
+##  <a name="dtor"></a>  CComObjectGlobal::~CComObjectGlobal
 
 Деструктор
 

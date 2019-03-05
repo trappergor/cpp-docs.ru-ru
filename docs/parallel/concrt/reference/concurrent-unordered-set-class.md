@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286209"
 ---
 # <a name="concurrentunorderedset-class"></a>Класс concurrent_unordered_set
 
@@ -59,7 +59,7 @@ _Allocator_type,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -79,7 +79,7 @@ _Allocator_type,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[concurrent_unordered_set](#ctor)|Перегружен. Создает параллельного неупорядоченного множества.|
 
@@ -95,7 +95,7 @@ _Allocator_type,
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_unordered_set` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 
@@ -387,7 +387,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 Тип значения, вставляемого в наборе.
 
-*значение*<br/>
+*value*<br/>
 Вставляемое значение.
 
 *_Where*<br/>
@@ -405,7 +405,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член определяет, существует ли в последовательности, ключ которого имеет соответствующий порядок, элемента X `value`. Если нет, он создает такой элемент X и инициализирует его с `value`. Функция затем определяет итератор `where` , обозначающий X. Если вставка произошла, функция возвращает `std::pair(where, true)`. В противном случае возвращает значение `std::pair(where, false)`.
+Первая функция-член определяет, существует ли в последовательности, ключ которого имеет соответствующий порядок, элемента X `value`. Если нет, он создает такой элемент X и инициализирует его с `value`. Функция затем определяет итератор `where` , обозначающий X. Если вставка произошла, функция возвращает `std::pair(where, true)`. В противном случае она возвращает `std::pair(where, false)`.
 
 Вторая функция-член возвращает insert ( `value`), с использованием `_Where` качестве отправной точки в управляемой последовательности для поиска точки вставки.
 
@@ -714,4 +714,3 @@ size_type unsafe_max_bucket_count() const;
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
-

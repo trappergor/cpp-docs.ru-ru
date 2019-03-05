@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295205"
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 
@@ -44,7 +44,7 @@ class source_link_manager;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент `source_link_manager` объекта.|
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `source_link_manager` объект для чтения и выполнения операций const.|
@@ -53,14 +53,14 @@ class source_link_manager;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[source_link_manager](#ctor)|Создает объект `source_link_manager`.|
 |[~ source_link_manager деструктор](#dtor)|Уничтожает `source_link_manager` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[add](#add)|Добавляет ссылку на источник `source_link_manager` объекта.|
 |[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `source_link_manager` объекта.|
@@ -96,7 +96,7 @@ void add(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок для добавления.
 
 ##  <a name="begin"></a> начать
@@ -125,7 +125,7 @@ bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок, который необходимо найти в `source_link_manager` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -183,7 +183,7 @@ bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок удалены, если найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -211,7 +211,7 @@ void set_bound(size_t _MaxLinks);
 source_link_manager();
 ```
 
-##  <a name="dtor"></a> ~ source_link_manager
+##  <a name="dtor"></a> ~source_link_manager
 
 Уничтожает `source_link_manager` объекта.
 

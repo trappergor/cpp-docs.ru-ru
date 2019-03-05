@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534836"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303941"
 ---
 # <a name="cmfctabdroptarget-class"></a>Класс CMFCTabDropTarget
 
@@ -39,14 +39,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Вызывается платформой, когда пользователь перетаскивает объект в окно вкладки. (Переопределяет [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Вызывается платформой, когда пользователь перетаскивает объект за пределами вкладки окна, имеющий фокус. (Переопределяет [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Вызывается платформой, когда пользователь перетаскивает объект на вкладке окна, имеющий фокус. (Переопределяет [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
@@ -98,8 +98,8 @@ virtual DROPEFFECT OnDragEnter(
 |Параметр|Описание|
 |*pWnd*|[in] Не используется.|
 |*pDataObject*|[in] Указатель на объект, который пользователь перетаскивает.|
-|*dwKeyState*|[in] Содержит состояние клавиши-модификаторы. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.|
-|*точка*|[in] Расположение курсора в координатах клиентской области окна.|
+|*dwKeyState*|[in] Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.|
+|*point*|[in] Расположение курсора в координатах клиентской области окна.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -156,11 +156,11 @@ virtual DROPEFFECT OnDragOver(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pWnd*|[in] Не используется.|
 |*pDataObject*|[in] Указатель на объект, который пользователь перетаскивает.|
-|*dwKeyState*|[in] Содержит состояние клавиши-модификаторы. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.|
-|*точка*|[in] Расположение указателя мыши в клиентских координатах.|
+|*dwKeyState*|[in] Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.|
+|*point*|[in] Расположение указателя мыши в клиентских координатах.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -204,7 +204,7 @@ virtual DROPEFFECT OnDropEx(
 |*pDataObject*|[in] Указатель на объект, который пользователь перетаскивает.|
 |*dropEffect*|[in] Операция перетаскивания по умолчанию.|
 |*из раскрывающегося списка*|[in] Не используется.|
-|*точка*|[in] Расположение указателя мыши в клиентских координатах.|
+|*point*|[in] Расположение указателя мыши в клиентских координатах.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -238,7 +238,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pOwner*|[in] Элемент управления вкладки, регистрируемый в качестве целевого объекта перетаскивания.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -254,4 +254,3 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Перетаскивание (OLE)](../../mfc/drag-and-drop-ole.md)
-

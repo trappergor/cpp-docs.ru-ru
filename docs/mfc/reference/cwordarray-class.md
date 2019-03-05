@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259455"
 ---
 # <a name="cwordarray-class"></a>Класс CWordArray
 
@@ -71,13 +71,13 @@ class CWordArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
@@ -99,7 +99,7 @@ class CWordArray : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 При размещении пользовательского элемента управления в представлении MFC [класс CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды сообщения пользовательского интерфейса для пользовательского элемента управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов). Путем реализации, вы предоставляете пользовательский элемент управления ссылку `ICommandSource` объекта.
 
-См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
+См. практическое руководство по [ Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -162,7 +162,7 @@ void AddCommandHandler(
 
 Этот метод добавляет обработчик команд *cmdHandler* к исходному объекту команды и сопоставляет обработчик, который *cmdID*.
 
-См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `AddCommandHandler`.
+См. практическое руководство по [ Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `AddCommandHandler`.
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 При размещении пользовательского элемента управления в представлении MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды сообщения пользовательского интерфейса для пользовательского элемента управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов). Путем реализации `ICommandTarget`, вы предоставляете пользовательский элемент управления, ссылка на объект.
 
-См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
+См. практическое руководство по [ Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -383,7 +383,7 @@ void Initialize(ICommandSource^ cmdSource);
 
 При размещении пользовательского элемента управления в представлении MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды сообщения пользовательского интерфейса для пользовательского элемента управления, чтобы тот мог обрабатывать команды MFC.
 
-Этот метод инициализирует целевой объект команды и связывает его с исходным объектом указанную команду *cmdSource*. Он должен вызываться в реализацию класса пользовательского элемента управления. При инициализации, необходимо зарегистрировать обработчики команд с исходным объектом команды путем вызова [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) в `Initialize` реализации. См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `Initialize` для этого.
+Этот метод инициализирует целевой объект команды и связывает его с исходным объектом указанную команду *cmdSource*. Он должен вызываться в реализацию класса пользовательского элемента управления. При инициализации, необходимо зарегистрировать обработчики команд с исходным объектом команды путем вызова [ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md) в `Initialize` реализации. См. практическое руководство по [ Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `Initialize` для этого.
 
 ##  <a name="icommandui_interface"></a>  Интерфейс ICommandUI
 
@@ -399,7 +399,7 @@ interface class ICommandUI
 
 `ICommandUI` используется в рамках `ON_UPDATE_COMMAND_UI` обработчик - производного класса. При активации пользователем приложения (выбирает или щелчков мыши) меню, а каждый пункт меню отображается как включена или отключена. Цель каждой команды меню предоставляет эти сведения, реализовав `ON_UPDATE_COMMAND_UI` обработчика. Для каждого из объектов пользовательского интерфейса команды в приложении используйте окно свойств для создания записи схемы сообщений и прототип функции для каждого обработчика.
 
-Дополнительные сведения о том, как `ICommandUI` в маршрутизации команд используется интерфейс, см. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
+Дополнительные сведения о том, как `ICommandUI` в маршрутизации команд используется интерфейс, см. в разделе [как: Добавление команды управления маршрутизации в Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md).
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Примечания
 
-Это функция дополнительный член, который должен использоваться в сочетании с [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) обработчик, который возвращает значение FALSE. Дополнительные сведения см. в разделе техническое Примечание [TN006: схемы сообщений](../../mfc/tn006-message-maps.md).
+Это функция дополнительный член, который должен использоваться в сочетании с [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex) обработчик, который возвращает значение FALSE. Дополнительные сведения см. в разделе техническое Примечание [TN006: Схемы сообщений](../../mfc/tn006-message-maps.md).
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -549,4 +549,3 @@ void OnUpdate();
 [Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

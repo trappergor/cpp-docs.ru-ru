@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CFrameWinTraits class
 - CControlWinTraits class
 ms.assetid: f78f486e-6d9c-42c6-8e86-371e05aa7e59
-ms.openlocfilehash: 9e60eb773573142d0a4498c42a98f6e9c4c49a7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 840433ffb325a4f181848371306607b62373e75a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532604"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280473"
 ---
 # <a name="cwintraits-class"></a>Класс CWinTraits
 
@@ -45,7 +45,7 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinTraits::GetWndExStyle](#getwndexstyle)|(Статический) Извлекает расширенные стили для `CWinTraits` объекта.|
 |[CWinTraits::GetWndStyle](#getwndstyle)|(Статический) Извлекает стандартный стили `CWinTraits` объекта.|
@@ -64,11 +64,11 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 - `CFrameWinTraits`
 
-   Предназначен для стандартных фрейме окна. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_APPWINDOW и WS_EX_WINDOWEDGE.
+   Предназначен для стандартных фрейме окна. Включают стандартные стилей, которые используются: WS_OVERLAPPEDWINDOW WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Расширенные стили, используемые включают: WS_EX_APPWINDOW и WS_EX_WINDOWEDGE.
 
 - `CMDIChildWinTraits`
 
-   Предназначен для стандартных дочернего окна интерфейса MDI. Включают стандартные стили, используемые: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Включить расширенные стили, используемые: WS_EX_MDICHILD.
+   Предназначен для стандартных дочернего окна интерфейса MDI. Включают стандартные стилей, которые используются: WS_OVERLAPPEDWINDOW, WS_CHILD, WS_VISIBLE, WS_CLIPCHILDREN и WS_CLIPSIBLINGS. Расширенные стили, используемые включают: WS_EX_MDICHILD.
 
 Если вы хотите убедиться, что некоторые стили заданы для всех экземпляров класса окна одновременно разрешая другие стили, чтобы быть заданы для каждого экземпляра, используйте [CWinTraitsOR](../../atl/reference/cwintraitsor-class.md) вместо этого.
 

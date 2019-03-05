@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
-ms.openlocfilehash: 1d0aa8b3b5409659dee08b4e4365beac1a3a92be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492280"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273352"
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 
@@ -48,7 +48,7 @@ class network_link_registry;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[add](#add)|При переопределении в производном классе добавляет ссылку на `network_link_registry` объекта.|
 |[begin](#begin)|При переопределении в производном классе, возвращает итератор, указывающий на первый элемент в `network_link_registry` объекта.|
@@ -80,7 +80,7 @@ virtual void add(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок для добавления.
 
 ##  <a name="begin"></a> начать
@@ -109,7 +109,7 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок, который ищется в `network_link_registry` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -138,7 +138,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок удалены, если найден.
 
 ### <a name="return-value"></a>Возвращаемое значение

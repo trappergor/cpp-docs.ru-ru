@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299326"
 ---
 # <a name="implementing-property-pages"></a>Реализация страниц свойств
 
@@ -40,7 +40,7 @@ ms.locfileid: "50543316"
    |[применить](../atl/reference/ipropertypageimpl-class.md#apply)|Проверьте параметры и обновить объекты.|Нет необходимости вызывать реализацию базового класса, так как он не выполняет никаких действий, помимо трассировки вызов.|
    |[Деактивация](../atl/reference/ipropertypageimpl-class.md#deactivate)|Очистка элементов, связанных с окнами.|Базовая реализация удаляет диалоговое окно, представляющий страницу свойств. Если вам нужно очистить перед уничтожением диалоговое окно, следует добавить код перед вызовом базового класса.|
 
-Пример реализации страницы свойств, см. в разделе [пример: реализация страницы свойств](../atl/example-implementing-a-property-page.md).
+Пример реализации страницы свойств, см. в разделе [пример: Реализация страницы свойств](../atl/example-implementing-a-property-page.md).
 
 > [!NOTE]
 > Если вы хотите размещения элементов управления ActiveX в страницу свойств, необходимо будет изменить наследование класса созданный мастером. Замените **CDialogImpl\<окне отслеживания TRACE появляется >** с **CAxDialogImpl\<окне отслеживания TRACE появляется >** в списке базовых классов.

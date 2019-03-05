@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 1de59e4404960ed99dedaadfa576168bc31da444
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259819"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 
@@ -194,7 +194,7 @@ class CBasePane : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -272,7 +272,7 @@ class CBasePane : public CWnd
 |`CBasePane::IsTooltipTopmost`|Используется внутренним образом.|
 |[CBasePane::IsVisible](#isvisible)|Определяет, является ли видимой области.|
 |[CBasePane::LoadState](#loadstate)|Загружает состояние панели из реестра.|
-|[Cbasepane::MoveWindow изменена](#movewindow)|Перемещает область.|
+|[CBasePane::MoveWindow](#movewindow)|Перемещает область.|
 |[CBasePane::OnAfterChangeParent](#onafterchangeparent)|Вызывается платформой при изменении родительской области.|
 |[CBasePane::OnBeforeChangeParent](#onbeforechangeparent)|Вызывается платформой непосредственно перед области изменении его родительского окна.|
 |[CBasePane::OnDrawCaption](#ondrawcaption)|Этот метод вызывается платформой при рисовании заголовок.|
@@ -324,7 +324,7 @@ class CBasePane : public CWnd
 
   Это флаги, которые можно комбинировать с помощью операции побитового или.
 
-`CBasePane` реализует следующие методы виртуального логическое, чтобы отразить эти флаги: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Их можно переопределить в производных классах для настройки их поведения.
+`CBasePane` реализует следующие виртуальные методы логическое чтобы отразить эти флаги: [CBasePane::CanBeClosed](#canbeclosed), [CBasePane::CanAutoHide](#canautohide), [CBasePane::CanFloat](#canfloat). Их можно переопределить в производных классах для настройки их поведения.
 
 - Вы можете настроить поведение прикрепления, переопределение [CBasePane::CanAcceptPane](#canacceptpane). У вашей панели возвращает значение FALSE из этого метода, чтобы предотвратить другую панель закрепления к нему.
 
@@ -699,7 +699,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Стиль окна (см. в разделе [CWnd::CreateEx](../../mfc/reference/cwnd-class.md#createex)).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Исходного прямоугольника.
 
 *pParentWnd*<br/>
@@ -730,7 +730,7 @@ virtual BOOL CreateEx(
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Области может перемещаться.|
 |AFX_CBRS_AUTOHIDE|Область поддерживает режим автоматического скрытия|
-|AFX_CBRS_RESIZE|Размер области может быть изменен. **Важно:** этот стиль не реализован.|
+|AFX_CBRS_RESIZE|Размер области может быть изменен. **Внимание!**  Этот стиль не реализован.|
 |AFX_CBRS_CLOSE|При закрытии области.|
 |AFX_CBRS_AUTO_ROLLUP|Возможность выполнять сведение области, когда отображается.|
 |AFX_CBRS_REGULAR_TABS|При на другую панель, в которой этот стиль закрепляет одну область, создается регулярное окна с вкладками. (Дополнительные сведения см. в разделе [класс CTabbedPane](../../mfc/reference/ctabbedpane-class.md).)|
@@ -1427,7 +1427,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указанная точка.
 
 *dwBarAlignment*<br/>
@@ -1538,7 +1538,7 @@ virtual BOOL LoadState(
 
 Платформа вызывает этот метод, чтобы загрузить состояние панели из реестра. Переопределение в производном классе, чтобы загрузить дополнительные сведения, сохраненные с [CBasePane::SaveState](#savestate).
 
-##  <a name="movewindow"></a>  Cbasepane::MoveWindow изменена
+##  <a name="movewindow"></a>  CBasePane::MoveWindow
 
 Перемещает область.
 
@@ -1551,7 +1551,7 @@ virtual HDWP MoveWindow(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник, указав новое расположение и размер области.
 
 *bRepaint*<br/>
@@ -1651,7 +1651,7 @@ virtual void OnPaneContextMenu(
 *pParentFrame*<br/>
 [in] Указатель на родительского фрейма.
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает расположение контекстного меню.
 
 ### <a name="remarks"></a>Примечания
@@ -1712,7 +1712,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает точку, в экранных координатах, для проверки.
 
 *nSensitivity*<br/>
@@ -1925,7 +1925,7 @@ virtual HDWP SetWindowPos(
 *y*<br/>
 [in] Задает положение верхнего края окна.
 
-*CX*<br/>
+*cx*<br/>
 [in] Указывает ширину окна.
 
 *CY*<br/>

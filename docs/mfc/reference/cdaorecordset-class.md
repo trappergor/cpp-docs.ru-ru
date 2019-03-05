@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639335"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273898"
 ---
 # <a name="cdaorecordset-class"></a>Класс CDaoRecordset
 
@@ -270,7 +270,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Содержит флаг, указывающее, является ли поля автоматически помечаются как измененный.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Содержит число элементов данных полей в классе наборов записей и количество столбцов, выбранных в набор записей из источника данных.|
@@ -567,7 +567,7 @@ virtual void DoFieldExchange(CDaoFieldExchange* pFX);
 
 ### <a name="parameters"></a>Параметры
 
-*PFX-файл*<br/>
+*pFX*<br/>
 Содержит указатель на `CDaoFieldExchange` объект. Платформа будет уже настроили этот объект для указать контекст операции обмена поля.
 
 ### <a name="remarks"></a>Примечания
@@ -1130,9 +1130,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` (По умолчанию) Имя, тип, размер, атрибуты
 
-- `AFX_DAO_SECONDARY_INFO` Сведения об основном, а также: порядковый номер позиции, необходимости разрешить нулевой длины, порядок сортировки, имя внешнего, исходное поле исходной таблицы
+- `AFX_DAO_SECONDARY_INFO` Сведения об основном, а также: Порядковый номер позиции необходимости разрешить нулевой длины, упорядочивания заказ, имя внешнего, исходное поле, исходная таблица
 
-- `AFX_DAO_ALL_INFO` Основной и дополнительной информации, а также: текст проверки значение по умолчанию, правила проверки
+- `AFX_DAO_ALL_INFO` Основной и дополнительной информации, а также: По умолчанию значение, правила проверки, текст проверки
 
 *lpszName*<br/>
 Имя поля.
@@ -1237,9 +1237,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` (По умолчанию) Имя, сведения о поле, поля
 
-- `AFX_DAO_SECONDARY_INFO` Сведения об основном, плюс: основной, Unique, Clustered, IgnoreNulls, необходимые, внешний
+- `AFX_DAO_SECONDARY_INFO` Сведения об основном, а также: Первичной, уникальный, кластеризованный, IgnoreNulls, необходимости внешнего
 
-- `AFX_DAO_ALL_INFO` Основной и дополнительной информации, а также: числа различных объектов
+- `AFX_DAO_ALL_INFO` Основной и дополнительной информации, а также: Подсчет различных объектов
 
 *lpszName*<br/>
 Указатель на имя объект индекса, для поиска по имени.
@@ -2084,7 +2084,7 @@ BOOL Seek(
 Один из следующих строковых выражений: «< «,»\<=», «=», «> =», или «>».
 
 *pKey1*<br/>
-Указатель на [COleVariant](../../mfc/reference/colevariant-class.md) , значение которого соответствует первое поле в индексе. Обязательно.
+Указатель на [COleVariant](../../mfc/reference/colevariant-class.md) , значение которого соответствует первое поле в индексе. Обязательный.
 
 *pKey2*<br/>
 Указатель на `COleVariant` , значение которого соответствует второе поле в индексе, если таковые имеются. По умолчанию NULL.

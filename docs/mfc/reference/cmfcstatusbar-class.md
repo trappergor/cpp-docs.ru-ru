@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: c4891c6bb66fe5e4b737ca9b128a01bcedcf39e7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176579"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326755"
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 
@@ -132,7 +132,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Вызывается платформой, когда он перерисовывает панели строки состояния.|
 

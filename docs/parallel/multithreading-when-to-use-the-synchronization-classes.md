@@ -1,5 +1,5 @@
 ---
-title: 'Многопоточность: Использование классов синхронизации MFC'
+title: 'Реализация многопоточности на языке: Использование классов синхронизации MFC'
 ms.date: 08/27/2018
 helpviewer_keywords:
 - threading [MFC], synchronization classes
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - threading [C++], synchronization
 - multithreading [C++], synchronization classes
 ms.assetid: 4914f54e-68ac-438f-93c9-c013455a657e
-ms.openlocfilehash: 63555236ec41ce0a28d82aa676318b53a24169c3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72cf5310704c1ae959cc012146a03dd32cff4068
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284376"
 ---
-# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Многопоточность: Использование классов синхронизации MFC
+# <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>Реализация многопоточности на языке: Использование классов синхронизации MFC
 
 Многопоточные классы, предоставляемые MFC делятся на две категории: объекты синхронизации ([CSyncObject](../mfc/reference/csyncobject-class.md), [CSemaphore](../mfc/reference/csemaphore-class.md), [CMutex](../mfc/reference/cmutex-class.md), [ CCriticalSection](../mfc/reference/ccriticalsection-class.md), и [CEvent](../mfc/reference/cevent-class.md)) и синхронизации доступ к объектам ([CMultiLock](../mfc/reference/cmultilock-class.md) и [CSingleLock](../mfc/reference/csinglelock-class.md)).
 
@@ -42,13 +42,13 @@ ms.locfileid: "50502847"
 
 `CSyncObject` никогда не используется напрямую. Это базовый класс для других четырех классов синхронизации.
 
-## <a name="example-1-using-three-synchronization-classes"></a>Пример 1: Использование трех классов синхронизации
+## <a name="example-1-using-three-synchronization-classes"></a>Пример 1: С помощью трех классов синхронизации
 
 Например рассмотрим приложение, поддерживающее связанный список учетных записей. Это приложение позволяет до трех учетных записей в отдельных окнах, но можно обновить в любой момент времени только один. При обновлении учетной записи, обновленные данные отправляются по сети в архив данных.
 
 В этом примере приложения используются все три типа классов синхронизации. Так как она допускает до трех учетных записей за один раз, он использует `CSemaphore` для ограничения доступа к трем объектам просмотра. При попытке просмотра четвертой учетной записи приложение находится в ожидании одной из первых трех windows закрывает или завершается с ошибкой. При обновлении учетной записи, приложение использует `CCriticalSection` чтобы убедиться, что только одна учетная запись обновляется одновременно. После успешного обновления, он сообщает о `CEvent`, который освобождает поток ожидает события. Этот поток отправляет новые данные в архив данных.
 
-## <a name="example-2-using-synchronization-access-classes"></a>Пример 2: Использование классов синхронизации доступа к
+## <a name="example-2-using-synchronization-access-classes"></a>Пример 2: С помощью классов доступа к синхронизации
 
 Выбор используемого класса доступа синхронизации использовать еще проще. Если приложение отвечает за доступ к только один управляемый ресурс, используйте `CSingleLock`. Если ему требуется доступ к одному из нескольких управляемых ресурсов, используйте `CMultiLock`. В примере 1 `CSingleLock` будет использоваться, так как в каждом конкретном случае требуется только один ресурс в любой момент времени.
 

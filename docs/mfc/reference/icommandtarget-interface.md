@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandTarget interface [MFC]
 ms.assetid: dd9927f6-3479-4e7c-8ef9-13206cf901f3
-ms.openlocfilehash: 830802f960cba1789c21c53efbf0ed05de3ac4cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a224b868ea1923bb4f84b0d682c71fadb63da572
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299946"
 ---
 # <a name="icommandtarget-interface"></a>Интерфейс ICommandTarget
 
@@ -37,7 +37,7 @@ interface class ICommandTarget
 
 При размещении пользовательского элемента управления в представлении MFC [CWinFormsView](../../mfc/reference/cwinformsview-class.md) команды маршруты и обновление команды сообщения пользовательского интерфейса для пользовательского элемента управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов). Путем реализации `ICommandTarget`, вы предоставляете ссылку на пользовательский элемент управления [ICommandSource](../../mfc/reference/icommandsource-interface.md) объекта.
 
-См. в разделе [как: Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
+См. практическое руководство по [ Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md) пример демонстрирует использование `ICommandTarget`.
 
 Дополнительные сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
@@ -62,10 +62,9 @@ void Initialize(ICommandSource^ cmdSource);
 
 При размещении пользовательского элемента управления в представления MFC, CWinFormsView направляет команды и сообщения пользовательского интерфейса команды обновления в пользовательский элемент управления, чтобы тот мог обрабатывать команды MFC.
 
-Этот метод инициализирует целевого объекта команды и связывает его с cmdSource объекта источника указанную команду. Он должен вызываться в реализацию класса пользовательского элемента управления. При инициализации необходимо зарегистрировать обработчики команд с исходным объектом команды путем вызова ICommandSource::AddCommandHandler в реализации Initialize. См. в разделе Практическое: Добавление маршрутизации команд к элементу управления Windows Forms, пример демонстрирует использование инициализации для этого.
+Этот метод инициализирует целевого объекта команды и связывает его с cmdSource объекта источника указанную команду. Он должен вызываться в реализацию класса пользовательского элемента управления. При инициализации необходимо зарегистрировать обработчики команд с исходным объектом команды путем вызова ICommandSource::AddCommandHandler в реализации Initialize. См. в разделе как: Элемент управления Windows Forms, пример демонстрирует использование инициализации для этого добавьте маршрутизации команд.
 
 ## <a name="see-also"></a>См. также
 
 [Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [Интерфейс ICommandSource](../../mfc/reference/icommandsource-interface.md)
-

@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269452"
 ---
 # <a name="targetblock-class"></a>Класс target_block
 
@@ -61,21 +61,21 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[target_block](#ctor)|Создает объект `target_block`.|
 |[~ target_block деструктор](#dtor)|Уничтожает `target_block` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[распространение](#propagate)|Асинхронно передает сообщение из блока источника этой целевой блок.|
 |[send](#send)|Синхронно передает сообщение из блока источника этой целевой блок.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[async_send](#async_send)|Асинхронно отправляет сообщение для обработки.|
 |[decline_incoming_messages](#decline_incoming_messages)|Указывает на блок, что новые сообщения должны быть отклонены.|
@@ -336,7 +336,7 @@ void sync_send(_Inout_opt_ message<_Source_type>* _PMessage);
 target_block();
 ```
 
-##  <a name="dtor"></a> ~ target_block
+##  <a name="dtor"></a> ~target_block
 
 Уничтожает `target_block` объекта.
 
