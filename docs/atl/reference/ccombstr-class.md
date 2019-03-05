@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475651"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282361"
 ---
 # <a name="ccombstr-class"></a>Класс CComBSTR
 
@@ -57,7 +57,7 @@ class CComBSTR
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComBSTR::Append](#append)|Добавляет строку в `m_str`.|
 |[CComBSTR::AppendBSTR](#appendbstr)|Добавляет строку BSTR, чтобы `m_str`.|
@@ -94,7 +94,7 @@ class CComBSTR
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComBSTR::m_str](#m_str)|Содержит строку BSTR, связанные с `CComBSTR` объекта.|
 
