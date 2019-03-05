@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: d152153ac4e379f4159c4ade5dfc044288f69720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273456"
 ---
 # <a name="cdatabase-class"></a>Класс CDatabase
 
-Представляет подключение к источнику данных, с помощью которого можно получить доступ к данным.
+Представляет подключение к источнику данных, с помощью которого можно выполнять действия с источником данных.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,11 +67,11 @@ ms.locfileid: "50541410"
 class CDatabase : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Создает объект `CDatabase`. Необходимо инициализировать объект путем вызова `OpenEx` или `Open`.|
 
@@ -86,7 +86,7 @@ class CDatabase : public CObject
 |[CDatabase::CanUpdate](#canupdate)|Возвращает ненулевое значение, если `CDatabase` объекта является обновляемым (не только для чтения).|
 |[CDatabase::Close](#close)|Закрывает соединение с источником данных.|
 |[CDatabase::CommitTrans](#committrans)|Завершает транзакцию, начатого `BeginTrans`. Команды в транзакции, изменяющие источнике данных выполняются.|
-|[Помощью функции CDatabase::ExecuteSQL](#executesql)|Выполняет инструкцию SQL. Записи данных, не возвращаются.|
+|[CDatabase::ExecuteSQL](#executesql)|Выполняет инструкцию SQL. Записи данных, не возвращаются.|
 |[CDatabase::GetBookmarkPersistence](#getbookmarkpersistence)|Определяет операции, выполнении которых закладки сохраняются в объектах набор записей.|
 |[CDatabase::GetConnect](#getconnect)|Возвращает строку подключения ODBC, используемые для подключения `CDatabase` объекта к источнику данных.|
 |[CDatabase::GetCursorCommitBehavior](#getcursorcommitbehavior)|Определяет эффект фиксирует транзакцию для объекта открыть набор записей.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) дескриптора соединения с источником данных. Тип *HDBC*.|
 
@@ -111,11 +111,11 @@ class CDatabase : public CObject
 Источник данных — с определенным экземпляром данным, размещенным в некоторые системы управления базами данных (СУБД). Примеры Microsoft SQL Server, Microsoft Access, Borland dBASE и xBASE. Можно иметь один или несколько `CDatabase` объектов в каждый момент времени в приложении.
 
 > [!NOTE]
->  Если вы работаете с классами объектов доступа к данным (DAO) вместо классов Open Database Connectivity (ODBC), используйте класс [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) вместо этого. Дополнительные сведения см. в статье [Обзор: программирования баз данных,](../../data/data-access-programming-mfc-atl.md).
+>  Если вы работаете с классами объектов доступа к данным (DAO) вместо классов Open Database Connectivity (ODBC), используйте класс [CDaoDatabase](../../mfc/reference/cdaodatabase-class.md) вместо этого. Дополнительные сведения см. в статье [Обзор: Программирование баз данных](../../data/data-access-programming-mfc-atl.md).
 
 Чтобы использовать `CDatabase`, создания `CDatabase` и вызовите его `OpenEx` функция-член. Это открывает соединение. При создании затем `CRecordset` объектов для работы с подключенного источника данных, передайте в конструктор набора записей указатель на вашей `CDatabase` объекта. Когда вы закончите, используя соединение, вызовите `Close` члена функции и уничтожать `CDatabase` объекта. `Close` Закрывает все наборы записей, которые ранее не закрыта.
 
-Дополнительные сведения о `CDatabase`, см. в статьях [источника данных (ODBC)](../../data/odbc/data-source-odbc.md) и [Обзор: программирования баз данных,](../../data/data-access-programming-mfc-atl.md).
+Дополнительные сведения о `CDatabase`, см. в статьях [источника данных (ODBC)](../../data/odbc/data-source-odbc.md) и [Обзор: Программирование баз данных](../../data/data-access-programming-mfc-atl.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -146,7 +146,7 @@ BOOL BeginTrans();
 > [!CAUTION]
 >  В зависимости от своего драйвера ODBC, открыв набор записей, перед вызовом `BeginTrans` может привести к проблемам при вызове `Rollback`. Следует проверить конкретный драйвер, который вы используете. Например при использовании драйвера Microsoft Access, включенного в 3.0 пакет драйвера Microsoft ODBC рабочего стола, необходимо учитывать требования СУБД Jet, что не следует начинать транзакции в любой базе данных с открытым курсором. В классы баз данных MFC, открытый курсор означает, что открытый `CRecordset` объекта. Дополнительные сведения см. в разделе [технические 68 Примечание](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md).
 
-`BeginTrans` также может блокировать записи данных на сервере, в зависимости от запрошенного параллелизма и возможности источника данных. Сведения о блокировке данных см. в статье [набор записей: Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
+`BeginTrans` также может блокировать записи данных на сервере, в зависимости от запрошенного параллелизма и возможности источника данных. Сведения о блокировке данных см. в статье [набор записей: Блокировка (ODBC)](../../data/odbc/recordset-locking-records-odbc.md).
 
 В этой статье рассматриваются пользовательские транзакции [транзакции (ODBC)](../../data/odbc/transaction-odbc.md).
 
@@ -161,7 +161,7 @@ BOOL BeginTrans();
 
 ### <a name="example"></a>Пример
 
-  См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  См. в статье [транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="bindparameters"></a>  CDatabase::BindParameters
 
@@ -288,7 +288,7 @@ BOOL CommitTrans();
 
 ### <a name="example"></a>Пример
 
-  См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  См. в статье [транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="executesql"></a>  Помощью функции CDatabase::ExecuteSQL
 
@@ -341,7 +341,7 @@ DWORD GetBookmarkPersistence() const;
 |SQL_BP_UPDATE|Закладка для строки действительна после `Update` операции в этой строке.|
 |SQL_BP_OTHER_HSTMT|Закладки, связанные с одним объектом recordset, действительны для второго объекта recordset.|
 
-Дополнительные сведения об этом значении см. в разделе функции ODBC API `SQLGetInfo` в пакете Windows SDK. Дополнительные сведения о закладках см. в статье [Recordset: закладки и абсолютные позиции (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
+Дополнительные сведения об этом значении см. в разделе функции ODBC API `SQLGetInfo` в пакете Windows SDK. Дополнительные сведения о закладках см. в статье [набор записей: Закладки и абсолютное позиционирование (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md).
 
 ##  <a name="getconnect"></a>  CDatabase::GetConnect
 
@@ -600,7 +600,7 @@ BOOL Rollback();
 
 ### <a name="example"></a>Пример
 
-  См. в статье [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
+  См. в статье [транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md).
 
 ##  <a name="setlogintimeout"></a>  CDatabase::SetLoginTimeout
 

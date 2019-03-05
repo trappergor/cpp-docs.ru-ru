@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575741"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303967"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>Класс CMFCPropertyGridColorProperty
 
@@ -37,18 +37,18 @@ ms.locfileid: "50575741"
 class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridColorProperty::CMFCPropertyGridColorProperty](#cmfcpropertygridcolorproperty)|Создает объект `CMFCPropertyGridColorProperty`.|
 |`CMFCPropertyGridColorProperty::~CMFCPropertyGridColorProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridColorProperty::EnableAutomaticButton](#enableautomaticbutton)|Позволяет *автоматического* кнопку в диалоговом окне выбора цвета. (Метка стандартной кнопки автоматического выбора **автоматического**.)|
 |[CMFCPropertyGridColorProperty::EnableOtherButton](#enableotherbutton)|Позволяет *других* кнопку в диалоговом окне выбора цвета. (Стандартной меткой другая кнопка **Дополнительные цвета**.)|
@@ -61,7 +61,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 |`CMFCPropertyGridColorProperty::OnUpdateValue`|Вызывается платформой при присвоении изменяемому свойству нового значения. (Переопределяет [CMFCPropertyGridProperty::OnUpdateValue](../../mfc/reference/cmfcpropertygridproperty-class.md#onupdatevalue).)|
 |[CMFCPropertyGridColorProperty::SetColor](#setcolor)|Задает новый цвет свойства.|
 |[CMFCPropertyGridColorProperty::SetColumnsNumber](#setcolumnsnumber)|Задает число столбцов в текущей таблице свойств цвета.|
-|[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству исходное значение.|
+|[CMFCPropertyGridColorProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству изначальное значение.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -103,7 +103,7 @@ CMFCPropertyGridColorProperty(
 *strName*<br/>
 [in] Имя свойства.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета свойства.
 
 *pPalette*<br/>
@@ -187,7 +187,7 @@ void SetColor(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение цвета RGB.
 
 ### <a name="remarks"></a>Примечания
@@ -211,7 +211,7 @@ void SetColumnsNumber(int nColumnsNumber);
 
 ##  <a name="setoriginalvalue"></a>  CMFCPropertyGridColorProperty::SetOriginalValue
 
-Задает изменяемому свойству исходное значение.
+Задает изменяемому свойству изначальное значение.
 
 ```
 virtual void SetOriginalValue(const COleVariant& varValue);

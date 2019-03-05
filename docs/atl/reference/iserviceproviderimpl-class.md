@@ -9,12 +9,12 @@ helpviewer_keywords:
 - IServiceProviderImpl class
 - IServiceProvider interface, ATL implementation
 ms.assetid: 251254d3-c4ce-40d7-aee0-3d676d1d72f2
-ms.openlocfilehash: 231c65d92ff287e35d5475109e70d21f5a047baa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e52c28d528e187713d2d0925fed23bd8cd4493d5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298676"
 ---
 # <a name="iserviceproviderimpl-class"></a>Класс IServiceProviderImpl
 
@@ -32,11 +32,11 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 *T*<br/>
 Ваш класс, производный от `IServiceProviderImpl`.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[IServiceProviderImpl::QueryService](#queryservice)|Создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.|
 
@@ -44,11 +44,11 @@ class ATL_NO_VTABLE IServiceProviderImpl : public IServiceProvider
 
 `IServiceProvider` Интерфейс находит службу, указанного по его идентификатору GUID и возвращает указатель интерфейса для запрошенного интерфейса в службе. Класс `IServiceProviderImpl` предоставляет стандартную реализацию этого интерфейса.
 
-`IServiceProviderImpl` Указывает один метод: [QueryService](#queryservice), который создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.
+`IServiceProviderImpl` Указывает один из методов: [QueryService](#queryservice), который создает или получает доступ к указанной службы и возвращает указатель интерфейса на указанный интерфейс для службы.
 
 `IServiceProviderImpl` использует схемы услуг, начиная с [BEGIN_SERVICE_MAP](service-map-macros.md#begin_service_map) и заканчивая [END_SERVICE_MAP](service-map-macros.md#end_service_map).
 
-Сопоставление службы содержит две записи: [SERVICE_ENTRY](service-map-macros.md#service_entry), указывающая идентификатор указанной службы (SID), поддерживаемых этим объектом, и [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), который вызывает `QueryService` цепочке в другую объект.
+Схема услуги содержит две записи: [SERVICE_ENTRY](service-map-macros.md#service_entry), который указывает идентификатор указанной службы (SID), поддерживаемых этим объектом, и [SERVICE_ENTRY_CHAIN](service-map-macros.md#service_entry_chain), который вызывает `QueryService` цепочке с другим объектом.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

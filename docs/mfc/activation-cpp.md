@@ -18,12 +18,12 @@ helpviewer_keywords:
 - activation [MFC], embedded OLE items
 - OLE activation [MFC]
 ms.assetid: ed8357d9-e487-4aaa-aa6b-2edc4de25dfa
-ms.openlocfilehash: ba3c705227e6ca189527d29d4f3ae0f21c71eb72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6009e5209ce71c6eed28faff2f55792a64de408
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276953"
 ---
 # <a name="activation-c"></a>Активация (C++)
 
@@ -40,11 +40,10 @@ ms.locfileid: "50493513"
 
 MFC поддерживает вложенные активации на месте. Если при создании приложения контейнера и сервера и контейнера и сервера внедряется в другой контейнер и активироваться на месте, что он не может на месте активации объектов, внедренных в нем.
 
-Что происходит при двойном щелчке его внедренного элемента зависит от команды, определенные для элемента. Сведения см. в разделе [активации: команды](../mfc/activation-verbs.md).
+Что происходит при двойном щелчке его внедренного элемента зависит от команды, определенные для элемента. Сведения см. в разделе [активации: Команды](../mfc/activation-verbs.md).
 
 ## <a name="see-also"></a>См. также
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Контейнеры](../mfc/containers.md)<br/>
 [Серверы](../mfc/servers.md)
-

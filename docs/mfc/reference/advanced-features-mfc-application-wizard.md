@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694300"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278227"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Страница "Дополнительные функции" мастера приложений MFC
 
@@ -21,7 +21,7 @@ ms.locfileid: "51694300"
 
    Создает набор справочных файлов для контекстной справки, доступ, нажав клавишу F1, меню "Справка" или щелкнув **помочь** кнопку в диалоговом окне. Для поддержки справки требуется компилятор справки. Если компилятор справки отсутствует, его можно установить, заново запустив программу установки.
 
-   См. в разделе [HTML-справки: Context-Sensitive для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) и [файлы справки (Справка HTML)](../../ide/help-files-html-help.md) Дополнительные сведения.
+   См. в разделе [HTML-справки: Контекстная справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) и [файлы справки (Справка HTML)](../../ide/help-files-html-help.md) Дополнительные сведения.
 
 - **Печать и предварительный просмотр**
 
@@ -57,7 +57,7 @@ ms.locfileid: "51694300"
 
 - **Поддержка диспетчера перезагрузки**
 
-   Добавлена поддержка [диспетчер перезапуска Windows](/windows/desktop/RstMgr/using-restart-manager). В этом видео показано, как использовать диспетчер перезапуска MFC: [How Do I: Use нового диспетчера перезапуска](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
+   Добавлена поддержка [диспетчер перезапуска Windows](/windows/desktop/RstMgr/using-restart-manager). В этом видео показано, как использовать диспетчер перезапуска MFC: [Инструкции: Использование нового диспетчера перезапуска](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100)).
 
 - **Дополнительные области фреймов**
 
@@ -76,4 +76,3 @@ ms.locfileid: "51694300"
 ## <a name="see-also"></a>См. также
 
 [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)
-

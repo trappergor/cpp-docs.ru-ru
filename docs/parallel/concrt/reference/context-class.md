@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Context class
 ms.assetid: c0d553f3-961d-4ecd-9a29-4fa4351673b8
-ms.openlocfilehash: c6b219eabd008114f40401c64465e44607c2ee9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9074dad572a3a74a5b456e9790dc359ddf8b7c60
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293957"
 ---
 # <a name="context-class"></a>Класс Context
 
@@ -37,7 +37,7 @@ ms.locfileid: "50555081"
 class Context;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -47,14 +47,14 @@ class Context;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Block](#block)|Блокирует текущий контекст.|
 |[CurrentContext](#currentcontext)|Возвращает указатель на текущий контекст.|
 |[GetId](#getid)|Возвращает идентификатор для контекста, который уникален в пределах планировщика, к которому принадлежит контекст.|
 |[GetScheduleGroupId](#getschedulegroupid)|Возвращает идентификатор для группы расписаний, контекст сейчас работает над.|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|Возвращает идентификатор для виртуального процессора, контекст выполняется в данный момент.|
-|[Идентификатор](#id)|Возвращает идентификатор для текущего контекста, который уникален в пределах планировщика, к которой принадлежит текущий контекст.|
+|[Id](#id)|Возвращает идентификатор для текущего контекста, который уникален в пределах планировщика, к которой принадлежит текущий контекст.|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|Возвращает значение, указывающее, следует ли коллекция задач, которая выполняется в данный момент встроено в текущем контексте, в процессе активной отмены (или будет вскоре).|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|Определяет, заблокирован ли контекст, синхронно. Контекст считается синхронно заблокировано, если он явно выполнил действие, которое привело к блокировке.|
 |[Превысить предел подписок](#oversubscribe)|Внедряет дополнительный виртуальный процессор в планировщике до конца блока кода при вызове контекста выполнения на одном из виртуальных процессоров в данном планировщике.|
@@ -308,4 +308,3 @@ static void __cdecl YieldExecution();
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс Scheduler](scheduler-class.md)<br/>
 [Планировщик задач](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

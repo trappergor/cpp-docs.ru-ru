@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
-ms.openlocfilehash: ccfa168f811b2c357a3760097ca7bbaab4f5ed3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629857"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303395"
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 
@@ -37,16 +37,18 @@ ms.locfileid: "50629857"
 namespace concurrency;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`runtime_object_identity`|Каждый экземпляр сообщения имеет идентификатор, который сопутствует ему при клонировании и передаче между компонентами обмена сообщениями. Он не может быть адресом объекта сообщения.|
 |`task_status`|Тип, который представляет конечное состояние задачи. Допустимые значения: `completed` и `canceled`.|
-|`TaskProc`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc)(void *)`. `TaskProc` вызывается для вызова тела задачи.|
-|`TaskProc_t`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc_t)(void *)`. `TaskProc` вызывается для вызова тела задачи.|
+|`TaskProc`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc)(void *)`. 
+  `TaskProc` вызывается для вызова тела задачи.|
+|`TaskProc_t`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc_t)(void *)`. 
+  `TaskProc` вызывается для вызова тела задачи.|
 
 ### <a name="classes"></a>Классы
 
@@ -133,7 +135,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Структура DispatchState](dispatchstate-structure.md)|Структура `DispatchState` используется для передачи состояния в метод `IExecutionContext::Dispatch`. Она описывает обстоятельства, при которых метод `Dispatch` вызывается для интерфейса `IExecutionContext`.|
 |[Структура IExecutionContext](iexecutioncontext-structure.md)|Интерфейс для контекста выполнения, который может выполняться на данном виртуальном процессоре и к которому может применяться совместное переключение контекста.|
@@ -154,7 +156,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Допустимые состояния для объекта `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.|
@@ -173,11 +175,11 @@ namespace concurrency;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|
-|[Функция cancel_current_task](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|
+|[cancel_current_task Function](concurrency-namespace-functions.md#cancel_current_task)|Отменяет выполняющуюся в данный момент задачу. Эту функцию можно вызывать из тела задачи, чтобы прервать выполнение задачи и перевести ее в состояние `canceled`.<br /><br /> Вызов этой функции является неподдерживаемым сценарием, если вы не находитесь в теле `task`. Такие действия приведут к неопределенному поведению, например сбою или зависанию в приложении.|
 |[Функция create_async](concurrency-namespace-functions.md#create_async)|Создает асинхронную конструкцию среды выполнения Windows на основе предоставленного пользователем лямбда-выражения или объекта функции. Тип возвращаемого значения `create_async` — один из следующих: `IAsyncAction^`, `IAsyncActionWithProgress<TProgress>^`, `IAsyncOperation<TResult>^` или `IAsyncOperationWithProgress<TResult, TProgress>^`, в зависимости от сигнатуры лямбда-выражения, переданного методу.|
 |[Функция create_task](concurrency-namespace-functions.md#create_task)|Перегружен. Создает объект PPL [задачи](task-class.md) объекта. Функция `create_task` может использоваться в любой ситуации, где бы вы использовали конструктор задач. Она предоставлена главным образом для удобства, поскольку позволяет использовать ключевое слово `auto` при создании задач.|
 |[Функция CreateResourceManager](concurrency-namespace-functions.md#createresourcemanager)|Возвращает интерфейс, который представляет одноэлементный экземпляр диспетчера ресурсов среды выполнения с параллелизмом. Диспетчер ресурсов отвечает за назначение ресурсов планировщикам, которым требуется взаимодействовать друг с другом.|
@@ -190,7 +192,7 @@ namespace concurrency;
 |[Функция GetProcessorCount](concurrency-namespace-functions.md#getprocessorcount)|Возвращает число аппаратных потоков базовой системы.|
 |[Функция GetProcessorNodeCount](concurrency-namespace-functions.md#getprocessornodecount)|Возвращает число узлов NUMA или пакетов процессора в базовой системе.|
 |[Функция GetSchedulerId](concurrency-namespace-functions.md#getschedulerid)|Возвращает уникальный идентификатор, который можно назначить планировщику, реализующему интерфейс `IScheduler`.|
-|[Функция interruption_point](concurrency-namespace-functions.md#interruption_point)|Создает точку прерывания для отмены. Если отмена выполняется в контексте, где вызывается эта функция, это создает внутреннее исключение, которое прерывает текущую выполняемую параллельную работу. Если отмена не выполняется, функция ничего не делает.|
+|[interruption_point Function](concurrency-namespace-functions.md#interruption_point)|Создает точку прерывания для отмены. Если отмена выполняется в контексте, где вызывается эта функция, это создает внутреннее исключение, которое прерывает текущую выполняемую параллельную работу. Если отмена не выполняется, функция ничего не делает.|
 |[Функция is_current_task_group_canceling](concurrency-namespace-functions.md#is_current_task_group_canceling)|Возвращает значение, указывающее, находится ли группа задач, которая в данный момент выполняется в текущем контексте во встроенном режиме, в процессе активной отмены (или вскоре перейдет в это состояние). Обратите внимание, что в отсутствие групп задач, выполняющихся в текущем контексте во встроенном режиме, будет возвращено значение `false`.|
 |[Функция make_choice](concurrency-namespace-functions.md#make_choice)|Перегружен. Конструирует блок сообщений `choice` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
 |[Функция make_greedy_join](concurrency-namespace-functions.md#make_greedy_join)|Перегружен. Конструирует блок сообщений `greedy multitype_join` из необязательного объекта `Scheduler` или `ScheduleGroup` и двух или более источников входных данных.|
@@ -220,11 +222,11 @@ namespace concurrency;
 
 ### <a name="operators"></a>Операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая завершается успешно, если обе задачи, предоставленные в качестве аргументов, завершаются успешно.|
-|[оператор||](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
+|[оператор&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
 |[оператор<](concurrency-namespace-operators.md#operator_lt)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
 |[оператор<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
@@ -233,7 +235,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Константы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|
@@ -261,4 +263,3 @@ namespace concurrency;
 ## <a name="see-also"></a>См. также
 
 [Ссылки](reference-concurrency-runtime.md)
-

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296791"
 ---
 # <a name="cancellationtokensource-class"></a>Класс cancellation_token_source
 
@@ -28,18 +28,18 @@ ms.locfileid: "50446752"
 class cancellation_token_source;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[cancellation_token_source](#ctor)|Перегружен. Создает новый `cancellation_token_source`. Источник можно использовать, чтобы сигнализировать об отмене некоторой отменяемой операции.|
 |[~ cancellation_token_source деструктор](#dtor)||
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Отмена](#cancel)|Отменяет токен. Любой элемент `task_group`, `structured_task_group` или `task`, который использует этот токен, будет отменен при этом вызове и создаст исключение в следующей точке прерывания.|
 |[create_linked_source](#create_linked_source)|Перегружен. Создает `cancellation_token_source`, который отменяется при отмене предоставленного токена.|
@@ -47,7 +47,7 @@ class cancellation_token_source;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator!=](#operator_neq)||
 |[оператор=](#operator_eq)||
@@ -117,7 +117,7 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 *Н_ачать*<br/>
 Итератор стандартной библиотеки C++, соответствующий началу диапазона токенов, которые требуется прослушивать на предмет отмены.
 
-*_Окончания*<br/>
+*_End*<br/>
 Итератор стандартной библиотеки C++, соответствующий концу диапазона токенов, которые требуется прослушивать на предмет отмены.
 
 ### <a name="return-value"></a>Возвращаемое значение

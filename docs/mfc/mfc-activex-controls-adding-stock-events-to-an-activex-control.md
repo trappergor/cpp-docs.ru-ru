@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
+title: Элементы ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
 ms.date: 11/04/2016
 f1_keywords:
 - EVENT__STOCK_ERROR
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - EVENT_STOCK_READYSTATECHANGE event
 - EVENT_STOCK_KEYPRESS event
 ms.assetid: 3eeadc67-4b3d-4444-8caa-53054073988a
-ms.openlocfilehash: d224bfada94878fcec69b0675bd0faa03575ed27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6f3c63f0436296791df428c704bce96eca3ec0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540014"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291123"
 ---
-# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Элементы управления ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
+# <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>Элементы ActiveX в MFC. Добавление событий хранения в элемент управления ActiveX
 
 Событий хранения отличаются от пользовательских событий, что они запускаются автоматически классом [COleControl](../mfc/reference/colecontrol-class.md). `COleControl` содержит функции стандартных элементов, которые инициируют события, полученные в результате распространенных действий. Некоторые стандартные действия, реализуемый `COleControl` включить одним - и двойным - clicks на элемент управления, события клавиатуры и изменения в состояние кнопок мыши. Записей для акции, которые события всегда предшествует event_stock-префикс сопоставления событий.
 
@@ -59,18 +59,18 @@ ms.locfileid: "50540014"
 
 ### <a name="stock-events"></a>Событий биржевых
 
-|событие|Запуск функции|Комментарии|
+|Событие|Запуск функции|Комментарии|
 |-----------|---------------------|--------------|
-|Нажмите кнопку|**void (FireClick)**|Возникает, когда элемент управления захвате мыши, в любом **BUTTONUP** (левая, Средняя или правая) сообщение и кнопка отпущена над элементом управления. Биржевая MouseDown и MouseUp события возникают до этого события.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_CLICK)**|
-|Двойное нажатие кнопки|**void (FireDblClick)**|Аналогично до щелчка, но возникающее когда **BUTTONDBLCLK** сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_DBLCLICK)**|
-|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, целое число без знака**`nHelpID`**= 0)**|Инициируется при возникновении ошибки в элементе управления ActiveX за пределами области метода вызова или свойство с доступом.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_ERROREVENT)**|
-|KeyDown|**void FireKeyDown (короткий** `nChar` **, short**`nShiftState`**)**|Возникает, когда `WM_SYSKEYDOWN` или `WM_KEYDOWN` сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_KEYDOWN)**|
+|Нажмите кнопку|**void (FireClick)**|Возникает, когда элемент управления захвате мыши, в любом **BUTTONUP** (левая, Средняя или правая) сообщение и кнопка отпущена над элементом управления. Биржевая MouseDown и MouseUp события возникают до этого события.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_CLICK( )**|
+|Двойное нажатие кнопки|**void FireDblClick( )**|Аналогично до щелчка, но возникающее когда **BUTTONDBLCLK** сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_DBLCLICK( )**|
+|Error|**void FireError (SCODE***scode* **, LPCSTR** `lpszDescription` **, целое число без знака**`nHelpID`**= 0)**|Инициируется при возникновении ошибки в элементе управления ActiveX за пределами области метода вызова или свойство с доступом.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_ERROREVENT( )**|
+|KeyDown|**void FireKeyDown (короткий** `nChar` **, short**`nShiftState`**)**|Возникает, когда `WM_SYSKEYDOWN` или `WM_KEYDOWN` сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_KEYDOWN( )**|
 |Нажатие клавиши|**void FireKeyPress (короткий** <strong>\*</strong> `pnChar` **)**|Которые возникают после `WM_CHAR` сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**void FireKeyUp (короткий** `nChar` **, short**`nShiftState`**)**|Возникает, когда `WM_SYSKEYUP` или `WM_KEYUP` сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_KEYUP)**|
-|MouseDown|**void FireMouseDown (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Возникает, если любой **BUTTONDOWN** получении (слева, середине или справа). Непосредственно перед это событие срабатывает, захват мыши.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEDOWN)**|
-|MouseMove|**void FireMouseMove (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Инициируется, когда поступает сообщение WM_MOUSEMOVE.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEMOVE)**|
-|MouseUp|**void FireMouseUp (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Возникает, если любой **BUTTONUP** получении (слева, середине или справа). Захват мыши освобождается, прежде чем это событие вызывается.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEUP)**|
-|ReadyStateChange|**void (FireReadyStateChange)**|Инициируется при переходе элемента управления в следующее состояние готовности, из-за количество полученных данных.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_READYSTATECHANGE)**|
+|KeyUp|**void FireKeyUp (короткий** `nChar` **, short**`nShiftState`**)**|Возникает, когда `WM_SYSKEYUP` или `WM_KEYUP` сообщение.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_KEYUP( )**|
+|MouseDown|**void FireMouseDown (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Возникает, если любой **BUTTONDOWN** получении (слева, середине или справа). Непосредственно перед это событие срабатывает, захват мыши.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEDOWN( )**|
+|MouseMove|**void FireMouseMove (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Инициируется, когда поступает сообщение WM_MOUSEMOVE.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEMOVE( )**|
+|MouseUp|**void FireMouseUp (короткий** `nButton` **, short** `nShiftState` **, число с плавающей запятой***x* **, число с плавающей запятой** *y***)**|Возникает, если любой **BUTTONUP** получении (слева, середине или справа). Захват мыши освобождается, прежде чем это событие вызывается.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_MOUSEUP( )**|
+|ReadyStateChange|**void (FireReadyStateChange)**|Инициируется при переходе элемента управления в следующее состояние готовности, из-за количество полученных данных.<br /><br /> Запись сопоставления событий: **EVENT_STOCK_READYSTATECHANGE( )**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> Стандартное событие, используя мастер добавления события
 

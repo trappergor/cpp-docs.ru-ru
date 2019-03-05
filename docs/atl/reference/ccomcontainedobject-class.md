@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273586"
 ---
 # <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
 
@@ -40,18 +40,18 @@ class CComContainedObject : public Base
 *Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует элемент указатель на объект владельца `IUnknown`.|
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComContainedObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект владельца.|
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Извлекает объект владельца `IUnknown`.|
@@ -101,7 +101,7 @@ CComContainedObject(void* pv);
 
 Наборы `m_pOuterUnknown` указателя на член (унаследованные `Base` класс) для *pv*.
 
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 Деструктор
 

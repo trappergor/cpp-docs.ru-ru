@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: 0577788e4ab28139943da4b3bd14914799341213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506136"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326001"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Добавление объектов и элементов управления в проект ATL
 
@@ -37,7 +37,7 @@ ms.locfileid: "50506136"
 
    [Добавление класса](../../ide/add-class-dialog-box.md) откроется диалоговое окно.
 
-1. С помощью **ATL** папке, выбранной в **категории** панели выберите объект для вставки из **шаблоны** области. Нажмите кнопку **откройте**. Откроется мастер кода для выбранного объекта.
+1. С помощью **ATL** папке, выбранной в **категории** панели выберите объект для вставки из **шаблоны** области. Нажмите кнопку **Открыть**. Откроется мастер кода для выбранного объекта.
 
    > [!NOTE]
    > Если вы хотите добавить объект ATL в проект MFC, необходимо добавить поддержку ATL в существующий проект. Это можно сделать, следуя инструкциям в [Добавление поддержки ATL в проект MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).

@@ -1,5 +1,5 @@
 ---
-title: Сокеты Windows. Блокировка
+title: Сокеты Windows. Блокировки
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], blocking mode
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - sockets [MFC], behavior on different Windows platforms
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
-ms.openlocfilehash: 7b41f034e08570e418bf24d9d720795eafc37932
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610578"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272351"
 ---
-# <a name="windows-sockets-blocking"></a>Сокеты Windows. Блокировка
+# <a name="windows-sockets-blocking"></a>Сокеты Windows. Блокировки
 
-В этой статье и в двух других статьях приведены некоторые проблемы в программировании сокетов Windows. В этой статье рассматриваются блокировки. Другие проблемы описанные в статьях: [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md) и [Windows Sockets: преобразование строк](../mfc/windows-sockets-converting-strings.md).
+В этой статье и в двух других статьях приведены некоторые проблемы в программировании сокетов Windows. В этой статье рассматриваются блокировки. Другие проблемы описанные в статьях: [Сокеты Windows. Порядок байтов](../mfc/windows-sockets-byte-ordering.md) и [сокеты Windows: Преобразование строк](../mfc/windows-sockets-converting-strings.md).
 
 Если вы используете или являются производными от класса [CAsyncSocket](../mfc/reference/casyncsocket-class.md), вам потребуется самостоятельно управлять эти проблемы. Если вы используете или являются производными от класса [CSocket](../mfc/reference/csocket-class.md), MFC автоматически управляет ими.
 
@@ -36,9 +36,9 @@ ms.locfileid: "50610578"
 
 В группе Windows заблокированных вызовов считается неудачным вариантом. По умолчанию [CAsyncSocket](../mfc/reference/casyncsocket-class.md) поддерживает асинхронные вызовы и вам необходимо управлять блокирует самостоятельно с помощью обратного вызова уведомления. Класс [CSocket](../mfc/reference/csocket-class.md), с другой стороны, является синхронным. Он передает сообщения Windows и управляет блокировки для вас.
 
-Дополнительные сведения о блокировке см. в спецификации Windows Sockets. Дополнительные сведения о функции «On», см. в разделе [Windows Sockets: уведомления сокетов](../mfc/windows-sockets-socket-notifications.md) и [Windows Sockets: наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Дополнительные сведения о блокировке см. в спецификации Windows Sockets. Дополнительные сведения о функции «On», см. в разделе [сокеты Windows: Сокета уведомления](../mfc/windows-sockets-socket-notifications.md) и [сокеты Windows: Наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
-Дополнительные сведения:
+Дополнительные сведения см. в следующих разделах.
 
 - [Сокеты Windows. Использование класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50610578"
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -54,4 +54,3 @@ ms.locfileid: "50610578"
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CAsyncSocket::OnSend](../mfc/reference/casyncsocket-class.md#onsend)
-

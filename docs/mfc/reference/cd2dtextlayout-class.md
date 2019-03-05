@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CD2DTextLayout [MFC], SetLocaleName
 - CD2DTextLayout [MFC], m_pTextLayout
 ms.assetid: 724bd13c-f2ef-4e55-a775-8cb04b7b7908
-ms.openlocfilehash: 378c96622144a4acac27785cef844f0c1d21b98b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa51b050543b6a027e354afa18b5e9c002c6bca1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283973"
 ---
 # <a name="cd2dtextlayout-class"></a>Класс CD2DTextLayout
 
@@ -45,11 +45,11 @@ ms.locfileid: "50630949"
 class CD2DTextLayout : public CD2DResource;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DTextLayout::CD2DTextLayout](#cd2dtextlayout)|Создает объект CD2DTextLayout.|
 |[CD2DTextLayout:: ~ CD2DTextLayout](#cd2dtextlayout__~cd2dtextlayout)|Деструктор Вызывается при уничтожении объекта макета текста D2D.|
@@ -58,7 +58,7 @@ class CD2DTextLayout : public CD2DResource;
 
 |Имя|Описание|
 |----------|-----------------|
-|[CD2DTextLayout::CREATE](#create)|Создает CD2DTextLayout. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DTextLayout::Create](#create)|Создает CD2DTextLayout. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DTextLayout::destroy](#destroy)|Уничтожает объект CD2DTextLayout. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DTextLayout::Get](#get)|Возвращает интерфейс IDWriteTextLayout|
 |[CD2DTextLayout::GetFontFamilyName](#getfontfamilyname)|Копирует имя семейства шрифтов текста в указанной позиции.|
@@ -72,11 +72,11 @@ class CD2DTextLayout : public CD2DResource;
 
 |Имя|Описание|
 |----------|-----------------|
-|[CD2DTextLayout::operator IDWriteTextLayout *](#operator_idwritetextlayout_star)|Возвращает интерфейс IDWriteTextLayout|
+|[CD2DTextLayout::operator IDWriteTextLayout*](#operator_idwritetextlayout_star)|Возвращает интерфейс IDWriteTextLayout|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CD2DTextLayout::m_pTextLayout](#m_ptextlayout)|Указатель на IDWriteTextLayout.|
 
@@ -92,7 +92,7 @@ class CD2DTextLayout : public CD2DResource;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout:: ~ CD2DTextLayout
+##  <a name="_dtorcd2dtextlayout"></a>  CD2DTextLayout::~CD2DTextLayout
 
 Деструктор Вызывается при уничтожении объекта макета текста D2D.
 
@@ -130,7 +130,7 @@ CD2DTextLayout(
 *bAutoDestroy*<br/>
 Указывает, что объект будет уничтожен владельца (pParentTarget).
 
-##  <a name="create"></a>  CD2DTextLayout::CREATE
+##  <a name="create"></a>  CD2DTextLayout::Create
 
 Создает CD2DTextLayout.
 
@@ -226,7 +226,7 @@ virtual BOOL IsValid() const;
 IDWriteTextLayout* m_pTextLayout;
 ```
 
-##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout *
+##  <a name="operator_idwritetextlayout_star"></a>  CD2DTextLayout::operator IDWriteTextLayout*
 
 Возвращает интерфейс IDWriteTextLayout
 

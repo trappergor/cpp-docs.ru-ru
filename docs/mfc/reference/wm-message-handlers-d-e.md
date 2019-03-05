@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ON_WM_DEVICECHANGE [MFC]
 - WM_ messages [MFC]
 ms.assetid: 56fb89c8-68a8-4adf-883e-a9f63bf677e9
-ms.openlocfilehash: 90076e991667e829a97cb805a32763b6acbfe6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ae9ff828f342bc4270c3701ced3e670988c7d54
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491056"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277719"
 ---
 # <a name="wm-message-handlers-d---e"></a>Обработчики сообщений WM_ D — E
 
@@ -59,13 +59,12 @@ ms.locfileid: "50491056"
 |ON_WM_DWMWINDOWMAXIMIZEDCHANGE()|afx_msg void [OnWindowMaximizedChanged](../../mfc/reference/cwnd-class.md#onwindowmaximizedchanged)(BOOL);|
 |ON_WM_ENABLE()|afx_msg void [OnEnable](../../mfc/reference/cwnd-class.md#onenable)(BOOL);|
 |ON_WM_ENDSESSION()|afx_msg void [OnEndSession](../../mfc/reference/cwnd-class.md#onendsession)(BOOL);|
-|ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(целое число без знака, CWnd *);|
+|ON_WM_ENTERIDLE()|afx_msg void [OnEnterIdle](../../mfc/reference/cwnd-class.md#onenteridle)(UINT, CWnd*);|
 |ON_WM_ENTERSIZEMOVE()|afx_msg void [OnEnterSizeMove](../../mfc/reference/cwnd-class.md#onentersizemove)();|
-|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC *);|
+|ON_WM_ERASEBKGND()|afx_msg BOOL [OnEraseBkgnd](../../mfc/reference/cwnd-class.md#onerasebkgnd)(CDC*);|
 |ON_WM_EXITSIZEMOVE()|afx_msg void [OnExitSizeMove](../../mfc/reference/cwnd-class.md#onexitsizemove)();|
 
 ## <a name="see-also"></a>См. также
 
 [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)<br/>
 [Обработчики для сообщений WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

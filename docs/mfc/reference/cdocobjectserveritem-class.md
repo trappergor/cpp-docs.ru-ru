@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275288"
 ---
 # <a name="cdocobjectserveritem-class"></a>Класс CDocObjectServerItem
 
@@ -31,7 +31,7 @@ ms.locfileid: "50536530"
 class CDocObjectServerItem : public COleServerItem
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -41,7 +41,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDocObjectServerItem::GetDocument](#getdocument)|Извлекает указатель на документ, который содержит элемент.|
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>Примечания
 
-`CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnDoVerb](#ondoverb), и [OnShow](#onshow).
+`CDocObjectServerItem` Определяет функции является переопределяемым элементом: [OnHide](#onhide), [OnDoVerb](#ondoverb), and [OnShow](#onshow).
 
 Для использования `CDocObjectServerItem`, убедиться, что [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem) в переопределите вашей `COleServerDoc`-производном классе возвращает новый `CDocObjectServerItem` объекта. Если вам нужно изменить функциональные возможности элемента, можно создать новый экземпляр собственного `CDocObjectServerItem`-производного класса.
 

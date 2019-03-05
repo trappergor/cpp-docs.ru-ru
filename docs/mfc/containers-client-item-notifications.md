@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], client-item notifications
 - client items and OLE containers
 ms.assetid: e1f1c427-01f5-45f2-b496-c5bce3d76340
-ms.openlocfilehash: b59ba84c27d9ed4c964bd308cf69f9f729eb3c39
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 583c438820c002a4c192d15358ca98424d02889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291058"
 ---
 # <a name="containers-client-item-notifications"></a>Контейнеры. Уведомления элементов клиентов
 
@@ -40,7 +40,7 @@ ms.locfileid: "50528899"
 |**OLE_CHANGED**|Указывает пропорции объекта OLE, которая была изменена.|
 |**OLE_CHANGED_STATE**|Описывает состояние, вводимым (*emptyState*, *loadedState*, *openState*, *activeState*, или  *activeUIState*).|
 
-Дополнительные сведения о состояниях, можно предположить, элемент клиента см. в разделе [контейнеры: состояния элементов клиентов](../mfc/containers-client-item-states.md).
+Дополнительные сведения о состояниях, можно предположить, элемент клиента см. в разделе [контейнеров: Состояния элементов клиентов](../mfc/containers-client-item-states.md).
 
 Платформа вызывает `COleClientItem::OnGetItemPosition` при активации элемента для редактирования на месте. Реализация является обязательным для приложения, поддерживающие редактирование на месте. Мастер приложений MFC предоставляет базовую реализацию, присваивающий координаты элемента, чтобы `CRect` объект, который передается в качестве аргумента для `OnGetItemPosition`.
 
@@ -51,4 +51,3 @@ ms.locfileid: "50528899"
 [Контейнеры](../mfc/containers.md)<br/>
 [Контейнеры. Состояния элементов клиентов](../mfc/containers-client-item-states.md)<br/>
 [COleClientItem::OnChangeItemPosition](../mfc/reference/coleclientitem-class.md#onchangeitemposition)
-

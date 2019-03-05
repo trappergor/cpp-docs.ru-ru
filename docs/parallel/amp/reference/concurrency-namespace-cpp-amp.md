@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
-ms.openlocfilehash: 5ddafe5dd821fb21eb6dd03d63122fa98a56af51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278695"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Пространство имен Concurrency (C++ AMP)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50635374"
 namespace Concurrency;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="namespaces"></a>Пространства имен
 
@@ -36,7 +36,7 @@ namespace Concurrency;
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Класс accelerator](accelerator-class.md)|Представляет абстракцию физического DP-оптимизированного вычислительного узла.|
 |[Класс accelerator_view](accelerator-view-class.md)|Представляет абстракцию виртуального устройства на ускорителе с параллельными данными C++ AMP.|
@@ -57,14 +57,14 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[Перечисление access_type](concurrency-namespace-enums-amp.md#access_type)|Указывает тип доступа к данным.|
 |[Перечисление queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)|Определяет режимы организации очереди, которые поддерживаются в сочетании клавиш.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |--------------|-----------------|
 |[оператор ==-оператор (C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Определяет, равны ли две заданных структуры данных.|
 |[оператор! =-оператор (C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Определяет, являются ли две заданных структуры данных неравными.|
@@ -76,7 +76,7 @@ namespace Concurrency;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Блокирует выполнение всех потоков в плитке, пока не будут завершены все доступы к памяти.|
 |[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Отменяет инициализацию среды выполнения C++ AMP.|
@@ -102,7 +102,7 @@ namespace Concurrency;
 
 ## <a name="constants"></a>Константы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Константа HLSL_MAX_NUM_BUFFERS](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Максимальное количество буферов, допускаемое DirectX.|
 |[Modulename_max_length-константа](concurrency-namespace-constants-amp.md#modulename_max_length)|Хранит максимальную длину имени модуля. Это значение должно быть одинаковым на компилятор и среда выполнения.|
@@ -114,4 +114,3 @@ namespace Concurrency;
 ## <a name="see-also"></a>См. также
 
 [Справочник (C++ AMP)](reference-cpp-amp.md)
-

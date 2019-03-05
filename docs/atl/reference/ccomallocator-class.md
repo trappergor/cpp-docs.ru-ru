@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-ms.openlocfilehash: 83ea5cdbc2460d308edf89647dafba65cb327f03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f1c005262d25b1ff5e900377c229afe1573e6d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658878"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296076"
 ---
 # <a name="ccomallocator-class"></a>Класс CComAllocator
 
@@ -27,11 +27,11 @@ ms.locfileid: "50658878"
 class CComAllocator
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComAllocator::Allocate](#allocate)|Вызовите статический метод для выделения памяти.|
 |[CComAllocator::Free](#free)|Вызовите статический метод для освобождения памяти.|

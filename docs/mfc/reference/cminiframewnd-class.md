@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693532"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293268"
 ---
 # <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
 
@@ -29,7 +29,7 @@ ms.locfileid: "51693532"
 class CMiniFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -129,7 +129,7 @@ virtual BOOL Create(
 
 См. в разделе [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание значений стилей окон невозможно. Обычно используется для окон области комбинация будет WS_POPUP&#124;WS_CAPTION&#124;WS_SYSMENU.
 
-*Rect*<br/>
+*rect*<br/>
 Объект `RECT` структуру, указав нужные размеры окна.
 
 *pParentWnd*<br/>
@@ -175,7 +175,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Указывает атрибуты стиля окна. См. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [CWnd::Create](../../mfc/reference/cwnd-class.md#create) описание возможных значений.
 
-*Rect*<br/>
+*rect*<br/>
 Размер и положение окна, в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>

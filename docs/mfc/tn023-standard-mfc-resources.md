@@ -1,5 +1,5 @@
 ---
-title: TN023. Стандартные ресурсы MFC
+title: 'TN023: Стандартные ресурсы MFC'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.resources
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: 04789ba85a9f7c193a88ba1a0d097b3671808e9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559917"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277683"
 ---
-# <a name="tn023-standard-mfc-resources"></a>TN023. Стандартные ресурсы MFC
+# <a name="tn023-standard-mfc-resources"></a>TN023: Стандартные ресурсы MFC
 
 Эта заметка описывает стандартные ресурсы в состав и необходимые библиотеки MFC.
 
@@ -47,7 +47,7 @@ MFC предоставляет предопределенные ресурсы, 
 
 - Afxres.rc: Общие ресурсы, используемые платформой.
 
-- Afxprint.rc: Ресурсы, специфические для печати.
+- Afxprint.rc: Ресурсы, относящиеся к печати.
 
 - Afxolecl.rc: Ресурсы, специфические для клиентских приложений OLE.
 
@@ -103,4 +103,3 @@ MFC предоставляет предопределенные ресурсы, 
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

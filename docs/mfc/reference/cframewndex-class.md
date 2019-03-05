@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302989"
 ---
 # <a name="cframewndex-class"></a>Класс CFrameWndEx
 
@@ -195,11 +195,11 @@ ms.locfileid: "53179010"
 class CFrameWndEx : public CFrameWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFrameWndEx::ActiveItemRecalcLayout](#activeitemrecalclayout)|Настраивает макет элемент клиента OLE и клиентской области рамки.|
 |`CFrameWndEx::AddDockSite`|Этот метод не используется.|
@@ -1150,7 +1150,7 @@ afx_msg LRESULT OnDWMCompositionChanged(
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] Этот параметр не используется.
 
 *к пулу журналов*<br/>
@@ -1174,7 +1174,7 @@ LRESULT OnExitSizeMove(
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] Этот параметр не используется.
 
 *к пулу журналов*<br/>
@@ -1304,7 +1304,7 @@ afx_msg LRESULT OnMenuChar(
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Код символа нажатой клавише.
 
 *nFlags*<br/>
@@ -1505,7 +1505,7 @@ afx_msg LRESULT OnPowerBroadcast(
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] События управления питанием. Список возможных значений см. в разделе [сообщения WM_POWERBROADCAST](/windows/desktop/Power/wm-powerbroadcast).
 
 *к пулу журналов*<br/>
@@ -1531,7 +1531,7 @@ BOOL OnSetMenu(HMENU hmenu);
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] Дескриптор нового меню фрейма окна.
 
 *к пулу журналов*<br/>
@@ -1758,7 +1758,7 @@ afx_msg LRESULT OnToolbarContextMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] Этот параметр не используется.
 
 *к пулу журналов*<br/>
@@ -1782,7 +1782,7 @@ afx_msg LRESULT OnToolbarCreateNew(
 
 ### <a name="parameters"></a>Параметры
 
-*WP*<br/>
+*wp*<br/>
 [in] Этот параметр не используется.
 
 *к пулу журналов*<br/>

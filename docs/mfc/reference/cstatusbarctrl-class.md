@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569741"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272845"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 
@@ -61,11 +61,11 @@ ms.locfileid: "50569741"
 class CStatusBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Создает объект `CStatusBarCtrl`.|
 
@@ -131,7 +131,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.
 
-*Rect*<br/>
+*rect*<br/>
 Задает размер и положение управления строкой состояния. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
 
 *pParentWnd*<br/>
@@ -177,7 +177,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.
 
-*Rect*<br/>
+*rect*<br/>
 Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
@@ -272,7 +272,7 @@ HICON GetIcon(int iPart) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*iPart*|[in] Отсчитываемый от нуля индекс части, который содержит значок, который требуется получить. Если этот параметр имеет значение -1, строка состояния считается строка состояния простой режим.|
 

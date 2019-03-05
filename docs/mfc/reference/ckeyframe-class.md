@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pExistingKeyFrame
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
-ms.openlocfilehash: b6ebe5ba78a259014f62bdf04f30e856a57f1aba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451081"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291362"
 ---
 # <a name="ckeyframe-class"></a>Класс CKeyFrame
 
@@ -43,7 +43,7 @@ ms.locfileid: "50451081"
 class CKeyFrame : public CBaseKeyFrame;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -64,7 +64,7 @@ class CKeyFrame : public CBaseKeyFrame;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CKeyFrame::m_offset](#m_offset)|Задает смещение этот опорный кадр из хранящихся в m_pExistingKeyFrame опорного кадра.|
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Содержит указатель на существующий keframe. Этот ключевой кадр добавляется в раскадровку с m_offset существующий ключевой кадр.|

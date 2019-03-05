@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525727"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291617"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>Класс CMFCToolBarEditBoxButton
 
@@ -69,7 +69,7 @@ ms.locfileid: "50525727"
 class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -127,7 +127,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 3. В обработчике сообщений, который обрабатывает сообщение AFX_WM_RESETTOOLBAR, заменить фиктивные кнопку "Создать поле" поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md).
+Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md).
 
 ## <a name="example"></a>Пример
 
@@ -229,7 +229,7 @@ virtual CEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Указывает родительского окна элемента управления. Он не должен иметь значение NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает размер и положение элемента управления поля ввода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -692,5 +692,4 @@ virtual void SetStyle(UINT nStyle);
 [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)

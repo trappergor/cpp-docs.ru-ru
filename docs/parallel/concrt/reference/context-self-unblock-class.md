@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - context_self_unblock class
 ms.assetid: 9601cd28-4f40-4c2e-89ab-747068956331
-ms.openlocfilehash: 5cb7fc951a4c62f4d299ce7d394e9f8268d7ed74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 900dc68eac4441bd1db3818d3c1f30698b80a6e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283362"
 ---
 # <a name="contextselfunblock-class"></a>Класс context_self_unblock
 
@@ -25,7 +25,7 @@ ms.locfileid: "50622174"
 class context_self_unblock : public std::exception;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 

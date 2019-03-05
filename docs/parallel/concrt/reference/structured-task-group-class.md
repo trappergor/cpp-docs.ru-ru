@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299300"
 ---
 # <a name="structuredtaskgroup-class"></a>Класс structured_task_group
 
@@ -30,7 +30,7 @@ ms.locfileid: "50600675"
 class structured_task_group;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -191,7 +191,7 @@ structured_task_group(cancellation_token _CancellationToken);
 
 Конструктор, который принимает токен отмены, создает `structured_task_group`, которая будет отменена, когда будет отменен источник, связанный с этим токеном. Предоставление явного токена отмены также изолирует этой группы структурированных задач из участия в неявной отмене из родительской группы с другим токеном или без токена.
 
-##  <a name="dtor"></a> ~ structured_task_group
+##  <a name="dtor"></a> ~structured_task_group
 
 Уничтожает объект `structured_task_group`. Вы должны вызвать либо метод `wait` или `run_and_wait` метода объекта до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.
 

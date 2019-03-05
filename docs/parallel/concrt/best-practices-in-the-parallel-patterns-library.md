@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293619"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>Рекомендации по работе с библиотекой параллельных шаблонов
 
@@ -76,7 +76,7 @@ ms.locfileid: "50503319"
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-Аналогичный пример, в котором для параллельного выполнения обработки изображений используется конвейер, см. в разделе [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Аналогичный пример, в котором для параллельного выполнения обработки изображений используется конвейер, см. в разделе [Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[В начало](#top)]
 
@@ -90,19 +90,19 @@ ms.locfileid: "50503319"
 
 Для снижения затрат алгоритм `parallel_invoke` выполняет последний ряд задач в вызывающем контексте.
 
-Полную версию этого примера, см. в разделе [как: использование функции parallel_invoke для написания параллельного сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Дополнительные сведения о `parallel_invoke` алгоритм, см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
+Полную версию этого примера, см. в разделе [как: Использование функции parallel_invoke для написания параллельного сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md). Дополнительные сведения о `parallel_invoke` алгоритм, см. в разделе [параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md).
 
 [[В начало](#top)]
 
 ##  <a name="breaking-loops"></a> Используйте отмену или обработки исключений для выхода из параллельного цикла
 
-Библиотека PPL предоставляет два способа отмены параллельной работы, выполняемой группой задач или параллельным алгоритмом. Первый способ — использовать механизм отмены, предоставляемый [concurrency::task_group](reference/task-group-class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классы. Второй способ — создать исключение в теле рабочей функции задачи. Механизм отмены более эффективен, чем обработка исключений при отмене дерева параллельной работы. Объект *дерево параллельной работы* — это группа связанных групп задач в которых некоторые группы задач содержат другие группы задач. Механизм отмены отменяет группу задач и ее дочерние группы в порядке «сверху вниз». Механизм обработки исключений, напротив, работает в режиме «снизу вверх», и каждую дочернюю группу задач приходится отменять независимо, поскольку исключение распространяется вверх.
+Библиотека PPL предоставляет два способа отмены параллельной работы, выполняемой группой задач или параллельным алгоритмом. Первый способ — использовать механизм отмены, предоставляемый [concurrency::task_group](reference/task-group-class.md) и [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md) классы. Второй способ — создать исключение в теле рабочей функции задачи. Механизм отмены более эффективен, чем обработка исключений при отмене дерева параллельной работы. Объект *дерево параллельной работы* — это группа связанных групп задач в которых некоторые группы задач содержат другие группы задач. Механизм отмены отменяет группу задач и ее дочерние группы в порядке «сверху вниз». И наоборот, обработка исключений работает в режиме «снизу вверх» и необходимо отменять каждую дочернюю группу задач независимо, поскольку исключение распространяется вверх.
 
 При работе непосредственно с объектом группы задач, используйте [Concurrency::task_group:: Cancel](reference/task-group-class.md#cancel) или [Concurrency::structured_task_group:: Cancel](reference/structured-task-group-class.md#cancel) для отмены работы, принадлежащей этой группе задач . Чтобы отменить параллельный алгоритм, например `parallel_for`, создайте родительскую группу задач и отмените ее. Например, рассмотрим следующую функцию, `parallel_find_any`, которая выполняет поиск значения в массиве в параллельном режиме.
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-Поскольку параллельные алгоритмы используют группы задач, когда одна из параллельных итераций отменяет родительскую группу задач, общая задача также отменяется. Полную версию этого примера, см. в разделе [как: использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
+Поскольку параллельные алгоритмы используют группы задач, когда одна из параллельных итераций отменяет родительскую группу задач, общая задача также отменяется. Полную версию этого примера, см. в разделе [как: Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md).
 
 Хотя обработка исключений является менее эффективным способом отмены параллельной работы, чем механизм отмены, существуют случаи, в которых лучше применять обработку исключений. Например, следующий метод, `for_all`, рекурсивно выполняет рабочую функцию для каждого узла структуры `tree`. В этом примере `_children` член данных является [std::list](../../standard-library/list-class.md) , содержащий `tree` объектов.
 
@@ -112,7 +112,7 @@ ms.locfileid: "50503319"
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-Полную версию этого примера, см. в разделе [как: использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Полную версию этого примера, см. в разделе [как: Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 Более общие сведения об отмене и механизмы обработки исключений, предоставляемых библиотекой PPL см. в разделе [Отмена в PPL](cancellation-in-the-ppl.md) и [обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md).
 
@@ -198,7 +198,7 @@ Container 1: Freeing resources...Exiting program...
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-Полную версию этого примера, см. в разделе [как: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Дополнительные сведения о `combinable` , представлена в разделе [параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).
+Полную версию этого примера, см. в разделе [как: Использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md). Дополнительные сведения о `combinable` , представлена в разделе [параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md).
 
 [[В начало](#top)]
 
@@ -264,10 +264,9 @@ Container 1: Freeing resources...Exiting program...
 [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
-[Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Практическое руководство. Использование функции parallel_invoke для написания программы параллельной сортировки](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)<br/>
 [Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)<br/>
 [Практическое руководство. Использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [Рекомендации по работе с библиотекой асинхронных агентов](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [Общие рекомендации в среде выполнения с параллелизмом](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

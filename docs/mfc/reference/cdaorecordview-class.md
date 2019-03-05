@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnGetRecordset
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
-ms.openlocfilehash: db1636bebd0cc29124018b5fad2c0535079706d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541210"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277781"
 ---
 # <a name="cdaorecordview-class"></a>Класс CDaoRecordView
 
@@ -33,7 +33,7 @@ ms.locfileid: "50541210"
 class AFX_NOVTABLE CDaoRecordView : public CFormView
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
@@ -43,7 +43,7 @@ class AFX_NOVTABLE CDaoRecordView : public CFormView
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Возвращает ненулевое значение, если текущая запись является первой записью в связанных записей.|
 |[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Возвращает ненулевое значение, если текущая запись является последней записи в наборе связанных записей.|
@@ -173,7 +173,7 @@ virtual CDaoRecordset* OnGetRecordset() = 0;
 
 Эта функция-член для создания или получения объекта набора записей и возврата указателя на его необходимо переопределить. Если вы объявляете класс представления записей с помощью классов, мастер создает переопределение по умолчанию. Реализация по умолчанию в ClassWizard возвращает набор записей указателем, сохраненным в представление записей, если он существует. Если нет, он создает объект набора записей типа вы указали с ClassWizard и вызывает его `Open` член функции для открытия таблицы или выполнения запроса и затем возвращает указатель на объект.
 
-Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).
+Дополнительные сведения и примеры см. в статье [представления записей: Использование представления записей](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  CDaoRecordView::OnMove
 

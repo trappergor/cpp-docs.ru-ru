@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294568"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 
@@ -57,7 +57,7 @@ ms.locfileid: "52176410"
 class CMFCPropertySheet : public CPropertySheet
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 

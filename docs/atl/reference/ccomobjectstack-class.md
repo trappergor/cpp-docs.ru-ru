@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObjectStack class
 ms.assetid: 3da72c40-c834-45f6-bb76-6ac204028d80
-ms.openlocfilehash: dfe8c58803a0eb06ea17ae1b241e1e435f0263f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19fd226e617e4cdb1bba8a113b8984c36bf28d59
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579274"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287165"
 ---
 # <a name="ccomobjectstack-class"></a>Класс CComObjectStack
 
@@ -35,7 +35,7 @@ class CComObjectStack : public Base
 *Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), а также как и из любого другого интерфейса, которые должны поддерживаться в объекте.
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -46,7 +46,7 @@ class CComObjectStack : public Base
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComObjectStack::AddRef](#addref)|Возвращает ноль. В режиме отладки, вызывает `_ASSERTE`.|
 |[CComObjectStack::QueryInterface](#queryinterface)|Возвращает значение E_NOINTERFACE. В режиме отладки, вызывает `_ASSERTE`.|
@@ -54,7 +54,7 @@ class CComObjectStack : public Base
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComObjectStack::m_hResFinalConstruct](#m_hresfinalconstruct)|Содержит значение HRESULT, возвращенное во время создания `CComObjectStack` объекта.|
 

@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505131"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281685"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -121,7 +121,7 @@ ms.locfileid: "50505131"
 class CMFCTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -168,7 +168,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::IsLeftRightRounded](#isleftrightrounded)|Указывает, округляются ли внешний вид левой и правой части вкладки в текущий набор вкладок.|
 |[CMFCTabCtrl::IsMDITabGroup](#ismditabgroup)|Указывает, содержится ли текущий элемент управления вкладки в клиентской области окна многодокументного интерфейса.|
 |[CMFCTabCtrl::IsOneNoteStyle](#isonenotestyle)|Указывает, отображается ли текущий элемент управления вкладки в стиле Microsoft OneNote.|
-|`CMFCTabCtrl::IsPtInTabArea`|Определяет, является ли точка внутри области вкладок. (Переопределяет [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
+|`CMFCTabCtrl::IsPtInTabArea`|Определяет, находится ли точка внутри области вкладок. (Переопределяет [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
 |[CMFCTabCtrl::IsSharedScroll](#issharedscroll)|Указывает, имеет ли текущий элемент управления вкладки полосы прокрутки, можно прокрутить его вкладок, как группу.|
 |[CMFCTabCtrl::IsTabDocumentsMenu](#istabdocumentsmenu)|Указывает, отображаются ли элементом управления tab кнопки прокрутки или создавать кнопки, меню окон с вкладками.|
 |[CMFCTabCtrl::IsVS2005Style](#isvs2005style)|Указывает, отображаются ли вкладки в стиле Visual Studio .NET 2005.|
@@ -178,7 +178,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::OnDragOver](#ondragover)|Вызывается платформой при выполнении операции перетаскивания при перемещении указателя мыши по окна цели перетаскивания. (Переопределяет [CMFCBaseTabCtrl::OnDragOver](../../mfc/reference/cmfcbasetabctrl-class.md#ondragover).)|
 |[CMFCTabCtrl::OnShowTabDocumentsMenu](#onshowtabdocumentsmenu)|Отображает всплывающее меню окон с вкладками, ожидает, когда пользователь выбирает вкладку и делает активной вкладкой выбранной вкладки.|
 |`CMFCTabCtrl::PreTranslateMessage`|Преобразует сообщения окна перед их диспетчеризацией в [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) и [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) функции Windows. (Переопределяет [CMFCBaseTabCtrl::PreTranslateMessage](../../mfc/reference/cmfcbasetabctrl-class.md#pretranslatemessage).)|
-|`CMFCTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет элемента управления вкладки. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
+|`CMFCTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет набора вкладок. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCTabCtrl::SetActiveInMDITabGroup](#setactiveinmditabgroup)|Задает текущей вкладке набор вкладок в качестве активной вкладки в нескольких группе вкладок интерфейс документа.|
 |[CMFCTabCtrl::SetActiveTab](#setactivetab)|Активирует вкладку. (Переопределяет [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
 |[CMFCTabCtrl::SetActiveTabBoldFont](#setactivetabboldfont)|Включает или отключает использование полужирного шрифта в активных вкладок.|
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Запрещает активное представление теряет фокус, когда вставляется новая вкладка и включен.|
 
@@ -267,7 +267,7 @@ void ActivateMDITab(int nTab = -1);
 
 ##  <a name="allowdestroyemptytabbedpane"></a>  CMFCTabCtrl::AllowDestroyEmptyTabbedPane
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual BOOL AllowDestroyEmptyTabbedPane() const;
@@ -313,7 +313,7 @@ BOOL Create(
 *Стиль*<br/>
 [in] Стиль элемента управления вкладки. Дополнительные сведения см. в разделе "Замечания".
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для этого элементом управления tab.
 
 *pParentWnd*<br/>
@@ -564,7 +564,7 @@ virtual void GetTabsRect(CRect& rect) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [out] При возвращении данного метода *rect* параметр содержит прямоугольник, ограничивающий область вкладки.
 
 ##  <a name="getwndarea"></a>  CMFCTabCtrl::GetWndArea
@@ -577,7 +577,7 @@ void GetWndArea(CRect& rect) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in, out] При возвращении данного метода этот параметр содержит прямоугольник, ограничивающий текущего элемента управления tab.
 
 ### <a name="remarks"></a>Примечания
@@ -846,7 +846,7 @@ BOOL ModifyTabStyle(Style style);
 
 Значение *стиля* параметр может принимать одно из следующих `CMFCTabCtrl::Style` перечисления.
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |STYLE_3D|Отображает вкладки трехмерного, прямоугольная, которые имеют скругленные углы.|
 |STYLE_3D_ONENOTE|Отображает трехмерные вкладок с одной части вертикальной и Наклонные стороне "один", который имеют скругленные углы.|
@@ -874,9 +874,9 @@ virtual DROPEFFECT OnDragEnter(
 [in] Указывает объект данных, содержащий данные, перетаскиваемые пользователем.
 
 *dwKeyState*<br/>
-[in] Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR) из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
+[in] Содержит состояние клавиши-модификаторы. Этот параметр представляет собой битовую комбинацию (OR), из следующих значений: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе **параметры сообщения** раздел [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-*точка*<br/>
+*point*<br/>
 [in] Содержит текущее положение курсора в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -908,7 +908,7 @@ virtual DROPEFFECT OnDragOver(
 *dwKeyState*<br/>
 [in] Состояние клавиши-модификаторы, который представляет собой битовую комбинацию (OR), MK_CONTROL MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON. Дополнительные сведения см. в разделе «Параметры сообщения» в [о ввод от мыши](/windows/desktop/inputdev/about-mouse-input).
 
-*точка*<br/>
+*point*<br/>
 [in] Текущее положение мыши.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -929,7 +929,7 @@ virtual void OnShowTabDocumentsMenu(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Координаты место отображения всплывающего меню.
 
 ### <a name="remarks"></a>Примечания
@@ -1042,14 +1042,14 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Идентификатор ресурса точечного рисунка, содержащий список изображений.
 
-*CX*<br/>
+*cx*<br/>
 [in] Ширина каждого изображения в пикселях. Значение по умолчанию — 15.
 
 *clrTransp*<br/>
 [in] Цвет прозрачное изображение. Части изображения, которые имеют этот цвет будет прозрачным. Значение по умолчанию — пурпурный цвет RGB(255,0,255).
 
 *hImageList*<br/>
-[in] Дескриптор к списку предварительно загруженные изображения.
+[in] Дескриптор списка предварительно загруженных изображений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode* параметр может принимать одно из следующих `ResizeMode` значений перечисления.
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |RESIZE_NO|Невозможно изменить размер вкладок.|
 |RESIZE_VERT|Элементом управления tab может изменяться по вертикали, но не по горизонтали.|

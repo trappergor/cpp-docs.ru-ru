@@ -132,16 +132,16 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278825"
 ---
 # <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 Реализует окно минифрейма, которое содержит одну область. Область заполняет собой клиентскую область окна.
 
@@ -151,7 +151,7 @@ ms.locfileid: "50450171"
 class CPaneFrameWnd : public CWnd
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -229,7 +229,7 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Указывает, следует ли регистрация класса окна со стилем класса CS_SAVEBITS.|
 
@@ -425,7 +425,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Указывает стиль окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает первоначальный размер и положение окна области.
 
 *pParentWnd*<br/>
@@ -467,7 +467,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Указывает стиль окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает первоначальный размер и положение окна области.
 
 *pParentWnd*<br/>
@@ -731,7 +731,7 @@ virtual LRESULT HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка для проверки.
 
 *bDetectCaption*<br/>
@@ -999,7 +999,7 @@ virtual CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точки, который был щелкнут пользователем, в экранных координатах.
 
 *nSensitivity*<br/>

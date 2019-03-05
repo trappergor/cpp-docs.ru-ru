@@ -1,18 +1,18 @@
 ---
-title: Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX
+title: Элементы ActiveX в MFC. Закраска элементов управления ActiveX
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], painting
 - MFC ActiveX controls [MFC], optimizing
 ms.assetid: 25fff9c0-4dab-4704-aaae-8dfb1065dee3
-ms.openlocfilehash: 4a7cff57213cf9ba234ead9880207fd93592614f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b90aa331c289caf827785af2eeba037e70f686ab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281934"
 ---
-# <a name="mfc-activex-controls-painting-an-activex-control"></a>Элементы управления ActiveX в MFC. Закраска элементов управления ActiveX
+# <a name="mfc-activex-controls-painting-an-activex-control"></a>Элементы ActiveX в MFC. Закраска элементов управления ActiveX
 
 В этой статье описывается процесс рисования элемента управления ActiveX и как его можно изменить код прорисовки для оптимизации процесса. (См. в разделе [оптимизация рисования элемента управления](../mfc/optimizing-control-drawing.md) для методики по оптимизации Рисование при отсутствии элементов управления по отдельности восстановить ранее выбранные объекты GDI. После рисования всех элементов управления контейнера можно автоматически восстановить исходные объекты.)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50549530"
 
 ##  <a name="_core_the_painting_process_of_an_activex_control"></a> Процесс рисования элемента управления ActiveX
 
-Когда элементы управления ActiveX, изначально отображаются или перерисовываются, следуют процесс рисования, аналогичную других приложений, разработанных с использованием MFC, с важным отличием: элементы управления ActiveX можно в активное или неактивное состояние.
+Когда элементы управления ActiveX, изначально отображаются или перерисовываются, они выполните процесс рисования, аналогичную других приложений, разработанных с использованием MFC, с важным отличием. Элементы управления ActiveX могут находиться в активное или неактивное состояние.
 
 Активный элемент управления представлен в контейнере элементов управления ActiveX, дочернее окно. Как и другие окна он отвечает за рисование сам при получении сообщения WM_PAINT. Базовый класс элемента управления, [COleControl](../mfc/reference/colecontrol-class.md), обрабатывает это сообщение в его `OnPaint` функции. Эта реализация по умолчанию вызывает `OnDraw` функции элемента управления.
 
@@ -90,7 +90,7 @@ ms.locfileid: "50549530"
 
 В дополнение к `CDC` функции-члены, существует несколько других функций, совместимых в метафайл контроллера домена. К ним относятся [CPalette::AnimatePalette](../mfc/reference/cpalette-class.md#animatepalette), [CFont::CreateFontIndirect](../mfc/reference/cfont-class.md#createfontindirect)и три функции-члены `CBrush`: [CreateBrushIndirect](../mfc/reference/cbrush-class.md#createbrushindirect), [CreateDIBPatternBrush](../mfc/reference/cbrush-class.md#createdibpatternbrush), и [CreatePatternBrush](../mfc/reference/cbrush-class.md#createpatternbrush).
 
-Функции, которые не записываются в метафайл,: [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc)и [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Так как метафайл контроллера домена не связаны с устройством, нельзя использовать SetDIBits GetDIBits и CreateDIBitmap с метафайлом контроллера домена. Можно использовать SetDIBitsToDevice и StretchDIBits с метафайлом контроллера домена в качестве цели. [Createcompatibledc; она](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), и [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) не имеют смысла с метафайлом контроллера домена.
+Ниже перечислены функции, которые не зарегистрированы в метафайл. [DrawFocusRect](../mfc/reference/cdc-class.md#drawfocusrect), [DrawIcon](../mfc/reference/cdc-class.md#drawicon), [DrawText](../mfc/reference/cdc-class.md#drawtext), [ExcludeUpdateRgn](../mfc/reference/cdc-class.md#excludeupdatergn), [FillRect](../mfc/reference/cdc-class.md#fillrect), [FrameRect ](../mfc/reference/cdc-class.md#framerect), [GrayString](../mfc/reference/cdc-class.md#graystring), [InvertRect](../mfc/reference/cdc-class.md#invertrect), [ScrollDC](../mfc/reference/cdc-class.md#scrolldc), и [TabbedTextOut](../mfc/reference/cdc-class.md#tabbedtextout). Так как метафайл контроллера домена не связаны с устройством, нельзя использовать SetDIBits GetDIBits и CreateDIBitmap с метафайлом контроллера домена. Можно использовать SetDIBitsToDevice и StretchDIBits с метафайлом контроллера домена в качестве цели. [Createcompatibledc; она](../mfc/reference/cdc-class.md#createcompatibledc), [CreateCompatibleBitmap](../mfc/reference/cbitmap-class.md#createcompatiblebitmap), и [CreateDiscardableBitmap](../mfc/reference/cbitmap-class.md#creatediscardablebitmap) не имеют смысла с метафайлом контроллера домена.
 
 Другой следует учесть при использовании метафайл контроллера домена, что система координат не может быть измеряется в пикселах. По этой причине все код рисования должно быть настроено в соответствии в прямоугольнике, передаваемый `OnDraw` в *rcBounds* параметра. Это предотвращает случайное рисования вне элемента управления, так как *rcBounds* представляет размер окна элемента управления.
 
@@ -111,4 +111,3 @@ ms.locfileid: "50549530"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: dee5d8c57bfff99e1b558f09c8df53c73e844f3c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289979"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
 
@@ -249,7 +249,7 @@ ms.locfileid: "50514365"
 class CMFCRibbonBaseElement : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -259,7 +259,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::AddToKeyList](#addtokeylist)|Добавляет массив подсказки клавиш клавишную подсказку для элемента ленты.|
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|Добавляет элемент ленты к окну списка команд указанной ленты.|
@@ -375,7 +375,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonBaseElement::OnProcessKey](#onprocesskey)|Вызывается платформой, когда пользователь нажимает сочетание клавиш.|
 |[CMFCRibbonBaseElement::OnSetFocus](#onsetfocus)|Вызывается платформой, когда элемент ленты, Получает или теряет фокус ввода.|
@@ -893,7 +893,7 @@ RibbonElementLocation GetLocationInGroup() const;
 
 Объект `RibbonElementLocation` значение перечисления. В следующей таблице перечислены возможные значения.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |`RibbonElementNotInGroup`|Элемента ленты не содержится в группу ленты.|
 |`RibbonElementSingleInGroup`|Элемент ленты отображается как единственный элемент в группу ленты.|
@@ -1199,7 +1199,7 @@ virtual CMFCRibbonBaseElement* HitTest(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1700,7 +1700,7 @@ virtual void OnDrawKeyTip(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для подсказки клавиши.
 
 *bIsMenu*<br/>
@@ -1723,7 +1723,7 @@ virtual BOOL OnDrawMenuImage(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник для изображения меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1757,7 +1757,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Расстояние в пикселях от левого края поле со списком для отображения текста.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник отображения для элемента ленты.
 
 *bIsSelected*<br/>
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1963,10 +1963,10 @@ virtual void SetCompactMode(BOOL bCompactMode = TRUE);
 
 |*bCompactMode*|Текущий размер элемента ленты|Новый размер элемента ленты|
 |--------------------|---------------------------------|-----------------------------|
-|true|Compact|Без изменений.|
-|true|Intermediate|Сжатие, если это возможно.|
-|true|Большой|Средний уровень, если это возможно.|
-|false|Compact|Средний уровень, если это возможно; в противном случае большой.|
+|TRUE|Compact|Без изменений.|
+|TRUE|Intermediate|Сжатие, если это возможно.|
+|TRUE|Большой|Средний уровень, если это возможно.|
+|FALSE|Compact|Средний уровень, если это возможно; в противном случае большой.|
 
 ##  <a name="setdata"></a>  CMFCRibbonBaseElement::SetData
 
@@ -2135,7 +2135,7 @@ void SetRect(CRect rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Размеры прямоугольника.
 
 ### <a name="remarks"></a>Примечания

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 98bb4de2f6d1a43fc1958a0fcbaafa1ac0af82a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523173"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282556"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>Альтернативы для архитектуры "документ-представление"
 
@@ -62,9 +62,8 @@ ms.locfileid: "51523173"
 
 - Переопределите части платформы MFC, создание документов и представлений, чтобы исключить создание их вообще. В процессе создания документа начинается с вызова `CWinApp::AddDocTemplate`. Исключить этот вызов из класса приложения `InitInstance` член функции и вместо этого создать окно фрейма в `InitInstance` самостоятельно. Поместите код управления данных в классе фрейма окна. Процесс создания документов и представлений проиллюстрирован на [создание документов и представлений](../mfc/document-view-creation.md). Это больше работы и потребует более глубокого понимания платформы, но освобождает только из документов и представлений издержки.
 
-Статья [MFC: использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md) предоставляет более конкретные примеры документов и представлений альтернатив в контексте базы данных приложений.
+Статья [MFC: Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md) предоставляет более конкретные примеры документов и представлений альтернатив в контексте базы данных приложений.
 
 ## <a name="see-also"></a>См. также
 
 [Архитектура документа/обзора](../mfc/document-view-architecture.md)
-

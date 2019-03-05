@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCRibbonCheckBox [MFC], OnDrawOnList
 - CMFCRibbonCheckBox [MFC], SetACCData
 ms.assetid: 3a6c3891-c8d1-4af0-b954-7b9ab048782a
-ms.openlocfilehash: 067f38522c1be112d6e12200c2c10e1d439e5057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34af1ae818125abd51b9eaf04cd98f9ac24addb3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612424"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281438"
 ---
 # <a name="cmfcribboncheckbox-class"></a>Класс CMFCRibbonCheckBox
 
@@ -41,17 +41,17 @@ ms.locfileid: "50612424"
 class CMFCRibbonCheckBox : public CMFCRibbonButton
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::CMFCRibbonCheckBox](#cmfcribboncheckbox)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(Переопределяет [CMFCRibbonButton::GetIntermediateSize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize).)|
@@ -256,7 +256,7 @@ virtual void OnDrawOnList(
 *nTextOffset*<br/>
 [in] Расстояние в пикселях от левого края поле со списком для отображения текста.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Прямоугольник отображения для флажка.
 
 *bIsSelected*<br/>

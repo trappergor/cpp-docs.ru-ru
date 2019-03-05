@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 80699c93-33d8-4f8b-b8cf-7b58aeab64ca
-ms.openlocfilehash: 66cc4d28e20ced498e4a434efbe41c3f5db59370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fc3a3643c675394de555f1411030e278bcee775
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293736"
 ---
 # <a name="coblist-class"></a>Класс cObList
 
@@ -67,17 +67,17 @@ ms.locfileid: "50605209"
 class CObList : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObList::CObList](#coblist)|Создается пустой список для `CObject` указатели.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CObList::AddHead](#addhead)|Добавляет элемент (или все элементы из другого списка) в начало списка (делает нового заголовка).|
 |[CObList::AddTail](#addtail)|Добавляет в конец списка (делает новый tail) элемента (или все элементы из другого списка).|
@@ -157,8 +157,8 @@ void AddHead(CObList* pNewList);
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ AddHead (const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ AddHead (LPCTSTR** `newElement` **);**<br /><br /> **void AddHead (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ AddHead (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddHead( CPtrList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ AddHead (const CString &** `newElement` **);**<br /><br /> **POSITION AddHead(LPCTSTR** `newElement` **);**<br /><br /> **void AddHead(CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="remarks"></a>Примечания
 
@@ -208,7 +208,7 @@ void AddTail(CObList* pNewList);
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**AddTail ПОЗИЦИИ (void** <strong>\*</strong> `newElement` **);**<br /><br /> **void AddTail (CPtrList** <strong>\*</strong> `pNewList` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddTail ПОЗИЦИИ (const CString &** `newElement` **);**<br /><br /> **AddTail ПОЗИЦИИ (LPCTSTR** `newElement` **);**<br /><br /> **void AddTail (CStringList** <strong>\*</strong> `pNewList` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**AddTail ПОЗИЦИИ (const CString &** `newElement` **);**<br /><br /> **POSITION AddTail( LPCTSTR** `newElement` **);**<br /><br /> **void AddTail( CStringList** <strong>\*</strong> `pNewList` **);**|
 
 ### <a name="example"></a>Пример
 
@@ -245,8 +245,8 @@ CObList(INT_PTR nBlockSize = 10);
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList (INT_PTR** `nBlockSize` **= 10);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList (INT_PTR** `nBlockSize` **= 10);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**CPtrList( INT_PTR** `nBlockSize` **= 10 );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CStringList( INT_PTR** `nBlockSize` **= 10 );**|
 
 ### <a name="example"></a>Пример
 
@@ -289,7 +289,7 @@ POSITION Find(
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**Найти ПОЗИЦИЮ (void** <strong>\*</strong> `searchValue` **, положение** `startAfter` **= NULL) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**Найти ПОЗИЦИИ (LPCTSTR** `searchValue` **, положение** `startAfter` **= NULL) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION Find( LPCTSTR** `searchValue` **, POSITION** `startAfter` **= NULL ) const;**|
 
 ### <a name="example"></a>Пример
 
@@ -322,8 +322,8 @@ POSITION FindIndex(INT_PTR nIndex) const;
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ FindIndex (INT_PTR** `nIndex` **) const;**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ FindIndex (INT_PTR** `nIndex` **) const;**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**POSITION FindIndex( INT_PTR** `nIndex` **) const;**|
 
 ### <a name="example"></a>Пример
 
@@ -382,8 +382,8 @@ INT_PTR GetCount() const;
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**(Const; INT_PTR GetCount)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**(Const; INT_PTR GetCount)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**INT_PTR GetCount( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**INT_PTR GetCount( ) const;**|
 
 ### <a name="example"></a>Пример
 
@@ -415,7 +415,7 @@ const CObject*& GetHead() const;
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& () GetHead const; void\*& GetHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetHead () const; CString & GetHead ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetHead( ) const; CString& GetHead( );**|
 
 ### <a name="example"></a>Пример
 
@@ -601,7 +601,7 @@ const CObject*& GetTail() const;
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**const void\*& () GetTail const; void\*& GetTail ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString & GetTail () const; CString & GetTail ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**const CString& GetTail( ) const; CString& GetTail( );**|
 
 ### <a name="example"></a>Пример
 
@@ -657,7 +657,7 @@ POSITION InsertAfter(
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertAfter (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertAfter( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -705,7 +705,7 @@ POSITION InsertBefore(
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, void** <strong>\*</strong> `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**ПОЗИЦИЯ InsertBefore (ПОЗИЦИЯ** *позиции* **, const CString &** `newElement` **);**<br /><br /> **POSITION InsertBefore( POSITION** *position* **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Пример
 
@@ -738,8 +738,8 @@ BOOL IsEmpty() const;
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**(Const; BOOL IsEmpty)**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**(Const; BOOL IsEmpty)**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**BOOL IsEmpty( ) const;**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**BOOL IsEmpty( ) const;**|
 
 ### <a name="example"></a>Пример
 
@@ -763,8 +763,8 @@ void RemoveAll();
 
 |Класс|Функция-член|
 |-----------|---------------------|
-|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void (RemoveAll);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void (RemoveAll);**|
+|[CPtrList](../../mfc/reference/cptrlist-class.md)|**void RemoveAll( );**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void RemoveAll( );**|
 
 ### <a name="example"></a>Пример
 
@@ -835,7 +835,7 @@ CObject* RemoveHead();
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void\* RemoveHead ();**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead ();**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**CString RemoveHead( );**|
 
 ### <a name="example"></a>Пример
 
@@ -901,7 +901,7 @@ void SetAt(
 |Класс|Функция-член|
 |-----------|---------------------|
 |[CPtrList](../../mfc/reference/cptrlist-class.md)|**void SetAt (ПОЗИЦИЯ** `pos` **, const CString &** `newElement` **);**|
-|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt (ПОЗИЦИЯ** `pos` **, LPCTSTR** `newElement` **);**|
+|[CStringList](../../mfc/reference/cstringlist-class.md)|**void SetAt( POSITION** `pos` **, LPCTSTR** `newElement` **);**|
 
 ### <a name="example"></a>Пример
 

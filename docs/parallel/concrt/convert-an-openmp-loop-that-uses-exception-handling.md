@@ -1,18 +1,18 @@
 ---
-title: Как выполнить Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
+title: Практическое руководство. Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740506"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285156"
 ---
-# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Как выполнить Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
+# <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>Практическое руководство. Преобразование цикла OpenMP, использующего обработку исключений для использования среды выполнения с параллелизмом
 
 В этом примере демонстрируется преобразование OpenMP [параллельных](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[для](../../parallel/openmp/reference/for-openmp.md) цикл, который выполняет обработку исключений, чтобы использовать механизм обработки исключений среды выполнения с параллелизмом.
 
@@ -56,11 +56,10 @@ An error of type 'class std::bad_alloc' occurred.
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `concrt-omp-exceptions.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc/OpenMP CL.exe concrt-omp-exceptions.cpp**
+**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
 
 ## <a name="see-also"></a>См. также
 
 [Переход от OpenMP к среде выполнения с параллелизмом](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)
-

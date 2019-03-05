@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - reference counting
 ms.assetid: 894a3d7c-2daf-4fd0-8fa4-e6a05bcfb631
-ms.openlocfilehash: 63547405791f7f0391138dd2d23020c62c8a4a28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06a0c0e4b650945e10015c3220b926399ec9c6fd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655811"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280645"
 ---
 # <a name="ccomobjectrootex-class"></a>Класс CComObjectRootEx
 
@@ -43,7 +43,7 @@ class CComObjectRootEx : public CComObjectRootBase
 *ThreadModel*<br/>
 Класс, методы которого реализовать нужный потоковой модели. Можно явно выбрать потоковую модель, задав *ThreadModel* для [CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md), [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md), или [ CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md). Вы можете принять потоковую модель сервера по умолчанию, задав *ThreadModel* для [CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel) или [CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel).
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="methods"></a>Методы
 

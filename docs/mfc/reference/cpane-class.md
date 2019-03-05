@@ -133,12 +133,12 @@ helpviewer_keywords:
 - CPane [MFC], m_bHandleMinSize
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
-ms.openlocfilehash: 1c485d1b6f2b0557243973774bf9dfb382c2595b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550440"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326781"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -150,17 +150,17 @@ ms.locfileid: "50550440"
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CPane::~CPane`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области.|
 |[CPane::AllocElements](#allocelements)|Выделяет память для внутреннего использования.|
@@ -228,7 +228,7 @@ class CPane : public CBasePane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPane::OnAfterDock](#onafterdock)|Вызывается платформой при область был закреплен.|
 |[CPane::OnAfterFloat](#onafterfloat)|Вызывается платформой при стала плавающей панели.|
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|Имя|Описание|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Позволяет согласованно обрабатывать минимальный размер для области.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Содержит сведения о последней закрепления.|
@@ -348,7 +348,7 @@ void CalcInsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [out] Содержит размер и смещение клиентской области панели.
 
 *bHorz*<br/>
@@ -487,7 +487,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 [in] Указывает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.
 
 *pParentWnd*<br/>
@@ -562,7 +562,7 @@ virtual BOOL CreateEx(
 *dwStyle*<br/>
 [in] Указывает атрибуты стиля окна. Дополнительные сведения см. в разделе [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles).
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает первоначальный размер и положение *pParentWnd* окна в координатах клиентской области окна.
 
 *pParentWnd*<br/>
@@ -626,7 +626,7 @@ virtual BOOL DockPane(
 *dockMethod*<br/>
 [in] Задает метод закрепления для использования. Возможными значениями являются следующим образом:
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |------------|-----------------|
 |DM_UNKNOWN|Инфраструктура использует этот параметр, если метод закрепления неизвестно. Области не хранит его последней позиции с плавающей запятой. Этот параметр позволяет программно закрепить в области, когда у вас нет для хранения последней позиции с плавающей запятой.|
 |DM_MOUSE|Используется внутренним образом.|
@@ -976,7 +976,7 @@ bool IsLeftOf(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Объект `CRect` объект, используемый для сравнения.
 
 *bWindowRect*<br/>
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment* может быть любым из следующих значений:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Позволяет области быть закреплено в верхнюю часть клиентской области окна фрейма.|
 |CBRS_ALIGN_BOTTOM|Позволяет области быть закреплено в нижнюю часть клиентской области окна фрейма.|
@@ -1299,7 +1299,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает расположение меню.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1308,7 +1308,7 @@ virtual BOOL OnShowControlBarMenu(CPoint point);
 
 ### <a name="remarks"></a>Примечания
 
-Меню содержит несколько элементов, которые позволяют указать поведение области, а именно: **плавающее**, **закрепления**, **Автоскрытие**, и **скрыть**. Вы можете включить это меню для всех панелей путем вызова [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
+Меню содержит несколько элементов, которые позволяют указать поведение области, а именно: **С плавающей запятой**, **закрепление**, **Автоскрытие**, и **скрыть**. Вы можете включить это меню для всех панелей путем вызова [CDockingManager::EnableDockSiteMenu](../../mfc/reference/cdockingmanager-class.md#enabledocksitemenu).
 
 ##  <a name="recalclayout"></a>  CPane::RecalcLayout
 
@@ -1494,7 +1494,7 @@ void SetVirtualRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Объект `CRect` объект, который указывает на виртуальный прямоугольник, задаваемый.
 
 *bMapToParent*<br/>

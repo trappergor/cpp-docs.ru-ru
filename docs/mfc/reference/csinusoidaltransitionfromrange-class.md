@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CSinusoidalTransitionFromRange [MFC], m_period
 - CSinusoidalTransitionFromRange [MFC], m_slope
 ms.assetid: 8b66a729-5f10-431a-b055-e3600d0065da
-ms.openlocfilehash: 20e910dfa34e90af2c8a2765947ad85a2465c596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df360493413e850f4c0fcee41c925cd256c16dad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283817"
 ---
 # <a name="csinusoidaltransitionfromrange-class"></a>Класс CSinusoidalTransitionFromRange
 
@@ -37,7 +37,7 @@ ms.locfileid: "50477588"
 class CSinusoidalTransitionFromRange : public CBaseTransition;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -47,13 +47,13 @@ class CSinusoidalTransitionFromRange : public CBaseTransition;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSinusoidalTransitionFromRange::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSinusoidalTransitionFromRange::m_dblMaximumValue](#m_dblmaximumvalue)|Значение переменной анимации в пиковое значение переход wave.|
 |[CSinusoidalTransitionFromRange::m_dblMinimumValue](#m_dblminimumvalue)|Значение переменной анимации с помощью средства переход wave.|

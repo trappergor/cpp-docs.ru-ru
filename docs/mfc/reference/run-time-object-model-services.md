@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304682"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -522,4 +522,3 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 [Макросы и глобальные объекты](mfc-macros-and-globals.md)<br/>
 [Изоляция библиотеки общих элементов управления MFC](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [Раздел CLSID](/windows/desktop/com/clsid-key-hklm)
-

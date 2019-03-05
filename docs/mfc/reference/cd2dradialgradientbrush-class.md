@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DRadialGradientBrush [MFC], m_pRadialGradientBrush
 - CD2DRadialGradientBrush [MFC], m_RadialGradientBrushProperties
 ms.assetid: 6c76d84a-d831-4ee2-96f1-82c1f5b0d6a9
-ms.openlocfilehash: fbdc6e6b9e7ffff1f14da79ed207644b518910fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22029ebcf8cf519571e81e11c84de146c9d54b26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564337"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277278"
 ---
 # <a name="cd2dradialgradientbrush-class"></a>Класс CD2DRadialGradientBrush
 
@@ -55,11 +55,11 @@ ms.locfileid: "50564337"
 class CD2DRadialGradientBrush : public CD2DGradientBrush;
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::CD2DRadialGradientBrush](#cd2dradialgradientbrush)|Создает объект CD2DLinearGradientBrush.|
 |[CD2DRadialGradientBrush:: ~ CD2DRadialGradientBrush](#_dtorcd2dradialgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D кисть радиального градиента.|
@@ -84,13 +84,13 @@ class CD2DRadialGradientBrush : public CD2DGradientBrush;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::operator ID2D1RadialGradientBrush *](#operator_id2d1radialgradientbrush_star)|Возвращает интерфейс ID2D1RadialGradientBrush|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DRadialGradientBrush::m_pRadialGradientBrush](#m_pradialgradientbrush)|Указатель на ID2D1RadialGradientBrush.|
 |[CD2DRadialGradientBrush::m_RadialGradientBrushProperties](#m_radialgradientbrushproperties)|Center, смещение начала градиента и радиус по оси x и y радиус кисти градиента.|
@@ -309,7 +309,7 @@ void SetCenter(CD2DPointF point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Центр градиента эллипса в пространстве координат кисти
 
 ##  <a name="setgradientoriginoffset"></a>  CD2DRadialGradientBrush::SetGradientOriginOffset

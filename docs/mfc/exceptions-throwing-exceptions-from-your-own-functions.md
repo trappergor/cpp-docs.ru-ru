@@ -1,19 +1,19 @@
 ---
-title: Исключения. Создание исключений из собственных функций
+title: 'Исключения: Создание исключений из собственных функций'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], from functions
 - functions [MFC], throwing exceptions
 - exceptions [MFC], throwing
 ms.assetid: 492976e8-8804-4234-8e8f-30dffd0501be
-ms.openlocfilehash: 4d0961bff706ccf86eb09d2dcbe695a13bfa8702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 030bf3db9ff305f35cbfb0b518c8704114ce083d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558997"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297948"
 ---
-# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Исключения. Создание исключений из собственных функций
+# <a name="exceptions-throwing-exceptions-from-your-own-functions"></a>Исключения: Создание исключений из собственных функций
 
 Это можно использовать в парадигме обработки исключений MFC исключительно для перехвата исключений, создаваемых с помощью функций в MFC или другие библиотеки. В дополнение к перехват исключения, создаваемые кодом библиотеки, может создавать исключения из собственного кода при написании функции, которые могут возникнуть исключительных условий.
 
@@ -43,4 +43,3 @@ ms.locfileid: "50558997"
 ## <a name="see-also"></a>См. также
 
 [Обработка исключений](../mfc/exception-handling-in-mfc.md)
-

@@ -84,16 +84,16 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178930"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293866"
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 
-Инкапсуляция `HMENU`Windows.
+Инкапсуляция `HMENU` Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -101,17 +101,17 @@ ms.locfileid: "53178930"
 class CMenu : public CObject
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Создает объект `CMenu`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Добавляет новый элемент в конец этого меню.|
 |[CMenu::Attach](#attach)|Прикрепляет дескриптор меню Windows `CMenu` объекта.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Извлекает дескриптор объекта меню.|
 |[CMenu::operator! =](#operator_neq)|Определяет, если два меню объекты не равны.|
