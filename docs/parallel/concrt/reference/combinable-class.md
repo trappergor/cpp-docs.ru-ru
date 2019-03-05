@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630754"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299985"
 ---
 # <a name="combinable-class"></a>Класс combinable
 
@@ -46,7 +46,7 @@ class combinable;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[clear](#clear)|Очищает все промежуточные вычислительные результаты из предыдущего использования.|
 |[combine](#combine)|Вычисляет конечное значение из набора локального потока вложенные вычисления, вызывая предоставленный функтор.|
@@ -55,7 +55,7 @@ class combinable;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Назначает `combinable` из другого объекта `combinable` объекта.|
 
@@ -102,7 +102,7 @@ combinable(const combinable& _Copy);
 *_FnInitialize*<br/>
 Функция, которая будет вызываться для инициализации каждого нового значения частные для потока, типа `T`. Он должен поддерживать оператор вызова функции с сигнатурой `T ()`.
 
-*_Копировать*<br/>
+*_Copy*<br/>
 Существующий `combinable` копируемый в данный объект.
 
 ### <a name="remarks"></a>Примечания
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>Параметры
 
-*_Копировать*<br/>
+*_Copy*<br/>
 Существующий `combinable` копируемый в данный объект.
 
 ### <a name="return-value"></a>Возвращаемое значение

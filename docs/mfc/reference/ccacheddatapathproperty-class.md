@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CCachedDataPathProperty [MFC], CCachedDataPathProperty
 - CCachedDataPathProperty [MFC], m_Cache
 ms.assetid: 0d81356b-4fe5-43f6-aed2-2eb5a5485706
-ms.openlocfilehash: 1605d5fe1549ba5172f61583cce586a353c2ab56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7394250c93bcc718d50f2ea9b3522256df7c820
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485661"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296730"
 ---
 # <a name="ccacheddatapathproperty-class"></a>Класс CCachedDataPathProperty
 
@@ -37,7 +37,7 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCachedDataPathProperty::m_Cache](#m_cache)|`CMemFile` Объект, в котором для кэширования данных.|
 
@@ -51,9 +51,9 @@ class CCachedDataPathProperty : public CDataPathProperty
 
 Дополнительные сведения о способах использования асинхронных моникеров и элементы управления ActiveX в веб-приложений см. в разделах:
 
-- [Интернете первые шаги: Элементы управления ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Первые шаги Интернета: Элементы управления ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Интернете первые шаги: Асинхронные моникеры](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Первые шаги Интернета: Асинхронные моникеры](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

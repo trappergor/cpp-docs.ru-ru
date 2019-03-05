@@ -188,18 +188,18 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640249"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288419"
 ---
 # <a name="cmfcribbonbar-class"></a>Класс CMFCRibbonBar
 
 Класс `CMFCRibbonBar` реализует панель ленты. Аналогичная реализация использовалась в Office 2007.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -319,7 +319,7 @@ class CMFCRibbonBar : public CPane
 
 С помощью класса `CMFCRibbonStatusBar` вы можете реализовать строку состояния, аналогичную используемой в Office 2007. Категории ленты содержится (и отображает) группы [ленте панелей](../../mfc/reference/cmfcribbonpanel-class.md). Каждой ленты содержит один или несколько элементов ленты, которые являются производными от [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md).
 
-Сведения о том, как добавить на панель ленты в существующее приложение MFC, см. в разделе [Пошаговое руководство: обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
+Сведения о том, как добавить на панель ленты в существующее приложение MFC, см. в разделе [Пошаговое руководство: Обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1305,7 +1305,7 @@ virtual CMFCRibbonBaseElement* HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Расположение точки в координатах панели ленты.
 
 *bCheckActiveCategory*<br/>
@@ -1478,7 +1478,7 @@ virtual void OnClickButton(
 *pButton*<br/>
 [in] Указатель на кнопку, которая была нажата.
 
-*точка*<br/>
+*point*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -2014,7 +2014,7 @@ virtual BOOL TranslateChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Код знака регистрации нажатия клавиш пользователем.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2156,4 +2156,3 @@ void SetWindows7Look(
 [Класс CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [Класс CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [Пошаговое руководство: Обновление приложения MFC Scribble](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - ITarget class
 ms.assetid: 5678db25-112a-4f72-be13-42e16b67c48b
-ms.openlocfilehash: fed6f6c9b93869602eb43dabfef4743fbce3a3d1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a0f66a0ba3b10c3307a835ff6ccaa216596538
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430008"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295335"
 ---
 # <a name="itarget-class"></a>Класс ITarget
 
@@ -40,7 +40,7 @@ class ITarget;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`filter_method`|Подпись любого метода, используемая блоком, который возвращает `bool` значение, чтобы определить, следует ли принять предложенное сообщение.|
 |`type`|Псевдоним для `T`.|
@@ -53,7 +53,7 @@ class ITarget;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[распространение](#propagate)|При переопределении в производном классе, асинхронно передает сообщение из блока источника этой целевой блок.|
 |[send](#send)|При переопределении в производном классе синхронно передает сообщение в целевой блок.|

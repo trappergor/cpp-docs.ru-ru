@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290382"
 ---
 # <a name="message-map-macros-atl"></a>Макросы схемы сообщений (ATL)
 
@@ -162,7 +162,7 @@ BEGIN_MSG_MAP(theClass)
 
 Следующие макросы направлять сообщения в другую схему сообщений. Этот процесс называется «цепочки».
 
-|Макрос|Описание:|
+|Макрос|Описание|
 |-----------|-----------------|
 |[CHAIN_MSG_MAP](#chain_msg_map)|Цепочки в схеме сообщений по умолчанию в базовом классе.|
 |[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|Цепочки в схеме сообщений по умолчанию в элементе данных класса.|
@@ -652,7 +652,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 
 ### <a name="parameters"></a>Параметры
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>
@@ -675,7 +675,7 @@ NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 [in] Идентификатор элемента управления, отправляющего сообщения.
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>
@@ -742,7 +742,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Помечает конец непрерывный диапазон идентификаторов элементов управления.
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>
@@ -921,7 +921,7 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 
 ### <a name="parameters"></a>Параметры
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>
@@ -944,7 +944,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 *id*<br/>
 [in] Идентификатор пункта меню, элемент управления или сочетаний клавиш.
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>
@@ -990,7 +990,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *idLast*<br/>
 [in] Помечает конец непрерывный диапазон идентификаторов элементов управления.
 
-*компакт-диска*<br/>
+*cd*<br/>
 [in] Код уведомления.
 
 *func*<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288055"
 ---
 # <a name="atl-class-overview"></a>Обзор класса ATL
 
@@ -27,7 +27,7 @@ ms.locfileid: "50529690"
 |[Составные элементы управления](../atl/composite-controls-classes.md)|[Свойства и страницы свойств](../atl/properties-and-property-pages-classes.md)|
 |[Точки подключения](../atl/connection-points-classes.md)|[Поддержка реестра](../atl/registry-support-classes.md)|
 |[Включение элементов управления](../atl/control-containment-classes.md)|[Выполнение объектов](../atl/running-objects-classes.md)|
-|[Элементов управления: Общая поддержка](../atl/controls-general-support-classes.md)|[Безопасность](../atl/security-classes.md)|
+|[Элементы управления. Общая поддержка](../atl/controls-general-support-classes.md)|[Безопасность](../atl/security-classes.md)|
 |[Передача данных](../atl/data-transfer-classes.md)|[Поддержка поставщика службы](../atl/service-provider-support-classes.md)|
 |[Типы данных](../atl/data-types-classes.md)|[Сведения о сайте](../atl/site-information-classes.md)|
 |[Отладка и исключения](../atl/debugging-and-exceptions-classes.md)|[Строковых и текстовых](../atl/string-and-text-classes.md)|
@@ -48,4 +48,3 @@ ms.locfileid: "50529690"
 [Глобальные переменные](../atl/reference/atl-global-variables.md)<br/>
 [Макросы](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-

@@ -1,5 +1,5 @@
 ---
-title: CTypedPtrList-класс
+title: CTypedPtrList Class
 ms.date: 11/04/2016
 f1_keywords:
 - CTypedPtrList
@@ -26,14 +26,14 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555888"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286027"
 ---
-# <a name="ctypedptrlist-class"></a>CTypedPtrList-класс
+# <a name="ctypedptrlist-class"></a>CTypedPtrList Class
 
 Предоставляет типобезопасную "программу-оболочку" для объектов класса `CPtrList`.
 

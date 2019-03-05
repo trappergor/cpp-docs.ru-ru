@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177853"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301224"
 ---
 # <a name="cgdiobject-class"></a>Класс CGdiObject
 
@@ -57,7 +57,7 @@ class CGdiObject : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CGdiObject::Attach](#attach)|Присоединяет объект Windows GDI для `CGdiObject` объекта.|
 |[CGdiObject::CreateStockObject](#createstockobject)|Извлекает дескриптор Windows предопределенные акций перья, кисти или шрифты.|
@@ -72,7 +72,7 @@ class CGdiObject : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CGdiObject::operator! =](#operator_neq)|Определяет, если два объекта GDI логически не равны.|
 |[CGdiObject::operator ==](#operator_eq_eq)|Определяет, логически равны ли два объекта GDI.|
@@ -80,7 +80,7 @@ class CGdiObject : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CGdiObject::m_hObject](#m_hobject)|МАРКЕР, содержащий HBITMAP, HPALETTE, HRGN, HBRUSH, HPEN или HFONT присоединен к этому объекту.|
 
@@ -274,11 +274,11 @@ UINT GetObjectType() const;
 
 - OBJ_BRUSH кисти
 
-- OBJ_FONT шрифта
+- OBJ_FONT Font
 
-- Палитра OBJ_PAL
+- OBJ_PAL Palette
 
-- OBJ_PEN пера
+- OBJ_PEN Pen
 
 - Расширенные OBJ_EXTPEN пера
 

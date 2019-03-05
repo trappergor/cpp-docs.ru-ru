@@ -1,5 +1,5 @@
 ---
-title: 'TN040: MFC-OLE по месту изменение размеров и масштабирование'
+title: 'TN040: Изменение размеров по месту MFC-OLE и масштабирование'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.ole
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 072ebe0180bb44145cef694e2283e91a0cacf602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477211"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283765"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040. Изменение размеров и масштабирование MFC/OLE по месту
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Изменение размеров по месту MFC/OLE и масштабирование
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -88,4 +88,3 @@ MFC полностью реализует интерфейс изменения 
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

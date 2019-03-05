@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694040"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284389"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс CPrivateObjectSecurityDesc
 
@@ -33,10 +33,10 @@ class CPrivateObjectSecurityDesc : public CSecurityDesc
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc](#cprivateobjectsecuritydesc)|Конструктор.|
-|[CPrivateObjectSecurityDesc:: ~ CPrivateObjectSecurityDesc](#dtor)|Деструктор|
+|[CPrivateObjectSecurityDesc::~CPrivateObjectSecurityDesc](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 

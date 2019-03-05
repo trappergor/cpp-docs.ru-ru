@@ -33,12 +33,12 @@ helpviewer_keywords:
 - ON_WM_LBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 96ecaaf1-6d13-4e12-a454-535635967489
-ms.openlocfilehash: 395bd7f627fe85b8bb763bdb1e75ae36c91b3061
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ebf5ced1f8e36dc059922b67552b19ca4672443
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550466"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290527"
 ---
 # <a name="wm-message-handlers-l---m"></a>Обработчики сообщений WM_ L — M
 
@@ -56,7 +56,7 @@ ms.locfileid: "50550466"
 |ON_WM_MEASUREITEM()|afx_msg void [OnMeasureItem](../../mfc/reference/cwnd-class.md#onmeasureitem)(LPMEASUREITEMSTRUCT);|
 |ON_WM_MENUCHAR()|afx_msg ДОЛГО [OnMenuChar](../../mfc/reference/cwnd-class.md#onmenuchar)(целое число без знака, целое число без знака, CMenu\*);|
 |ON_WM_MENUDRAG()|целое число без знака afx_msg [OnMenuDrag](../../mfc/reference/cwnd-class.md#onmenudrag)(целое число без знака, CMenu\*);|
-|ON_WM_MENUGETOBJECT()|целое число без знака afx_msg [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*);|
+|ON_WM_MENUGETOBJECT()|afx_msg UINT [OnMenuGetObject](../../mfc/reference/cwnd-class.md#onmenugetobject)(MENUGETOBJECTINFO\*);|
 |ON_WM_MENURBUTTONUP()|afx_msg void [OnMenuRButtonUp](../../mfc/reference/cwnd-class.md#onmenurbuttonup)(целое число без знака, CMenu\*);|
 |ON_WM_MENUSELECT()|afx_msg void [OnMenuSelect](../../mfc/reference/cwnd-class.md#onmenuselect)(целое число без знака, целое число без знака, HMENU);|
 |ON_WM_MOUSEACTIVATE()|afx_msg int [OnMouseActivate](../../mfc/reference/cwnd-class.md#onmouseactivate)(CWnd\*, целое число без знака, целое число без знака);|
@@ -66,10 +66,9 @@ ms.locfileid: "50550466"
 |ON_WM_MOUSEMOVE()|afx_msg void [OnMouseMove](../../mfc/reference/cwnd-class.md#onmousemove)(целое число без знака, CPoint);|
 |ON_WM_MOUSEWHEEL()|afx_msg BOOL [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)(целое число без знака, short, CPoint);|
 |ON_WM_MOVE()|afx_msg void [OnMove](../../mfc/reference/cwnd-class.md#onmove)(int, int);|
-|ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(целое число без знака, LPRECT);|
+|ON_WM_MOVING()|afx_msg void [OnMoving](../../mfc/reference/cwnd-class.md#onmoving)(UINT, LPRECT);|
 
 ## <a name="see-also"></a>См. также
 
 [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)<br/>
 [Обработчики для сообщений WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

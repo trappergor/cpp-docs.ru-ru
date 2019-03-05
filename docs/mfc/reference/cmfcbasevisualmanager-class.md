@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440200"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292215"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>Класс CMFCBaseVisualManager
 
@@ -55,7 +55,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|Создает и инициализирует объект `CMFCBaseVisualManager`.|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|Деструктор.|
 
@@ -63,7 +63,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCBaseVisualManager::DrawCheckBox](#drawcheckbox)|Рисует элемент управления "флажок" с помощью текущей темы Windows.|
 |[CMFCBaseVisualManager::DrawComboBorder](#drawcomboborder)|Рисует границу поле со списком, с помощью текущей темы Windows.|
 |[CMFCBaseVisualManager::DrawComboDropButton](#drawcombodropbutton)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows.|
@@ -77,7 +77,7 @@ class CMFCBaseVisualManager: public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCBaseVisualManager::CleanUpThemes](#cleanupthemes)|Вызовы `CloseThemeData` для получить все дескрипторы в `UpdateSystemColors`.|
 |[CMFCBaseVisualManager::UpdateSystemColors](#updatesystemcolors)|Вызовы `OpenThemeData` для получения дескрипторов для рисования различных элементов управления: windows, панелей инструментов, кнопок и т. д.|
 
@@ -138,7 +138,7 @@ virtual BOOL DrawCheckBox(
 *pDC*<br/>
 [in] Указатель на контекст устройства
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник поля с флажком.
 
 *bHighlighted*<br/>
@@ -187,7 +187,7 @@ virtual BOOL DrawComboBorder(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник границы поля со списком.
 
 *bDisabled*<br/>
@@ -221,7 +221,7 @@ virtual BOOL DrawComboDropButton(
 |Параметр|Описание|
 |---------------|-----------------|
 |*pDC*|[in] Указатель на контекст устройства.|
-|*Rect*|[in] Ограничивающий прямоугольник кнопки раскрывающегося списка поле со списком.|
+|*rect*|[in] Ограничивающий прямоугольник кнопки раскрывающегося списка поле со списком.|
 |*bDisabled*|[in] Указывает, отключен ли кнопка раскрывающегося списка поле со списком.|
 |*bIsDropped*|[in] Указывает, удаляется ли кнопка раскрывающегося списка поле со списком.|
 |*bIsHighlighted*|[in] Указывает, выделена ли кнопка раскрывающегося списка поле со списком.|
@@ -247,7 +247,7 @@ virtual BOOL DrawPushButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки.
 
 *pButton*<br/>
@@ -279,7 +279,7 @@ virtual BOOL DrawRadioButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник переключателя.
 
 *bHighlighted*<br/>

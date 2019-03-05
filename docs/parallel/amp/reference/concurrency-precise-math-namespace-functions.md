@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297350"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Функции пространства имен Concurrency::precise_math
 
@@ -2431,7 +2431,7 @@ inline void sincos(
 *_S*<br/>
 Возвращает значение синуса _X
 
-*_О*<br/>
+*_C*<br/>
 Возвращает значение косинуса _X
 
 ##  <a name="sincosf"></a>  sincosf
@@ -2453,7 +2453,7 @@ inline void sincosf(
 *_S*<br/>
 Возвращает значение синуса _X
 
-*_О*<br/>
+*_C*<br/>
 Возвращает значение косинуса _X
 
 ##  <a name="sinh"></a>  sinh
@@ -2708,7 +2708,7 @@ inline float tgammaf(float _X) restrict(amp);
 
 Возвращает результат гамма-функции для _X
 
-##  <a name="trunc"></a>  TRUNC
+##  <a name="trunc"></a>  trunc
 
 Усекает аргумент до целой
 

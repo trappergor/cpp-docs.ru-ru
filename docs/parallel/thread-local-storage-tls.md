@@ -9,12 +9,12 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: 02c699ec64fe03a1f892fc3c7e8bf9f6b9c05dfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507592"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293463"
 ---
 # <a name="thread-local-storage-tls"></a>Локальное хранилище потока (TLS)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50507592"
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Реализация компилятора для TLS
 
-**C ++ 11:** `thread_local` спецификатор класса хранения рекомендуется использовать для указания локального хранилища потока для объектов и членов класса. Дополнительные сведения см. в разделе [классы хранения (C++)](../cpp/storage-classes-cpp.md).
+**C++11:**  `thread_local` Спецификатор класса хранения рекомендуется использовать для указания локального хранилища потока для объектов и членов класса. Дополнительные сведения см. в разделе [классы хранения (C++)](../cpp/storage-classes-cpp.md).
 
 Visual C++ также предоставляет атрибут систем Майкрософт, [поток](../cpp/thread.md), как расширенный модификатор класса хранилища. Используйте **__declspec** ключевого слова для объявления **поток** переменной. В следующем примере кода показано, как объявлять целочисленную локальную переменную потока и инициализировать её некоторым значением:
 

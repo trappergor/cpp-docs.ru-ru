@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300275"
 ---
 # <a name="cevent-class"></a>Класс CEvent
 
@@ -37,13 +37,13 @@ class CEvent : public CSyncObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CEvent::CEvent](#cevent)|Создает объект `CEvent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CEvent::PulseEvent](#pulseevent)|Наборы события доступны (сигнал), освобождает потоков в состоянии ожидания и задает событие в состояние недоступности (несигнальное).|
 |[CEvent::ResetEvent](#resetevent)|Задает событие в состояние недоступности (несигнальное).|
@@ -195,4 +195,3 @@ BOOL Unlock();
 
 [Класс CSyncObject](../../mfc/reference/csyncobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

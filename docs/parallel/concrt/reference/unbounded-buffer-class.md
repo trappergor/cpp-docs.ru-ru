@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288152"
 ---
 # <a name="unboundedbuffer-class"></a>Класс unbounded_buffer
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>Параметры
 
-*_Тип*<br/>
+*_Type*<br/>
 Тип полезных данных сообщений, сохраненных и распространенных буфером.
 
 ## <a name="members"></a>Участники
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>Параметры
 
-*_Элемент*<br/>
+*_Item*<br/>
 Добавляемый элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -375,4 +375,3 @@ unbounded_buffer(
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Класс single_assignment](single-assignment-class.md)
-

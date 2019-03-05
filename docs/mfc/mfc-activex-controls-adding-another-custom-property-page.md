@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
+title: Элементы ActiveX в MFC. Добавление другой страницы пользовательских свойств
 ms.date: 11/04/2016
 helpviewer_keywords:
 - property pages [MFC], MFC ActiveX controls
@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ActiveX controls [MFC], property pages
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: fcf7e119-9f29-41a9-908d-e9b1607e08af
-ms.openlocfilehash: ac72258e881d10723a02b5103c602ac5cec6a1f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87b71fdddc5b52f66c34cdbcdb234c83616d0850
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289558"
 ---
-# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы управления ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств
+# <a name="mfc-activex-controls-adding-another-custom-property-page"></a>Элементы ActiveX в MFC. Добавление другой страницы пользовательских свойств
 
 В некоторых случаях элемент управления ActiveX будет иметь больше свойств, чем достаточно может поместиться на одной странице свойств. В этом случае можно добавить страницы свойств в элемент управления ActiveX по отображению этих свойств.
 
-В этой статье рассматривается добавление новых страниц свойств в элемент управления ActiveX, который уже содержит по крайней мере одну страницу свойства. Дополнительные сведения о добавлении стандартное свойство страниц (шрифт, рисунок или цвет), см. в статье [элементы управления MFC ActiveX: использование запасных страниц свойств](../mfc/mfc-activex-controls-using-stock-property-pages.md).
+В этой статье рассматривается добавление новых страниц свойств в элемент управления ActiveX, который уже содержит по крайней мере одну страницу свойства. Дополнительные сведения о добавлении стандартное свойство страниц (шрифт, рисунок или цвет), см. в статье [элементы управления MFC ActiveX: Использование стандартных страниц свойств](../mfc/mfc-activex-controls-using-stock-property-pages.md).
 
 В следующих процедурах используются платформа управления ActiveX примера, созданного с помощью мастера управления ActiveX. Таким образом имена классов и идентификаторы являются уникальными в этом примере.
 
@@ -110,4 +110,3 @@ ms.locfileid: "50465316"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

@@ -1,5 +1,5 @@
 ---
-title: Класс _U_STRINGorID
+title: _U_STRINGorID Class
 ms.date: 11/04/2016
 f1_keywords:
 - ATL._U_STRINGorID
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-ms.openlocfilehash: 8f94322912dc8645c88d32ac721d35bd2deb70af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e6c086f9d2ff4061c6404444a3b4c61dd91fe1c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557434"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299001"
 ---
-# <a name="ustringorid-class"></a>Класс _U_STRINGorID
+# <a name="ustringorid-class"></a>_U_STRINGorID Class
 
 Этот класс адаптера аргумент позволяет имена ресурсов (LPCTSTRs) или идентификаторы ресурсов (единицы), должны быть переданы функции, не требуя вызывающий объект, преобразуемый в строку с помощью макроса MAKEINTRESOURCE идентификатор.
 
@@ -33,7 +33,7 @@ class _U_STRINGorID
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[_U_STRINGorID::_U_STRINGorID](#_u_stringorid___u_stringorid)|Конструктор.|
 

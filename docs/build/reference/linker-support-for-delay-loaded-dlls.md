@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, linker support
 ms.assetid: b2d7e449-2809-42b1-9c90-2c0ca5e31a14
-ms.openlocfilehash: 248a559735750f912030a37aea85a2cb34156887
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5143b8c3850386f73ff713e7986fdc3b59fd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301393"
 ---
 # <a name="linker-support-for-delay-loaded-dlls"></a>Поддержка компоновщика для DLLs, загружаемых с задержкой
 
@@ -17,7 +17,7 @@ ms.locfileid: "50664546"
 
 До Visual C++ 6.0, единственный способ загрузки библиотеки DLL во время выполнения заключался в использовании **LoadLibrary** и **GetProcAddress**; операционная система загружает библиотеку DLL при исполняемый файл или библиотеку DLL с помощью его загрузки.
 
-Начиная с Visual C++ 6.0, при статической компоновке с библиотекой DLL, компоновщик предоставляет параметры для задержки загрузки библиотеки DLL, пока программа вызывает функцию в этой библиотеке DLL.
+Начиная с Visual C++ 6.0, при неявно связывании с библиотекой DLL, компоновщик предоставляет параметры для задержки загрузки библиотеки DLL, пока программа вызывает функцию в этой библиотеке DLL.
 
 Приложение может задержать загрузку DLL при помощи [/DELAYLOAD (Импорт загрузить отложенной)](../../build/reference/delayload-delay-load-import.md) параметр компоновщика со вспомогательной функцией (реализацией по умолчанию, предоставляемой Visual C++). Вспомогательная функция будет загрузить библиотеку DLL во время выполнения путем вызова **LoadLibrary** и **GetProcAddress** для вас.
 

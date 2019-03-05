@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleDispatchException [MFC], m_strSource
 - COleDispatchException [MFC], m_wCode
 ms.assetid: 0e95c8be-e21a-490c-99ec-181c6a9a26d0
-ms.openlocfilehash: 06f8d8abd8ea337369ceed62a9944e867d355768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6440ef202d0eafc4730b1e63ca4627d5dab61bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456242"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299963"
 ---
 # <a name="coledispatchexception-class"></a>Класс COleDispatchException
 
@@ -37,7 +37,7 @@ class COleDispatchException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchException::m_dwHelpContext](#m_dwhelpcontext)|Контекст справки для ошибки.|
 |[COleDispatchException::m_strDescription](#m_strdescription)|Описание устные ошибки.|
@@ -51,7 +51,7 @@ class COleDispatchException : public CException
 
 Как правило, следует вызывать [AfxThrowOleDispatchException](exception-processing.md#afxthrowoledispatchexception) Чтобы создать и вызвать `COleDispatchException` объекта.
 
-Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения OLE](../../mfc/exceptions-ole-exceptions.md).
+Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключения: Исключения OLE](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

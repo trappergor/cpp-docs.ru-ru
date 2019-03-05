@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
-ms.openlocfilehash: f183bb21d6a23b4e8ac4284894cfa2fcc7bb1dfd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538163"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290087"
 ---
 # <a name="cheapptrbase-class"></a>Класс CHeapPtrBase
 
@@ -52,7 +52,7 @@ class CHeapPtrBase
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHeapPtrBase::AllocateBytes](#allocatebytes)|Этот метод используется для выделения памяти.|
 |[CHeapPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
@@ -62,15 +62,15 @@ class CHeapPtrBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CHeapPtrBase::operator T *](#operator_t_star)|Оператор приведения типов.|
+|[CHeapPtrBase::operator T*](#operator_t_star)|Оператор приведения типов.|
 |[CHeapPtrBase::operator &](#operator_amp)|& Оператор.|
 |[CHeapPtrBase::operator "->"](#operator_ptr)|Оператор указателя на член.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHeapPtrBase::m_pData](#m_pdata)|Указатель данных переменная-член.|
 
@@ -186,7 +186,7 @@ T** operator&() throw();
 
 Возвращает адрес объекта, на которые указывают `CHeapPtrBase` объекта.
 
-##  <a name="operator_ptr"></a>  CHeapPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CHeapPtrBase::operator -&gt;
 
 Оператор указателя на член.
 
@@ -202,7 +202,7 @@ T* operator->() const throw();
 
 Этот оператор используется для вызова метода в классе, на которые указывают `CHeapPtrBase` объекта. В отладочных сборках, произойдет сбой утверждения, если `CHeapPtrBase` указывает на значение NULL.
 
-##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T *
+##  <a name="operator_t_star"></a>  CHeapPtrBase::operator T*
 
 Оператор приведения типов.
 

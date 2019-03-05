@@ -1,5 +1,5 @@
 ---
-title: TN021. Маршрутизация команд и сообщений
+title: 'TN021: Команды и маршрутизации сообщений'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.routing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - command routing [MFC], technical note TN021
 - Windows messages [MFC], routing
 ms.assetid: b5952c8b-123e-406c-a36d-a6ac7c6df307
-ms.openlocfilehash: 4a0774234e6314ff6811bbeafa11403f19cf568e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce8aa2013c8f2f351ca1028f0d6103135ba5ecd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635712"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294399"
 ---
-# <a name="tn021-command-and-message-routing"></a>TN021. Маршрутизация команд и сообщений
+# <a name="tn021-command-and-message-routing"></a>TN021: Команды и маршрутизации сообщений
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.

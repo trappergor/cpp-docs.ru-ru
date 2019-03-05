@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonSlider [MFC], SetZoomButtons
 - CMFCRibbonSlider [MFC], SetZoomIncrement
 ms.assetid: 9351ac34-f234-4e42-91e2-763f1989c8ff
-ms.openlocfilehash: 8db8165325c7bcd1e626b6707c35b69ebd211073
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85c646e2fa524268e4559b587f90c5e06971b765
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585111"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300333"
 ---
 # <a name="cmfcribbonslider-class"></a>Класс CMFCRibbonSlider
 
@@ -57,7 +57,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonSlider::GetPos](#getpos)|Возвращает текущее положение элемента управления "ползунок".|
 |[CMFCRibbonSlider::GetRangeMax](#getrangemax)|Возвращает максимальное значение ползунка.|
@@ -156,7 +156,7 @@ int GetRangeMin() const;
 
 ##  <a name="getregularsize"></a>  CMFCRibbonSlider::GetRegularSize
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -196,7 +196,7 @@ BOOL HasZoomButtons() const;
 
 ##  <a name="ondraw"></a>  CMFCRibbonSlider::OnDraw
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual void OnDraw(CDC* pDC);
