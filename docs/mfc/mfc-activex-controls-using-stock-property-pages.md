@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Использование стандартных страниц свойств
+title: Элементы ActiveX в MFC. Использование стандартных страниц свойств
 ms.date: 09/12/2018
 f1_keywords:
 - CLSID_CPicturePropPage
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304708"
 ---
-# <a name="mfc-activex-controls-using-stock-property-pages"></a>Элементы управления ActiveX в MFC. Использование стандартных страниц свойств
+# <a name="mfc-activex-controls-using-stock-property-pages"></a>Элементы ActiveX в MFC. Использование стандартных страниц свойств
 
 В этой статье рассматриваются страницы стандартных свойств, доступных для элементов управления ActiveX и их использование.
 
@@ -33,7 +33,7 @@ ms.locfileid: "50545396"
 
 - [Элементы ActiveX в MFC. Страницы свойств](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Элементы ActiveX в MFC. Добавление дополнительной страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Элементы ActiveX в MFC. Добавление другой страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC предоставляет три стандартных страниц свойств для использования с элементами управления ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, и `CLSID_CPicturePropPage`. Эти страницы пользовательского интерфейса для стандартных цвета, шрифта и свойствах изображения, соответственно.
 
@@ -55,4 +55,3 @@ MFC предоставляет три стандартных страниц св
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
 [Элементы ActiveX в MFC. Добавление стандартных свойств](../mfc/mfc-activex-controls-adding-stock-properties.md)
-

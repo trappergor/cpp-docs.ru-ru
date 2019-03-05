@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303174"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Класс CMFCToolBarComboBoxButton
 
@@ -85,13 +85,13 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Создает документ `CMFCToolBarComboBoxButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|Добавляет элемент в конец списка.|
 |[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Добавляет элемент в поле со списком. Порядок элементов в списке определяется `Compare`.|
@@ -132,7 +132,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 3. В обработчике сообщений, который обрабатывает сообщение AFX_WM_RESETTOOLBAR, заменить фиктивные кнопку "Создать поле" поле со списком с помощью [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton).
 
-Дополнительные сведения см. в разделе [Пошаговое руководство: размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md). Пример кнопки панели инструментов поле со списком см. пример проекта VisualStudioDemo.
+Дополнительные сведения см. в разделе [Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md). Пример кнопки панели инструментов поле со списком см. пример проекта VisualStudioDemo.
 
 ## <a name="example"></a>Пример
 
@@ -327,7 +327,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Указатель на родительское окно кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник в поле со списком.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -350,7 +350,7 @@ virtual CMFCToolBarComboBoxEdit* CreateEdit(
 *pWndParent*<br/>
 [in] Указатель на родительское окно кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для нового поля ввода.
 
 *dwEditStyle*<br/>
@@ -825,7 +825,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Параметры
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Дескриптор окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -993,7 +993,7 @@ virtual void OnDraw(
 *Основного контроллера домена*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки.
 
 *pImages*<br/>
@@ -1030,7 +1030,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Контекст устройства, отображается кнопка поле со списком.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки поля со списком.
 
 *bSelected*<br/>
@@ -1335,5 +1335,4 @@ void SetText(LPCTSTR lpszText);
 [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [Класс CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)

@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonGalleryMenuButton
+title: CMFCRibbonGalleryMenuButton Class
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
@@ -18,17 +18,17 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: 99a48c62b7e47e1c2de1a4d2c473ebde6fc0da22
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9398e0c07d64760d7140b9c4ecf3bbf987a636f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517000"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326768"
 ---
-# <a name="cmfcribbongallerymenubutton-class"></a>Класс CMFCRibbonGalleryMenuButton
+# <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton Class
 
 Реализует кнопку меню ленты, которая содержит коллекцию лент.
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,17 +36,17 @@ ms.locfileid: "50517000"
 class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Создает и инициализирует объект `CMFCRibbonGalleryMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Переопределяет [CMFCToolBarMenuButton::CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|
 |[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Переопределяет [CMFCToolBarMenuButton::CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|
