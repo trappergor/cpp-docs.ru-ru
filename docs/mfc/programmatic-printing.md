@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IPrint interface
 - printing [MFC]
 ms.assetid: 3db0945b-5e13-4be4-86a0-6aecdae565bd
-ms.openlocfilehash: d01dcd901425fb3957201dca754a01042e629ebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb8804610832f91f4b24487fddfe9c24a3799117
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630663"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264005"
 ---
 # <a name="programmatic-printing"></a>Программная печать
 
@@ -46,7 +46,7 @@ interface IPrint : IUnknown
 
 Объекты, поддерживающие `IPrint` отмечены в реестре «Возможностью печати для состояния» ключ, хранящийся в разделе CLSID объекта:
 
-HKEY_CLASSES_ROOT\CLSID\\{...} \Printable
+HKEY_CLASSES_ROOT\CLSID\\{...}\Printable
 
 `IPrint` обычно реализуется на тот же объект, который поддерживает `IPersistFile` или `IPersistStorage`. Вызывающие объекты Обратите внимание, возможность программным образом распечатать сохраняемого состояния какие-либо классы путем поиска в реестре для ключа «Возможностью печати для состояния». В настоящее время «Печатным» указывает на поддержку по крайней мере `IPrint`; другие интерфейсы может быть задано в будущем которого будут доступны через `QueryInterface` где `IPrint` просто представляет базовый уровень поддержки.
 
@@ -72,4 +72,3 @@ interface IContinueCallback : IUnknown
 ## <a name="see-also"></a>См. также
 
 [Контейнеры активных документов](../mfc/active-document-containers.md)
-

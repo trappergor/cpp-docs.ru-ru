@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
-ms.openlocfilehash: 4c15fc0ba9c78d8b6416cd88480c8ada6e3febf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603571"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265058"
 ---
 # <a name="dispatchstate-structure"></a>Структура DispatchState
 
@@ -32,13 +32,13 @@ struct DispatchState;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[DispatchState::DispatchState](#ctor)|Создает новый `DispatchState` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Размер этой структуры, которая используется для управления версиями.|
 |[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Сообщает, вошел ли этот контекст `Dispatch` метод из-за предыдущего контекста асинхронно блокировки. Это используется только в контексте планирования UMS и присваивается значение `0` для всех остальных контекстов выполнения.|
@@ -70,7 +70,7 @@ DispatchState();
 unsigned long m_dispatchStateSize;
 ```
 
-##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  Член данных DispatchState::m_fIsPreviousContextAsynchronouslyBlocked
+##  <a name="m_fispreviouscontextasynchronouslyblocked"></a>  DispatchState::m_fIsPreviousContextAsynchronouslyBlocked Data Member
 
 Сообщает, вошел ли этот контекст `Dispatch` метод из-за предыдущего контекста асинхронно блокировки. Это используется только в контексте планирования UMS и присваивается значение `0` для всех остальных контекстов выполнения.
 

@@ -2,12 +2,12 @@
 title: Мастеры и диалоговые окна MFC
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
-ms.openlocfilehash: a9574b270fdbffc0026d49452adf092fdf87d7cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493903"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267476"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Мастеры и диалоговые окна MFC
 
@@ -15,7 +15,7 @@ Microsoft Foundation Class (MFC) мастер создает стандартн�
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание|
+|Заголовок|Описание:|
 |-----------|-----------------|
 |[Создание проекта библиотеки DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)|Создает библиотеку DLL, в зависимости от MFC.|
 |[Создание приложения MFC](../../mfc/reference/creating-an-mfc-application.md)|Создает приложение MFC.|
@@ -28,4 +28,3 @@ Microsoft Foundation Class (MFC) мастер создает стандартн�
 |[Поддержка ATL в проект MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|Создает заголовки и макросы, которые необходимы, Active Template Library (ATL).|
 |[Мастер классов MFC](../../mfc/reference/mfc-class-wizard.md)|Создает h-файле и CPP-файла.|
 |[Приложения MFC для рабочего стола](../../mfc/mfc-desktop-applications.md)|Ссылки на документацию MFC.|
-

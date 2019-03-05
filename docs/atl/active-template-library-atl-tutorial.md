@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tutorials [ATL]
 - ATL, tutorials
 ms.assetid: f921a121-09c8-4812-9317-e15b2f1471fa
-ms.openlocfilehash: b4a47cd22026663acb1cade6f2b4c098c4887965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 716818306c751a8d774a8fc6c311694a7932be2c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570577"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270115"
 ---
 # <a name="active-template-library-atl-tutorial"></a>Учебник по активной библиотеке шаблонных классов (ATL)
 
@@ -24,21 +24,20 @@ ATL предназначена для упрощения процесса соз
 
 Учебник разделен на семь шагов. Следует выполнять каждый шаг в порядке, так как позднее зависят от ранее завершенные задачи. Перед началом работы необходимо убедиться, что вы имеете права, необходимые для регистрации компонента ActiveX на конкретном компьютере. Эта проблема обычно только если вы используете Visual Studio .NET через подключение служб терминалов.
 
-- [Шаг 1: Создание проекта](../atl/creating-the-project-atl-tutorial-part-1.md)
+- [Шаг 1. Создание проекта](../atl/creating-the-project-atl-tutorial-part-1.md)
 
-- [Шаг 2: Добавление элемента управления в проект](../atl/adding-a-control-atl-tutorial-part-2.md)
+- [Шаг 2. Добавление элемента управления в проект](../atl/adding-a-control-atl-tutorial-part-2.md)
 
 - [Шаг 3. Добавление свойства в элемент управления](../atl/adding-a-property-to-the-control-atl-tutorial-part-3.md)
 
-- [Шаг 4: Изменение кода отрисовки элемента управления](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
+- [Шаг 4. Изменение кода отрисовки элемента управления](../atl/changing-the-drawing-code-atl-tutorial-part-4.md)
 
-- [Шаг 5: Добавление события](../atl/adding-an-event-atl-tutorial-part-5.md)
+- [Шаг 5. Добавление события](../atl/adding-an-event-atl-tutorial-part-5.md)
 
-- [Шаг 6: Добавление страницы свойств](../atl/adding-a-property-page-atl-tutorial-part-6.md)
+- [Шаг 6. Добавление страницы свойств](../atl/adding-a-property-page-atl-tutorial-part-6.md)
 
-- [Шаг 7: Размещение элемента управления на веб-странице](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
+- [Шаг 7. Размещение элемента управления на веб-странице](../atl/putting-the-control-on-a-web-page-atl-tutorial-part-7.md)
 
 ## <a name="see-also"></a>См. также
 
 [Основные понятия](../atl/active-template-library-atl-concepts.md)
-

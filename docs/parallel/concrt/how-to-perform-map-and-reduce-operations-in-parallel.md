@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Параллельное выполнение операций сопоставления и сокращения числа элементов
+title: Практическое руководство. Выполните карты и уменьшить объем операций в параллельном режиме
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258662"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Практическое руководство. Параллельное выполнение операций сопоставления и сокращения числа элементов
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>Практическое руководство. Выполните карты и уменьшить объем операций в параллельном режиме
 
 В этом примере показано, как использовать [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) и [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) алгоритмы и [concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)для подсчета вхождений слов в файлах.
 

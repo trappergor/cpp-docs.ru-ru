@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495892"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277941"
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 
@@ -45,10 +45,10 @@ class CComPolyObject : public IUnknown,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Конструктор.|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|Деструктор|
+|[CComPolyObject::~CComPolyObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComPolyObject::m_contained](#m_contained)|Делегаты `IUnknown` вызывает внешняя Неизвестная строка, если объект является статистическим или `IUnknown` объекта, если объект не является агрегатом.|
 
@@ -126,7 +126,7 @@ CComPolyObject(void* pv);
 
 Деструктор уменьшает счетчик блокировки модуля.
 
-##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject
+##  <a name="dtor"></a>  CComPolyObject::~CComPolyObject
 
 Деструктор
 

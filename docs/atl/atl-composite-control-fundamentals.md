@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - composite controls, about composite controls
 ms.assetid: 2ac78cdd-1ec4-4d78-871c-1bcc23b5253e
-ms.openlocfilehash: 18190f4d35d69f167be075130c8332baf7b459ce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96a7b84b40dd74f42944e61cfd219638907502c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556719"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272234"
 ---
 # <a name="atl-composite-control-fundamentals"></a>Основные сведения о составном элементе управления ATL
 
@@ -32,4 +32,3 @@ ms.locfileid: "50556719"
 [Основные понятия](../atl/active-template-library-atl-concepts.md)<br/>
 [Глобальные функции составных элементов управления](../atl/reference/composite-control-global-functions.md)<br/>
 [Макросы для работы с составными элементами управления](../atl/reference/composite-control-macros.md)
-

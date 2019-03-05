@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CPropertySheet class [MFC], property sheets and pages
 - property sheets, propert pages
 ms.assetid: de8fea12-6c35-4cef-8625-b8073a379446
-ms.openlocfilehash: 971b8cde1560e54f87269e8b85a41cdec55c091d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ff2851cc4ed04a64f1a49d68b6e3143b5edccd8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445400"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278770"
 ---
 # <a name="property-sheets-and-property-pages-mfc"></a>Вкладки свойств и страницы свойств (MFC)
 
@@ -33,4 +33,3 @@ MFC [диалоговое окно](../mfc/dialog-boxes.md) может прин�
 [Обмен данными](../mfc/exchanging-data.md)<br/>
 [Создание немодальной страницы свойств](../mfc/creating-a-modeless-property-sheet.md)<br/>
 [Обработка кнопки "Применить"](../mfc/handling-the-apply-button.md)
-

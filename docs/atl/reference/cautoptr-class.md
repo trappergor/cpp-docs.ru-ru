@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615258"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259793"
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 
@@ -42,14 +42,14 @@ class CAutoPtr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|Конструктор.|
 |[CAutoPtr:: ~ CAutoPtr](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAutoPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
 |[CAutoPtr::Detach](#detach)|Вызовите этот метод для освобождения владения указатель.|
@@ -57,7 +57,7 @@ class CAutoPtr
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAutoPtr::operator T *](#operator_t_star)|Оператор приведения типов.|
 |[CAutoPtr::operator =](#operator_eq)|Оператор присваивания.|

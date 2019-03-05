@@ -5,12 +5,12 @@ helpviewer_keywords:
 - CHotKeyCtrl class [MFC], using
 - hot key controls
 ms.assetid: cdd6524b-cc43-447f-b151-164273559685
-ms.openlocfilehash: 335489011076b1e30a9c36720a3bf2e94c7918b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9178fe989e476111a3da55861642e9aa6311872
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260586"
 ---
 # <a name="using-a-hot-key-control"></a>Использование элемента управления "Сочетание клавиш"
 
@@ -32,4 +32,3 @@ ms.locfileid: "50542198"
 
 [Использование CHotKeyCtrl](../mfc/using-chotkeyctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)
-

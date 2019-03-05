@@ -7,12 +7,12 @@ helpviewer_keywords:
 - application wizards [MFC], document/view classes created
 - view classes [MFC], created by application wizards
 ms.assetid: 70c34a60-2701-4981-acea-c08a5787d8e6
-ms.openlocfilehash: 0ef0da4ea738d02518fb68085afc194e219103cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95b50e34d612c3b8f5dea2f8b469bd6c65182d41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271454"
 ---
 # <a name="document-and-view-classes-created-by-the-mfc-application-wizard"></a>Классы документов и представлений, создаваемые с помощью Мастера приложений MFC
 
@@ -25,4 +25,3 @@ ms.locfileid: "50464591"
 ## <a name="see-also"></a>См. также
 
 [Архитектура документа/обзора](../mfc/document-view-architecture.md)
-

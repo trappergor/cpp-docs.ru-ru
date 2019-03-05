@@ -6,12 +6,12 @@ helpviewer_keywords:
 - modeless dialog boxes [MFC], creating
 - MFC dialog boxes [MFC], creating
 ms.assetid: 70d78c7f-3d40-477b-9f78-0f33c359f88b
-ms.openlocfilehash: 4cc2bc0ce54ad658a8bf13e70a8fa54479cbbf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71cca82e667ddbf5cfc4c2abb5880cd69c7fafae
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453710"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266358"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>Создание немодальных диалоговых окон
 
@@ -20,4 +20,3 @@ ms.locfileid: "50453710"
 ## <a name="see-also"></a>См. также
 
 [Жизненный цикл диалогового окна](../mfc/life-cycle-of-a-dialog-box.md)
-

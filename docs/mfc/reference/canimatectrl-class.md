@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178266"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281377"
 ---
 # <a name="canimatectrl-class"></a>Canimatectrl-класс
 
@@ -51,7 +51,7 @@ class CAnimateCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimateCtrl::Close](#close)|Закрывает AVI-файла.|
 |[CAnimateCtrl::Create](#create)|Создает элемент управления анимации и присоединяет его к `CAnimateCtrl` объекта.|
@@ -356,4 +356,3 @@ BOOL Stop();
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [CAnimateCtrl::Create](#create)<br/>
 [ON_CONTROL](message-map-macros-mfc.md#on_control)
-

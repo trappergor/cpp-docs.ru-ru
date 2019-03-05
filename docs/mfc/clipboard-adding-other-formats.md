@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280222"
 ---
 # <a name="clipboard-adding-other-formats"></a>Буфер обмена. Добавление других форматов
 
-В этом разделе объясняется, как расширить список поддерживаемых форматов, особенно для поддержки OLE. Раздел [буфер обмена: копирование и вставка данных](../mfc/clipboard-copying-and-pasting-data.md) описывается минимальная реализация необходимость поддержки копирования и вставки из буфера обмена. Если все реализации, являются единственными форматами, буфер обмена **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**и, возможно, **CF_LINKSOURCE**. В большинстве приложений потребуется другие форматы, в буфер обмена, чем эти три.
+В этом разделе объясняется, как расширить список поддерживаемых форматов, особенно для поддержки OLE. Раздел [буфер обмена: Копирование и вставка данных](../mfc/clipboard-copying-and-pasting-data.md) описывается минимальная реализация необходимость поддержки копирования и вставки из буфера обмена. Если все реализации, являются единственными форматами, буфер обмена **CF_METAFILEPICT**, **CF_EMBEDSOURCE**, **CF_OBJECTDESCRIPTOR**и, возможно, **CF_LINKSOURCE**. В большинстве приложений потребуется другие форматы, в буфер обмена, чем эти три.
 
 ##  <a name="_core_registering_custom_formats"></a> Регистрация пользовательских форматов
 
@@ -49,4 +49,3 @@ ms.locfileid: "50560567"
 ## <a name="see-also"></a>См. также
 
 [Буфер обмена. Использование механизма буфера обмена OLE](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-

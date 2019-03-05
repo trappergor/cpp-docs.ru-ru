@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE common dialog classes [MFC]
 - common dialog classes [MFC]
 ms.assetid: 706526ae-f94f-4909-a0f8-6b5fe954fd97
-ms.openlocfilehash: e11e072ad3133d5df9614afa8753178e11b2d025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d34c141fc9a2b53eab6a4c0b0ce1799ff5243d84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614075"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263550"
 ---
 # <a name="ole-common-dialog-classes"></a>Классы общих диалоговых окон OLE
 
@@ -53,4 +53,3 @@ ms.locfileid: "50614075"
 ## <a name="see-also"></a>См. также
 
 [Общие сведения о классе](../mfc/class-library-overview.md)
-

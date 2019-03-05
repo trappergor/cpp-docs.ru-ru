@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataPathProperty [MFC], SetControl
 - CDataPathProperty [MFC], SetPath
 ms.assetid: 1f96efdb-54e4-460b-862c-eba5d4103488
-ms.openlocfilehash: 1d17b121854623e9919f434a44b6ab40c2db2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61c8dfa85363509ee09eaaccdb6d45d70390c344
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608190"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262770"
 ---
 # <a name="cdatapathproperty-class"></a>Класс CDataPathProperty
 
@@ -41,13 +41,13 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDataPathProperty::CDataPathProperty](#cdatapathproperty)|Создает объект `CDataPathProperty`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDataPathProperty::GetControl](#getcontrol)|Извлекает асинхронной управления OLE, связанный с `CDataPathProperty` объекта.|
 |[CDataPathProperty::GetPath](#getpath)|Получает путь свойства.|
@@ -64,9 +64,9 @@ class CDataPathProperty : public CAsyncMonikerFile
 
 Дополнительные сведения о способах использования асинхронных моникеров и элементы управления ActiveX в веб-приложений см. в разделе со следующими статьями:
 
-- [Интернете первые шаги: Элементы управления ActiveX](../../mfc/activex-controls-on-the-internet.md)
+- [Первые шаги Интернета: Элементы управления ActiveX](../../mfc/activex-controls-on-the-internet.md)
 
-- [Интернете первые шаги: Асинхронные моникеры](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [Первые шаги Интернета: Асинхронные моникеры](../../mfc/asynchronous-monikers-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

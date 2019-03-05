@@ -27,12 +27,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
-ms.openlocfilehash: a0f66e888220fbc5a4a484ddd37a3f28dff66065
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583278"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281347"
 ---
 # <a name="crbtree-class"></a>Класс CRBTree
 
@@ -66,7 +66,7 @@ class CRBTree
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRBTree::KINARGTYPE](#kinargtype)|Тип, используемый при передаче ключа в качестве входного аргумента.|
 |[CRBTree::KOUTARGTYPE](#koutargtype)|Тип, используемый при возврате ключа в виде выходного аргумента.|
@@ -75,7 +75,7 @@ class CRBTree
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Класс CRBTree::CPair](#cpair_class)|Класс, содержащий элементы ключ и значение.|
 
@@ -87,7 +87,7 @@ class CRBTree
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Вызовите этот метод, чтобы определить позицию элемента, который использует следующего доступного ключа.|
 |[CRBTree::GetAt](#getat)|Вызовите этот метод для возвращения элемента в заданной позиции в дереве.|
@@ -188,7 +188,7 @@ void GetAt(POSITION pos, KOUTARGTYPE key, VOUTARGTYPE value) const;
 *key*<br/>
 Переменная, которая получает ключ.
 
-*значение*<br/>
+*value*<br/>
 Переменная, которая получает значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -291,7 +291,7 @@ void GetNextAssoc(
 *key*<br/>
 Параметр шаблона, указывающий тип ключа, как дерево.
 
-*значение*<br/>
+*value*<br/>
 Параметр шаблона, указывающий тип значения, как дерево.
 
 ### <a name="remarks"></a>Примечания
@@ -467,7 +467,7 @@ void SetValueAt(POSITION pos, VINARGTYPE value);
 *торговых терминалов*<br/>
 Счетчик позиции, возвращается предыдущим вызовом методов, таких как [CRBTree::GetHeadPosition](#getheadposition) или [CRBTree::FindFirstKeyAfter](#findfirstkeyafter).
 
-*значение*<br/>
+*value*<br/>
 Значение, которое нужно добавить `CRBTree` объекта.
 
 ### <a name="remarks"></a>Примечания

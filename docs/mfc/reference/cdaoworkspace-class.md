@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472869"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263459"
 ---
 # <a name="cdaoworkspace-class"></a>Класс CDaoWorkspace
 
@@ -83,7 +83,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Создает объект рабочей области. После этого вызовите `Create` или `Open`.|
 
@@ -462,9 +462,9 @@ void GetDatabaseInfo(
 
 - Имя AFX_DAO_PRIMARY_INFO (по умолчанию), обновляемым, транзакции
 
-- А также сведения об основном AFX_DAO_SECONDARY_INFO: версия, порядок сортировки, время ожидания запроса
+- AFX_DAO_SECONDARY_INFO сведения об основном плюс: Версия, порядок, сортировки, время ожидания запроса
 
-- AFX_DAO_ALL_INFO основной и дополнительной информации плюс: подключение
+- AFX_DAO_ALL_INFO первичного и вторичного сведения плюс: Подключить
 
 *lpszName*<br/>
 Имя объекта базы данных, для поиска по имени. Имя — это строка в до 14 символов, который дает уникальное название новый объект рабочей области.
@@ -632,9 +632,9 @@ void GetWorkspaceInfo(
 
 - Имя AFX_DAO_PRIMARY_INFO (по умолчанию)
 
-- А также сведения об основном AFX_DAO_SECONDARY_INFO: имя пользователя
+- AFX_DAO_SECONDARY_INFO сведения об основном плюс: Имя пользователя
 
-- AFX_DAO_ALL_INFO основной и дополнительной информации плюс: изолировать ODBCTrans
+- AFX_DAO_ALL_INFO первичного и вторичного сведения плюс: Изолировать ODBCTrans
 
 *lpszName*<br/>
 Имя объекта рабочей области, для поиска по имени. Имя — это строка в до 14 символов, который дает уникальное название новый объект рабочей области.

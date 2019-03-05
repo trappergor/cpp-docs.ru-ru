@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649284"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279501"
 ---
 # <a name="cstatusbar-class"></a>Класс CStatusBar
 
@@ -57,13 +57,13 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStatusBar::CStatusBar](#cstatusbar)|Создает объект `CStatusBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Получает индекс для идентификатора данного индикатора.|
 |[CStatusBar::Create](#create)|Создает строку состояния, присоединяется к `CStatusBar` , а также задает исходную высоту шрифта и строке.|
@@ -108,7 +108,7 @@ Framework хранит сведения индикатора в массив, с
 
 Вызовите [SetPaneStyle](#setpanestyle) Обновить стиль панели строки состояния.
 
-Дополнительные сведения об использовании `CStatusBar`, см. в статье [реализация строки состояния в MFC](../../mfc/status-bar-implementation-in-mfc.md) и [Технические примечания 31: панелей элементов управления](../../mfc/tn031-control-bars.md).
+Дополнительные сведения об использовании `CStatusBar`, см. в статье [реализация строки состояния в MFC](../../mfc/status-bar-implementation-in-mfc.md) и [Технические примечания 31: Панели элементов управления](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

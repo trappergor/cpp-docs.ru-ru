@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CMFCStandardColorsPropertyPage class [MFC]
 ms.assetid: b84b7cfb-bb24-4c65-804a-5b642cb64400
-ms.openlocfilehash: 7663f85b20ab88c999af7ba37b260237d0fd869e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91cfa609c31e83c02cce8b2a474a9b66ec3ba56f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520670"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260742"
 ---
 # <a name="cmfcstandardcolorspropertypage-class"></a>Класс CMFCStandardColorsPropertyPage
 
@@ -27,14 +27,14 @@ class CMFCStandardColorsPropertyPage : public CPropertyPage
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CMFCStandardColorsPropertyPage::CMFCStandardColorsPropertyPage`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CMFCStandardColorsPropertyPage::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |`CMFCStandardColorsPropertyPage::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
 

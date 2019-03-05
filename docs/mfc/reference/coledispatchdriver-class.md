@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 22ba71bc0abaefd20cb68d82d4fefe06ab7fa929
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524941"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274587"
 ---
 # <a name="coledispatchdriver-class"></a>Класс COleDispatchDriver
 
@@ -47,13 +47,13 @@ class COleDispatchDriver
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::COleDispatchDriver](#coledispatchdriver)|Создает объект `COleDispatchDriver`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDispatchDriver::AttachDispatch](#attachdispatch)|Присоединяет `IDispatch` соединение `COleDispatchDriver` объекта.|
 |[COleDispatchDriver::CreateDispatch](#createdispatch)|Создает `IDispatch` подключения и присоединяет его к `COleDispatchDriver` объекта.|
@@ -280,7 +280,7 @@ void AFX_CDECL InvokeHelper(
 
 |Символ|Возвращаемый тип|
 |------------|-----------------|
-|ЗНАЧЕНИЕ VT_EMPTY|**void**|
+|VT_EMPTY|**void**|
 |VT_I2|**short**|
 |VT_I4|**long**|
 |VT_R4|**float**|

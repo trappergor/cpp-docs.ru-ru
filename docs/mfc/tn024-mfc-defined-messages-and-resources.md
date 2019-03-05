@@ -1,5 +1,5 @@
 ---
-title: TN024. Сообщения и ресурсы, определенные MFC
+title: 'TN024: Сообщения, определенные MFC и ресурсы'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639638"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278136"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024. Сообщения и ресурсы, определенные MFC
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024: Сообщения, определенные MFC и ресурсы
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -156,7 +156,7 @@ MFC закрытый Windows, которые сообщения находятс
 
 Это сообщение отправляется окна верхнего уровня при активации или отключении окна в его верхнего уровня» группа «. Окно является частью группы высшего уровня, если это окно верхнего уровня (без родительской или владелец), или оно принадлежит такое окно. Это сообщение используется аналогичны WM_ACTIVATEAPP, но работает в ситуациях, когда имеются windows, принадлежащих разных процессах смешанный в одном окне иерархии (обычно в приложениях OLE).
 
-## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_EXITHELPMODE WM_COMMANDHELP WM_HELPHITTEST,
+## <a name="wmcommandhelp-wmhelphittest-wmexithelpmode"></a>WM_COMMANDHELP, WM_HELPHITTEST, WM_EXITHELPMODE
 
 Эти сообщения используются в реализации контекстной справки. Обратитесь к [Технические замечания 28](../mfc/tn028-context-sensitive-help-support.md) Дополнительные сведения.
 
@@ -203,4 +203,3 @@ SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629428"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275146"
 ---
 # <a name="cdaofieldinfo-structure"></a>Структура CDaoFieldInfo
 
@@ -78,7 +78,7 @@ struct CDaoFieldInfo
 *m_lSize*<br/>
 Значение, указывающее максимальный размер в байтах, поля объекта DAO, который содержит текст или фиксированного размера поле объекта, содержащий текстовых или числовых. Дополнительные сведения см. в разделе «Свойство Size» в справке DAO. Размеры может принимать одно из следующих значений:
 
-|Тип|Размер (байт)|Описание|
+|Тип|Размер (байт)|Описание:|
 |----------|--------------------|-----------------|
 |`dbBoolean`|1 байт|Да/Нет (то же, как True или False)|
 |`dbByte`|1|Byte|
@@ -160,4 +160,3 @@ struct CDaoFieldInfo
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

@@ -1,18 +1,18 @@
 ---
-title: Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой модели COM
+title: Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой COM
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d306377be4a000c54fb5556b15263a15b2d4618
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278201"
 ---
-# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой модели COM
+# <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>Пошаговое руководство. Использование среды выполнения с параллелизмом в приложениях с поддержкой COM
 
 В этом документе демонстрируется использование среды выполнения с параллелизмом в приложении, которое использует компонент модели объектов (COM).
 
@@ -151,7 +151,7 @@ fib(12) = 144
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `parallel-scripts.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**CL.exe/EHsc/Link параллельного-Array-Search.cpp ole32.lib**
+**cl.exe /EHsc parallel-scripts.cpp /link ole32.lib**
 
 ## <a name="see-also"></a>См. также
 
@@ -162,4 +162,3 @@ fib(12) = 144
 [Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
 [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

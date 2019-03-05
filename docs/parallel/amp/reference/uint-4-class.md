@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e763c2654f0edaa02ceaa5294eb33ef02e69ee9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579040"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266813"
 ---
 # <a name="uint4-class"></a>Класс uint_4
 
@@ -295,7 +295,7 @@ class uint_4;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор uint_4](#uint_4__ctor) |Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
@@ -442,26 +442,26 @@ class uint_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
-|uint_4::operator * =||
-|uint_4::operator / =||
+|uint_4::operator*=||
+|uint_4::operator/=||
 |uint_4::operator ++||
-|uint_4::operator +=||
-|uint_4::operator =||
+|uint_4::operator+=||
+|uint_4::operator=||
 |uint_4::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -600,7 +600,7 @@ class uint_4;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ## <a name="uint_4__ctor"></a> uint_4
 

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unnorm_2::g
 - amp_short_vectors/Concurrency::graphics::unnorm_2::operator++
 ms.assetid: 62e88ea7-e29f-4f62-95ce-61a1f39f5e34
-ms.openlocfilehash: 9647cbb61bfc07ebe11d7d58b64e1fbe884a74bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33411511809fc9798f6fdf65f5331e2e587990ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658904"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259325"
 ---
 # <a name="unorm2-class"></a>Класс unorm_2
 
@@ -55,13 +55,13 @@ class unorm_2;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор unorm_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |unorm_2::get_x||
 |unorm_2::get_xy||
@@ -78,14 +78,14 @@ class unorm_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |unorm_2::operator--||
-|unorm_2::operator * =||
-|unorm_2::operator / =||
+|unorm_2::operator*=||
+|unorm_2::operator/=||
 |unorm_2::operator ++||
 |unorm_2::operator +=||
-|unorm_2::operator =||
+|unorm_2::operator=||
 |unorm_2::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
@@ -96,16 +96,16 @@ class unorm_2;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |unorm_2::g||
-|unorm_2::GR||
+|unorm_2::gr||
 |unorm_2::r||
 |unorm_2::rg||
 |unorm_2::x||
-|unorm_2::XY||
+|unorm_2::xy||
 |unorm_2::y||
-|unorm_2::YX||
+|unorm_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -115,7 +115,7 @@ class unorm_2;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> unorm_2
 

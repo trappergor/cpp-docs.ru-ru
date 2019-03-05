@@ -5,12 +5,12 @@ helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616377"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272266"
 ---
 # <a name="how-to-create-a-task-that-completes-after-a-delay"></a>Практическое руководство. Создание задачи, выполняемой после задержки
 
@@ -58,4 +58,3 @@ ms.locfileid: "50616377"
 [Класс call](../../parallel/concrt/reference/call-class.md)<br/>
 [Асинхронные блоки сообщений](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)
-

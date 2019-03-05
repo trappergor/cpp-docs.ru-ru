@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CBaseTabbedPane [MFC], SetAutoHideMode
 - CBaseTabbedPane [MFC], ShowTab
 ms.assetid: f22c0080-5b29-4a0a-8f74-8f0a4cd2dbcf
-ms.openlocfilehash: 51344a8cd0e5671f81e608b74363ed06c9200324
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7ffaa7274a8ed12944cdbc5dcbbdcb8fd3fd2b9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259299"
 ---
 # <a name="cbasetabbedpane-class"></a>Класс CBaseTabbedPane
 
@@ -89,7 +89,7 @@ class CBaseTabbedPane : public CDockablePane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBaseTabbedPane::AddTab](#addtab)|Добавляет новую вкладку области с вкладками.|
 |[CBaseTabbedPane::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Указывает, можно ли уничтожить пустой области с вкладками.|
@@ -129,7 +129,7 @@ class CBaseTabbedPane : public CDockablePane
 
 Этот класс является абстрактным классом и не может быть создан. Она реализует службы, которые являются общими для всех видов панели с вкладками.
 
-В настоящее время библиотека включает два класса производный области с вкладками: [класс CTabbedPane](../../mfc/reference/ctabbedpane-class.md) и [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
+В настоящее время в библиотеку входят два класса производный области с вкладками. [Класс CTabbedPane](../../mfc/reference/ctabbedpane-class.md) и [класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md).
 
 Объект `CBaseTabbedPane` объект оболочкой для указателя на [класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) объекта. [Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md) становится дочернее окно области с вкладками.
 

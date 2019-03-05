@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694547"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262107"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 
@@ -159,7 +159,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Добавляет кнопку с галочкой в диалоговом окне.|
 |[CFileDialog::AddComboBox](#addcombobox)|Добавляет поле со списком в диалоговом окне.|
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|Задает текст, связанный с элементом управления, например текст кнопки или изменить метку поля.|
 |[CFileDialog::SetControlState](#setcontrolstate)|Задает текущую видимость и включенные состояния данного элемента управления.|
 |[CFileDialog::SetControlText](#setcontroltext)|Задает текст для указанного элемента управления в стиле проводника **откройте** или **Сохранить как** общее диалоговое окно.|
-|[CFileDialog::setdefext изменена](#setdefext)|Задает расширение имени файла по умолчанию для обозревателя стиле **откройте** или **Сохранить как** общее диалоговое окно.|
+|[CFileDialog::SetDefExt](#setdefext)|Задает расширение имени файла по умолчанию для обозревателя стиле **откройте** или **Сохранить как** общее диалоговое окно.|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|Задает текущий текст в поле ввода.|
 |[CFileDialog::SetProperties](#setproperties)|Предоставляет хранилище свойств, которое определяет значения по умолчанию для сохраняемого элемента.|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|Задает выбранное состояние какого-либо элемента в группе или поле со списком в диалоговом окне.|
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Сообщения windows для `CFileDialog` класс различаются в зависимости от используемой операционной системы. Например, Windows XP не поддерживает [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) и [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) для `CFileDialog` класса. Тем не менее Windows Vista и более поздних версий поддерживают их. Дополнительные сведения о различных сообщениях, которые создаются и порядок, в котором они поступают, см. в разделе [CFileDialog пример: ведение журнала порядок событий](../../visual-cpp-samples.md).
+Сообщения windows для `CFileDialog` класс различаются в зависимости от используемой операционной системы. Например, Windows XP не поддерживает [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) и [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) для `CFileDialog` класса. Тем не менее Windows Vista и более поздних версий поддерживают их. Дополнительные сведения о различных сообщениях, которые создаются и порядок, в котором они поступают, см. в разделе [CFileDialog образца: Ведение журнала порядок событий](../../visual-cpp-samples.md).
 
 Чтобы использовать `CFileDialog` следует сначала создать объект с помощью `CFileDialog` конструктор. После создания диалоговом окне можно задать или изменить значения в [CFileDialog::m_ofn](#m_ofn) структуры для инициализации значения или состояния элементов управления диалогового окна. `m_ofn` Структуры имеет тип `OPENFILENAME`. Дополнительные сведения см. в разделе [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) структуры в пакете Windows SDK.
 
@@ -1489,7 +1489,7 @@ void SetControlText(
 
 Чтобы использовать этот метод, необходимо создать диалоговое окно со стилем OFN_EXPLORER. В противном случае функция завершится с ошибкой с утверждение.
 
-##  <a name="setdefext"></a>  CFileDialog::setdefext изменена
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 Вызывайте эту функцию, чтобы задать расширение имени файла по умолчанию для проводника открыть или сохранить как общее диалоговое окно.
 
@@ -1642,4 +1642,3 @@ void UpdateOFNFromShellDialog();
 
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: daa2f978b306bbe45f91514ada0f264a848521c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450613"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270269"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Класс CMFCDesktopAlertWndButton
 
@@ -33,7 +33,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Конструктор по умолчанию.|
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Деструктор.|
 
@@ -41,7 +41,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Определяет, отображается ли кнопка в области заголовка диалогового окна предупреждения.|
 |[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Определяет, ли кнопки закрывает диалоговое окно предупреждения.|
 

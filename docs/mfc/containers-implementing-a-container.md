@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546709"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271428"
 ---
 # <a name="containers-implementing-a-container"></a>Контейнеры. Реализация контейнера
 
@@ -46,7 +46,7 @@ ms.locfileid: "50546709"
 
 В мастере приложений будет создать производный класс для вас, но вы скорее всего, потребуется переопределить `OnChange` и другие функции, перечисленные с ним на шаге 2 предыдущей процедуры. Скелет реализации должны настраиваться для большинства приложений, так как эти функции реализуются по-разному из одного приложения к другому. В качестве примера, см. в примерах MFC [ФУНКЦИЙ](../visual-cpp-samples.md) и [КОНТЕЙНЕРА](../visual-cpp-samples.md).
 
-Число элементов необходимо добавить к структуре меню приложения-контейнера для поддержки OLE. Дополнительные сведения см. в разделе [меню и ресурсы: добавление контейнеров](../mfc/menus-and-resources-container-additions.md).
+Число элементов необходимо добавить к структуре меню приложения-контейнера для поддержки OLE. Дополнительные сведения см. в разделе [меню и ресурсы: Добавление контейнеров](../mfc/menus-and-resources-container-additions.md).
 
 Можно также поддерживает некоторые из следующих компонентов в приложении контейнера:
 
@@ -60,10 +60,9 @@ ms.locfileid: "50546709"
 
 - Ссылки на внедренные объекты или сочетание контейнера и сервера приложений.
 
-   Дополнительные сведения см. в разделе [контейнеры: Дополнительные функции](../mfc/containers-advanced-features.md).
+   Дополнительные сведения см. в разделе [контейнеров: Дополнительные возможности](../mfc/containers-advanced-features.md).
 
 ## <a name="see-also"></a>См. также
 
 [Контейнеры](../mfc/containers.md)<br/>
-[Контейнеры. Элементы клиентов](../mfc/containers-client-items.md)
-
+[Контейнеры. Клиентские элементы](../mfc/containers-client-items.md)

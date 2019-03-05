@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280684"
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 
@@ -62,7 +62,7 @@ class CComSafeArray
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComSafeArray::Add](#add)|Добавляет один или несколько элементов, или `SAFEARRAY` структуру `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Присоединяет `SAFEARRAY` структуру `CComSafeArray` объекта.|
@@ -86,7 +86,7 @@ class CComSafeArray
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Приводит значение к `SAFEARRAY` указатель.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Получает элемент из массива.|

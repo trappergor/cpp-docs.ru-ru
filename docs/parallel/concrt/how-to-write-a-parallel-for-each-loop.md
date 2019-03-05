@@ -5,12 +5,12 @@ helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272221"
 ---
 # <a name="how-to-write-a-parallelforeach-loop"></a>Практическое руководство. Написание цикла parallel_for_each
 
@@ -42,10 +42,9 @@ took 1653 ms
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
-Лямбда-выражения, в примере передается `parallel_for_each` алгоритм использует `InterlockedIncrement` функция для включения параллельных итераций цикла увеличивается счетчик одновременно. При использовании функции, такие как `InterlockedIncrement` для синхронизации доступа к общим ресурсам, можно представить узкие места производительности в коде. Можно использовать механизм синхронизации без блокировки, например, [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класса, чтобы исключить одновременный доступ к общим ресурсам. Пример, использующий `combinable` класса таким образом, см. в разделе [как: использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
+Лямбда-выражения, в примере передается `parallel_for_each` алгоритм использует `InterlockedIncrement` функция для включения параллельных итераций цикла увеличивается счетчик одновременно. При использовании функции, такие как `InterlockedIncrement` для синхронизации доступа к общим ресурсам, можно представить узкие места производительности в коде. Можно использовать механизм синхронизации без блокировки, например, [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md) класса, чтобы исключить одновременный доступ к общим ресурсам. Пример, использующий `combinable` класса таким образом, см. в разделе [как: Использование класса combinable для повышения производительности](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md).
 
 ## <a name="see-also"></a>См. также
 
 [Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)<br/>
 [Функция parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)
-

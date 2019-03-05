@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - SchedulerPolicy class
 ms.assetid: bcebf51a-65f8-45a3-809b-d1ff93527dc4
-ms.openlocfilehash: 0d1c28501abc86d09b683b0ed91f831fe8697306
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2eff40b11e4e9a5981ad85c37c8345abefb13fed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265539"
 ---
 # <a name="schedulerpolicy-class"></a>Класс SchedulerPolicy
 
@@ -32,14 +32,14 @@ class SchedulerPolicy;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[SchedulerPolicy](#ctor)|Перегружен. Создает новую политику планировщик и заполняет его значения для [ключи политики](concurrency-namespace-enums.md) поддерживаемых планировщиков исполняющей среды с параллелизмом и Resource Manager.|
 |[~ Деструктор SchedulerPolicy](#dtor)|Уничтожает политики планировщика.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[GetPolicyValue](#getpolicyvalue)|Извлекает значение ключа политики передано в качестве `key` параметра.|
 |[SetConcurrencyLimits](#setconcurrencylimits)|Одновременно задает `MinConcurrency` и `MaxConcurrency` политики на `SchedulerPolicy` объекта.|
@@ -185,7 +185,7 @@ unsigned int SetPolicyValue(
 *key*<br/>
 Ключ политики, чтобы задать значение для.
 
-*значение*<br/>
+*value*<br/>
 Задаваемое значение ключа политики.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -207,4 +207,3 @@ unsigned int SetPolicyValue(
 [Класс CurrentScheduler](currentscheduler-class.md)<br/>
 [Класс Scheduler](scheduler-class.md)<br/>
 [Планировщик задач](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, interfaces
 ms.assetid: 971eadcd-6a1e-46f2-b8fe-ee6b53dfe3ea
-ms.openlocfilehash: 5d3afda0f31cf4cc8d02af0363ba1b40414ec8b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f19df1723a4e115ca7f8e314bd5ea423082417e1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266982"
 ---
 # <a name="interfaces-atl-control-wizard"></a>Интерфейсы, мастер элементов управления ATL
 
@@ -20,7 +20,7 @@ ms.locfileid: "50528054"
 > [!NOTE]
 > Если вы выбрали **минимальный элемент управления** на [параметры](../../atl/reference/options-atl-control-wizard.md) вкладке интерфейсы не отображаются по умолчанию в **поддерживаемые** поле со списком.
 
-- **не поддерживается**
+- **Не поддерживается**
 
    Определяет доступные интерфейсы, которые в настоящее время не поддерживаются для элемента управления.
 
@@ -38,4 +38,3 @@ ms.locfileid: "50528054"
 ## <a name="see-also"></a>См. также
 
 [Мастер элементов управления ATL](../../atl/reference/atl-control-wizard.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
-ms.openlocfilehash: f421848a87ea3cc38309e85eb39c9453530ce4fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659099"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267489"
 ---
 # <a name="crbmultimap-class"></a>Класс CRBMultiMap
 
@@ -52,14 +52,14 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Конструктор.|
-|[CRBMultiMap:: ~ CRBMultiMap](#dtor)|Деструктор|
+|[CRBMultiMap::~CRBMultiMap](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Вызовите этот метод, чтобы определить позицию первого элемента с данным ключом.|
 |[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Вызовите этот метод, чтобы получить значение, связанное с данным ключом и обновите значение позиции.|
@@ -114,7 +114,7 @@ explicit CRBMultiMap(size_t nBlockSize = 10) throw();
 
 [!code-cpp[NVC_ATL_Utilities#85](../../atl/codesnippet/cpp/crbmultimap-class_1.cpp)]
 
-##  <a name="dtor"></a>  CRBMultiMap:: ~ CRBMultiMap
+##  <a name="dtor"></a>  CRBMultiMap::~CRBMultiMap
 
 Деструктор
 
@@ -234,7 +234,7 @@ POSITION Insert(KINARGTYPE key, VINARGTYPE value) throw(...);
 *key*<br/>
 Значение ключа, чтобы добавить `CRBMultiMap` объекта.
 
-*значение*<br/>
+*value*<br/>
 Значение, которое нужно добавить `CRBMultiMap` объект, связанный с *ключ*.
 
 ### <a name="return-value"></a>Возвращаемое значение

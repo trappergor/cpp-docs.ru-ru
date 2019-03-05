@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Локализация элемента управления ActiveX
+title: Элементы ActiveX в MFC. Локализация элемента управления ActiveX
 ms.date: 09/12/2018
 f1_keywords:
 - LocaleID
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 0a9c45873f784cf639ccf7e886f65527a6a78f2f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613212"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268218"
 ---
-# <a name="mfc-activex-controls-localizing-an-activex-control"></a>Элементы управления ActiveX в MFC. Локализация элемента управления ActiveX
+# <a name="mfc-activex-controls-localizing-an-activex-control"></a>Элементы ActiveX в MFC. Локализация элемента управления ActiveX
 
 В этой статье рассматриваются процедуры для локализации интерфейсов элемента управления ActiveX.
 
@@ -103,4 +103,3 @@ ms.locfileid: "50613212"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

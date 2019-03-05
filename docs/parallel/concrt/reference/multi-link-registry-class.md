@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635413"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264769"
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 
@@ -79,7 +79,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -112,7 +112,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок, который необходимо найти в `multi_link_registry` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,7 +139,7 @@ virtual size_t count();
 multi_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ multi_link_registry
+##  <a name="dtor"></a> ~multi_link_registry
 
 Уничтожает `multi_link_registry` объекта.
 
@@ -161,7 +161,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок удалены, если найден.
 
 ### <a name="return-value"></a>Возвращаемое значение

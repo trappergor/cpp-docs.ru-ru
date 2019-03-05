@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259208"
 ---
 # <a name="cbindstatuscallback-class"></a>Класс CBindStatusCallback
 
@@ -64,14 +64,14 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBindStatusCallback::CBindStatusCallback](#cbindstatuscallback)|Конструктор.|
 |[CBindStatusCallback:: ~ CBindStatusCallback](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBindStatusCallback::Download](#download)|Создает статический метод, который запускает процесс загрузки `CBindStatusCallback` объекте и вызывает метод `StartAsyncDownload`.|
 |[CBindStatusCallback::GetBindInfo](#getbindinfo)|Вызывается асинхронный моникер для получения сведений о типа привязки должен быть создан.|
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CBindStatusCallback::m_dwAvailableToRead](#m_dwavailabletoread)|Число байтов, доступных для чтения.|
 |[CBindStatusCallback::m_dwTotalRead](#m_dwtotalread)|Общее число считанных байтов.|
@@ -357,7 +357,7 @@ STDMETHOD(
 ### <a name="parameters"></a>Параметры
 
 *grfBSCF*<br/>
-[in] Значение перечисления BSCF. Один или несколько из следующих: BSCF_FIRSTDATANOTIFICATION, BSCF_INTERMEDIARYDATANOTIFICATION или BSCF_LASTDATANOTIFICATION.
+[in] Значение перечисления BSCF. Один или несколько из следующих: BSCF_FIRSTDATANOTIFICATION BSCF_INTERMEDIARYDATANOTIFICATION и BSCF_LASTDATANOTIFICATION.
 
 *dwSize*<br/>
 [in] Совокупное объем (в байтах) данных, доступных с начала выполнения привязки. Может быть 0, указывающее, что объем данных, не соответствующие или стала доступной, не определенный срок.

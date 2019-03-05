@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CWinApp class [MFC], and MFC Application Wizard
 - MFC, wizards
 ms.assetid: f8ac0491-3302-4e46-981d-0790624eb8a2
-ms.openlocfilehash: c659387043accbd6cdad7d5e2b97ce8bf15c6e63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb45c8ffae15628b0b99a1ebcd962d88d845f83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437213"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266267"
 ---
 # <a name="cwinapp-and-the-mfc-application-wizard"></a>CWinApp и мастер приложений MFC
 
@@ -33,7 +33,6 @@ ms.locfileid: "50437213"
 
 ## <a name="see-also"></a>См. также
 
-[CWinApp: класс приложений](../mfc/cwinapp-the-application-class.md)<br/>
+[CWinApp: Класс приложений](../mfc/cwinapp-the-application-class.md)<br/>
 [Переопределяемые функции-члены CWinApp](../mfc/overridable-cwinapp-member-functions.md)<br/>
 [Специальные службы CWinApp](../mfc/special-cwinapp-services.md)
-

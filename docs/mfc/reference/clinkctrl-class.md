@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260413"
 ---
 # <a name="clinkctrl-class"></a>Класс CLinkCtrl
 
@@ -61,7 +61,7 @@ class CLinkCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CLinkCtrl::Create](#create)|Создает элемент управления связями и присоединяет его к `CLinkCtrl` объекта.|
 |[CLinkCtrl::CreateEx](#createex)|Создает элемент управления связями с помощью расширенных стилей и присоединяет его к `CLinkCtrl` объекта.|
@@ -242,7 +242,7 @@ int GetIdealSize(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*cxMaxWidth*|[in] Максимальная ширина ссылки, в пикселях.|
 |[out] \* *pSize*|Указатель на Windows [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуры. При возвращении данного метода *cy* членом `SIZE` структура содержит Высота текстового идеальный ссылку для ширину текста ссылки, который задается параметром *cxMaxWidth*. *Cx* член структуры содержит ширину текста ссылки, которая фактически требуется.|

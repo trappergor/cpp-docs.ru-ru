@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178165"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261301"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -53,7 +53,7 @@ class CInternetSession : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CInternetSession::CInternetSession](#cinternetsession)|Создает объект `CInternetSession`.|
 
@@ -76,7 +76,7 @@ class CInternetSession : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CInternetSession::operator HINTERNET](#operator_hinternet)|Дескриптор текущего сеанса Интернет.|
 
@@ -532,7 +532,7 @@ CStdioFile* OpenURL(
 |file://|`CStdioFile*`|
 |http://|`CHttpFile*`|
 |Gopher://|`CGopherFile*`|
-|FTP: / /|`CInternetFile*`|
+|ftp://|`CInternetFile*`|
 
 ### <a name="remarks"></a>Примечания
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CLinearTransitionFromSpeed [MFC], m_dblFinalValue
 - CLinearTransitionFromSpeed [MFC], m_dblSpeed
 ms.assetid: 8f159a1c-8893-4017-951e-09e5758aba7d
-ms.openlocfilehash: 9ef461124321e5e8fff11c1c7be1d90246c411a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1efa9806267958b4221ee112e56f242c7e25a8f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563973"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260703"
 ---
 # <a name="clineartransitionfromspeed-class"></a>Класс CLinearTransitionFromSpeed
 
@@ -35,7 +35,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CLinearTransitionFromSpeed::CLinearTransitionFromSpeed](#clineartransitionfromspeed)|Создает объект переход с линейной скоростью и инициализирует его с скоростью и конечное значение.|
 
@@ -47,7 +47,7 @@ class CLinearTransitionFromSpeed : public CBaseTransition;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CLinearTransitionFromSpeed::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
 |[CLinearTransitionFromSpeed::m_dblSpeed](#m_dblspeed)|Абсолютное значение переменной скоростью.|

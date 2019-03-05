@@ -5,29 +5,28 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection classes, ATL
 ms.assetid: 6818db73-7094-48d8-a0ca-18147beec362
-ms.openlocfilehash: a0d7483cc142377ec4de903e27f23056a9e8dd8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1ab9a160b01ea278d162a515e5121054bf398f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495311"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265409"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>Классы коллекций ATL и перечислителей
 
 Библиотека ATL предоставляет следующие классы для реализации коллекции и перечислители.
 
-|Класс|Описание|
+|Класс|Описание:|
 |-----------|-----------------|
 |[ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)|Реализация интерфейса коллекции|
 |[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|Реализация интерфейса перечислителя (предполагается, что данные, хранящиеся в контейнере совместимые библиотеки C++ Standard)|
 |[CComEnumImpl](../atl/reference/ccomenumimpl-class.md)|Реализация интерфейса перечислителя (предполагается, что данные, хранящиеся в массив)|
 |[CComEnumOnSTL](../atl/reference/ccomenumonstl-class.md)|Реализация объекта перечислителя (использует `IEnumOnSTLImpl`)|
 |[CComEnum](../atl/reference/ccomenum-class.md)|Реализация объекта перечислителя (использует `CComEnumImpl`)|
-|[_Копировать](../atl/atl-copy-policy-classes.md)|Класс политики копирования|
+|[_Copy](../atl/atl-copy-policy-classes.md)|Класс политики копирования|
 |[_CopyInterface](../atl/atl-copy-policy-classes.md)|Класс политики копирования|
 |[CAdapt](../atl/reference/cadapt-class.md)|Класс адаптера (скрывает **оператор &** позволяя `CComPtr`, `CComQIPtr`, и `CComBSTR` для сохранения в контейнеры стандартной библиотеки C++)|
 
 ## <a name="see-also"></a>См. также
 
 [Коллекции и перечислители](../atl/atl-collections-and-enumerators.md)
-
