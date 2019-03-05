@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CMFCPreviewCtrlImpl [MFC], m_font
 - CMFCPreviewCtrlImpl [MFC], m_pDocument
 ms.assetid: 06257fa0-54c9-478d-9d68-c9698c3f93ed
-ms.openlocfilehash: 3ec1acd1872bc0e51117602ef723116170458afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f66ed8478023bd42e185da4f21740d1de2536140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295751"
 ---
 # <a name="cmfcpreviewctrlimpl-class"></a>Класс CMFCPreviewCtrlImpl
 
@@ -59,7 +59,7 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 |Имя|Описание|
 |----------|-----------------|
-|[CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|
+|[CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl](#dtor)|Разрушается объект предварительного просмотра элемента управления.|
 |[CMFCPreviewCtrlImpl::CMFCPreviewCtrlImpl](#cmfcpreviewctrlimpl)|Создает объект управления предварительной версии.|
 
 ### <a name="public-methods"></a>Открытые методы
@@ -78,13 +78,13 @@ class CMFCPreviewCtrlImpl : public CWnd;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::DoPaint](#dopaint)|Вызывается платформой для визуализации предварительного просмотра.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCPreviewCtrlImpl::m_clrBackColor](#m_clrbackcolor)|Цвет фона окна предварительного просмотра.|
 |[CMFCPreviewCtrlImpl::m_clrTextColor](#m_clrtextcolor)|Цвет текста окна предварительного просмотра.|
@@ -329,7 +329,7 @@ virtual void SetRect(
 
 Обычно новый ограничивающий прямоугольник имеет значение при изменении размера элемента управления ведущего приложения.
 
-## <a name="dtor"></a> CMFCPreviewCtrlImpl:: ~ CMFCPreviewCtrlImpl
+## <a name="dtor"></a> CMFCPreviewCtrlImpl::~CMFCPreviewCtrlImpl
 
 Разрушается объект предварительного просмотра элемента управления.
 
@@ -338,4 +338,3 @@ virtual void SetRect(
 ```
 virtual ~CMFCPreviewCtrlImpl();
 ```
-

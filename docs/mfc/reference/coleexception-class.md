@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 243ea2028b30d60a2c19b22238914682966d3b69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599346"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300366"
 ---
 # <a name="coleexception-class"></a>Класс COleException
 
@@ -31,13 +31,13 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleException::Process](#process)|Преобразует перехваченного исключения в кодом возврата OLE.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleException::m_sc](#m_sc)|Содержит код состояния, который указывает причину возникновения исключения.|
 
@@ -47,7 +47,7 @@ class COleException : public CException
 
 В общем случае не следует создавать `COleException` объекта напрямую; вместо этого следует вызывать [AfxThrowOleException](exception-processing.md#afxthrowoleexception).
 
-Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения OLE](../../mfc/exceptions-ole-exceptions.md).
+Дополнительные сведения об исключениях см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключения: Исключения OLE](../../mfc/exceptions-ole-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -112,4 +112,3 @@ static SCODE PASCAL Process(const CException* pAnyException);
 [Пример MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

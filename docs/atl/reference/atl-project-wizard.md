@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 7a53b33892b23d414a877721eca514931f82080e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9d69b6ca8cf1cff45098f0d63b452238db7ddfe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476704"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259767"
 ---
 # <a name="atl-project-wizard"></a>Мастер проектов ATL
 
@@ -53,5 +53,4 @@ Active Template Library (ATL) — это набор основанных на ш
 [Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
-[Учебник](../../atl/active-template-library-atl-tutorial.md)
-
+[Руководство](../../atl/active-template-library-atl-tutorial.md)

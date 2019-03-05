@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CFontHolder [MFC], SetFont
 - CFontHolder [MFC], m_pFont
 ms.assetid: 728ab472-0c97-440d-889f-1324c6e1b6b8
-ms.openlocfilehash: 24a33aafa279f47bcfabd1ac3f3ee8d4abd4c731
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623ce5da46716e3f9a562862fc0375fb8704bb21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297883"
 ---
 # <a name="cfontholder-class"></a>Класс CFontHolder
 
@@ -66,7 +66,7 @@ class CFontHolder
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFontHolder::m_pFont](#m_pfont)|Указатель на `CFontHolder` объекта `IFont` интерфейс.|
 
@@ -74,7 +74,7 @@ class CFontHolder
 
 `CFontHolder` не имеет базового класса.
 
-Этот класс используется для реализации свойств пользовательского шрифта для элемента управления. Сведения о создании таких свойств, см. в статье [элементы управления ActiveX: использование шрифтов](../../mfc/mfc-activex-controls-using-fonts.md).
+Этот класс используется для реализации свойств пользовательского шрифта для элемента управления. Сведения о создании таких свойств, см. в статье [элементы управления ActiveX: Использование шрифтов](../../mfc/mfc-activex-controls-using-fonts.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

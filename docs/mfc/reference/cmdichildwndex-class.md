@@ -112,18 +112,18 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541548"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293433"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 
 `CMDIChildWndEx` Класс предоставляет функциональные возможности Windows дочернего окна многодокументного интерфейса (MDI). Он расширяет функциональные возможности [класс CMDIChildWnd](../../mfc/reference/cmdichildwnd-class.md). Платформа требует этот класс, если приложение MDI использует определенные классы MFC.
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -135,7 +135,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Вызывается внутренне платформой активация рамки верхнего уровня в том случае, если приложение следует активировать из вкладки панели задач.|
 |`CMDIChildWndEx::AddDockSite`|Этот метод не используется и не реализован.|
@@ -201,7 +201,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ## <a name="example"></a>Пример
 
-Следующий пример является производным от класса `CMDIChildWndEx`. Этот фрагмент кода поступает из [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+Следующий пример является производным от класса `CMDIChildWndEx`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>Пример
 
-В следующем примере иллюстрируется использование метода `GetDocumentName`. Этот фрагмент кода поступает из [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере иллюстрируется использование метода `GetDocumentName`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -567,7 +567,7 @@ BOOL IsPointNearDockSite(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указанная точка.
 
 *dwBarAlignment*<br/>
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано переопределение `IsReadOnly` метод. Этот фрагмент кода поступает из [VisualStudioDemo пример: приложения MFC для Visual Studio](../../visual-cpp-samples.md).
+В следующем примере показано переопределение `IsReadOnly` метод. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -686,7 +686,7 @@ CBasePane* PaneFromPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Указывает точку, в экранных координатах, для проверки.
 
 *nSensitivity*<br/>
@@ -828,7 +828,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Указывает новый прямоугольник отсечения. Если прямоугольник пустой или значение null, удаляется обрезки.
 
 ### <a name="return-value"></a>Возвращаемое значение

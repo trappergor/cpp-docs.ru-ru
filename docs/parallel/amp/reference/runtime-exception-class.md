@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 627fc6788dd359779bf07da3da1901be4c3aeafd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289667"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception - класс
 
@@ -30,20 +30,20 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор runtime_exception](#ctor)|Инициализирует новый экземпляр класса `runtime_exception`.|
 |[~ runtime_exception деструктор](#dtor)|Уничтожает `runtime_exception` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[get_error_code](#runtime_exception__get_error_code)|Возвращает код ошибки, вызвавшей исключение.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `runtime_exception` в данный объект.|
 
@@ -57,7 +57,7 @@ class runtime_exception : public std::exception;
 
 **Заголовок:** amprt.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** параллелизм
 
 ## <a name="runtime_exception__ctor"></a>  Конструктор runtime_exception
 

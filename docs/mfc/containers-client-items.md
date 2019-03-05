@@ -1,18 +1,18 @@
 ---
-title: Контейнеры. Элементы клиентов
+title: Контейнеры. Клиентские элементы
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE containers [MFC], client items
 - client items and OLE containers
 ms.assetid: 231528b5-0744-4f83-8897-083bf55ed087
-ms.openlocfilehash: e0d56d4a8f25828de954a78e9bafd8df150c7ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c7f4a63cb9a31b52be2d3574ddad29313df6a4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437015"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298286"
 ---
-# <a name="containers-client-items"></a>Контейнеры. Элементы клиентов
+# <a name="containers-client-items"></a>Контейнеры. Клиентские элементы
 
 В этой статье объясняются клиентские элементы и из классов, что приложения должны наследовать его клиентские элементы.
 
@@ -29,6 +29,6 @@ ms.locfileid: "50437015"
 [Контейнеры](../mfc/containers.md)<br/>
 [Контейнеры. Составные файлы](../mfc/containers-compound-files.md)<br/>
 [Контейнеры. Проблемы пользовательского интерфейса](../mfc/containers-user-interface-issues.md)<br/>
-[Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)<br/>
+[Контейнеры. Расширенные возможности](../mfc/containers-advanced-features.md)<br/>
 [Класс COleClientItem](../mfc/reference/coleclientitem-class.md)<br/>
 [Класс COleServerItem](../mfc/reference/coleserveritem-class.md)

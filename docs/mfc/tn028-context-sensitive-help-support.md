@@ -1,5 +1,5 @@
 ---
-title: TN028. Поддержка контекстной справки
+title: 'TN028: Поддержка контекстной справки'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288289"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>TN028. Поддержка контекстной справки
+# <a name="tn028-context-sensitive-help-support"></a>TN028: Поддержка контекстной справки
 
 Эта заметка описывает правила для назначения идентификаторов контекстов справки и другие проблемы справки в MFC. Поддержка контекстной справки требуется компилятор справки, который доступен в Visual C++.
 
 > [!NOTE]
->  Помимо реализации контекстной справки, с помощью WinHelp, MFC также поддерживает использование справки HTML. Дополнительные сведения об этой поддержки и программирование с использованием HTML-справки, см. в разделе [HTML-справки: Context-Sensitive для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md).
+>  Помимо реализации контекстной справки, с помощью WinHelp, MFC также поддерживает использование справки HTML. Дополнительные сведения об этой поддержки и программирование с использованием HTML-справки, см. в разделе [HTML-справки: Контекстная справка для ваших программ](../mfc/html-help-context-sensitive-help-for-your-programs.md).
 
 ## <a name="types-of-help-supported"></a>Типы поддерживаемых справки
 
@@ -180,4 +180,3 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

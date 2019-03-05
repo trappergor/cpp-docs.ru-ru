@@ -1,5 +1,5 @@
 ---
-title: Серверы автоматизации. Вопросы времени жизни объектов
+title: Серверы автоматизации. Проблемы времени существования объекта
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293584"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>Серверы автоматизации. Вопросы времени жизни объектов
+# <a name="automation-servers-object-lifetime-issues"></a>Серверы автоматизации. Проблемы времени существования объекта
 
 Когда клиент автоматизации создает или активирует объект OLE, сервер передает клиент указатель на этот объект. Клиент устанавливает ссылку на объект посредством вызова функции OLE [IUnknown::AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref). Эта ссылка действует до клиент вызывает [IUnknown::Release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release). (Клиентские приложения, написанные с помощью библиотеки Microsoft Foundation Class классы OLE не потребуется выполнять эти вызовы framework делает это.) Система OLE и сам сервер, могут устанавливать ссылки на объект. Сервер не должен уничтожить объект, до тех пор, пока внешние ссылки на объект остаются в силе.
 
@@ -32,4 +32,3 @@ ms.locfileid: "50637649"
 
 [Серверы автоматизации](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

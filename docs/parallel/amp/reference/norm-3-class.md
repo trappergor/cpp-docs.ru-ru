@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_3::set_zx
 - amp_short_vectors/Concurrency::graphics::norm_3::bgr
 ms.assetid: 17081060-14ce-477e-a71a-9801b0f1d9e4
-ms.openlocfilehash: f350e5c5707dad93fe2863523e816d309647acd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cec778e6cdc53871b7987ef5a2faf529eea6d4f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513806"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288939"
 ---
 # <a name="norm3-class"></a>Класс norm_3
 
@@ -99,7 +99,7 @@ class norm_3;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор norm_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
@@ -146,12 +146,12 @@ class norm_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |norm_3::operator-||
 |norm_3::operator--||
-|norm_3::operator * =||
-|norm_3::operator / =||
+|norm_3::operator*=||
+|norm_3::operator/=||
 |norm_3::operator ++||
 |norm_3::operator +=||
 |norm_3::operator =||
@@ -168,27 +168,27 @@ class norm_3;
 |Имя|Описание|
 |----------|-----------------|
 |norm_3::b||
-|norm_3::BG||
+|norm_3::bg||
 |norm_3::bgr||
 |norm_3::br||
 |norm_3::brg||
 |norm_3::g||
-|norm_3::GB||
-|norm_3::GBR||
-|norm_3::GR||
+|norm_3::gb||
+|norm_3::gbr||
+|norm_3::gr||
 |norm_3::grb||
 |norm_3::r||
-|norm_3::RB||
+|norm_3::rb||
 |norm_3::rbg||
-|norm_3::RG||
-|norm_3::RGB||
+|norm_3::rg||
+|norm_3::rgb||
 |norm_3::x||
-|norm_3::XY||
+|norm_3::xy||
 |norm_3::xyz||
 |norm_3::xz||
 |norm_3::xzy||
 |norm_3::y||
-|norm_3::YX||
+|norm_3::yx||
 |norm_3::yxz||
 |norm_3::yz||
 |norm_3::yzx||
@@ -206,7 +206,7 @@ class norm_3;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ## <a name="ctor"></a> Конструктор norm_3
 

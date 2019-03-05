@@ -1,19 +1,19 @@
 ---
-title: Поддержка OLE. Стратегии реализации
+title: Поддержка OLE. Implementation Strategies
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE [MFC], development strategy
 - OLE applications [MFC], implementing OLE
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
-ms.openlocfilehash: a9bcbc16b08f16953df92efe5a83db39f9a33cc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40c74d48b76921f770740602a39d28804a7e3c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284818"
 ---
-# <a name="ole-background-implementation-strategies"></a>Поддержка OLE. Стратегии реализации
+# <a name="ole-background-implementation-strategies"></a>Поддержка OLE. Implementation Strategies
 
 В зависимости от приложения существует четыре возможных вариантов реализации стратегии для добавления поддержки OLE.
 
@@ -39,6 +39,5 @@ ms.locfileid: "50624397"
 
 [Поддержка OLE](../mfc/ole-background.md)<br/>
 [Контейнеры. Реализация контейнера](../mfc/containers-implementing-a-container.md)<br/>
-[Серверы. Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
+[серверы: Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
 [Мастер приложений MFC](../mfc/reference/mfc-application-wizard.md)
-

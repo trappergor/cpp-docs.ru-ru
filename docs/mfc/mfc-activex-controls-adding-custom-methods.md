@@ -1,18 +1,18 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление пользовательских методов
+title: Элементы ActiveX в MFC. Добавление пользовательских методов
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554561"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278851"
 ---
-# <a name="mfc-activex-controls-adding-custom-methods"></a>Элементы управления ActiveX в MFC. Добавление пользовательских методов
+# <a name="mfc-activex-controls-adding-custom-methods"></a>Элементы ActiveX в MFC. Добавление пользовательских методов
 
 Пользовательские методы отличаются от стандартных методов, что они уже не реализованы в `COleControl`. Необходимо предоставить реализацию для каждого пользовательского метода, который можно добавить в элемент управления.
 
@@ -26,7 +26,7 @@ ms.locfileid: "50554561"
 В следующей процедуре показано добавление пользовательского метода PtInCircle скелетный код элемента управления ActiveX. PtInCircle определяет, являются ли координаты передаваться элементу управления внутри или вне круга. Эту процедуру можно также использоваться для добавления других пользовательских методов. Подставьте имя пользовательского метода и его параметры для PtInCircle имя метода и параметров.
 
 > [!NOTE]
->  В этом примере используется `InCircle` функции из статьи события. Дополнительные сведения по этой функции см. в статье [элементы ActiveX в MFC: Добавление пользовательских событий в элемент управления ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).
+>  В этом примере используется `InCircle` функции из статьи события. Дополнительные сведения по этой функции см. в статье [элементы управления MFC ActiveX: Добавление пользовательских событий в элемент управления ActiveX](../mfc/mfc-activex-controls-adding-custom-events.md).
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>Чтобы добавить ptincircle-пользовательский метод, с помощью мастера добавления метода
 
@@ -80,4 +80,3 @@ Disp_function-макрос сопоставляет метод `PtInCircle` фу
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
 [Значки представления классов и обозревателя объектов](/visualstudio/ide/class-view-and-object-browser-icons)
-

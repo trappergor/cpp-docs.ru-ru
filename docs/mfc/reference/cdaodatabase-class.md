@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439289"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272907"
 ---
 # <a name="cdaodatabase-class"></a>Класс CDaoDatabase
 
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Указатель на базовый объект базы данных DAO.|
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Указатель на [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) объект, который содержит базу данных и определяет его место транзакций.|
@@ -587,9 +587,9 @@ void GetQueryDefInfo(
 
 - Имя AFX_DAO_PRIMARY_INFO (по умолчанию), тип
 
-- А также сведения об основном AFX_DAO_SECONDARY_INFO: Дата создания, Дата последнего обновления, возвращает записи, возможно обновление
+- AFX_DAO_SECONDARY_INFO сведения об основном плюс: Дата создания, Дата последнего обновления, возвращает записи, обновляемые
 
-- AFX_DAO_ALL_INFO основной и дополнительной информации плюс: время ожидания ODBC SQL, Connect,
+- AFX_DAO_ALL_INFO первичного и вторичного сведения плюс: SQL, подключиться, время ожидания ODBC
 
 *lpszName*<br/>
 Строка, содержащая имя запроса, определенные в базе данных, для поиска по имени.
@@ -744,9 +744,9 @@ void GetTableDefInfo(
 
 - AFX_DAO_PRIMARY_INFO (по умолчанию), обновляемым, атрибуты
 
-- А также сведения об основном AFX_DAO_SECONDARY_INFO: Дата создания, Дата последнего обновления, имя исходной таблицы, Connect
+- AFX_DAO_SECONDARY_INFO сведения об основном плюс: Дата создания, Дата последнего обновления, имя исходной таблицы, подключения
 
-- AFX_DAO_ALL_INFO основной и дополнительной информации плюс: правило проверки, текст проверки, число записей
+- AFX_DAO_ALL_INFO первичного и вторичного сведения плюс: Число записей текст проверки правила проверки
 
 *lpszName*<br/>
 Имя объекта tabledef, для поиска по имени.

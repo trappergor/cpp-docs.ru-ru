@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime [MFC], class information
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
-ms.openlocfilehash: 83c10d5a87c7d5782505fcd93e46c678a97b8b5d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521962"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274301"
 ---
 # <a name="cruntimeclass-structure"></a>Структура CRuntimeClass
 
@@ -30,7 +30,7 @@ struct CRuntimeClass
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRuntimeClass::CreateObject](#createobject)|Создает объект во время выполнения.|
 |[CRuntimeClass::FromName](#fromname)|Создает объект во время выполнения, используя имя класса знакомы.|
@@ -88,7 +88,7 @@ static CObject* PASCAL CreateObject(LPCWSTR lpszClassName);
 
 ### <a name="remarks"></a>Примечания
 
-Классы, производные от `CObject` может поддерживать динамическое создание, который является возможность создания объекта указанного класса во время выполнения. Документ, представления и классы фрейма, к примеру, должен поддерживать динамическое создание. Дополнительные сведения о динамическое создание и `CreateObject` член, см. в разделе [класс CObject](../../mfc/using-cobject.md) и [класс CObject: задание уровней функциональности](../../mfc/specifying-levels-of-functionality.md).
+Классы, производные от `CObject` может поддерживать динамическое создание, который является возможность создания объекта указанного класса во время выполнения. Документ, представления и классы фрейма, к примеру, должен поддерживать динамическое создание. Дополнительные сведения о динамическое создание и `CreateObject` член, см. в разделе [класс CObject](../../mfc/using-cobject.md) и [класс CObject: Задание уровней функциональности](../../mfc/specifying-levels-of-functionality.md).
 
 ### <a name="example"></a>Пример
 
@@ -141,7 +141,7 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 > [!NOTE]
 >  Чтобы использовать `CRuntimeClass` структуры, необходимо включить макрос IMPLEMENT_DYNAMIC, IMPLEMENT_DYNCREATE или IMPLEMENT_SERIAL в реализации класса, для которого требуется получить сведения о времени выполнения объекта.
 
-Дополнительные сведения об использовании `CRuntimeClass`, см. в статье [класс CObject: доступ к сведениям о классе среды выполнения](../../mfc/accessing-run-time-class-information.md).
+Дополнительные сведения об использовании `CRuntimeClass`, см. в статье [класс CObject: Доступ к сведениям о классе среды выполнения](../../mfc/accessing-run-time-class-information.md).
 
 ### <a name="example"></a>Пример
 
@@ -224,4 +224,3 @@ BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-

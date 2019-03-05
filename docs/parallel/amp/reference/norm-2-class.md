@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_2
 - amp_short_vectors/Concurrency::graphics::norm_2::operator--
 ms.assetid: 80703f9b-61f4-414a-93fd-bc774f7d3393
-ms.openlocfilehash: ebf1a80a695f1d25652f239f66d8d40c0e1099ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c48e6dd573e3303307cc8a0247a955aba62d809e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542224"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271181"
 ---
 # <a name="norm2-class"></a>Класс norm_2
 
@@ -55,13 +55,13 @@ class norm_2;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор norm_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |norm_2::get_x||
 |norm_2::get_xy||
@@ -78,12 +78,12 @@ class norm_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |norm_2::operator-||
 |norm_2::operator--||
-|norm_2::operator * =||
-|norm_2::operator / =||
+|norm_2::operator*=||
+|norm_2::operator/=||
 |norm_2::operator ++||
 |norm_2::operator +=||
 |norm_2::operator =||
@@ -91,22 +91,22 @@ class norm_2;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#norm_2__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |norm_2::g||
-|norm_2::GR||
+|norm_2::gr||
 |norm_2::r||
 |norm_2::rg||
 |norm_2::x||
-|norm_2::XY||
+|norm_2::xy||
 |norm_2::y||
-|norm_2::YX||
+|norm_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -116,7 +116,7 @@ class norm_2;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> norm_2
 

@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
-ms.openlocfilehash: 5f358dbc61fc39928e877dbc3673a8b9f51917eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280296"
 ---
 # <a name="taskcontinuationcontext-class"></a>Класс task_continuation_context
 
@@ -33,7 +33,7 @@ class task_continuation_context : public details::_ContextCallback;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[get_current_winrt_context](#get_current_winrt_context)|Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока winrt.|
 |[use_arbitrary](#use_arbitrary)|Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.|

@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594965"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263615"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 
@@ -137,10 +137,10 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Создает объект CDHtmlDialog.|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Уничтожает объект CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Уничтожает объект CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -304,7 +304,7 @@ CDHtmlDialog(
 
 Вторая форма конструктора предоставляет доступ к ресурсу через имя шаблона диалогового окна. Третья форма конструктора предоставляет доступ к ресурсу через идентификатор ресурса шаблона диалогового окна. Как правило, идентификатор начинается с **IDD_** префикс.
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 Уничтожает объект CDHtmlDialog.
 
@@ -402,7 +402,7 @@ void DDX_DHtml_CheckBox(
 *szId*<br/>
 Значение, указанное для параметра ID элемента управления HTML.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ### <a name="example"></a>Пример
@@ -468,7 +468,7 @@ void DDX_DHtml_ElementText(
 *Идентификатор DISPID*<br/>
 Идентификатор диспетчеризации HTML-элемента, с которым вы хотите обмениваться данными.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ void DDX_DHtml_Radio(
 *szId*<br/>
 Значение, указанное для параметра ID элемента управления HTML.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ void DDX_DHtml_SelectIndex(
 *szId*<br/>
 Значение, указанное для параметра id элемента управления HTML.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ void DDX_DHtml_SelectString(
 *szId*<br/>
 Значение, указанное для параметра ID элемента управления HTML.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ void DDX_DHtml_SelectValue(
 *szId*<br/>
 Значение, указанное для параметра ID элемента управления HTML.
 
-*значение*<br/>
+*value*<br/>
 Значение, при обмене.
 
 ### <a name="example"></a>Пример
@@ -1462,7 +1462,7 @@ STDMETHOD(TranslateAccelerator)(
 *lpMsg*<br/>
 См. в разделе *lpMsg* в [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в пакете Windows SDK.
 
-*параметром pguidCmdGroup*<br/>
+*pguidCmdGroup*<br/>
 См. в разделе *параметром pguidCmdGroup* в `IDocHostUIHandler::TranslateAccelerator` в пакете Windows SDK.
 
 *nCmdID*<br/>
@@ -1527,4 +1527,3 @@ STDMETHOD(UpdateUI)(void);
 [Сложный пример MFC](../../visual-cpp-samples.md)<br/>
 [Вспомогательные макросы DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

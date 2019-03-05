@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], GetMenuBar
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
-ms.openlocfilehash: a3bb6f4d2926f07f61891656613c06e5690c9099
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491460"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283401"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Класс CMFCColorPopupMenu
 
@@ -45,7 +45,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Создает фиксируемого перемещаемой цветовую шкалу. (Переопределяет [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
@@ -55,7 +55,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|name|Описание|
+|name|Описание:|
 |`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую шкалу.|
 |`m_wndColorBar`|`CMFCColorBar` Объект, предоставляющий выбранный цвет.|
 
@@ -130,7 +130,7 @@ CMFCColorPopupMenu(
 *Цвета*<br/>
 [in] Массив цветов, отображаемых структурой всплывающего меню.
 
-*Цвет*<br/>
+*color*<br/>
 [in] Значение по умолчанию выбранный цвет.
 
 *lpszAutoColor*<br/>
@@ -198,7 +198,7 @@ virtual CPane* CreateTearOffBar(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pWndMain*|[in] Указатель на родительское окно перемещаемой панелью.|
 |*uiID*|[in] Идентификатор команды перемещаемой панелью.|
 |*lpszName*|[in] Текст окна перемещаемой панелью.|

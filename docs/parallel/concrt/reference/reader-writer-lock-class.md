@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
-ms.openlocfilehash: 1c2696695992cac9d51d547913c41234beaecf57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268659"
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 
@@ -50,7 +50,7 @@ class reader_writer_lock;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[lock](#lock)|Получает блокировку чтения записи писателя.|
 |[lock_read](#lock_read)|Получает блокировку чтения записи, как средство чтения. Если есть записи, активные модули нужно подождать, пока они выполняются. Средство чтения просто регистрирует интерес к блокировке и ожидает записи для его освобождения.|
@@ -112,7 +112,7 @@ void lock_read();
 reader_writer_lock();
 ```
 
-##  <a name="dtor"></a> ~ reader_writer_lock
+##  <a name="dtor"></a> ~reader_writer_lock
 
 Уничтожает `reader_writer_lock` объекта.
 

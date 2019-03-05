@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Сериализация
+title: Элементы ActiveX в MFC. Сериализация
 ms.date: 09/12/2018
 f1_keywords:
 - _wVerMinor
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - versioning ActiveX controls
 - wVerMajor global constant
 ms.assetid: 9d57c290-dd8c-4853-b552-6f17f15ebedd
-ms.openlocfilehash: fddd09ad7a3dc7d9211480bb21ac434419a48758
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c1c845640be2dfaa6aeda2defb478afb650b83b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303356"
 ---
-# <a name="mfc-activex-controls-serializing"></a>Элементы управления ActiveX в MFC. Сериализация
+# <a name="mfc-activex-controls-serializing"></a>Элементы ActiveX в MFC. Сериализация
 
 В этой статье описывается сериализация элемента управления ActiveX. Сериализация — это процесс чтение или запись в среде постоянного хранения, например файл на диске. Библиотека Microsoft Foundation Class (MFC) предоставляет встроенную поддержку для сериализации в классе `CObject`. `COleControl` расширяет эту функцию на элементы управления ActiveX при помощи свойства механизм exchange.
 
@@ -54,20 +54,20 @@ ms.locfileid: "50522217"
 
 |Свойства функции обмена данными|Цель|
 |---------------------------------|-------------|
-|**PX_Blob)**|Сериализует тип данных свойства больших двоичных объектов (BLOB).|
-|**PX_Bool)**|Сериализует тип логического свойства.|
-|**PX_Color)**|Сериализует свойство цвета типа.|
-|**PX_Currency)**|Сериализует тип **CY** свойство (валюта).|
-|**PX_Double)**|Сериализует тип **двойные** свойство.|
-|**PX_Font)**|Сериализует тип свойства шрифтов.|
-|**PX_Float)**|Сериализует тип **float** свойство.|
-|**PX_IUnknown)**|Сериализует свойство типа `LPUNKNOWN`.|
-|**PX_Long)**|Сериализует тип **long** свойство.|
-|**PX_Picture)**|Сериализует тип свойства изображения.|
-|**PX_Short)**|Сериализует тип **короткие** свойство.|
+|**PX_Blob( )**|Сериализует тип данных свойства больших двоичных объектов (BLOB).|
+|**PX_Bool( )**|Сериализует тип логического свойства.|
+|**PX_Color( )**|Сериализует свойство цвета типа.|
+|**PX_Currency( )**|Сериализует тип **CY** свойство (валюта).|
+|**PX_Double( )**|Сериализует тип **двойные** свойство.|
+|**PX_Font( )**|Сериализует тип свойства шрифтов.|
+|**PX_Float( )**|Сериализует тип **float** свойство.|
+|**PX_IUnknown( )**|Сериализует свойство типа `LPUNKNOWN`.|
+|**PX_Long( )**|Сериализует тип **long** свойство.|
+|**PX_Picture( )**|Сериализует тип свойства изображения.|
+|**PX_Short( )**|Сериализует тип **короткие** свойство.|
 |**(PXstring)**|Сериализует тип `CString` свойства.|
-|**PX_ULong)**|Сериализует тип **ULONG** свойство.|
-|**PX_UShort)**|Сериализует тип **USHORT** свойство.|
+|**PX_ULong( )**|Сериализует тип **ULONG** свойство.|
+|**PX_UShort( )**|Сериализует тип **USHORT** свойство.|
 
 Дополнительные сведения об этих функциях свойства exchange см. в разделе [сохраняемости OLE элементов управления](../mfc/reference/persistence-of-ole-controls.md) в *Справочник по библиотеке MFC*.
 
@@ -96,4 +96,3 @@ ms.locfileid: "50522217"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280125"
 ---
 # <a name="cdacl-class"></a>Класс CDacl
 
@@ -37,14 +37,14 @@ class CDacl : public CAcl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDacl::CDacl](#cdacl)|Конструктор.|
 |[CDacl::~CDacl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDacl::AddAllowedAce](#addallowedace)|Добавляет разрешенных ACE (записи управления доступом) `CDacl` объекта.|
 |[CDacl::AddDeniedAce](#adddeniedace)|Добавляет запрещенный ACE для `CDacl` объекта.|

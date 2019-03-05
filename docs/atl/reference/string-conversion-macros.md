@@ -11,12 +11,12 @@ f1_keywords:
 - atlconv/ATL::DEVMODEW2A
 - atlconv/ATL::TEXTMETRICW2A
 ms.assetid: 2ff7c0b6-2bde-45fe-897f-6128e18e0c27
-ms.openlocfilehash: 1cad89fe065c0827169a22cc9699b677323d8594
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889f8459e81418197420bc2efd410225d4f220bc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544528"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271766"
 ---
 # <a name="string-conversion-macros"></a>Макросы преобразования строк
 
@@ -24,7 +24,7 @@ ms.locfileid: "50544528"
 
 ##  <a name="atl_and_mfc_string_conversion_macros"></a>  ATL и макросов преобразования MFC из строки
 
-Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Дополнительные сведения о преобразовании строки MFC см. в разделе [TN059: использование макросов преобразования MFC MBCS в Юникод](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [макросы и Globals MFC](../../mfc/reference/mfc-macros-and-globals.md).
+Рассматриваемые здесь макросы преобразования строк можно использовать как для ATL, так и для MFC. Дополнительные сведения о преобразовании строки MFC см. в разделе [TN059: Использование макросов MFC из MBCS в Юникод преобразование](../../mfc/tn059-using-mfc-mbcs-unicode-conversion-macros.md) и [макросы и Globals MFC](../../mfc/reference/mfc-macros-and-globals.md).
 
 ##  <a name="devmode_and_textmetric_string_conversion_macros"></a>  DEVMODE и макросы преобразования строк TEXTMETRIC
 

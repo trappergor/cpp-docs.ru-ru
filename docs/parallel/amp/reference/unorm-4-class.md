@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::rb
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
-ms.openlocfilehash: f8a76e09adf606d9f366e8ed5657791fae497a2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619366"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302524"
 ---
 # <a name="unorm4-class"></a>Класс unorm_4
 
@@ -295,7 +295,7 @@ class unorm_4;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор unorm_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
@@ -442,34 +442,34 @@ class unorm_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |unorm_4::operator-||
 |unorm_4::operator--||
-|unorm_4::operator * =||
-|unorm_4::operator / =||
+|unorm_4::operator*=||
+|unorm_4::operator/=||
 |unorm_4::operator ++||
-|unorm_4::operator +=||
-|unorm_4::operator =||
+|unorm_4::operator+=||
+|unorm_4::operator=||
 |unorm_4::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#unorm_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |unorm_4::a||
-|unorm_4::AB||
+|unorm_4::ab||
 |unorm_4::abg||
 |unorm_4::abgr||
-|unorm_4::ABR||
+|unorm_4::abr||
 |unorm_4::abrg||
-|unorm_4::AG||
+|unorm_4::ag||
 |unorm_4::agb||
 |unorm_4::agbr||
 |unorm_4::agr||
@@ -478,65 +478,65 @@ class unorm_4;
 |unorm_4::arb||
 |unorm_4::arbg||
 |unorm_4::arg||
-|unorm_4::ARGB||
+|unorm_4::argb||
 |unorm_4::b||
-|unorm_4::BA||
+|unorm_4::ba||
 |unorm_4::bag||
 |unorm_4::bagr||
-|unorm_4::Bar||
+|unorm_4::bar||
 |unorm_4::barg||
-|unorm_4::BG||
-|unorm_4::BGA||
+|unorm_4::bg||
+|unorm_4::bga||
 |unorm_4::bgar||
 |unorm_4::bgr||
 |unorm_4::bgra||
 |unorm_4::br||
-|unorm_4::BRA||
+|unorm_4::bra||
 |unorm_4::brag||
 |unorm_4::brg||
 |unorm_4::brga||
 |unorm_4::g||
 |unorm_4::ga||
-|unorm_4::GAB||
+|unorm_4::gab||
 |unorm_4::gabr||
 |unorm_4::gar||
 |unorm_4::garb||
-|unorm_4::GB||
+|unorm_4::gb||
 |unorm_4::gba||
 |unorm_4::gbar||
-|unorm_4::GBR||
+|unorm_4::gbr||
 |unorm_4::gbra||
-|unorm_4::GR||
+|unorm_4::gr||
 |unorm_4::gra||
 |unorm_4::grab||
 |unorm_4::grb||
 |unorm_4::grba||
 |unorm_4::r||
-|unorm_4::RA||
+|unorm_4::ra||
 |unorm_4::rab||
 |unorm_4::rabg||
 |unorm_4::rag||
 |unorm_4::ragb||
-|unorm_4::RB||
+|unorm_4::rb||
 |unorm_4::rba||
 |unorm_4::rbag||
 |unorm_4::rbg||
 |unorm_4::rbga||
-|unorm_4::RG||
+|unorm_4::rg||
 |unorm_4::rga||
 |unorm_4::rgab||
-|unorm_4::RGB||
-|unorm_4::RGBA||
+|unorm_4::rgb||
+|unorm_4::rgba||
 |unorm_4::w||
-|unorm_4::WX||
+|unorm_4::wx||
 |unorm_4::wxy||
 |unorm_4::wxyz||
 |unorm_4::wxz||
 |unorm_4::wxzy||
-|unorm_4::WY||
+|unorm_4::wy||
 |unorm_4::wyx||
 |unorm_4::wyxz||
-|unorm_4::WYZ||
+|unorm_4::wyz||
 |unorm_4::wyzx||
 |unorm_4::wz||
 |unorm_4::wzx||
@@ -549,7 +549,7 @@ class unorm_4;
 |unorm_4::xwyz||
 |unorm_4::xwz||
 |unorm_4::xwzy||
-|unorm_4::XY||
+|unorm_4::xy||
 |unorm_4::xyw||
 |unorm_4::xywz||
 |unorm_4::xyz||
@@ -565,7 +565,7 @@ class unorm_4;
 |unorm_4::ywxz||
 |unorm_4::ywz||
 |unorm_4::ywzx||
-|unorm_4::YX||
+|unorm_4::yx||
 |unorm_4::yxw||
 |unorm_4::yxwz||
 |unorm_4::yxz||
@@ -600,7 +600,7 @@ class unorm_4;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> unorm_4
 

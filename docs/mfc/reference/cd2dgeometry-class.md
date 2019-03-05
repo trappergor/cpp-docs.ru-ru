@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CD2DGeometry [MFC], Widen
 - CD2DGeometry [MFC], m_pGeometry
 ms.assetid: 3f95054b-fdb8-4e87-87f2-9fc3df7279ec
-ms.openlocfilehash: 929926129ddee0efdee4f1b02494b503755811d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4549b2e7981d5f8493ddf9f24477e75a94ddde8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610695"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271233"
 ---
 # <a name="cd2dgeometry-class"></a>Класс CD2DGeometry
 
@@ -291,7 +291,7 @@ BOOL ComputePointAtLength(
 *worldTransform*<br/>
 Преобразование применяется к данной геометрии, до расчета заданной точки и тангенс.
 
-*точка*<br/>
+*point*<br/>
 Расположение на заданном расстоянии вдоль геометрического объекта. Если данная геометрия пуста, эта точка содержат NaN в виде x и y значения.
 
 *unitTangentVector*<br/>
@@ -338,7 +338,7 @@ BOOL FillContainsPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Точка для проверки.
 
 *worldTransform*<br/>
@@ -519,7 +519,7 @@ BOOL StrokeContainsPoint(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Точка для проверки на включение.
 
 *strokeWidth*<br/>

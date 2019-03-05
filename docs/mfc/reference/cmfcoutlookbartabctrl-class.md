@@ -44,17 +44,17 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: e858d5a481add0f3c6e61175a96a5b27133bf125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559722"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269946"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
 Элемент управления "вкладка", который имеет внешний вид раздела **Область переходов** в Microsoft Outlook.
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Конструктор по умолчанию.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Добавляет элемент управления Windows в виде новой вкладки панели Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Вызывается платформой для определения размеров поле ввода, который отображается, когда пользователь переименовывает вкладки. (Переопределяет `CMFCBaseTabCtrl::CalcRectEdit`.)|
@@ -85,18 +85,18 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::EnableScrollButtons](#enablescrollbuttons)|Вызывается платформой для включения кнопки, позволяющие пользователю выполнять прокрутку по кнопкам на область панели Outlook.|
 |`CMFCOutlookBarTabCtrl::FindTargetWnd`|Определяет область, которая содержит указанную точку. (Переопределяет [CMFCBaseTabCtrl::FindTargetWnd](../../mfc/reference/cmfcbasetabctrl-class.md#findtargetwnd).)|
 |[CMFCOutlookBarTabCtrl::GetBorderSize](#getbordersize)|Возвращает размер границы элемента управления вкладки Outlook.|
-|`CMFCOutlookBarTabCtrl::GetTabArea`|Извлекает размер и положение области вкладок элемента управления вкладки. (Переопределяет [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
+|`CMFCOutlookBarTabCtrl::GetTabArea`|Извлекает размер и положение области вкладки набора вкладок. (Переопределяет [CMFCBaseTabCtrl::GetTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#gettabarea).)|
 |`CMFCOutlookBarTabCtrl::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
 |[CMFCOutlookBarTabCtrl::GetVisiblePageButtons](#getvisiblepagebuttons)||
 |[CMFCOutlookBarTabCtrl::IsAnimation](#isanimation)|Определяет, включена ли анимация, которая происходит во время переключения между вкладками active.|
 |[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|Определяет, является ли элемент управления вкладки панели Outlook в режиме, который эмулирует Microsoft Outlook 2003.|
-|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Определяет, является ли точка внутри области вкладок. (Переопределяет [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
-|`CMFCOutlookBarTabCtrl::IsTabDetachable`|Определяет, является ли вкладка отделяемой. (Переопределяет [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|
+|`CMFCOutlookBarTabCtrl::IsPtInTabArea`|Определяет, находится ли точка внутри области вкладок. (Переопределяет [CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea).)|
+|`CMFCOutlookBarTabCtrl::IsTabDetachable`|Указывает, является ли вкладка отделяемой. (Переопределяет [CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable).)|
 |`CMFCOutlookBarTabCtrl::OnChangeTabs`|Вызывается платформой при вставке или удалить вкладку. (Переопределяет `CMFCBaseTabCtrl::OnChangeTabs`.)|
 |[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|Вызывается платформой, чтобы уменьшить число кнопок страниц, которые отображаются.|
 |[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|Вызывается платформой, чтобы увеличить число кнопок страниц, которые отображаются.|
 |[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|Отображает **параметры панели переходов** диалоговое окно.|
-|`CMFCOutlookBarTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет элемента управления вкладки. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
+|`CMFCOutlookBarTabCtrl::RecalcLayout`|Повторно вычисляет внутренний макет набора вкладок. (Переопределяет [CMFCBaseTabCtrl::RecalcLayout](../../mfc/reference/cmfcbasetabctrl-class.md#recalclayout).)|
 |[CMFCOutlookBarTabCtrl::SetActiveTab](#setactivetab)|Задает активной вкладки. (Переопределяет [CMFCBaseTabCtrl::SetActiveTab](../../mfc/reference/cmfcbasetabctrl-class.md#setactivetab).)|
 |[CMFCOutlookBarTabCtrl::SetBorderSize](#setbordersize)|Задает размер границы элемента управления вкладки Outlook.|
 |[CMFCOutlookBarTabCtrl::SetPageButtonTextAlign](#setpagebuttontextalign)|Задает выравнивание текста метки на панели кнопок.|
@@ -219,7 +219,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает первоначальный размер и положение, в пикселях.
 
 *pParentWnd*<br/>
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Указывает идентификатор ресурса изображения для загрузки.
 
-*CX*<br/>
+*cx*<br/>
 [in] Задает ширину изображения в списке изображений в пикселях.
 
 *clrTransp*<br/>

@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Использование фильтра блоков сообщений
+title: Практическое руководство. Использовать фильтр блока сообщений
 ms.date: 11/04/2016
 helpviewer_keywords:
 - message-block filters, using [Concurrency Runtime]
 - using message-block filters [Concurrency Runtime]
 ms.assetid: db6b99fb-288d-4477-96dc-b9751772ebb2
-ms.openlocfilehash: 512dda6503d5980dbdcc20a55ca0ee836d4d08e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bfa11953d27dc7e013e715b3f58111f124caeaf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284298"
 ---
-# <a name="how-to-use-a-message-block-filter"></a>Практическое руководство. Использование фильтра блоков сообщений
+# <a name="how-to-use-a-message-block-filter"></a>Практическое руководство. Использовать фильтр блока сообщений
 
 В этом документе показано, как использовать функцию фильтрации, чтобы позволить блоку асинхронное сообщение для принятия или отклонения сообщения в зависимости от полезных данных сообщения.
 
@@ -20,7 +20,7 @@ ms.locfileid: "50660139"
 
 Функции фильтрации важны, так как они позволяют соединять блоки сообщений для создания *сети потоков данных*. В сети потока данных блоки сообщений управлять потоком данных, обработку только этих сообщений, соответствующих заданным критериям. Сравните это с моделью потока управления, где поток данных контролируется с помощью структур управления, такие как условные операторы, циклы и так далее.
 
-Этот документ содержит простой пример того, как использовать фильтр сообщений. Дополнительные примеры использования фильтров сообщений и модели потока данных для подключения блоков сообщений см. в разделе [Пошаговое руководство: создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) и [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md) .
+Этот документ содержит простой пример того, как использовать фильтр сообщений. Дополнительные примеры использования фильтров сообщений и модели потока данных для подключения блоков сообщений см. в разделе [Пошаговое руководство: Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md) и [Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 ## <a name="example"></a>Пример
 
@@ -50,7 +50,7 @@ ms.locfileid: "50660139"
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `primes-filter.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe primes-filter.cpp**
+**cl.exe /EHsc primes-filter.cpp**
 
 ## <a name="robust-programming"></a>Отказоустойчивость
 
@@ -66,6 +66,6 @@ bool (T const &)
 ## <a name="see-also"></a>См. также
 
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Пошаговое руководство. Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Пошаговое руководство: Создание агента для обработки потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Класс transformer](../../parallel/concrt/reference/transformer-class.md)

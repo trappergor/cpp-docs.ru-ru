@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296037"
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 
@@ -44,11 +44,11 @@ class CComGITPtr
 |Имя|Описание|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Конструктор.|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|Деструктор|
+|[CComGITPtr::~CComGITPtr](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComGITPtr::Attach](#attach)|Этот метод используется для регистрации указателя интерфейса в глобальной таблицы интерфейсов (GIT).|
 |[CComGITPtr::CopyTo](#copyto)|Этот метод используется для копирования интерфейс из глобальной таблицы интерфейсов (GIT) в переданных указатель.|
@@ -58,7 +58,7 @@ class CComGITPtr
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComGITPtr::operator DWORD](#operator_dword)|Возвращает файл cookie из `CComGITPtr` объекта.|
 |[CComGITPtr::operator =](#operator_eq)|Оператор присвоения.|
@@ -138,7 +138,7 @@ CComGITPtr(CComGITPtr&& rv);
 
 Использование конструктора *rv* является конструктором перемещения. При перемещении данных из источника, *rv*, а затем *rv* очищается.
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 Деструктор
 
@@ -232,7 +232,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 [in] Указатель на интерфейс.
 
 *Git*<br/>
-[in] Ссылку на `CComGITPtr` объекта.
+[in] Ссылка на объект `CComGITPtr`.
 
 *dwCookie*<br/>
 [in] Файл cookie, используемый для идентификации указатель интерфейса.

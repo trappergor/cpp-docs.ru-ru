@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285910"
 ---
 # <a name="contexts"></a>Контексты
 
@@ -26,7 +26,7 @@ ms.locfileid: "50529181"
 
 ### <a name="example"></a>Пример
 
-Пример, использующий `wait` функцию для получения текущего контекста, сократив тем самым для других контекстов для запуска, см. в разделе [как: используйте группы расписаний для влияют на порядок выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Пример, использующий `wait` функцию для получения текущего контекста, сократив тем самым для других контекстов для запуска, см. в разделе [как: Использование групп планирования для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="the-context-class"></a>Класс контекста
 
@@ -46,7 +46,7 @@ ms.locfileid: "50529181"
 
 #### <a name="example"></a>Пример
 
-Пример, использующий `Context::Block`, `Context::Unblock`, и `Context::Yield` методы для реализации класса семафора, см. в разделе [как: использование класса Context для реализации семафора совместной](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Пример, использующий `Context::Block`, `Context::Unblock`, и `Context::Yield` методы для реализации класса семафора, см. в разделе [как: Использование класса Context для реализации семафора](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 ##### <a name="oversubscription"></a>Превышение лимита подписки
 
@@ -66,12 +66,11 @@ ms.locfileid: "50529181"
 
 ###### <a name="example"></a>Пример
 
-Например, превышение лимита подписки для смещения задержки, вызванной чтение данных из сетевого подключения, см. в разделе [как: превышение лимита подписки используйте к задержке смещение](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Например, превышение лимита подписки для смещения задержки, вызванной чтение данных из сетевого подключения, см. в разделе [как: Использование лимита подписки для задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 ## <a name="see-also"></a>См. также
 
 [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
-[Практическое руководство. Использование групп планирования для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
+[Практическое руководство. Использование групп расписаний для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [Практическое руководство. Использование класса Context для реализации семафора, поддерживающего параллельный доступ](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [Практическое руководство. Использование лимита подписки для устранения задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

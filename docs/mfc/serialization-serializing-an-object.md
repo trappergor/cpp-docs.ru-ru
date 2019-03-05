@@ -6,16 +6,16 @@ helpviewer_keywords:
 - serialization [MFC], objects
 - objects [MFC], serializing
 ms.assetid: 1db772b1-ad55-4fcf-b133-126cca082510
-ms.openlocfilehash: 10a7c52e6187f4db8345e1eadb88faeefa50b419
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5c1106f180c587894283575a82a88e9e18b5c01a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588530"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290499"
 ---
 # <a name="serialization-serializing-an-object"></a>Сериализация. Сериализация объекта
 
-Статья [сериализации: создание сериализуемого класса](../mfc/serialization-making-a-serializable-class.md) показано, как создать сериализуемый класс. Получив сериализуемого класса, вы можете сериализовать объекты этого класса и из файла с помощью [CArchive](../mfc/reference/carchive-class.md) объекта. В этой статье объясняется:
+Статья [сериализации: Создание сериализуемого класса](../mfc/serialization-making-a-serializable-class.md) показано, как создать сериализуемый класс. Получив сериализуемого класса, вы можете сериализовать объекты этого класса и из файла с помощью [CArchive](../mfc/reference/carchive-class.md) объекта. В этой статье объясняется:
 
 - [Какие объект CArchive](../mfc/what-is-a-carchive-object.md).
 
@@ -30,4 +30,3 @@ ms.locfileid: "50588530"
 ## <a name="see-also"></a>См. также
 
 [Сериализация](../mfc/serialization-in-mfc.md)
-

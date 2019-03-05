@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAxWindow2 class
 ms.assetid: b87bc943-7991-4537-b902-2138d7f4d837
-ms.openlocfilehash: 3e28bfe15c55342cbdfb50b125243c170ba97698
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d5991dcbf79d1c2415594636a09908586d1dc2f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326521"
 ---
 # <a name="caxwindow2t-class"></a>Класс CAxWindow2T
 
@@ -49,7 +49,7 @@ template <class TBase = CWindow>
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAxWindow2T::Create](#create)|Создает главное окно.|
 |[CAxWindow2T::CreateControlLic](#createcontrollic)|Создает лицензированный элемент управления ActiveX, инициализирует его и размещает в указанном окне.|
@@ -58,7 +58,7 @@ template <class TBase = CWindow>
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAxWindow2T::operator =](#operator_eq)|Назначает HWND в существующий `CAxWindow2T` объекта.|
 

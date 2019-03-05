@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e90dd3b23b33f6699f2df4ce0df9178f95816b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596546"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273260"
 ---
 # <a name="location-class"></a>Класс location
 
@@ -31,21 +31,21 @@ class location;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[расположение](#ctor)|Перегружен. Создает объект `location`.|
 |[~ расположение деструктор](#dtor)|Уничтожает объект `location`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Текущий](#current)|Возвращает объект `location`, представляющий наиболее определенное расположение, выполняемое вызывающим потоком.|
 |[from_numa_node](#from_numa_node)|Возвращает объект `location`, представляющий заданный узел NUMA.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Определяет, представляют ли два объекта `location` различные расположения.|
 |[оператор=](#operator_eq)|Назначает содержимое другого объекта `location` данному.|

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CD2DPathGeometry [MFC], Stream
 - CD2DPathGeometry [MFC], m_pPathGeometry
 ms.assetid: 686216eb-5080-4242-ace5-8fa1ce96307c
-ms.openlocfilehash: 35e9a8c9d32cba53c9ea8a3b7f4644e20b01ef77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8657421e67239cdeb782cffbbd42e0c50f6c0e96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258883"
 ---
 # <a name="cd2dpathgeometry-class"></a>Класс CD2DPathGeometry
 
@@ -53,10 +53,10 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DPathGeometry::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
-|[CD2DPathGeometry::CREATE](#create)|Создает CD2DPathGeometry. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DPathGeometry::Create](#create)|Создает CD2DPathGeometry. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DPathGeometry::destroy](#destroy)|Уничтожает объект CD2DPathGeometry. (Переопределяет [CD2DGeometry::Destroy](../../mfc/reference/cd2dgeometry-class.md#destroy).)|
 |[CD2DPathGeometry::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
 |[CD2DPathGeometry::GetFigureCount](#getfigurecount)|Получает число фигур геометрическому пути.|
@@ -66,7 +66,7 @@ class CD2DPathGeometry : public CD2DGeometry;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CD2DPathGeometry::m_pPathGeometry](#m_ppathgeometry)|Указатель на ID2D1PathGeometry.|
 
@@ -115,7 +115,7 @@ CD2DPathGeometry(
 *bAutoDestroy*<br/>
 Указывает, что объект будет уничтожен владельца (pParentTarget).
 
-##  <a name="create"></a>  CD2DPathGeometry::CREATE
+##  <a name="create"></a>  CD2DPathGeometry::Create
 
 Создает CD2DPathGeometry.
 

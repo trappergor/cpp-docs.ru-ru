@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450938"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300626"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet-класс
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Создает объект `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|
 |[CPropertySheet::Construct](#construct)|Создает объект `CPropertySheet`.|
@@ -117,7 +117,7 @@ class CPropertySheet : public CWnd
 
 Чтобы отобразить эти новые образы автоматически в ваш объект страницы свойств, передайте допустимые значения для точечного рисунка и палитру изображений в вызове [CPropertySheet::Construct](#construct) или [CPropertySheet::CPropertySheet](#cpropertysheet).
 
-Несмотря на то что `CPropertySheet` не является производным от [CDialog](../../mfc/reference/cdialog-class.md), управление `CPropertySheet` объект аналогичен управление `CDialog` объекта. Например, создание свойств требуется для создания двух частей: вызовите конструктор, а затем вызвать [DoModal](#domodal) для модальную страницу свойств или [создать](#create) для немодальный лист свойств. `CPropertySheet` Существует два типа конструкторов: [CPropertySheet::Construct](#construct) и [CPropertySheet::CPropertySheet](#cpropertysheet).
+Несмотря на то что `CPropertySheet` не является производным от [CDialog](../../mfc/reference/cdialog-class.md), управление `CPropertySheet` объект аналогичен управление `CDialog` объекта. Например, создание свойств требуется для создания двух частей: вызовите конструктор, а затем вызвать [DoModal](#domodal) для модальную страницу свойств или [создать](#create) для немодальный лист свойств. `CPropertySheet` есть два типа конструкторов. [CPropertySheet::Construct](#construct) и [CPropertySheet::CPropertySheet](#cpropertysheet).
 
 При построении `CPropertySheet` объекта, некоторые [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) вызовет исключение первого шанса возникает. В результате из системы, попытка изменить стиль свойств перед созданием таблицы стилей. Чтобы избежать этого исключения, убедитесь, что вы установлены следующие стили при создании вашей `CPropertySheet`:
 
@@ -648,7 +648,7 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>Параметры
 
 *nButton*<br/>
-nButton: Определяет нажатие кнопки. Этот параметр может принимать одно из следующих значений:
+nButton: Идентифицирует нажатие кнопки. Этот параметр может принимать одно из следующих значений:
 
 - PSBTN_BACK нажимает кнопку "Назад".
 

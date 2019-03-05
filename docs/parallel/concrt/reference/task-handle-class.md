@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518885"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298091"
 ---
 # <a name="taskhandle-class"></a>Класс task_handle
 
@@ -44,7 +44,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator()](#task_handle__operator_call)|Оператор вызова функции, который среда выполнения вызывает для выполнения работы дескриптор задач.|
 
@@ -68,7 +68,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 **Пространство имен:** concurrency
 
-##  <a name="task_handle__operator_call"></a> Operator()
+##  <a name="task_handle__operator_call"></a> operator()
 
 Оператор вызова функции, который среда выполнения вызывает для выполнения работы дескриптор задач.
 
@@ -93,7 +93,7 @@ task_handle(const _Function& _Func);
 
 Среда выполнения создает копию рабочую функцию, передайте в конструктор. Таким образом, изменения состояния, которые происходят в функции объекта, что передаваемый `task_handle` объект не будет отображаться в свою копию этого объекта функции.
 
-##  <a name="dtor"></a> ~ task_handle
+##  <a name="dtor"></a> ~task_handle
 
 Уничтожает `task_handle` объекта.
 

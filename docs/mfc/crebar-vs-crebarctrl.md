@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rebar controls [MFC], CReBarCtrl class [MFC]
 - GetReBarCtrl class [MFC]
 ms.assetid: 7f9c1d7e-5d5f-4956-843c-69ed3df688d0
-ms.openlocfilehash: 49a1528e52d140a673d4035c55394ded3656652f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1b5cda729e760246449bf197fdc9b32752b96e8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641416"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279215"
 ---
 # <a name="crebar-vs-crebarctrl"></a>CReBar или CReBarCtrl
 
@@ -37,4 +37,3 @@ Visual C++ предоставляет два способа для исполь�
 
 [Использование CReBarCtrl](../mfc/using-crebarctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)
-

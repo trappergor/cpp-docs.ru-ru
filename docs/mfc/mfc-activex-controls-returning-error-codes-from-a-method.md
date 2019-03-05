@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Возврат кодов ошибок из метода
+title: Элементы ActiveX в MFC. Возврат кодов ошибок из метода
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - SCODE, MFC ActiveX controls
 - ThrowError method [MFC]
 ms.assetid: 771fb9c9-2413-4dcc-b386-7bc4c4adeafd
-ms.openlocfilehash: 8c5fe88cf952337a7d070eae7a5da149a8e905bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0800c1827c636dd81e2928e33c0ee2afde4c94ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676490"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259143"
 ---
-# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Элементы управления ActiveX в MFC. Возврат кодов ошибок из метода
+# <a name="mfc-activex-controls-returning-error-codes-from-a-method"></a>Элементы ActiveX в MFC. Возврат кодов ошибок из метода
 
 В этой статье описывается, как возвращать коды ошибок из метода, элемент управления ActiveX.
 
@@ -35,4 +35,3 @@ ms.locfileid: "50676490"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)
-

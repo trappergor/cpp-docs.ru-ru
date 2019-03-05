@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CFileException [MFC], m_lOsError
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
-ms.openlocfilehash: e6b1b25f9125701a212f379c925a80ff888d58f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305124"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileException::CFileException](#cfileexception)|Создает объект `CFileException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileException::ErrnoToException](#errnotoexception)|Возвращает вызвать код, соответствующий номеру ошибки времени выполнения.|
 |[CFileException::GetErrorMessage](#geterrormessage)|Получает сообщение, описывающее исключение.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFileException::m_cause](#m_cause)|Содержит переносимого кода, соответствующий причине исключения.|
 |[CFileException::m_lOsError](#m_loserror)|Содержит число ошибок, связанных с операционной системы.|
@@ -187,35 +187,35 @@ int m_cause;
 
 Этот элемент данных — это открытая переменная типа **int**. Перечислители и их значение представлено далее.
 
-- `CFileException::none` 0: без ошибок.
+- `CFileException::none` 0: Ошибки не обнаружены.
 
-- `CFileException::genericException` 1: произошла неизвестная ошибка.
+- `CFileException::genericException` 1: Произошла неизвестная ошибка.
 
-- `CFileException::fileNotFound` 2: не удалось найти файл.
+- `CFileException::fileNotFound` 2: Не удалось найти файл.
 
-- `CFileException::badPath` 3: все или часть пути является недопустимым.
+- `CFileException::badPath` 3: Все или часть пути является недопустимым.
 
-- `CFileException::tooManyOpenFiles` 4: превышено разрешенное число открытых файлов.
+- `CFileException::tooManyOpenFiles` 4: Превышено разрешенное число открытых файлов.
 
-- `CFileException::accessDenied` 5: не быть доступа к файлу.
+- `CFileException::accessDenied` 5: Файл недоступен.
 
-- `CFileException::invalidFile` 6: Произошла попытка использовать недопустимый дескриптор файла.
+- `CFileException::invalidFile` 6: Попытка использовать недопустимый дескриптор файла.
 
-- `CFileException::removeCurrentDir` 7: невозможно удалить текущий рабочий каталог.
+- `CFileException::removeCurrentDir` 7: Невозможно удалить текущий рабочий каталог.
 
-- `CFileException::directoryFull` 8: нет записей каталога больше нет.
+- `CFileException::directoryFull` 8: Существует несколько записей каталога нет.
 
-- `CFileException::badSeek` 9: произошла ошибка при попытке задания указателя файла.
+- `CFileException::badSeek` 9: Произошла ошибка при попытке задания указателя файла.
 
-- `CFileException::hardIO` 10: произошла аппаратная ошибка.
+- `CFileException::hardIO` 10: Произошла аппаратная ошибка.
 
-- `CFileException::sharingViolation` 11: ОБЩИЙ РЕСУРС. Exe-ФАЙЛ не был загружен или общий регион заблокирован.
+- `CFileException::sharingViolation` 11: Предоставить общий доступ. Exe-ФАЙЛ не был загружен или общий регион заблокирован.
 
-- `CFileException::lockViolation` 12: попытка заблокировать регион, который уже заблокирован.
+- `CFileException::lockViolation` 12: Попытка заблокировать регион, который уже заблокирован.
 
-- `CFileException::diskFull` 14: диск заполнен.
+- `CFileException::diskFull` 14: Диск заполнен.
 
-- `CFileException::endOfFile` 15: достигнут конец файла.
+- `CFileException::endOfFile` 15: Достигнут конец файла.
 
     > [!NOTE]
     >  Перечислители причины `CFileException` отличаются от перечислителей причины `CArchiveException`.
@@ -313,4 +313,3 @@ static void PASCAL ThrowOsError(LONG lOsError, LPCTSTR lpszFileName = NULL);
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Обработка исключений](../../mfc/reference/exception-processing.md)
-

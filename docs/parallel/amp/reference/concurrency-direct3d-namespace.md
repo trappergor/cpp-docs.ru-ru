@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - direct3d namespace
 ms.assetid: 9566a2f1-4d5f-43e4-a3ac-676643d38420
-ms.openlocfilehash: c99aba319df6f84dbda7b9cf90a1abebdc3757f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6afbd7b3a3f4280ad658c1cb9d8802cc3251d0ed
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291338"
 ---
 # <a name="concurrencydirect3d-namespace"></a>Пространство имен Concurrency::direct3d
 
@@ -31,19 +31,19 @@ namespace direct3d;
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Класс scoped_d3d_access_lock](scoped-d3d-access-lock-class.md)|Оболочка RAII для блокирования доступа D3D `accelerator_view` объекта.|
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Структура adopt_d3d_access_lock_t](adopt-d3d-access-lock-t-structure.md)|Тип тега, чтобы указать блокировку доступа D3D должны соблюдать, а не получена.|
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[abs](concurrency-direct3d-namespace-functions-amp.md#abs)|Возвращает абсолютное значение аргумента|
 |[clamp](concurrency-direct3d-namespace-functions-amp.md#clamp)|Перегружен. Ограничивает _X в заданный диапазон диапазону между _Min и _Max|
@@ -75,7 +75,7 @@ namespace direct3d;
 
 **Заголовок** : amp.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** параллелизм
 
 ## <a name="see-also"></a>См. также
 

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622629"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304084"
 ---
 # <a name="cmfcoutlookbar-class"></a>Класс CMFCOutlookBar
 
@@ -59,7 +59,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|Конструктор по умолчанию.|
 |`CMFCOutlookBar::~CMFCOutlookBar`|Деструктор.|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Примечания
 
-Пример того, панель Outlook, см. в разделе [образце OutlookDemo: приложение MFC OutlookDemo](../../visual-cpp-samples.md).
+Например, панель Outlook, см. в разделе [образце OutlookDemo: Приложения MFC OutlookDemo](../../visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Реализация панели Outlook
 
@@ -267,7 +267,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 [in] Задает указатель на родительское окно. Он не должен иметь значение NULL.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Задает размер и положение в точках панели outlook.
 
 *nID*<br/>

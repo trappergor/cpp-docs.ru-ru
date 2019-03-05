@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561243"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260755"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage-класс
 
@@ -61,13 +61,13 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Создает объект `CPropertyPage`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Изменяет "ОК" для чтения Close и отключает кнопки "Отмена", при изменении неустранимой модальную страницу свойств на странице.|
 |[CPropertyPage::Construct](#construct)|Создает объект `CPropertyPage`. Используйте `Construct` , если вы хотите указать параметры во время выполнения или при использовании массивов.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) структуры. Предоставляет доступ к параметрам страницу основных свойств.|
 

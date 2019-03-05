@@ -1,18 +1,18 @@
 ---
-title: Серверы. Реализация сервера
+title: 'серверы: Реализация сервера'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 953d157f4bbad0b460947740a2622074dfc90f4f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518967"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267567"
 ---
-# <a name="servers-implementing-a-server"></a>Серверы. Реализация сервера
+# <a name="servers-implementing-a-server"></a>серверы: Реализация сервера
 
 В этой статье объясняется, мастер приложений MFC создает для визуального редактирования серверного приложения. Если вы не используете мастер приложений, в этой статье перечислены области, где необходимо написать код для реализации серверного приложения.
 
@@ -28,11 +28,11 @@ ms.locfileid: "51518967"
 
   Дополнительные сведения об этих ресурсах см. в разделе [меню и ресурсы: Добавление серверов](../mfc/menus-and-resources-server-additions.md).
 
-- Определив элемент класс производным от `COleServerItem`. Дополнительные сведения для элементов сервера см. в разделе [серверов: элементы сервера](../mfc/servers-server-items.md).
+- Определив элемент класс производным от `COleServerItem`. Дополнительные сведения для элементов сервера см. в разделе [серверов: Элементы сервера](../mfc/servers-server-items.md).
 
-- Изменение базового класса для класса документа `COleServerDoc`. Дополнительные сведения см. в разделе [серверы: реализация документов сервера](../mfc/servers-implementing-server-documents.md).
+- Изменение базового класса для класса документа `COleServerDoc`. Дополнительные сведения см. в разделе [серверов: Реализация документов сервера](../mfc/servers-implementing-server-documents.md).
 
-- Определение класса окна фрейма производным от `COleIPFrameWnd`. Дополнительные сведения см. в разделе [серверы: реализация Windows фрейма на месте](../mfc/servers-implementing-in-place-frame-windows.md).
+- Определение класса окна фрейма производным от `COleIPFrameWnd`. Дополнительные сведения см. в разделе [серверов: Реализация фрейма на месте Windows](../mfc/servers-implementing-in-place-frame-windows.md).
 
 - Создание записи для серверного приложения в базе данных регистрации Windows и регистрации нового экземпляра сервера в системе OLE. Сведения по этой теме см. в разделе [регистрации](../mfc/registration.md).
 
@@ -46,4 +46,3 @@ ms.locfileid: "51518967"
 [Контейнеры](../mfc/containers.md)<br/>
 [Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Регистрация](../mfc/registration.md)
-

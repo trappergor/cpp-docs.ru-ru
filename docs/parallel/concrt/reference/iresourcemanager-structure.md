@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IResourceManager structure
 ms.assetid: 3dd5ec2c-fe53-4121-ae77-1bc1d1167ff4
-ms.openlocfilehash: 7c6ed48c8896b54faa8418719f0ab7c7fa1df7c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f8f5992d9ce55100d193196a3c0f94b468ef892
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275287"
 ---
 # <a name="iresourcemanager-structure"></a>Структура IResourceManager
 
@@ -41,7 +41,7 @@ struct IResourceManager;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[IResourceManager::CreateNodeTopology](#createnodetopology)|Присутствует только в отладочной сборки среды выполнения, этот метод является тестового обработчика, разработанный для упрощения тестирования диспетчера ресурсов на различных топологий оборудования, без необходимости фактическое оборудования, соответствующего конфигурации. С помощью розничных сборках среды выполнения этот метод возвращает не выполняя никаких действий.|
 |[IResourceManager::GetAvailableNodeCount](#getavailablenodecount)|Возвращает количество узлов, доступных диспетчеру ресурсов.|

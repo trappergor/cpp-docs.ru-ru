@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDraw
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
-ms.openlocfilehash: 05ac8b26cb6b6e7d8e622ecbaac1d4a81bfd35e1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565936"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302771"
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
 
@@ -52,7 +52,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** в списке **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |`CMFCRibbonSeparator::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
@@ -231,11 +231,11 @@ virtual void OnDrawOnList(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pDC*|[in] Указатель на контекст устройства.|
 |*strText*|[in] Текст, отображаемый в списке.|
 |*nTextOffset*|[in] Расстояние между текстом и левой стороны обрамляющего прямоугольника.|
-|*Rect*|[in] Указывает ограничивающий прямоугольник.|
+|*rect*|[in] Указывает ограничивающий прямоугольник.|
 |*bIsSelected*|[in] Игнорируется.|
 |*bHighlighted*|[in] Игнорируется.|
 

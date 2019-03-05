@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656044"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260716"
 ---
 # <a name="clongbinary-class"></a>Класс CLongBinary
 
@@ -53,7 +53,7 @@ class CLongBinary : public CObject
 
 Когда уничтожить набора записей, встроенный `CLongBinary` уничтожении объекта, и его деструктор освобождает `HGLOBAL` дескриптора данных.
 
-Дополнительные сведения о больших объектов и использование `CLongBinary`, см. в статьях [записей (ODBC)](../../data/odbc/recordset-odbc.md) и [набор записей: работа с элементами больших данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
+Дополнительные сведения о больших объектов и использование `CLongBinary`, см. в статьях [записей (ODBC)](../../data/odbc/recordset-odbc.md) и [набор записей: Работа с большими элементами данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6366638ebfd5e78ad517a8913e4276d5cd820670
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178945"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264682"
 ---
 # <a name="cwinapp-class"></a>Класс CWinApp
 
@@ -213,7 +213,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::CWinApp](#cwinapp)|Создает объект `CWinApp`.|
 
@@ -306,7 +306,7 @@ class CWinApp : public CWinThread
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinApp::m_bHelpMode](#m_bhelpmode)|Указывает, является ли пользователь режим контекста справки (обычно вызывается с помощью клавиши SHIFT + F1).|
 |[CWinApp::m_eHelpType](#m_ehelptype)|Указывает тип справки, используемый приложением.|
@@ -323,7 +323,7 @@ class CWinApp : public CWinThread
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CWinApp::m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)|Флаги, которые определяют поведение диспетчера перезапуска.|
 |[CWinApp::m_nAutosaveInterval](#m_nautosaveinterval)|Продолжительность времени в миллисекундах между преждевременном прекращении работы.|
@@ -1305,17 +1305,17 @@ DWORD m_dwRestartManagerSupportFlags;
 
 |||
 |-|-|
-|Flag|Описание|
+|Flag|Описание:|
 |AFX_RESTART_MANAGER_SUPPORT_RESTART|Приложение регистрируется с помощью [CWinApp::RegisterWithRestartManager](#registerwithrestartmanager). Диспетчер перезапуска несет ответственность за перезапуска приложения, если она неожиданно завершает работу.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Приложение регистрируется с диспетчером перезапуска и диспетчер перезапуска вызывает функцию обратного вызова восстановления, после его перезапуска приложения. Функция обратного вызова для восстановления по умолчанию является [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы при повторном запуске приложения.|
-|-AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы с регулярным интервалом. Временной интервал определяется параметром [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY|Приложение регистрируется с диспетчером перезапуска и диспетчер перезапуска вызывает функцию обратного вызова восстановления, после его перезапуска приложения. Функция обратного вызова для восстановления по умолчанию является [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы при повторном запуске приложения.|
+|- AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL|Включена функция автоматического сохранения и преждевременном прекращении работы диспетчера перезапуска открытые документы с регулярным интервалом. Временной интервал определяется параметром [CWinApp::m_nAutosaveInterval](#m_nautosaveinterval).|
 |-AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES|Диспетчер перезапуска открывается ранее открытые документы после перезапуска приложения из непредвиденный выход. [Класс CDataRecoveryHandler](../../mfc/reference/cdatarecoveryhandler-class.md) обрабатывает хранения список открытых документов и их восстановление.|
-|-AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Диспетчер перезапуска предлагает пользователю восстановить автоматическое сохранение файлов после перезапуска приложения. `CDataRecoveryHandler` Класс запрашивает пользователь.|
-|-AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Объединение AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER и AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Объединение AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Объединение AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
-|-AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES|Диспетчер перезапуска предлагает пользователю восстановить автоматическое сохранение файлов после перезапуска приложения. `CDataRecoveryHandler` Класс запрашивает пользователь.|
+|- AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE|Объединение AFX_RESTART_MANAGER_SUPPORT_RESTART AFX_RESTART_MANAGER_SUPPORT_RECOVER и AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_ALL_ASPECTS|Объединение AFX_RESTART_MANAGER_SUPPORT_NO_AUTOSAVE, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RESTART_ASPECTS|Объединение AFX_RESTART_MANAGER_SUPPORT_RESTART, AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
+|- AFX_RESTART_MANAGER_SUPPORT_RECOVERY_ASPECTS|Union ofAFX_RESTART_MANAGER_SUPPORT_RECOVERY, AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL, AFX_RESTART_MANAGER_REOPEN_PREVIOUS_FILES и AFX_RESTART_MANAGER_RESTORE_AUTOSAVED_FILES.|
 
 ##  <a name="m_ehelptype"></a>  CWinApp::m_eHelpType
 
@@ -1508,7 +1508,7 @@ LPCTSTR m_pszRegistryKey;
 
 Как правило этот элемент данных рассматривается как доступный только для чтения.
 
-- Значение хранится в раздел реестра. Имя параметра профиля приложения добавляется следующий раздел реестра: HKEY_CURRENT_USER/Software/LocalAppWizard созданный /.
+- Значение хранится в раздел реестра. Имя параметра профиля приложения добавляется следующий раздел реестра: HKEY_CURRENT_USER/Software/LocalAppWizard-Generated/.
 
 Если присвоить значение `m_pszRegistryKey`, он должен быть динамически выделен в куче. `CWinApp` Вызовы деструктора **бесплатный**() этого указателя. Многие будет использоваться `_tcsdup`()-функция библиотеки времени выполнения для выполнения распределения. Кроме того освободите память, связанную с текущим указателем перед назначением ему новое значение. Пример:
 
@@ -1962,7 +1962,7 @@ virtual HRESULT RegisterWithRestartManager(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*bRegisterRecoveryCallback*|[in] Значение TRUE указывает, что этот экземпляр приложения использует функцию обратного вызова восстановления; Значение FALSE указывает, что это не так. Платформа вызывает функцию обратного вызова восстановления, когда приложение неожиданно завершает работу. Дополнительные сведения см. в разделе [CWinApp::ApplicationRecoveryCallback](#applicationrecoverycallback).|
 |*strRestartIdentifier*|[in] Уникальная строка, определяющая данного экземпляра диспетчера перезапуска. Идентификатор диспетчера перезапуска является уникальным для каждого экземпляра приложения.|
 |*pwzCommandLineArgs*|[in] Строка, содержащая все лишние аргументы из командной строки.|
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [Класс CWinThread](../../mfc/reference/cwinthread-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Инструкции: Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)
+[Практическое руководство. Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md)

@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CD2DGeometrySink [MFC], SetSegmentFlags
 - CD2DGeometrySink [MFC], m_pSink
 ms.assetid: e5e07f41-0343-4ab1-9d6b-8c62ed33c04a
-ms.openlocfilehash: ff68cc737f28763e5545b0ccaf2c0122e78cb051
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48c88f0b837b2e49e4c87f07a9aa28c16a66c1e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271207"
 ---
 # <a name="cd2dgeometrysink-class"></a>Класс CD2DGeometrySink
 
@@ -91,7 +91,7 @@ class CD2DGeometrySink;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CD2DGeometrySink::m_pSink](#m_psink)|Указатель на ID2D1GeometrySink.|
 
@@ -162,7 +162,7 @@ void AddLine(CD2DPointF point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 Конечная точка линии для рисования.
 
 ##  <a name="addlines"></a>  CD2DGeometrySink::AddLines

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453528"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295982"
 ---
 # <a name="schedule-groups"></a>Группы расписаний
 
@@ -20,7 +20,7 @@ ms.locfileid: "50453528"
 
 Каждый `Scheduler` объект имеет группу расписаний по умолчанию для каждого узла планирования. Объект *узел планирования* сопоставляется топологии базовой системы. Среда выполнения создает один узел планирования для каждого пакета процессора или узел архитектура неоднородной памяти (NUMA), какое из этих значение больше. Если задача не связана с группой расписаний явным образом, планировщик выбирает какую группу добавляется задача.
 
-`SchedulingProtocol` Политики планировщика влияет на порядок, в котором планировщиком задач в каждой группе расписаний. Когда `SchedulingProtocol` присваивается `EnhanceScheduleGroupLocality` (это значение по умолчанию), планировщик выбирает следующую задачу из группы расписаний, он работает, когда текущая задача завершается или выполняет совместную передачу. Планировщик задач выполняет поиск текущей группы расписаний для рабочего, прежде чем перейти к следующей группе доступны. И наоборот, если `SchedulingProtocol` присваивается `EnhanceForwardProgress`, планировщик переходит к следующей группе расписаний после завершения каждой задачи, или передачи. Пример, в котором сравниваются эти политики, см. в разделе [как: используйте группы расписаний для влияют на порядок выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+`SchedulingProtocol` Политики планировщика влияет на порядок, в котором планировщиком задач в каждой группе расписаний. Когда `SchedulingProtocol` присваивается `EnhanceScheduleGroupLocality` (это значение по умолчанию), планировщик выбирает следующую задачу из группы расписаний, он работает, когда текущая задача завершается или выполняет совместную передачу. Планировщик задач выполняет поиск текущей группы расписаний для рабочего, прежде чем перейти к следующей группе доступны. И наоборот, если `SchedulingProtocol` присваивается `EnhanceForwardProgress`, планировщик переходит к следующей группе расписаний после завершения каждой задачи, или передачи. Пример, в котором сравниваются эти политики, см. в разделе [как: Использование групп планирования для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 Среда выполнения использует [concurrency::ScheduleGroup](../../parallel/concrt/reference/schedulegroup-class.md) класс для представления групп расписаний. Чтобы создать `ScheduleGroup` , вызовите [Concurrency::CurrentScheduler:: createschedulegroup](reference/currentscheduler-class.md#createschedulegroup) или [Concurrency::Scheduler:: createschedulegroup](reference/scheduler-class.md#createschedulegroup) метод. Среда выполнения использует механизм подсчета ссылок для управления временем существования `ScheduleGroup` объектов, так же, как с помощью `Scheduler` объектов. При создании `ScheduleGroup` объекта, среда выполнения задает ссылку на один счетчик. [Concurrency::ScheduleGroup:: Reference](reference/schedulegroup-class.md#reference) метод увеличивает счетчик ссылок на единицу. [Concurrency::ScheduleGroup:: Release](reference/schedulegroup-class.md#release) метод уменьшает значение счетчика ссылок на единицу.
 
@@ -30,11 +30,10 @@ ms.locfileid: "50453528"
 
 ## <a name="example"></a>Пример
 
-Пример, что используются группы для управления порядком выполнения задач расписаний, см. в разделе [как: используйте группы расписаний для влияют на порядок выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
+Пример, что используются группы для управления порядком выполнения задач расписаний, см. в разделе [как: Использование групп планирования для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md).
 
 ## <a name="see-also"></a>См. также
 
 [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Экземпляры планировщика](../../parallel/concrt/scheduler-instances.md)<br/>
-[Практическое руководство. Использование групп планирования для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-
+[Практическое руководство. Использование групп расписаний для определения порядка выполнения](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)

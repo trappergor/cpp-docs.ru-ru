@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCRibbonStatusBar [MFC], SetInformation
 - CMFCRibbonStatusBar [MFC], OnDrawInformation
 ms.assetid: 921eb57f-3b40-49fa-a38c-3f2fb6dc2893
-ms.openlocfilehash: 068cff9ea3827e780bec886bc5d4b0e263c02e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b927012f241c30b1beec23ff7e0bbc9e8302d8da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635348"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287649"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>Класс CMFCRibbonStatusBar
 
@@ -71,7 +71,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonStatusBar::AddDynamicElement](#adddynamicelement)|Добавляет элемент динамические строки состояния ленты.|
 |[CMFCRibbonStatusBar::AddElement](#addelement)|Добавляет новый элемент ленты для строки состояния ленты.|
@@ -97,7 +97,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCRibbonStatusBar::OnDrawInformation](#ondrawinformation)|Отображает сведения строка, которая появляется на строке при включении режима сведения состояния ленты.|
 
@@ -271,7 +271,7 @@ BOOL CreateEx(
 
 ##  <a name="findbyid"></a>  CMFCRibbonStatusBar::FindByID
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
@@ -367,7 +367,7 @@ CMFCRibbonBaseElement* GetExElement(int nIndex);
 
 ##  <a name="getextendedarea"></a>  CMFCRibbonStatusBar::GetExtendedArea
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual BOOL GetExtendedArea(CRect& rect) const;
@@ -383,7 +383,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ##  <a name="getspace"></a>  CMFCRibbonStatusBar::GetSpace
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 int GetSpace() const;
@@ -395,7 +395,7 @@ int GetSpace() const;
 
 ##  <a name="isbottomframe"></a>  CMFCRibbonStatusBar::IsBottomFrame
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 BOOL IsBottomFrame() const;
@@ -407,7 +407,7 @@ BOOL IsBottomFrame() const;
 
 ##  <a name="isextendedelement"></a>  CMFCRibbonStatusBar::IsExtendedElement
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
@@ -465,7 +465,7 @@ virtual void OnDrawInformation(
 
 ##  <a name="recalclayout"></a>  CMFCRibbonStatusBar::RecalcLayout
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual void RecalcLayout();

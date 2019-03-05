@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657140"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263043"
 ---
 # <a name="iumsthreadproxy-structure"></a>Структура IUMSThreadProxy
 
@@ -33,7 +33,7 @@ struct IUMSThreadProxy : public IThreadProxy;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|Вызывается для ввода критической области. При использовании внутри критической области, планировщик не будет наблюдать асинхронные операции блокирования, происходящие во время области. Это означает, что планировщик не будет введен к снова для ошибок страниц, приостановки потока, вызовов асинхронных процедур ядра (APC) и т. д., для потока UMS.|
 |[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|Вызывается для ввода hyper критической области. При использовании внутри hyper критической области, планировщик не будет наблюдать любые блокирующие операции, которые происходят во время области. Это означает, что в планировщик не будет повторных входов для блокирующих вызовов функции, блокирующих попыток получения блокировки, сбоев страниц, приостановок потока, вызовов асинхронных процедур ядра (APC) и т. п. для потока UMS.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - image lists [MFC], drawing images from
 - images [MFC], drawing
 ms.assetid: 2f6063fb-1c28-45f8-a333-008c064db11c
-ms.openlocfilehash: 2ed309ec4a6e58fbc4a900bc541a80004d6be3d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2058c727620c9aae4ccd9a3fbeaae02c78ce8c6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490562"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260534"
 ---
 # <a name="drawing-images-from-an-image-list"></a>Рисование изображений из списка изображений
 
@@ -34,4 +34,3 @@ Nonmasked образ копируется в контексте устройст
 
 [Использование CImageList](../mfc/using-cimagelist.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)
-

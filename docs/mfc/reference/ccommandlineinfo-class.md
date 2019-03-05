@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCommandLineInfo [MFC], m_strPrinterName
 - CCommandLineInfo [MFC], m_strRestartIdentifier
 ms.assetid: 3e313ddb-0a82-4991-87ac-a27feff4668c
-ms.openlocfilehash: 60c0ae66234d5fb3be61d9249cf61ee77dff41ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e4b535da00fdcecf4ce52fad696cb5d2bc55efa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481475"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303031"
 ---
 # <a name="ccommandlineinfo-class"></a>Класс CCommandLineInfo
 
@@ -49,19 +49,19 @@ class CCommandLineInfo : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCommandLineInfo::CCommandLineInfo](#ccommandlineinfo)|Создает значение по умолчанию `CCommandLineInfo` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCommandLineInfo::ParseParam](#parseparam)|Переопределите этот обратный вызов для синтаксического анализа отдельных параметров.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCommandLineInfo::m_bRunAutomated](#m_brunautomated)|Указывает, командной строки `/Automation` обнаружен параметр.|
 |[CCommandLineInfo::m_bRunEmbedded](#m_brunembedded)|Указывает, командной строки `/Embedding` обнаружен параметр.|
@@ -328,4 +328,3 @@ virtual void ParseParam(
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline)<br/>
 [CWinApp::ProcessShellCommand](../../mfc/reference/cwinapp-class.md#processshellcommand)
-

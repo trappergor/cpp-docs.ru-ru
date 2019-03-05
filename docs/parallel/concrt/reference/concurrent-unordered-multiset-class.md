@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
-ms.openlocfilehash: 8b03245790bf011941cabcb18600bbb1e69c37d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543940"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276009"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Класс concurrent_unordered_multiset
 
@@ -59,7 +59,7 @@ _Allocator_type,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -85,7 +85,7 @@ _Allocator_type,
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|
 |[insert](#insert)|Перегружен. Добавляет элементы `concurrent_unordered_multiset` объекта.|
@@ -385,7 +385,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 Тип вставляемое значение.
 
-*значение*<br/>
+*value*<br/>
 Вставляемое значение.
 
 *_Where*<br/>
@@ -710,4 +710,3 @@ size_type unsafe_max_bucket_count() const;
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
-

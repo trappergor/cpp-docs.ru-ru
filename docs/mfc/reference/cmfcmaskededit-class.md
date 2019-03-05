@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: c5625c60d6c3c5037c1ef63719c63371b0ff7934
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276988"
 ---
 # <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
 
@@ -45,7 +45,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанного знака от соответствующего символа маски.|
 
@@ -172,7 +172,7 @@ void EnableMask(
 
 |Символ маски|Определение|
 |--------------------|----------------|
-|Н|Цифра.|
+|D|Цифра.|
 |d|Цифра или пробел.|
 |+|Плюс («+»), минус ("-"), или пробел.|
 |В|Символ является буквой алфавита.|

@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604950"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285286"
 ---
 # <a name="coleserverdoc-class"></a>Класс COleServerDoc
 
@@ -109,7 +109,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Активирует связанный документ DocObject.|
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Активирует документ для редактирования на месте.|
@@ -168,7 +168,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 Требуется один `COleServerDoc`-производный класс для каждого типа сервера документов поддерживает ваше приложение. Например, если серверное приложение поддерживает листы и диаграммы, необходимы два `COleServerDoc`-производные классы.
 
-Дополнительные сведения о серверах см. в статье [серверы: реализация сервера](../../mfc/servers-implementing-a-server.md).
+Дополнительные сведения о серверах см. в статье [серверов: Реализация сервера](../../mfc/servers-implementing-a-server.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -615,7 +615,7 @@ virtual HRESULT OnExecOleCmd(
 
 ### <a name="parameters"></a>Параметры
 
-*параметром pguidCmdGroup*<br/>
+*pguidCmdGroup*<br/>
 Указатель на GUID, который определяет набор команд. Может иметь значение NULL для указания группы команд по умолчанию.
 
 *nCmdID*<br/>

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589362"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296735"
 ---
 # <a name="uint2-class"></a>Класс uint_2
 
@@ -81,19 +81,19 @@ class uint_2;
 |Имя|Описание|
 |----------|-----------------|
 |uint_2::operator--||
-|uint_2::operator % =||
-|uint_2::operator & =||
-|uint_2::operator * =||
-|uint_2::operator / =||
+|uint_2::operator%=||
+|uint_2::operator&=||
+|uint_2::operator*=||
+|uint_2::operator/=||
 |uint_2::operator ^ =||
 |uint_2::operator&#124;=||
 |uint_2::operator ~||
 |uint_2::operator ++||
-|uint_2::operator +=||
+|uint_2::operator+=||
 |uint_2::operator<\<=||
-|uint_2::operator =||
+|uint_2::operator=||
 |uint_2::operator-=||
-|uint_2::operator >> =||
+|uint_2::operator>>=||
 
 ### <a name="public-constants"></a>Открытые константы
 
@@ -122,7 +122,7 @@ class uint_2;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> uint_2
 

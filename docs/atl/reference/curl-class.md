@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
-ms.openlocfilehash: ed42461af50fa83ca142127587d334cc7e75d914
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295660"
 ---
 # <a name="curl-class"></a>Класс cUrl
 
@@ -62,11 +62,11 @@ class CUrl
 |Имя|Описание|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Конструктор.|
-|[CUrl:: ~ CUrl](#dtor)|Деструктор|
+|[CUrl::~CUrl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CUrl::Canonicalize](#canonicalize)|Этот метод используется для преобразования строки URL-адрес в канонической форме.|
 |[CUrl::Clear](#clear)|Вызовите этот метод, чтобы очистить все поля URL-адрес.|
@@ -98,7 +98,7 @@ class CUrl
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CUrl::operator =](#operator_eq)|Назначает указанное `CUrl` объект с текущим `CUrl` объекта.|
 
@@ -149,15 +149,15 @@ inline BOOL Canonicalize(DWORD dwFlags = 0) throw();
 
 - ATL_URL_BROWSER_MODE: Не кодирование или декодирование символов после «#» или «» и не удаляет пробелы после «». Если это значение не указано, кодируется весь URL-адрес и конечный пробел удаляется.
 
-- ATL_URL _DECODE: преобразует все % XX последовательности символов, включая escape-последовательности, прежде чем анализируется URL-адрес.
+- ATL_URL _DECODE: Преобразует все % XX последовательности символов, включая escape-последовательности, прежде чем анализируется URL-адрес.
 
-- ATL_URL _ENCODE_PERCENT: кодирует все символы процента обнаружил. По умолчанию символы процента не кодируются.
+- ATL_URL _ENCODE_PERCENT: Кодирует все символы процента обнаружил. По умолчанию символы процента не кодируются.
 
-- ATL_URL _ENCODE_SPACES_ONLY: кодирует только пробелы.
+- ATL_URL _ENCODE_SPACES_ONLY: Кодирует только пробелы.
 
-- ATL_URL _NO_ENCODE: не выполняет преобразование небезопасных символов в escape-последовательности.
+- ATL_URL _NO_ENCODE: Не выполняет преобразование небезопасных символов в escape-последовательности.
 
-- ATL_URL _NO_META: не приводит к удалению meta последовательности (такие как «. «и»..») из URL-адрес.
+- ATL_URL _NO_META: Не приводит к удалению meta последовательности (такие как «. «и»..») из URL-адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

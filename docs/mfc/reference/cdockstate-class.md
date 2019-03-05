@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CDockState [MFC], SaveState
 - CDockState [MFC], m_arrBarInfo
 ms.assetid: 09e7c10b-3abd-4cb2-ad36-42420fe6bc36
-ms.openlocfilehash: 56be735aa99cfebe4ec64ff76f53d28cc9b9779e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8c4b80d7182795d8919adb64491d506325976ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262692"
 ---
 # <a name="cdockstate-class"></a>Класс CDockState
 
@@ -46,7 +46,7 @@ class CDockState : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDockState::m_arrBarInfo](#m_arrbarinfo)|Массив указателей на сохраненный закрепить сведения о состоянии с одной записью для каждую панель элементов управления.|
 
@@ -58,7 +58,7 @@ class CDockState : public CObject
 
 [CFrameWnd::GetDockState](../../mfc/reference/cframewnd-class.md#getdockstate) извлечение сведений о состоянии всех фрейма окна `CControlBar` объектов и помещает его в `CDockState` объекта. После этого можно написать содержимое `CDockState` объекта в хранилище с помощью [Serialize](../../mfc/reference/cobject-class.md#serialize) или [CDockState::SaveState](#savestate). Если позже вы хотите восстановить состояние панелей элементов управления в окне фрейма, ее можно загружать в состояние с `Serialize` или [CDockState::LoadState](#loadstate), затем с помощью [CFrameWnd::SetDockState](../../mfc/reference/cframewnd-class.md#setdockstate) для применения сохраненного состояние для панелей элементов управления окна фрейма.
 
-Дополнительные сведения о закрепляемых панелей элементов управления, см. в статьях [панелей элементов управления](../../mfc/control-bars.md), [панели инструментов: закрепленные и плавающие](../../mfc/docking-and-floating-toolbars.md), и [фрейма Windows](../../mfc/frame-windows.md).
+Дополнительные сведения о закрепляемых панелей элементов управления, см. в статьях [панелей элементов управления](../../mfc/control-bars.md), [панели инструментов: Закрепленные и плавающие](../../mfc/docking-and-floating-toolbars.md), и [кадров Windows](../../mfc/frame-windows.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -144,4 +144,3 @@ void SaveState(LPCTSTR lpszProfileName);
 
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

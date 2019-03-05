@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 6c439ace92a407c8de3a200dedd61428b9bdbc28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437379"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290460"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Значок средства пользователь рисует в заданном прямоугольнике.|
@@ -70,7 +70,7 @@ class CUserTool : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Аргументы командной строки для пользовательского средства.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Исходный каталог для пользовательского средства.|
@@ -98,7 +98,7 @@ class CUserTool : public CObject
 
 ##  <a name="copyicontoclipboard"></a>  CUserTool::CopyIconToClipboard
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 BOOL CopyIconToClipboard();
@@ -218,7 +218,7 @@ CString m_strLabel;
 
 ##  <a name="serialize"></a>  CUserTool::Serialize
 
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ```
 virtual void Serialize(CArchive& ar);

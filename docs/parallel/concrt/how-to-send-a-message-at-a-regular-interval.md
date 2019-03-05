@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Отправка сообщений через определенные интервалы
+title: Практическое руководство. Отправлять сообщение через равные промежутки времени
 ms.date: 11/04/2016
 helpviewer_keywords:
 - timer class, example
 - sending messages at regular intervals [Concurrency Runtime]
 ms.assetid: 4b60ea6c-97c8-4d69-9f7b-ad79f3548026
-ms.openlocfilehash: 05777b0c00f587f588a50733d5113d9a7362d247
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bf5f93e2a570761874232a88a23289e59e58d94
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549621"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257622"
 ---
-# <a name="how-to-send-a-message-at-a-regular-interval"></a>Практическое руководство. Отправка сообщений через определенные интервалы
+# <a name="how-to-send-a-message-at-a-regular-interval"></a>Практическое руководство. Отправлять сообщение через равные промежутки времени
 
 В этом примере показано, как использовать параллелизм::[класс timer](../../parallel/concrt/reference/timer-class.md) для отправки сообщения с регулярным интервалом.
 
@@ -32,7 +32,7 @@ Performing a lengthy operation..........done.
 
 Скопируйте код примера и вставьте его в проект Visual Studio или вставьте его в файл с именем `report-progress.cpp` и выполните следующую команду в окне командной строки Visual Studio.
 
-**/ EHsc CL.exe report-progress.cpp**
+**cl.exe /EHsc report-progress.cpp**
 
 ## <a name="see-also"></a>См. также
 

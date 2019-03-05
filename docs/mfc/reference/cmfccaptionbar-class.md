@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264993"
 ---
 # <a name="cmfccaptionbar-class"></a>Класс CMFCCaptionBar
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Создает элемент управления панели заголовка и присоединяет его к `CMFCCaptionBar` объекта.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Указывает, могут ли другой области динамически вставлены между заголовок и его родительского фрейма. (Переопределяет [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Цвет фона заголовка окна.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Цвет границы заголовка окна.|
@@ -356,7 +356,7 @@ virtual void OnDrawBackground(
 *pDC*<br/>
 [in] Указатель на контекст устройства заголовка окна.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник для заливки.
 
 ### <a name="remarks"></a>Примечания
@@ -380,7 +380,7 @@ virtual void OnDrawBorder(
 *pDC*<br/>
 [in] Контекст устройства, который используется для отображения границ.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник.
 
 ### <a name="remarks"></a>Примечания
@@ -406,7 +406,7 @@ virtual void OnDrawButton(
 *pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки.
 
 *strButton*<br/>
@@ -434,7 +434,7 @@ virtual void OnDrawImage(
 *pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения изображения.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Указывает ограничивающий прямоугольник изображения.
 
 ### <a name="remarks"></a>Примечания
@@ -457,7 +457,7 @@ virtual void OnDrawText(
 *pDC*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник текста.
 
 *strText*<br/>

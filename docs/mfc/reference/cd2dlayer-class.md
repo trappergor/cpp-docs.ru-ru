@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DLayer [MFC], IsValid
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
-ms.openlocfilehash: cd4452eeb9e600aeabaec1b54fd40217514e02eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531720"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270882"
 ---
 # <a name="cd2dlayer-class"></a>Класс CD2DLayer
 
@@ -45,17 +45,17 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Создает объект CD2DLayer.|
 |[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Деструктор Вызывается при уничтожении объекта D2D слоя.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DLayer::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
-|[CD2DLayer::CREATE](#create)|Создает CD2DLayer. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DLayer::Create](#create)|Создает CD2DLayer. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DLayer::destroy](#destroy)|Уничтожает объект CD2DLayer. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DLayer::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
 |[CD2DLayer::Get](#get)|Возвращает интерфейс ID2D1Layer|
@@ -64,13 +64,13 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CD2DLayer::operator ID2D1Layer *](#operator_id2d1layer_star)|Возвращает интерфейс ID2D1Layer|
+|[CD2DLayer::operator ID2D1Layer*](#operator_id2d1layer_star)|Возвращает интерфейс ID2D1Layer|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CD2DLayer::m_pLayer](#m_player)|Содержит указатель на объект ID2D1Layer.|
 
@@ -206,7 +206,7 @@ virtual BOOL IsValid() const;
 ID2D1Layer* m_pLayer;
 ```
 
-##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer *
+##  <a name="operator_id2d1layer_star"></a>  CD2DLayer::operator ID2D1Layer*
 
 Возвращает интерфейс ID2D1Layer
 

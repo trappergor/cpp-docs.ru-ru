@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694859"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283661"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -73,7 +73,7 @@ class CRegKey
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Вызовите этот метод для присоединения открываемый раздел HKEY `CRegKey` объекта, задав [m_hKey](#m_hkey) член дескриптор `hKey`.|
 |[CRegKey::Close](#close)|Вызовите этот метод для освобождения [m_hKey](#m_hkey) член обработки и ему присвоено значение NULL.|
@@ -113,7 +113,7 @@ class CRegKey
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.|
 |[CRegKey::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
@@ -606,7 +606,7 @@ LONG QueryMultiStringValue(
 *pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 Указатель на буфер, получающий данные, состоящие из нескольких строк. Мультистрока представляет собой массив строк, завершающаяся нулем, завершаемый двумя символами null.
 
 *pnChars*<br/>
@@ -668,7 +668,7 @@ LONG QueryStringValue(
 *pszValueName*<br/>
 Указатель на заканчивающуюся нулем строку, содержащая имя значения для запроса.
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 Указатель на буфер, получающий данные строки.
 
 *pnChars*<br/>
@@ -918,7 +918,7 @@ LONG SetMultiStringValue(LPCTSTR pszValueName, LPCTSTR pszValue) throw();
 *pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 Указатель на данные, состоящие из нескольких строк для хранения с именем указанного значения. Мультистрока представляет собой массив строк, завершающаяся нулем, завершаемый двумя символами null.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -969,7 +969,7 @@ LONG SetStringValue(
 *pszValueName*<br/>
 Указатель на строку, содержащую имя присваиваемое значение. Если значение с таким именем не существует, метод добавляет его к ключу.
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 Указатель на строку данных для хранения с именем указанного значения.
 
 *dwType*<br/>

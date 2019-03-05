@@ -1,5 +1,5 @@
 ---
-title: TN002. Формат данных постоянного объекта
+title: 'TN002: Формат данных постоянного объекта'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.data
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - persistent C++ objects [MFC]
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
-ms.openlocfilehash: 5f5bde68d9fd4175ed97a7b61d807887d07e9e12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474390"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282015"
 ---
-# <a name="tn002-persistent-object-data-format"></a>TN002. Формат данных постоянного объекта
+# <a name="tn002-persistent-object-data-format"></a>TN002: Формат данных постоянного объекта
 
 Эта заметка описывает процедуры MFC, которые поддерживают постоянные объекты C++ и формат данных объекта, когда он хранится в файле. Это относится только к классам с [DECLARE_SERIAL](../mfc/reference/run-time-object-model-services.md#declare_serial) и [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial) макросы.
 
@@ -50,7 +50,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 
 Сохранение (Вставка) и восстановление объектов (извлечении) зависит от нескольких «констант манифеста.» Ниже приведены значения, которые хранятся в двоичном формате и содержащие важные сведения в архив (Обратите внимание, что префикс «w» указывает количества 16-разрядное).
 
-|Тег|Описание|
+|Тег|Описание:|
 |---------|-----------------|
 |wNullTag|Используется для указателей объект NULL (0).|
 |wNewClassTag|Указывает, что описание класса, который следует за является новой возможностью в этом контексте архива (-1).|
@@ -111,4 +111,3 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

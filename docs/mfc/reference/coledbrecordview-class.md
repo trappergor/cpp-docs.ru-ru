@@ -12,12 +12,12 @@ helpviewer_keywords:
 - COleDBRecordView [MFC], OnGetRowset
 - COleDBRecordView [MFC], OnMove
 ms.assetid: 98612427-c4c9-4760-b7e1-85b17448add9
-ms.openlocfilehash: fbbaaae72c7b58f898735d768c019a02cdb7d7e5
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1b09599479010f87e396e6f576c9524651923f9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280381"
 ---
 # <a name="coledbrecordview-class"></a>COleDBRecordView-класс
 
@@ -33,7 +33,7 @@ class COleDBRecordView : public CFormView
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDBRecordView::COleDBRecordView](#coledbrecordview)|Создает объект `COleDBRecordView`.|
 
@@ -51,7 +51,7 @@ class COleDBRecordView : public CFormView
 Можно использовать функции DDX с `COleDbRecordView` для получения данных непосредственно из набора записей базы данных и отображения его в элемент управления диалогового окна. Следует использовать `DDX_*` методы (такие как `DDX_Text`), а не `DDX_Field*` функции (такие как `DDX_FieldText`) с `COleDbRecordView`. `DDX_FieldText` не будет работать с `COleDbRecordView` поскольку `DDX_FieldText` принимает дополнительный аргумент типа `CRecordset*` (для `CRecordView`) или `CDaoRecordset*` (для `CDaoRecordView`).
 
 > [!NOTE]
->  Если вы работаете с классами объектов доступа к данным (DAO) вместо классов шаблонов потребителей OLE DB, используйте класс [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) вместо этого. Дополнительные сведения см. в статье [Обзор: программирования баз данных,](../../data/data-access-programming-mfc-atl.md).
+>  Если вы работаете с классами объектов доступа к данным (DAO) вместо классов шаблонов потребителей OLE DB, используйте класс [CDaoRecordView](../../mfc/reference/cdaorecordview-class.md) вместо этого. Дополнительные сведения см. в статье [Обзор: Программирование баз данных](../../data/data-access-programming-mfc-atl.md).
 
 `COleDBRecordView` отслеживает этой положение пользователя в наборе строк, представление записей можно обновить пользовательский интерфейс. Когда пользователь перемещает в любой конец набора строк, представление записей отключает объектов пользовательского интерфейса — например пункты меню или кнопки панели инструментов — для перемещения в одном направлении.
 
@@ -124,7 +124,7 @@ virtual CRowset<>* OnGetRowset() = 0;
 
 [!code-cpp[NVC_MFCDatabase#38](../../mfc/codesnippet/cpp/coledbrecordview-class_1.cpp)]
 
-Дополнительные сведения и примеры см. в статье [представления записей: использование представления записей](../../data/using-a-record-view-mfc-data-access.md).
+Дополнительные сведения и примеры см. в статье [представления записей: Использование представления записей](../../data/using-a-record-view-mfc-data-access.md).
 
 ##  <a name="onmove"></a>  COleDBRecordView::OnMove
 
@@ -164,4 +164,3 @@ virtual BOOL OnMove(UINT nIDMoveCommand);
 ## <a name="see-also"></a>См. также
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

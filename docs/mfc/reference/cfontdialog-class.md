@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 5c9e3a7de10b6ba0913b02c5f79dcc63c89adce5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267190"
 ---
 # <a name="cfontdialog-class"></a>Класс CFontDialog
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Создает объект `CFontDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CFontDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Извлекает форматирования знаков в выбранном шрифте.|
@@ -397,4 +397,3 @@ CHOOSEFONT m_cf;
 [Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

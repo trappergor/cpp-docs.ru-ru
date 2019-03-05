@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 9c72e9b4964aa76631b1b9d42bfbd158a2ae8fc8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291289"
 ---
 # <a name="mfc-desktop-applications"></a>Приложения MFC для рабочего стола
 
@@ -45,7 +45,7 @@ ms.locfileid: "50604208"
 Перечисляет классы в библиотеке MFC по категориям.
 
 [Пошаговые руководства](walkthroughs-mfc.md)<br/>
-Содержит статьи с пошаговыми руководствами для различных задач, связанных с возможностями библиотеки MFC.
+Содержит статьи с пошаговыми руководствами для различных задач, связанных с функциями библиотеки MFC.
 
 [Технические примечания](mfc-technical-notes.md)<br/>
 Содержит ссылки на разделы, которые специализированные командой разработки MFC, в библиотеке классов.
@@ -66,7 +66,7 @@ ms.locfileid: "50604208"
 Предоставляет ссылки на структуры, стили, обратные вызовы и схемы сообщений, используемых библиотекой MFC.
 
 [Мастеры и диалоговые окна MFC](reference/mfc-wizards-and-dialog-boxes.md)<br/>
-Руководство по возможностям и компонентам в Visual Studio для создания приложений MFC.
+Руководство по функциям и компонентам в Visual Studio для создания приложений MFC.
 
 [Работа с файлами ресурсов](../windows/working-with-resource-files.md)<br/>
 Использование файлов ресурсов для управления данными статического пользовательского интерфейса, такими как строки пользовательского интерфейса и макеты диалоговых окон.

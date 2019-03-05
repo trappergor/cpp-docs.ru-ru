@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Добавление элементов управления и обработчиков событий ленты
+title: Практическое руководство. Добавление элементов управления ленты и обработчиков событий
 ms.date: 11/04/2016
 helpviewer_keywords:
 - event handlers [MFC], adding
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
-ms.openlocfilehash: 356358e5fd5ac4f3f7511f178ca304e9ab7eff86
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8a164101dc42241a2cc76c91a3baa66e02e4dc90
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518402"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291136"
 ---
-# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Практическое руководство. Добавление элементов управления и обработчиков событий ленты
+# <a name="how-to-add-ribbon-controls-and-event-handlers"></a>Практическое руководство. Добавление элементов управления ленты и обработчиков событий
 
 Элементы управления ленты, элементы, такие как кнопки и поля со списком, добавляемые в панели. Панели — это области ленты для отображения группы связанных элементов управления.
 
@@ -40,6 +40,5 @@ ms.locfileid: "51518402"
 
 ## <a name="see-also"></a>См. также
 
-[Пример RibbonGadgets: Приложение с гаджетами на ленты](../visual-cpp-samples.md)<br/>
+[Пример RibbonGadgets: Приложение с гаджетами на ленте](../visual-cpp-samples.md)<br/>
 [Конструктор ленты (MFC)](../mfc/ribbon-designer-mfc.md)
-

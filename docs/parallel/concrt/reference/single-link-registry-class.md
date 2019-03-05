@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290135"
 ---
 # <a name="singlelinkregistry-class"></a>Класс single_link_registry
 
@@ -47,7 +47,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[add](#add)|Добавляет ссылку на `single_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `single_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|
@@ -77,7 +77,7 @@ virtual void add(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок для добавления.
 
 ### <a name="remarks"></a>Примечания
@@ -110,7 +110,7 @@ virtual bool contains(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок, который необходимо найти в `single_link_registry` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,7 +139,7 @@ virtual bool remove(_EType _Link);
 
 ### <a name="parameters"></a>Параметры
 
-*_Связать*<br/>
+*_Link*<br/>
 Указатель на блок удалены, если найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -154,7 +154,7 @@ virtual bool remove(_EType _Link);
 single_link_registry();
 ```
 
-##  <a name="dtor"></a> ~ single_link_registry
+##  <a name="dtor"></a> ~single_link_registry
 
 Уничтожает `single_link_registry` объекта.
 

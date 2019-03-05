@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659073"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276290"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 
@@ -45,13 +45,13 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Печать документа приложения-контейнера, используя параметры принтера по умолчанию.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, указанные пользователем.|
@@ -144,14 +144,14 @@ HRESULT ExecCommand(
 *nCmdExecOpt*<br/>
 Указывает параметры выполнения команды. По умолчанию, чтобы выполнить команду без подтверждения пользователя. См. в разделе [перечислений OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) список значений.
 
-*параметром pguidCmdGroup*<br/>
+*pguidCmdGroup*<br/>
 Уникальный идентификатор группы команд. По умолчанию NULL, которое указывает стандартной группы. Команда переданный *nCmdID* должны принадлежать к группе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает значение S_OK, если выполнение прошло успешно; в противном случае возвращает одно из следующих кодов ошибки.
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |E_UNEXPECTED|Произошла непредвиденная ошибка.|
 |E_FAIL|Произошла ошибка.|
@@ -275,7 +275,7 @@ HRESULT QueryCommand(
 *pCmdText*<br/>
 Указатель на [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) структуры, в которую будет возвращено имя и сведения о состоянии одной команды. Может иметь значение NULL, чтобы указать, что ему нужны эти сведения.
 
-*параметром pguidCmdGroup*<br/>
+*pguidCmdGroup*<br/>
 Уникальный идентификатор группы команд; может иметь значение NULL для указания стандартной группы.
 
 ### <a name="return-value"></a>Возвращаемое значение

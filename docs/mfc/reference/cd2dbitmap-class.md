@@ -51,12 +51,12 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_strPath
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
-ms.openlocfilehash: 869d8c9cffae1a257de04cf82446025be33ef7de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605872"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264720"
 ---
 # <a name="cd2dbitmap-class"></a>Класс CD2DBitmap
 
@@ -75,24 +75,24 @@ class CD2DBitmap : public CD2DResource;
 |Имя|Описание|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap из HBITMAP.|
-|[CD2DBitmap:: ~ CD2DBitmap](#_dtorcd2dbitmap)|Деструктор Вызывается при уничтожении объекта D2D растрового изображения.|
+|[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Деструктор Вызывается при уничтожении объекта D2D растрового изображения.|
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DBitmap::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Копирует указанную область в текущую битовую карту из указанного растрового изображения|
 |[CD2DBitmap::CopyFromMemory](#copyfrommemory)|Копирует указанную область памяти в текущую битовую карту|
 |[CD2DBitmap::CopyFromRenderTarget](#copyfromrendertarget)|Копирует заданную область из указанной целевой объект отрисовки в текущую битовую карту|
-|[CD2DBitmap::CREATE](#create)|Создает CD2DBitmap. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
-|[CD2DBitmap::destroy](#destroy)|Уничтожает объект CD2DBitmap. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
+|[CD2DBitmap::Create](#create)|Создает CD2DBitmap. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
+|[CD2DBitmap::Destroy](#destroy)|Уничтожает объект CD2DBitmap. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
 |[CD2DBitmap::Detach](#detach)|Отсоединяет интерфейс ресурса из объекта|
 |[CD2DBitmap::Get](#get)|Возвращает интерфейс ID2D1Bitmap|
 |[CD2DBitmap::GetDPI](#getdpi)|Возвращает размер в точках на дюйм (DPI) растрового изображения|
@@ -103,7 +103,7 @@ class CD2DBitmap : public CD2DResource;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DBitmap::CommonInit](#commoninit)|Инициализирует объект|
 
@@ -111,11 +111,11 @@ class CD2DBitmap : public CD2DResource;
 
 |Имя|Описание|
 |----------|-----------------|
-|[CD2DBitmap::operator ID2D1Bitmap *](#operator_id2d1bitmap_star)|Возвращает интерфейс ID2D1Bitmap|
+|[CD2DBitmap::operator ID2D1Bitmap*](#operator_id2d1bitmap_star)|Возвращает интерфейс ID2D1Bitmap|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|Значение TRUE, если необходимо уничтожить m_hBmpSrc; в противном случае — значение FALSE.|
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Дескриптор точечного рисунка источника.|
@@ -137,7 +137,7 @@ class CD2DBitmap : public CD2DResource;
 
 **Заголовок:** afxrendertarget.h
 
-##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap:: ~ CD2DBitmap
+##  <a name="_dtorcd2dbitmap"></a>  CD2DBitmap::~CD2DBitmap
 
 Деструктор Вызывается при уничтожении объекта D2D растрового изображения.
 
@@ -296,7 +296,7 @@ HRESULT CopyFromRenderTarget(
 
 Если метод завершается успешно, возвращается значение S_OK. В противном случае он возвращает код ошибки HRESULT.
 
-##  <a name="create"></a>  CD2DBitmap::CREATE
+##  <a name="create"></a>  CD2DBitmap::Create
 
 Создает CD2DBitmap.
 
@@ -461,7 +461,7 @@ CString m_strPath;
 UINT m_uiResID;
 ```
 
-##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap *
+##  <a name="operator_id2d1bitmap_star"></a>  CD2DBitmap::operator ID2D1Bitmap*
 
 Возвращает интерфейс ID2D1Bitmap
 

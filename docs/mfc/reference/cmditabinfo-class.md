@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMDITabInfo [MFC], m_style
 - CMDITabInfo [MFC], m_tabLocation
 ms.assetid: 988ae1b7-4f7f-4239-b88f-7e28b3291c5e
-ms.openlocfilehash: b9b45142d0fb1d53ccecad31ace7ad1a6dd4ee40
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a42128d097c9d63d82243090e2e215a250ff432b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276342"
 ---
 # <a name="cmditabinfo-class"></a>Класс CMDITabInfo
 
@@ -55,13 +55,13 @@ class CMDITabInfo
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMDITabInfo::Serialize](#serialize)|Считывает этот объект из архива или записывает в него.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMDITabInfo::m_bActiveTabCloseButton;](#m_bactivetabclosebutton_)|Указывает ли **закрыть** кнопка отображается на метке активной вкладки.|
 |[CMDITabInfo::m_bAutoColor](#m_bautocolor)|Указывает, следует ли цвета вкладок MDI.|

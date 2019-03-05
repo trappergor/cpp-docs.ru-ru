@@ -9,18 +9,18 @@ helpviewer_keywords:
 - Windows Sockets [MFC], with archives
 - two-state socket object
 ms.assetid: d8ae4039-391d-44f0-a19b-558817affcbb
-ms.openlocfilehash: f6101193c85e41fbf82681b0b2ae1e09e4162f87
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 3af94bc881276238f1a8d2dbeeee4dca1f173a4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174916"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300691"
 ---
 # <a name="windows-sockets-how-sockets-with-archives-work"></a>Сокеты Windows. Работа сокетов с архивами
 
 В этой статье объясняется, как [CSocket](../mfc/reference/csocket-class.md) объекта, [CSocketFile](../mfc/reference/csocketfile-class.md) объекта и [CArchive](../mfc/reference/carchive-class.md) объект объединяются для упрощают отправку и получение данных с помощью Windows Сокет.
 
-Статья [Windows Sockets: пример из сокетов с использованием архивов](../mfc/windows-sockets-example-of-sockets-using-archives.md) представляется `PacketSerialize` функции. Объект архива в `PacketSerialize` пример будет работать аналогично архив объектом, переданным MFC [Serialize](../mfc/reference/cobject-class.md#serialize) функции. Essential разница заключается в том, что для сокетов, архив прикреплена не со стандартом [CFile](../mfc/reference/cfile-class.md) (обычно связан с файлом на диске) объекта а `CSocketFile` объекта. Вместо того чтобы подключаться в файл на диске, `CSocketFile` объект подключается к `CSocket` объекта.
+Статья [сокеты Windows: Пример сокетов с использованием архивов](../mfc/windows-sockets-example-of-sockets-using-archives.md) представляется `PacketSerialize` функции. Объект архива в `PacketSerialize` пример будет работать аналогично архив объектом, переданным MFC [Serialize](../mfc/reference/cobject-class.md#serialize) функции. Essential разница заключается в том, что для сокетов, архив прикреплена не со стандартом [CFile](../mfc/reference/cfile-class.md) (обычно связан с файлом на диске) объекта а `CSocketFile` объекта. Вместо того чтобы подключаться в файл на диске, `CSocketFile` объект подключается к `CSocket` объекта.
 
 Объект `CArchive` объекта управляет буфером. При заполнении буфера хранения архива (отправка), связанным `CFile` объект записывает содержимое буфера. Запись на диск буфера архив, подключенное к разъему эквивалентно отправке сообщения. При переполнении буфера архива загрузка (получение), `CFile` объект останавливает чтение, пока буфер снова станет доступным.
 
@@ -46,7 +46,7 @@ CArchive, CSocketFile и CSocket
 
 В режиме «архив compatible» `CSocketFile` объект обеспечивает более высокую производительность и уменьшает риск «взаимоблокировка». Взаимоблокировка возникает, когда отправки и получения сокеты ожидают друг друга или общий ресурс. Это может произойти, если `CArchive` объект работали с `CSocketFile` так, как с помощью `CFile` объекта. С помощью `CFile`, архива можно предположить, что при получении меньшее число байтов, чем она запрошена, конец файла был достигнут. С помощью `CSocketFile`, тем не менее, данные сообщение в зависимости; буфер может содержать несколько сообщений, поэтому получение меньше количества запрошенных байтов не подразумевает, что конец файла. Приложение не будет блокировать в данном случае, как это может быть с `CFile`, и может продолжить чтение сообщений из буфера, пока буфер пуст. [IsBufferEmpty](../mfc/reference/carchive-class.md#isbufferempty) работать в `CArchive` полезны для мониторинга состояния буфера архива в этом случае.
 
-Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)
+Дополнительные сведения см. в разделе [сокеты Windows: Использование сокетов с архивами](../mfc/windows-sockets-using-sockets-with-archives.md)
 
 ## <a name="see-also"></a>См. также
 

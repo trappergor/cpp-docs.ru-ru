@@ -7,12 +7,12 @@ helpviewer_keywords:
 - archives [MFC], and Windows Sockets
 - CSocket class [MFC], programming model
 ms.assetid: 17e71a99-a09e-4e1a-9fda-13d62805c824
-ms.openlocfilehash: 64c5c058404b977254ca54d5595193654b3f4479
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71a7ed1f1b67bed157805328679a18ceabf201d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261509"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Сокеты Windows. Использование сокетов с архивами
 
@@ -21,10 +21,10 @@ ms.locfileid: "50615397"
 > [!TIP]
 >  Можно использовать класс `CSocket` сама по себе как более удобным версия `CAsyncSocket`, но самая простая модель программирования является использование `CSocket` с `CArchive` объекта.
 
-Дополнительные сведения о том, как работает реализации сокетов с архивами, см. в разделе [Windows Sockets: как сокетов с архивами рабочих](../mfc/windows-sockets-how-sockets-with-archives-work.md). Пример кода, см. в разделе [Windows Sockets: операции последовательности](../mfc/windows-sockets-sequence-of-operations.md) и [Windows Sockets: пример из сокетов с использованием архивов](../mfc/windows-sockets-example-of-sockets-using-archives.md). Сведения о некоторых функций можно получить путем наследования от классов сокета собственных классов, см. в разделе [Windows Sockets: наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).
+Дополнительные сведения о том, как работает реализации сокетов с архивами, см. в разделе [сокеты Windows: Работа сокетов с архивами](../mfc/windows-sockets-how-sockets-with-archives-work.md). Пример кода, см. в разделе [сокеты Windows: Последовательность операций](../mfc/windows-sockets-sequence-of-operations.md) и [сокеты Windows: Пример сокетов с использованием архивов](../mfc/windows-sockets-example-of-sockets-using-archives.md). Сведения о некоторых функций можно получить путем наследования от классов сокета собственных классов, см. в разделе [сокеты Windows: Наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
 > [!NOTE]
->  При написании программы MFC клиента для взаимодействия с серверами установленного (не MFC), не отправляйте объектов C++ с помощью архива. Не является приложение MFC, распознаваемые типы объектов, которые вы хотите отправить, он не будет возможность получения и десериализации объектов. Связанные материалы по вопросам взаимодействия с приложениями, не являющихся MFC также см. в статье [Windows Sockets: порядок байтов](../mfc/windows-sockets-byte-ordering.md).
+>  При написании программы MFC клиента для взаимодействия с серверами установленного (не MFC), не отправляйте объектов C++ с помощью архива. Не является приложение MFC, распознаваемые типы объектов, которые вы хотите отправить, он не будет возможность получения и десериализации объектов. Связанные материалы по вопросам взаимодействия с приложениями, не являющихся MFC также см. в статье [сокеты Windows: Порядок байтов](../mfc/windows-sockets-byte-ordering.md).
 
 ##  <a name="_core_the_csocket_programming_model"></a> Модель программирования CSocket
 
@@ -70,11 +70,11 @@ ms.locfileid: "50615397"
     > [!NOTE]
     >  Класс `CArchive` предоставляет `IsBufferEmpty` функция-член специально для использования с классом `CSocket`. Если буфер содержит несколько сообщений данных, к примеру, необходимо, пока все они доступны для чтения и буфер очищается. В противном случае ваши Далее уведомление о наличии получения данных неограниченное время с задержкой. Используйте `IsBufferEmpty` гарантировать, что можно получить все данные.
 
-Статья [Windows Sockets: операции последовательности](../mfc/windows-sockets-sequence-of-operations.md) иллюстрирует обе части этого процесса с примерами кода.
+Статья [сокеты Windows: Последовательность операций](../mfc/windows-sockets-sequence-of-operations.md) иллюстрирует обе части этого процесса с примерами кода.
 
 Дополнительные сведения:
 
-- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 
@@ -82,4 +82,3 @@ ms.locfileid: "50615397"
 
 [Сокеты Windows в MFC](../mfc/windows-sockets-in-mfc.md)<br/>
 [CSocket::Create](../mfc/reference/csocket-class.md#create)
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288042"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Рекомендации по выбору класса коллекции
 
@@ -89,12 +89,11 @@ ms.locfileid: "50446739"
 
 2. Возможность сериализации зависит от базового типа коллекции. Например, если массив типизированных указателей основан на `CObArray`, он поддерживает сериализацию. Если он основан на `CPtrArray`, его нельзя сериализовать. В общем случае классы Ptr нельзя сериализовать.
 
-3. Если в этом столбце указано значение "Да", нешаблонный класс коллекции является типобезопасным (при условии его использования надлежащим образом). Например, при сохранении байтов в `CByteArray` массив является типобезопасным. Однако если он используется для хранения символов, его типобезопасность не столь очевидна.
+3. Если в этом столбце указано значение "Да", нешаблонный класс коллекции является типобезопасным (при условии его использования надлежащим образом). Например, при сохранении байтов в `CByteArray`массив является типобезопасным. Однако если он используется для хранения символов, его типобезопасность не столь очевидна.
 
 ## <a name="see-also"></a>См. также
 
 [Коллекции](../mfc/collections.md)<br/>
 [Классы на основе шаблонов](../mfc/template-based-classes.md)<br/>
-[Практическое руководство. Создание типобезопасных коллекций](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Практическое руководство. Создание безопасных типов коллекций](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Доступ ко всем членам коллекции](../mfc/accessing-all-members-of-a-collection.md)
-

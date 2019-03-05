@@ -1,18 +1,18 @@
 ---
-title: Пошаговое руководство. Удаление задач из потоков пользовательского интерфейса
+title: Пошаговое руководство. Удаление задач из потока пользовательского интерфейса
 ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304721"
 ---
-# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Пошаговое руководство. Удаление задач из потоков пользовательского интерфейса
+# <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Пошаговое руководство. Удаление задач из потока пользовательского интерфейса
 
 В этом документе показано, как с помощью среды выполнения с параллелизмом перемещать работу, выполняемую потоком пользовательского интерфейса (UI) в приложении Microsoft Foundation Classes (MFC) в рабочий поток. В этом документе также показано, как повысить производительность продолжительной операции рисования.
 

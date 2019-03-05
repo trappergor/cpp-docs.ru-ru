@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570174"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301302"
 ---
 # <a name="scheduler-instances"></a>Экземпляры планировщика
 
@@ -38,7 +38,7 @@ ms.locfileid: "50570174"
 
 Как правило `CurrentScheduler` класс используется для доступа к текущему планировщику. `Scheduler` Класс может быть полезен, если вам нужно управлять планировщиком, не является текущим.
 
-В следующих разделах рассматривается создание и управление экземпляром планировщика. Полный пример, иллюстрирующий эти задачи, см. в разделе [как: управление экземпляром планировщика](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+В следующих разделах рассматривается создание и управление экземпляром планировщика. Полный пример, иллюстрирующий эти задачи, см. в разделе [как: Управление экземпляром планировщика](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 [[В начало](#top)]
 
@@ -103,7 +103,7 @@ ms.locfileid: "50570174"
 
 В следующей таблице показаны важные методы, которые определяются `Scheduler` класса.
 
-|Метод|Описание|
+|Метод|Описание:|
 |------------|-----------------|
 |[Создание](reference/scheduler-class.md#create)|Создает `Scheduler` объект, который использует указанную политику.|
 |[Attach](reference/scheduler-class.md#attach)|Связывает `Scheduler` объект с текущим контекстом.|
@@ -120,7 +120,7 @@ ms.locfileid: "50570174"
 
 ##  <a name="example"></a> Пример
 
-Простые примеры того, как создание и управление экземпляром планировщика см. в разделе [как: управление экземпляром планировщика](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
+Простые примеры того, как создание и управление экземпляром планировщика см. в разделе [как: Управление экземпляром планировщика](../../parallel/concrt/how-to-manage-a-scheduler-instance.md).
 
 ## <a name="see-also"></a>См. также
 
@@ -128,4 +128,3 @@ ms.locfileid: "50570174"
 [Практическое руководство. Управление экземпляром планировщика](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [Политики планировщика](../../parallel/concrt/scheduler-policies.md)<br/>
 [Группы планирования](../../parallel/concrt/schedule-groups.md)
-

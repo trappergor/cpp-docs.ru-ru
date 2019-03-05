@@ -13,12 +13,12 @@ helpviewer_keywords:
 - IObjectSafety, ATL implementation
 - IObjectSafetyImpl class
 ms.assetid: 64e32082-d910-4a8a-a5bf-ebed9145359d
-ms.openlocfilehash: e9035a8573a917e732f3452aeb7fd07af160517f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e75c52b016fff5bf04fefc86d4289021efc4db8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471790"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293281"
 ---
 # <a name="iobjectsafetyimpl-class"></a>Класс IObjectSafetyImpl
 
@@ -50,14 +50,14 @@ class IObjectSafetyImpl
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[IObjectSafetyImpl::GetInterfaceSafetyOptions](#getinterfacesafetyoptions)|Получает параметры безопасности, поддерживаемых этим объектом, а также параметры безопасности, заданных в настоящее время для объекта.|
 |[IObjectSafetyImpl::SetInterfaceSafetyOptions](#setinterfacesafetyoptions)|Объект становится безопасным для инициализации или сценариев.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[IObjectSafetyImpl::m_dwCurrentSafety](#m_dwcurrentsafety)|Сохраняет текущий уровень безопасности объекта.|
 

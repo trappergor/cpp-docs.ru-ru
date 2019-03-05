@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694664"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275237"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 
@@ -188,7 +188,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно разместить кнопку на панели инструментов или меню во время настройки.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|
@@ -260,7 +260,7 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::m_bImage](#m_bimage)|Указывает, отображается ли изображение на кнопке.|
 |[CMFCToolBarButton::m_bText](#m_btext)|Указывает, отображается ли текстовая метка на кнопке.|
@@ -824,7 +824,7 @@ virtual BOOL IsOwnerOf(HWND hwnd);
 
 ### <a name="parameters"></a>Параметры
 
-*HWND*<br/>
+*hwnd*<br/>
 [in] Дескриптор окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1201,7 +1201,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 Реализация по умолчанию этот метод не выполняет никаких действий и возвращает значение FALSE. Переопределите этот метод для возврата ненулевое значение, если кнопки обрабатывает сообщение справки.
 
-Дополнительные сведения о сообщении WM_HELPHITTEST см. в разделе [TN028: поддержка справки контекстные](../../mfc/tn028-context-sensitive-help-support.md).
+Дополнительные сведения о сообщении WM_HELPHITTEST см. в разделе [TN028: Поддержка контекстной справки](../../mfc/tn028-context-sensitive-help-support.md).
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1294,7 +1294,7 @@ virtual void OnDraw(
 *pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки.
 
 *pImages*<br/>
@@ -1335,7 +1335,7 @@ virtual int OnDrawOnCustomizeList(
 *pDC*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник кнопки.
 
 *bSelected*<br/>
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 Этот метод поддерживает процессов передачи данных, такие как буфер обмена или операции перетаскивания и вставки. Он считывает или записывает свойства кнопок, такие как Идентификаторы, надписи и идентификатор образа, предоставленного в или из него `CArchive` объекта.
 
-Примеры сериализации см. в разделе [сериализации: сериализация объекта](../../mfc/serialization-serializing-an-object.md).
+Примеры сериализации см. в разделе [сериализации: Сериализация объекта](../../mfc/serialization-serializing-an-object.md).
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 
@@ -1689,7 +1689,7 @@ void SetRect(const CRect rect);
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 [in] Новый ограничивающий прямоугольник кнопки.
 
 ### <a name="remarks"></a>Примечания

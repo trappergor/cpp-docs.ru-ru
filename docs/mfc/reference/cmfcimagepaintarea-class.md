@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCImagePaintArea [MFC], SetColor
 - CMFCImagePaintArea [MFC], SetMode
 ms.assetid: c59eec22-f15a-4e58-8c4d-4a18a41f4452
-ms.openlocfilehash: af1d485d6d6281e909e33176ee1ae2b736c76600
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37d975ace4d144cc6274b49a3406382f0fb300ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290757"
 ---
 # <a name="cmfcimagepaintarea-class"></a>Класс CMFCImagePaintArea
 
@@ -47,7 +47,7 @@ class CMFCImagePaintArea : public CButton
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |[CMFCImagePaintArea::GetMode](#getmode)|Извлекает текущий режим рисования.|
 |[CMFCImagePaintArea::SetBitmap](#setbitmap)|Задает растровое изображение для области рисунка.|
 |[CMFCImagePaintArea::SetColor](#setcolor)|Задает текущий цвет рисования.|
@@ -93,7 +93,7 @@ CMFCImagePaintArea(CMFCImageEditorDialog* pParentDlg);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pParentDlg*|[in] Указатель на диалоговое окно, которое является родительским для редактора изображений.|
 
 ##  <a name="getmode"></a>  CMFCImagePaintArea::GetMode
@@ -120,7 +120,7 @@ void SetBitmap(CBitmap* pBitmap);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pBitmap*|[in] Новый растрового изображения для отображения.|
 
 ### <a name="remarks"></a>Примечания
@@ -139,8 +139,8 @@ void SetColor(COLORREF color);
 
 |||
 |-|-|
-|Параметр|Описание|
-|*Цвет*|[in] Новый цвет рисования.|
+|Параметр|Описание:|
+|*color*|[in] Новый цвет рисования.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -160,7 +160,7 @@ void SetMode(IMAGE_EDIT_MODE mode);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*mode*|[in] [IMAGE_EDIT_MODE](cmfcimagepaintarea-image-edit-mode-enumeration.md) значение, указывающее текущий режим рисования.|
 
 ## <a name="see-also"></a>См. также

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CPictureHolder [MFC], SetPictureDispatch
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
-ms.openlocfilehash: 14ffcbc043d80bfd296bcf52d125d288039f0501
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509587"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284220"
 ---
 # <a name="cpictureholder-class"></a>Класс CPictureHolder
 
@@ -49,13 +49,13 @@ class CPictureHolder
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPictureHolder::CPictureHolder](#cpictureholder)|Создает объект `CPictureHolder`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPictureHolder::CreateEmpty](#createempty)|Создает пустой объект `CPictureHolder`.|
 |[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Создает `CPictureHolder` объекта из растрового изображения.|
@@ -69,7 +69,7 @@ class CPictureHolder
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPictureHolder::m_pPict](#m_ppict)|Указатель на объект рисунка.|
 
@@ -79,7 +79,7 @@ class CPictureHolder
 
 С помощью стандартных свойств изображения разработчик может указать точечного рисунка, значка или метафайла для отображения.
 
-Сведения о создании настраиваемых свойствах изображения, см. в статье [элементы управления MFC ActiveX: использование изображений в элементе управления ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
+Сведения о создании настраиваемых свойствах изображения, см. в статье [элементы управления MFC ActiveX: Использование изображений в элементе управления ActiveX](../../mfc/mfc-activex-controls-using-pictures-in-an-activex-control.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

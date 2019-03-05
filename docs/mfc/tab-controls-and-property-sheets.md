@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [MFC], and property sheets
 - CTabCtrl class [MFC], and property sheets
 ms.assetid: f3b87bea-9ad9-41e6-a7ff-a9285308267e
-ms.openlocfilehash: 0b679f25738beaf91a0a9af8f562a72419b276fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be612038683ea4d8546e5811beaf6e62c5f88888
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569233"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265760"
 ---
 # <a name="tab-controls-and-property-sheets"></a>Элементы управления "Вкладка" и вкладки свойств
 
@@ -27,4 +27,3 @@ ms.locfileid: "50569233"
 
 [Использование CTabCtrl](../mfc/using-ctabctrl.md)<br/>
 [Элементы управления](../mfc/controls-mfc.md)
-

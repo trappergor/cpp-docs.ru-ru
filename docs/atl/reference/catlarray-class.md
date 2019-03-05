@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
-ms.openlocfilehash: c6a4d522a05885468a0dfec3889fb950b16b847f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca4b0f4c8ffc3382984660caec7ae04107c8797a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442683"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301861"
 ---
 # <a name="catlarray-class"></a>Класс CAtlArray
 
@@ -61,7 +61,7 @@ class CAtlArray
 |[добавить](#append)|Вызовите этот метод, чтобы добавить содержимое одного массива в другой конец.|
 |[AssertValid](#assertvalid)|Вызовите этот метод, чтобы подтвердить правильность объект массива.|
 |[CAtlArray](#catlarray)|Конструктор.|
-|[~ CAtlArray](#dtor)|Деструктор|
+|[~CAtlArray](#dtor)|Деструктор|
 |[Копировать](#copy)|Этот метод используется для копирования элементов одного массива в другой.|
 |[FreeExtra](#freeextra)|Вызовите этот метод, чтобы удалить все пустые элементы из массива.|
 |[GetAt](#getat)|Вызовите этот метод для получения отдельного элемента в объекте массива.|
@@ -393,7 +393,7 @@ bool IsEmpty() const throw();
 
 [!code-cpp[NVC_ATL_Utilities#10](../../atl/codesnippet/cpp/catlarray-class_10.cpp)]
 
-##  <a name="operator_at"></a>  [CAtlArray::operator]
+##  <a name="operator_at"></a>  CAtlArray::operator []
 
 Вызовите этот оператор, чтобы вернуть ссылку на элемент в массиве.
 

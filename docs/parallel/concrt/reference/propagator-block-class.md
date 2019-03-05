@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
-ms.openlocfilehash: 38b7c920f8ffcab6d709d9484f308a56cd6b8425
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272949"
 ---
 # <a name="propagatorblock-class"></a>Класс propagator_block
 
@@ -68,7 +68,7 @@ public ITarget<typename _SourceLinkRegistry::type::source_type>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[распространение](#propagate)|Асинхронно передает сообщение из блока источника этой целевой блок.|
 |[send](#send)|Синхронно запускает сообщение, этот блок. Вызывается средой `ISource` блока. По завершении этой функции сообщение уже будет распространено в блок.|
@@ -222,7 +222,7 @@ virtual message_status propagate_message(
 propagator_block();
 ```
 
-##  <a name="dtor"></a> ~ propagator_block
+##  <a name="dtor"></a> ~propagator_block
 
 Уничтожает объект `propagator_block`.
 

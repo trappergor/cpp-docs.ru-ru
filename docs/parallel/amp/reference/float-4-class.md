@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_4::get_z
 - amp_short_vectors/Concurrency::graphics::float_4::set_xyzw
 ms.assetid: 10f92170-e58c-4afc-8198-fc5778d56038
-ms.openlocfilehash: 97302504303a540eb691f7af15f7d346d0d50ce3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63dbc38fd4c5c6d668dda525416ec4ff2f05b50f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275211"
 ---
 # <a name="float4-class"></a>Класс float_4
 
@@ -295,13 +295,13 @@ class float_4;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор float_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |float_4::get_w||
 |float_4::get_wx||
@@ -446,16 +446,16 @@ class float_4;
 |----------|-----------------|
 |float_4::operator-||
 |float_4::operator--||
-|float_4::operator * =||
-|float_4::operator / =||
-|float_4::operator ++||
-|float_4::operator +=||
-|float_4::operator =||
+|float_4::operator*=||
+|float_4::operator/=||
+|float_4::operator++||
+|float_4::operator+=||
+|float_4::operator=||
 |float_4::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#float_4__size)||
 
@@ -464,12 +464,12 @@ class float_4;
 |Имя|Описание|
 |----------|-----------------|
 |float_4::a||
-|float_4::AB||
+|float_4::ab||
 |float_4::abg||
 |float_4::abgr||
-|float_4::ABR||
+|float_4::abr||
 |float_4::abrg||
-|float_4::AG||
+|float_4::ag||
 |float_4::agb||
 |float_4::agbr||
 |float_4::agr||
@@ -478,12 +478,12 @@ class float_4;
 |float_4::arb||
 |float_4::arbg||
 |float_4::arg||
-|float_4::ARGB||
+|float_4::argb||
 |float_4::b||
 |float_4::ba||
 |float_4::bag||
 |float_4::bagr||
-|float_4::Bar||
+|float_4::bar||
 |float_4::barg||
 |float_4::bg||
 |float_4::bga||
@@ -497,16 +497,16 @@ class float_4;
 |float_4::brga||
 |float_4::g||
 |float_4::ga||
-|float_4::GAB||
+|float_4::gab||
 |float_4::gabr||
 |float_4::gar||
 |float_4::garb||
-|float_4::GB||
+|float_4::gb||
 |float_4::gba||
 |float_4::gbar||
 |float_4::gbr||
 |float_4::gbra||
-|float_4::GR||
+|float_4::gr||
 |float_4::gra||
 |float_4::grab||
 |float_4::grb||
@@ -517,7 +517,7 @@ class float_4;
 |float_4::rabg||
 |float_4::rag||
 |float_4::ragb||
-|float_4::RB||
+|float_4::rb||
 |float_4::rba||
 |float_4::rbag||
 |float_4::rbg||
@@ -533,10 +533,10 @@ class float_4;
 |float_4::wxyz||
 |float_4::wxz||
 |float_4::wxzy||
-|float_4::WY||
+|float_4::wy||
 |float_4::wyx||
 |float_4::wyxz||
-|float_4::WYZ||
+|float_4::wyz||
 |float_4::wyzx||
 |float_4::wz||
 |float_4::wzx||
@@ -549,7 +549,7 @@ class float_4;
 |float_4::xwyz||
 |float_4::xwz||
 |float_4::xwzy||
-|float_4::XY||
+|float_4::xy||
 |float_4::xyw||
 |float_4::xywz||
 |float_4::xyz||
@@ -565,7 +565,7 @@ class float_4;
 |float_4::ywxz||
 |float_4::ywz||
 |float_4::ywzx||
-|float_4::YX||
+|float_4::yx||
 |float_4::yxw||
 |float_4::yxwz||
 |float_4::yxz||
@@ -600,7 +600,7 @@ class float_4;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> float_4
 

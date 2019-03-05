@@ -1,5 +1,5 @@
 ---
-title: TN053. Пользовательские процедуры DFX для классов баз данных DAO
+title: 'TN053: Пользовательские процедуры DFX для классов баз данных DAO'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dfx
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517771"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282413"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053. Пользовательские процедуры DFX для классов баз данных DAO
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053: Пользовательские процедуры DFX для классов баз данных DAO
 
 > [!NOTE]
 >  Среды Visual C++ и мастерах не поддерживают DAO (хотя классы DAO включены и их по-прежнему можно использовать). Корпорация Майкрософт рекомендует использовать [шаблоны OLE DB](../data/oledb/ole-db-templates.md) или [ODBC и MFC](../data/odbc/odbc-and-mfc.md) для новых проектов. DAO следует использовать только для поддержки существующих приложений.
@@ -121,7 +121,7 @@ PopUpEmployeeData(emp.m_strFirstName,
 
 В сердце DFX механизмом является `CDaoRecordset` класса, производного от `DoFieldExchange` функции. Эта функция отправляет вызовы отдельных функций DFX типа соответствующую операцию. Перед вызовом `DoFieldExchange` внутренней функции MFC задают тип операции. Ниже перечислены различные типы операций и краткое описание.
 
-|Операция|Описание|
+|Операция|Описание:|
 |---------------|-----------------|
 |`AddToParameterList`|Предложение параметров сборки|
 |`AddToSelectList`|Предложение SELECT сборок|
@@ -220,4 +220,3 @@ DAO `GetRows` можно работать с несколькими способ
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

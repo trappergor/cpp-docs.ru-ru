@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270139"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 
@@ -77,9 +77,9 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[Функцию CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
+|[CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|
 |[CWinThread::GetMainWnd](#getmainwnd)|Извлекает указатель на главное окно для потока.|
 |[CWinThread::GetThreadPriority](#getthreadpriority)|Получает приоритет текущего потока.|
@@ -98,7 +98,7 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|
 
@@ -140,7 +140,7 @@ class CWinThread : public CCmdTarget
 
 **Заголовок:** afxwin.h
 
-##  <a name="createthread"></a>  Функцию CWinThread::CreateThread
+##  <a name="createthread"></a>  CWinThread::CreateThread
 
 Создает поток для выполнения в адресном пространстве вызывающего процесса.
 

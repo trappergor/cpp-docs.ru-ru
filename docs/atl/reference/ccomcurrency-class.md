@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277729"
 ---
 # <a name="ccomcurrency-class"></a>Класс CComCurrency
 
@@ -36,7 +36,7 @@ class CComCurrency
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComCurrency::CComCurrency](#ccomcurrency)|Конструктор объекта `CComCurrency`.|
 
@@ -74,7 +74,7 @@ class CComCurrency
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComCurrency::m_currency](#m_currency)|Переменная валюты, созданные экземпляром класса.|
 
@@ -131,7 +131,7 @@ explicit CComCurrency(LPCSTR szSrc);
 *cySrc*<br/>
 Переменная типа валюты.
 
-*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc usSrc*<br/>
+*bSrc*, *dSrc*, *fSrc*, *lSrc*, *sSrc*, *ulSrc, usSrc*<br/>
 Начальное значение, присваиваемое переменной-члену `m_currency`.
 
 *cSrc*<br/>
@@ -462,7 +462,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 *cySrc*<br/>
 Переменная типа валюты.
 
-*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc* , *ulSrc*, *dSrc*<br/>
+*sSrc*, *fSrc*, *lSrc*, *bSrc*, *usSrc*, *dSrc*, *cSrc*, *ulSrc*, *dSrc*<br/>
 Числовое значение, присваиваемое `CComCurrency` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
