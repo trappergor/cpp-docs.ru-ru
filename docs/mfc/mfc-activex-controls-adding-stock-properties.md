@@ -1,5 +1,5 @@
 ---
-title: Элементы управления ActiveX в MFC. Добавление стандартных свойств
+title: Элементы ActiveX в MFC. Добавление стандартных свойств
 ms.date: 11/04/2016
 helpviewer_keywords:
 - BackColor property [MFC]
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - foreground colors, ActiveX controls
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
-ms.openlocfilehash: b27979b5492ed03b93aa0d8990c9c0b699242c86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607835"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289693"
 ---
-# <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы управления ActiveX в MFC. Добавление стандартных свойств
+# <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы ActiveX в MFC. Добавление стандартных свойств
 
 Стандартные свойства отличаются от пользовательских свойств, что они уже реализован класс `COleControl`. `COleControl` содержит функции стандартных элементов, которые поддерживают общие свойства для элемента управления. Некоторые общие свойства включают заголовок элемента управления и цвета переднего плана и фона. Сведения о других стандартных свойств, см. в разделе [Stock свойства поддерживается мастер добавления свойств](#_core_stock_properties_supported_by_classwizard) далее в этой статье. Записи сопоставления диспетчеризации для свойства всегда начинаются с DISP_STOCKPROP бумагу.
 
@@ -75,15 +75,15 @@ ms.locfileid: "50607835"
 
 |Свойство.|Запись сопоставления диспетчеризации|Как получить доступ к значению|
 |--------------|------------------------|-------------------------|
-|`Appearance`|(DISP_STOCKPROP_APPEARANCE)|Значение, уровень доступности, как `m_sAppearance`.|
+|`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Значение, уровень доступности, как `m_sAppearance`.|
 |`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Значение, доступным путем вызова `GetBackColor`.|
 |`BorderStyle`|(DISP_STOCKPROP_BORDERSTYLE)|Значение, уровень доступности, как `m_sBorderStyle`.|
-|`Caption`|(DISP_STOCKPROP_CAPTION)|Значение, доступным путем вызова `InternalGetText`.|
-|`Enabled`|(DISP_STOCKPROP_ENABLED)|Значение, уровень доступности, как `m_bEnabled`.|
-|`Font`|(DISP_STOCKPROP_FONT)|См. в статье [элементы управления MFC ActiveX: использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md) для использования.|
+|`Caption`|DISP_STOCKPROP_CAPTION( )|Значение, доступным путем вызова `InternalGetText`.|
+|`Enabled`|DISP_STOCKPROP_ENABLED( )|Значение, уровень доступности, как `m_bEnabled`.|
+|`Font`|DISP_STOCKPROP_FONT( )|См. в статье [элементы управления MFC ActiveX: Использование шрифтов](../mfc/mfc-activex-controls-using-fonts.md) для использования.|
 |`ForeColor`|(DISP_STOCKPROP_FORECOLOR)|Значение, доступным путем вызова `GetForeColor`.|
-|`hWnd`|(DISP_STOCKPROP_HWND)|Значение, уровень доступности, как `m_hWnd`.|
-|`Text`|(DISP_STOCKPROP_TEXT)|Значение, доступным путем вызова `InternalGetText`. Это свойство является таким же, как `Caption`, за исключением имени свойства.|
+|`hWnd`|DISP_STOCKPROP_HWND( )|Значение, уровень доступности, как `m_hWnd`.|
+|`Text`|DISP_STOCKPROP_TEXT( )|Значение, доступным путем вызова `InternalGetText`. Это свойство является таким же, как `Caption`, за исключением имени свойства.|
 |`ReadyState`|DISP_STOCKPROP_READYSTATE()|Значение, уровень доступности, как `m_lReadyState` или `GetReadyState`|
 
 ##  <a name="_core_stock_properties_and_notification"></a> Стандартные свойства и уведомления

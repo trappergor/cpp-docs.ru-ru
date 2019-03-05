@@ -1,5 +1,5 @@
 ---
-title: TN042. Рекомендации по драйверу ODBC для разработчиков
+title: 'TN042: Рекомендации по драйвер ODBC для разработчиков'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.odbc
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - databases [MFC], ODBC
 - TN042
 ms.assetid: ecc6b5d9-f480-4582-9e22-8309fe561dad
-ms.openlocfilehash: 2140261c2e90eaee7930d4be3282ec31bda29759
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462f8229d995add79f48f34b7f81257710b4a8b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276615"
 ---
-# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042. Рекомендации по драйверу ODBC для разработчиков
+# <a name="tn042-odbc-driver-developer-recommendations"></a>TN042: Рекомендации по драйвер ODBC для разработчиков
 
 > [!NOTE]
 >  Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -120,4 +120,3 @@ ms.locfileid: "50502055"
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-
