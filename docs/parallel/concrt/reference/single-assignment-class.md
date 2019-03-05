@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593483"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268970"
 ---
 # <a name="singleassignment-class"></a>Класс single_assignment
 
@@ -46,7 +46,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[single_assignment](#ctor)|Перегружен. Создает блок обмена сообщениями `single_assignment` .|
 |[~ single_assignment деструктор](#dtor)|Уничтожает `single_assignment` блок обмена сообщениями.|
@@ -56,11 +56,11 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |Имя|Описание|
 |----------|-----------------|
 |[has_value](#has_value)|Проверяет, является ли это `single_assignment` блок обмена сообщениями еще была инициализирована со значением.|
-|[значение](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `single_assignment` блок обмена сообщениями.|
+|[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `single_assignment` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `single_assignment` блок обмена сообщениями, возвращая копию сообщения вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `single_assignment` и зарезервированного целевым объектом, возвращая копию сообщения вызывающему объекту.|
@@ -333,4 +333,3 @@ T const& value();
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Класс overwrite_buffer](overwrite-buffer-class.md)<br/>
 [Класс unbounded_buffer](unbounded-buffer-class.md)
-

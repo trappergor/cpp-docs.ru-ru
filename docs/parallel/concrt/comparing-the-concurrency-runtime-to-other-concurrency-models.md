@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 885cce09707e1c067efdeb0bdc8b7d8a40841c02
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285104"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>Сравнение среды выполнения с параллелизмом с другими моделями параллелизма
 
@@ -98,7 +98,7 @@ Windows API использует язык программирования C д�
 ## <a name="see-also"></a>См. также
 
 [Среда выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime.md)<br/>
-[Обзор набора средств Visual Studio для Unity](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
+[Обзор](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [Библиотека параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)

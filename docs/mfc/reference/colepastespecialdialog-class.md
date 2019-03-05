@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530030"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303324"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
 
@@ -55,7 +55,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Добавляет в список форматов, которые можно вставить в приложение пользовательские форматы.|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Добавляет новую запись в список поддерживаемых форматов буфера обмена.|
@@ -69,7 +69,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COlePasteSpecialDialog::m_ps](#m_ps)|Структура типа OLEUIPASTESPECIAL, который управляет функция диалогового окна.|
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Параметры
 
-*FMT*<br/>
+*fmt*<br/>
 Ссылка на тип данных для добавления.
 
 *lpszFormat*<br/>
@@ -151,7 +151,7 @@ void AddFormat(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция может вызываться для добавления стандартных форматах, например CF_TEXT или CF_TIFF либо пользовательских форматов, зарегистрированных в системе приложения. Дополнительные сведения о вставке данных объектов в приложении см. в статье [объекты и источники данных: манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
+Эта функция может вызываться для добавления стандартных форматах, например CF_TEXT или CF_TIFF либо пользовательских форматов, зарегистрированных в системе приложения. Дополнительные сведения о вставке данных объектов в приложении см. в статье [объекты и источники данных: Манипуляции](../../mfc/data-objects-and-data-sources-manipulation.md).
 
 Дополнительные сведения см. в разделе [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed) тип перечисления и [FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) структуры в пакете Windows SDK.
 

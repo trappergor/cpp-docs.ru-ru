@@ -8,12 +8,12 @@ helpviewer_keywords:
 - classes [MFC], MFC hierarchy
 - MFC, object model
 ms.assetid: 19d70341-e391-4a72-94c6-35755ce975d4
-ms.openlocfilehash: 0af7f6b9e2bb3027287ec33540c51e0784d3c56b
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4b991c9dab2d3549ac64b5ba0b8689c6fe63f113
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275308"
 ---
 # <a name="hierarchy-chart"></a>Диаграмма иерархии
 
@@ -29,7 +29,7 @@ ms.locfileid: "52175474"
 
 ![Классы, не унаследованные от CObject](../mfc/media/mfc_hierarchy_chart3of3.png "классах, Непроизводных от CObject")
 
-Можно загрузить полную таблицу из следующего расположения: [загрузки диаграммы иерархии MFC](https://aka.ms/hxgg8e).
+Можно загрузить полную таблицу из следующего расположения: [Загрузка диаграммы иерархии MFC](https://aka.ms/hxgg8e).
 
 ## <a name="see-also"></a>См. также
 

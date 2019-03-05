@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644396"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291630"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -65,13 +65,13 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Создает объект `CControlBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Возвращает размер панели динамических элементов управления как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
 |[CControlBar::CalcFixedLayout](#calcfixedlayout)|Возвращает размер панели элементов управления, как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
@@ -107,7 +107,7 @@ class CControlBar : public CWnd
 
 - [Панели элементов управления](../../mfc/control-bars.md)
 
-- [Техническое Примечание 31: Панелей элементов управления](../../mfc/tn031-control-bars.md).
+- [Техническое Примечание 31: Панели элементов управления](../../mfc/tn031-control-bars.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -206,7 +206,7 @@ virtual void CalcInsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*Rect*<br/>
+*rect*<br/>
 Содержит текущие размеры панели элементов управления; включая границы.
 
 *bHorz*<br/>
@@ -260,7 +260,7 @@ virtual void DrawBorders(
 *pDC*<br/>
 Указывает контекст устройства, используемого для отрисовки границ элемента панели элементов управления.
 
-*Rect*<br/>
+*rect*<br/>
 Объект `CRect` объект, содержащий размеры панели элементов управления.
 
 ### <a name="remarks"></a>Примечания
@@ -282,7 +282,7 @@ virtual void DrawGripper(
 *pDC*<br/>
 Указывает контекст устройства, используемого для отрисовки захвата панели управления.
 
-*Rect*<br/>
+*rect*<br/>
 Объект `CRect` объект, содержащий размеры захвата панели управления.
 
 ### <a name="remarks"></a>Примечания

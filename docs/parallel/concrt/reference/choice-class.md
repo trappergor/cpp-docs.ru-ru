@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
-ms.openlocfilehash: 60b09b674bec58a7d35a9a37d9a8f4c40d8cd522
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267021"
 ---
 # <a name="choice-class"></a>Класс choice
 
@@ -49,7 +49,7 @@ class choice: public ISource<size_t>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
@@ -62,7 +62,7 @@ class choice: public ISource<size_t>;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Принять](#accept)|Принимает сообщение, предложенное это `choice` блоком, передавая владение вызывающему объекту.|
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `choice` блок обмена сообщениями, чтобы предотвратить удаление данных.|
@@ -75,7 +75,7 @@ class choice: public ISource<size_t>;
 |[reserve](#reserve)|Резервирует сообщение, ранее предложенного этим объектом `choice` блок обмена сообщениями.|
 |[unlink_target](#unlink_target)|Удаляет связь с целевым блоком и это `choice` блок обмена сообщениями.|
 |[unlink_targets](#unlink_targets)|Удаляет связь всех целевых объектов из данного `choice` блок обмена сообщениями. (Переопределяет [ISource::unlink_targets](isource-class.md#unlink_targets).)|
-|[значение](#value)|Получает сообщение, индекс которого была выбрана инструментом `choice` блок обмена сообщениями.|
+|[value](#value)|Получает сообщение, индекс которого была выбрана инструментом `choice` блок обмена сообщениями.|
 
 ## <a name="remarks"></a>Примечания
 

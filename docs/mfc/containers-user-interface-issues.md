@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE containers [MFC], user interface
 - user interface issues
 ms.assetid: c833c249-a633-4f1c-82d6-ec6b4892863a
-ms.openlocfilehash: 340d5b9345d66ea7e797480cffdb9f9c794b4320
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e35f831f3e1a0b2fede03de0bbd846525f3c41f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605758"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304266"
 ---
 # <a name="containers-user-interface-issues"></a>Контейнеры. Проблемы пользовательского интерфейса
 
@@ -19,14 +19,13 @@ ms.locfileid: "50605758"
 
 |Сведения о|См.|
 |------------------------|---------|
-|Добавления меню для контейнеров|[Меню и ресурсы. Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
-|Дополнительные ресурсы для контейнеров|[Меню и ресурсы. Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
+|Добавления меню для контейнеров|[Меню и ресурсы: Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
+|Дополнительные ресурсы для контейнеров|[Меню и ресурсы: Добавление контейнеров](../mfc/menus-and-resources-container-additions.md)|
 |Рисование связанных или внедренных элементов|[Образец контейнера](../visual-cpp-samples.md)|
 |Новые диалоговые окна для контейнеров|[Диалоговые окна в OLE](../mfc/dialog-boxes-in-ole.md)|
 
 ## <a name="see-also"></a>См. также
 
 [Контейнеры](../mfc/containers.md)<br/>
-[Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)<br/>
+[Контейнеры. Расширенные возможности](../mfc/containers-advanced-features.md)<br/>
 [Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)
-

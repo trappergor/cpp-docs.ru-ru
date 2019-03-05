@@ -37,12 +37,12 @@ helpviewer_keywords:
 - security IDs [C++]
 - SIDs [C++], returning SID objects
 ms.assetid: 85404dcb-c59b-4535-ab3d-66cfa37e87de
-ms.openlocfilehash: fc625ffe18aad5cf6e2b15dd61122c97bcf14d44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab5d743c7c6abf7ee3a849a28916ebd32788ef40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592482"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269413"
 ---
 # <a name="security-identifier-global-functions"></a>Глобальные функции идентификатор безопасности
 
@@ -59,8 +59,8 @@ ms.locfileid: "50592482"
 |[SIDs::AuthenticatedUser](#authenticateduser)|Возвращает идентификатор безопасности SECURITY_AUTHENTICATED_USER_RID.|
 |[SIDs::BackupOps](#backupops)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_BACKUP_OPS.|
 |[SIDs::Batch](#batch)|Возвращает идентификатор безопасности SECURITY_BATCH_RID.|
-|[SIDs::CreatorGroup](#creatorgroup)|Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_RID.|
-|[SIDs::CreatorGroupServer](#creatorgroupserver)|Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_SERVER_RID.|
+|[Sids::CreatorGroup](#creatorgroup)|Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_RID.|
+|[Sids::CreatorGroupServer](#creatorgroupserver)|Возвращает идентификатор безопасности SECURITY_CREATOR_GROUP_SERVER_RID.|
 |[SIDs::CreatorOwner](#creatorowner)|Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_RID.|
 |[SIDs::CreatorOwnerServer](#creatorownerserver)|Возвращает идентификатор безопасности SECURITY_CREATOR_OWNER_SERVER_RID.|
 |[SIDs::Dialup](#dialup)|Возвращает идентификатор безопасности SECURITY_DIALUP_RID.|
@@ -70,7 +70,7 @@ ms.locfileid: "50592482"
 |[SIDs::Network](#network)|Возвращает идентификатор безопасности SECURITY_NETWORK_RID.|
 |[SIDs::NetworkService](#networkservice)|Возвращает идентификатор безопасности SECURITY_NETWORK_SERVICE_RID.|
 |[SIDs::NULL](#null)|Возвращает идентификатор безопасности SECURITY_NULL_RID.|
-|[SIDs::PreW2KAccess](#prew2kaccess)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
+|[Sids::PreW2KAccess](#prew2kaccess)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.|
 |[SIDs::PowerUsers](#powerusers)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_POWER_USERS.|
 |[SIDs::PrintOps](#printops)|Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PRINT_OPS.|
 |[SIDs::Proxy](#proxy)|Возвращает идентификатор безопасности SECURITY_PROXY_RID.|
@@ -232,7 +232,7 @@ CSid NetworkService() throw(...);
 CSid Null() throw(...);
 ```
 
-##  <a name="prew2kaccess"></a>  SIDs::PreW2KAccess
+##  <a name="prew2kaccess"></a>  Sids::PreW2KAccess
 
 Возвращает идентификатор безопасности DOMAIN_ALIAS_RID_PREW2KCOMPACCESS.
 

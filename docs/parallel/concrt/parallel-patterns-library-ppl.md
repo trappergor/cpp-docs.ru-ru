@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 11440d56b9618d4763e1b7e47a21b365bbdc0c15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459414"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290720"
 ---
 # <a name="parallel-patterns-library-ppl"></a>Библиотека параллельных шаблонов
 
@@ -25,7 +25,7 @@ PPL обеспечивает следующие возможности.
 
 ## <a name="example"></a>Пример
 
-PPL предоставляет модель программирования, которая напоминает стандартной библиотеки C++. В следующем примере показаны различные возможности PPL. В нем последовательно и параллельно вычисляется несколько чисел Фибоначчи. Оба вычисления работают с [std::array](../../standard-library/array-class-stl.md) объекта. В этом примере в консоль также выводится время, необходимое на выполнение обоих вычислений.
+PPL предоставляет модель программирования, которая напоминает стандартной библиотеки C++. В следующем примере показаны различные функции PPL. В нем последовательно и параллельно вычисляется несколько чисел Фибоначчи. Оба вычисления работают с [std::array](../../standard-library/array-class-stl.md) объекта. В этом примере в консоль также выводится время, необходимое на выполнение обоих вычислений.
 
 Стандартная библиотека C++ использует последовательную версию [std::for_each](../../standard-library/algorithm-functions.md#for_each) алгоритм для прохождения массива и сохраняет результаты в [std::vector](../../standard-library/vector-class.md) объекта. Параллельная версия выполняет ту же задачу, но использует PPL [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм и сохраняет результаты в [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md) объекта. Класс `concurrent_vector` позволяет каждой итерации цикла одновременно добавлять элементы, не требуя синхронизации доступа на запись в контейнер.
 
@@ -58,4 +58,3 @@ fib(42): 267914296
 |[Параллельные контейнеры и объекты](../../parallel/concrt/parallel-containers-and-objects.md)|Описывает различные параллельные контейнеры и объекты, предоставляемые PPL.|
 |[Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)|Объясняет, как отменить работу, выполняемую алгоритмом параллельной обработки.|
 |[Среда выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime.md)|Описывает среду выполнения с параллелизмом, которая упрощает процесс параллельного программирования и содержит ссылки на соответствующие разделы.|
-

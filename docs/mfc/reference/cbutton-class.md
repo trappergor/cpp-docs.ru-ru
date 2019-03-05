@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178647"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260144"
 ---
 # <a name="cbutton-class"></a>Класс CButton
 
@@ -95,7 +95,7 @@ class CButton : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CButton::CButton](#cbutton)|Создает объект `CButton`.|
 
@@ -421,7 +421,7 @@ BOOL GetNote(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*lpszNote*|[out] Указатель на буфер, который вызывающий объект отвечает за выделение и освобождение. Если возвращаемое значение равно TRUE, буфер содержит текст примечаний, который связан с текущий элемент управления command link; в противном случае буфера не изменяется.|
 |*cchNote*|[in, out] Указатель на переменную целого числа без знака.<br /><br /> При вызове этого метода, переменная содержит размер буфера, заданного *lpszNote* параметра.<br /><br /> Если этого метода завершается, если возвращаемое значение равно TRUE переменной содержит размер заметки, связанные с текущей элемент управления command link. Если возвращаемое значение равно FALSE, переменная содержит размер буфера, необходимый для размещения заметки.|
@@ -530,7 +530,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pSize*|[out] Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуру, которая получает описание прямоугольника.|
 
@@ -578,7 +578,7 @@ UINT GetState() const;
 
 Битовое поле, которое содержит комбинацию значений, которые указывают текущее состояние элемента управления "Кнопка". В следующей таблице перечислены возможные значения.
 
-|Состояние кнопки|Значение|Описание|
+|Состояние кнопки|Значение|Описание:|
 |------------------|-----------|-----------------|
 |BST_UNCHECKED|0x0000|Начальное состояние.|
 |BST_CHECKED|0x0001|Элемент управления button проверяется.|
@@ -762,7 +762,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fDropDown*|[in] Значение TRUE, чтобы задать состояние BST_DROPDOWNPUSHED; в противном случае — значение FALSE.|
 
@@ -798,7 +798,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*fElevationRequired*|[in] Значение true, чтобы набор `elevation required` состояния; в противном случае — значение FALSE.|
 
@@ -918,7 +918,7 @@ BOOL SetSplitGlyph(TCHAR chGlyph);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*chGlyph*|[in] Символ, который указывает глиф для использования в качестве стрелку раскрывающегося списка кнопки разбиения.|
 
@@ -944,7 +944,7 @@ BOOL SetSplitImageList(CImageList* pSplitImageList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pSplitImageList*|[in] Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) для присваивания для текущего управления SplitButton.|
 
@@ -1042,7 +1042,7 @@ BOOL SetSplitStyle(UINT uSplitStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*uSplitStyle*|[in] Побитовое сочетание стили кнопок разбиения. Дополнительные сведения см. в разделе `uSplitStyle` членом [BUTTON_SPLITINFO](/windows/desktop/api/commctrl/ns-commctrl-tagbutton_splitinfo) структуры.|
 

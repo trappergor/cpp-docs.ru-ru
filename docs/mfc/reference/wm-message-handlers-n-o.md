@@ -37,12 +37,12 @@ helpviewer_keywords:
 - ON_WM_NCMBUTTONUP [MFC]
 - WM_ messages
 ms.assetid: 4efd1cda-b642-4e8b-89e8-73255fa70d77
-ms.openlocfilehash: 21c1ea3dfee864a4e28a0cbadfdfb73744e2d7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59fd895823ff13039e6f78b8164cd19f3eac2af9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619782"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285364"
 ---
 # <a name="wm-message-handlers-n---o"></a>Обработчики сообщений WM_ N — O
 
@@ -78,4 +78,3 @@ ms.locfileid: "50619782"
 
 [Схемы сообщений](../../mfc/reference/message-maps-mfc.md)<br/>
 [Обработчики для сообщений WM_](../../mfc/reference/handlers-for-wm-messages.md)
-

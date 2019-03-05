@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, macros
 ms.assetid: 17f2dd5e-07e6-4aa6-b965-7a361c78c45e
-ms.openlocfilehash: 10965fed5aac2eb037cf9894998688e3e7c2bffa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c6d3e350755ef4a0cf4a84561e34619ab3974be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499009"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299119"
 ---
 # <a name="composite-control-macros"></a>Макросы составного элемента управления
 
@@ -43,7 +43,7 @@ BEGIN_SINK_MAP(_class)
 
 ### <a name="parameters"></a>Параметры
 
-*_класса*<br/>
+*_class*<br/>
 [in] Определяет элемент управления.
 
 ### <a name="example"></a>Пример
@@ -97,7 +97,7 @@ SINK_ENTRY( id, dispid, fn )
 
 Реализация CE ATL ActiveX событий приемники только поддерживает возвращаемого значения типа HRESULT или void из методов обработчика событий; Возвращаемое значение не поддерживается, и его поведение не определено.
 
-##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX и SINK_ENTRY_EX_P
+##  <a name="sink_entry_ex"></a>  SINK_ENTRY_EX and SINK_ENTRY_EX_P
 
 Объявляет функцию-обработчик (*fn*) для указанного события (*dispid*), интерфейса диспетчеризации (*iid*), для управления, идентифицируемого *идентификатор*.
 

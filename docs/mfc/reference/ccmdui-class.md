@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571154"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302880"
 ---
 # <a name="ccmdui-class"></a>Класс CCmdUI
 
@@ -57,7 +57,7 @@ class CCmdUI
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CCmdUI::m_nID](#m_nid)|Идентификатор объекта пользовательского интерфейса.|
 |[CCmdUI::m_nIndex](#m_nindex)|Индекс объекта пользовательского интерфейса.|
@@ -77,7 +77,7 @@ class CCmdUI
 
 В следующей таблице перечислены эффект `CCmdUI`в функции-члены имеют на различные элементы пользовательского интерфейса команды.
 
-|Элемент пользовательского интерфейса|Включить|SetCheck|SetRadio|SetText|
+|Элемент пользовательского интерфейса|Разрешить|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |Элемент меню|Включает или отключает|Установке или снятии|Проверки, используя запятую|Наборы элементов текста|
 |Кнопка панели инструментов|Включает или отключает|Выбирает, приводит к отмене выбора, или не определен|Аналогично `SetCheck`|(Неприменимо)|

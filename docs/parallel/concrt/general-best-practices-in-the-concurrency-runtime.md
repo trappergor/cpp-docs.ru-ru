@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25011e2466d76c946cc55421ed228c8ea174161
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647702"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285611"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>Общие рекомендации в среде выполнения с параллелизмом
 
@@ -84,7 +84,7 @@ ms.locfileid: "50647702"
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-Так как `GetHttpFile` функция выполняет операцию с возможностью задержек, превышение лимита подписки можно включить другие задачи, как текущая задача ожидает получения данных. Полную версию этого примера, см. в разделе [как: использование превышения лимита подписки для смещения задержки](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Так как `GetHttpFile` функция выполняет операцию с возможностью задержек, превышение лимита подписки можно включить другие задачи, как текущая задача ожидает получения данных. Полную версию этого примера, см. в разделе [как: Использование лимита подписки для задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[В начало](#top)]
 
@@ -92,7 +92,7 @@ ms.locfileid: "50647702"
 
 Использование функции управления памятью, [concurrency::Alloc](reference/concurrency-namespace-functions.md#alloc) и [concurrency::Free](reference/concurrency-namespace-functions.md#free), при наличии детализированными задачами, постоянно выделяющими небольшие объекты с коротким временем существования. Среда выполнения с параллелизмом содержит отдельный кэш памяти для каждого выполняющегося потока. `Alloc` И `Free` функции выделяют и освобождают память из этих кэшей без использования блокировки или барьеры памяти.
 
-Дополнительные сведения о эти функции управления памятью, см. в разделе [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Пример, использующий эти функции, см. в разделе [как: используйте Alloc и Free для повышения производительности памяти](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
+Дополнительные сведения о эти функции управления памятью, см. в разделе [планировщик](../../parallel/concrt/task-scheduler-concurrency-runtime.md). Пример, использующий эти функции, см. в разделе [как: Использование функций Alloc и Free для повышения производительности памяти](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md).
 
 [[В начало](#top)]
 
@@ -124,7 +124,7 @@ Error details:
     negative balance: -76
 ```
 
-Дополнительные примеры, использующих шаблон RAII для управления временем существования объектов параллелизма, см. в разделе [Пошаговое руководство: удаление задач из потока пользовательского интерфейса](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [как: использование класса Context для реализации совместной Семафор](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), и [как: использование лимита подписки для задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
+Дополнительные примеры, использующих шаблон RAII для управления временем существования объектов параллелизма, см. в разделе [Пошаговое руководство: Удаление задач из потока пользовательского интерфейса](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md), [как: Использование класса Context для реализации семафора](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md), и [как: Использование лимита подписки для задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md).
 
 [[В начало](#top)]
 
@@ -159,6 +159,6 @@ Error details:
 [Практическое руководство. Использование функций Alloc и Free для повышения производительности операций с памятью](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)<br/>
 [Практическое руководство. Использование лимита подписки для устранения задержек](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)<br/>
 [Практическое руководство. Использование класса Context для реализации семафора, поддерживающего параллельный доступ](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
-[Пошаговое руководство. Удаление задач из потока пользовательского интерфейса](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
+[Пошаговое руководство: Удаление задач из потока, обрабатывающего события от пользовательского интерфейса](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)<br/>
 [Рекомендации по работе с библиотекой параллельных шаблонов](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Рекомендации по работе с библиотекой асинхронных агентов](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)

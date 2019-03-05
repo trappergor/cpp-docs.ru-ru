@@ -1,5 +1,5 @@
 ---
-title: TN020. Соглашения именования и нумерации идентификаторов
+title: 'TN020: Соглашения идентификатор именования и нумерации'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518675"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267398"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020. Соглашения именования и нумерации идентификаторов
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020: Соглашения идентификатор именования и нумерации
 
 Эта заметка описывает именовании Идентификаторов и нумерации соглашения, используемые MFC 2.0 для ресурсов, команды, строк, элементы управления и дочерние окна.
 
@@ -76,7 +76,7 @@ MFC также использует «IDP_» как особая форма ст
 |------------|-------------------|-----------------|
 |IDR_|несколько|от 1 до 0x6FFF|
 |IDD_|диалоговые шаблоны|от 1 до 0x6FFF|
-|IDB_ IDC_, IDI_,|курсоры, значки, растровые изображения|от 1 до 0x6FFF|
+|IDC_,IDI_,IDB_|курсоры, значки, растровые изображения|от 1 до 0x6FFF|
 |IDS_ IDP_|Общие строки|от 1 до 0x7FFF|
 |ID_|команды|0x8000 до 0xDFFF|
 |IDC_|элементы управления|8 до 0xDFFF|
@@ -107,4 +107,3 @@ MFC также использует «IDP_» как особая форма ст
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

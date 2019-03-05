@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301887"
 ---
 # <a name="synchronization-data-structures"></a>Структуры данных синхронизации
 
@@ -37,7 +37,7 @@ ms.locfileid: "50495931"
 
 В следующей таблице показаны важные методы, которые определяются `critical_section` класса.
 
-|Метод|Описание|
+|Метод|Описание:|
 |------------|-----------------|
 |[lock](reference/critical-section-class.md#lock)|Получает критическую секцию. Вызывающий контекст блокируется, пока не получит блокировку.|
 |[try_lock](reference/critical-section-class.md#try_lock)|Пытается получить критический раздел, но не приводит к блокировке.|
@@ -64,7 +64,7 @@ ms.locfileid: "50495931"
 
 В следующей таблице показаны важные методы, которые определяются `reader_writer_lock` класса.
 
-|Метод|Описание|
+|Метод|Описание:|
 |------------|-----------------|
 |[lock](reference/reader-writer-lock-class.md#lock)|Получает доступ на чтение и запись к блокировке.|
 |[try_lock](reference/reader-writer-lock-class.md#try_lock)|Пытается получить доступ на чтение и запись к блокировке, но не приводит к блокировке.|
@@ -115,4 +115,3 @@ ms.locfileid: "50495931"
 
 [Среда выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime.md)<br/>
 Описывает среду выполнения с параллелизмом, которая упрощает процесс параллельного программирования и содержит ссылки на соответствующие разделы.
-

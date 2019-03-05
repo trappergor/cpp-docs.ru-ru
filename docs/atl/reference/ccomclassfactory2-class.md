@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactory2 class
 ms.assetid: 19b66fd6-b9ed-47a0-822c-8132184f5a3e
-ms.openlocfilehash: ba5bda2e73964e7195c4955806e897f9496c244a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3b14fa59765aa72a1142e0eef41aa84abea35de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460207"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301857"
 ---
 # <a name="ccomclassfactory2-class"></a>Класс CComClassFactory2
 
@@ -47,7 +47,7 @@ class CComClassFactory2 : public IClassFactory2,
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CComClassFactory2::CreateInstance](#createinstance)|Создает объект для указанного идентификатора CLSID.|
 |[CComClassFactory2::CreateInstanceLic](#createinstancelic)|Лицензионный ключ создает объект с заданным идентификатором CLSID.|

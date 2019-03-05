@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304994"
 ---
 # <a name="cmdichildwnd-class"></a>Класс CMDIChildWnd
 
@@ -150,7 +150,7 @@ virtual BOOL Create(
 *dwStyle*<br/>
 Задает окно [стиля](../../mfc/reference/styles-used-by-mfc.md#window-styles) атрибуты. Стиль WS_CHILD является обязательным.
 
-*Rect*<br/>
+*rect*<br/>
 Содержит размер и положение окна. `rectDefault` Значение позволяет Windows указать размер и положение нового `CMDIChildWnd`.
 
 *pParentWnd*<br/>
@@ -171,7 +171,7 @@ MDI дочернее окно текущего активного кадра м�
 
 ### <a name="example"></a>Пример
 
-Пример 1.
+Пример 1:
 
 [!code-cpp[NVC_MFCWindowing#7](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_1.cpp)]
 

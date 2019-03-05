@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::set_xzy
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
-ms.openlocfilehash: 5faf2789c89e492d74851cb94d270b6fac2972c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553378"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283908"
 ---
 # <a name="uint3-class"></a>Класс uint_3
 
@@ -99,13 +99,13 @@ class uint_3;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор uint_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
@@ -146,26 +146,26 @@ class uint_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |uint_3::operator--||
-|uint_3::operator % =||
-|uint_3::operator & =||
-|uint_3::operator * =||
-|uint_3::operator / =||
+|uint_3::operator%=||
+|uint_3::operator&=||
+|uint_3::operator*=||
+|uint_3::operator/=||
 |uint_3::operator ^ =||
 |uint_3::operator&#124;=||
 |uint_3::operator ~||
 |uint_3::operator ++||
-|uint_3::operator +=||
+|uint_3::operator+=||
 |uint_3::operator<\<=||
-|uint_3::operator =||
+|uint_3::operator=||
 |uint_3::operator-=||
-|uint_3::operator >> =||
+|uint_3::operator>>=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#uint_3__size)||
 
@@ -212,7 +212,7 @@ class uint_3;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> uint_3
 

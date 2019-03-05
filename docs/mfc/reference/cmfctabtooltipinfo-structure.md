@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCTabToolTipInfo struct
 ms.assetid: 9c3b3fb9-1497-4d59-932b-0da9348dd5e2
-ms.openlocfilehash: b785754a7970573c42fcc1d0736541416f522c9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e10e74729a1a4bde90ca22abdcc1a75b41c95db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260821"
 ---
 # <a name="cmfctabtooltipinfo-structure"></a>Структура CMFCTabToolTipInfo
 
@@ -27,7 +27,7 @@ struct CMFCTabToolTipInfo
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCTabToolTipInfo::m_nTabIndex](#m_ntabindex)|Указывает индекс элемента управления вкладки.|
 |[CMFCTabToolTipInfo::m_pTabWnd](#m_ptabwnd)|Указатель на элемент управления вкладки.|
@@ -39,7 +39,7 @@ struct CMFCTabToolTipInfo
 
 ## <a name="example"></a>Пример
 
-В следующем примере показан как `CMFCTabToolTipInfo` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).
+В следующем примере показан как `CMFCTabToolTipInfo` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -65,7 +65,7 @@ int m_nTabIndex;
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_nTabIndex` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).
+В следующем примере показан как `m_nTabIndex` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -79,7 +79,7 @@ CMFCBaseTabCtrl* m_pTabWnd;
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_pTabWnd` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).
+В следующем примере показан как `m_pTabWnd` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 
@@ -97,7 +97,7 @@ CString m_strText;
 
 ### <a name="example"></a>Пример
 
-В следующем примере показан как `m_strText` используется в [примере MDITabsDemo: MFC с вкладками MDI-приложения](../../visual-cpp-samples.md).
+В следующем примере показан как `m_strText` используется в [примере MDITabsDemo: Приложение MDI с вкладками MFC](../../visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MDITabsDemo#2](../../mfc/reference/codesnippet/cpp/cmfctabtooltipinfo-structure_1.cpp)]
 

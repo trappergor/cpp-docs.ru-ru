@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CAutoHideDockSite [MFC], UnSetAutoHideMode
 - CAutoHideDockSite [MFC], m_nExtraSpace
 ms.assetid: 2a0f6bec-c369-4ab7-977d-564e7946ebad
-ms.openlocfilehash: 5bfff575861d92eaaef07a1f2f21b79d89cb52b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f24827e2dc1f4d1131f5b63aebeb0e2b09bc2281
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653639"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302966"
 ---
 # <a name="cautohidedocksite-class"></a>Класс CAutoHideDockSite
 
@@ -53,7 +53,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|Имя|Описание|
+|Имя|Описание:|
 |`CAutoHideDockSite::AllowShowOnPaneMenu`|Указывает, является ли `CAutoHideDockSite` отображается на панели меню.|
 |[CAutoHideDockSite::CanAcceptPane](#canacceptpane)|Определяет ли объект базового области является производным от [класс CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md).|
 |[CAutoHideDockSite::DockPane](#dockpane)|Закрепляет область `CAuotHideDockSite` объекта.|
@@ -67,7 +67,7 @@ class CAutoHideDockSite : public CDockSite
 
 |||
 |-|-|
-|name|Описание|
+|name|Описание:|
 |[CAutoHideDockSite::m_nExtraSpace](#m_nextraspace)|Определяет размер пространства между панелями инструментов и границей панели стыковки. Это пространство измеряется от левого края или верхнего края, в зависимости от выравнивания для области закрепления.|
 
 ## <a name="remarks"></a>Примечания
@@ -110,7 +110,7 @@ virtual BOOL CanAcceptPane(const CBasePane* pBar) const;
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pBar*|[in] Базовый объект области того, платформа.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -136,7 +136,7 @@ virtual void DockPane(
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*pWnd*|[in] Области, в которой закрепляет платформы.|
 |*dockMethod*|[in] Закрепление параметры для области.|
 |*lpRect*|[in] Прямоугольник, который указывает границы закрепленной панели.|
@@ -159,8 +159,8 @@ void GetAlignRect(CRect& rect) const;
 
 |||
 |-|-|
-|Параметр|Описание|
-|*Rect*|[in] Ссылка в прямоугольник. Метод сохраняет размер на сайте закрепления в этот прямоугольник.|
+|Параметр|Описание:|
+|*rect*|[in] Ссылка в прямоугольник. Метод сохраняет размер на сайте закрепления в этот прямоугольник.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -224,7 +224,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 |||
 |-|-|
-|Параметр|Описание|
+|Параметр|Описание:|
 |*rectNewClientArea*|[in] Зарезервированное значение.|
 
 ### <a name="remarks"></a>Примечания

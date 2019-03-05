@@ -14,12 +14,12 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282946"
 ---
 # <a name="automation-clients-using-type-libraries"></a>Клиенты автоматизации. Использование библиотек типов
 
@@ -61,4 +61,3 @@ Visual C++ автоматически сохраняет этот файл би�
 ## <a name="see-also"></a>См. также
 
 [Клиенты автоматизации](../mfc/automation-clients.md)
-

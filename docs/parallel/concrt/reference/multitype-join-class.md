@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - multitype_join class
 ms.assetid: 236e87a0-4867-49fd-869a-bef4010e49a7
-ms.openlocfilehash: 2fd94ef072fcab9af076fcdfa1b5c094d77f89c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a0c68c2c017eedfa23548bee1d17177e8eaaa1e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547411"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289030"
 ---
 # <a name="multitypejoin-class"></a>Класс multitype_join
 
@@ -50,20 +50,20 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[multitype_join](#ctor)|Перегружен. Создает блок обмена сообщениями `multitype_join` .|
 |[~ multitype_join деструктор](#dtor)|Уничтожает `multitype_join` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Принять](#accept)|Принимает сообщение, предложенное это `multitype_join` блоком, передавая владение вызывающему объекту.|
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `multitype_join` блок обмена сообщениями, чтобы предотвратить удаление данных.|
@@ -209,7 +209,7 @@ multitype_join(
 
 Конструкция перемещения не выполняется при блокировке. Это означает, что пользователь должен убедиться в отсутствии простых задач во время перемещения. В противном случае могут возникнуть многочисленные гонки, приводящие к исключениям или недопустимому состоянию.
 
-##  <a name="dtor"></a> ~ multitype_join
+##  <a name="dtor"></a> ~multitype_join
 
 Уничтожает `multitype_join` блок обмена сообщениями.
 

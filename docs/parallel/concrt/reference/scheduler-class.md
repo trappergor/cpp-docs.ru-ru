@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638273"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287909"
 ---
 # <a name="scheduler-class"></a>Класс Scheduler
 
@@ -49,7 +49,7 @@ class Scheduler;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Attach](#attach)|Присоединяет планировщик для контекста вызова. После возврата этого метода, вызывающий контекст управляется планировщиком и планировщик становится текущего планировщика.|
 |[Создание](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметра, помещает исходную ссылку на планировщик и возвращает указатель на него.|
@@ -336,4 +336,3 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 [Класс Scheduler](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Планировщик задач](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

@@ -118,18 +118,18 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544421"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288835"
 ---
 # <a name="cwinappex-class"></a>Класс CWinAppEx
 
 `CWinAppEx` Обрабатывает состояние приложения, сохраняет состояние в реестр, загружает состояние из реестра, инициализирует диспетчеры приложения и приводятся ссылки на эти те же диспетчеры приложения.
 
-   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+   Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -140,7 +140,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CWinAppEx::CWinAppEx](#cwinappex)|Создает объект `CWinAppEx`.|
 
@@ -210,7 +210,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Указывает ли платформа приведет к сбросу всех изображениям значков панели инструментов при загрузке окна фрейма, который содержит панели инструментов.|
 
@@ -222,7 +222,7 @@ class CWinAppEx : public CWinApp
 
 - Наследуйте класс от основного приложения `CWinAppEx`.
 
-После внедрения `CWinAppEx` в приложение, вы можете инициализировать один из диспетчеров приложений. Прежде чем использовать диспетчер приложения, необходимо инициализировать его путем вызова метода соответствующие инициализации. Чтобы получить указатель на иному менеджеру, вызовите метод get связан. `CWinAppEx` Класс управляет следующие диспетчеры приложения: [класс CMouseManager](../../mfc/reference/cmousemanager-class.md), [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [ Класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), и [класс CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
+После внедрения `CWinAppEx` в приложение, вы можете инициализировать один из диспетчеров приложений. Прежде чем использовать диспетчер приложения, необходимо инициализировать его путем вызова метода соответствующие инициализации. Чтобы получить указатель на иному менеджеру, вызовите метод get связан. `CWinAppEx` Класс управляет следующие диспетчеры приложения: [Класс CMouseManager](../../mfc/reference/cmousemanager-class.md), [класс CContextMenuManager](../../mfc/reference/ccontextmenumanager-class.md), [класс CKeyboardManager](../../mfc/reference/ckeyboardmanager-class.md), [класс CUserToolsManager](../../mfc/reference/cusertoolsmanager-class.md), и [ Класс CMenuTearOffManager](../../mfc/reference/cmenutearoffmanager-class.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -405,7 +405,7 @@ BOOL GetBinary(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если выполнение прошло успешно; Значение FALSE в противном случае.
+Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
@@ -962,7 +962,7 @@ virtual BOOL LoadState(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае 0.
+Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -996,7 +996,7 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае 0.
+Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1187,7 +1187,7 @@ BOOL SaveState(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если выполнение прошло успешно; Значение FALSE в противном случае.
+Значение TRUE в случае успешного выполнения. В противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1232,7 +1232,7 @@ virtual BOOL ShowPopupMenu(
 *uiMenuResId*<br/>
 [in] Идентификатор ресурса меню.
 
-*точка*<br/>
+*point*<br/>
 [in] Объект [CPoint](../../atl-mfc-shared/reference/cpoint-class.md) , указывающий положение меню в экранных координатах.
 
 *pWnd*<br/>
@@ -1272,7 +1272,7 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Ненулевое значение, если выполнение прошло успешно; в противном случае 0.
+Ненулевое значение в случае успешного выполнения. В противном случае — 0.
 
 ### <a name="remarks"></a>Примечания
 

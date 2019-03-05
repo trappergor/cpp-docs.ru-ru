@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user interfaces, support classes
 - user interfaces, ATL classes
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
-ms.openlocfilehash: 7306ddbbc3cf70850e0c7c66e48abf402017e5db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09b7aa26fc2f4597f741865ec94222bd65b85665
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644229"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297047"
 ---
 # <a name="ui-support-classes"></a>Классы с поддержкой пользовательского интерфейса
 
@@ -36,4 +36,3 @@ ms.locfileid: "50644229"
 ## <a name="see-also"></a>См. также
 
 [Общие сведения о классе](../atl/atl-class-overview.md)
-

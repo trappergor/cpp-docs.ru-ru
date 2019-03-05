@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: 6ae0ebb94952408aa2576d4320ce4e00308c458f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549517"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295023"
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Содержит код возврата Open Database Connectivity (ODBC), типа RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Содержит строку с описанием ошибки в терминах буквенно-цифровых.|
@@ -44,13 +44,13 @@ class CDBException : public CException
 Этот класс включает два общих данных члена, которые можно использовать для определения причины исключения или текстовое сообщение, описывающее исключение. `CDBException` объекты конструирования и вызванных функций-членов классов базы данных.
 
 > [!NOTE]
->  Этот класс является одним из классов MFC Open Database Connectivity (ODBC). Если вместо этого вы используете более новые классы объектов доступа к данным (DAO), используйте [CDaoException](../../mfc/reference/cdaoexception-class.md) вместо этого. Все имена классов DAO имеют «CDao» как префикс. Дополнительные сведения см. в статье [Обзор: программирования баз данных,](../../data/data-access-programming-mfc-atl.md).
+>  Этот класс является одним из классов MFC Open Database Connectivity (ODBC). Если вместо этого вы используете более новые классы объектов доступа к данным (DAO), используйте [CDaoException](../../mfc/reference/cdaoexception-class.md) вместо этого. Все имена классов DAO имеют «CDao» как префикс. Дополнительные сведения см. в статье [Обзор: Программирование баз данных](../../data/data-access-programming-mfc-atl.md).
 
 Исключения случаях аномальных выполнения, включающих условия за пределами элемента управления программы, такие как источник данных или сетевых операций ввода-вывода ошибок. Ошибки, которые могут ожидать см. в ходе нормального выполнения программы, обычно не считаются исключения.
 
 Эти объекты в пределах доступны **CATCH** выражение. Также может породить `CDBException` объектов из кода с помощью `AfxThrowDBException` глобальной функции.
 
-Дополнительные сведения об обработке исключений в общие или о `CDBException` объектов, см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключений: исключения базы данных](../../mfc/exceptions-database-exceptions.md).
+Дополнительные сведения об обработке исключений в общие или о `CDBException` объектов, см. в статьях [обработка исключений (MFC)](../../mfc/exception-handling-in-mfc.md) и [исключения: Базы данных исключений](../../mfc/exceptions-database-exceptions.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -132,9 +132,9 @@ class CDBException : public CException
 
 Строка имеет форму «состояние: % s, машинный код: % ld, источник: % s», где коды формата, в порядке, будут заменены значениями, которые описывают:
 
-- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687)в *Справочник по программированию ODBC*. Пример: «S0022».
+- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687)в *Справочник по программированию ODBC*. Пример «S0022».
 
-- Машинный код ошибки, относящиеся к источнику данных, возвращаемых в *pfNativeError* параметр `SQLError` функции. Пример: 207.
+- Машинный код ошибки, относящиеся к источнику данных, возвращаемых в *pfNativeError* параметр `SQLError` функции. Пример 207.
 
 - Текст сообщения об ошибке возвращаются в *szErrorMsg* параметр `SQLError` функции. Это сообщение состоит из нескольких имен в квадратных скобках. Как ошибка передается от источника для пользователя, каждый компонент "ODBC" (источник данных, драйвер, диспетчер драйверов) добавляет собственное имя. Эта информация поможет найти источник ошибки. Пример: [Microsoft] [ODBC SQL Server Driver] [SQL Server]
 
@@ -144,9 +144,9 @@ class CDBException : public CException
 
 ### <a name="example"></a>Пример
 
-  Из ODBC: «Состояние: S0022, машинный код: 207, источник: [Microsoft] [ODBC SQL Server Driver] [имя сервера SQL Server] Недопустимый столбец «ColName»»
+  Из ODBC. «Состояние: S0022, машинный код: 207, источник: имя [Microsoft] [ODBC SQL Server Driver] [SQL Server] Недопустимый столбец «ColName»»
 
-В `m_strStateNativeOrigin`: «состояние: S0022, машинный код: 207, источник: [Microsoft] [ODBC SQL Server Driver] [SQL Server]»
+В `m_strStateNativeOrigin`: «Состояние: S0022, машинный код: 207, источник: [Microsoft] [ODBC SQL Server Driver] [SQL Server]»
 
 В `m_strError`: «Недопустимое имя столбца «ColName»»
 

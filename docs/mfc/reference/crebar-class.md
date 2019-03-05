@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175890"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267788"
 ---
 # <a name="crebar-class"></a>CReBar-класс
 
@@ -33,7 +33,7 @@ class CReBar : public CControlBar
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CReBar::AddBar](#addbar)|Добавляет полосу элемент управления главной панели.|
 |[CReBar::Create](#create)|Создает элемент управления "Главная панель" и присоединяет его к `CReBar` объекта.|
@@ -178,4 +178,3 @@ CReBarCtrl& GetReBarCtrl() const;
 [Пример MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

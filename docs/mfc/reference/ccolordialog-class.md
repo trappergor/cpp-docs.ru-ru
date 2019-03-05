@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 8b9c452dc3dcb157b20558a1f7cb31103dc01f84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561269"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304214"
 ---
 # <a name="ccolordialog-class"></a>Класс CColorDialog
 
@@ -47,7 +47,7 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CColorDialog::DoModal](#domodal)|Отображает диалоговое окно цвета и позволяет пользователю сделать выбор.|
 |[CColorDialog::GetColor](#getcolor)|Возвращает `COLORREF` структуру, содержащую значения выбранного цвета.|
@@ -56,13 +56,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CColorDialog::OnColorOK](#oncolorok)|Переопределите для проверки введенных в диалоговом окне цвет.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CColorDialog::m_cc](#m_cc)|Структура, используемая для настройки параметров диалогового окна.|
 
@@ -255,7 +255,7 @@ void SetCurrentColor(COLORREF clr);
 
 ### <a name="parameters"></a>Параметры
 
-*Среда CLR*<br/>
+*clr*<br/>
 Значение цвета RGB.
 
 ### <a name="remarks"></a>Примечания
@@ -272,4 +272,3 @@ void SetCurrentColor(COLORREF clr);
 [Пример MFC ФУНКЦИЙ](../../visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-

@@ -1,5 +1,5 @@
 ---
-title: TN011. Использование MFC как часть библиотеки DLL
+title: 'TN011: Использование MFC как часть библиотеки DLL'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dll
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326209"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326456"
 ---
-# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011. Использование MFC как часть библиотеки DLL
+# <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011: Использование MFC как часть библиотеки DLL
 
 Эта заметка описывает постоянные библиотеки DLL MFC, что позволит вам использовать библиотеку MFC как часть библиотеки динамической компоновки (DLL) Windows. Предполагается, что вы знакомы с DLL Windows, а также способы их построения. Сведения о библиотеках DLL расширений MFC, с помощью которого можно создавать расширения для библиотеки MFC, см. в разделе [версии библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md).
 
@@ -115,4 +115,3 @@ BOOL PromptTraceFlags(TracerData FAR* lpData);
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

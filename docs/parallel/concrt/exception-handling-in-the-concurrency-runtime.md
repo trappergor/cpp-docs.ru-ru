@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agents, exception handling [Concurrency Runtime]
 - task groups, exception handling [Concurrency Runtime]
 ms.assetid: 4d1494fb-3089-4f4b-8cfb-712aa67d7a7a
-ms.openlocfilehash: 7611e9d3f0bbf961784c9fed23117750a101486f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8239913c369605503134a9ea4c99789528911868
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437873"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272637"
 ---
 # <a name="exception-handling-in-the-concurrency-runtime"></a>Обработка исключений в среде выполнения с параллелизмом
 
@@ -102,7 +102,7 @@ ms.locfileid: "50437873"
 X = 15, Y = 30Caught exception: point is NULL.
 ```
 
-Полный пример, в котором используется обработка исключений в группу задач, см. в разделе [как: использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
+Полный пример, в котором используется обработка исключений в группу задач, см. в разделе [как: Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md).
 
 [[В начало](#top)]
 
@@ -193,4 +193,3 @@ the status of the agent is: done
 [Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)<br/>
 [Планировщик задач](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [Асинхронные агенты](../../parallel/concrt/asynchronous-agents.md)
-

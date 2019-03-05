@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494590"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266423"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>Рекомендации по работе с библиотекой асинхронных агентов
 
@@ -42,7 +42,7 @@ ms.locfileid: "50494590"
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-Полные примеры для определения и использования агентов, см. в разделе [Пошаговое руководство: Создание приложения с поддержкой агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) и [Пошаговое руководство: создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
+Полные примеры для определения и использования агентов, см. в разделе [Пошаговое руководство: Создание приложения с поддержкой агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md) и [Пошаговое руководство: Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md).
 
 [[В начало](#top)]
 
@@ -58,7 +58,7 @@ ms.locfileid: "50494590"
 
 В этом примере производитель отправляет сообщения относительно небольшого числа объекту-получателю. Таким образом этот пример не демонстрирует потенциальный нехватки памяти или из за памяти. Тем не менее этот механизм полезен, когда конвейер данных содержит относительно большое число сообщений.
 
-Дополнительные сведения о создании semaphore-класс, который используется в этом примере, см. в разделе [как: использование класса Context для реализации семафора совместной](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
+Дополнительные сведения о создании semaphore-класс, который используется в этом примере, см. в разделе [как: Использование класса Context для реализации семафора](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md).
 
 [[В начало](#top)]
 
@@ -66,7 +66,7 @@ ms.locfileid: "50494590"
 
 Библиотека агентов наиболее полезна в случаях, когда работа, выполняемая конвейер данных будет довольно грубый. Например один компонент приложения может считывать данные из файла или сетевого подключения и отправлять эти данные другому компоненту. Протокол, который использует библиотеки агентов для распространения сообщений вызывает механизм передачи сообщений к дополнительным затратам ресурсов, чем задача параллельные конструкции, которые предоставляются [библиотеку параллельных шаблонов](../../parallel/concrt/parallel-patterns-library-ppl.md) (PPL). Таким образом Убедитесь, что работа, выполняемая конвейер данных достаточно длинным, чтобы оправдать дополнительную нагрузку.
 
-Несмотря на то, что конвейер данных наиболее эффективен при выполнении недетализированных задач, каждого этапа конвейера данных можно использовать PPL конструкций, таких как группы задач и параллельных алгоритмов для выполнения более детализированную работу. Пример сети недетализированного данных, использующей точного параллелизма на каждом этапе обработки, см. в разделе [Пошаговое руководство: создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
+Несмотря на то, что конвейер данных наиболее эффективен при выполнении недетализированных задач, каждого этапа конвейера данных можно использовать PPL конструкций, таких как группы задач и параллельных алгоритмов для выполнения более детализированную работу. Пример сети недетализированного данных, использующей точного параллелизма на каждом этапе обработки, см. в разделе [Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md).
 
 [[В начало](#top)]
 
@@ -118,9 +118,8 @@ Destroying resource 64...
 
 [Рекомендации по работе со средой выполнения с параллелизмом](../../parallel/concrt/concurrency-runtime-best-practices.md)<br/>
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)<br/>
-[Пошаговое руководство. Создание приложения на основе агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
-[Пошаговое руководство. Создание агента потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
-[Пошаговое руководство. Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
+[Пошаговое руководство: Создание приложения на основе агента](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)<br/>
+[Пошаговое руководство: Создание агента для обработки потоков данных](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)<br/>
+[Пошаговое руководство: Создание сети обработки изображений](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [Рекомендации по работе с библиотекой параллельных шаблонов](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [Общие рекомендации в среде выполнения с параллелизмом](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCFilterChunkValueImpl [MFC], SetTextValue
 - CMFCFilterChunkValueImpl [MFC], SetChunk
 ms.assetid: 3c833f23-5b88-4d08-9e09-ca6a8aec88bf
-ms.openlocfilehash: a59cf087a52bd7b6a2eaa00d3091047e93e14d4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b883d442342dd9fbbd074d9f8fcab76f81ef9864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666847"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264447"
 ---
 # <a name="cmfcfilterchunkvalueimpl-class"></a>Класс CMFCFilterChunkValueImpl
 
@@ -113,7 +113,7 @@ hr = фрагмента данных. SetBoolValue(PKEY_IsAttachment, true);
 
 или
 
-hr = фрагмента данных. SetFileTimeValue (PKEY_ItemDate, ftLastModified);
+hr = chunk.SetFileTimeValue(PKEY_ItemDate, ftLastModified);
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -669,7 +669,7 @@ HRESULT SetTextValue(
 *PKEY*<br/>
 Указывает ключ свойства.
 
-*размер pszValue*<br/>
+*pszValue*<br/>
 Указывает задаваемое значение фрагмента данных.
 
 *chunkType*<br/>

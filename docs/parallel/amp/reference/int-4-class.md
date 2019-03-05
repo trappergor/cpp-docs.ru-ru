@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::bg
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
-ms.openlocfilehash: aa1874dee72f7734c690ce9e86998a5120b2974b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643707"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273430"
 ---
 # <a name="int4-class"></a>Класс int_4
 
@@ -295,13 +295,13 @@ class int_4;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор int_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -446,29 +446,29 @@ class int_4;
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
-|int_4::operator % =||
-|int_4::operator & =||
-|int_4::operator * =||
-|int_4::operator / =||
+|int_4::operator%=||
+|int_4::operator&=||
+|int_4::operator*=||
+|int_4::operator/=||
 |int_4::operator ^ =||
 |int_4::operator&#124;=||
 |int_4::operator~||
 |int_4::operator ++||
-|int_4::operator +=||
+|int_4::operator+=||
 |int_4::operator<\<=||
-|int_4::operator =||
+|int_4::operator=||
 |int_4::operator-=||
-|int_4::operator >> =||
+|int_4::operator>>=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[размер константа](#int_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||
@@ -607,7 +607,7 @@ class int_4;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> int_4
 

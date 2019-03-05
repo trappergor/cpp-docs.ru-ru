@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: 8fe22924039cc0e2547df2cc07b0c4387ad908bd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177060"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296011"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Перерисовывает элемента управления сетки свойств и его свойства.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Вызывается элементом управления сетки свойств сортировки свойств.|
@@ -434,7 +434,7 @@ virtual int CompareProps(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-|Возвращаемое значение|Описание:|
+|Возвращаемое значение|Описание|
 |------------------|-----------------|
 |< 0|Имя *pProp1* параметра меньше, чем имя *pProp2* параметра.|
 |0|Имя *pProp1* совпадают имя *pProp2* параметра.|
@@ -1253,7 +1253,7 @@ virtual void OnChangeSelection(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pNewSel*|[in] Указатель на только что выбранного свойства.|
 |*pOldSel*|[in] Указатель на ранее выбранного свойства.|

@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_2::g
 - amp_short_vectors/Concurrency::graphics::double_2::set_y
 ms.assetid: c19c2d21-3cbf-4ce5-b460-3b8253688f82
-ms.openlocfilehash: 1c23906c3d7bcad0e538cea8484e42ea8e89400e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9482c2839c4963d533eb643fa0ef86a5c66636a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289654"
 ---
 # <a name="double2-class"></a>Класс double_2
 
@@ -55,13 +55,13 @@ class double_2;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор double_2](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |double_2::get_x||
 |double_2::get_xy||
@@ -78,26 +78,26 @@ class double_2;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |double_2::operator-||
 |double_2::operator--||
-|double_2::operator * =||
-|double_2::operator / =||
+|double_2::operator*=||
+|double_2::operator/=||
 |double_2::operator ++||
-|double_2::operator +=||
-|double_2::operator =||
+|double_2::operator+=||
+|double_2::operator=||
 |double_2::operator-=||
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |Константа double_2::size||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |double_2::g||
 |double_2::GR||
@@ -106,7 +106,7 @@ class double_2;
 |double_2::x||
 |double_2::XY||
 |double_2::y||
-|double_2::YX||
+|double_2::yx||
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -116,7 +116,7 @@ class double_2;
 
 **Заголовок:** amp_short_vectors.h
 
-**Пространство имен:** Concurrency::graphics
+**Пространство имен:** Concurrency::Graphics
 
 ##  <a name="ctor"></a> double_2
 

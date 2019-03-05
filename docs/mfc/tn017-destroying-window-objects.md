@@ -1,5 +1,5 @@
 ---
-title: TN017. Уничтожение объектов окон
+title: 'TN017: Уничтожение объектов окон'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502236"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294115"
 ---
-# <a name="tn017-destroying-window-objects"></a>TN017. Уничтожение объектов окон
+# <a name="tn017-destroying-window-objects"></a>TN017: Уничтожение объектов окон
 
 Эта заметка описывает использование [CWnd::PostNcDestroy](../mfc/reference/cwnd-class.md#postncdestroy) метод. Используйте этот метод, если вы хотите сделать настраиваемые выделение `CWnd`-объекты, производные от. Эта заметка также объясняется, почему следует использовать [CWnd::DestroyWindow](../mfc/reference/cwnd-class.md#destroywindow) уничтожаемый объект Windows на C++, а не **удалить** оператор.
 
@@ -97,4 +97,3 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 [Технические примечания по номеру](../mfc/technical-notes-by-number.md)<br/>
 [Технические примечания по категории](../mfc/technical-notes-by-category.md)
-

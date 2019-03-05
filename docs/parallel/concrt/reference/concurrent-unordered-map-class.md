@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284350"
 ---
 # <a name="concurrentunorderedmap-class"></a>Класс concurrent_unordered_map
 
@@ -88,13 +88,13 @@ false>>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[concurrent_unordered_map](#ctor)|Перегружен. Создает параллельный не упорядоченный сопоставление.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[at](#at)|Перегружен. Находит элемент в `concurrent_unordered_map` с указанным значением ключа... Этот метод безопасен в режиме параллелизма.|
 |[hash_function](#hash_function)|Получает сохраненный объект хэш-функции.|
@@ -250,7 +250,7 @@ concurrent_unordered_map(
 *Н_ачать*<br/>
 Положение первого элемента в диапазоне копируемых элементов.
 
-*_Окончания*<br/>
+*_End*<br/>
 Положение первого элемента после диапазона копируемых элементов.
 
 *_Umap*<br/>
@@ -443,7 +443,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член определяет, существует ли в последовательности, ключ которого имеет соответствующий порядок, элемента X `value`. Если нет, он создает такой элемент X и инициализирует его с `value`. Функция затем определяет итератор `where` , обозначающий X. Если вставка произошла, функция возвращает `std::pair(where, true)`. В противном случае возвращает значение `std::pair(where, false)`.
+Первая функция-член определяет, существует ли в последовательности, ключ которого имеет соответствующий порядок, элемента X `value`. Если нет, он создает такой элемент X и инициализирует его с `value`. Функция затем определяет итератор `where` , обозначающий X. Если вставка произошла, функция возвращает `std::pair(where, true)`. В противном случае она возвращает `std::pair(where, false)`.
 
 Вторая функция-член возвращает insert ( `value`), с использованием `_Where` качестве отправной точки в управляемой последовательности для поиска точки вставки.
 
@@ -751,7 +751,7 @@ size_type unsafe_erase(
 *Н_ачать*<br/>
 Положение первого элемента в диапазоне элементов для удаления.
 
-*_Окончания*<br/>
+*_End*<br/>
 Положение первого элемента за пределами диапазона элементов для удаления.
 
 *KVal*<br/>
@@ -783,4 +783,3 @@ size_type unsafe_max_bucket_count() const;
 
 [Пространство имен concurrency](concurrency-namespace.md)<br/>
 [Параллельные контейнеры и объекты](../../../parallel/concrt/parallel-containers-and-objects.md)
-

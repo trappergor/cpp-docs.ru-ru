@@ -46,12 +46,12 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96178ee72073e5063fc009f17ab21565f3cf1ab5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667640"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259871"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Функции пространства имен Concurrency::fast_math
 
@@ -852,7 +852,7 @@ inline float modf(
 *_X*<br/>
 Значение с плавающей запятой
 
-*_Кластера*<br/>
+*_Ip*<br/>
 Получает часть значения в целое число
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -874,7 +874,7 @@ inline float modff(
 *_X*<br/>
 Значение с плавающей запятой
 
-*_Кластера*<br/>
+*_Ip*<br/>
 Получает часть значения в целое число
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1078,7 +1078,7 @@ inline void sincos(
 *_S*<br/>
 Возвращает значение синуса _X
 
-*_О*<br/>
+*_C*<br/>
 Возвращает значение косинуса _X
 
 ##  <a name="sincosf"></a>  sincosf
@@ -1100,7 +1100,7 @@ inline void sincosf(
 *_S*<br/>
 Возвращает значение синуса _X
 
-*_О*<br/>
+*_C*<br/>
 Возвращает значение косинуса _X
 
 ##  <a name="sinh"></a>  sinh
@@ -1239,7 +1239,7 @@ inline float tanhf(float _X) restrict(amp);
 
 Возвращает значение гиперболического тангенса аргумента
 
-##  <a name="trunc"></a>  TRUNC
+##  <a name="trunc"></a>  trunc
 
 Усекает аргумент до целой
 

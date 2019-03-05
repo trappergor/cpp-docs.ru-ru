@@ -5,12 +5,12 @@ helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ff6fa851519066c3c399a28557fd8f103d0e94be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268945"
 ---
 # <a name="asynchronous-agents"></a>Асинхронные агенты
 
@@ -26,7 +26,7 @@ ms.locfileid: "52176540"
 
 В следующей таблице описаны каждого штата `agent_status` перечисления.
 
-|Состояние агента|Описание:|
+|Состояние агента|Описание|
 |-----------------|-----------------|
 |`agent_created`|Агент не был запланирован для выполнения.|
 |`agent_runnable`|Среда выполнения планирует агент для выполнения.|
@@ -64,4 +64,3 @@ ms.locfileid: "52176540"
 ## <a name="see-also"></a>См. также
 
 [Библиотека асинхронных агентов](../../parallel/concrt/asynchronous-agents-library.md)
-

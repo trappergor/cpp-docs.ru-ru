@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693559"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302095"
 ---
 # <a name="reflected-window-message-ids"></a>Отраженные идентификаторы сообщений окон
 
-Подкласс быстрый способ создания элемента управления ActiveX или другие специализированного элемента управления является окном. Дополнительные сведения см. в разделе [элементы ActiveX в MFC: Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
+Подкласс быстрый способ создания элемента управления ActiveX или другие специализированного элемента управления является окном. Дополнительные сведения см. в разделе [элементы управления MFC ActiveX: Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md).
 
 Чтобы предотвратить получение окно сообщения, отправленные элемент управления Windows, контейнера элемента управления [COleControl](../mfc/reference/colecontrol-class.md) создает окно «рефлектор» для перехвата определенных сообщений окна и отправить их обратно в элемент управления. Элемент управления, в его процедуре окна, затем может обрабатывать эти отраженные сообщения, выполнив действия, соответствующие для элемента управления ActiveX.
 
@@ -65,7 +65,7 @@ ms.locfileid: "51693559"
 |---------------------------------|--------------------------------------|
 |[WM_COMMAND](/windows/desktop/menurc/wm-command)|OCM_COMMAND|
 |[WM_CTLCOLORBTN](/windows/desktop/Controls/wm-ctlcolorbtn)|OCM_CTLCOLORBTN|
-|[WM_CTLCOLOREDIT, КОТОРЫЕ](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
+|[WM_CTLCOLOREDIT](/windows/desktop/Controls/wm-ctlcoloredit)|OCM_CTLCOLOREDIT|
 |[WM_CTLCOLORDLG](/windows/desktop/dlgbox/wm-ctlcolordlg)|OCM_CTLCOLORDLG|
 |[WM_CTLCOLORLISTBOX](/windows/desktop/Controls/wm-ctlcolorlistbox)|OCM_CTLCOLORLISTBOX|
 |[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
@@ -76,7 +76,7 @@ ms.locfileid: "51693559"
 |[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
 |[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
 |[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[СООБЩЕНИЯ WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
@@ -87,5 +87,4 @@ ms.locfileid: "51693559"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX в MFC. Создание подкласса элемента управления Windows](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[TN062. Отражение сообщений для элементов управления окнами](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[TN062: Отражение сообщений для элементов управления Windows](../mfc/tn062-message-reflection-for-windows-controls.md)

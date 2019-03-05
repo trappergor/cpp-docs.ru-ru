@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266332"
 ---
 # <a name="carchive-class"></a>CArchive-класс
 
@@ -73,7 +73,7 @@ class CArchive
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CArchive::CArchive](#carchive)|Создает объект `CArchive`.|
 
@@ -105,14 +105,14 @@ class CArchive
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CArchive::operator &lt;&lt;](#operator_lt_lt)|Хранит объекты и типы-примитивы в архив.|
 |[CArchive::operator &gt;&gt;](#operator_gt_gt)|Загружает объекты и типы-примитивы из архива.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CArchive::m_pDocument](#m_pdocument)||
 
@@ -132,7 +132,7 @@ class CArchive
 
 `CArchive` также поддерживает программирование с использованием классов MFC Windows Sockets [CSocket](../../mfc/reference/csocket-class.md) и [CSocketFile](../../mfc/reference/csocketfile-class.md). [IsBufferEmpty](#isbufferempty) функция-член поддерживает это использование.
 
-Дополнительные сведения о `CArchive`, см. в статьях [сериализации](../../mfc/serialization-in-mfc.md) и [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Дополнительные сведения о `CArchive`, см. в статьях [сериализации](../../mfc/serialization-in-mfc.md) и [сокеты Windows: Использование сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -298,7 +298,7 @@ BOOL IsBufferEmpty() const;
 
 Причина использования `IsBufferEmpty` с архив, связанные с `CSocketFile` объект является то, что буфер архива может содержать более одного сообщения или записи. После получения одно сообщение, следует использовать `IsBufferEmpty` для управления циклом, по-прежнему получает данные, пока буфер пуст. Дополнительные сведения см. в разделе [Receive](../../mfc/reference/casyncsocket-class.md#receive) функция-член класса `CAsyncSocket`, который показывает, как использовать `IsBufferEmpty`.
 
-Дополнительные сведения см. в разделе [Windows Sockets: с помощью сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
+Дополнительные сведения см. в разделе [сокеты Windows: Использование сокетов с архивами](../../mfc/windows-sockets-using-sockets-with-archives.md).
 
 ##  <a name="isloading"></a>  CArchive::IsLoading
 

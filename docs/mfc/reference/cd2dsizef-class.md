@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DSizeF [MFC], CD2DSizeF
 - CD2DSizeF [MFC], IsNull
 ms.assetid: f486a1e1-997d-4286-8cb9-26369dc82055
-ms.openlocfilehash: e9c8d77a9f84abe9a483a0f100e1f52b8768202b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09ccd8c4ba6bb0c345adb32bcf22686c485d1184
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557473"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296596"
 ---
 # <a name="cd2dsizef-class"></a>Класс CD2DSizeF
 
@@ -31,15 +31,15 @@ class CD2DSizeF : public D2D1_SIZE_F;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CD2DSizeF::CD2DSizeF](#cd2dsizef)|Перегружен. Создает `CD2DSizeF` объекта из `D2D1_SIZE_F` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
-|[CD2DSizeF::ISNULL](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
+|[CD2DSizeF::IsNull](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
 
 ### <a name="public-operators"></a>Открытые операторы
 
@@ -76,13 +76,13 @@ CD2DSizeF(
 *size*<br/>
 Размер источника
 
-*CX*<br/>
+*cx*<br/>
 исходная ширина
 
 *CY*<br/>
 Исходная высота
 
-##  <a name="isnull"></a>  CD2DSizeF::ISNULL
+##  <a name="isnull"></a>  CD2DSizeF::IsNull
 
 Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).
 

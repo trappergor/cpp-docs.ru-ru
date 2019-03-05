@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273807"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>Два способа создать объект CArchive
 
@@ -60,7 +60,7 @@ ms.locfileid: "50659931"
 
    Второй аргумент `CArchive` конструктор является значение перечисления, которое указывает, используется ли для сохранения или загрузки данных в или из файла архива. `Serialize` Функция объекта проверяет это состояние, вызвав `IsStoring` функцией для объекта архива.
 
-Когда вы закончите, сохранения или загрузки данных из `CArchive` объекта, закройте его. Несмотря на то что `CArchive` (и `CFile`) объекты автоматически закроется архива (и файл), рекомендуется явно сделать это, так как это упрощает восстановление после ошибки. Дополнительные сведения об обработке ошибок см. в статье [исключений: исключения для перехвата и удаление](../mfc/exceptions-catching-and-deleting-exceptions.md).
+Когда вы закончите, сохранения или загрузки данных из `CArchive` объекта, закройте его. Несмотря на то что `CArchive` (и `CFile`) объекты автоматически закроется архива (и файл), рекомендуется явно сделать это, так как это упрощает восстановление после ошибки. Дополнительные сведения об обработке ошибок см. в статье [исключения: Перехват и удаление исключений](../mfc/exceptions-catching-and-deleting-exceptions.md).
 
 #### <a name="to-close-the-carchive-object"></a>Чтобы закрыть объект CArchive
 
@@ -71,4 +71,3 @@ ms.locfileid: "50659931"
 ## <a name="see-also"></a>См. также
 
 [Сериализация. Сериализация объекта](../mfc/serialization-serializing-an-object.md)
-

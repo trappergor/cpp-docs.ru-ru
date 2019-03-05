@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDAOQueryDef
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
-ms.openlocfilehash: 07c508dcf4bd57855d09be5a305847d0b2981305
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664533"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283648"
 ---
 # <a name="cdaoquerydef-class"></a>Класс CDaoQueryDef
 
@@ -87,13 +87,13 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Создает объект `CDaoQueryDef`. Затем вызовите метод `Open` или `Create`, в зависимости от потребностей.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoQueryDef::Append](#append)|Добавляет querydef querydefs-коллекция базы данных как сохраненный запрос.|
 |[CDaoQueryDef::CanUpdate](#canupdate)|Возвращает ненулевое значение, если запрос можно обновить базу данных.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|Указатель на интерфейс OLE для базового объекта querydef DAO.|
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|Указатель на `CDaoDatabase` объект, с которым связан querydef. Querydef может быть сохранен в базе данных, или нет.|
@@ -435,9 +435,9 @@ void GetFieldInfo(
 
 - Размер имени, типа AFX_DAO_PRIMARY_INFO (по умолчанию), атрибуты
 
-- А также сведения об основном AFX_DAO_SECONDARY_INFO: порядковый номер позиции, требуется разрешить нулевой длины, исходное поле, имя внешнего, исходной таблицы, порядок сортировки
+- AFX_DAO_SECONDARY_INFO сведения об основном плюс: Порядковый номер позиции необходимости разрешить нулевой длины, исходное поле, имя внешнего, исходной таблицы, порядок сортировки
 
-- AFX_DAO_ALL_INFO основной и дополнительной информации плюс: значение по умолчанию текст проверки правила проверки
+- AFX_DAO_ALL_INFO первичного и вторичного сведения плюс: По умолчанию значение, текст проверки, правила проверки
 
 *lpszName*<br/>
 Строка, содержащая имя нужное поле, для поиска по имени. Можно использовать [CString](../../atl-mfc-shared/reference/cstringt-class.md).

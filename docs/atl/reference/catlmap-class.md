@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 83ac810538bf189d026c0cb9b2a76ded49fdd86c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499694"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293788"
 ---
 # <a name="catlmap-class"></a>Класс CAtlMap
 
@@ -76,7 +76,7 @@ class CAtlMap
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Тип, используемый при передаче ключа в качестве входного аргумента|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Тип, используемый при возврате ключа в виде выходного аргумента.|
@@ -85,7 +85,7 @@ class CAtlMap
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Класс CAtlMap::CPair](#cpair_class)|Класс, содержащий элементы ключ и значение.|
 
@@ -98,7 +98,7 @@ class CAtlMap
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Конструктор.|
 |[CAtlMap:: ~ CAtlMap](#dtor)|Деструктор|
@@ -133,7 +133,7 @@ class CAtlMap
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Заменяет или добавляет новый элемент к `CAtlMap`.|
 
@@ -294,7 +294,7 @@ CPair* GetAt(POSITION& pos) throw();
 *key*<br/>
 Параметр шаблона, указывающий тип ключа карты.
 
-*значение*<br/>
+*value*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -391,7 +391,7 @@ void GetNextAssoc(
 *key*<br/>
 Параметр шаблона, указывающий тип ключа карты.
 
-*значение*<br/>
+*value*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 ### <a name="remarks"></a>Примечания
@@ -561,7 +561,7 @@ CPair* Lookup(KINARGTYPE key) throw();
 *key*<br/>
 Задает ключ, определяющий элемент, выполняется поиск.
 
-*значение*<br/>
+*value*<br/>
 Переменная, которая получает искомого значения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -675,7 +675,7 @@ POSITION SetAt(
 *key*<br/>
 Значение ключа, чтобы добавить `CAtlMap` объекта.
 
-*значение*<br/>
+*value*<br/>
 Значение, которое нужно добавить `CAtlMap` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -731,7 +731,7 @@ void SetValueAt(
 *торговых терминалов*<br/>
 Счетчик позиции, возвращенный предыдущим вызовом [CAtlMap::GetNextAssoc](#getnextassoc) или [CAtlMap::GetStartPosition](#getstartposition).
 
-*значение*<br/>
+*value*<br/>
 Значение, которое нужно добавить `CAtlMap` объекта.
 
 ### <a name="remarks"></a>Примечания

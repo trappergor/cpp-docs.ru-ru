@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273612"
 ---
 # <a name="chttpconnection-class"></a>Класс CHttpConnection
 
@@ -37,7 +37,7 @@ class CHttpConnection : public CInternetConnection
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHttpConnection::OpenRequest](#openrequest)|Открывает HTTP-запроса.|
 
@@ -197,7 +197,7 @@ CHttpFile* OpenRequest(
 
 *dwFlags* может принимать одно из следующих:
 
-|Флаг Internet|Описание|
+|Флаг Internet|Описание:|
 |-------------------|-----------------|
 |INTERNET_FLAG_RELOAD|Вызывает загрузку запрошенного файла, объекта или списка каталогов с сервера-источника, а не из кэша.|
 |INTERNET_FLAG_DONT_CACHE|Не добавляет сущность, возвращаемую в кэш.|

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266065"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap-класс
 
@@ -56,7 +56,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Вставляет элемент в схеме.|
 
@@ -144,7 +144,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 Это встраиваемая функция вызывает `BASE_CLASS` **:: подстановки**.
 
-##  <a name="operator_at"></a>  [CTypedPtrMap::operator]
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 Этот оператор может использоваться только в левой части оператора присваивания (l значение).
 
