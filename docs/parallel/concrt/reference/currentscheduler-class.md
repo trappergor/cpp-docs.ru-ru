@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619184"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326794"
 ---
 # <a name="currentscheduler-class"></a>Класс CurrentScheduler
 
@@ -212,7 +212,7 @@ static bool __cdecl IsAvailableLocation(const location& _Placement);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Индикация доступности расположения, указанного аргументом `_Placement`, в текущем планировщике.
+Индикация доступности расположения, указанного параметром `_Placement`, в текущем планировщике.
 
 ### <a name="remarks"></a>Примечания
 
@@ -273,4 +273,3 @@ static void __cdecl ScheduleTask(
 [Класс Scheduler](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [Планировщик задач](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

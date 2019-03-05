@@ -140,17 +140,17 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662778"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303352"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 
 Изображения на панели инструментов. `CMFCToolBarImages` Класс управляет инструментов изображения, загруженные из ресурсов приложения или из файлов.
-Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 ## <a name="syntax"></a>Синтаксис
 
 ```
@@ -167,7 +167,7 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||
 |[CMFCToolBarImages::AddIcon](#addicon)|Добавляет значок изображениям значков панели инструментов.|
@@ -242,7 +242,7 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Значение TRUE, если отключена альфа-truecolor смешение (32-разрядный цвет).|
 
@@ -295,7 +295,7 @@ int AddIcon(
 ### <a name="parameters"></a>Параметры
 
 *hIcon*<br/>
-[in] Дескриптор значка для добавления.
+[in] Дескриптор значка, который нужно добавить.
 
 *bAlphaBlend*<br/>
 [in] Значение TRUE, если этот значок используется с альфа-смешением; в противном случае — значение FALSE.
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Значение TRUE, если `CMFCToolBarImages` объект использует глубину цвета (бита на пиксель) нового изображения. Значение FALSE, если `CMFCToolbarImages` сохраняет текущую глубину цвета.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Ссылку на `CMFCToolbarImages` , содержащий изображение для добавления.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Параметры
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Список изображений для использования в качестве источника для изображений на панели инструментов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -585,7 +585,7 @@ static void FillDitheredRect(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Координаты прямоугольника для заливки.
 
 ### <a name="remarks"></a>Примечания

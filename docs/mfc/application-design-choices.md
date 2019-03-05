@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602934"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302821"
 ---
 # <a name="application-design-choices"></a>Решения, которые необходимо принять при разработке приложения
 
@@ -52,7 +52,7 @@ ms.locfileid: "50602934"
 
 Приложение выполняется на клиентском компьютере или на компьютере сервера. Приложения могут также храниться на сервере и затем Интернета и запустить на клиентском компьютере. Классы MFC WinInet используются для клиентских приложений для загрузки файлов. MFC и асинхронным моникером классы используются для загрузки файлов и свойства элемента управления. Классы для элементов управления ActiveX и активные документы используются для клиентских приложений и приложений, которые загружаются с сервера под управлением клиента.
 
-##  <a name="_core_the_web_page"></a> Веб-страницы: Элементы управления ActiveX HTML, активные документы,
+##  <a name="_core_the_web_page"></a> Веб-страницы: Элементы управления ActiveX HTML, активные документы
 
 Корпорация Майкрософт предлагает несколько способов предоставления содержимого на веб-странице. Веб-страниц можно использовать стандартный HTML или HTML-расширений, таких как тег объекта, для обеспечения динамического содержимого, такие как элементы управления ActiveX.
 
@@ -92,4 +92,3 @@ ms.locfileid: "50602934"
 [Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)<br/>
 [Расширения Интернета Win32 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [Асинхронные моникеры в Интернете](../mfc/asynchronous-monikers-on-the-internet.md)
-

@@ -166,18 +166,18 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: f7a8cca3da85e3ac0b7b7e63e83d394a0e8a9899
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305072"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
 
 Объект `CMFCPropertyGridProperty` представляет элемент списка в элементе управления списком свойств.
 
-   Для получения дополнительных сведений см. в разделе исходном коде, расположенном в **VC\\atlmfc\\src\\mfc** папке установки Visual Studio.
+   Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -189,7 +189,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Создает объект `CMFCPropertyGridProperty`.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Деструктор.|
@@ -263,13 +263,13 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::SetData](#setdata)|Связывает значение типа DWORD со свойством.|
 |[CMFCPropertyGridProperty::SetDescription](#setdescription)|Задает текст, описывающий текущее свойство.|
 |[CMFCPropertyGridProperty::SetName](#setname)|Задает имя свойства.|
-|[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству исходное значение.|
+|[CMFCPropertyGridProperty::SetOriginalValue](#setoriginalvalue)|Задает изменяемому свойству изначальное значение.|
 |[CMFCPropertyGridProperty::SetValue](#setvalue)|Задает значение свойства сетки свойств.|
 |[CMFCPropertyGridProperty::Show](#show)|Показывает или скрывает свойство.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Вызывается платформой для добавления поля со списком к свойству.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Указывает, содержит ли свойство кнопки.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Строка формата для значения типа double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Строка формата для значения типа float.|
@@ -477,7 +477,7 @@ virtual CComboBox* CreateCombo(
 *pWndParent*<br/>
 [in] Указатель на родительское окно, в поле со списком.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник в поле со списком.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -651,7 +651,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*bIncludeHidden*|[in] Значение TRUE для включения скрытых вложенных элементов в счетчик; в противном случае — значение FALSE. Значение по умолчанию — TRUE.|
 
@@ -880,7 +880,7 @@ CMFCPropertyGridProperty* HitTest(
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка для проверки, в координатах клиентской области окна. Этот параметр обычно является текущем положении указателя мыши.
 
 *pt*<br/>
@@ -902,7 +902,7 @@ CMFCPropertyGridProperty* HitTest(
 
 В следующей таблице перечислены значения, которые могут быть возвращены в *pnArea* параметра.
 
-|Область|Описание|
+|Область|Описание:|
 |----------|-----------------|
 |`ClickArea::ClickExpandBox`|Поле элемента развертывания, обозначенного знак плюса (+).|
 |`ClickArea::ClickName`|Имя свойства.|
@@ -1129,7 +1129,7 @@ virtual void OnClickButton(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка, в координатах клиентской области окна.
 
 ### <a name="remarks"></a>Примечания
@@ -1146,7 +1146,7 @@ virtual void OnClickName(CPoint C);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*C*|[in] Точка, в координатах клиентской области окна.|
 
@@ -1169,7 +1169,7 @@ virtual BOOL OnClickValue(
 *uiMsg*<br/>
 [in] Сообщения мыши.
 
-*точка*<br/>
+*point*<br/>
 [in] Точка, в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1224,7 +1224,7 @@ virtual BOOL OnDblClk(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-*точка*<br/>
+*point*<br/>
 [in] Точка, в координатах клиентской области окна.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1280,7 +1280,7 @@ virtual void OnDrawDescription(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, который указывает, где для рисования в описании свойства.
 
 ### <a name="remarks"></a>Примечания
@@ -1324,7 +1324,7 @@ virtual void OnDrawName(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, который указывает, где для рисования имя свойства.
 
 ### <a name="remarks"></a>Примечания
@@ -1344,7 +1344,7 @@ virtual void OnDrawValue(
 *pDC*<br/>
 [in] Указатель на контекст устройства.
 
-*Rect*<br/>
+*rect*<br/>
 [in] Ограничивающий прямоугольник, который указывает, куда извлекается значение свойства.
 
 ### <a name="remarks"></a>Примечания
@@ -1396,7 +1396,7 @@ virtual BOOL OnKillFocus(CWnd*);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*CWnd*|[in] (Не используется). Указатель на окно.|
 
@@ -1446,7 +1446,7 @@ virtual void OnRClickName(CPoint C);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*C*|[in] Точка, в координатах клиентской области окна.|
 
@@ -1501,7 +1501,7 @@ virtual BOOL OnSetCursor() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод поддерживает следующие типы variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
+Этот метод поддерживает следующие типы variant. VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
 
 ##  <a name="onsetselection"></a>  CMFCPropertyGridProperty::OnSetSelection
 
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1550,7 +1550,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод поддерживает свойство, которое является список значений или один из следующих типов variant: VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
+Этот метод поддерживает свойство, которое является список значений или один из следующих типов variant. VT_INT, VT_I2, VT_I4, VT_UINT, VT_UI1, VT_UI2, VT_UI4, VT_R4, VT_R8 и VT_BSTR.
 
 ##  <a name="redraw"></a>  CMFCPropertyGridProperty::Redraw
 
@@ -1662,7 +1662,7 @@ void SetName(
 
 ##  <a name="setoriginalvalue"></a>  CMFCPropertyGridProperty::SetOriginalValue
 
-Задает изменяемому свойству исходное значение.
+Задает изменяемому свойству изначальное значение.
 
 ```
 virtual void SetOriginalValue(const COleVariant& varValue);

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC Add Class Wizard
 - wizards [MFC]
 ms.assetid: ad3b0989-d307-43b2-9417-3f9a78889024
-ms.openlocfilehash: 245963d4222188f16fd334d6950e04584ac1e978
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fa9b947ae6fc0e48aaecde61e35a5f4152c85f27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520846"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304097"
 ---
 # <a name="mfc-add-class-wizard"></a>Мастер добавления классов MFC
 
@@ -77,7 +77,7 @@ ms.locfileid: "51520846"
 
   Задает уровень поддержки для класса [автоматизации](../../mfc/automation.md). Автоматизация на уровне класса доступна для всех классов, поддерживающих автоматизацию. Он также доступен для проектов, созданных с поддержкой автоматизации. То есть проектов MFC [поддерживает ATL](../../atl/reference/mfc-support-in-atl-projects.md), или в проект MFC, для которого установлен **автоматизации** флажок в [дополнительные функции](../../mfc/reference/advanced-features-mfc-application-wizard.md) странице MFC Мастер приложений.
 
-  |Параметр|Описание|
+  |Параметр|Описание:|
   |------------|-----------------|
   |**None**|Указывает, что класс имеет не поддерживает автоматизацию.|
   |**Автоматизация**|Указывает, что класс поддерживает автоматизацию. Если выбран этот параметр, только что созданный класс доступен в виде программируемых объекта клиентскими приложениями модели автоматизации, такие как Microsoft Visual Basic и Microsoft Excel. Этот параметр недоступен для базовых классов, перечисленных под этой таблицей.|

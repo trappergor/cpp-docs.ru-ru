@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477094"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304695"
 ---
 # <a name="concurrentqueue-class"></a>Класс concurrent_queue
 
@@ -46,7 +46,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди.|
 |`const_iterator`|Тип, представляющий не поточно ориентированной `const` итератор по элементам в параллельной очереди.|
@@ -59,7 +59,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Перегружен. Создает параллельную очередь.|
 |[~ concurrent_queue деструктор](#dtor)|Уничтожает параллельной очереди.|
@@ -134,7 +134,7 @@ concurrent_queue(_InputIterator _Begin,
 *Н_ачать*<br/>
 Положение первого элемента в диапазоне копируемых элементов.
 
-*_Окончания*<br/>
+*_End*<br/>
 Положение первого элемента за пределами диапазона копируемых элементов.
 
 ### <a name="remarks"></a>Примечания

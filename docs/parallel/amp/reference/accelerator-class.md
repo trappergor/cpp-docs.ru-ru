@@ -40,12 +40,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
-ms.openlocfilehash: 2045d2d1c6a848378ac55114b61177d386b14fab
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326636"
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Конструктор сочетаний клавиш](#ctor)|Инициализирует новый экземпляр класса `accelerator`.|
 |[~ accelerator, деструктор](#ctor)|Уничтожает `accelerator` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[create_view](#create_view)|Создает и возвращает `accelerator_view` на этом ускорителе.|
 |[get_all](#get_all)|Возвращает вектор `accelerator` объекты, которые представляют все допустимые ускорители.|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Сравнивает этот `accelerator` объект с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator` в данный объект.|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Получает строковую константу для ЦП `accelerator`.|
 |[dedicated_memory](#dedicated_memory)|Получает выделенную память для `accelerator`, в килобайтах.|
@@ -131,7 +131,7 @@ class accelerator;
 
 **Заголовок:** amprt.h
 
-**Пространство имен** : Concurrency
+**Пространство имен:** параллелизм
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
@@ -505,7 +505,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="parameters"></a>Параметры
 
-*_Путь*<br/>
+*_Path*<br/>
 Путь к ускорителю.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -561,7 +561,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 __declspec(property(get= get_version)) unsigned int version;
 ```
 
-##  <a name="dtor"></a> </a> ~ accelerator_view
+##  <a name="dtor"></a> </a> ~accelerator_view
 
 Уничтожает [accelerator_view](accelerator-view-class.md) объекта.
 

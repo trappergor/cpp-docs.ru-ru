@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_gValue
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
-ms.openlocfilehash: 6037dd11ddef10500d9468bdf9fa188901aad739
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536703"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304342"
 ---
 # <a name="canimationcolor-class"></a>Класс CAnimationColor
 
@@ -51,13 +51,13 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Создает объект анимации цвета.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красного, зеленого и синего компонентов.|
 |[CAnimationColor::GetB](#getb)|Предоставляет доступ к CAnimationVariable, представляющий синего компонента.|
@@ -69,13 +69,13 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
 |[CAnimationColor::operator =](#operator_eq)|Назначает цвет CAnimationColor.|
@@ -146,7 +146,7 @@ CAnimationColor(
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Задает цвета по умолчанию.
 
 *nGroupID*<br/>
@@ -249,7 +249,7 @@ BOOL GetValue(COLORREF& color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Выходные данные. Содержит текущее значение при возвращении данного метода.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -292,7 +292,7 @@ operator COLORREF();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-##  <a name="operator_eq"></a>  CAnimationColor::operator =
+##  <a name="operator_eq"></a>  CAnimationColor::operator=
 
 Назначает цвет CAnimationColor.
 
@@ -302,7 +302,7 @@ void operator=(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Указывает новое значение анимации цвета.
 
 ### <a name="remarks"></a>Примечания
@@ -319,7 +319,7 @@ void SetDefaultValue(COLORREF color);
 
 ### <a name="parameters"></a>Параметры
 
-*Цвет*<br/>
+*color*<br/>
 Задает новые значения по умолчанию для красного, зеленого и синего компонентов.
 
 ### <a name="remarks"></a>Примечания

@@ -1,19 +1,19 @@
 ---
-title: Контейнеры элементов управления ActiveX. Включение вложения элемента управления ActiveX вручную
+title: Контейнеры элементов ActiveX. Включение вложения элемента управления ActiveX вручную
 ms.date: 09/12/2018
 helpviewer_keywords:
 - AfxEnableControlContainer method [MFC]
 - ActiveX control containers [MFC], enabling
 - ActiveX controls [MFC], enabling containers
 ms.assetid: 833bcde9-c9ad-4709-ad12-2fc2150fb6a5
-ms.openlocfilehash: 1fdf27975516715ea350af1f917eb43179f3e6d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80ca25192f3dbda711b0398917cfa68571cd2c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510127"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302732"
 ---
-# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Контейнеры элементов управления ActiveX. Включение вложения элемента управления ActiveX вручную
+# <a name="activex-control-containers-manually-enabling-activex-control-containment"></a>Контейнеры элементов ActiveX. Включение вложения элемента управления ActiveX вручную
 
 Если не была включена поддержка элементов управления ActiveX, при использовании мастера приложений MFC для создания приложения, необходимо вручную добавить поддержку этих функций. В этой статье описывается процесс для вручную добавлять вложения элемента управления ActiveX в приложение контейнера OLE. Если заранее известно, что требуется поддержка элементов управления ActiveX в OLE-контейнер, ознакомьтесь со статьей [создание контейнеров элементов управления MFC ActiveX](../mfc/reference/creating-an-mfc-activex-control-container.md).
 
@@ -39,4 +39,3 @@ ms.locfileid: "50510127"
 ## <a name="see-also"></a>См. также
 
 [Контейнеры для элементов ActiveX](../mfc/activex-control-containers.md)
-

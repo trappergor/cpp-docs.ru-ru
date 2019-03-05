@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], IsValidSource
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
-ms.openlocfilehash: 4f0dfb1579539ef744f9e16a24acc6c34463a435
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d118b132fc110402967e9c7f2b1d74a2164d7c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594649"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304617"
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 
@@ -63,7 +63,7 @@ class COleChangeSourceDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|
 
