@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 51d524054b67a5cecc5aa7791b0aeea0cc076813
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50457789"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304981"
 ---
 # <a name="coledropsource-class"></a>Класс COleDropSource
 
@@ -31,17 +31,17 @@ ms.locfileid: "50457789"
 class COleDropSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Участники
+## <a name="members"></a>Члены
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Создает объект `COleDropSource`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[COleDropSource::GiveFeedback](#givefeedback)|Изменяет курсор во время операции перетаскивания и вставки.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Обрабатывает захват мыши во время операции перетаскивания и вставки.|
@@ -147,7 +147,7 @@ virtual SCODE QueryContinueDrag(
 Указывает, была ли нажата клавиша ESC с момента последнего вызова `COleDropSource::QueryContinueDrag`.
 
 *dwKeyState*<br/>
-Содержит состояние управляющих клавиш на клавиатуре. Это представляет собой сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
+Содержит состояние управляющих клавиш на клавиатуре. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -167,4 +167,3 @@ DRAGDROP_S_CANCEL, если клавиша ESC или правой кнопки 
 [Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
-
