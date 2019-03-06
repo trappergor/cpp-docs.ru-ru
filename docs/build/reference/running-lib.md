@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656980"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413333"
 ---
 # <a name="running-lib"></a>Запуск программы LIB
 
@@ -62,7 +62,7 @@ ms.locfileid: "50656980"
 
 Следующие параметры применяются ко всем режимам LIB:
 
-> **/ ERRORREPORT** [**NONE** &AMP;#124; **PROMPT** &AMP;#124; **ОЧЕРЕДИ** &AMP;#124; **ОТПРАВКИ**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 При сбое lib.exe во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.
 
@@ -88,7 +88,7 @@ ms.locfileid: "50656980"
 
 Отображает подробные сведения о ходе выполнения сеанса, включая имена добавляемых OBJ-файлов. Эти сведения отправляются в стандартный вывод и могут быть перенаправлены в файл.
 
-> **/WX**[**: НЕТ**]
+> **/WX**[**:NO**]
 
 Обрабатывать предупреждения как ошибки. См. в разделе [/WX (обработка предупреждений компоновщика как ошибки)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Дополнительные сведения.
 

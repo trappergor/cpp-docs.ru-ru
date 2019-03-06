@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551337"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414633"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Различия в поведении при обработке исключений в /CLR
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a>Разделенные реторы
 
-**/ CLR** не поддерживает повторное создание исключения за пределами обработчика catch (известный как Разделенные реторы). Исключения этого типа, обрабатываются как стандартный rethrow C++. Если rethrow при обнаружении active управляемого исключения, исключение упаковываться как исключения C++, а затем выдаваться повторно. Исключения этого типа может быть перехвачен только как исключение типа [System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx).
+**/ CLR** не поддерживает повторное создание исключения за пределами обработчика catch (известный как Разделенные реторы). Исключения этого типа, обрабатываются как стандартный rethrow C++. Если םוסגחאםםץ rethrow при обнаружении active управляемого исключения, исключение упаковываться как исключения C++, а затем выдаваться повторно. Исключения этого типа может быть перехвачен только как исключение типа <xref:System.Runtime.InteropServices.SEHException>.
 
 В следующем примере показано управляемое исключение повторно создаются как исключения C++:
 

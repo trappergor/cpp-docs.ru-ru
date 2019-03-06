@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260274"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418767"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 
@@ -69,7 +69,7 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CProgressCtrl::Create](#create)|Создает элемент управления хода выполнения и присоединяет его к `CProgressCtrl` объекта.|
 |[CProgressCtrl::CreateEx](#createex)|Создает элемент управления хода выполнения с указанной расширенные стили Windows и присоединяет его к `CProgressCtrl` объекта.|
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - Отображает PBS_SMOOTH постепенного, плавное заполнение индикатора. Без этого флага элемент управления будет заполнить блоки.
 
 *rect*<br/>
-Задает размер и положение окна хода выполнения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Так как элемент управления должен быть дочернего окна, указанной координаты указываются относительно клиентской области *pParentWnd*.
+Задает размер и положение окна хода выполнения. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры. Так как элемент управления должен быть дочернего окна, указанной координаты указываются относительно клиентской области *pParentWnd*.
 
 *pParentWnd*<br/>
 Указывает ход родительскому окну элемента управления, обычно `CDialog`. Он не должен иметь значение NULL.
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 Задает стиль окна хода выполнения. Применить любое сочетание стилей окна, описанные в [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете Windows SDK.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.
@@ -380,7 +380,7 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*clrBar*|[in] Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|
 
@@ -531,7 +531,7 @@ int SetState(int iState);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iState*|[in] Состояние, устанавливаемое для индикатора. Необходимо использовать одно из следующих значений.<br /><br /> -PBST_NORMAL - выполняется<br />-PBST_ERROR - ошибка<br />-PBST_PAUSED - приостановлена|
 

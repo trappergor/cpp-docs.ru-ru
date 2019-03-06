@@ -22,12 +22,12 @@ helpviewer_keywords:
 - GetPropertyInfo method
 - SetProperties method
 ms.assetid: a7f15a8b-95b2-4316-b944-d5d03f8d74ab
-ms.openlocfilehash: 2ce9f3fa18d2a17d499b65258cfda52783ce46c5
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 13c41b97190ff13b87361b6e8344b8f17798708a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556950"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413346"
 ---
 # <a name="idbpropertiesimpl-class"></a>Класс IDBPropertiesImpl
 
@@ -62,7 +62,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
 
 ## <a name="remarks"></a>Примечания
 
-[IDBProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719607(v=vs.85)) обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей. Тем не менее если перечислитель предоставляет [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85)), она должна предоставлять `IDBProperties`. `IDBPropertiesImpl` реализует `IDBProperties` с помощью статической функции, определяемые [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
+[IDBProperties](/previous-versions/windows/desktop/ms719607(v=vs.85)) обязательный интерфейс для объектов источников данных и дополнительный интерфейс для перечислителей. Тем не менее если перечислитель предоставляет [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85)), она должна предоставлять `IDBProperties`. `IDBPropertiesImpl` реализует `IDBProperties` с помощью статической функции, определяемые [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md).
 
 ## <a name="getproperties"></a> IDBPropertiesImpl::GetProperties
 
@@ -79,7 +79,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) в *справочнике программиста OLE DB*.
 
 Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IDBProperties::GetProperties`:
 
@@ -110,7 +110,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBProperties::GetPropertyInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718175(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IDBProperties::GetPropertyInfo](/previous-versions/windows/desktop/ms718175(v=vs.85)) в *справочнике программиста OLE DB*.
 
 Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IDBProperties::GetPropertyInfo`:
 
@@ -136,7 +136,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723049(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IDBProperties::SetProperties](/previous-versions/windows/desktop/ms723049(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 

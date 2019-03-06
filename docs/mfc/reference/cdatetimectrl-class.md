@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422498"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 
@@ -61,7 +61,7 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Создает объект `CDateTimeCtrl`.|
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 Задает сочетание стилей элемента управления даты-времени. См. в разделе [стили даты и времени средство выбора элемента управления](/windows/desktop/Controls/date-and-time-picker-control-styles) в пакете SDK для Windows, Дополнительные сведения о стилях средство выбора даты и времени.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, которая является положение и размер элемента управления выбора даты и времени.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, которая является положение и размер элемента управления выбора даты и времени.
 
 *pParentWnd*<br/>
 Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления выбора даты и времени. Он не должен иметь значение NULL.
@@ -194,7 +194,7 @@ BOOL GetDateTimePickerInfo(LPDATETIMEPICKERINFO pDateTimePickerInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pDateTimePickerInfo*|[out] Указатель на [DATETIMEPICKERINFO](/windows/desktop/api/commctrl/ns-commctrl-tagdatetimepickerinfo) структуру, которая получает описание текущего элемента управления выбора даты и времени.<br /><br /> Вызывающий объект отвечает за распределение этой структуры. Тем не менее, этот метод инициализирует *cbSize* член структуры.|
 
@@ -509,7 +509,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*dwStyle*|[in] Новый месяц календаря стиль элемента управления, который представляет собой битовую комбинацию (OR) стили элемента управления Календарь месяца. Дополнительные сведения см. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles).|
 

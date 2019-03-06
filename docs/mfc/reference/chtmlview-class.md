@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295998"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425007"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 
@@ -390,7 +390,7 @@ virtual BOOL Create(
 Указывает атрибуты стиля окна. По умолчанию задаются стили WS_VISIBLE и WS_CHILD Windows.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
 
 *pParentWnd*<br/>
 Указатель на родительское окно элемента управления.
@@ -1045,7 +1045,7 @@ void Navigate(
 Строка, содержащая URL-адрес для перехода к выделенный вызывающим объектом, или полный путь к файлу для отображения.
 
 *dwFlags*<br/>
-Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.
+Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) перечисления.
 
 *lpszTargetFrameName*<br/>
 Указатель на строку, содержащую имя фрейма, в котором будет отображаться ресурс.
@@ -1095,7 +1095,7 @@ void Navigate2(
 Указатель на [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist) структуры.
 
 *dwFlags*<br/>
-Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.
+Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, на чтение или запись из кэша и следует ли отображать ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) перечисления.
 
 *lpszTargetFrameName*<br/>
 Указатель на строку, содержащую имя фрейма, в котором будет отображаться ресурс.
@@ -1215,7 +1215,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnDocWindowActivate` реагировать на `OnDocWindowActivate` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnDocWindowActivate` реагировать на `OnDocWindowActivate` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1256,7 +1256,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Включает или отключает немодальных диалоговых окон, когда контейнер создает или уничтожает модальное диалоговое окно. Переопределить `OnEnableModeless` реагировать на `EnableModeless` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Включает или отключает немодальных диалоговых окон, когда контейнер создает или уничтожает модальное диалоговое окно. Переопределить `OnEnableModeless` реагировать на `EnableModeless` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ virtual HRESULT OnFilterDataObject(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnFilterDataObject` реагировать на `FilterDataObject` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnFilterDataObject` реагировать на `FilterDataObject` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnFrameWindowActivate` реагировать на `OnFrameWindowActivate` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnFrameWindowActivate` реагировать на `OnFrameWindowActivate` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1338,11 +1338,11 @@ virtual HRESULT OnGetDropTarget(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-См. в разделе [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в пакете SDK для Windows, список кодов возврата.
+См. в разделе [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) в пакете SDK для Windows, список кодов возврата.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnGetDropTarget` реагировать на `GetDropTarget` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnGetDropTarget` реагировать на `GetDropTarget` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnGetExternal` реагировать на `GetExternal` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnGetExternal` реагировать на `GetExternal` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Параметры
 
 *pInfo*<br/>
-Адрес [DOCHOSTUIINFO](https://msdn.microsoft.com/library/aa770044.aspx) структуру, которая получает возможности пользовательского интерфейса ведущего приложения.
+Адрес [DOCHOSTUIINFO](/previous-versions/aa770044\(v=vs.85\)) структуру, которая получает возможности пользовательского интерфейса ведущего приложения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1384,7 +1384,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnGetHostInfo` реагировать на `GetHostInfo` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnGetHostInfo` реагировать на `GetHostInfo` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ virtual HRESULT OnGetOptionKeyPath(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnGetOptionKeyPath` реагировать на `GetOptionKeyPath` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnGetOptionKeyPath` реагировать на `GetOptionKeyPath` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnHideUI` реагировать на `HideUI` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnHideUI` реагировать на `HideUI` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1585,7 +1585,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnResizeBorder` реагировать на `ResizeBorder` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnResizeBorder` реагировать на `ResizeBorder` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ virtual HRESULT OnShowContextMenu(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-См. в разделе [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в пакете Windows SDK для списка значений.
+См. в разделе [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) в пакете Windows SDK для списка значений.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnShowContextMenu` реагировать на `ShowContextMenu` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnShowContextMenu` реагировать на `ShowContextMenu` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ virtual HRESULT OnShowUI(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-См. в разделе [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в пакете Windows SDK для списка значений.
+См. в разделе [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) в пакете Windows SDK для списка значений.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnShowUI` реагировать на `ShowUI` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnShowUI` реагировать на `ShowUI` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1756,7 +1756,7 @@ virtual HRESULT OnTranslateAccelerator(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnTranslateAccelerator` реагировать на `TranslateAccelerator` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnTranslateAccelerator` реагировать на `TranslateAccelerator` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ virtual HRESULT OnTranslateUrl(
 
 ### <a name="remarks"></a>Примечания
 
-Переопределить `OnTranslateUrl` реагировать на `TranslateUrl` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) в пакете SDK для Windows, Дополнительные сведения.
+Переопределить `OnTranslateUrl` реагировать на `TranslateUrl` уведомления из элемента управления веб-браузере Microsoft. См. в разделе [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения.
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -2236,4 +2236,4 @@ void Stop();
 [Пример MFC MFCIE](../../visual-cpp-samples.md)<br/>
 [Класс CFormView](../../mfc/reference/cformview-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
+[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

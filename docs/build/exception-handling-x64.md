@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ exception handling, x64
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
-ms.openlocfilehash: 33206dfb885239839c3a64436b6b540fc7d4e6e5
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627544"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422979"
 ---
 # <a name="x64-exception-handling"></a>x64 обработки исключений
 
@@ -45,7 +45,7 @@ ms.locfileid: "53627544"
 |UBYTE: 4|Регистр кадра|
 |UBYTE: 4|Смещение регистра кадров (масштабировать)|
 |USHORT \* n|Массив кодов очистки|
-|переменная|Может быть формы (1) или (2) ниже|
+|Переменная|Может быть формы (1) или (2) ниже|
 
 (1) обработчик исключений
 
@@ -68,7 +68,7 @@ ms.locfileid: "53627544"
 
    Номер версии для очистки данных, в данный момент 1.
 
-- **флаги**
+- **Флаги**
 
    В настоящее время определены три флага:
 
@@ -182,7 +182,7 @@ ms.locfileid: "53627544"
 
   |||
   |-|-|
-  |RSP + 32|SS|
+  |RSP+32|SS|
   |RSP + 24|Старый RSP|
   |RSP + 16|EFLAGS|
   |RSP + 8|CS|
@@ -193,7 +193,7 @@ ms.locfileid: "53627544"
   |||
   |-|-|
   |RSP + 40|SS|
-  |RSP + 32|Старый RSP|
+  |RSP+32|Старый RSP|
   |RSP + 24|EFLAGS|
   |RSP + 16|CS|
   |RSP + 8|ЗАРЕЗЕРВИРОВАННОГО IP-АДРЕСА|
@@ -504,4 +504,4 @@ typedef struct _RUNTIME_FUNCTION {
 
 ## <a name="see-also"></a>См. также
 
-[x64 программные соглашения](../build/x64-software-conventions.md)
+[Программные соглашения для 64-разрядных систем](../build/x64-software-conventions.md)

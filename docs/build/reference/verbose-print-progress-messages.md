@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dependencies [C++], dependency information in linker output
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
-ms.openlocfilehash: 41a8ee835a65a7c9a17df9bb9c155267cae29baf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 290d2e5c5c5a87042ee805cdaed90cce4418a389
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575621"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423759"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (печать сообщений о ходе выполнения)
 
@@ -33,12 +33,12 @@ ms.locfileid: "50575621"
 |Параметр|Описание|
 |------------|-----------------|
 |/VERBOSE|Отображает подробные сведения о процессе компоновки.|
-|/ VERBOSE: ICF|Отображает сведения о действиях компоновщика, полученный в результате применения [/OPT: ICF](../../build/reference/opt-optimizations.md).|
-|/ VERBOSE: INCR|Отображает сведения о процессе компоновки.|
+|/VERBOSE:ICF|Отображает сведения о действиях компоновщика, полученный в результате применения [/OPT: ICF](../../build/reference/opt-optimizations.md).|
+|/VERBOSE:INCR|Отображает сведения о процессе компоновки.|
 |/ VERBOSE: LIB|Отображает сообщения о ходе выполнения, указывающие только библиотеки, в котором выполняется поиск.<br /><br /> Отображаемая информация включает в себя процесс поиска библиотеки и списки имена библиотек и объектов (с указанием полного пути), символ, разрешаемый из библиотеки и список объектов, которые ссылаются на этот символ.|
 |/ VERBOSE: REF|Отображает сведения о действиях компоновщика, полученный в результате применения [предотвратят](../../build/reference/opt-optimizations.md).|
-|/ VERBOSE: SAFESEH|Отображает сведения о модулях, несовместимых с безопасной обработки, когда исключений [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) не указан.|
-|/ VERBOSE: UNUSEDLIBS|Отображает сведения обо всех файлах библиотеки, которые не используются при создании образа.|
+|/VERBOSE:SAFESEH|Отображает сведения о модулях, несовместимых с безопасной обработки, когда исключений [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md) не указан.|
+|/VERBOSE:UNUSEDLIBS|Отображает сведения обо всех файлах библиотеки, которые не используются при создании образа.|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 

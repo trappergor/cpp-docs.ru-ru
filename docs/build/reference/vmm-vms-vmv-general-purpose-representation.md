@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 4dd7b47245e3359bbc938578f2bcd07b8b295909
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578442"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425215"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm, /vms и /vmv (представление общего назначения)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50578442"
 
 Данные параметры описаны в следующей таблице.
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |------------|-----------------|
 |**/vmm**|Указывает наиболее общее представление указателя на член класса, в котором используется множественное наследование.<br /><br /> Соответствующий [ключевое слово наследования](../../cpp/inheritance-keywords.md) и аргумент для [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) — **multiple_inheritance**.<br /><br /> Это представление больше, чем, необходимого для одиночного наследования.<br /><br /> Если модель наследования определения класса, для которой объявлен указатель на член является виртуальной, компилятор создает ошибку.|
 |**/vms**|Указывает наиболее общее представление указателя на член класса, в котором использует не наследования или одиночное наследование.<br /><br /> Соответствующий [ключевое слово наследования](../../cpp/inheritance-keywords.md) и аргумент для [#pragma pointers_to_members](../../preprocessor/pointers-to-members.md) — **одиночного наследования**.<br /><br /> Это наименьшее возможное представление указателя на член класса.<br /><br /> Если модель наследования определения класса, для которой объявлен указатель на член является несколькими или виртуальными, компилятор выдает ошибку.|

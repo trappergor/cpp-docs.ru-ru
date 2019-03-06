@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272845"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426138"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 
@@ -61,7 +61,7 @@ ms.locfileid: "57272845"
 class CStatusBarCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.
 
 *rect*<br/>
-Задает размер и положение управления строкой состояния. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Задает размер и положение управления строкой состояния. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 *pParentWnd*<br/>
 Указывает состояние панели родительскому окну элемента управления, обычно `CDialog`. Он не должен иметь значение NULL.
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 Задает стиль управления строкой состояния. Применить любое сочетание строки стили элемента управления, перечисленные в состояния [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK. Этот параметр должен содержать стиль WS_CHILD. Она также должна включать WS_VISIBLE стиль.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.
@@ -344,7 +344,7 @@ BOOL GetRect(
 Отсчитываемый от нуля индекс части которого ограничивающий прямоугольник которой требуется извлечь.
 
 *lpRect*<br/>
-Адрес [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник.
+Адрес [RECT](/previous-versions/dd162897\(v=vs.85\)) структуру, которая получает ограничивающий прямоугольник.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

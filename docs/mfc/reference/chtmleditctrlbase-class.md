@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293944"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423239"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 
@@ -241,7 +241,7 @@ template <class T> class CHtmlEditCtrlBase
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CHtmlEditCtrlBase::AddToGlyphTable](#addtoglyphtable)|Добавляет запись в таблицу глифа, который задает изображения, отображаемые для конкретных тегов в режиме конструктора.|
 |[CHtmlEditCtrlBase::Bold](#bold)|Переключает полужирным состояние выбранного текста.|
@@ -418,9 +418,9 @@ URL-адрес изображения.
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о параметрах см. в разделе «Формат строки таблицы глиф» в [с помощью редактирования глифы](https://msdn.microsoft.com/library/aa969614.aspx).
+Дополнительные сведения о параметрах см. в разделе «Формат строки таблицы глиф» в [с помощью редактирования глифы](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\)).
 
-Этот метод отправляет [идентификатор команды IDM_ADDTOGLYPHTABLE](https://msdn.microsoft.com/library/aa769891.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_ADDTOGLYPHTABLE](/previous-versions/aa769891\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
 
@@ -436,7 +436,7 @@ HRESULT Bold() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BOLD](https://msdn.microsoft.com/library/aa769861.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BOLD](/previous-versions/aa769861\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button
 
@@ -457,7 +457,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BUTTON](https://msdn.microsoft.com/library/aa769966.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BUTTON](/previous-versions/aa769966\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
 
@@ -478,7 +478,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_CHECKBOX](https://msdn.microsoft.com/library/aa769972.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_CHECKBOX](/previous-versions/aa769972\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
 
@@ -494,7 +494,7 @@ HRESULT ClearSelection() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_CLEARSELECTION](https://msdn.microsoft.com/library/aa770038.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_CLEARSELECTION](/previous-versions/aa770038\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
 
@@ -510,7 +510,7 @@ HRESULT Copy() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_COPY](https://msdn.microsoft.com/library/aa769872.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_COPY](/previous-versions/aa769872\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
 
@@ -526,7 +526,7 @@ HRESULT Cut() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_CUT](https://msdn.microsoft.com/library/aa769875.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_CUT](/previous-versions/aa769875\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
 
@@ -542,7 +542,7 @@ HRESULT Delete() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_DELETE](https://msdn.microsoft.com/library/aa769876.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_DELETE](/previous-versions/aa769876\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
 
@@ -563,7 +563,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_DROPDOWNBOX](https://msdn.microsoft.com/library/aa769984.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_DROPDOWNBOX](/previous-versions/aa769984\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
 
@@ -579,7 +579,7 @@ HRESULT EmptyGlyphTable() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_EMPTYGLYPHTABLE](https://msdn.microsoft.com/library/aa769907.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_EMPTYGLYPHTABLE](/previous-versions/aa769907\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
 
@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
-Идентификатор команды для выполнения. Список, см. в разделе [идентификаторы команд MSHTML](https://msdn.microsoft.com/library/aa741315.aspx).
+Идентификатор команды для выполнения. Список, см. в разделе [идентификаторы команд MSHTML](/previous-versions/aa741315\(v=vs.85\)).
 
 *cmdExecOpt*<br/>
 Значения, взятые из [перечислений OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) перечисления, который описывают, каким образом объект должен выполнить команду.
@@ -639,7 +639,7 @@ HRESULT Font() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_FONT](https://msdn.microsoft.com/library/aa769913.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_FONT](/previous-versions/aa769913\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
 
@@ -660,7 +660,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_ABSOLUTE_POSITION](/previous-versions/aa769889\(v=vs.85\)).
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -681,7 +681,7 @@ HRESULT GetBackColor(int& nColor) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
 
@@ -702,7 +702,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BLOCKFMT](https://msdn.microsoft.com/library/aa769883.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BLOCKFMT](/previous-versions/aa769883\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
 
@@ -723,7 +723,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [ИД команды IDM_GETBLOCKFMTS](https://msdn.microsoft.com/library/aa769884.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [ИД команды IDM_GETBLOCKFMTS](/previous-versions/aa769884\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
 
@@ -744,7 +744,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_BOOKMARK](/previous-versions/aa769873\(v=vs.85\)).
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -852,7 +852,7 @@ HRESULT GetFontFace(CString& strFace) const;
 
 Если текущее выделение использует несколько шрифтов, *strFace* будет пустая строка.
 
-Этот метод отправляет [идентификатор команды IDM_FONTNAME](https://msdn.microsoft.com/library/aa769880.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_FONTNAME](/previous-versions/aa769880\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
 
@@ -873,7 +873,7 @@ HRESULT GetFontSize(short& nSize) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
 
@@ -894,7 +894,7 @@ HRESULT GetForeColor(int& nColor);
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
 
@@ -915,7 +915,7 @@ HRESULT GetFrameZone(short& nZone) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_GETFRAMEZONE](https://msdn.microsoft.com/library/aa769916.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_GETFRAMEZONE](/previous-versions/aa769916\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
 
@@ -948,7 +948,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)).
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ HRESULT GetShowAllTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)).
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ HRESULT GetShowAreaTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)).
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ HRESULT GetShowBRTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)).
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ HRESULT GetShowCommentTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)).
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ HRESULT GetShowMiscTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)).
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ HRESULT GetShowScriptTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)).
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ HRESULT GetShowStyleTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)).
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ HRESULT GetShowUnknownTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx).
+Дополнительные сведения см. в разделе [идентификатор команды IDM_SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)).
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 
@@ -1137,7 +1137,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_HORIZONTALLINE](https://msdn.microsoft.com/library/aa769968.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_HORIZONTALLINE](/previous-versions/aa769968\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
 
@@ -1158,7 +1158,7 @@ URL-адрес гиперссылки.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_HYPERLINK](https://msdn.microsoft.com/library/aa769874.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_HYPERLINK](/previous-versions/aa769874\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
 
@@ -1179,7 +1179,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_IE50_PASTE](https://msdn.microsoft.com/library/aa769922.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_IE50_PASTE](/previous-versions/aa769922\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
 
@@ -1200,7 +1200,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_IFRAME](https://msdn.microsoft.com/library/aa769969.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_IFRAME](/previous-versions/aa769969\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image
 
@@ -1221,7 +1221,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_IMAGE](https://msdn.microsoft.com/library/aa769970.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_IMAGE](/previous-versions/aa769970\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
 
@@ -1237,7 +1237,7 @@ HRESULT Indent() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INDENT](https://msdn.microsoft.com/library/aa769963.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INDENT](/previous-versions/aa769963\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
 
@@ -1258,7 +1258,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSFIELDSET](https://msdn.microsoft.com/library/aa769967.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSFIELDSET](/previous-versions/aa769967\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
 
@@ -1279,7 +1279,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTBUTTON](https://msdn.microsoft.com/library/aa769971.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTBUTTON](/previous-versions/aa769971\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
 
@@ -1300,7 +1300,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTHIDDEN](https://msdn.microsoft.com/library/aa769974.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTHIDDEN](/previous-versions/aa769974\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
 
@@ -1321,7 +1321,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTIMAGE](https://msdn.microsoft.com/library/aa769975.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTIMAGE](/previous-versions/aa769975\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
 
@@ -1342,7 +1342,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTPASSWORD](https://msdn.microsoft.com/library/aa769976.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTPASSWORD](/previous-versions/aa769976\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
 
@@ -1363,7 +1363,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTRESET](https://msdn.microsoft.com/library/aa769978.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTRESET](/previous-versions/aa769978\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
 
@@ -1384,7 +1384,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTSUBMIT](https://msdn.microsoft.com/library/aa769979.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTSUBMIT](/previous-versions/aa769979\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
 
@@ -1405,7 +1405,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_INSINPUTUPLOAD](https://msdn.microsoft.com/library/aa769973.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_INSINPUTUPLOAD](/previous-versions/aa769973\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
 
@@ -1426,7 +1426,7 @@ HRESULT Is1DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_1D_ELEMENT](https://msdn.microsoft.com/library/aa769885.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_1D_ELEMENT](/previous-versions/aa769885\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
 
@@ -1447,7 +1447,7 @@ HRESULT Is2DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_2D_ELEMENT](https://msdn.microsoft.com/library/aa769886.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_2D_ELEMENT](/previous-versions/aa769886\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
 
@@ -1463,7 +1463,7 @@ HRESULT Italic() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_ITALIC](https://msdn.microsoft.com/library/aa769988.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_ITALIC](/previous-versions/aa769988\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
 
@@ -1479,7 +1479,7 @@ HRESULT JustifyCenter() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_JUSTIFYCENTER](https://msdn.microsoft.com/library/aa769989.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_JUSTIFYCENTER](/previous-versions/aa769989\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
 
@@ -1495,7 +1495,7 @@ HRESULT JustifyLeft() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_JUSTIFYLEFT](https://msdn.microsoft.com/library/aa770011.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_JUSTIFYLEFT](/previous-versions/aa770011\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
 
@@ -1511,7 +1511,7 @@ HRESULT JustifyRight() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_JUSTIFYRIGHT](https://msdn.microsoft.com/library/aa770013.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_JUSTIFYRIGHT](/previous-versions/aa770013\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
 
@@ -1532,7 +1532,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_LISTBOX](https://msdn.microsoft.com/library/aa769985.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_LISTBOX](/previous-versions/aa769985\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
 
@@ -1553,7 +1553,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_MARQUEE](https://msdn.microsoft.com/library/aa769981.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_MARQUEE](/previous-versions/aa769981\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
 
@@ -1586,7 +1586,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_ORDERLIST](https://msdn.microsoft.com/library/aa769982.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_ORDERLIST](/previous-versions/aa769982\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
 
@@ -1602,7 +1602,7 @@ HRESULT Outdent() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_OUTDENT](https://msdn.microsoft.com/library/aa770015.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_OUTDENT](/previous-versions/aa770015\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
 
@@ -1623,7 +1623,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_PARAGRAPH](https://msdn.microsoft.com/library/aa769983.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_PARAGRAPH](/previous-versions/aa769983\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
 
@@ -1639,7 +1639,7 @@ HRESULT Paste() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_PASTE](https://msdn.microsoft.com/library/aa770017.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_PASTE](/previous-versions/aa770017\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
 
@@ -1665,7 +1665,7 @@ HRESULT PrintDocument(bool bShowPrintDialog) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_PRINT](https://msdn.microsoft.com/library/aa769937.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_PRINT](/previous-versions/aa769937\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
 
@@ -1687,7 +1687,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_PRINTPREVIEW](https://msdn.microsoft.com/library/aa769938.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_PRINTPREVIEW](/previous-versions/aa769938\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
 
@@ -1725,7 +1725,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_RADIOBUTTON](https://msdn.microsoft.com/library/aa769977.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_RADIOBUTTON](/previous-versions/aa769977\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
 
@@ -1741,7 +1741,7 @@ HRESULT RefreshDocument() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_REFRESH](https://msdn.microsoft.com/library/aa770020.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_REFRESH](/previous-versions/aa770020\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
 
@@ -1757,7 +1757,7 @@ HRESULT RemoveFormat() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_REMOVEFORMAT](https://msdn.microsoft.com/library/aa770021.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_REMOVEFORMAT](/previous-versions/aa770021\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
 
@@ -1778,7 +1778,7 @@ HRESULT SaveAs(LPCTSTR szPath = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [ИД команды IDM_SAVEAS](https://msdn.microsoft.com/library/aa770024.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [ИД команды IDM_SAVEAS](/previous-versions/aa770024\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
 
@@ -1794,7 +1794,7 @@ HRESULT SelectAll() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_SELECTALL](https://msdn.microsoft.com/library/aa770025.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_SELECTALL](/previous-versions/aa770025\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
 
@@ -1815,7 +1815,7 @@ HRESULT Set2DPosition(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_2D_POSITION](https://msdn.microsoft.com/library/aa769887.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_2D_POSITION](/previous-versions/aa769887\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
 
@@ -1836,7 +1836,7 @@ HRESULT SetAbsolutePosition(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_ABSOLUTE_POSITION](https://msdn.microsoft.com/library/aa769889.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_ABSOLUTE_POSITION](/previous-versions/aa769889\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
 
@@ -1857,7 +1857,7 @@ HRESULT SetAtomicSelection(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_ATOMICSELECTION](https://msdn.microsoft.com/library/aa769892.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_ATOMICSELECTION](/previous-versions/aa769892\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
 
@@ -1878,7 +1878,7 @@ HRESULT SetAutoURLDetectMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_AUTOURLDETECT_MODE](https://msdn.microsoft.com/library/aa769893.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_AUTOURLDETECT_MODE](/previous-versions/aa769893\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
 
@@ -1892,10 +1892,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="parameters"></a>Параметры
 
 *nColor*<br/>
-Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).
+Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)).
 
 *szColor*<br/>
-Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](https://msdn.microsoft.com/library/aa769858.aspx).
+Цвет. См. в разделе *pvaIn* в [идентификатор команды IDM_BACKCOLOR](/previous-versions/aa769858\(v=vs.85\)).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1903,7 +1903,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BACKCOLOR_](https://msdn.microsoft.com/library/aa769858.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BACKCOLOR_](/previous-versions/aa769858\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
 
@@ -1924,7 +1924,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [IDM_BLOCKFMT_command идентификатор](https://msdn.microsoft.com/library/aa769883.aspx) для элемента управления WebBrowser.
+Этот метод отправляет [IDM_BLOCKFMT_command идентификатор](/previous-versions/aa769883\(v=vs.85\)) для элемента управления WebBrowser.
 
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
 
@@ -1945,7 +1945,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_BOOKMARK](https://msdn.microsoft.com/library/aa769873.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_BOOKMARK](/previous-versions/aa769873\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
 
@@ -1966,7 +1966,7 @@ HRESULT SetCSSEditingLevel(short nLevel) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_CSSEDITING_LEVEL](https://msdn.microsoft.com/library/aa769903.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_CSSEDITING_LEVEL](/previous-versions/aa769903\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
 
@@ -2012,7 +2012,7 @@ HRESULT SetDefaultComposeSettings(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [ИД команды IDM_COMPOSESETTINGS](https://msdn.microsoft.com/library/aa769901.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [ИД команды IDM_COMPOSESETTINGS](/previous-versions/aa769901\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
 
@@ -2050,7 +2050,7 @@ HRESULT SetDisableEditFocusUI(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM_DISABLE_EDITFOCUS_UI](https://msdn.microsoft.com/library/aa769905.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM_DISABLE_EDITFOCUS_UI](/previous-versions/aa769905\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды FONTNAME IDM](https://msdn.microsoft.com/library/aa769880.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды FONTNAME IDM](/previous-versions/aa769880\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
 
@@ -2109,7 +2109,7 @@ HRESULT SetFontSize(unsigned short size) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM FONTSIZE](https://msdn.microsoft.com/library/aa769881.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM FONTSIZE](/previous-versions/aa769881\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM FORECOLOR](https://msdn.microsoft.com/library/aa769882.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM FORECOLOR](/previous-versions/aa769882\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM IE50_PASTE_MODE](https://msdn.microsoft.com/library/aa769923.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM IE50_PASTE_MODE](/previous-versions/aa769923\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ HRESULT SetLiveResize(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM LIVERESIZE](https://msdn.microsoft.com/library/aa769928.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM LIVERESIZE](/previous-versions/aa769928\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ HRESULT SetMultiSelect(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM MULTIPLESELECTION](https://msdn.microsoft.com/library/aa769929.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM MULTIPLESELECTION](/previous-versions/aa769929\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ HRESULT SetOverrideCursor(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM OVERRIDE_CURSOR](https://msdn.microsoft.com/library/aa769932.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM OVERRIDE_CURSOR](/previous-versions/aa769932\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ HRESULT SetOverwriteMode(bool bMode) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [ПЕРЕЗАПИСАТЬ IDM идентификатор команды](https://msdn.microsoft.com/library/aa770016.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [ПЕРЕЗАПИСАТЬ IDM идентификатор команды](/previous-versions/aa770016\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ HRESULT SetRespectVisInDesign(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM RESPECTVISIBILITY_INDESIGN](https://msdn.microsoft.com/library/aa770023.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM RESPECTVISIBILITY_INDESIGN](/previous-versions/aa770023\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ HRESULT SetShowAlignedSiteTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWALIGNEDSITETAGS](https://msdn.microsoft.com/library/aa769947.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWALIGNEDSITETAGS](/previous-versions/aa769947\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ HRESULT SetShowAllTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWALLTAGS](https://msdn.microsoft.com/library/aa769948.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWALLTAGS](/previous-versions/aa769948\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ HRESULT SetShowAreaTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWAREATAGS](https://msdn.microsoft.com/library/aa769949.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWAREATAGS](/previous-versions/aa769949\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ HRESULT SetShowBRTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWWBRTAGS](https://msdn.microsoft.com/library/aa769956.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWWBRTAGS](/previous-versions/aa769956\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ HRESULT SetShowCommentTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWCOMMENTTAGS](https://msdn.microsoft.com/library/aa769950.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWCOMMENTTAGS](/previous-versions/aa769950\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ HRESULT SetShowMiscTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWMISCTAGS](https://msdn.microsoft.com/library/aa769952.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWMISCTAGS](/previous-versions/aa769952\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ HRESULT SetShowScriptTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWSCRIPTTAGS](https://msdn.microsoft.com/library/aa769953.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWSCRIPTTAGS](/previous-versions/aa769953\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ HRESULT SetShowStyleTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWSTYLETAGS](https://msdn.microsoft.com/library/aa769954.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWSTYLETAGS](/previous-versions/aa769954\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ HRESULT SetShowUnknownTags(bool bNewValue) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM SHOWUNKNOWNTAGS](https://msdn.microsoft.com/library/aa769955.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM SHOWUNKNOWNTAGS](/previous-versions/aa769955\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM TEXTAREA](https://msdn.microsoft.com/library/aa769986.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM TEXTAREA](/previous-versions/aa769986\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM TEXTBOX](https://msdn.microsoft.com/library/aa769980.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM TEXTBOX](/previous-versions/aa769980\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [IDM UNBOOKMARK идентификатор команды](https://msdn.microsoft.com/library/aa770034.aspx) для элемента управления WebBrowser.
+Этот метод отправляет [IDM UNBOOKMARK идентификатор команды](/previous-versions/aa770034\(v=vs.85\)) для элемента управления WebBrowser.
 
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [IDM UNDERLINE идентификатор команды](https://msdn.microsoft.com/library/aa770035.aspx) для элемента управления WebBrowser.
+Этот метод отправляет [IDM UNDERLINE идентификатор команды](/previous-versions/aa770035\(v=vs.85\)) для элемента управления WebBrowser.
 
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [удалить связь группы IDM идентификатор команды](https://msdn.microsoft.com/library/aa770037.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [удалить связь группы IDM идентификатор команды](/previous-versions/aa770037\(v=vs.85\)) в элемент управления WebBrowser.
 
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [идентификатор команды IDM UNORDERLIST](https://msdn.microsoft.com/library/aa769987.aspx) в элемент управления WebBrowser.
+Этот метод отправляет [идентификатор команды IDM UNORDERLIST](/previous-versions/aa769987\(v=vs.85\)) в элемент управления WebBrowser.
 
 ## <a name="see-also"></a>См. также
 

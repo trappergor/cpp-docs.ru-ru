@@ -2,12 +2,12 @@
 title: Облачное и веб-программирование в Visual C++
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 197d3d344d4be809c81f52f30e2462d35ebefbbe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519637"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414490"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Облачное и веб-программирование в Visual C++
 
@@ -44,13 +44,13 @@ ms.locfileid: "51519637"
 
   Поддерживает Windows Desktop (7 +), Windows Server (2012 или более поздней), универсальной платформы Windows, Linux, OSX, Android и iOS.
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](/uwp/api/windows.web.http.httpclient)
 
   Клиентский класс HTTP среды выполнения Windows, основанный на классе .NET Framework с тем же именем в пространстве имен System.Web. `HttpClient` полностью поддерживает асинхронной отправку и загрузку по протоколу HTTP, а также фильтры конвейера, позволяющие вставлять пользовательские обработчики HTTP в конвейер. Пакет Windows SDK содержит примеры фильтров для лимитных сетей, проверки подлинности OAuth и т. д. Для приложений, предназначенных для универсальной платформы Windows, мы рекомендуем использовать `Windows::Web:HttpClient` класса.
 
 - [Интерфейс IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  Предоставляет собственный интерфейс COM, что можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP, и вызывать команду GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
+  Предоставляет собственный интерфейс COM, что можно использовать в приложениях среды выполнения Windows или классических приложениях Windows для подключения к Интернету по протоколу HTTP, и вызывать команду GET, PUT и других команд HTTP. Дополнительные сведения см. в разделе [Пошаговое руководство: Подключение с использованием задач и HTTP-запросов XML](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md).
 
 - [Windows Internet (WinInet)](/windows/desktop/WinInet/portal)
 

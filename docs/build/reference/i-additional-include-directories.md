@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750396"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412852"
 ---
 # <a name="i-additional-include-directories"></a>/I (Дополнительные каталоги включения)
 
@@ -62,7 +62,7 @@ ms.locfileid: "50750396"
 
 ## <a name="example"></a>Пример
 
-Следующая команда выполняет поиск включаемых файлов, запрашиваемые MAIN.c в следующем порядке: во-первых, если указан с помощью двойных кавычек, локальные файлы просматриваются. Затем поиск продолжается в каталог \INCLUDE, а затем в каталоге \MY\INCLUDE и наконец в каталогах, назначенных для переменной среды INCLUDE.
+Следующая команда выполняет поиск включаемых файлов, запрашиваемые MAIN.c в следующем порядке: Во-первых Если указан с помощью двойные кавычки, производится поиск локальных файлов. Затем поиск продолжается в каталог \INCLUDE, а затем в каталоге \MY\INCLUDE и наконец в каталогах, назначенных для переменной среды INCLUDE.
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

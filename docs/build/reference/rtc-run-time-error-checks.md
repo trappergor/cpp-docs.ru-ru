@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655006"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424617"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (проверки ошибок во время выполнения)
 
@@ -95,7 +95,7 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="remarks"></a>Примечания
 
-Проверки ошибок во время выполнения — это способ обнаружения проблем в выполняющемся коде. Дополнительные сведения см. в разделе [как: Использование собственного проверок во время выполнения](/visualstudio/debugger/how-to-use-native-run-time-checks).
+Проверки ошибок во время выполнения — это способ обнаружения проблем в выполняющемся коде. Дополнительные сведения см. в разделе [как: Проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 При компиляции программы командной строки, с помощью любого из **/RTC** параметры компилятора, все директивы pragma [оптимизировать](../../preprocessor/optimize.md) автоматически завершится ошибкой в коде. Это обусловлено проверки ошибок во время выполнения не допускаются в сборке выпуска (оптимизированный).
 
@@ -111,7 +111,7 @@ c = a;  // No run-time error with /RTCu
 
 1. Нажмите кнопку **создание кода** страницу свойств.
 
-1. Измените одно или оба из следующих свойств: **основные проверки времени выполнения** или **меньшего размера тип проверки**.
+1. Измените одно или оба из следующих свойств: **Основные проверки времени выполнения** или **более мелкие введите Check**.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 

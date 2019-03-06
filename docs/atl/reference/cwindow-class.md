@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298352"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425072"
 ---
 # <a name="cwindow-class"></a>Класс CWindow
 
@@ -173,11 +173,11 @@ ms.locfileid: "57298352"
 class CWindow
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CWindow::CWindow](#cwindow)|Конструктор.|
 
@@ -536,7 +536,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 См. в разделе [ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1789,7 +1789,7 @@ int MapWindowPoints(
 
 См. в разделе [MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1923,7 +1923,7 @@ BOOL MoveWindow(
 
 Для окна верхнего уровня параметры объекта x и y являются относительно верхнего левого угла экрана. Для дочернего объекта окна они являются относительно левого верхнего угла клиентской области родительского окна.
 
-Вторая версия этого метода использует [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, чтобы определить новое положение, ширину и высоту окна.
+Вторая версия этого метода использует [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, чтобы определить новое положение, ширину и высоту окна.
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2134,7 +2134,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 См. в разделе [ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) в Windows SDK.
 
-Вторая версия этого метода позволяет преобразовать координаты [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Вторая версия этого метода позволяет преобразовать координаты [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
 
 См. в разделе [SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) в Windows SDK.
 
-Вторая версия этого метода использует [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, чтобы задать новое положение, ширину и высоту окна.
+Вторая версия этого метода использует [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, чтобы задать новое положение, ширину и высоту окна.
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

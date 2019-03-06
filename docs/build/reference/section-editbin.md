@@ -9,12 +9,12 @@ helpviewer_keywords:
 - alignment characters in sections
 - /SECTION editbin option
 ms.assetid: 4680ab4e-c984-4251-8241-93440cad7615
-ms.openlocfilehash: 23a7ab9efc96ec10f4ad14547b0c0a20f13ac014
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ec58e2501176413991e6ad270940406f50b870d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523309"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413151"
 ---
 # <a name="section-editbin"></a>/SECTION (EDITBIN)
 
@@ -40,10 +40,10 @@ ms.locfileid: "50523309"
 |m|Удалить ссылку|
 |o|Информация о связи|
 |p|разбитого на страницы виртуальной памяти|
-|r|чтение|
+|процедура|чтение|
 |s|общие|
 |u|неинициализированных данных|
-|w|запись|
+|если|запись|
 
 Элемент управления *выравнивание*, укажите знак- **A** предшествовать одному из следующих символов, чтобы задать размер выравнивания в байтах, следующим образом:
 

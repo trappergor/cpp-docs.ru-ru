@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: fda12332ef14cb95e9f11f8df0b94ccfffa0303d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556405"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425189"
 ---
 # <a name="idbcreatecommandimpl-class"></a>Класс IDBCreateCommandImpl
 
-Предоставляет реализацию [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85)) интерфейс.
+Предоставляет реализацию [IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85)) интерфейс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -69,7 +69,7 @@ STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBCreateCommand::CreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IDBCreateCommand::CreateCommand](/previous-versions/windows/desktop/ms709772(v=vs.85)) в *справочнике программиста OLE DB*.
 
 Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IDBCreateCommand::CreateCommand`:
 
