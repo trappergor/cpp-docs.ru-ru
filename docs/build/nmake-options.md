@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-ms.openlocfilehash: 84130afea6cc73c480b46f065d6d85e365101b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca7b94935f385971b8d9bff53ece3b86f2885b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455345"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417077"
 ---
 # <a name="nmake-options"></a>Параметры NMAKE
 
@@ -22,7 +22,7 @@ ms.locfileid: "50455345"
 |/C|Подавляет имя выхода по умолчанию, включая некритичные ошибки NMAKE или предупреждения, отметки времени и уведомление об авторских правах NMAKE. Подавляет предупреждения, выдаваемые /K.|
 |/D|Отображение отметок времени каждого вычисление целевых и зависимых сообщение, если целевой объект не существует. Удобно использовать с /P для отладки файла makefile. Используйте **! CMDSWITCHES** для установки или снятия /D для части файла makefile.|
 |/E|В результате переменные среды для переопределения определения макросов makefile.|
-|/ ERRORREPORT [NONE &AMP;#124; PROMPT &AMP;#124; ОЧЕРЕДИ &AMP;#124; ОТПРАВКИ]|Если nmake.exe происходит во время выполнения, можно использовать/errorReport в корпорацию Майкрософт сведения об этих ошибках.<br /><br /> Дополнительные сведения о/errorReport, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../build/reference/errorreport-report-internal-compiler-errors.md).|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Если nmake.exe происходит во время выполнения, можно использовать/errorReport в корпорацию Майкрософт сведения об этих ошибках.<br /><br /> Дополнительные сведения о/errorReport, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../build/reference/errorreport-report-internal-compiler-errors.md).|
 |/F *имя файла*|Указывает *filename* как makefile. Пробелы или символы табуляции может предшествовать *filename*. Укажите /F один раз для каждого файла makefile. Чтобы указать makefile из стандартного ввода, указать дефис (-) для *filename*и завершить ввод с клавиатуры с F6 или CTRL + Z.|
 |/G|Отображает файлы makefile, состав! Директива #INCLUDE.  См. в разделе [директивы предварительной обработки файла Makefile](../build/makefile-preprocessing-directives.md) Дополнительные сведения.|
 |/ HELP, /?|Отображает сводку о синтаксисе командной строки (NMAKE).|

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479053"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421445"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (формат отладочной информации)
 
@@ -83,7 +83,7 @@ ms.locfileid: "50479053"
 
 1. Откройте **свойства конфигурации** > **C/C++** > **Общие** страницу свойств.
 
-1. Изменить **формат отладочной информации** свойство. Выберите **ОК** для сохранения изменений.
+1. Изменить **формат отладочной информации** свойство. Выберите **ОК** для сохранения внесенных изменений.
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
@@ -93,4 +93,3 @@ ms.locfileid: "50479053"
 
 [Параметры компилятора](../../build/reference/compiler-options.md)<br/>
 [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
-

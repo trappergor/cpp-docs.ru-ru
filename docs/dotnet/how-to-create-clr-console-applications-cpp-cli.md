@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Создание консольного приложения CLR (C++/CLI)
+title: Практическое руководство. Создание консольного приложения CLR (C + +/ CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - console applications, templates
 - CLR console applications, project template
 ms.assetid: e89bce3c-706f-4ae0-8a90-cb1a0f674e70
-ms.openlocfilehash: fa45578b1e773e954fe692bd1c49e311626c35de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ce50266eeb17ad858891149489db85b03855aec
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525684"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426343"
 ---
-# <a name="how-to-create-clr-console-applications-ccli"></a>Практическое руководство. Создание консольного приложения CLR (C++/CLI)
+# <a name="how-to-create-clr-console-applications-ccli"></a>Практическое руководство. Создание консольного приложения CLR (C + +/ CLI)
 
 Шаблон консольного приложения можно использовать для создания проекта консольного приложения, уже включающего необходимые ссылки и файлы.
 
@@ -22,7 +22,7 @@ ms.locfileid: "50525684"
 
 - Ссылки на следующие пространства имен .NET Framework:
 
-   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)— содержит фундаментальные и базовые классы, определяющие часто используемые типы значений и типы ссылочных данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.
+   - <xref:System.AppDomainManager>— Содержит фундаментальные и базовые классы, определяющие часто используемые значения и ссылочные типы данных, события и обработчики событий, интерфейсы, атрибуты и исключения обработки.
 
    - mscorlib — библиотека DLL сборки, которая поддерживает разработку для .NET Framework.
 

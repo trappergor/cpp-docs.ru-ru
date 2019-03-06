@@ -4,16 +4,16 @@ ms.date: 10/13/2018
 helpviewer_keywords:
 - OLE DB providers, reading strings into
 ms.assetid: 517f322c-f37e-4eed-bf5e-dd9a412c2f98
-ms.openlocfilehash: 6d8558cce3fc4818d3e6fc8d64a4c682f5ce5b26
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 19fc7b16695ebeff35462aaa2c451ff6459bb7b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556170"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425228"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>Чтение строк в поставщике OLE DB
 
-`CCustomRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85)). Поставщик получает имя файла и сохраняет его в переменной-члена `m_strCommandText`. `Execute` считывает имя файла из `m_strCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (изменения `CCustomWindowsFile` из [хранения строк в поставщике OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) и помещает их в массив.
+`CCustomRowset::Execute` Функция открывает файл и считывает строки. Потребитель передает имя файла для поставщика путем вызова [ICommandText::SetCommandText](/previous-versions/windows/desktop/ms709757(v=vs.85)). Поставщик получает имя файла и сохраняет его в переменной-члена `m_strCommandText`. `Execute` считывает имя файла из `m_strCommandText`. Если имя файла является недопустимым или недоступен, файл `Execute` возвращает сообщение об ошибке. В противном случае он открывает файл и вызовы `fgets` для извлечения строк. Для каждого набора строк его чтение, `Execute` создает экземпляр пользовательской записи (изменения `CCustomWindowsFile` из [хранения строк в поставщике OLE DB](../../data/oledb/storing-strings-in-the-ole-db-provider.md)) и помещает их в массив.
 
 Если не удается открыть файл, `Execute` должен возвращать DB_E_NOTABLE. Если вместо этого он возвращает E_FAIL, поставщик не будет работать с объектами-получателями и не будет передавать OLE DB [проверка на совместимость с](../../data/oledb/testing-your-provider.md).
 

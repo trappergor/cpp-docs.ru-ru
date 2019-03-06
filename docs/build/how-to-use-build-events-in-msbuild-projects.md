@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570278"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417619"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Практическое руководство. Использование событий построения в проектах MSBuild
 
@@ -23,7 +23,7 @@ ms.locfileid: "50570278"
 
 В следующей таблице перечислены каждый элемент XML события сборки:
 
-|XML-элемент|Описание|
+|XML-элемент|Описание:|
 |-----------------|-----------------|
 |`PreBuildEvent`|Это событие выполняется до начала построения.|
 |`PreLinkEvent`|Это событие выполняется до начала этапа компоновки.|
@@ -31,7 +31,7 @@ ms.locfileid: "50570278"
 
 В следующей таблице перечислены все *использовать в построении* элемент:
 
-|XML-элемент|Описание|
+|XML-элемент|Описание:|
 |-----------------|-----------------|
 |`PreBuildEventUseInBuild`|Указывает, следует ли выполнять *перед сборкой* событий.|
 |`PreLinkEventUseInBuild`|Указывает, следует ли выполнять *перед компоновкой* событий.|
@@ -39,7 +39,7 @@ ms.locfileid: "50570278"
 
 ## <a name="example"></a>Пример
 
-Следующий пример можно добавить в элемент проекта myproject.vcxproj файла, созданного в [Пошаговое руководство: использование MSBuild для создания проекта Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Объект *перед сборкой* событий делает копию main.cpp; *перед компоновкой* событий делает копию main.obj; а также *после построения* событий создается копия myproject.exe. Если проект создается с помощью конфигурации release, выполняются события построения. Если проект создается с помощью конфигурации отладки, события сборки, не выполняются.
+Следующий пример можно добавить в элемент проекта myproject.vcxproj файла, созданного в [Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Объект *перед сборкой* событий делает копию main.cpp; *перед компоновкой* событий делает копию main.obj; а также *после построения* событий создается копия myproject.exe. Если проект создается с помощью конфигурации release, выполняются события построения. Если проект создается с помощью конфигурации отладки, события сборки, не выполняются.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +73,4 @@ ms.locfileid: "50570278"
 ## <a name="see-also"></a>См. также
 
 [MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[Пошаговое руководство. Использование MSBuild для создания проекта Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

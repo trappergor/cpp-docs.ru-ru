@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266299"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426398"
 ---
 # <a name="cipaddressctrl-class"></a>Класс CIPAddressCtrl
 
@@ -41,7 +41,7 @@ ms.locfileid: "57266299"
 class CIPAddressCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -51,7 +51,7 @@ class CIPAddressCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CIPAddressCtrl::ClearAddress](#clearaddress)|Очищает содержимое контроль IP-адресов.|
 |[CIPAddressCtrl::Create](#create)|Создает элемент управления адрес IP-адрес и присоединяет его к `CIPAddressCtrl` объекта.|
@@ -122,7 +122,7 @@ virtual BOOL Create(
 Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK Windows для получения списка стили windows.
 
 *rect*<br/>
-Ссылка на размер и положение контроль IP-адресов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Ссылка на размер и положение контроль IP-адресов. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 *pParentWnd*<br/>
 Указатель на родительское окно контроль IP-адресов. Он не должен иметь значение NULL.
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 Стиль элемента управления IP-адрес. Примените сочетание стилей окна. Стиль WS_CHILD необходимо включить, так как элемент управления должен быть дочернего окна. См. в разделе [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) в пакете SDK Windows для получения списка стили windows.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.

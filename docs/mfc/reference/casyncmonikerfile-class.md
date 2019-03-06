@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b86cba0c2e8f7991902a552d404355d6c1474138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262627"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425826"
 ---
 # <a name="casyncmonikerfile-class"></a>Класс CAsyncMonikerFile
 
@@ -53,13 +53,13 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAsyncMonikerFile::CAsyncMonikerFile](#casyncmonikerfile)|Создает объект `CAsyncMonikerFile`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CAsyncMonikerFile::Close](#close)|Закрывает и освобождает все ресурсы.|
 |[CAsyncMonikerFile::GetBinding](#getbinding)|Извлекает указатель на асинхронную передачу привязки.|
@@ -68,7 +68,7 @@ class CAsyncMonikerFile : public CMonikerFile
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAsyncMonikerFile::CreateBindStatusCallback](#createbindstatuscallback)|Создает объект COM, который реализует `IBindStatusCallback`.|
 |[CAsyncMonikerFile::GetBindInfo](#getbindinfo)|Вызывается библиотекой системы OLE для получения сведений о типа привязки должен быть создан.|
@@ -158,7 +158,7 @@ virtual IUnknown* CreateBindStatusCallback(IUnknown* pUnkControlling);
 
 [CAsyncMonikerFile::Open](#open) вызовы `CreateBindStatusCallback`.
 
-Дополнительные сведения об асинхронных моникеров и асинхронной привязки см. в разделе [IBindStatusCallback](https://msdn.microsoft.com/library/ie/ms775060) интерфейс и [как асинхронной привязки и рабочего хранилища](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Описание статистической обработки, см. в разделе [статистической обработки](/windows/desktop/com/aggregation). Все три раздела предназначены в пакете Windows SDK.
+Дополнительные сведения об асинхронных моникеров и асинхронной привязки см. в разделе [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\)) интерфейс и [как асинхронной привязки и рабочего хранилища](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work). Описание статистической обработки, см. в разделе [статистической обработки](/windows/desktop/com/aggregation). Все три раздела предназначены в пакете Windows SDK.
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 
