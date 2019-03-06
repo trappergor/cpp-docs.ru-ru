@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259546"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425020"
 ---
 # <a name="ctabctrl-class"></a>Класс CTabCtrl
 
@@ -89,7 +89,7 @@ ms.locfileid: "57259546"
 class CTabCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 Указывает, какие операции необходимо выполнить. Если этот параметр имеет значение TRUE, *lpRect* указывает прямоугольник отображения и получает соответствующие прямоугольной области окна. Если этот параметр имеет значение FALSE, *lpRect* прямоугольной области окна задает и получает соответствующие прямоугольник отображения.
 
 *lpRect*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, которая указывает заданного прямоугольника и получает расчетный прямоугольник.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, которая указывает заданного прямоугольника и получает расчетный прямоугольник.
 
 ### <a name="example"></a>Пример
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 Задает стиль элемента управления tab. Применить любое сочетание [вкладке Стили элемента управления](/windows/desktop/Controls/tab-control-styles), описанные в пакете Windows SDK. См. в разделе **"Примечания"** список стилей окна, которые также можно применить к элементу управления.
 
 *rect*<br/>
-Задает размер и положение элемента управления tab. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Задает размер и положение элемента управления tab. Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента управления вкладки, обычно `CDialog`. Он не должен иметь значение NULL.
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 Задает стиль элемента управления tab. Применить любое сочетание [вкладке Стили элемента управления](/windows/desktop/Controls/tab-control-styles), описанные в пакете Windows SDK. См. в разделе **"Примечания"** в [создать](#create) список стилей окна, которые также можно применить к элементу управления.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 Отсчитываемый от нуля индекс элемента вкладки.
 
 *lpRect*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая получает ограничивающий прямоугольник вкладки. Эти координаты использовать текущий режим сопоставления окна просмотра.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуру, которая получает ограничивающий прямоугольник вкладки. Эти координаты использовать текущий режим сопоставления окна просмотра.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -858,7 +858,7 @@ BOOL SetItemState(
 *dwState*<br/>
 Ссылка на значение DWORD, содержащее сведения о состоянии. Может принимать одно из следующих значений:
 
-|Значение|Описание|
+|Значение|Описание:|
 |-----------|-----------------|
 |TCIS_BUTTONPRESSED|Элемент управления вкладки выбран.|
 |TCIS_HIGHLIGHTED|Будет выделен элемент управления вкладки и вкладка и тексты отрисовываются с использованием текущего цвета выделения. При использовании цветом, это будет значение true, интерполяции, не сглаженный цвет.|

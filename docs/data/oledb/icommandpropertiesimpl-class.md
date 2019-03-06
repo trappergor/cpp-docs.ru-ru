@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b9d6c9aab2b12859462abfa2a842754128e72306
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556157"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416661"
 ---
 # <a name="icommandpropertiesimpl-class"></a>Класс ICommandPropertiesImpl
 
-Предоставляет реализацию [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85)) интерфейс.
+Предоставляет реализацию [ICommandProperties](/previous-versions/windows/desktop/ms723044(v=vs.85)) интерфейс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -75,7 +75,7 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [ICommandProperties::GetProperties](/previous-versions/windows/desktop/ms723119(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -94,7 +94,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommandProperties::SetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [ICommandProperties::SetProperties](/previous-versions/windows/desktop/ms711497(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="see-also"></a>См. также
 

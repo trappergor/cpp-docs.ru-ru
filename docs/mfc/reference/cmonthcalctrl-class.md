@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303674"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413931"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 
@@ -107,7 +107,7 @@ ms.locfileid: "57303674"
 class CMonthCalCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 Задает сочетание Windows стили, примененный к элементу управления Календарь месяца. См. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles) в пакете SDK для Windows, Дополнительные сведения о стилях.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры. Содержит положение и размер элемента управления calendar month.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры. Содержит положение и размер элемента управления calendar month.
 
 *pt*<br/>
-Ссылку на [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуру, которая определяет расположение элемента управления calendar month.
+Ссылку на [ТОЧКИ](/previous-versions/dd162805\(v=vs.85\)) структуру, которая определяет расположение элемента управления calendar month.
 
 *pParentWnd*<br/>
 Указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления calendar month. Он не должен иметь значение NULL.
@@ -302,7 +302,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*pmcGridInfo*|[out] Указатель на [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) структуры, получающий сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|
 
@@ -450,11 +450,11 @@ int GetFirstDayOfWeek(BOOL* pbLocal = NULL) const;
 
 |Значение|День недели|
 |-----------|---------------------|
-|0|Понедельник|
+|0|понедельник|
 |1|Вторник|
-|2|Среда|
+|2|среда|
 |3|Четверг|
-|4|Пятница|
+|4|пятница|
 |5|Суббота|
 |6|Воскресенье|
 
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>Параметры
 
 *pRect*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, которая будет получать сведения ограничивающий прямоугольник. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуру, которая будет получать сведения ограничивающий прямоугольник. Этот параметр должен быть допустимым адресом и не может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -814,7 +814,7 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*cxyBorder*|[in] Ширина границы в пикселях.|
 
@@ -860,7 +860,7 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*CALID*|[in] Один из [идентификатор календаря](/windows/desktop/Intl/calendar-identifiers) константы.|
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*lpRect*|[in] Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, содержащий требуемое число календарей.|
+|*lpRect*|[in] Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, определяющая прямоугольник, содержащий требуемое число календарей.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, определяющая прямоугольник, размер которых меньше или равно в прямоугольник, определяемый *lpRect* параметра.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, определяющая прямоугольник, размер которых меньше или равно в прямоугольник, определяемый *lpRect* параметра.
 
 ### <a name="remarks"></a>Примечания
 

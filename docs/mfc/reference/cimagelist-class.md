@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298924"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416011"
 ---
 # <a name="cimagelist-class"></a>Класс CImageList
 
@@ -91,7 +91,7 @@ ms.locfileid: "57298924"
 class CImageList : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
@@ -144,7 +144,7 @@ class CImageList : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CImageList::m_hImageList](#m_himagelist)|Дескриптор, содержащий список изображений, присоединенного к этому объекту.|
 
@@ -402,7 +402,7 @@ BOOL Create(CImageList* pImageList);
 Смещение ось y второе изображение в связи с первого изображения в пикселях.
 
 *pImageList*<br/>
-Указатель на объект `CImageList`.
+Указатель на объект `CImageList` .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -691,13 +691,13 @@ BOOL DrawIndirect(
 Отсчитываемый от нуля индекс изображения для отрисовки.
 
 *pt*<br/>
-Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-где рисуется изображение.
+Объект [ТОЧКИ](/previous-versions/dd162805\(v=vs.85\)) структура, содержащая координаты x и y-где рисуется изображение.
 
 *sz*<br/>
 Объект [размер](/windows/desktop/api/windef/ns-windef-tagsize) структура, указывающая размер изображения для отрисовки.
 
 *ptOrigin*<br/>
-Объект [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структура, содержащая координаты x и y-указание верхнего левого угла операции рисования по отношению к само изображение. Изображения, которые расположены слева координаты x и более поздних версий координату по оси y не пикселов.
+Объект [ТОЧКИ](/previous-versions/dd162805\(v=vs.85\)) структура, содержащая координаты x и y-указание верхнего левого угла операции рисования по отношению к само изображение. Изображения, которые расположены слева координаты x и более поздних версий координату по оси y не пикселов.
 
 *fStyle*<br/>
 Флаг, указывающий стиль рисования и, возможно, изображение для наложения. В разделе "Примечания" сведения на изображение для наложения. Реализация по умолчанию MFC, ILD_NORMAL, Рисует изображение, используя цвет фона для списка изображений. Если цвет фона имеет значение CLR_NONE, рисуется изображение явным образом с помощью маски.
@@ -874,7 +874,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>Параметры
 
 *lpPoint*<br/>
-Адрес [ТОЧКИ](https://msdn.microsoft.com/library/windows/desktop/dd162805) структуры, который получает текущий перетащите позиции.
+Адрес [ТОЧКИ](/previous-versions/dd162805\(v=vs.85\)) структуры, который получает текущий перетащите позиции.
 
 *lpPointHotSpot*<br/>
 Адрес `POINT` структуру, которая получает смещение изображение перетаскивания относительно положения перетаскивания.

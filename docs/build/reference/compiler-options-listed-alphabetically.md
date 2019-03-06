@@ -3,12 +3,12 @@ title: Параметры компилятора в алфавитном пор�
 ms.date: 08/20/2018
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73236485026b82895426a2651b48a83fc35ce8b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646736"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415881"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -79,7 +79,7 @@ ms.locfileid: "50646736"
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ, допускающий горячее обновление.|
 |[/I](i-additional-include-directories.md)|Осуществляет поиск включаемых файлов в каталоге.|
 |[/J](j-default-char-type-is-unsigned.md)|Изменяет тип `char` по умолчанию.|
-|[/ JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
+|[/JMC](jmc.md)|Поддерживает отладку собственного C++ Just My Code.|
 |[/kernel](kernel-create-kernel-mode-binary.md)|Компилятор и компоновщик создадут двоичный файл для выполнения в ядре Windows.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Создает библиотеку динамической компоновки.|
 |[/LDd](md-mt-ld-use-run-time-library.md)|Создает отладочную библиотеку динамической компоновки.|
@@ -123,7 +123,7 @@ ms.locfileid: "50646736"
 |[/u](u-u-undefine-symbols.md)|Удаляет все предварительно определенные макросы.|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|Набор источника и выполнения кодировки UTF-8.|
 |[/V](v-version-number.md)|Не рекомендуется. Задает строку версии OBJ-файла.|
-|[/ Validate/CharSet](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
+|[/validate-charset](validate-charset-validate-for-compatible-characters.md)|Проверка файлов UTF-8 только совместимости символов.|
 |[/vd](vd-disable-construction-displacements.md)|Подавляет или включает скрытые vtordisp-члены класса.|
 |[/vmb](vmb-vmg-representation-method.md)|Использует оптимальное основание для указателей на члены.|
 |[/vmg](vmb-vmg-representation-method.md)|Использует полное обобщение для указателей на члены.|

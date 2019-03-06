@@ -26,16 +26,16 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ca22f16cf22cabc4c508df053d49d862fef70bce
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556209"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414620"
 ---
 # <a name="irowsetinfoimpl-class"></a>Класс IRowsetInfoImpl
 
-Предоставляет реализацию для [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85)) интерфейс.
+Предоставляет реализацию для [IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85)) интерфейс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowsetInfo::GetProperties](/previous-versions/windows/desktop/ms719611(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="getreferencedrowset"></a> IRowsetInfoImpl::GetReferencedRowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки.
+См. в разделе [IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145(v=vs.85)) в *справочнике программиста OLE DB*. *IOrdinal* параметр должен быть столбца закладки.
 
 ## <a name="getspecification"></a> IRowsetInfoImpl::GetSpecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 

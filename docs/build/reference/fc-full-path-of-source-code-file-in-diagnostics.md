@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624917"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422485"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (полный путь к файлу исходного кода в папке Diagnostics)
 
@@ -36,11 +36,11 @@ int main( ) {
 
 Без **/FC**, диагностическое будет выглядеть примерно следующим образом диагностики:
 
-- compiler_option_FC.cpp(5): ошибка C2143: синтаксическая ошибка: отсутствует «;» перед "}"
+- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 С помощью **/FC**, диагностическое будет выглядеть примерно следующим образом диагностики:
 
-- c:\test\compiler_option_fc.cpp(5): ошибка C2143: синтаксическая ошибка: отсутствует «;» перед "}"
+- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC** требуется также в том случае, если вы хотите увидеть полный путь к имени файла, при использовании &#95; &#95;ФАЙЛ&#95; &#95; макрос. См. в разделе [предустановленные макросы](../../preprocessor/predefined-macros.md) Дополнительные сведения о &#95; &#95;ФАЙЛ&#95;&#95;.
 

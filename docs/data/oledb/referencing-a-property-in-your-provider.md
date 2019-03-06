@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: 642e6219f72e506205e8192770be7d8af5d0d817
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556480"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415946"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>Обращение к свойству в поставщике
 
-Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](https://docs.microsoft.com/previous-versions/windows/desktop/ms722734(v=vs.85)) в **Справочник программиста OLE DB по**.
+Для свойства, которое требуется найти группы свойств и идентификатор свойства. Дополнительные сведения см. в разделе [свойства OLE DB](/previous-versions/windows/desktop/ms722734(v=vs.85)) в **Справочник программиста OLE DB по**.
 
 В следующем примере предполагается, что вы пытаетесь получить свойство из набора строк. Код для использования команды или сеанса, похоже, но используется другой интерфейс.
 

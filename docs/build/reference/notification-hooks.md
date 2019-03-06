@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 9205791995bc113e4f560ab6085fc3acf47c8182
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549835"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426554"
 ---
 # <a name="notification-hooks"></a>Обработчики уведомления
 
@@ -27,7 +27,7 @@ ms.locfileid: "50549835"
 
 - При предоставлении нового определения указателя **__pfnDliNotifyHook2** , инициализированный для указания собственной функции, принимающей уведомления.
 
-   \-или -
+   \-или-
 
 - Установив указатель **__pfnDliNotifyHook2** вашей функции-обработчика, прежде чем каких-либо вызовов DLL, которая программа отложить загрузку.
 

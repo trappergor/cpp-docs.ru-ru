@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274509"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414655"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 
@@ -31,11 +31,11 @@ ms.locfileid: "57274509"
 class CSplitButton : public CButton
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSplitButton::CSplitButton](#csplitbutton)|Создает объект `CSplitButton`.|
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |Параметр|Описание:|
 |---------------|-----------------|
 |*dwStyle*|[in] Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
-|*rect*|[in] Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, содержащая положение и размер элемента управления.|
+|*rect*|[in] Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, содержащая положение и размер элемента управления.|
 |*pParentWnd*|[in] Ненулевой указатель на [CWnd](../../mfc/reference/cwnd-class.md) объект, являющийся родительского окна элемента управления.|
 |*nID*|[in] Идентификатор элемента управления.|
 
@@ -120,7 +120,7 @@ CSplitButton(CMenu* pMenu)
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nMenuId*|[in] Идентификатор ресурса меню.|
 |*nSubMenuId*|[in] Идентификатор ресурса меню.|

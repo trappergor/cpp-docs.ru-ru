@@ -8,12 +8,12 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: 85bfa6cb82b4b1825ae9b9a9a0f3a9f06e579499
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: c0c3620f4e5fea864fda1fd3d6b046fa3f485085
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626712"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417545"
 ---
 # <a name="configure-visual-c-for-64-bit-x64-targets"></a>Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов
 
@@ -21,13 +21,13 @@ ms.locfileid: "53626712"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-- [Практическое руководство. Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Практическое руководство. Настройка проектов Visual C++ для 64-разрядных платформ с архитектурой x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Практическое руководство. Включить 64-разрядных набора инструментов Visual C++ в командной строке](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Практическое руководство. Использование набора 64-разрядных инструментов Visual C++ в командной строке](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
 - [Общие вопросы использования Visual C++ для 64-разрядных систем](../build/common-visual-cpp-64-bit-migration-issues.md)
 
-- [x64 программные соглашения](../build/x64-software-conventions.md)
+- [Программные соглашения для 64-разрядных систем](../build/x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Связанные разделы
 

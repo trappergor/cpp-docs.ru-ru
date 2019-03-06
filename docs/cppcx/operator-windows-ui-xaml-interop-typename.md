@@ -2,16 +2,16 @@
 title: оператор Windows::UI::Xaml::Interop::TypeName
 ms.date: 12/30/2016
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7480df474086d78e28d235cc89b05094c648d28b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659218"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415179"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>оператор Windows::UI::Xaml::Interop::TypeName
 
-Включает преобразование из `Platform::Type` в [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx).
+Включает преобразование из `Platform::Type` в [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -21,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) при получении `Platform::Type^`.
+Возвращает значение [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) при получении `Platform::Type^`.
 
 ### <a name="remarks"></a>Примечания
 
-`TypeName` является независимой от языка структурой среды выполнения Windows для представления сведений о типе. [Platform::Type](../cppcx/platform-type-class.md) используется только в C++ и не передается через двоичный интерфейс приложений (ABI). Ниже представлен один из способов использования `TypeName`в функции [Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) .
+`TypeName` является независимой от языка структурой среды выполнения Windows для представления сведений о типе. [Platform::Type](../cppcx/platform-type-class.md) используется только в C++ и не передается через двоичный интерфейс приложений (ABI). Ниже представлен один из способов использования `TypeName`в функции [Navigate](/uwp/api/windows.ui.xaml.controls.frame.navigate) .
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

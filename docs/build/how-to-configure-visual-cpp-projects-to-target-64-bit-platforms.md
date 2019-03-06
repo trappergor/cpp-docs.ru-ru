@@ -1,19 +1,19 @@
 ---
-title: 'Практическое: Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ'
+title: Практическое руководство. Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523941"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421389"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Практическое: Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ
+# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Практическое руководство. Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ
 
 Конфигурации проекта в Интегрированной среде разработки Visual Studio можно использовать для настройки приложений C++ для 64-разрядных, x64 платформ. Также можно перенести параметры проекта Win32 в конфигурацию 64-разрядного проекта.
 
@@ -47,9 +47,9 @@ ms.locfileid: "51523941"
 
   - Параметр**Зарегистрировать вывод** выключается. Дополнительные сведения см. в разделе [Linker Property Pages](../ide/linker-property-pages.md).
 
-  - Параметру**Конечная среда** присваивается значение **/env x64**. Для получения дополнительной информации см. [MIDL Property Pages: General](../ide/midl-property-pages-general.md).
+  - Параметру**Конечная среда** присваивается значение **/env x64**. Дополнительные сведения см. в разделе [страницы свойств MIDL: Общие](../ide/midl-property-pages-general.md).
 
-  - Значение параметра**Проверка параметров** сбрасывается и меняется на значение по умолчанию. Для получения дополнительной информации см. [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md).
+  - Значение параметра**Проверка параметров** сбрасывается и меняется на значение по умолчанию. Дополнительные сведения см. в разделе [страницы свойств MIDL: Advanced](../ide/midl-property-pages-advanced.md).
 
   - Если для параметра **Формат отладочной информации** в конфигурации проекта Win32 было задано значение **/ZI** , то в конфигурации 64-разрядного проекта ему присваивается значение **/Zi** . Дополнительные сведения см. в разделе [/Z7, /Zi, /ZI (формат отладочной информации)](../build/reference/z7-zi-zi-debug-information-format.md).
 

@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
-ms.openlocfilehash: 9564904fa77ae6a7355119e83bdfa3ac65a4050c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a60d962d79684cb16d8d5a5139b9b65df8148052
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560840"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414412"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 
@@ -45,13 +45,13 @@ UnorderedMapView — это конкретная реализация C++ [Windo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|
@@ -71,7 +71,7 @@ UnorderedMapView — это конкретная реализация C++ [Windo
 
 ## <a name="first"></a>  Метод UnorderedMapView::First
 
-Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элемент в неупорядоченном сопоставлении.
+Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элемент в неупорядоченном сопоставлении.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -129,7 +129,7 @@ V Lookup(K key);
 
 ## <a name="size"></a>  Метод UnorderedMapView::Size
 
-Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в UnorderedMapView.
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов в UnorderedMapView.
 
 ### <a name="syntax"></a>Синтаксис
 

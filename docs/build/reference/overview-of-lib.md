@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a66f78d225a5899b53a931c7eb6a0564de689ca1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548503"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423291"
 ---
 # <a name="overview-of-lib"></a>Общие сведения о LIB
 
@@ -31,7 +31,7 @@ LIB можно использовать в следующих режимах:
 
 В следующей таблице перечислены параметров lib.exe, со ссылкой на дополнительные сведения.
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |-|-|
 |**/DEF**|Создание библиотеки импорта и файла экспорта.<br/><br/>Дополнительные сведения см. в разделе [построение библиотеки импорта и экспорта файла](../../build/reference/building-an-import-library-and-export-file.md).|
 |**/ ERRORREPORT**|   Отправьте в Майкрософт сведения о внутренних ошибках lib.exe.<br/><br/>Дополнительные сведения см. в разделе [запуск программы LIB](../../build/reference/running-lib.md).|

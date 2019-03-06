@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441123"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424812"
 ---
 # <a name="kinds-of-dlls"></a>Виды библиотек DLL
 
@@ -31,13 +31,13 @@ ms.locfileid: "50441123"
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Общие сведения о библиотеках DLL, не являющихся MFC](../build/non-mfc-dlls-overview.md)
+- [Несовместимые с MFC библиотеки DLL: обзор](../build/non-mfc-dlls-overview.md)
 
 - [Обычные библиотеки DLL MFC, статически компонуемые с MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
 - [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Общие сведения о библиотеках DLL расширений MFC](../build/extension-dlls-overview.md)
+- [Библиотеки DLL для расширения MFC: обзор](../build/extension-dlls-overview.md)
 
 - [Какой тип используемой библиотеки DLL](#_core_which_kind_of_dll_to_use)
 
@@ -55,17 +55,17 @@ ms.locfileid: "50441123"
 
 Если библиотека DLL динамически скомпонована с MFC, библиотеки MFC DLL могут быть распространены с данной библиотекой DLL. Эта архитектура особенно полезна для совместного использования библиотеки классов несколькими исполняемыми файлами для экономии дискового пространства и минимизации использования памяти.
 
-До версии 4.0 в Visual C++ поддерживались только два вида библиотек DLL, которые использовали MFC: библиотеки USRDLL и AFXDLL. Обычные библиотеки DLL MFC, статически компонуемые с MFC имеют те же характеристики, как бывший USRDLL. Библиотеки DLL расширения MFC имеют те же характеристики, что AFXDLL.
+До версии 4.0 Visual C++ поддерживал только два вида библиотек DLL, которые использовали MFC: Библиотеки USRDLL и AFXDLL. Обычные библиотеки DLL MFC, статически компонуемые с MFC имеют те же характеристики, как бывший USRDLL. Библиотеки DLL расширения MFC имеют те же характеристики, что AFXDLL.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Общие сведения о библиотеках DLL, не являющихся MFC](../build/non-mfc-dlls-overview.md)
+- [Несовместимые с MFC библиотеки DLL: обзор](../build/non-mfc-dlls-overview.md)
 
 - [Обычные библиотеки DLL MFC, статически компонуемые с MFC](../build/regular-dlls-statically-linked-to-mfc.md)
 
 - [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Общие сведения о библиотеках DLL расширений MFC](../build/extension-dlls-overview.md)
+- [Библиотеки DLL для расширения MFC: обзор](../build/extension-dlls-overview.md)
 
 ## <a name="see-also"></a>См. также
 

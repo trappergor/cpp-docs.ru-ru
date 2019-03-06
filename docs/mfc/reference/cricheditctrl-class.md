@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303438"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414295"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -169,17 +169,17 @@ ms.locfileid: "57303438"
 class CRichEditCtrl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Создает объект `CRichEditCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Определяет, если содержимое буфера обмена, можно вставить в этот элемент управления форматированным редактированием.|
 |[CRichEditCtrl::CanRedo](#canredo)|Определяет, есть ли каких-либо действий в очереди повторов элемента управления.|
@@ -489,7 +489,7 @@ virtual BOOL CreateEx(
 Задает стиль элемента управления поля ввода. Применить сочетание стилей окна, перечисленных в **"Примечания"** раздел [создать](#create) и [изменение стилей элемента управления](/windows/desktop/Controls/edit-control-styles), описанные в пакете Windows SDK.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.

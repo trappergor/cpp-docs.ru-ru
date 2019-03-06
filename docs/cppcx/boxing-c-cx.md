@@ -2,16 +2,16 @@
 title: Упаковка-преобразование (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-ms.openlocfilehash: c680ea0262e8e65345cba40280a389453c2985bb
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4a8812cb56cbbd684be953876d480e6e0c90841a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519520"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420015"
 ---
 # <a name="boxing-ccx"></a>Упаковка-преобразование (C++/CX)
 
-*Упаковка* — это заключение переменной типа значения, например [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx), или базового скалярного типа, например `int`, в ссылочный класс при передаче переменной методу, который в качестве входного типа принимает [Platform::Object^](../cppcx/platform-object-class.md) .
+*Упаковка* — это заключение переменной типа значения, например [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime), или базового скалярного типа, например `int`, в ссылочный класс при передаче переменной методу, который в качестве входного типа принимает [Platform::Object^](../cppcx/platform-object-class.md) .
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Передача типа значения параметру Object^
 

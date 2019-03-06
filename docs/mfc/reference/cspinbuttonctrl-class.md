@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290434"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425033"
 ---
 # <a name="cspinbuttonctrl-class"></a>Класс CSpinButtonCtrl
 
@@ -59,7 +59,7 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSpinButtonCtrl::Create](#create)|Создает управления "Счетчик" и присоединяет его к `CSpinButtonCtrl` объекта.|
 |[CSpinButtonCtrl::CreateEx](#createex)|Создает управления "Счетчик" с указанным расширенные стили Windows и присоединяет его к `CSpinButtonCtrl` объекта.|
@@ -120,7 +120,7 @@ virtual BOOL Create(
 Задает стиль элемента управления "Счетчик". Любое сочетание стили элемента управления "Счетчик" примените к элементу управления. Эти стили описаны в [стили элемента управления вверх-вниз](/windows/desktop/Controls/up-down-control-styles) в пакете Windows SDK.
 
 *rect*<br/>
-Задает размер и положение элемента управления "Счетчик". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры
+Задает размер и положение элемента управления "Счетчик". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры
 
 *pParentWnd*<br/>
 Указатель на управления "Счетчик" родительского окна, обычно `CDialog`. Он не должен иметь значение NULL.
@@ -160,7 +160,7 @@ virtual BOOL CreateEx(
 Задает стиль элемента управления "Счетчик". Любое сочетание стили элемента управления "Счетчик" примените к элементу управления. Эти стили описаны в [стили элемента управления вверх-вниз](/windows/desktop/Controls/up-down-control-styles) в пакете Windows SDK.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.

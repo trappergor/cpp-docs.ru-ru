@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: f7887b1c9ddaf9d51da584df371acbed6726643b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66edc7d4a1b4c78480da7d11cf30f7feeecefe2c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291305"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417389"
 ---
 # <a name="chotkeyctrl-class"></a>Класс CHotKeyCtrl
 
@@ -43,13 +43,13 @@ class CHotKeyCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CHotKeyCtrl::CHotKeyCtrl](#chotkeyctrl)|Создает объект `CHotKeyCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHotKeyCtrl::Create](#create)|Создает элемент управления "Горячий" ключа и присоединяет его к `CHotKeyCtrl` объекта.|
 |[CHotKeyCtrl::CreateEx](#createex)|Создает элемент управления "Горячий" ключа с указанным расширенные стили Windows и присоединяет его к `CHotKeyCtrl` объекта.|
@@ -151,7 +151,7 @@ virtual BOOL CreateEx(
 Задает стиль "Горячий" ключа элемента управления. Примените любое сочетание стилей элемента управления. Дополнительные сведения см. в разделе [общие стили элемента управления](/windows/desktop/Controls/common-control-styles) в пакете Windows SDK.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - assemblies [C++], linking resource files
 - /ASSEMBLYRESOURCE linker option
 ms.assetid: 0ce6e1fb-921b-4b1b-a59c-d35388d789f2
-ms.openlocfilehash: 566a667ababaa67c7aff71861b111416abbbd878
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c18a014ca645cceb3196fb7efefd227e96f8e1fa
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486611"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416220"
 ---
 # <a name="assemblyresource-embed-a-managed-resource"></a>/ASSEMBLYRESOURCE (внедрение управляемого ресурса)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50486611"
 Управляемый ресурс, который требуется внедрить в этой сборке.
 
 *name*<br/>
-Необязательный. Логическое имя ресурса; имя, используемое для загрузки ресурса. По умолчанию используется имя файла.
+Необязательный параметр. Логическое имя ресурса; имя, используемое для загрузки ресурса. По умолчанию используется имя файла.
 
 Кроме того можно указать, если этот файл должен быть закрытым в манифесте сборки. По умолчанию *имя* является открытым в сборке.
 
@@ -40,7 +40,7 @@ ms.locfileid: "50486611"
 
 Ресурсы в сборку при создании с ключом компоновщика открыты. Компоновщик не поддерживает переименование ресурса в сборке.
 
-Если *filename* является файлом ресурсов (RESOURCES) платформы .NET Framework, созданным, например, по [генератор файлов ресурсов (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов пространства **System.Resources** пространства имен (см. в разделе [System.Resources.ResourceManager](https://msdn.microsoft.com/library/system.resources.resourcemanager.aspx) Дополнительные сведения). Все прочие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класс для доступа к ресурсу во время выполнения.
+Если *filename* является файлом ресурсов (RESOURCES) платформы .NET Framework, созданным, например, по [генератор файлов ресурсов (Resgen.exe)](/dotnet/framework/tools/resgen-exe-resource-file-generator) или в среде разработки, он может осуществляться с помощью членов пространства **System.Resources** пространства имен (см. в разделе [System.Resources.ResourceManager](/dotnet/api/system.resources.resourcemanager) Дополнительные сведения). Все прочие ресурсы, используйте **GetManifestResource** \* методы в **System.Reflection.Assembly** класс для доступа к ресурсу во время выполнения.
 
 Доступны следующие параметры компоновщика, которые влияют на создание сборки.
 

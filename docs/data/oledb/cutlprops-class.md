@@ -30,12 +30,12 @@ helpviewer_keywords:
 - OnPropertyChanged method
 - SetPropValue method
 ms.assetid: bb525178-765c-4e23-a110-c0fd70c05437
-ms.openlocfilehash: db0976ecd3e3af76640a56ebc1e07e9ade2e3815
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1c45e28e0e74d7216023f06ad22896c53c9226b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556781"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423057"
 ---
 # <a name="cutlprops-class"></a>Класс CUtlProps
 
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 Большая часть этого класса является элементом реализации.
 
-`CUtlProps` содержит два члена для задания свойств внутренне: [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
+`CUtlProps` содержит два члена для задания свойств внутренне. [GetPropValue](../../data/oledb/cutlprops-getpropvalue.md) и [SetPropValue](../../data/oledb/cutlprops-setpropvalue.md).
 
 Дополнительные сведения о макросы, используемые в сопоставление набора свойств, см. в разделе [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md) и [END_PROPSET_MAP](../../data/oledb/end-propset-map.md).
 
@@ -121,7 +121,7 @@ virtual HRESULT CUtlPropsBase::IsValidValue(ULONG /* iCurSet */,
 Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.
 
 *pDBProp*<br/>
-Идентификатор свойства и новое значение в [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) структуры.
+Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -183,7 +183,7 @@ virtual HRESULT OnPropertyChanged(ULONG /* iCurSet */,
 Индекс в массиве набора свойств. нуль, если есть только одно свойство набор.
 
 *pDBProp*<br/>
-Идентификатор свойства и новое значение в [DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85)) структуры.
+Идентификатор свойства и новое значение в [DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85)) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

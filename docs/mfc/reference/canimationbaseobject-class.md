@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258922"
 ---
 # <a name="canimationbaseobject-class"></a>Класс CAnimationBaseObject
 
@@ -71,7 +71,7 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Перегружен. Создает объект анимации.|
 |[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Деструктор Вызывается при уничтожении объекта анимации.|
@@ -104,7 +104,7 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли автоматически удалить связанные с ней переходы.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Содержит определяемые пользователем данные.|
@@ -315,7 +315,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="remarks"></a>Примечания
 
-Это чисто виртуальный метод, который должен быть переопределен в производном классе. Объекта анимации, в зависимости от его типа, содержит одну или несколько переменных анимации. Например CAnimationPoint содержит две переменные для соответственно координаты X и Y. Базовый класс CAnimationBaseObject реализует некоторые универсальные методы, которые работают на список переменных анимации: ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. Эти методы вызвать GetAnimationVariableList, в которой содержатся в производном классе фактическое анимации переменными, содержащимися в объекте определенной анимации, то цикл для списка и выполнять необходимые действия. При создании объекта пользовательской анимации, вам необходимо добавить lst все переменные анимации, содержащиеся в этом объекте.
+Это чисто виртуальный метод, который должен быть переопределен в производном классе. Объекта анимации, в зависимости от его типа, содержит одну или несколько переменных анимации. Например CAnimationPoint содержит две переменные для соответственно координаты X и Y. Базовый класс CAnimationBaseObject реализует некоторые универсальные методы, которые работают на список переменных анимации: ApplyTransitions ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Эти методы вызвать GetAnimationVariableList, в которой содержатся в производном классе фактическое анимации переменными, содержащимися в объекте определенной анимации, то цикл для списка и выполнять необходимые действия. При создании объекта пользовательской анимации, вам необходимо добавить lst все переменные анимации, содержащиеся в этом объекте.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 

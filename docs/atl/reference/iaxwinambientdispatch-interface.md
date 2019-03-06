@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: 9b9557a76d133d81a07320f1a64482d17c955ef2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301601"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425657"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>Интерфейс IAxWinAmbientDispatch
 
@@ -94,7 +94,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 Этот интерфейс предоставляется элементом управления ActiveX библиотеки ATL, размещение объектов. Вызывайте методы на этом интерфейсе для задания свойства окружающей среды, доступные для размещаемого элемента управления или для указания других аспектов поведения контейнера. В дополнение к свойств, предоставляемых `IAxWinAmbientDispatch`, использовать [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md).
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx) будет пытаться загрузить сведения о типе о `IAxWinAmbientDispatch` и `IAxWinAmbientDispatchEx` из библиотеки типов, который содержит код.
+<xref:System.Windows.Forms.AxHost> будет пытаться загрузить сведения о типе о `IAxWinAmbientDispatch` и `IAxWinAmbientDispatchEx` из библиотеки типов, который содержит код.
 
 При связывании ATL90.dll, **AXHost** загрузит сведения о типе из библиотеки типов в библиотеке DLL.
 
