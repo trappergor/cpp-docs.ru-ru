@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582641"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426762"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Работа с потоками и маршалинг (C++/CX)
 
@@ -61,7 +61,7 @@ ref class MyOptions
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-При добавлении ссылки (в области членов или глобальной области) на объект, имеющий поведение маршалинга "Standard", компилятор выдает предупреждение, рекомендующее заключить этот тип в оболочку `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Если воспользоваться типом `Agile<T>`, класс можно будет использовать как любой другой гибкий класс. Используйте `Platform::Agile<T>` в следующих ситуациях:
+При добавлении ссылки — в области членов или глобальной области видимости — объект, имеющий поведение маршалинга «Standard», компилятор выдает предупреждение, предлагающее тип в `Platform::Agile<T>`: `Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` Если вы используете `Agile<T>`, вы можете использовать класс, как и любой другой гибкий класс. Используйте `Platform::Agile<T>` в следующих ситуациях:
 
 - Негибкая переменная объявляется в глобальной области.
 
@@ -124,5 +124,5 @@ public ref class MySTAClass
 
 ## <a name="see-also"></a>См. также
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

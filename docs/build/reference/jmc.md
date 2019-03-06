@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: a81292b590d96ef93446f9bb59af305c7eda2ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1950ff4a973ddbd23ff902ba4afb0d45dacb0e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516861"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417766"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/ JMC (отлаживать только мой код)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50516861"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ JMC**\[**-**]
+> **/JMC**\[**-**]
 
 ## <a name="remarks"></a>Примечания
 

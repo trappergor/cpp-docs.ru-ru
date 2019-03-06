@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Сборка не требующих регистрации компонентов COM
+title: Практическое руководство. Построение компонентов COM без регистрации
 ms.date: 11/04/2016
 helpviewer_keywords:
 - COM components, registration-free
 ms.assetid: 7e585d6a-0314-45b2-8f1b-cae9ac4df037
-ms.openlocfilehash: 4f4ebf121b761c37969fa3f9788bda52d913f340
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 503c3e4399359d793ce660f36844d2edc6602146
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463535"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416778"
 ---
-# <a name="how-to-build-registration-free-com-components"></a>Практическое руководство. Сборка не требующих регистрации компонентов COM
+# <a name="how-to-build-registration-free-com-components"></a>Практическое руководство. Построение компонентов COM без регистрации
 
 Без регистрации COM-компонентами являются компоненты COM, содержащие манифесты, встроенные в библиотеки DLL.
 

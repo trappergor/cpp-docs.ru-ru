@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1124630d8ee15dd284893516bef8057f852b4632
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263420"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420665"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl-класс
 
@@ -119,7 +119,7 @@ HWND Create(
 *hWndParent*<br/>
 [in] Дескриптор окна-владельца.
 
-**RECT &** *rect* [in] объект [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение диалогового окна.
+**RECT &** *rect* [in] объект [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, указывающий размер и положение диалогового окна.
 
 *dwInitParam*<br/>
 [in] Указывает значение для передачи в диалоговом окне *lParam* параметр WM_INITDIALOG сообщения.

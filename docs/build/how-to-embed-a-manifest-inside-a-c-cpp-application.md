@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Внедрение манифеста в приложение C или C++
+title: Практическое руководство. Внедрение манифеста в приложения C/C++
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624878"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412904"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Практическое руководство. Внедрение манифеста в приложение C или C++
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Практическое руководство. Внедрение манифеста в приложения C/C++
 
 Рекомендуется наличие его манифестом, включаемым в конечный двоичный файл, так как это гарантирует нужная среда выполнения поведение в большинстве сценариев приложения C/C++ (или библиотека). По умолчанию Visual Studio пытается встроить манифест при построении проекта из файлов исходного кода; см. в разделе [Manifest Generation в Visual Studio](../build/manifest-generation-in-visual-studio.md) Дополнительные сведения. Однако если приложение создается с помощью nmake, необходимы некоторые изменения в существующий файл makefile. В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически встраивать манифест в конечный двоичный файл.
 
@@ -27,7 +27,7 @@ ms.locfileid: "50624878"
 
    или
 
-   **MT.exe-манифеста MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 для EXE-файла, 2 для библиотеки DLL).
 

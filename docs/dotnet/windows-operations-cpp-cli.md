@@ -43,12 +43,12 @@ helpviewer_keywords:
 - registry, writing to
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
-ms.openlocfilehash: d23eef1d48674751a725e076d1b652b304ad40a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1075c70b10ca8c59272e9a9de8a9a3fd7aa248e6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508398"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415088"
 ---
 # <a name="windows-operations-ccli"></a>Операции Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry> Класс является контейнером для статических экземпляров <xref:Microsoft.Win32.RegistryKey>. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.
 
-В дополнение к, статическим, объекты на <xref:Microsoft.Win32.Registry> , доступны только для чтения. Кроме того, экземпляры из <xref:Microsoft.Win32.RegistryKey> объектов класса, которые создаются для доступа к содержимому реестра, также доступны только для чтения. Пример того, как переопределить это поведение, см. в разделе [как: записывать данные в реестр Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+В дополнение к, статическим, объекты на <xref:Microsoft.Win32.Registry> , доступны только для чтения. Кроме того, экземпляры из <xref:Microsoft.Win32.RegistryKey> объектов класса, которые создаются для доступа к содержимому реестра, также доступны только для чтения. Пример того, как переопределить это поведение, см. в разделе [как: Запись данных в реестр Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Существует два дополнительных объектов в <xref:Microsoft.Win32.Registry> класса: <xref:Microsoft.Win32.Registry.DynData> и <xref:Microsoft.Win32.Registry.PerformanceData>. Оба значения являются экземплярами из <xref:Microsoft.Win32.RegistryKey> класса. <xref:Microsoft.Win32.Registry.DynData> Объект содержит динамические сведения реестра, который поддерживается только в Windows 98 и Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Объект может использоваться для доступа к данным счетчиков производительности для приложений, использующих систему мониторинга производительности Windows. <xref:Microsoft.Win32.Registry.PerformanceData> Узел представляет сведения, которые фактически не сохраняются в реестре и поэтому нельзя просмотреть с помощью Regedit.exe.
 
@@ -503,7 +503,7 @@ int main()
 
 ### <a name="remarks"></a>Примечания
 
-.NET Framework можно использовать для доступа к реестру с помощью <xref:Microsoft.Win32.Registry> и [RegistryKey](https://msdn.microsoft.com/library/microsoft.win32.registrykey.aspx) классы, оба из которых определены в <xref:Microsoft.Win32> пространства имен. **Реестра** класс — это контейнер для статических экземпляров <xref:Microsoft.Win32.RegistryKey> класса. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.
+.NET Framework можно использовать для доступа к реестру с помощью <xref:Microsoft.Win32.Registry> и <xref:Microsoft.Win32.RegistryKey> классы, оба из которых определены в <xref:Microsoft.Win32> пространства имен. **Реестра** класс — это контейнер для статических экземпляров <xref:Microsoft.Win32.RegistryKey> класса. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.
 
 ## <a name="related-sections"></a>Связанные разделы
 

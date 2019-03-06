@@ -91,12 +91,12 @@ helpviewer_keywords:
 - m_iRowset
 - m_rgRowHandles
 ms.assetid: 6a9189af-7556-45b1-adcb-9d62bb36704c
-ms.openlocfilehash: a1826155bec3313afe503ee1c58f786a5c4739e8
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: d7d7797e0e1ac69ef114a251fbcee9fbe29cd7e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556989"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420899"
 ---
 # <a name="irowsetimpl-class"></a>Класс IRowsetImpl
 
@@ -162,7 +162,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
 
 ## <a name="remarks"></a>Примечания
 
-[IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85)) — это базовый интерфейс набора строк.
+[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85)) — это базовый интерфейс набора строк.
 
 ## <a name="addrefrows"></a> IRowsetImpl::AddRefRows
 
@@ -179,7 +179,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="createrow"></a> IRowsetImpl::CreateRow
 
@@ -222,7 +222,7 @@ STDMETHOD(GetData )(HROW hRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::GetData](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::GetData](/previous-versions/windows/desktop/ms716988(v=vs.85)) в *справочнике программиста OLE DB*.
 
 Некоторые параметры соответствуют *Справочник программиста OLE DB по* параметры разные имена, которые описаны в `IRowset::GetData`:
 
@@ -255,7 +255,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) флаги для столбца.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) флаги для столбца.
 
 ## <a name="getnextrows"></a> IRowsetImpl::GetNextRows
 
@@ -273,7 +273,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::GetNextRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms709827(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::GetNextRows](/previous-versions/windows/desktop/ms709827(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="irowsetimpl"></a> IRowsetImpl::IRowsetImpl
 
@@ -305,7 +305,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -327,7 +327,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::ReleaseRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::ReleaseRows](/previous-versions/windows/desktop/ms719771(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="restartposition"></a> IRowsetImpl::RestartPosition
 
@@ -341,7 +341,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowset::RestartPosition](https://docs.microsoft.com/previous-versions/windows/desktop/ms712877(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowset::RestartPosition](/previous-versions/windows/desktop/ms712877(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -362,7 +362,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>Параметры
 
 *statusFlags*<br/>
-[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85)) флажки, которые нужно установить для столбца.
+[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85)) флажки, которые нужно установить для столбца.
 
 *currentRow*<br/>
 Текущая строка.

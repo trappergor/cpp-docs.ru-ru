@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484803"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414698"
 ---
 # <a name="msbuild-visual-c-overview"></a>Общие сведения о MSBuild (Visual C++)
 
@@ -27,7 +27,7 @@ MSBuild — стандартный система сборки для проек
 
 - [Справочник по командной строке](/visualstudio/msbuild/msbuild-command-line-reference) описаны аргументы командной строки и параметры, которые можно использовать с помощью msbuild.exe.
 
-- [Задача ссылку](/visualstudio/msbuild/msbuild-task-reference) задачи описывает MSBuild. Особое внимание уделите эти задачи, которые относятся к Visual C++: [Задача BscMake](/visualstudio/msbuild/bscmake-task), [CL-задача](/visualstudio/msbuild/cl-task), [CPPClean-задача](/visualstudio/msbuild/cppclean-task), [LIB-задача](/visualstudio/msbuild/lib-task), [связывания задачи](/visualstudio/msbuild/link-task), [задача MIDL](/visualstudio/msbuild/midl-task), [MT-задача](/visualstudio/msbuild/mt-task), [Задача RC](/visualstudio/msbuild/rc-task), [Задача SetEnv](/visualstudio/msbuild/setenv-task), [VCMessage-задача](/visualstudio/msbuild/vcmessage-task), [Задача XDCMake](/visualstudio/msbuild/xdcmake-task), [XSD-задача](/visualstudio/msbuild/xsd-task).
+- [Задача ссылку](/visualstudio/msbuild/msbuild-task-reference) задачи описывает MSBuild. Особое внимание уделите данным задачам, относящиеся к Visual C++: [Задача BscMake](/visualstudio/msbuild/bscmake-task), [CL-задача](/visualstudio/msbuild/cl-task), [cppclean-задача](/visualstudio/msbuild/cppclean-task), [LIB-задача](/visualstudio/msbuild/lib-task), [задача Link](/visualstudio/msbuild/link-task), [задача MIDL](/visualstudio/msbuild/midl-task), [MT-задача](/visualstudio/msbuild/mt-task), [задача RC](/visualstudio/msbuild/rc-task), [задача SetEnv](/visualstudio/msbuild/setenv-task), [vcmessage-задача](/visualstudio/msbuild/vcmessage-task), [задача XDCMake](/visualstudio/msbuild/xdcmake-task), [XSD-задача](/visualstudio/msbuild/xsd-task).
 
 ## <a name="msbuild-on-the-command-line"></a>MSBuild в командной строке
 
@@ -73,7 +73,7 @@ A *параметр задачи* свойство класса задачи, о
 
 Каталоги файлов поддержки содержат файлы с такими расширениями:
 
-|Расширение|Описание|
+|Расширение|Описание:|
 |---------------|-----------------|
 |.targets|Содержит `Target` элементы XML, которые задают задачи, выполняемые целевым объектом. Может также содержать `PropertyGroup`, `ItemGroup`, `ItemDefinitionGroup`, и определяемых пользователем `Item` элементов, используемых для назначения параметров задачи файлы и параметры командной строки.<br /><br /> Дополнительные сведения см. в разделе [элемент Target (MSBuild)](/visualstudio/msbuild/target-element-msbuild).|
 |.props|Содержит `Property Group` и определяемых пользователем `Property` XML-элементов, укажите файл и параметры, которые используются во время построения.<br /><br /> Может также содержать `ItemDefinitionGroup` и определяемых пользователем `Item` XML-элементы, задающие Дополнительные параметры. Элементы, определенные в группу определений элемента напоминают свойства, но нельзя получить доступ из командной строки. Файлы проекта Visual C++ часто вместо свойств используются элементы для представления параметров.<br /><br /> Дополнительные сведения см. в разделе [элемент ItemGroup (MSBuild)](/visualstudio/msbuild/itemgroup-element-msbuild), [элемент ItemDefinitionGroup (MSBuild)](/visualstudio/msbuild/itemdefinitiongroup-element-msbuild), и [элемент Item (MSBuild)](/visualstudio/msbuild/item-element-msbuild).|
@@ -85,7 +85,7 @@ A *параметр задачи* свойство класса задачи, о
 
 ### <a name="platformtoolset-property"></a>Свойство PlatformToolset
 
-`PlatformToolset` Свойство определяет, какой набор инструментов Visual C++, используемых в построении. По умолчанию используется текущий набор инструментов. Если это свойство имеет значение, значение свойства сцепляется со строковыми литералами для формирования пути к каталогу, содержащему файлы свойств и целевых объектов, которые необходимы для построения проекта для конкретной платформы. Необходимо установить набор инструментов платформы для построения с помощью этой версии набора инструментов платформы.
+ `PlatformToolset` Свойство определяет, какой набор инструментов Visual C++, используемых в построении. По умолчанию используется текущий набор инструментов. Если это свойство имеет значение, значение свойства сцепляется со строковыми литералами для формирования пути к каталогу, содержащему файлы свойств и целевых объектов, которые необходимы для построения проекта для конкретной платформы. Необходимо установить набор инструментов платформы для построения с помощью этой версии набора инструментов платформы.
 
 Например, задать `PlatformToolset` свойства `v140` использовать инструменты Visual C++ 2015 и библиотеки для построения приложения:
 
@@ -93,7 +93,7 @@ A *параметр задачи* свойство класса задачи, о
 
 ### <a name="preferredtoolarchitecture-property"></a>Свойство PreferredToolArchitecture
 
-`PreferredToolArchitecture` Свойство определяет 32-разрядной или 64-разрядных компилятора и средств, используются ли в сборке. Это свойство не влияет на вывод архитектура платформы или конфигурации. По умолчанию MSBuild использует x86 версии компилятора и инструментов, если это свойство не задано.
+ `PreferredToolArchitecture` Свойство определяет 32-разрядной или 64-разрядных компилятора и средств, используются ли в сборке. Это свойство не влияет на вывод архитектура платформы или конфигурации. По умолчанию MSBuild использует x86 версии компилятора и инструментов, если это свойство не задано.
 
 Например, задать `PreferredToolArchitecture` свойства `x64` использовать 64-разрядный компилятор и средства для построения приложения:
 

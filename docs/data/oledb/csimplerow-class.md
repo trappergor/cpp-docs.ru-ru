@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556638"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414031"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -105,7 +105,7 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения.
+Значение HRESULT, обычно S_OK, указывающее, две строки имеют один и тот же экземпляр строки, или значение S_FALSE, указывающее, две строки различаются. См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *Справочник программиста OLE DB по* другие возможные возвращаемые значения.
 
 ## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 

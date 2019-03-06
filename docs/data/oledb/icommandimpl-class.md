@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556820"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424851"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
-Предоставляет реализацию для [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85)) интерфейс.
+Предоставляет реализацию для [ICommand](/previous-versions/windows/desktop/ms709737(v=vs.85)) интерфейс.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [ICommand::Cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [ICommand::Cancel](/previous-versions/windows/desktop/ms714402(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ## <a name="cancelexecution"></a> ICommandImpl::CancelExecution
 
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 Для создания более чем одному набору строк, или оставить свои собственные требования к созданию различных наборов строк, поместите различных вызовов `CreateRowset` изнутри `Execute`.
 
-См. в разделе [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике программиста OLE DB.*
+См. в разделе [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике программиста OLE DB.*
 
 ## <a name="execute"></a> ICommandImpl::Execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommand::Execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [ICommand::Execute](/previous-versions/windows/desktop/ms718095(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 

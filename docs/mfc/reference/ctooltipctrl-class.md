@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300964"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420847"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -99,7 +99,7 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CToolTipCtrl::Activate](#activate)|Активирует и деактивирует всплывающая подсказка.|
 |[CToolTipCtrl::AddTool](#addtool)|Регистрирует средство управления всплывающей подсказки.|
@@ -210,7 +210,7 @@ BOOL AddTool(
 Идентификатор строкового ресурса, содержащий текст для средства.
 
 *lpRectTool*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, содержащую средство координаты ограничивающего прямоугольника. Координаты указываются относительно левого верхнего угла клиентской области окна, идентифицируемый *pWnd*.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуру, содержащую средство координаты ограничивающего прямоугольника. Координаты указываются относительно левого верхнего угла клиентской области окна, идентифицируемый *pWnd*.
 
 *nIDTool*<br/>
 Идентификатор средства.
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>Параметры
 
 *lprc*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, которая содержит прямоугольник окна подсказки средство или прямоугольник отображаемого текста.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, которая содержит прямоугольник окна подсказки средство или прямоугольник отображаемого текста.
 
 *bLarger*<br/>
 Если значение равно TRUE, *lprc* используется для указания прямоугольник отображения текста, и он получает соответствующий прямоугольной области окна. Если значение равно FALSE, *lprc* используется для указания прямоугольника окна, и он получает соответствующий прямоугольник отображения текста.
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>Параметры
 
 *lprc*<br/>
-Адрес `RECT` структуру, которая будет получать данные поля. Члены [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры не определяют ограничивающего прямоугольника. Для этого сообщения элементы структуры интерпретируются следующим образом:
+Адрес `RECT` структуру, которая будет получать данные поля. Члены [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры не определяют ограничивающего прямоугольника. Для этого сообщения элементы структуры интерпретируются следующим образом:
 
 |Член|Представление|
 |------------|--------------------|
@@ -867,7 +867,7 @@ void SetToolRect(
 Идентификатор средства.
 
 *lpRect*<br/>
-Указатель на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуру, указав новый ограничивающий прямоугольник.
+Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуру, указав новый ограничивающий прямоугольник.
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 

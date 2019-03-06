@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447207"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412735"
 ---
 # <a name="cl-invokes-the-linker"></a>Вызов компоновщика компилятором CL
 
@@ -24,7 +24,7 @@ CL автоматически вызывает компоновщик после
 |Параметр|Описание|
 |------------|-----------------|
 |/c|Компиляция без компоновки|
-|/ /P E, /EP,|Предварительно обработать без компиляции или связывание|
+|/E, /EP, /P|Предварительно обработать без компиляции или связывание|
 |/Zg|Создание прототипов функций|
 |/Zs|Проверка синтаксиса|
 

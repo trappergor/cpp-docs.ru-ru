@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464913"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415413"
 ---
 # <a name="bscmake-options"></a>Параметры BSCMAKE
 
@@ -57,7 +57,7 @@ ms.locfileid: "50464913"
 **/ ES**<br/>
 Исключает из файла для просмотра информации каждый включенный файл указан с абсолютным путем или найти в абсолютный путь, указанный в переменной среды INCLUDE. (Обычно к ним относятся системные включаемые файлы, которые содержат большой объем сведений, которые могут потребоваться в файл информации об.) Этот параметр не исключает файлы, указанные без пути или с помощью относительных путей или файлов, найденных в относительный путь в INCLUDE. Можно использовать **/Ei** вместе с параметром **/es** чтобы исключить файлы, **/es** нельзя исключить. Если вы хотите исключить только некоторые файлы, **/es** исключает, использовать **/Ei** вместо **/es** и вывести список файлов, которые требуется исключить.
 
-**/ errorReport:**[**none** &#124; **строке** &#124; **очереди** &#124; **отправки**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 Позволяет отправлять в Майкрософт сведения о внутренних ошибках в bscmake.exe.
 
 Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).

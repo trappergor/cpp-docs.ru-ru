@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263615"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413957"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>Параметры
 
 *fEnable*<br/>
-См. в разделе *fEnable* в [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) в пакете Windows SDK.
+См. в разделе *fEnable* в [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -590,7 +590,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
 
@@ -605,7 +605,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>Параметры
 
 *pDO*<br/>
-См. в разделе *pDO* в [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) в пакете Windows SDK.
+См. в разделе *pDO* в [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) в пакете Windows SDK.
 
 *ppDORet*<br/>
 См. в разделе *ppDORet* в `IDocHostUIHandler::FilterDataObject` в пакете Windows SDK.
@@ -616,7 +616,7 @@ STDMETHOD(FilterDataObject)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
 
@@ -695,7 +695,7 @@ void GetCurrentUrl(CString& szUrl);
 
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
 
-Извлекает [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейса на текущем загруженном документе HTML.
+Извлекает [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) интерфейса на текущем загруженном документе HTML.
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -722,7 +722,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>Параметры
 
 *pDropTarget*<br/>
-См. в разделе *pDropTarget* в [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) в пакете Windows SDK.
+См. в разделе *pDropTarget* в [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) в пакете Windows SDK.
 
 *ppDropTarget*<br/>
 См. в разделе *ppDropTarget* в `IDocHostUIHandler::GetDropTarget` в пакете Windows SDK.
@@ -733,7 +733,7 @@ STDMETHOD(GetDropTarget)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement
 
@@ -896,7 +896,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>Параметры
 
 *ppDispatch*<br/>
-См. в разделе *ppDispatch* в [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) в пакете Windows SDK.
+См. в разделе *ppDispatch* в [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -904,7 +904,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
@@ -917,7 +917,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>Параметры
 
 *pInfo*<br/>
-См. в разделе *pInfo* в [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) в пакете Windows SDK.
+См. в разделе *pInfo* в [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -925,7 +925,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
 
@@ -940,7 +940,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>Параметры
 
 *pchKey*<br/>
-См. в разделе *pchKey* в [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) в пакете Windows SDK.
+См. в разделе *pchKey* в [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) в пакете Windows SDK.
 
 *dw*<br/>
 См. в разделе *dw* в `IDocHostUIHandler::GetOptionKeyPath` в Windows SDK.
@@ -951,7 +951,7 @@ STDMETHOD(GetOptionKeyPath)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="hideui"></a>  CDHtmlDialog::HideUI
 
@@ -967,7 +967,7 @@ STDMETHOD(HideUI)(void);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
@@ -1082,7 +1082,7 @@ void Navigate(
 Указатель на строку, содержащую URL-адрес, для которых будет включен.
 
 *dwFlags*<br/>
-Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, следует ли для чтения в кэш или записи из кэша и необходимость отображения ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](https://msdn.microsoft.com/library/aa768360.aspx) перечисления.
+Флаги, переменной, которая указывает, следует ли добавить ресурс в список журнала, следует ли для чтения в кэш или записи из кэша и необходимость отображения ресурса в новом окне. Переменная может представлять собой сочетание значений, определенных в [BrowserNavConstants](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\)) перечисления.
 
 *lpszTargetFrameName*<br/>
 Указатель на строку, содержащую имя фрейма, в котором будет отображаться ресурс.
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Параметры
 
 *fActivate*<br/>
-См. в разделе *fActivate* в [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) в пакете Windows SDK.
+См. в разделе *fActivate* в [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1151,7 +1151,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является CDHtmlDialog в реализации [IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx), как описано в пакете Windows SDK.
+Эта функция-член является CDHtmlDialog в реализации [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>Параметры
 
 *fActivate*<br/>
-См. в разделе *fActivate* в [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) в пакете Windows SDK.
+См. в разделе *fActivate* в [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1172,7 +1172,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
 
@@ -1226,7 +1226,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>Параметры
 
 *prcBorder*<br/>
-См. в разделе *prcBorder* в [IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) в пакете Windows SDK.
+См. в разделе *prcBorder* в [IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) в пакете Windows SDK.
 
 *pUIWindow*<br/>
 См. в разделе *pUIWindow* в `IDocHostUIHandler::ResizeBorder` в пакете Windows SDK.
@@ -1372,7 +1372,7 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>Параметры
 
 *dwFlags*<br/>
-Возможные значения см. в разделе [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) в пакете Windows SDK.
+Возможные значения см. в разделе [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) в пакете Windows SDK.
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
 
@@ -1389,7 +1389,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>Параметры
 
 *dwID*<br/>
-См. в разделе *dwID* в [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) в пакете Windows SDK.
+См. в разделе *dwID* в [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) в пакете Windows SDK.
 
 *PPT*<br/>
 См. в разделе *ppt* в `IDocHostUIHandler::ShowContextMenu` в Windows SDK.
@@ -1406,7 +1406,7 @@ STDMETHOD(ShowContextMenu)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="showui"></a>  CDHtmlDialog::ShowUI
 
@@ -1424,7 +1424,7 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>Параметры
 
 *dwID*<br/>
-См. в разделе *dwID* в [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) в пакете Windows SDK.
+См. в разделе *dwID* в [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) в пакете Windows SDK.
 
 *pActiveObject*<br/>
 См. в разделе *d pActiveObject* в `IDocHostUIHandler::ShowUI` в пакете Windows SDK.
@@ -1444,7 +1444,7 @@ STDMETHOD(ShowUI)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
 
@@ -1460,7 +1460,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>Параметры
 
 *lpMsg*<br/>
-См. в разделе *lpMsg* в [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) в пакете Windows SDK.
+См. в разделе *lpMsg* в [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) в пакете Windows SDK.
 
 *pguidCmdGroup*<br/>
 См. в разделе *параметром pguidCmdGroup* в `IDocHostUIHandler::TranslateAccelerator` в пакете Windows SDK.
@@ -1474,7 +1474,7 @@ STDMETHOD(TranslateAccelerator)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
 
@@ -1490,7 +1490,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>Параметры
 
 *dwTranslate*<br/>
-См. в разделе *dwTranslate* в [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) в пакете Windows SDK.
+См. в разделе *dwTranslate* в [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) в пакете Windows SDK.
 
 *pchURLIn*<br/>
 См. в разделе *pchURLIn* в `IDocHostUIHandler::TranslateUrl` в пакете Windows SDK.
@@ -1504,7 +1504,7 @@ STDMETHOD(TranslateUrl)(
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
 
@@ -1520,7 +1520,7 @@ STDMETHOD(UpdateUI)(void);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

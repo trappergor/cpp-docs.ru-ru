@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRSUPPORTLASTERROR linker option
 - -CLRSUPPORTLASTERROR linker option
 ms.assetid: b7057990-4154-4b1d-9fc9-6236f7be7575
-ms.openlocfilehash: e813966367b4349a95c174c59340204592b81b74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8be1ca08ae219202ad7b7f19ac693dd2123553b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660922"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417740"
 ---
 # <a name="clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls"></a>/CLRSUPPORTLASTERROR (Сохранение кода последней ошибки для вызовов PInvoke)
 
@@ -32,34 +32,34 @@ ms.locfileid: "50660922"
 
 |||||
 |-|-|-|-|
-|УСОВЕРШЕНСТВОВАННЫЙ. БИБЛИОТЕКИ DLL|ACTIVEDS. БИБЛИОТЕКИ DLL|ADPTIF. БИБЛИОТЕКИ DLL|ADVAPI32. БИБЛИОТЕКИ DLL|
-|ASYCFILT. БИБЛИОТЕКИ DLL|AUTHZ. БИБЛИОТЕКИ DLL|AVICAP32. БИБЛИОТЕКИ DLL|AVIFIL32. БИБЛИОТЕКИ DLL|
-|CAB-ФАЙЛ. БИБЛИОТЕКИ DLL|CLUSAPI. БИБЛИОТЕКИ DLL|COMCTL32. БИБЛИОТЕКИ DLL|COMDLG32. БИБЛИОТЕКИ DLL|
-|COMSVCS. БИБЛИОТЕКИ DLL|CREDUI. БИБЛИОТЕКИ DLL|ФУНКЦИЯ CRYPT32. БИБЛИОТЕКИ DLL|CRYPTNET. БИБЛИОТЕКИ DLL|
-|CRYPTUI. БИБЛИОТЕКИ DLL|D3D8THK. БИБЛИОТЕКИ DLL|DBGENG. БИБЛИОТЕКИ DLL|DBGHELP. БИБЛИОТЕКИ DLL|
-|DCIMAN32. БИБЛИОТЕКИ DLL|DNSAPI. БИБЛИОТЕКИ DLL|DSPROP. БИБЛИОТЕКИ DLL|DSUIEXT. БИБЛИОТЕКИ DLL|
-|GDI32. БИБЛИОТЕКИ DLL|GLU32. БИБЛИОТЕКИ DLL|HLINK. БИБЛИОТЕКИ DLL|ICM32. БИБЛИОТЕКИ DLL|
+|УСОВЕРШЕНСТВОВАННЫЙ. БИБЛИОТЕКИ DLL|ACTIVEDS. БИБЛИОТЕКИ DLL|ADPTIF. БИБЛИОТЕКИ DLL|ADVAPI32.DLL|
+|ASYCFILT. БИБЛИОТЕКИ DLL|AUTHZ. БИБЛИОТЕКИ DLL|AVICAP32.DLL|AVIFIL32. БИБЛИОТЕКИ DLL|
+|CAB-ФАЙЛ. БИБЛИОТЕКИ DLL|CLUSAPI.DLL|COMCTL32.DLL|COMDLG32.DLL|
+|COMSVCS. БИБЛИОТЕКИ DLL|CREDUI. БИБЛИОТЕКИ DLL|CRYPT32.DLL|CRYPTNET. БИБЛИОТЕКИ DLL|
+|CRYPTUI. БИБЛИОТЕКИ DLL|D3D8THK.DLL|DBGENG. БИБЛИОТЕКИ DLL|DBGHELP. БИБЛИОТЕКИ DLL|
+|DCIMAN32. БИБЛИОТЕКИ DLL|DNSAPI.DLL|DSPROP. БИБЛИОТЕКИ DLL|DSUIEXT. БИБЛИОТЕКИ DLL|
+|GDI32.DLL|GLU32. БИБЛИОТЕКИ DLL|HLINK. БИБЛИОТЕКИ DLL|ICM32.DLL|
 |IMAGEHLP. БИБЛИОТЕКИ DLL|IMM32. БИБЛИОТЕКИ DLL|IPHLPAPI. БИБЛИОТЕКИ DLL|IPROP. БИБЛИОТЕКИ DLL|
-|KERNEL32. БИБЛИОТЕКИ DLL|KSUSER. БИБЛИОТЕКИ DLL|LOADPERF. БИБЛИОТЕКИ DLL|LZ32. БИБЛИОТЕКИ DLL|
-|MAPI32. БИБЛИОТЕКИ DLL|MGMTAPI. БИБЛИОТЕКИ DLL|MOBSYNC. БИБЛИОТЕКИ DLL|ПРАВИЛО ПОЛИТИКИ УПРАВЛЕНИЯ. БИБЛИОТЕКИ DLL|
-|MPRAPI. БИБЛИОТЕКИ DLL|MQRT. БИБЛИОТЕКИ DLL|MSACM32. БИБЛИОТЕКИ DLL|MSCMS. БИБЛИОТЕКИ DLL|
-|MSI. БИБЛИОТЕКИ DLL|MSIMG32. БИБЛИОТЕКИ DLL|MSRATING. БИБЛИОТЕКИ DLL|MSTASK. БИБЛИОТЕКИ DLL|
-|MSVFW32. БИБЛИОТЕКИ DLL|MSWSOCK. БИБЛИОТЕКИ DLL|MTXEX. БИБЛИОТЕКИ DLL|NDDEAPI. БИБЛИОТЕКИ DLL|
-|NETAPI32. БИБЛИОТЕКИ DLL|NPPTOOLS. БИБЛИОТЕКИ DLL|NTDSAPI. БИБЛИОТЕКИ DLL|NTDSBCLI. БИБЛИОТЕКИ DLL|
-|NTMSAPI. БИБЛИОТЕКИ DLL|ODBC32. БИБЛИОТЕКИ DLL|ODBCBCP. БИБЛИОТЕКИ DLL|OLE32. БИБЛИОТЕКИ DLL|
-|OLEACC. БИБЛИОТЕКИ DLL|В МОДУЛЕ OLEAUT32. БИБЛИОТЕКИ DLL|OLEDLG. БИБЛИОТЕКИ DLL|OPENGL32. БИБЛИОТЕКИ DLL|
-|PDH. БИБЛИОТЕКИ DLL|POWRPROF. БИБЛИОТЕКИ DLL|QOSNAME. БИБЛИОТЕКИ DLL|ЗАПРОС. БИБЛИОТЕКИ DLL|
-|RASAPI32. БИБЛИОТЕКИ DLL|RASDLG. БИБЛИОТЕКИ DLL|RASSAPI. БИБЛИОТЕКИ DLL|RESUTILS. БИБЛИОТЕКИ DLL|
-|БИБЛИОТЕКИ RICHED20. БИБЛИОТЕКИ DLL|RPCNS4. БИБЛИОТЕКИ DLL|RPCRT4. БИБЛИОТЕКИ DLL|RTM-ВЕРСИИ. БИБЛИОТЕКИ DLL|
-|RTUTILS. БИБЛИОТЕКИ DLL|SCARDDLG. БИБЛИОТЕКИ DLL|SECUR32. БИБЛИОТЕКИ DLL|SENSAPI. БИБЛИОТЕКИ DLL|
-|SETUPAPI. БИБЛИОТЕКИ DLL|SFC. БИБЛИОТЕКИ DLL|SHELL32. БИБЛИОТЕКИ DLL|SHFOLDER. БИБЛИОТЕКИ DLL|
-|SHLWAPI. БИБЛИОТЕКИ DLL|SISBKUP. БИБЛИОТЕКИ DLL|SNMPAPI. БИБЛИОТЕКИ DLL|SRCLIENT. БИБЛИОТЕКИ DLL|
+|KERNEL32.DLL|KSUSER. БИБЛИОТЕКИ DLL|LOADPERF. БИБЛИОТЕКИ DLL|LZ32.DLL|
+|MAPI32.DLL|MGMTAPI. БИБЛИОТЕКИ DLL|MOBSYNC. БИБЛИОТЕКИ DLL|ПРАВИЛО ПОЛИТИКИ УПРАВЛЕНИЯ. БИБЛИОТЕКИ DLL|
+|MPRAPI.DLL|MQRT. БИБЛИОТЕКИ DLL|MSACM32.DLL|MSCMS. БИБЛИОТЕКИ DLL|
+|MSI.DLL|MSIMG32. БИБЛИОТЕКИ DLL|MSRATING. БИБЛИОТЕКИ DLL|MSTASK. БИБЛИОТЕКИ DLL|
+|MSVFW32.DLL|MSWSOCK. БИБЛИОТЕКИ DLL|MTXEX. БИБЛИОТЕКИ DLL|NDDEAPI.DLL|
+|NETAPI32. БИБЛИОТЕКИ DLL|NPPTOOLS. БИБЛИОТЕКИ DLL|NTDSAPI.DLL|NTDSBCLI.DLL|
+|NTMSAPI.DLL|ODBC32.DLL|ODBCBCP. БИБЛИОТЕКИ DLL|OLE32.DLL|
+|OLEACC. БИБЛИОТЕКИ DLL|OLEAUT32.DLL|OLEDLG. БИБЛИОТЕКИ DLL|OPENGL32. БИБЛИОТЕКИ DLL|
+|PDH. БИБЛИОТЕКИ DLL|POWRPROF. БИБЛИОТЕКИ DLL|QOSNAME.DLL|ЗАПРОС. БИБЛИОТЕКИ DLL|
+|RASAPI32.DLL|RASDLG. БИБЛИОТЕКИ DLL|RASSAPI. БИБЛИОТЕКИ DLL|RESUTILS. БИБЛИОТЕКИ DLL|
+|БИБЛИОТЕКИ RICHED20. БИБЛИОТЕКИ DLL|RPCNS4.DLL|RPCRT4. БИБЛИОТЕКИ DLL|RTM.DLL|
+|RTUTILS. БИБЛИОТЕКИ DLL|SCARDDLG. БИБЛИОТЕКИ DLL|SECUR32.DLL|SENSAPI.DLL|
+|SETUPAPI. БИБЛИОТЕКИ DLL|SFC.DLL|SHELL32. БИБЛИОТЕКИ DLL|SHFOLDER. БИБЛИОТЕКИ DLL|
+|SHLWAPI.DLL|SISBKUP. БИБЛИОТЕКИ DLL|SNMPAPI.DLL|SRCLIENT. БИБЛИОТЕКИ DLL|
 |STI ДЛЯ ПРОЦЕССОРОВ. БИБЛИОТЕКИ DLL|TAPI32. БИБЛИОТЕКИ DLL|ТРАФИК. БИБЛИОТЕКИ DLL|URL-АДРЕС. БИБЛИОТЕКИ DLL|
 |URLMON. БИБЛИОТЕКИ DLL|USER32. БИБЛИОТЕКИ DLL|USERENV. БИБЛИОТЕКИ DLL|USP10. БИБЛИОТЕКИ DLL|
 |UXTHEME. БИБЛИОТЕКИ DLL|VDMDBG. БИБЛИОТЕКИ DLL|ВЕРСИЯ. БИБЛИОТЕКИ DLL|WINFAX. БИБЛИОТЕКИ DLL|
 |WINHTTP. БИБЛИОТЕКИ DLL|WININET. БИБЛИОТЕКИ DLL|WINMM. БИБЛИОТЕКИ DLL|WINSCARD. БИБЛИОТЕКИ DLL|
 |WINTRUST. БИБЛИОТЕКИ DLL|WLDAP32. БИБЛИОТЕКИ DLL|WOW32. БИБЛИОТЕКИ DLL|WS2_32.DLL|
-|WSNMP32. БИБЛИОТЕКИ DLL|WSOCK32.DLL|WTSAPI32. БИБЛИОТЕКИ DLL|XOLEHLP. БИБЛИОТЕКИ DLL|
+|WSNMP32.DLL|WSOCK32.DLL|WTSAPI32.DLL|XOLEHLP. БИБЛИОТЕКИ DLL|
 
 > [!NOTE]
 >  Сохранение последней ошибки, не поддерживается для неуправляемых функций, которые используются кодом среды CLR в одном модуле.

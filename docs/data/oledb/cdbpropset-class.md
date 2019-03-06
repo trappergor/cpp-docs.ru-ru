@@ -33,12 +33,12 @@ helpviewer_keywords:
 - SetGUID method
 - AddProperty method
 ms.assetid: 54190149-c277-4679-b81a-ef484d4d1c00
-ms.openlocfilehash: 4b71fc43c3766f9a039d841b8872dee99210fe8c
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 01b9012a2b32c22b86968b1ea0895bdc9ceabb13
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556755"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417727"
 ---
 # <a name="cdbpropset-class"></a>Класс CDBPropSet
 
@@ -127,7 +127,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> CDBPropSet::CDBPropSet
 
-Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
+Конструктор. Инициализирует `rgProperties`, `cProperties`, и `guidPropertySet` поля [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -160,7 +160,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>Параметры
 
 *Идентификатор GUID*<br/>
-[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
+[in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры.
 
 ### <a name="remarks"></a>Примечания
 
@@ -181,5 +181,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CDBPropIDSet](../../data/oledb/cdbpropidset-class.md)<br/>
-[Структуре DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))
-[структуры DBPROP](https://docs.microsoft.com/previous-versions/windows/desktop/ms717970(v=vs.85))
+[Структуре DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85))
+[структуры DBPROP](/previous-versions/windows/desktop/ms717970(v=vs.85))

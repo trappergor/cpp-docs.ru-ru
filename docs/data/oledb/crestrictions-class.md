@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3ade541e5418799f525a08d3fc868f07d2bdfe6a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412826"
 ---
 # <a name="crestrictions-class"></a>Класс CRestrictions
 
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 
 Можно указать максимум семь ограничений в наборе строк схемы.
 
-См. в разделе [IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85)) сведения об определенных ограничениях на все наборы строк схемы.
+См. в разделе [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85)) сведения об определенных ограничениях на все наборы строк схемы.
 
 ## <a name="see-also"></a>См. также
 

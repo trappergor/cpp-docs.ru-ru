@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588244"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423850"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>Основные принципы использования управляемых исключений
 
@@ -29,7 +29,7 @@ ms.locfileid: "50588244"
 
 ## <a name="remarks"></a>Примечания
 
-Если компиляция выполняется с **/CLR** параметр, можно обрабатывать исключения среды CLR, а также стандартный [обработки исключений C++](../cpp/cpp-exception-handling.md) и [структурированная обработка исключений](../cpp/structured-exception-handling-c-cpp.md) (SEH). Исключения среды CLR — это любое исключение, вызванное управляемый тип. [System::Exception](https://msdn.microsoft.com/library/system.exception.aspx) класс предоставляет множество полезных методов для обработки исключения CLR и рекомендуется в качестве базового класса для классов исключений, определяемых пользователем.
+Если компиляция выполняется с **/CLR** параметр, можно обрабатывать исключения среды CLR, а также стандартный <xref:System.Exception> класс предоставляет множество полезных методов для обработки исключения CLR и рекомендуется в качестве базового класса для пользовательского исключения классы.
 
 Перехват исключения типов, производных от интерфейса не поддерживается в **/CLR**. Кроме того среда CLR позволяет перехватывать исключения переполнения стека; процесс будет прерван исключение переполнения стека.
 
@@ -140,7 +140,7 @@ In 'catch(MyStruct^ catchException)'
 
 ### <a name="catching-unmanaged-types"></a>Перехват неуправляемых типов
 
-При возникновении неуправляемый объект типа, он упаковывается с исключением типа [System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx). При поиске соответствующего **catch** предложение, существуют две возможности.
+При возникновении неуправляемый объект типа, он упаковывается с исключением типа <xref:System.Runtime.InteropServices.SEHException>. При поиске соответствующего **catch** предложение, существуют две возможности.
 
 - Если в собственный тип C++, расшифровывается и по сравнению с обнаружен тип исключения. Это сравнение позволяет собственный тип C++ оказалось обычным способом.
 

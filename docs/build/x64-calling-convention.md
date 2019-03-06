@@ -3,12 +3,12 @@ title: x64 соглашение о вызовах
 description: Сведения о вызовах по умолчанию x64 ABI.
 ms.date: 12/17/2018
 ms.assetid: 41ca3554-b2e3-4868-9a84-f1b46e6e21d9
-ms.openlocfilehash: f2a63df878d4eac727f9c697cc326bb1f2981d95
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 02bf4719766366049b600b148ad88fc238f4e54e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53636221"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415790"
 ---
 # <a name="x64-calling-convention"></a>x64 соглашение о вызовах
 
@@ -146,7 +146,7 @@ Struct2 func4(int a, double b, int c, float d);
 
 Регистры RBX, RBP, RDI, RSI, RSP, R12, R13, R14 и R15 считаются энергонезависимой и необходимо сохранить и восстановить с помощью функции, использует их.
 
-## <a name="function-pointers"></a>Указатели на функции
+## <a name="function-pointers"></a>Указатели функций
 
 Указатели функций являются просто указатели на метку соответствующей функции. Не предусмотрены содержание требований для указателей на функции.
 
@@ -207,4 +207,4 @@ MMX и регистры с плавающей запятой стека (MM0-MM7
 
 ## <a name="see-also"></a>См. также
 
-[x64 программные соглашения](../build/x64-software-conventions.md)
+[Программные соглашения для 64-разрядных систем](../build/x64-software-conventions.md)

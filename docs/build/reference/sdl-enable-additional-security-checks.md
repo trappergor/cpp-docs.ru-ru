@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: 49ac57f81ef07eb2a9c1e11280e160f0c48fce73
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389946"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413099"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (включение дополнительных проверок безопасности)
 
@@ -29,7 +29,7 @@ ms.locfileid: "52389946"
 
 **/ SDL** позволяет применять эти предупреждения как ошибки:
 
-|Включаемые/sdl предупреждения|Эквивалентный параметр командной строки|Описание:|
+|Включаемые/sdl предупреждения|Эквивалентный параметр командной строки|Описание|
 |------------------------------|-------------------------------------|-----------------|
 |[C4146](../../error-messages/compiler-warnings/compiler-warning-level-2-c4146.md)|/we4146|Унарный оператор "минус" был применен к беззнаковому типу, что приведет к получению результата без знака.|
 |[C4308](../../error-messages/compiler-warnings/compiler-warning-level-2-c4308.md)|/we4308|Отрицательная целая константа преобразуется в беззнаковый тип, что, вероятно, приведет к получению бессмысленного результата.|
@@ -39,7 +39,7 @@ ms.locfileid: "52389946"
 |[C4703](../../error-messages/compiler-warnings/compiler-warning-level-4-c4703.md)|/we4703|Используется потенциально неинициализированная локальная переменная-указатель.|
 |[C4789](../../error-messages/compiler-warnings/compiler-warning-level-1-c4789.md)|/we4789|Переполнение буфера при использовании определенных функций среды выполнения C (CRT).|
 |[C4995](../../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)|/we4995|Использование функции, помеченной директивой pragma как [устаревшим](../../preprocessor/deprecated-c-cpp.md).|
-|[ПРЕДУПРЕЖДЕНИЕ C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Использование функции помечен как [устаревшим](../../cpp/deprecated-cpp.md).|
+|[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md)|/we4996|Использование функции помечен как [устаревшим](../../cpp/deprecated-cpp.md).|
 
 ## <a name="runtime-checks"></a>Проверки времени выполнения
 

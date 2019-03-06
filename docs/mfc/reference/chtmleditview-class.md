@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditView [MFC], GetDHtmlDocument
 - CHtmlEditView [MFC], GetStartDocument
 ms.assetid: 166c8ba8-3fb5-4dd7-a9ea-5bca662d00f6
-ms.openlocfilehash: 7d1b28e2b3e279bc3b2e3ccb116ab24017c07cd2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c03d580b1b01fd0d0e858278d8b752c3e4b115b9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301263"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413385"
 ---
 # <a name="chtmleditview-class"></a>Класс CHtmlEditView
 
@@ -35,7 +35,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CHtmlEditView::CHtmlEditView](#chtmleditview)|Создает объект `CHtmlEditView`.|
 
@@ -106,7 +106,7 @@ virtual BOOL Create(
 Указывает атрибуты стиля окна. По умолчанию задаются стили WS_VISIBLE и WS_CHILD Windows.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, указывающий размер и положение окна. *RectDefault* значение позволяет Windows указать размер и положение нового окна.
 
 *pParentWnd*<br/>
 Указатель на родительское окно элемента управления.
@@ -132,7 +132,7 @@ BOOL GetDHtmlDocument(IHTMLDocument2** ppDocument) const;
 ### <a name="parameters"></a>Параметры
 
 *ppDocument*<br/>
-[IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx) интерфейс.
+[IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\)) интерфейс.
 
 ##  <a name="getstartdocument"></a>  CHtmlEditView::GetStartDocument
 

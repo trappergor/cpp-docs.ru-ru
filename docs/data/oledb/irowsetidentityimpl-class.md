@@ -14,16 +14,16 @@ helpviewer_keywords:
 - IRowsetIdentityImpl class
 - IsSameRow method
 ms.assetid: 56821edf-e045-40c8-96bd-231552cd5799
-ms.openlocfilehash: b70ebdaa44331d9fa545763f0dd19e6320dd652b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: e70330a023dc48b7e763bfb874da5290f2fa519f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556222"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424526"
 ---
 # <a name="irowsetidentityimpl-class"></a>Класс IRowsetIdentityImpl
 
-Реализует OLE DB [IRowsetIdentity](https://docs.microsoft.com/previous-versions/windows/desktop/ms715913(v=vs.85)) интерфейс, позволяющий тестирования для идентификации строки.
+Реализует OLE DB [IRowsetIdentity](/previous-versions/windows/desktop/ms715913(v=vs.85)) интерфейс, позволяющий тестирования для идентификации строки.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -66,7 +66,7 @@ STDMETHOD(IsSameRow )(HROW hThisRow,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 

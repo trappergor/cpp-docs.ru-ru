@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413177"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Регулярные MFC DLL, динамически компонуемые с MFC
 
@@ -33,7 +33,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 - В отличие от статически скомпонованной регулярных DLL MFC этот тип из библиотеки DLL, динамически компонуемые с MFC DLL (также называется общей библиотеки DLL MFC).
 
-- Библиотека импорта MFC, связать с этим типом DLL является совпадает с используемым для библиотеки DLL расширения MFC или приложений с использованием библиотеки DLL MFC: .lib MFCxx (D).
+- Библиотека импорта MFC, связать с этим типом DLL — совпадает с используемым для библиотеки DLL расширения MFC или приложений с использованием библиотеки DLL MFC: .Lib MFCxx (D).
 
 Обычной MFC DLL, динамически компонуемые с MFC предъявляются следующие требования:
 

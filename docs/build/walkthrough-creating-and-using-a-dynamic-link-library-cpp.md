@@ -1,19 +1,19 @@
 ---
-title: 'Пошаговое руководство: Создание и использование собственных динамические ссылки библиотеки (C++)'
+title: Пошаговое руководство. Создание и использование собственных динамические ссылки библиотеки (C++)
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330545"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416457"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Пошаговое руководство: Создание и использование собственных динамические ссылки библиотеки (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>Пошаговое руководство. Создание и использование собственных динамические ссылки библиотеки (C++)
 
 Это пошаговое руководство показывает, как использовать Visual Studio IDE для создания собственной библиотеки динамической компоновки (DLL), написанные на языке C++, а затем использовать его из другого приложения C++. Библиотеки DLL являются одним из наиболее полезные виды компоненты Windows. Их можно использовать как способ совместного использования кода и ресурсов, для уменьшения размера приложений и для упрощения обслуживания и расширение приложений. В этом пошаговом руководстве вы создать библиотеку DLL, который реализует некоторые математические функции и создайте консольное приложение, которое использует функции из библиотеки DLL. Попутно вы познакомитесь с некоторые приемы программирования и соглашения, используемые в библиотеках DLL Windows.
 
@@ -402,5 +402,5 @@ int main()
 
 [DLL в Visual C++](../build/dlls-in-visual-cpp.md)<br/>
 [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[Пошаговое руководство. Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+[Пошаговое руководство: Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 [Вызов функций библиотек DLL из приложений Visual Basic](../build/calling-dll-functions-from-visual-basic-applications.md)

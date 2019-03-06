@@ -5,12 +5,12 @@ helpviewer_keywords:
 - syntax, CL compiler command line
 - cl.exe compiler, command-line syntax
 ms.assetid: acba2c1c-0803-4a3a-af25-63e849b930a2
-ms.openlocfilehash: a350a2cb793630b90143b7d190ada9469a79bfc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f5e611064f7f4670056a42e5ccee1f291fbdd567
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581302"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421237"
 ---
 # <a name="compiler-command-line-syntax"></a>Синтаксис командной строки компилятора
 
@@ -28,7 +28,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 |`file`|Имя одного или нескольких файлов исходного кода, OBJ-файлов или библиотек. CL компилирует исходные файлы и передает компоновщику имена OBJ-файлов и библиотек. См. в разделе [синтаксис имен файлов CL](../../build/reference/cl-filename-syntax.md) Дополнительные сведения.|
 |*lib*|Одно или несколько имен библиотеки. Компилятор передает эти имена в компоновщик.|
 |*командный файл*|Файл, содержащий несколько параметров и имен файлов. См. в разделе [командные файлы компилятора CL](../../build/reference/cl-command-files.md) Дополнительные сведения.|
-|*ссылка opt*|Один или несколько [параметры компоновщика](../../build/reference/linker-options.md). Компилятор передает эти параметры компоновщика.|
+|*link-opt*|Один или несколько [параметры компоновщика](../../build/reference/linker-options.md). Компилятор передает эти параметры компоновщика.|
 
 Можно указать любое количество параметров, имен файлов и библиотеки, до тех пор, пока число символов в командной строке не превышает 1024, ограничение, зависит от операционной системы.
 

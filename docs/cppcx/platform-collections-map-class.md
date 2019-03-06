@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481462"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423707"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -77,7 +77,7 @@ ref class Map sealed;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Map::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[MAP::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -92,7 +92,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание|
+|name|Описание:|
 |[MAP::MapChanged](#mapchanged-event.md) `event`|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-*значение*<br/>
+*value*<br/>
 Значение из пары "ключ-значение". Тип *значение* является именем типа *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -202,7 +202,7 @@ V Lookup(K key);
 ### <a name="parameters"></a>Параметры
 
 *key*<br/>
-Ключ, используемый для поиска элемента в сопоставлении. Тип *ключ* является именем типа *K*.
+Ключ, используемый для поиска элемента на карте. Тип *ключ* является именем типа *K*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>  Метод MAP::size
 
-Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в сопоставлении.
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов в сопоставлении.
 
 ### <a name="syntax"></a>Синтаксис
 

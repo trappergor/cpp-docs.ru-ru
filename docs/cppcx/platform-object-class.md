@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850095"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422793"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 
@@ -39,7 +39,7 @@ public ref class Object : Object
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
 |[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
@@ -116,7 +116,7 @@ Object::GetType();
 
 Статический [Type::GetTypeCode](../cppcx/platform-type-class.md#gettypecode) может использоваться для получения [перечисление Platform::TypeCode](../cppcx/platform-typecode-enumeration.md) значение, которое представляет текущий тип. Это наиболее полезно для встроенных типов. Код типа для любого класса ссылок помимо [Platform::String](../cppcx/platform-string-class.md) — объект (1).
 
-[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
+[Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
 
 Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:
 

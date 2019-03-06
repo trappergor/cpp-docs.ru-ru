@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557080"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418611"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
 
@@ -152,7 +152,7 @@ HRESULT GetProperties(ULONG ulPropIDSets,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IDBProperties::GetProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
+См. в разделе [IDBProperties::GetProperties](/previous-versions/windows/desktop/ms714344(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID,
 [in] `CLSID` Поставщика данных.
 
 *pPropSet*<br/>
-[in] Указатель на массив [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
+[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK.
 
 *nPropertySets*<br/>
-[in] Число [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент.
+[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент.
 
 *pName*<br/>
 [входные данные] Имя базы данных, к которой необходимо подключиться.
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID,
 [входные данные] Пароль пользователя.
 
 *nInitMode*<br/>
-[входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.
+[входные данные] Режим инициализации базы данных. См. в разделе [свойства инициализации](/previous-versions/windows/desktop/ms723127(v=vs.85))в *Справочник программиста OLE DB по* в пакете SDK Windows для получения списка допустимых режимов инициализации. Если *nInitMode* — это инициализация нулю, то режим включается в набор свойств, используемых для открытия соединения.
 
 *szProgID*<br/>
 [входные данные] Идентификатор программы.
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [входные данные] Имя файла (обычно это файл подключения к источнику данных (UDL)).
 
-Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85)) в пакете Windows SDK.
+Дополнительные сведения о файлах передачи данных (UDL-файлах) см. в разделе [Обзор API связи данных](/previous-versions/windows/desktop/ms718102(v=vs.85)) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [входные данные] Идентификатор программы поставщика данных.
 
 *pPropset*<br/>
-[in] Указатель на массив [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.
+[in] Указатель на массив [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структур, содержащих свойства и значения, которые можно установить. См. в разделе [наборов свойств и группы свойств](/previous-versions/windows/desktop/ms713696(v=vs.85)) в *справочнике программиста OLE DB* в Windows SDK. При инициализации объекта источника данных свойства должны принадлежать к группе свойств источника данных. Если в то же свойство указано более одного раза *pPropset*, то используется значение, которое зависит от поставщика. Если *ulPropSets* равен нулю, этот параметр учитывается.
 
 *ulPropSets*<br/>
-[in] Число [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.
+[in] Число [DBPROPSET](/previous-versions/windows/desktop/ms714367(v=vs.85)) структуры, передаются в *pPropSet* аргумент. Если это равно нулю, поставщик не учитывает *pPropset*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

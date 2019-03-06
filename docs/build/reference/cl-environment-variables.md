@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535779"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412462"
 ---
 # <a name="cl-environment-variables"></a>Переменные среды CL
 
@@ -42,11 +42,11 @@ ms.locfileid: "50535779"
 
 Ниже приведен пример настройки переменной среды компилятора CL:
 
-> ЗАДАЙТЕ CL = / Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 Если значение этой переменной среды, если ввести `CL INPUT.C` в командной строке, это команда:
 
-> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE. OBJ ВХОДНЫЕ ДАННЫЕ. C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 В следующем примере простая команда CL компилирует исходные файлы FILE1.c и FILE2.c, а затем компонует объектные файлы FILE1.obj, FILE2.obj и FILE3.obj:
 
@@ -54,7 +54,7 @@ ms.locfileid: "50535779"
 
 Результаты аналогичны следующей команде:
 
-> CL "ФАЙЛ1". C "ФАЙЛ2". C ФАЙЛАМИ "ФАЙЛ3". OBJ
+> CL FILE1.C FILE2.C FILE3.OBJ
 
 ## <a name="see-also"></a>См. также
 

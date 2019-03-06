@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283609"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422004"
 ---
 # <a name="csliderctrl-class"></a>Класс CSliderCtrl
 
@@ -95,13 +95,13 @@ class CSliderCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSliderCtrl::CSliderCtrl](#csliderctrl)|Создает объект `CSliderCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSliderCtrl::ClearSel](#clearsel)|Очищает текущее выделение в элементе управления "ползунок".|
 |[CSliderCtrl::ClearTics](#cleartics)|Удаляет текущий делений из элемента управления "ползунок".|
@@ -209,7 +209,7 @@ virtual BOOL Create(
 Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](/windows/desktop/Controls/trackbar-control-styles), описанные в пакет SDK для Windows, к элементу управления.
 
 *rect*<br/>
-Задает размер и положение элемента управления "ползунок". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структуры.
+Задает размер и положение элемента управления "ползунок". Может быть либо [CRect](../../atl-mfc-shared/reference/crect-class.md) объекта или [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры.
 
 *pParentWnd*<br/>
 Указывает родительскому окну элемента управления "ползунок", обычно `CDialog`. Он не должен иметь значение NULL.
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 Задает стиль элемента управления "ползунок". Применить любое сочетание [стили элемента управления "ползунок"](/windows/desktop/Controls/trackbar-control-styles), описанные в пакет SDK для Windows, к элементу управления.
 
 *rect*<br/>
-Ссылку на [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
+Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, описывающая размер и положение окна, создаваемых в клиентских координатах *pParentWnd*.
 
 *pParentWnd*<br/>
 Указатель на окно, которое является родительским для элемента управления.
@@ -703,7 +703,7 @@ void SetThumbLength(int nLength);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
+|Параметр|Описание:|
 |---------------|-----------------|
 |*nLength*|[in] Длина ползунка в пикселях.|
 

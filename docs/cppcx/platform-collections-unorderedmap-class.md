@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
-ms.openlocfilehash: d3e6069f4bf7b0c23d5db5844821524ee80589da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648335"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423616"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -81,7 +81,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание|
+|name|Описание:|
 |[MAP::MapChanged](#mapchanged) событий|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -106,7 +106,7 @@ virtual void Clear();
 
 ## <a name="first"></a>  Метод UnorderedMap::First
 
-Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элемент в неупорядоченном сопоставлении.
+Возвращает итератор, задающий первый [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элемент в неупорядоченном сопоставлении.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -177,7 +177,7 @@ virtual bool Insert(
 *key*<br/>
 Ключ из пары "ключ-значение". Тип *ключ* является именем типа *K*.
 
-*значение*<br/>
+*value*<br/>
 Значение из пары "ключ-значение". Тип *значение* является именем типа *V*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -217,7 +217,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>Значение свойства, возвращаемое значение
 
-Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx) и [CollectionChange Enumeration](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx).
+Объект [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler) , содержащий сведения об объекте, который вызвал событие и типе произошедшего изменения. См. также [IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_) и [CollectionChange Enumeration](/uwp/api/windows.foundation.collections.collectionchange).
 
 ## <a name="net-framework-equivalent"></a>Эквивалент .NET Framework
 
@@ -241,7 +241,7 @@ virtual void Remove(
 
 ## <a name="size"></a>  Метод UnorderedMap::Size
 
-Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx) элементов в объекте UnorderedMap.
+Возвращает количество [Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_) элементов в объекте UnorderedMap.
 
 ### <a name="syntax"></a>Синтаксис
 

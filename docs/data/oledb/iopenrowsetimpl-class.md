@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CreateRowset method
 - OpenRowset method
 ms.assetid: d259cedc-1db4-41cf-bc9f-5030907ab486
-ms.openlocfilehash: 437f78636d1fa75f5bb8e4304a347dc3b554c34d
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 3d4f778f560b55f22c1c54185bea79af07949ceb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556267"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422766"
 ---
 # <a name="iopenrowsetimpl-class"></a>Класс IOpenRowsetImpl
 
@@ -52,11 +52,11 @@ class IOpenRowsetImpl : public IOpenRowset
 
 ## <a name="remarks"></a>Примечания
 
-[IOpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716946(v=vs.85)) интерфейс является обязательным для объекта сеанса. Она открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.
+[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85)) интерфейс является обязательным для объекта сеанса. Она открывает и возвращает набор строк, который содержит все строки из одной базовой таблицы или индекса.
 
 ## <a name="createrowset"></a> IOpenRowsetImpl::CreateRowset
 
-Создает объект набора строк. Не вызывается непосредственно пользователем. См. в разделе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB.*
+Создает объект набора строк. Не вызывается непосредственно пользователем. См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB.*
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -80,7 +80,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 [out] Указатель на объект набора строк. Обычно этот параметр не используется, но он может использоваться, если необходимо выполнить дополнительные действия в наборе строк перед его передачей в COM-объект. Время существования *pRowsetObj* привязана к *ppRowset*.
 
-Другие параметры, см. в разделе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) в *Справочник программиста OLE DB по.*
+Другие параметры, см. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *Справочник программиста OLE DB по.*
 
 ## <a name="openrowset"></a> IOpenRowsetImpl::OpenRowset
 
@@ -100,7 +100,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>Параметры
 
-См. в разделе [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB*.
+См. в разделе [IOpenRowset::OpenRowset](/previous-versions/windows/desktop/ms716724(v=vs.85)) в *справочнике программиста OLE DB*.
 
 ### <a name="remarks"></a>Примечания
 
