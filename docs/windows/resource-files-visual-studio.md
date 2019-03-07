@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: bd73db481659573d51e4abd56da9689e2e8ade25
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676439"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563008"
 ---
 # <a name="resource-files-c"></a>Файлы ресурсов (C++)
 
@@ -121,9 +121,9 @@ ms.locfileid: "56676439"
 
 1. Разверните **файлы ресурсов** папку, затем:
 
-   - Чтобы открыть в текстовом редакторе, дважды щелкните файл с расширением MANIFEST.
+   - Чтобы открыть в текстовом редакторе, дважды щелкните *.manifest* файл.
 
-   - Чтобы открыть в другом редакторе, щелкните правой кнопкой мыши файл с расширением MANIFEST и выберите **открыть с помощью...** . Выберите редактор, выберите **откройте**.
+   - Чтобы открыть в другом редакторе, щелкните правой кнопкой мыши *.manifest* файл и выберите **открыть с помощью**. Выберите редактор, и выберите **откройте**.
 
 ## <a name="requirements"></a>Требования
 

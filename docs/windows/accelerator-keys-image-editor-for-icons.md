@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336543"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563125"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Сочетания клавиш (редактор C++ изображений для значков)
 
-Ниже приведены сочетания клавиш для команд редактора изображений, привязанных к ключи по умолчанию. Чтобы изменить сочетания клавиш, нажмите кнопку **параметры** на **средства** меню и выберите **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
+Ниже приведены сочетания клавиш для команд редактора изображений, привязанных к ключи по умолчанию. Чтобы изменить сочетания клавиш, перейдите к меню **средства** > **параметры** и выберите **клавиатуры** под **среды** папки. Дополнительные сведения см. в разделе [Определение и настройка сочетаний клавиш в Visual Studio](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio).
 
 > [!NOTE]
-> Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, выберите в меню **Сервис** пункт **Импорт и экспорт параметров** . Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
+> Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, перейдите к меню **средства** > **Импорт и экспорт параметров**. Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
 |Команда|Клавиши|Описание:|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ ms.locfileid: "56336543"
 
 ## <a name="see-also"></a>См. также
 
-[Редактор изображений для значков](../windows/image-editor-for-icons.md)
+[Редактор изображений для значков](../windows/image-editor-for-icons.md)<br/>
+[Практическое руководство. Создание значка или другого изображения](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[Практическое руководство. Изменение изображения](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Практическое руководство. Использование инструмента рисования](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[Практическое руководство. Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)<br/>

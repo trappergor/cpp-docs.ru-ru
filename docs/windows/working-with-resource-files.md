@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676426"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562969"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
 > [!WARNING]
 > Этот раздел относится к классическим приложениям Windows, написанным на C++.
 >
-> Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/), или о добавлении ресурсов в C + +/ CLI (управляемые) проектов, см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в *руководства разработчика .NET Framework*.
+> Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/), или о добавлении ресурсов в C + +/ CLI (управляемые) проектов, см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в Руководство разработчика .NET Framework.
 
 Ресурсы могут состоять из широкий спектр элементов, таких как:
 
@@ -28,6 +28,9 @@ ms.locfileid: "56676426"
 - Ресурсы меню и диалоговому окну.
 
 Вы можете добавить новые ресурсы в проект и изменить их с помощью соответствующего редактора ресурсов. Большинство мастеров Visual C++ автоматически создают RC-файл для проекта.
+
+> [!NOTE]
+> **Редакторы ресурсов** и **представление ресурсов** недоступны в выпусках Express.
 
 Чтобы вручную добавлять файлы ресурсов в управляемые проекты, см. в разделе [Создание файлов ресурсов для приложений рабочего стола](/dotnet/framework/resources/creating-resource-files-for-desktop-apps). Эта статья содержит способы доступа к ресурсам, отображать статические ресурсы и присваивать строки ресурсов свойствам.
 

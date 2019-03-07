@@ -5,18 +5,18 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 2abbfb83f6d9b09a1c5dcc2afe1c48a6d2dff79a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954852"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562878"
 ---
 # <a name="atl-predefined-symbols"></a>Предопределенные символы ATL
 
 Эти символы определяются в файлах заголовков ATL, но они поддерживают стандартные функции приложения Windows и действия. Эти символы используются главным образом с диалоговыми окнами.
 
-При работе с элементами управления и диалоговых окон в [редактор диалоговых окон](../windows/dialog-editor.md), эти символы будут отображаться в **свойства** окно, связанное с помощью стандартных элементов управления. Например если в диалоговом окне есть **отменить** кнопку, что команда будет связана с символом IDCANCEL в [окно "Свойства"](/visualstudio/ide/reference/properties-window).
+При работе с элементами управления и диалоговых окон в [редактор диалоговых окон](../windows/dialog-editor.md), эти символы будут отображаться в [окно "Свойства"](/visualstudio/ide/reference/properties-window) связанный с помощью стандартных элементов управления. К примеру Если в диалоговом окне есть **отменить** кнопку, что команда будет связана с символом IDCANCEL в **свойства** окна.
 
 |||
 |-|-|
