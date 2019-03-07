@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 7d3581a9f6f2a2080f72634a01d3417ffecf82a4
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954917"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562761"
 ---
 # <a name="predefined-symbol-ids"></a>Стандартные идентификаторы символов
 
@@ -18,7 +18,7 @@ ms.locfileid: "56954917"
 
 Эти идентификаторы символов становятся важными при работе с ресурсами. Они доступны при редактировании таблиц сочетаний клавиш и некоторые из них уже связаны с виртуальными клавишами. Они также доступны с помощью [окно "Свойства"](/visualstudio/ide/reference/properties-window). Можно назначить какой-либо стандартные идентификаторы символов для новых ресурсов, или сочетания клавиш можно назначить их и функции, связанные с символом, который автоматически связывает идентификатор с этими сочетаниями клавиш.
 
-Эти библиотеки содержат предопределенные символы, которые будут отображаться как составная часть проекта:
+Библиотеки содержат предопределенные символы, которые будут отображаться как часть проекта:
 
 - [Предопределенные символы ATL](../windows/atl-predefined-symbols.md)
 
