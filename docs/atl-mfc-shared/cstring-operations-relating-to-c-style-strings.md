@@ -15,12 +15,12 @@ helpviewer_keywords:
 - strings [C++], class CString
 - casting CString objects
 ms.assetid: 5048de8a-5298-4891-b8a0-c554b5a3ac1b
-ms.openlocfilehash: f68f021d16de7ad701ce20c3be59ed6958aa6893
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eee23296d9aac40849dacf58c3b3d9bdf583d1df
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528405"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743271"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>Операции CString, связанные со строками в стиле C
 
@@ -50,7 +50,8 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-Вы можете использовать методы `CString`, например `SetAt`, для изменения отдельных символов в объекте строки. Тем не менее, LPCTSTR указатель является временным и становится недействительным при любом изменении `CString`. `CString` также может выйти за пределы области, после чего выполняется его автоматическое удаление. Мы рекомендуем получать новый указатель LPCTSTR `CString` объекта каждый раз использовать один.
+Вы можете использовать методы `CString`, например `SetAt`, для изменения отдельных символов в объекте строки. Тем не менее, LPCTSTR указатель является временным и становится недействительным при любом изменении `CString`. 
+  `CString` также может выйти за пределы области, после чего выполняется его автоматическое удаление. Мы рекомендуем получать новый указатель LPCTSTR `CString` объекта каждый раз использовать один.
 
 Иногда вам может потребоваться копия данных `CString` для непосредственного внесения изменений. Используйте более защищенную функцию `strcpy_s` (или переносимую между Юникодом и многобайтовой кодировкой `_tcscpy_s`) для копирования объекта `CString` в отдельный буфер. Именно здесь можно безопасно изменить символы, как показано в следующем примере.
 

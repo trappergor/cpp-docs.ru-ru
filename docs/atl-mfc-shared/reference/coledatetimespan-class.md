@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: 7bcf4c50577cf7211f90415143edac9fd0df1d5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509335"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748493"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 
@@ -97,7 +97,7 @@ class COleDateTimeSpan
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** ATLComTime.h
+**Заголовок.** ATLComTime.h
 
 ##  <a name="coledatetimespan_relational_operators"></a>  Операторы отношения COleDateTimeSpan
 
@@ -758,4 +758,3 @@ enum DateTimeSpanStatus{
 [Класс CTimeSpan](../../atl-mfc-shared/reference/ctimespan-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

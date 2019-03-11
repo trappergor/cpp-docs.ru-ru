@@ -7,12 +7,12 @@ helpviewer_keywords:
 - template libraries
 - libraries, Standard C++
 ms.assetid: a37d3ba3-58af-47c7-9ee2-441ccd7b77ee
-ms.openlocfilehash: b6886f87aefdf57706a1850595986b779c1f2357
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea8bae08def17093a2e663bb21dfe617ae851651
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575959"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752302"
 ---
 # <a name="c-standard-library-reference"></a>Справочник по стандартной библиотеке C++
 
@@ -20,7 +20,7 @@ ms.locfileid: "50575959"
 
 Дополнительные сведения о библиотеках времени выполнения Visual C++ см. в разделе [Функции библиотеки CRT](../c-runtime-library/crt-library-features.md).
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
 Обзор реализации стандартной библиотеки C++ корпорации Майкрософт.
@@ -30,4 +30,3 @@ ms.locfileid: "50575959"
 
 [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
 Содержит ссылки на справочные статьи, описывающие файлы заголовков стандартной библиотеки C++ с примерами кода.
-

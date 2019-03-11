@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC, date and time
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
-ms.openlocfilehash: b8460d50a0c6cbd4b213e45c62d8d6cadae68544
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548191"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750394"
 ---
 # <a name="date-type"></a>Тип DATE
 
@@ -54,7 +54,7 @@ ms.locfileid: "50548191"
 |30 декабря 1899 г., 6: 00|0.25|
 |30 декабря 1899 г., полудня|0.50|
 |30 декабря 1899 г., 18: 00|0.75|
-|31 декабря 1899 г., полночь|1.00|
+|31 декабря 1899 г., полночь|1,00|
 |1 января 1900 г., полночь|2.00|
 |1 января 1900 года полудня|2.50|
 |2 января 1900 г., полночь|3.00|
@@ -68,4 +68,3 @@ ms.locfileid: "50548191"
 
 [Дата и время](../atl-mfc-shared/date-and-time.md)<br/>
 [Класс COleDateTime](../atl-mfc-shared/reference/coledatetime-class.md)
-

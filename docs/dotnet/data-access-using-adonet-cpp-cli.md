@@ -22,12 +22,12 @@ helpviewer_keywords:
 - SAFEARRAY, marshaling
 - ADO.NET [C++], marshaling SAFEARRAY types
 ms.assetid: b0cd987d-1ea7-4f76-ba01-cbd52503d06d
-ms.openlocfilehash: 896cad4d3a679cd1832b073f4b1f355a70a608d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b258e574b912b1c32e5ffae7ba29cfc5f9903685
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638481"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749351"
 ---
 # <a name="data-access-using-adonet-ccli"></a>Доступ к данным с помощью ADO.NET (C++/CLI)
 
@@ -43,7 +43,7 @@ ADO.NET выполняется в группе Common Language Runtime (CLR). Т
 
 В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: объявление дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что собственные строки C++ передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringAnsi%2A> используется для маршалирования `char *` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalAnsi%2A> используется для маршалирования <xref:System.String> для `char *`.
 
@@ -169,7 +169,7 @@ StringCol: This is string 2.
 
 В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: объявление дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что строки COM передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringBSTR%2A> используется для маршалирования `BSTR` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> используется для маршалирования <xref:System.String> для `BSTR`.
 
@@ -303,7 +303,7 @@ StringCol: This is string 2.
 
 В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: объявление дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что строки Юникода для C++ передаются как значения для столбца базы данных StringCol. Внутри класса DatabaseClass эти строки маршалируются в управляемые строки с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.PtrToStringUni%2A> используется для маршалирования `wchar_t *` для <xref:System.String>и метод <xref:System.Runtime.InteropServices.Marshal.StringToHGlobalUni%2A> используется для маршалирования <xref:System.String> для `wchar_t *`.
 
@@ -429,7 +429,7 @@ StringCol: This is string 2.
 
 В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: объявление дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что машинные `VARIANT` типы передаются как значения для столбца базы данных ObjectCol. Внутри класса DatabaseClass эти `VARIANT` типы маршалируются в управляемые объекты, с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.GetObjectForNativeVariant%2A> используется для маршалирования `VARIANT` для <xref:System.Object>и метод <xref:System.Runtime.InteropServices.Marshal.GetNativeVariantForObject%2A> используется для маршалирования <xref:System.Object> для `VARIANT`.
 
@@ -570,7 +570,7 @@ ObjectCol: 42
 
 В этом примере класса DatabaseClass создается класс для взаимодействия с ADO.NET <xref:System.Data.DataTable> объекта. Обратите внимание, что этот класс является машинного кода C++ `class` (по сравнению с `ref class` или `value class`). Это необходимо, поскольку мы будем использовать этот класс из машинного кода, а управляемые типы не может использоваться в машинном коде. Этот класс компилируется для среды CLR, в соответствии с `#pragma managed` директива, перед объявлением класса. Дополнительные сведения об этой директиве см. в разделе [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md).
 
-Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: объявление дескрипторов в собственных типов](../dotnet/how-to-declare-handles-in-native-types.md).
+Обратите внимание, закрытый член класса класса DatabaseClass: `gcroot<DataTable ^> table`. Поскольку собственные типы не могут содержать управляемые типы `gcroot` ключевое слово не требуется. Дополнительные сведения о `gcroot`, см. в разделе [как: Объявление дескрипторов в собственных типах](../dotnet/how-to-declare-handles-in-native-types.md).
 
 Остальная часть кода в этом примере — машинный код C++, как указано в `#pragma unmanaged` директиву перед `main`. В этом примере мы создания нового экземпляра класса DatabaseClass и вызов его методов, чтобы создать таблицу и заполнить некоторые строки в таблице. Обратите внимание, что машинные `SAFEARRAY` типы передаются как значения для столбца базы данных ArrayIntsCol. Внутри класса DatabaseClass эти `SAFEARRAY` типы маршалируются в управляемые объекты, с помощью механизма маршалинга в <xref:System.Runtime.InteropServices?displayProperty=fullName> пространства имен. В частности, метод <xref:System.Runtime.InteropServices.Marshal.Copy%2A> используется для маршалирования `SAFEARRAY` в управляемый массив целых чисел, а также метод <xref:System.Runtime.InteropServices.Marshal.Copy%2A> используется для маршалирования в управляемый массив целых чисел `SAFEARRAY`.
 
@@ -721,7 +721,7 @@ int main()
 
 ## <a name="related-sections"></a>Связанные разделы
 
-|Раздел|Описание|
+|Раздел|Описание:|
 |-------------|-----------------|
 |[ADO.NET](/dotnet/framework/data/adonet/index)|Обзор ADO.NET, набор классов, предоставляющих службы доступа к данным программисту .NET.|
 

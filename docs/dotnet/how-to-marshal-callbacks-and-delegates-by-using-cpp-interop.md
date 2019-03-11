@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Маршалинг обратных вызовов и делегатов посредством C++ Interop
+title: Практическое руководство. Маршалинг обратных вызовов и делегатов посредством взаимодействия C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: b72b99798a2c719f1ba919478132c7133fd71ca1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615726"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739214"
 ---
-# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Практическое руководство. Маршалинг обратных вызовов и делегатов посредством C++ Interop
+# <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>Практическое руководство. Маршалинг обратных вызовов и делегатов посредством взаимодействия C++
 
 В этом разделе демонстрируется маршалинг обратных вызовов и делегатов (на управляемую версию обратный вызов) между управляемым и неуправляемым кодом, с помощью Visual C++.
 

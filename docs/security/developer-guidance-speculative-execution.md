@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Spectre
 - CVE-2017-5753
 - Speculative Execution
-ms.openlocfilehash: 94e55f08e4ff427aef0c93bf74c711a6fd935d0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20e6d45c088fe92fa736539e485d6807802b368a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631047"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750550"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>Материалы для разработчиков C++ для каналов на стороне упреждающего выполнения
 
@@ -67,7 +67,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 Следующая таблица предоставляет сводку моделей безопасности программного обеспечения, где разработчикам может потребоваться ли мои опасения возникновения уязвимости:
 
-|Граница доверия|Описание|
+|Граница доверия|Описание:|
 |----------------|----------------|
 |Граница виртуальной машины|Приложения, которые изоляции рабочих нагрузок на отдельных виртуальных машинах, которые получают непроверенных данных из другой виртуальной машины может находиться в опасности.|
 |Ядра границ|Драйвер устройства режима ядра, который получает непроверенных данных из процесса режим пользователь без прав администратора могут подвергаться опасности.|

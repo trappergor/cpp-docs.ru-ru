@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579287"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748233"
 ---
 # <a name="csimplestringt-class"></a>Класс CSimpleStringT
 
@@ -69,21 +69,21 @@ class CSimpleStringT
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSimpleStringT::PCXSTR](#pcxstr)|Указатель на строковую константу.|
 |[CSimpleStringT::PXSTR](#pxstr)|Указатель на строку.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Создает `CSimpleStringT` объекты различными способами.|
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSimpleStringT::Append](#append)|Добавляет `CSimpleStringT` объекта к существующему `CSimpleStringT` объекта.|
 |[CSimpleStringT::AppendChar](#appendchar)|Добавляет символ в существующий `CSimpleStringT` объекта.|
@@ -112,7 +112,7 @@ class CSimpleStringT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Напрямую обращается к символов, сохраненных в `CSimpleStringT` объект в виде строки C-стиля.|
 |[CSimpleStringT::operator\[\]](#operator_at)|Возвращает символ в заданной позиции — оператор подстановки для `GetAt`.|
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения см. в разделе [строк: очистка исключений CString](../cstring-exception-cleanup.md).
+Дополнительные сведения см. в разделе [строки: Очистка исключений CString](../cstring-exception-cleanup.md).
 
 ### <a name="example"></a>Пример
 

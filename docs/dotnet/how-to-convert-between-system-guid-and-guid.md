@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GUID, converting to System::GUID
 - System::GUID, converting to GUID
 ms.assetid: 022c934c-3395-4f04-b498-85ad9bf8c646
-ms.openlocfilehash: 7aa89557c1aeac4b7093ff6fc0bbd3937e99b0b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e74a95eea1018916dcdef6b133ef1f0ab0533f96
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635699"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747752"
 ---
 # <a name="how-to-convert-between-systemguid-and-guid"></a>Практическое руководство. Преобразование между классами System::Guid и _GUID
 
