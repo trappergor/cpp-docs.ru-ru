@@ -45,14 +45,14 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: d54e054310b6077adb88c55b8923b6c13ce1c5ea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467334"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751821"
 ---
-# <a name="ltsharedmutex"></a>&lt;shared_mutex >
+# <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
 &lt;Shared_mutex > заголовок предоставляет примитивы синхронизации для защиты общих данных, которые может осуществляться несколькими потоками. Помимо монопольного доступа, предоставляемого классами mutex, классы shared mutex также предоставляют возможность совместного владения из нескольких потоков для неисключительного доступа. Общие мьютексы можно использовать для управления ресурсами, которые могут считываться несколькими потоками без возникновения состязания, однако должны записываться строго одним потоком.
 
@@ -64,7 +64,7 @@ ms.locfileid: "50467334"
 |[Класс shared_timed_mutex](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Тип общего мьютекса с ограничением по времени, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
 |[Класс shared_lock](../standard-library/shared-mutex.md#class_shared_lock)|Класс шаблонов, создающий программу-оболочку для общего мьютекса, чтобы обеспечить поддержку операций блокировки с ограничением по времени и совместное использование несколькими агентами с неисключительными правами.|
 
-|Функции|Описание|
+|Функции|Описание:|
 |---------------|-----------------|
 |[swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|
 

@@ -1,27 +1,27 @@
 ---
-title: 'CFixedStringT: Пример пользовательского диспетчера строк'
+title: CFixedStringT. Пример пользовательского диспетчера строк
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b6da5d4166b220ef63500d0154ab32dc72b40f4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663168"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740700"
 ---
-# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: Пример пользовательского диспетчера строк
+# <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT. Пример пользовательского диспетчера строк
 
 Библиотека ATL реализует один пример диспетчера пользовательскую строку, используемый классом [CFixedStringT](../atl-mfc-shared/reference/cfixedstringt-class.md), который называется **CFixedStringMgr**. `CFixedStringT` является производным от [CStringT](../atl-mfc-shared/reference/cstringt-class.md) и реализует строку, которая выделяет его символьных данных как часть `CFixedStringT` самого объекта до тех пор, пока строка меньше, чем длина, заданная параметром `t_nChars` параметр шаблона `CFixedStringT`. В этом случае строка необязательно кучи, если длина строки выходит за размер буфера фиксированного. Так как `CFixedStringT` не всегда используйте кучу для выделения данных строки, он не может использовать `CAtlStringMgr` руководителем его строку. Он использует диспетчер Настраиваемая строка (`CFixedStringMgr`), реализуя [IAtlStringMgr](../atl-mfc-shared/reference/iatlstringmgr-class.md) интерфейс. Этот интерфейс подробно рассматривается в [реализации из пользовательского диспетчера строк (расширенный метод)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md).
 
 Конструктор `CFixedStringMgr` принимает три параметра:
 
-- *pData:* указатель к фиксированному `CStringData` структура для использования.
+- *pData:* Указатель к фиксированному `CStringData` структура для использования.
 
-- *nChars:* максимальное количество символов `CStringData` структура может содержать.
+- *nChars:* Максимальное количество символов `CStringData` структура может содержать.
 
-- *pMgr:* указатель на `IAtlStringMgr` интерфейс «диспетчера резервного копирования строк».
+- *pMgr:* Указатель на `IAtlStringMgr` интерфейс «диспетчера резервного копирования строк».
 
 Конструктор сохраняет значения *pData* и *pMgr* в их соответствующие переменные (`m_pData` и `m_pMgr`). Затем он задает длину буфера до нуля, доступных длину равной максимальный размер фиксированном буфере и счетчик ссылок в значение -1. Значения счетчика ссылок указывает, блокируется буфера и использовать этот экземпляр `CFixedStringMgr` как диспетчера строк.
 
@@ -64,4 +64,3 @@ ms.locfileid: "50663168"
 ## <a name="see-also"></a>См. также
 
 [Управление памятью с помощью CStringT](../atl-mfc-shared/memory-management-with-cstringt.md)
-

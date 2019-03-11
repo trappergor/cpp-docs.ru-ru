@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handling, .NET/native interop
 - event handling, Windows Forms in C++
 ms.assetid: 6e30ddee-d058-4c8d-9956-2a43d86f19d5
-ms.openlocfilehash: 1bc601a4dbd7a51695b6964ab4d0ee47531c1b2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d02bcea4efce03c8fb11650d344468236737cfbd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555913"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738783"
 ---
 # <a name="how-to-sink-windows-forms-events-from-native-c-classes"></a>Практическое руководство. Получение событий Windows Forms из собственных классов C++
 
@@ -25,7 +25,7 @@ ms.locfileid: "50555913"
 
 - Создайте сопоставление делегатов с помощью [BEGIN_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#begin_delegate_map), [END_DELEGATE_MAP](../mfc/reference/delegate-and-interface-maps.md#end_delegate_map), и [EVENT_DELEGATE_ENTRY](../mfc/reference/delegate-and-interface-maps.md#event_delegate_entry).
 
-В этом примере продолжает работу, начатую в [как: сделать DDX/DDV к элементам Управления Data Binding with Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
+В этом примере продолжает работу, начатую в [как: Привязка данных DDX/DDV к элементам Управления Windows Forms](../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md).
 
 Теперь нужно связать элемент управления MFC (`m_MyControl`) с управляемым делегатом обработчика событий вызывается `OnClick` для управляемого <xref:System.Windows.Forms.Control.Click> событий.
 

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Маршалирование структур с помощью PInvoke
+title: Практическое руководство. Маршалинг структур с помощью PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - interop [C++], structures
 - marshaling [C++], structures
 ms.assetid: 35997e6f-9251-4af3-8c6e-0712d64d6a5d
-ms.openlocfilehash: e79eb343f81cf2d66e394be7561d2c9727c4c9ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5c64a3e93cd85d7e38bac7c0ea3fa3c3301abc9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429115"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747999"
 ---
-# <a name="how-to-marshal-structures-using-pinvoke"></a>Практическое руководство. Маршалирование структур с помощью PInvoke
+# <a name="how-to-marshal-structures-using-pinvoke"></a>Практическое руководство. Маршалинг структур с помощью PInvoke
 
 В этом документе объясняется, как неуправляемый код функции, которые принимают структуры стиля C может вызываться из управляемых функций, с помощью P/Invoke. Несмотря на то, что мы рекомендуем использовать возможности взаимодействия C++ вместо P/Invoke, так как P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может быть утомительным, если неуправляемый интерфейс API входит в состав библиотеки DLL и исходный код не доступно, P/Invoke является единственным параметром. В противном случае ознакомьтесь со следующими документами:
 
 - [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Практическое руководство. Маршалинг строк с помощью PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+- [Практическое руководство. Маршалирование строк с помощью PInvoke](../dotnet/how-to-marshal-strings-using-pinvoke.md)
 
 По умолчанию неуправляемые и управляемые структуры располагаются по-разному в памяти, успешно передачи через границу управляемых и неуправляемых структур требуются дополнительные действия, чтобы сохранить целостность данных.
 

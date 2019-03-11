@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5376a87aac2b82615cd48f80e0e95208b8132bf0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177919"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750485"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>Классы, совместно используемые MFC и ATL
 
 В следующей таблице перечислены классы, совместно использовать MFC и ATL.
 
-|Класс|Описание|Файл заголовка|
+|Класс|Описание:|Файл заголовка|
 |-----------|-----------------|-----------------|
 |[CFileTime](../../atl-mfc-shared/reference/cfiletime-class.md)|Предоставляет методы для управления значений даты и времени, связанного с файлом.|atltime.h|
 |[CFileTimeSpan](../../atl-mfc-shared/reference/cfiletimespan-class.md)|Предоставляет методы для управления относительных дат и времени значения, связанные с файлом.|atltime.h|
@@ -37,4 +37,3 @@ ms.locfileid: "53177919"
 ## <a name="see-also"></a>См. также
 
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523134"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746218"
 ---
 # <a name="basic-cstring-operations"></a>Базовые операции CString
 
@@ -85,7 +85,7 @@ ms.locfileid: "51523134"
 
 ##  <a name="_core_converting_cstring_objects"></a> Преобразование объектов CString
 
-Сведения о преобразовании объекты CString в строки других типов, см. в разделе [как: преобразование между различных типов строк](../text/how-to-convert-between-various-string-types.md).
+Сведения о преобразовании объекты CString в строки других типов, см. в разделе [как: Преобразование между различными строковыми типами](../text/how-to-convert-between-various-string-types.md).
 
 ## <a name="using-cstring-with-wcout"></a>Использование CString с wcout
 
@@ -105,4 +105,3 @@ wcout << (const wchar_t*) cs << endl;
 [Класс CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
 [Специализация шаблонов](../cpp/template-specialization-cpp.md)<br/>
 [Практическое руководство. Преобразование различных типов строк](../text/how-to-convert-between-various-string-types.md)
-

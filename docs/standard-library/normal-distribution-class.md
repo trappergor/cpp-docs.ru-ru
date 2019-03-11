@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::normal_distribution [C++], param_type
 - std::normal_distribution [C++], param_type
 ms.assetid: bf92cdbd-bc72-4d4a-b588-173d748f0d7d
-ms.openlocfilehash: e0df3359a27a216692f0127ab7f17e1e1fce469a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d0de31a20e06d9b8ff3789cc7ae1928c9a7b6b7d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743064"
 ---
 # <a name="normaldistribution-class"></a>Класс normal_distribution
 
@@ -209,7 +209,7 @@ explicit normal_distribution(const param_type& parm);
 
 ### <a name="remarks"></a>Примечания
 
-**Предусловие:** `0.0 ≤ stddev`
+**Предусловие:** `0.0 < stddev`
 
 Первый конструктор создает объект, чье хранимое значение `mean` равно *mean*, а хранимое значение `stddev` — *stddev*.
 
@@ -244,7 +244,7 @@ struct param_type {
 
 ### <a name="remarks"></a>Примечания
 
-**Предусловие:** `0.0 ≤ stddev`
+**Предусловие:** `0.0 < stddev`
 
 Эту структуру можно передать конструктору класса распределения во время создания экземпляра, функции-члену `param()` для установки хранимых параметров существующего распределения и `operator()` для использования вместо хранимых параметров.
 

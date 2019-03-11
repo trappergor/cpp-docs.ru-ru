@@ -1,19 +1,19 @@
 ---
-title: 'Практическое: Использование собственного типа в компиляции - clr'
+title: Практическое руководство. Использование собственного типа в компиляции - clr
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compilation, native types in /clr
 - /clr compiler option [C++], using native types
 ms.assetid: 3a505c90-4adb-4942-9cf9-7d1fdcbc01e7
-ms.openlocfilehash: 0079be21b474858684e1abaaeb363820764a701d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9979113ac4ffc062ddfe8654279af03036984f38
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459960"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746036"
 ---
-# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Практическое руководство. Использование собственного типа в компиляции /clr
+# <a name="how-to-use-a-native-type-in-a-clr-compilation"></a>Практическое руководство. Использование собственного типа в компиляции/CLR
 
 Можно определить собственный тип в **/CLR** компиляции и любое использование этого машинного типа в сборке является допустимым. Тем не менее собственные типы, не будет использоваться в ссылочных метаданных.
 

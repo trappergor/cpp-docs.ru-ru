@@ -1,23 +1,23 @@
 ---
-title: Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI
+title: Практическое руководство. Создание пользовательского элемента управления и узла Просмотр MDI
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], Windows Forms Controls
 - Windows Forms [C++], MFC support
 ms.assetid: 625b5821-f923-4701-aca0-c1a4ceca4f63
-ms.openlocfilehash: c2705ef1938684d8521316436fccaae367629584
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d535fce47be5504f6f521cda1267344206287da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509126"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738771"
 ---
-# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Практическое руководство. Создание пользовательского элемента управления и просмотр ведущего интерфейса MDI
+# <a name="how-to-create-the-user-control-and-host-mdi-view"></a>Практическое руководство. Создание пользовательского элемента управления и узла Просмотр MDI
 
 Ниже показано, как создать пользовательский элемент управления .NET Framework, регистрации пользовательского элемента управления в библиотеке классов (в частности, проект Windows Control Library) и затем скомпилировать проект в сборку. Элемент управления затем могут использоваться из приложения MFC, использующего классы, производные от [CView Class](../mfc/reference/cview-class.md) и [класс CWinFormsView](../mfc/reference/cwinformsview-class.md).
 
-Сведения о том, как создать пользовательский элемент управления Windows Forms и о разработке библиотеки класса для элемента управления, см. в разделе [как: Разработка пользовательских элементов управления](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
+Сведения о том, как создать пользовательский элемент управления Windows Forms и о разработке библиотеки класса для элемента управления, см. в разделе [как: Создание пользовательских элементов управления](/dotnet/framework/winforms/controls/how-to-author-composite-controls).
 
 > [!NOTE]
 >  В некоторых случаях элементы управления Windows Forms, например, элемент управления сетки независимых производителей, работают не стабильно при размещении в приложении MFC. Рекомендуемый обходной путь — поместить пользовательский элемент управления Windows Forms в приложении MFC и поместите элемент управления сетки сторонних внутри пользовательского элемента управления.

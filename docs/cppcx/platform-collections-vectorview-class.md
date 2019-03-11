@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
-ms.openlocfilehash: 4f4a5cbd2f1b6c06b339950307dbb333fc6392ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658189"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745284"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Класс Platform::Collections::VectorView
 
@@ -46,13 +46,13 @@ template <typename T, typename E>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[VectorView::VectorView](#ctor)|Инициализирует новый экземпляр класса VectorView.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[VectorView::First](#first)|Возвращает итератор, указывающий первый элемент объекта VectorView.|
 |[VectorView::GetAt](#getat)|Извлекает элемент текущего VectorView, указанный заданным индексом.|
@@ -154,7 +154,7 @@ virtual bool IndexOf(
 
 ### <a name="parameters"></a>Параметры
 
-*значение*<br/>
+*value*<br/>
 Элемент, который нужно найти.
 
 *Индекс*<br/>
@@ -253,7 +253,7 @@ VectorView(
 *size*<br/>
 Количество элементов в объекте VectorView.
 
-*значение*<br/>
+*value*<br/>
 Значение, используемое для инициализации каждого элемента в текущем объекте VectorView.
 
 *v*<br/>

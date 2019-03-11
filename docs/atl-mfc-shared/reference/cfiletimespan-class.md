@@ -11,12 +11,12 @@ helpviewer_keywords:
 - shared classes, CFileTimeSpan
 - CFileTimeSpan class
 ms.assetid: 5856fb39-9c82-4027-8ccf-8760890491ec
-ms.openlocfilehash: 8d384ced5de588a348eb72b9852697694b370ee4
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 001e6ddc78a41e118949e9b750b78609f3ff9e92
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894163"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746439"
 ---
 # <a name="cfiletimespan-class"></a>Класс CFileTimeSpan
 
@@ -38,7 +38,7 @@ class CFileTimeSpan
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFileTimeSpan::GetTimeSpan](#gettimespan)|Вызовите этот метод для получения интервал времени из `CFileTimeSpan` объекта.|
 |[CFileTimeSpan::SetTimeSpan](#settimespan)|Вызовите этот метод, чтобы задать временной период из `CFileTimeSpan` объекта.|

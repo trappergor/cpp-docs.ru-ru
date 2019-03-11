@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539143"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743745"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Класс Platform::Collections::VectorViewIterator
 
@@ -52,7 +52,7 @@ class VectorViewIterator;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Оператор VectorViewIterator::operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
 |[Оператор VectorViewIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorViewIterator.|
@@ -115,7 +115,7 @@ VectorViewIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorViewIterator перед его использованием.
 
-Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. Тип `int` во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
+Второй синтаксис выполняет уменьшение текущего итератора VectorViewIterator после его использования. Тип `int` во втором примере синтаксиса указывает операцию уменьшения после использования, он не является операндом целочисленного типа.
 
 ## <a name="operator-dereference"></a>  VectorViewIterator::operator\* оператор
 
@@ -131,7 +131,7 @@ reference operator*() const;
 
 Элемент, указанный текущим итератором VectorIterator.
 
-## <a name="operator-equality"></a>  VectorViewIterator::operator ==-оператор
+## <a name="operator-equality"></a>  VectorViewIterator::operator== Operator
 
 Указывает, равен ли текущий объект VectorViewIterator указанному объекту VectorViewIterator.
 
@@ -212,7 +212,7 @@ VectorViewIterator operator++(int);
 
 Второй синтаксис выполняет приращение текущего итератора VectorViewIterator после его использования. Тип `int` во втором примере синтаксиса задает операцию увеличения после использования, он не является операндом целочисленного типа.
 
-## <a name="operator-inequality"></a>  VectorViewIterator::operator! =-оператор
+## <a name="operator-inequality"></a>  VectorViewIterator::operator!= Operator
 
 Указывает, отличен ли текущий объект VectorViewIterator от указанного объекта VectorViewIterator.
 
@@ -347,7 +347,7 @@ inline VectorViewIterator<T> operator+
 
 Во втором синтаксисе — объект VectorViewIterator, указывающий на элемент с заданным смещением от начала `i` параметра.
 
-## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-=-оператор
+## <a name="operator-minus-assign"></a>  VectorViewIterator::operator-= Operator
 
 Уменьшает текущий итератор VectorIterator на указанную величину смещения.
 

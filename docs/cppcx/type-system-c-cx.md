@@ -2,12 +2,12 @@
 title: Система типов (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445991"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745958"
 ---
 # <a name="type-system-ccx"></a>Система типов (C++/CX)
 
@@ -17,15 +17,15 @@ ms.locfileid: "50445991"
 
 Подробное рассмотрение проекции языка C++/CX и принципов его работы приведено в следующих записях блогов:
 
-1. [C + +/ CX: часть 0 из \[n\]: введение](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C + +/ CX: часть 0 из \[n\]: Общие сведения о](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/ CX: часть 1 из \[n\]: простой класс](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C + +/ CX: часть 1 из \[n\]: Простой класс](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/ CX: часть 2 из \[n\]: типы крышками](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C + +/ CX: часть 2 из \[n\]: Типы крышками](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
 1. [C + +/ CX: часть 3 из \[n\]: В процессе построения](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/ CX: часть 4 из \[n\]: статические функции-члены](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C + +/ CX: часть 4 из \[n\]: Статические функции-члены](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Файлы метаданных Windows (WINMD-файлы)
 

@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Доступ к символам объекта System::String
+title: Практическое руководство. Доступа к символам объекта System::String
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 6ecd3ed09e31e99898143e30ffe70c1c14aea9f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667053"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738451"
 ---
-# <a name="how-to-access-characters-in-a-systemstring"></a>Практическое руководство. Доступ к символам объекта System::String
+# <a name="how-to-access-characters-in-a-systemstring"></a>Практическое руководство. Доступа к символам объекта System::String
 
 Можно получить доступ к символов <xref:System.String> объекта для высокой производительности вызовов неуправляемых функций, принимающих `wchar_t*` строк. Метод возвращает внутренний указатель на первый символ <xref:System.String> объекта. Этот указатель можно работать напрямую или закрепленный и передается в функцию, ожидающую обычный `wchar_t` строка.
 

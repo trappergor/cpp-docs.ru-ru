@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFileTime class
 - shared classes, CFileTime
 ms.assetid: 1a358a65-1383-4124-b0d4-59b026e6860f
-ms.openlocfilehash: 42c89bcfa064bbb151f9d110cbd25763dbd44185
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 07b888b031a38dc2f09404a14e729e26b3eaa019
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893942"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746101"
 ---
 # <a name="cfiletime-class"></a>Класс CFileTime
 
@@ -41,13 +41,13 @@ class CFileTime :  public FILETIME
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFileTime::CFileTime](#cfiletime)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|Имя|Описание|
 |----------|-----------------|
 |[CFileTime::GetCurrentTime](#getcurrenttime)|Вызовите эту статическую функцию для получения `CFileTime` объект, представляющий текущую системную дату и время.|
 |[CFileTime::GetTime](#gettime)|Вызовите этот метод, чтобы получить время из `CFileTime` объекта.|

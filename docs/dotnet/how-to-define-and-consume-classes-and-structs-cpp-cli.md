@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Определение и использование классов и структур (C++/CLI)
+title: Практическое руководство. Определение и использование классов и структур (C + +/ CLI)
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436170"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751834"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Практическое руководство. Определение и использование классов и структур (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Практическое руководство. Определение и использование классов и структур (C + +/ CLI)
 
 В этой статье показано, как определение и использование определяемых пользователем ссылочных типов и типов значений в C + +/ CLI.
 
@@ -455,7 +455,7 @@ int main() {
 
 Определите статический конструктор как закрытая функция-член, так как он должен вызываться только средой CLR.
 
-Дополнительные сведения о статических конструкторов, см. в разделе [как: определение статического конструктора интерфейса (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
+Дополнительные сведения о статических конструкторов, см. в разделе [как: Определение статического конструктора интерфейса (C + +/ CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md) .
 
 ```cpp
 // compile with: /clr
