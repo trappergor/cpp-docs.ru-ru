@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86a535bc106e17b276dc5f42a59773aa0de8c361
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471205"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749283"
 ---
 # <a name="platformagile-class"></a>Класс Platform::Agile
 
@@ -61,7 +61,7 @@ class Agile;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Agile::operator->](#operator-arrow)|Извлекает дескриптор объекта, представленного текущим объектом Agile.|
 |[Agile::operator=](#operator-assign)|Присваивает указанное значение текущему объекту Agile.|

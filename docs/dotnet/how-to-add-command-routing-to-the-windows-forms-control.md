@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms
+title: Практическое руководство. Добавление команды управления маршрутизации для Windows Forms
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - command routing [C++], adding to Windows Forms controls
 - Windows Forms controls [C++], command routing
 ms.assetid: bf138ece-b463-442a-b0a0-de7063a760c0
-ms.openlocfilehash: b3f93574e007fdb1b7d4009d85c573223091adf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f633cf744314833409a3ffeacf8c850429e099c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447116"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750302"
 ---
-# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Практическое руководство. Добавление маршрутизации команд в элемент управления Windows Forms
+# <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>Практическое руководство. Добавление команды управления маршрутизации для Windows Forms
 
 [CWinFormsView](../mfc/reference/cwinformsview-class.md) направляет команды и сообщения пользовательского интерфейса команды update в пользовательский элемент управления, чтобы тот мог обрабатывать команды MFC (например, элементы меню и кнопки панели инструментов).
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447116"
 
 `CWinFormsView` обрабатывает несколько общих уведомлений MFC, перенаправляя их в управляемый пользовательский элемент управления. Эти уведомления входят [OnInitialUpdate](../mfc/reference/iview-interface.md#oninitialupdate), [OnUpdate](../mfc/reference/iview-interface.md#onupdate) и [OnActivateView](../mfc/reference/iview-interface.md#onactivateview) методы.
 
-В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+В этом разделе предполагается, вы выполнили ранее [как: Создание пользовательского элемента управления и ведущего приложения в диалоговом окне](../dotnet/how-to-create-the-user-control-and-host-in-a-dialog-box.md) и [как: Создание пользовательского элемента управления и узла Просмотр MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 ### <a name="to-create-the-mfc-host-application"></a>Создание ведущего приложения MFC
 
@@ -70,7 +70,7 @@ ms.locfileid: "50447116"
     }
     ```
 
-1. Откройте приложение MFC, созданное в [как: Создание пользовательского элемента управления и представление главного приложения MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
+1. Откройте приложение MFC, созданное в [как: Создание пользовательского элемента управления и узла Просмотр MDI](../dotnet/how-to-create-the-user-control-and-host-mdi-view.md).
 
 1. Добавьте пункт меню, которое вызовет `singleMenuHandler`.
 

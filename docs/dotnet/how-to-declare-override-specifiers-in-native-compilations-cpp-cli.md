@@ -1,17 +1,17 @@
 ---
-title: 'Практическое: объявление спецификаторов переопределения (C + +/ CLI)'
+title: Практическое руководство. Объявление спецификаторов переопределения (C + +/ CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: a0c2d65aa44141b1dbe30fb39d66beabde93fa99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555549"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752389"
 ---
-# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C++/CLI)
+# <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>Практическое руководство. Объявление спецификаторов переопределения в компиляциях машинного кода (C + +/ CLI)
 
 [Запечатанный](../windows/sealed-cpp-component-extensions.md), [абстрактный](../windows/abstract-cpp-component-extensions.md), и [переопределить](../windows/override-cpp-component-extensions.md) доступны в компиляциях, не использующих **/ZW** или [/CLR](../build/reference/clr-common-language-runtime-compilation.md).
 
@@ -20,7 +20,7 @@ ms.locfileid: "50555549"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В следующем примере показано, что `sealed` является допустимым в компиляции в машинный код.
 
@@ -49,7 +49,7 @@ public:
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В следующем примере показано, что `override` является допустимым в компиляции в машинный код.
 
@@ -71,7 +71,7 @@ public:
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, что `abstract` является допустимым в компиляции в машинный код.
 

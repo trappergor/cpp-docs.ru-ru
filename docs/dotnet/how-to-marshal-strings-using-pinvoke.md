@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Маршалирование строк с помощью PInvoke
+title: Практическое руководство. Маршалинг строк с помощью PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - platform invoke [C++], strings
 ms.assetid: bcc75733-7337-4d9b-b1e9-b95a98256088
-ms.openlocfilehash: 86ce065da5c214c0da803ad53d19eaec3de5efb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f316e33f1711ea0053fb68c0af7e89f90b793e05
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598124"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739247"
 ---
-# <a name="how-to-marshal-strings-using-pinvoke"></a>Практическое руководство. Маршалирование строк с помощью PInvoke
+# <a name="how-to-marshal-strings-using-pinvoke"></a>Практическое руководство. Маршалинг строк с помощью PInvoke
 
 В этом разделе объясняется, как неуправляемый код функции, которые принимают строки в стиле C может вызываться с помощью строки CLR типа System::String, используя поддержку вызова платформы .NET Framework. Программистам Visual C++, рекомендуется использовать возможности взаимодействия C++ (если возможно), поскольку P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может быть утомительным. Если неуправляемый интерфейс API входит в состав библиотеки DLL, а исходный код недоступен, P/Invoke является единственным параметром, но в противном случае см. в разделе [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md).
 
