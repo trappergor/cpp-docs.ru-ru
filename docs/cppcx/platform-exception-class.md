@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
-ms.openlocfilehash: 8579b3506d727f5c4faeb56a9c1f3ea88b7a4b6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464965"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743416"
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 
@@ -35,7 +35,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="constructors"></a>Конструкторы
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|
 
@@ -51,7 +51,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 Класс Exception также содержит следующие свойства.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|

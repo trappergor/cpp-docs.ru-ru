@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: 83a652192d2d9055fddffdec96eb91a2ebdd68a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304227"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743899"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 
@@ -247,7 +247,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `_bstr_t` в строки других типов, перечисленных выше. `_bstr_t` Объект является способ инкапсуляции расширенный символ `BSTR` строк. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -347,7 +347,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `CComBSTR` в строки других типов, перечисленных выше. Как _bstr_t `CComBSTR` объект является способ инкапсуляции строк расширенных символов BSTR. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -601,7 +601,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание
+### <a name="description"></a>Описание:
 
 В этом примере показано, как преобразовать `basic_string` в строки других типов, перечисленных выше.
 

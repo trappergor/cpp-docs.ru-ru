@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Указатели функций маршалирования, использующие PInvoke
+title: Практическое руководство. Указатели функций маршалирования с помощью PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - platform invoke [C++], callbacks and delegates
 - marshaling [C++], callbacks and delegates
 ms.assetid: dcf396fd-a91d-49c0-ab0b-1ea160668a89
-ms.openlocfilehash: 2f12c86b7e32955622a4a2c598d01057e303a329
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031bda0f93d6a95aa3c774553aefca0647d0518c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435611"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742865"
 ---
-# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Практическое руководство. Указатели функций маршалирования, использующие PInvoke
+# <a name="how-to-marshal-function-pointers-using-pinvoke"></a>Практическое руководство. Указатели функций маршалирования с помощью PInvoke
 
 В этом разделе объясняется, как управляемые делегаты можно использовать вместо указателей функций при взаимодействии с неуправляемыми функциями, с помощью функции .NET Framework P/Invoke. Тем не менее программистам Visual C++, рекомендуется использовать возможности взаимодействия C++ (если возможно), поскольку P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может быть утомительным. Если неуправляемый интерфейс API входит в состав библиотеки DLL и исходный код недоступен, P/Invoke является единственным параметром. В противном случае см. в разделах:
 
 - [Использование взаимодействия языка C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)
 
-- [Практическое руководство. Маршалинг обратных вызовов и делегатов посредством взаимодействия C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
+- [Практическое руководство. Маршалирование обратных вызовов и делегатов с помощью взаимодействия C++](../dotnet/how-to-marshal-callbacks-and-delegates-by-using-cpp-interop.md)
 
 Неуправляемые API, принимающие указатели функций, как аргументы, которые могут вызываться из управляемого кода с помощью управляемого делегата собственного указателя функции. Компилятор автоматически маршалирует делегат неуправляемые функции, как указатель функции и вставляет код необходимости перехода с управляемым и неуправляемым кодом.
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, date and time
 - dates, MFC
 ms.assetid: ecf56dc5-d418-4603-ad3e-af7e205a6403
-ms.openlocfilehash: dcb5ef9f21987e11608cfa29e77b24e96153e6b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32222b4a2a529716db2c414e0281e1b1ba16a0dd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459453"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739166"
 ---
 # <a name="date-and-time"></a>Дата и время
 
@@ -26,14 +26,13 @@ MFC поддерживает несколько различных способ�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
 
-- [Дата и время. Поддержка SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
+- [Дата и время: Поддержка SYSTEMTIME](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
-- [Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
+- [Дата и время: Поддержка модели автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
 
-- [Дата и время. Поддержка базы данных](../atl-mfc-shared/date-and-time-database-support.md)
+- [Дата и время: Поддержка баз данных](../atl-mfc-shared/date-and-time-database-support.md)
 
 ## <a name="see-also"></a>См. также
 
 [Основные понятия](../mfc/mfc-concepts.md)<br/>
 [Общие разделы по MFC](../mfc/general-mfc-topics.md)
-

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 8e776e0f5d479ee8633efa647ac41e6b1b5f9c0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595602"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743220"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Класс Platform::Collections::VectorIterator
 
@@ -46,13 +46,13 @@ class VectorIterator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[VectorIterator::VectorIterator](#ctor)|Инициализирует новый экземпляр класса VectorIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[Оператор VectorIterator::operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
 |[Оператор VectorIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorIterator.|
@@ -116,7 +116,7 @@ VectorIterator operator--(int);
 
 Первый синтаксис выполняет уменьшение текущего итератора VectorIterator перед его использованием.
 
-Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. Тип `int` во втором синтаксисе указывает операцию уменьшения после использования, а не фактический операнд целочисленного типа.
+Второй синтаксис выполняет уменьшение текущего итератора VectorIterator после его использования. Тип `int` во втором примере синтаксиса указывает операцию уменьшения после использования, он не является операндом целочисленного типа.
 
 ## <a name="operator-dereference"></a>  VectorIterator::operator\* оператор
 

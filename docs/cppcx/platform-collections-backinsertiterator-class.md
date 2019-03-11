@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 33397ed7061f14d9aeb9c8b5c3d561865ad91cad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638091"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739536"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Класс Platform::Collections::BackInsertIterator
 
@@ -39,7 +39,7 @@ public ::std::iterator<::std::output_iterator_tag, void, void, void, void>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[BackInsertIterator::BackInsertIterator](#ctor)|Инициализирует новый экземпляр класса BackInsertIterator.|
 
@@ -81,9 +81,10 @@ IVector\<T > объекта.
 
 ### <a name="remarks"></a>Примечания
 
-`BackInsertIterator` вставляет элементы после последнего элемента объекта, указанного параметром `v`.
 
-## <a name="operator-assign"></a>  BackInsertIterator::operator =-оператор
+  `BackInsertIterator` вставляет элементы после последнего элемента объекта, указанного параметром `v`.
+
+## <a name="operator-assign"></a>  BackInsertIterator::operator= Operator
 
 Добавляет указанный объект в конец текущей упорядоченной коллекции.
 

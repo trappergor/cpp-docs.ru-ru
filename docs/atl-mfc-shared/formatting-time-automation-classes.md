@@ -1,19 +1,19 @@
 ---
-title: 'Форматирование времени: Классы автоматизации'
+title: Форматирование времени. Классы автоматизации
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Automation classes, formatting time
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
-ms.openlocfilehash: 2d08adcc03c7b9f46f6b6bd290b02ff5f22029f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c3157bd29879ae5206a27e238d05a4b5c9a61e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429709"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742690"
 ---
-# <a name="formatting-time-automation-classes"></a>Форматирование времени: Классы автоматизации
+# <a name="formatting-time-automation-classes"></a>Форматирование времени. Классы автоматизации
 
 ## <a name="to-format-a-time"></a>Форматирование времени
 
@@ -31,5 +31,4 @@ ms.locfileid: "50429709"
 
 ## <a name="see-also"></a>См. также
 
-[Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
-
+[Дата и время: Поддержка модели автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)

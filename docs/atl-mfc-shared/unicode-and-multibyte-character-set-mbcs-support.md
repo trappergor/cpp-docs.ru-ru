@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596655"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743909"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Поддержка Юникода и многобайтовой кодировки
 
@@ -35,7 +35,7 @@ ms.locfileid: "50596655"
 
 |||||
 |-|-|-|-|
-|UAFXCW. LIB|UAFXCW. PDB-ФАЙЛ|UAFXCWD. LIB|UAFXCWD. PDB-ФАЙЛ|
+|UAFXCW. LIB|UAFXCW. PDB-ФАЙЛ|UAFXCWD. LIB|UAFXCWD.PDB|
 |MFC*версии*U.LIB|MFC*версии*U.PDB|MFC*версии*U.DLL|MFC*версии*доменов обновления. LIB|
 |MFC*версии*доменов обновления. PDB-ФАЙЛ|MFC*версии*доменов обновления. БИБЛИОТЕКИ DLL|MFCS*версии*U.LIB|MFCS*версии*U.PDB|
 |MFCS*версии*доменов обновления. LIB|MFCS*версии*доменов обновления. PDB-ФАЙЛ|MFCM*версии*U.LIB|MFCM*версии*U.PDB|

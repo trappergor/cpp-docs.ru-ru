@@ -1,5 +1,5 @@
 ---
-title: 'Практическое: Миграция в - clr'
+title: Практическое руководство. Миграция в - clr
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454448"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749118"
 ---
-# <a name="how-to-migrate-to-clr"></a>Практическое руководство. Переход на /clr
+# <a name="how-to-migrate-to-clr"></a>Практическое руководство. Миграция в/CLR
 
 В этом разделе рассматриваются проблемы, возникающие при компиляции машинного кода с **/CLR** (см. в разделе [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) Дополнительные сведения). **/ CLR** позволяет машинного кода C++ для вызова, а также быть вызван из сборок .NET в дополнение к другим машинного кода C++. См. в разделе [смешанные (собственные и управляемые) сборки](../dotnet/mixed-native-and-managed-assemblies.md) и [машинный код и платформы.NET](../dotnet/native-and-dotnet-interoperability.md) Дополнительные сведения о преимуществах компиляции с использованием **/CLR**.
 

@@ -1,18 +1,18 @@
 ---
-title: Практическое руководство. Использование свойств в C++/CLI
+title: Практическое руководство. Использование свойств в C + +/ CLI
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617494"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739284"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>Практическое руководство. Использование свойств в C++/CLI
+# <a name="how-to-use-properties-in-ccli"></a>Практическое руководство. Использование свойств в C + +/ CLI
 
 В этой статье показано, как использовать свойства в C + +/ CLI.
 
@@ -88,7 +88,7 @@ int main() {
 
 Если вы используете стандартное индексированное свойство, можно получить доступ к структуре данных так же, ссылаясь на имя класса, но при использовании индексированного свойства, определяемые пользователем, необходимо указать имя свойства для доступа к структуре данных.
 
-Сведения о том, как использовать индексатор, который написан на C#, см. в разделе [как: использование индексатора C# (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
+Сведения о том, как использовать индексатор, который создается на языке C#, см. в разделе [как: Использовать C# индексатора (C + +/ CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md).
 
 В этом примере кода показано, как использовать по умолчанию и пользовательские индексированного свойства:
 

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607042"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746192"
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 
@@ -43,7 +43,7 @@ public ref class String sealed : Object,
 
 Две функции итераторов, не являющиеся членами класса String, можно использовать с функциями шаблона `std::for_each` для перечисления символов в объекте String.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |`const char16* begin(String^ s)`|Возвращает указатель на начало указанного объекта String.|
 |`const char16* end(String^ s)`|Возвращает указатель на позицию после окончания указанного объекта String.|
@@ -56,7 +56,7 @@ public ref class String sealed : Object,
 
 **Конструкторы**
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[String::String](#ctor)|Инициализирует новый экземпляр класса String.|
 
@@ -64,7 +64,7 @@ public ref class String sealed : Object,
 
 Класс String наследует методы Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() и ToString() от класса [Platform::Object Class](../cppcx/platform-object-class.md). Класс String содержит также следующие методы.
 
-|Метод|Описание|
+|Метод|Описание:|
 |------------|-----------------|
 |[String::Begin](#begin)|Возвращает указатель на начало текущей строки.|
 |[String::CompareOrdinal](#compareordinal)|Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.|
@@ -79,11 +79,11 @@ public ref class String sealed : Object,
 |[String::Length](#length)|Получает длину текущего объекта String.|
 |[String::ToString](#tostring)|Возвращает объект String, значение которого совпадает со значением текущей строки.|
 
-**Операторы**
+**Инструкции**
 
 Класс String имеет следующие операторы.
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[String::operator ==-оператор](#operator-equality)|Указывает, равны ли значения двух указанных объектов String.|
 |[Оператор operator+](#operator-plus)|Сцепляет два объекта String в новый объект String.|

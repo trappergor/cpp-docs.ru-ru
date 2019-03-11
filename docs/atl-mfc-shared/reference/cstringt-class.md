@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525500"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750875"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
@@ -134,10 +134,10 @@ class CStringT :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Создает `CStringT` объект по-разному.|
-|[CStringT:: ~ CStringT](#_dtorcstringt)|Уничтожает объект `CStringT`.|
+|[CStringT::~CStringT](#_dtorcstringt)|Уничтожает объект `CStringT`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
@@ -251,7 +251,7 @@ class CStringT :
 
 Так как `CStringT` использует аргумент шаблона, чтобы определить тип символа (либо [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)) поддерживается, типы параметров метода, может быть затруднена время от времени. Чтобы упростить эту проблему, определяется и используется на протяжении всего набора предопределенных типов `CStringT` класса. В следующей таблице перечислены различные типы:
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |`XCHAR`|Один символ (либо **wchar_t** или **char**) с помощью символа совпадает с типом `CStringT` объекта.|
 |`YCHAR`|Один символ (либо **wchar_t** или **char**) с противоположной символьным типом как `CStringT` объекта.|
@@ -525,7 +525,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>Параметры
 
-*PCH*<br/>
+*pch*<br/>
 Указатель на массив символов длиной *nLength*, не оканчивается символом null.
 
 *nLength*<br/>
@@ -588,7 +588,7 @@ TCHAR (для символьных строк ANSI и Юникода).
 
 [!code-cpp[NVC_ATLMFC_Utilities#112](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_7.cpp)]
 
-##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
+##  <a name="_dtorcstringt"></a>  CStringT::~CStringT
 
 Уничтожает `CStringT` объекта.
 
@@ -1040,7 +1040,7 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*<br/>
+*ch1*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
 *ch2*<br/>
@@ -1141,7 +1141,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*<br/>
+*ch1*<br/>
 Символ ANSI или Юникода, для сравнения.
 
 *ch2*<br/>
@@ -1167,7 +1167,7 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#142](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_26.cpp)]
 
-##  <a name="operator_neq"></a>  CStringT::operator! =
+##  <a name="operator_neq"></a>  CStringT::operator !=
 
 Определяет, действительно ли две строки логически не равны.
 
@@ -1183,7 +1183,7 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*гл. 1*<br/>
+*ch1*<br/>
 Символ ANSI или Юникода, для объединения со строкой.
 
 *ch2*<br/>
@@ -1428,7 +1428,7 @@ int Replace(XCHAR chOld, XCHAR chNew);
 |_UNICODE|Расширенные символы|
 |_MBCS|Многобайтовых символов|
 |Ни|Однобайтовые символы|
-|Оба значения|Не определено|
+|Оба|Не определено|
 
 ### <a name="example"></a>Пример
 
@@ -1733,4 +1733,3 @@ CStringT& TrimRight();
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [Класс CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

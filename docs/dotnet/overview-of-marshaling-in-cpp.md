@@ -10,18 +10,18 @@ helpviewer_keywords:
 - C++ Support Library, marshaling
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
-ms.openlocfilehash: 9b4bdcb8a6e691d8f9f0f0f0c2e7d852b4885ea6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486285"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746829"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Общие сведения о маршалировании в C++
 
 В смешанном режиме иногда необходимо выполнить маршалинг данных между неуправляемыми и управляемыми типами. Visual Studio 2008 появилась *библиотека маршалинга* для маршалинга и преобразования данных в простой способ.  Библиотека маршалинга состоит из набора функций и `marshal_context` класс, который выполняют маршалинг для типов. Библиотека определяется в эти заголовки в **включают msclr** каталог для других выпусков Visual Studio:
 
-|Header|Описание|
+|Header|Описание:|
 |---------------|-----------------|
 |Marshal.h|`marshal_context` класс и маршалинга функции, свободные контекста|
 |marshal_atl.h| Функции для маршалинга типов ATL|
@@ -50,14 +50,14 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 |BSTR|System::String ^|marshal_as|Marshal.h|
 |System::String ^|bstr_t|marshal_as|marshal_windows.h|
 |bstr_t|System::String ^|marshal_as|marshal_windows.h|
-|System::String ^|std::String|marshal_as|marshal_cppstd.h|
-|std::String|System::String ^|marshal_as|marshal_cppstd.h|
+|System::String ^|std::string|marshal_as|marshal_cppstd.h|
+|std::string|System::String ^|marshal_as|marshal_cppstd.h|
 |System::String ^|std::wstring|marshal_as|marshal_cppstd.h|
 |std::wstring|System::String ^|marshal_as|marshal_cppstd.h|
-|System::String ^|CStringT\<char >|marshal_as|marshal_atl.h|
-|CStringT\<char >|System::String ^|marshal_as|marshal_atl.h|
-|System::String ^|CStringT < wchar_t >|marshal_as|marshal_atl.h|
-|CStringT < wchar_t >|System::String ^|marshal_as|marshal_atl.h|
+|System::String ^|CStringT\<char>|marshal_as|marshal_atl.h|
+|CStringT\<char>|System::String ^|marshal_as|marshal_atl.h|
+|System::String ^|CStringT<wchar_t>|marshal_as|marshal_atl.h|
+|CStringT<wchar_t>|System::String ^|marshal_as|marshal_atl.h|
 |System::String ^|CComBSTR|marshal_as|marshal_atl.h|
 |CComBSTR|System::String ^|marshal_as|marshal_atl.h|
 
@@ -70,7 +70,7 @@ C:\\Program Files (x86)\\Microsoft Visual Studio\\Preview\\Enterprise\\VC\\Tools
 
 `#include "msclr\marshal_cppstd.h"`
 
-Библиотека маршалинга является расширяемой, таким образом, можно добавить собственные маршалинга типов. Дополнительные сведения о расширении библиотеке маршалинга см. в разделе [как: расширение библиотеки маршалинга](../dotnet/how-to-extend-the-marshaling-library.md).
+Библиотека маршалинга является расширяемой, таким образом, можно добавить собственные маршалинга типов. Дополнительные сведения о расширении библиотеке маршалинга см. в разделе [как: Расширение библиотеки маршалинга](../dotnet/how-to-extend-the-marshaling-library.md).
 
 В более ранних версий, следует маршалировать данные с помощью [неуправляемого](/dotnet/framework/interop/consuming-unmanaged-dll-functions). Дополнительные сведения о `PInvoke`, см. в разделе [вызов собственных функций из управляемого кода](../dotnet/calling-native-functions-from-managed-code.md).
 

@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
-ms.openlocfilehash: eda65255aa76d6a801bdc0f80c437a9dc975d8f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449144"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747116"
 ---
 # <a name="platformintptr-value-class"></a>Класс значения Platform::IntPtr
 
@@ -30,7 +30,7 @@ public value struct IntPtr
 
 Класс IntPtr имеет следующие члены:
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[IntPtr::IntPtr](#ctor)|Инициализирует новый экземпляр класса IntPtr.|
 |[Оператор IntPtr::op_explicit](#op-explicit)|Преобразует указанный параметр в объект IntPtr или указатель на значение IntPtr.|
@@ -58,7 +58,7 @@ IntPtr( __int64 handle-or-pointer );   IntPtr( void* value );   IntPtr( int 32-b
 
 ### <a name="parameters"></a>Параметры
 
-*значение*<br/>
+*value*<br/>
 64-разрядный дескриптор или указатель, указатель на 64-разрядное значение или 32-разрядное значение, которое можно преобразовать в 64-разрядное.
 
 ## <a name="op-explicit"> </a> Оператор IntPtr::op_explicit

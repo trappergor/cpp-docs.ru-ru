@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178757"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739423"
 ---
 # <a name="crect-class"></a>Класс CRect
 
@@ -55,13 +55,13 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Создает объект `CRect`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Возвращает точку нижний правый `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Возвращает centerpoint из `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CRect::operator-](#operator_-)|Вычитает заданного смещения из `CRect` или понижает порядок `CRect` и возвращает результат в виде `CRect`.|
 |[CRect::operator LPCRECT](#operator_lpcrect)|Преобразует `CRect` в `LPCRECT`.|
@@ -1178,7 +1178,7 @@ CRect operator&(const RECT& rect2) const throw();
    ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator&#124;
+##  <a name="operator_or"></a>  CRect::operator &#124;
 
 Возвращает `CRect` , представляющее собой объединение `CRect` и *rect2*.
 
@@ -1504,4 +1504,3 @@ int Width() const throw();
 [Класс CPoint](cpoint-class.md)<br/>
 [Класс CSize](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

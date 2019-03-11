@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 17f2f05ba6a8854a69fd2dd449a94d6b86a66d7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480019"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739986"
 ---
 # <a name="user-defined-operators-ccli"></a>Пользовательские операторы (C++/CLI)
 
@@ -19,7 +19,7 @@ ms.locfileid: "50480019"
 
 - Дескриптор (`type` ^) к экземпляру данного включающего типа.
 
-- Косвенное обращение типов ссылок (`type`^ & или тип ^ %) на дескриптор экземпляра данного включающего типа.
+- Косвенное обращение типов ссылок (`type`^ & или тип ^ %) Дескриптор к экземпляру данного включающего типа.
 
 В тип значения один из параметров статический определяемый пользователем оператор должен быть один из следующих:
 

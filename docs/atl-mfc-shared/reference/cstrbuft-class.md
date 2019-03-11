@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CStrBufT class
 - shared classes, CStrBufT
 ms.assetid: 6b50fa8f-87e8-4ed4-a229-157ce128710f
-ms.openlocfilehash: e33bea159d2915b86fc77381f69dc2a745af68f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81c3b429089eab3ba95c178e3fc7cf2bf55783a2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492825"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747457"
 ---
 # <a name="cstrbuft-class"></a>Класс CStrBufT
 
@@ -54,7 +54,7 @@ class CStrBufT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStrBufT::CStrBufT](#cstrbuft)|Конструктор для объекта буфера строки.|
 
@@ -66,14 +66,14 @@ class CStrBufT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CStrBufT::operator PCXSTR](#operator_pcxstr)|Извлекает **const** указатель на буфер символов соответствующий строковый объект.|
 |[CStrBufT::operator PXSTR](#operator_pxstr)|Извлекает указатель на буфер символов соответствующий строковый объект.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CStrBufT::AUTO_LENGTH](#auto_length)|Автоматически Определите новые длину строки на момент выпуска.|
 |[CStrBufT::SET_LENGTH](#set_length)|Задайте длину строкового объекта во время GetBuffer|
@@ -228,4 +228,3 @@ typedef CSimpleStringT<TCharType> StringType;
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Общие классы ATL и MFC](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-
