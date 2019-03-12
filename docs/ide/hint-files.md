@@ -11,12 +11,12 @@ helpviewer_keywords:
 - cpp.stop
 - Class View, hint file
 ms.assetid: 17194f66-cf62-4523-abec-77db0675ab65
-ms.openlocfilehash: ca250849a0bcd150a6359abdad996b72c4372713
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.openlocfilehash: c08b45bddaed23bf5d1bf82fd6d27d1078fc84a6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006761"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740972"
 ---
 # <a name="hint-files"></a>Файлы подсказок
 
@@ -242,7 +242,7 @@ void Function() NOEXCEPT
 
 - Указание `#undef` в каталоге `A2` удалило указания для `OBRACE` и `CBRACE` в файле из каталога `Debug`.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Типы файлов, создаваемых для проектов Visual C++](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [Директива #define (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>

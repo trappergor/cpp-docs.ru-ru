@@ -2,12 +2,12 @@
 title: Новые возможности Visual C++ 2003–2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: bc0092aeb8910f960befc174c1f71ce05c4eb131
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894358"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749156"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -2233,6 +2233,6 @@ __sptr, __uptr
 
 Добавлены директива .SAFESEH и параметр `/safeseh` ml.exe.
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [Руководство по переносу и обновлению Visual C++](visual-cpp-porting-and-upgrading-guide.md)

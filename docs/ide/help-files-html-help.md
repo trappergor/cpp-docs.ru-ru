@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], HTML Help files
 ms.assetid: d30a1b1b-318f-4a78-8b60-93da53a224a8
-ms.openlocfilehash: dc98e9794200e2a317c7db2b0b513a254efff275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3ccc4b602610813ed4e80c1d24ca5d96275a8dd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480383"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741920"
 ---
 # <a name="help-files-html-help"></a>Файлы справки (справка HTML)
 
 Указанные ниже файлы создаются, когда вы добавляете в приложение поддержку справки типа "Справка в формате HTML", установив флажок **Контекстная справка** и выбрав **Формат справки HTML** на странице [Дополнительные функции](../mfc/reference/advanced-features-mfc-application-wizard.md) мастера приложений MFC.
 
-|Имя файла|Расположение каталога|Расположение в обозревателе решений|Описание:|
+|Имя файла|Расположение каталога|Расположение в обозревателе решений|Описание|
 |---------------|------------------------|--------------------------------|-----------------|
 |*Имя_проекта*.hhp|*Имя_проекта*\hlp|файлы справки HTML|Файл проекта справки. Он содержит данные, необходимые для компиляции файлов справки в файл HXS или CHM.|
 |*Имя_проекта*.hhk|*Имя_проекта*\hlp|файлы справки HTML|Содержит индекс разделов справки.|
