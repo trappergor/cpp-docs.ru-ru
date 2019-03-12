@@ -10,12 +10,12 @@ f1_keywords:
 - _set_app_type
 - corecrt_startup/_set_app_type
 ms.assetid: 1e7fe786-b587-4116-8c05-f7d762350100
-ms.openlocfilehash: f12e409355fcd10ece474103109286925b1f3a8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a29fd94cca7fdbf6bbb24699b7f510bf1465f15
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569823"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749195"
 ---
 # <a name="setapptype"></a>_set_app_type
 
@@ -41,7 +41,7 @@ void __cdecl _set_app_type(
 *appType*<br/>
 Значение, указывающее на тип приложения. Допустимые значения:
 
-|Значение|Описание:|
+|Значение|Описание|
 |----------------|-----------------|
 |_crt_unknown_app|Неизвестный тип приложения.|
 |_crt_console_app|Приложение консоли (командной строки).|
@@ -56,4 +56,3 @@ void __cdecl _set_app_type(
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
 |_set_app_type|process.h|
-

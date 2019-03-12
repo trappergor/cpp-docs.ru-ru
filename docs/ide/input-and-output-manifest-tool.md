@@ -10,12 +10,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b9af50e6dca2dafa4dabd356a868405dfacc958
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624709"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741186"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Диалоговое окно страниц свойств &lt;Имя_проекта&gt; "Свойства конфигурации", "Инструмент манифеста", "Вход и выход"
 
@@ -29,7 +29,7 @@ ms.locfileid: "50624709"
 Использует параметр **/manifest**, чтобы указать полные пути к дополнительным файлам манифеста, обрабатываемым или объединяемым инструментом манифеста. Полные пути разделяются точкой с запятой.
 
 **Манифесты входных ресурсов**<br/>
-Использует параметр **/inputresource**, чтобы указать полный путь ресурса типа RT_MANIFEST для ввода в инструмент манифеста. После этого пути может стоять заданный идентификатор ресурса. Пример:
+Использует параметр **/inputresource**, чтобы указать полный путь ресурса типа RT_MANIFEST для ввода в инструмент манифеста. После этого пути может стоять заданный идентификатор ресурса. Например:
 
 `dll_with_manifest.dll;#1`
 

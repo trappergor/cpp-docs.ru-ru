@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639157"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743852"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>Программа MFC или управление файлами исходного кода и заголовков
 
@@ -17,7 +17,7 @@ ms.locfileid: "50639157"
 
 Все эти файлы находятся в каталоге *Имя_проекта* и в папке файлов заголовков (H) или исходных файлов (CPP) в обозревателе решений.
 
-|Имя файла|Описание:|
+|Имя файла|Описание|
 |---------------|-----------------|
 |*Имя_проекта*.h|Основной включаемый файл для программы или библиотеки DLL. Он содержит все глобальные символы и директивы `#include` для других файлов заголовков. Он является производным от класса `CPrjnameApp` из `CWinApp` и объявляет функцию-член `InitInstance`. Для элемента управления класс `CPrjnameApp` является производным от `COleControlModule`.|
 |*Имя_проекта*.cpp|Исходный файл основной программы. Он создает один объект класса `CPrjnameApp`, который является производным от `CWinApp`, и переопределяет функцию-член `InitInstance`.<br /><br /> Для исполняемых файлов `CPrjnameApp::InitInstance` выполняет ряд задач. Он регистрирует шаблоны документов, соединяющие документы и представления, создает окно главного фрейма, а также создает пустой документ (или открывает документ, если он указан в качестве аргумента командной строки для приложения).<br /><br /> Для библиотек DLL и элементов управления ActiveX (ранее OLE) `CProjNameApp::InitInstance` регистрирует фабрику объектов элемента управления с помощью OLE, вызвав `COleObjectFactory::RegisterAll`, и вызывает `AfxOLEInit`. Кроме того, функция-член `CProjNameApp::ExitInstance` используется для выгрузки элемента управления из памяти посредством вызова **AfxOleTerm**.<br /><br /> Этот файл также выполняет регистрацию и ее отмену для элемента управления в базе данных регистрации Windows, реализуя функции `DllRegisterServer` и `DllUnregisterServer`.|
