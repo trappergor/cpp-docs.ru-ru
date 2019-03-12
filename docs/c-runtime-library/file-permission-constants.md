@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _S_IWRITE constant
 - _S_IREAD constant
 ms.assetid: 593cad33-31d1-44d2-8941-8af7d210c88c
-ms.openlocfilehash: c0c5e02458fa6b5436b029392a40bd2f54f22c0c
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 0e042cddce6edf079aa54f114130f9750412e327
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220287"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742704"
 ---
 # <a name="file-permission-constants"></a>Константы разрешений файлов
 
@@ -47,7 +47,7 @@ ms.locfileid: "54220287"
 |`_S_IWRITE`|Чтение запрещено (файл доступен только для записи)|
 |`_S_IREAD` &#124; `_S_IWRITE`|Чтение и запись запрещены|
 
-## <a name="see-also"></a>См. также раздел
+## <a name="see-also"></a>См. также
 
 [_open, _wopen](../c-runtime-library/reference/open-wopen.md)<br/>
 [_sopen, _wsopen](../c-runtime-library/reference/sopen-wsopen.md)<br/>

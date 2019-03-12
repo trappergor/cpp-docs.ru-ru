@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CRT_REPORT_HOOK type
 - _finddata_t type
 ms.assetid: 23312dd2-4a6a-4d70-9b48-2a5d0d8c9f28
-ms.openlocfilehash: dd508095508cf9d0d04778b06d6296296649f710
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ebe9052d9e8bd18dfc9b3b123871e2e5acda4e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565325"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740470"
 ---
 # <a name="standard-types"></a>Стандартные типы
 
@@ -189,7 +189,7 @@ ms.locfileid: "50565325"
 |int_fast64_t, uint_fast64_t|long long, long long без знака|
 |intmax_t, uintmax_t|long long, long long без знака|
 
-|Тип|Описание:|Объявляется в|
+|Тип|Описание|Объявляется в|
 |----------|-----------------|-----------------|
 |`clock_t` (long)|Хранит значения времени; используется [часами](../c-runtime-library/reference/clock.md).|TIME.H|
 |Структура `_complex`|Хранит реальные и мнимые части сложных чисел; используется в [_cabs](../c-runtime-library/reference/cabs.md).|MATH.H|

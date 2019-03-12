@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178073"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740392"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -38,13 +38,13 @@ class CPoint : public tagPOINT
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Добавляет значения в таблицу `x` и `y` членами `CPoint`.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|Имя|Описание:|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размером или отрицание точку или разница размера между двумя точками или смещение с отрицательным размером.|
 |[CPoint::operator! =](#operator_neq)|Проверяет неравенство между двумя точками.|
@@ -147,7 +147,7 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*Смещение*<br/>
+*xOffset*<br/>
 Указывает величина смещения `x` членом `CPoint`.
 
 *Смещение*<br/>
@@ -347,4 +347,3 @@ CPoint operator-() const throw();
 [Структура POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [Класс CSize](../../atl-mfc-shared/reference/csize-class.md)
-

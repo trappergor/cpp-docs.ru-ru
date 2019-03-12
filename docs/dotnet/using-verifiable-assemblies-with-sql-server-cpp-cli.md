@@ -4,12 +4,12 @@ ms.date: 10/17/2018
 helpviewer_keywords:
 - verifiable assemblies [C++], with SQL Server
 ms.assetid: 5248a60d-aa88-4ff3-b30a-b791c3ea2de9
-ms.openlocfilehash: a977aa81a598e1698dfbc1c5679b85378b7ba6fc
-ms.sourcegitcommit: d04dfe95801bafcbd5371e40e626fe5c678343b8
+ms.openlocfilehash: 27dec67cc0932a784cdd041ba346bb8c635b280d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52389933"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747700"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>Использование проверяемых сборок вместе с SQL Server (C++/CLI)
 
@@ -19,9 +19,9 @@ ms.locfileid: "52389933"
 
 SQL Server предоставляет расширения языка Transact-SQL (T-SQL), чтобы можно было установить проверяемых сборок в SQL Server. Набор разрешений SQL Server определяет контекст безопасности со следующими уровнями безопасности:
 
-- Неограниченный режим: выполнять код на свой страх и риск; не требуется быть проверяемый типобезопасный код.
+- Неограниченный режим: Выполнять код на свой страх и риск; не требуется быть проверяемый типобезопасный код.
 
-- Безопасный режим: запускает строго типизированный код; компилировать с/CLR: safe.
+- Безопасный режим: Запускает строго типизированный код; компилировать с/CLR: safe.
 
 > [!IMPORTANT]
 > Рекомендуется использовать Visual Studio 2015 и Visual Studio 2017 не поддерживает **/CLR: pure** и **/CLR: safe** Создание проверяемых проектов. Если вам требуется проверяемый код, мы рекомендуем перевести код на C#.

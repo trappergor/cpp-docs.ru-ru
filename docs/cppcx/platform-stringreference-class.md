@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498388"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750927"
 ---
 # <a name="platformstringreference-class"></a>Класс Platform::StringReference
 
@@ -150,7 +150,7 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 Так как `StringReference` является стандартным классом C++, а не ссылочным классом, он не отображается в **обозреватель объектов**.
 
-## <a name="operator-call"></a>  Оператор stringreference:: operator()
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 Преобразует объект `StringReference` в объект `Platform::String^`.
 

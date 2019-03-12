@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595966"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746921"
 ---
 # <a name="managed-types-ccli"></a>Управляемые типы (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 Тем не менее если добавить другой элемент `struct S` в nested_value_types.cpp, (например, `double d;`) и скомпилировать компонент заново без перекомпиляции клиента, в результате необработанного исключения (типа <xref:System.IO.FileLoadException?displayProperty=fullName>).
 
-## <a name="test_equality"></a> Практическое: проверка на равенство
+## <a name="test_equality"></a> Практическое руководство. Для проверки на равенство
 
 В следующем примере проверка на равенство, использующий управляемые расширения для C++ основана на которые указывают дескрипторы.
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> Практическое: диагностика и устранение проблем совместимости сборок
+## <a name="diagnose_fix"></a> Практическое руководство. Диагностика и устранение проблем совместимости сборок
 
 В этом разделе объясняется, что может произойти, если версия сборки, которая использовалась во время компиляции не соответствует версии сборки, указанной во время выполнения и способы устранения проблемы.
 

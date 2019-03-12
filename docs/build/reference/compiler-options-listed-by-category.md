@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676504"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746973"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -118,9 +118,9 @@ ms.locfileid: "56676504"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|Объявляет одиночное наследование.|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|Объявляет виртуальное наследование.|
 |[/Z7](z7-zi-zi-debug-information-format.md)|Приводит к возникновению ошибки совместимости с C 7.0 отладочную информацию.|
-|[/Za](za-ze-disable-language-extensions.md)|Отключает расширения языка.|
+|[/Za](za-ze-disable-language-extensions.md)|Отключает расширения языка C89.|
 |[/Zc](zc-conformance.md)|Задает стандартное поведение при использовании параметра [/Ze](za-ze-disable-language-extensions.md).|
-|[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
+|[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка C89.|
 |[/Zf](zf.md)|Улучшает время создания в параллельные сборки PDB-файла.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Включает отладочную информацию в базу данных программы, совместимую с функцией "Изменить и продолжить". (только x86)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Создает полную отладочную информацию.|

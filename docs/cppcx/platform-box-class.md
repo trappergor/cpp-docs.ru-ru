@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327035"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742942"
 ---
 # <a name="platformbox-class"></a>Класс Platform::Box
 
@@ -30,13 +30,13 @@ ref class Box abstract;
 
 ### <a name="members"></a>Участники
 
-|Член|Описание|
+|Член|Описание:|
 |------------|-----------------|
 |[Box](#ctor) | Создает объект `Box`, который может инкапсулировать значение указанного типа. |
-|[оператор поле&lt;const T&gt;^](#box-const-t) | Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`. |
-|[оператор поле&lt;const volatile T&gt;^](#box-const-volatile-t) | Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`. |
+|[оператор поле&lt;const T&gt;^](#box-const-t) | Позволяет осуществлять преобразования-упаковки класса значений `const``T` или `enum` класса `T` в `Box<T>`. |
+|[оператор поле&lt;const volatile T&gt;^](#box-const-volatile-t) | Позволяет осуществлять преобразования-упаковки из класса значений `const volatile``T` или `enum` типа `T` в `Box<T>`. |
 |[оператор поле&lt;T&gt;^](#box-t) | Позволяет осуществлять преобразования-упаковки класса значений `T` в `Box<T>`. |
-|[оператор поле&lt;volatile T&gt;^](#box-volatile-t) | Позволяет осуществлять преобразования-упаковки из класса значений `volatile` `T` или `enum` типа `T` в `Box<T>`. |
+|[оператор поле&lt;volatile T&gt;^](#box-volatile-t) | Позволяет осуществлять преобразования-упаковки из класса значений `volatile``T` или `enum` типа `T` в `Box<T>`. |
 |[Box::operator T](#t) | Позволяет осуществлять преобразования-упаковки класса значений `T` или `enum` класса `T` в `Box<T>`. |
 |[Значение свойства](#value) | Возвращает значение, которое инкапсулируется в объекте `Box`. |
 
@@ -57,7 +57,7 @@ Box(T valueArg);
 
 ## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ оператор
 
-Позволяет осуществлять преобразования-упаковки класса значений `const` `T` или `enum` класса `T` в `Box<T>`.
+Позволяет осуществлять преобразования-упаковки класса значений `const``T` или `enum` класса `T` в `Box<T>`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -76,7 +76,7 @@ operator Box<const T>^(const T valueType);
 
 ## <a name="box-const-volatile-t"></a> Box::operator Box&lt;const volatile T&gt;^ оператор
 
-Позволяет осуществлять преобразования-упаковки из класса значений `const volatile` `T` или `enum` типа `T` в `Box<T>`.
+Позволяет осуществлять преобразования-упаковки из класса значений `const volatile``T` или `enum` типа `T` в `Box<T>`.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -114,7 +114,7 @@ operator Box<const T>^(const T valueType);
 
 ## <a name="box-volatile-t"></a> Box::operator Box&lt;volatile T&gt;^ оператор
 
-Позволяет осуществлять преобразования-упаковки из класса значений `volatile` `T` или `enum` типа `T` в `Box<T>`.
+Позволяет осуществлять преобразования-упаковки из класса значений `volatile``T` или `enum` типа `T` в `Box<T>`.
 
 ### <a name="syntax"></a>Синтаксис
 

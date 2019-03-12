@@ -8,18 +8,18 @@ helpviewer_keywords:
 - variables, global
 - global variables, Microsoft run-time library
 ms.assetid: 01d1551c-2f0c-4f72-935c-6442caccf84f
-ms.openlocfilehash: b66d77285cb601b30a89a313fa21b815f42775b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfa78bd2c7aae7cc6059443066cbef58512755ce
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522544"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744366"
 ---
 # <a name="global-variables"></a>Глобальные переменные
 
 Библиотека времени выполнения языка C (Майкрософт) обеспечивает следующие глобальные переменные или макросы. Многие из этих глобальных переменных или макросов были признаны нерекомендуемыми и заменены более надежными и безопасными функциональными версиями, которые мы рекомендуем использовать вместо них.
 
-|Переменная|Описание:|
+|Переменная|Описание|
 |--------------|-----------------|
 |[__argc, \__argv, \__wargv](../c-runtime-library/argc-argv-wargv.md)|Содержит аргументы командной строки.|
 |[_daylight, _dstbias, _timezone, and _tzname](../c-runtime-library/daylight-dstbias-timezone-and-tzname.md)|Не рекомендуется. Используйте `_get_daylight`, `_get_dstbias`, `_get_timezone` и `_get_tzname`.<br /><br /> Вносит корректировку для локального времени; используется в некоторых функциях даты и времени.|

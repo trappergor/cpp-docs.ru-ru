@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Преобразование типа System::String к wchar_t* или char*
+title: Практическое руководство. Преобразование типа System::String к wchar_t * или char *
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - wchart type, converting System::String
 - char data type, converting System::String to
 ms.assetid: 385da01b-5649-4543-8076-e3e251243ff0
-ms.openlocfilehash: 26e9f5511c0205a3c484b85381fddde802f5469a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9bf8a6af2d48c4b2624b91e2e85f78c63aee6de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550505"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738821"
 ---
-# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Практическое руководство. Преобразование типа System::String к wchar_t* или char*
+# <a name="how-to-convert-systemstring-to-wchart-or-char"></a>Практическое руководство. Преобразование типа System::String к wchar_t * или char *
 
 Можно использовать `PtrToStringChars` в файле Vcclr.h преобразуемый <xref:System.String> в машинный код `wchar_t *` или `char *`.  Это всегда возвращает указатель на строку Unicode расширенных, так как является внутренним форматом строк CLR. Затем можно преобразовать из двухбайтного, как показано в следующем примере.
 

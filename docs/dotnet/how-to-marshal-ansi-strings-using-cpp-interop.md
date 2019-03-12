@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Маршалирование строк ANSI с использованием взаимодействия C++
+title: Практическое руководство. Маршалинг строк ANSI с использованием взаимодействия C++
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,20 +9,20 @@ helpviewer_keywords:
 - C++ Interop, strings
 - data marshaling [C++], strings
 ms.assetid: 5eda2eb6-5140-40f0-82cf-7ce171fffb45
-ms.openlocfilehash: 272e64a5dd8faf103daf3ab7fa17449bf3dbb7ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73d8ed403ab0bbad7703f66f0d8d4ac23bb7766
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570511"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748038"
 ---
-# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Практическое руководство. Маршалирование строк ANSI с использованием взаимодействия C++
+# <a name="how-to-marshal-ansi-strings-using-c-interop"></a>Практическое руководство. Маршалинг строк ANSI с использованием взаимодействия C++
 
 В этом разделе показано, как строки ANSI могут быть передан с помощью взаимодействия C++, но в .NET Framework <xref:System.String> представляет строки в формате Юникод, поэтому преобразование в ANSI это дополнительное действие. Для взаимодействия с другими типами строки, в следующих разделах:
 
-- [Практическое руководство. Маршалинг строк Юникода с использованием взаимодействия C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
+- [Практическое руководство. Маршалирование строк Юникод с использованием взаимодействия C++](../dotnet/how-to-marshal-unicode-strings-using-cpp-interop.md)
 
-- [Практическое руководство. Маршалинг строк COM с помощью взаимодействия C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
+- [Практическое руководство. Маршалирование строк СОМ с использованием взаимодействия C++](../dotnet/how-to-marshal-com-strings-using-cpp-interop.md)
 
 В следующем примере кода используются [управляемые, неуправляемые](../preprocessor/managed-unmanaged.md) директивы #pragma управляемых и неуправляемых функций в одном файле, но эти функции взаимодействия таким же образом, если они определены в отдельных файлах. Так как файлы, содержащие только неуправляемые функции не обязательно должны быть скомпилированы с [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md), они сохраняют свои характеристики производительности.
 

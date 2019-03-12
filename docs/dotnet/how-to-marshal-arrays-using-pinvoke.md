@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Маршалинг массивов с помощью службы PInvoke
+title: Практическое руководство. Маршалинг массивов с помощью PInvoke
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - interop [C++], arrays
 - data marshaling [C++], arrays
 ms.assetid: a1237797-a2da-4df4-984a-6333ed3af406
-ms.openlocfilehash: bd349fb1eca63fc336a30f4f23ae337d1191bb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60b49135928e3dadffc2a3c7a422646d2f3a768d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628518"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752315"
 ---
-# <a name="how-to-marshal-arrays-using-pinvoke"></a>Практическое руководство. Маршалинг массивов с помощью службы PInvoke
+# <a name="how-to-marshal-arrays-using-pinvoke"></a>Практическое руководство. Маршалинг массивов с помощью PInvoke
 
 В этом разделе объясняется, как неуправляемый код функции, которые принимают строки в стиле C может вызываться с помощью строкового типа среды CLR <xref:System.String> с помощью вызова платформы .NET Framework поддержки. Программистам Visual C++, рекомендуется использовать возможности взаимодействия C++ (если возможно), поскольку P/Invoke предоставляет мало времени компиляции сведений об ошибках, не является строго типизированным и может быть утомительным. Если неуправляемый интерфейс API входит в состав библиотеки DLL и исходный код недоступен, P/Invoke является единственным параметром (см. в противном случае [с помощью взаимодействия C++ (неявный PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)).
 
