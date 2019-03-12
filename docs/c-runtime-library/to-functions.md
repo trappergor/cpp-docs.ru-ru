@@ -20,12 +20,12 @@ helpviewer_keywords:
 - case, converting
 - characters, converting
 ms.assetid: f636a4c6-8c9f-4be2-baac-064f9dbae300
-ms.openlocfilehash: 8a6a1a69147c135ce539393e535f0e1f2d03ccfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17d80507462b3eb0fdfb5d9e41da6162947bd3de
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580783"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742531"
 ---
 # <a name="to-functions"></a>Функции to
 
@@ -40,7 +40,7 @@ ms.locfileid: "50580783"
 
 Функции **to** и макросы преобразования выглядят следующим образом.
 
-|Подпрограмма|Макрос|Описание:|
+|Подпрограмма|Макрос|Описание|
 |-------------|-----------|-----------------|
 |`__toascii`|`__toascii`|Преобразует `c` в ASCII символ|
 |`tolower`|`tolower`|Преобразует `c` в нижний регистр при необходимости|

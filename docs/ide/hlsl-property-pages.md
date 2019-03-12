@@ -4,22 +4,22 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.FXCompilerTool.AdditionalOptionsPage
 ms.assetid: 0c65f5ec-a2a5-4f5b-8d4c-fa57113a5a1d
-ms.openlocfilehash: 74775e34e3f0591457c2ecff6168767d065b916e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68189d6d4de75e71b5dfe430b870dd37742e934c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666561"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752341"
 ---
 # <a name="hlsl-property-pages"></a>Страницы свойств HLSL
 
 Страницы свойств компилятора HLSL (fxc.exe) можно использовать для настройки сборки отдельных файлов шейдера HLSL. Эти свойства разделены на три категории:
 
-- [Страницы свойств HLSL: "Общие"](../ide/hlsl-property-pages-general.md)
+- [Страницы свойств HLSL: общие](../ide/hlsl-property-pages-general.md)
 
    Предоставляет свойства, определяющие часто используемые параметры для компилятора HLSL.
 
-- [Страницы свойств HLSL: "Дополнительно"](../ide/hlsl-property-pages-advanced.md)
+- [Страницы свойств HLSL: дополнительно](../ide/hlsl-property-pages-advanced.md)
 
    Предоставляет свойства, определяющие дополнительные параметры для компилятора HLSL.
 
