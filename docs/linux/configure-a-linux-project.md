@@ -1,17 +1,17 @@
 ---
 title: Настройка проекта C++ для Linux в Visual Studio
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622499"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745184"
 ---
 # <a name="configure-a-linux-project"></a>Настройка проекта Linux
 
-В этом разделе описывается, как настроить проект C++ для Linux в Visual Studio. Сведения о проектах CMake Linux в Visual Studio см. в разделе [Настройка проекта Linux CMake](cmake-linux-project.md).
+Этот раздел описывает, как настроить проект C++ для Linux, основанный на шаблоне проекта Linux, в Visual Studio. Сведения о проектах CMake Linux в Visual Studio см. в разделе [Настройка проекта Linux CMake](cmake-linux-project.md).
 
 ## <a name="general-settings"></a>Общие параметры
 
@@ -90,7 +90,7 @@ apt install zip
 ## <a name="see-also"></a>См. также
 
 [Работа со свойствами проектов](../ide/working-with-project-properties.md)<br/>
-[Общие свойства C++ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[Каталоги VC++ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[Свойства копирования источников проекта (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[Свойства событий сборки (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[Общие свойства C++ (Linux C++)](prop-pages/general-linux.md)<br/>
+[Каталоги VC++ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[Свойства копирования источников проекта (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[Свойства событий сборки (Linux C++)](prop-pages/build-events-linux.md)

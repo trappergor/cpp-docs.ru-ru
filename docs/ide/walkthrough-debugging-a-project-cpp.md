@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581952"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741353"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>Пошаговое руководство. Отладка проекта (C++)
 
@@ -53,8 +53,8 @@ ms.locfileid: "50581952"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Предыдущая статья:** [Пошаговое руководство. Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**Следующая статья:** [Пошаговое руководство. Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**Предыдущая статья:** [Пошаговое руководство: Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Далее:** [Пошаговое руководство: Развертывание программы (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 

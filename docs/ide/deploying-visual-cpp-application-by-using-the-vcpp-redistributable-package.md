@@ -4,12 +4,12 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436432"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743792"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>Пошаговое руководство. Развертывание приложения Visual C++ с помощью распространяемого пакета Visual C++
 
@@ -25,7 +25,7 @@ ms.locfileid: "50436432"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Использование распространяемого пакета Visual C++ для развертывания приложения
 
-1.  Вы можете создать приложение MFC и выполнить его сборку, выполнив инструкции в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+1.  Вы можете создать приложение MFC и выполнить его сборку, следуя инструкциям в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 1. Создайте файл, присвойте ему имя setup.bat и добавьте в него приведенные ниже команды. Измените `MyMFCApplication` на имя проекта.
 

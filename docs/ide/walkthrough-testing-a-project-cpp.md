@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437314"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744601"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>Пошаговое руководство. Тестирование проекта (C++)
 
@@ -57,8 +57,8 @@ ms.locfileid: "50437314"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Назад:** [Пошаговое руководство. Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md).<br/>
-**Далее:** [Пошаговое руководство. Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Предыдущая статья:** [Пошаговое руководство: Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**Далее:** [Пошаговое руководство: Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 
