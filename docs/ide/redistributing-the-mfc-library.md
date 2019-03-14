@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659944"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746960"
 ---
 # <a name="redistributing-the-mfc-library"></a>Распространение библиотеки MFC
 
@@ -25,7 +25,7 @@ ms.locfileid: "50659944"
 
 В случае статического связывания приложения с MFC (то есть при указании значения **Использовать MFC в статической библиотеке** на вкладке **Общие** диалогового окна **Страницы свойств**) повторно распространять библиотеку DLL MFC не требуется. Однако хотя статическое связывание может работать для тестирования и внутреннего развертывания приложений, мы не рекомендуем использовать его для повторного распространения MFC. Дополнительные сведения о рекомендуемых стратегиях развертывания библиотек Visual C++ см. в разделе [Выбор метода развертывания](../ide/choosing-a-deployment-method.md).
 
-Если приложение использует классы MFC, реализующие элемент управления WebBrowser (например, [класс CHtmlView](../mfc/reference/chtmlview-class.md) или [класс CHtmlEditView](../mfc/reference/chtmleditview-class.md)), рекомендуется установить актуальную версию Microsoft Internet Explorer, чтобы на конечном компьютере были доступны самые новые файлы общих элементов управления. (Требуется Internet Explorer 4.0 или более поздней версии.) Сведения об установке компонентов Internet Explorer см. в статье 185375 "Создание одиночного установочного EXE-файла Internet Explorer" на веб-сайте службы поддержки Майкрософт.
+Если приложение использует классы MFC, реализующие элемент управления WebBrowser (например, [класс CHtmlView](../mfc/reference/chtmlview-class.md) или [класс CHtmlEditView](../mfc/reference/chtmleditview-class.md)), рекомендуется установить актуальную версию Microsoft Internet Explorer, чтобы на конечном компьютере были доступны самые новые файлы общих элементов управления. (Требуется Internet Explorer 4.0 или более поздней версии.) Сведения об установке компонентов Internet Explorer можно найти в "Статье 185375: как создать установку одного EXE-файла Internet Explorer" на веб-сайте службы поддержки Майкрософт.
 
 Если в приложении используются классы баз данных MFC (например, [CRecordset Class](../mfc/reference/crecordset-class.md) и [CRecordView Class](../mfc/reference/crecordview-class.md)), нужно также повторно распространить ODBC и все драйверы ODBC, которые использует приложение.
 

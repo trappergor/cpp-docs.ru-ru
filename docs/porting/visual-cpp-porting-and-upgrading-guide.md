@@ -2,12 +2,12 @@
 title: Руководство по переносу и обновлению Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556872"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752432"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
 
@@ -73,7 +73,7 @@ ms.locfileid: "51556872"
 
 ## <a name="related-topics"></a>Связанные разделы
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Описываются способы использования проектов, созданных в предыдущих версиях Visual C++.|
 |[Новые возможности компилятора C++ в Visual Studio 2017 RC](../what-s-new-for-visual-cpp-in-visual-studio.md)|Изменения в интегрированной среде разработки и инструментах Visual Studio 2015–2017|

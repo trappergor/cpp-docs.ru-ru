@@ -3,12 +3,12 @@ title: Подключение к удаленному компьютеру Linux
 description: Подключение к удаленному компьютеру Linux в проекте C++ Visual Studio.
 ms.date: 07/20/2018
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: ce6a3c02846586dbc46b0c9bc0db0d579878c814
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575247"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562852"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Подключение к удаленному компьютеру Linux
 
@@ -24,7 +24,7 @@ ms.locfileid: "50575247"
 
 1. Введите следующую информацию.
 
-   | Ввод | Описание:
+   | Ввод | Описание
    | ----- | ---
    | **Имя узла**           | Имя или IP-адрес целевого устройства
    | **Порт**                | Порт, в котором работает служба SSH, обычно 22

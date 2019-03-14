@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481410"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750511"
 ---
 # <a name="ismbb-routines"></a>Процедуры _ismbb
 
@@ -53,7 +53,7 @@ ms.locfileid: "50481410"
 |[_ismbbgraph](../c-runtime-library/reference/ismbbgraph-ismbbgraph-l.md)|То же, что и `_ismbbprint`, но `_ismbbgraph` не включает символ пробела (0x20).|
 |[_ismbbkalnum](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|Не входящий в набор ASCII текстовый символ, отличный от знака препинания. Например, только для кодовой страницы 932, функция `_ismbbkalnum` проверяет на принадлежность к алфавитно-цифровым символам катаканы.|
 |[_ismbbkana](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|Катакана (0xA1–0xDF). Применяется только к кодовой странице 932.|
-|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Не входящие в набор ASCII текстовые и пунктуационные символы. Например, только для кодовой страницы 932, `_ismbbkprint` проверяет на принадлежность к алфавитно-цифровым или пунктуационным символам катаканы (диапазон: 0xA1–0xDF).|
+|[_ismbbkprint](../c-runtime-library/reference/ismbbkprint-ismbbkprint-l.md)|Не входящие в набор ASCII текстовые и пунктуационные символы. Например, только для кодовой страницы 932, `_ismbbkprint` проверяет на принадлежность к алфавитно-цифровым или пунктуационным символам катаканы (диапазон: 0xA1 – 0xDF).|
 |[_ismbbkpunct](../c-runtime-library/reference/ismbbkpunct-ismbbkpunct-l.md)|Не входящий в набор ASCII знак препинания. Например, только для кодовой страницы 932, `_ismbbkpunct` проверяет на принадлежность к пунктуационным символам катаканы.|
 |[_ismbblead](../c-runtime-library/reference/ismbblead-ismbblead-l.md)|Первый байт многобайтового символа. Например, только для кодовой страницы 932, допустимые диапазоны: 0x81–0x9F, 0xE0–0xFC.|
 |[_ismbbprint](../c-runtime-library/reference/ismbbprint-ismbbprint-l.md)|`isprint` &#124;&#124; `_ismbbkprint`. **ismbbprint** включает пробел (0x20).|

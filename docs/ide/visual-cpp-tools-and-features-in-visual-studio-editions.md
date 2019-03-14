@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463756"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751899"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>Инструменты и функции Visual C++ в выпусках Visual Studio
 
@@ -106,7 +106,7 @@ ms.locfileid: "50463756"
 |Отладка управляемого кода||X|X|X|
 |Использование GPU|X||X|X|
 |Использование памяти|X||X|X|
-|Удаленная отладка|X|X|X|X|
+|Remote Debugging|X|X|X|X|
 |Отладка SQL|||X|X|
 |Статический анализ кода|Ограниченный|Ограниченный|X|X|
 

@@ -1,19 +1,19 @@
 ---
-title: Пошаговое руководство. Построение проекта (C++)
+title: Пошаговое руководство. Сборка проекта (C++)
 ms.date: 09/14/2018
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1d5dbd8f83f501c3b68bad771089eab8acc6f8aa
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524161"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742495"
 ---
-# <a name="walkthrough-building-a-project-c"></a>Пошаговое руководство. Построение проекта (C++)
+# <a name="walkthrough-building-a-project-c"></a>Пошаговое руководство. Сборка проекта (C++)
 
 В этом пошаговом руководстве в код на языке Visual C++ умышленно вводится синтаксическая ошибка, чтобы ознакомиться с тем, как проявляется ошибка компиляции и как ее можно исправить. При компиляции проекта выдается сообщение об ошибке, указывающее на ее характер и место возникновения.
 
@@ -54,8 +54,8 @@ ms.locfileid: "51524161"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Предыдущая статья.** [Пошаговое руководство. Работа с проектами и решениями (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
-**Следующая статья.** [Пошаговое руководство. Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**Предыдущая статья:** [Пошаговое руководство: Работа с проектами и решениями (C++)](../ide/walkthrough-working-with-projects-and-solutions-cpp.md)<br/>
+**Далее:** [Пошаговое руководство: Тестирование проекта (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 

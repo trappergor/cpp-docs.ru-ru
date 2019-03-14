@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DLL conflicts [C++]
 ms.assetid: c217ffd2-5d9a-4678-a1df-62a637a96460
-ms.openlocfilehash: c90303db63724bbcf584340147555814d9a92f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31f9d9aceba167b516c9d37724e240f1bc4586e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562777"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749909"
 ---
 # <a name="potential-errors-passing-crt-objects-across-dll-boundaries"></a>Потенциальные ошибки при передаче объектов CRT через границы DLL
 
@@ -19,7 +19,7 @@ ms.locfileid: "50562777"
 
 Другим признаком этой проблемы может быть ошибка в окне вывода во время отладки, например:
 
-HEAP[]: Invalid Address specified to RtlValidateHeap(#,#)
+HEAP[]: недопустимый адрес, указанный в RtlValidateHeap(#,#)
 
 ## <a name="causes"></a>Причины
 
@@ -29,7 +29,7 @@ HEAP[]: Invalid Address specified to RtlValidateHeap(#,#)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере дескриптор файла передается через границу библиотеки DLL.
 
@@ -71,7 +71,7 @@ this is a string
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере переменные среды передаются через границу библиотеки DLL.
 

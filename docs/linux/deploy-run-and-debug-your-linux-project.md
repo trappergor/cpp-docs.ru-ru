@@ -3,16 +3,16 @@ title: Развертывание, запуск и отладка проекта
 description: Компиляция, выполнение и отладка кода в удаленной системе в проекте C++ для Linux в Visual Studio.
 ms.date: 09/12/2018
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: 413f0b089b3b1398093073bcd6f49358143121c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328400"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562891"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Развертывание, запуск и отладка проекта Linux
 
-После создания проекта Linux для C++ в Visual Studio и подключения к проекту с помощью [диспетчера подключений Linux](../linux/connect-to-your-remote-linux-computer.md) можно запускать и отлаживать проект. Компиляция, выполнение и отладка кода осуществляются в удаленной системе.
+После создания проекта Linux для C++ в Visual Studio и подключения к проекту с помощью [диспетчера подключений Linux](connect-to-your-remote-linux-computer.md) можно запускать и отлаживать проект. Компиляция, выполнение и отладка кода осуществляются в удаленной системе.
 
 Существует несколько способов взаимодействия с проектом Linux и его отладки.
 
@@ -24,16 +24,16 @@ ms.locfileid: "51328400"
 
 1. Выберите режим отладки на странице свойств **Отладка**.
 
-   GDB используется для отладки приложений на платформе Linux.  Однако он может работать в двух разных режимах, которые выбираются в параметре **Режим отладки** на странице свойств **Отладка** проекта:
+   GDB используется для отладки приложений на платформе Linux. GDB может работать в двух разных режимах, которые выбираются в параметре **Режим отладки** на странице свойств **Отладка** проекта:
 
    ![Параметры GDB](media/settings_debugger.png)
 
-   - В режиме **gdbserver** GDB выполняется в локальной среде, подключенной к gdbserver, работающем в удаленной системе.  Обратите внимание, что это единственный режим, который поддерживает окно консоли Linux.
+   - В режиме **gdbserver** GDB выполняется в локальной среде, подключенной к gdbserver в удаленной системе.  Обратите внимание, что это единственный режим, который поддерживает окно консоли Linux.
 
-   - В режиме **gdb** отладчик Visual Studio управляет GDB в удаленной системе, что более приемлемо, если локальная версия GDB несовместима с версией, установленной на целевом компьютере. |
+   - В режиме **gdb** в Visual Studio отладчик запускает GDB в удаленной системе. Это лучший вариант, если локальная версия GDB несовместима с версией, установленной на целевом компьютере. |
 
    > [!NOTE]
-   > Если не удается попасть в точки останова в режиме отладки gdbserver, попробуйте gdb режим. gdb сначала следует [установить](../linux/download-install-and-setup-the-linux-development-workload.md) в удаленной целевой системе.
+   > Если не удается попасть в точки останова в режиме отладки gdbserver, попробуйте gdb режим. gdb сначала следует [установить](download-install-and-setup-the-linux-development-workload.md) в удаленной целевой системе.
 
 1. Выберите удаленную целевую систему, используя стандартную панель инструментов **Отладка** в Visual Studio.
 
@@ -41,7 +41,7 @@ ms.locfileid: "51328400"
 
    ![Удаленная целевая система](media/remote_target.png)
 
-   Если вы еще не подключились к удаленной целевой системе, вы увидите инструкции по использованию [диспетчера подключений Linux](../linux/connect-to-your-remote-linux-computer.md) для подключения к удаленной целевой системе.
+   Если вы еще не подключились к удаленной целевой системе, вы увидите инструкции по использованию [диспетчера подключений Linux](connect-to-your-remote-linux-computer.md) для подключения к удаленной целевой системе.
 
    ![Удаленная архитектура](media/architecture.png)
 
@@ -79,10 +79,10 @@ ms.locfileid: "51328400"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-- Сведения об отладке устройств ARM в Linux см. в записи блога [Отладка встраиваемых устройств ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
+- Для отладки устройств ARM в Linux см. записи блога: [Отладка встроенного устройства ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
 
-- Сведения об отладке с использованием команды **Присоединение к процессу** см. в записи блога [Изменения в рабочих нагрузках C++ в Linux для системы проектов, консольного окна Linux, rsync and команды "Присоединение к процессу"](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
+- Для отладки с помощью команды **Присоединение к процессу** см. запись блога: [Изменения в рабочих нагрузках C++ в Linux для системы проектов, консольного окна Linux, rsync и команды "Присоединение к процессу"](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>См. также
 
-[Свойства отладки C++ (Linux C++)](../linux/prop-pages/debugging-linux.md)
+[Свойства отладки C++ (Linux C++)](prop-pages/debugging-linux.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509113"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744857"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Подготовка тестового компьютера для выполнения исполняемого файла отладки
 
@@ -20,7 +20,7 @@ ms.locfileid: "50509113"
 
 Существует три способа развернуть отладочные версии библиотек DLL Visual C++ вместе с отладочной версией приложения.
 
-- Используйте центральное развертывание для установки отладочной версии конкретной библиотеки DLL Visual C++ в каталоге %windir%\system32\, используя проект установки, который включает в себя модули слияния для подходящей версии библиотеки и архитектуры приложения. Модули слияния можно найти в каталоге Program Files или Program Files (x86) внутри \Common Files\Merge Modules\\. Отладочная версия модуля слияния имеет слово Debug в имени, например Microsoft_VC110_DebugCRT_x86.msm. Пример этого развертывания можно найти в разделе [Пошаговое руководство. Развертывание приложения Visual C++ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
+- Используйте центральное развертывание для установки отладочной версии конкретной библиотеки DLL Visual C++ в каталоге %windir%\system32\, используя проект установки, который включает в себя модули слияния для подходящей версии библиотеки и архитектуры приложения. Модули слияния можно найти в каталоге Program Files или Program Files (x86) внутри \Common Files\Merge Modules\\. Отладочная версия модуля слияния имеет слово Debug в имени, например Microsoft_VC110_DebugCRT_x86.msm. Пример этого развертывания можно найти в [Пошаговом руководстве. Развертывание приложения Visual C++ с помощью проекта установки](../ide/walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md).
 
 - Используйте локальное развертывание для установки отладочной версии конкретной библиотеки DLL Visual C++ в каталоге установки приложения, используя файлы, находящиеся в каталоге Program Files или Program Files (x86) внутри \Microsoft Visual Studio \<версия>\VC\redist\Debug_NonRedist\\.
 
