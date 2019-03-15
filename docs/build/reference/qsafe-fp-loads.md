@@ -1,12 +1,12 @@
 ---
 title: /Qsafe_fp_loads
 ms.date: 01/24/2018
-ms.openlocfilehash: e1ef4237fe3af39e76777609a06f90bd585ca422
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57aece79dfab617121371e0489aa80f18e143372
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504440"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819698"
 ---
 # <a name="qsafefploads"></a>/Qsafe_fp_loads
 
@@ -22,13 +22,13 @@ ms.locfileid: "50504440"
 
 **/ Qsafe_fp_loads** регистрирует компилятору использовать целочисленные инструкции перемещения вместо инструкций с плавающей запятой перемещения для перемещения данных между памятью и MMX силы. Этот параметр также отключает оптимизации загрузки регистра для значений с плавающей запятой, которые могут загружаться в нескольких путей системы контроля, значение может вызвать исключение при загрузке — например, значение NaN.
 
-Этот параметр переопределяется параметром [/fp: except](../../build/reference/fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** определяет подмножество поведение компилятора, который задается параметром **/fp: except**.
+Этот параметр переопределяется параметром [/fp: except](fp-specify-floating-point-behavior.md). **/ Qsafe_fp_loads** определяет подмножество поведение компилятора, который задается параметром **/fp: except**.
 
-**/ Qsafe_fp_loads** несовместим с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) и [/fp:fast](../../build/reference/fp-specify-floating-point-behavior.md). Дополнительные сведения о параметрах компилятора с плавающей точкой, см. в разделе [/fp (определение поведения с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md).
+**/ Qsafe_fp_loads** несовместим с [/CLR](clr-common-language-runtime-compilation.md) и [/fp:fast](fp-specify-floating-point-behavior.md). Дополнительные сведения о параметрах компилятора с плавающей точкой, см. в разделе [/fp (определение поведения с плавающей запятой)](fp-specify-floating-point-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -40,6 +40,6 @@ ms.locfileid: "50504440"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры /Q (низкоуровневые операции)](q-options-low-level-operations.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

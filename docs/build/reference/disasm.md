@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 77f6f05029ec4480afb2180eab0bb57838d643a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462950"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822539"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -36,8 +36,8 @@ ms.locfileid: "50462950"
 
 **/ DISASM** следует использовать только в машинном коде, не управляемых образов. Аналогичный инструмент для управляемого кода является [ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler).
 
-Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования на файлы, созданные [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+Только [/Headers](headers.md) параметр (программа DUMPBIN) доступен для использования на файлы, созданные [/GL (оптимизация всей программы)](gl-whole-program-optimization.md) параметр компилятора.
 
 ## <a name="see-also"></a>См. также
 
-[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+[Параметры DUMPBIN](dumpbin-options.md)

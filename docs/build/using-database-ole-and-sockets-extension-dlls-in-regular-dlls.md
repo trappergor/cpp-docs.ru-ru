@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d08822a04abe5a01883ad8aa1bd6d94269e810cc
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421211"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57807979"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>С помощью базы данных, OLE и сокетов MFC DLL расширения в обычных библиотеках DLL MFC
 
@@ -132,17 +132,17 @@ BOOL CYourRegularDLL::InitInstance()
 
 ### <a name="what-do-you-want-to-do"></a>Выберите действие
 
-- [Инициализация библиотеки DLL расширения MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Инициализация библиотеки DLL расширения MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
-- [Инициализация обычных библиотек DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Инициализация обычных библиотек DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Библиотеки DLL расширений MFC](../build/extension-dlls.md)
+- [Библиотеки DLL расширений MFC](extension-dlls.md)
 
-- [Обычные DLL-библиотеки MFC, статически связанные с MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Обычные DLL-библиотеки MFC, статически связанные с MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Обычные DLL-библиотеки MFC, динамически связанные с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Обычные DLL-библиотеки MFC, динамически связанные с MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
@@ -150,4 +150,4 @@ BOOL CYourRegularDLL::InitInstance()
 
 ## <a name="see-also"></a>См. также
 
-[Библиотеки DLL расширений MFC](../build/extension-dlls.md)
+[Библиотеки DLL расширений MFC](extension-dlls.md)

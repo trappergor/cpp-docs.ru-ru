@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418819"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818366"
 ---
 # <a name="link-an-executable-to-a-dll"></a>Связывание исполняемого файла с библиотекой DLL
 
@@ -30,7 +30,7 @@ ms.locfileid: "57418819"
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>Определение подходящего метода связывания
+## <a name="link-an-executable-to-a-dll"></a>Связывание исполняемого файла с библиотекой DLL
 
 Следует ли использовать связывание неявное или явное связывание является архитектурным решением, необходимые для вашего приложения. Существуют, преимущества и недостатки каждого метода.
 
@@ -70,13 +70,13 @@ ms.locfileid: "57418819"
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>Неявное связывание с библиотекой DLL
+## <a name="link-an-executable-to-a-dll"></a>Связывание исполняемого файла с библиотекой DLL
 
 С помощью неявного связывания библиотеки DLL, исполняемые файлы клиента необходимо получить эти файлы от поставщика библиотеки DLL:
 
 - Один или несколько файлы заголовков (h-файлы), которые содержат объявления экспортированных данных, функций и классов C++ в библиотеке DLL. Классы, функции и данные, экспортированные посредством библиотеки DLL должны все быть помечены `__declspec(dllimport)` в файле заголовка. Дополнительные сведения см. в разделе [dllexport, dllimport](../cpp/dllexport-dllimport.md).
 
-- Библиотека импорта для связывания в исполняемый файл. При построении библиотеки DLL, компоновщик создает библиотеку импорта. Дополнительные сведения см. в разделе [. LIB-файлы](../build/reference/dot-lib-files-as-linker-input.md).
+- Библиотека импорта для связывания в исполняемый файл. При построении библиотеки DLL, компоновщик создает библиотеку импорта. Дополнительные сведения см. в разделе [. LIB-файлы](reference/dot-lib-files-as-linker-input.md).
 
 - Фактический файл DLL.
 
@@ -139,10 +139,10 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Работа с библиотеками импорта и файлами экспорта](../build/reference/working-with-import-libraries-and-export-files.md)
+- [Работа с библиотеками импорта и файлами экспорта](reference/working-with-import-libraries-and-export-files.md)
 
 - [Порядок поиска библиотеки динамической компоновки](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL в Visual C++](dlls-in-visual-cpp.md)
