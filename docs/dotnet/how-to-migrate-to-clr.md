@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749118"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816039"
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Миграция в/CLR
 
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/ CLR** могут быть выбраны в среде разработки, следуя инструкциям в [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md). Как упоминалось ранее, этот шаг будет автоматически отключена конфликтующие параметры проекта.
 
 > [!NOTE]
->  При обновлении управляемой библиотеки или проекта веб-службы из Visual C++ 2003 **/Zl** компилятора параметр будет добавлен **командной строки** страницу свойств. В результате LNK2001. Удалить **/Zl** из **командной строки** страницу свойств для решения. См. в разделе [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) и [работа со свойствами проекта](../ide/working-with-project-properties.md) Дополнительные сведения. Либо добавьте msvcrt.lib и msvcmrt.lib в компоновщик **Дополнительные зависимости** свойство.
+>  При обновлении управляемой библиотеки или проекта веб-службы из Visual C++ 2003 **/Zl** компилятора параметр будет добавлен **командной строки** страницу свойств. В результате LNK2001. Удалить **/Zl** из **командной строки** страницу свойств для решения. См. в разделе [/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md) и [задать компилятора и свойства сборки](../build/working-with-project-properties.md) Дополнительные сведения. Либо добавьте msvcrt.lib и msvcmrt.lib в компоновщик **Дополнительные зависимости** свойство.
 
 Для проектов, созданных с помощью файлов makefile, несовместимые параметры компилятора должны быть отключены вручную **/CLR** добавляется. См. в разделе /[ограничения/CLR](../build/reference/clr-restrictions.md) сведения о параметрах компилятора, которые не совместимы с **/CLR**.
 

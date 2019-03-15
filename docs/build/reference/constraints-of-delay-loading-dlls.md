@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420496"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816585"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ограничения библиотек DLL, загружаемых с задержкой
 
@@ -21,7 +21,7 @@ ms.locfileid: "57420496"
 
 - Отложенная загрузка Kernel32.dll не поддерживается. Эта библиотека DLL необходима для того, чтобы вспомогательные подпрограммы отложенной загрузки могли выполнить отложенную загрузку.
 
-- [Привязка](../../build/reference/binding-imports.md) записи переадресованных точек не поддерживается.
+- [Привязка](binding-imports.md) записи переадресованных точек не поддерживается.
 
 - Отложенная загрузка библиотеки DLL может изменить поведение процесса, если в точке входа библиотеки DLL, загружаемой с задержкой, осуществляется инициализация процессов. Другие варианты включают статическая память TLS (локальное хранилище потока), объявленные с помощью [__declspec(thread)](../../cpp/thread.md), который не обрабатывается, когда библиотека DLL загружается через `LoadLibrary`. Тем не менее, как в статических библиотеках DLL, так и в библиотеках DLL, загружаемых с задержкой, доступна для использования динамическая память TLS, реализуемая с помощью функций `TlsAlloc`, `TlsFree`, `TlsGetValue` и `TlsSetValue`.
 
@@ -33,7 +33,7 @@ ms.locfileid: "57420496"
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](linker-support-for-delay-loaded-dlls.md)<br/>
 [Функции LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [Функция GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [GetProcAddress-функция](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

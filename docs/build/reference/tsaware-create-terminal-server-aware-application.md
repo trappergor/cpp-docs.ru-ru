@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421503"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816949"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (создание приложения, поддерживающего сервер терминалов)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57421503"
 
 При использовании/TSAWARE, и приложение по-прежнему использует ini-файлы, файлы будут совместно использоваться всеми пользователями системы. Если допустима, по-прежнему можно связать приложение с/TSAWARE; в противном случае необходимо использовать: No.
 
-Параметр/TSAWARE включена по умолчанию для Windows и консольных приложений. См. в разделе [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) и [/Version](../../build/reference/version-version-information.md) сведения.
+Параметр/TSAWARE включена по умолчанию для Windows и консольных приложений. См. в разделе [/SUBSYSTEM](subsystem-specify-subsystem.md) и [/Version](version-version-information.md) сведения.
 
 / TSAWARE не является допустимым для драйверов, VxD или DLL.
 
-Если приложение было скомпоновано с/TSAWARE, DUMPBIN [/Headers](../../build/reference/headers.md) будут отображаться сведения об этом.
+Если приложение было скомпоновано с/TSAWARE, DUMPBIN [/Headers](headers.md) будут отображаться сведения об этом.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -56,7 +56,7 @@ ms.locfileid: "57421503"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)<br/>
 [Хранить сведения о пользователе](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [Устаревшие приложения в среде служб терминалов](https://msdn.microsoft.com/library/aa382957.aspx)

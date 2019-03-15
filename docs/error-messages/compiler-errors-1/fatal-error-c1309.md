@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - C1309
 ms.assetid: a95363d6-a4f3-45fb-9690-aa7e552093b7
-ms.openlocfilehash: c67c706f91fa48bf6d604ae70a4011c9053d45bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9945a36f1bdd9413cb4d161bb7ee4c6af95a71f6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605248"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813504"
 ---
 # <a name="fatal-error-c1309"></a>Неустранимая ошибка C1309
 
 Несовпадение версий C2. Библиотеки DLL и PGODB\<версии >. БИБЛИОТЕКИ DLL
 
-При использовании для построения и использовать набор инструментов [профильной оптимизации](../../build/reference/profile-guided-optimizations.md) содержит несовпадающие компоненты.  Если не удается устранить эту ошибку вручную, переустановите Visual C++.
+При использовании для построения и использовать набор инструментов [профильной оптимизации](../../build/profile-guided-optimizations.md) содержит несовпадающие компоненты.  Если не удается устранить эту ошибку вручную, переустановите Visual C++.

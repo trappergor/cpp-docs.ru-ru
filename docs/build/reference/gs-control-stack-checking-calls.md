@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e31b42c1d9422d44c5f106f40c4a60a38f23425b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418832"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818578"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (управлять вызовами проверки стека)
 
@@ -55,7 +55,7 @@ ms.locfileid: "57418832"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -67,5 +67,5 @@ ms.locfileid: "57418832"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

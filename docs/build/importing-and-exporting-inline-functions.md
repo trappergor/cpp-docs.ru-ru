@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425553"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822045"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Импорт и экспорт встраиваемых функций
 
@@ -28,22 +28,22 @@ ms.locfileid: "57425553"
 > [!CAUTION]
 >  Следует соблюдать осторожность при передаче импортируемых встроенных функций, так как они могут вызвать конфликты версий. Встроенная функция разворачивается в код приложения; Таким образом Если позже вы повторное написание функции, она не обновится, если не перекомпилируется само приложение. (Как правило, функции DLL могут обновляться без повторной сборки приложения, которые их используют.)
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+- [Экспорт из библиотеки DLL](exporting-from-a-dll.md)
 
-- [Экспорт из библиотеки DLL с помощью. DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+- [Экспорт из библиотеки DLL с помощью. DEF-файлы](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Экспорт и импорт с использованием AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>См. также
 
-[Импортирование и экспортирование](../build/importing-and-exporting.md)
+[Импортирование и экспортирование](importing-and-exporting.md)

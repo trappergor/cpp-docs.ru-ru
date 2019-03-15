@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 0b7d4569c7be70bd97094ebbe09a7ae462331983
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326390"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815961"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (определение библиотеки по умолчанию)
 
@@ -34,15 +34,15 @@ ms.locfileid: "51326390"
 
 **/DEFAULTLIB** параметр добавляет один *библиотеки* в список библиотек, LINK выполняет поиск при разрешении ссылок. Это библиотека, заданная с помощью **/DEFAULTLIB** выполняется после библиотеки указаны явно в командной строке и перед стандартных библиотек в OBJ-файлы.
 
-При использовании без аргументов, [/NODEFAULTLIB (игнорировать все стандартные библиотеки)](../../build/reference/nodefaultlib-ignore-libraries.md) параметр переопределяет все **/DEFAULTLIB**:*библиотеки* параметры. **/NODEFAULTLIB**:*библиотеки* параметр переопределения **/DEFAULTLIB**:*библиотеки* при же *библиотеки*имя указано в обоих.
+При использовании без аргументов, [/NODEFAULTLIB (игнорировать все стандартные библиотеки)](nodefaultlib-ignore-libraries.md) параметр переопределяет все **/DEFAULTLIB**:*библиотеки* параметры. **/NODEFAULTLIB**:*библиотеки* параметр переопределения **/DEFAULTLIB**:*библиотеки* при же *библиотеки*имя указано в обоих.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
-1. В **Дополнительные параметры**, введите **/DEFAULTLIB**:*библиотеки* параметр для каждой библиотеки для поиска. Выберите **ОК** для сохранения изменений.
+1. В **Дополнительные параметры**, введите **/DEFAULTLIB**:*библиотеки* параметр для каждой библиотеки для поиска. Выберите **ОК** для сохранения внесенных изменений.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
@@ -50,5 +50,5 @@ ms.locfileid: "51326390"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Справочник по компоновщику MSVC](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)

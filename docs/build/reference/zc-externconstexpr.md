@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -Zc:externConstexpr compiler option (C++)
 - extern constexpr variables (C++)
 ms.assetid: 4da5e33a-2e4d-4ed2-8616-bd8f43265c27
-ms.openlocfilehash: b0af9fa0cc61b82853e64808897b30aaf2fa887d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3c18a5310646ea39c0599f709e9fddc3990b7a2b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415166"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813062"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/ Zc: externconstexpr (Включение внешних переменных constexpr)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57415166"
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Установка параметра компилятора в Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -38,5 +38,5 @@ ms.locfileid: "57415166"
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>
 [Ключевое слово auto](../../cpp/auto-keyword.md)

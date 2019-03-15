@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425670"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812321"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Исключение повторяющихся строк)
 
@@ -45,16 +45,16 @@ char *t = "This is a character buffer";
 ```
 
 > [!NOTE]
->  [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) автоматически задает режим работы, изменить и продолжить, **/GF** параметр.
+>  [/ZI](z7-zi-zi-debug-information-format.md) автоматически задает режим работы, изменить и продолжить, **/GF** параметр.
 
 > [!NOTE]
->  **/GF** параметр компилятора создает адресуемый раздел для каждого уникальную строку. И по умолчанию объектный файл может содержать до 65 536 адресуемых секций. Если программа содержит более 65 536 строк, используйте [/bigobj](../../build/reference/bigobj-increase-number-of-sections-in-dot-obj-file.md) параметр компилятора, чтобы создать дополнительные разделы.
+>  **/GF** параметр компилятора создает адресуемый раздел для каждого уникальную строку. И по умолчанию объектный файл может содержать до 65 536 адресуемых секций. Если программа содержит более 65 536 строк, используйте [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) параметр компилятора, чтобы создать дополнительные разделы.
 
-**/GF** вступает в силу, когда [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md) или **/O2** используется.
+**/GF** вступает в силу, когда [/O1](o1-o2-minimize-size-maximize-speed.md) или **/O2** используется.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -68,5 +68,5 @@ char *t = "This is a character buffer";
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

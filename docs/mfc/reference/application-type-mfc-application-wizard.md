@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static libraries, MFC
 ms.assetid: c3f62b0e-3f13-42c5-9859-d3890d0c3e1d
-ms.openlocfilehash: de23c59fdb59f6f40e256589c5450a8118bb8e5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: be4fff19b812ef3dfdafc3270b4923a02e456cee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281256"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820576"
 ---
 # <a name="application-type-mfc-application-wizard"></a>Тип приложения, мастер приложений MFC
 
@@ -60,7 +60,7 @@ ms.locfileid: "57281256"
 
   Указывает, имеет ли приложение standard MFC, проводник, Visual Studio или архитектура Office и отображения. Дополнительные сведения см. в разделе [Создание приложения MFC в стиле проводника файл](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md).
 
-  |Параметр|Описание:|
+  |Параметр|Описание|
   |------------|-----------------|
   |**MFC standard**|Предоставляет стандартную архитектуру приложения MFC.|
   |**Проводник**|Реализует файл аналогичных приложений с помощью окна разделителя, где левая панель – [класс CTreeView](../../mfc/reference/ctreeview-class.md) и правая панель – [класс CListView](../../mfc/reference/clistview-class.md).|
@@ -101,4 +101,4 @@ ms.locfileid: "57281256"
 ## <a name="see-also"></a>См. также
 
 [Мастер приложений MFC](../../mfc/reference/mfc-application-wizard.md)<br/>
-[Типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md)
+[Типы файлов, создаваемых для проектов Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md)

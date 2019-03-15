@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -RAWDATA dumpbin option
 - /RAWDATA dumpbin option
 ms.assetid: 41cba845-5e1f-415e-9fe4-604a52235983
-ms.openlocfilehash: 4e884ba8bca7b3ccdf900c7da2c43dd741c03d12
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 02af8df04d80c20c5d7629b51abab6295a21f5e5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413372"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816468"
 ---
 # <a name="rawdata"></a>/RAWDATA
 
@@ -35,8 +35,8 @@ ms.locfileid: "57413372"
 |НЕТ|Необработанные данные отбрасываются. Этот аргумент полезен для управления выводом/ALL.|
 |*Число*|Отображаемые строки заданы для ширины, который содержит `number` значений каждой строке.|
 
-Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+Только [/Headers](headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](gl-whole-program-optimization.md) параметр компилятора.
 
 ## <a name="see-also"></a>См. также
 
-[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+[Параметры DUMPBIN](dumpbin-options.md)

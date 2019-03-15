@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 73abc426-dab0-45e2-be85-0f9a14206cc2
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 3cefe34eef1a30274ba2e9e362e2f61458f10e38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb23106648e3325755a857d0b962112e9bdcfac4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565923"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822604"
 ---
 # <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/ Параметр CLRUNMANAGEDCODECHECK (Remove SuppressUnmanagedCodeSecurityAttribute)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50565923"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните узел **Свойства конфигурации**.
 
@@ -55,5 +55,5 @@ ms.locfileid: "50565923"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Справочник по компоновщику MSVC](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)

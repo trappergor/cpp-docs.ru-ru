@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414087"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816143"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (инкрементная компоновка)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57414087"
 
 - Выбран параметр /ORDER
 
-/ INCREMENTAL подразумевается, если [/DEBUG](../../build/reference/debug-generate-debug-info.md) указан.
+/ INCREMENTAL подразумевается, если [/DEBUG](debug-generate-debug-info.md) указан.
 
 Кроме того, LINK выполняет полную компоновку, если возникает одна из следующих ситуаций:
 
@@ -72,7 +72,7 @@ ms.locfileid: "57414087"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **компоновщика** папки.
 
@@ -86,5 +86,5 @@ ms.locfileid: "57414087"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b6620b73713886301e4efc29754cf407d9576f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280021"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812347"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>Настройка оптимизации компилятора для проекта ATL
 
@@ -54,8 +54,7 @@ class ATL_NO_VTABLE CProjName
 ## <a name="see-also"></a>См. также
 
 [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Типы проектов Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - module definition files
 - /DEF linker option
 ms.assetid: 6497fa68-65f0-48ca-8f66-b87166fc631a
-ms.openlocfilehash: 4b6490186e2faf289844f7fb6b84f5a1c27b10a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c08412fb50835485e7941b2bb1db088943387b71
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423512"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807446"
 ---
 # <a name="def-specify-module-definition-file"></a>/DEF (указание файла определения модуля)
 
@@ -31,11 +31,11 @@ ms.locfileid: "57423512"
 
 ## <a name="remarks"></a>Примечания
 
-Параметр/DEF передает файл определения модуля (.def) в компоновщик. Ссылку можно указать только один DEF-файл. Дополнительные сведения о DEF-файлы, см. в разделе [файлы определения модуля](../../build/reference/module-definition-dot-def-files.md).
+Параметр/DEF передает файл определения модуля (.def) в компоновщик. Ссылку можно указать только один DEF-файл. Дополнительные сведения о DEF-файлы, см. в разделе [файлы определения модуля](module-definition-dot-def-files.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -51,5 +51,5 @@ ms.locfileid: "57423512"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

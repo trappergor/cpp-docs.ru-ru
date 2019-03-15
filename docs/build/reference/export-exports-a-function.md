@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EXPORT linker option
 - -EXPORT linker option
 ms.assetid: 0920fb44-a472-4091-a8e6-73051f494ca0
-ms.openlocfilehash: 86e2dadbfcdc31d5d5f5fe3121c33f9011c14ab5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7c4f4621bbccd4285bcf4eca07d2544d53d14f6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414387"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819861"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (экспортирует функцию)
 
@@ -36,7 +36,7 @@ ms.locfileid: "57414387"
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) в исходном коде
 
-1. [ЭКСПОРТОВ](../../build/reference/exports.md) инструкции в DEF-файла
+1. [ЭКСПОРТОВ](exports.md) инструкции в DEF-файла
 
 1. Спецификации/Export в команде LINK
 
@@ -44,7 +44,7 @@ ms.locfileid: "57414387"
 
 Все эти методы можно использовать в одной программе. Когда программа LINK создает программу, содержащую экспорты, она также создает библиотеку импорта, если только не используется файл EXP в сборке.
 
-LINK использует декорированную форму идентификаторов. Компилятор добавляет идентификатор, создавая OBJ-файле. Если *имя* указывается для компоновщика в его недекорированной форме (как оно отображается в исходном коде) ССЫЛКУ пытается соответствовать имени. Если не удается найти уникальное соответствие, ссылка выдает сообщение об ошибке. Используйте [DUMPBIN](../../build/reference/dumpbin-reference.md) средство, чтобы получить [декорированное имя](../../build/reference/decorated-names.md) форма идентификатора при необходимости укажите его в компоновщик.
+LINK использует декорированную форму идентификаторов. Компилятор добавляет идентификатор, создавая OBJ-файле. Если *имя* указывается для компоновщика в его недекорированной форме (как оно отображается в исходном коде) ССЫЛКУ пытается соответствовать имени. Если не удается найти уникальное соответствие, ссылка выдает сообщение об ошибке. Используйте [DUMPBIN](dumpbin-reference.md) средство, чтобы получить [декорированное имя](decorated-names.md) форма идентификатора при необходимости укажите его в компоновщик.
 
 > [!NOTE]
 > Не указывайте декорированную форму идентификаторов C, объявляются `__cdecl` или `__stdcall`.
@@ -58,7 +58,7 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
@@ -70,5 +70,5 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

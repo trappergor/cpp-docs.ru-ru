@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418949"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812945"
 ---
 # <a name="error-handling-and-notification"></a>Обработка ошибок и предупреждений
 
 Дополнительные сведения о обработка ошибок и предупреждений, см. в разделе [понятие вспомогательной функции](understanding-the-helper-function.md).
 
-Дополнительные сведения о функции-ловушки, см. в разделе [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md).
+Дополнительные сведения о функции-ловушки, см. в разделе [определение структуры и константы](structure-and-constant-definitions.md).
 
 Если программа использует библиотеки DLL, загружаемых с задержкой, она должна обрабатывать ошибки надежно так, как сбои, возникающие во время работы программы приведет к необработанных исключений. Обработка сбоев состоит из двух частей:
 
@@ -27,12 +27,12 @@ ms.locfileid: "57418949"
 
 Обработка ошибок и предупреждений, рассматривается в следующих разделах:
 
-- [Обработчики уведомлений](../../build/reference/notification-hooks.md)
+- [Обработчики уведомлений](notification-hooks.md)
 
-- [Обработчики сбоев](../../build/reference/failure-hooks.md)
+- [Обработчики сбоев](failure-hooks.md)
 
-- [Исключения](../../build/reference/exceptions-c-cpp.md)
+- [Исключения](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](linker-support-for-delay-loaded-dlls.md)

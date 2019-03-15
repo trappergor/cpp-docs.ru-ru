@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LIB [C++]
 - 32-Bit Library Manager
 ms.assetid: ecc7f643-bbd4-47a3-8dc6-b360f880db91
-ms.openlocfilehash: 382810fd418dbc49b20885f487ca9a35b0889a5f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8e0c2815fdc3ab9ab171d3ebb94480393c8815ed
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415335"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813816"
 ---
 # <a name="lib-reference"></a>Справочник по LIB
 
@@ -24,18 +24,18 @@ ms.locfileid: "57415335"
 > [!NOTE]
 >  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
 
-- [Общие сведения о LIB](../../build/reference/overview-of-lib.md)
+- [Общие сведения о LIB](overview-of-lib.md)
 
-- [Практическое руководство. Параметры LIB.EXE в среде разработки Visual Studio](../../build/reference/how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
+- [Практическое руководство. Параметры LIB.EXE в среде разработки Visual Studio](how-to-set-lib-exe-options-in-the-visual-studio-development-environment.md)
 
-- [Запуск программы LIB](../../build/reference/running-lib.md)
+- [Запуск программы LIB](running-lib.md)
 
-- [Управление библиотекой](../../build/reference/managing-a-library.md)
+- [Управление библиотекой](managing-a-library.md)
 
-- [Извлечение члена библиотеки](../../build/reference/extracting-a-library-member.md)
+- [Извлечение члена библиотеки](extracting-a-library-member.md)
 
-- [Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md)
+- [Работа с библиотеками импорта и файлами экспорта](working-with-import-libraries-and-export-files.md)
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)

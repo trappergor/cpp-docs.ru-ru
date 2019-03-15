@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326164"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815974"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/ DEPENDENTLOADFLAG (зависимой загрузки флаги, заданные по умолчанию)
 
@@ -42,7 +42,7 @@ ms.locfileid: "51326164"
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Установка параметра компоновщика DEPENDENTLOADFLAG в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
@@ -54,9 +54,9 @@ ms.locfileid: "51326164"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](setting-linker-options.md)
-- [Параметры компоновщика](linker-options.md)
-- [Неявное связывание с библиотекой DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [Определение подходящего метода связывания](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Справочник по компоновщику MSVC](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)
+- [Связывание исполняемого файла с библиотекой DLL](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Связывание исполняемого файла с библиотекой DLL](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [Порядок поиска библиотеки динамической компоновки](/windows/desktop/Dlls/dynamic-link-library-search-order)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420691"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814557"
 ---
 # <a name="mutual-imports"></a>Взаимный импорт
 
@@ -41,7 +41,7 @@ ms.locfileid: "57420691"
 
 Ниже показано решение для двух взаимного импорта библиотек DLL, DLL1 и DLL2. Шаг 1 — это выполнить LIB, с набором параметров/DEF, на DLL1. Шаг 1 создает DLL1.lib библиотеки импорта и DLL1.exp. На шаге 2 библиотека импорта используется для построения DLL2, который в свою очередь создает библиотеку импорта для DLL2 символов. Шаг 3 построение DLL1 с помощью DLL1.exp и DLL2.lib в качестве входных данных. Обратите внимание на то, что файл EXP для DLL2 не является необходимым, поскольку LIB не используется для построения библиотеки импорта DLL2.
 
-![Компоновка двух библиотек DLL с помощью взаимного импорта](../build/media/vc37yj1.gif "компоновка двух библиотек DLL с помощью взаимного импорта")<br/>
+![Компоновка двух библиотек DLL с помощью взаимного импорта](media/vc37yj1.gif "компоновка двух библиотек DLL с помощью взаимного импорта")<br/>
 Компоновка двух библиотек DLL с взаимный импорт
 
 ## <a name="limitations-of-afxext"></a>Ограничения _AFXEXT
@@ -107,26 +107,26 @@ class CExampleA : public CObject
 #define AFX_DATA
 ```
 
-### <a name="what-do-you-want-to-do"></a>Выберите действие
+### <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+- [Экспорт из библиотеки DLL](exporting-from-a-dll.md)
 
-- [Экспорт из библиотеки DLL с помощью. DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+- [Экспорт из библиотеки DLL с помощью. DEF-файлы](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Экспорт и импорт с использованием AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Программы LIB и параметр/DEF](../build/reference/lib-reference.md)
+- [Программы LIB и параметр/DEF](reference/lib-reference.md)
 
 ## <a name="see-also"></a>См. также
 
-[Импортирование и экспортирование](../build/importing-and-exporting.md)
+[Импортирование и экспортирование](importing-and-exporting.md)

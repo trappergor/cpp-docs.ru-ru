@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [C++], building
 - DLL linker option [C++]
 ms.assetid: c7685aec-31d0-490f-9503-fb5171a23609
-ms.openlocfilehash: edad85b2890679e4247c7d34b4e19534e871f4dd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5f7907d659ee3bedc590b88320df03edce005b06
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420067"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820511"
 ---
 # <a name="dll-build-a-dll"></a>/DLL (построение библиотеки DLL)
 
@@ -29,9 +29,9 @@ ms.locfileid: "57420067"
 
 1. [__declspec(dllexport)](../../cpp/dllexport-dllimport.md) в исходном коде
 
-1. [ЭКСПОРТОВ](../../build/reference/exports.md) инструкции в DEF-файла
+1. [ЭКСПОРТОВ](exports.md) инструкции в DEF-файла
 
-1. [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
+1. [/EXPORT](export-exports-a-function.md) спецификации в команде LINK
 
 Программа может использовать более одного метода.
 
@@ -43,7 +43,7 @@ ms.locfileid: "57420067"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **свойства конфигурации** папки.
 
@@ -57,5 +57,5 @@ ms.locfileid: "57420067"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

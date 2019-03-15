@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 8a5aede89e2b37655b67144a9882f1de9b7a4bf8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414802"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809591"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (Опущенное по умолчанию имя библиотеки)
 
@@ -30,13 +30,13 @@ ms.locfileid: "57414802"
 
 ## <a name="remarks"></a>Примечания
 
-Дополнительные сведения о библиотеке по умолчанию, см. в разделе [использование библиотеки времени выполнения](../../build/reference/md-mt-ld-use-run-time-library.md).
+Дополнительные сведения о библиотеке по умолчанию, см. в разделе [использование библиотеки времени выполнения](md-mt-ld-use-run-time-library.md).
 
 Можно использовать **/Zl** для компиляции OBJ-файлы, которые планируется включить в библиотеку. Несмотря на то, что при пропуске названия библиотеки сохраняет только небольшой объем пространства для одном obj-файле, сохранить общее пространство важен в библиотеку, которая содержит много модулей объекта.
 
 Этот параметр является дополнительным параметром. Этот параметр удаляет определенные поддержка библиотек времени выполнения C, необходимой для вашего приложения, в результате чего ошибки во время компоновки, если ваше приложение зависит от этой поддержки. При использовании этого параметра необходимо указать необходимые компоненты иным способом.
 
-Используйте [/NODEFAULTLIB (пропуск библиотек)](../../build/reference/nodefaultlib-ignore-libraries.md). Чтобы перенаправить компоновщик для пропуска ссылок на библиотеки в все OBJ-файлы.
+Используйте [/NODEFAULTLIB (пропуск библиотек)](nodefaultlib-ignore-libraries.md). Чтобы перенаправить компоновщик для пропуска ссылок на библиотеки в все OBJ-файлы.
 
 Дополнительные сведения см. в разделе [Функции библиотеки CRT](../../c-runtime-library/crt-library-features.md).
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -70,5 +70,5 @@ void Test() {
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

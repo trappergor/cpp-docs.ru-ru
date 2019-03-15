@@ -10,12 +10,12 @@ helpviewer_keywords:
 - delayimp.h
 - helper functions
 ms.assetid: 6279c12c-d908-4967-b0b3-cabfc3e91d3d
-ms.openlocfilehash: 955ae0ed8feac22da19eb13218e2332849477e29
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3ad193d0101507f43145c6af9f8e6200ab6fcdb5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421393"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817999"
 ---
 # <a name="understanding-the-helper-function"></a>Понятие вспомогательной функции
 
@@ -53,16 +53,16 @@ ms.locfileid: "57421393"
 
 В следующих разделах описываются вспомогательной функции:
 
-- [Изменения во вспомогательной функции отложенной загрузки библиотеки DLL по сравнению с Visual C++ версии 6.0](../../build/reference/changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
+- [Изменения во вспомогательной функции отложенной загрузки библиотеки DLL по сравнению с Visual C++ версии 6.0](changes-in-the-dll-delayed-loading-helper-function-since-visual-cpp-6-0.md)
 
-- [Соглашения о вызовах, параметры и тип возвращаемого значения](../../build/reference/calling-conventions-parameters-and-return-type.md)
+- [Соглашения о вызовах, параметры и тип возвращаемого значения](calling-conventions-parameters-and-return-type.md)
 
-- [Определения структур и констант](../../build/reference/structure-and-constant-definitions.md)
+- [Определения структур и констант](structure-and-constant-definitions.md)
 
-- [Вычисление необходимых значений](../../build/reference/calculating-necessary-values.md)
+- [Вычисление необходимых значений](calculating-necessary-values.md)
 
-- [Выгрузка библиотеки DLL с отложенной загрузкой](../../build/reference/explicitly-unloading-a-delay-loaded-dll.md)
+- [Выгрузка библиотеки DLL с отложенной загрузкой](explicitly-unloading-a-delay-loaded-dll.md)
 
 ## <a name="see-also"></a>См. также
 
-[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[Поддержка компоновщика для библиотек DLL с отложенной загрузкой](linker-support-for-delay-loaded-dlls.md)

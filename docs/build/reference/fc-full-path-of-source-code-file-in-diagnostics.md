@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 190174e1e2ac4d160140ddc54f9cc1c3a1b31709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422485"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809032"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (полный путь к файлу исходного кода в папке Diagnostics)
 
@@ -44,13 +44,13 @@ int main( ) {
 
 **/FC** требуется также в том случае, если вы хотите увидеть полный путь к имени файла, при использовании &#95; &#95;ФАЙЛ&#95; &#95; макрос. См. в разделе [предустановленные макросы](../../preprocessor/predefined-macros.md) Дополнительные сведения о &#95; &#95;ФАЙЛ&#95;&#95;.
 
-**/FC** подразумевается параметр **/ZI**. Дополнительные сведения о **/ZI**, см. в разделе [/Z7, / Zi, /ZI (формат отладочной информации)](../../build/reference/z7-zi-zi-debug-information-format.md).
+**/FC** подразумевается параметр **/ZI**. Дополнительные сведения о **/ZI**, см. в разделе [/Z7, / Zi, /ZI (формат отладочной информации)](z7-zi-zi-debug-information-format.md).
 
 **/FC** выводит полные пути, задаваемый в нижнем регистре.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **Дополнительно** страницу свойств.
 
@@ -62,5 +62,5 @@ int main( ) {
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

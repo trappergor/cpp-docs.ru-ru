@@ -14,16 +14,16 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46da8fc0cb98406bdf97285d7c6f824afd61c4bb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298065"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808356"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>Классы окна фрейма, создаваемые с помощью Мастера приложений
 
-При использовании [мастера приложений](../ide/creating-desktop-projects-by-using-application-wizards.md) Создание скелет приложения, в дополнение к приложений, классы документов и представлений, мастер приложения создает класс производном фреймового окна для окна главного фрейма приложения. Класс называется `CMainFrame` по умолчанию, а также файлы, которые его содержат называются MAINFRM. H и MAINFRM. CPP.
+При создания нового MFC проекта **новый проект** диалоговое окно, в дополнение к приложений, классы документов и представлений, мастер приложения создает класс производном фреймового окна для окна главного фрейма приложения. Класс называется `CMainFrame` по умолчанию, а также файлы, которые его содержат называются MAINFRM. H и MAINFRM. CPP.
 
 Если приложение является SDI, ваш `CMainFrame` класс является производным от класса [CFrameWnd](../mfc/reference/cframewnd-class.md).
 
@@ -36,4 +36,5 @@ ms.locfileid: "57298065"
 ## <a name="see-also"></a>См. также
 
 [Классы окна фрейма](../mfc/frame-window-classes.md)<br/>
-[Программа MFC или управление файлами исходного кода и заголовков](../ide/mfc-program-or-control-source-and-header-files.md)
+[Программа MFC или управление файлами исходного кода и заголовков](../build/reference/mfc-program-or-control-source-and-header-files.md)
+

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /HEAP linker option
 - HEAP linker option
 ms.assetid: a3f71927-7f1d-492c-9fdb-dfccb1a043da
-ms.openlocfilehash: 500e1eca9385697829edca46e5e703a5238684a7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 715eaa358d052d4ae646f38f2e784f0235dffccb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422377"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813298"
 ---
 # <a name="heap-set-heap-size"></a>/HEAP (Установка размера кучи)
 
@@ -34,11 +34,11 @@ ms.locfileid: "57422377"
 
 Укажите *зарезервировать* и `commit` значения в десятичном или нотации языка.
 
-Эта функция также доступна через файл определения модуля с [HEAPSIZE](../../build/reference/heapsize.md).
+Эта функция также доступна через файл определения модуля с [HEAPSIZE](heapsize.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -52,5 +52,5 @@ ms.locfileid: "57422377"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

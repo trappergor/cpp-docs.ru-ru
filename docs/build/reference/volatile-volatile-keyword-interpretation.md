@@ -13,12 +13,12 @@ helpviewer_keywords:
 - volatile compiler option
 - -volatile compiler option [C++]
 ms.assetid: 9d08fcc6-5bda-44c8-8151-8d8d54f164b8
-ms.openlocfilehash: da2d981d9fcca6be66a7fd495e7c76670ed8e3ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02871622242930d7419fda16f4d106fccb2056f0
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502522"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819497"
 ---
 # <a name="volatile-volatile-keyword-interpretation"></a>/volatile (интерпретация ключевого слова volatile)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50502522"
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>Чтобы задать/volatile-параметр компилятора в Visual Studio
 
-1. Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -55,5 +55,5 @@ ms.locfileid: "50502522"
 ## <a name="see-also"></a>См. также
 
 [volatile](../../cpp/volatile-cpp.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

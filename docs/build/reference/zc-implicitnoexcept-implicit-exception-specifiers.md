@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Zc:implicitNoexcept
 - -Zc:implicitNoexcept
 ms.assetid: 71807652-6f9d-436b-899e-f52daa6f500b
-ms.openlocfilehash: 0ca03cc2a3afa0d5665f217ccb0d41eb1e41d3be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec2b8c8fb4c7730a78c4403606d6fa61c0ddc374
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480938"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810020"
 ---
 # <a name="zcimplicitnoexcept-implicit-exception-specifiers"></a>/Zc:implicitNoexcept (неявные спецификаторы исключений)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50480938"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ Zc: implicitnoexcept**[**-**]
+> **/Zc:implicitNoexcept**[**-**]
 
 ## <a name="remarks"></a>Примечания
 
@@ -129,7 +129,7 @@ Exit returning EXIT_SUCCESS
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -137,7 +137,7 @@ Exit returning EXIT_SUCCESS
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [Спецификации исключений (throw)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [terminate](../../standard-library/exception-functions.md#terminate)<br/>

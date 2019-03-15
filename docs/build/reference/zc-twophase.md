@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648765"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821408"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(отключение двухэтапного поиска имени)
 
@@ -162,7 +162,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -170,4 +170,4 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>

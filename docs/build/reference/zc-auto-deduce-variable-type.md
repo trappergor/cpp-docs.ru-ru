@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 03bbe3d9da0530d4fe3c540d46d1a597fbe9dd2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549309"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822565"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (выведение типа переменной)
 
@@ -22,7 +22,7 @@ ms.locfileid: "50549309"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ Zc: auto**[**-**]
+> **/Zc:auto**[**-**]
 
 ## <a name="remarks"></a>Примечания
 
@@ -32,7 +32,7 @@ ms.locfileid: "50549309"
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>Установка параметра компилятора в Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -40,5 +40,5 @@ ms.locfileid: "50549309"
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>
 [Ключевое слово auto](../../cpp/auto-keyword.md)

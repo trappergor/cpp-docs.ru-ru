@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413021"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820633"
 ---
 # <a name="building-browse-information-files-overview"></a>Информационные файлы просмотра сборки: Обзор
 
@@ -20,18 +20,18 @@ ms.locfileid: "57413021"
 
 Создание SBR и BSC файлов занимает некоторое время, поэтому Visual C++ эти функции будут отключены по умолчанию. Если вы хотите просмотреть текущую информацию, необходимо включить параметры просмотра и повторите сборку проекта.
 
-Используйте [/FR](../../build/reference/fr-fr-create-dot-sbr-file.md) или [/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) сообщить компилятору создать SBR-файлов. Чтобы создать файл BSC, можно вызвать [BSCMAKE](../../build/reference/bscmake-command-line.md) из командной строки. Использование BSCMAKE из командной строки позволяет более точно контролировать манипуляции файлы для просмотра информации. См. в разделе [Справочник по BSCMAKE](../../build/reference/bscmake-reference.md) Дополнительные сведения.
+Используйте [/FR](fr-fr-create-dot-sbr-file.md) или [/Fr](fr-fr-create-dot-sbr-file.md) сообщить компилятору создать SBR-файлов. Чтобы создать файл BSC, можно вызвать [BSCMAKE](bscmake-command-line.md) из командной строки. Использование BSCMAKE из командной строки позволяет более точно контролировать манипуляции файлы для просмотра информации. См. в разделе [Справочник по BSCMAKE](bscmake-reference.md) Дополнительные сведения.
 
 > [!TIP]
 >  Можно включить создание SBR-файла, но оставить отключить создание BSC-файла. Это обеспечивает быстрые построения, а также позволяет быстро создавать новый BSC-файла, включение Создание BSC-файла и сборка проекта.
 
 Можно уменьшить время, память и дисковое пространство, необходимое для создания BSC-файла, уменьшив размер BSC-файла.
 
-См. в разделе [свойств "Общие" (проект)](../../ide/general-property-page-project.md) сведения о том, как создать файл обозревателя в среде разработки.
+См. в разделе [свойств "Общие" (проект)](general-property-page-project.md) сведения о том, как создать файл обозревателя в среде разработки.
 
 ### <a name="to-create-a-smaller-bsc-file"></a>Для создания небольших BSC-файла
 
-1. Используйте [командной строки параметры BSCMAKE](../../build/reference/bscmake-options.md) исключить данные из файла для просмотра информации.
+1. Используйте [командной строки параметры BSCMAKE](bscmake-options.md) исключить данные из файла для просмотра информации.
 
 1. Не включайте локальные символы в один или несколько SBR-файлов при компиляции или сборке.
 
@@ -45,5 +45,5 @@ ms.locfileid: "57413021"
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Справочник ВSCMAKE](../../build/reference/bscmake-reference.md)
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)<br/>
+[Справочник ВSCMAKE](bscmake-reference.md)

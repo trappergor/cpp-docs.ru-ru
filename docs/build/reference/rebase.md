@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 42cbcb911fcd0aa7753d84aae5523d28371b9972
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422043"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815414"
 ---
 # <a name="rebase"></a>/REBASE
 
@@ -26,7 +26,7 @@ ms.locfileid: "57422043"
 
 ## <a name="remarks"></a>Примечания
 
-Этот параметр задает базовые адреса для указанных файлов. EDITBIN назначает новые базовые адреса в непрерывным адресным пространством в соответствии с размером каждого файла с округлением до ближайших 64 КБ. Дополнительные сведения о базовых адресов, см. в разделе [базовый адрес](../../build/reference/base-base-address.md) (/ BASE) параметр компоновщика.
+Этот параметр задает базовые адреса для указанных файлов. EDITBIN назначает новые базовые адреса в непрерывным адресным пространством в соответствии с размером каждого файла с округлением до ближайших 64 КБ. Дополнительные сведения о базовых адресов, см. в разделе [базовый адрес](base-base-address.md) (/ BASE) параметр компоновщика.
 
 Укажите программы исполняемые файлы и библиотеки DLL в *файлы* аргумент в командной строке (программа EDITBIN), в том порядке, в котором они должны основываться. При необходимости можно указать один или несколько *модификаторы*, разделяя их запятой (**,**):
 
@@ -38,4 +38,4 @@ ms.locfileid: "57422043"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры EDITBIN](../../build/reference/editbin-options.md)
+[Параметры EDITBIN](editbin-options.md)

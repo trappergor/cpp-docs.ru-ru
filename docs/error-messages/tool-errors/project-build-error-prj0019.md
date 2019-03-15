@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0019
 ms.assetid: 5390a62b-aacf-4bc8-b9d7-08f1e0233423
-ms.openlocfilehash: d99750efcfc400cc85a865ebd30a8c2a3da1d07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e97d9488df0eeb666cb78354d0363c2a359a159d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620798"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808096"
 ---
 # <a name="project-build-error-prj0019"></a>Ошибка построения проекта PRJ0019
 
@@ -21,6 +21,6 @@ ms.locfileid: "50620798"
 
 Вы также увидите PRJ0019 при инструмент вернул код ошибки, но сообщение об ошибке не. Это может произойти, например, при перенаправлении вывода MIDL NUL.
 
-См. в разделе [действия по устранению неполадок пользовательские сборки и события построения](../../ide/troubleshooting-build-customizations.md) Дополнительные сведения.
+См. в разделе [действия по устранению неполадок пользовательские сборки и события построения](../../build/troubleshooting-build-customizations.md) Дополнительные сведения.
 
 Эта ошибка может возникнуть при выполнении как член группы «Пользователи» и необходим доступ с правами администратора. Дополнительные сведения см. в разделе [Запуск от имени участника группы «Пользователи»](../../security/running-as-a-member-of-the-users-group.md).

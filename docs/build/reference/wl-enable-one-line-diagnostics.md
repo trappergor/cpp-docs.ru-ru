@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-ms.openlocfilehash: 820143e1ff6feb718660fe8b297f2b96e26d2eb9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c0d5110615f66dcf4f7dc170d89ee58c2e8fa5cb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413814"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811983"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (включение вывода однострочных диагностических сообщений)
 
@@ -43,7 +43,7 @@ int main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -57,5 +57,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

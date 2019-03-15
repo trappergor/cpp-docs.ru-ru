@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423317"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815428"
 ---
 # <a name="decorated-names"></a>Внутренние имена
 
@@ -67,7 +67,7 @@ ms.locfileid: "57423317"
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>Использование листинга для просмотра внутренних имен
 
-1. Создайте листинг, скомпилировав исходный файл, содержащий данные, объект, или определение функции или прототип с [тип файла](../../build/reference/fa-fa-listing-file.md) параметр компилятора сборка с исходным кодом (**параметра/FAs**).
+1. Создайте листинг, скомпилировав исходный файл, содержащий данные, объект, или определение функции или прототип с [тип файла](fa-fa-listing-file.md) параметр компилятора сборка с исходным кодом (**параметра/FAs**).
 
    Например, введите `cl /c /FAs example.cpp` в командную строку разработчика, чтобы создать файл листинга example.asm.
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)<br/>
 [Использование ключевого слова extern для задания компоновки](../../cpp/using-extern-to-specify-linkage.md)

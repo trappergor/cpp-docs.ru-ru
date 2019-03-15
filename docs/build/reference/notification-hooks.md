@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426554"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818314"
 ---
 # <a name="notification-hooks"></a>Обработчики уведомления
 
@@ -77,8 +77,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-Уведомления передаются в **DelayLoadInfo** Структура функции-обработчика и значение уведомления. Эти данные идентичен тому, который используется вспомогательная подпрограмма задержки загрузки. Значение уведомлений будет иметь одно из значений, определенных в [определение структуры и константы](../../build/reference/structure-and-constant-definitions.md).
+Уведомления передаются в **DelayLoadInfo** Структура функции-обработчика и значение уведомления. Эти данные идентичен тому, который используется вспомогательная подпрограмма задержки загрузки. Значение уведомлений будет иметь одно из значений, определенных в [определение структуры и константы](structure-and-constant-definitions.md).
 
 ## <a name="see-also"></a>См. также
 
-[Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)
+[Обработка ошибок и предупреждений](error-handling-and-notification.md)

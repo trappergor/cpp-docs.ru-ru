@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: a451b7fe7b2f7cd89f8898232badf0d3b7e9f138
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447220"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816234"
 ---
 # <a name="project-build-warning-prj0049"></a>Предупреждение при построении проекта PRJ0049
 
@@ -21,7 +21,7 @@ ms.locfileid: "50447220"
 
 1. Выберите один из следующих вариантов.
 
-   - Изменение целевой версии .NET framework в проекте **страницы свойств** диалоговое окно, так как это превышающую минимально допустимая версия для всех указанных сборок и проектов. Дополнительные сведения см. в разделе [Добавление ссылок](../../ide/adding-references-in-visual-cpp-projects.md).
+   - Изменение целевой версии .NET framework в проекте **страницы свойств** диалоговое окно, так как это превышающую минимально допустимая версия для всех указанных сборок и проектов. Дополнительные сведения см. в разделе [Добавление ссылок](../../build/adding-references-in-visual-cpp-projects.md).
 
    - Удалите ссылку на сборку или проект, минимально допустимая версия, которая старше целевой версии .NET framework. Эти объекты помечаются значком предупреждения в проекте **страницы свойств**.
 

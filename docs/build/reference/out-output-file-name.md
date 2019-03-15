@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /OUT C++ linker option
 - linker [C++], output files
 ms.assetid: 976210a4-e51f-4cfb-af5e-c16344455834
-ms.openlocfilehash: 395a2475ec572476f80b17cc5ffab7c2724e6b02
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: be5fe929bdcf52be19955a5bc2d7aa093e194f45
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418052"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812425"
 ---
 # <a name="out-output-file-name"></a>/OUT (имя выходного файла)
 
@@ -35,11 +35,11 @@ ms.locfileid: "57418052"
 
 По умолчанию компоновщик формирует имя файла, используя базовое имя первого указанного файла OBJ и соответствующего расширения (.exe или .dll).
 
-Этот параметр по умолчанию базовое имя для сопоставления MAPFILE или импорта библиотеки. Дополнительные сведения см. в разделе [Создание файла сопоставления](../../build/reference/map-generate-mapfile.md) (/ MAP) и [/IMPLIB](../../build/reference/implib-name-import-library.md).
+Этот параметр по умолчанию базовое имя для сопоставления MAPFILE или импорта библиотеки. Дополнительные сведения см. в разделе [Создание файла сопоставления](map-generate-mapfile.md) (/ MAP) и [/IMPLIB](implib-name-import-library.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -53,5 +53,5 @@ ms.locfileid: "57418052"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

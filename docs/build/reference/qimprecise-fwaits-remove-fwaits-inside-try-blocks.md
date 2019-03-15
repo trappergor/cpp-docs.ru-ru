@@ -7,16 +7,16 @@ helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-ms.openlocfilehash: 3f2a0e6bc28fb812e087a689716be6119640ffca
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 40683382686ea64a80563f3f29b7d3523f4144a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422147"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57819718"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (Удалить ожидания в блоке try)
 
-Удаляет `fwait` внутренние для команды `try` блокировать при использовании [/fp: except](../../build/reference/fp-specify-floating-point-behavior.md) параметр компилятора.
+Удаляет `fwait` внутренние для команды `try` блокировать при использовании [/fp: except](fp-specify-floating-point-behavior.md) параметр компилятора.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ ms.locfileid: "57422147"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -44,6 +44,6 @@ ms.locfileid: "57422147"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры /Q (низкоуровневые операции)](q-options-low-level-operations.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

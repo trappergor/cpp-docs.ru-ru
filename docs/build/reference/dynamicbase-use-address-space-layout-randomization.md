@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /DYNAMICBASE linker option
 - DYNAMICBASE linker option
 ms.assetid: 6c0ced8e-fe9c-4b63-b956-eb8a55fbceb2
-ms.openlocfilehash: 47d23ac6f9234e095a1733a8d4078840318cce4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3495de3ec72bcac78cdee2f5f3265864e7a2932
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512402"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807758"
 ---
 # <a name="dynamicbase-use-address-space-layout-randomization"></a>/DYNAMICBASE (использование технологии Address Space Layout Randomization (ASRL))
 
@@ -21,7 +21,7 @@ ms.locfileid: "50512402"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ DYNAMICBASE**[**: НЕТ**]
+> **/DYNAMICBASE**[**:NO**]
 
 ## <a name="remarks"></a>Примечания
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512402"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **Дополнительно** страницу свойств.
 
@@ -43,7 +43,7 @@ ms.locfileid: "50512402"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Справочник по компоновщику MSVC](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)
 - [/HIGHENTROPYVA](highentropyva-support-64-bit-aslr.md)
 - [Способы защиты программного обеспечения для независимых поставщиков программного обеспечения Windows](https://msdn.microsoft.com/library/bb430720.aspx)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /NXCOMPAT linker option
 - -NXCOMPAT linker option
 - NXCOMPAT linker option
-ms.openlocfilehash: 815719468e7dcf9325d19efe879b8f4ace040094
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8550337189f9c92a1c8a8d86f2f9b2b829bbc3e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490497"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813322"
 ---
 # <a name="nxcompat-compatible-with-data-execution-prevention"></a>/NXCOMPAT (совместимо с предотвращением исполнения данных (DEP))
 
@@ -20,7 +20,7 @@ ms.locfileid: "50490497"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ NXCOMPAT**[**: НЕТ**]
+> **/NXCOMPAT**[**:NO**]
 
 ## <a name="remarks"></a>Примечания
 
@@ -38,7 +38,7 @@ ms.locfileid: "50490497"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
@@ -50,5 +50,5 @@ ms.locfileid: "50490497"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

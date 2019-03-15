@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-ms.openlocfilehash: 59522b462f2393dd3fd4d8afefe9cbbe0e519203
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bfc03ebd5c900bf8bf81b4a50eed02111baf85ee
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413047"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822497"
 ---
 # <a name="u-u-undefine-symbols"></a>Параметры /U и /u (отмена определения символа)
 
@@ -46,18 +46,18 @@ ms.locfileid: "57413047"
 
 |Символ|Функция|
 |------------|--------------|
-|_CHAR_UNSIGNED|Тип char по умолчанию не подписан. Определяется, если [/j](../../build/reference/j-default-char-type-is-unsigned.md) параметра.|
-|_CPPRTTI|Определен для кода, компилируемого с [/GR](../../build/reference/gr-enable-run-time-type-information.md) параметр.|
-|_CPPUNWIND|Определен для кода, компилируемого с [/EHsc](../../build/reference/eh-exception-handling-model.md) параметр.|
-|_DLL|Определяется, если [/MD](../../build/reference/md-mt-ld-use-run-time-library.md) параметра.|
+|_CHAR_UNSIGNED|Тип char по умолчанию не подписан. Определяется, если [/j](j-default-char-type-is-unsigned.md) параметра.|
+|_CPPRTTI|Определен для кода, компилируемого с [/GR](gr-enable-run-time-type-information.md) параметр.|
+|_CPPUNWIND|Определен для кода, компилируемого с [/EHsc](eh-exception-handling-model.md) параметр.|
+|_DLL|Определяется, если [/MD](md-mt-ld-use-run-time-library.md) параметра.|
 |_M_IX86|По умолчанию, определенные для 600 x86 целевых объектов.|
 |_MSC_VER|Для получения дополнительной информации см. [Predefined Macros](../../preprocessor/predefined-macros.md).|
 |_WIN32|Определяется для приложений WIN32. Определяется всегда.|
-|_MT|Определяется, если [/MD или/MT](../../build/reference/md-mt-ld-use-run-time-library.md) параметра.|
+|_MT|Определяется, если [/MD или/MT](md-mt-ld-use-run-time-library.md) параметра.|
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -71,9 +71,9 @@ ms.locfileid: "57413047"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/J (тип символа по умолчанию не подписан)](../../build/reference/j-default-char-type-is-unsigned.md)<br/>
-[/GR (предоставление информации о типах во время выполнения)](../../build/reference/gr-enable-run-time-type-information.md)<br/>
-[/EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md)<br/>
-[/MD, /MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[/J (тип символа по умолчанию не подписан)](j-default-char-type-is-unsigned.md)<br/>
+[/GR (предоставление информации о типах во время выполнения)](gr-enable-run-time-type-information.md)<br/>
+[/EH (модель обработки исключений)](eh-exception-handling-model.md)<br/>
+[/MD, /MT, /LD (использование библиотеки времени выполнения)](md-mt-ld-use-run-time-library.md)

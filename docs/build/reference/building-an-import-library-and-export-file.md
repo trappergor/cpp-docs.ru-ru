@@ -25,12 +25,12 @@ helpviewer_keywords:
 - .lib files
 - EXP files
 ms.assetid: 2fe4f30a-1dd6-4b05-84b5-0752e1dee354
-ms.openlocfilehash: 31570b1e6680b5af5f0a774c290eba20f3b5fdb0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 37c3169b66e1120dbfdb3a69379430e9bc8a1586
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413190"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813491"
 ---
 # <a name="building-an-import-library-and-export-file"></a>Построение библиотеки импорта и файла экспорта
 
@@ -68,4 +68,4 @@ ms.locfileid: "57413190"
 
 ## <a name="see-also"></a>См. также
 
-[Работа с библиотеками импорта и файлами экспорта](../../build/reference/working-with-import-libraries-and-export-files.md)
+[Работа с библиотеками импорта и файлами экспорта](working-with-import-libraries-and-export-files.md)
