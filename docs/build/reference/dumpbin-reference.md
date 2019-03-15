@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COFF files, displaying information about
 - binary file dumper
 ms.assetid: 4bc06822-5330-44b4-8a3f-6180dfd41dfb
-ms.openlocfilehash: b590d852e8139aa7a12d7a7913915cd7a3bdccc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45f6b9c71eaea93597e90de93c704d2ea260235e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416362"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821392"
 ---
 # <a name="dumpbin-reference"></a>Справочник DUMPBIN
 
@@ -24,12 +24,12 @@ ms.locfileid: "57416362"
 > [!NOTE]
 >  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
 
-Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+Только [/Headers](headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](gl-whole-program-optimization.md) параметр компилятора.
 
-- [Командная строка DUMPBIN](../../build/reference/dumpbin-command-line.md)
+- [Командная строка DUMPBIN](dumpbin-command-line.md)
 
-- [Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+- [Параметры DUMPBIN](dumpbin-options.md)
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)

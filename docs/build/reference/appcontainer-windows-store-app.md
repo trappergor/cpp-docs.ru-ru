@@ -2,12 +2,12 @@
 title: / APPCONTAINER (приложение UWP/Microsoft Store)
 ms.date: 11/04/2016
 ms.assetid: 9a432db5-7640-460b-ab18-6f61fa7daf6f
-ms.openlocfilehash: c58559a908a9281507c74c2dd3ff7e56490cb6e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f7ab8cf1ce034580953fdf1403264e8ef3d3ff09
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418676"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812412"
 ---
 # <a name="appcontainer-microsoft-store-app"></a>/ APPCONTAINER (приложение Microsoft Store)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57418676"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните узел **Свойства конфигурации**.
 
@@ -41,5 +41,5 @@ ms.locfileid: "57418676"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)
