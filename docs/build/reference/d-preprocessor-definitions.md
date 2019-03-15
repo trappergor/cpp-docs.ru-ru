@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 18bbdb980c63b3c04b432602afb2402c5e2c42e7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424682"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812087"
 ---
 # <a name="d-preprocessor-definitions"></a>Определения препроцессора (/D)
 
@@ -62,7 +62,7 @@ CL /DTEST=%% TEST.C
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. В левой области выберите **свойства конфигурации**, **C/C++**, **препроцессор**.
 
@@ -97,8 +97,8 @@ TEST defined 1
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/U и /u (отмена определения символа)](../../build/reference/u-u-undefine-symbols.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[/U и /u (отмена определения символа)](u-u-undefine-symbols.md)<br/>
 [Директива #undef (C/C++)](../../preprocessor/hash-undef-directive-c-cpp.md)<br/>
 [Директива #define (C/C++)](../../preprocessor/hash-define-directive-c-cpp.md)

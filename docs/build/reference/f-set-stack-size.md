@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9db595daa7de7820b594a8515ece7481b4382c98
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414451"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820420"
 ---
 # <a name="f-set-stack-size"></a>/F (Задание размера стека)
 
@@ -38,13 +38,13 @@ ms.locfileid: "57414451"
 
 Можно также задать размер стека:
 
-- С помощью **/STACK** параметр компоновщика. Дополнительные сведения см. в разделе [/STACK](../../build/reference/stack.md).
+- С помощью **/STACK** параметр компоновщика. Дополнительные сведения см. в разделе [/STACK](stack.md).
 
-- С помощью программы EDITBIN файл .exe. Дополнительные сведения см. в разделе [Справочник ЕDITBIN](../../build/reference/editbin-reference.md).
+- С помощью программы EDITBIN файл .exe. Дополнительные сведения см. в разделе [Справочник ЕDITBIN](editbin-reference.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
@@ -56,5 +56,5 @@ ms.locfileid: "57414451"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

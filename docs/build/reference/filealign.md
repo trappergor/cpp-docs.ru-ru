@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -FILEALIGN linker option
 - FILEALIGN linker option
 ms.assetid: c1017a35-8d71-4ad9-934b-a3e3ea037fa0
-ms.openlocfilehash: f2f46796a939d068c893e397499a42fe0bf6f41a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 43cfdd6efb163013d05877e91c8375eb592295a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417974"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814479"
 ---
 # <a name="filealign-align-sections-in-files"></a>/ FILEALIGN (выравнивание разделов в файлах)
 
@@ -39,7 +39,7 @@ ms.locfileid: "57417974"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **командной строки** страницы свойств в **компоновщика** папки.
 
@@ -51,5 +51,5 @@ ms.locfileid: "57417974"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - blank projects
 - files [C++], adding to projects
 ms.assetid: 070098e8-0396-49fe-a697-3daa2f1be6de
-ms.openlocfilehash: d5347a0693619e5db44b1087fc249c68b9227fb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8facd371ad2dddbb8ce239af5ca536b21a606807
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568662"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818210"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>Добавление файлов в пустые приложения Win32
 
@@ -29,7 +29,7 @@ ms.locfileid: "50568662"
 Чтобы добавить файлы, ни источник, заголовок или файлы ресурсов в проект, щелкните правой кнопкой мыши **решение** узел в **обозревателе решений** и добавьте файлы в проект таким же образом. Объект **Разное** будет создана папка для хранения других файлов в проекте.
 
 > [!NOTE]
-> Прежде чем приступать к сборке проекта, необходимо будет указать параметры сборки этих файлов, чтобы они были корректным образом включены в готовое приложение. Дополнительные сведения см. в разделах [Задание параметров проекта при помощи страниц свойств](../ide/property-pages-visual-cpp.md) и [Сборка программы C/C++](../build/building-c-cpp-programs.md).
+> Прежде чем приступать к сборке проекта, необходимо будет указать параметры сборки этих файлов, чтобы они были корректным образом включены в готовое приложение. Дополнительные сведения см. в разделах [Задание параметров проекта при помощи страниц свойств](../build/reference/property-pages-visual-cpp.md) и [Сборка программы C/C++](../build/building-c-cpp-programs.md).
 
 ## <a name="see-also"></a>См. также
 

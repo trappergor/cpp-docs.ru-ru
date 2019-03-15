@@ -2,12 +2,12 @@
 title: Общие вопросы использования Visual C++ ARM
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618521"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816260"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Общие вопросы использования Visual C++ ARM
 
@@ -92,7 +92,7 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ### <a name="volatile-keyword-default-behavior"></a>поведение по умолчанию volatile-ключевое слово
 
-Компилятор MSVC поддерживает две разные интерпретации `volatile` квалификатор хранилища, которое можно указать с помощью параметров компилятора. [/Volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md) Выбор расширенные volatile семантику, что гарантирует строгое упорядочение, так же как традиционному случаю для x86 и x64 из-за надежный памяти модель на основе архитектуры Майкрософт. [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) Выбор строгую C++ standard volatile семантику, которая не гарантирует строгое упорядочение.
+Компилятор MSVC поддерживает две разные интерпретации `volatile` квалификатор хранилища, которое можно указать с помощью параметров компилятора. [/Volatile:ms](reference/volatile-volatile-keyword-interpretation.md) Выбор расширенные volatile семантику, что гарантирует строгое упорядочение, так же как традиционному случаю для x86 и x64 из-за надежный памяти модель на основе архитектуры Майкрософт. [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md) Выбор строгую C++ standard volatile семантику, которая не гарантирует строгое упорядочение.
 
 В архитектуре ARM, по умолчанию используется **/volatile:iso** Поскольку процессоры ARM имеют слабо упорядоченные модели памяти, а программное обеспечение ARM не имеет устаревшего полагается на расширенную семантику **/volatile:ms**  и обычно не имеют интерфейс с программным обеспечением, который выполняет. Тем не менее это по-прежнему иногда смысла или даже необходимо скомпилировать программу ARM использует эту расширенную семантику. Например может быть слишком много ресурсов, к порту программа использует эту семантику ISO C++ или драйверов может потребоваться соблюдать традиционные семантику для правильной работы. В таких случаях можно использовать **/volatile:ms** коммутатор; тем не менее, для повторного создания традиционных volatile семантику для целевых объектов ARM, компилятор должен вставлять барьеры в памяти вокруг каждого чтения или записи из `volatile` переменной для принудительного применения строгое упорядочение, который может иметь негативное влияние на производительность.
 
@@ -100,4 +100,4 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ## <a name="see-also"></a>См. также
 
-[Настройка Visual C++ для процессоров ARM](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[Настройка Visual C++ для процессоров ARM](configuring-programs-for-arm-processors-visual-cpp.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523218"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810319"
 ---
 # <a name="ltcg-link-time-code-generation"></a>Параметр /LTCG (создание кода во время компоновки)
 
@@ -30,71 +30,71 @@ ms.locfileid: "50523218"
 
 Эти параметры являются устаревшими, начиная с Visual Studio 2015:
 
-> **/ ПАРАМЕТР LTCG:**{**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/LTCG:**{**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
 
 ### <a name="arguments"></a>Аргументы
 
 **ДОБАВОЧНОЕ**<br/>
 (Необязательно) Указывает, что компоновщик применяет только всей программы оптимизации или во время создания кода (LTCG) в набор файлов, затронутых изменения, а не всего проекта. По умолчанию этот флаг не устанавливается при **/LTCG** указано, и весь проект компонуется с помощью оптимизации всей программы.
 
-**NOSTATUS** &AMP;#124; **СОСТОЯНИЯ**<br/>
+**NOSTATUS** &#124; **STATUS**<br/>
 (Необязательно) Указывает, отображает ли компоновщик индикатор хода выполнения, показывающий, какой процент ссылку завершена. По умолчанию эти данные о состоянии не отображается.
 
 **OFF**<br/>
 (Необязательно) Отключает создание кода во время компоновки. Это происходит так же, как и при **/LTCG** не указан в командной строке.
 
 **PGINSTRUMENT**<br/>
-(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и [/genprofile или/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) Чтобы создать инструментированную сборку для профильной оптимизации. Данные, собранные из инструментированных запусков используется для создания оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](profile-guided-optimizations.md). Краткая форма этого параметра — **/LTCG: PGI**.
+(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и [/genprofile или/fastgenprofile](genprofile-fastgenprofile-generate-profiling-instrumented-build.md) Чтобы создать инструментированную сборку для профильной оптимизации. Данные, собранные из инструментированных запусков используется для создания оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](../profile-guided-optimizations.md). Краткая форма этого параметра — **/LTCG: PGI**.
 
 **PGOPTIMIZE**<br/>
-(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и [/useprofile](useprofile.md) для сборки оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](../../build/reference/profile-guided-optimizations.md). Краткая форма этого параметра — **LTCG: PGO**.
+(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и [/useprofile](useprofile.md) для сборки оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](../profile-guided-optimizations.md). Краткая форма этого параметра — **LTCG: PGO**.
 
 **PGUPDATE**<br/>
-(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и **/useprofile** для перестроения оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](../../build/reference/profile-guided-optimizations.md). Краткая форма этого параметра — **/LTCG:PGU**.
+(Необязательно) Этот параметр является устаревшим, начиная с Visual Studio 2015. Вместо этого используйте **/LTCG** и **/useprofile** для перестроения оптимизированного образа. Дополнительные сведения см. в разделе [профильной оптимизации](../profile-guided-optimizations.md). Краткая форма этого параметра — **/LTCG:PGU**.
 
 ## <a name="remarks"></a>Примечания
 
-**/LTCG** параметр предписывает компоновщику вызов компилятора и выполнение оптимизации всей программы. Вы можете также выполнить профильную оптимизацию. Дополнительные сведения см. в разделе [профильной оптимизации](../../build/reference/profile-guided-optimizations.md).
+**/LTCG** параметр предписывает компоновщику вызов компилятора и выполнение оптимизации всей программы. Вы можете также выполнить профильную оптимизацию. Дополнительные сведения см. в разделе [профильной оптимизации](../profile-guided-optimizations.md).
 
 За исключением следующих случаев нельзя добавлять параметры компилятора в комбинацию PGO **/LTCG** и **/useprofile** , не были указаны в предыдущей комбинации инициализации PGO  **/ Параметр LTCG** и **/genprofile** параметры:
 
-- [/BASE](../../build/reference/base-base-address.md)
+- [/BASE](base-base-address.md)
 
-- [/FIXED](../../build/reference/fixed-fixed-base-address.md)
+- [/FIXED](fixed-fixed-base-address.md)
 
 - **/LTCG**
 
-- [/MAP](../../build/reference/map-generate-mapfile.md)
+- [/MAP](map-generate-mapfile.md)
 
-- [/MAPINFO](../../build/reference/mapinfo-include-information-in-mapfile.md)
+- [/MAPINFO](mapinfo-include-information-in-mapfile.md)
 
-- [/NOLOGO](../../build/reference/nologo-suppress-startup-banner-linker.md)
+- [/NOLOGO](nologo-suppress-startup-banner-linker.md)
 
-- [/OUT](../../build/reference/out-output-file-name.md)
+- [/OUT](out-output-file-name.md)
 
-- [/PGD](../../build/reference/pgd-specify-database-for-profile-guided-optimizations.md)
+- [/PGD](pgd-specify-database-for-profile-guided-optimizations.md)
 
-- [/PDB](../../build/reference/pdb-use-program-database.md)
+- [/PDB](pdb-use-program-database.md)
 
-- [/PDBSTRIPPED](../../build/reference/pdbstripped-strip-private-symbols.md)
+- [/PDBSTRIPPED](pdbstripped-strip-private-symbols.md)
 
-- [/STUB](../../build/reference/stub-ms-dos-stub-file-name.md)
+- [/STUB](stub-ms-dos-stub-file-name.md)
 
-- [/VERBOSE](../../build/reference/verbose-print-progress-messages.md)
+- [/VERBOSE](verbose-print-progress-messages.md)
 
 Параметры компоновщика, которые указаны вместе с **/LTCG** и **/genprofile** могут не быть указаны при сборке с помощью параметров для инициализации PGO **/LTCG** и **/Useprofile**; они подразумеваются.
 
 В остальной части этой статьи описывается **/LTCG** с точки зрения создания кода во время компоновки.
 
-**/ Параметр LTCG** подразумевает выполнение действий с [/GL](../../build/reference/gl-whole-program-optimization.md).
+**/ Параметр LTCG** подразумевает выполнение действий с [/GL](gl-whole-program-optimization.md).
 
-Компоновщик вызывает создание кода во время компоновки, если он передается в модуль, который был скомпилирован с помощью **/GL** или модуля MSIL (см. в разделе [.netmodule качестве входных файлов компоновщика](../../build/reference/netmodule-files-as-linker-input.md)). Если вы явно не укажете **/LTCG** при передаче **/GL** или модулей MSIL в компоновщик, со временем компоновщик обнаруживает это и перезапустит ссылку с помощью **/LTCG**. Явно укажите **/LTCG** при передаче **/GL** и модули MSIL в компоновщик для наивысшей производительность сборки.
+Компоновщик вызывает создание кода во время компоновки, если он передается в модуль, который был скомпилирован с помощью **/GL** или модуля MSIL (см. в разделе [.netmodule качестве входных файлов компоновщика](netmodule-files-as-linker-input.md)). Если вы явно не укажете **/LTCG** при передаче **/GL** или модулей MSIL в компоновщик, со временем компоновщик обнаруживает это и перезапустит ссылку с помощью **/LTCG**. Явно укажите **/LTCG** при передаче **/GL** и модули MSIL в компоновщик для наивысшей производительность сборки.
 
 Для еще большей производительности используйте **/LTCG: ДОБАВОЧНОЕ**. Этот параметр указывает компоновщику повторно оптимизировать только набор файлов, затронутый изменениями в исходном файле, а не весь проект. Это может значительно сократить требуемое для компоновки время. Это не тот же параметр как инкрементную компоновку.
 
-**/LTCG** невозможно использовать с [/INCREMENTAL](../../build/reference/incremental-link-incrementally.md).
+**/LTCG** невозможно использовать с [/INCREMENTAL](incremental-link-incrementally.md).
 
-Когда **/LTCG** используется для связывания модули, скомпилированные с помощью [/Og](../../build/reference/og-global-optimizations.md), [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md), [/O2](../../build/reference/o1-o2-minimize-size-maximize-speed.md), или [/Ox](../../build/reference/ox-full-optimization.md), выполняются следующие оптимизации:
+Когда **/LTCG** используется для связывания модули, скомпилированные с помощью [/Og](og-global-optimizations.md), [/O1](o1-o2-minimize-size-maximize-speed.md), [/O2](o1-o2-minimize-size-maximize-speed.md), или [/Ox](ox-full-optimization.md), выполняются следующие оптимизации:
 
 - кроссмодульное встраивание;
 
@@ -130,7 +130,7 @@ ms.locfileid: "50523218"
 
 ### <a name="ltcg-and-msil-modules"></a>Модули /LTCG и MSIL
 
-Модули, скомпилированные с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) и [/clr](../../build/reference/clr-common-language-runtime-compilation.md) , могут использоваться в качестве входных данных компоновщика, если указан параметр **/LTCG** .
+Модули, скомпилированные с помощью [/GL](gl-whole-program-optimization.md) и [/clr](clr-common-language-runtime-compilation.md) , могут использоваться в качестве входных данных компоновщика, если указан параметр **/LTCG** .
 
 - **/ Параметр LTCG** смешанной машинные и управляемые объекта файлы и может принять машинные файлы объектов (скомпилированные с помощью **/CLR**). **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
@@ -138,7 +138,7 @@ ms.locfileid: "50523218"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. См. в разделе [работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. См. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **Общие** страницу свойств.
 
@@ -152,5 +152,5 @@ ms.locfileid: "50523218"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Справочник по MSVC компоновщика](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)

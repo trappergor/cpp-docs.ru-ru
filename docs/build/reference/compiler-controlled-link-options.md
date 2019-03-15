@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426710"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822331"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -40,9 +40,9 @@ CL-компилятор автоматически вызывает ССЫЛКУ
 |ZI или/Z7|Передает/Debug|
 |/Zl|Опускает имя библиотеки по умолчанию из OBJ-файле|
 
-Дополнительные сведения см. в разделе [Параметры компилятора](../../build/reference/compiler-options.md).
+Дополнительные сведения см. в разделе [параметры компилятора MSVC](compiler-options.md).
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

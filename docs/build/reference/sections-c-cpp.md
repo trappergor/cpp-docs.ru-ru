@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - SECTIONS .def file statement
 ms.assetid: 7b974366-9ef5-4e57-bbcc-73a1df6f8857
-ms.openlocfilehash: d70c8d6e7188844a8721b37d5e80fb88a4e21ef9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5125b09675969c784aafe375faf1fdbc36d8c5d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412800"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815116"
 ---
 # <a name="sections-cc"></a>Ключевое слово SECTIONS (C/C++)
 
@@ -34,7 +34,7 @@ definitions
 
 где `.section_name` — это имя раздела в образе программы и `specifier` равно одному или нескольким из следующих модификаторов доступа:
 
-|Модификатор|Описание:|
+|Модификатор|Описание|
 |--------------|-----------------|
 |`EXECUTE`|Раздел является исполняемого файла|
 |`READ`|Позволяет выполнять операции чтения данных|
@@ -58,8 +58,8 @@ section [CLASS 'classname'] specifier
 
 `CLASS` Ключевое слово поддерживается для совместимости, но учитывается.
 
-Эквивалентный способ указание атрибутов раздела — с помощью [/SECTION](../../build/reference/section-specify-section-attributes.md) параметр.
+Эквивалентный способ указание атрибутов раздела — с помощью [/SECTION](section-specify-section-attributes.md) параметр.
 
 ## <a name="see-also"></a>См. также
 
-[Правила для операторов определения модуля](../../build/reference/rules-for-module-definition-statements.md)
+[Правила для операторов определения модуля](rules-for-module-definition-statements.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 944d66de3c029d9731a225281b4e592c477806e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417987"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809435"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (компиляция среды выполнения Windows)
 
@@ -34,7 +34,7 @@ ms.locfileid: "57417987"
 ## <a name="arguments"></a>Аргументы
 
 **nostdlib**<br/>
-Указывает на то, что Platform.winmd, Windows.Foundation.winmd и другие файлы метаданных Windows по умолчанию (WINMD) не включаются в компиляцию автоматически. Вместо этого необходимо использовать [/FU (имя принудительно #using файла)](../../build/reference/fu-name-forced-hash-using-file.md) параметр компилятора, чтобы явным образом указать файлы метаданных Windows.
+Указывает на то, что Platform.winmd, Windows.Foundation.winmd и другие файлы метаданных Windows по умолчанию (WINMD) не включаются в компиляцию автоматически. Вместо этого необходимо использовать [/FU (имя принудительно #using файла)](fu-name-forced-hash-using-file.md) параметр компилятора, чтобы явным образом указать файлы метаданных Windows.
 
 ## <a name="remarks"></a>Примечания
 
@@ -44,7 +44,7 @@ ms.locfileid: "57417987"
 
 - Автоматический подсчет ссылок на объекты среды выполнения Windows и автоматическое удаление объекта, когда его счетчик ссылок становится равен нулю.
 
-Так как Инкрементный компоновщик не поддерживает метаданные Windows, входящие в OBJ-файлов с помощью **/ZW** параметр, [/Gm (включение минимального перепостроения)](../../build/reference/gm-enable-minimal-rebuild.md) не совместим с **/ZW** .
+Так как Инкрементный компоновщик не поддерживает метаданные Windows, входящие в OBJ-файлов с помощью **/ZW** параметр, [/Gm (включение минимального перепостроения)](gm-enable-minimal-rebuild.md) не совместим с **/ZW** .
 
 Дополнительные сведения см. в разделе [Справочник по языку Visual C++](../../cppcx/visual-c-language-reference-c-cx.md).
 
@@ -52,5 +52,5 @@ ms.locfileid: "57417987"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

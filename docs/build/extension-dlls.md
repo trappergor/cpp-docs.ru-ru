@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eca33b60b8fa6ba812bf5fa68520f51ceb1d164b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414568"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820446"
 ---
 # <a name="mfc-extension-dlls"></a>Библиотеки DLL расширений MFC
 
@@ -116,7 +116,7 @@ MFCxx.dll является обычно последним в списке ре�
 
 ### <a name="what-do-you-want-to-do"></a>Выберите действие
 
-- [Инициализация библиотеки DLL расширения MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Инициализация библиотеки DLL расширения MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
@@ -124,12 +124,12 @@ MFCxx.dll является обычно последним в списке ре�
 
 - [Версия библиотеки DLL MFC](../mfc/tn033-dll-version-of-mfc.md)
 
-- [Обычные библиотеки DLL MFC, статически компонуемые с MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Обычные библиотеки DLL MFC, статически компонуемые с MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL в Visual C++](dlls-in-visual-cpp.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - importing DLLs [C++], applications
 - applications [C++], importing into
 ms.assetid: 9d646466-e12e-4710-8ad9-c819c0375fcc
-ms.openlocfilehash: 41bd42ed51f1465db7487a120357fd27389f5b78
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8fd15212a1ca5e31198c50ac2626755ac0171ae7
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415558"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818470"
 ---
 # <a name="importing-into-an-application"></a>Импорт в приложение
 
@@ -23,14 +23,14 @@ ms.locfileid: "57415558"
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью объявления __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Импорт вызовов функций с помощью объявления __declspec(dllimport)](../build/importing-function-calls-using-declspec-dllimport.md)
+- [Импорт вызовов функций с помощью объявления __declspec(dllimport)](importing-function-calls-using-declspec-dllimport.md)
 
-- [Импорт данных с помощью __declspec(dllimport)](../build/importing-data-using-declspec-dllimport.md)
+- [Импорт данных с помощью __declspec(dllimport)](importing-data-using-declspec-dllimport.md)
 
-- [Импорт с использованием DEF-файлов](../build/importing-using-def-files.md)
+- [Импорт с использованием DEF-файлов](importing-using-def-files.md)
 
 ## <a name="see-also"></a>См. также
 
-[Импортирование и экспортирование](../build/importing-and-exporting.md)
+[Импортирование и экспортирование](importing-and-exporting.md)

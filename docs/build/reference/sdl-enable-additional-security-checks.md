@@ -4,12 +4,12 @@ ms.date: 11/26/2018
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-ms.openlocfilehash: dd37dae4927531b86cfdac274493b945b066760a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413099"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814206"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (включение дополнительных проверок безопасности)
 
@@ -23,7 +23,7 @@ ms.locfileid: "57413099"
 
 ## <a name="remarks"></a>Примечания
 
-**/ SDL** предоставляет надмножество базовых проверок безопасности, предоставляемые [/GS](../../build/reference/gs-buffer-security-check.md) и переопределяет **/GS-**. По умолчанию **/SDL** отключен. **рамках** отключает дополнительные проверки безопасности.
+**/ SDL** предоставляет надмножество базовых проверок безопасности, предоставляемые [/GS](gs-buffer-security-check.md) и переопределяет **/GS-**. По умолчанию **/SDL** отключен. **рамках** отключает дополнительные проверки безопасности.
 
 ## <a name="compile-time-checks"></a>Проверки времени компиляции
 
@@ -67,7 +67,7 @@ ms.locfileid: "57413099"
 
 #### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **C/C++** папки.
 
@@ -75,5 +75,5 @@ ms.locfileid: "57413099"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

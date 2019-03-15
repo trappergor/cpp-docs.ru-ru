@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -FIXED linker option
 - FIXED linker option
 ms.assetid: 929bba5e-b7d8-40ed-943e-056aa3710fc5
-ms.openlocfilehash: ccb89b7dfed78ddebf73aaf6e2a1a8529b065042
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6cc89df76e48ee258a7c6608aab12573ab11729b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423044"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811528"
 ---
 # <a name="fixed-fixed-base-address"></a>/FIXED (фиксированный базовый адрес)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57423044"
 
 ## <a name="remarks"></a>Примечания
 
-Указывает операционной системе загружать программу только по ее предпочтительному базовому адресу. Если предпочтительный базовый адрес недоступен, операционная система не загружается файл. Дополнительные сведения см. в разделе [Параметр /Base (базовый адрес)](../../build/reference/base-base-address.md).
+Указывает операционной системе загружать программу только по ее предпочтительному базовому адресу. Если предпочтительный базовый адрес недоступен, операционная система не загружается файл. Дополнительные сведения см. в разделе [Параметр /Base (базовый адрес)](base-base-address.md).
 
 Компоновщике значение по умолчанию для библиотеки DLL, а параметр/FIXED — по умолчанию для любого другого типа проекта.
 
@@ -35,7 +35,7 @@ ms.locfileid: "57423044"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **компоновщика** папки.
 
@@ -49,5 +49,5 @@ ms.locfileid: "57423044"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

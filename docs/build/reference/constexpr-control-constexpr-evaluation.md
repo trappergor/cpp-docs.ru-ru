@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -constexpr control constexpr evaluation [C++]
 - constexpr control constexpr evaluation [C++]
 ms.assetid: 76d56784-f5ad-401d-841d-09d1059e8b8c
-ms.openlocfilehash: 49a9566ec0725b63330af3a41afb871c3be3cc27
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 178acc548fb9c89dcfde104d2a12d85637440e28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414659"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810189"
 ---
 # <a name="constexpr-control-constexpr-evaluation"></a>/constexpr (управлять вычислением constexpr)
 
@@ -54,5 +54,5 @@ ms.locfileid: "57414659"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

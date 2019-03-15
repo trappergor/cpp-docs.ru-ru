@@ -1,5 +1,5 @@
 ---
-title: Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов
+title: Настройка проектов C++ для 64-разрядная версия, x64 целевых объектов
 ms.date: 11/04/2016
 helpviewer_keywords:
 - 64-bit compiler [C++], options
@@ -8,26 +8,26 @@ helpviewer_keywords:
 - programming [C++], 64-bit
 - Visual C++, 64-bit hardware
 ms.assetid: cb99f72b-8c74-48f4-846a-8921b37b97e9
-ms.openlocfilehash: c0c3620f4e5fea864fda1fd3d6b046fa3f485085
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c56cd34ecbc6615b0acebde6c40c658ca0c436a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417545"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818119"
 ---
-# <a name="configure-visual-c-for-64-bit-x64-targets"></a>Настройка Visual C++ для 64-разрядная версия, x64 целевых объектов
+# <a name="configure-c-projects-for-64-bit-x64-targets"></a>Настройка проектов C++ для 64-разрядная версия, x64 целевых объектов
 
 Этот раздел содержит разделы о предназначенных для 64-разрядных x64 средства сборки оборудования с помощью Visual C++.
 
 ## <a name="in-this-section"></a>В этом разделе
 
-- [Практическое руководство. Настройка проектов Visual C++ для 64-разрядных платформ с архитектурой x64](../build/how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
+- [Практическое руководство. Настройка проектов Visual C++ для 64-разрядных платформ с архитектурой x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)
 
-- [Практическое руководство. Использование набора 64-разрядных инструментов Visual C++ в командной строке](../build/how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
+- [Практическое руководство. Использование набора 64-разрядных инструментов Visual C++ в командной строке](how-to-enable-a-64-bit-visual-cpp-toolset-on-the-command-line.md)
 
-- [Общие вопросы использования Visual C++ для 64-разрядных систем](../build/common-visual-cpp-64-bit-migration-issues.md)
+- [Общие вопросы использования Visual C++ для 64-разрядных систем](common-visual-cpp-64-bit-migration-issues.md)
 
-- [Программные соглашения для 64-разрядных систем](../build/x64-software-conventions.md)
+- [Программные соглашения для X64](x64-software-conventions.md)
 
 ## <a name="related-sections"></a>Связанные разделы
 
@@ -35,9 +35,9 @@ ms.locfileid: "57417545"
 
 [align](../cpp/align-cpp.md)
 
-[/clr (компиляция среды выполнения)](../build/reference/clr-common-language-runtime-compilation.md)
+[/clr (компиляция среды выполнения)](reference/clr-common-language-runtime-compilation.md)
 
-[/favor (оптимизация для особенностей архитектуры)](../build/reference/favor-optimize-for-architecture-specifics.md)
+[/favor (оптимизация для особенностей архитектуры)](reference/favor-optimize-for-architecture-specifics.md)
 
 [Руководство по программированию для 64-разрядной Windows](/windows/desktop/WinProg64/programming-guide-for-64-bit-windows)
 
@@ -47,4 +47,4 @@ ms.locfileid: "57417545"
 
 ## <a name="see-also"></a>См. также
 
-[Сборка программ C/C++](building-c-cpp-programs.md)
+[Проекты и системы сборки](projects-and-build-systems-cpp.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -IMPLIB linker option
 - import libraries, overriding default name
 ms.assetid: fe8f71ab-7055-41b5-8ef8-2b97cfa4a432
-ms.openlocfilehash: 8d3793b11e7bd0430c94d89f9d40ec3627c4eb20
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dc9a9220d55f7831a00f70ec155cc5b57a695818
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413359"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821317"
 ---
 # <a name="implib-name-import-library"></a>/IMPLIB (именование библиотеки импорта)
 
@@ -32,15 +32,15 @@ ms.locfileid: "57413359"
 
 - [__Declspec(dllexport)](../../cpp/dllexport-dllimport.md) ключевое слово в исходном коде
 
-- [ЭКСПОРТЫ](../../build/reference/exports.md) инструкции в DEF-файла
+- [ЭКСПОРТЫ](exports.md) инструкции в DEF-файла
 
-- [/EXPORT](../../build/reference/export-exports-a-function.md) спецификации в команде LINK
+- [/EXPORT](export-exports-a-function.md) спецификации в команде LINK
 
-LINK игнорирует/IMPLIB, когда не была создана библиотека импорта. Если указаны экспортируемые элементы, ссылка не создает библиотеку импорта. Если файл экспорта используется в сборке, ССЫЛКУ предполагается, что библиотека импорта уже существует и не создает его. Сведения о библиотеками импорта и экспорта файлов, см. в разделе [Справочник по LIB](../../build/reference/lib-reference.md).
+LINK игнорирует/IMPLIB, когда не была создана библиотека импорта. Если указаны экспортируемые элементы, ссылка не создает библиотеку импорта. Если файл экспорта используется в сборке, ССЫЛКУ предполагается, что библиотека импорта уже существует и не создает его. Сведения о библиотеками импорта и экспорта файлов, см. в разделе [Справочник по LIB](lib-reference.md).
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -54,5 +54,5 @@ LINK игнорирует/IMPLIB, когда не была создана биб
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

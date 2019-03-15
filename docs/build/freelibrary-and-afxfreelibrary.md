@@ -13,12 +13,12 @@ helpviewer_keywords:
 - explicit linking [C++]
 - DLLs [C++], unloading
 ms.assetid: 4a48d290-3971-43e9-8e97-ba656cd0c8f8
-ms.openlocfilehash: 51d14b86a92f3acb76dc54d1bade2d2cd0baa055
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 709e4fdbc24d6fbbac44944e686a6fecf8c9b8db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419957"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808148"
 ---
 # <a name="freelibrary-and-afxfreelibrary"></a>Функции FreeLibrary и AfxFreeLibrary
 
@@ -28,18 +28,18 @@ ms.locfileid: "57419957"
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 
-- [Неявное связывание с библиотекой DLL](../build/linking-an-executable-to-a-dll.md#linking-implicitly)
+- [Связывание исполняемого файла с библиотекой DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 
-- [Определение подходящего метода связывания](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [Связывание исполняемого файла с библиотекой DLL](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Функции LoadLibrary и AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)
+- [Функции LoadLibrary и AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)
 
-- [Функция GetProcAddress](../build/getprocaddress.md)
+- [Функция GetProcAddress](getprocaddress.md)
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[DLL в Visual C++](dlls-in-visual-cpp.md)<br/>
 [FreeLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-freelibrary)
 [AfxFreeLibrary](../mfc/reference/application-information-and-management.md#afxfreelibrary)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: cb11a74932e44f94f481a2fdc48b8d6ee359f9e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: afa49a4d54397cf79a3bd0af28e4a0f0a4c7639e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260547"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818639"
 ---
 # <a name="exception-handling-in-mfc"></a>Обработка исключений в MFC
 
@@ -55,7 +55,7 @@ ms.locfileid: "57260547"
 Если вы уже разработали приложения с помощью макроса исключений MFC, можно продолжить использование этих макросов в существующем коде, при использовании исключений C++ в новом коде. Статья [исключения: Изменения в макросах исключений в версии 3.0](../mfc/exceptions-changes-to-exception-macros-in-version-3-0.md) дает инструкции по таким образом.
 
 > [!NOTE]
->  Чтобы включить обработку исключений C++ в коде, выберите Включить C++ исключения на странице "Создание кода" в папке проекта C/C++ [страницы свойств](../ide/property-pages-visual-cpp.md) диалогового окна, или используйте [/EHsc](../build/reference/eh-exception-handling-model.md) параметр компилятора.
+>  Чтобы включить обработку исключений C++ в коде, выберите Включить C++ исключения на странице "Создание кода" в папке проекта C/C++ [страницы свойств](../build/reference/property-pages-visual-cpp.md) диалогового окна, или используйте [/EHsc](../build/reference/eh-exception-handling-model.md) параметр компилятора.
 
 В этой статье рассматриваются следующие темы:
 
