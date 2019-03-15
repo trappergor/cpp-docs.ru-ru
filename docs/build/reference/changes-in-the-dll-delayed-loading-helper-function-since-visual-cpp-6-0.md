@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426528"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808005"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Изменения вспомогательной функции отложенной загрузки библиотек DLL по сравнению с Visual C++ версии 6.0
 
@@ -33,7 +33,7 @@ ms.locfileid: "57426528"
 
 Если у вас есть несколько версий Visual C++ на компьютере, убедитесь, что компоновщик совпадает с библиотекой delayimp.lib. Если существует несоответствие, отобразится ошибка компоновщика отчетов либо `___delayLoadHelper2@8` или `___delayLoadHelper@8` как неразрешенном внешнем символе. Первое означает новый компоновщика со старой библиотекой delayimp.lib, а второе означает, что старый компоновщик с новой библиотекой delayimp.lib.
 
-Если возникнет Неустранимая ошибка компоновщика, запустите [dumpbin/LINKERMEMBER](../../build/reference/linkermember.md): 1 на библиотекой delayimp.lib, которая должна содержать вспомогательную функцию, чтобы узнать, какие вспомогательную функцию вместо определен. Вспомогательная функция также можно определить в объектный файл; Запустите [dumpbin/Symbols](../../build/reference/symbols.md) и найдите `delayLoadHelper(2)`.
+Если возникнет Неустранимая ошибка компоновщика, запустите [dumpbin/LINKERMEMBER](linkermember.md): 1 на библиотекой delayimp.lib, которая должна содержать вспомогательную функцию, чтобы узнать, какие вспомогательную функцию вместо определен. Вспомогательная функция также можно определить в объектный файл; Запустите [dumpbin/Symbols](symbols.md) и найдите `delayLoadHelper(2)`.
 
 Если вы знаете, что у вас есть компоновщик Visual C++ 6.0, затем:
 
@@ -51,7 +51,7 @@ ms.locfileid: "57426528"
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>Загрузка всех импортов для библиотеки DLL с отложенной загрузкой
 
-Компоновщик может загружать все импорты из библиотеки DLL, созданную с отложенной загрузкой. См. в разделе [загрузка всех импортов для библиотеки DLL Delay-Loaded](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md) Дополнительные сведения.
+Компоновщик может загружать все импорты из библиотеки DLL, созданную с отложенной загрузкой. См. в разделе [загрузка всех импортов для библиотеки DLL Delay-Loaded](loading-all-imports-for-a-delay-loaded-dll.md) Дополнительные сведения.
 
 ## <a name="see-also"></a>См. также
 

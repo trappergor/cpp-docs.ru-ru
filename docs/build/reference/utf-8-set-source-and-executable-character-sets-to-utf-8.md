@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb683e9baddea455b72bb823676ba1e6adabfd4c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5ac15c63041e76b8bb0d292868bb982c21866078
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421562"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812295"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/ UTF-8 (задать источник и кодировки исполняемого файла в кодировке UTF-8)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57421562"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните **свойства конфигурации**, **C/C++**, **командной строки** папки.
 
@@ -41,8 +41,8 @@ ms.locfileid: "57421562"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/ Execution-CharSet (задать выполнение кодировки)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/source/charset (задание исходной кодировки)](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/validate/charset (проверка совместимости символов)](../../build/reference/validate-charset-validate-for-compatible-characters.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[/ Execution-CharSet (задать выполнение кодировки)](execution-charset-set-execution-character-set.md)<br/>
+[/source/charset (задание исходной кодировки)](source-charset-set-source-character-set.md)<br/>
+[/validate/charset (проверка совместимости символов)](validate-charset-validate-for-compatible-characters.md)
