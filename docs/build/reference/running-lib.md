@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413333"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820368"
 ---
 # <a name="running-lib"></a>Запуск программы LIB
 
@@ -66,7 +66,7 @@ ms.locfileid: "57413333"
 
 При сбое lib.exe во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.
 
-Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).
+Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](errorreport-report-internal-compiler-errors.md).
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ ms.locfileid: "57413333"
 
 > **/WX**[**:NO**]
 
-Обрабатывать предупреждения как ошибки. См. в разделе [/WX (обработка предупреждений компоновщика как ошибки)](../../build/reference/wx-treat-linker-warnings-as-errors.md) Дополнительные сведения.
+Обрабатывать предупреждения как ошибки. См. в разделе [/WX (обработка предупреждений компоновщика как ошибки)](wx-treat-linker-warnings-as-errors.md) Дополнительные сведения.
 
 Другие параметры применяются только в определенных режимах работы LIB. Эти параметры будут подробно описаны в разделах, посвященных каждого режима.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по LIB](../../build/reference/lib-reference.md)
+[Справочник по LIB](lib-reference.md)

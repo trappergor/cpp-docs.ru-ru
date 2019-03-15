@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850302"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808395"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -711,7 +711,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 До появления Windows Vista приложения, обращавшиеся к реестр, обычно используется **HKEY_CLASSES_ROOT** узла. Тем не менее с Windows Vista или более поздних операционных системах, необходимо запустить приложение в режиме с повышенными правами для записи в HKCR.
 
-Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [Linker Property Pages](../../ide/linker-property-pages.md).
+Этот метод позволяет вашему приложению для чтения и записи в реестр без запуска в режиме с повышенными правами, перенаправляя доступ к реестру из HKCR в HKCU. Дополнительные сведения см. в разделе [Linker Property Pages](../../build/reference/linker-property-pages.md).
 
 Если вы включили функцию перенаправления реестра, платформа перенаправляет доступ из HKCR для **HKEY_CURRENT_USER\Software\Classes**. Перенаправление влияет только на платформах MFC и ATL.
 

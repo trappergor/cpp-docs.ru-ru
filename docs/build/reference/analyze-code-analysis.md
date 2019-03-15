@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-ms.openlocfilehash: 057fabe9612f84af07649d7a4f7bbf6d83e01f6c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 63cfd2bd206a361301c75110a684e1d2c642a1f2
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426216"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57819510"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (анализ кода)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57426216"
 
 / analyze включает анализ в режиме по умолчанию. Результат анализа выводится в **вывода** окна, как и другие сообщения об ошибках. Используйте **/ analyze-** чтобы явно отключить анализ.
 
-/ analyze: WX-задание **/ analyze: WX -** означает, что предупреждения анализа кода не обрабатываются как ошибки при компиляции с помощью **/WX**. Дополнительные сведения см. в разделах [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (уровень предупреждений)](../../build/reference/compiler-option-warning-level.md).
+/ analyze: WX-задание **/ analyze: WX -** означает, что предупреждения анализа кода не обрабатываются как ошибки при компиляции с помощью **/WX**. Дополнительные сведения см. в разделах [/w, /W0, /W1, /W2, /W3, /W4, /w1, /w2, /w3, /w4, /Wall, /wd, /we, /wo, /Wv, /WX (уровень предупреждений)](compiler-option-warning-level.md).
 
 / analyze: журнал `filename` подробные результаты анализатора записываются в формате XML в файл, который задается параметром `filename`.
 
@@ -79,7 +79,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните узел **Свойства конфигурации**.
 
@@ -95,5 +95,5 @@ set Esp.Extensions=CppCoreCheck.dll
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора](../../build/reference/compiler-options.md)
-- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+- [Параметры компилятора MSVC](compiler-options.md)
+- [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)
