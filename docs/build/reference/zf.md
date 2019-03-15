@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /Zf
 - -Zf
-ms.openlocfilehash: 2c3f8d08f59c3a6803eda67126ef8a8f9ba6b1fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed37a189e3eb1eb7b55dbdee1f81f360eafa721
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595744"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814050"
 ---
 # <a name="zf-faster-pdb-generation"></a>/Zf (Создание быстрее PDB-файла)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50595744"
 
 ## <a name="remarks"></a>Примечания
 
-**/Zf** параметр включает поддержку компилятора для быстрее Создание PDB-файлы, при использовании [/MP (построить с несколькими процессами)](mp-build-with-multiple-processes.md) параметр, или когда система сборки (например, [MSBuild ](/visualstudio/msbuild/msbuild-reference) или [CMake](../../ide/cmake-tools-for-visual-cpp.md)) может выполнять несколько cl.exe компилятора процессы в то же время. Этот параметр заставляет компилятор внешнего интерфейса до отложить создание типов индексов для каждого типа записи в PDB-файл до конца компиляции, а затем запрашивает их все в одном вызове RPC к mspdbsrv.exe, вместо того, чтобы запрос RPC для каждой записи. Это может существенно повысить пропускную способность сборки, снижая нагрузку на процесс mspdbsrv.exe в среде, где одновременно запустить несколько процессов компилятора cl.exe RPC.
+**/Zf** параметр включает поддержку компилятора для быстрее Создание PDB-файлы, при использовании [/MP (построить с несколькими процессами)](mp-build-with-multiple-processes.md) параметр, или когда система сборки (например, [MSBuild ](/visualstudio/msbuild/msbuild-reference) или [CMake](../cmake-projects-in-visual-studio.md)) может выполнять несколько cl.exe компилятора процессы в то же время. Этот параметр заставляет компилятор внешнего интерфейса до отложить создание типов индексов для каждого типа записи в PDB-файл до конца компиляции, а затем запрашивает их все в одном вызове RPC к mspdbsrv.exe, вместо того, чтобы запрос RPC для каждой записи. Это может существенно повысить пропускную способность сборки, снижая нагрузку на процесс mspdbsrv.exe в среде, где одновременно запустить несколько процессов компилятора cl.exe RPC.
 
 Так как **/Zf** параметр применяется только к Создание PDB-файла, он требует [/ZI](z7-zi-zi-debug-information-format.md) или [/ZI](z7-zi-zi-debug-information-format.md) параметр.
 
@@ -31,7 +31,7 @@ ms.locfileid: "50595744"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **командной строки** страницу свойств.
 
