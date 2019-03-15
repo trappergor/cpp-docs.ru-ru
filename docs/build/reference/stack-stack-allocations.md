@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412774"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813803"
 ---
 # <a name="stack-stack-allocations"></a>Параметр /STACK (выделение памяти в стеке)
 
@@ -35,11 +35,11 @@ ms.locfileid: "57412774"
 
 Укажите `reserve` и `commit` значения в десятичном или нотации языка.
 
-Другой способ задать размер стека — с помощью [STACKSIZE](../../build/reference/stacksize.md) инструкции в файл определения модуля (DEF). **STACKSIZE** переопределяет выделение стека (/ STACK), если они указаны одновременно. Можно изменить размер стека после построения с помощью файла .exe [EDITBIN](../../build/reference/editbin-reference.md) средство.
+Другой способ задать размер стека — с помощью [STACKSIZE](stacksize.md) инструкции в файл определения модуля (DEF). **STACKSIZE** переопределяет выделение стека (/ STACK), если они указаны одновременно. Можно изменить размер стека после построения с помощью файла .exe [EDITBIN](editbin-reference.md) средство.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **компоновщика** папки.
 
@@ -57,5 +57,5 @@ ms.locfileid: "57412774"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

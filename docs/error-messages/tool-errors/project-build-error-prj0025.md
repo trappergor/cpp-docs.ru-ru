@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0025
 ms.assetid: 57725c78-bc63-44f3-9667-2969b2d7c41d
-ms.openlocfilehash: 5cc6a042c04bc205dd3cf2242d48f2572a51885c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5f3699dce75a20b9cc6e1d712bc5702543ab7b6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599693"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814570"
 ---
 # <a name="project-build-error-prj0025"></a>Ошибка построения проекта PRJ0025
 
@@ -23,4 +23,4 @@ ms.locfileid: "50599693"
 
 Способ устранения этой ошибки — обновления содержимого правила построения или построения события в формате ANSI или установите кодовую страницу на компьютере и установите ее в качестве системной настройки по умолчанию.
 
-Дополнительные сведения о пользовательских этапов построения и события сборки, см. в разделе [понимание пользовательские шаги построения и события построения](../../ide/understanding-custom-build-steps-and-build-events.md).
+Дополнительные сведения о пользовательских этапов построения и события сборки, см. в разделе [понимание пользовательские шаги построения и события построения](../../build/understanding-custom-build-steps-and-build-events.md).
