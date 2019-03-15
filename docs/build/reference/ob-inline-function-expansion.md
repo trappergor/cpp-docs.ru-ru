@@ -1,5 +1,5 @@
 ---
-title: Параметр /Ob (расширение встраиваемых функций)
+title: Параметр /Ob (расширение встроенных функций)
 ms.date: 09/25/2017
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
@@ -24,14 +24,14 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426151"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807523"
 ---
-# <a name="ob-inline-function-expansion"></a>Параметр /Ob (расширение встраиваемых функций)
+# <a name="ob-inline-function-expansion"></a>Параметр /Ob (расширение встроенных функций)
 
 Управляет подстановкой функций.
 
@@ -50,7 +50,7 @@ ms.locfileid: "57426151"
 **2**<br/>
 Значение по умолчанию. Разрешает подстановку всех функций, помеченных как `inline`, `__inline` или `__forceinline`, а также любых функций, выбранных компилятором.
 
-**/ Ob2** вступает в силу, когда [/O1, / O2 (минимизировать размер, максимизировать скорость)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) или [/Ox (Включение наиболее видов оптимизации скорости)](../../build/reference/ox-full-optimization.md) используется.
+**/ Ob2** вступает в силу, когда [/O1, / O2 (минимизировать размер, максимизировать скорость)](o1-o2-minimize-size-maximize-speed.md) или [/Ox (Включение наиболее видов оптимизации скорости)](ox-full-optimization.md) используется.
 
 Этот параметр необходимо включить оптимизацию с помощью **/O1**, **/O2**, **/Ox**, или **/Og**.
 
@@ -61,11 +61,11 @@ ms.locfileid: "57426151"
 Можно использовать `#pragma` [auto_inline](../../preprocessor/auto-inline.md) директиву, чтобы исключить из рассмотрения как кандидаты на подстановку функции. Также см. в разделе `#pragma` [внутренние](../../preprocessor/intrinsic.md) директива.
 
 > [!NOTE]
-> Сведения, собранные из теста профилирования, запускают переопределения оптимизаций, которые бы в противном случае вступят в силу, если указать **/Ob**, **/Os**, или **/Ot**. Дополнительные сведения см. в разделе [профильной оптимизации](../../build/reference/profile-guided-optimizations.md).
+> Сведения, собранные из теста профилирования, запускают переопределения оптимизаций, которые бы в противном случае вступят в силу, если указать **/Ob**, **/Os**, или **/Ot**. Дополнительные сведения см. в разделе [профильной оптимизации](../profile-guided-optimizations.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните **свойства конфигурации**, **C/C++** и выберите **оптимизации**.
 
@@ -77,6 +77,6 @@ ms.locfileid: "57426151"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры /O (оптимизация кода)](o-options-optimize-code.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

@@ -2,12 +2,12 @@
 title: Пошаговое руководство. Компиляция C + +/ CX программа в командной строке
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad718a2eb876430d7721d0cd20cfd5b952750f8b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413801"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809513"
 ---
 # <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>Пошаговое руководство. Компиляция C + +/ CX программа в командной строке
 
@@ -24,11 +24,11 @@ ms.locfileid: "57413801"
 
 ## <a name="compiling-a-ccx-program"></a>Компиляция программы на C++/CX
 
-Чтобы включить компиляцию для C + +/ CX, необходимо использовать [/ZW](../build/reference/zw-windows-runtime-compilation.md) параметр компилятора. Компилятор Visual C++ создает файл EXE, предназначенный для среды выполнения Windows и связанный с необходимыми библиотеками.
+Чтобы включить компиляцию для C + +/ CX, необходимо использовать [/ZW](reference/zw-windows-runtime-compilation.md) параметр компилятора. Компилятор MSVC создает файл .exe, обращается к среде выполнения Windows, а также ссылки на необходимые библиотеки.
 
 #### <a name="to-compile-a-ccx-application-on-the-command-line"></a>Компиляция приложения C++/CX из командной строки
 
-1. Откройте **Командная строка разработчика** окна. (На **запустить** открытое окно **приложений**. Откройте **средств Visual Studio** папку в вашей версии Visual Studio и выберите **Командная строка разработчика** ярлык.) Дополнительные сведения о том, как открыть окно командной строки разработчика, см. в разделе [кода C/C++ на сборки в командной строке](../build/building-on-the-command-line.md).
+1. Откройте **Командная строка разработчика** окна. (На **запустить** открытое окно **приложений**. Откройте **средств Visual Studio** папку в вашей версии Visual Studio и выберите **Командная строка разработчика** ярлык.) Дополнительные сведения о том, как открыть окно командной строки разработчика, см. в разделе [использовать набор инструментов MSVC из командной строки](building-on-the-command-line.md).
 
    В зависимости от операционной системы и конфигурации компьютера для успешной компиляции кода могут потребоваться учетные данные администратора. Чтобы запустить окно командной строки с правами администратора, откройте контекстное меню для **Командная строка разработчика** и выберите **Запуск от имени администратора**.
 
@@ -51,7 +51,7 @@ ms.locfileid: "57413801"
 
    Вы создали исходным файлом Visual C++, который использует среда выполнения Windows [пространство имен Platform](../cppcx/platform-namespace-c-cx.md) пространства имен.
 
-1. В командной строке введите **/cl/EHsc /ZW basiccx.cpp Link/SUBSYSTEM: Console**. Компилятор cl.exe скомпилирует исходный код в OBJ-файл, а затем запустит компоновщик для создания исполняемой программы с именем basiccx.exe. ( [/EHsc](../build/reference/eh-exception-handling-model.md) параметр компилятора указывает модель обработки исключений C++ и [/link](../build/reference/link-pass-options-to-linker.md) флаг указывает на консольное приложение.)
+1. В командной строке введите **/cl/EHsc /ZW basiccx.cpp Link/SUBSYSTEM: Console**. Компилятор cl.exe скомпилирует исходный код в OBJ-файл, а затем запустит компоновщик для создания исполняемой программы с именем basiccx.exe. ( [/EHsc](reference/eh-exception-handling-model.md) параметр компилятора указывает модель обработки исключений C++ и [/link](reference/link-pass-options-to-linker.md) флаг указывает на консольное приложение.)
 
 1. Чтобы запустить программу basiccx.exe, в командной строке введите **basiccx**.
 
@@ -63,6 +63,5 @@ ms.locfileid: "57413801"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
-[Сборка программ C/C++](../build/building-c-cpp-programs.md)<br/>
-[Параметры компилятора](../build/reference/compiler-options.md)
+[Проекты и системы сборки](projects-and-build-systems-cpp.md)<br/>
+[Параметры компилятора MSVC](reference/compiler-options.md)

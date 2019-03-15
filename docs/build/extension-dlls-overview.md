@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425059"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816481"
 ---
 # <a name="mfc-extension-dlls-overview"></a>Библиотеки DLL расширений MFC: Обзор
 
@@ -25,24 +25,24 @@ ms.locfileid: "57425059"
 
 Обратите внимание, что термин AFXDLL больше не используется в документации по Visual C++. Библиотеки DLL расширения MFC имеет те же характеристики, что и прежние AFXDLL.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Инициализация библиотеки DLL расширения MFC](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [Инициализация библиотеки DLL расширения MFC](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Библиотеки DLL расширений MFC](../build/extension-dlls.md)
+- [Библиотеки DLL расширений MFC](extension-dlls.md)
 
-- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [Несовместимые с MFC библиотеки DLL: обзор](../build/non-mfc-dlls-overview.md)
+- [Несовместимые с MFC библиотеки DLL: обзор](non-mfc-dlls-overview.md)
 
-- [Обычные библиотеки DLL MFC, статически компонуемые с MFC](../build/regular-dlls-statically-linked-to-mfc.md)
+- [Обычные библиотеки DLL MFC, статически компонуемые с MFC](regular-dlls-statically-linked-to-mfc.md)
 
-- [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Обычные библиотеки DLL MFC, динамически компонуемые с MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [Создание библиотеки DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>См. также
 
-[Типы библиотек DLL](../build/kinds-of-dlls.md)
+[Типы библиотек DLL](kinds-of-dlls.md)

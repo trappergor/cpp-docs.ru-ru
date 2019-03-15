@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: a0fc4b34-2cf0-45a7-a642-b8afc4ca19f2
-ms.openlocfilehash: a0a5edda3d0d178a03fa98cf689b257cd5ab3f53
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92a1bfa5ec3bab2814397d51e35e617b7666c706
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808343"
 ---
 # <a name="zcthreadsafeinit-thread-safe-local-static-initialization"></a>/ Zc: threadsafeinit (потокобезопасной локальной статичной инициализации)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50605833"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ Zc: threadsafeinit**[**-**]
+> **/Zc:threadSafeInit**[**-**]
 
 ## <a name="remarks"></a>Примечания
 
@@ -40,7 +40,7 @@ ms.locfileid: "50605833"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Из **конфигураций** раскрывающийся список меню, выберите **все конфигурации**.
 
@@ -50,6 +50,6 @@ ms.locfileid: "50605833"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>

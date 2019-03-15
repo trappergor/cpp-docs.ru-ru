@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417012"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821267"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (укажите подсистему)
 
@@ -42,7 +42,7 @@ ms.locfileid: "57417012"
 Подсистемы Extensible Firmware Interface. Дополнительные сведения см. Примеры см. на сайте Intel. Минимальная версия версии и по умолчанию — 1.0.
 
 **СОБСТВЕННЫЙ**<br/>
-В режиме ядра драйверы для Windows NT. Этот параметр обычно зарезервирован для компонентов системы Windows. Если [/DRIVER:WDM](../../build/reference/driver-windows-nt-kernel-mode-driver.md) указан, по умолчанию используется машинный код.
+В режиме ядра драйверы для Windows NT. Этот параметр обычно зарезервирован для компонентов системы Windows. Если [/DRIVER:WDM](driver-windows-nt-kernel-mode-driver.md) указан, по умолчанию используется машинный код.
 
 **POSIX**<br/>
 Приложение, выполняемое с подсистемой POSIX в Windows NT.
@@ -63,17 +63,17 @@ ms.locfileid: "57417012"
 
 |Подсистема|Минимум|Значение по умолчанию|
 |---------------|-------------|-------------|
-|BOOT_APPLICATION|1.0|1.0|
+|BOOT_APPLICATION|1,0|1,0|
 |CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
 |ОКНА|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
 |Машинный код (и DRIVER: WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
 |Машинный код (без /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
-|POSIX|1.0|19.90|
-|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
+|POSIX|1,0|19.90|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1,0|1,0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите папку Компоновщик.
 
@@ -87,5 +87,5 @@ ms.locfileid: "57417012"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639354"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816104"
 ---
 # <a name="clr-restrictions"></a>Ограничения /clr
 
@@ -17,7 +17,7 @@ ms.locfileid: "50639354"
 
 - В структурированный обработчик исключений, существуют ограничения на использование `_alloca` при компиляции с параметром **/CLR**. Дополнительные сведения см. в разделе [_alloca](../../c-runtime-library/reference/alloca.md).
 
-- Использование проверки ошибок во время выполнения не работает с **/CLR**. Дополнительная информация есть в статье [Практическое руководство. Настройка проверок во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
+- Использование проверки ошибок во время выполнения не работает с **/CLR**. Дополнительные сведения см. в разделе [Как использовать проверки во время выполнения машинного кода](/visualstudio/debugger/how-to-use-native-run-time-checks).
 
 - Когда **/CLR** — используется для компиляции программы, использующей только стандартный синтаксис C++, с использованием встроенной сборке применяются следующие правила:
 
@@ -37,36 +37,36 @@ ms.locfileid: "50639354"
 
 - Не поддерживает следующие параметры компилятора **/CLR**:
 
-  - **/ EHsc** и **/EHs** (**/CLR** подразумевает **/EHa** (см. в разделе [/EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md))
+  - **/ EHsc** и **/EHs** (**/CLR** подразумевает **/EHa** (см. в разделе [/EH (модель обработки исключений)](eh-exception-handling-model.md))
 
-  - **/ fp: strict** и **/fp: except** (см. в разделе [/fp (определение поведения с плавающей запятой)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/ fp: strict** и **/fp: except** (см. в разделе [/fp (определение поведения с плавающей запятой)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- Сочетание `_STATIC_CPPLIB` определение препроцессора (`/D_STATIC_CPPLIB`) и **/CLR** параметр компилятора не поддерживается. Это происходит оттого, что определение приводит приложение для связи с статический многопоточных стандартной библиотеки C++, который не поддерживается. Дополнительные сведения см. в разделе [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) раздела.
+- Сочетание `_STATIC_CPPLIB` определение препроцессора (`/D_STATIC_CPPLIB`) и **/CLR** параметр компилятора не поддерживается. Это происходит оттого, что определение приводит приложение для связи с статический многопоточных стандартной библиотеки C++, который не поддерживается. Дополнительные сведения см. в разделе [/MD, / MT, /LD (использование библиотеки времени выполнения)](md-mt-ld-use-run-time-library.md) раздела.
 
-- При использовании **/ZI** с **/CLR**, это влияет на производительность. Дополнительные сведения см. в разделе [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md).
+- При использовании **/ZI** с **/CLR**, это влияет на производительность. Дополнительные сведения см. в разделе [/ZI](z7-zi-zi-debug-information-format.md).
 
-- Процедура передачи расширенных символов в .NET Framework выходных данных без указания [/Zc: wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) или без приведения символ, который `__wchar_t` вызовет выходные данные отображаются в виде `unsigned short int`. Пример:
+- Процедура передачи расширенных символов в .NET Framework выходных данных без указания [/Zc: wchar_t](zc-wchar-t-wchar-t-is-native-type.md) или без приведения символ, который `__wchar_t` вызовет выходные данные отображаются в виде `unsigned short int`. Пример:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/ GS](../../build/reference/gs-buffer-security-check.md) игнорируется при компиляции с параметром **/CLR**, если функция не применяются `#pragma` [неуправляемых](../../preprocessor/managed-unmanaged.md) или если функция должна компилироваться в машинный код, в этом случае компилятор выдаст предупреждение C4793, которое отключено по умолчанию.
+- [/ GS](gs-buffer-security-check.md) игнорируется при компиляции с параметром **/CLR**, если функция не применяются `#pragma` [неуправляемых](../../preprocessor/managed-unmanaged.md) или если функция должна компилироваться в машинный код, в этом случае компилятор выдаст предупреждение C4793, которое отключено по умолчанию.
 
-- См. в разделе [/Entry](../../build/reference/entry-entry-point-symbol.md) для требования к подписи функция управляемого приложения.
+- См. в разделе [/Entry](entry-entry-point-symbol.md) для требования к подписи функция управляемого приложения.
 
-- Приложения, скомпилированные с **/OpenMP** и **/CLR** может выполняться только в процессе единственной области приложений.  См. в разделе [/OpenMP (Включение поддержки OpenMP 2.0)](../../build/reference/openmp-enable-openmp-2-0-support.md) Дополнительные сведения.
+- Приложения, скомпилированные с **/OpenMP** и **/CLR** может выполняться только в процессе единственной области приложений.  См. в разделе [/OpenMP (Включение поддержки OpenMP 2.0)](openmp-enable-openmp-2-0-support.md) Дополнительные сведения.
 
 - Функции, которые принимают переменное число аргументов (varargs) будут создаваться в машинном коде. Все управляемые типы данных в позиции аргументов переменных будут маршалированы в собственные типы. Обратите внимание, что <xref:System.String?displayProperty=fullName> типы являются фактически двухбайтовые строки, но они маршалируются в однобайтовый символ строки. Поэтому если спецификатор printf %S (wchar_t *), он будет упакован в %s строка вместо.
 
@@ -88,4 +88,4 @@ ms.locfileid: "50639354"
 
 ## <a name="see-also"></a>См. также
 
-- [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (компиляция среды выполнения)](clr-common-language-runtime-compilation.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415257"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810358"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -28,7 +28,7 @@ reserve[,commit]
 
 ## <a name="remarks"></a>Примечания
 
-`reserve` Аргумент задает общее начальное выделение кучи виртуальной памяти. По умолчанию размер кучи составляет 1 МБ. [Справочник ЕDITBIN](../../build/reference/editbin-reference.md) Округляет указанное значение до ближайшего числа, кратного 4 байта.
+`reserve` Аргумент задает общее начальное выделение кучи виртуальной памяти. По умолчанию размер кучи составляет 1 МБ. [Справочник ЕDITBIN](editbin-reference.md) Округляет указанное значение до ближайшего числа, кратного 4 байта.
 
 Необязательный `commit` аргумент интерпретируется операционной системой. В операционной системе Windows он указывает начальный объем физической памяти для выделения, а также объем дополнительной памяти, выделяемой при кучи должна быть развернута. Выделенной виртуальной памяти резервирует пространство в файле подкачки. Более высокий `commit` значение позволяет системе для выделения памяти меньше часто в том случае, когда приложению требуется больше пространства кучи, но увеличивает требования к памяти и, возможно, на время запуска приложения. `commit` Значение должно быть меньше или равно `reserve` значение.
 
@@ -36,4 +36,4 @@ reserve[,commit]
 
 ## <a name="see-also"></a>См. также
 
-[Параметры EDITBIN](../../build/reference/editbin-options.md)
+[Параметры EDITBIN](editbin-options.md)

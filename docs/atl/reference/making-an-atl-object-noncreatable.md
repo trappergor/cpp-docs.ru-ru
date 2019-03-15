@@ -7,12 +7,12 @@ helpviewer_keywords:
 - noncreatable ATL objects
 - ATL projects, noncreatable objects
 ms.assetid: 80d0bca2-dea0-4801-9a85-6243124437f6
-ms.openlocfilehash: da1d5c43d86d95d7eff9b6830b83b61737d3030f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 966c7c1e42cd707726a8ca65bb80914c29ad582e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267073"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814505"
 ---
 # <a name="making-an-atl-object-noncreatable"></a>Что делает Noncreatable объекта ATL
 
@@ -37,8 +37,7 @@ ms.locfileid: "57267073"
 ## <a name="see-also"></a>См. также
 
 [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[Типы проектов Visual C++](../../ide/visual-cpp-project-types.md)<br/>
-[Создание проектов для рабочего стола с помощью мастеров приложений](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Типы проектов Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
 [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)

@@ -2,18 +2,16 @@
 title: Классы с поддержкой пользовательского интерфейса (ATL)
 ms.date: 11/04/2016
 ms.topic: reference
-f1_keywords:
-- vc.atl.ui
 helpviewer_keywords:
 - user interfaces, support classes
 - user interfaces, ATL classes
 ms.assetid: 313dfc95-308a-4118-b919-5a3c3673b865
-ms.openlocfilehash: 09b7aa26fc2f4597f741865ec94222bd65b85665
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4aa508a028eb0a90233b7baa34db9ee78bbe2b83
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297047"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812399"
 ---
 # <a name="ui-support-classes"></a>Классы с поддержкой пользовательского интерфейса
 

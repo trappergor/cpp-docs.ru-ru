@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413177"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821304"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Регулярные MFC DLL, динамически компонуемые с MFC
 
@@ -81,20 +81,20 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 Пример для написания, сборки и использовать обычную библиотеку DLL MFC, см. в образце [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Дополнительные сведения о регулярных DLL MFC, динамически связываются с MFC см. в разделе «Преобразование DLLScreenCap для динамически ссылку с MFC DLL» в абстрактный пример.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Инициализация обычных библиотек DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Инициализация обычных библиотек DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Состояния модулей обычной библиотеки DLL MFC, динамически компонуемые с MFC](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [Состояния модулей обычной библиотеки DLL MFC, динамически компонуемые с MFC](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [Управление данными состояния модулей MFC](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>См. также
 
-[Типы библиотек DLL](../build/kinds-of-dlls.md)
+[Типы библиотек DLL](kinds-of-dlls.md)

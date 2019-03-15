@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - BSCMAKE, command line
 ms.assetid: 8006e8cf-8bfe-4c23-868a-b0a25e6bbf0f
-ms.openlocfilehash: b6268eb6d0ea39e72a1d8fd40ab563347c05f0c6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7724069a401aadcdb2e3e8487dc85273dac357fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416843"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818652"
 ---
 # <a name="bscmake-command-line"></a>Командная строка BSCMAKE
 
@@ -33,8 +33,8 @@ BSCMAKE [options] sbrfiles
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-Дополнительные сведения см. в разделе [командный файл BSCMAKE](../../build/reference/bscmake-command-file-response-file.md) и [параметры BSCMAKE](../../build/reference/bscmake-options.md).
+Дополнительные сведения см. в разделе [командный файл BSCMAKE](bscmake-command-file-response-file.md) и [параметры BSCMAKE](bscmake-options.md).
 
 ## <a name="see-also"></a>См. также
 
-[Справочник ВSCMAKE](../../build/reference/bscmake-reference.md)
+[Справочник ВSCMAKE](bscmake-reference.md)

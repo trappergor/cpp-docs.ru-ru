@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421385"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818405"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Отклонение стандартных путей включения)
 
@@ -32,11 +32,11 @@ ms.locfileid: "57421385"
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать этот параметр вместе с [/I (Дополнительные каталоги включаемых файлов)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) параметр.
+Можно использовать этот параметр вместе с [/I (Дополнительные каталоги включаемых файлов)](i-additional-include-directories.md) (**/I**`directory`) параметр.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -58,5 +58,5 @@ CL /X /I \ALT\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

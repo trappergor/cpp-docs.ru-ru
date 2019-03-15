@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607666"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814427"
 ---
 # <a name="cc-preprocessor-reference"></a>Cправочник препроцессора /C++
 *Справочника по препроцессору C/C++* Описание препроцессора, так как она реализована в Microsoft C/C++. Препроцессор выполняет предварительные операции с файлами C и C++ перед их передачей компилятору. Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.
@@ -27,7 +27,7 @@ ms.locfileid: "50607666"
 Описание предустановленных макросов согласно спецификации ANSI и Microsoft C++.
 
 [Директивы pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-Описание директив #pragma, которые позволяют каждому компилятору предоставлять возможности, зависящие от компьютера и операционной системы, в то же время сохраняя общую совместимость с языками C и C++.
+Описание директив #pragma, которые позволяют каждому компилятору предоставлять функции, зависящие от компьютера и операционной системы, в то же время сохраняя общую совместимость с языками C и C++.
 
 ## <a name="related-sections"></a>Связанные разделы
 
@@ -40,5 +40,5 @@ ms.locfileid: "50607666"
 [Сборка программы C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Ссылки на разделы, в которых рассматриваются параметры компилятора и компоновщика.
 
-[Создание проектов Visual C++ и управление ими](../ide/creating-and-managing-visual-cpp-projects.md)<br/>
+[Создание проектов Visual C++ и управление ими](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 Описание пользовательского интерфейса в Visual Studio, позволяющего определять каталоги, в которых система проектов будет выполнять поиск файлов для проекта C++.

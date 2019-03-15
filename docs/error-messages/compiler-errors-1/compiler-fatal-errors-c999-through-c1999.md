@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677335"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814453"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>Неустранимые ошибки компилятора (C999-C1999)
 
@@ -224,7 +223,7 @@ ms.locfileid: "50677335"
 |Неустранимая ошибка C1063|ограничение компилятора: переполнение стека компилятора|
 |[Неустранимая ошибка C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|ограничение компилятора: лексема переполнила внутренний буфер|
 |[Неустранимая ошибка C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|ограничение компилятора: закончились теги|
-|[Неустранимая ошибка C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|предел компилятора: превышен предельный размер 64 КБ для записи типа|
+|[Неустранимая ошибка C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|ограничение компилятора: Был превышен предельный размер записи типа 64 КБ|
 |Неустранимая ошибка C1068|не удается открыть файл "*file*"|
 |Неустранимая ошибка C1069|невозможно прочесть командную строку компилятора|
 |Неустранимая ошибка C1070|непарные #if/#endif в файле "*file*"|
@@ -234,7 +233,7 @@ ms.locfileid: "50677335"
 |[Неустранимая ошибка C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|в конце файла обнаружен левый непарный *token*|
 |[Неустранимая ошибка C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|ограничение компилятора: достигнут предел внутренней кучи; воспользуйтесь /Zm для задания большего значения|
 |Неустранимая ошибка C1077|ограничение компилятора: не может иметь больше *number* параметров командной строки|
-|[Неустранимая ошибка C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|ограничение компилятора: превышен предельный размер файла PCH|
+|[Неустранимая ошибка C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|ограничение компилятора: Превышен предельный размер файла PCH|
 |[Неустранимая ошибка C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|ограничение компилятора: параметр командной строки превысил предел d *number* знаков|
 |[Неустранимая ошибка C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|"*file*": слишком длинное имя файла|
 |Неустранимая ошибка C1082|не удается закрыть файл " *type* ": "*file*": *message*|
@@ -265,7 +264,7 @@ ms.locfileid: "50677335"
 |Неустранимая ошибка C1111|слишком много вложенных или универсальных параметров|
 |Неустранимая ошибка C1112|ограничение компилятора: `'number`"слишком много аргументов макроса, только *номер* разрешено|
 |[Неустранимая ошибка C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|сбой #using для "*file*"|
-|Неустранимая ошибка C1114|"*file*": среда выполнения Windows не поддерживает директиву #using для управляемой сборки|
+|Неустранимая ошибка C1114|"*файл*": WinRT не поддерживает #using для управляемой сборки|
 |[Неустранимая ошибка C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|сбой при вызове GetProcAddress для "*function*"|
 |[Неустранимая ошибка C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|не удалось выполнить вызов CryptoAPI|
 |[Неустранимая ошибка C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|автоматическое выделение памяти превышает *size*|

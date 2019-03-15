@@ -1,5 +1,5 @@
 ---
-title: Импорт в приложение с помощью __declspec(dllimport)
+title: Импорт в приложение с помощью объявления __declspec(dllimport)
 ms.date: 11/04/2016
 f1_keywords:
 - __declspec
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: ef01c2905dea215a1a52333ae5611ec58c5f5af4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419223"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810228"
 ---
-# <a name="importing-into-an-application-using-declspecdllimport"></a>Импорт в приложение с помощью __declspec(dllimport)
+# <a name="import-into-an-application-using-declspecdllimport"></a>Импорт в приложение с помощью объявления __declspec(dllimport)
 
 Считается, что программа, которая использует открытые символы, определенные библиотекой DLL, импортировать их. При создании файлов заголовков для приложений, использующих библиотеки DLL для сборки с помощью, используйте **__declspec(dllimport)** для объявления открытых символов. Ключевое слово **__declspec(dllimport)** работает ли экспорт с помощью DEF-файлы или **__declspec(dllexport)** ключевое слово.
 
@@ -43,16 +43,16 @@ class CLASS_DECLSPEC CExampleA : public CObject
 { ... class definition ... };
 ```
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Импорт и экспорт встраиваемых функций](../build/importing-and-exporting-inline-functions.md)
+- [Импорт и экспорт встраиваемых функций](importing-and-exporting-inline-functions.md)
 
-- [Взаимный импорт](../build/mutual-imports.md)
+- [Взаимный импорт](mutual-imports.md)
 
 ## <a name="see-also"></a>См. также
 
-[Импорт в приложение](../build/importing-into-an-application.md)
+[Импорт в приложение](importing-into-an-application.md)

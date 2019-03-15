@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443581"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818106"
 ---
 # <a name="netmodule-files-as-linker-input"></a>.NETMODULE-файлы в качестве входных файлов компоновщика
 
 LINK.exe теперь принимает OBJ MSIL и netmodules-файлы в качестве входных данных. Выходной файл, создаваемый компоновщиком является сборки или NETMODULE-файл с не зависят от времени выполнения на любом из OBJ или NETMODULE, были введены в компоновщик.
 
-netmodules-файлы создаются с помощью компилятора Visual C++ с [/LN (Создание модуля MSIL)](../../build/reference/ln-create-msil-module.md) или компоновщиком с помощью [/NOASSEMBLY (Создание модуля MSIL)](../../build/reference/noassembly-create-a-msil-module.md). OBJ-файлов всегда создаются при компиляции Visual C++. Для других компиляторов Visual Studio используйте **/target: module** параметр компилятора.
+netmodules-файлы создаются с компилятором MSVC [/LN (Создание модуля MSIL)](ln-create-msil-module.md) или компоновщиком с помощью [/NOASSEMBLY (Создание модуля MSIL)](noassembly-create-a-msil-module.md). OBJ-файлов всегда создаются при компиляции Visual C++. Для других компиляторов Visual Studio используйте **/target: module** параметр компилятора.
 
 Необходимо передать в компоновщик OBJ-файл из компиляции Visual C++, который создан .netmodule. Передавая .netmodule больше не поддерживается, так как **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
-Сведения о том, как вызывать компоновщика из командной строки, см. в разделе [синтаксис командной строки компоновщика](../../build/reference/linker-command-line-syntax.md), [кода C/C++ на сборки в командной строке](../../build/building-on-the-command-line.md), и [задайте путь и переменные среды для Сборки из командной строки](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Сведения о том, как вызывать компоновщика из командной строки, см. в разделе [синтаксис командной строки компоновщика](linking.md), [использовать набор инструментов MSVC из командной строки](../building-on-the-command-line.md), и [задать пути и переменных среды для построения из командной строки](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
-Путем передачи NETMODULE-файл или DLL-файла компоновщика, скомпилированного с помощью компилятора Visual C++ с **/CLR** может привести к ошибке компоновщика. Дополнительные сведения см. в разделе [Выбор формата входных файлов .netmodule](../../build/reference/choosing-the-format-of-netmodule-input-files.md).
+Передача NETMODULE-файл или DLL-файл в компоновщик, был скомпилирован с компилятором MSVC **/CLR** может привести к ошибке компоновщика. Дополнительные сведения см. в разделе [Выбор формата входных файлов .netmodule](choosing-the-format-of-netmodule-input-files.md).
 
 Компоновщик принимает машинные OBJ-файлы, а также MSIL OBJ-файлы, скомпилированные с использованием **/CLR**. При передаче смешанных OBJ-файлов в той же сборки, проверяемость выходного файла по умолчанию будет равен самый низкий уровень проверяемости входных модулей.
 
 Если вы уже создали приложение, которое состоит из двух или нескольких сборок и приложение должен содержаться в одной сборке, необходимо перекомпилировать сборку и затем связать OBJ-файлов или netmodules-файлы, чтобы получить единую сборку.
 
-Необходимо указать учетную запись точки с помощью [/Entry (символ точки входа)](../../build/reference/entry-entry-point-symbol.md) при создании исполняемого образа.
+Необходимо указать учетную запись точки с помощью [/Entry (символ точки входа)](entry-entry-point-symbol.md) при создании исполняемого образа.
 
-При связывании с помощью файла OBJ- или .netmodule MSIL, использовать [/LTCG (Создание кода во время компоновки)](../../build/reference/ltcg-link-time-code-generation.md), в противном случае при обнаружении MSIL .obj или NETMODULE-файл, оно будет перезапущено ссылку с параметром/LTCG.
+При связывании с помощью файла OBJ- или .netmodule MSIL, использовать [/LTCG (Создание кода во время компоновки)](ltcg-link-time-code-generation.md), в противном случае при обнаружении MSIL .obj или NETMODULE-файл, оно будет перезапущено ссылку с параметром/LTCG.
 
 Файлы OBJ- или .netmodule MSIL также могут передаваться в cl.exe.
 
-Входные файлы OBJ- или .netmodule MSIL не может иметь внедренные ресурсы. Ресурс внедрен в выходной файл (модуля или сборки) с [/ASSEMBLYRESOURCE (внедрение управляемого ресурса)](../../build/reference/assemblyresource-embed-a-managed-resource.md) параметр компоновщика или с **/Resource** параметр компилятора в другие компиляторы Visual Studio.
+Входные файлы OBJ- или .netmodule MSIL не может иметь внедренные ресурсы. Ресурс внедрен в выходной файл (модуля или сборки) с [/ASSEMBLYRESOURCE (внедрение управляемого ресурса)](assemblyresource-embed-a-managed-resource.md) параметр компоновщика или с **/Resource** параметр компилятора в другие компиляторы Visual Studio.
 
-При выполнении компоновки MSIL, и в том случае, если вы не указано [/LTCG (Создание кода во время компоновки)](../../build/reference/ltcg-link-time-code-generation.md), появится информационное сообщение, перезапуске компоновки. Это сообщение можно проигнорировать, но в целях повышения производительности компоновщика с MSIL-связывание, явно укажите **/LTCG**.
+При выполнении компоновки MSIL, и в том случае, если вы не указано [/LTCG (Создание кода во время компоновки)](ltcg-link-time-code-generation.md), появится информационное сообщение, перезапуске компоновки. Это сообщение можно проигнорировать, но в целях повышения производительности компоновщика с MSIL-связывание, явно укажите **/LTCG**.
 
 ## <a name="example"></a>Пример
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>См. также
 
-- [Входные LINK-файлы](../../build/reference/link-input-files.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Входные LINK-файлы](link-input-files.md)
+- [Параметры компоновщика MSVC](linker-options.md)

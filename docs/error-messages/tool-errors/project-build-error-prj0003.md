@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572394"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816182"
 ---
 # <a name="project-build-error-prj0003"></a>Ошибка построения проекта PRJ0003
 
@@ -27,7 +27,7 @@ ms.locfileid: "50572394"
 
 - Недостаточные привилегии безопасности. Убедитесь в наличии требуемых привилегий безопасности.
 
-- Пути к исполняемым файлам, указанный в **каталоги VC ++** не включают путь для инструмента, который вы пытаетесь запустить. Сведения см. в разделе [работа со свойствами проектов](../../ide/working-with-project-properties.md)
+- Пути к исполняемым файлам, указанный в **каталоги VC ++** не включают путь для инструмента, который вы пытаетесь запустить. Сведения см. в разделе [задать компилятора и свойства сборки](../../build/working-with-project-properties.md)
 
 - Для проекта makefile, отсутствует команда на выполнение в **построения командной строки** или **командной строке перестроения**.
 

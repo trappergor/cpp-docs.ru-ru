@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -FUNCTIONPADMIN linker option
 - /FUNCTIONPADMIN linker option
 ms.assetid: 25b02c13-1add-4fbd-add9-fcb30eb2cae7
-ms.openlocfilehash: c1e84f308796eabcaea61518e3731f633c2f67e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 699da3cea9914b5a10bdf769015d41c33936a902
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474897"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818626"
 ---
 # <a name="functionpadmin-create-hotpatchable-image"></a>/FUNCTIONPADMIN (создание образа, допускающего горячее обновление)
 
@@ -29,17 +29,17 @@ ms.locfileid: "50474897"
 
 ## <a name="remarks"></a>Примечания
 
-Чтобы компоновщик для создания образа с обновлением, OBJ-файлов, должны компилироваться с [/hotpatch (создать образ с обновлениями)](../../build/reference/hotpatch-create-hotpatchable-image.md).
+Чтобы компоновщик для создания образа с обновлением, OBJ-файлов, должны компилироваться с [/hotpatch (создать образ с обновлениями)](hotpatch-create-hotpatchable-image.md).
 
 После компиляции и связать изображение с однократного вызова cl.exe, **/hotpatch** подразумевает **/functionpadmin**.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **командной строки** страницу свойств.
 
-1. Введите **/FUNCTIONPADMIN** в диалоговом окне **Дополнительные параметры**. Выберите **ОК** для сохранения изменений.
+1. Введите **/FUNCTIONPADMIN** в диалоговом окне **Дополнительные параметры**. Выберите **ОК** для сохранения внесенных изменений.
 
 ### <a name="to-set-this-linker-option-programmatically"></a>Задание данного параметра компоновщика программным способом
 
@@ -47,5 +47,5 @@ ms.locfileid: "50474897"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по компоновщику MSVC](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

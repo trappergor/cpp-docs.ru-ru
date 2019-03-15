@@ -11,16 +11,16 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: 3031f02d-3b14-4ad0-869e-22b0110c3aed
-ms.openlocfilehash: b800bdcc36c82dabe13418244782e82737ad9171
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f98667d3a771994d1b4e54b429f42cb566c102c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502028"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810264"
 ---
 # <a name="zcforscope-force-conformance-in-for-loop-scope"></a>/Zc:forScope (принудительное обеспечение соответствия в области видимости оператора for)
 
-Использовался для реализации стандартного поведения C++ для циклов [for](../../cpp/for-statement-cpp.md) с расширениями Майкрософт ([/Ze](../../build/reference/za-ze-disable-language-extensions.md)).
+Использовался для реализации стандартного поведения C++ для циклов [for](../../cpp/for-statement-cpp.md) с расширениями Майкрософт ([/Ze](za-ze-disable-language-extensions.md)).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,7 +28,7 @@ ms.locfileid: "50502028"
 
 ## <a name="remarks"></a>Примечания
 
-При стандартном поведении инициализатору цикла **for** позволяется выходить за пределы области после цикла **for** . При использовании **/Zc:forScope-** и [/Ze](../../build/reference/za-ze-disable-language-extensions.md)инициализатор цикла **for** остается в пределах области до завершения локальной области.
+При стандартном поведении инициализатору цикла **for** позволяется выходить за пределы области после цикла **for** . При использовании **/Zc:forScope-** и [/Ze](za-ze-disable-language-extensions.md)инициализатор цикла **for** остается в пределах области до завершения локальной области.
 
 **/Zc: forScope** включен параметр по умолчанию. **/ Zc: forScope** не затрагивается при [/ permissive-](permissive-standards-conformance.md) параметра.
 
@@ -55,13 +55,13 @@ int main() {
 
 Поведение параметра **/Zc:forScope** во время выполнения можно изменить с помощью директивы pragma [conform](../../preprocessor/conform.md) .
 
-При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если требуется новый PCH-файл создан, используйте [/Yc (создать предкомпилированный заголовочный файл)](../../build/reference/yc-create-precompiled-header-file.md).
+При использовании параметра **/Zc:forScope-** в проекте с существующим файлом PCH выдается предупреждение, параметр **/Zc:forScope-** пропускается, а компиляция продолжается c использованием существующих файлов PCH. Если требуется новый PCH-файл создан, используйте [/Yc (создать предкомпилированный заголовочный файл)](yc-create-precompiled-header-file.md).
 
 Дополнительные сведения о вопросах соответствия в Visual C++ см. в статье [Nonstandard Behavior](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **языка** страницу свойств.
 
@@ -73,5 +73,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
-[/Za, /Ze (отключение расширений языка)](../../build/reference/za-ze-disable-language-extensions.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>
+[/Za, /Ze (отключение расширений языка)](za-ze-disable-language-extensions.md)<br/>

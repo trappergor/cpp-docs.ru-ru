@@ -8,12 +8,12 @@ helpviewer_keywords:
 - exporting DLLs [C++], C functions in C++ executables
 - exporting functions [C++], C functions in C++ executables
 ms.assetid: b51d6e5e-37cf-4c1c-b0bf-fcf188c82f00
-ms.openlocfilehash: 0d459c0116a657e12eafa09b50b1a855243f96ea
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b7ba2ed30615efb3b05e71cecf0ea69898feb8ba
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416505"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812438"
 ---
 # <a name="exporting-c-functions-for-use-in-c-or-c-language-executables"></a>Экспорт функций на языке C для использования в исполняемых файлах, исходный код которых написан на языке C или C++
 
@@ -44,26 +44,26 @@ extern "C" {
 }
 ```
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Экспорт из DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+- [Экспорт из DLL с использованием DEF-файлы](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Экспорт и импорт с использованием AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Декорированные имена](../build/reference/decorated-names.md)
+- [Декорированные имена](reference/decorated-names.md)
 
 - [Использование ключевого слова extern для задания компоновки](../cpp/using-extern-to-specify-linkage.md)
 
 ## <a name="see-also"></a>См. также
 
-[Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+[Экспорт из библиотеки DLL](exporting-from-a-dll.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d1821d8dc5eab202a918893a1e7895151629b551
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627531"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807693"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (Выравнивание члена структуры)
 
@@ -53,11 +53,11 @@ ms.locfileid: "53627531"
 
 - [__unaligned](../../cpp/unaligned.md)
 
-- [Примеры выравнивания структуры](../../build/x64-software-conventions.md#examples-of-structure-alignment) (x64 конкретных)
+- [/ALIGN (выравнивание разделов)](align-section-alignment.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **C/C++** > **создание кода** страницу свойств.
 
@@ -69,5 +69,5 @@ ms.locfileid: "53627531"
 
 ## <a name="see-also"></a>См. также
 
-- [Параметры компилятора](../../build/reference/compiler-options.md)
-- [Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+- [Параметры компилятора MSVC](compiler-options.md)
+- [Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

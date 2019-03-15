@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DEBUGTYPE linker option
 - -DEBUGTYPE linker option
 ms.assetid: 1ddcb718-7fec-4f92-a319-3f70f04fe742
-ms.openlocfilehash: c4a24d79295c1f7dbbe645c4a6e52f58b4a08807
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 00e3cb61f8ec9aa707bb72aa9ff05a64f98d4e47
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423508"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820056"
 ---
 # <a name="debugtype-debug-info-options"></a>/DEBUGTYPE (параметры отладочных сведений)
 
@@ -40,11 +40,11 @@ ms.locfileid: "57423508"
 
 Используйте **/DEBUGTYPE** параметр, чтобы указать Включение перемещения данных или pdata и xdata информация заголовка таблицы в потоке отладки. В этом случае компоновщик включает сведения о коде пользовательского режима, который видим в отладчике ядра при остановке в коде режима ядра. Чтобы сделать символы отладки доступными при **адресная ПРИВЯЗКА** будет указано, включают **CV** аргумент.
 
-Для отладки кода в пользовательском режиме, который является типичным для приложений, **/DEBUGTYPE** параметр не требуется. По умолчанию выходные параметры компилятора, укажите отладки ([/Z7, / Zi, /ZI](../../build/reference/z7-zi-zi-debug-information-format.md)) выдавать все сведения о необходимости средой Visual Studio отладчика. Используйте **/DEBUGTYPE:PDATA** или **/DEBUGTYPE:CV, PDATA адресная ПРИВЯЗКА** для отладки код, который сочетает в себе компоненты пользовательского режима и режима ядра, например приложения настройки для драйвера устройства. Дополнительные сведения об отладчиках режима ядра см. в разделе [отладки средства для Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
+Для отладки кода в пользовательском режиме, который является типичным для приложений, **/DEBUGTYPE** параметр не требуется. По умолчанию выходные параметры компилятора, укажите отладки ([/Z7, / Zi, /ZI](z7-zi-zi-debug-information-format.md)) выдавать все сведения о необходимости средой Visual Studio отладчика. Используйте **/DEBUGTYPE:PDATA** или **/DEBUGTYPE:CV, PDATA адресная ПРИВЯЗКА** для отладки код, который сочетает в себе компоненты пользовательского режима и режима ядра, например приложения настройки для драйвера устройства. Дополнительные сведения об отладчиках режима ядра см. в разделе [отладки средства для Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)
 
 ## <a name="see-also"></a>См. также
 
-[/DEBUG (создание отладочной информации)](../../build/reference/debug-generate-debug-info.md)<br/>
-[/DRIVER (драйвер режима ядра Windows NT)](../../build/reference/driver-windows-nt-kernel-mode-driver.md)<br/>
-[/PROFILE (профилировщик средств оценки производительности)](../../build/reference/profile-performance-tools-profiler.md)<br/>
+[/DEBUG (создание отладочной информации)](debug-generate-debug-info.md)<br/>
+[/DRIVER (драйвер режима ядра Windows NT)](driver-windows-nt-kernel-mode-driver.md)<br/>
+[/PROFILE (профилировщик средств оценки производительности)](profile-performance-tools-profiler.md)<br/>
 [Средства отладки для Windows (WinDbg, KD, CDB, NTSD)](/windows-hardware/drivers/debugger/index)

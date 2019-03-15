@@ -14,12 +14,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - buffers [C++], avoiding overruns
 ms.assetid: 8d8a5ea1-cd5e-42e1-bc36-66e1cd7e731e
-ms.openlocfilehash: 6681ff09b846011af1b500f88a535c208d0bc1c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 10afa874092eb563903ba5f49c6add136afc869c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417611"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820238"
 ---
 # <a name="gs-buffer-security-check"></a>Параметр /GS (проверка безопасности буфера)
 
@@ -96,7 +96,7 @@ struct { int a; int b; };
 
 - Функции, которые не содержат буфер GS.
 
-- Оптимизация ([параметры /O](../../build/reference/o-options-optimize-code.md)) не включены.
+- Оптимизация ([параметры /O](o-options-optimize-code.md)) не включены.
 
 - Функции, которые имеют список аргументов переменных (...).
 
@@ -116,7 +116,7 @@ struct { int a; int b; };
 
 1. В **обозревателе решений**, щелкните правой кнопкой мыши проект и нажмите кнопку **свойства**.
 
-   Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+   Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. В **страницы свойств** диалоговом окне щелкните **C/C++** папки.
 
@@ -157,5 +157,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

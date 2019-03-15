@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
 helpviewer_keywords:
 - Unicode, Visual C++
-ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71458ab345670c0a5715576a7da80c4e6ff2955b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494982"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807531"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>Поддержка Юникода в компиляторе и компоновщике
 
@@ -45,8 +45,8 @@ ms.locfileid: "50494982"
 
 ## <a name="asm-and-cod-dumps"></a>ASM и COD
 
-ASM и COD, в формате ANSI по умолчанию для обеспечения совместимости с MASM. Используйте [параметр/FAu](../../build/reference/fa-fa-listing-file.md) для вывода UTF-8. Обратите внимание, что при указании **параметра/FAs**, смешанный источник будет печататься напрямую и может выглядеть например, если исходный код — UTF-8, и вы не указали **/FAsu**.
+ASM и COD, в формате ANSI по умолчанию для обеспечения совместимости с MASM. Используйте [параметр/FAu](fa-fa-listing-file.md) для вывода UTF-8. Обратите внимание, что при указании **параметра/FAs**, смешанный источник будет печататься напрямую и может выглядеть например, если исходный код — UTF-8, и вы не указали **/FAsu**.
 
 ## <a name="see-also"></a>См. также
 
-[Создание кода C/C++ в командной строке](../../build/building-on-the-command-line.md)
+[Использование набора средств MSVC из командной строки](../building-on-the-command-line.md)

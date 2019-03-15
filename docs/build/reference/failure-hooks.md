@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417948"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811996"
 ---
 # <a name="failure-hooks"></a>Обработчики сбоев
 
-Обработчик сбоев включается в так же, как [обработчика уведомлений](../../build/reference/notification-hooks.md). Процедура обработки требует возврата подходящего значения таким образом, чтобы обработку можно продолжить (HINSTANCE или FARPROC) или 0, чтобы указать, что должно вызываться исключение.
+Обработчик сбоев включается в так же, как [обработчика уведомлений](notification-hooks.md). Процедура обработки требует возврата подходящего значения таким образом, чтобы обработку можно продолжить (HINSTANCE или FARPROC) или 0, чтобы указать, что должно вызываться исключение.
 
 — Указатель на переменную, ссылающуюся на пользовательской функции:
 
@@ -39,4 +39,4 @@ PfnDliHook   __pfnDliFailureHook2;
 
 ## <a name="see-also"></a>См. также
 
-[Обработка ошибок и предупреждений](../../build/reference/error-handling-and-notification.md)
+[Обработка ошибок и предупреждений](error-handling-and-notification.md)

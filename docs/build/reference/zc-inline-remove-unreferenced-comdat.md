@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441240"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820524"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (удаление COMDAT без ссылки)
 
@@ -23,11 +23,11 @@ ms.locfileid: "50441240"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/ Zc: inline**[**-**]
+> **/Zc:inline**[**-**]
 
 ## <a name="remarks"></a>Примечания
 
-Когда **/Zc: inline** указан, компилятор не выдает символьную информацию для неиспользуемые функции COMDAT или данные, или для функции или данные, которые имеют только внутреннюю компоновку. Эта оптимизация упрощает часть работы, выполняемой компоновщиком в сборках выпуска или если параметр компоновщика [предотвратят](../../build/reference/opt-optimizations.md) указан. Если компилятор выполняет эту оптимизацию, размер файла OBJ может значительно уменьшиться, а скорость работы компоновщика — возрасти. Этот параметр компилятора не включена, если отключены оптимизации ([/Od](../../build/reference/od-disable-debug.md)) или когда [/GL (оптимизация всей программы)](../../build/reference/gl-whole-program-optimization.md) указан.
+Когда **/Zc: inline** указан, компилятор не выдает символьную информацию для неиспользуемые функции COMDAT или данные, или для функции или данные, которые имеют только внутреннюю компоновку. Эта оптимизация упрощает часть работы, выполняемой компоновщиком в сборках выпуска или если параметр компоновщика [предотвратят](opt-optimizations.md) указан. Если компилятор выполняет эту оптимизацию, размер файла OBJ может значительно уменьшиться, а скорость работы компоновщика — возрасти. Этот параметр компилятора не включена, если отключены оптимизации ([/Od](od-disable-debug.md)) или когда [/GL (оптимизация всей программы)](gl-whole-program-optimization.md) указан.
 
 По умолчанию этот параметр отключен (**/Zc:inline-**). [/ Permissive-](permissive-standards-conformance.md) параметр не позволяет включить **/Zc: inline**.
 
@@ -123,7 +123,7 @@ void main() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **C/C++** > **языка** страницу свойств.
 
@@ -131,4 +131,4 @@ void main() {
 
 ## <a name="see-also"></a>См. также
 
-[/Zc (соответствие)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (соответствие)](zc-conformance.md)<br/>

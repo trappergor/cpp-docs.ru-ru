@@ -11,18 +11,18 @@ helpviewer_keywords:
 - .exp files [C++]
 - EXP files
 ms.assetid: 399f5636-0a4d-462e-b500-5f5b9ae5ad22
-ms.openlocfilehash: 170adfe54b34d14f84b54c717bc9f75fe0b7ab37
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f2f5c22752d6d938700228fc208c21b8f32cc7b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418481"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822292"
 ---
 # <a name="exp-files-as-linker-input"></a>EXP-файлы в качестве входных файлов компоновщика
 
-Файлы экспорта (EXP) содержат сведения о экспортируемые элементы функции и данные. Когда LIB создает библиотеку импорта, она также создает файл EXP. EXP-файл используется при связывании это программа, которая экспортирует и импортирует из другой программы, прямо или косвенно. При компоновке с EXP-файл, LINK не создает библиотеку импорта, так как предполагается, что LIB уже создана. Дополнительные сведения о EXP-файлы и библиотеки импорта, см. в разделе [работа с библиотеками, импортировать и экспортировать файлы](../../build/reference/working-with-import-libraries-and-export-files.md).
+Файлы экспорта (EXP) содержат сведения о экспортируемые элементы функции и данные. Когда LIB создает библиотеку импорта, она также создает файл EXP. EXP-файл используется при связывании это программа, которая экспортирует и импортирует из другой программы, прямо или косвенно. При компоновке с EXP-файл, LINK не создает библиотеку импорта, так как предполагается, что LIB уже создана. Дополнительные сведения о EXP-файлы и библиотеки импорта, см. в разделе [работа с библиотеками, импортировать и экспортировать файлы](working-with-import-libraries-and-export-files.md).
 
 ## <a name="see-also"></a>См. также
 
-[Входные LINK-файлы](../../build/reference/link-input-files.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Входные LINK-файлы](link-input-files.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

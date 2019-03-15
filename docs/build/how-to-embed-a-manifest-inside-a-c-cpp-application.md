@@ -6,16 +6,16 @@ helpviewer_keywords:
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412904"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809786"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Практическое руководство. Внедрение манифеста в приложения C/C++
 
-Рекомендуется наличие его манифестом, включаемым в конечный двоичный файл, так как это гарантирует нужная среда выполнения поведение в большинстве сценариев приложения C/C++ (или библиотека). По умолчанию Visual Studio пытается встроить манифест при построении проекта из файлов исходного кода; см. в разделе [Manifest Generation в Visual Studio](../build/manifest-generation-in-visual-studio.md) Дополнительные сведения. Однако если приложение создается с помощью nmake, необходимы некоторые изменения в существующий файл makefile. В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически встраивать манифест в конечный двоичный файл.
+Рекомендуется наличие его манифестом, включаемым в конечный двоичный файл, так как это гарантирует нужная среда выполнения поведение в большинстве сценариев приложения C/C++ (или библиотека). По умолчанию Visual Studio пытается встроить манифест при построении проекта из файлов исходного кода; см. в разделе [Manifest Generation в Visual Studio](manifest-generation-in-visual-studio.md) Дополнительные сведения. Однако если приложение создается с помощью nmake, необходимы некоторые изменения в существующий файл makefile. В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически встраивать манифест в конечный двоичный файл.
 
 ## <a name="two-approaches"></a>Два подхода
 
@@ -255,4 +255,4 @@ $(_VC_MANIFEST_BASENAME).auto.manifest :
 
 ## <a name="see-also"></a>См. также
 
-[Основные сведения о создании манифестов для программ на C/C++](../build/understanding-manifest-generation-for-c-cpp-programs.md)
+[Основные сведения о создании манифестов для программ на C/C++](understanding-manifest-generation-for-c-cpp-programs.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412462"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807966"
 ---
 # <a name="cl-environment-variables"></a>Переменные среды CL
 
@@ -30,13 +30,13 @@ ms.locfileid: "57412462"
 
 > ЗАДАЙТЕ CL = [[*параметр*]... [*файл*]...] [/ link *-opt ссылку* ...] ЗАДАЙТЕ \_CL\_= [[*параметр*]... [*файл*]...] [/ link *-opt ссылку* ...]
 
-Дополнительные сведения об аргументах для компилятора CL и \_CL\_ переменные среды, см. в разделе [синтаксис командной строки компилятора](../../build/reference/compiler-command-line-syntax.md).
+Дополнительные сведения об аргументах для компилятора CL и \_CL\_ переменные среды, см. в разделе [синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md).
 
 Эти переменные среды можно использовать для определения наиболее часто используемых файлов и параметров, а с помощью командной строки можно определить отдельные файлы и параметры для определенных целей. CL и \_CL\_ переменные среды ограничены до 1024 символов (ограничение ввода командной строки).
 
 Невозможно использовать параметр /D для определения символа, в который входит знак равенства (=). Символ номера (#) можно заменить на символ равенства. Таким образом, можно использовать компилятора CL или \_CL\_ переменных среды для определения констант препроцессора с явными значениями — например, `/DDEBUG#1` для определения `DEBUG=1`.
 
-Дополнительные сведения см. в разделе [Настройка переменных среды](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md).
+Дополнительные сведения см. в разделе [Настройка переменных среды](../setting-the-path-and-environment-variables-for-command-line-builds.md).
 
 ## <a name="examples"></a>Примеры
 
@@ -58,5 +58,5 @@ ms.locfileid: "57412462"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)
+[Настройка параметров компилятора](compiler-command-line-syntax.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)

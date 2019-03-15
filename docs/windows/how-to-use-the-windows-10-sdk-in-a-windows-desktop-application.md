@@ -1,16 +1,16 @@
 ---
-title: Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
+title: Практическое руководство. Использовать Windows 10 SDK в приложении для настольных систем Windows
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669122"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809929"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>Практическое руководство. Использовать Windows 10 SDK в приложении для настольных систем Windows
 
 При создании классического проекта рабочего стола Windows в Visual Studio 2017 задано по умолчанию для сборки с версией пакета SDK Windows 10, установленной при установки или последнего обновления рабочей нагрузки C++ Desktop. Эта версия пакета SDK Windows совместима с Windows 7 и более поздних версий. См. в разделе [использование заголовков Windows](/windows/desktop/WinProg/using-the-windows-headers) Дополнительные сведения о предназначенных для конкретных версий Windows.
 
@@ -38,7 +38,7 @@ ms.locfileid: "50669122"
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. Откройте свойства проекта и в разделе **Свойства конфигурации, Общие** обратите внимание на значения из параметра **Версия целевой платформы Windows**. Изменение значения на данном этапе действует аналогично данной процедуре. См. раздел [General Property Page (Project)](../ide/general-property-page-project.md).
+4. Откройте свойства проекта и в разделе **Свойства конфигурации, Общие** обратите внимание на значения из параметра **Версия целевой платформы Windows**. Изменение значения на данном этапе действует аналогично данной процедуре. См. раздел [General Property Page (Project)](../build/reference/general-property-page-project.md).
 
    ![Версия целевой платформы](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

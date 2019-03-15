@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: 931253b0a50e8b8f96a385400b2afbb1894c9d47
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417701"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814167"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (тип знака по умолчанию не подписан)
 
@@ -55,6 +55,6 @@ ANSI C и C++ не требуют реализации `char` типа. Этот
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[Работа со свойствами проектов](../../ide/working-with-project-properties.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md)

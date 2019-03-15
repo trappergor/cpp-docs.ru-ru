@@ -8,12 +8,12 @@ helpviewer_keywords:
 - LINKERMEMBER dumpbin option
 - -LINKERMEMBER dumpbin option
 ms.assetid: c96868c1-d70e-4651-ae36-c55b58b16406
-ms.openlocfilehash: 8669198ee62032e15e40c821ed2e4caccdebe519
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a0456fd9ed1729b4a6cfa200a54ba211a64e94ea
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813283"
 ---
 # <a name="linkermember"></a>/LINKERMEMBER
 
@@ -25,8 +25,8 @@ ms.locfileid: "57417493"
 
 Этот параметр отображает открытые символы, определенные в библиотеке. Аргумент 1 для отображения символов в порядке объекта, а также их смещения. Аргумент 2 позволяет вывести смещения и порядковые номера объектов, а затем список символов в алфавитном порядке, вместе с индексом для каждого объекта. Чтобы получить обоих выходов, укажите/LINKERMEMBER без числовой аргумент.
 
-Только [/Headers](../../build/reference/headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора.
+Только [/Headers](headers.md) параметр (программа DUMPBIN) доступен для использования в файлах, созданных с помощью [/GL](gl-whole-program-optimization.md) параметр компилятора.
 
 ## <a name="see-also"></a>См. также
 
-[Параметры DUMPBIN](../../build/reference/dumpbin-options.md)
+[Параметры DUMPBIN](dumpbin-options.md)

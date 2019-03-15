@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416557"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817001"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>Экспорт из библиотеки DLL с использованием DEF-файлов
 
@@ -21,7 +21,7 @@ ms.locfileid: "57416557"
 
 - Первый оператор в файле должен быть оператор LIBRARY. Этот оператор определяет DEF-файл как принадлежащий библиотеке DLL. Оператор LIBRARY следует имя библиотеки DLL. Компоновщик помещает это имя в DLL-библиотека импорта.
 
-- Оператор EXPORTS перечисляет имена и, при необходимости, порядковые номера функций, экспортируемых посредством библиотеки DLL. Присвоения функции порядкового после имени функции с помощью символа (@) и номер. При указании порядковые номера, они должны быть в диапазоне от 1 до N, где N — число функций, экспортируемых посредством библиотеки DLL. Если вы хотите экспортировать функции по порядковому номеру, см. в разделе [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) а также в этом разделе.
+- Оператор EXPORTS перечисляет имена и, при необходимости, порядковые номера функций, экспортируемых посредством библиотеки DLL. Присвоения функции порядкового после имени функции с помощью символа (@) и номер. При указании порядковые номера, они должны быть в диапазоне от 1 до N, где N — число функций, экспортируемых посредством библиотеки DLL. Если вы хотите экспортировать функции по порядковому номеру, см. в разделе [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md) а также в этом разделе.
 
 Например библиотеку DLL, которая содержит код для реализации дерева поиска двоичных файлов может выглядеть следующим образом:
 
@@ -54,34 +54,34 @@ EXPORTS
 
 Обратите внимание на то, что MFC использует DEF-файлы для экспорта функций и классов из файла MFCx0.dll.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт и импорт с использованием AFX_EXT_CLASS](../build/exporting-and-importing-using-afx-ext-class.md)
+- [Экспорт и импорт с использованием AFX_EXT_CLASS](exporting-and-importing-using-afx-ext-class.md)
 
-- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [DEF-файлы](../build/reference/module-definition-dot-def-files.md)
+- [DEF-файлы](reference/module-definition-dot-def-files.md)
 
-- [Правила для операторов определения модуля](../build/reference/rules-for-module-definition-statements.md)
+- [Правила для операторов определения модуля](reference/rules-for-module-definition-statements.md)
 
-- [Декорированные имена](../build/reference/decorated-names.md)
+- [Декорированные имена](reference/decorated-names.md)
 
-- [Импорт и экспорт встраиваемых функций](../build/importing-and-exporting-inline-functions.md)
+- [Импорт и экспорт встраиваемых функций](importing-and-exporting-inline-functions.md)
 
-- [Взаимный импорт](../build/mutual-imports.md)
+- [Взаимный импорт](mutual-imports.md)
 
 ## <a name="see-also"></a>См. также
 
-[Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+[Экспорт из библиотеки DLL](exporting-from-a-dll.md)

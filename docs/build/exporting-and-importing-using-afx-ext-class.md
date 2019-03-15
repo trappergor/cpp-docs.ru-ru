@@ -11,16 +11,16 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421198"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821226"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Экспортирование и импортирование с использованием AFX_EXT_CLASS
 
-[Библиотеки DLL расширений MFC](../build/extension-dlls-overview.md) используйте макрос **AFX_EXT_CLASS** Экспорт классов; исполняемые файлы, связанные библиотеки DLL расширения MFC использовать макрос для импорта классов. С помощью **AFX_EXT_CLASS** макрос, тех же файлов заголовков, которые используются для построения библиотеки DLL, которые могут использоваться с исполняемыми файлами, связанных с библиотекой DLL расширения MFC.
+[Библиотеки DLL расширений MFC](extension-dlls-overview.md) используйте макрос **AFX_EXT_CLASS** Экспорт классов; исполняемые файлы, связанные библиотеки DLL расширения MFC использовать макрос для импорта классов. С помощью **AFX_EXT_CLASS** макрос, тех же файлов заголовков, которые используются для построения библиотеки DLL, которые могут использоваться с исполняемыми файлами, связанных с библиотекой DLL расширения MFC.
 
 Добавьте в файл заголовка для библиотеки DLL, **AFX_EXT_CLASS** ключевое слово в объявление класса следующим образом:
 
@@ -102,30 +102,30 @@ class CExampleView : public CView
 > [!NOTE]
 >  Если экспортируется весь класс, а не выбранные элементы класса, автоматически экспортируются статические данные-члены.
 
-### <a name="what-do-you-want-to-do"></a>Выберите действие
+### <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Экспорт из DLL с использованием DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+- [Экспорт из DLL с использованием DEF-файлы](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из библиотеки DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [Экспорт функций на языке C для использования в исполняемых файлах C или C++-язык](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Инициализация библиотеки DLL](../build/run-time-library-behavior.md#initializing-a-dll)
+- [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Декорированные имена](../build/reference/decorated-names.md)
+- [Декорированные имена](reference/decorated-names.md)
 
-- [Импорт и экспорт встраиваемых функций](../build/importing-and-exporting-inline-functions.md)
+- [Импорт и экспорт встраиваемых функций](importing-and-exporting-inline-functions.md)
 
-- [Взаимный импорт](../build/mutual-imports.md)
+- [Взаимный импорт](mutual-imports.md)
 
 ## <a name="see-also"></a>См. также
 
-[Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+[Экспорт из библиотеки DLL](exporting-from-a-dll.md)

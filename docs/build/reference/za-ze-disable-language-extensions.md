@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 71718aed7853e7d09b15734bad6a350f9a19fd5e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422836"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812308"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za, /Ze (отключить расширения языка)
 
@@ -51,7 +51,7 @@ ms.locfileid: "57422836"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. В области навигации выберите **свойства конфигурации** > **C/C++** > **языка**.
 
@@ -64,7 +64,6 @@ ms.locfileid: "57422836"
 ## <a name="see-also"></a>См. также
 
 [Параметры компилятора](compiler-options.md)<br/>
-[Настройка параметров компилятора](setting-compiler-options.md)<br/>
 [/Zc (соответствие)](zc-conformance.md)<br/>
 [/permissive- (соответствие стандартам)](permissive-standards-conformance.md)<br/>
 [/std (определение стандартной версии языка)](std-specify-language-standard-version.md)<br/>

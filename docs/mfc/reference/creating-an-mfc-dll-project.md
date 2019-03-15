@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278838"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814154"
 ---
 # <a name="creating-an-mfc-dll-project"></a>Создание проекта библиотеки DLL MFC
 
@@ -25,7 +25,7 @@ ms.locfileid: "57278838"
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>Чтобы создать проект библиотеки DLL MFC, с помощью мастера MFC DLL
 
-1. Следуйте инструкциям, приведенным в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Следуйте инструкциям в разделе справки [создайте проект консольного приложения C++](../../get-started/tutorial-console-cpp.md).
 
 **Примечание** в **новый проект** выберите `MFC DLL` значок в области «Шаблоны», чтобы открыть мастер библиотек DLL MFC.
 
@@ -36,10 +36,11 @@ ms.locfileid: "57278838"
 
 1. Нажмите кнопку **Готово** закрыть мастер и откройте новый проект в **обозревателе решений**.
 
-После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>См. также
 
 [Типы проектов Visual C++](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Страницы свойств](../../ide/property-pages-visual-cpp.md)
+[Страницы свойств](../../build/reference/property-pages-visual-cpp.md)
+

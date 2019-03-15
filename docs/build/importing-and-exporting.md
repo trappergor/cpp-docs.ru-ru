@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815831"
 ---
 # <a name="importing-and-exporting"></a>Импортирование и экспортирование
 
@@ -27,7 +27,7 @@ ms.locfileid: "57424799"
 
 Файл определения модуля (DEF) — это текстовый файл, содержащий один или несколько операторов модуля, описывающих различные атрибуты библиотеки DLL. Если вы не используете **__declspec(dllimport)** или **__declspec(dllexport)** DEF-файла для экспорта функций библиотеки DLL, необходимой библиотеке DLL.
 
-Можно использовать DEF-файлы для [Импорт в приложение](../build/importing-using-def-files.md) или [Экспорт из библиотеки DLL](../build/exporting-from-a-dll-using-def-files.md).
+Можно использовать DEF-файлы для [Импорт в приложение](importing-using-def-files.md) или [Экспорт из библиотеки DLL](exporting-from-a-dll-using-def-files.md).
 
 ## <a name="using-declspec"></a>С помощью __declspec
 
@@ -39,12 +39,12 @@ Visual C++ использует **__declspec(dllimport)** и **__declspec(dllexp
 
 Формат переносимого исполняемого файла Win32 позволяет свести к минимуму число страниц, предназначенных для отладки импортов. Чтобы сделать это, она помещает все адреса импорта по любой программе, в одном месте, именем таблицы адресов импорта. Благодаря этому загрузчик для изменения только одного или двух страниц при доступе к эти операции.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие
+## <a name="what-do-you-want-to-do"></a>Выберите действие.
 
-- [Импорт в приложение](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение](importing-into-an-application-using-declspec-dllimport.md)
 
-- [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+- [Экспорт из библиотеки DLL](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL в Visual C++](dlls-in-visual-cpp.md)

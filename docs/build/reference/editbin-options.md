@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EDITBIN program, options
 ms.assetid: 2da9f88e-cbab-4d64-bb66-ef700535230f
-ms.openlocfilehash: 409c40986068475299c95f1be0dff5f15d022520
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e7338c6a45d74aa8efac1b72683cca7661c62e0a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424331"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820108"
 ---
 # <a name="editbin-options"></a>Параметры EDITBIN
 
@@ -21,30 +21,30 @@ ms.locfileid: "57424331"
 
 (Программа EDITBIN) имеет следующие параметры:
 
-|Параметр|Цель|
+|Параметр|Назначение|
 |------------|-------------|
-|[/ALLOWBIND](../../build/reference/allowbind.md)|Указывает, можно ли привязать библиотеку DLL.|
-|[/ALLOWISOLATION](../../build/reference/allowisolation.md)|Указывает библиотеку DLL или поведение поиск манифеста в исполняемый файл.|
-|[/APPCONTAINER](../../build/reference/appcontainer.md)|Указывает, должно ли приложение работать в AppContainer — например, приложение UWP.|
-|[/BIND](../../build/reference/bind.md)|Задает адреса для точки входа в указанных объектов, чтобы сократить время загрузки.|
-|[/DYNAMICBASE](../../build/reference/dynamicbase.md)|Указывает ли библиотеки DLL или исполняемый образ может быть случайным образом переместить во время загрузки, используя технологию address space макета randomization (ASLR).|
-|[/ ERRORREPORT](../../build/reference/errorreport-editbin-exe.md)|Отчеты о внутренних ошибках в корпорацию Майкрософт.|
-|[/HEAP](../../build/reference/heap.md)|Задает размер кучи исполняемый образ, в байтах.|
-|[/HIGHENTROPYVA](../../build/reference/highentropyva.md)|Указывает, поддерживает ли библиотеки DLL или исполняемый образ файлами технологии с высокой энтропией (64-разрядная версия) адрес space layout randomization (ASLR).|
-|[/INTEGRITYCHECK](../../build/reference/integritycheck.md)|Указывает, нужно ли проверять цифровую подпись при загрузке.|
-|[/LARGEADDRESSAWARE](../../build/reference/largeaddressaware.md)|Указывает, поддерживает ли объект адреса, превышающие два гигабайта.|
-|[/NOLOGO](../../build/reference/nologo-editbin.md)|Отключает загрузочный баннер (программа EDITBIN).|
-|[/NXCOMPAT](../../build/reference/nxcompat.md)|Указывает, совместим ли исполняемый образ с предотвращением выполнения данных Windows.|
-|[/REBASE](../../build/reference/rebase.md)|Задает базовые адреса для указанных объектов.|
-|[/RELEASE](../../build/reference/release.md)|Задает контрольную сумму в заголовке.|
-|[/SECTION](../../build/reference/section-editbin.md)|Переопределяет атрибуты секции.|
-|[/STACK](../../build/reference/stack.md)|Задает размер стека исполняемый образ, в байтах.|
-|[/SUBSYSTEM](../../build/reference/subsystem.md)|Указывает среде выполнения.|
-|[/SWAPRUN](../../build/reference/swaprun.md)|Указывает исполняемый образ должен скопировать файл подкачки и запустите оттуда.|
-|[/TSAWARE](../../build/reference/tsaware.md)|Указывает, что приложение, предназначенное для работы в многопользовательской среде.|
-|[/VERSION](../../build/reference/version.md)|Задает номер версии в заголовке.|
+|[/ALLOWBIND](allowbind.md)|Указывает, можно ли привязать библиотеку DLL.|
+|[/ALLOWISOLATION](allowisolation.md)|Указывает библиотеку DLL или поведение поиск манифеста в исполняемый файл.|
+|[/APPCONTAINER](appcontainer.md)|Указывает, должно ли приложение работать в AppContainer — например, приложение UWP.|
+|[/BIND](bind.md)|Задает адреса для точки входа в указанных объектов, чтобы сократить время загрузки.|
+|[/DYNAMICBASE](dynamicbase.md)|Указывает ли библиотеки DLL или исполняемый образ может быть случайным образом переместить во время загрузки, используя технологию address space макета randomization (ASLR).|
+|[/ ERRORREPORT](errorreport-editbin-exe.md)|Отчеты о внутренних ошибках в корпорацию Майкрософт.|
+|[/HEAP](heap.md)|Задает размер кучи исполняемый образ, в байтах.|
+|[/HIGHENTROPYVA](highentropyva.md)|Указывает, поддерживает ли библиотеки DLL или исполняемый образ файлами технологии с высокой энтропией (64-разрядная версия) адрес space layout randomization (ASLR).|
+|[/INTEGRITYCHECK](integritycheck.md)|Указывает, нужно ли проверять цифровую подпись при загрузке.|
+|[/LARGEADDRESSAWARE](largeaddressaware.md)|Указывает, поддерживает ли объект адреса, превышающие два гигабайта.|
+|[/NOLOGO](nologo-editbin.md)|Отключает загрузочный баннер (программа EDITBIN).|
+|[/NXCOMPAT](nxcompat.md)|Указывает, совместим ли исполняемый образ с предотвращением выполнения данных Windows.|
+|[/REBASE](rebase.md)|Задает базовые адреса для указанных объектов.|
+|[/RELEASE](release.md)|Задает контрольную сумму в заголовке.|
+|[/SECTION](section-editbin.md)|Переопределяет атрибуты секции.|
+|[/STACK](stack.md)|Задает размер стека исполняемый образ, в байтах.|
+|[/SUBSYSTEM](subsystem.md)|Указывает среде выполнения.|
+|[/SWAPRUN](swaprun.md)|Указывает исполняемый образ должен скопировать файл подкачки и запустите оттуда.|
+|[/TSAWARE](tsaware.md)|Указывает, что приложение, предназначенное для работы в многопользовательской среде.|
+|[/VERSION](version.md)|Задает номер версии в заголовке.|
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
-[Справочник ЕDITBIN](../../build/reference/editbin-reference.md)
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)<br/>
+[Справочник ЕDITBIN](editbin-reference.md)

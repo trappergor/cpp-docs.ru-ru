@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 5a908fc49776eaca68d9a79fb679b759155853d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418858"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822471"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 
@@ -47,11 +47,11 @@ ms.locfileid: "57418858"
 
 - **noAssembly**
 
-   **является устаревшим /CLR:NOASSEMBLY**. Взамен рекомендуется использовать [/LN (Create MSIL Module)](../../build/reference/ln-create-msil-module.md) .
+   **является устаревшим /CLR:NOASSEMBLY**. Взамен рекомендуется использовать [/LN (Create MSIL Module)](ln-create-msil-module.md) .
 
    Указывает, что манифест сборки не должен быть включен в выходной файл. По умолчанию параметр **noAssembly** отключен.
 
-   Управляемая программа, которая не содержит метаданных сборки в манифесте, называется *модулем*. Параметр **noAssembly** можно использовать только для создания модуля. Если компиляция выполняется с параметром [/c](../../build/reference/c-compile-without-linking.md) и **/clr:noAssembly**, укажите параметр [/NOASSEMBLY](../../build/reference/noassembly-create-a-msil-module.md) на фазе компоновщика, чтобы создать модуль.
+   Управляемая программа, которая не содержит метаданных сборки в манифесте, называется *модулем*. Параметр **noAssembly** можно использовать только для создания модуля. Если компиляция выполняется с параметром [/c](c-compile-without-linking.md) и **/clr:noAssembly**, укажите параметр [/NOASSEMBLY](noassembly-create-a-msil-module.md) на фазе компоновщика, чтобы создать модуль.
 
    До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.
 
@@ -65,27 +65,27 @@ ms.locfileid: "57418858"
 
 ## <a name="remarks"></a>Примечания
 
-Управляемый код — это код, который среда CLR может проверять и контролировать. Управляемый код может обращаться к управляемым объектам. Для получения дополнительной информации см. [/clr Restrictions](../../build/reference/clr-restrictions.md).
+Управляемый код — это код, который среда CLR может проверять и контролировать. Управляемый код может обращаться к управляемым объектам. Для получения дополнительной информации см. [/clr Restrictions](clr-restrictions.md).
 
 Сведения о разработке приложений, которые определяют и используют управляемые типы, см. в разделе [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
 
 Приложение, скомпилированное с использованием **/clr** , может содержать или не содержать управляемые данные.
 
-Чтобы включить отладку для управляемых приложений, см. в разделе [/ASSEMBLYDEBUG (Добавление атрибута DebuggableAttribute)](../../build/reference/assemblydebug-add-debuggableattribute.md).
+Чтобы включить отладку для управляемых приложений, см. в разделе [/ASSEMBLYDEBUG (Добавление атрибута DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
 В куче сбора мусора будут созданы экземпляры только типов среды CLR. Дополнительные сведения см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).
 
-По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md). Параметр **/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.
+По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](md-mt-ld-use-run-time-library.md). Параметр **/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.
 
-Если компиляция выполняется с помощью **/c**, можно указать тип среды CLR выходного файла, задав [/CLRIMAGETYPE](../../build/reference/clrimagetype-specify-type-of-clr-image.md).
+Если компиляция выполняется с помощью **/c**, можно указать тип среды CLR выходного файла, задав [/CLRIMAGETYPE](clrimagetype-specify-type-of-clr-image.md).
 
-**/clr** подразумевает указание **/EHa**, и никакие другие параметры **/EH** не поддерживаются для **/clr**. Дополнительные сведения см. в статье [/EH (модель обработки исключений)](../../build/reference/eh-exception-handling-model.md).
+**/clr** подразумевает указание **/EHa**, и никакие другие параметры **/EH** не поддерживаются для **/clr**. Дополнительные сведения см. в статье [/EH (модель обработки исключений)](eh-exception-handling-model.md).
 
-Сведения о том, как определить тип образа среды файла CLR, см. в разделе [/CLRHEADER](../../build/reference/clrheader.md).
+Сведения о том, как определить тип образа среды файла CLR, см. в разделе [/CLRHEADER](clrheader.md).
 
 Все модули, передаваемые компоновщику при определенном вызове, должны компилироваться с одним и тем же параметром компилятора, указывающим библиотеку времени выполнения (**/MD** или **/LD**).
 
-Используйте параметр компоновщика [/ASSEMBLYRESOURCE](../../build/reference/assemblyresource-embed-a-managed-resource.md) для внедрения ресурса в сборку. Параметры компоновщика[/DELAYSIGN](../../build/reference/delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](../../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)и [/KEYFILE](../../build/reference/keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) также позволяют настраивать способ создания сборки.
+Используйте параметр компоновщика [/ASSEMBLYRESOURCE](assemblyresource-embed-a-managed-resource.md) для внедрения ресурса в сборку. Параметры компоновщика[/DELAYSIGN](delaysign-partially-sign-an-assembly.md), [/KEYCONTAINER](keycontainer-specify-a-key-container-to-sign-an-assembly.md)и [/KEYFILE](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md) также позволяют настраивать способ создания сборки.
 
 При использовании **/clr** символ `_MANAGED` определяется как 1. Для получения дополнительной информации см. [Predefined Macros](../../preprocessor/predefined-macros.md).
 
@@ -105,5 +105,5 @@ class {} x;
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

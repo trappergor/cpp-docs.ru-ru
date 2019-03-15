@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420873"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818535"
 ---
 # <a name="og-global-optimizations"></a>/Og (Виды глобальной оптимизации)
 
-Не рекомендуется. Предоставляет локальные и глобальные оптимизации, автоматическое выделение регистров и оптимизацию цикла. Мы рекомендуем использовать либо [/O1 (минимизировать размер)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) или [/O2 (максимизировать скорость)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) вместо этого.
+Не рекомендуется. Предоставляет локальные и глобальные оптимизации, автоматическое выделение регистров и оптимизацию цикла. Мы рекомендуем использовать либо [/O1 (минимизировать размер)](o1-o2-minimize-size-maximize-speed.md) или [/O2 (максимизировать скорость)](o1-o2-minimize-size-maximize-speed.md) вместо этого.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ ms.locfileid: "57420873"
 
 ## <a name="remarks"></a>Примечания
 
-**/Og** является устаревшим. Эти оптимизации обычно включены по умолчанию. Дополнительные сведения об оптимизации, см. в разделе [/O1, / O2 (минимизировать размер, максимизировать скорость)](../../build/reference/o1-o2-minimize-size-maximize-speed.md) или [/Ox (Включение наиболее видов оптимизации скорости)](../../build/reference/ox-full-optimization.md).
+**/Og** является устаревшим. Эти оптимизации обычно включены по умолчанию. Дополнительные сведения об оптимизации, см. в разделе [/O1, / O2 (минимизировать размер, максимизировать скорость)](o1-o2-minimize-size-maximize-speed.md) или [/Ox (Включение наиболее видов оптимизации скорости)](ox-full-optimization.md).
 
 Следующие оптимизации можно найти в разделе **/Og**:
 
@@ -76,11 +76,11 @@ ms.locfileid: "57420873"
    > [!NOTE]
    > Можно включить или отключить глобальная оптимизация для отдельных функций, функции с помощью `optimize` pragma вместе с `g` параметр.
 
-Дополнительные сведения см. в разделе [/Oi (Создание встроенных функций)](../../build/reference/oi-generate-intrinsic-functions.md) и [/Ox (Включение наиболее видов оптимизации скорости)](../../build/reference/ox-full-optimization.md).
+Дополнительные сведения см. в разделе [/Oi (Создание встроенных функций)](oi-generate-intrinsic-functions.md) и [/Ox (Включение наиболее видов оптимизации скорости)](ox-full-optimization.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -94,8 +94,4 @@ ms.locfileid: "57420873"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры /O (оптимизация кода)](../../build/reference/o-options-optimize-code.md)
-
-[Параметры компилятора](../../build/reference/compiler-options.md)
-
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

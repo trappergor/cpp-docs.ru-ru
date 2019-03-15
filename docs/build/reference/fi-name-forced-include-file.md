@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: b91ca1ba6cc97157be0ab16fc18e065dc501d5fd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422472"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809227"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (имя принудительно включаемого файла)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57422472"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -49,7 +49,7 @@ ms.locfileid: "57422472"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры выходного файла (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[Указание пути](../../build/reference/specifying-the-pathname.md)
+[Параметры выходного файла (/F)](output-file-f-options.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[Указание пути](specifying-the-pathname.md)
