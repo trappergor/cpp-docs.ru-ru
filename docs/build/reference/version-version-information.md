@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /VERSION linker option
 - VERSION linker option
 ms.assetid: b86d0e86-dca6-4316-aee2-d863ccb9f223
-ms.openlocfilehash: 709ba836fb537fbcb594f7eb6aa2f2d43df5b4d1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 626461fc7a9fc6dd7b6578e836733d154a66862a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414711"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807608"
 ---
 # <a name="version-version-information"></a>/VERSION (Сведения о версии)
 
@@ -31,17 +31,17 @@ ms.locfileid: "57414711"
 
 ## <a name="remarks"></a>Примечания
 
-Параметр / Version предписывает компоновщику поставить номер версии в заголовке файла .exe или .dll. Использование служебной программы DUMPBIN [/Headers](../../build/reference/headers.md) для просмотра поля OPTIONAL HEADER VALUES, чтобы увидеть соответствующий эффект/Version версии образа.
+Параметр / Version предписывает компоновщику поставить номер версии в заголовке файла .exe или .dll. Использование служебной программы DUMPBIN [/Headers](headers.md) для просмотра поля OPTIONAL HEADER VALUES, чтобы увидеть соответствующий эффект/Version версии образа.
 
 *Основных* и *незначительные* аргументами являются десятичные числа в диапазоне от 0 до 65 535. По умолчанию используется версия 0.0.
 
 Сведения, указанные с помощью/Version не влияет на сведения о версии, который отображается для приложения при просмотре его свойства в проводнике. Сведения о версии поступают из файла ресурсов, который используется для построения приложения. См. в разделе [редактор сведений о версии](../../windows/version-information-editor.md) Дополнительные сведения.
 
-Другой способ добавить номер версии — с помощью [версии](../../build/reference/version-c-cpp.md) оператор определения модуля.
+Другой способ добавить номер версии — с помощью [версии](version-c-cpp.md) оператор определения модуля.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -55,5 +55,5 @@ ms.locfileid: "57414711"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)
