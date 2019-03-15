@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ErrLook tool
 - Error lookup tool
 ms.assetid: 6040ffc1-2355-4a45-8998-84cbcba4ca91
-ms.openlocfilehash: 598e3d938645e3d024b2409d97b4b8f082ee2d85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8afcafa7d1b8cd666eb5b02f09a14782f8621ca
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621472"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813374"
 ---
 # <a name="errlook-reference"></a>Справочник ERRLOOK
 
@@ -18,21 +18,21 @@ ms.locfileid: "50621472"
 
 Сочетания клавиш для копировать (CTRL + C), Вырезать (CTRL + X) и рабочих вставить (CTRL + V) для обоих **значение** и **сообщение об ошибке** редактирование элементов управления, если сначала выделить текст.
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
-[Элемент управления "Поле ввода значений"](../../build/reference/value-edit-control.md)<br/>
+[Элемент управления "Поле ввода значений"](value-edit-control.md)<br/>
 Описание элемента управления, измените значение в ERRLOOK.
 
-[Элемент управления "Редактирование сообщений об ошибке"](../../build/reference/error-message-edit-control.md)<br/>
+[Элемент управления "Редактирование сообщений об ошибке"](error-message-edit-control.md)<br/>
 Описание управления редактирование сообщения об ошибке в программе ERRLOOK.
 
-[Кнопка "Модули"](../../build/reference/modules-button.md)<br/>
+[Кнопка "Модули"](modules-button.md)<br/>
 Описывает кнопка "Модули" в ERRLOOK.
 
-[Кнопка "Найти"](../../build/reference/look-up-button.md)<br/>
+[Кнопка "Найти"](look-up-button.md)<br/>
 Описывает найти-кнопка в ERRLOOK.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)<br/>
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)<br/>
 Предоставляет ссылки на разделы, посвященные C/C++ создавать средства, предоставляемые в Visual C++.

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - side-by-side assemblies [C++]
 - isolated assemblies [C++]
 ms.assetid: 945a885f-cb3e-4c8a-a0b9-2c2e3e02cc50
-ms.openlocfilehash: 332c78581d4a13c61c3adb7728b2b3ef2cf1a2a2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 61da61b4a213c01ca66e8978c78622fe8b2818d1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420626"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817586"
 ---
 # <a name="concepts-of-isolated-applications-and-side-by-side-assemblies"></a>Основные понятия, связанные с изолированными приложениями и параллельными сборками
 
@@ -32,8 +32,8 @@ ms.locfileid: "57420626"
 
 ## <a name="visual-c-libraries"></a>Библиотеки Visual C++
 
-В Visual Studio 2005 и Visual Studio 2008 распространяемые библиотеки, такие как ATL, MFC, CRT, OpenMP, MSDIA и стандартная библиотека C++, разворачивались как совместно используемые параллельные сборки в собственном кэше сборок. В текущей версии для распространяемых библиотек используется центральное развертывание. По умолчанию в Visual C++ сборка всех приложений выполняется с манифестом, включаемым в конечный двоичный файл; этот манифест описывает зависимости этого двоичного файла от библиотек Visual C++. Описание создания манифестов для приложений Visual C++ см. в разделе [Understanding Manifest Generation for C/C++ Programs](../build/understanding-manifest-generation-for-c-cpp-programs.md). Манифест не требуется для приложений, которые статически привязаны к используемым ими библиотекам или используют локальное развертывание. Дополнительные сведения о развертывании см. в разделе [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
+В Visual Studio 2005 и Visual Studio 2008 распространяемые библиотеки, такие как ATL, MFC, CRT, OpenMP, MSDIA и стандартная библиотека C++, разворачивались как совместно используемые параллельные сборки в собственном кэше сборок. В текущей версии для распространяемых библиотек используется центральное развертывание. По умолчанию в Visual C++ сборка всех приложений выполняется с манифестом, включаемым в конечный двоичный файл; этот манифест описывает зависимости этого двоичного файла от библиотек Visual C++. Описание создания манифестов для приложений Visual C++ см. в разделе [Understanding Manifest Generation for C/C++ Programs](understanding-manifest-generation-for-c-cpp-programs.md). Манифест не требуется для приложений, которые статически привязаны к используемым ими библиотекам или используют локальное развертывание. Дополнительные сведения о развертывании см. в разделе [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md).
 
 ## <a name="see-also"></a>См. также
 
-[Создание изолированных приложений и параллельных сборок C/C++](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[Создание изолированных приложений и параллельных сборок C/C++](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)

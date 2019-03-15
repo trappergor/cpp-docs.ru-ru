@@ -9,12 +9,12 @@ helpviewer_keywords:
 - statically linked DLLs [C++]
 - regular MFC DLLs [C++], statically linked to MFC
 ms.assetid: 2eed531c-726a-4b8a-b936-f721dc00a7fa
-ms.openlocfilehash: 074cd6c9fca08261cf2333a968dce3cc83c0c860
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f05b5e3c268935cf3161fb7184e04b3e3ea1446
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415991"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815805"
 ---
 # <a name="regular-mfc-dlls-statically-linked-to-mfc"></a>Регулярные MFC DLL, статически компонуемые с MFC
 
@@ -66,20 +66,20 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 
-- [Инициализация обычных библиотек DLL MFC](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [Инициализация обычных библиотек DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
 - [Использование MFC как часть библиотеки DLL](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
-- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [Использование библиотек DLL расширений MFC для баз данных, OLE и сокетов в обычных DLL-библиотеках MFC](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [Создание библиотеки DLL MFC](../mfc/reference/mfc-dll-wizard.md)
 
-- [Обычные DLL-библиотеки MFC, динамически связанные с MFC](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [Обычные DLL-библиотеки MFC, динамически связанные с MFC](regular-dlls-dynamically-linked-to-mfc.md)
 
-- [Библиотеки DLL расширений MFC](../build/extension-dlls-overview.md)
+- [Библиотеки DLL расширений MFC](extension-dlls-overview.md)
 
 ## <a name="see-also"></a>См. также
 
-[Типы библиотек DLL](../build/kinds-of-dlls.md)
+[Типы библиотек DLL](kinds-of-dlls.md)

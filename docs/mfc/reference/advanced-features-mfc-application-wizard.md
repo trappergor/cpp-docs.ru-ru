@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278227"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816442"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>Страница "Дополнительные функции" мастера приложений MFC
 
@@ -21,7 +21,7 @@ ms.locfileid: "57278227"
 
    Создает набор справочных файлов для контекстной справки, доступ, нажав клавишу F1, меню "Справка" или щелкнув **помочь** кнопку в диалоговом окне. Для поддержки справки требуется компилятор справки. Если компилятор справки отсутствует, его можно установить, заново запустив программу установки.
 
-   См. в разделе [HTML-справки: Контекстная справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) и [файлы справки (Справка HTML)](../../ide/help-files-html-help.md) Дополнительные сведения.
+   См. в разделе [HTML-справки: Контекстная справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) и [файлы справки (Справка HTML)](../../build/reference/help-files-html-help.md) Дополнительные сведения.
 
 - **Печать и предварительный просмотр**
 
@@ -61,7 +61,7 @@ ms.locfileid: "57278227"
 
 - **Дополнительные области фреймов**
 
-   |Параметр|Описание:|
+   |Параметр|Описание|
    |------------|-----------------|
    |**Закрепляемая область обозревателя**|Создание закрепляемой области, аналогичной Visual Studio **обозревателе решений** слева от фрейма главного окна.|
    |**Закрепляемый фрейм вывода**|Создание закрепляемой области, аналогичной Visual Studio **вывода** области, расположенной в папке фрейма главного окна.|

@@ -1,17 +1,17 @@
 ---
-title: Практическое руководство. Создание проверяемых проектов на языке C++ (C++/CLI)
+title: Практическое руководство. Создание проектов проверяемых C++ (C + +/ CLI)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
 - Visual C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: acd37469f0702b73cdb1386fcf43091c8d27aebb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630442"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817388"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Практическое: создание проверяемых проектов на C++ (C + +/ CLI)
 
@@ -28,7 +28,7 @@ ms.locfileid: "50630442"
 
 ### <a name="to-change-the-compiler-and-linker-settings"></a>Чтобы изменить параметры компилятора и компоновщика
 
-1. Отображение страницы свойств проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../ide/working-with-project-properties.md).
+1. Отображение страницы свойств проекта. Дополнительные сведения см. в разделе [задать компилятора и свойства сборки](../build/working-with-project-properties.md).
 
 1. На **Общие** странице в разделе **свойства конфигурации** набор узлов, **Поддержка Common Language Runtime** свойства **безопасный общий язык MSIL Поддержка среды выполнения (/ CLR: safe)**.
 
@@ -56,7 +56,7 @@ ms.locfileid: "50630442"
 
 1. Измените имя _tmain() на Main() в основной CPP-файле проекта.
 
-1. Отображение страницы свойств проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../ide/working-with-project-properties.md).
+1. Отображение страницы свойств проекта. Дополнительные сведения см. в разделе [задать компилятора и свойства сборки](../build/working-with-project-properties.md).
 
 1. На **Дополнительно** странице в разделе **компоновщика** узла, введите `Main` как **точки входа** значение свойства.
 

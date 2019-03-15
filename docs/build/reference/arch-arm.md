@@ -2,16 +2,16 @@
 title: /arch (ARM)
 ms.date: 11/04/2016
 ms.assetid: 4f1406ff-f174-487c-a126-8ab06cf447c1
-ms.openlocfilehash: 7fd396f4ed9c02daff5363342d7c851d022919ac
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b732a74d5fe223fdaf3b161d4ae92093ab5df407
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424994"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807875"
 ---
 # <a name="arch-arm"></a>/arch (ARM)
 
-Указывает архитектуру для создания кода на платформе ARM. См. также [/arch (x86)](../../build/reference/arch-x86.md) и [/arch (x64)](../../build/reference/arch-x64.md).
+Указывает архитектуру для создания кода на платформе ARM. См. также [/arch (x86)](arch-x86.md) и [/arch (x64)](arch-x64.md).
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -31,11 +31,11 @@ ms.locfileid: "57424994"
 
 `_M_ARM_FP` Макроса (ARM) указывает, что, если таковые имеются, **/arch** использовался параметр компилятора. Для получения дополнительной информации см. [Predefined Macros](../../preprocessor/predefined-macros.md).
 
-При использовании [/CLR](../../build/reference/clr-common-language-runtime-compilation.md) для компиляции, **/arch** не влияет на создание кода для управляемых функций. **/ arch** только влияет на создание кода для собственных функций.
+При использовании [/CLR](clr-common-language-runtime-compilation.md) для компиляции, **/arch** не влияет на создание кода для управляемых функций. **/ arch** только влияет на создание кода для собственных функций.
 
 ### <a name="to-set-the-archarmv7ve-or-archvfpv4-compiler-option-in-visual-studio"></a>Чтобы задать параметр компилятора /arch:ARMv7VE или /arch:VFPv4 в Visual Studio
 
-1. Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте **страницы свойств** диалоговое окно для проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **C/C++** папки.
 
@@ -49,6 +49,6 @@ ms.locfileid: "57424994"
 
 ## <a name="see-also"></a>См. также
 
-[/arch (минимальная архитектура ЦПУ)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[/arch (минимальная архитектура ЦПУ)](arch-minimum-cpu-architecture.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

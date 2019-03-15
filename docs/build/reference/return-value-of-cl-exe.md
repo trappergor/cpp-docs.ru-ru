@@ -4,12 +4,12 @@ ms.date: 09/05/2018
 helpviewer_keywords:
 - cl.exe compiler, return value
 ms.assetid: 7c2d7f33-ee0d-4199-8ef4-75fe2b007670
-ms.openlocfilehash: 5ad4b7947890d105d2c87bc4dbf29186fa15a86b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1617208a8d99e3c5643330f75faf9beed9ce5f1b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412787"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813985"
 ---
 # <a name="return-value-of-clexe"></a>Возвращаемое программой cl.exe значение
 
@@ -19,7 +19,7 @@ ms.locfileid: "57412787"
 
 В программе cl.exe предусмотрено слишком много возможных кодов ошибок завершения cl.exe, чтобы можно было их все перечислить. Можно выполнять поиск кода ошибки в файле winerror.h и ntstatus.h файлы включены в пакет средств разработки программного обеспечения Windows в % ProgramFiles (x86) %\Windows наборы\\<em>версии</em>\Include\shared\ directory. Коды ошибок, возвращенные в виде десятичного числа, для поиска необходимо преобразовать в шестнадцатеричный вид. Например, код ошибки -1073741620 преобразуется в шестнадцатеричный код 0xC00000CC. Эта ошибка находится в файле ntstatus.h, в котором приведено соответствующее сообщение "Общий ресурс с указанным именем не найден на удаленном сервере". Загружаемый список кодов ошибок Windows, см. в разделе [ &#91;MS-ERREF&#93;: Коды ошибок Windows](https://msdn.microsoft.com/library/cc231196).
 
-Для выяснения значения ошибки компилятора можно также использовать программу поиска ошибок в Visual Studio. В командной строке Visual Studio, введите **errlook.exe** запустить программу; или в СРЕДЕ Visual Studio в строке меню выберите **средства**, **поиск ошибки**. Введите значение ошибки, чтобы найти связанный с ней описательный текст. Дополнительные сведения см. в разделе [Справочник ERRLOOK](../../build/reference/errlook-reference.md).
+Для выяснения значения ошибки компилятора можно также использовать программу поиска ошибок в Visual Studio. В командной строке Visual Studio, введите **errlook.exe** запустить программу; или в СРЕДЕ Visual Studio в строке меню выберите **средства**, **поиск ошибки**. Введите значение ошибки, чтобы найти связанный с ней описательный текст. Дополнительные сведения см. в разделе [Справочник ERRLOOK](errlook-reference.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -51,4 +51,4 @@ cl /W4 t.cpp
 
 ## <a name="see-also"></a>См. также
 
-[Синтаксис командной строки компилятора](../../build/reference/compiler-command-line-syntax.md)
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

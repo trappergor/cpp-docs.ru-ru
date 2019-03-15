@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: 41b415889465441b0c53f12ec7f4aa412a636562
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418091"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811879"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR, /Fr (создать SBR-файл)
 
@@ -41,14 +41,14 @@ ms.locfileid: "57418091"
 
 Если не указать `filename`, SBR-файл получает такое же базовое имя, как у исходного файла.
 
-Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md).
+Использовать параметр **/Fr** не рекомендуется; используйте вместо него **/FR** . Дополнительные сведения см. в разделе "Нерекомендуемые и удаленные параметры компилятора" статьи [Compiler Options Listed by Category](compiler-options-listed-by-category.md).
 
 > [!NOTE]
 >  Не изменяйте расширение SBR. Программе BSCMAKE требуются промежуточные файлы с этим расширением.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. В области навигации выберите страницу свойств **C/C++**, **Информация об исходном коде** .
 
@@ -60,7 +60,7 @@ ms.locfileid: "57418091"
 
 ## <a name="see-also"></a>См. также
 
-[Параметры выходного файла (/F)](../../build/reference/output-file-f-options.md)<br/>
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)<br/>
-[Указание пути](../../build/reference/specifying-the-pathname.md)
+[Параметры выходного файла (/F)](output-file-f-options.md)<br/>
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)<br/>
+[Указание пути](specifying-the-pathname.md)

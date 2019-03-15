@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: f0fbc0b943865e4c6b4145618689a267224045bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299293"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822708"
 ---
 # <a name="mfc-dll-wizard"></a>мастер DLL [MFC]
 
@@ -40,9 +40,9 @@ ms.locfileid: "57299293"
 
 ## <a name="see-also"></a>См. также
 
-[Создание проектов Visual C++ и управление ими](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[Страницы свойств](../../ide/property-pages-visual-cpp.md)<br/>
-[Работа со свойствами проектов](../../ide/working-with-project-properties.md)<br/>
+[Создание проектов Visual C++ и управление ими](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Страницы свойств](../../build/reference/property-pages-visual-cpp.md)<br/>
+[Настройка компилятора и свойствами построения](../../build/working-with-project-properties.md)<br/>
 [Класс MFC](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Реализация интерфейса](../../ide/implementing-an-interface-visual-cpp.md)<br/>

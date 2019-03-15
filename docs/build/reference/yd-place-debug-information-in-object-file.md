@@ -9,16 +9,16 @@ helpviewer_keywords:
 - debugging [C++], debug information files
 - Yd compiler option [C++]
 ms.assetid: c5a699fe-65ce-461e-964c-7f5eb2a8320a
-ms.openlocfilehash: 55bb8197cd15243f65c90d7fbd2724f91fce23b4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e6719226d28088d10da6c4f0e6caf3bdb78bea27
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414881"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820160"
 ---
 # <a name="yd-place-debug-information-in-object-file"></a>/Yd (размещение отладочной информации в объектном файле)
 
-Включить полный отладочную информацию во всех объектных файлах, созданного из файла предкомпилированного заголовка (PCH) при использовании с [/Yc](../../build/reference/yc-create-precompiled-header-file.md) и [/Z7](../../build/reference/z7-zi-zi-debug-information-format.md) параметры. Не рекомендуется.
+Включить полный отладочную информацию во всех объектных файлах, созданного из файла предкомпилированного заголовка (PCH) при использовании с [/Yc](yc-create-precompiled-header-file.md) и [/Z7](z7-zi-zi-debug-information-format.md) параметры. Не рекомендуется.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,9 +28,9 @@ ms.locfileid: "57414881"
 
 ## <a name="remarks"></a>Примечания
 
-**/Yd** устарел. Visual C++ теперь поддерживает несколько объектов, запись в единый файл PDB, используйте **/ZI** вместо этого. Список параметров компилятора, см. в разделе **нерекомендуемые и удаленные параметры компилятора** в [параметры компилятора, упорядоченные по категориям](../../build/reference/compiler-options-listed-by-category.md).
+**/Yd** устарел. Visual C++ теперь поддерживает несколько объектов, запись в единый файл PDB, используйте **/ZI** вместо этого. Список параметров компилятора, см. в разделе **нерекомендуемые и удаленные параметры компилятора** в [параметры компилятора, упорядоченные по категориям](compiler-options-listed-by-category.md).
 
-Если не нужно распространять содержащего отладочную информацию библиотеки, используйте [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md) параметр вместо **/Z7** и **/Yd**.
+Если не нужно распространять содержащего отладочную информацию библиотеки, используйте [/ZI](z7-zi-zi-debug-information-format.md) параметр вместо **/Z7** и **/Yd**.
 
 Хранение полную отладочную информацию в каждый OBJ-файл необходим только для распространения библиотек, которые содержат сведения об отладке. Это замедляет компиляцию и требует значительных объемов дискового пространства. Когда **/Yc** и **/Z7** используются без **/Yd**, компилятор сохраняет общую отладочную информацию в первый OBJ-файл, созданный из PCH-файла. Компилятору не вставлять эту информацию в файлы OBJ, созданные из PCH-файла; он вставляет перекрестные ссылки на данные. Независимо от того, сколько файлов OBJ использовать PCH-файл только один OBJ-файл содержит общую отладочную информацию.
 
@@ -38,13 +38,13 @@ ms.locfileid: "57414881"
 
 Дополнительные сведения о предкомпилированных заголовках см. в разделе:
 
-- [/Y (предкомпилированные заголовки)](../../build/reference/y-precompiled-headers.md)
+- [/Y (предкомпилированные заголовки)](y-precompiled-headers.md)
 
-- [Создание предварительно скомпилированных файлов заголовков](../../build/reference/creating-precompiled-header-files.md)
+- [Файлы предварительно скомпилированных заголовков](../creating-precompiled-header-files.md)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
@@ -83,5 +83,5 @@ CL /YuETC.H /Z7 G.CPP
 
 ## <a name="see-also"></a>См. также
 
-[Параметры компилятора](../../build/reference/compiler-options.md)<br/>
-[Настройка параметров компилятора](../../build/reference/setting-compiler-options.md)
+[Параметры компилятора MSVC](compiler-options.md)<br/>
+[Синтаксис командной строки компилятора MSVC](compiler-command-line-syntax.md)

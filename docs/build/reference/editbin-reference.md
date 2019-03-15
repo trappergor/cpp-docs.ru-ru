@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418793"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807922"
 ---
 # <a name="editbin-reference"></a>Справочник ЕDITBIN
 
@@ -23,12 +23,12 @@ ms.locfileid: "57418793"
 > [!NOTE]
 >  Это средство можно запустить только из командной строки Visual Studio. В системной командной строке или проводнике это невозможно.
 
-(Программа EDITBIN) недоступен для использования в файлах, созданных с помощью [/GL](../../build/reference/gl-whole-program-optimization.md) параметр компилятора. Изменения в двоичные файлы, созданные с параметром /GL будет достигаться компиляцию и компоновку.
+(Программа EDITBIN) недоступен для использования в файлах, созданных с помощью [/GL](gl-whole-program-optimization.md) параметр компилятора. Изменения в двоичные файлы, созданные с параметром /GL будет достигаться компиляцию и компоновку.
 
-- [Командная строка EDITBIN](../../build/reference/editbin-command-line.md)
+- [Командная строка EDITBIN](editbin-command-line.md)
 
-- [Параметры EDITBIN](../../build/reference/editbin-options.md)
+- [Параметры EDITBIN](editbin-options.md)
 
 ## <a name="see-also"></a>См. также
 
-[Средства сборки С/C++](../../build/reference/c-cpp-build-tools.md)
+[Средства сборки дополнительных MSVC](c-cpp-build-tools.md)

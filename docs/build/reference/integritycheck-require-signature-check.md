@@ -2,12 +2,12 @@
 title: /INTEGRITYCHECK (требование проверки подписи)
 ms.date: 11/04/2016
 ms.assetid: 9e738825-2c98-40cd-8ad2-5d0d9c14893e
-ms.openlocfilehash: ad4420847be7c8bbcaa9fda4c5b7dfda818e7f27
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 446ebe3afc06b8db8cc9f36b289c1e5c3ef5f117
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419617"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813686"
 ---
 # <a name="integritycheck-require-signature-check"></a>/INTEGRITYCHECK (требование проверки подписи)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57419617"
 
 ### <a name="to-set-this-linker-option-in-visual-studio"></a>Настройка этого параметра компоновщика в Visual Studio
 
-1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [Работа со свойствами проекта](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Окна свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Разверните узел **Свойства конфигурации**.
 
@@ -37,8 +37,8 @@ ms.locfileid: "57419617"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)<br/>
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)<br/>
 [Принудительная целостность подписи из переносимых исполняемых (PE) файлов](http://social.technet.microsoft.com/wiki/contents/articles/255.forced-integrity-signing-of-portable-executable-pe-files.aspx)<br/>
 [Пошаговое руководство о подписи кода режима ядра](https://msdn.microsoft.com/windows/hardware/gg487328.aspx)<br/>
 [Библиотеки DLL инициализации приложений в Windows 7 и Windows Server 2008](https://msdn.microsoft.com/windows/hardware/gg463040.aspx)

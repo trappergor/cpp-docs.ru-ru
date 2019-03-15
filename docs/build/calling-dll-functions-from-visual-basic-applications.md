@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417622"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814973"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>Вызов функций библиотек DLL из приложений Visual Basic
 
@@ -33,7 +33,7 @@ int __stdcall func (int a, double b)
 
 Соглашение о вызовах C (`__cdecl`) экспортируемое имя как `_func`.
 
-Чтобы получить декорированное имя, используйте [/MAP](../build/reference/map-generate-mapfile.md). Использование **__declspec(dllexport)** делает следующее:
+Чтобы получить декорированное имя, используйте [/MAP](reference/map-generate-mapfile.md). Использование **__declspec(dllexport)** делает следующее:
 
 - Если функция экспортируется с использованием соглашения о вызовах C (`__cdecl`), удаляются начальные подчеркивания ( **\_** ) при экспорте имя.
 
@@ -58,18 +58,18 @@ EXPORTS
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Экспорт из библиотеки DLL](../build/exporting-from-a-dll.md)
+- [Экспорт из библиотеки DLL](exporting-from-a-dll.md)
 
-- [Экспорт из библиотеки DLL с помощью. DEF-файлы](../build/exporting-from-a-dll-using-def-files.md)
+- [Экспорт из библиотеки DLL с помощью. DEF-файлы](exporting-from-a-dll-using-def-files.md)
 
-- [Экспорт из DLL с использованием __declspec(dllexport)](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [Экспорт из DLL с использованием __declspec(dllexport)](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [Экспорт функций C++ для использования в исполняемых файлах языка C](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [Экспорт функций C++ для использования в исполняемых файлах языка C](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [Определение подходящего метода экспорта для использования](../build/determining-which-exporting-method-to-use.md)
+- [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Декорированные имена](../build/reference/decorated-names.md)
+- [Декорированные имена](reference/decorated-names.md)
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)
+[DLL в Visual C++](dlls-in-visual-cpp.md)

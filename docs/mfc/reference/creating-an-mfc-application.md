@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292631"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818600"
 ---
 # <a name="creating-an-mfc-application"></a>Создание приложения MFC
 
@@ -36,7 +36,7 @@ ms.locfileid: "57292631"
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>Создание приложения MFC при помощи мастера приложений MFC.
 
-1. Следуйте инструкциям, приведенным в разделе справки [Создание проекта с использованием мастера приложений Visual C++](../../ide/creating-desktop-projects-by-using-application-wizards.md).
+1. Следуйте инструкциям в разделе справки [создайте проект консольного приложения C++](../../get-started/tutorial-console-cpp.md).
 
 1. В **новый проект** выберите **приложения MFC** в области «Шаблоны», чтобы открыть мастер.
 
@@ -47,9 +47,10 @@ ms.locfileid: "57292631"
 
 1. Нажмите кнопку **Готово** закрыть мастер и открыть проект в среде разработки.
 
-После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../ide/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для проектов Visual C++](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>См. также
 
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Страницы свойств](../../ide/property-pages-visual-cpp.md)
+[Страницы свойств](../../build/reference/property-pages-visual-cpp.md)
+

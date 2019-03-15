@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415140"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820498"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -65,10 +65,10 @@ ms.locfileid: "57415140"
 
 - Значения `major` и `minor` должно иметь значение от 0 до 65 535.
 
-Выбор подсистемы влияет на начальный адрес программы по умолчанию. Дополнительные сведения см. в разделе [/Entry (символ точки входа)](../../build/reference/entry-entry-point-symbol.md), компоновщика/ENTRY:*функция* параметр.
+Выбор подсистемы влияет на начальный адрес программы по умолчанию. Дополнительные сведения см. в разделе [/Entry (символ точки входа)](entry-entry-point-symbol.md), компоновщика/ENTRY:*функция* параметр.
 
-Дополнительные сведения, включая минимальное и значения по умолчанию для основной и дополнительный номера версии для каждой подсистемы, см. в разделе [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md) параметр компоновщика.
+Дополнительные сведения, включая минимальное и значения по умолчанию для основной и дополнительный номера версии для каждой подсистемы, см. в разделе [/SUBSYSTEM](subsystem-specify-subsystem.md) параметр компоновщика.
 
 ## <a name="see-also"></a>См. также
 
-[Параметры EDITBIN](../../build/reference/editbin-options.md)
+[Параметры EDITBIN](editbin-options.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mapfiles, specifying file name
 - /MAP linker option
 ms.assetid: 9ccce53d-4e36-43da-87b0-7603ddfdea63
-ms.openlocfilehash: 769fdc6a3980be34d92fc722099fde11ab677dc8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a45fd5ea44b8908e77f847275bde42b86385cdb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417896"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817950"
 ---
 # <a name="map-generate-mapfile"></a>/MAP (создание файла сопоставления)
 
@@ -51,11 +51,11 @@ ms.locfileid: "57417896"
 
 - Точка входа (как *разделе*:*смещение*)
 
-[/MAPINFO предписывает](../../build/reference/mapinfo-include-information-in-mapfile.md) указывает Дополнительные сведения, включаемые в файл сопоставления.
+[/MAPINFO предписывает](mapinfo-include-information-in-mapfile.md) указывает Дополнительные сведения, включаемые в файл сопоставления.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств проекта Visual C++ параметр](../../ide/working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
 
 1. Нажмите кнопку **компоновщика** папки.
 
@@ -69,5 +69,5 @@ ms.locfileid: "57417896"
 
 ## <a name="see-also"></a>См. также
 
-[Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)<br/>
-[Параметры компоновщика](../../build/reference/linker-options.md)
+[Справочник по MSVC компоновщика](linking.md)<br/>
+[Параметры компоновщика MSVC](linker-options.md)

@@ -17,16 +17,16 @@ helpviewer_keywords:
 - linker [C++], reserved words
 - reserved words [C++]
 ms.assetid: 9b9f49e5-0739-45ab-a37e-81e3915ceb25
-ms.openlocfilehash: 360baf479f9100483fe694ca8860dfc1d7ebfe11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d51f599dfb81dfa860e1bdba86c4372e80379fb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502470"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822448"
 ---
 # <a name="reserved-words"></a>Зарезервированные слова
 
-Следующие слова зарезервированы компоновщиком. Эти имена можно использовать в качестве аргументов в [операторов определения модуля](../../build/reference/module-definition-dot-def-files.md) только в том случае, если имя заключено в двойные кавычки (»»).
+Следующие слова зарезервированы компоновщиком. Эти имена можно использовать в качестве аргументов в [операторов определения модуля](module-definition-dot-def-files.md) только в том случае, если имя заключено в двойные кавычки (»»).
 
 ||||
 |-|-|-|
@@ -57,5 +57,5 @@ ms.locfileid: "50502470"
 
 ## <a name="see-also"></a>См. также
 
-- [Настройка параметров компоновщика](../../build/reference/setting-linker-options.md)
-- [Параметры компоновщика](../../build/reference/linker-options.md)
+- [Справочник по MSVC компоновщика](linking.md)
+- [Параметры компоновщика MSVC](linker-options.md)

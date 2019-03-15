@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424760"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821278"
 ---
 # <a name="rules-for-module-definition-statements"></a>Правила для операторов определения модуля
 
@@ -34,8 +34,8 @@ ms.locfileid: "57424760"
 
 - Числовые аргументы указываются в десятеричной или шестнадцатеричное.
 
-- Если строковый аргумент соответствует [зарезервированное слово](../../build/reference/reserved-words.md), он должен быть заключен в двойные кавычки ("«).
+- Если строковый аргумент соответствует [зарезервированное слово](reserved-words.md), он должен быть заключен в двойные кавычки ("«).
 
 ## <a name="see-also"></a>См. также
 
-[Файлы определения модуля (DEF)](../../build/reference/module-definition-dot-def-files.md)
+[Файлы определения модуля (DEF)](module-definition-dot-def-files.md)

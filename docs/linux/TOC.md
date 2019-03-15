@@ -4,7 +4,7 @@
 # [Создание проекта Linux](create-a-new-linux-project.md)
 # [Подключение к удаленному компьютеру Linux](connect-to-your-remote-linux-computer.md)
 # [Развертывание, запуск и отладка проекта Linux](deploy-run-and-debug-your-linux-project.md)
-# [Учебник. Создание кроссплатформенных проектов C++ в Visual Studio](../ide/get-started-linux-cmake.md)
+# [Учебник. Создание кроссплатформенных проектов C++ в Visual Studio](../build/get-started-linux-cmake.md)
 # [Справочник по страницам свойств проекта Linux](prop-pages-linux.md)
 ## [Общие свойства (Linux)](prop-pages/general-linux.md)
 ## [Свойства отладки (Linux)](prop-pages/debugging-linux.md)
