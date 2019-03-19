@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: c202d4eae5e9115f847caefce18a8974a4388a04
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740460"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820212"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Пошаговое руководство. Развертывание программы (C++)
 
@@ -77,5 +77,5 @@ ms.locfileid: "57740460"
 ## <a name="see-also"></a>См. также
 
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
-[Сборка программ C/C++](../build/building-c-cpp-programs.md)<br/>
+[Проекты и системы сборки](../build/projects-and-build-systems-cpp.md)<br/>
 [Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
