@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740243"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808044"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Как сообщить о проблеме с набором инструментов Visual C++ или документацией
 
@@ -43,7 +43,7 @@ ms.locfileid: "57740243"
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>Предоставление информации о полной версии используемого компилятора
 
-1. Откройте **командную строку разработчика**, соответствующую версии Visual Studio и архитектуре конфигурации, используемой для создания проекта. Например, если сборка выполняется в Visual Studio 2017 на x64-системе для целевой архитектуры x64, выберите **Командная строка Native Tools x64 для VS 2017**. Дополнительные сведения см. в разделе [Ярлыки командной строки разработчика](build/building-on-the-command-line.md#developer-command-prompt-shortcuts).
+1. Откройте **командную строку разработчика**, соответствующую версии Visual Studio и архитектуре конфигурации, используемой для создания проекта. Например, если сборка выполняется в Visual Studio 2017 на x64-системе для целевой архитектуры x64, выберите **Командная строка Native Tools x64 для VS 2017**. Дополнительные сведения см. в разделе [Ярлыки командной строки разработчика](build/building-on-the-command-line.md#developer_command_prompt_shortcuts).
 
 1. В окне консоли командной строки разработчика введите команду **cl /Bv**.
 
