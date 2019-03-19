@@ -405,7 +405,6 @@
 #### [Функции <system_error>](system-error-functions.md)
 #### [Операторы <system_error>](system-error-operators.md)
 #### [Перечисления <system_error>](system-error-enums.md)
-#### [Определения типов <system_error>](system-error-typedefs.md)
 #### [Класс error_category](error-category-class.md)
 #### [Класс error_code](error-code-class.md)
 #### [Класс error_condition](error-condition-class.md)
