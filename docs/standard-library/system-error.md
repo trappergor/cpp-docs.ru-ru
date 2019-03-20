@@ -1,18 +1,18 @@
 ---
 title: '&lt;system_error&gt;'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - <system_error>
 - system_error
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662765"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172989"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
@@ -31,22 +31,16 @@ ms.locfileid: "50662765"
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|Представляет категорию общих ошибок.|
 |[system_category](../standard-library/system-error-functions.md#system_category)|Представляет категорию ошибок, вызванных переполнением системы низкого уровня.|
 
-### <a name="typedefs"></a>Определения типов
-
-|Имя типа|Описание|
-|-|-|
-|[generic_errno](../standard-library/system-error-typedefs.md#generic_errno)|Тип, который представляет перечисление, предоставляющее символьные имена для всех макросов с ошибками в коде, определяемых Posix в `<errno.h>`.|
-
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|Функция|Описание:|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Создает объект `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Создает объект `error_condition`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
 |[operator!=](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|
