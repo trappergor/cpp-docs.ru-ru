@@ -1,5 +1,5 @@
 ---
-title: Visual C++ в Visual Studio
+title: C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809656"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57814414"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual C++ в Visual Studio
 
@@ -71,11 +71,14 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="c-development-tools"></a>Средства разработки C++
 
-[Интегрированная среда разработки и средства разработки](ide/ide-and-tools-for-visual-cpp-development.md)<br/>
+[Разработка приложений C++ в Visual Studio](overview-of-cpp-development.md)<br/>
 Использование интегрированной среды разработки Visual Studio для создания проектов, редактирования кода, создания ссылок на библиотеки, компиляции, отладки, создания модульных тестов, выполнения статического анализа, развертывания и многого другого.
 
-[Компиляторы и инструменты сборки](build/building-c-cpp-programs.md)<br/>
-Разделы, посвященные возможностям компилятора и компоновщика Microsoft C++, сообщениям об ошибках, примерам командной строки, настройке для разных платформ и ссылкам на сборки.
+[Проекты и системы сборки](build/projects-and-build-systems-cpp.md)<br/>
+Как создать и настроить проекты Visual Studio C++, проекты CMake и другие типы проектов с помощью компилятора MSVC и параметров компоновщика.
+
+[Написание и рефакторинг кода C++](ide/writing-and-refactoring-code-cpp.md)<br/>
+Как использовать функции производительности в редакторе C++ для рефакторинга и написания кода и перемещения по нему.
 
 [Отладка машинного кода](/visualstudio/debugger/debugging-native-code)<br/>
 Сведения об использовании отладчика Visual Studio с проектами C++.

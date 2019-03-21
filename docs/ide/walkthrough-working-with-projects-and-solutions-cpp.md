@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519235"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820069"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>Пошаговое руководство. Работа с проектами и решениями (C++)
 
@@ -22,7 +22,7 @@ ms.locfileid: "51519235"
 
 ## <a name="before-you-start"></a>Перед началом работы
 
-Для выполнения данного пошагового руководства требуется Visual Studio 2017 версии 15.3 или более поздней. Если вам нужна копия, здесь приведено краткое руководство: [Установка поддержки С++ в Visual Studio](../build/vscpp-step-0-installation.md). Если вы еще не сделали это, выполните приведенные ниже шаги после установки в рамках руководства "Hello, World", чтобы убедиться в правильности установки и работы Visual C++.
+Для выполнения данного пошагового руководства требуется Visual Studio 2017 версии 15.3 или более поздней. Если вам нужна копия, вот краткое руководство: [Установка поддержки С++ в Visual Studio](../build/vscpp-step-0-installation.md). Если вы еще не сделали это, выполните приведенные ниже шаги после установки в рамках руководства "Hello, World", чтобы убедиться в правильности установки и работы Visual C++.
 
 Полезно владеть основами языка C++ и понимать назначение компилятора, компоновщика и отладчика. В руководстве также предполагается, что вы знакомы с Windows и умеете использовать меню и диалоговые окна.
 
@@ -83,11 +83,13 @@ ms.locfileid: "51519235"
 
       Измените этот конструктор так, чтобы он принимал один параметр типа `int` с именем *players*.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - После деструктора по умолчанию добавьте встроенное объявление функции-члена типа `static int` с именем *GetParticipants*, которая не принимает параметры и возвращает значение `totalParticipants`.
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    После изменения файл Cardgame.h должен содержать примерно такой код:
 
@@ -215,10 +217,10 @@ ms.locfileid: "51519235"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Назад:** [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).<br/>
-**Далее:** [Пошаговое руководство. Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md).<br/>
+**Предыдущая статья:** [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**Далее:** [Пошаговое руководство: Сборка проекта (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
-[Сборка программ C/C++](../build/building-c-cpp-programs.md)<br/>
+[Проекты и системы сборки](../build/projects-and-build-systems-cpp.md)<br/>
