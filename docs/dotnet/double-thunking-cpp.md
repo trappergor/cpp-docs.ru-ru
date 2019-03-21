@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /clr compiler option [C++], double thunking
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
-ms.openlocfilehash: 984a20d701b159820a94483fe9d3743f015b71f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741958"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278402"
 ---
 # <a name="double-thunking-c"></a>Двойное преобразование (С++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "57741958"
 
 Аналогично Если вы экспортируете ([dllexport, dllimport](../cpp/dllexport-dllimport.md)) управляемой функции, основную точку входа, и любая функция, которая импортирует и вызывает эту функцию будет вызываться через машинную точку входа. Чтобы избежать двойного в этой ситуации, следует использовать семантику собственного экспорта и импорта; просто ссылаться на метаданные с помощью `#using` (см. в разделе [# директива using](../preprocessor/hash-using-directive-cpp.md)).
 
-Компилятор был обновлен на сокращение ненужных двойного. Например, любая функция с управляемым типом в сигнатуре (включая возвращаемый тип) будет неявно иметь пометку `__clrcall`. Дополнительные сведения о исключения двойного преобразования, см. в разделе [ https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx ](https://msdn.microsoft.com/msdnmag/issues/05/01/COptimizations/default.aspx).
+Компилятор был обновлен на сокращение ненужных двойного. Например, любая функция с управляемым типом в сигнатуре (включая возвращаемый тип) будет неявно иметь пометку `__clrcall`.
 
 ## <a name="example"></a>Пример
 

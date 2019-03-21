@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258337"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278558"
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 
@@ -99,7 +99,6 @@ ms.locfileid: "57258337"
 |||
 |-|-|
 |[Шаблоны асинхронного программирования и советы по Hilo (приложения Магазина Windows на C++ и XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Узнайте, как мы использовали среды выполнения с параллелизмом для реализации асинхронных операций в Hilo, приложении среды выполнения Windows на C++ и XAML.|
-|[Примеры кода для среды выполнения с параллелизмом и библиотеки параллельных шаблонов в Visual Studio 2010](http://go.microsoft.com/fwlink/p/?linkid=183875)|Примеры приложений и утилит, демонстрирующих исполняющую среду с параллелизмом.|
 |[Блог Parallel Programming in Native Code](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|
 |[Форум Parallel Computing in C++ and Native Code](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|
 |[Параллельное программирование](/dotnet/standard/parallel-programming/index)|Содержит сведения о модель параллельного программирования, который доступен в .NET Framework.|
