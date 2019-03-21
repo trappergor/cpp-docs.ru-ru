@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - HTML [MFC], about HTML
 ms.assetid: aab8ea9f-12d4-4bdd-a585-ac3124081a2a
-ms.openlocfilehash: 7617216f8fd9a0e4b62ac8b5f12314d38027d836
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 63a866786abc3b1eaa87a06492b43b1c9e354882
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263368"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278389"
 ---
 # <a name="html-basics"></a>Основы HTML
 
@@ -107,7 +107,7 @@ Life is good.
 
 Полное описание тегов, атрибутов и расширения см. в спецификации языка (HTML):
 
-[http://www.w3.org/pub/WWW/MarkUp/](http://www.w3.org/pub/www/markup/)
+[Последняя опубликованная версия HTML](https://www.w3.org/TR/html/) в W3C.org.
 
 ## <a name="see-also"></a>См. также
 

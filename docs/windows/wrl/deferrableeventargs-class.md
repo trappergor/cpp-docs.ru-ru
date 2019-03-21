@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Microsoft::WRL::DeferrableEventArgs::GetDeferral method
 - Microsoft::WRL::DeferrableEventArgs::InvokeAllFinished method
 ms.assetid: ece89267-7b72-40e1-8185-550c865b070a
-ms.openlocfilehash: 509686556bd06a6ec9d059593be46d0fc6a3876d
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 4a3786e65873d6837389ad4fa5e7d06a14d66460
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336656"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278366"
 ---
 # <a name="deferrableeventargs-class"></a>Класс DeferrableEventArgs
 
@@ -41,16 +41,16 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                                         | Описание
+Имя                                                         | Описание:
 ------------------------------------------------------------ | -----------------------------------------------------------------------------------------------------------------------------
-[DeferrableEventArgs::GetDeferral](#getdeferral)             | Получает ссылку на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, который представляет отложенное событие.
+[DeferrableEventArgs::GetDeferral](#getdeferral)             | Получает ссылку на [отсрочки](/uwp/api/windows.foundation.deferral) объект, который представляет отложенное событие.
 [DeferrableEventArgs::InvokeAllFinished](#invokeallfinished) | Вызывается, чтобы указать, что вся обработка для отложенного события завершена.
 
 ## <a name="remarks"></a>Примечания
 
 Экземпляры этого класса передаются в обработчики событий для отложенных событий. Параметры шаблона представляют интерфейс, определяющий подробные сведения об аргументах событий для конкретного типа отложенного события, а также класс, реализующий этот интерфейс.
 
-Класс отображается как первый аргумент обработчика событий для отложенного события. Можно вызвать [задержка](#getdeferral) метод для получения [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, из которого можно получить все сведения об отложенном событии. После завершения обработки событий необходимо вызвать завершение в объекте «Задержка». Затем следует вызвать [InvokeAllFinished](#invokeallfinished) в конце метода обработчика событий, который гарантирует, что завершение всех отложенных событий передается надлежащим образом.
+Класс отображается как первый аргумент обработчика событий для отложенного события. Можно вызвать [задержка](#getdeferral) метод для получения [отсрочки](/uwp/api/windows.foundation.deferral) объект, из которого можно получить все сведения об отложенном событии. После завершения обработки событий необходимо вызвать завершение в объекте «Задержка». Затем следует вызвать [InvokeAllFinished](#invokeallfinished) в конце метода обработчика событий, который гарантирует, что завершение всех отложенных событий передается надлежащим образом.
 
 ## <a name="requirements"></a>Требования
 
@@ -60,7 +60,7 @@ class DeferrableEventArgs : public TEventArgsInterface;
 
 ## <a name="getdeferral"></a>DeferrableEventArgs::GetDeferral
 
-Получает ссылку на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объект, который представляет отложенное событие.
+Получает ссылку на [отсрочки](/uwp/api/windows.foundation.deferral) объект, который представляет отложенное событие.
 
 ```cpp
 HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
@@ -69,7 +69,7 @@ HRESULT GetDeferral([out, retval] Windows::Foundation::IDeferral** result)
 ### <a name="parameters"></a>Параметры
 
 *результат*<br/>
-Указатель, который будет ссылаться на [отсрочки](http://go.microsoft.com/fwlink/p/?linkid=526520) объекта после завершения вызова.
+Указатель, который будет ссылаться на [отсрочки](/uwp/api/windows.foundation.deferral) объекта после завершения вызова.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

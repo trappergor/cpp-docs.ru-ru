@@ -1,6 +1,6 @@
 ---
 title: Класс locale
-ms.date: 11/04/2016
+ms.date: 03/19/2019
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677920"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278519"
 ---
 # <a name="locale-class"></a>Класс locale
 
@@ -140,19 +140,19 @@ cout.imbue(loc);
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|Конструктор|Описание:|
 |-|-|
 |[locale](#locale)|Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|Имя типа|Описание:|
 |-|-|
 |[category](#category)|Целочисленный тип, который содержит значения битовой маски для обозначения стандартных семейств аспектов.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция-член|Описание:|
 |-|-|
 |[combine](#combine)|Вставляет аспект из определенного языкового стандарта в целевой языковой стандарт.|
 |[name](#name)|Возвращает имя сохраненного языкового стандарта.|
@@ -166,7 +166,7 @@ cout.imbue(loc);
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|Оператор|Описание:|
 |-|-|
 |[operator!=](#op_neq)|Проверка двух языковых стандартов на неравенство.|
 |[оператор( )](#op_call)|Сравнивает два объекта `basic_string`.|
@@ -174,7 +174,7 @@ cout.imbue(loc);
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|Класс|Описание:|
 |-|-|
 |[facet](#facet_class)|Класс, используемый как базовый класс для всех аспектов языкового стандарта.|
 |[id](#id_class)|Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.|
@@ -403,8 +403,14 @@ The previous locale was: C
 
 Класс члена содержит уникальный идентификатор аспекта, применяемый в качестве индекса для поиска аспектов в языковом стандарте.
 
-class id { protected:    id(); private:    id(const id&) // not defined void operator=(const id&)  // not defined    };
-
+```cpp
+class id 
+{
+   protected:    id();
+   private:      id(const id&)
+   void operator=(const id&)  // not defined    
+};
+```
 ### <a name="remarks"></a>Примечания
 
 Класс-член описывает статический объект-член, необходимый для каждого уникального аспекта языкового стандарта. Обратите внимание, что нельзя копировать или присвоить объект типа класса `id`.
