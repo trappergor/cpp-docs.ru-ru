@@ -37,12 +37,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 9d660f507f50c00c8ccd6f19505f09285ede9e60
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893604"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356235"
 ---
 # <a name="hstring-class"></a>Класс HString
 
@@ -62,14 +62,14 @@ class HString;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-Имя                                | Описание
+name                                | Описание
 ----------------------------------- | -----------------------------------------------------
 [HString::HString](#hstring)        | Инициализирует новый экземпляр класса `HString`.
 [HString:: ~ HString](#tilde-hstring) | Удаляет текущий экземпляр `HString` класса.
 
 ### <a name="public-methods"></a>Открытые методы
 
-Имя                                     | Описание:
+name                                     | Описание:
 ---------------------------------------- | -------------------------------------------------------------------------------------------------------------
 [HString::Attach](#attach)               | Связывает указанный `HString` объект с текущим `HString` объекта.
 [HString::CopyTo](#copyto)               | Копирует текущий `HString` объект в объект HSTRING.
@@ -83,7 +83,7 @@ class HString;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-Имя                                         | Описание:
+name                                         | Описание:
 -------------------------------------------- | ----------------------------------------------------------------------------
 [Оператор HString::operator =](#operator-assign)       | Перемещает значение другого `HString` объект с текущим `HString` объекта.
 [Оператор HString::operator ==](#operator-equality)    | Указывает, равны ли два параметра.
@@ -187,7 +187,7 @@ HSTRING* GetAddressOf() throw()
 Инициализирует новый экземпляр класса `HString`.
 
 ```cpp
-HString(HSTRING hstr = nullptr) throw();
+HString() throw();
 HString(HString&& other) throw();
 ```
 

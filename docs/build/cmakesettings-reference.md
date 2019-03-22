@@ -4,16 +4,16 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: d80829b1475e8718e1c4188ff4fb7d42a1d4b3b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 893bc5c8efe3fdae80a4a0de8204d391baa63d07
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827706"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356118"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
-Файл `cmakesettings.json` содержит сведения о том, как Visual Studio должна взаимодействовать с CMake для сборки проекта для указанной платформы. Используйте этот файл для хранения сведений, таких как переменные среды или аргументы, для среды cmake.exe.
+**Cmakesettings.json**"файл содержит сведения о том, как Visual Studio должна взаимодействовать с CMake для построения проекта для указанной платформы. Используйте этот файл для хранения сведений, таких как переменные среды или аргументы, для среды cmake.exe.
 
 ## <a name="environments"></a>Среды
 
