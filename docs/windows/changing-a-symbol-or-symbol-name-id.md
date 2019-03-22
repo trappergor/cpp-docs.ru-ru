@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562800"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328848"
 ---
 # <a name="how-to-manage-symbols"></a>Практическое руководство. Управление символы
 
@@ -85,7 +85,7 @@ ms.locfileid: "57562800"
 
 ### <a name="to-change-a-symbol-name-id"></a>Чтобы изменить имя символа (ID)
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), выберите ресурс.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), выберите ресурс.
 
 1. В **свойства** окно, введите новое имя символа или выберите из списка существующих символов в **идентификатор** поле.
 
@@ -129,7 +129,7 @@ ms.locfileid: "57562800"
 
 ### <a name="to-change-a-symbol-value"></a>Чтобы изменить значение символа
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), выберите ресурс.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), выберите ресурс.
 
 1. В **свойства** введите имя символа за которым следует знак равенства и целое число в **идентификатор** поле, например:
 
@@ -185,7 +185,7 @@ ms.locfileid: "57562800"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>Включение общих (только для чтения) символов в файл ресурсов
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите [включения ресурсов](../windows/resource-includes-dialog-box.md).
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите [включения ресурсов](../windows/resource-includes-dialog-box.md).
 
 1. В **директивы символов только для чтения** используйте `#include` директиву компилятора, чтобы задать файл, в котором должны храниться символы только для чтения.
 
@@ -204,7 +204,7 @@ ms.locfileid: "57562800"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>Изменение имени файла символов заголовков ресурсов
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите [включения ресурсов](../windows/resource-includes-dialog-box.md).
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите [включения ресурсов](../windows/resource-includes-dialog-box.md).
 
 1. В **файла символов заголовков** введите новое имя включаемого файла.
 

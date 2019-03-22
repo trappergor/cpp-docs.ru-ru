@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627490"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328562"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>Встроенные функции _InterlockedDecrement
 
 **Блок, относящийся только к системам Microsoft**
 
-Предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement) функции.
+Предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement) функции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -120,7 +120,7 @@ __int64 _InterlockedDecrement64_nf(
 
 Существуют несколько вариантов `_InterlockedDecrement`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
-Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, `_InterlockedDecrement16``_InterlockedDecrement64` работает с 16-разрядными целыми значениями и работает с 64-разрядными целыми значениями.
+Функция `_InterlockedDecrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedDecrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedDecrement64`работает с 64-разрядными целыми значениями.
 
 На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенные функции с суффиксом `_nf` («без границ») не действуют как барьер памяти.
 

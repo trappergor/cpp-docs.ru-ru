@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627304"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328316"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchange
 
@@ -179,32 +179,32 @@ __int64 _InterlockedCompareExchange64_rel(
 #### <a name="parameters"></a>Параметры
 
 *Назначение*<br/>
-[in, out] Указатель на значение назначения. Знак игнорируется.
+[in, out] Указатель на значение назначения. Знак игнорируется
 
 *Exchange*<br/>
-[in] Значение Exchange. Знак игнорируется.
+[in] Значение Exchange. Знак игнорируется
 
 *Сравниваемый операнд*<br/>
-[in] Значение для сравнения с местом назначения. Знак игнорируется.
+[in] Значение для сравнения с местом назначения. Знак игнорируется
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Начальное значение является значением, возвращаемым указателем `Destination`.
+Начальное значение является значением, возвращаемым указателем `Destination` .
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|Верхний колонтитул|
+|Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<Intrin.h >|
-|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<Intrin.h >|
-|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<Intrin.h >|
-|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedCompareExchange_np`, `_InterlockedCompareExchange16_np`, `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
+|`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
 `_InterlockedCompareExchange` выполняет атомарное сравнение значения `Destination` со значением `Comparand`. Если значение `Destination` равно значению `Comparand`, значение `Exchange` сохранится по адресу, указанному `Destination`. В противном случае операция не выполняется.
 
-`_InterlockedCompareExchange` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange) функции.
+`_InterlockedCompareExchange` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) функции.
 
 Существуют несколько вариантов `_InterlockedCompareExchange`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 

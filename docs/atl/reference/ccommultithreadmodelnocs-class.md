@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComMultiThreadModelNoCS class
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
-ms.openlocfilehash: 9b1622525635a4ea852dec9095fcd479b21044c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261561"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328666"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS Class
 
@@ -35,7 +35,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание:|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Ссылается на класс [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Ссылается на класс `CComFakeCriticalSection`.|
@@ -43,7 +43,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание:|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::Decrement](#decrement)|(Статический) Уменьшает значение указанной переменной в потокобезопасным способом.|
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Статический) Увеличивает значение указанной переменной в потокобезопасным способом.|
@@ -117,7 +117,7 @@ typedef CComFakeCriticalSection CriticalSection;
 
 ##  <a name="decrement"></a>  CComMultiThreadModelNoCS::Decrement
 
-Эта статическая функция вызывает функцию Win32 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement), который уменьшает значение переменной, на которые указывают *p*.
+Эта статическая функция вызывает функцию Win32 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement), который уменьшает значение переменной, на которые указывают *p*.
 
 ```
 static ULONG WINAPI Decrement(LPLONG p) throw();
@@ -138,7 +138,7 @@ static ULONG WINAPI Decrement(LPLONG p) throw();
 
 ##  <a name="increment"></a>  CComMultiThreadModelNoCS::Increment
 
-Эта статическая функция вызывает функцию Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement), которая увеличивает значение переменной, на которые указывают *p*.
+Эта статическая функция вызывает функцию Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement), которая увеличивает значение переменной, на которые указывают *p*.
 
 ```
 static ULONG WINAPI Increment(LPLONG p) throw();

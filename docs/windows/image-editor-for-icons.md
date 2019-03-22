@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563086"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328432"
 ---
 # <a name="image-editor-for-icons-c"></a>Редактор изображений для значков (C++)
 
@@ -60,7 +60,7 @@ ms.locfileid: "57563086"
 
 Можно также использовать **редактор изображений** и [двоичный редактор](binary-editor.md) для работы с файлами ресурсов в управляемые проекты. Все управляемые ресурсы, которые нужно редактировать, должны быть связанными ресурсами. Редакторы ресурсов Visual Studio не поддерживают редактирование внедренных ресурсов.
 
-Помимо создания новых графических ресурсов, вы можете [импортировать существующие образы](/windows/how-to-copy-resources#import-and-export-resources) для редактирования и затем добавить их в проект. Можно также открыть и редактировать изображения, которые не являются частью проекта для [редактирование автономного образа](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
+Помимо создания новых графических ресурсов, вы можете [импортировать существующие образы](../windows/how-to-copy-resources.md#import-and-export-resources) для редактирования и затем добавить их в проект. Можно также открыть и редактировать изображения, которые не являются частью проекта для [редактирование автономного образа](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md).
 
 Сведения о **редактор изображений**, см. в разделе Практическое [создать значок или другое изображение](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md), [редактирования изображения](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md), [использование инструмента рисования](../windows/using-a-drawing-tool-image-editor-for-icons.md), [Работать с цветом](../windows/working-with-color-image-editor-for-icons.md), и [сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md).
 
@@ -71,7 +71,7 @@ ms.locfileid: "57563086"
 
 **Изображение** меню, которое отображается, только если **редактор изображений** активна, содержит команды для редактирования изображений, управления цветовые палитры и установка **редактор изображений** окно Параметры. Кроме того команды по использованию образов устройства доступны, при работе со значками и курсорами.
 
-|Команда|Описание:|
+|Команда|Описание|
 |---|---|
 |**Обратить цвета**|Позволяет преобразовать цвета.|
 |**Отразить по-горизонтали**|Горизонтальное зеркальное отражение изображения или выбранного фрагмента.|
@@ -151,7 +151,7 @@ ms.locfileid: "57563086"
 
 Вот пример того, как добавить текст в значок в приложении Windows и управления ими шрифт текста.
 
-1. Создание приложения C++ Windows Forms. Дополнительные сведения см. в разделе [Создание проекта приложения Windows](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5). *App.ico* файл добавляется в проект по умолчанию.
+1. Создание приложения C++ Windows Forms. Подробную информацию см. в разделе [Практическое руководство. Создавать приложения Windows Forms](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90)). *App.ico* файл добавляется в проект по умолчанию.
 
 1. В **обозревателе решений**, дважды щелкните файл *app.ico*. **Редактор изображений** будет открыт.
 

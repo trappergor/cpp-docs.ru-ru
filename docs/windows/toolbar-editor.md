@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: a138eb5aa40429696ca2efa4a67e1a1c5490f4fa
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563255"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328861"
 ---
 # <a name="toolbar-editor-c"></a>Редактор панелей инструментов (C++)
 
@@ -128,7 +128,7 @@ ms.locfileid: "57563255"
 
 #### <a name="to-create-a-new-toolbar-button"></a>Чтобы создать новую кнопку панели инструментов
 
-1. В [представление ресурсов](../windows/resource-view-window.md) разверните папку ресурсов (например, *Project1.rc*).
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) разверните папку ресурсов (например, *Project1.rc*).
 
 1. Разверните **инструментов** папку и выберите панель инструментов, чтобы изменить, выполните одно из следующих:
 
@@ -138,7 +138,7 @@ ms.locfileid: "57563255"
 
 #### <a name="to-add-an-image-to-a-toolbar-as-a-button"></a>Добавление изображения на панель инструментов, как кнопка
 
-1. В [представление ресурсов](../windows/resource-view-window.md), откройте панель инструментов, дважды щелкнув его.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), откройте панель инструментов, дважды щелкнув его.
 
 1. Затем откройте образ, который вы хотите добавить на панель инструментов.
 

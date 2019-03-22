@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273456"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329004"
 ---
 # <a name="cdatabase-class"></a>Класс CDatabase
 
-Представляет подключение к источнику данных, с помощью которого можно выполнять действия с источником данных.
+Представляет подключение к источнику данных, с помощью которого можно получить доступ к данным.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,17 +67,17 @@ ms.locfileid: "57273456"
 class CDatabase : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание:|
 |----------|-----------------|
 |[CDatabase::CDatabase](#cdatabase)|Создает объект `CDatabase`. Необходимо инициализировать объект путем вызова `OpenEx` или `Open`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDatabase::BeginTrans](#begintrans)|Запускает «транзакция» — ряд обратимое вызовы `AddNew`, `Edit`, `Delete`, и `Update` функции-члены класса `CRecordset` — на подключенном источнике данных. Источник данных должен поддерживать транзакции для `BeginTrans` в действие.|
 |[CDatabase::BindParameters](#bindparameters)|Позволяет выполнить привязку параметров перед вызовом `CDatabase::ExecuteSQL`.|
@@ -102,7 +102,7 @@ class CDatabase : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание:|
 |----------|-----------------|
 |[CDatabase::m_hdbc](#m_hdbc)|Open Database Connectivity (ODBC) дескриптора соединения с источником данных. Тип *HDBC*.|
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Примечания
 
-Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](/previous-versions/windows/desktop/ms713564). Дополнительные сведения см. в разделе [асинхронное выполнение](/previous-versions/windows/desktop/ms713563) в пакете Windows SDK.
+Обратите внимание, что классам ODBC библиотеки MFC больше не использовать асинхронной обработки; для выполнения асинхронной операции, необходимо непосредственно вызвать функцию ODBC API [SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function). Дополнительные сведения см. в разделе [асинхронное выполнение](/sql/odbc/reference/develop-app/asynchronous-execution).
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

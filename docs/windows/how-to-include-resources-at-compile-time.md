@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562839"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328393"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Практическое руководство. Включение ресурсов во время компиляции (C++)
 
@@ -48,7 +48,7 @@ ms.locfileid: "57562839"
 
 Вы можно добавить ресурсы из других файлов в проект во время компиляции, указав их в **директивы времени компиляции** поле **включения ресурсов** диалоговое окно. Используйте **включения ресурсов** диалоговое окно, чтобы изменить обычную рабочую настройку среды проекта хранение всех ресурсов в RC-файл проекта и все [символы](../windows/symbols-resource-identifiers.md) в `Resource.h`.
 
-Чтобы приступить к работе, откройте **включения ресурсов** диалоговое окно, щелкните правой кнопкой мыши RC-файла в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources)выберите **включения ресурсов** и запишите следующие свойства:
+Чтобы приступить к работе, откройте **включения ресурсов** диалоговое окно, щелкните правой кнопкой мыши RC-файла в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources)выберите **включения ресурсов** и запишите следующие свойства:
 
 | Свойство. | Описание: |
 |---|---|
@@ -65,7 +65,7 @@ ms.locfileid: "57562839"
 
 1. Поместите ресурсы в файл описания ресурсов с уникальным именем. Не используйте *projectname.rc*, так как это имя файла, используемого для главного файла описания ресурсов.
 
-1. Щелкните правой кнопкой мыши *.rc* файл [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources) и выберите **включения ресурсов**.
+1. Щелкните правой кнопкой мыши *.rc* файл [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) и выберите **включения ресурсов**.
 
 1. В **директивы времени компиляции** , добавьте [#include](../preprocessor/hash-include-directive-c-cpp.md) директивы компилятора, чтобы включить новый файл ресурсов в главный файл ресурсов в среде разработки.
 

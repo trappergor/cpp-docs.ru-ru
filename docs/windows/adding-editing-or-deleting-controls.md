@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562917"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328510"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Как выполнить: Добавление, редактирование или удаление элементов управления (C++)
 
@@ -153,7 +153,7 @@ ms.locfileid: "57562917"
 
 1. Создайте проект Win32, измените параметры приложения, поэтому создается приложение Windows (не консольное приложение).
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), дважды щелкните *.rc* файл.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), дважды щелкните *.rc* файл.
 
 1. В разделе диалоговое окно, дважды щелкните **о** поле.
 

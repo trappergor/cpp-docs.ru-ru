@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563047"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328627"
 ---
 # <a name="how-to-manage-resources-c"></a>Практическое руководство. Управление ресурсами (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "57563047"
 
 ### <a name="to-copy-resources"></a>Копирование ресурсов
 
-1. Откройте отдельно два файла ресурсов (см. в разделе Практическое [Открытие файла описания ресурсов](/how-to-create-a-resource-script-file#use-resource-script-files)). Например, откройте *Source1.rc* и *Source2.rc*.
+1. Откройте отдельно два файла ресурсов. (См. в разделе [используются файлы описания ресурсов](how-to-create-a-resource-script-file.md#use-resource-script-files)). Например, откройте *Source1.rc* и *Source2.rc*.
 
 1. В первом RC-файла, либо:
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>Копирование существующего ресурса и изменение его языка или условия
 
-В *.rc* файл или в [представление ресурсов](../windows/resource-view-window.md) окно, щелкните правой кнопкой мыши ресурс, нужно скопировать и выберите **вставить копию**. Затем установите следующие значения:
+В *.rc* файл или в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) окно, щелкните правой кнопкой мыши ресурс, нужно скопировать и выберите **вставить копию**. Затем установите следующие значения:
 
 - Для **языка** выберите язык.
 
@@ -107,7 +107,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>Чтобы импортировать ресурс в файл описания ресурсов
 
-1. В [представление ресурсов](../windows/resource-view-window.md) правой кнопкой мыши узел RC-файла ресурсов, к которому необходимо добавить ресурс и выберите **импорта**.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) правой кнопкой мыши узел RC-файла ресурсов, к которому необходимо добавить ресурс и выберите **импорта**.
 
 1. Найдите и выберите имя файла точечного рисунка (BMP), значка (ICO), курсора (.cur), HTML-файл (.htm) или другой файл для импорта.
 
@@ -118,7 +118,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Процедура экспорта ресурса для использования за пределами Visual C++
 
-1. В [представление ресурсов](../windows/resource-view-window.md), щелкните правой кнопкой мыши ресурс, нужно экспортировать и выберите **Экспорт**. Можно принять имя текущего файла или введите новое.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), щелкните правой кнопкой мыши ресурс, нужно экспортировать и выберите **Экспорт**. Можно принять имя текущего файла или введите новое.
 
 1. Перейдите к папке, где вы хотите сохранить файл и выберите **Экспорт**.
 

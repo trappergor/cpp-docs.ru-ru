@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301250"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328445"
 ---
 # <a name="deriving-a-class-from-cobject"></a>Наследование класса от CObject
 
@@ -59,7 +59,7 @@ ms.locfileid: "57301250"
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-Как правило, тем не менее, вы можете переопределить некоторые `CObject`в функции-члены для обработки особенности нового класса. Например, обычно можно переопределить `Dump` функции `CObject` для предоставления выходные данные отладки для содержимого вашего класса. Дополнительные сведения о том, как переопределить `Dump`, см. в статье [диагностики: Сохранение содержимого объекта](/previous-versions/visualstudio/visual-studio-2010/sc15kz85). Может также потребоваться переопределить `AssertValid` функции `CObject` для предоставления настраиваемые тесты, чтобы проверить согласованность данных членов класса объектов. Описание того, как переопределить `AssertValid`, см. в разделе [MFC ASSERT_VALID и CObject::AssertValid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa).
+Как правило, тем не менее, вы можете переопределить некоторые `CObject`в функции-члены для обработки особенности нового класса. Например, обычно можно переопределить `Dump` функции `CObject` для предоставления выходные данные отладки для содержимого вашего класса. Дополнительные сведения о том, как переопределить `Dump`, см. в статье [Настройка дампа объектов](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100)). Может также потребоваться переопределить `AssertValid` функции `CObject` для предоставления настраиваемые тесты, чтобы проверить согласованность данных членов класса объектов. Описание того, как переопределить `AssertValid`, см. в разделе [MFC ASSERT_VALID и CObject::AssertValid](reference/diagnostic-services.md#assert_valid).
 
 Статья [задание уровней функциональности](../mfc/specifying-levels-of-functionality.md) описывается, как указать другие уровни функциональные возможности, включая сведения о классе среды выполнения, динамическое создание объектов и сериализации.
 
