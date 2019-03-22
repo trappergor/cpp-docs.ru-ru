@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
-ms.openlocfilehash: 2bb15597be5ac4e1bb5f37fb2f12b74631e5a354
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a171e6a7eea5e10b47bf680545bc14618893b155
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592721"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328991"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -26,7 +26,7 @@ ms.locfileid: "50592721"
 ### <a name="parameters"></a>Параметры
 
 *db_source*<br/>
-Строка подключения, используемая для подключения к источнику данных. Формат строки подключения, см. в разделе [строки соединения и ссылки на данные](/previous-versions/windows/desktop/ms718376) в Майкрософт данных Access Components (MDAC) SDK.
+Строка подключения, используемая для подключения к источнику данных. Формат строки подключения, см. в разделе [строки соединения и ссылки на данные](/previous-versions/windows/desktop/ms718376(v=vs.85)) в Майкрософт данных Access Components (MDAC) SDK.
 
 *name*<br/>
 (Необязательно) При использовании **db_source** в классе, *имя* — это экземпляр объекта источника данных, имеющий **db_source** атрибут, примененный к нему (см. Пример 1). При использовании **db_source** , встроенный в реализации метода, *имя* — переменная (локальный метода), которая может использоваться для доступа к данным источника (см. Пример 2). Передать его *имя* для *source_name* параметр `db_command` должен быть сопоставлен команды в источнике данных.

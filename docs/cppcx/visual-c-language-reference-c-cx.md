@@ -2,12 +2,12 @@
 title: Справочник по языку Visual C++ (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422966"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328419"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Справочник по языку Visual C++ (C++/CX)
 
@@ -24,7 +24,7 @@ C + +/ CX представляет собой набор расширений я
 
 - Компоненты среды выполнения Windows на C++, которые можно использовать их в приложениях Windows на базе JavaScript. Для получения дополнительной информации см. [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp).
 
-- Игры Windows на базе DirectX и приложения, активно использующие графику. Дополнительные сведения см. в разделе [создание простой игрой UWP с помощью DirectX](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game).
+- Игры Windows на базе DirectX и приложения, активно использующие графику. Дополнительные сведения см. в разделе [создание простой игрой UWP с помощью DirectX](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game).
 
 ## <a name="related-articles"></a>Связанные статьи
 
@@ -32,7 +32,7 @@ C + +/ CX представляет собой набор расширений я
 |-|-|
 |[Краткий справочник](../cppcx/quick-reference-c-cx.md)|Таблица ключевых слов и операторов C + +/ CX.|
 |[Система типов](../cppcx/type-system-c-cx.md)|Описывает основные C + +/ CX типов и конструкций программирования и как использовать C + +/ CX и создания типов среды выполнения Windows.|
-|[Создание приложений и библиотек](../cppcx/building-apps-and-libraries-c-cx.md)|Принципы использования интегрированной среды разработки для построения приложений и подключения статических библиотек и DLL.|
+|[Создание приложений и библиотек](../cppcx/building-apps-and-libraries-c-cx.md)|В этой статье описывается использование интегрированной среды разработки для создания приложений и ссылка на статические библиотеки и библиотеки DLL.|
 |[Взаимодействие с другими языками](../cppcx/interoperating-with-other-languages-c-cx.md)|Рассматриваются как компоненты, написанные с использованием C + +/ CX можно использовать с компонентами, написанными на языке JavaScript, все управляемые язык или библиотека шаблонов C++ среды выполнения Windows.|
 |[Работа с потоками и маршалинг](../cppcx/threading-and-marshaling-c-cx.md)|Принципы указания поведения при использовании потоков и маршалинга в создаваемых компонентах.|
 |[Справочник по пространствам имен](../cppcx/namespaces-reference-c-cx.md)|Справочная документация по следующим пространствам имен: по умолчанию, Platform, Platform::Collections и другим связанным с ними пространствам имен.|

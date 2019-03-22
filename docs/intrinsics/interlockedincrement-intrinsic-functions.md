@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626937"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328614"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Встроенные функции _InterlockedIncrement
 
 **Блок, относящийся только к системам Microsoft**
 
-Предоставляют встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement) функции.
+Предоставляют встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement) функции.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -111,14 +111,14 @@ __int64 _InterlockedIncrement64_nf(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<Intrin.h >|
-|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<Intrin.h >|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
 Существуют несколько вариантов `_InterlockedIncrement`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
 
-Функция `_InterlockedIncrement` работает с 32-разрядными целыми значениями, `_InterlockedIncrement16``_InterlockedIncrement64` работает с 16-разрядными целыми значениями и работает с 64-разрядными целыми значениями.
+Функция `_InterlockedIncrement` работает с 32-разрядными целыми значениями, _InterlockedDecrement16`_InterlockedIncrement16`работает с 16-разрядными целыми значениями и _InterlockedDecrement64`_InterlockedIncrement64`работает с 64-разрядными целыми значениями.
 
 На платформах ARM используйте встроенные функции с суффиксами `_acq` и `_rel`, если нужно получить и освободить семантику, например в начале и конце критической секции. Встроенная функция с суффиксом `_nf` («без границ») не действует как ограничитель памяти.
 

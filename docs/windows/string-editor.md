@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563307"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328900"
 ---
 # <a name="string-editor-c"></a>Редактор строк (C++)
 
@@ -56,7 +56,7 @@ ms.locfileid: "57563307"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>Чтобы найти строковый ресурс в таблице строк
 
-1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Перейдите к меню **изменить** > **поиск и замена** и выберите **найти**.
 
@@ -79,7 +79,7 @@ ms.locfileid: "57563307"
 
 #### <a name="to-add-a-string-table-entry"></a>Чтобы добавить записи в таблице строк
 
-1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Щелкните правой кнопкой мыши в таблице строк и выберите **новую строку**.
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563307"
 
 #### <a name="to-change-a-string-or-its-identifier"></a>Чтобы изменить строку или идентификатору
 
-1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Выберите строку, в которой нужно изменить и дважды щелкните **идентификатор**, **значение**, или **заголовок** столбца, то вы можете:
 
@@ -136,7 +136,7 @@ ms.locfileid: "57563307"
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>Чтобы изменить свойство заголовка для нескольких строковых ресурсов
 
-1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Выберите строки, которые вы хотите изменить, удерживая нажатой **Ctrl** ключа после выбора каждого из них.
 
@@ -146,7 +146,7 @@ ms.locfileid: "57563307"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>Добавление форматирования или специальных символов в строковый ресурс
 
-1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources).
+1. Откройте таблицу строк, дважды щелкнув его значок в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources).
 
 1. Выберите строку, которую требуется изменить.
 
@@ -159,7 +159,7 @@ ms.locfileid: "57563307"
    | Tab | \\t |
    | Обратная косая черта (\\) | \\\\ |
    | Символ ASCII | \\ddd (восьмеричной нотации) |
-   | оповещение (колокольчик) | \\a |
+   | оповещение (колокольчик) | \\ОБЪЕКТ |
 
    > [!NOTE]
    > **Редактор строк** не поддерживает полный набор символов ASCI ЦЕЛИКОМ. Можно использовать только перечисленных выше.

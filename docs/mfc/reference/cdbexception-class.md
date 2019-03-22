@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CDBException [MFC], m_strError
 - CDBException [MFC], m_strStateNativeOrigin
 ms.assetid: eb9e1119-89f5-49a7-b9d4-b91cee1ccc82
-ms.openlocfilehash: e8a5195d4d2a3662d79d515c28dc66d1b0a27b24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 755b89635eedd7808f900dc63cd3039845db1dd3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295023"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328536"
 ---
 # <a name="cdbexception-class"></a>Класс CDBException
 
@@ -33,7 +33,7 @@ class CDBException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание:|
 |----------|-----------------|
 |[CDBException::m_nRetCode](#m_nretcode)|Содержит код возврата Open Database Connectivity (ODBC), типа RETCODE.|
 |[CDBException::m_strError](#m_strerror)|Содержит строку с описанием ошибки в терминах буквенно-цифровых.|
@@ -132,7 +132,7 @@ class CDBException : public CException
 
 Строка имеет форму «состояние: % s, машинный код: % ld, источник: % s», где коды формата, в порядке, будут заменены значениями, которые описывают:
 
-- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687)в *Справочник по программированию ODBC*. Пример «S0022».
+- SQLSTATE, заканчивающуюся нулем строку, содержащее код ошибки пяти символов, возвращаемых в *szSqlState* параметра функции ODBC `SQLError`. В приложении А перечислены значения SQLSTATE [коды ошибок ODBC](/previous-versions/windows/desktop/ms714687(v=vs.85))в *Справочник по программированию ODBC*. Пример «S0022».
 
 - Машинный код ошибки, относящиеся к источнику данных, возвращаемых в *pfNativeError* параметр `SQLError` функции. Пример 207.
 
@@ -140,13 +140,13 @@ class CDBException : public CException
 
 Платформа framework интерпретирует строку ошибки и помещает его компоненты в `m_strStateNativeOrigin`; Если `m_strStateNativeOrigin` содержит сведения для более чем одна ошибка, ошибки разделяются символы новой строки. Платформа помещает текст ошибки буквенно-цифровых в `m_strError`.
 
-Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](/previous-versions/windows/desktop/ms716312) работать в *Справочник по программированию ODBC*.
+Дополнительные сведения о кодах, используемых для этой строки, см. в разделе [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85)) работать в *Справочник по программированию ODBC*.
 
 ### <a name="example"></a>Пример
 
-  Из ODBC. «Состояние: S0022, машинный код: 207, источник: имя [Microsoft] [ODBC SQL Server Driver] [SQL Server] Недопустимый столбец «ColName»»
+  Из ODBC. «Состояние: S0022, машинный код: 207, источник:\[Майкрософт]\[драйвер ODBC SQL Server]\[SQL Server] Недопустимый столбец «ColName»»
 
-В `m_strStateNativeOrigin`: «Состояние: S0022, машинный код: 207, источник: [Microsoft] [ODBC SQL Server Driver] [SQL Server]»
+В `m_strStateNativeOrigin`: «Состояние: S0022, машинный код: 207, источник:\[Майкрософт]\[драйвер ODBC для SQL Server]\[SQL Server]»
 
 В `m_strError`: «Недопустимое имя столбца «ColName»»
 

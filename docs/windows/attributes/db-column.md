@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
-ms.openlocfilehash: c9c060bda4198c199ea86f0e2a33adc3275b353b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ceb0b93f37133ccbbf89ed659f74b632e45bcb1
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555055"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328939"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -34,23 +34,23 @@ ms.locfileid: "50555055"
 ```
 
 *dbType*<br/>
-(Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251) для записи в столбце.
+(Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251(v=vs.85)) для записи в столбце.
 
 *precision*<br/>
-(Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *Масштаб*<br/>
-(Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*.
+(Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 *length*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания
 
-**db_column** связывает указанного табличного столбца с переменной в наборе строк. Она разделяет данные члена, которые могут участвовать в OLE DB `IAccessor`-привязку на основе. Этот атрибут задает сопоставление столбцов, обычно определяется с помощью макросов потребителя OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), и [COLUMN_ENTRY](../../data/oledb/column-entry.md). Эти управления OLE DB [структуры DBBINDING](/previous-versions/windows/desktop/ms716845) для привязки указанного столбца. Каждый член, пометьте с **db_column** атрибут будет занимать одну запись в сопоставлении столбцов в виде записи в столбце. Следовательно вызывать этот атрибут где находится в сопоставление столбцов, то есть в классе команд или таблиц.
+**db_column** связывает указанного табличного столбца с переменной в наборе строк. Она разделяет данные члена, которые могут участвовать в OLE DB `IAccessor`-привязку на основе. Этот атрибут задает сопоставление столбцов, обычно определяется с помощью макросов потребителя OLE DB [BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md), [END_COLUMN_MAP](../../data/oledb/end-column-map.md), и [COLUMN_ENTRY](../../data/oledb/column-entry.md). Эти управления OLE DB [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85)) для привязки указанного столбца. Каждый член, пометьте с **db_column** атрибут будет занимать одну запись в сопоставлении столбцов в виде записи в столбце. Следовательно вызывать этот атрибут где находится в сопоставление столбцов, то есть в классе команд или таблиц.
 
 Используйте **db_column** в сочетании со [db_table](db-table.md) или [db_command](db-command.md) атрибуты.
 

@@ -3,12 +3,12 @@ title: Настройка параметров сборки CMake в Visual Stud
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: aa840dd41ee6843afae80343e42ba62741bbcd80
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: dd34fbefcbc89c7c4aa93105ae5bad31ae4d5f01
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826394"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328302"
 ---
 # <a name="customize-cmake-build-settings"></a>Настройка параметров сборки CMake
 
@@ -53,19 +53,19 @@ JSON IntelliSense помогает изменить файл `CMakeSettings.json
 
 - **generator**: сопоставляется с параметром **-G** в CMake и задает используемый генератор. Это свойство можно также использовать как макрос `${generator}`, чтобы задать другие значения свойств. Сейчас Visual Studio поддерживает следующие генераторы CMake:
 
-    - Ninja
-    - Visual Studio 14 2015
-    - Visual Studio 14 2015 ARM
-    - Visual Studio 14 2015 Win64
-    - Visual Studio 15 2017
-    - Visual Studio 15 2017 ARM
-    - Visual Studio 15 2017 Win64
+  - Ninja
+  - Visual Studio 14 2015
+  - Visual Studio 14 2015 ARM
+  - Visual Studio 14 2015 Win64
+  - Visual Studio 15 2017
+  - Visual Studio 15 2017 ARM
+  - Visual Studio 15 2017 Win64
 
-    Так как генератор Ninja предназначен для ускорения сборки в ущерб гибкости и функциональности, он используется по умолчанию. Однако некоторые проекты CMake могут быть неспособны использовать Ninja правильно. В этом случае можно велеть CMake создать проект Visual Studio.
+  Так как генератор Ninja предназначен для ускорения сборки в ущерб гибкости и функциональности, он используется по умолчанию. Однако некоторые проекты CMake могут быть неспособны использовать Ninja правильно. В этом случае можно велеть CMake создать проект Visual Studio.
 
-    Чтобы указать генератор Visual Studio, откройте `CMakeSettings.json` в главном меню, выбрав **CMake | Изменить параметры CMake**. Удалите слово Ninja и введите букву V. Это активирует IntelliSense, позволяя выбрать нужный генератор.
+  Чтобы указать генератор Visual Studio, откройте `CMakeSettings.json` в главном меню, выбрав **CMake | Изменить параметры CMake**. Удалите слово Ninja и введите букву V. Это активирует IntelliSense, позволяя выбрать нужный генератор.
 
-    Когда для активной конфигурации выбран генератор Visual Studio, по умолчанию вызывается MSBuild.exe с аргументами `-m -v:minimal`. Чтобы настроить сборку в файле `CMakeSettings.json`, можно указать дополнительные [аргументы командной строки MSBuild](../build/msbuild-visual-cpp-overview.md) для передачи в систему сборки через свойство `buildCommandArgs`:
+  Когда для активной конфигурации выбран генератор Visual Studio, по умолчанию вызывается MSBuild.exe с аргументами `-m -v:minimal`. Чтобы настроить сборку в файле `CMakeSettings.json`, можно указать дополнительные [аргументы командной строки MSBuild](../build/reference/msbuild-visual-cpp-overview.md) для передачи в систему сборки через свойство `buildCommandArgs`:
     
     ```json
     "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64"
@@ -121,7 +121,7 @@ ninja: invalid option -- `-?'
 usage: ninja [options] [targets...]
 ```
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |--------------|------------|
 | --version  | Вывод версии Ninja ("1.7.1")|
 |   -C DIR   | Переход в каталог DIR перед выполнением других действий|
@@ -132,7 +132,7 @@ usage: ninja [options] [targets...]
 |   -n       | Пробный запуск (команды не выполняются, но считаются успешно выполненными)|
 |   -v       | Отображение всех командных строк во время сборки|
 |   -d MODE  | Включение отладки (используйте список -d для указания режимов)|
-|   -t TOOL  | Запуск подчиненного инструмента (используйте список -t для указания подчиненных инструментов); завершает действие параметров верхнего уровня; в средство передаются дополнительные флаги|
+|   -t TOOL  | Запуск подчиненного инструмента (используйте список -t для указания подчиненных инструментов); Завершает параметров верхнего уровня; Дополнительные флаги передаются в средство|
 |   -w FLAG  | Настройка предупреждений (используйте список -w для указания предупреждений)|
 
 ## <a name="inherited-environments"></a>Унаследованные среды

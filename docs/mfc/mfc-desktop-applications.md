@@ -9,12 +9,12 @@ helpviewer_keywords:
 - class libraries, MFC
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
-ms.openlocfilehash: 364f29406b2c00d26ecc4cc69060ed8ec21b743b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60c50eb25132a38c72be762ab96d8ee262f5b349
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291289"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328835"
 ---
 # <a name="mfc-desktop-applications"></a>Приложения MFC для рабочего стола
 
@@ -85,7 +85,7 @@ ms.locfileid: "57291289"
 [Справочные материалы по библиотекам Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
 Содержит ссылки на различные библиотеки, входящие в состав Visual C++, включая шаблоны ATL, MFC, OLE DB, библиотеку времени выполнения языка C, а также стандартную библиотеку C++.
 
-[Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio.md)<br/>
+[Отладка в Visual Studio](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Ссылки на разделы, описывающие использование отладчика Visual Studio для устранения логических ошибок в приложениях и хранимых процедурах.
 
 ## <a name="see-also"></a>См. также

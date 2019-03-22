@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 91092b29d7265904e69b093310daa72b673d8745
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c2e2f67a6547b05fca198a54b13776a1d3fafecf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563385"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328926"
 ---
 # <a name="how-to-create-symbols-c"></a>Практическое руководство. Создание символов (C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "57563385"
 
 Диалоговое окно содержит следующие свойства:
 
-|Свойство.|Описание:|
+|Свойство.|Описание|
 |--------------------------|------------------------------------------|
 |**Name**|Отображает имя символа.<br/><br/>Дополнительные сведения см. в разделе [ограничения для имен символов](../windows/symbol-name-restrictions.md).|
 |**Значение**|Отображает числовое значение символа.<br/><br/>Дополнительные сведения см. в разделе [ограничения для значений символов](../windows/symbol-value-restrictions.md).|
@@ -65,7 +65,7 @@ ms.locfileid: "57563385"
 
 ## <a name="to-view-resource-symbols"></a>Просмотр символов ресурсов
 
-В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите **символы ресурсов** Чтобы просмотреть таблицу символов ресурсов в **символы ресурсов**диалоговое окно.
+В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), щелкните правой кнопкой мыши ваш *.rc* файл и выберите **символы ресурсов** Чтобы просмотреть таблицу символов ресурсов в **символы ресурсов**диалоговое окно.
 
 > [!NOTE]
 > Чтобы просмотреть предопределенные символы, установите флажок **Показать символы, доступные только для чтения** "флажок".

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562865"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328757"
 ---
 # <a name="binary-editor-c"></a>Двоичный редактор (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "57562865"
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>Открытие ресурса классического приложения Windows для редактирования в двоичном редакторе
 
-1. В окне [представления ресурсов](/windows/how-to-create-a-resource-script-file#create-resources)выберите файл ресурсов, который необходимо изменить.
+1. В окне [представления ресурсов](how-to-create-a-resource-script-file.md#create-resources)выберите файл ресурсов, который необходимо изменить.
 
 1. Щелкните ресурс правой кнопкой мыши и выберите **открыть двоичные данные**.
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505044"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328796"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -38,16 +38,16 @@ ms.locfileid: "50505044"
 - DBPARAMIO_NOTPARAM метод доступа не имеет параметров. Параметр `eParamIO` этому значению в строке методы доступа напоминает пользователям, что параметры игнорируются.
 
 *dbType*<br/>
-(Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251) для записи в столбце.
+(Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251(v=vs.85)) для записи в столбце.
 
 *precision*<br/>
-(Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *Масштаб*<br/>
-(Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845)
+(Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617) в *Справочник программиста OLE DB по*.
+(Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*.
 
 *length*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563021"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328809"
 ---
 # <a name="resource-editors-c"></a>Редакторы ресурсов (C++)
 
@@ -63,13 +63,13 @@ ms.locfileid: "57563021"
 > [!NOTE]
 > Свойства ресурса можно изменить с помощью **свойства** окна.
 
-- Чтобы изменить свойства ресурса, в [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources), щелкните правой кнопкой мыши ресурс, нужно изменить и выберите **свойства**.  Затем в [окно "Свойства"](/visualstudio/ide/reference/properties-window), изменение свойств ресурса.
+- Чтобы изменить свойства ресурса, в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources), щелкните правой кнопкой мыши ресурс, нужно изменить и выберите **свойства**.  Затем в [окно "Свойства"](/visualstudio/ide/reference/properties-window), изменение свойств ресурса.
 
 - Чтобы отменить изменения, внесенные в свойства ресурса, убедитесь, что ресурс имеет фокус **представление ресурсов** и выберите **отменить** из **изменить** меню.
 
 ### <a name="win32-resources"></a>Ресурсы Win32
 
-Ресурсы Win32 в доступны [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources) области.
+Ресурсы Win32 в доступны [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) области.
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>Чтобы просмотреть файл ресурсов Win32 в редакторе ресурсов
 
@@ -113,7 +113,7 @@ ms.locfileid: "57563021"
 
 ### <a name="to-preview-resources"></a>Предварительный просмотр ресурсов
 
-1. В [представление ресурсов](/windows/how-to-create-a-resource-script-file#create-resources) или в окне документа выберите ресурс, например, **IDD_ABOUTBOX**.
+1. В [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources) или в окне документа выберите ресурс, например, **IDD_ABOUTBOX**.
 
 1. В [окно "Свойства"](/visualstudio/ide/reference/properties-window)выберите **страницы свойств** кнопки.
 

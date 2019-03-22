@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559683"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328588"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 
@@ -75,12 +75,12 @@ ms.locfileid: "50559683"
 
    Где это необходимо, замените неуправляемые типы ссылок на структуры из [системы](/dotnet/api/system) пространства имен. В следующей таблице перечислены распространенные управляемых типов.
 
-   |Структура|Описание|
+   |Структура|Описание:|
    |---------------|-----------------|
    |[Boolean](/dotnet/api/system.boolean)|Представляет логическое значение.|
    |[Byte](/dotnet/api/system.byte)|Представляет 8-битовое целое число без знака.|
    |[Char](/dotnet/api/system.char)|Представляет символ Юникода.|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|Представляет текущее время, обычно выраженное как дата и время суток.|
+   |[DateTime](/dotnet/api/system.datetime)|Представляет текущее время, обычно выраженное как дата и время суток.|
    |[Decimal](/dotnet/api/system.decimal)|Представляет десятичное число.|
    |[Double](/dotnet/api/system.double)|Представляет число двойной точности с плавающей запятой.|
    |[Guid](/dotnet/api/system.guid)|Представляет глобальный уникальный идентификатор (GUID).|
@@ -88,8 +88,8 @@ ms.locfileid: "50559683"
    |[Int32](/dotnet/api/system.int32)|Представляет 32-разрядное целое число со знаком.|
    |[Int64](/dotnet/api/system.int64)|Представляет 64-разрядное целое число со знаком.|
    |[IntPtr](/dotnet/api/system.intptr)|Определяемый платформой тип, который используется для представления указателя или дескриптора.|
-   |[SByte](/dotnet/api/system.byte.aspx)|Представляет 8-разрядное целое число со знаком.|
-   |[Single](/dotnet/api/system.single.aspx)|Представляет число с плавающей запятой одиночной точности.|
+   |[SByte](/dotnet/api/system.byte)|Представляет 8-разрядное целое число со знаком.|
+   |[Single](/dotnet/api/system.single)|Представляет число одиночной точности с плавающей запятой.|
    |[TimeSpan](/dotnet/api/system.timespan)|Представляет интервал времени.|
    |[UInt16](/dotnet/api/system.uint16)|Представляет 16-битовое целое число без знака.|
    |[UInt32](/dotnet/api/system.uint32)|Представляет 32-битовое целое число без знака.|
