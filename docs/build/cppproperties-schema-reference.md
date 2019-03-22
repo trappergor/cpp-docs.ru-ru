@@ -1,14 +1,14 @@
 ---
 title: Справочник по схеме CppProperties.json
-ms.date: 03/05/2019
+ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
-ms.openlocfilehash: fd655de3313dd95eb3fcefaeba21e703d32e860a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826973"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356105"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Справочник по схеме CppProperties.json
 
@@ -115,7 +115,9 @@ Visual Studio предоставляет предопределенные кон
 |`compilerSwitches`|Один или несколько дополнительных параметров, которые могут повлиять на поведение IntelliSense|
 |`forcedInclude`|Заголовок, автоматически включаемый в каждый блок компиляции (сопоставляется с /FI для MSVC или с -include для clang)|
 |`undefines`|Список макросов, которые должны быть неопределенными (сопоставляется с /U для MSVC)|
-|`intelliSenseMode`|Используемая подсистема IntelliSense. Для MSVC, gcc или Clang вы можете указать варианты, привязанные к конкретной архитектуре:<br/><br/>- msvc-x86 (по умолчанию)<br/>- msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Используемая подсистема IntelliSense. Для MSVC, gcc или Clang вы можете указать варианты, привязанные к конкретной архитектуре:<br/><br/>— windows — msvc-x86 (по умолчанию)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+
+Примечание. Значения `msvc-x86` и `msvc-x64` поддерживаются для обеспечения обратной совместимости. Используйте `windows-msvc*` вариантов.
 
 ## <a name="custom-configurations"></a>Настраиваемые конфигурации
 
@@ -186,7 +188,7 @@ Visual Studio предоставляет предопределенные кон
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "inheritEnvironments": [
@@ -199,7 +201,7 @@ Visual Studio предоставляет предопределенные кон
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
@@ -227,7 +229,7 @@ Visual Studio предоставляет предопределенные кон
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x86"
+      "intelliSenseMode": "windows-msvc-x86"
     },
     {
       "environments": [
@@ -246,7 +248,7 @@ Visual Studio предоставляет предопределенные кон
         "${env.INCLUDE}"
       ],
       "defines": [ "WIN32", "_DEBUG", "UNICODE", "_UNICODE" ],
-      "intelliSenseMode": "msvc-x64"
+      "intelliSenseMode": "windows-msvc-x64"
     }
   ]
 }
