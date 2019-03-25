@@ -1,18 +1,18 @@
 ---
 title: __declspec
-ms.date: 10/09/2018
+ms.date: 03/21/2019
 f1_keywords:
 - __declspec_cpp
 - __declspec
 - _declspec
 helpviewer_keywords:
 - __declspec keyword [C++]
-ms.openlocfilehash: 3ee83203cc992ba8c5d05b7bb6974d3576baf59c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645098"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58416953"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -23,15 +23,16 @@ ms.locfileid: "50645098"
 ## <a name="grammar"></a>Грамматика
 
 *спецификатор decl*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (***extended-decl-modifier-seq***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**__declspec (**  *extended-decl-modifier-seq*  **)**
 
 *extended-decl-modifier-seq*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier*<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Extended-decl-modifier* *extended-decl-modifier-seq*
+&nbsp;&nbsp;&nbsp;&nbsp;*extended-decl-modifier* *extended-decl-modifier-seq*
 
 *extended-decl-modifier*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Выровнять (** *#* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**выделить («** *segname* **")**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**Распределитель**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**домен приложения**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**code_seg("** *segname* **")**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Устарело**<br/>
@@ -45,17 +46,17 @@ ms.locfileid: "50645098"
 &nbsp;&nbsp;&nbsp;&nbsp;**nothrow**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**novtable**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**Процесс**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**свойство (** { **получить =**_get_func_name_ &#124; **, put =**_put_func_name_ } **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**property(** { **get=**_get_func_name_ &#124; **,put=**_put_func_name_ } **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ограничения**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**safebuffers**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**selectany**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**spectre(nomitigation)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**thread**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**UUID («** *ComObjectGUID* **")**
+&nbsp;&nbsp;&nbsp;&nbsp;**uuid("** *ComObjectGUID* **")**
 
 Пробел отделяет последовательность модификаторов объявления. Примеры приведены в дальнейших разделах.
 
-Эти атрибуты класса хранения характерные для Майкрософт поддерживаются грамматикой расширенный атрибут: [выровнять](../cpp/align-cpp.md), [выделить](../cpp/allocate.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [устаревшим](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [сатрибутомnaked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md) , [процесс](../cpp/process.md), [ограничить](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), и [поток](../cpp/thread.md). Она также поддерживает эти атрибуты COM-объекта: [свойство](../cpp/property-cpp.md) и [uuid](../cpp/uuid-cpp.md).
+Эти атрибуты класса хранения характерные для Майкрософт поддерживаются грамматикой расширенный атрибут: [выровнять](../cpp/align-cpp.md), [выделить](../cpp/allocate.md), [распределителя](../cpp/allocator.md), [appdomain](../cpp/appdomain.md), [code_seg](../cpp/code-seg-declspec.md), [устаревшим](../cpp/deprecated-cpp.md), [dllexport](../cpp/dllexport-dllimport.md), [dllimport](../cpp/dllexport-dllimport.md), [jitintrinsic](../cpp/jitintrinsic.md), [с атрибутом naked](../cpp/naked-cpp.md), [noalias](../cpp/noalias.md), [noinline](../cpp/noinline.md), [noreturn](../cpp/noreturn.md), [nothrow](../cpp/nothrow-cpp.md), [novtable](../cpp/novtable.md), [процесс](../cpp/process.md), [ограничить](../cpp/restrict.md), [safebuffers](../cpp/safebuffers.md), [selectany](../cpp/selectany.md), [spectre](../cpp/spectre.md), и [поток](../cpp/thread.md). Она также поддерживает эти атрибуты COM-объекта: [свойство](../cpp/property-cpp.md) и [uuid](../cpp/uuid-cpp.md).
 
 **Code_seg**, **dllexport**, **dllimport**, **с атрибутом naked**, **noalias**, **nothrow** , **свойство**, **ограничить**, **selectany**, **поток**, и **uuid**атрибуты класса хранения это свойства исключительно объявления объекта или функции, к которому они применяются. **Поток** атрибут влияет на данные и только объекты. **С атрибутом naked** и **spectre** атрибуты влияют на функции только. **Dllimport** и **dllexport** атрибуты влияют на функции, данные и объекты. **Свойство**, **selectany**, и **uuid** атрибуты влияют на COM-объекты.
 
