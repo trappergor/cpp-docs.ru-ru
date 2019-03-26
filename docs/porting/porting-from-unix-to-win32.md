@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 325cdb86f61f658776c69057022c005c389492d3
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 3146c94879532a5c58208369bb6d131a3a027c33
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57813907"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278493"
 ---
 # <a name="porting-from-unix-to-win32"></a>Перенос приложений из UNIX в Win32
 
@@ -38,12 +38,6 @@ ms.locfileid: "57813907"
 [Руководство по переносу настраиваемых приложений UNIX](https://technet.microsoft.com/library/bb656290.aspx) содержит технические рекомендации по переносу кода из UNIX в среду Win32.
 
 [Руководство по проекту переноса из Unix](https://technet.microsoft.com/library/bb656287.aspx) дополняет руководство по переносу настраиваемых приложений UNIX и содержит высокоуровневые справочные сведения о переносе важных проектов из UNIX в Win32. Руководство содержит рекомендации, которые следует учитывать на каждом этапе миграции проекта.
-
-### <a name="microsoft-windows-services-for-unix-sfu"></a>Службы Microsoft Windows для UNIX (SFU)
-
-Службы Microsoft Windows для UNIX (SFU) предоставляют полный диапазон кроссплатформенных служб для интеграции Windows в существующие среды на основе UNIX. Службы для UNIX предоставляют общий доступ к файлам, обеспечивают удаленный доступ и администрирование, выполняют синхронизацию паролей и общие функции управления каталогами, содержат общий набор служебных программ и оболочку.
-
-[Службы Windows для UNIX](http://www.microsoft.com/downloads/details.aspx?FamilyID=896c9688-601b-44f1-81a4-02878ff11778&displaylang=en)
 
 ### <a name="interopsystemscom"></a>InteropSystems.com
 
