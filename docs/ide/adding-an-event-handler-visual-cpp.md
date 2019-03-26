@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MSBuild, properties
 - event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 96e5b8777bb8b0c976277a06e8ad49b3334921fb
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694521"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328575"
 ---
 # <a name="add-an-event-handler"></a>Добавление обработчика событий
 
@@ -25,7 +25,7 @@ ms.locfileid: "51694521"
 
 **Добавление обработчика событий для элемента управления диалогового окна**
 
-1. Дважды щелкните ресурс диалогового окна в [представлении ресурсов](../windows/resource-view-window.md), чтобы открыть ресурс диалогового окна, содержащий нужный элемент управления, в [редакторе диалоговых окон](../windows/dialog-editor.md).
+1. Дважды щелкните ресурс диалогового окна в [представлении ресурсов](../windows/how-to-create-a-resource-script-file.md#create-resources), чтобы открыть ресурс диалогового окна, содержащий нужный элемент управления, в [редакторе диалоговых окон](../windows/dialog-editor.md).
 
 1. Щелкните правой кнопкой мыши элемент управления, для которого нужно обработать событие уведомления.
 

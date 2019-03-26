@@ -5,12 +5,12 @@ ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 17a830238e21a5ef231285b5be9bfa6ae39183f4
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809767"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356274"
 ---
 # <a name="visual-c-language-conformance"></a>Соответствие стандартам языка Visual C++
 
@@ -79,18 +79,17 @@ ms.locfileid: "56809767"
 |&nbsp;&nbsp;[P0017R1 Расширенная агрегатная инициализация](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0017r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0091R3 Выведение аргументов шаблонов для шаблонов классов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0091r3.html)<br />&nbsp;&nbsp;[P0512R0 Проблемы с выведением аргумента шаблона класса](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0512r0.pdf)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0127R2 Объявление параметров шаблона, не являющихся типами, с auto](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0127r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0135R1 Гарантированный пропуск копирования](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6 <sup>[H](#note_H)</sup>|
+|&nbsp;&nbsp;[P0135R1 Гарантированный пропуск копирования](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0135r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0136R1 Перефразирование наследования конструкторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0136r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0137R1 std::launder](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0137r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0145R3 Уточнение порядка вычисления выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0145r3.pdf)<br />&nbsp;&nbsp;[P0400R0 Порядок вычисления аргументов функции ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0400r0.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0195R2 Упаковка расширений в объявлениях using](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0195r2.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0283R2 Пропуск нераспознанных атрибутов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0702R1 Исправление выведения шаблона аргумента класса для конструкторов списка инициализаторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
 |Область функции| |
 |----|---|
 |__Основные возможности языка C++17 (сообщения о дефектах)__|__Поддерживается__|
-|&nbsp;&nbsp;[P0702R1 Исправление выведения шаблона аргумента класса для конструкторов списка инициализаторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0702R1 Исправление выведения шаблона аргумента класса для конструкторов списка инициализаторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 Упрощение неявного захвата в лямбда-выражении](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Нет|
 |&nbsp;&nbsp;[CWG 1581: когда определяются функции-члены constexpr?](https://wg21.cmeerw.net/cwg/issue1581)|Нет|
 |&nbsp;&nbsp;[P0962R1 Ослабление правил поиска точки настройки структурированных привязок](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|Нет|
@@ -100,7 +99,7 @@ ms.locfileid: "56809767"
 |Область функции| |
 |----|---|
 |__Основные возможности языка C++20__|__Поддерживается__|
-|&nbsp;&nbsp;[P0306R4 Добавление &#95;&#95;VA_OPT&#95;&#95 для пропуска и удаления запятых](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|Нет|
+|&nbsp;&nbsp;[P0306R4 Добавление &#95;&#95;VA_OPT&#95;&#95 для пропуска и удаления запятых](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0306r4.html)|Нет|
 |&nbsp;&nbsp;[P0329R4 Назначенный конструктор инициализации](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|Нет|
 |&nbsp;&nbsp;[P0409R2 Разрешение захвата объекта [=, this] в лямбда-выражении](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|Нет|
 |&nbsp;&nbsp;[P0428R2 Знакомый синтаксис шаблона для универсальных лямбда-выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Нет|
@@ -145,7 +144,7 @@ ms.locfileid: "56809767"
 |&nbsp;&nbsp;[N4562 Основы работы с библиотеками: \<memory_resource>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#memory.resource.synop)<br />&nbsp;&nbsp;[P0337R0 Удаление назначения polymorphic_allocator](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0337r0.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0024R2 Параллельные алгоритмы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0024r2.html)<br />&nbsp;&nbsp;[P0336R1 Переименование политик параллельного выполнения](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0336r1.pdf)<br />&nbsp;&nbsp;[P0394R4 Параллельные алгоритмы следует завершить terminate() для исключений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0394r4.html)<br />&nbsp;&nbsp;[P0452R1 Объединение параллельных алгоритмов \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0452r1.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0226R1 Специальные математические функции](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
-|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Относительные пути для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Кэширование записей каталога для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p03179r1.html)<br />&nbsp;&nbsp;[P0392R0 Поддержка string_view в путях файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Поддержка файловых систем, отличных от POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Разрешение комментариев NB для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
+|&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br />&nbsp;&nbsp;[P0219R1 Относительные пути для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br />&nbsp;&nbsp;[P0317R1 Кэширование записей каталога для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br />&nbsp;&nbsp;[P0392R0 Поддержка string_view в путях файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br />&nbsp;&nbsp;[P0430R2 Поддержка файловых систем, отличных от POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br />&nbsp;&nbsp;[P0492R2 Разрешение комментариев NB для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[K](#note_K)</sup>|
 |&nbsp;&nbsp;[P0003R5 Удаление динамических спецификаций исключений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0003r5.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0005R4 not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0005r4.html)<br />&nbsp;&nbsp;[P0358R1 Исправления для not_fn()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0358r1.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0033R1 Переформулировка enable_shared_from_this](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0033r1.html)|VS 2017 15.5 <sup>[14](#note_14)</sup>|
@@ -162,7 +161,7 @@ ms.locfileid: "56809767"
 |&nbsp;&nbsp;[P0084R2 Определение местоположения возвращаемого значения](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0152R1 atomic::is_always_lock_free](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0152r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0154R1 hardware_destructive_interference_sizeи т. д.](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0154r1.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0156R2 Переименование lock\_guard в scoped\_lock с переменным числом аргументов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0156r2.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0156R2 Переименование lock\_guard в scoped\_lock с переменным числом аргументов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0156r2.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[L](#note_L)</sup>|
 |&nbsp;&nbsp;[P0295R0 gcd(), lcm()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0295r0.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0298R3 std::byte](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0298r3.pdf)|VS 2017 15.3 <sup>[17](#note_17), [byte](#note_byte)</sup>|
