@@ -29,14 +29,17 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b1d62e8d122cb4f08feef60d6936359b3e246749
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812061"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508791"
 ---
 # <a name="bscmake-options"></a>Параметры BSCMAKE
+
+> [!WARNING]
+> Хотя средство BSCMAKE по-прежнему устанавливается вместе с Visual Studio, оно больше не используется в интегрированной среде разработки. Начиная с Visual Studio 2008 информация об исходном коде и символах автоматически сохраняется в SDF-файле SQL Server в папке решения.
 
 В этом разделе описываются параметры, доступные для управления BSCMAKE. Несколько вариантов управления содержимым файла для просмотра информации путем исключения и включения определенные сведения. Параметры исключения можно разрешить BSCMAKE выполняться быстрее и может привести к меньшего размера BSC-файла. Имена параметров чувствительны к регистру (за исключением **/HELP** и **/nologo**).
 
