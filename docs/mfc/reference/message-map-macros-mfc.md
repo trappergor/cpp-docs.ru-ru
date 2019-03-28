@@ -1,6 +1,6 @@
 ---
 title: Макросы схемы сообщений (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850276"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565545"
 ---
 # <a name="message-map-macros-mfc"></a>Макросы схемы сообщений (MFC)
 
@@ -45,7 +45,7 @@ ms.locfileid: "55850276"
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|Объявляет, что виртуальной схемы сообщений будет использоваться в классе для сопоставления сообщений к функциям (необходимо использовать в объявлении класса).|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|Начинается определение виртуальной схемы сообщений (необходимо использовать в реализации класса).|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|Начинается определение виртуальной схемы сообщений для типа класса, содержащего аргумента одного шаблона. |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|Начинается определение виртуальной схемы сообщений для типа класса, содержащего аргумента одного шаблона. |
 |[END_MESSAGE_MAP](#end_message_map)|Завершает определение виртуальной схемы сообщений (необходимо использовать в реализации класса).|
 
 ### <a name="message-mapping-macros"></a>Макросы сопоставления сообщений
@@ -67,7 +67,7 @@ ms.locfileid: "55850276"
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|Указывает, какая функция будет обрабатывать диапазон идентификаторов, указанных в первые два параметра в макрос.|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Показывает, какой обработчик обновление будет обрабатывать диапазон идентификаторов, указанных в первых двух pa] араметры в макрос.|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|Указывает, какой обработчик обновление будет обрабатывать диапазон идентификаторов, указанных в первые два параметра в макрос.|
 |[ON_CONTROL_RANGE](#on_control_range)|Указывает, какая функция будет обрабатывать уведомления из диапазона идентификаторов, указанных в параметрах второго и третьего в макрос элементов управления. Первый параметр является сообщением уведомление элемента управления, например BN_CLICKED.|
 
 Дополнительные сведения о схемы сообщений, в объявлении схемы сообщений и разделительной макросы и макросы сопоставления сообщений, см. в разделе [схемы сообщений](../../mfc/reference/message-maps-mfc.md) и [обработка сообщений и разделы сопоставления](../../mfc/message-handling-and-mapping.md). Дополнительные сведения о диапазонов схем сообщений, см. в разделе [обработчики для диапазонов схем сообщений](../../mfc/handlers-for-message-map-ranges.md).
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **Заголовок:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 Начинается определение виртуальной схемы сообщений для типа класса, содержащего аргумента одного шаблона.
 
@@ -199,12 +199,12 @@ END_MESSAGE_MAP( )
 ### <a name="syntax"></a>Синтаксис
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*Идентификатор команды*<br/>
 Идентификатор команды.
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ ON_COMMAND( id, memberFxn )
 
 Когда целевой объект команды получает сообщение Windows WM_COMMAND с указанным Идентификатором, ON_COMMAND вызывает функцию-член `memberFxn` для обработки сообщения.
 
-Используйте ON_COMMAND для сопоставления одной команды к функции-члену. Используйте [ON_COMMAND_RANGE](#on_command_range) для сопоставления диапазона идентификаторов команд один член функции. Только одна запись схемы сообщений может соответствовать заданным идентификатором команды. То есть нельзя сопоставить команду несколько обработчиков. Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).
+Используйте ON_COMMAND для сопоставления одной команды к функции-члену. Используйте [ON_COMMAND_RANGE](#on_command_range) для сопоставления диапазона идентификаторов команд один член функции. Только одна запись схемы сообщений может соответствовать заданному идентификатору команды. То есть нельзя сопоставить команду несколько обработчиков. Дополнительные сведения и примеры см. в разделе [обработка сообщений и сопоставление разделов](../../mfc/message-handling-and-mapping.md).
 
 ### <a name="example"></a>Пример
 
@@ -237,12 +237,12 @@ END_MESSAGE_MAP()
 ### <a name="syntax"></a>Синтаксис
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*Идентификатор команды*<br/>
 Идентификатор команды.
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ Header file: afxmsg_.h
 ### <a name="syntax"></a>Синтаксис
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 Код уведомления элемента управления.
 
-*id*<br/>
+*Идентификатор команды*<br/>
 Идентификатор команды.
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 ### <a name="syntax"></a>Синтаксис
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -367,7 +367,7 @@ ON_OLECMD( pguid, olecmdid, id )
 *olecmdid*<br/>
 Идентификатор команды OLE.
 
-*id*<br/>
+*Идентификатор команды*<br/>
 Идентификатор меню, панели инструментов идентификатор, ИД кнопки или других идентификатор ресурса или объекта, используя следующую команду.
 
 ### <a name="remarks"></a>Примечания
@@ -575,12 +575,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ### <a name="syntax"></a>Синтаксис
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*id*<br/>
+*messageId*<br/>
 Идентификатор сообщения.
 
 *memberFxn*<br/>

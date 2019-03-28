@@ -1,6 +1,6 @@
 ---
 title: Класс Platform::Collections::Map
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745174"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565286"
 ---
 # <a name="platformcollectionsmap-class"></a>Класс Platform::Collections::Map
 
@@ -47,7 +47,7 @@ ref class Map sealed;
 *C*<br/>
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map. По умолчанию [std::less\<K >](../standard-library/less-struct.md).
 
-*__is_valid_winrt_type()* компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в сопоставлении.
+*__is_valid_winrt_type()* созданная компилятором функция, которая проверяет тип *K* и *V* и предоставляет понятное сообщение об ошибке, если тип не может храниться в сопоставлении.
 
 ### <a name="remarks"></a>Примечания
 
@@ -71,13 +71,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[MAP::MAP](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Map::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[MAP::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -92,8 +92,8 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
-|[MAP::MapChanged](#mapchanged-event.md) `event`|Происходит при изменении объекта Map.|
+|name|Описание|
+|[MAP::MapChanged](#mapchanged) событий|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -238,7 +238,7 @@ Map(
 Тип, предоставляющий объект функции, который может сравнить два значения элементов как ключи сортировки для определения их относительного порядка в объекте Map.
 
 *m*<br/>
-Ссылка или [значения lvalue и rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для `map Class` , используемый для инициализации текущего объекта Map.
+Ссылка или [rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md) для `map Class` , используемый для инициализации текущего объекта Map.
 
 *Первый*<br/>
 Итератор ввода первого элемента в диапазоне элементов, используемый для инициализации текущего объекта Map.

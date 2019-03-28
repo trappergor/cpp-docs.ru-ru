@@ -1,6 +1,6 @@
 ---
 title: runtime_exception - класс
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289667"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565497"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception - класс
 
@@ -30,20 +30,20 @@ class runtime_exception : public std::exception;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор runtime_exception](#ctor)|Инициализирует новый экземпляр класса `runtime_exception`.|
 |[~ runtime_exception деструктор](#dtor)|Уничтожает `runtime_exception` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|Возвращает код ошибки, вызвавшей исключение.|
+|[get_error_code](#get_error_code)|Возвращает код ошибки, вызвавшей исключение.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `runtime_exception` в данный объект.|
 
@@ -59,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **Пространство имен:** параллелизм
 
-## <a name="runtime_exception__ctor"></a>  Конструктор runtime_exception
+## <a name="ctor"></a>  Конструктор runtime_exception
 
 Инициализирует новый экземпляр класса.
 
@@ -102,7 +102,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 Возвращает код ошибки, вызвавшей исключение.
 
@@ -116,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 Значение HRESULT ошибки, вызвавшей исключение.
 
-## <a name="runtime_exception__operator_eq"></a>  оператор=
+## <a name="operator_eq"></a>  оператор=
   Копирует содержимое указанного объекта `runtime_exception` в данный объект.
 
 ### <a name="syntax"></a>Синтаксис

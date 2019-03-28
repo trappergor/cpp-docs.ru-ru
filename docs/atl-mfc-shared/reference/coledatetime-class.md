@@ -1,6 +1,6 @@
 ---
 title: Класс COleDateTime
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740526"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565939"
 ---
 # <a name="coledatetime-class"></a>Класс COleDateTime
 
@@ -55,13 +55,13 @@ class COleDateTime
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTime::COleDateTime](#coledatetime)|Создает объект `COleDateTime`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTime::Format](#format)|Создает форматированное строковое представление `COleDateTime` объекта.|
 |[COleDateTime::GetAsDBTIMESTAMP](#getasdbtimestamp)|Вызовите этот метод для получения времени в `COleDateTime` объекта в виде `DBTIMESTAMP` структуру данных.|
@@ -85,7 +85,7 @@ class COleDateTime
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTime::operator == COleDateTime::operator < и т. д.](#coledatetime_relational_operators)|Сравнение двух `COleDateTime` значения.|
 |[COleDateTime::operator + COleDateTime::operator-](#operator_add_-)|Добавление и вычитание `COleDateTime` значения.|
@@ -95,7 +95,7 @@ class COleDateTime
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTime::m_dt](#m_dt)|Содержит базовый `DATE` для данного `COleDateTime` объекта.|
 |[COleDateTime::m_status](#m_status)|Содержит состояние данного объекта `COleDateTime` объекта.|
@@ -117,7 +117,7 @@ class COleDateTime
 |1 января 1900 г., 6: 00|2.25|
 
 > [!CAUTION]
-> Обратите внимание, в приведенной выше таблице, несмотря на то, что значения дня становиться отрицательными до полуночи 30 декабря 1899 года, время дня значений нет. Например 6:00 AM всегда представляется дробное значение 0,25 независимо от типа целое число, представляющее день положительное (после 30 декабря 1899 г.) или отрицательным (до 30 декабря 1899 г.). Это означает, что простое сравнение с плавающей точкой ошибочно отсортировать `COleDateTime` представляющий 06:00:00 12/29/1899 года как **позже** чем та, представляющий 7:00 в тот же день.
+> В приведенной выше таблице, несмотря на то, что значения дня становиться отрицательными до полуночи 30 декабря 1899 года, время дня значений нет. Например 6:00 AM всегда представляется дробное значение 0,25 независимо от типа целое число, представляющее день положительное (после 30 декабря 1899 г.) или отрицательным (до 30 декабря 1899 г.). Это означает, что простое сравнение с плавающей точкой ошибочно отсортировать `COleDateTime` представляющий 06:00:00 12/29/1899 года как **позже** чем та, представляющий 7:00 в тот же день.
 
 `COleDateTime` Класс обрабатывает даты с 1 января 100 до 31 декабря 9999 года. `COleDateTime` Класс использует григорианского календаря; он не поддерживает юлианскому дат. `COleDateTime` игнорирует летнего времени. (См. в разделе [даты и времени: Поддержка модели автоматизации](../../atl-mfc-shared/date-and-time-automation-support.md).)
 
@@ -195,7 +195,7 @@ COleDateTime(int nYear,
 
 COleDateTime(WORD wDosDate,
     WORD wDosTime) throw();
-COleDateTime(const DBTIMESTAMP& dbts) throw();
+COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -216,7 +216,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 Объект `SYSTEMTIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
 *filetimeSrc*<br/>
-Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
+Объект `FILETIME` структуры, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта. Объект `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
 
 *nYear*, *nMonth*, *nDay*, *основе Nчас*, *Nмин.*, *nSec*<br/>
 Указать значения даты и времени, который необходимо скопировать в новый `COleDateTime` объекта.
@@ -224,7 +224,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 *wDosDate*, *wDosTime*<br/>
 Значения даты и времени MS-DOS, которые следует преобразовать в значение даты и времени и скопировать в новый `COleDateTime` объекта.
 
-*DBTS*<br/>
+*Метка времени*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуру, содержащую текущее местное время.
 
 ### <a name="remarks"></a>Примечания
@@ -256,7 +256,7 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 - `COleDateTime(` *systimeSrc* **)** создает `COleDateTime` объекта из `SYSTEMTIME` значение.
 
-- `COleDateTime(` `filetimeSrc` **)** Создает `COleDateTime` объекта из `FILETIME` значение. . Обратите внимание, что `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
+- `COleDateTime(` `filetimeSrc` **)** Создает `COleDateTime` объекта из `FILETIME` значение. . Объект `FILETIME` использует всеобщее скоординированное время (UTC), поэтому если передать местное время в структуре, ваши результаты могут оказаться неправильными. Дополнительные сведения см. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете Windows SDK.
 
 - `COleDateTime(` `nYear``nMonth`, `nDay`, `nHour`, `nMin`, `nSec` **)** Создает `COleDateTime` объект из указанного числовые значения.
 
@@ -300,7 +300,7 @@ CString Format(UINT nFormatID) const;
 Указывает идентификатор языкового стандарта для использования для преобразования. Дополнительные сведения об идентификаторах языков см. в разделе [идентификаторы языка](/windows/desktop/Intl/language-identifiers).
 
 *lpszFormat*<br/>
-Форматирование строки аналогичную `printf` форматирования строки. Каждый форматирование кода, предшествует процента ( `%`) выполните вход, заменен соответствующим `COleDateTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Функции времени выполнения см. в разделе [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md) Дополнительные сведения. Значение и значение коды форматирования для `Format` являются:
+Форматирование строки аналогичную `printf` форматирования строки. Каждый форматирование кода, предшествует процента ( `%`) выполните вход, заменен соответствующим `COleDateTime` компонента. Другие символы в строке формата копируются без изменений возвращаемой строки. Дополнительные сведения см. в разделе функции времени выполнения [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md). Значение и значение коды форматирования для `Format` являются:
 
 - `%H` Часов в текущей даты
 
@@ -341,12 +341,12 @@ CString Format(UINT nFormatID) const;
 Вызовите этот метод для получения времени в `COleDateTime` объекта в виде `DBTIMESTAMP` структуру данных.
 
 ```
-bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
+bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*DBTS*<br/>
+*Метка времени*<br/>
 Ссылку на [DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype) структуры.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -355,7 +355,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="remarks"></a>Примечания
 
-Сохраняет полученное время для упоминаемого *dbts* структуры. `DBTIMESTAMP` Структура данных инициализируется при помощи этой функции будет иметь его `fraction` имеет нулевое значение члена.
+Сохраняет полученное время для упоминаемого *timeStamp* структуры. `DBTIMESTAMP` Структура данных инициализируется при помощи этой функции будет иметь его `fraction` имеет нулевое значение члена.
 
 ### <a name="example"></a>Пример
 
@@ -382,19 +382,19 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 `GetAsSystemTime` сохраняет полученное время для упоминаемого *sysTime* объекта. `SYSTEMTIME` Структура данных инициализируется при помощи этой функции будет иметь его `wMilliseconds` имеет нулевое значение члена.
 
-См. в разделе [GetStatus](#getstatus) для содержатся дополнительные сведения о сведениях о состоянии в `COleDateTime` объекта.
+Для содержатся дополнительные сведения о сведениях о состоянии в `COleDateTime` объекта, см. в разделе [GetStatus](#getstatus).
 
 ##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
 
 Вызовите этот метод для получения времени в `COleDateTime` объекта в виде `UDATE` структуру данных.
 
 ```
-bool GetAsUDATE(UDATE& udate) const throw();
+bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*UDATE*<br/>
+*uDate*<br/>
 Ссылку на `UDATE` структуру для получения преобразованного даты и времени по максимуму `COleDateTime` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -684,7 +684,7 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает состояние данного объекта `COleDateTime` значение. При вызове метода `GetStatus` на `COleDateTime` объект создан со значением по умолчанию, он будет возвращать допустимый. При вызове метода `GetStatus` на `COleDateTime` объект инициализирован со конструктор, имеющим значение null, `GetStatus` вернет значение null. См. в разделе **"Примечания"** Дополнительные сведения.
+Возвращает состояние данного объекта `COleDateTime` значение. При вызове метода `GetStatus` на `COleDateTime` объект создан со значением по умолчанию, он будет возвращать допустимый. При вызове метода `GetStatus` на `COleDateTime` объект инициализирован со конструктор, имеющим значение null, `GetStatus` вернет значение null.
 
 ### <a name="remarks"></a>Примечания
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>Примечания
 
-Тип этого элемента данных является перечисляемым типом `DateTimeStatus`, который определен в `COleDateTime` класса. См. в разделе [COleDateTime::GetStatus](#getstatus) сведения.
+Тип этого элемента данных является перечисляемым типом `DateTimeStatus`, который определен в `COleDateTime` класса. Дополнительные сведения см. в разделе [COleDateTime::GetStatus](#getstatus).
 
 > [!CAUTION]
 >  Этот член данных — для сложных ситуациях программирования. Следует использовать подставляемые функции-члены [GetStatus](#getstatus) и [SetStatus](#setstatus). См. в разделе `SetStatus` дополнительные предупреждения, касающиеся явного задания для этого элемента данных.
@@ -819,7 +819,7 @@ COleDateTime& operator=(const time_t& timeSrc) throw();
 COleDateTime& operator=(const __time64_t& timeSrc) throw();
 COleDateTime& operator=(const SYSTEMTIME& systimeSrc) throw();
 COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
-COleDateTime& operator=(const UDATE& udate) throw();
+COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
 ### <a name="remarks"></a>Примечания
@@ -836,9 +836,9 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **оператор = (** *systimeSrc* **)** [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый.
 
-- **оператор = (** `udate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». См. в разделе функция [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate) для получения дополнительных сведений.
+- **оператор = (** `uDate` **)** `UDATE` преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; Если операция завершилась неудачей, он устанавливается на недопустимый. Объект `UDATE` структура представляет дату «распакованы». Дополнительные сведения см. в разделе функция [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate).
 
-- **оператор = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. См. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете SDK для Windows, Дополнительные сведения.
+- **оператор = (** `filetimeSrc` **)** [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime) преобразуется и копируются в это значение `COleDateTime` объекта. Если преобразование прошло успешно, состояние этого объекта присваивается допустимым; в противном случае оно устанавливается на недопустимый. `FILETIME` использует всеобщее скоординированное время (UTC), поэтому, если передать время в формате UTC в структуре, результаты преобразуется из времени в формате UTC в местное время и будет храниться в виде варианта времени. Это происходит так же, как и в Visual C++ 6.0 и Visual C++ .NET 2003 с пакетом обновления 2. Дополнительные сведения см. в разделе [времени файлов](/windows/desktop/SysInfo/file-times) в пакете Windows SDK.
 
 Дополнительные сведения см. в разделе [VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) запись в пакете Windows SDK.
 
@@ -968,7 +968,7 @@ bool ParseDateTime(
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-Обратите внимание, что также влияет на код языка ли формат строки является приемлемой для преобразования в значение даты и времени.
+Код локали повлияет ли формат строки является приемлемой для преобразования в значение даты и времени.
 
 В случае VAR_DATEVALUEONLY значения времени присваивается 0, или полуночи. В случае VAR_TIMEVALUEONLY значение будет присвоено даты 0, то есть 30 декабря 1899 г.
 
@@ -1149,7 +1149,7 @@ void SetStatus(DateTimeStatus status) throw();
 *Состояние* значение параметра определяется `DateTimeStatus` перечислимый тип, который определен в `COleDateTime` класса. См. в разделе [COleDateTime::GetStatus](#getstatus) сведения.
 
 > [!CAUTION]
->  Эта функция служит для сложных ситуациях программирования. Эта функция не изменяет данные в этом объекте. Чаще всего будет использоваться для задания состояния **null** или **недопустимый**. Обратите внимание, что оператор присваивания ( [оператор =](#eq)) и [SetDateTime](#setdatetime) задать состояние объекта на основании значения источника.
+>  Эта функция служит для сложных ситуациях программирования. Эта функция не изменяет данные в этом объекте. Чаще всего будет использоваться для задания состояния **null** или **недопустимый**. Оператор присваивания ([оператор =](#operator_eq)) и [SetDateTime](#setdatetime) задать состояние объекта на основании значения источника.
 
 ### <a name="example"></a>Пример
 

@@ -1,6 +1,6 @@
 ---
 title: Класс CWinFormsDialog
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-ms.openlocfilehash: 4d0731e40a622f0d360cabc03b68b0fe74c1ebc9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1542f852a8fe3f05d81ae59efb8a522caae671fd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277122"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565351"
 ---
 # <a name="cwinformsdialog-class"></a>Класс CWinFormsDialog
 
@@ -42,13 +42,13 @@ class CWinFormsDialog :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinFormsDialog::CWinFormsDialog](#cwinformsdialog)|Создает объект `CWinFormsDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinFormsDialog::GetControl](#getcontrol)|Извлекает ссылку на пользовательский элемент управления Windows Forms.|
 |[CWinFormsDialog::GetControlHandle](#getcontrolhandle)|Извлекает дескриптор окна для пользовательского элемента управления Windows Forms.|
@@ -59,7 +59,7 @@ class CWinFormsDialog :
 |name||
 |----------|-|
 |[CWinFormsDialog::operator-&gt;](#operator_-_gt)|Заменяет [CWinFormsDialog::GetControl](#getcontrol) в выражениях.|
-|[CWinFormsDialog::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип как ссылку на пользовательский элемент управления Windows Forms.|
+|[CWinFormsDialog::operator TManagedControl ^](#operator-tmanagedcontrol-hat)|Приводит тип как ссылку на пользовательский элемент управления Windows Forms.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -140,7 +140,7 @@ inline TManagedControl^  operator->() const throw();
 
 Сведения об использовании Windows Forms, см. в разделе [использование пользовательского элемента управления формы Windows в MFC](../../dotnet/using-a-windows-form-user-control-in-mfc.md).
 
-##  <a name="operator_tmanagedcontrol_xor"></a>  CWinFormsDialog::operator TManagedControl ^
+##  <a name="operator-tmanagedcontrol-hat"></a>  CWinFormsDialog::operator TManagedControl ^
 
 Приводит тип как ссылку на пользовательский элемент управления Windows Forms.
 

@@ -1,6 +1,6 @@
 ---
 title: '#Импортировать директивы (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822630"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564969"
 ---
 # <a name="import-directive-c"></a>Директива #import (C++)
 
@@ -160,7 +160,7 @@ using namespace MyLib;
 
 сразу после **#import** инструкции в исходном коде.
 
-Пространство имен можно подавить с помощью [no_namespace](#_predir_no_namespace) атрибут **#import** директива. Однако подавление пространства имен может привести к конфликтам имен. Пространство имен может быть переименовано [rename_namespace](#_predir_rename_namespace) атрибута.
+Пространство имен можно подавить с помощью [no_namespace](no-namespace.md)) атрибут **#import** директива. Однако подавление пространства имен может привести к конфликтам имен. Пространство имен может быть переименовано [rename_namespace](rename-namespace.md) атрибута.
 
 Компилятор предоставляет полный путь к любой зависимости библиотеки типов, необходимой библиотеке типов, которая его в данный момент обрабатывает. Путь записывается в форме комментариев в заголовке библиотеки типов (.TLH), который компилятор создает для каждой обрабатываемой библиотеки типов.
 

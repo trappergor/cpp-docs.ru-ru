@@ -1,6 +1,6 @@
 ---
 title: Класс CDataConnection
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ATL::CDataConnection
 - ATL.CDataConnection
@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 8a419a19c04b579c72df9938151f9ada657178f2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326545"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565510"
 ---
 # <a name="cdataconnection-class"></a>Класс CDataConnection
 
@@ -119,7 +119,7 @@ class CDataConnection
 > [!NOTE]
 >  Если вы создаете приложение базы данных, который должен обрабатывать несколько сеансов, необходимо использовать [OpenNewSession](../../data/oledb/cdataconnection-opennewsession.md).
 
-## <a name="#cdataconnection"></a> CDataConnection::CDataConnection
+## <a name="cdataconnection"></a> CDataConnection::CDataConnection
 
 Создает и инициализирует `CDataConnection` объекта.
 
@@ -141,7 +141,7 @@ CDataConnection(const CDataConnection &ds);
 
 Второе переопределение создает новую `CDataConnection` с параметрами, эквивалентно вами объект подключения к данным.
 
-## <a name="#copy"></a> CDataConnection::Copy
+## <a name="copy"></a> CDataConnection::Copy
 
 Создает копию существующего соединения данных.
 
@@ -156,7 +156,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 *доменных служб Active Directory*<br/>
 [in] Ссылка на существующее подключение к данным для копирования.
 
-## <a name="#open"></a> CDataConnection::Open
+## <a name="open"></a> CDataConnection::Open
 
 Открывает подключение к источнику данных с помощью строки инициализации.
 
@@ -175,7 +175,7 @@ HRESULT Open(LPCOLESTR szInitString) throw();
 
 Стандартный HRESULT.
 
-## <a name="#opennewsession"></a> CDataConnection::OpenNewSession
+## <a name="opennewsession"></a> CDataConnection::OpenNewSession
 
 Открывает новый сеанс с использованием источника данных текущего объекта соединения.
 

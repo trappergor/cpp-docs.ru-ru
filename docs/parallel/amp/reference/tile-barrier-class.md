@@ -1,6 +1,6 @@
 ---
 title: Класс tile_barrier
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tile_barrier
 - AMP/tile_barrier
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0e742a0cc1a0809fc08b3862cadb7e3deb36fa8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301172"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564987"
 ---
 # <a name="tilebarrier-class"></a>Класс tile_barrier
 
@@ -29,17 +29,17 @@ ms.locfileid: "57301172"
 class tile_barrier;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор tile_barrier](#ctor)|Инициализирует новый экземпляр класса `tile_barrier`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[wait](#wait)|Указывает, что все потоки в группе потоков (мозаике) остановить выполнение до завершения всех потоков в плитке ожидания.|
 |[wait_with_all_memory_fence](#wait_with_all_memory_fence)|Блокирует выполнение всех потоков в плитке, пока не будут завершены все доступы к памяти и все потоки в плитке достигнут этого вызова.|
@@ -54,9 +54,9 @@ class tile_barrier;
 
 **Заголовок** : amp.h
 
-**Пространство имен:** Параллельность
+**Пространство имен:** параллелизм
 
-## <a name="tile_barrier__ctor"></a>  Конструктор tile_barrier
+## <a name="ctor"></a>  Конструктор tile_barrier
 
 Инициализирует новый экземпляр класса путем копирования существующего.
 
@@ -72,7 +72,7 @@ tile_barrier(
 *_Другое*<br/>
 `tile_barrier` Копируемый объект.
 
-## <a name="wait"></a>  Подождите
+## <a name="wait"></a>Подождите
 
 Указывает, что все потоки в группе потоков (мозаике) остановить выполнение до завершения всех потоков в плитке ожидания.
 
@@ -82,7 +82,7 @@ tile_barrier(
 void wait() const restrict(amp);
 ```
 
-## <a name="wait_with_all_memory_fence"></a>  wait_with_all_memory_fence
+## <a name="waitwithallmemoryfence"></a>wait_with_all_memory_fence
 
 Блокирует выполнение всех потоков в плитке, пока все потоки в мозаике достигнут этого вызова. Это гарантирует, что все доступы к памяти видимы для других потоков в плитке потоков и доступы осуществлены в программном порядке.
 
@@ -92,7 +92,7 @@ void wait() const restrict(amp);
 void wait_with_all_memory_fence() const restrict(amp);
 ```
 
-## <a name="wait_with_global_memory_fence"></a>  wait_with_global_memory_fence
+## <a name="waitwithglobalmemoryfence"></a>wait_with_global_memory_fence
 
 Блокирует выполнение всех потоков в плитке, пока все потоки в мозаике достигнут этого вызова. Это гарантирует, что все доступы к памяти видимы для других потоков в плитке потоков и были выполнены в программном порядке.
 
@@ -102,7 +102,7 @@ void wait_with_all_memory_fence() const restrict(amp);
 void wait_with_global_memory_fence() const  restrict(amp);
 ```
 
-## <a name="wait_with_tile_static_memory_fence"></a>  wait_with_tile_static_memory_fence
+## <a name="waitwithtilestaticmemoryfence"></a>wait_with_tile_static_memory_fence
 
 Блокирует выполнение всех потоков в плитке, пока все потоки в мозаике достигнут этого вызова. Это гарантирует, что `tile_static` памяти доступы к видимы для других потоков в плитке потоков и выполнены в программном порядке.
 

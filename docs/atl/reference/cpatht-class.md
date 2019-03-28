@@ -1,6 +1,6 @@
 ---
 title: Класс CPathT
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273027"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565796"
 ---
 # <a name="cpatht-class"></a>Класс CPathT
 
 Этот класс представляет собой путь.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -79,7 +79,7 @@ class CPathT
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPathT::PCXSTR](#pcxstr)|Тип постоянной строки.|
 |[CPathT::PXSTR](#pxstr)|Тип string.|
@@ -87,13 +87,13 @@ class CPathT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPathT::CPathT](#cpatht)|Конструктор для пути.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPathT::AddBackslash](#addbackslash)|Вызовите этот метод, чтобы добавить обратную косую черту в конец строки для создания правильного синтаксиса для пути.|
 |[CPathT::AddExtension](#addextension)|Вызовите этот метод, чтобы добавить расширение файла в путь.|
@@ -135,16 +135,16 @@ class CPathT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPathT::operator const StringType &](#operator_const_stringtype_amp)|Этот оператор позволяет объекту рассматриваться как строка.|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|Этот оператор позволяет объекту рассматриваться как строка.|
-|[CPathT::operator StringType &](#operator_stringtype)|Этот оператор позволяет объекту рассматриваться как строка.|
+|[CPathT::operator StringType &](#operator_stringtype_amp)|Этот оператор позволяет объекту рассматриваться как строка.|
 |[CPathT::operator +=](#operator_add_eq)|Этот оператор добавляет строку к пути.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPathT::m_strPath](#m_strpath)|Путь.|
 
@@ -653,7 +653,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 Этот оператор позволяет объекту рассматриваться как строка.
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -665,19 +665,19 @@ operatorconst StringType&() const throw();
 Этот оператор позволяет объекту рассматриваться как строка.
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Возвращает строку, представляющую текущий путь, управляемых этим объектом.
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator StringType &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator StringType &amp;
 
 Этот оператор позволяет объекту рассматриваться как строка.
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение

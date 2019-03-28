@@ -1,6 +1,6 @@
 ---
 title: Класс CD2DGradientBrush
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DGradientBrush
 - AFXRENDERTARGET/CD2DGradientBrush
@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2e04d714e3479224cfc4e207b70483786be33db8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290980"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565468"
 ---
 # <a name="cd2dgradientbrush-class"></a>Класс CD2DGradientBrush
 
@@ -35,24 +35,24 @@ ms.locfileid: "57290980"
 class CD2DGradientBrush : public CD2DBrush;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DGradientBrush::CD2DGradientBrush](#cd2dgradientbrush)|Создает объект CD2DGradientBrush.|
-|[CD2DGradientBrush:: ~ CD2DGradientBrush](#cd2dgradientbrush__~cd2dgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D градиентной кисти.|
+|[CD2DGradientBrush:: ~ CD2DGradientBrush](#_dtorcd2dgradientbrush)|Деструктор Вызывается при уничтожении объекта D2D градиентной кисти.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DGradientBrush::Destroy](#destroy)|Уничтожает объект CD2DGradientBrush. (Переопределяет [CD2DBrush::Destroy](../../mfc/reference/cd2dbrush-class.md#destroy).)|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DGradientBrush::m_arGradientStops](#m_argradientstops)|Массив структур D2D1_GRADIENT_STOP.|
 |[CD2DGradientBrush::m_colorInterpolationGamma](#m_colorinterpolationgamma)|Место на диске, в какой цвет выполняется интерполяции между ограничениями градиента.|

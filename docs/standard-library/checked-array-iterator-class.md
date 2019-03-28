@@ -1,6 +1,6 @@
 ---
 title: Класс checked_array_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 688b93902da5b4492812b4715a248db9561ec258
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476615"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565718"
 ---
 # <a name="checkedarrayiterator-class"></a>Класс checked_array_iterator
 
@@ -495,7 +495,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
+## <a name="op_lt_eq"></a>  checked_array_iterator::operator&lt;=
 
 Проверка на то, что итератор `checked_array_iterator` с левой стороны оператора меньше или равен итератору `checked_array_iterator` с правой стороны.
 
@@ -514,7 +514,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
 
-## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
+## <a name="op_gt_eq"></a>  checked_array_iterator::operator&gt;=
 
 Проверка на то, что итератор `checked_array_iterator` с левой стороны оператора больше или равен итератора `checked_array_iterator` с правой стороны.
 
@@ -697,7 +697,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator--"></a>  checked_array_iterator::operator--
+## <a name="operator--"></a>  checked_array_iterator::operator--
 
 Уменьшение `checked_array_iterator` до предыдущего элемента.
 
@@ -841,7 +841,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-_eq"></a>  checked_array_iterator::operator-=
+## <a name="operator-_eq"></a>  checked_array_iterator::operator-=
 
 Уменьшение заданного смещения из `checked_array_iterator`.
 
@@ -890,7 +890,7 @@ int main() {
 */
 ```
 
-## <a name="checked_array_iterator__operator-"></a>  checked_array_iterator::operator-
+## <a name="operator-"></a>  checked_array_iterator::operator-
 
 Уменьшение смещения из итератора и возврат нового итератора `checked_array_iterator`, который обращается к вставленному элементу в новой позиции смещения.
 
@@ -910,8 +910,6 @@ difference_type operator-(const checked_array_iterator& right) const;
 Объект `checked_array_iterator`, который обращается к элементу смещения.
 
 ### <a name="remarks"></a>Примечания
-
-Пример кода см. в разделе [checked_array_iterator::operator-](#operator-).
 
 Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
 

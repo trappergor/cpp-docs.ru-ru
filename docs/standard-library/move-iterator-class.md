@@ -1,6 +1,6 @@
 ---
 title: Класс move_iterator
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - iterator/std::move_iterator
 - iterator/std::move_iterator::iterator_type
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: c9ff9385d43ac1c53f91a548ea01c04c1c67dc18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656161"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565071"
 ---
 # <a name="moveiterator-class"></a>Класс move_iterator
 
@@ -175,7 +175,7 @@ move_iterator& operator+=(difference_type _Off);
 
 Добавляет оператор *_Off* к сохраненному итератору. Затем возвращает `*this`.
 
-## <a name="move_iterator__operator-_eq"></a>  move_iterator::operator-=
+## <a name="operator-_eq"></a>  move_iterator::operator-=
 
 Выполняет переход через заданное число предыдущих элементов. Этот оператор вычитает смещение из сохраненного итератора.
 
@@ -234,7 +234,7 @@ reference operator[](difference_type _Off) const;
 
 Оператор возвращает `(reference)*(*this + _Off)`.
 
-## <a name="move_iterator__operator--"></a>  move_iterator::operator--
+## <a name="operator--"></a>  move_iterator::operator--
 
 Предекрементные и постдекрементные операторы-члены уменьшают сохраненный итератор на единицу.
 
@@ -251,7 +251,7 @@ move_iterator operator--();
 
 Второй (постдекрементный) оператор создает копию `*this` и вычисляет `--*this`. Затем возвращает эту копию.
 
-## <a name="move_iterator__operator-"></a>  move_iterator::operator-
+## <a name="operator-"></a>  move_iterator::operator-
 
 Уменьшает значение сохраненного итератора и возвращает указанное значение.
 

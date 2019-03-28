@@ -1,6 +1,6 @@
 ---
 title: Класс CDHtmlDialog
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDHtmlDialog
 - AFXDHTML/CDHtmlDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413957"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565809"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 
@@ -137,14 +137,14 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|Создает объект CDHtmlDialog.|
-|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|Уничтожает объект CDHtmlDialog.|
+|[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|Уничтожает объект CDHtmlDialog.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDHtmlDialog::CanAccessExternal](#canaccessexternal)|Переопределяемый, вызываемого как ли объекты сценариев на странице "загрузки" доступ к внешней диспетчеризация сайт элемента управления проверки доступа. Проверяет, чтобы убедиться в том, что диспетчеризации, либо safe для использования в сценариях или текущей зоны позволяет для объектов, которые не являются безопасными для использования в сценариях.|
 |[CDHtmlDialog::CreateControlSite](#createcontrolsite)|Переопределяемый класс, используемый для создания экземпляра сайта элемента управления, чтобы разместить элемент управления WebBrowser в диалоговом окне.|
@@ -197,7 +197,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDHtmlDialog::m_bUseHtmlTitle](#m_busehtmltitle)|Указывает, следует ли использовать название документа HTML как заголовок диалогового окна.|
 |[CDHtmlDialog::m_nHtmlResID](#m_nhtmlresid)|Ресурс ресурса код HTML для отображения.|
@@ -352,7 +352,7 @@ virtual BOOL CreateControlSite(
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT& var);
 
 void DDX_DHtml_AxControl(
@@ -370,7 +370,7 @@ void DDX_DHtml_AxControl(
 *szId*<br/>
 Значение параметра идентификатор тега объекта в источнике HTML для элемента управления ActiveX.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчера свойства, с которым вы хотите обмениваться данными.
 
 *szPropName*<br/>
@@ -417,43 +417,43 @@ void DDX_DHtml_CheckBox(
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     CString& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     short& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     int& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     long& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     DWORD& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     float& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     double& value);
 ```
 
@@ -465,7 +465,7 @@ void DDX_DHtml_ElementText(
 *szId*<br/>
 Значение, указанное для параметра ID элемента управления HTML.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчеризации HTML-элемента, с которым вы хотите обмениваться данными.
 
 *value*<br/>
@@ -510,7 +510,7 @@ void DDX_DHtml_SelectIndex(
 Указатель на [CDataExchange](../../mfc/reference/cdataexchange-class.md) объекта.
 
 *szId*<br/>
-Значение, указанное для параметра id элемента управления HTML.
+Значение, которое указано для элемента управления HTML `id` параметра.
 
 *value*<br/>
 Значение, при обмене.
@@ -651,11 +651,11 @@ VARIANT GetControlProperty(
 
 VARIANT GetControlProperty(
     LPCTSTR szId,
-    DISPID dispid);
+    DISPID dispId);
 
 VARIANT GetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -669,7 +669,7 @@ HTML-идентификатор элемента управления ActiveX.
 *pdispControl*<br/>
 `IDispatch` Указатель на элемент управления ActiveX.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчера свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -802,7 +802,7 @@ template <class Q> HRESULT GetElementInterface(
 
 HRESULT GetElementInterface(
     LPCTSTR szElementId,
-    REFIID riid,
+    REFIID refiid,
     void** ppvObj);
 ```
 
@@ -814,7 +814,7 @@ HRESULT GetElementInterface(
 *ppvObj*<br/>
 Адрес указатель, который заполняется запрошенный указатель интерфейса, если элемент найден и запрос завершается успешно.
 
-*riid*<br/>
+*refiid*<br/>
 Идентификатор IID запрошенного интерфейса интерфейс.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -827,12 +827,12 @@ HRESULT GetElementInterface(
 
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
 
-Получает значение свойства, идентифицируемого по *dispid* из HTML-элемент, идентифицируемый *szElementId*.
+Получает значение свойства, идентифицируемого по *dispId* из HTML-элемент, идентифицируемый *szElementId*.
 
 ```
 VARIANT GetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 Идентификатор HTML-элемента.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчера свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1151,7 +1151,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член является CDHtmlDialog в реализации [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), как описано в пакете Windows SDK.
+Эта функция-член является реализацией в CDHtmlDialog [IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)), как описано в пакете Windows SDK.
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1245,12 +1245,12 @@ STDMETHOD(ResizeBorder)(
 ```
 void SetControlProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 HTML-идентификатор элемента управления ActiveX.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчера свойства.
 
 *pVar*<br/>
@@ -1308,7 +1308,7 @@ void SetElementHtml(
 ```
 void SetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 ```
 
@@ -1317,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 Идентификатор HTML-элемента.
 
-*Идентификатор DISPID*<br/>
+*Идентификатор dispId*<br/>
 Идентификатор диспетчера свойства.
 
 *pVar*<br/>

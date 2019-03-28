@@ -1,6 +1,6 @@
 ---
 title: Операторы присваивания
-ms.date: 03/05/2018
+ms.date: 03/27/2019
 f1_keywords:
 - =
 - '*='
@@ -31,18 +31,18 @@ helpviewer_keywords:
 - /= operator
 - <<= operator
 ms.assetid: b028cf35-2ff1-4f14-9027-fd53ebec8aa0
-ms.openlocfilehash: 44211e43a0449c8a50ff03cac31eeed1fcc49a28
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 758c82f02d2b113f6c750f7f0ede662c97b646b0
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328478"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565484"
 ---
 # <a name="assignment-operators"></a>Операторы присваивания
 
 ## <a name="syntax"></a>Синтаксис
 
-*выражение* *оператор присваивания* *выражение*
+*expression* *assignment-operator* *expression*
 
 *оператор присваивания* : один из<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;<strong>=&nbsp;&nbsp;&nbsp;*=&nbsp;&nbsp;&nbsp;/=&nbsp;&nbsp;&nbsp;%=&nbsp;&nbsp;&nbsp;+=&nbsp;&nbsp;&nbsp;-=&nbsp;&nbsp;&nbsp;\<\<=&nbsp;&nbsp;&nbsp;>>=&nbsp;&nbsp;&nbsp;&=&nbsp;&nbsp;&nbsp;^=&nbsp;&nbsp;&nbsp;\|=</strong>
@@ -57,7 +57,7 @@ ms.locfileid: "51328478"
 
 Все операторы присваивания в следующей таблице, за исключением оператора =, являются составными.
 
-### <a name="assignment-operators"></a>Операторы присваивания
+### <a name="assignment-operators-table"></a>Таблица операторов присваивания
 
 |Оператор|Значение|
 |--------------|-------------|
@@ -73,7 +73,7 @@ ms.locfileid: "51328478"
 |**^=**|Выполнение операции побитового исключающего ИЛИ для значений первого и второго операндов; сохранение результата в объект, указанный первым операндом.|
 |**\|=**|Выполнение операции побитового включающего ИЛИ для значений первого и второго операндов; сохранение результата в объект, указанный первым операндом.|
 
-**Ключевые слова операторов**
+### <a name="operator-keywords"></a>Ключевые слова операторов
 
 Три составных оператора присвоения текстовые эквиваленты. Они приведены ниже.
 
@@ -180,7 +180,7 @@ B = A;
 
 ## <a name="compound-assignment"></a>Составное присваивание
 
-Составные операторы присваивания, приведенных в таблице в [операторы присваивания](#assignment-operators), указываются в виде *e1* *op*= *e2*, где *e1* является изменяемым l значением не **const** типа и *e2* является одним из следующих:
+Составные операторы присваивания, показанный на [таблицы операторов присваивания](#assignment-operators-table), указываются в виде *e1* *op*= *e2*, где *e1* является изменяемым l значением не **const** типа и *e2* является одним из следующих:
 
 - Арифметический тип
 

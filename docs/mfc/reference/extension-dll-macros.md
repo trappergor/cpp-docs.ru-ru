@@ -1,15 +1,15 @@
 ---
 title: Макросы и функции для управления библиотеки DLL
-ms.date: 04/03/2017
+ms.date: 03/27/2019
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b27f8763b60dc7ce3ee074cad1365e7e1de3a7e6
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328770"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565429"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>Макросы и функции для управления библиотеки DLL
 
@@ -20,10 +20,10 @@ ms.locfileid: "58328770"
 |[AfxOleInitModule](#afxoleinitmodule)|Обеспечивает поддержку OLE из обычной библиотеки DLL MFC, динамически компонуемые с MFC.|
 |[AfxNetInitModule](#afxnetinitmodule)|Обеспечивает поддержку сокетов MFC с обычной библиотеки DLL MFC, динамически компонуемые с MFC.|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|Возвращает текущее состояние флага состояние-module.|
-|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Задает состояние модуля перед инициализацией и/или для восстановления предыдущего состояния модуля после очистки.|
+|[AfxGetStaticModuleState](#afxgetstaticmodulestate)|Задает состояние модуля перед инициализацией и/или восстановить предыдущее состояние модуля после очистки.|
 |[AfxInitExtensionModule](#afxinitextensionmodule)|Инициализирует библиотеку DLL.|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|Задайте флаг состояния каждого модуля, который влияет на поведение WinSxS MFC.|
-|[Функцию AfxTermExtensionModule](#afxtermextensionmodule)|Позволяет MFC для очистки библиотеки DLL расширения MFC после отсоединения всех процессов из библиотеки DLL.|
+|[Функцию AfxTermExtensionModule](#afxtermextensionmodule)|Позволяет очистить библиотеки DLL расширения MFC, после отсоединения всех процессов из библиотеки DLL MFC.|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 
@@ -79,7 +79,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 Дополнительные сведения о состояния модулей и MFC, см. в разделе «Управление данными о состоянии модулей MFC» в [создание новых документов, Windows и представления](../creating-new-documents-windows-and-views.md) и [технические 58 Примечание](../tn058-mfc-module-state-implementation.md).
 
 > [!NOTE]
->  Когда MFC создает контекст активации для сборки, он использует [AfxWinInit](#afxwininit) для создания контекста и `AFX_MANAGE_STATE` включать и отключать его. Обратите внимание, что `AFX_MANAGE_STATE` включена для статические библиотеки MFC, а также библиотеки DLL MFC, чтобы разрешить MFC код, выполняемый в контексте правильной активации выбранного библиотекой пользователя. Дополнительные сведения см. в разделе [поддержка контекстов активации в состоянии модуля MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
+>  Когда MFC создает контекст активации для сборки, он использует [AfxWinInit](application-information-and-management.md#afxwininit) для создания контекста и `AFX_MANAGE_STATE` включать и отключать его. Обратите внимание, что `AFX_MANAGE_STATE` включена для статические библиотеки MFC, а также библиотеки DLL MFC, чтобы разрешить MFC код, выполняемый в контексте правильной активации выбранного библиотекой пользователя. Дополнительные сведения см. в разделе [поддержка контекстов активации в состоянии модуля MFC](../support-for-activation-contexts-in-the-mfc-module-state.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -151,7 +151,7 @@ BOOL AFXAPI AfxGetAmbientActCtx();
 
 ## <a name="afxgetstaticmodulestate"></a> AfxGetStaticModuleState
 
-Вызывайте эту функцию для задания состояния модуля перед инициализацией и/или для восстановления предыдущего состояния модуля после очистки.
+Вызывайте эту функцию для задания состояния модуля перед инициализацией и/или восстановить предыдущее состояние модуля после очистки.
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -181,7 +181,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ));
 
 **Заголовок:** afxstat_.h
 
-## <a name="afxinitextensionmodule"></a> AfxInitExtensionModule
+## <a name="afxinitextensionmodule"></a>AfxInitExtensionModule
 
 Вызовите эту функцию в MFC библиотеки DLL расширения `DllMain` для инициализации библиотеки DLL.
 
@@ -228,7 +228,7 @@ DllMain(HINSTANCE hInstance, DWORD dwReason, LPVOID lpReserved)
 `AfxInitExtensionModule` Создает копию библиотеки DLL HMODULE и захватывает классов среды выполнения DLL (`CRuntimeClass` структур) а также производства объектов (`COleObjectFactory` объектов) для использования более поздние версии `CDynLinkLibrary` создается объект.
 Расширения MFC DLL-библиотеки нужно сделать две вещи в свои `DllMain` функции:
 
-- Вызовите [AfxInitExtensionModule](#_mfc_afxinitextensionmodule) и проверяйте возвращаемое значение.
+- Вызовите [AfxInitExtensionModule](#afxinitextensionmodule) и проверяйте возвращаемое значение.
 
 - Создание `CDynLinkLibrary` объекта, если библиотека DLL будет экспортироваться [структура CRuntimeClass](cruntimeclass-structure.md) объектов или имеет свои собственные настраиваемые ресурсы.
 
@@ -275,7 +275,7 @@ BOOL CMFCListViewApp::InitInstance()
 
 ## <a name="afxtermextensionmodule"></a>  Функцию AfxTermExtensionModule
 
-Вызывайте эту функцию, чтобы разрешить MFC очистки библиотеки DLL расширения MFC после отсоединения всех процессов из библиотеки DLL (что происходит при завершении процесса или при выгрузке библиотеки DLL в результате использования `AfxFreeLibrary` вызова).
+Вызывайте эту функцию, чтобы разрешить MFC для очистки библиотеки DLL расширения MFC, после отсоединения всех процессов из библиотеки DLL (что происходит при завершении процесса или при выгрузке библиотеки DLL в результате использования `AfxFreeLibrary` вызова).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -289,7 +289,7 @@ void AFXAPI AfxTermExtensionModule(  AFX_EXTENSION_MODULE& state,  BOOL bAll  = 
 Ссылку на [AFX_EXTENSION_MODULE](afx-extension-module-structure.md) структуру, содержащую состояние модуля DLL расширения MFC.
 
 *Шар*<br/>
-Если значение TRUE, очистка всех модулей библиотеки DLL расширения MFC. В противном случае — Очистка только текущего модуля DLL.
+Если значение равно TRUE, очистить все модули библиотеки DLL расширения MFC. В противном случае очистите только текущего модуля DLL.
 
 ### <a name="remarks"></a>Примечания
 

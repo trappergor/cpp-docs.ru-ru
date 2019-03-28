@@ -1,17 +1,17 @@
 ---
 title: Класс basic_regex
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633416"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565455"
 ---
 # <a name="basicregex-class"></a>Класс basic_regex
 
@@ -59,12 +59,12 @@ class basic_regex
 |открытый статический const icase flag_type|regex_constants::icase|
 |открытый статический const nosubs flag_type|regex_constants::nosubs|
 |открытый статический const flag_type оптимизации|regex_constants::optimize|
-|открытый статический const flag_type collate|regex_constants::COLLATE|
+|открытый статический const flag_type collate|regex_constants::collate|
 |открытый статический const flag_type ECMAScript|regex_constants::ECMAScript|
-|открытый статический const flag_type базовый|regex_constants::Basic|
-|открытый статический const flag_type расширенных|regex_constants::Extended|
+|открытый статический const flag_type базовый|regex_constants::basic|
+|открытый статический const flag_type расширенных|regex_constants::extended|
 |открытый статический const flag_type awk|regex_constants::awk|
-|открытый статический const flag_type grep|regex_constants::GREP|
+|открытый статический const flag_type grep|regex_constants::grep|
 |открытый статический egrep flag_type const|regex_constants::egrep|
 |закрытый RXtraits признаков||
 
@@ -88,7 +88,7 @@ class basic_regex
 |-|-|
 |[assign](#assign)|Присваивает значение объекту регулярного выражения.|
 |[flags](#flags)|Возвращает флаги параметров синтаксиса.|
-|[get_loc](#get_loc)|Возвращает сохраненный объект языкового стандарта.|
+|[getloc](#getloc)|Возвращает сохраненный объект языкового стандарта.|
 |[imbue](#imbue)|Изменяет сохраненный объект языкового стандарта.|
 |[mark_count](#mark_count)|Возвращает число сопоставленных частей выражения.|
 |[swap](#swap)|Меняет местами два объекта регулярного выражения.|

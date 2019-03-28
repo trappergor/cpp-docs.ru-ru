@@ -1,6 +1,6 @@
 ---
 title: Класс CStringT
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750875"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565822"
 ---
 # <a name="cstringt-class"></a>Класс CStringT
 
@@ -134,14 +134,14 @@ class CStringT :
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CStringT::CStringT](#cstringt)|Создает `CStringT` объект по-разному.|
 |[CStringT::~CStringT](#_dtorcstringt)|Уничтожает объект `CStringT`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CStringT::AllocSysString](#allocsysstring)|Выделяет строку BSTR из `CStringT` данных.|
 |[CStringT::AnsiToOem](#ansitooem)|Производится преобразование на месте из кодировки ANSI в набор символов OEM.|
@@ -182,7 +182,7 @@ class CStringT :
 
 |||
 |-|-|
-|[оператор =](#operator_eq)|Назначает новое значение для `CStringT` объекта.|
+|[CStringT::operator =](#operator_eq)|Назначает новое значение для `CStringT` объекта.|
 |[CStringT::operator +](#operator_add)|Сцепляет две строки или символ и строку.|
 |[CStringT::operator +=](#operator_add_eq)|Сцепляет новую строку в конец существующей строки.|
 |[CStringT::operator ==](#operator_eq_eq)|Определяет, логически равны ли две строки.|
@@ -251,7 +251,7 @@ class CStringT :
 
 Так как `CStringT` использует аргумент шаблона, чтобы определить тип символа (либо [wchar_t](../../c-runtime-library/standard-types.md) или [char](../../c-runtime-library/standard-types.md)) поддерживается, типы параметров метода, может быть затруднена время от времени. Чтобы упростить эту проблему, определяется и используется на протяжении всего набора предопределенных типов `CStringT` класса. В следующей таблице перечислены различные типы:
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`XCHAR`|Один символ (либо **wchar_t** или **char**) с помощью символа совпадает с типом `CStringT` объекта.|
 |`YCHAR`|Один символ (либо **wchar_t** или **char**) с противоположной символьным типом как `CStringT` объекта.|
@@ -1023,6 +1023,56 @@ void OemToAnsi();
 ### <a name="example"></a>Пример
 
 См. в примере [CStringT::AnsiToOem](#ansitooem).
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+Назначает новое значение в строку.
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>Параметры
+
+*strSrc*<br/>
+Объект `CStringT` для назначения этой строки.
+
+*str*<br/>
+Ссылка на объект `CThisSimpleString`.
+
+*bMFCDLL*<br/>
+Логическое значение, показывающее, является ли проект MFC библиотеки DLL.
+
+*BaseType*<br/>
+Базовый тип строки.
+
+*var*<br/>
+Объект типа variant для назначения этой строки.
+
+*ch*<br/>
+Символ ANSI или Юникод, присваиваемое строке.
+
+*pszSrc*<br/>
+Указатель на исходную строку, присваиваемого.
+
+### <a name="remarks"></a>Примечания
+
+Оператор присваивания принимает другой `CStringT` объекта, указатель на символ или один символ. Следует иметь в виду эту память, исключения могут возникать каждый раз, когда этот оператор используется, поскольку можно выделить новое хранилище.
+
+Сведения о `CThisSimpleString`, см. в разделе "Примечания" [CStringT::CStringT](#cstringt).
+
+> [!NOTE]
+> Несмотря на то, что можно создать `CStringT` экземпляров, которые содержат внедренные символы null, мы не рекомендуем включать его. Вызов методов и операторов для `CStringT` объектов, содержащих внедренные символы null может привести к непредвиденным результатам.
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

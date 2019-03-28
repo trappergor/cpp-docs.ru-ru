@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751821"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565390"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ ms.locfileid: "57751821"
 
 |Классы|Описание|
 |-------------|-----------------|
-|[Класс shared_mutex](../standard-library/shared-mutex.md#class_shared_mutex)|Тип общего мьютекса, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
-|[Класс shared_timed_mutex](../standard-library/shared-mutex.md#class_shared_timed_mutex)|Тип общего мьютекса с ограничением по времени, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
-|[Класс shared_lock](../standard-library/shared-mutex.md#class_shared_lock)|Класс шаблонов, создающий программу-оболочку для общего мьютекса, чтобы обеспечить поддержку операций блокировки с ограничением по времени и совместное использование несколькими агентами с неисключительными правами.|
+|[Класс shared_mutex](#class_shared_mutex)|Тип общего мьютекса, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
+|[Класс shared_timed_mutex](#class_shared_timed_mutex)|Тип общего мьютекса с ограничением по времени, который может быть заблокирован одним агентом или совместно использоваться несколькими агентами с неисключительным доступом.|
+|[Класс shared_lock](#class_shared_lock)|Класс шаблонов, создающий программу-оболочку для общего мьютекса, чтобы обеспечить поддержку операций блокировки с ограничением по времени и совместное использование несколькими агентами с неисключительными правами.|
 
-|Функции|Описание:|
+|Функции|Описание|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|
+|[swap](#function_swap)|Меняет местами содержимое общих объектов мьютекса, на которые ссылаются параметры функции.|
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> Класс shared_lock
+###  <a name="class_shared_lock"></a> Класс shared_lock
 
 Класс шаблонов `shared_lock` контролирует совместное владение объектом shared mutex в области. Параметр шаблона должен быть типом shared mutex.
 

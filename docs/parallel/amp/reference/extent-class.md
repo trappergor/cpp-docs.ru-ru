@@ -1,6 +1,6 @@
 ---
 title: Касс extent (C++ AMP)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - extent
 - AMP/extent
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270193"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565835"
 ---
 # <a name="extent-class-c-amp"></a>Касс extent (C++ AMP)
 
@@ -39,19 +39,19 @@ class extent;
 
 **Заголовок** : amp.h
 
-**Пространство имен:** Параллельность
+**Пространство имен:** параллелизм
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[область конструктора](#ctor)|Инициализирует новый экземпляр класса `extent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Содержит](#contains)|Проверяет, что указанный `extent` объект с указанным рангом.|
 |[size](#size)|Возвращает полный линейный размер области памяти (в единицах элементов).|
@@ -59,7 +59,7 @@ class extent;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator-](#operator_min)|Возвращает новый `extent` объект, созданный путем вычитания `index` элементы из соответствующих `extent` элементов.|
 |[оператор--](#operator_min_min)|Уменьшает каждый элемент `extent` объекта.|
@@ -75,9 +75,9 @@ class extent;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
-|[Ранг константа](#rank)|Получает ранг объекта `extent` объекта.|
+|[Ранг константа](#rank_constant)|Получает ранг объекта `extent` объекта.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

@@ -1,6 +1,6 @@
 ---
 title: Класс CAnimationBaseObject
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationBaseObject
 - AFXANIMATIONCONTROLLER/CAnimationBaseObject
@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e9c5ed98d654eb37be7ab8523d44c9da6eecd9c7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258922"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565895"
 ---
 # <a name="canimationbaseobject-class"></a>Класс CAnimationBaseObject
 
@@ -71,14 +71,14 @@ class CAnimationBaseObject : public CObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|Перегружен. Создает объект анимации.|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|Деструктор Вызывается при уничтожении объекта анимации.|
+|[CAnimationBaseObject:: ~ CAnimationBaseObject](#_dtorcanimationbaseobject)|Деструктор Вызывается при уничтожении объекта анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationBaseObject::ApplyTransitions](#applytransitions)|Добавляет переходы на раскадровку с переменной инкапсулированный анимации.|
 |[CAnimationBaseObject::ClearTransitions](#cleartransitions)|Удаляет все связанные с ней переходы.|
@@ -90,21 +90,21 @@ class CAnimationBaseObject : public CObject;
 |[CAnimationBaseObject::GetAutodestroyTransitions](#getautodestroytransitions)|Сообщает, автоматическое удаление связанных перехода.|
 |[CAnimationBaseObject::GetGroupID](#getgroupid)|Возвращает идентификатор текущей группы.|
 |[CAnimationBaseObject::GetObjectID](#getobjectid)|Возвращает идентификатор текущего объекта.|
-|[CAnimationBaseObject::GetUserData](#getuserdata)|Возвращает данные, определенные пользователем.|
-|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Задает флаг, который упорядочивает автоматически уничтожить переходов.|
+|[CAnimationBaseObject::GetUserData](#getuserdata)|Возвращает пользовательские данные.|
+|[CAnimationBaseObject::SetAutodestroyTransitions](#setautodestroytransitions)|Задает флаг, чтобы автоматически удалить переходы.|
 |[CAnimationBaseObject::SetID](#setid)|Задает новые идентификаторы.|
 |[CAnimationBaseObject::SetUserData](#setuserdata)|Задает определяемые пользователем данные.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationBaseObject::GetAnimationVariableList](#getanimationvariablelist)|Собирает указатели на переменные автономной анимации.|
 |[CAnimationBaseObject::SetParentAnimationObjects](#setparentanimationobjects)|Устанавливает связь между переменными анимации, содержащиеся в объекта анимации и их контейнера.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationBaseObject::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, следует ли автоматически удалить связанные с ней переходы.|
 |[CAnimationBaseObject::m_dwUserData](#m_dwuserdata)|Содержит определяемые пользователем данные.|
@@ -114,7 +114,7 @@ class CAnimationBaseObject : public CObject;
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс реализует основные методы для всех объектов анимации. Объекта анимации можно представляют собой значения, точки, размер, прямоугольник или цвет в приложения, а также любые пользовательские сущности. Объекты анимации хранятся в группах анимации (см. в разделе CAnimationGroup). Каждая группа может быть анимировано отдельно и могут рассматриваться как аналогичен раскадровки. Объекта анимации инкапсулирует одну или несколько анимации переменных (см. в разделе CAnimationVariable), в зависимости от его логическое представление. Например CAnimationRect содержит четыре переменные анимации — одну переменную для каждой стороны прямоугольника. Каждый класс анимации объекта предоставляет перегруженный метод AddTransition, который должен использоваться для применения переходы к переменным инкапсулированный анимации. Объекта анимации, можно определить по ИД объекта (при необходимости) и по идентификатору группы. Идентификатор группы необходим для размещения объекта анимации к нужной группе, но если не указан идентификатор группы, объект помещается в группу по умолчанию с Идентификатором 0. Если вы вызываете SetID с разных GroupID, объекта анимации будут перемещены в другую группу (новая группа создается при необходимости).
+Этот класс реализует основные методы для всех объектов анимации. Объекта анимации можно представляют собой значения, точки, размер, прямоугольник или цвет в приложения, а также любые пользовательские сущности. Объекты анимации хранятся в группах анимации (см. в разделе CAnimationGroup). Каждая группа может быть анимировано отдельно и могут рассматриваться как аналог раскадровки. Объекта анимации инкапсулирует одну или несколько анимации переменных (см. в разделе CAnimationVariable), в зависимости от его логическое представление. Например CAnimationRect содержит четыре переменные анимации — одну переменную для каждой стороны прямоугольника. Каждый класс анимации объекта предоставляет перегруженный метод AddTransition, который должен использоваться для применения переходы к переменным инкапсулированный анимации. Объекта анимации, можно определить по ИД объекта (при необходимости) и по идентификатору группы. Идентификатор группы необходим для размещения объекта анимации к нужной группе, но если не указан идентификатор группы, объект помещается в группу по умолчанию с Идентификатором 0. Если вы вызываете SetID с разных GroupID, объекта анимации будут перемещены в другую группу (новая группа создается при необходимости).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -150,7 +150,7 @@ virtual BOOL ApplyTransitions(
 Указатель на раскадровку.
 
 *bDependOnKeyframes*<br/>
-Со значением FALSE данный метод добавляет только таких переходов, которые не зависят от опорные кадры.
+Если задано значение FALSE, этот метод добавляет только таких переходов, которые не зависят от опорные кадры.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -305,17 +305,17 @@ virtual void EnableValueChangedEvent(
 ```
 virtual void GetAnimationVariableList(
     CList<CAnimationVariable*,
-    CAnimationVariable*>& lst) = 0;
+    CAnimationVariable*>& list) = 0;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lst*<br/>
+*list*<br/>
 Список, должно быть заполнено анимации переменными, содержащимися в объекте анимации.
 
 ### <a name="remarks"></a>Примечания
 
-Это чисто виртуальный метод, который должен быть переопределен в производном классе. Объекта анимации, в зависимости от его типа, содержит одну или несколько переменных анимации. Например CAnimationPoint содержит две переменные для соответственно координаты X и Y. Базовый класс CAnimationBaseObject реализует некоторые универсальные методы, которые работают на список переменных анимации: ApplyTransitions ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Эти методы вызвать GetAnimationVariableList, в которой содержатся в производном классе фактическое анимации переменными, содержащимися в объекте определенной анимации, то цикл для списка и выполнять необходимые действия. При создании объекта пользовательской анимации, вам необходимо добавить lst все переменные анимации, содержащиеся в этом объекте.
+Это чисто виртуальный метод должен переопределяться в производном классе. Объекта анимации, в зависимости от его типа, содержит одну или несколько переменных анимации. Например CAnimationPoint содержит две переменные для соответственно координаты X и Y. Базовый класс CAnimationBaseObject реализует некоторые универсальные методы, которые работают на список переменных анимации: ApplyTransitions ClearTransitions EnableValueChangedEvent, EnableIntegerValueChangedEvent. Эти методы вызвать GetAnimationVariableList, в которой содержатся в производном классе фактическое анимации переменными, содержащимися в объекте определенной анимации, то цикл для списка и выполнять необходимые действия. Если вы создаете объект пользовательскую анимацию, необходимо добавить *списка* все переменные анимации, содержащиеся в этом объекте.
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 
@@ -367,7 +367,7 @@ UINT32 GetObjectID() const;
 
 ##  <a name="getuserdata"></a>  CAnimationBaseObject::GetUserData
 
-Возвращает данные, определенные пользователем.
+Возвращает пользовательские данные.
 
 ```
 DWORD GetUserData() const;
@@ -423,7 +423,7 @@ CAnimationController* m_pParentController;
 
 ##  <a name="setautodestroytransitions"></a>  CAnimationBaseObject::SetAutodestroyTransitions
 
-Задает флаг, который упорядочивает автоматически уничтожить переходов.
+Задает флаг, чтобы автоматически удалить переходы.
 
 ```
 void SetAutodestroyTransitions(BOOL bValue);
@@ -458,7 +458,7 @@ void SetID(
 
 ### <a name="remarks"></a>Примечания
 
-Позволяет изменить идентификатор объекта и идентификатор группы. Если идентификатор новой группы отличается от идентификатора текущего, объекта анимации перемещается в другую группу (новая группа создается, если это необходимо).
+Можно изменить идентификатор объекта и идентификатор группы. Если идентификатор новой группы отличается от идентификатора текущего, объекта анимации перемещается в другую группу (новая группа создается, если это необходимо).
 
 ##  <a name="setparentanimationobjects"></a>  CAnimationBaseObject::SetParentAnimationObjects
 
@@ -470,7 +470,7 @@ virtual void SetParentAnimationObjects();
 
 ### <a name="remarks"></a>Примечания
 
-Это вспомогательный объект, который может использоваться для установления связи между переменными анимации, содержащиеся в объекта анимации и их контейнера. Он обрабатывает в цикле анимации переменных и задает обратный указатель на родительский объект анимации для каждой переменной анимации. В текущей реализации, фактический отношений в CAnimationBaseObject::ApplyTransitions Поэтому обратные указатели не заданы до вызова метода CAnimationGroup::Animate. Зная связи могут оказаться полезными при обработки событий и вам необходимо получить анимированный значок родительского объекта из CAnimationVariable (используйте CAnimationVariable::GetParentAnimationObject).
+Этого вспомогательного объекта можно использовать для установления связи между переменными анимации, содержащиеся в объекта анимации и их контейнера. Он обрабатывает в цикле анимации переменных и задает обратный указатель на родительский объект анимации для каждой переменной анимации. В текущей реализации фактического отношений в CAnimationBaseObject::ApplyTransitions, поэтому обратные указатели не заданы до вызова метода CAnimationGroup::Animate. Зная связи могут оказаться полезными при обработки событий и вам необходимо получить анимированный значок родительского объекта из CAnimationVariable. Используйте CAnimationVariable::GetParentAnimationObject.
 
 ##  <a name="setuserdata"></a>  CAnimationBaseObject::SetUserData
 

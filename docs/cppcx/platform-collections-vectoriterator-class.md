@@ -1,18 +1,18 @@
 ---
 title: Класс Platform::Collections::VectorIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743220"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565789"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Класс Platform::Collections::VectorIterator
 
@@ -36,7 +36,7 @@ class VectorIterator;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`difference_type`|Различие указателя (ptrdiff_t).|
 |`iterator_category`|Категория итератора произвольного доступа (::std::random_access_iterator_tag).|
@@ -46,13 +46,13 @@ class VectorIterator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[VectorIterator::VectorIterator](#ctor)|Инициализирует новый экземпляр класса VectorIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Оператор VectorIterator::operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
 |[Оператор VectorIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorIterator.|
@@ -64,11 +64,11 @@ class VectorIterator;
 |[Оператор VectorIterator::operator+=](#operator-plus-assign)|Увеличивает текущий итератор VectorIterator на указанную величину смещения.|
 |[Оператор VectorIterator::operator<](#operator-less-than)|Указывает, является ли текущий объект VectorIterator меньшим, чем указанный объект VectorIterator.|
 |[VectorIterator::operator\<=-оператор](#operator-less-than-or-equals)|Указывает, является ли текущий объект VectorIterator меньшим или равным указанному объекту VectorIterator.|
-|[Оператор VectorIterator::operator-=](#operator-subtract-assign)|Уменьшает текущий итератор VectorIterator на указанную величину смещения.|
+|[Оператор VectorIterator::operator-=](#operator-minus-equals)|Уменьшает текущий итератор VectorIterator на указанную величину смещения.|
 |[Оператор VectorIterator::operator==](#operator-equality)|Указывает, равен ли текущий объект VectorIterator указанному объекту VectorIterator.|
 |[Оператор VectorIterator::operator>](#operator-greater-than)|Указывает, действительно ли текущий объект VectorIterator больше, чем указанный объект VectorIterator.|
 |[Оператор VectorIterator::operator->](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор VectorIterator.|
-|[Оператор VectorIterator::operator>=](#operator-greater-than-or-equal)|Указывает, действительно ли текущий объект VectorIterator больше указанного объекта VectorIterator или равен ему.|
+|[Оператор VectorIterator::operator>=](#operator-greater-than-or-equals)|Указывает, действительно ли текущий объект VectorIterator больше указанного объекта VectorIterator или равен ему.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

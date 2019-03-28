@@ -1,6 +1,6 @@
 ---
 title: Класс CD2DTextFormat
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DTextFormat
 - AFXRENDERTARGET/CD2DTextFormat
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa2f3b663cb5258c64ec0405abacf2e4eedeb987
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297896"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565325"
 ---
 # <a name="cd2dtextformat-class"></a>Класс CD2DTextFormat
 
@@ -41,18 +41,18 @@ ms.locfileid: "57297896"
 class CD2DTextFormat : public CD2DResource;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|Создает объект CD2DTextFormat.|
-|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|Деструктор Вызывается при уничтожении объекта D2D текстовый формат.|
+|[CD2DTextFormat::~CD2DTextFormat](#_dtorcd2dtextformat)|Деструктор Вызывается при уничтожении объекта D2D текстовый формат.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DTextFormat::Create](#create)|Создает CD2DTextFormat. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
 |[CD2DTextFormat::Destroy](#destroy)|Уничтожает объект CD2DTextFormat. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
@@ -64,13 +64,13 @@ class CD2DTextFormat : public CD2DResource;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|Возвращает интерфейс IDWriteTextFormat|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DTextFormat::m_pTextFormat](#m_ptextformat)|Указатель на IDWriteTextFormat.|
 
