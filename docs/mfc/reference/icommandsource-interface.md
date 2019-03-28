@@ -1,6 +1,6 @@
 ---
 title: Интерфейс ICommandSource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296024"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565614"
 ---
 # <a name="icommandsource-interface"></a>Интерфейс ICommandSource
 
@@ -38,7 +38,7 @@ interface class ICommandSource
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[ICommandSource::AddCommandHandler](#addcommandhandler)|Добавляет обработчик команд объект источника команды.|
 |[ICommandSource::AddCommandRangeHandler](#addcommandrangehandler)|Добавляет группу обработчиков команд объект источника команды.|
@@ -179,7 +179,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 Этот метод удаляет обработчик команды, сопоставленный с cmdID объект источника команды.
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 Удаляет группу обработчиков команд из исходного объекта команды.
 ```
@@ -196,7 +196,7 @@ void RemoveCommandRangeUIHandler(
 Конечный индекс диапазона идентификатор команды.
 ### <a name="remarks"></a>Примечания
 
-Этот метод удаляет группу обработчиков сообщений, сопоставленный с указанным идентификаторов команд cmdIDMin и cmdIDMax, объект источника команды.
+Этот метод удаляет группу обработчиков сообщений, сопоставляются с идентификаторы команд, заданного cmdIDMin и cmdIDMax из исходного объекта команды.
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ void RemoveCommandRangeUIHandler(
 Конечный индекс диапазона идентификатор команды.
 ### <a name="remarks"></a>Примечания
 
-Этот метод удаляет группу пользователя интерфейс сообщение обработчиков команд, сопоставленный с указанным идентификаторов команд cmdIDMin и cmdIDMax, объект источника команды.
+Этот метод удаляет группу пользователя интерфейс сообщение обработчиков команд, сопоставляются с идентификаторы команд, заданного cmdIDMin и cmdIDMax из исходного объекта команды.
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

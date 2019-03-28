@@ -1,6 +1,6 @@
 ---
 title: Класс CAnimationController
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270284"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565965"
 ---
 # <a name="canimationcontroller-class"></a>Класс CAnimationController
 
@@ -120,18 +120,18 @@ ms.locfileid: "57270284"
 class CAnimationController : public CObject;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|Создает контроллер анимации.|
-|[CAnimationController:: ~ CAnimationController](#canimationcontroller__~canimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|
+|[CAnimationController:: ~ CAnimationController](#_dtorcanimationcontroller)|Деструктор Вызывается при уничтожении объекта контроллера анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationController::AddAnimationObject](#addanimationobject)|Добавляет группы, к которой принадлежит контроллер анимации объекта анимации.|
 |[CAnimationController::AddKeyframeToGroup](#addkeyframetogroup)|Добавляет группу опорного кадра.|
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|Перегружен. Создает опорный кадр, зависящий от перехода, и добавляет его в указанную группу.|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|Задает или освобождает обработчик для вызова при изменении состояния диспетчера анимации.|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|Задает или освобождает обработчик для событий времени и обработчик для времени обновления.|
-|[Метода CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Задает или освобождает обработчик сравнения приоритет для вызова для определения запланированная раскадровка может быть отменена, подтвердила, усекаются или сжаты.|
+|[Метода CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|Задает или освобождает обработчик сравнения приоритет для вызова для определения ли запланированная раскадровка можно отменить, подтвердила, усекаются или сжаты.|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|Задает или освобождает обработчик для событий состояния и обновление раскадровки.|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|Перегружен. Находит группу анимации, соответствующую раскадровку.|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|Выполняет поиск объекта анимации, содержащий переменную указанным анимации.|
@@ -174,14 +174,14 @@ class CAnimationController : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationController::CleanUpGroup](#cleanupgroup)|Перегружен. Вспомогательный объект, который очищает группе.|
 |[CAnimationController::OnAfterSchedule](#onafterschedule)|Вызывается платформой, когда только что был запланирован анимацию для указанной группы.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationController::gkeyframeStoryboardStart](#g_keyframestoryboardstart)|Опорный кадр, представляющий начало раскадровки.|
 |[CAnimationController::m_bIsValid](#m_bisvalid)|Указывает, является ли контроллер анимации допустимым. Этот элемент имеет значение FALSE, если текущая операционная система не поддерживает API анимации в Windows.|
@@ -402,7 +402,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ##  <a name="enableprioritycomparisonhandler"></a>  Метода CAnimationController::EnablePriorityComparisonHandler
 
-Задает или освобождает обработчик сравнения приоритет для вызова для определения запланированная раскадровка может быть отменена, подтвердила, усекаются или сжаты.
+Задает или освобождает обработчик сравнения приоритет для вызова для определения ли запланированная раскадровка можно отменить, подтвердила, усекаются или сжаты.
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);

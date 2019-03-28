@@ -1,17 +1,17 @@
 ---
 title: Параллельные контейнеры и объекты
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333297"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565952"
 ---
 # <a name="parallel-containers-and-objects"></a>Параллельные контейнеры и объекты
 
@@ -27,13 +27,13 @@ ms.locfileid: "51333297"
 
 Параллельные контейнеры
 
-- [Класс concurrent_vector](#ctor)
+- [Класс concurrent_vector](#vector)
 
-   - [Различия между concurrent_vector и vector](#ctor)
+   - [Различия между concurrent_vector и vector](#vector-differences)
 
-   - [Параллельно безопасных операций](#ctor)
+   - [Параллельно безопасных операций](#vector-safety)
 
-   - [Исключения безопасности](#ctor)
+   - [Исключения безопасности](#vector-exceptions)
 
 - [Класс concurrent_queue](#queue)
 
@@ -189,7 +189,7 @@ ms.locfileid: "51333297"
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-Пример, использующий `concurrent_unordered_map` для осуществления карту и уменьшить количество операций в параллельном режиме, см. в разделе [как: выполнения сопоставления и уменьшения параллельные операции](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
+Пример, использующий `concurrent_unordered_map` для осуществления карту и уменьшить количество операций в параллельном режиме, см. в разделе [как: Выполните карты и уменьшить объем операций в параллельном режиме](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md).
 
 ###  <a name="map-differences"></a> Различия между concurrent_unordered_map и unordered_map
 

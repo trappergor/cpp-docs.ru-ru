@@ -1,6 +1,6 @@
 ---
 title: Класс CAnimationVariable
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationVariable
 - AFXANIMATIONCONTROLLER/CAnimationVariable
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 42fd3ddc504e85ba3f69588bee54c6540b628129
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269036"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565779"
 ---
 # <a name="canimationvariable-class"></a>Класс CAnimationVariable
 
@@ -61,18 +61,18 @@ ms.locfileid: "57269036"
 class CAnimationVariable;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|Создает объект переменной анимации.|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|Деструктор Вызывается при уничтожении объекта CAnimationVariable.|
+|[CAnimationVariable:: ~ CAnimationVariable](#_dtorcanimationvariable)|Деструктор Вызывается при уничтожении объекта CAnimationVariable.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationVariable::AddTransition](#addtransition)|Добавляет переход.|
 |[CAnimationVariable::ApplyTransitions](#applytransitions)|Добавляет переходы из внутреннего списка, чтобы раскадровка.|
@@ -89,19 +89,19 @@ class CAnimationVariable;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationVariable::SetParentAnimationObject](#setparentanimationobject)|Задает связь между переменной анимации и объекта анимации.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationVariable::m_bAutodestroyTransitions](#m_bautodestroytransitions)|Указывает, должен ли быть удален переход на связанные объекты.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationVariable::m_dblDefaultValue](#m_dbldefaultvalue)|Указывает значение по умолчанию, которое распространяется на IUIAnimationVariable.|
 |[CAnimationVariable::m_lstTransitions](#m_lsttransitions)|Содержит список переходов, анимация этой переменной анимации.|

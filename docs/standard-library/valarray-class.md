@@ -1,6 +1,6 @@
 ---
 title: Класс valarray
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525318"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565744"
 ---
 # <a name="valarray-class"></a>Класс valarray
 
@@ -88,7 +88,7 @@ ms.locfileid: "51525318"
 |-|-|
 |[оператор!](#op_not)|Унарный оператор, который получает логические значения `NOT` каждого элемента в `valarray`.|
 |[оператор%=](#op_mod_eq)|Получает остаток от поэлементного деления элементов массива на указанный `valarray` или на значение типа элемента.|
-|[оператор&=](#op_amp_eq)|Получает битовый `AND` элементов в массиве при помощи соответствующих элементов в указанном `valarray` или при помощи значения типа элемента.|
+|[оператор&=](#op_and_eq)|Получает битовый `AND` элементов в массиве при помощи соответствующих элементов в указанном `valarray` или при помощи значения типа элемента.|
 |[оператор>>=](#op_gt_gt_eq)|Сдвигает вправо биты для каждого элемента операнда `valarray` на указанное число позиций или на поэлементную сумму, указанную вторым `valarray`.|
 |[оператор<<=](#op_lt_lt_eq)|Сдвигает влево биты для каждого элемента операнда `valarray` на указанное число позиций или на поэлементную сумму, указанную вторым `valarray`.|
 |[оператор*=](#op_star_eq)|Поэлементно умножает элементы указанного `valarray` или значение типа элемента на операнд `valarray`.|
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 Получает побитовое **И** для элементов в массиве и соответствующих элементов в указанном объекте valarray или значений типа элемента.
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 Унарный оператор, который отнимает единицу от каждого элемента в valarray.
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 Поэлементно вычитает элементы указанного объекта valarray или значение типа элемента из операнда valarray.
 
@@ -1276,7 +1276,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="remarks"></a>Примечания
 
-Логическое исключающее **ИЛИ** имеет следующую семантику: если взять элементы *e*1 и *e*2, то *e*1 **исключающее логическое ИЛИ** *e*2 имеет значение **true**, если ровно один из элементов имеет значение true, и значение **false**, если оба элемента имеют значение false или оба элемента имеют значение true.
+Исключающего логического или, называемая также **XOR**, имеет следующую семантику: Имея элемента *e*1 и *e*2, *e*1 **XOR** *e*2 — **true** Если только один из элементов имеет значение true; **false** Если оба элемента имеют значение false, или если выполняются оба элемента.
 
 ### <a name="example"></a>Пример
 

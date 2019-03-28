@@ -1,6 +1,6 @@
 ---
 title: Класс COleDateTimeSpan
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748493"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565653"
 ---
 # <a name="coledatetimespan-class"></a>Класс COleDateTimeSpan
 
@@ -47,13 +47,13 @@ class COleDateTimeSpan
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTimeSpan::COleDateTimeSpan](#coledatetimespan)|Создает объект `COleDateTimeSpan`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTimeSpan::Format](#format)|Создает форматированное строковое представление `COleDateTimeSpan` объекта.|
 |[COleDateTimeSpan::GetDays](#getdays)|Возвращает день часть диапазона, это `COleDateTimeSpan` представляет объект.|
@@ -80,7 +80,7 @@ class COleDateTimeSpan
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDateTimeSpan::m_span](#m_span)|Содержит базовый **двойные** для данного `COleDateTimeSpan` объекта.|
 |[COleDateTimeSpan::m_status](#m_status)|Содержит состояние данного объекта `COleDateTimeSpan` объекта.|
@@ -745,7 +745,7 @@ enum DateTimeSpanStatus{
 - `COleDateTimeSpan::null` Указывает, что этот `COleDateTimeSpan` объект имеет значение null, то есть, что значение не указано для этого объекта. (Это «null» в смысле «предложений having без значения,» в отличие от C++ NULL базы данных.)
 
    > [!CAUTION]
-   > Эта функция служит для сложных ситуациях программирования. Эта функция не изменяет данные в этом объекте. Чаще всего будет использоваться для задания состояния **null** или **недопустимый**. Обратите внимание, что оператор присваивания ( [оператор =](#eq)) и [SetDateTimeSpan](#setdatetimespan) задать состояние объекта на основании значения источника.
+   > Эта функция служит для сложных ситуациях программирования. Эта функция не изменяет данные в этом объекте. Чаще всего будет использоваться для задания состояния **null** или **недопустимый**. Обратите внимание, что оператор присваивания ([оператор =](#operator_eq)) и [SetDateTimeSpan](#setdatetimespan) задать состояние объекта на основании значения источника.
 
 ### <a name="example"></a>Пример
 

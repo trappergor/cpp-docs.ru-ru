@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739423"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565705"
 ---
 # <a name="crect-class"></a>Класс CRect
 
@@ -55,13 +55,13 @@ class CRect : public tagRECT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRect::CRect](#crect)|Создает объект `CRect`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRect::BottomRight](#bottomright)|Возвращает точку нижний правый `CRect`.|
 |[CRect::CenterPoint](#centerpoint)|Возвращает centerpoint из `CRect`.|
@@ -89,7 +89,7 @@ class CRect : public tagRECT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRect::operator-](#operator_-)|Вычитает заданного смещения из `CRect` или понижает порядок `CRect` и возвращает результат в виде `CRect`.|
 |[CRect::operator LPCRECT](#operator_lpcrect)|Преобразует `CRect` в `LPCRECT`.|
@@ -950,7 +950,7 @@ void operator+=(LPCRECT lpRect) throw();
 
 Параметр *x* и *y* (или `cx` и `cy`) значения добавляются к `CRect`.
 
-Третья перегрузка увеличивает `CRect` на число указанных единиц в каждом члене параметра.
+Третья перегрузка увеличивает `CRect` число единиц измерения, указанные в каждом члене параметра.
 
 ### <a name="example"></a>Пример
 
@@ -988,7 +988,7 @@ void operator-=(LPCRECT lpRect) throw();
 
 Параметр *x* и *y* (или `cx` и `cy`) следует вычесть из значения `CRect`.
 
-Третья перегрузка сжимает `CRect` на число указанных единиц в каждом члене параметра. Обратите внимание, что эта перегрузка функции например [DeflateRect](#deflaterect).
+Третья перегрузка сжимает `CRect` число единиц измерения, указанные в каждом члене параметра. Обратите внимание, что эта перегрузка функции например [DeflateRect](#deflaterect).
 
 ### <a name="example"></a>Пример
 
@@ -1085,7 +1085,7 @@ CRect operator+(SIZE size) const throw();
 
 Параметр *x* и *y* (или `cx` и `cy`) параметры добавляются `CRect`в позиции.
 
-Третья перегрузка возвращает новый `CRect` равный `CRect` увеличивается за счет число указанных единиц в каждом члене параметра.
+Третья перегрузка возвращает новый `CRect` равный `CRect` увеличивается за счет заданное количество единиц в каждом члене параметра.
 
 ### <a name="example"></a>Пример
 
@@ -1128,7 +1128,7 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 Параметр *x* и *y* (или `cx` и `cy`) параметры следует вычесть из `CRect`в позиции.
 
-Третья перегрузка возвращает новый `CRect` равный `CRect` уменьшения на число указанных единиц в каждом члене параметра. Обратите внимание, что эта перегрузка функции например [DeflateRect](#deflaterect), а не [SubtractRect](#subtractrect).
+Третья перегрузка возвращает новый `CRect` равный `CRect` уменьшения число единиц измерения, указанные в каждом члене параметра. Обратите внимание, что эта перегрузка функции например [DeflateRect](#deflaterect), а не [SubtractRect](#subtractrect).
 
 ### <a name="example"></a>Пример
 

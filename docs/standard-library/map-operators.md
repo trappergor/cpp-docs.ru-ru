@@ -1,6 +1,6 @@
 ---
 title: Операторы &lt;map&gt;
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - map/std::operator!=
 - map/std::operator&gt;
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::operator&lt; (map)
 - std::operator&lt;= (map)
 - std::operator== (map)
-ms.openlocfilehash: 28acb02932ac2a6064ad49853adcb40dfb781520
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6d2ac108652e33fdd76abaac9b982840d4fce7f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504316"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565338"
 ---
 # <a name="ltmapgt-operators"></a>Операторы &lt;map&gt;
 
@@ -29,8 +29,8 @@ ms.locfileid: "50504316"
 |-|-|-|
 |[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
 |[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-|[operator!= (multimap)](#op_neq_multimap)|[оператор&gt;](#op_gt_multimap)|[operator&gt;=](#op_gt_eq_multimap)|
-|[оператор&lt;](#op_lt_multimap)|[operator&lt;=](#op_lt_eq_multimap)|[operator==](#op_eq_eq_multimap)|
+|[operator!= (multimap)](#op_neq_multimap)|[оператор&gt; (multimap)](#op_gt_multimap)|[оператор&gt;= (multimap)](#op_gt_eq_multimap)|
+|[оператор&lt; (multimap)](#op_lt_multimap)|[оператор&lt;= (multimap)](#op_lt_eq_multimap)|[оператор== (multimap)](#op_eq_eq_multimap)|
 
 ## <a name="op_neq"></a> operator!=
 
@@ -550,7 +550,7 @@ The multimap m1 is not less than the multimap m3.
 */
 ```
 
-## <a name="eq_multimap"></a> operator&lt;=
+## <a name="op_lt_eq_multimap"></a> operator&lt;=
 
 Проверяет, что объект multimap слева от оператора меньше объекта multimap справа от оператора или равен ему.
 

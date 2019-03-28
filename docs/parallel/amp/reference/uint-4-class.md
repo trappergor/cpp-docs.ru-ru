@@ -1,6 +1,6 @@
 ---
 title: Класс uint_4
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::ywx
 - amp_short_vectors/Concurrency::graphics::uint_4::get_yxw
@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_4::rba
 - amp_short_vectors/Concurrency::graphics::uint_4::set_yzx
 ms.assetid: 1cda9e2c-5970-4ced-ae54-d7ff3c6746f4
-ms.openlocfilehash: e5c0482854a08973593e9c67f2f51d5706304831
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 413edb5c83dba465aff804658afc6931c7181e73
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266813"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565848"
 ---
 # <a name="uint4-class"></a>Класс uint_4
 
@@ -289,19 +289,19 @@ class uint_4;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор uint_4](#uint_4__ctor) |Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |uint_4::get_w||
 |uint_4::get_wx||
@@ -442,7 +442,7 @@ class uint_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |uint_4::operator-||
 |uint_4::operator--||
@@ -455,13 +455,13 @@ class uint_4;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |uint_4::a||
 |uint_4::ab||
@@ -606,7 +606,7 @@ class uint_4;
 
 По умолчанию конструктор инициализирует все элементы с 0.
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 uint_4() restrict(amp,cpu);
@@ -659,9 +659,9 @@ explicit inline uint_4(
 *_Другое*<br/>
 Объект, используемый для инициализации.
 
-## <a name=""></a> Размер
+## <a name="size"></a>size
 
-## <a name="syntax"></a>Синтаксис
+### <a name="syntax"></a>Синтаксис
 
 ```
 static const int size = 4;

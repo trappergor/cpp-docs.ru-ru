@@ -1,6 +1,6 @@
 ---
 title: Класс time_point
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: f38cb883f1fc9e07c65d261ea7a6e074bf02db5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513754"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565247"
 ---
 # <a name="timepoint-class"></a>Класс time_point
 
@@ -33,7 +33,7 @@ class time_point;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`time_point::clock`|Синоним параметра шаблона `Clock`.|
 |`time_point::duration`|Синоним параметра шаблона `Duration`.|
@@ -42,13 +42,13 @@ class time_point;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[time_point](#time_point)|Создает объект `time_point`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[max](#max)|Указывает верхний предел для значения типа `time_point::ref`.|
 |[min](#min)|Указывает нижний предел для значения типа `time_point::ref`.|
@@ -56,7 +56,7 @@ class time_point;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[time_point::operator+=](#op_add_eq)|Добавляет указанное значение к хранимой длительности.|
 |[time_point::operator-=](#operator-_eq)|Вычитает заданное значение из хранимой длительности.|
@@ -108,7 +108,7 @@ time_point& operator+=(const duration& Dur);
 
 Объект `time_point` после добавления.
 
-## <a name="time_point__operator-_eq"></a>  time_point::operator-=
+## <a name="operator-_eq"></a>  time_point::operator-=
 
 Вычитает заданное значение из хранимого значения [duration](../standard-library/duration-class.md).
 

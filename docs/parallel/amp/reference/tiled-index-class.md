@@ -1,6 +1,6 @@
 ---
 title: Класс tiled_index
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - tiled_index
 - AMP/tiled_index
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd8b6d7a0e174c88ad229da2d08a9ec8a11fb0aa
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257908"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565221"
 ---
 # <a name="tiledindex-class"></a>Класс tiled_index
 
@@ -63,23 +63,23 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 *_Dim2*<br/>
 Длина наименее значительного измерения.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[tiled_index конструктор](#ctor)|Инициализирует новый экземпляр класса `tile_index`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[get_tile_extent](#tiled_index__get_tile_extent)|Возвращает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Барьер константа](#tiled_index__barrier)|Магазины [tile_barrier](tile-barrier-class.md) , представляющий барьер в текущей мозаике потоков.|
 |||
@@ -94,7 +94,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[tile_extent](#tile_extent)|Получает [экстент](extent-class.md) объект, имеющий значения `tiled_index` аргументов шаблона `tiled_index` аргументов шаблона `_Dim0`, `_Dim1`, и `_Dim2`.|
 
@@ -108,9 +108,9 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **Заголовок** : amp.h
 
-**Пространство имен:** Параллельность
+**Пространство имен:** параллелизм
 
-## <a name="tiled_index__ctor"></a>  tiled_index конструктор
+## <a name="ctor"></a>  tiled_index конструктор
 
 Инициализирует новый экземпляр класса `tiled_index`.
 
@@ -152,7 +152,7 @@ tiled_index(
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` класс из индекса плитки в глобальных координатах и относительной позиции в плитке в локальных координатах. `_Global` И `_Tile_origin` вычисляются параметры.|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|Инициализирует новый экземпляр класса `tile_index` посредством копирования указанного `tiled_index` объекта.|
 

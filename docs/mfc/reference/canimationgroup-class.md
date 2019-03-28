@@ -1,6 +1,6 @@
 ---
 title: Класс CAnimationGroup
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationGroup
 - AFXANIMATIONCONTROLLER/CAnimationGroup
@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CAnimationGroup [MFC], m_nGroupID
 - CAnimationGroup [MFC], m_pParentController
 ms.assetid: 8bc18ceb-33a2-41d0-9731-71811adacab7
-ms.openlocfilehash: 9be0a5b76f91ddf4dc3d1c4ff2816b7ffd5a1986
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32b2adfee2a36139a11caa12fa98bd240b0732dd
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304383"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565991"
 ---
 # <a name="canimationgroup-class"></a>Класс CAnimationGroup
 
@@ -63,18 +63,18 @@ ms.locfileid: "57304383"
 class CAnimationGroup;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationGroup::CAnimationGroup](#canimationgroup)|Создает группу анимации.|
-|[CAnimationGroup:: ~ CAnimationGroup](#canimationgroup__~canimationgroup)|Деструктор Вызывается при уничтожении группу анимации.|
+|[CAnimationGroup:: ~ CAnimationGroup](#_dtorcanimationgroup)|Деструктор Вызывается при уничтожении группу анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationGroup::Animate](#animate)|Анимирует группу.|
 |[CAnimationGroup::ApplyTransitions](#applytransitions)|Применяется переходы к объектам анимации.|
@@ -87,7 +87,7 @@ class CAnimationGroup;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationGroup::AddKeyframes](#addkeyframes)|Вспомогательный класс, раскадровки, добавляющий опорные кадры.|
 |[CAnimationGroup::AddTransitions](#addtransitions)|Вспомогательный класс, добавляющий переходы к раскадровке.|
@@ -95,7 +95,7 @@ class CAnimationGroup;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationGroup::m_bAutoclearTransitions](#m_bautocleartransitions)|Указывает, как очистить переходы из анимации объектов, принадлежащих к группе. Если этот элемент имеет значение TRUE, переходы, удаляются автоматически, при анимации был запланирован. В противном случае необходимо вручную удалить переходы.|
 |[CAnimationGroup::m_bAutodestroyAnimationObjects](#m_bautodestroyanimationobjects)|Указывает, как для уничтожения объектов анимации. Если этот параметр имеет значение TRUE, объекты анимации будут уничтожены автоматически при удалении группы. В противном случае объекты анимации необходимо уничтожить вручную. Значение по умолчанию — FALSE. Это значение равно TRUE только в том случае, если все объекты анимации, принадлежащих к группе выделяются динамически с помощью оператора new.|
@@ -106,7 +106,7 @@ class CAnimationGroup;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationGroup::m_nGroupID](#m_ngroupid)|Уникальный идентификатор группы анимации.|
 |[CAnimationGroup::m_pParentController](#m_pparentcontroller)|Указатель на контроллер анимации, к которой принадлежит эта группа.|

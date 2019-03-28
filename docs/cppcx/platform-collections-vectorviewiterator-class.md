@@ -1,18 +1,18 @@
 ---
 title: Класс Platform::Collections::VectorViewIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743745"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565666"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Класс Platform::Collections::VectorViewIterator
 
@@ -36,7 +36,7 @@ class VectorViewIterator;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`difference_type`|Различие указателя (ptrdiff_t).|
 |`iterator_category`|Категория итератора произвольного доступа (::std::random_access_iterator_tag).|
@@ -46,13 +46,13 @@ class VectorViewIterator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[VectorViewIterator::VectorViewIterator](#ctor)|Инициализирует новый экземпляр класса VectorViewIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Оператор VectorViewIterator::operator-](#operator-minus)|Вычитает указанное количество элементов из текущего итератора, возвращая новый итератор, или вычитает указанный итератор из текущего итератора, возвращая количество элементов между итераторами.|
 |[Оператор VectorViewIterator::operator--](#operator-decrement)|Выполняет уменьшение текущего итератора VectorViewIterator.|
@@ -61,7 +61,7 @@ class VectorViewIterator;
 |[VectorViewIterator::operator\[\]](#operator-at)|Извлекает ссылку на элемент, удаленный от текущего итератора VectorViewIterator на указанную величину смещения.|
 |[Оператор VectorViewIterator::operator+](#operator-plus)|Возвращает объект VectorViewIterator, указывающий на элемент с заданным смещением от указанного объекта VectorViewIterator.|
 |[Оператор VectorViewIterator::operator++](#operator-increment)|Выполняет приращение текущего итератора VectorViewIterator.|
-|[Оператор VectorViewIterator::operator+=](#operator-plus-assign)|Увеличивает текущий итератор VectorViewIterator на указанную величину смещения.|
+|[Оператор VectorViewIterator::operator+=](#operator-plus-equals)|Увеличивает текущий итератор VectorViewIterator на указанную величину смещения.|
 |[Оператор VectorViewIterator::operator<](#operator-less-than)|Указывает, действительно ли текущий объект VectorViewIterator меньше, чем указанный объект VectorViewIterator.|
 |[VectorViewIterator::operator\<=-оператор](#operator-less-than-or-equals)|Указывает, действительно ли текущий объект VectorViewIterator меньше указанного объекта VectorViewIterator или равен ему.|
 |[Оператор VectorViewIterator::operator-=](#operator-minus-assign)|Уменьшает текущий итератор VectorViewIterator на указанную величину смещения.|

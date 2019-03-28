@@ -1,6 +1,6 @@
 ---
 title: Класс CDataRecoveryHandler
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273040"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565861"
 ---
 # <a name="cdatarecoveryhandler-class"></a>Класс CDataRecoveryHandler
 
@@ -79,7 +79,7 @@ ms.locfileid: "57273040"
 class CDataRecoveryHandler : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -168,7 +168,7 @@ virtual BOOL AutosaveAllDocumentInfo();
 
 Этот метод возвращает значение TRUE, если нет документов, которые необходимо сохранить. Он также возвращает значение TRUE без сохранения всех документов, если извлечение `CWinApp` или `CDocManager` для приложения приводит к ошибке.
 
-Чтобы использовать этот метод, необходимо задать AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART или AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL в `m_dwRestartManagerSupportFlags`. См. в разделе [m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags) Дополнительные сведения.
+Чтобы использовать этот метод, необходимо задать AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART или AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL в `m_dwRestartManagerSupportFlags`. Дополнительные сведения см. в разделе [Как Добавление поддержки диспетчера перезапуска](../../mfc/how-to-add-restart-manager-support.md).
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 
@@ -184,7 +184,7 @@ virtual BOOL AutosaveDocumentInfo(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pDocument*|[in] Указатель на `CDocument` для сохранения.|
 |*bResetModifiedFlag*|[in] Значение TRUE указывает, что `CDataRecoveryHandler` рассматривает *pDocument* изменяемые; Значение FALSE указывает, что инфраструктура считает *pDocument* быть без изменений. Дополнительные сведения о влиянии этого флага в разделе "Примечания".|
 
@@ -217,7 +217,7 @@ CDataRecoveryHandler(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*dwRestartManagerSupportFlags*|[in] Указывает, какие параметры диспетчера перезапуска, поддерживаются.|
 |*nAutosaveInterval*|[in] Время между преждевременном прекращении работы. Этот параметр указывается в миллисекундах.|
 
@@ -274,7 +274,7 @@ virtual BOOL DeleteAutosavedFile(const CString& strAutosavedFile);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*strAutosavedFile*|[in] Строка, содержащая имя файла автоматическое сохранение.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -365,7 +365,7 @@ virtual CString GetNormalDocumentTitle(CDocument* pDocument);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pDocument*|[in] Указатель на `CDocument`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -503,7 +503,7 @@ virtual BOOL RemoveDocumentInfo(CDocument* pDocument);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pDocument*|[in] Указатель на документ, который необходимо удалить.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -618,7 +618,7 @@ virtual void SetRestartIdentifier(const CString& strRestartIdentifier);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*strRestartIdentifier*|[in] Уникальный идентификатор диспетчера перезапуска.|
 
 ### <a name="remarks"></a>Примечания
@@ -637,7 +637,7 @@ virtual void SetSaveDocumentInfoOnIdle(BOOL bSaveOnIdle);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*bSaveOnIdle*|[in] Значение TRUE, чтобы сохранить сведения о документе в течение текущего цикла простоя; Значение FALSE, если не выполнить сохранение.|
 
 ##  <a name="setshutdownbyrestartmanager"></a>  CDataRecoveryHandler::SetShutdownByRestartManager
@@ -652,7 +652,7 @@ virtual void SetShutdownByRestartManager(BOOL bShutdownByRestartManager);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*bShutdownByRestartManager*|[in] Значение TRUE указывает, что диспетчер перезапуска привело завершать работу; Значение FALSE указывает, что приложение завершило работу по другой причине.|
 
 ### <a name="remarks"></a>Примечания
@@ -671,7 +671,7 @@ virtual BOOL UpdateDocumentInfo(CDocument* pDocument);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pDocument*|[in] Указатель на сохраненный документ.|
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -1,6 +1,6 @@
 ---
 title: Класс CD2DResource
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CD2DResource
 - AFXRENDERTARGET/CD2DResource
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CD2DResource [MFC], m_bIsAutoDestroy
 - CD2DResource [MFC], m_pParentTarget
 ms.assetid: 34e3ee18-aab6-4c39-9294-de869e1f7820
-ms.openlocfilehash: 04d1fa57e34528f96f505fa20abb9b1131f80689
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e2cc6be7119a2df193aa2af415a9c8d4054f537c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284870"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564779"
 ---
 # <a name="cd2dresource-class"></a>Класс CD2DResource
 
@@ -39,18 +39,18 @@ ms.locfileid: "57284870"
 class CD2DResource : public CObject;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DResource::CD2DResource](#cd2dresource)|Создает объект CD2DResource.|
-|[CD2DResource:: ~ CD2DResource](#cd2dresource__~cd2dresource)|Деструктор Вызывается при уничтожении объекта D2D ресурсов.|
+|[CD2DResource:: ~ CD2DResource](#_dtorcd2dresource)|Деструктор Вызывается при уничтожении объекта D2D ресурсов.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DResource::CREATE](#create)|Создает CD2DResource.|
 |[CD2DResource::destroy](#destroy)|Уничтожает объект CD2DResource.|
@@ -58,16 +58,16 @@ class CD2DResource : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DResource::IsAutoDestroy](#isautodestroy)|Проверка автоматического уничтожить флаг.|
 |[CD2DResource::ReCreate](#recreate)|Повторно создает CD2DResource.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
-|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет destoyed владельцем (CRenderTarget)|
+|[CD2DResource::m_bIsAutoDestroy](#m_bisautodestroy)|Ресурс будет уничтожен владельца (CRenderTarget)|
 |[CD2DResource::m_pParentTarget](#m_pparenttarget)|Указатель на родительский CRenderTarget)|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
@@ -157,7 +157,7 @@ virtual BOOL IsValid() const = 0;
 
 ##  <a name="m_bisautodestroy"></a>  CD2DResource::m_bIsAutoDestroy
 
-Ресурс будет destoyed владельцем (CRenderTarget)
+Ресурс будет уничтожен владельца (CRenderTarget)
 
 ```
 BOOL m_bIsAutoDestroy;

@@ -1,16 +1,16 @@
 ---
-title: Общий ресурс или resuse параметров проекта Visual Studio - C++
-ms.date: 11/28/2018
+title: Совместное использование или повторно использовать параметры проекта Visual Studio - C++
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827943"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565130"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>Общий ресурс или resuse параметры проекта Visual Studio
+# <a name="share-or-reuse-visual-studio-project-settings"></a>Совместное использование или повторно использовать параметры проекта Visual Studio
 
 Чтобы создать пользовательскую группу параметров, которые можно использовать совместно с другими пользователями или повторно использовать в нескольких проектах, используйте **диспетчер свойств** для создания *свойств* (PROPS-файл) для сохранения параметров для каждого типа проект, который вы хотите иметь возможность повторно использовать или предоставлять другим пользователям. С помощью свойства листы гораздо меньше ошибок чем другие способы создания «глобальные» параметры. 
 

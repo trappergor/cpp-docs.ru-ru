@@ -1,6 +1,6 @@
 ---
 title: Класс basic_ostream
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543641"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565731"
 ---
 # <a name="basicostream-class"></a>Класс basic_ostream
 
@@ -48,7 +48,7 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>Примечания
 
-Большинство функций-членов, которые перегружают [operator<<](#op_lt_lt),  — это форматированные выходные функции. Они следуют этому шаблону:
+Большинство функций-членов, которые перегружают [operator<<](#basic_ostream_operator_lt_lt),  — это форматированные выходные функции. Они следуют этому шаблону:
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ return (*this);
 |[put](#put)|Помещает символ в поток.|
 |[seekp](#seekp)|Сбрасывает позицию в потоке вывода.|
 |[sentry](#sentry)|Вложенный класс описывает объект, объявление которого структурирует форматированные и неформатированные выходные функции.|
-|[swap](#op_eq)|Меняет местами значения в этом объекте `basic_ostream` и значения предоставленного объекта `basic_ostream`.|
+|[swap](#swap)|Меняет местами значения в этом объекте `basic_ostream` и значения предоставленного объекта `basic_ostream`.|
 |[tellp](#tellp)|Сообщает позицию в потоке вывода.|
 |[write](#write)|Помещает символы в поток.|
 
@@ -130,7 +130,7 @@ return (*this);
 
 |Оператор|Описание|
 |-|-|
-|[оператор=](#basic_ostream_operator_eq)|Присваивает значение указанного параметра объекта `basic_ostream` этому объекту.|
+|[оператор=](#op_eq)|Присваивает значение указанного параметра объекта `basic_ostream` этому объекту.|
 |[оператор<<](#basic_ostream_operator_lt_lt)|Записывает данные в поток.|
 
 ## <a name="requirements"></a>Требования

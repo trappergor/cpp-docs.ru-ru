@@ -1,6 +1,6 @@
 ---
 title: Макросы отладки и отчеты об ошибках
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atldef/ATL::_ATL_DEBUG_INTERFACES
 - atldef/ATL::_ATL_DEBUG_QI
@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 0f556e64160c61f2fb15c5f5d6f9e170c2008ac8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287327"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565047"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчеты об ошибках
 
@@ -29,7 +29,7 @@ ms.locfileid: "57287327"
 |[ATLASSERT](#atlassert)|Выполняет ту же функциональность, что [_ASSERTE](../../c-runtime-library/reference/assert-asserte-assert-expr-macros.md) макрос, найденный в библиотеке времени выполнения C.|
 |[ATLENSURE](#atlensure)|Выполняет проверку параметров. Вызовите `AtlThrow` при необходимости|
 |[ATLTRACENOTIMPL](#atltracenotimpl)|Отправляет сообщение на устройство дампа, что указанная функция не реализована.|
-|[ATLTRACE](#alttrace)|Предупреждения в устройство вывода, например окна отладчика, в соответствии с указанных флагов и уровней. Включен для обеспечения обратной совместимости.|
+|[ATLTRACE](#atltrace)|Предупреждения в устройство вывода, например окна отладчика, в соответствии с указанных флагов и уровней. Включен для обеспечения обратной совместимости.|
 |[ATLTRACE2](#atltrace2)|Предупреждения в устройство вывода, например окна отладчика, в соответствии с указанных флагов и уровней.|
 
 ##  <a name="_atl_debug_interfaces"></a>  _ATL_DEBUG_INTERFACES
@@ -226,7 +226,7 @@ ATLTRACE2(
 
 ### <a name="atl-trace-flags"></a>Флаги трассировки ATL
 
-|Категории ATL|Описание:|
+|Категории ATL|Описание|
 |------------------|-----------------|
 |`atlTraceGeneral`|Отчеты на все приложения ATL. По умолчанию.|
 |`atlTraceCOM`|Сообщает об методы COM.|
@@ -244,7 +244,7 @@ ATLTRACE2(
 
 ### <a name="mfc-trace-flags"></a>Флаги трассировки MFC
 
-|Категория MFC|Описание:|
+|Категория MFC|Описание|
 |------------------|-----------------|
 |`traceAppMsg`|Общего назначения сообщения MFC. Рекомендуется всегда использовать.|
 |`traceDumpContext`|Сообщения от [CDumpContext](../../mfc/reference/cdumpcontext-class.md).|

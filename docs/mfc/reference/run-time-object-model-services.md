@@ -1,17 +1,17 @@
 ---
 title: Службы модели объекта во время выполнения
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - vc.mfc.macros
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 45ad85e5b85674be957320ef6fdb7f5a81db6503
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304682"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565900"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -363,7 +363,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 **Заголовок:** afxdisp.h
 
-## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
+## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
 
 Реализует `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
 
