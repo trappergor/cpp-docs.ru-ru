@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259455"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565364"
 ---
 # <a name="cwordarray-class"></a>Класс CWordArray
 
@@ -71,13 +71,13 @@ class CWordArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
@@ -99,7 +99,7 @@ class CWordArray : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::operator&#91;&#93;](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 
@@ -292,7 +292,7 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод удаляет группу обработчиков сообщений, сопоставляются с указанным идентификаторов команд по *cmdIDMin* и *cmdIDMax*, из исходного объекта команды.
+Этот метод удаляет группу обработчиков сообщений, сопоставляются с идентификаторы команд, определяемое *cmdIDMin* и *cmdIDMax*, из исходного объекта команды.
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод удаляет группу пользователя интерфейс сообщение обработчиков команд, сопоставляются с указанным идентификаторов команд по *cmdIDMin* и *cmdIDMax*, из исходного объекта команды.
+Этот метод удаляет группу пользователя интерфейс сообщение обработчиков команд, сопоставляются с идентификаторы команд, определяемое *cmdIDMin* и *cmdIDMax*, из исходного объекта команды.
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 
