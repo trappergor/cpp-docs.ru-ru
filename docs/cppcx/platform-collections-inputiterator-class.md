@@ -1,18 +1,18 @@
 ---
 title: Класс Platform::Collections::InputIterator
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::InputIterator::InputIterator
 helpviewer_keywords:
 - InputIterator Class
 ms.assetid: ef72eea4-32a9-42b9-8119-ce87dbdcd3be
-ms.openlocfilehash: f5cd6afa591ba2a03fbfe492e566b0fc938ae396
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 49b131b01fe3d9cad5f8366fd4cc0c110b5d060c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745801"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565143"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Класс Platform::Collections::InputIterator
 
@@ -34,7 +34,7 @@ class InputIterator;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`difference_type`|Различие указателя (ptrdiff_t).|
 |`iterator_category`|Категория итератора ввода (:: std::input_iterator_tag).|
@@ -44,16 +44,16 @@ class InputIterator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[InputIterator::InputIterator](#ctor)|Инициализирует новый экземпляр класса InputIterator.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Оператор InputIterator::operator!=](#operator-inequality)|Указывает, отличен ли текущий объект InputIterator от указанного объекта InputIterator.|
-|[Оператор InputIterator::operator*](#operator-decrement)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|
+|[Оператор InputIterator::operator*](#operator-dereference)|Извлекает ссылку на элемент, указанный текущим итератором InputIterator.|
 |[Оператор InputIterator::operator++](#operator-increment)|Выполняет приращение текущего итератора InputIterator.|
 |[Оператор InputIterator::operator==](#operator-equality)|Указывает, равен ли текущий объект InputIterator указанному объекту InputIterator.|
 |[Оператор InputIterator::operator->](#operator-arrow)|Извлекает адрес элемента, на который ссылается текущий итератор InputIterator.|
@@ -76,12 +76,12 @@ class InputIterator;
 
 ```
 InputIterator();
-explicit InputIterator(Windows::Foundation::Collections<X>^ iter);
+explicit InputIterator(Windows::Foundation::Collections<X>^ iterator);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Iter*<br/>
+*iterator*<br/>
 Объект итератора.
 
 ## <a name="operator-arrow"></a>  InputIterator::operator-&gt; Operator

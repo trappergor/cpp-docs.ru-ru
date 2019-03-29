@@ -1,6 +1,6 @@
 ---
 title: Класс CBaseTransition
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258376"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565913"
 ---
 # <a name="cbasetransition-class"></a>Класс CBaseTransition
 
@@ -65,20 +65,20 @@ class CBaseTransition : public CObject;
 
 ### <a name="public-enumerations"></a>Открытые перечисления
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Перечисление CBaseTransition::TRANSITION_TYPE](#transition_type_enumeration)|Определяет типы перехода, в настоящее время поддерживает реализацию MFC Windows API анимации.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|Создает объект базового перехода.|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|Деструктор Вызывается при уничтожении объекта перехода.|
+|[CBaseTransition:: ~ CBaseTransition](#_dtorcbasetransition)|Деструктор Вызывается при уничтожении объекта перехода.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBaseTransition::AddToStoryboard](#addtostoryboard)|Добавляет переход к раскадровке.|
 |[CBaseTransition::AddToStoryboardAtKeyframes](#addtostoryboardatkeyframes)|Добавляет переход к раскадровке.|
@@ -320,7 +320,7 @@ BOOL IsAdded();
 
 ### <a name="remarks"></a>Примечания
 
-Этот флаг установлен внутренне при верхнего уровня код добавляет переходы на раскадровку.
+Этот флаг установлен внутренне кода верхнего уровня добавляет переходы на раскадровку.
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

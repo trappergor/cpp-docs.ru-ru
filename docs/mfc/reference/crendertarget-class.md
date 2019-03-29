@@ -1,6 +1,6 @@
 ---
 title: Класс CRenderTarget
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259884"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565776"
 ---
 # <a name="crendertarget-class"></a>Класс CRenderTarget
 
@@ -131,18 +131,18 @@ ms.locfileid: "57259884"
 class CRenderTarget : public CObject;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|Создает объект CRenderTarget.|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|
+|[CRenderTarget:: ~ CRenderTarget](#_dtorcrendertarget)|Деструктор Вызывается при уничтожении целевой объект отрисовки.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
 |[CRenderTarget::BeginDraw](#begindraw)|Целевой объект отрисовки инициирует нарисовать на нем.|
@@ -196,19 +196,19 @@ class CRenderTarget : public CObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRenderTarget::VerifyResource](#verifyresource)|Проверяет допустимость объекта CD2DResource; Создает объект, если он еще не существует.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|Возвращает интерфейс ID2D1RenderTarget|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRenderTarget::m_lstResources](#m_lstresources)|Список указателей на объекты CD2DResource.|
 |[CRenderTarget::m_pRenderTarget](#m_prendertarget)|Указатель на объект ID2D1RenderTarget.|
@@ -502,7 +502,7 @@ void DrawLine(
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>Параметры
 
-*rect*<br/>
+*Прямоугольник*<br/>
 Размеры прямоугольника для рисования в аппаратно независимых пикселях
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ void DrawRoundedRectangle(
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 Указатель на массив знаков Юникода для рисования.
 
-*rect*<br/>
+*Прямоугольник*<br/>
 Размер и положение области, в которой рисуется текст.
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ void FillOpacityMask(
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*rect*<br/>
+*Прямоугольник*<br/>
 Измерение прямоугольника для рисования в аппаратно независимых пикселях.
 
 *pBrush*<br/>
@@ -999,7 +999,7 @@ void PushAxisAlignedClip(
 Размер и положение области отсечения в аппаратно независимых пикселях.
 
 *mode*<br/>
-Режим сглаживания, который используется для рисования краев клипов прямоугольники, границы субпикселем и клипов с содержимым сцены в blend. Наложение выполняется, как только при вызове метода PopAxisAlignedClip, не применяется к каждой примитив в слое.
+Режим сглаживания, который используется для рисования краев клипов прямоугольников, которые имеют границы субпикселем и клипов с содержимым сцены в blend. Наложение выполняется, как только при вызове метода PopAxisAlignedClip, не применяется к каждой примитив в слое.
 
 ##  <a name="pushlayer"></a>  CRenderTarget::PushLayer
 
