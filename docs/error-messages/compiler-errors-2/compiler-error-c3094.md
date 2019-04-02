@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3094
 ms.assetid: 10da9b7c-e72d-4013-9925-c83e1bb142db
-ms.openlocfilehash: 1b2cd29738763e5b31cc6727126114fca509a47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2147320aeb662c46421f953eeb99c5cab0f5cd5e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512587"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767708"
 ---
 # <a name="compiler-error-c3094"></a>Ошибка компилятора C3094
 
 "атрибут": анонимное использование не допускается
 
-Неправильно задана область действия атрибута.  Дополнительные сведения см. в разделе [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Неправильно задана область действия атрибута.  Дополнительные сведения см. в разделе [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3070
 ms.assetid: ac88584d-40a6-4176-90f3-2371c3c935f2
-ms.openlocfilehash: 7e1175fc1289a2504795a9d19bcd6274462b7a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3825e9e77564af9c40bc08aff560cdf533f2b5c0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677842"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769515"
 ---
 # <a name="compiler-error-c3070"></a>Ошибка компилятора C3070
 
 "свойство": у свойства нет метода set
 
-Метод доступа set свойства не был определен. Для получения дополнительной информации см. [property](../../windows/property-cpp-component-extensions.md).
+Метод доступа set свойства не был определен. Для получения дополнительной информации см. [property](../../extensions/property-cpp-component-extensions.md).
 
 В следующем примере возникает ошибка C3070.
 
