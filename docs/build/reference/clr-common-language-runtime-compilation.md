@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 124f54f46e71ac8fb8511d12fba43ab77d04c32e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822471"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779356"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 
@@ -67,13 +67,13 @@ ms.locfileid: "57822471"
 
 Управляемый код — это код, который среда CLR может проверять и контролировать. Управляемый код может обращаться к управляемым объектам. Для получения дополнительной информации см. [/clr Restrictions](clr-restrictions.md).
 
-Сведения о разработке приложений, которые определяют и используют управляемые типы, см. в разделе [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md).
+Сведения о разработке приложений, которые определяют и используют управляемые типы, см. в разделе [Component Extensions for Runtime Platforms](../../extensions/component-extensions-for-runtime-platforms.md).
 
 Приложение, скомпилированное с использованием **/clr** , может содержать или не содержать управляемые данные.
 
 Чтобы включить отладку для управляемых приложений, см. в разделе [/ASSEMBLYDEBUG (Добавление атрибута DebuggableAttribute)](assemblydebug-add-debuggableattribute.md).
 
-В куче сбора мусора будут созданы экземпляры только типов среды CLR. Дополнительные сведения см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).
+В куче сбора мусора будут созданы экземпляры только типов среды CLR. Дополнительные сведения см. в разделе [классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md). Для компиляции функции в машинный код используйте директиву `unmanaged` pragma. Дополнительные сведения см. в разделе [управляемые, неуправляемые](../../preprocessor/managed-unmanaged.md).
 
 По умолчанию параметр **/clr** отключен. Если **/clr** включен, также действует и параметр **/MD** . Дополнительные сведения см. в разделе [/MD, /MT, /LD (использование библиотеки времени выполнения)](md-mt-ld-use-run-time-library.md). Параметр **/MD** гарантирует, что из файлов стандартных заголовков (H-файлов) выбираются динамически связанные, многопотоковые версии процедур среды выполнения. Многопоточность необходима для управляемого программирования, так как сборщик мусора CLR запускает методы завершения во вспомогательном потоке.
 

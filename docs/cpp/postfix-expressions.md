@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332443"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779265"
 ---
 # <a name="postfix-expressions"></a>Постфиксные выражения
 
@@ -149,7 +149,7 @@ double& func2( double& d, const char *c ) {
 
 Многоточие (если оно используется) необходимо объявлять последним в списке аргументов. Дополнительные сведения о передаче переменное число аргументов см. в обсуждении [va_arg, va_start и va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md) в *Справочник по библиотеке времени выполнения*.
 
-Сведения об аргументах по умолчанию программировании в среде CLR см. в разделе [списками аргументов переменных (...) (C + +/ CLI) ](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+Сведения об аргументах по умолчанию программировании в среде CLR см. в разделе [списками аргументов переменных (...) (C + +/ CLI) ](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 Аргументы по умолчанию позволяют задать значение, которое должен принять аргумент, если в вызове функции значение не передано. В следующем фрагменте кода показано, как работают аргументы по умолчанию. Дополнительные сведения об ограничениях на задание аргументов по умолчанию, см. в разделе [аргументы по умолчанию](../cpp/default-arguments.md).
 

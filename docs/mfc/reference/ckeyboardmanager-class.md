@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303611"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779811"
 ---
 # <a name="ckeyboardmanager-class"></a>Класс CKeyboardManager
 
@@ -53,14 +53,14 @@ class CKeyboardManager : public CObject
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CKeyboardManager::CKeyboardManager](#ckeyboardmanager)|Создает объект `CKeyboardManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CKeyboardManager::CleanUp](#cleanup)|Очистка таблиц ключа ярлыка.|
 |[CKeyboardManager::FindDefaultAccelerator](#finddefaultaccelerator)|Получает сочетание клавиш по умолчанию для указанной команды и окна.|
 |[CKeyboardManager::IsKeyHandled](#iskeyhandled)|Определяет, обрабатывается ли ключ в таблице сочетаний клавиш.|
@@ -81,7 +81,7 @@ class CKeyboardManager : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как получить указатель на `CKeyboardManager` объекта из `CWinAppEx` , а также показать сочетания клавиш, связанные с командами меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как получить указатель на `CKeyboardManager` объекта из `CWinAppEx` , а также показать сочетания клавиш, связанные с командами меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 
@@ -197,7 +197,7 @@ static BOOL __stdcall IsKeyPrintable(const UINT nChar);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*nChar*|[in] Символ, этот метод проверяет.|
 
 ### <a name="return-value"></a>Возвращаемое значение

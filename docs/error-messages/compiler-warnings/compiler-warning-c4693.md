@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cac5918eb4a1689fd215e07272958eeca48247ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536663"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781904"
 ---
 # <a name="compiler-warning-c4693"></a>Предупреждение компилятора C4693
 
 > "класс": у запечатанного абстрактного класса не может быть членов экземпляра "Тест"
 
-Если тип помечен [запечатанный](../../windows/sealed-cpp-component-extensions.md) и [абстрактный](../../windows/abstract-cpp-component-extensions.md), он может иметь только статические члены.
+Если тип помечен [запечатанный](../../extensions/sealed-cpp-component-extensions.md) и [абстрактный](../../extensions/abstract-cpp-component-extensions.md), он может иметь только статические члены.
 
 Это предупреждение автоматически повышается до ошибки. Если вы хотите изменить это поведение, используйте [#pragma warning](../../preprocessor/warning.md).
 

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCVisualManagerWindows [MFC], SetOfficeStyleMenus
 - CMFCVisualManagerWindows [MFC], m_b3DTabsXPTheme
 ms.assetid: 568b6e9e-8e67-4477-9a3d-2981cbd09861
-ms.openlocfilehash: 3219de7f90d76e18b52efab8d8601b848427fca7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d26e679135f6e8c8236803bae0343e956000c9e8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275965"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779122"
 ---
 # <a name="cmfcvisualmanagerwindows-class"></a>Класс CMFCVisualManagerWindows
 
@@ -163,13 +163,13 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCVisualManagerWindows::CMFCVisualManagerWindows`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)|Платформа вызывает этот метод, чтобы определить ли 3D вкладки, всегда должны быть выделены в приложении. (Переопределяет [CMFCVisualManager::AlwaysHighlight3DTabs](../../mfc/reference/cmfcvisualmanager-class.md#alwayshighlight3dtabs).)|
 |[CMFCVisualManagerWindows::DrawComboBorderWinXP](#drawcomboborderwinxp)|(Переопределяет `CMFCVisualManager::DrawComboBorderWinXP`.)|
@@ -240,7 +240,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCVisualManagerWindows::m_b3DTabsXPTheme](#m_b3dtabsxptheme)|Указывает, отображаются ли темы Windows XP 3D вкладки.|
 
@@ -252,7 +252,7 @@ class CMFCVisualManagerWindows : public CMFCVisualManagerOfficeXP
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `CMFCVisualManagerWindows`. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `CMFCVisualManagerWindows`. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#10](../../mfc/reference/codesnippet/cpp/cmfcvisualmanagerwindows-class_1.cpp)]
 

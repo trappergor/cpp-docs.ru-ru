@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3654
 ms.assetid: 57d96e3f-6bbb-4eaa-934b-26c23b4ceb2e
-ms.openlocfilehash: eca5081daaaf92a7b95a076a1e93bc06799bd9f8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e66f0071a3d086c84a51c8b69e52b06643344c4d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649024"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779499"
 ---
 # <a name="compiler-error-c3654"></a>Ошибка компилятора C3654
 
 «текст»: синтаксическая ошибка в явном переопределении
 
-Непредвиденная строка была в явном переопределении. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+Непредвиденная строка была в явном переопределении. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3654:
 

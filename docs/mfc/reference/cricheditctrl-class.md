@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414295"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779278"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -173,13 +173,13 @@ class CRichEditCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditCtrl::CRichEditCtrl](#cricheditctrl)|Создает объект `CRichEditCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditCtrl::CanPaste](#canpaste)|Определяет, если содержимое буфера обмена, можно вставить в этот элемент управления форматированным редактированием.|
 |[CRichEditCtrl::CanRedo](#canredo)|Определяет, есть ли каких-либо действий в очереди повторов элемента управления.|
@@ -269,7 +269,7 @@ class CRichEditCtrl : public CWnd
 
 - [Использование CRichEditCtrl](../../mfc/using-cricheditctrl.md)
 
-Пример использования элемента управления форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../visual-cpp-samples.md) пример приложения.
+Пример использования элемента управления форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../overview/visual-cpp-samples.md) пример приложения.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -2198,7 +2198,7 @@ BOOL Undo();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CEdit](../../mfc/reference/cedit-class.md)<br/>

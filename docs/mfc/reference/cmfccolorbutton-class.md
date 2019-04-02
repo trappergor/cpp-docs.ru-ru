@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293489"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780006"
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
 
@@ -61,17 +61,17 @@ ms.locfileid: "57293489"
 class CMFCColorButton : public CMFCButton
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorButton::CMFCColorButton](#cmfccolorbutton)|Создает новый `CMFCColorButton` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorButton::EnableAutomaticButton](#enableautomaticbutton)|Включает и отключает кнопка «автоматически», расположенный над кнопками регулярных цвет. (Кнопка автоматического стандартная система называется **автоматического**.)|
 |[CMFCColorButton::EnableOtherButton](#enableotherbutton)|Включает и отключает «other» кнопка, расположенный ниже регулярных цвет кнопок. (Стандартной системы, кнопка «other» называется **Дополнительные цвета**.)|
@@ -86,7 +86,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorButton::IsDrawXPTheme](#isdrawxptheme)|Указывает, отображается ли кнопка текущего цвета в визуальном стиле Windows XP.|
 |[CMFCColorButton::OnDraw](#ondraw)|Вызвано структурой для отображения изображения кнопки.|
@@ -98,7 +98,7 @@ class CMFCColorButton : public CMFCButton
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`m_bAltColorDlg`|Логическое значение. Если значение равно TRUE, платформа отображает [CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md) цвет-диалоговое окно при *других* кнопки, или если значение равно FALSE, система цвета диалоговое окно. Значение по умолчанию — TRUE. Дополнительные сведения см. в разделе [CMFCColorButton::EnableOtherButton](#enableotherbutton).|
 |`m_bAutoSetFocus`|Логическое значение. Значение TRUE, если framework устанавливает фокус на меню «цвет», когда меню отображается, или если значение равно FALSE, не изменяет фокус. Значение по умолчанию — TRUE.|
@@ -126,7 +126,7 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку кнопку цвета с помощью различных методов в `CMFCColorButton` класса. Методы задать цвет «цвет» и его число столбцов и включите автоматическое и другие кнопки. Этот пример является частью [состояние панели демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку кнопку цвета с помощью различных методов в `CMFCColorButton` класса. Методы задать цвет «цвет» и его число столбцов и включите автоматическое и другие кнопки. Этот пример является частью [состояние панели демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

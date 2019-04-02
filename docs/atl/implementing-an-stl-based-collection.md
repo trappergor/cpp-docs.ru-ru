@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
-ms.openlocfilehash: 90583f34c9e9fb500bb48fdbd3c1a17d343d865f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292930"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779252"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>Реализация коллекции на основе библиотеки C++ Standard
 
 Библиотека ATL предоставляет `ICollectionOnSTLImpl` интерфейс, чтобы можно было быстро реализовать интерфейсы коллекций на основе стандартной библиотеки C++ для ваших объектов. Чтобы понять, как работает этот класс, будет работать через простой пример (см. ниже), использующий этот класс для реализации только для чтения коллекция, предназначенных для клиентов автоматизации.
 
-Пример кода взят из [ATLCollections пример](../visual-cpp-samples.md).
+Пример кода взят из [ATLCollections пример](../overview/visual-cpp-samples.md).
 
 Для выполнения этой процедуры, вы научитесь:
 
@@ -75,7 +75,7 @@ ms.locfileid: "57292930"
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-В этом примере можно использовать пользовательский `GenericCopy` класс, определенный в файле VCUE_Copy.h и VCUE_CopyString.h из [ATLCollections](../visual-cpp-samples.md) образца. Этот класс можно использовать в другом коде, но может потребоваться Дополнительно определите специализации структур `GenericCopy` для поддержки типов данных, используемых в свои собственные коллекции. Дополнительные сведения см. в разделе [классы политики копирования ATL](../atl/atl-copy-policy-classes.md).
+В этом примере можно использовать пользовательский `GenericCopy` класс, определенный в файле VCUE_Copy.h и VCUE_CopyString.h из [ATLCollections](../overview/visual-cpp-samples.md) образца. Этот класс можно использовать в другом коде, но может потребоваться Дополнительно определите специализации структур `GenericCopy` для поддержки типов данных, используемых в свои собственные коллекции. Дополнительные сведения см. в разделе [классы политики копирования ATL](../atl/atl-copy-policy-classes.md).
 
 ##  <a name="vcconenumeration_and_collection"></a> Создание определения типов для перечисления и коллекции
 
@@ -102,5 +102,5 @@ ms.locfileid: "57292930"
 ## <a name="see-also"></a>См. также
 
 [Коллекции и перечислители](../atl/atl-collections-and-enumerators.md)<br/>
-[Пример ATLCollections](../visual-cpp-samples.md)<br/>
+[Пример ATLCollections](../overview/visual-cpp-samples.md)<br/>
 [Классы политики копирования ATL](../atl/atl-copy-policy-classes.md)

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418936"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58782008"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -183,13 +183,13 @@ class CTreeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTreeCtrl::CTreeCtrl](#ctreectrl)|Создает объект `CTreeCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTreeCtrl::Create](#create)|Создает дерево и присоединяет его к `CTreeCtrl` объекта.|
 |[CTreeCtrl::CreateDragImage](#createdragimage)|Создает растровое изображение перетаскивания для указанного представления элемента дерева.|
@@ -806,7 +806,7 @@ int GetItemExpandedImageIndex(HTREEITEM hItem)const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 
@@ -883,7 +883,7 @@ BOOL GetItemPartRect(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*nPart*|[in] Идентификатор для части. Должно быть присвоено TVGIPR_BUTTON.|
@@ -1495,7 +1495,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*uAccId*|[in] Идентификатор элемента в элементе представления дерева специальных возможностей.|
 
@@ -1531,7 +1531,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе *hItem* членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
 
@@ -1676,7 +1676,7 @@ BOOL SetAutoscrollInfo(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*uPixelsPerSec*|[in] Количество пикселей, в секунду для прокрутки.|
 |*uUpdateTime*|[in] Интервал времени между обновлениями элемента управления.|
@@ -1772,7 +1772,7 @@ DWORD SetExtendedStyle(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwExMask*|[in] Битовая маска, указывает, какие стили в текущий элемент управления представления дерева затрагиваются этим методом. Если этот параметр равен нулю, он игнорируется и значение *dwExStyles* присваивается элементу управления представления дерева.<br /><br /> Укажите ноль или побитовое сочетание (OR) стили, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles).|
 |*dwExStyles*|[in] Битовая маска, указывает, какие стили в виде дерева управления установите или снимите флажок.<br /><br /> Чтобы задать сочетание стили, укажите битовую комбинацию (OR) из стилей, описанные в [стили расширенных элементов управления представления дерева](/windows/desktop/Controls/tree-view-control-window-extended-styles). Чтобы очистить набор стилей, укажите ноль.|
@@ -2122,7 +2122,7 @@ BOOL SetItemStateEx(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента управления представления дерева.|
 |*uStateEx*|[in] Расширенные состояние элемента. Дополнительные сведения см. в разделе `uStateEx` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
@@ -2275,7 +2275,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*hItem*|[in] Дескриптор элемента представления дерева в элементе управления. Дополнительные сведения см. в разделе `hItem` членом [TVITEMEX](/windows/desktop/api/commctrl/ns-commctrl-tagtvitemexa) структуры.|
 
@@ -2341,7 +2341,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CImageList](../../mfc/reference/cimagelist-class.md)

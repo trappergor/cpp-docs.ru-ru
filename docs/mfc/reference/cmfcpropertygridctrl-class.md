@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296011"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781982"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>Класс CMFCPropertyGridCtrl
 
@@ -173,14 +173,14 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::CMFCPropertyGridCtrl](#cmfcpropertygridctrl)|Создает объект `CMFCPropertyGridCtrl`.|
 |`CMFCPropertyGridCtrl::~CMFCPropertyGridCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCPropertyGridCtrl::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CMFCPropertyGridCtrl::accLocation`|Вызывается платформой для получения текущего положения указанного объекта на экране. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -253,7 +253,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridCtrl::AdjustLayout](#adjustlayout)|Перерисовывает элемента управления сетки свойств и его свойства.|
 |[CMFCPropertyGridCtrl::CompareProps](#compareprops)|Вызывается элементом управления сетки свойств сортировки свойств.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 В следующей таблице перечислены четыре типа свойства выбора:
 
-|Класс|Описание:|
+|Класс|Описание|
 |-----------|-----------------|
 |[Класс CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)|Свойство общего назначения, которое используется для указания значения строки, логические значения, дат и т. д.|
 |[Класс CMFCPropertyGridColorProperty](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)|Свойство, которое используется для выбора значения цвета.|
@@ -297,7 +297,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку объект элемента управления сетки свойств с помощью различных методов в `CMFCPropertyGridCtrl` класса. В примере, как включить элемент управления заголовка, включить область описания и задать внешний вид элемента управления сетки свойств. В примере также показано, как задать режим для элемента управления, при котором элемент управления сортирует все свойства, содержащиеся в ней по имени свойства и как задать настраиваемые цвета для различных элементов элемента управления сетки свойств. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку объект элемента управления сетки свойств с помощью различных методов в `CMFCPropertyGridCtrl` класса. В примере, как включить элемент управления заголовка, включить область описания и задать внешний вид элемента управления сетки свойств. В примере также показано, как задать режим для элемента управления, при котором элемент управления сортирует все свойства, содержащиеся в ней по имени свойства и как задать настраиваемые цвета для различных элементов элемента управления сетки свойств. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод в `CMFCPropertyGridCtrl` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Create` метод в `CMFCPropertyGridCtrl` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 
@@ -1625,7 +1625,7 @@ virtual BOOL ValidateItemData(CMFCPropertyGridProperty* pProp);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pProp*|[in] Указатель на свойство. Этот параметр не используется.|
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283661"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778303"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -66,14 +66,14 @@ class CRegKey
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRegKey::CRegKey](#cregkey)|Конструктор.|
 |[CRegKey:: ~ CRegKey](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRegKey::Attach](#attach)|Вызовите этот метод для присоединения открываемый раздел HKEY `CRegKey` объекта, задав [m_hKey](#m_hkey) член дескриптор `hKey`.|
 |[CRegKey::Close](#close)|Вызовите этот метод для освобождения [m_hKey](#m_hkey) член обработки и ему присвоено значение NULL.|
@@ -106,14 +106,14 @@ class CRegKey
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRegKey::operator HKEY](#operator_hkey)|Преобразует `CRegKey` объект HKEY.|
 |[CRegKey::operator =](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRegKey::m_hKey](#m_hkey)|Содержит дескриптор раздела реестра, связанные с `CRegKey` объекта.|
 |[CRegKey::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
@@ -1058,5 +1058,5 @@ ATL_DEPRECATED LONG SetValue(
 
 ## <a name="see-also"></a>См. также
 
-[Образец DCOM](../../visual-cpp-samples.md)<br/>
+[Образец DCOM](../../overview/visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

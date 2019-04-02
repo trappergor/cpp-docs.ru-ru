@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738483"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780240"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>Практическое руководство. Маршалинг встроенных указателей посредством взаимодействия C++
 
@@ -23,7 +23,7 @@ ms.locfileid: "57738483"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как неуправляемую функцию, которая принимает структуру, содержащую указатели могут вызываться из управляемой функции. Создает экземпляр структуры управляемой функции и инициализирует встроенный указатель с новым ключевым словом (а не [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) ключевое слово). Так как это выделяет память в неуправляемой куче, нет необходимости для закрепления массива для подавления сборки мусора. Тем не менее объем памяти должны быть явно удалены во избежание утечки памяти.
+В следующем примере показано, как неуправляемую функцию, которая принимает структуру, содержащую указатели могут вызываться из управляемой функции. Создает экземпляр структуры управляемой функции и инициализирует встроенный указатель с новым ключевым словом (а не [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) ключевое слово). Так как это выделяет память в неуправляемой куче, нет необходимости для закрепления массива для подавления сборки мусора. Тем не менее объем памяти должны быть явно удалены во избежание утечки памяти.
 
 ```
 // marshal_embedded_pointer.cpp

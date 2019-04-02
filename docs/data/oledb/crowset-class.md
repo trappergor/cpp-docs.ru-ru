@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: 4a24dada2f1211138449e65a8865810a46230970
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329017"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779460"
 ---
 # <a name="crowset-class"></a>Класс CRowset
 
@@ -534,7 +534,7 @@ HRESULT GetDataHere(int nAccessor,
 
 ### <a name="remarks"></a>Примечания
 
-Пример использования этой функции, см. в разделе [Образец MultiRead](../../visual-cpp-samples.md).
+Пример использования этой функции, см. в разделе [Образец MultiRead](../../overview/visual-cpp-samples.md).
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -937,8 +937,8 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 
 ## <a name="see-also"></a>См. также
 
-[Образец DBViewer](../../visual-cpp-samples.md)<br/>
-[Образец MultiRead](../../visual-cpp-samples.md)<br/>
-[Атрибутов multiRead](../../visual-cpp-samples.md)<br/>
+[Образец DBViewer](../../overview/visual-cpp-samples.md)<br/>
+[Образец MultiRead](../../overview/visual-cpp-samples.md)<br/>
+[Атрибутов multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

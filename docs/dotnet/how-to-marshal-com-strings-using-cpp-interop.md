@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751522"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780877"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>Практическое руководство. Маршалинг строк COM с помощью взаимодействия C++
 
@@ -28,7 +28,7 @@ ms.locfileid: "57751522"
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как можно передать строку BSTR (формат строк в программировании COM) из управляемого в неуправляемую функцию. Вызов управляемой функции используется <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> получение адреса BSTR представления содержимого .NET System.String. Этот указатель закрепляется с помощью [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) чтобы убедиться, что его физический адрес не меняется во время цикла сбора мусора во время выполнения неуправляемой функции. Сборщик мусора не освобождает перемещение памяти до [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) выходит за пределы области.
+В следующем примере показано, как можно передать строку BSTR (формат строк в программировании COM) из управляемого в неуправляемую функцию. Вызов управляемой функции используется <xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A> получение адреса BSTR представления содержимого .NET System.String. Этот указатель закрепляется с помощью [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) чтобы убедиться, что его физический адрес не меняется во время цикла сбора мусора во время выполнения неуправляемой функции. Сборщик мусора не освобождает перемещение памяти до [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) выходит за пределы области.
 
 ```
 // MarshalBSTR1.cpp

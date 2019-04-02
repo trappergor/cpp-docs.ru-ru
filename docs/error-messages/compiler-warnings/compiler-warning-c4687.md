@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4687
 ms.assetid: 2f28e0b1-7358-4c88-bd70-aad8f0aa004c
-ms.openlocfilehash: 50551faf817f83d8a4af848a75af67ebe7004fe7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1978e1a35ba5b5d59b5961a21378d8af6921d145
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635487"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778667"
 ---
 # <a name="compiler-warning-c4687"></a>Предупреждение компилятора C4687
 
@@ -19,7 +19,7 @@ ms.locfileid: "50635487"
 
 Запечатанный абстрактный тип обычно содержит только для хранения статических функций-членов.
 
-Дополнительные сведения см. в разделе [абстрактный](../../windows/abstract-cpp-component-extensions.md)и [запечатанный](../../windows/sealed-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [абстрактный](../../extensions/abstract-cpp-component-extensions.md)и [запечатанный](../../extensions/sealed-cpp-component-extensions.md).
 
 C4687 выдается как ошибка по умолчанию. Вы можете отключить C4687 с [предупреждение](../../preprocessor/warning.md) директивы pragma. Если вы уверены, что вы хотите реализовать интерфейс в Запечатанный абстрактный тип, можно отключить C4687.
 
