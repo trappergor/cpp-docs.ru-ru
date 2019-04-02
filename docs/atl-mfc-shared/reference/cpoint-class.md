@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740392"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768033"
 ---
 # <a name="cpoint-class"></a>Класс CPoint
 
@@ -32,19 +32,19 @@ class CPoint : public tagPOINT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPoint::CPoint](#cpoint)|Создает документ `CPoint`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPoint::Offset](#offset)|Добавляет значения в таблицу `x` и `y` членами `CPoint`.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPoint::operator-](#operator_-)|Возвращает разность `CPoint` и размером или отрицание точку или разница размера между двумя точками или смещение с отрицательным размером.|
 |[CPoint::operator! =](#operator_neq)|Проверяет неравенство между двумя точками.|
@@ -342,7 +342,7 @@ CPoint operator-() const throw();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Структура POINT](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)<br/>

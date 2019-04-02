@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751834"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774923"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>Практическое руководство. Определение и использование классов и структур (C + +/ CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *Неявно абстрактного класса* не может быть создан. Класс является абстрактным неявно, если базовый тип класса является интерфейсом, а класс не реализует все функции-члены этого интерфейса.
 
-Если вы не сможете создать объекты из класса, который является производным от интерфейса, причина может быть, что данный класс является абстрактным неявно. Дополнительные сведения об абстрактных классах см. в разделе [абстрактный](../windows/abstract-cpp-component-extensions.md).
+Если вы не сможете создать объекты из класса, который является производным от интерфейса, причина может быть, что данный класс является абстрактным неявно. Дополнительные сведения об абстрактных классах см. в разделе [абстрактный](../extensions/abstract-cpp-component-extensions.md).
 
 В следующем примере кода показано, что `MyClass` класс не может быть создан, так как функция `MyClass::func2` не реализован. Чтобы включить в примере для компиляции, раскомментируйте `MyClass::func2`.
 
@@ -229,7 +229,7 @@ in Public_Class
 |public|Элемент доступен внутри и вне сборки.  См. в разделе [открытый](../cpp/public-cpp.md) Дополнительные сведения.|
 |private|Член недоступен, ни внутри, ни за пределы данной сборки.  См. в разделе [частного](../cpp/private-cpp.md) Дополнительные сведения.|
 |protected|Элемент доступен внутри и вне сборки, но только для производных типов.  См. в разделе [защищенные](../cpp/protected-cpp.md) Дополнительные сведения.|
-|internal|Член является общедоступной внутри сборки, но закрытый за пределы данной сборки.  `internal` — контекстно-зависимое ключевое слово.  Дополнительные сведения см. в разделе [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).|
+|internal|Член является общедоступной внутри сборки, но закрытый за пределы данной сборки.  `internal` — контекстно-зависимое ключевое слово.  Дополнительные сведения см. в разделе [контекстные ключевые слова](../extensions/context-sensitive-keywords-cpp-component-extensions.md).|
 |открытый защищенный - или - защищенных public|Член является общедоступной внутри сборки, однако защищены за пределы данной сборки.|
 |закрытый защищенный - или - защищенных private|Член является защищенным внутри сборки, но закрытый за пределы данной сборки.|
 
@@ -499,9 +499,9 @@ in static constructor
 
 Дополнительные сведения см. в разделе .
 
-- [Оператор дескриптора объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [Оператор дескриптора объекта (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -797,7 +797,7 @@ ref struct A {
 
 - Объект входит в объект, деструктор которого выполняется.
 
-- Вы вызываете [удалить](../cpp/delete-operator-cpp.md) оператор маркер ([оператор дескриптора объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)).
+- Вы вызываете [удалить](../cpp/delete-operator-cpp.md) оператор маркер ([оператор дескриптора объекта (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)).
 
 - Вы явным образом вызовите деструктор.
 
@@ -844,7 +844,7 @@ int main() {
 
 Если метод завершения удаляет собственный указатель в управляемом типе, необходимо убедиться, что ссылки, или через собственный указатель не собираются преждевременно; вызова деструктора в управляемый тип, вместо использования <xref:System.GC.KeepAlive%2A>.
 
-Во время компиляции вы можете обнаружить, является ли тип имеет метод завершения или деструктор. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Во время компиляции вы можете обнаружить, является ли тип имеет метод завершения или деструктор. Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).
 
 В приведенном ниже примере показано два типа, имеющую неуправляемые ресурсы, а другой управляемые ресурсы, которые выпускаются детерминировано.
 
@@ -914,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)
+[Классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[Классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)

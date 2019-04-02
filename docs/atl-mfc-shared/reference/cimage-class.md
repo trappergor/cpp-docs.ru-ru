@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739439"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775950"
 ---
 # <a name="cimage-class"></a>Класс CImage
 
@@ -78,13 +78,13 @@ class CImage
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CImage::CImage](#cimage)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CImage::AlphaBlend](#alphablend)|Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.|
 |[CImage::Attach](#attach)|Присоединяет объект HBITMAP для `CImage` объекта. Можно использовать с точечные рисунки не DIB раздел или растровые изображения DIB раздела.|
@@ -128,7 +128,7 @@ class CImage
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CImage::operator HBITMAP](#operator_hbitmap)|Возвращает дескриптор Windows, подключенный к `CImage` объекта.|
 
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>См. также
 
-[Пример MMXSwarm](../../visual-cpp-samples.md)<br/>
-[Образце SimpleImage](../../visual-cpp-samples.md)<br/>
+[Пример MMXSwarm](../../overview/visual-cpp-samples.md)<br/>
+[Образце SimpleImage](../../overview/visual-cpp-samples.md)<br/>
 [Аппаратно независимых точечных рисунков](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [Компоненты ATL COM Desktop](../../atl/atl-com-desktop-components.md)<br/>

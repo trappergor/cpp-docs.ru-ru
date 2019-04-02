@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __hook keyword [C++]
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
-ms.openlocfilehash: a8a7fb6a88fb22fee5f5f8ec8c0dc215479c62fd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4887d85e01344c171fb0fdfe957f2d8a669ff6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489743"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771673"
 ---
 # <a name="hook"></a>__hook
 
@@ -45,7 +45,7 @@ long __hook(
 - Управляемые события: *SourceClass* является исходным классом и *EventMethod* — это событие.
 
 *interface*<br/>
-Имя интерфейса, присоединяемого с *получателя*, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут является **true**.
+Имя интерфейса, присоединяемого с *получателя*, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/attributes/event-receiver.md) атрибут является **true**.
 
 *source*<br/>
 Указатель на экземпляр источника события. В зависимости от кода `type` указано в `event_receiver`, *источника* может принимать одно из следующих:
@@ -76,7 +76,7 @@ long __hook(
 
 Встроенная функция **__hook** в приемнике событий можно связать или присоединить метод обработчика с методом события. Затем, когда этот источник вызывает указанное событие, вызывается указанный обработчик. Можно подключить несколько обработчиков к одному событию или несколько событий к одному обработчику.
 
-Существует два вида **__hook**. Можно использовать первую форму (четыре аргумента) в большинстве случаев, в частности, для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут **false** .
+Существует два вида **__hook**. Можно использовать первую форму (четыре аргумента) в большинстве случаев, в частности, для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/attributes/event-receiver.md) атрибут **false** .
 
 В таких случаях не требуется присоединять все методы в интерфейсе перед порождением события в одном из методов; достаточно присоединить только метод, обрабатывающий событие. Можно использовать второй формы (с двумя аргументами) **__hook** только для приемника событий COM, в котором *layout_dependent* **= true**.
 
@@ -88,7 +88,7 @@ long __hook(
 
 Альтернативой использованию **__hook** можно использовать оператор +=.
 
-Дополнительные сведения о кодировании управляемых событий в новом синтаксисе см. в разделе [событий](../windows/event-cpp-component-extensions.md).
+Дополнительные сведения о кодировании управляемых событий в новом синтаксисе см. в разделе [событий](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 > Класс-шаблон или структура не могут содержать события.
@@ -101,7 +101,7 @@ long __hook(
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [Обработка событий](../cpp/event-handling.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__unhook](../cpp/unhook.md)<br/>
 [__raise](../cpp/raise.md)<br/>

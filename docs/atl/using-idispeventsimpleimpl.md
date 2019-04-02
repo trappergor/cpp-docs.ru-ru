@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventSimpleImpl class, using
 ms.assetid: 8640ad1a-4bd0-40a5-b5e4-7322685d7aab
-ms.openlocfilehash: 2da4c017f686f35f721dd2bff45436e95fb33630
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.openlocfilehash: 40edca3a99fb6e9d57d617e79d0bd37ebbfcd4ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57811196"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768568"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Использование IDispEventSimpleImpl
 
@@ -31,7 +31,7 @@ ms.locfileid: "57811196"
 
 В приведенном ниже примере показано, как обрабатывать `DocumentChange` события, инициированные средой Word **приложения** объекта. Это событие определяется как метод на `ApplicationEvents` disp-интерфейса.
 
-Пример взят из [ATLEventHandling пример](../visual-cpp-samples.md).
+Пример взят из [ATLEventHandling пример](../overview/visual-cpp-samples.md).
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -66,4 +66,4 @@ methods:
 ## <a name="see-also"></a>См. также
 
 [Обработка событий](../atl/event-handling-and-atl.md)<br/>
-[Пример ATLEventHandling](../visual-cpp-samples.md)
+[Пример ATLEventHandling](../overview/visual-cpp-samples.md)

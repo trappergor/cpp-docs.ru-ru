@@ -37,12 +37,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlMap class
 ms.assetid: 5e2fe028-8e6d-4686-93df-1433d2080ec3
-ms.openlocfilehash: 80975047b300f270c0ac58c8b8abfc59ff2b17ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1821532a4d5a3078202f180273b02945b8d8e4ba
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293788"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774559"
 ---
 # <a name="catlmap-class"></a>Класс CAtlMap
 
@@ -76,7 +76,7 @@ class CAtlMap
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlMap::KINARGTYPE](#kinargtype)|Тип, используемый при передаче ключа в качестве входного аргумента|
 |[CAtlMap::KOUTARGTYPE](#koutargtype)|Тип, используемый при возврате ключа в виде выходного аргумента.|
@@ -85,7 +85,7 @@ class CAtlMap
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Класс CAtlMap::CPair](#cpair_class)|Класс, содержащий элементы ключ и значение.|
 
@@ -98,14 +98,14 @@ class CAtlMap
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlMap::CAtlMap](#catlmap)|Конструктор.|
 |[CAtlMap:: ~ CAtlMap](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlMap::AssertValid](#assertvalid)|Вызовите этот метод, чтобы вызвать метод ASSERT, если `CAtlMap` является недопустимым.|
 |[CAtlMap::DisableAutoRehash](#disableautorehash)|Вызовите этот метод, чтобы отключить автоматическое проведя пересчет контрольной суммы из `CAtlMap` объекта.|
@@ -133,7 +133,7 @@ class CAtlMap
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|Заменяет или добавляет новый элемент к `CAtlMap`.|
 
@@ -782,6 +782,6 @@ V  m_value;
 
 ## <a name="see-also"></a>См. также
 
-[Пример бегущей строки](../../visual-cpp-samples.md)<br/>
+[Пример бегущей строки](../../overview/visual-cpp-samples.md)<br/>
 [Образец UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

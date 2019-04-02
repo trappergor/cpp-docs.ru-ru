@@ -6,16 +6,16 @@ helpviewer_keywords:
 - intrinsic functions [C++], event handling
 - event handling [C++], Visual C++
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: d1a89d5afce2e3715b5a61c0815d88ed2fbae8b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769476"
 ---
 # <a name="event-handling"></a>Обработка событий
 
-Обработка событий в основном поддерживается для COM-классов (классов C++, реализующих COM-объектов, обычно с помощью классов ATL или [coclass](../windows/coclass.md) атрибут).  Дополнительные сведения см. в разделе [обработка событий в COM](../cpp/event-handling-in-com.md).
+Обработка событий в основном поддерживается для COM-классов (классов C++, реализующих COM-объектов, обычно с помощью классов ATL или [coclass](../windows/coclass.md) атрибут). Дополнительные сведения см. в разделе [обработка событий в COM](../cpp/event-handling-in-com.md).
 
 Обработка событий также поддерживается для собственных классов C++ (классов C++, которые не реализуют объекты COM-модели), однако эта поддержка является устаревшей и в будущих выпусках будет удалена.  Дополнительные сведения см. в разделе [обработка событий в неуправляемом коде C++](../cpp/event-handling-in-native-cpp.md).
 
@@ -25,8 +25,8 @@ Visual C++ включает атрибуты и ключевые слова дл
 
 |Раздел|Описание|
 |-----------|-----------------|
-|[event_source](../windows/event-source.md)|Создает источник событий.|
-|[event_receiver](../windows/event-receiver.md)|Создает приемник событий (получатель).|
+|[event_source](../windows/attributes/event-source.md)|Создает источник событий.|
+|[event_receiver](../windows/attributes/event-receiver.md)|Создает приемник событий (получатель).|
 |[__event](../cpp/event.md)|Объявление события.|
 |[__raise](../cpp/raise.md)|Выделяет место вызова события.|
 |[__hook](../cpp/hook.md)|Связывает метод обработчика с событием.|

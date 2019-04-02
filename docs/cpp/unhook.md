@@ -8,12 +8,12 @@ helpviewer_keywords:
 - event handlers [C++], dissociating events
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
-ms.openlocfilehash: f6e5031cb77729ede053b275c90fa93bf251fcb6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486779"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769528"
 ---
 # <a name="unhook"></a>__unhook
 
@@ -48,7 +48,7 @@ long  __unhook(
 - Управляемые события: *SourceClass* является исходным классом и *EventMethod* — это событие.
 
 *interface*<br/>
-Имя интерфейса, отсоединяемого с помощью *получателя*, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/event-receiver.md) атрибут является **true**.
+Имя интерфейса, отсоединяемого с помощью *получателя*, только для приемников событий COM, в котором *layout_dependent* параметр [event_receiver](../windows/attributes/event-receiver.md) атрибут является **true**.
 
 *source*<br/>
 Указатель на экземпляр источника события. В зависимости от кода `type` указано в `event_receiver`, *источника* может принимать одно из следующих:
@@ -89,7 +89,7 @@ long  __unhook(
 
 Альтернативой использованию **__unhook** можно использовать оператор-=.
 
-Дополнительные сведения о кодировании управляемых событий в новом синтаксисе см. в разделе [событий](../windows/event-cpp-component-extensions.md).
+Дополнительные сведения о кодировании управляемых событий в новом синтаксисе см. в разделе [событий](../extensions/event-cpp-component-extensions.md).
 
 > [!NOTE]
 >  Класс-шаблон или структура не могут содержать события.
@@ -101,8 +101,8 @@ long  __unhook(
 ## <a name="see-also"></a>См. также
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[event_source](../windows/event-source.md)<br/>
-[event_receiver](../windows/event-receiver.md)<br/>
+[event_source](../windows/attributes/event-source.md)<br/>
+[event_receiver](../windows/attributes/event-receiver.md)<br/>
 [__event](../cpp/event.md)<br/>
 [__hook](../cpp/hook.md)<br/>
 [__raise](../cpp/raise.md)

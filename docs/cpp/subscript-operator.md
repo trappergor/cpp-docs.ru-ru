@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572917"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767929"
 ---
 # <a name="subscript-operator-"></a>Подстрочный оператор]
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 Постфиксное выражение (который также может быть основным выражением) следуют оператор индекса, **[]**, задает индексирование массива.
 
-Сведения об управляемых массивах см. в разделе [массивы](../windows/arrays-cpp-component-extensions.md).
+Сведения об управляемых массивов в C + +/ CLI, см. в разделе [массивы](../extensions/arrays-cpp-component-extensions.md).
 
 Как правило, значение, представленное *Постфиксное выражение* значение указателя, например идентификатор массива, и *выражение* является целочисленным значением (включая перечисляемые типы). Однако все, что необходимо синтаксически, — это чтобы одно из выражений имело тип указателя, а другие — целочисленный тип. Таким образом, целочисленное значение может находиться в *Постфиксное выражение* позиции, а значение указателя может находиться в квадратных скобках в *выражение* или позиции индекса. Рассмотрим следующий фрагмент кода:
 

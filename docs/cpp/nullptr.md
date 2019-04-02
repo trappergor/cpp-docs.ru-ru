@@ -6,19 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - nullptr keyword [C++]
 ms.assetid: e9d80ea6-2506-4eb5-b47b-2349df085832
-ms.openlocfilehash: fc210679553c393143c7e94121dd75e19b934dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57be8d71f1dac4f347ea6567c02a385719bb7306
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637116"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781085"
 ---
 # <a name="nullptr"></a>nullptr
 
 Обозначает константу-указатель NULL типа `std::nullptr_t`, которая может быть преобразована к любому типу необработанного указателя.  Несмотря на то, что можно использовать ключевое слово **nullptr** без включения любые заголовки, если код использует тип `std::nullptr_t`, а затем необходимо определить его, включая заголовок `<cstddef>`.
 
 > [!NOTE]
->  **Nullptr** ключевое слово также определяется в C + +/ CLI для приложений управляемого кода и оно не взаимозаменяемо с ключевым словом языка C++ стандарта ISO. Если ваш код может компилироваться с помощью [/CLR](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора, который нацелен на управляемый код, затем с помощью `__nullptr` в любую строку кода, где необходимо обеспечить, чтобы компилятор использовал собственную интерпретацию C++. Дополнительные сведения см. в разделе [nullptr](../windows/nullptr-cpp-component-extensions.md).
+>  **Nullptr** ключевое слово также определяется в C + +/ CLI для приложений управляемого кода и оно не взаимозаменяемо с ключевым словом языка C++ стандарта ISO. Если ваш код может компилироваться с помощью [/CLR](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора, который нацелен на управляемый код, затем с помощью `__nullptr` в любую строку кода, где необходимо обеспечить, чтобы компилятор использовал собственную интерпретацию C++. Дополнительные сведения см. в разделе [nullptr](../extensions/nullptr-cpp-component-extensions.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -27,4 +27,4 @@ ms.locfileid: "50637116"
 ## <a name="see-also"></a>См. также
 
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[nullptr](../windows/nullptr-cpp-component-extensions.md)
+[nullptr](../extensions/nullptr-cpp-component-extensions.md)(C + +/ CLI)

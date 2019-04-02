@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
-ms.openlocfilehash: 3891741cb6998ec8621795801ce409aa40ab6d1d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270388"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769554"
 ---
 # <a name="catlexemodulet-class"></a>Класс CAtlExeModuleT
 
@@ -45,18 +45,18 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 *T*<br/>
 Ваш класс, производный от `CAtlExeModuleT`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT::CAtlExeModuleT](#catlexemodulet)|Конструктор.|
 |[CAtlExeModuleT:: ~ CAtlExeModuleT](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT::InitializeCom](#initializecom)|Инициализирующий COM.|
 |[CAtlExeModuleT::ParseCommandLine](#parsecommandline)|Выполняет синтаксический анализ командной строки и при необходимости выполняет регистрацию.|
@@ -72,7 +72,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)|Флаг, указывающий, что должно быть задержка завершения работы модуля.|
 |[CAtlExeModuleT::m_dwPause](#m_dwpause)|Приостановка значение, используемое для убедитесь, что все объекты освобождаются перед завершением работы.|
@@ -353,7 +353,7 @@ int WinMain(int nShowCmd) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец ATLDuck](../../visual-cpp-samples.md)<br/>
+[Образец ATLDuck](../../overview/visual-cpp-samples.md)<br/>
 [Класс CAtlModuleT](../../atl/reference/catlmodulet-class.md)<br/>
 [Класс CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

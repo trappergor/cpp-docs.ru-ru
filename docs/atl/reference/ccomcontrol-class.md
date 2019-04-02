@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261587"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771556"
 ---
 # <a name="ccomcontrol-class"></a>Класс CComControl
 
@@ -53,13 +53,13 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComControl::CComControl](#ccomcontrol)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComControl::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
 |[CComControl::CreateControlWindow](#createcontrolwindow)|Создает окно для элемента управления.|
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 Дополнительные сведения о создании элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
 
-С примером `CComControl` методы и элементы данных, см. в разделе [Кр](../../visual-cpp-samples.md) образца.
+С примером `CComControl` методы и элементы данных, см. в разделе [Кр](../../overview/visual-cpp-samples.md) образца.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interop [C++], MFC
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
-ms.openlocfilehash: d36932a3edc0129f0497cb8db4095283650c5c96
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494163"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773103"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Использование пользовательского элемента управления формы Windows Form в MFC
 
@@ -34,7 +34,7 @@ ms.locfileid: "50494163"
 > [!NOTE]
 > При создании приложения с помощью (изменено) частную копию интерфейсов MFC Windows Forms DLL (библиотеку mfcmifc80.dll), он не сможет установить в глобальном кэше СБОРОК, если ключ Майкрософт замените свой собственный ключ поставщика. Дополнительные сведения о подписи сборки см. в разделе [программирование с использованием сборок](/dotnet/framework/app-domains/programming-with-assemblies) и [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
-Если приложение MFC использует Windows Forms, необходимо повторно распространить библиотеку mfcmifc80.dll с вашим приложением. Дополнительные сведения см. в разделе [распространение библиотеки MFC](../ide/redistributing-the-mfc-library.md).
+Если приложение MFC использует Windows Forms, необходимо повторно распространить библиотеку mfcmifc80.dll с вашим приложением. Дополнительные сведения см. в разделе [распространение библиотеки MFC](../windows/redistributing-the-mfc-library.md).
 
 ## <a name="in-this-section"></a>В этом разделе
 

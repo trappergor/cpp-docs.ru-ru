@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826583"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775430"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Проекты C/C++ и системы сборки в Visual Studio
 
@@ -78,6 +78,8 @@ cl /EHsc hello.cpp
 Описывает, как использовать компилятор C/C++ и создавать средства непосредственно из командной строки, а не с помощью Visual Studio IDE.
 
 [Построение библиотеки DLL в Visual Studio](dlls-in-visual-cpp.md) как создание, отладка и развертывание библиотек DLL C/C++ (Общие библиотеки) в Visual Studio.
+
+[Пошаговое руководство: Создание и использование статической библиотеки](walkthrough-creating-and-using-a-static-library-cpp.md) Создание двоичного LIB-файл.
 
 [Построение изолированных приложений C/C++ и сборок Side-by-side](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md) описывает модель развертывания для приложения для настольных компьютеров Windows, основанную на идее изолированных приложений и сборок side-by-side.
 

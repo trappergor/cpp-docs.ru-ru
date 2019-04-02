@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296349"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776964"
 ---
 # <a name="atl-copy-policy-classes"></a>Классы политики копирования ATL
 
@@ -62,7 +62,7 @@ ms.locfileid: "57296349"
 
 ## <a name="custom-implementations"></a>Пользовательские реализации
 
-Как правило необходимо определить свои собственные классы политики копирования для разнородных копирования (т. е. преобразование между типами данных). Некоторые примеры пользовательских классов политики копирования, просмотрите файлы файлах VCUE_Copy.h и VCUE_CopyString.h в [ATLCollections](../visual-cpp-samples.md) образца. Эти файлы содержат два классов политики копирования шаблонов, `GenericCopy` и `MapCopy`, а также целый ряд специализаций `GenericCopy` для различных типов данных.
+Как правило необходимо определить свои собственные классы политики копирования для разнородных копирования (т. е. преобразование между типами данных). Некоторые примеры пользовательских классов политики копирования, просмотрите файлы файлах VCUE_Copy.h и VCUE_CopyString.h в [ATLCollections](../overview/visual-cpp-samples.md) образца. Эти файлы содержат два классов политики копирования шаблонов, `GenericCopy` и `MapCopy`, а также целый ряд специализаций `GenericCopy` для различных типов данных.
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ ms.locfileid: "57296349"
 ## <a name="see-also"></a>См. также
 
 [Реализация коллекции на основе стандартной библиотеки C++](../atl/implementing-an-stl-based-collection.md)<br/>
-[Пример ATLCollections](../visual-cpp-samples.md)
+[Пример ATLCollections](../overview/visual-cpp-samples.md)

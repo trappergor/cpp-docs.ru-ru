@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329043"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775417"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Журнал изменений Visual C++ 2003–2015
 
 В этой статье описываются критические изменения, начиная с Visual Studio 2015 и до Visual Studio 2003, а термины "новое поведение" и "теперь" относятся к Visual Studio 2015 и более поздним версиям. Термины "старое поведение" и "раньше" относятся к Visual Studio 2013 и более ранних версий.
 
-Сведения о Visual Studio 2017 см. в статьях [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017) и [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Улучшения соответствия в Visual C++ в Visual Studio 2017).
+Сведения о Visual Studio 2017 см. в статьях [What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017) и [Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) (Улучшения соответствия в Visual C++ в Visual Studio 2017).
 
 > [!NOTE]
 > Принципы работы с двоичными файлами в Visual Studio 2017 по сравнению с Visual Studio 2015 существенно не изменились.
@@ -3524,4 +3524,4 @@ ms.locfileid: "58329043"
 
 ## <a name="see-also"></a>См. также
 
-[What's New for Visual C++ in Visual Studio](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)
+[What's New for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)

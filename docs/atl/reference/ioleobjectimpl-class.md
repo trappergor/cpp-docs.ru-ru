@@ -49,12 +49,12 @@ helpviewer_keywords:
 - IOleObject, ATL implementation
 - IOleObjectImpl class
 ms.assetid: 59750b2d-1633-4a51-a4c2-6455b6b90c45
-ms.openlocfilehash: c228d5030c3577af22feda6a0d03769867b1c5c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5a815023d340839068873c32f1477d33053b13b4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268471"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775937"
 ---
 # <a name="ioleobjectimpl-class"></a>Класс IOleObjectImpl
 
@@ -75,11 +75,11 @@ class ATL_NO_VTABLE IOleObjectImpl : public IOleObject
 *T*<br/>
 Ваш класс, производный от `IOleObjectImpl`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IOleObjectImpl::Advise](#advise)|Устанавливает вспомогательное соединение с элементом управления.|
 |[IOleObjectImpl::Close](#close)|Изменяет состояние элемента управления «выполняется» на загруженных.|
@@ -369,7 +369,7 @@ STDMETHOD(EnumVerbs)(IEnumOLEVERB** ppEnumOleVerb);
 
 ### <a name="remarks"></a>Примечания
 
-Можно добавить команды в RGS-файл проекта. Например см. в разделе CIRCCTL. RGS в [Кр](../../visual-cpp-samples.md) образца.
+Можно добавить команды в RGS-файл проекта. Например см. в разделе CIRCCTL. RGS в [Кр](../../overview/visual-cpp-samples.md) образца.
 
 См. в разделе [IOleObject::EnumVerbs](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-enumverbs) в Windows SDK.
 

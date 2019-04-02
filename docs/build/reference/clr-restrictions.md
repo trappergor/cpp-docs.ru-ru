@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816104"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777822"
 ---
 # <a name="clr-restrictions"></a>Ограничения /clr
 
@@ -29,7 +29,7 @@ ms.locfileid: "57816104"
 
 - [С атрибутом naked](../../cpp/naked-cpp.md) [__declspec](../../cpp/declspec.md) модификатор учитывается в/CLR.
 
-- Функция-преобразователь задается [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) будет только в перехватчиках в неуправляемом коде. См. в разделе [обработка исключений](../../windows/exception-handling-cpp-component-extensions.md) Дополнительные сведения.
+- Функция-преобразователь задается [_set_se_translator](../../c-runtime-library/reference/set-se-translator.md) будет только в перехватчиках в неуправляемом коде. См. в разделе [обработка исключений](../../extensions/exception-handling-cpp-component-extensions.md) Дополнительные сведения.
 
 - Сравнение указателей на функции не разрешено **/CLR**.
 

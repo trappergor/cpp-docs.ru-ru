@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274522"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772834"
 ---
 # <a name="ctokengroups-class"></a>Класс CTokenGroups
 
@@ -40,14 +40,14 @@ class CTokenGroups
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CTokenGroups::CTokenGroups](#ctokengroups)|Конструктор.|
 |[CTokenGroups:: ~ CTokenGroups](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CTokenGroups::Add](#add)|Добавляет `CSid` или имеющиеся `TOKEN_GROUPS` структуру `CTokenGroups` объекта.|
 |[CTokenGroups::Delete](#delete)|Удаляет `CSid` и связанных с ним атрибутов из `CTokenGroups` объекта.|
@@ -60,7 +60,7 @@ class CTokenGroups
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTokenGroups::operator const TOKEN_GROUPS *](#operator_const_token_groups__star)|Приведения `CTokenGroups` объекта в указатель на `TOKEN_GROUPS` структуры.|
 |[CTokenGroups::operator =](#operator_eq)|Оператор присвоения.|
@@ -273,7 +273,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[Образец безопасности](../../overview/visual-cpp-samples.md)<br/>
 [Класс CSid](../../atl/reference/csid-class.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

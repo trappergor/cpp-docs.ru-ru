@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746327"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770695"
 ---
 # <a name="for-each-in"></a>for each, in
 
@@ -35,7 +35,7 @@ ms.locfileid: "57746327"
 Тип параметра `identifier`.
 
 *identifier*<br/>
-Переменная итерации, представляющая элемент коллекции.  Когда `identifier` — [оператор отслеживания ссылок](../windows/tracking-reference-operator-cpp-component-extensions.md), этот элемент можно изменять.
+Переменная итерации, представляющая элемент коллекции.  Когда `identifier` — [оператор отслеживания ссылок](../extensions/tracking-reference-operator-cpp-component-extensions.md), этот элемент можно изменять.
 
 *Выражение*<br/>
 Выражение массива или коллекция. Элемент коллекции должен быть таким, чтобы компилятор мог преобразовать его в тип `identifier`.
@@ -49,7 +49,7 @@ ms.locfileid: "57746327"
 
 *Инструкций* выполняются для каждого элемента в массиве или коллекции. После завершения итерации всех элементов коллекции управление передается следующему оператору после блока `for each`.
 
-`for each` и `in` являются [контекстно-зависимые ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md).
+`for each` и `in` являются [контекстно-зависимые ключевые слова](../extensions/context-sensitive-keywords-cpp-component-extensions.md).
 
 Дополнительные сведения:
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>См. также
 
-[Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+[Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)

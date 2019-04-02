@@ -6,12 +6,12 @@ helpviewer_keywords:
 - STL/CLR, containers
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
-ms.openlocfilehash: 511ea14d02b77e237ae9768776c4ff3eb97982ed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744350"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774546"
 ---
 # <a name="stlclr-containers"></a>Контейнеры STL/CLR
 
@@ -37,7 +37,7 @@ ms.locfileid: "57744350"
 
 ### <a name="handles-to-reference-types"></a>Дескрипторы для ссылочных типов
 
-Дескриптор ссылочного типа можно вставить в контейнер STL/CLR. Дескриптор в C++, предназначенной для среды CLR является аналогом указатель на традиционном C++. Дополнительные сведения см. в разделе [оператор дескриптора объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md).
+Дескриптор ссылочного типа можно вставить в контейнер STL/CLR. Дескриптор в C++, предназначенной для среды CLR является аналогом указатель на традиционном C++. Дополнительные сведения см. в разделе [оператор дескриптора объекта (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md).
 
 #### <a name="example"></a>Пример
 
@@ -229,7 +229,7 @@ int main()
 
 Вы также можете вставить в контейнер STL/CLR неупакованный тип значения. Неупакованный тип значения является типом значения, которое не было *упакованных* в ссылочный тип.
 
-Элемент типа значение может быть один из типов стандартное значение, например `int`, или он может быть типом значения, определяемые пользователем, например `value class`. Дополнительные сведения см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)
+Элемент типа значение может быть один из типов стандартное значение, например `int`, или он может быть типом значения, определяемые пользователем, например `value class`. Дополнительные сведения см. в разделе [классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 #### <a name="example"></a>Пример
 
