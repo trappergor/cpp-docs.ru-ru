@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - arrays [C++], single-dimension
 ms.assetid: 301cfb3e-199f-42c8-8151-629dce9e87f3
-ms.openlocfilehash: 3043a277ddca41bc6519d6f127f8a98c07c418d2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 65d384cbac7691d000ae6e895c9cf63e71726689
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747544"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780929"
 ---
 # <a name="how-to-use-arrays-in-ccli"></a>Практическое руководство. Использование массивов в C + +/ CLI
 
@@ -620,4 +620,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Массивы](../windows/arrays-cpp-component-extensions.md)
+[Массивы](../extensions/arrays-cpp-component-extensions.md)

@@ -5,18 +5,18 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644188"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780435"
 ---
 # <a name="atl-com-desktop-components"></a>Компоненты ATL COM Desktop
 
 ATL в справочных документах Active Template Library (ATL), набор основанных на шаблонах классов C++, упрощающих программирование объектов модели объектов компонента (COM). COM — это двоичный спецификация для создания и использования компонентов программного обеспечения Windows. Чтобы полностью воспользоваться преимуществами ATL, настоятельно рекомендуется ознакомиться с COM. Дополнительные сведения о COM, см. в разделе [объектов модели компонентов (COM)](/windows/desktop/com/component-object-model--com--portal).
 
-## <a name="in-this-section"></a>в этом разделе
+## <a name="in-this-section"></a>В этом разделе
 
 [Общие сведения о классах ATL](../atl/atl-class-overview.md)<br/>
 Предоставляет ссылки на и краткое описание классов ATL, упорядоченные по категориям.
@@ -47,7 +47,7 @@ ATL в справочных документах Active Template Library (ATL), 
 [Учебник по ATL](../atl/active-template-library-atl-tutorial.md)<br/>
 Описание создания элементов управления и демонстрирует некоторые основные сведения о ATL в процессе.
 
-[Примеры библиотек ATL](../visual-cpp-samples.md)<br/>
+[Примеры библиотек ATL](../overview/visual-cpp-samples.md)<br/>
 Пример кода, показывающий, как использовать библиотеку ATL для записи COM-объектов.
 
 [Шаблоны OLE DB](../data/oledb/ole-db-templates.md)<br/>

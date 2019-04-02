@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743899"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778329"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>Практическое руководство. Преобразование различных типов строк
 
@@ -22,7 +22,7 @@ ms.locfileid: "57743899"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано, как преобразовать `char *` в строки других типов, перечисленных выше. Объект `char *` строке (также называется строкой формата C) используется символ null для обозначения конца строки. В строках формата C обычно требуется один байт на символ, но также можно использовать два байта. В приведенных ниже примерах `char *` строк, иногда называются строками многобайтовых знаков из-за строковых данных, получаемых при преобразовании из строк формата Юникод. Единый однобайтовых и многобайтовых (`MBCS`) можно использовать функции `char *` строк.
 
@@ -123,7 +123,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано, как преобразовать `wchar_t *` в строки других типов, перечисленных выше. Несколько типов строк, включая `wchar_t *`, реализуют форматы расширенных символов. Для преобразования строк многобайтовых и формат расширенных символов, можно использовать один вызов функции например `mbstowcs_s` или вызов конструктора для класса, например `CStringA`.
 
@@ -247,7 +247,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано, как преобразовать `_bstr_t` в строки других типов, перечисленных выше. `_bstr_t` Объект является способ инкапсуляции расширенный символ `BSTR` строк. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -347,7 +347,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано, как преобразовать `CComBSTR` в строки других типов, перечисленных выше. Как _bstr_t `CComBSTR` объект является способ инкапсуляции строк расширенных символов BSTR. В строке BSTR имеется значение длины и не используется знак null для завершения строки, но строковый тип, который выполняется преобразование может потребоваться завершающий нуль-символ.
 
@@ -601,7 +601,7 @@ Hello, World! (System::String)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере показано, как преобразовать `basic_string` в строки других типов, перечисленных выше.
 
@@ -812,4 +812,4 @@ Hello, World! (basic_string)
 [wcstombs_s, _wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s, wcscpy_s, _mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
 [strcat_s, wcscat_s, _mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)<br/>
-[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)
+[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)

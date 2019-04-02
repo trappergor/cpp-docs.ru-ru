@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 89767a3ed6880703c3c754700ea5669c0cc183e5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283726"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779200"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>Класс CMFCToolBarFontComboBox
 
@@ -33,13 +33,13 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarFontComboBox::CMFCToolBarFontComboBox](#cmfctoolbarfontcombobox)|Создает объект `CMFCToolBarFontComboBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarFontComboBox::GetFontDesc](#getfontdesc)|Возвращает указатель на `CMFCFontInfo` объект для указанного индекса в поле со списком.|
 |[CMFCToolBarFontComboBox::SetFont](#setfont)|Выбирает шрифт в поле со списком шрифта в соответствии с, либо имя шрифта или префикс и набор символов шрифта.|
@@ -142,7 +142,7 @@ TRUETYPE_FONTTYPE
 
 ### <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCToolBarFontComboBox` объекта. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+В следующем примере демонстрируется создание `CMFCToolBarFontComboBox` объекта. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]
 

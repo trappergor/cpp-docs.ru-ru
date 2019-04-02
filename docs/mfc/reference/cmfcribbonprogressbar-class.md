@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetPos
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
-ms.openlocfilehash: 626666a8f03a8312bd26fceca745f82ad1ab89b1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285923"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778173"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>Класс CMFCRibbonProgressBar
 
@@ -47,13 +47,13 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|Создает и инициализирует объект `CMFCRibbonProgressBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonProgressBar::GetPos](#getpos)|Возвращает текущий ход выполнения.|
 |[CMFCRibbonProgressBar::GetRangeMax](#getrangemax)|Возвращает максимальное значение текущего диапазона.|
@@ -71,7 +71,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonProgressBar` . В примере как задать индикатор хода выполнения для работы в бесконечную режиме (где время завершения операции неизвестно), установите минимальное и максимальное значения для индикатора выполнения и установить текущее положение индикатора выполнения. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonProgressBar` . В примере как задать индикатор хода выполнения для работы в бесконечную режиме (где время завершения операции неизвестно), установите минимальное и максимальное значения для индикатора выполнения и установить текущее положение индикатора выполнения. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 

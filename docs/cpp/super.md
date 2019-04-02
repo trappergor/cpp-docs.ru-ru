@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __super keyword [C++]
 ms.assetid: f0957c31-9256-405b-b402-cad182404b5f
-ms.openlocfilehash: 778ed2d80aa926c7282073a99898a6aa355a3379
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a69d177bb83ce404a18d50c8f966be5d81f5fa72
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602622"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779655"
 ---
 # <a name="super"></a>__super
 
@@ -33,7 +33,7 @@ __super::member_function();
 
 **__super** нельзя использовать с помощью объявления. См. в разделе [объявление using](../cpp/using-declaration.md) Дополнительные сведения.
 
-С появлением [атрибуты](../windows/cpp-attributes-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых вы можете не знать, но которые содержат методы, которые должны вызываться.
+С появлением [атрибуты](../windows/attributes/attributes-alphabetical-reference.md) , внедряющих код, код может содержать один или несколько базовых классов, имена которых вы можете не знать, но которые содержат методы, которые должны вызываться.
 
 ## <a name="example"></a>Пример
 

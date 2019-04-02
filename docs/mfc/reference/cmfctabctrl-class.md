@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281685"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778459"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -121,18 +121,18 @@ ms.locfileid: "57281685"
 class CMFCTabCtrl : public CMFCBaseTabCtrl
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CMFCTabCtrl::CMFCTabCtrl`|Конструктор по умолчанию.|
 |`CMFCTabCtrl::~CMFCTabCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|Отображает указанную вкладку текущей вкладки и устанавливает фокус на этой вкладке.|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
@@ -193,7 +193,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCTabCtrl::m_bEnableActivate](#m_benableactivate)|Запрещает активное представление теряет фокус, когда вставляется новая вкладка и включен.|
 
@@ -243,7 +243,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCTabCtrl` класс для настройки `CMFCTabCtrl` объекта. Примере объясняется, как добавить вкладку, Показать на активной вкладке "Закрыть", включить метки редактируемой вкладку и отображения всплывающего меню окна с вкладками меток. Этот пример является частью [пример коллекции состояний](../../visual-cpp-samples.md).
+Следующий пример демонстрирует использование различных методов `CMFCTabCtrl` класс для настройки `CMFCTabCtrl` объекта. Примере объясняется, как добавить вкладку, Показать на активной вкладке "Закрыть", включить метки редактируемой вкладку и отображения всплывающего меню окна с вкладками меток. Этот пример является частью [пример коллекции состояний](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -355,7 +355,7 @@ BOOL Create(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод в `CMFCTabCtrl` класса. Этот пример является частью [пример коллекции состояний](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Create` метод в `CMFCTabCtrl` класса. Этот пример является частью [пример коллекции состояний](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -846,7 +846,7 @@ BOOL ModifyTabStyle(Style style);
 
 Значение *стиля* параметр может принимать одно из следующих `CMFCTabCtrl::Style` перечисления.
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |STYLE_3D|Отображает вкладки трехмерного, прямоугольная, которые имеют скругленные углы.|
 |STYLE_3D_ONENOTE|Отображает трехмерные вкладок с одной части вертикальной и Наклонные стороне "один", который имеют скругленные углы.|
@@ -1078,7 +1078,7 @@ void SetResizeMode(ResizeMode resizeMode);
 
 *ResizeMode* параметр может принимать одно из следующих `ResizeMode` значений перечисления.
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |RESIZE_NO|Невозможно изменить размер вкладок.|
 |RESIZE_VERT|Элементом управления tab может изменяться по вертикали, но не по горизонтали.|

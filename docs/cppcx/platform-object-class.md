@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749884"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781020"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
 
@@ -33,13 +33,13 @@ public ref class Object : Object
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Object::Object](#ctor)|Инициализирует новый экземпляр класса Object.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Object::Equals](#equals)|Определяет, равен ли заданный объект текущему объекту.|
 |[Object::GetHashCode](#gethashcode)|Возвращает хэш-код данного экземпляра.|
@@ -118,7 +118,7 @@ Object::GetType();
 
 [Windows::UI::Xaml::Interop::TypeName](/uwp/api/windows.ui.xaml.interop.typename) класс используется в API Windows как независимый от языка способ передачи сведений о типе между компонентами Windows и приложениями. T[класс Platform::Type](../cppcx/platform-type-class.md) имеет операторы для преобразования между `Type` и `TypeName`.
 
-Используйте [typeid](../windows/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:
+Используйте [typeid](../extensions/typeid-cpp-component-extensions.md) оператора для выборки `Platform::Type` для имени класса, например, при переходе между страницами XAML:
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2767
 ms.assetid: e8f84178-a160-4d71-a236-07e4fcc11e96
-ms.openlocfilehash: 6c13610b6fd7aae4b4232b836a0307867bd591d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78b171b634aea66115c4029c696fec042593bb30
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550154"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779590"
 ---
 # <a name="compiler-error-c2767"></a>Ошибка компилятора C2767
 
 управляемые или WinRTarray измерения несоответствие: требуется N аргументов, представлено M
 
-Неправильный формат объявления управляемого массива или массива WinRT. Дополнительные сведения см. в описании [array](../../windows/arrays-cpp-component-extensions.md).
+Неправильный формат объявления управляемого массива или массива WinRT. Дополнительные сведения см. в описании [array](../../extensions/arrays-cpp-component-extensions.md).
 
 В следующем примере показано возникновение ошибки C2767 и приводятся сведения по ее устранению.
 

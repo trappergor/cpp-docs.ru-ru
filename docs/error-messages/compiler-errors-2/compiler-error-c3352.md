@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
-ms.openlocfilehash: c45ce5e2e72c6a987a0053cb4b1bbb151c149faf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496546"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779603"
 ---
 # <a name="compiler-error-c3352"></a>Ошибка компилятора C3352
 
@@ -19,7 +19,7 @@ ms.locfileid: "50496546"
 
 Их списки параметров для `function` и делегат не совпадают.
 
-Дополнительные сведения см. в разделе [delegate (расширения компонентов C++)](../../windows/delegate-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [delegate (расширения компонентов C++)](../../extensions/delegate-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3352:
 

@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262107"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779213"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 
@@ -153,13 +153,13 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileDialog::CFileDialog](#cfiledialog)|Создает объект `CFileDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFileDialog::AddCheckButton](#addcheckbutton)|Добавляет кнопку с галочкой в диалоговом окне.|
 |[CFileDialog::AddComboBox](#addcombobox)|Добавляет поле со списком в диалоговом окне.|
@@ -214,7 +214,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileDialog::OnButtonClicked](#onbuttonclicked)|Вызывается при нажатии кнопки.|
 |[CFileDialog::OnCheckButtonToggled](#oncheckbuttontoggled)|Вызывается, когда флажок или снятии флажка.|
@@ -230,7 +230,7 @@ class CFileDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileDialog::m_ofn](#m_ofn)|Windows `OPENFILENAME` структуры. Предоставляет доступ к параметрам поле диалогового окна базовый файл.|
 
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Сообщения windows для `CFileDialog` класс различаются в зависимости от используемой операционной системы. Например, Windows XP не поддерживает [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) и [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) для `CFileDialog` класса. Тем не менее Windows Vista и более поздних версий поддерживают их. Дополнительные сведения о различных сообщениях, которые создаются и порядок, в котором они поступают, см. в разделе [CFileDialog образца: Ведение журнала порядок событий](../../visual-cpp-samples.md).
+Сообщения windows для `CFileDialog` класс различаются в зависимости от используемой операционной системы. Например, Windows XP не поддерживает [CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel) и [CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok) для `CFileDialog` класса. Тем не менее Windows Vista и более поздних версий поддерживают их. Дополнительные сведения о различных сообщениях, которые создаются и порядок, в котором они поступают, см. в разделе [CFileDialog образца: Ведение журнала порядок событий](../../overview/visual-cpp-samples.md).
 
 Чтобы использовать `CFileDialog` следует сначала создать объект с помощью `CFileDialog` конструктор. После создания диалоговом окне можно задать или изменить значения в [CFileDialog::m_ofn](#m_ofn) структуры для инициализации значения или состояния элементов управления диалогового окна. `m_ofn` Структуры имеет тип `OPENFILENAME`. Дополнительные сведения см. в разделе [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) структуры в пакете Windows SDK.
 

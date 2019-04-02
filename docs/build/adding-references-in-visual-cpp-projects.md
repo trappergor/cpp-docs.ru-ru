@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827193"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780474"
 ---
 # <a name="consuming-libraries-and-components"></a>Использование библиотек и компонентов
 
@@ -20,7 +20,7 @@ ms.locfileid: "57827193"
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Использование библиотек загружен с помощью vcpkg
 
-Чтобы использовать библиотеку, загруженный с помощью **vcpkg** диспетчера пакетов, можно пропустить приведенные ниже инструкции. См. раздел [vcpkg: Диспетчер пакетов C++ для Windows, Linux и MacOS](../vcpkg.md#integrate-with-visual-studio-windows) Дополнительные сведения.
+Чтобы использовать библиотеку, загруженный с помощью **vcpkg** диспетчера пакетов, можно пропустить приведенные ниже инструкции. См. раздел [vcpkg: Диспетчер пакетов C++ для Windows, Linux и MacOS](vcpkg.md#integrate-with-visual-studio-windows) Дополнительные сведения.
 
 ## <a name="consuming-static-libraries"></a>Использование статических библиотек
 
@@ -167,4 +167,4 @@ ms.locfileid: "57827193"
 ## <a name="see-also"></a>См. также
 
 [Справочник по страницам свойств проекта C++](reference/property-pages-visual-cpp.md)<br>
-[Значение компилятора C++ и свойства в Visual Studio сборки](working-with-project-properties.md)
+[Настройка компилятора C++ и свойства сборки в Visual Studio](working-with-project-properties.md)

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAutoRevertImpersonation class
 ms.assetid: 43732849-1940-4bd4-9d52-7a5698bb8838
-ms.openlocfilehash: c8ab7fed8f1560054eb023cbd4e47c43c4c6f0cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 78488fba080e397b06eb67ebe8039fb3e8d5e035
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299106"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779382"
 ---
 # <a name="cautorevertimpersonation-class"></a>Класс CAutoRevertImpersonation
 
@@ -28,18 +28,18 @@ ms.locfileid: "57299106"
 class CAutoRevertImpersonation
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAutoRevertImpersonation::CAutoRevertImpersonation](#cautorevertimpersonation)|Создает `CAutoRevertImpersonation` объекта|
 |[CAutoRevertImpersonation:: ~ CAutoRevertImpersonation](#dtor)|Уничтожает объект и отменяет олицетворение токена доступа.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoRevertImpersonation::Attach](#attach)|Автоматизирует редакция олицетворения маркера доступа.|
 |[CAutoRevertImpersonation::Detach](#detach)|Отменяет редакция автоматическое олицетворение.|
@@ -137,6 +137,6 @@ const CAccessToken* GetAccessToken() throw();
 
 ## <a name="see-also"></a>См. также
 
-[Пример ATLSecurity](../../visual-cpp-samples.md)<br/>
+[Пример ATLSecurity](../../overview/visual-cpp-samples.md)<br/>
 [Маркеры доступа](/windows/desktop/SecAuthZ/access-tokens)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)

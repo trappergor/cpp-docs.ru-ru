@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
-ms.openlocfilehash: 78d3df4a96cb769cb31760c53c8486c86189e00c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893344"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780864"
 ---
 # <a name="struct-c"></a>struct (C++)
 
@@ -56,7 +56,7 @@ ms.locfileid: "54893344"
 
 В C++ структура совпадает со значением класса за исключением того, что ее члены являются открытыми **открытый** по умолчанию.
 
-Сведения об управляемых классах и структурах см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md).
+Сведения об управляемых классах и структурах в C + +/ CLI, см. в разделе [классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="using-a-structure"></a>Использование структуры
 

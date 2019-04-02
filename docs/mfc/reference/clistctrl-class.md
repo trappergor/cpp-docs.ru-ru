@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425098"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780617"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -285,13 +285,13 @@ class CListCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CListCtrl::CListCtrl](#clistctrl)|Создает объект `CListCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CListCtrl::ApproximateViewRect](#approximateviewrect)|Определяет ширину и высоту, необходимые для отображения элементов элемента управления представления списка.|
 |[CListCtrl::Arrange](#arrange)|Выравнивает элементы на сетку.|
@@ -1356,7 +1356,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iIndex*|[in] Отсчитываемый от нуля индекс в группе.|
 |*pGroup*|[out] Указатель на [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры, который получает сведения о группе, указанной параметром *iIndex* параметра.<br /><br /> Вызывающий объект отвечает за инициализацию членов [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры. Задайте `cbSize` член размер структуры и флаги `mask` указал информацию необходимо вернуть.|
@@ -1495,7 +1495,7 @@ UINT GetGroupState(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iGroupId*|[in] Отсчитываемый от нуля индекс в группе.|
 |*dwMask*|[in] Маска, указывающая значение состояния для извлечения для указанной группы. Дополнительные сведения см. в разделе `mask` членом [LVGROUP](/windows/desktop/api/commctrl/ns-commctrl-taglvgroup) структуры.|
@@ -2091,7 +2091,7 @@ BOOL GetNextItemIndex(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pItemIndex*|[in, out] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|
 |*nFlags*|[in] Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения.|
@@ -2895,7 +2895,7 @@ UINT MapIDToIndex(UINT id) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*id*|[in] Уникальный идентификатор элемента.|
 
@@ -2921,7 +2921,7 @@ UINT MapIndexToID(UINT index) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*Индекс*|[in] Отсчитываемый от нуля индекс элемента.|
 
@@ -3820,7 +3820,7 @@ BOOL SetItemIndexState(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pItemIndex*|[in] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|
 |*dwState*|[in] Состояние, чтобы задать элемент, который представляет собой битовую комбинацию из [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states). Укажите ноль для сброса или одну для установки, состояния.|
@@ -4422,7 +4422,7 @@ BOOL Update(int nItem);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC ROWLIST](../../visual-cpp-samples.md)<br/>
+[Пример MFC ROWLIST](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](cwnd-class.md)<br/>
 [Диаграмма иерархии](../hierarchy-chart.md)<br/>
 [Класс CImageList](cimagelist-class.md)

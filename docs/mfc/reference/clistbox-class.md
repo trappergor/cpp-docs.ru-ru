@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280320"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778771"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 
@@ -119,17 +119,17 @@ ms.locfileid: "57280320"
 class CListBox : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CListBox::CListBox](#clistbox)|Создает объект `CListBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CListBox::AddString](#addstring)|Добавляет строку в поле со списком.|
 |[CListBox::CharToItem](#chartoitem)|Переопределение, чтобы обеспечить пользовательский WM_CHAR обработки для списков рисуемый владельцем, которых нет строки.|
@@ -1538,7 +1538,7 @@ WM_VKEYTOITEM сообщение отправляется в списке, ко�
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>

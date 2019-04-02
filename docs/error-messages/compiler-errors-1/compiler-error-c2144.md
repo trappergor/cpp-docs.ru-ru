@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2144
 ms.assetid: 49f3959b-324f-4c06-9588-c0ecef5dc5b3
-ms.openlocfilehash: f6472fc70ee4a86bed1422941e758127009f14cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a75330d26b0924e60f7e46d10d617341709d7e23
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483334"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778290"
 ---
 # <a name="compiler-error-c2144"></a>Ошибка компилятора C2144
 
@@ -23,7 +23,7 @@ ms.locfileid: "50483334"
 
 C2144 также может возникать при попытке создать макрос из CLR ключевое слово, которое содержит символ пробела.
 
-C2144 может отображаться также в том случае, если вы пытаетесь передачи типа. См. в разделе [Переадресация типа (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Дополнительные сведения.
+C2144 может отображаться также в том случае, если вы пытаетесь передачи типа. См. в разделе [Переадресация типа (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md) Дополнительные сведения.
 
 ## <a name="examples"></a>Примеры
 
