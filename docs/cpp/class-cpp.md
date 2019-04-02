@@ -7,12 +7,12 @@ helpviewer_keywords:
 - class types [C++], class statements
 - class keyword [C++]
 ms.assetid: dd23c09f-6598-4069-8bff-69c7f2518b9f
-ms.openlocfilehash: 5abd2ef73ff8af9ebc2f1827cb5403025d5383ee
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c4ef9690a41737147354ee0976f6912c4711ff67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331000"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774819"
 ---
 # <a name="class-c"></a>class (C++)
 
@@ -37,7 +37,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 *class*<br/>
 **Класс** ключевое слово.
 
-*MS-decl-spec*<br/>
+*ms-decl-spec*<br/>
 Необязательная спецификация класса хранения. Дополнительные сведения см. [__declspec](../cpp/declspec.md) ключевое слово.
 
 *Тег*<br/>
@@ -66,7 +66,7 @@ class [ms-decl-spec] [tag [: base-list ]]
 
 - [__virtual_inheritance](../cpp/inheritance-keywords.md)
 
-Сведения об управляемых классах и структурах см. в разделе [классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)
+Сведения об управляемых классах и структурах в C + +/ CLI и C + +/ CX, см. в разделе [классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)
 
 ## <a name="example"></a>Пример
 

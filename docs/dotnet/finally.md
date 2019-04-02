@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - finally keyword [C++]
 ms.assetid: b55f3c8e-1af0-43e8-bcfb-99c3685d2578
-ms.openlocfilehash: cb2bbdb36a102c7ef8974a9ac210473f2306f5d6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f7db4320cf901412e3a9e3de682d0cfbcc9f23bc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746777"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771517"
 ---
 # <a name="finally"></a>finally
 
@@ -19,7 +19,7 @@ ms.locfileid: "57746777"
 
 Цель `finally` блок должен освободить все ресурсы, после возникновения исключения. Обратите внимание, что `finally` блоке выполняется всегда, даже если исключение не создано. `catch` Блок выполняется только в том случае, если управляемое исключение возникает в пределах связанного `try` блока.
 
-`finally` — контекстно-зависимые ключевое слово; см. в разделе [контекстные ключевые слова](../windows/context-sensitive-keywords-cpp-component-extensions.md) Дополнительные сведения.
+`finally` — контекстно-зависимые ключевое слово; см. в разделе [контекстные ключевые слова](../extensions/context-sensitive-keywords-cpp-component-extensions.md) Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 
@@ -58,4 +58,4 @@ in finally
 
 ## <a name="see-also"></a>См. также
 
-[Обработка исключений](../windows/exception-handling-cpp-component-extensions.md)
+[Обработка исключений](../extensions/exception-handling-cpp-component-extensions.md)

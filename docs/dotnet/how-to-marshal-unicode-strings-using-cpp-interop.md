@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742661"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777679"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>Практическое руководство. Маршалинг строк Юникода с помощью взаимодействия C++
 
@@ -30,7 +30,7 @@ ms.locfileid: "57742661"
 
 ## <a name="example"></a>Пример
 
-Чтобы передать строку Юникода из управляемого в неуправляемую функцию, можно использовать функцию PtrToStringChars (объявлено в файле Vcclr.h) для доступа к памяти, где хранится управляемая строка. Так как этот адрес будет передан в неуправляемую функцию, очень важно, что память была закреплена с [pin_ptr (C + +/ CLI)](../windows/pin-ptr-cpp-cli.md) чтобы предотвратить перемещение строковые данные, следует цикла сборки мусора выполняются во время выполняет неуправляемой функции.
+Чтобы передать строку Юникода из управляемого в неуправляемую функцию, можно использовать функцию PtrToStringChars (объявлено в файле Vcclr.h) для доступа к памяти, где хранится управляемая строка. Так как этот адрес будет передан в неуправляемую функцию, очень важно, что память была закреплена с [pin_ptr (C + +/ CLI)](../extensions/pin-ptr-cpp-cli.md) чтобы предотвратить перемещение строковые данные, следует цикла сборки мусора выполняются во время выполняет неуправляемой функции.
 
 ```
 // MarshalUnicode1.cpp

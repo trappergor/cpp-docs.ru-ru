@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267242"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777042"
 ---
 # <a name="example-implementing-a-property-page"></a>Пример Реализация страницы свойств
 
 В этом примере показано, как создать страницу свойств, отображающий (и позволяет изменять) свойства [классы документов](../mfc/document-classes.md) интерфейс.
 
-Пример построен на основе [пример ATLPages](../visual-cpp-samples.md).
+Пример построен на основе [пример ATLPages](../overview/visual-cpp-samples.md).
 
 Чтобы выполнить этот пример, вы научитесь:
 
@@ -164,4 +164,4 @@ End Module
 ## <a name="see-also"></a>См. также
 
 [Страницы свойств](../atl/atl-com-property-pages.md)<br/>
-[Пример ATLPages](../visual-cpp-samples.md)
+[Пример ATLPages](../overview/visual-cpp-samples.md)

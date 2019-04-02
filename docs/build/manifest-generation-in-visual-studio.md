@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 ms.assetid: 0af60aa9-d223-42cd-8426-b3fc543a2a81
-ms.openlocfilehash: eabd488e581357ec1386b20597c1987e4c8b2c19
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: f055e3d16dfc0ea4320883210458ae10daebdc45
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809734"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781683"
 ---
 # <a name="manifest-generation-in-visual-studio"></a>Создание манифестов в Visual Studio
 
@@ -27,7 +27,7 @@ ms.locfileid: "57809734"
 
 1. Если манифест внедрен в двоичный файл так же, как манифест, созданный инструментом манифеста, построение будет продолжаться к дальнейшим действиям построения.
 
-Манифест является внедренным в конечный двоичный файл как текстовый ресурс и его можно просмотреть, открыв конечный двоичный файл как файл в Visual Studio. Чтобы убедиться, что манифест ссылается на нужные библиотеки, выполните действия, описанные в [основные сведения о зависимостях приложения Visual C++](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md) или следуйте указаниям, приведенным в [Устранениенеполадок](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) раздел.
+Манифест является внедренным в конечный двоичный файл как текстовый ресурс и его можно просмотреть, открыв конечный двоичный файл как файл в Visual Studio. Чтобы убедиться, что манифест ссылается на нужные библиотеки, выполните действия, описанные в [основные сведения о зависимостях приложения Visual C++](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md) или следуйте указаниям, приведенным в [Устранениенеполадок](troubleshooting-c-cpp-isolated-applications-and-side-by-side-assemblies.md) раздел.
 
 ## <a name="see-also"></a>См. также
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740921"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772609"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Семантика стека C++ для ссылочных типов
 
-До Visual C++ 2005, экземпляр ссылочного типа может создаваться только с помощью `new` оператор, который создал объект в сборке мусора куче. Тем не менее теперь можно создать экземпляр ссылочного типа, используя тот же синтаксис, который используется для создания экземпляра собственного типа в стеке. Таким образом, не нужно использовать [ref new, gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md) для создания объекта ссылочного типа. И, когда объект выходит за пределы области, компилятор вызывает деструктор объекта.
+До Visual C++ 2005, экземпляр ссылочного типа может создаваться только с помощью `new` оператор, который создал объект в сборке мусора куче. Тем не менее теперь можно создать экземпляр ссылочного типа, используя тот же синтаксис, который используется для создания экземпляра собственного типа в стеке. Таким образом, не нужно использовать [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) для создания объекта ссылочного типа. И, когда объект выходит за пределы области, компилятор вызывает деструктор объекта.
 
 ## <a name="remarks"></a>Примечания
 
@@ -41,15 +41,15 @@ ms.locfileid: "57740921"
 
 Следующие типы ссылок не доступны для использования с семантикой стека:
 
-- [delegate (расширения компонентов C++)](../windows/delegate-cpp-component-extensions.md)
+- [delegate (расширения компонентов C++)](../extensions/delegate-cpp-component-extensions.md)
 
-- [Массивы](../windows/arrays-cpp-component-extensions.md)
+- [Массивы](../extensions/arrays-cpp-component-extensions.md)
 
 - <xref:System.String>
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем образце кода показан способ объявления экземпляров ссылочных типов с помощью семантики стека, как оператор присваивания и работает конструктор копирования, а также способы инициализации с ссылочным типом, созданных с помощью семантики стека отслеживаемую ссылку.
 
@@ -113,4 +113,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)
+[Классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)

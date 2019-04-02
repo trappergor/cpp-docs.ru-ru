@@ -1,5 +1,5 @@
 ---
-title: Auto (C++)
+title: auto (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - auto_CPP
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518571"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776340"
 ---
-# <a name="auto-c"></a>Auto (C++)
+# <a name="auto-c"></a>auto (C++)
 
 Выводит тип объявленной переменной из выражения инициализации.
 
@@ -34,13 +34,13 @@ auto declarator initializer;
 
 Мы рекомендуем использовать **автоматически** ключевое слово для большинства ситуаций — Если вам действительно преобразование, так как он предоставляет следующие преимущества:
 
-- **Надежность:** при смене типа выражения — это включает в себя, когда изменяется тип возвращаемого значения функции — это просто работает.
+- **Надежность:** При смене типа выражения — это включает в себя, когда изменяется тип возвращаемого значения функции — это просто работает.
 
-- **Производительность:** гарантирует, что будет существовать без преобразования.
+- **Производительность:** Это гарантирует, что будет существовать без преобразования.
 
-- **Удобство использования:** не нужно беспокоиться о типа имя опечатках и ошибках.
+- **Удобство использования:** Не нужно беспокоиться о типа имя опечатках и ошибках.
 
-- **Эффективность:** программирования может оказаться более эффективным.
+- **Эффективность:** Программирования может оказаться более эффективным.
 
 Случаи преобразования, в которых может потребоваться использовать **автоматически**:
 
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 Выражение инициализации может представлять назначения (синтаксис со знаком равенства), прямую инициализацию (синтаксис в стиле функции), [оператор new](new-operator-cpp.md) выражение или выражение инициализации может быть  *для объявления диапазона* параметр в [по диапазону для инструкции (C++)](../cpp/range-based-for-statement-cpp.md) инструкции. Дополнительные сведения см. в разделе [инициализаторы](../cpp/initializers.md) и примеры кода далее в этом документе.
 
-**Автоматически** ключевое слово — это заполнитель для типа, но он сам не является типом. Таким образом **автоматически** ключевое слово не может использоваться в приведениях типов или операторы например [sizeof](../cpp/sizeof-operator.md) и [typeid](../windows/typeid-cpp-component-extensions.md).
+**Автоматически** ключевое слово — это заполнитель для типа, но он сам не является типом. Таким образом **автоматически** ключевое слово не может использоваться в приведениях типов или операторы например [sizeof](../cpp/sizeof-operator.md) и (C + +/ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Удобство
 
@@ -133,7 +133,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|Символ не может быть использован до инициализации. Практически это означает, что переменную нельзя использовать для инициализации самой себя.|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|Не может быть приведен к типу, который объявлен с **автоматически** ключевое слово.|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|Все символы в списке деклараторов, объявленные при помощи **автоматически** ключевое слово должно разрешаться в тот же тип. Дополнительные сведения см. в разделе [объявления и определения](declarations-and-definitions-cpp.md).|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) и [typeid](../windows/typeid-cpp-component-extensions.md) операторы не могут применены к символам, объявленный с помощью **автоматически** ключевое слово.|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md), [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md) и [typeid](../extensions/typeid-cpp-component-extensions.md) операторы не могут применены к символам, объявленный с помощью **автоматически** ключевое слово.|
 
 ## <a name="examples"></a>Примеры
 
@@ -225,7 +225,7 @@ int main()
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (выведение типа переменной)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [Оператор sizeof](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [Оператор new](new-operator-cpp.md)<br/>
 [Объявления и определения](declarations-and-definitions-cpp.md)<br/>
 [Примеры лямбда-выражений](../cpp/examples-of-lambda-expressions.md)<br/>

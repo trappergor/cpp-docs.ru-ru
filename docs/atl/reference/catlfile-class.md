@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlFile class
 ms.assetid: 93ed160b-af2a-448c-9cbe-e5fa46c199bb
-ms.openlocfilehash: 19e230f150803019d47e1ea710e7d713d1822a53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0faae50afcd26948bdcb4d4333efb25d5cca33ea
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270100"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772973"
 ---
 # <a name="catlfile-class"></a>Класс CAtlFile
 
@@ -44,13 +44,13 @@ class CAtlFile : public CHandle
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFile::CAtlFile](#catlfile)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFile::Create](#create)|Этот метод используется для создания или открытия файла.|
 |[CAtlFile::Flush](#flush)|Этот метод используется для очистки буферов для файла и потере всех буферизованных данных для записи в файл.|
@@ -66,7 +66,7 @@ class CAtlFile : public CHandle
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект|
 
@@ -449,6 +449,6 @@ HRESULT Write(
 
 ## <a name="see-also"></a>См. также
 
-[Пример бегущей строки](../../visual-cpp-samples.md)<br/>
+[Пример бегущей строки](../../overview/visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс CHandle](../../atl/reference/chandle-class.md)

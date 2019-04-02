@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768072"
 ---
 # <a name="new-operator-c"></a>Оператор new (C++)
 
 Выделяет память для объекта или массива объектов *имя типа* из свободного хранилища и возвращает подходящим образом типизированный ненулевой указатель на объект.
 
 > [!NOTE]
->  Расширения компонентов C++ Майкрософт обеспечивает поддержку для **новый** ключевое слово для добавления записей слота vtable. Дополнительные сведения см. в разделе [new (новый слот в vtable)](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Расширения компонентов C++ Майкрософт обеспечивает поддержку для **новый** ключевое слово для добавления записей слота vtable. Дополнительные сведения см. в разделе [new (новый слот в vtable)](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -29,7 +29,7 @@ ms.locfileid: "50477991"
 
 Если операция завершилась неудачей, **новый** возвращает ноль или создает исключение; см. в разделе [новых и удаленных операторах](../cpp/new-and-delete-operators.md) Дополнительные сведения. Это поведение по умолчанию можно изменить, создав пользовательскую процедуру обработки исключений и вызвав [_set_new_handler](../c-runtime-library/reference/set-new-handler.md) функции библиотеки времени выполнения с именем функции в качестве аргумента.
 
-Сведения о том, как создать объект в управляемой куче, см. в разделе [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md).
+Сведения о том, как создать объект в управляемой куче, см. в разделе [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md).
 
 Когда **новый** — используется для выделения памяти для объекта класса C++, в конструктор объекта вызывается после выделения памяти.
 

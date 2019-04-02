@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: 3673b7ae8630a344e640df70a23698247b0ff8ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aadaa64a936aee867766dfc0f7a6e190c9691ca6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262640"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778030"
 ---
 # <a name="csecuritydesc-class"></a>Класс CSecurityDesc
 
@@ -58,14 +58,14 @@ class CSecurityDesc
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSecurityDesc::CSecurityDesc](#csecuritydesc)|Конструктор.|
 |[CSecurityDesc::~CSecurityDesc](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSecurityDesc::FromString](#fromstring)|Преобразует формат строки дескриптора безопасности в дескриптор допустимый, функциональной безопасности.|
 |[CSecurityDesc::GetControl](#getcontrol)|Извлекает контролировать данные из дескриптора безопасности.|
@@ -96,7 +96,7 @@ class CSecurityDesc
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSecurityDesc::operator const SECURITY_DESCRIPTOR *](#operator_const_security_descriptor__star)|Возвращает указатель на `SECURITY_DESCRIPTOR` структуры.|
 |[CSecurityDesc::operator =](#operator_eq)|Оператор присвоения.|
@@ -703,7 +703,7 @@ bool ToString(
 
 ## <a name="see-also"></a>См. также
 
-[Образец безопасности](../../visual-cpp-samples.md)<br/>
+[Образец безопасности](../../overview/visual-cpp-samples.md)<br/>
 [SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Глобальные функции безопасности](../../atl/reference/security-global-functions.md)

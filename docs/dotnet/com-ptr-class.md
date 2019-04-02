@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - msclr::ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-ms.openlocfilehash: 8909f91e31279f1fc1395610aea4708b79731113
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.openlocfilehash: 342c222b837e179e2e13dbbd27c88efc18b12332
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54805972"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774176"
 ---
 # <a name="comptr-class"></a>Класс com::ptr
 
@@ -43,7 +43,7 @@ COM-интерфейс.
 
 Объект `com::ptr` также может быть использована как переменная локальной функции для упрощения задач различных COM и автоматизировать управление жизненным циклом.
 
-Объект `com::ptr` нельзя использовать непосредственно в качестве параметра функции, используйте [оператор отслеживания ссылок](../windows/tracking-reference-operator-cpp-component-extensions.md) или [оператор дескриптора объекта (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md) вместо этого.
+Объект `com::ptr` нельзя использовать непосредственно в качестве параметра функции, используйте [оператор отслеживания ссылок](../extensions/tracking-reference-operator-cpp-component-extensions.md) или [оператор дескриптора объекта (^)](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) вместо этого.
 
 Объект `com::ptr` не возвращается из функции напрямую; вместо этого используйте дескриптор.
 
@@ -167,14 +167,14 @@ int main() {
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание:| 
+|name|Описание| 
 |---------|-----------| 
 |[ptr::ptr](#ptr)|Создает `com::ptr` программы-оболочки COM-объекта.| 
 |[ptr::~ptr](#tilde-ptr)|Destructs `com::ptr`.| 
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |---------|-----------| 
 |[ptr::Attach](#attach)|Присоединяет COM-объекту `com::ptr`.| 
 |[ptr::CreateInstance](#createInstance)|Создает экземпляр COM-объекта в `com::ptr`.| 
@@ -185,7 +185,7 @@ int main() {
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|name|Описание:|
+|name|Описание|
 |---------|-----------| 
 |[PTR::operator-&gt;](#operator-arrow)|Оператор доступа к члену, используемый для вызова методов для собственных COM-объекта.| 
 |[ptr::operator=](#operator-assign)|Присоединяет COM-объекту `com::ptr`.| 

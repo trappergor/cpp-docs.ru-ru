@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - user-defined operators under /clr
 ms.assetid: 42f93b4a-6de4-4e34-b07b-5a62ac014f2c
-ms.openlocfilehash: 462d0d2819d4c65b0e37d39f24566a7152a44cf3
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: cf80eb4c440c1308e8ea06a563c18569e4e4ddf2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739986"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774572"
 ---
 # <a name="user-defined-operators-ccli"></a>Пользовательские операторы (C++/CLI)
 
@@ -36,31 +36,31 @@ ms.locfileid: "57739986"
 |Оператор|Унарный/бинарный Forms?|
 |--------------|--------------------------|
 |!|Унарный|
-|!=|Binary|
-|%|Binary|
+|!=|Бинарный|
+|%|Бинарный|
 |&|Унарный и бинарный|
-|&&|Binary|
+|&&|Бинарный|
 |*|Унарный и бинарный|
 |+|Унарный и бинарный|
 |++|Унарный|
-|,|Binary|
+|,|Бинарный|
 |-|Унарный и бинарный|
 |--|Унарный|
 |->|Унарный|
-|/|Binary|
-|<|Binary|
-|<<|Binary|
-|\<=|Binary|
-|=|Binary|
-|==|Binary|
-|>|Binary|
-|>=|Binary|
-|>>|Binary|
-|^|Binary|
+|/|Бинарный|
+|<|Бинарный|
+|<<|Бинарный|
+|\<=|Бинарный|
+|=|Бинарный|
+|==|Бинарный|
+|>|Бинарный|
+|>=|Бинарный|
+|>>|Бинарный|
+|^|Бинарный|
 |False|Унарный|
 |true|Унарный|
-|&#124;|Binary|
-|&#124;&#124;|Binary|
+|&#124;|Бинарный|
+|&#124;&#124;|Бинарный|
 |~|Унарный|
 
 ## <a name="example"></a>Пример
@@ -165,4 +165,4 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Классы и структуры](../windows/classes-and-structs-cpp-component-extensions.md)
+[Классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md)

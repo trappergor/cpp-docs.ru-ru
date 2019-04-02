@@ -2,19 +2,19 @@
 title: Новые возможности Visual C++ 2003–2015
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749156"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768689"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
 Эта страница содержит все страницы о новых возможностях для всех версий Visual C++ от Visual Studio 2015 до Visual Studio 2003. Эти сведения предоставлены для справки на случай обновления с предыдущих версий Visual C++.
 
 > [!NOTE]
-> Сведения о Visual Studio 2017 см. в статьях [What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017) и [Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md) (Улучшения соответствия в Visual C++ в Visual Studio 2017).
+> Сведения о Visual Studio 2017 см. в статьях [What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio 2017) и [Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md) (Улучшения соответствия в Visual C++ в Visual Studio 2017).
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Новые возможности C++ в Visual Studio 2015
 

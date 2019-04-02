@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809773"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769281"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>Практическое руководство. Включить 64-разрядной версией, x64 размещенных набор инструментов MSVC в командной строке
 
 Visual Studio включает в себя компиляторы, компоновщики и других средств, которые можно использовать для создания версии платформы приложений, которые могут выполняться на 32-разрядной, 64-разрядной или ARM под управлением операционных систем Windows C++. Другие дополнительные рабочие нагрузки Visual Studio позволяют использовать C++ tools для других платформ, таких как iOS, Android и Linux. Архитектура сборки по умолчанию используется 32-разрядной, размещенный в x86 средства для сборки 32-разрядной, x86 и машинного кода Windows. Тем не менее возможно, 64-разрядном компьютере. Можно воспользоваться преимуществами процессора и памяти, места для 64-разрядного кода с помощью 64-разрядной, размещенный в x64 набор инструментов, при создании кода для x86, x64 или процессоров ARM.
 
 > [!NOTE]
-> Сведения о различных средствах, входящих в состав каждого выпуска Visual Studio, см. в разделе [Visual C++ средства и возможности в выпуске Visual Studio](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md).
+> Сведения о различных средствах, входящих в состав каждого выпуска Visual Studio, см. в разделе [Visual C++ средства и возможности в выпуске Visual Studio](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md).
 >
 > Сведения о том, как использовать Visual Studio IDE для создания 64-разрядных приложений см. в разделе [как: Настройка проектов Visual C++ для 64-разрядных платформ с архитектурой x64](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md).
 

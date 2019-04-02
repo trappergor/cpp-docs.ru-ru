@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283054"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768020"
 ---
 # <a name="atl-collections-and-enumerators"></a>Коллекции и перечислители ATL
 
@@ -40,7 +40,7 @@ ms.locfileid: "57283054"
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Ссылки на разделы о программировании с использованием библиотеки ATL.
 
-[Пример ATLCollections](../visual-cpp-samples.md)<br/>
+[Пример ATLCollections](../overview/visual-cpp-samples.md)<br/>
 Пример, демонстрирующий использование `ICollectionOnSTLImpl` и `CComEnumOnSTL`и реализация пользовательских классов политики копирования.
 
 ## <a name="see-also"></a>См. также

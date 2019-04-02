@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816039"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781319"
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Миграция в/CLR
 
@@ -152,7 +152,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ## <a name="using-new-visual-c-features"></a>С помощью новых возможностей Visual C++
 
-После компиляции приложения, ссылки и выполняется, вы можете использовать компоненты .NET в любом модуле, скомпилированном с **/CLR**. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md).
+После компиляции приложения, ссылки и выполняется, вы можете использовать компоненты .NET в любом модуле, скомпилированном с **/CLR**. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md).
 
 Если вы использовали управляемых расширений для C++, можно преобразовать код для использования нового синтаксиса. Дополнительные сведения о преобразовании управляемых расширений для C++ см. в разделе [C + +/ CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
 
@@ -162,7 +162,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 - [Взаимодействие исходного кода и платформы.NET](../dotnet/native-and-dotnet-interoperability.md)
 
-- [Расширения компонентов для платформ среды выполнения](../windows/component-extensions-for-runtime-platforms.md)
+- [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>См. также
 

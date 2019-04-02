@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1a8618bd5146f2906f18cfbaa33894d34598776a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276170"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770750"
 ---
 # <a name="ccomheap-class"></a>Класс CComHeap
 
@@ -35,7 +35,7 @@ class CComHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
 |[CComHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|
@@ -149,7 +149,7 @@ virtual __declspec(allocator) void* Reallocate(void* p, size_t nBytes) throw();
 
 ## <a name="see-also"></a>См. также
 
-[Образец DynamicConsumer](../../visual-cpp-samples.md)<br/>
+[Образец DynamicConsumer](../../overview/visual-cpp-samples.md)<br/>
 [Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
 [Класс CWin32Heap](../../atl/reference/cwin32heap-class.md)<br/>
 [Класс CLocalHeap](../../atl/reference/clocalheap-class.md)<br/>
