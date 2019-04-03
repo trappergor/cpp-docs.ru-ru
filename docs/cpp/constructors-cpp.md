@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: cad88af9e81a60857fbbd6c90cf81cdcafbd7a12
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a45cee1abd9351a8fef56769706fe8944a7965b8
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781475"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898743"
 ---
 # <a name="constructors-c"></a>Конструкторы (C++)
 
@@ -636,7 +636,7 @@ Derived d3 = d2 calls: Base(Base&)
 Derived d4 calls: Base()*/
 ```
 
-**Visual Studio 2017 версии 15.7 и выше**: **С помощью** инструкции в **/std: c ++ 17** режим переводит в область видимости все конструкторы из базового класса, кроме тех, которые имеют одинаковую сигнатуру с конструкторов в производном классе. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы. См. также [улучшения в Visual Studio 2017 версии 15.7](../overview/cpp-conformance-improvements-2017.md#improvements_157).
+**Visual Studio 2017 версии 15.7 и выше**: **С помощью** инструкции в **/std: c ++ 17** режим переводит в область видимости все конструкторы из базового класса, кроме тех, которые имеют одинаковую сигнатуру с конструкторов в производном классе. Обычно, если в производном классе не объявляются новые данные-члены или конструкторы, оптимальным решением будет использовать наследуемые конструкторы. См. также [улучшения в Visual Studio 2017 версии 15.7](../overview/cpp-conformance-improvements.md#improvements_157).
 
 Шаблон класса может наследовать все конструкторы от аргумента типа, если этот тип определяет базовый класс:
 
