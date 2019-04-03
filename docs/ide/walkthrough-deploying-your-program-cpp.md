@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820212"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769268"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>Пошаговое руководство. Развертывание программы (C++)
 
-Теперь, когда вы создали свое приложение, выполнив описанные ранее пошаговые руководства, перечисленные в разделе [Использование интегрированной среды разработки Visual Studio для разработки классических приложений на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md), нужно выполнить последний шаг — создать установщик, чтобы другие пользователи могли установить программу на своих компьютерах. Для создания установщика следует добавить новый проект в имеющееся решение. Выходным файлом этого проекта будет являться файл setup.exe, который служит для установки приложения на другом компьютере.
+Теперь, когда вы создали свое приложение, выполнив описанные ранее пошаговые руководства, необходимо выполнить последний шаг — создать установщик, чтобы другие пользователи могли установить программу на своих компьютерах. Для создания установщика следует добавить новый проект в имеющееся решение. Выходным файлом этого проекта будет являться файл setup.exe, который служит для установки приложения на другом компьютере.
 
-В этом пошаговом руководстве показано, как развернуть приложение с помощью установщика Windows. Кроме того, для развертывания приложения может использоваться ClickOnce. Дополнительные сведения см. в разделе [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md). Дополнительные общие сведения о развертывании см. в разделе [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components).
+В этом пошаговом руководстве показано, как развернуть приложение с помощью установщика Windows. Кроме того, для развертывания приложения может использоваться ClickOnce. Дополнительные сведения см. в разделе [ClickOnce Deployment for Visual C++ Applications](../windows/clickonce-deployment-for-visual-cpp-applications.md). Дополнительные общие сведения о развертывании см. в разделе [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components).
 
 ## <a name="prerequisites"></a>Предварительные требования
 
 - В этом пошаговом руководство предполагается, что вы знакомы с основами языка C++.
 
-- В нем также предполагается, что вы выполнили инструкции из предыдущих руководств, перечисленных в статье [Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md).
+- В нем также предполагается, что вы выполнили инструкции из предыдущих руководств, перечисленных в статье [Использование интегрированной среды разработки Visual Studio для разработки приложений для настольных систем на языке C++](using-the-visual-studio-ide-for-cpp-desktop-development.md).
 
 - Инструкции этого руководства невозможно выполнить в выпусках Express среды Visual Studio.
 
@@ -72,10 +72,10 @@ ms.locfileid: "57820212"
 
 ## <a name="next-steps"></a>Следующие шаги
 
-**Предыдущая статья:** [Пошаговое руководство: Отладка проекта (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**Предыдущая статья:** [Пошаговое руководство: Отладка проекта (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>См. также
 
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Проекты и системы сборки](../build/projects-and-build-systems-cpp.md)<br/>
-[Развертывание классических приложений](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[Развертывание классических приложений](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>
