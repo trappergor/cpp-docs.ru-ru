@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776041"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898756"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(отключение двухэтапного поиска имени)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 В разделе **/Zc:twoPhase-** в старых компиляторах, компилятор требуется только `template` ключевое слово в строке 2. По умолчанию, а в режиме совместимости, компилятор теперь также требует `template` ключевое слово в строке 4, чтобы указать, что `T::X<T>` является шаблоном. Найдите код, в котором отсутствует ключевое слово и задать в нем для соответствия стандарту кода.
 
-Дополнительные сведения о вопросах соответствия, см. в разделе [улучшения соответствия C++ в Visual Studio](../../overview/cpp-conformance-improvements-2017.md) и [нестандартное поведение](../../cpp/nonstandard-behavior.md).
+Дополнительные сведения о вопросах соответствия, см. в разделе [улучшения соответствия C++ в Visual Studio](../../overview/cpp-conformance-improvements.md) и [нестандартное поведение](../../cpp/nonstandard-behavior.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
