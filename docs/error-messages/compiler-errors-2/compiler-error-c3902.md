@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3902
 ms.assetid: feb3bb29-f836-4d77-ba71-3876f7f4f216
-ms.openlocfilehash: 22536f380187c6dceac3e355224d9d118cd1a2df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d90bf299c566ce72e3d1cbfeb545def0a43d6cbf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564532"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776301"
 ---
 # <a name="compiler-error-c3902"></a>Ошибка компилятора C3902
 
 «метод_доступа»: тип последнего параметра должен быть «тип»
 
-Тип последнего параметра по крайней мере один метод set должен соответствовать типу свойства. Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).
+Тип последнего параметра по крайней мере один метод set должен соответствовать типу свойства. Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3902:
 

@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778459"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -310,7 +310,7 @@ BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-*Стиль*<br/>
+*стиль*<br/>
 [in] Стиль элемента управления вкладки. Дополнительные сведения см. в разделе "Замечания".
 
 *rect*<br/>
@@ -835,7 +835,7 @@ BOOL ModifyTabStyle(Style style);
 
 ### <a name="parameters"></a>Параметры
 
-*Стиль*<br/>
+*стиль*<br/>
 [in] Одно из значений перечисления, указывающее внешний вид вкладок элемента управления. Дополнительные сведения см. в таблице в "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1042,7 +1042,7 @@ virtual BOOL SetImageList(HIMAGELIST hImageList);
 *uiID*<br/>
 [in] Идентификатор ресурса точечного рисунка, содержащий список изображений.
 
-*cx*<br/>
+*CX*<br/>
 [in] Ширина каждого изображения в пикселях. Значение по умолчанию — 15.
 
 *clrTransp*<br/>
@@ -1139,6 +1139,6 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
-[Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

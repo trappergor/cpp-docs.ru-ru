@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269946"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776808"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -65,14 +65,14 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCOutlookBarTabCtrl::CMFCOutlookBarTabCtrl`|Конструктор по умолчанию.|
 |`CMFCOutlookBarTabCtrl::~CMFCOutlookBarTabCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Добавляет элемент управления Windows в виде новой вкладки панели Outlook.|
 |`CMFCOutlookBarTabCtrl::CalcRectEdit`|Вызывается платформой для определения размеров поле ввода, который отображается, когда пользователь переименовывает вкладки. (Переопределяет `CMFCBaseTabCtrl::CalcRectEdit`.)|
@@ -109,7 +109,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует способы инициализации `CMFCOutlookBarTabCtrl` объекта и использование различных методов `CMFCOutlookBarTabCtrl` класса. В примере показано включить редактирование на месте текстовой подписи на странице кнопок панели, включить анимацию, включите прокрутки дескрипторы, которые позволяют пользователю прокрутить кнопки на область панели Outlook, задать размер границы cont вкладку Outlook роли и набор выравнивание текстовые метки на панели кнопок. Этот фрагмент кода является частью [Outlook демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует способы инициализации `CMFCOutlookBarTabCtrl` объекта и использование различных методов `CMFCOutlookBarTabCtrl` класса. В примере показано включить редактирование на месте текстовой подписи на странице кнопок панели, включить анимацию, включите прокрутки дескрипторы, которые позволяют пользователю прокрутить кнопки на область панели Outlook, задать размер границы cont вкладку Outlook роли и набор выравнивание текстовые метки на панели кнопок. Этот фрагмент кода является частью [Outlook демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ void AddControl(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `AddControl` метод в `CMFCOutlookBarTabCtrl` класса. Этот фрагмент кода является частью [Outlook демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `AddControl` метод в `CMFCOutlookBarTabCtrl` класса. Этот фрагмент кода является частью [Outlook демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -476,7 +476,7 @@ BOOL SetToolbarImageList(
 *uiID*<br/>
 [in] Указывает идентификатор ресурса изображения для загрузки.
 
-*cx*<br/>
+*CX*<br/>
 [in] Задает ширину изображения в списке изображений в пикселях.
 
 *clrTransp*<br/>
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [Класс CMFCOutlookBar](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [Класс CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

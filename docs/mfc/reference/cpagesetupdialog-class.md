@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 9a8940aa23b23281a6de6ce7e75bb1e43341b14a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277889"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778095"
 ---
 # <a name="cpagesetupdialog-class"></a>Класс CPageSetupDialog
 
@@ -51,13 +51,13 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPageSetupDialog::CPageSetupDialog](#cpagesetupdialog)|Создает объект `CPageSetupDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPageSetupDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства для печати.|
 |[CPageSetupDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|
@@ -72,7 +72,7 @@ class CPageSetupDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPageSetupDialog::m_psd](#m_psd)|Структура, используемая для настройки `CPageSetupDialog` объекта.|
 
@@ -322,7 +322,7 @@ virtual UINT OnDrawPage(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Указатель на контекст устройства принтера.
 
 *nMessage*<br/>
@@ -405,6 +405,6 @@ virtual UINT PreDrawPage(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: d81fd0fb3612a8c22fa6365aa7fc6dddb89cf120
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481163"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775631"
 ---
 # <a name="compiler-error-c3238"></a>Ошибка компилятора C3238
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481163"
 
 В клиентском приложении был определен тип, который также определен посредством синтаксиса перенаправления в связанной сборке. Нельзя определять оба типа в области приложения.
 
-См. в разделе [Переадресация типа (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md) Дополнительные сведения.
+См. в разделе [Переадресация типа (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md) Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 

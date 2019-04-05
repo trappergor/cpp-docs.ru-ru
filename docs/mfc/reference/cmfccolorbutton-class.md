@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
 ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780006"
 ---
 # <a name="cmfccolorbutton-class"></a>Класс CMFCColorButton
@@ -260,7 +260,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указывает контекст устройства, который используется для отрисовки изображения кнопки.
 
 *rect*<br/>
@@ -286,7 +286,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указывает контекст устройства, используемый для рисования границы.
 
 *rectClient*<br/>
@@ -311,7 +311,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указывает контекст устройства, используемый для рисования прямоугольника фокуса.
 
 *rectClient*<br/>
@@ -481,6 +481,6 @@ virtual void UpdateColor(COLORREF color);
 [CMFCColorButton::OnShowColorPopup](#onshowcolorpopup)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
 [Класс CPalette](../../mfc/reference/cpalette-class.md)<br/>
-[Класс CArray](../../mfc/reference/carray-class.md)<br/>
+[CArray-класс](../../mfc/reference/carray-class.md)<br/>
 [Класс CList](../../mfc/reference/clist-class.md)<br/>
 [CString](../../atl-mfc-shared/reference/cstringt-class.md)

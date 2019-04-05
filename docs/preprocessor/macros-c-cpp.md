@@ -6,12 +6,12 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656304"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032184"
 ---
 # <a name="macros-cc"></a>Макросы (C/C++)
 Предварительной обработки макросы разворачиваются во всех строк, которые не являются директивами препроцессора (строки, у которых нет **#** как первый символ без пробелов) и в частях некоторых директив, которые не пропущены как часть Условная компиляция. Директивы условной компиляции позволяют подавлять компиляцию частей исходного файла путем проверки константного выражения или идентификатора для определения того, какие блоки текста передаются в компилятор, а какие блоки текста удаляются из исходного файла во время предварительной обработки.
@@ -30,10 +30,10 @@ ms.locfileid: "50656304"
 
 - [Макросы и C++](../preprocessor/macros-and-cpp.md)
 
-- [Макросы с переменным числом аргументов](../preprocessor/variadic-macros.md)
+- [Макрос со списками аргументов переменных](../preprocessor/variadic-macros.md)
 
-- [Предопределенные макросы](../preprocessor/predefined-macros.md)
+- [Предустановленный макрос](../preprocessor/predefined-macros.md)
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Cправочник препроцессора /C++](../preprocessor/c-cpp-preprocessor-reference.md)

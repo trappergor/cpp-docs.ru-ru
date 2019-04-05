@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleDropSource [MFC], OnBeginDrag
 - COleDropSource [MFC], QueryContinueDrag
 ms.assetid: d3eecc5f-a70b-4a01-b705-7d2c098ebe17
-ms.openlocfilehash: 587aa0730502d5e8f90c4fec57bb87886b79fb3f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a2773333ea1dd89f73e7bdf3c5dc2f36945e0810
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304981"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778511"
 ---
 # <a name="coledropsource-class"></a>Класс COleDropSource
 
@@ -31,17 +31,17 @@ ms.locfileid: "57304981"
 class COleDropSource : public CCmdTarget
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDropSource::COleDropSource](#coledropsource)|Создает объект `COleDropSource`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDropSource::GiveFeedback](#givefeedback)|Изменяет курсор во время операции перетаскивания и вставки.|
 |[COleDropSource::OnBeginDrag](#onbegindrag)|Обрабатывает захват мыши во время операции перетаскивания и вставки.|
@@ -163,7 +163,7 @@ DRAGDROP_S_CANCEL, если клавиша ESC или правой кнопки 
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

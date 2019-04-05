@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597707"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041245"
 ---
 # <a name="codeseg"></a>code_seg
 Определяет текстовый сегмент, в котором хранятся функции в OBJ-файле.
@@ -32,7 +32,7 @@ ms.locfileid: "51597707"
 **pop**<br/>
 (Необязательно) Удаление записи из верхней части внутреннего стека компилятора.
 
-*identifier*<br/>
+*идентификатор*<br/>
 (Необязательно) При использовании с **принудительной**, назначает имя записи во внутреннем стеке компилятора. При использовании с **pop**, извлекает записи из внутреннего стека до *идентификатор* удаляется; Если *идентификатор* не найден во внутреннем стеке не выводятся.
 
 *Идентификатор* позволяет вывести только с одним несколько записей **pop** команды.

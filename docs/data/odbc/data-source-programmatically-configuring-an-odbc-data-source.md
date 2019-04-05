@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC connections, configuring
 - configuring ODBC data sources
 ms.assetid: b8cabe9b-9e12-4d73-ae36-7cb12dee3213
-ms.openlocfilehash: 3d02a19d6c61e79fffd31b67ef1b8f7ea9007fcb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33269b65835812a6e1a03e091833831781d97b6d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677374"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037963"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>Источник данных. Программная настройка источника данных ODBC
 
@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 Обратите внимание на то, что источник данных — это каталог (C:\EXCELDIR); Этот каталог должен существовать. Драйвер Excel использует каталоги как источники данных, а файлы как отдельные таблицы (по одной таблице на XLS-файл).
 
-Дополнительные сведения о создании таблиц см. в разделе [источника данных: создание таблицы в источнике данных ODBC программным путем](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
+Дополнительные сведения о создании таблиц см. в разделе [источника данных: Создание таблицы в источнике данных ODBC программным путем](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md).
 
 Ниже описываются параметры, которые должны быть переданы `::SQLConfigDataSource` функции ODBC API. Чтобы использовать `::SQLConfigDataSource`, необходимо включить файл заголовка Odbcinst.h и использовать импорта Odbcinst.lib. Кроме того Odbccp32.dll должен находиться в пути во время выполнения (или Odbcinst.dll для 16-разрядных).
 
@@ -94,7 +94,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 
    - Для 32-разрядная версия, найти ключ **HKEY_CURRENT_USER\Software\ODBC\ODBC. Источники данных INI\ODBC** в левой области.
 
-      В правой части перечислены записи в формате: «pub: REG_SZ:*<data source name>*«, где *<data source name>* является источником данных, который уже был настроен с требуемыми параметрами для драйвера для использования. Выберите источник данных, которые необходимы, например, SQL Server. Элементы вслед за строкой «pub:» — это имя параметра и значение для использования в вашей *lpszAttributes* параметра.
+      В правой части перечислены записи в формате: «pub: REG_SZ:*<data source name>*«, где *<data source name>* является источником данных, который уже был настроен с требуемыми параметрами для драйвера, которые будут использоваться. Выберите источник данных, которые необходимы, например, SQL Server. Элементы вслед за строкой «pub:» — это имя параметра и значение для использования в вашей *lpszAttributes* параметра.
 
    - Для 16-разрядных, найдите раздел в файле Odbc.ini обозначен [*\<источник данных >*].
 

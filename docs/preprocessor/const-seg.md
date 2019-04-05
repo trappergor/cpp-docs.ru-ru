@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648348"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029626"
 ---
 # <a name="constseg"></a>const_seg
 Определяет сегмент, в котором [const](../cpp/const-cpp.md) переменные сохраняются в OBJ-файле.
@@ -32,7 +32,7 @@ ms.locfileid: "50648348"
 **pop**<br/>
 (Необязательно) Удаление записи из верхней части внутреннего стека компилятора.
 
-*identifier*<br/>
+*идентификатор*<br/>
 (Необязательно) При использовании с **принудительной**, назначает имя записи во внутреннем стеке компилятора. При использовании с **pop**, извлекает записи из внутреннего стека до *идентификатор* удаляется; Если *идентификатор* не найден во внутреннем стеке не выводятся.
 
 С помощью *идентификатор* включает несколько записей, извлекаемых с помощью одного **pop** команды.

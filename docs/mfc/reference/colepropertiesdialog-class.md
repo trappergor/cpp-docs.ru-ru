@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263875"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781865"
 ---
 # <a name="colepropertiesdialog-class"></a>Класс COlePropertiesDialog
 
@@ -39,24 +39,24 @@ ms.locfileid: "57263875"
 class COlePropertiesDialog : public COleDialog
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePropertiesDialog::COlePropertiesDialog](#colepropertiesdialog)|Создает объект `COlePropertiesDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePropertiesDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|
 |[COlePropertiesDialog::OnApplyScale](#onapplyscale)|Вызывается платформой при изменении масштабирования элемента документа.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePropertiesDialog::m_gp](#m_gp)|Структура, используемая для инициализации страница «Общие» `COlePropertiesDialog` объекта.|
 |[COlePropertiesDialog::m_lp](#m_lp)|Структура, используемая для инициализации на страницу «Link» `COlePropertiesDialog` объекта.|
@@ -261,8 +261,8 @@ virtual BOOL OnApplyScale(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC Кр](../../visual-cpp-samples.md)<br/>
+[Пример MFC Кр](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)<br/>
-[Класс CPropertyPage](../../mfc/reference/cpropertypage-class.md)
+[Cpropertypage-класс](../../mfc/reference/cpropertypage-class.md)

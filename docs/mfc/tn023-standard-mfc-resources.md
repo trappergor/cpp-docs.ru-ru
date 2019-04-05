@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277683"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780318"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023: Стандартные ресурсы MFC
 
@@ -23,7 +23,7 @@ ms.locfileid: "57277683"
 
 MFC предоставляет предопределенные ресурсы, которые можно использовать в приложении две категории: ресурсы коллекции картинок и стандартных ресурсах платформы.
 
-Ресурсы коллекции картинок, дополнительные ресурсы, платформа не зависит, однако, может потребоваться добавить в интерфейс пользователя. В примере MFC содержатся следующие ресурсы коллекции картинок [CLIPART](../visual-cpp-samples.md):
+Ресурсы коллекции картинок, дополнительные ресурсы, платформа не зависит, однако, может потребоваться добавить в интерфейс пользователя. В примере MFC содержатся следующие ресурсы коллекции картинок [CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.rc: Один файл ресурсов, содержащий:
 

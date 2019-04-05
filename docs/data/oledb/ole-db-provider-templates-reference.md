@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB provider templates
 ms.assetid: 518358f0-bab1-4de9-bce9-4062cc87c11f
-ms.openlocfilehash: 7c4088d676406c855ed910a4aad35c62a6957333
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e1d6be9687085361edd9141d8fb471e21b6f6376
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420107"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038681"
 ---
 # <a name="ole-db-provider-templates-reference"></a>Ссылка на шаблоны поставщика OLE DB
 
@@ -113,5 +113,5 @@ OLE DB требует, чтобы поставщики для реализаци
 
 ## <a name="see-also"></a>См. также
 
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Шаблоны OLE DB](../../data/oledb/ole-db-templates.md)

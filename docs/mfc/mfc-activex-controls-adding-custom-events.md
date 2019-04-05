@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263017"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781007"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Элементы ActiveX в MFC. Добавление пользовательских событий
 
@@ -92,7 +92,7 @@ ms.locfileid: "57263017"
 
 1. Дважды щелкните новую функцию обработчика в представлении классов для перехода к код обработчика сообщений в реализации (. Указать файл .cpp) элемента управления ActiveX.
 
-Следующий код вызывает образец `InCircle` функции каждый раз при нажатии левой кнопки мыши в окне элемента управления. Этот пример можно найти в функции обработчика WM_LBUTTONDOWN `OnLButtonDown`в [пример Кр](../visual-cpp-samples.md) абстрактным.
+Следующий код вызывает образец `InCircle` функции каждый раз при нажатии левой кнопки мыши в окне элемента управления. Этот пример можно найти в функции обработчика WM_LBUTTONDOWN `OnLButtonDown`в [пример Кр](../overview/visual-cpp-samples.md) абстрактным.
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 
@@ -133,6 +133,6 @@ ms.locfileid: "57263017"
 
 ## <a name="see-also"></a>См. также
 
-[Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
+[Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
 [Элементы ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
-[Класс COleControl](../mfc/reference/colecontrol-class.md)
+[Colecontrol-класс](../mfc/reference/colecontrol-class.md)

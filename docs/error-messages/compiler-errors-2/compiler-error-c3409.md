@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3409
 ms.assetid: e372d9fa-230c-4b28-b6d3-6ad81ccf9dbb
-ms.openlocfilehash: b6ceb6f2e8700a5459dbd01db443ef90de314b5e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 24f107e0c1f74f95afc521c8a4c888a26a35c13a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330090"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033765"
 ---
 # <a name="compiler-error-c3409"></a>Ошибка компилятора C3409
 
@@ -19,7 +19,7 @@ ms.locfileid: "51330090"
 
 ## <a name="remarks"></a>Примечания
 
-Квадратные скобки интерпретировал компилятора как [атрибут](../../windows/cpp-attributes-reference.md) блок, но атрибуты не найдены.
+Квадратные скобки интерпретировал компилятора как [атрибут](../../windows/attributes-alphabetical-reference.md) блок, но атрибуты не найдены.
 
 Компилятор может создать эту ошибку, при использовании квадратных скобок как часть определения лямбда-выражения. Эта ошибка возникает, когда компилятор не может определить, являются ли квадратные скобки частью определения лямбда-выражения или блока атрибута. Дополнительные сведения о лямбда-выражениях см. в разделе [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md).
 
@@ -69,6 +69,6 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[attribute](../../windows/cpp-attributes-reference.md)<br/>
+[Атрибут](../../windows/attributes-alphabetical-reference.md)<br/>
 [Лямбда-выражения](../../cpp/lambda-expressions-in-cpp.md)<br/>
 [Синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md)

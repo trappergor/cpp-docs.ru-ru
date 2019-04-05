@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766044"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041258"
 ---
 # <a name="data-access-in-visual-c"></a>Доступ к данным в Visual C++
 
@@ -23,10 +23,10 @@ ms.locfileid: "58766044"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Доступ к данным, программирование (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
+[Программирование доступа к данным (MFC/ATL)](data-access-programming-mfc-atl.md)<br/>
 Описывает программирование доступа к данным прежних версий с помощью Visual C++, когда предпочтительным способом является использование одной из библиотек классов, например Active Template Class Library (ATL), или библиотеки Microsoft Foundation Class (MFC), которые упрощают работу с API базы данных.
 
-[Интерфейс ODBC](odbc/open-database-connectivity-odbc.md)<br/>
+[Интерфейс ODBC (ODBC)](odbc/open-database-connectivity-odbc.md)<br/>
 Библиотека Microsoft Foundation Classes (MFC) предоставляет классы для разработки программ с использованием интерфейса ODBC.
 
 [Программирование объектов OLE DB](oledb/ole-db-programming.md)<br/>
@@ -46,13 +46,13 @@ ms.locfileid: "58766044"
 [Собственный клиент SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 Собственный клиент SQL Server — прикладной программный интерфейс (API) для автономного доступа к данным, который используется для OLE DB и ODBC и поддерживается в версиях SQL Server начиная с SQL Server 2005 и заканчивая SQL Server 2014. В новых приложениях следует использовать драйвер ODBC версии 13.1 для SQL Server.
 
-[Microsoft Azure C и C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
+[Центр разработчиков C и C++ для Microsoft Azure](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure позволяет легко создавать приложения C++, обладающие высокой гибкостью, масштабируемостью и надежностью, с помощью тех инструментов, которые вам нравятся.
 
-[Использование хранилища BLOB-объектов из C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
+[Использование хранилища BLOB-объектов в программах на C++](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Хранилище BLOB-объектов Azure — это служба, которая сохраняет неструктурированные данные в облаке в виде BLOB-объектов. В хранилище BLOB-объектов можно хранить любые типы текстовых или двоичных данных, таких как документы, файлы мультимедиа или установщики приложений. Хранилище BLOB-объектов также называют хранилищем объектов.
 
-[ Справочник по программированию ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[ Справочник программиста по ODBC](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 Интерфейс ODBC предназначен для использования с языком программирования C. Использование интерфейса ODBC охватывает три области: Инструкции SQL, вызовы функций ODBC и программирование C.
 
 ## <a name="see-also"></a>См. также

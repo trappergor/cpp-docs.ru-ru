@@ -7,12 +7,12 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294997"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781735"
 ---
 # <a name="tn029-splitter-windows"></a>TN029: Окна разделителей
 
@@ -46,7 +46,7 @@ ms.locfileid: "57294997"
 
 ## <a name="splitter-examples"></a>Примеры разделителя
 
-Многие из примеров программ MFC используют окна разделителей, прямо или косвенно. Пример MFC Общие [VIEWEX](../visual-cpp-samples.md) показано несколько раз используется статический разделителей, в том числе о способах размещения разделителя в разделителе.
+Многие из примеров программ MFC используют окна разделителей, прямо или косвенно. Пример MFC Общие [VIEWEX](../overview/visual-cpp-samples.md) показано несколько раз используется статический разделителей, в том числе о способах размещения разделителя в разделителе.
 
 ClassWizard также можно создать несколько документов интерфейса (MDI) дочерний класс окна фрейма, содержащий окна разделителя. Дополнительные сведения о окна разделителей, см. в разделе [несколько типов документов, представлений и фрейма Windows](../mfc/multiple-document-types-views-and-frame-windows.md).
 
