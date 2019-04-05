@@ -10,12 +10,12 @@ helpviewer_keywords:
 - recordsets [C++], transactions
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
-ms.openlocfilehash: 0deb21a43ff17ca94efe29bdec37db7611331a86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615817"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023674"
 ---
 # <a name="transaction-odbc"></a>Транзакция (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50615817"
 Вызовы `AddNew` и `Edit` функциями-членами `CRecordset` отразиться на источник данных, немедленно при вызове `Update`. `Delete` вызовы также вступают в силу немедленно. Напротив, можно использовать транзакции, состоящей из нескольких вызовов `AddNew`, `Edit`, `Update`, и `Delete`, которая будет выполнена, но не были зафиксированы до вызова метода `CommitTrans` явным образом. Устанавливая транзакцию, можно выполнить ряд таких вызовов сохранением возможности отката. Если недоступен важный ресурс или другое условие, препятствует выполнению всей транзакции, выполнить откат транзакции, а его фиксацией. В этом случае ни одно из изменений, относящихся к транзакции отражается на источнике данных.
 
 > [!NOTE]
->  В настоящее время класса `CRecordset` не поддерживает обновления в источнике данных, если вы реализовали выборка строк. Это означает, что нельзя выполнять вызовы `AddNew`, `Edit`, `Delete`, или `Update`. Тем не менее можно написать собственные функции для выполнения обновлений и затем вызывать эти функции в транзакции. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  В настоящее время класса `CRecordset` не поддерживает обновления в источнике данных, если вы реализовали выборка строк. Это означает, что нельзя выполнять вызовы `AddNew`, `Edit`, `Delete`, или `Update`. Тем не менее можно написать собственные функции для выполнения обновлений и затем вызывать эти функции в транзакции. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 > [!NOTE]
 >  Кроме того, изменяя набор записей, транзакции изменяют инструкции SQL, которые выполняются непосредственно до тех пор, пока используется ODBC **HDBC** связанный с вашей `CDatabase` объекта или ODBC **HSTMT** на основе **HDBC**.
@@ -43,10 +43,10 @@ ms.locfileid: "50615817"
 
 Дополнительные сведения о том, как выполняются операции в следующих разделах.
 
-- [Транзакция. Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Транзакция. Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Транзакции: Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)
+[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

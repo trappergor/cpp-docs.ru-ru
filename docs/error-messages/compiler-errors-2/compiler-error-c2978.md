@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428110"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780305"
 ---
 # <a name="compiler-error-c2978"></a>Ошибка компилятора C2978
 
 синтаксическая ошибка: требуется "ключевое_слово1" или "ключевое_слово2"; обнаружен тип "ключевое_слово3"; параметры, не являющиеся параметрами типа, не поддерживаются в универсальных классах
 
-Универсальный класс был объявлен неправильно. См. в разделе [универсальные шаблоны](../../windows/generics-cpp-component-extensions.md)Дополнительные сведения.
+Универсальный класс был объявлен неправильно. См. в разделе [универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md)Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 

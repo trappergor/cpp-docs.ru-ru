@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3353
 ms.assetid: 5699c04b-d504-46ce-bf71-c200318fed71
-ms.openlocfilehash: eb7b55f63e911f155c13e777e2e84ae7b587e9a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c38642d7abd4f2fd50792c548c9a5521b2da10ad
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432673"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776145"
 ---
 # <a name="compiler-error-c3353"></a>Ошибка компилятора C3353
 
 delegate: создание делегата допускается только из глобальной функции или функции-члена управляемого типа или типа WinRT
 
-Делегаты, объявленные с [делегировать](../../windows/delegate-cpp-component-extensions.md) ключевое слово, могут объявляться только в глобальной области.
+Делегаты, объявленные с [делегировать](../../extensions/delegate-cpp-component-extensions.md) ключевое слово, могут объявляться только в глобальной области.
 
 Следующий пример приводит к возникновению ошибки C3353:
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268490"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773844"
 ---
 # <a name="cricheditcntritem-class"></a>Класс CRichEditCntrItem
 
@@ -31,13 +31,13 @@ class CRichEditCntrItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditCntrItem::CRichEditCntrItem](#cricheditcntritem)|Создает объект `CRichEditCntrItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditCntrItem::SyncToRichEditObject](#synctoricheditobject)|Активирует элемент другого типа.|
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 Это Windows общего элемента управления (и, следовательно, [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) и связанными классами) доступны только для программ, работающих в версиях Windows 95/98 и Windows NT 3.51 и более поздних версиях.
 
-Пример использования элементов контейнера форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../visual-cpp-samples.md) пример приложения.
+Пример использования элементов контейнера форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../overview/visual-cpp-samples.md) пример приложения.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -110,7 +110,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>

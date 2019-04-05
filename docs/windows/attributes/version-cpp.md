@@ -7,12 +7,12 @@ helpviewer_keywords:
 - version attribute
 - version information, version attribute
 ms.assetid: db6ce5d8-82c2-4329-b1a8-8ca2f67342cb
-ms.openlocfilehash: 01c4cca846326d237fdacd19187a44e21bd15913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe1df9e12b9adbf9ce55978fd3479f7e740ddc96
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519318"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025756"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50519318"
 |**Применение**|**Класс**, **структуры**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|**кокласс**|
-|**Недопустимые атрибуты**|None|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

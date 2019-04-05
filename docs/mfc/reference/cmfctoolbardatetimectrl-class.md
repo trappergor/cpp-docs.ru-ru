@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: c93d8a2a18518cad8b6fb7fe014828011f78a653
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280996"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776054"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>Класс CMFCToolBarDateTimeCtrl
 
@@ -69,14 +69,14 @@ class CMFCToolBarDateTimeCtrl : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarDateTimeCtrl::CMFCToolBarDateTimeCtrl](#cmfctoolbardatetimectrl)|Создает объект `CMFCToolBarDateTimeCtrl`.|
 |`CMFCToolBarDateTimeCtrl::~CMFCToolBarDateTimeCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarDateTimeCtrl::CanBeStretched](#canbestretched)|Указывает, может ли пользователь растянуть кнопки во время настройки. (Переопределяет [CMFCToolBarButton::CanBeStretched](../../mfc/reference/cmfctoolbarbutton-class.md#canbestretched).)|
 |[CMFCToolBarDateTimeCtrl::CopyFrom](#copyfrom)|Копирует свойства другую кнопку панели инструментов для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -172,7 +172,7 @@ CMFCToolBarDateTimeCtrl(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCToolBarDateTimeCtrl` класса. Этот фрагмент кода является частью [пример Выбор инструментов даты / времени](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание объекта класса `CMFCToolBarDateTimeCtrl` класса. Этот фрагмент кода является частью [пример Выбор инструментов даты / времени](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]
 
@@ -438,7 +438,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Контекст устройства, которое отображает кнопки.
 
 *nCtlColor*<br/>
@@ -616,4 +616,4 @@ static BOOL SetTimeAll(
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
-[Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)

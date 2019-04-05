@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 60eeaa2a37dd824ae418b25e95743c21c65ae7ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259520"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773727"
 ---
 # <a name="cricheditview-class"></a>Класс CRichEditView
 
@@ -121,13 +121,13 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditView::CRichEditView](#cricheditview)|Создает объект `CRichEditView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditView::AdjustDialogPosition](#adjustdialogposition)|Перемещает диалоговое окно, чтобы он не скрывать текущего выделения.|
 |[CRichEditView::CanPaste](#canpaste)|Указывает, содержит ли буфер данных, которая может быть вставлена в представлении rich edit.|
@@ -164,7 +164,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditView::GetClipboardData](#getclipboarddata)|Получает объект Clipboard для диапазона в этом представлении rich edit.|
 |[CRichEditView::GetContextMenu](#getcontextmenu)|Получает контекстное меню для использования в правой-нажатия кнопки мыши.|
@@ -181,7 +181,7 @@ class CRichEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditView::m_nBulletIndent](#m_nbulletindent)|Указывает отступ для маркированные списки.|
 |[CRichEditView::m_nWordWrap](#m_nwordwrap)|Указывает ограничения переноса слов.|
@@ -194,7 +194,7 @@ class CRichEditView : public CCtrlView
 
 Это Windows общего элемента управления (и, следовательно, [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) и связанными классами) доступны только для программ, работающих в версиях Windows 95/98 и Windows NT 3.51 и более поздних версиях.
 
-Пример использования представления rich edit в приложении MFC, см. в разделе [WORDPAD](../../visual-cpp-samples.md) пример приложения.
+Пример использования представления rich edit в приложении MFC, см. в разделе [WORDPAD](../../overview/visual-cpp-samples.md) пример приложения.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -1046,7 +1046,7 @@ long PrintInsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Указатель на контекст устройства для области вывода.
 
 *rectLayout*<br/>
@@ -1086,7 +1086,7 @@ long PrintPage(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Указатель на контекст устройства для вывода страниц.
 
 *nIndexStart*<br/>
@@ -1226,7 +1226,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>Параметры
 
-*pf*<br/>
+*Общая папка*<br/>
 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2) атрибуты форматирования абзаца структура, содержащая новое значение по умолчанию.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1284,7 +1284,7 @@ virtual void WrapChanged();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)<br/>

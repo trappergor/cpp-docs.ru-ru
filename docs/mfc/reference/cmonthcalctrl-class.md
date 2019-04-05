@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413931"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777172"
 ---
 # <a name="cmonthcalctrl-class"></a>Cmonthcalctrl-класс
 
@@ -111,13 +111,13 @@ class CMonthCalCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMonthCalCtrl::CMonthCalCtrl](#cmonthcalctrl)|Создает объект `CMonthCalCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMonthCalCtrl::Create](#create)|Создает элемент управления calendar month и присоединяет его к `CMonthCalCtrl` объекта.|
 |[CMonthCalCtrl::GetCalendarBorder](#getcalendarborder)|Получает ширину границы элемента управления calendar текущего месяца.|
@@ -302,7 +302,7 @@ BOOL GetCalendarGridInfo(PMCGRIDINFO pmcGridInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pmcGridInfo*|[out] Указатель на [MCGRIDINFO](/windows/desktop/api/commctrl/ns-commctrl-tagmcgridinfo) структуры, получающий сведения об элементе управления календаря текущего месяца. Вызывающий объект отвечает за выделение и инициализации этой структуры.|
 
@@ -814,7 +814,7 @@ void SetCalendarBorder(int cxyBorder);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*cxyBorder*|[in] Ширина границы в пикселях.|
 
@@ -860,7 +860,7 @@ BOOL SetCalID(CALID calid);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*CALID*|[in] Один из [идентификатор календаря](/windows/desktop/Intl/calendar-identifiers) константы.|
 
@@ -951,7 +951,7 @@ BOOL SetCurrentView(DWORD dwNewView);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwNewView*|[in] Одно из следующих значений, указывающих ежемесячно, ежегодно, десять лет или представления века.<br /><br /> MCMV_MONTH: Представление за месяц.<br /><br /> MCMV_YEAR: Ежегодное представление<br /><br /> MCMV_DECADE: Представление десять лет<br /><br /> MCMV_CENTURY: Представление веке|
 
@@ -1304,7 +1304,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CDateTimeCtrl](../../mfc/reference/cdatetimectrl-class.md)

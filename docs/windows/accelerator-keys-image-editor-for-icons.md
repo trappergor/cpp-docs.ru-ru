@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563125"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025089"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>Сочетания клавиш (редактор C++ изображений для значков)
 
@@ -22,7 +22,7 @@ ms.locfileid: "57563125"
 > [!NOTE]
 > Доступные в диалоговых окнах параметры, а также названия и расположение команд меню могут отличаться от описанных в справке в зависимости от текущих параметров или выпуска. Чтобы изменить параметры, перейдите к меню **средства** > **Импорт и экспорт параметров**. Дополнительные сведения см. в разделе [Персонализация интегрированной среды разработки Visual Studio](/visualstudio/ide/personalizing-the-visual-studio-ide).
 
-|Команда|Клавиши|Описание:|
+|Команда|Клавиши|Описание|
 |-------------|----------|-----------------|
 |Image.AirBrushTool|**CTRL** + **A**|Рисование с помощью воздушной кисти с выбранным размером и цветом.|
 |Image.BrushTool|**CTRL** + **B**|Рисование с помощью кисти с выбранной формой, размер и цвет.|
@@ -40,7 +40,7 @@ ms.locfileid: "57563125"
 |Image.LineTool|**CTRL** + **L**|Рисование прямой линии с выбранной формой, размером и цветом.|
 |Image.MagnificationTool|**Ctrl** + **M**|Активирует **увеличить** средство, которое позволяет увеличивать фрагменты рисунка.|
 |Image.Magnify|**CTRL** + **SHIFT** + **M**|Переключение между текущим масштабом и масштабом 1:1.|
-|Image.NewImageType|**Вставить**|Запускает [New \<устройства > тип изображения диалоговое окно](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) с помощью которого можно создать изображение другого типа.|
+|Image.NewImageType|**Insert**|Запускает [New \<устройства > тип изображения диалоговое окно](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md) с помощью которого можно создать изображение другого типа.|
 |Image.NextColor|**Ctrl** + **]**<br /><br /> -или-<br /><br /> **CTRL** + **Стрелка вправо**|Изменение основного цвета на следующий цвет в палитре.|
 |Image.NextRightColor|**Ctrl** + **Shift** + **]**<br /><br /> -или-<br /><br /> **SHIFT** + **Ctrl** + **Стрелка вправо**|Изменение цвета фона на следующий цвет в палитре.|
 |Image.OutlinedEllipseTool|**SHIFT** + **Alt** + **P**|Рисование эллипса с заливкой и с контуром.|
@@ -70,6 +70,6 @@ ms.locfileid: "57563125"
 
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)<br/>
 [Практическое руководство. Создание значка или другого изображения](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[Практическое руководство. Изменение изображения](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Практическое руководство. Изменить изображение](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Практическое руководство. Использование инструмента рисования](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Практическое руководство. Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Практическое руководство. Работать с цветом](../windows/working-with-color-image-editor-for-icons.md)<br/>

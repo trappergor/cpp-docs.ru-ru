@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CLGI instruction
 - __svm_clgi intrinsic
 ms.assetid: 6640f5ab-9472-46f9-a042-e15c4f1ff858
-ms.openlocfilehash: 9f3484cc5cbffea1315d546ced317dfdfceee9e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe25141499a19a265e2ac3ec746664ecd6cc9a2e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618893"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028701"
 ---
 # <a name="svmclgi"></a>__svm_clgi
 
@@ -30,7 +30,7 @@ void __svm_clgi( void );
 
 Функция `__svm_clgi` эквивалентна инструкции компьютера `CLGI` . Флаг прерывания глобального определяет микропроцессора игнорирует, откладывающий или обрабатывает прерывания из-за события, такие как завершение ввода/вывода, температуры оповещение оборудования или исключение отладки.
 
-Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Номер 24593, редакция 3.11, System Programming,» документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -44,5 +44,5 @@ void __svm_clgi( void );
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_stgi](../intrinsics/svm-stgi.md)

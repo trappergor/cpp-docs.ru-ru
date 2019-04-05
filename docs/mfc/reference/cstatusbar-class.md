@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413398"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777341"
 ---
 # <a name="cstatusbar-class"></a>Класс CStatusBar
 
@@ -57,13 +57,13 @@ class CStatusBar : public CControlBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CStatusBar::CStatusBar](#cstatusbar)|Создает объект `CStatusBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CStatusBar::CommandToIndex](#commandtoindex)|Получает индекс для идентификатора данного индикатора.|
 |[CStatusBar::Create](#create)|Создает строку состояния, присоединяется к `CStatusBar` , а также задает исходную высоту шрифта и строке.|
@@ -506,9 +506,9 @@ BOOL SetPaneText(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[Образец DLGCBR32 MFC](../../visual-cpp-samples.md)<br/>
-[Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
+[Пример MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Образец DLGCBR32 MFC](../../overview/visual-cpp-samples.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)

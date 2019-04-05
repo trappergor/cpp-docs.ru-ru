@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: 704d48cc546943d818ae8b898060fe0f7e203c53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f2c4135d2a27928dbde4299fa1f8eda42237d893
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303557"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776795"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>Класс CMFCDropDownToolBar
 
@@ -38,11 +38,11 @@ ms.locfileid: "57303557"
 class CMFCDropDownToolBar : public CMFCToolBar
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCDropDownToolBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(Переопределяет `CPane::AllowShowOnPaneMenu`.)|
 |[CMFCDropDownToolBar::LoadBitmap](#loadbitmap)|(Переопределяет [CMFCToolBar::LoadBitmap](../../mfc/reference/cmfctoolbar-class.md#loadbitmap).)|
@@ -76,7 +76,7 @@ class CMFCDropDownToolBar : public CMFCToolBar
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод в `CMFCDropDownToolBar` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Create` метод в `CMFCDropDownToolBar` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#29](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#30](../../mfc/codesnippet/cpp/cmfcdropdowntoolbar-class_2.cpp)]
@@ -260,4 +260,4 @@ virtual void OnUpdateCmdUI(
 [CMFCToolBar::Create](../../mfc/reference/cmfctoolbar-class.md#create)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [Класс CMFCDropDownToolbarButton](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)<br/>
-[Пошаговое руководство: Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[Пошаговое руководство. Размещение элементов управления на панели инструментов](../../mfc/walkthrough-putting-controls-on-toolbars.md)

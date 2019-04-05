@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCFontComboBox [MFC], Setup
 - CMFCFontComboBox [MFC], m_bDrawUsingFont
 ms.assetid: 9a53fb0c-7b45-486d-8187-2a4c723d9fbb
-ms.openlocfilehash: 6d0b2fc22d1d0779db17e970118694270a206439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccc4e545b2274d6dbb9989cfb9c047de819b8d32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272676"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781306"
 ---
 # <a name="cmfcfontcombobox-class"></a>Класс CMFCFontComboBox
 
@@ -37,14 +37,14 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCFontComboBox::CMFCFontComboBox](#cmfcfontcombobox)|Создает объект `CMFCFontComboBox`.|
 |`CMFCFontComboBox::~CMFCFontComboBox`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCFontComboBox::CompareItem`|Вызывается платформой для определения относительной позиции нового элемента в отсортированном списке текущего элемента управления поля со списком шрифтов. (Переопределяет [CComboBox::CompareItem](../../mfc/reference/ccombobox-class.md#compareitem).)|
 |`CMFCFontComboBox::DrawItem`|Вызывается платформой для рисования заданного элемента в элементе управления текущего поля со списком шрифта. (Переопределяет [CComboBox::DrawItem](../../mfc/reference/ccombobox-class.md#drawitem).)|
@@ -56,7 +56,7 @@ class CMFCFontComboBox : public CComboBox
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCFontComboBox::m_bDrawUsingFont](#m_bdrawusingfont)|Указывает платформу какой шрифт, используемый для рисования метки элемента в поле со списком текущего шрифта.|
 
@@ -151,7 +151,7 @@ BOOL SelectFont(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `SelectFont` метод в `CMFCFontComboBox` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `SelectFont` метод в `CMFCFontComboBox` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#35](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_2.cpp)]
@@ -188,7 +188,7 @@ BOOL Setup(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Setup` метод в `CMFCFontComboBox` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Setup` метод в `CMFCFontComboBox` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#34](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#36](../../mfc/reference/codesnippet/cpp/cmfcfontcombobox-class_3.cpp)]

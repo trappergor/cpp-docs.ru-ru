@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304474"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778524"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
 
@@ -129,13 +129,13 @@ class CComboBox : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComboBox::CComboBox](#ccombobox)|Создает объект `CComboBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComboBox::AddString](#addstring)|Добавляет строку в конец списка в окне списка, поле со списком или в отсортированном позиции для поля списка CBS_SORT стиль.|
 |[CComboBox::Clear](#clear)|Удаляет (очищает) текущее выделение, если таковое имеется, в элементе управления.|
@@ -665,7 +665,7 @@ BOOL GetCueBanner(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpszText*|[out] Указатель на буфер, получающий текст баннера подсказки.|
 |*cchText*|[in] Размер буфера, *lpszText* указывает параметр.|
@@ -1191,7 +1191,7 @@ BOOL SetCueBanner(LPCTSTR lpszText);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpszText*|[in] Указатель на буфер нулевым байтом, который содержит текст подсказки.|
 
@@ -1557,13 +1557,13 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Класс CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
-[Класс CListBox](../../mfc/reference/clistbox-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CListBox-класс](../../mfc/reference/clistbox-class.md)<br/>
 [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Класс CStatic](../../mfc/reference/cstatic-class.md)<br/>
 [Класс CDialog](../../mfc/reference/cdialog-class.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndButton [MFC], IsCaptionButton
 - CMFCDesktopAlertWndButton [MFC], IsCloseButton
 ms.assetid: df39a0c8-0c39-4ab0-8c64-78c5b2c4ecaf
-ms.openlocfilehash: 2a9ade332c87f293719872e426fb459b011d2d35
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 639342e0a09a6e970478fce1b5aac629f03c2015
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270269"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776951"
 ---
 # <a name="cmfcdesktopalertwndbutton-class"></a>Класс CMFCDesktopAlertWndButton
 
@@ -33,7 +33,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |`CMFCDesktopAlertWndButton::CMFCDesktopAlertWndButton`|Конструктор по умолчанию.|
 |`CMFCDesktopAlertWndButton::~CMFCDesktopAlertWndButton`|Деструктор.|
 
@@ -41,7 +41,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCDesktopAlertWndButton::IsCaptionButton](#iscaptionbutton)|Определяет, отображается ли кнопка в области заголовка диалогового окна предупреждения.|
 |[CMFCDesktopAlertWndButton::IsCloseButton](#isclosebutton)|Определяет, ли кнопки закрывает диалоговое окно предупреждения.|
 
@@ -61,7 +61,7 @@ class CMFCDesktopAlertWndButton : public CMFCButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `SetImage` метод в `CMFCDesktopAlertWndButton` класса. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `SetImage` метод в `CMFCDesktopAlertWndButton` класса. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#4](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DesktopAlertDemo#5](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndbutton-class_2.cpp)]

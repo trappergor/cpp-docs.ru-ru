@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304084"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775261"
 ---
 # <a name="cmfcoutlookbar-class"></a>Класс CMFCOutlookBar
 
@@ -59,14 +59,14 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCOutlookBar::CMFCOutlookBar`|Конструктор по умолчанию.|
 |`CMFCOutlookBar::~CMFCOutlookBar`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCOutlookBar::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)|Указывает, можно ли уничтожить пустой области с вкладками. (Переопределяет [CBaseTabbedPane::AllowDestroyEmptyTabbedPane](../../mfc/reference/cbasetabbedpane-class.md#allowdestroyemptytabbedpane).)|
 |[CMFCOutlookBar::CanAcceptPane](#canacceptpane)|Определяет, ли другую панель можно закрепить область панели Outlook. (Переопределяет CDockablePane::CanAcceptPane).|
@@ -89,7 +89,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Примечания
 
-Например, панель Outlook, см. в разделе [образце OutlookDemo: Приложения MFC OutlookDemo](../../visual-cpp-samples.md).
+Например, панель Outlook, см. в разделе [образце OutlookDemo: Приложения MFC OutlookDemo](../../overview/visual-cpp-samples.md).
 
 ## <a name="implementing-the-outlook-bar"></a>Реализация панели Outlook
 
@@ -294,7 +294,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод `CMFCOutlookBar` класса. Этот фрагмент кода является частью [пример Outlook с несколькими представлениями](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Create` метод `CMFCOutlookBar` класса. Этот фрагмент кода является частью [пример Outlook с несколькими представлениями](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
@@ -578,5 +578,5 @@ void SetMode2003(BOOL bMode2003=TRUE);
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CBaseTabbedPane](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[Класс CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [Класс CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)

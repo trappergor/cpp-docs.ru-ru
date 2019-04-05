@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283765"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58775287"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040: Изменение размеров по месту MFC/OLE и масштабирование
 
@@ -40,7 +40,7 @@ ms.locfileid: "57283765"
 
 Текущий коэффициент масштабирования можно определить путем вызова `COleServerDoc::GetZoomFactor`. При вызове этой функции при документ не является активным на месте приведет к всегда в масштабе 100% фактор (или соотношение 1:1). Вызов ее, когда активный на месте могут возвращать что-то отличного от 100%.
 
-Пример масштабирования правильно см. Пример MFC OLE [HIERSVR](../visual-cpp-samples.md). Увеличение HIERSVR усложняется тем фактом, что отображается текст, и текст, в общем случае не подходит в линейном порядке (подсказки, обозначения, проектирования ширины и высоты усложнить заключается в). Тем не менее, HIERSVR является разумным ссылку для реализации масштабирования правильно, и в учебнике MFC [SCRIBBLE](../visual-cpp-samples.md) (шаг 7).
+Пример масштабирования правильно см. Пример MFC OLE [HIERSVR](../overview/visual-cpp-samples.md). Увеличение HIERSVR усложняется тем фактом, что отображается текст, и текст, в общем случае не подходит в линейном порядке (подсказки, обозначения, проектирования ширины и высоты усложнить заключается в). Тем не менее, HIERSVR является разумным ссылку для реализации масштабирования правильно, и в учебнике MFC [SCRIBBLE](../overview/visual-cpp-samples.md) (шаг 7).
 
 `COleServerDoc::GetZoomFactor` Определяет значения масштаба на основе количества различных метрик, доступных из контейнера или от реализации вашей `COleServerItem` и `COleServerDoc` классы. Короче говоря текущий коэффициент масштабирования определяется по следующей формуле:
 

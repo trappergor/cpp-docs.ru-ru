@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304994"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774590"
 ---
 # <a name="cmdichildwnd-class"></a>Класс CMDIChildWnd
 
@@ -43,13 +43,13 @@ class CMDIChildWnd : public CFrameWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMDIChildWnd::CMDIChildWnd](#cmdichildwnd)|Создает объект `CMDIChildWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMDIChildWnd::Create](#create)|Создает дочернее окно Windows MDI, связанные с `CMDIChildWnd` объекта.|
 |[CMDIChildWnd::GetMDIFrame](#getmdiframe)|Возвращает родительский объект фрейма MDI клиентского окна MDI.|
@@ -287,9 +287,9 @@ void SetHandles(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
-[Пример MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Класс CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301341"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780227"
 ---
 # <a name="cmfccolormenubutton-class"></a>Класс CMFCColorMenuButton
 
@@ -65,13 +65,13 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorMenuButton::CMFCColorMenuButton](#cmfccolormenubutton)|Создает объект `CMFCColorMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorMenuButton::EnableAutomaticButton](#enableautomaticbutton)|Включает и отключает кнопка «автоматически», расположенный над кнопками регулярных цвет. (Кнопка автоматического стандартная система называется **автоматического**.)|
 |[CMFCColorMenuButton::EnableDocumentColors](#enabledocumentcolors)|Позволяет отображать конкретного документа цвета вместо цветов системы.|
@@ -89,7 +89,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorMenuButton::CopyFrom](#copyfrom)|Копирует текущий кнопки другую кнопку панели инструментов.|
 |[CMFCColorMenuButton::CreatePopupMenu](#createpopupmenu)|Создает диалоговое окно выбора цвета.|
@@ -105,7 +105,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание и настройка кнопка меню цвета с помощью различных методов в `CMFCColorMenuButton` класса. В примере `CPalette` объекта сначала создается и затем используется для создания объекта `CMFCColorMenuButton` класса. `CMFCColorMenuButton` Объект затем настраивается, включение его автоматическое и другие кнопки и настроив его цвет и число столбцов. Этот код является частью [примера Word Pad](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание и настройка кнопка меню цвета с помощью различных методов в `CMFCColorMenuButton` класса. В примере `CPalette` объекта сначала создается и затем используется для создания объекта `CMFCColorMenuButton` класса. `CMFCColorMenuButton` Объект затем настраивается, включение его автоматическое и другие кнопки и настроив его цвет и число столбцов. Этот код является частью [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]
@@ -387,7 +387,7 @@ virtual void OnDraw(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -426,7 +426,7 @@ virtual int OnDrawOnCustomizeList(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>

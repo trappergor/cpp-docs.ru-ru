@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3913
 ms.assetid: a678bfce-9524-470d-9f23-7d08ecb972c8
-ms.openlocfilehash: bf83be5e95109c9e7fa0516cde780ca6907416ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a38f7bffd56f025510e092ad37b5f810cb11a9b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516389"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776522"
 ---
 # <a name="compiler-error-c3913"></a>Ошибка компилятора C3913
 
@@ -19,7 +19,7 @@ ms.locfileid: "50516389"
 
 Было неправильно задано свойство по умолчанию.
 
-Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3913:
 

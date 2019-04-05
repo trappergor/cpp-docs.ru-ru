@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-ms.openlocfilehash: bc3d9f089dc6289331c79c6a1e18eccbc9ff4993
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296979"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776834"
 ---
 # <a name="coledatasource-class"></a>Класс COleDataSource
 
@@ -57,13 +57,13 @@ class COleDataSource : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDataSource::COleDataSource](#coledatasource)|Создает объект `COleDataSource`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDataSource::CacheData](#cachedata)|Предоставляет данные в указанном формате, используя `STGMEDIUM` структуры.|
 |[COleDataSource::CacheGlobalData](#cacheglobaldata)|Предоставляет данные в указанном формате, используя HGLOBAL.|
@@ -488,8 +488,8 @@ void SetClipboard();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDataObject](../../mfc/reference/coledataobject-class.md)

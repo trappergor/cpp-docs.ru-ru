@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269856"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781241"
 ---
 # <a name="ceditview-class"></a>Класс CEditView
 
@@ -61,13 +61,13 @@ class CEditView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CEditView::CEditView](#ceditview)|Создает объект типа `CEditView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CEditView::FindText](#findtext)|Поиск строки в тексте.|
 |[CEditView::GetBufferLength](#getbufferlength)|Получает длину буфера знаков.|
@@ -83,7 +83,7 @@ class CEditView : public CCtrlView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CEditView::OnFindNext](#onfindnext)|Находит следующее вхождение строки текста.|
 |[CEditView::OnReplaceAll](#onreplaceall)|Заменяет все вхождения заданной строки новую строку.|
@@ -92,7 +92,7 @@ class CEditView : public CCtrlView
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CEditView::dwStyleDefault](#dwstyledefault)|По умолчанию стиль для объектов типа `CEditView`.|
 
@@ -397,7 +397,7 @@ UINT PrintInsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Указатель на контекст устройства принтера.
 
 *rectLayout*<br/>
@@ -492,10 +492,10 @@ void UnlockBuffer() const;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [Класс CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Класс CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Класс CCtrlView](../../mfc/reference/cctrlview-class.md)<br/>

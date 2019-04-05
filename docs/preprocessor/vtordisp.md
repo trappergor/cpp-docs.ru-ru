@@ -8,16 +8,16 @@ helpviewer_keywords:
 - pragmas, vtordisp
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
-ms.openlocfilehash: 075f00ad8a4071af57014638707503847b58756d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557187"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034382"
 ---
 # <a name="vtordisp"></a>vtordisp
 
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Управляет добавлением скрытого члена смещения конструктора или деструктора vtordisp.
 
@@ -41,7 +41,7 @@ ms.locfileid: "50557187"
 *n*<br/>
 Определяет новое значение vtordisp. Возможные значения: 0, 1 или 2, соответствующие `/vd0`, `/vd1`, и `/vd2` параметры компилятора. Дополнительные сведения см. в разделе [/vd (отключение смещений при выполнении конструктора)](../build/reference/vd-disable-construction-displacements.md).
 
-*on*<br/>
+*вкл.*<br/>
 Аналогично параметру `#pragma vtordisp(1)`.
 
 *Отключение*<br/>
@@ -57,7 +57,7 @@ ms.locfileid: "50557187"
 
 Задание 2 скрытые **vtordisp** членов для всех виртуальных базовых классов с виртуальными функциями.  `vtordisp(2)` может потребоваться обеспечить правильное производительность **dynamic_cast** на частично сконструированным объектам. Дополнительные сведения см. в разделе [Предупреждение компилятора (уровень 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md).
 
-Директива `#pragma vtordisp()` без аргументов восстанавливает исходное значение vtordisp.
+`#pragma vtordisp()`, без аргументов восстанавливает исходное значение vtordisp.
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 

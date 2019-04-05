@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301926"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780201"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>Структуры, стили, обратные вызовы и схемы сообщений
 
@@ -39,5 +39,5 @@ ms.locfileid: "57301926"
 [Общие сведения о библиотеке классов](../../mfc/class-library-overview.md)<br/>
 Перечисляет классы в библиотеке MFC по категориям.
 
-[Примеры MFC](../../visual-cpp-samples.md)<br/>
+[Примеры библиотек MFC](../../overview/visual-cpp-samples.md)<br/>
 Содержит ссылки на примеры, демонстрирующие использование библиотеки MFC.

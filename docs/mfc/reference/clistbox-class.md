@@ -103,10 +103,10 @@ helpviewer_keywords:
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
 ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778771"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
@@ -1543,7 +1543,7 @@ WM_VKEYTOITEM сообщение отправляется в списке, ко�
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Класс CButton](../../mfc/reference/cbutton-class.md)<br/>
-[Класс CComboBox](../../mfc/reference/ccombobox-class.md)<br/>
-[Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
+[CComboBox-класс](../../mfc/reference/ccombobox-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Класс CStatic](../../mfc/reference/cstatic-class.md)

@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424487"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781267"
 ---
 # <a name="ctoolbarctrl-class"></a>Класс CToolBarCtrl
 
@@ -203,13 +203,13 @@ class CToolBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CToolBarCtrl::CToolBarCtrl](#ctoolbarctrl)|Создает объект `CToolBarCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CToolBarCtrl::AddBitmap](#addbitmap)|Добавляет один или несколько точечных рисунков кнопки в список изображений кнопок, доступных для элемента управления панели инструментов.|
 |[CToolBarCtrl::AddButtons](#addbuttons)|Добавляет одну или несколько кнопок в элемент управления toolbar.|
@@ -901,7 +901,7 @@ CString GetButtonText(int idButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*idButton*|[in] Идентификатор для кнопки, извлечения, отображаемый текст.|
 
@@ -923,7 +923,7 @@ BOOL GetColorScheme(COLORSCHEME* lpColorScheme) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpColorScheme*|[out] Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структуру, которая получает сведения о схеме цвет. При возвращении данного метода структура описывает цветом и цветом тени панели инструментов.|
 
@@ -1708,7 +1708,7 @@ BOOL ReplaceBitmap(LPTBREPLACEBITMAP pReplaceBitmap);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pReplaceBitmap*|[in] Указатель на [TBREPLACEBITMAP](/windows/desktop/api/commctrl/ns-commctrl-tbreplacebitmap) структура, описывающая точечный рисунок заменяемого и новая Битовая карта.|
 
@@ -1956,7 +1956,7 @@ void SetColorScheme(const COLORSCHEME* lpColorScheme);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpColorScheme*|[in] Указатель на [COLORSCHEME](/windows/desktop/api/commctrl/ns-commctrl-tagcolorscheme) структура, описывающая цвет выделения и цвет тени элемента управления панели инструментов.|
 
@@ -2225,7 +2225,7 @@ DWORD SetPadding(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nHorzPadding*|[in] Указывает горизонтальное заполнение элемента управления панели инструментов, в пикселях.|
 |*nVertPadding*|[in] Задает вертикальный отступ элемента управления панели инструментов, в пикселях.|
@@ -2256,7 +2256,7 @@ CImagelist* SetPressedImageList(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iImageID*|[in] Отсчитываемый от нуля индекс списка изображений. Установите этот параметр равным нулю, если вы используете только один список изображений.|
 |*pImageList*|[in] Указатель на [CImageList](../../mfc/reference/cimagelist-class.md) , содержащий новый список изображений.|
@@ -2386,8 +2386,8 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC MFCIE](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CToolBar](../../mfc/reference/ctoolbar-class.md)

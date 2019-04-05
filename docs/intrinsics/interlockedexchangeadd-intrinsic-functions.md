@@ -55,12 +55,12 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd16_nf intrinsic
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
-ms.openlocfilehash: 8cb4c4a5f1b8048995684e3f5c630acecc74000b
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627504"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039180"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>Встроенные функции _InterlockedExchangeAdd
 
@@ -167,11 +167,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 ## <a name="requirements"></a>Требования
 
-|Встроенная функция|Архитектура|Верхний колонтитул|
+|Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<Intrin.h >|
-|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<Intrin.h >|
-|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h >|
+|`_InterlockedExchangeAdd`, `_InterlockedExchangeAdd8`, `_InterlockedExchangeAdd16`, `_InterlockedExchangeAdd64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedExchangeAdd_acq`, `_InterlockedExchangeAdd_rel`, `_InterlockedExchangeAdd_nf`, `_InterlockedExchangeAdd8_acq`, `_InterlockedExchangeAdd8_rel`, `_InterlockedExchangeAdd8_nf`,`_InterlockedExchangeAdd16_acq`, `_InterlockedExchangeAdd16_rel`, `_InterlockedExchangeAdd16_nf`, `_InterlockedExchangeAdd64_acq`, `_InterlockedExchangeAdd64_rel`, `_InterlockedExchangeAdd64_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangeAdd_HLEAcquire`, `_InterlockedExchangeAdd_HLERelease`, `_InterlockedExchangeAdd64_HLEAcquire`, `_InterlockedExchangeAdd64_HLErelease`|x86, x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
@@ -193,6 +193,6 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Конфликты с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

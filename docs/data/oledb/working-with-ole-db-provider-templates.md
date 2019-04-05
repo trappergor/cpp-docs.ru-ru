@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates, OLE DB provider
 - OLE DB providers, templates
 ms.assetid: c90b7523-dbff-431c-be06-eed9055710d2
-ms.openlocfilehash: 23a455eef5645aa027a9fdb97baaea948500cd6c
-ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
+ms.openlocfilehash: 79b225fb45c05a0b324f441654e63c6ea9f4918f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51265065"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030911"
 ---
 # <a name="working-with-ole-db-provider-templates"></a>Работа с шаблонами поставщика OLE DB
 
@@ -24,7 +24,7 @@ ms.locfileid: "51265065"
 
 - [Установка свойств в поставщике](../../data/oledb/setting-properties-in-your-provider.md)
 
-- [Динамическая привязка столбцов в поставщике](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
+- [Динамическое связывание столбцов в поставщике](../../data/oledb/dynamically-binding-columns-in-your-provider.md)
 
 - [Поддержка свободной потоковой модели в поставщике](../../data/oledb/supporting-free-threading-in-your-provider.md)
 

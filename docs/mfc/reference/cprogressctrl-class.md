@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418767"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778953"
 ---
 # <a name="cprogressctrl-class"></a>Класс CProgressCtrl
 
@@ -63,13 +63,13 @@ class CProgressCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CProgressCtrl::CProgressCtrl](#cprogressctrl)|Создает объект `CProgressCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CProgressCtrl::Create](#create)|Создает элемент управления хода выполнения и присоединяет его к `CProgressCtrl` объекта.|
 |[CProgressCtrl::CreateEx](#createex)|Создает элемент управления хода выполнения с указанной расширенные стили Windows и присоединяет его к `CProgressCtrl` объекта.|
@@ -380,7 +380,7 @@ COLORREF SetBarColor(COLORREF clrBar);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*clrBar*|[in] Объект [COLORREF](/windows/desktop/gdi/colorref) значение, которое указывает новый цвет индикатора индикатор хода выполнения. Укажите CLR_DEFAULT заставить индикатор хода выполнения использовать цвета по умолчанию.|
 
@@ -439,7 +439,7 @@ BOOL SetMarquee(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*fMarqueeMode*|[in] Значение true, чтобы включить режим бегущей строки Вкл "или" значение FALSE, чтобы отключить режим бегущей строки.|
 |*nInterval*|[in] Время в миллисекундах между обновлениями анимации области выделения.|
@@ -604,6 +604,6 @@ int StepIt();
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)
