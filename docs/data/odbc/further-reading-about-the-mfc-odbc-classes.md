@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440343"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035193"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Дополнительные сведения о классах ODBC MFC
 
@@ -23,7 +23,7 @@ ms.locfileid: "50440343"
 
 - [Динамический набор](../../data/odbc/dynaset.md)
 
-- [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)
+- [Исключения: Исключения базы данных](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC. Использование классов базы данных с документами и представлениями](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
@@ -33,17 +33,17 @@ ms.locfileid: "50440343"
 
 - [Администратор ODBC](../../data/odbc/odbc-administrator.md)
 
-- [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)
 
 - [Представления записей](../../data/record-views-mfc-data-access.md)
 
-- [Сериализация. Сериализация или Ввод/вывод баз данных](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Сериализация. Vs сериализации. Ввод/вывод баз данных](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Снимок](../../data/odbc/snapshot.md)
 
-- [SQL](../../data/odbc/sql.md)
+- [SQL-код](../../data/odbc/sql.md)
 
 - [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)
 
@@ -54,4 +54,4 @@ ms.locfileid: "50440343"
 ## <a name="see-also"></a>См. также
 
 [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Доступ к данным, программирование (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Программирование доступа к данным (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

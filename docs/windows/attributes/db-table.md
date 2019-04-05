@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_table attribute
 ms.assetid: ff9eb957-4e6d-4175-afcc-fd8ea916cec0
-ms.openlocfilehash: d0b67bae643698b6d4f09a75dd2e4ec6a23a5d28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab548261d6ebcb9d3d7f7e352c8afe3b33db06f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607276"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023871"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -28,7 +28,7 @@ ms.locfileid: "50607276"
 *db_table*<br/>
 Строка, указывающая имя таблицы базы данных (например, «продукты»).
 
-*name*<br/>
+*имя*<br/>
 (Необязательно) Имя дескриптора, который можно использовать для работы с таблицей. Необходимо указать этот параметр, если вы хотите вернуть более одной строки результатов. **db_table** создает переменную с указанным *имя* , может использоваться для просмотра набора строк или выполнения нескольких запросов.
 
 *source_name*<br/>
@@ -70,11 +70,11 @@ class CProducts {
 |-|-|
 |**Применение**|**Класс**, **структуры**|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|None|
-|**Недопустимые атрибуты**|None|
+|**Обязательные атрибуты**|Нет|
+|**Недопустимые атрибуты**|Нет|
 
 Дополнительные сведения о контекстах атрибутов см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)
+[Атрибуты потребителя OLE DB](ole-db-consumer-attributes.md)

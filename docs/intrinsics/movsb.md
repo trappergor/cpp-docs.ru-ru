@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep movsb instruction
 - __movsb intrinsic
 ms.assetid: ba5469f6-f797-4cd2-bee8-74c7666c26d4
-ms.openlocfilehash: 9dc32f460a2098d2a216c725f49c0389f77043c2
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 42124743c27b297c723780c1bc19038fb54e638d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329037"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024998"
 ---
 # <a name="movsb"></a>__movsb
 
@@ -36,7 +36,7 @@ void __movsb(
 *Назначение*<br/>
 [out] Указатель на место назначения копирования.
 
-*Источник*<br/>
+*Исходный код*<br/>
 [in] Указатель на источник копирования.
 
 *Количество*<br/>
@@ -84,4 +84,4 @@ A big black dog. A big black dog.
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

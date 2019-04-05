@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - raw_native_types attribute
 ms.assetid: 9f38daa8-8dc0-46a5-aff9-f1ff9c1e6f48
-ms.openlocfilehash: e48aa2ca1469d38b67dcb06a3377713141a158e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32b77905ef7025334e5101e76864da9a15c50cf6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620445"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024972"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Отключает использование классов поддержки COM в высокоуровневых функциях оболочки и принудительно использует вместо них низкоуровневые типы данных.
 
@@ -28,9 +28,9 @@ raw_native_types
 
 По умолчанию высокоуровневые методы обработки ошибок используют классы с поддержкой COM [_bstr_t](../cpp/bstr-t-class.md) и [_variant_t](../cpp/variant-t-class.md) вместо `BSTR` и `VARIANT` типов данных и необработанные COM указателей на интерфейс. Эти классы инкапсулируют сведения выделения и отмены выделения хранилища памяти для этих типов данных и значительно упрощают операции приведения и преобразования типов.
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

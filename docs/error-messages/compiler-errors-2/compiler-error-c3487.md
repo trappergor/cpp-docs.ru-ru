@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3487
 ms.assetid: 39bda474-4418-4a79-98bf-2b22fa92eaaa
-ms.openlocfilehash: a1c4b667e23ff167b28b9f22f93b0930545c915c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 01f8a1bd74ed2b7a3150afae5b46128c6f5b0ca2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492615"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028416"
 ---
 # <a name="compiler-error-c3487"></a>Ошибка компилятора C3487
 
@@ -21,7 +21,7 @@ ms.locfileid: "50492615"
 
 ### <a name="to-correct-this-error"></a>Исправление ошибки
 
-- Укажите конечный возвращаемый тип для лямбда-выражения. Убедитесь, что все возвращаемые типа лямбда-выражения относятся к одному типу или могут быть неявно преобразованы в тип возвращаемого значения.
+- Укажите конечный тип возвращаемого значения для лямбда-выражения. Убедитесь, что все возвращаемые типа лямбда-выражения относятся к одному типу или могут быть неявно преобразованы в тип возвращаемого значения.
 
 ## <a name="example"></a>Пример
 

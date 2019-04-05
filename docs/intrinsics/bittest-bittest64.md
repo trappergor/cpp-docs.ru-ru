@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _bittest64 intrinsic
 - bt instruction
 ms.assetid: 15e62afb-abea-4ee7-a6b1-13efa2034937
-ms.openlocfilehash: 170979b5cf463d72f645599e146d1e8e2a10154d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d29b8bec646bb2da8acfe20479fe0e238db0de5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645406"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035232"
 ---
 # <a name="bittest-bittest64"></a>_bittest, _bittest64
 
@@ -39,7 +39,7 @@ unsigned char _bittest64(
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*пример*<br/>
 [in] Указатель памяти для проверки.
 
 *b*<br/>
@@ -53,8 +53,8 @@ unsigned char _bittest64(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_bittest`|x86, ARM, x64|\<Intrin.h >|
-|`_bittest64`|ARM, x64|\<Intrin.h >|
+|`_bittest`|x86, ARM, x64|\<intrin.h>|
+|`_bittest64`|ARM, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
@@ -104,4 +104,4 @@ Binary representation:
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

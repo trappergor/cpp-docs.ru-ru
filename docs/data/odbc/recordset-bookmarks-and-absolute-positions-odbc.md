@@ -21,12 +21,12 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500948"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023793"
 ---
 # <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>Набор записей. Закладки и абсолютное позиционирование (ODBC)
 
@@ -80,7 +80,7 @@ rs.SetBookmark( varRecordToReturnTo );
 > [!NOTE]
 >  Абсолютное положение записи потенциально ненадежным. Если пользователь удаляет записи из набора записей, изменяет порядковый номер всех последующих записей. Закладки-это рекомендуемый метод для перемещения текущей записи. Дополнительные сведения см. в разделе [закладки в MFC ODBC](#_core_bookmarks_in_mfc_odbc).
 
-Дополнительные сведения о перемещении по набору записей, см. в разделе [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
+Дополнительные сведения о перемещении по набору записей, см. в разделе [набор записей: Прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md).
 
 ## <a name="see-also"></a>См. также
 

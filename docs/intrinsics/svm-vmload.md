@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmload intrinsic
 - VMLOAD instruction
 ms.assetid: b46a5592-db76-4ffc-8694-2f3494e28bed
-ms.openlocfilehash: 31f60096b60db7d8b135c686af87464060e0401a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 282f1c005c7eb59b2c590c70b38233c88c664e07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584773"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031158"
 ---
 # <a name="svmvmload"></a>__svm_vmload
 
@@ -36,7 +36,7 @@ void __svm_vmload(
 
 ## <a name="remarks"></a>Примечания
 
-Функция `__svm_vmload` эквивалентна инструкции компьютера `VMLOAD` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Функция `__svm_vmload` эквивалентна инструкции компьютера `VMLOAD` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Номер 24593, редакция 3.11, System Programming,» документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -50,6 +50,6 @@ void __svm_vmload(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
 [__svm_vmsave](../intrinsics/svm-vmsave.md)

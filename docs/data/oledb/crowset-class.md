@@ -238,12 +238,12 @@ helpviewer_keywords:
 - Update method
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
-ms.openlocfilehash: eda4bb09865698a657828c6d4684a8df92ffe9b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032329"
 ---
 # <a name="crowset-class"></a>Класс CRowset
 
@@ -273,16 +273,16 @@ class CRowset
 |-|-|
 |[AddRefRows](#addrefrows)|Увеличивает счетчик ссылок, связанный с текущей строкой.|
 |[Закрыть](#close)|Освобождает строк и текущий `IRowset` интерфейс.|
-|[Compare](#compare)|Сравнивает два закладки с помощью [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
+|[Сравнение](#compare)|Сравнивает два закладки с помощью [IRowsetLocate::Compare](/previous-versions/windows/desktop/ms709539(v=vs.85)).|
 |[CRowset](#crowset)|Создает новый `CRowset` объекта, который (при необходимости) связывается с `IRowset` интерфейс, предоставляемый в качестве параметра.|
-|[Удалить](#delete)|Удаляет строки из набора строк с помощью [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
+|[Оператор delete](#delete)|Удаляет строки из набора строк с помощью [IRowsetChange:DeleteRows](/previous-versions/windows/desktop/ms724362(v=vs.85)).|
 |[FindNextRow](#findnextrow)|Находит следующий совпадающей строки после указанной закладке.|
 |[GetApproximatePosition](#getapproximateposition)|Возвращает приблизительное позицию строка, соответствующая закладки.|
 |[GetData](#getdata)|Извлекает данные из копии строки в наборе строк.|
 |[GetDataHere](#getdatahere)|Извлекает данные из указанного буфера.|
 |[GetOriginalData](#getoriginaldata)|Извлекает данные, наиболее недавно извлечены из или передана в источник данных, игнорируя ожидающие изменения.|
 |[GetRowStatus](#getrowstatus)|Возвращает состояние всех строк.|
-|[Вставить](#insert)|Создает и вставляет новую строку, используя [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
+|[Insert](#insert)|Создает и вставляет новую строку, используя [IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85)).|
 |[IsSameRow](#issamerow)|Сравнивает указанной строки с текущей строкой.|
 |[MoveFirst](#movefirst)|Перемещает расположение next fetch в исходное положение.|
 |[MoveLast](#movelast)|Переход к последней записи.|
@@ -348,7 +348,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 #### <a name="parameters"></a>Параметры
 
-*Закладке Bookmark1*<br/>
+*Bookmark1*<br/>
 [in] Первая закладка для сравнения.
 
 *Bookmark2*<br/>
@@ -741,7 +741,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Параметры
 
-*Закладка*<br/>
+*закладка*<br/>
 [in] Закладка, расположения, из которого требуется извлечь данные.
 
 *lSkip*<br/>
@@ -941,4 +941,4 @@ HRESULT UpdateAll(DBCOUNTITEM* pcRows = NULL,
 [Образец MultiRead](../../overview/visual-cpp-samples.md)<br/>
 [Атрибутов multiRead](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

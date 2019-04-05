@@ -32,12 +32,12 @@ helpviewer_keywords:
 - Hash method
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
-ms.openlocfilehash: c5954aefaff2cdacb1aa1712f8b4bda93c9e434e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420379"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039823"
 ---
 # <a name="irowsetlocateimpl-class"></a>Класс IRowsetLocateImpl
 
@@ -94,10 +94,10 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 
 |||
 |-|-|
-|[Compare](#compare)|Сравнивает два закладки.|
+|[Сравнение](#compare)|Сравнивает два закладки.|
 |[GetRowsAt](#getrowsat)|Извлекает строки, начиная со строки, указанной в качестве смещения относительно закладки.|
 |[GetRowsByBookmark](#getrowsbybookmark)|Извлекает строки, которые соответствуют указанной закладки.|
-|[хэш](#hash)|Возвращает хэш-значения для указанного закладки.|
+|[Hash](#hash)|Возвращает хэш-значения для указанного закладки.|
 
 ### <a name="data-members"></a>Элементы данных
 

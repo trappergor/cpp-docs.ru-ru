@@ -8,19 +8,19 @@ helpviewer_keywords:
 - binary large objects
 - CLongBinary class, using in recordsets
 ms.assetid: 3e80b5a8-b6e7-43c6-a816-e54befc513a3
-ms.openlocfilehash: 8ef32621821d731d9137a446bea220564cb7f92f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ba8d4af5b0781c425dd3b1223e2208b279f055e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460376"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033048"
 ---
 # <a name="recordset-working-with-large-data-items-odbc"></a>Набор записей. Работа с большими элементами данных (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC и классы MFC DAO.
 
 > [!NOTE]
->  При использовании классов MFC DAO, управлять элементами больших объемов данных с помощью класса [CByteArray](../../mfc/reference/cbytearray-class.md) вместо того чтобы класс [CLongBinary](../../mfc/reference/clongbinary-class.md). Если вы используете классам ODBC библиотеки MFC с массовой выборке строк, используйте `CLongBinary` вместо `CByteArray`. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  При использовании классов MFC DAO, управлять элементами больших объемов данных с помощью класса [CByteArray](../../mfc/reference/cbytearray-class.md) вместо того чтобы класс [CLongBinary](../../mfc/reference/clongbinary-class.md). Если вы используете классам ODBC библиотеки MFC с массовой выборке строк, используйте `CLongBinary` вместо `CByteArray`. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Предположим, что базы данных можно хранить больших частей данных, таких как растровые изображения (фотографии сотрудников, карты, изображения продуктов, объекты OLE и т. д.). Этот тип данных часто называется большой двоичный объект (или BLOB-ОБЪЕКТОВ) из-за:
 
@@ -63,4 +63,4 @@ ms.locfileid: "50460376"
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Определение сумм и других статистических результатов (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)<br/>
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

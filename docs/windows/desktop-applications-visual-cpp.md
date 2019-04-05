@@ -2,12 +2,12 @@
 title: Классические приложения (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694573"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033122"
 ---
 # <a name="desktop-applications-visual-c"></a>Классические приложения (Visual C++)
 
@@ -35,25 +35,25 @@ ms.locfileid: "51694573"
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
-|[Консольные приложения Windows (C++)](console-applications-in-visual-cpp.md)|Содержит сведения о консольных приложениях. Консольное приложение Win32 (или Win64) не имеет собственного окна и цикла обработки сообщений. Оно выполняется в окне консоли, а ввод и вывод обрабатываются через командную строку.|
+|[Консольные приложения Windows в C++](console-applications-in-visual-cpp.md)|Содержит сведения о консольных приложениях. Консольное приложение Win32 (или Win64) не имеет собственного окна и цикла обработки сообщений. Оно выполняется в окне консоли, а ввод и вывод обрабатываются через командную строку.|
 |[Пошаговое руководство. Создание классических приложений Windows (C++)](walkthrough-creating-windows-desktop-applications-cpp.md)|Создание простого приложения рабочего стола Windows.|
 |[Создание пустого классического приложения Windows](creating-an-empty-windows-desktop-application.md)|Как создать проект рабочего стола Windows, ни одного файла по умолчанию.|
 |[Добавление файлов в пустые приложения Win32](adding-files-to-an-empty-win32-applications.md)|Как добавить файлы в пустой проект.|
 |[Работа с файлами ресурсов](working-with-resource-files.md)|Как добавить изображения, значки, таблицы строк и другие ресурсы в приложение рабочего стола.|
 |[Ресурсы для создания игры с использованием DirectX (C++)](resources-for-creating-a-game-using-directx.md)|Ссылки на материалы по созданию игр на C++.|
-|[Пошаговое руководство: Создание и использование статической библиотеки](walkthrough-creating-and-using-a-static-library-cpp.md)|Как создать двоичный файл .lib.|
-|[Практическое руководство. Использование пакета SDK для Windows 10 в классическом приложении Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Содержит инструкции по настройке проекта для построения с помощью пакета SDK для Windows 10.|
+|[Пошаговое руководство. Создание и использование статической библиотеки](walkthrough-creating-and-using-a-static-library-cpp.md)|Как создать двоичный файл .lib.|
+|[Практическое руководство. Использовать Windows 10 SDK в приложении для настольных систем Windows](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Содержит инструкции по настройке проекта для построения с помощью пакета SDK для Windows 10.|
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Разработка для Windows](/windows/desktop/index)|Содержит сведения об API Windows и COM. (Некоторые API-интерфейсы Windows и сторонние библиотеки DLL реализованы в виде объектов COM).|
-|[Hilo: разработка приложений C++ для Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Описание способов создания классического приложения Windows, использующего анимацию Windows и Direct2D для создания интерфейса пользователя по принципу карусели.  Этот учебник не была обновлена с момента Windows 7, но он по-прежнему предоставляет основные знания для программирования в среде Win32.|
+|[Hilo: Разработка приложений C++ для Windows 7](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|Описание способов создания классического приложения Windows, использующего анимацию Windows и Direct2D для создания интерфейса пользователя по принципу карусели.  Этот учебник не была обновлена с момента Windows 7, но он по-прежнему предоставляет основные знания для программирования в среде Win32.|
 |[Общие сведения о программировании на C++ в Windows](overview-of-windows-programming-in-cpp.md)|Описание ключевых возможностей рабочего стола Windows, программировании на языке C++.|
 
 ## <a name="see-also"></a>См. также
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

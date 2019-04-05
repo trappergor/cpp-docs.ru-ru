@@ -11,22 +11,22 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827743"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028510"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>Сведения об этапах настраиваемого построения и событиях построения.
 
 В среде разработки Visual C++ существует три основных способа для настройки процесса сборки.
 
-- **Настраиваемые этапы сборки**
+- **Настраиваемые этапы построения**
 
    Настраиваемый этап сборки — это правило сборки, связанное с проектом. Настраиваемый этап сборки может указать командную строку для выполнения, любые дополнительные входные или выходные файлы, а также отображаемые сообщения. Дополнительные сведения см. в разделе [Как добавить пользовательский шаг сборки в проекты MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md).
 
-- **Настраиваемые средства сборки**
+- **Пользовательские средства построения**
 
    Настраиваемое средство сборки — это правило сборки, связанное с одним или несколькими файлами. Настраиваемый этап сборки может передавать входные файлы настраиваемому средству сборки, в результате чего создается один или несколько выходных файлов. Например, файлы справки в приложении MFC создаются с помощью настраиваемого средства сборки. Дополнительные сведения см. в разделе [Как Добавление пользовательских средств сборки в проекты MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md) и [Задание пользовательских средств сборки](specifying-custom-build-tools.md).
 
@@ -64,14 +64,14 @@ ms.locfileid: "57827743"
 
 `custom build step on the project` и `post-build event` выполняются последовательно после завершения всех остальных процессов сборки.
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>Содержание раздела
 
-[Определение пользовательских инструментов сборки](specifying-custom-build-tools.md)<br/>
-[Определение событий сборки](specifying-build-events.md)<br/>
-[Устранение неполадок с настройками сборки](troubleshooting-build-customizations.md)<br/>
-[Форматирование выходных данных этапа настраиваемой сборки или события сборки](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[Укажите пользовательские средства построения](specifying-custom-build-tools.md)<br/>
+[Указание событий сборки](specifying-build-events.md)<br/>
+[Устранение неполадок настроек сборки](troubleshooting-build-customizations.md)<br/>
+[Формат выходных данных этапа настраиваемого построения или события построения](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>См. также
 
-[Проекты Visual Studio — C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Проекты Visual Studio - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [Стандартные макросы для команд и свойств сборки](reference/common-macros-for-build-commands-and-properties.md)

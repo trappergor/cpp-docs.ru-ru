@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563359"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023702"
 ---
 # <a name="dialog-box-controls-c"></a>Элементам управления диалоговыми (C++)
 
@@ -38,17 +38,17 @@ ms.locfileid: "57563359"
 
 |Имя элемента управления|Событие по умолчанию|
 |---|---|
-|[Элемент управления Button](../mfc/reference/cbutton-class.md)|BN_CLICKED|
-|[Элемент управления "флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Поле со списком](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[Изменение элемента управления](../mfc/reference/cedit-class.md)|СОБЫТИЕ EN_CHANGE|
+|[Button - элемент управления](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Элемент управления "Флажок"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Элемент управления "Поле со списком"](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
+|[Элемент управления "Поле ввода"](../mfc/reference/cedit-class.md)|СОБЫТИЕ EN_CHANGE|
 |Группа|(неприменимо)|
-|[Окно списка](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
-|[Управления "переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[Статический элемент управления текст](../mfc/reference/cstatic-class.md)|(неприменимо)|
-|[Управления изображения](../mfc/reference/cpictureholder-class.md)|(неприменимо)|
-|[Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)|СОБЫТИЕ EN_CHANGE|
-|[Полосы прокрутки](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
+|[Элемент управления "Список"](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
+|[Элемент управления "Переключатель"](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
+|[Элемент управления "Надпись"](../mfc/reference/cstatic-class.md)|(неприменимо)|
+|[Элемент управления "Рисунок"](../mfc/reference/cpictureholder-class.md)|(неприменимо)|
+|[Элемент управления Rich Edit 2.0](../mfc/using-cricheditctrl.md)|СОБЫТИЕ EN_CHANGE|
+|[Элемент управления "Полоса прокрутки"](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
 > [!NOTE]
 > Дополнительные сведения об использовании **RichEdit 1.0** управления с MFC, см. в разделе [использование элемента управления RichEdit 1.0 с MFC](../windows/using-the-richedit-1-0-control-with-mfc.md) и [примеры элемента управления Правка Rich](../mfc/rich-edit-control-examples.md).
@@ -57,18 +57,18 @@ ms.locfileid: "57563359"
 
 |Имя элемента управления|Событие по умолчанию|
 |---|---|
-|[Элемент управления "ползунок"](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
-|[Элемент управления "Счетчик"](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
-|[Элемент управления хода выполнения](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
-|["Горячий" ключа управления](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
-|[Управления "список"](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
-|[Дерево](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
-|[Набор вкладок](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
-|[Анимация элемента управления](../mfc/using-an-animation-control.md)|ACN_START|
-|[Элемент управления даты средство выбора времени](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[Элемент управления месячного календаря](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
-|[IP-адрес управления](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
-|[Расширенного элемента управления списком](../mfc/creating-an-extended-combo-box-control.md)||
+|[Ползунок - элемент управления](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Spin control](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
+|[Progress control](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
+|[Элемент управления "Сочетание клавиш"](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
+|[Элемент управления "Список"](../mfc/list-control-and-list-view.md)|LVN_ITEMCHANGE|
+|[Элемент управления "Дерево"](../mfc/tree-control-styles.md)|TVN_SELCHANGE|
+|[Элемент управления табуляции](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
+|[Элемент управления "Анимация"](../mfc/using-an-animation-control.md)|ACN_START|
+|[Элемент управления "Выбор даты и времени"](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
+|[Элемент управления "Календарь месяца"](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[Элемент управления "IP-адрес"](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
+|[Элемент управления "Расширенное поле со списком"](../mfc/creating-an-extended-combo-box-control.md)||
 |Пользовательский элемент управления|TTN_GETDISPINFO|
 
 ## <a name="custom-controls"></a>Пользовательские элементы управления

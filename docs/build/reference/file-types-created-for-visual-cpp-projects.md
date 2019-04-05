@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b0f780b122b147d633d5d7cd949da805d267f757
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58327585"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033379"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Типы файлов, создаваемых для проектов C++ в Visual Studio
 
@@ -39,7 +39,7 @@ ms.locfileid: "58327585"
 
 - [Файлы справки (WinHelp)](help-files-winhelp.md)
 
-- [Файлы указаний](hint-files.md)
+- [Файлы подсказок](hint-files.md)
 
 При создании проекта Visual Studio, можно создать новое решение или проект, добавляемый решения. Нетривиальные приложения обычно разрабатываются как решения, содержащие множество проектов.
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651195"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039654"
 ---
 # <a name="recordset-architecture-odbc"></a>Набор записей. Архитектура (ODBC)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50651195"
 - [Использование m_nFields и m_nParams элементов данных](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если выборка строк реализована, похоже архитектуры. Сведения о различиях, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если выборка строк реализована, похоже архитектуры. Сведения о различиях, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_a_sample_class"></a> Пример класса
 
@@ -89,10 +89,10 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 
 Когда мастер создает конструктор для класса, он также инициализирует [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields) элемента данных, которое указывает количество [полей с данными](#_core_field_data_members) в классе. Если какие-либо добавляются [параметры](#_core_parameter_data_members) к классу, необходимо также добавить инициализацию для [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams) элемент данных, который указывает число элементов данных параметров. Инфраструктура использует эти значения для работы с элементами данных.
 
-Дополнительные сведения и примеры см. в разделе [обмен полями записей: использование RFX](../../data/odbc/record-field-exchange-using-rfx.md).
+Дополнительные сведения и примеры см. в разделе [обмен полями записей: Использование RFX](../../data/odbc/record-field-exchange-using-rfx.md).
 
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Объявление класса таблицы (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

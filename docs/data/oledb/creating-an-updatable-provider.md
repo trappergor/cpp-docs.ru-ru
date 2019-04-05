@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521405"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024744"
 ---
 # <a name="creating-an-updatable-provider"></a>Создание поставщика с возможностью записи
 
@@ -109,9 +109,9 @@ Visual C++ поддерживает поставщики, которые мог�
 
    Если вы реализуете `IRowsetChangeImpl`, необходимо задать следующие свойства для поставщика. Эти свойства в основном используются для запроса интерфейсов с помощью `ICommandProperties::SetProperties`.
 
-   - `DBPROP_IRowsetChange`: Задание при этом автоматически наборы `DBPROP_IRowsetChange`.
+   - `DBPROP_IRowsetChange`: При этом автоматически Установка наборов `DBPROP_IRowsetChange`.
 
-   - `DBPROP_UPDATABILITY`: Битовая маска, указывающая поддерживаемые методы на `IRowsetChange`: `SetData`, `DeleteRows`, или `InsertRow`.
+   - `DBPROP_UPDATABILITY`: Битовая маска, указывающая на поддерживаемых методов `IRowsetChange`: `SetData`, `DeleteRows`, или `InsertRow`.
 
    - `DBPROP_CHANGEINSERTEDROWS`: Пользователь может вызвать `IRowsetChange::DeleteRows` или `SetData` для вставленных строк.
 
@@ -123,15 +123,15 @@ Visual C++ поддерживает поставщики, которые мог�
 
    - `DBPROP_IRowsetUpdate`.
 
-   - `DBPROP_OWNINSERT`: Должен иметь значение VARIANT_TRUE и READ_ONLY.
+   - `DBPROP_OWNINSERT`: Должно быть равно VARIANT_TRUE и READ_ONLY.
 
-   - `DBPROP_OWNUPDATEDELETE`: Должен иметь значение VARIANT_TRUE и READ_ONLY.
+   - `DBPROP_OWNUPDATEDELETE`: Должно быть равно VARIANT_TRUE и READ_ONLY.
 
-   - `DBPROP_OTHERINSERT`: Должен иметь значение VARIANT_TRUE и READ_ONLY.
+   - `DBPROP_OTHERINSERT`: Должно быть равно VARIANT_TRUE и READ_ONLY.
 
-   - `DBPROP_OTHERUPDATEDELETE`: Должен иметь значение VARIANT_TRUE и READ_ONLY.
+   - `DBPROP_OTHERUPDATEDELETE`: Должно быть равно VARIANT_TRUE и READ_ONLY.
 
-   - `DBPROP_REMOVEDELETED`: Должен иметь значение VARIANT_TRUE и READ_ONLY.
+   - `DBPROP_REMOVEDELETED`: Должно быть равно VARIANT_TRUE и READ_ONLY.
 
    - `DBPROP_MAXPENDINGROWS`.
 

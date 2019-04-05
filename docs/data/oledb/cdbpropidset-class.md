@@ -33,12 +33,12 @@ helpviewer_keywords:
 - operator=, property sets
 - SetGUID method
 ms.assetid: 52bb806c-9581-494d-9af7-50d8a4834805
-ms.openlocfilehash: d51b1bf6862aebda34586518be6501f57f119590
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e878af3acf4c4d3a6ca785454c4bb072f17cf09
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419963"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022415"
 ---
 # <a name="cdbpropidset-class"></a>Класс CDBPropIDSet
 
@@ -68,7 +68,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
 
 |||
 |-|-|
-|[оператор =](#op_equal)|Назначает содержимого идентификатор свойства набора в другой.|
+|[operator =](#op_equal)|Назначает содержимого идентификатор свойства набора в другой.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -105,7 +105,7 @@ CDBPropIDSet();
 
 #### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
+*guid*<br/>
 [in] Идентификатор GUID, используемый для инициализации `guidPropertySet` поля.
 
 *propidset*<br/>
@@ -123,7 +123,7 @@ void SetGUID(const GUID& guid) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
+*guid*<br/>
 [in] Идентификатор GUID, используемый для задания `guidPropertySet` поле [DBPROPIDSET](/previous-versions/windows/desktop/ms717981(v=vs.85)) структуры.
 
 ### <a name="remarks"></a>Примечания
@@ -143,4 +143,4 @@ CDBPropIDSet& operator =(CDBPropIDSet& propset) throw();
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

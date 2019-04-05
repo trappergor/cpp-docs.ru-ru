@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC, about ODBC
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
-ms.openlocfilehash: 81b1f6d06d909b5b046703b97c4574270efbdd46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591728"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033246"
 ---
 # <a name="odbc-basics"></a>Основы ODBC
 
@@ -25,7 +25,7 @@ ms.locfileid: "50591728"
 
 - [Компоненты ODBC, необходимо повторить с приложениями](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
-Необходимо также ознакомьтесь с разделом [ODBC: библиотека курсоров ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Необходимо также ознакомьтесь с разделом [ODBC: Библиотека курсоров ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 > [!NOTE]
 > Источники данных ODBC доступны через классы MFC ODBC, как описано в этом разделе, или с помощью классов MFC объекта доступа к данным (DAO).
@@ -67,4 +67,4 @@ ODBC часть базы данных из Microsoft Windows откройте с
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)
+[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)

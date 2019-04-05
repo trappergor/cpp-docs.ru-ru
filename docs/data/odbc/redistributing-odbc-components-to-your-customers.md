@@ -9,12 +9,12 @@ helpviewer_keywords:
 - components [C++]
 - components [C++], redistributing
 ms.assetid: 17b065b4-a307-4b89-99ac-d05831cfab87
-ms.openlocfilehash: cfbe6b2c440f84a4c470255bc964adf6c5145cf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a6ec6f5fdd3c32080d357ca58d31ccea271b7a4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676792"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040099"
 ---
 # <a name="redistributing-odbc-components-to-your-customers"></a>Распространение компонентов ODBC среди клиентов
 
@@ -22,7 +22,7 @@ ms.locfileid: "50676792"
 
 См. в документации по всем драйверам ODBC, которые планируется поставлять. Необходимо определить, какие библиотеки DLL и другие файлы для отправки. Стоит также прочесть [распространение компонентов ODBC среди клиентов](../../data/odbc/redistributing-odbc-components-to-your-customers.md), который описывается распространение компонентов ODBC.
 
-Кроме того необходимо включить еще один файл в большинстве случаев. Odbccr32.dll является библиотека курсоров ODBC. Эта библиотека предоставляет драйверам первого уровня возможность прямой и обратной прокрутки. Он также предоставляет возможность поддержки моментальные снимки. Дополнительные сведения о библиотеку курсоров ODBC, см. в разделе [ODBC: библиотека курсоров ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
+Кроме того необходимо включить еще один файл в большинстве случаев. Odbccr32.dll является библиотека курсоров ODBC. Эта библиотека предоставляет драйверам первого уровня возможность прямой и обратной прокрутки. Он также предоставляет возможность поддержки моментальные снимки. Дополнительные сведения о библиотеку курсоров ODBC, см. в разделе [ODBC: Библиотека курсоров ODBC](../../data/odbc/odbc-the-odbc-cursor-library.md).
 
 Дополнительные сведения об использовании ODBC и классы баз данных в следующих разделах.
 

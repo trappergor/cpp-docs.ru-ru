@@ -10,12 +10,12 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
-ms.openlocfilehash: b34f6f51c6ff3a0995f4cf6044ddd7949644f42c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665300"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040772"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Набор записей. Дополнительные сведения об обновлениях (ODBC)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50665300"
 - [Дополнительные сведения о функции-члены Update и Delete](#_core_more_about_update_and_delete).
 
 > [!NOTE]
->  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы реализовали выборка строк, некоторые данные не применяется. Например, нельзя вызывать `AddNew`, `Edit`, `Delete`, и `Update` функций-членов; тем не менее, можно выполнять транзакции. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы реализовали выборка строк, некоторые данные не применяется. Например, нельзя вызывать `AddNew`, `Edit`, `Delete`, и `Update` функций-членов; тем не менее, можно выполнять транзакции. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> Влияние на другие операции обновления
 
@@ -53,7 +53,7 @@ ms.locfileid: "50665300"
 
 ###  <a name="_core_how_scrolling_affects_updates"></a> Влияние прокрутки на обновление
 
-Когда вы [набор записей: прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) в наборе записей, в буфере заполняется каждая новая текущая запись (предыдущая запись при этом не сохраняется). При прокрутке пропускаются ранее удаленные записи. Если прокрутить после `AddNew` или `Edit` вызов без вызова `Update`, `CommitTrans`, или `Rollback` во-первых, все изменения будут потеряны (предупреждение при этом не отображается) при записи в буфер. В буфере заполняется новая запись, сохраненная запись освобождается и не произойдет никаких изменений в источнике данных. Это относится как `AddNew` и `Edit`.
+Когда вы [набор записей: Прокрутка (ODBC)](../../data/odbc/recordset-scrolling-odbc.md) в наборе записей, в буфере заполняется каждая новая текущая запись (предыдущая запись при этом не сохраняется). При прокрутке пропускаются ранее удаленные записи. Если прокрутить после `AddNew` или `Edit` вызов без вызова `Update`, `CommitTrans`, или `Rollback` во-первых, все изменения будут потеряны (предупреждение при этом не отображается) при записи в буфер. В буфере заполняется новая запись, сохраненная запись освобождается и не произойдет никаких изменений в источнике данных. Это относится как `AddNew` и `Edit`.
 
 ##  <a name="_core_your_updates_and_the_updates_of_other_users"></a> Обновления и обновления других пользователей
 
@@ -105,7 +105,7 @@ ms.locfileid: "50665300"
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[SQL](../../data/odbc/sql.md)<br/>
-[Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)
+[Набор записей. Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[SQL-код](../../data/odbc/sql.md)<br/>
+[Исключения: Исключения базы данных](../../mfc/exceptions-database-exceptions.md)
