@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e12cf9f65e6fd6dd7f68edc4a94103baa5a8df62
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293433"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781761"
 ---
 # <a name="cmdichildwndex-class"></a>Класс CMDIChildWndEx
 
@@ -135,7 +135,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMDIChildWndEx::ActivateTopLevelFrame](#activatetoplevelframe)|Вызывается внутренне платформой активация рамки верхнего уровня в том случае, если приложение следует активировать из вкладки панели задач.|
 |`CMDIChildWndEx::AddDockSite`|Этот метод не используется и не реализован.|
@@ -201,7 +201,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 
 ## <a name="example"></a>Пример
 
-Следующий пример является производным от класса `CMDIChildWndEx`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
+Следующий пример является производным от класса `CMDIChildWndEx`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>Пример
 
-В следующем примере иллюстрируется использование метода `GetDocumentName`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
+В следующем примере иллюстрируется использование метода `GetDocumentName`. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>Пример
 
-В следующем примере показано переопределение `IsReadOnly` метод. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../visual-cpp-samples.md).
+В следующем примере показано переопределение `IsReadOnly` метод. Этот фрагмент кода поступает из [VisualStudioDemo образца: Приложение Visual Studio MFC](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -941,7 +941,7 @@ virtual int OnTaskbarTabThumbnailMouseActivate(
 *nHitTest*<br/>
 Указывает код области проверки нажатия. Проверку нажатия является тест, который определяет расположение курсора.
 
-*message*<br/>
+*сообщение*<br/>
 Указывает номер сообщения мыши.
 
 ### <a name="remarks"></a>Примечания

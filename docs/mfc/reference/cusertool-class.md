@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5bb0ae073b722c97e8e30158f8f7832fd88b2fbc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779044"
 ---
 # <a name="cusertool-class"></a>Класс CUserTool
 
@@ -51,7 +51,7 @@ class CUserTool : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CUserTool::CopyIconToClipboard](#copyicontoclipboard)||
 |[CUserTool::DrawToolIcon](#drawtoolicon)|Значок средства пользователь рисует в заданном прямоугольнике.|
@@ -64,13 +64,13 @@ class CUserTool : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CUserTool::LoadDefaultIcon](#loaddefaulticon)|Загружает значок по умолчанию для пользовательского средства.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CUserTool::m_strArguments](#m_strarguments)|Аргументы командной строки для пользовательского средства.|
 |[CUserTool::m_strInitialDirectory](#m_strinitialdirectory)|Исходный каталог для пользовательского средства.|
@@ -82,7 +82,7 @@ class CUserTool : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание средство, разработанное `CUserToolsManager` установите `m_strLabel` переменной-члена, а также набор приложение, которое запускает средство пользовательской среды. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание средство, разработанное `CUserToolsManager` установите `m_strLabel` переменной-члена, а также набор приложение, которое запускает средство пользовательской среды. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#35](../../mfc/codesnippet/cpp/cusertool-class_1.cpp)]
 
@@ -120,7 +120,7 @@ void DrawToolIcon(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rectImage*<br/>

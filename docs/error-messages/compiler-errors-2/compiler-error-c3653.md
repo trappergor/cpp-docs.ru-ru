@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3653
 ms.assetid: 316549d7-f7ef-4578-a2ba-57adc8aac527
-ms.openlocfilehash: d7936303dab4fbb273a01f98def5b9af99f89dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75e2c061190b24019491db7a625ecafb5ac82b6b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477627"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776652"
 ---
 # <a name="compiler-error-c3653"></a>Ошибка компилятора C3653
 
 «функция»: нельзя использовать в качестве именованного переопределения: переопределяемая функция не найдена; Возможно, вы забыли имя функции явно, используя:: оператор?
 
-Явное переопределение указана функция, не найден ни в одном интерфейсе. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+Явное переопределение указана функция, не найден ни в одном интерфейсе. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3653:
 

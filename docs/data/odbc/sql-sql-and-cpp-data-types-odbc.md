@@ -1,19 +1,19 @@
 ---
-title: SQL. Типы данных SQL и C++ (ODBC)
+title: 'SQL: SQL и типы данных C++ (ODBC)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649505"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024352"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL. Типы данных SQL и C++ (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL и типы данных C++ (ODBC)
 
 > [!NOTE]
 >  Эти сведения относятся к классам ODBC библиотеки MFC. Если вы работаете с классами MFC DAO, см. в разделе «Сравнения Microsoft Jet базы данных ядра SQL и ANSI SQL» в справке DAO.
@@ -28,21 +28,21 @@ ms.locfileid: "50649505"
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
 |**REAL**|**float**|
-|**ЦЕЛОЕ ЧИСЛО**|**long**|
+|**INTEGER**|**long**|
 |**FLOAT**|**double**|
 |**DOUBLE**|**double**|
 |**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
-|**BIT**|**BOOL**|
+|**БИТ**|**BOOL**|
 |**TINYINT**|**BYTE**|
 |**BIGINT**|`CString` 1|
 |**ДВОИЧНЫЙ**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**ВРЕМЯ**|`CTime`, `CString`|
-|**МЕТКА ВРЕМЕНИ**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
+|**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **ДЕСЯТИЧНОЕ** и **ЧИСЛОВЫХ** сопоставляются `CString` поскольку **SQL_C_CHAR** тип передачи ODBC по умолчанию.
 
@@ -56,5 +56,5 @@ ms.locfileid: "50649505"
 
 ## <a name="see-also"></a>См. также
 
-[SQL](../../data/odbc/sql.md)<br/>
-[SQL. Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL-код](../../data/odbc/sql.md)<br/>
+[SQL: Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

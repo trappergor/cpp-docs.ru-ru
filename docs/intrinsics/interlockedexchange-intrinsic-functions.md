@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 3945b8a7516962531050e999e96bdef31b179bbb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328523"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021499"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>Встроенные функции _InterlockedExchange
 
@@ -144,7 +144,7 @@ __int64 _InterlockedExchange64_rel(
 
 #### <a name="parameters"></a>Параметры
 
-*Целевой объект*<br/>
+*целевого объекта*<br/>
 [in, out] Указатель на значение для обмена. Функция присваивает этой переменной `Value` и возвращает предыдущее значение.
 
 *Значение*<br/>
@@ -184,6 +184,6 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Конфликты с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

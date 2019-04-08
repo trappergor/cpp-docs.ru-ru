@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775326"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038042"
 ---
 # <a name="visual-studio-projects---c"></a>Проекты Visual Studio - C++
 
@@ -60,16 +60,16 @@ ms.locfileid: "58775326"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Настройка компилятора C++ и свойства сборки в Visual Studio](working-with-project-properties.md)<br/>
+[Значение компилятора C++ и свойства в Visual Studio сборки](working-with-project-properties.md)<br/>
 Как использовать страницы свойств и страницы свойств для указания параметров проекта.
 
-[Использование эталонных библиотек и компонентов во время сборки](adding-references-in-visual-cpp-projects.md)<br/>
+[Справочник по библиотекам и компоненты во время сборки](adding-references-in-visual-cpp-projects.md)<br/>
 Как включить в проект библиотеки DLL, компоненты COM и .NET.
  
-[Упорядочение выходных файлов проекта](how-to-organize-project-output-files-for-builds.md)<br/>
+[Организация выходных файлов проекта](how-to-organize-project-output-files-for-builds.md)<br/>
 Как настроить расположение исполняемые файлы, созданные в процессе построения.
 
-[Настраиваемые этапы сборки и события сборки](understanding-custom-build-steps-and-build-events.md)<br/>
+[Настраиваемые этапы построения и событиях построения.](understanding-custom-build-steps-and-build-events.md)<br/>
 Как добавить любую произвольную команду к процессу сборки с указанными точками.
 
 [Создание проекта на основе имеющегося кода](how-to-create-a-cpp-project-from-existing-code.md)<br/>

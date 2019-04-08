@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [COM]
 - COM, attributes
 ms.assetid: 52a5dd70-e8be-4bba-afd6-daf90fe689a0
-ms.openlocfilehash: fa7e279f6b7c9c0932d404c336bcfd89bfd553a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb87d3861c6b3066cf482108e2ce2243c8196093
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644097"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038933"
 ---
 # <a name="com-attributes"></a>Атрибуты COM
 
@@ -20,7 +20,7 @@ ms.locfileid: "50644097"
 |Атрибут|Описание|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|Указывает, что элемент управления может быть статистически вычислен другим элементом управления.|
-|[aggregates](aggregates.md)|Указывает, что элемент управления использует статистическую функцию целевого класса.|
+|[статистические выражения](aggregates.md)|Указывает, что элемент управления использует статистическую функцию целевого класса.|
 |[кокласс](coclass.md)|Создает объект COM, который можно реализовать COM-интерфейса.|
 |[com_interface_entry](com-interface-entry-cpp.md)|Добавляет запись интерфейс COM карты.|
 |[implements_category](implements-category.md)|Указывает категории реализованного компонента для класса.|
@@ -30,7 +30,7 @@ ms.locfileid: "50644097"
 |[requires_category](requires-category.md)|Указывает категории необходимый компонент для класса.|
 |[support_error_info](support-error-info.md)|Поддерживает об ошибках для целевого объекта.|
 |[synchronize](synchronize.md)|Синхронизирует доступ к методу.|
-|[threading](threading-cpp.md)|Указывает потоковую модель для COM-объекта.|
+|[работа с потоками](threading-cpp.md)|Указывает потоковую модель для COM-объекта.|
 |[vi_progid](vi-progid.md)|Определяет независимый от версии идентификатор ProgID для элемента управления.|
 
 ## <a name="see-also"></a>См. также

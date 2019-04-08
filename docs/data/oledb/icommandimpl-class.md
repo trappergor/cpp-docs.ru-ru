@@ -52,12 +52,12 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: e1f461cc850a2122af7902babfad8f1e14ac3e33
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424851"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026796"
 ---
 # <a name="icommandimpl-class"></a>Класс ICommandImpl
 
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[Отмена](#cancel)|Отмена выполнения текущей команды.|
 |[CancelExecution](#cancelexecution)|Отмена выполнения текущей команды.|
 |[CreateRowset](#createrowset)|Создает объект набора строк.|
-|[Execute](#execute)|Выполняет команду.|
+|[Выполнение](#execute)|Выполняет команду.|
 |[GetDBSession](#getdbsession)|Возвращает указатель интерфейса для сеанса, создавшего команду.|
 |[ICommandImpl](#icommandimpl)|Конструктор.|
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210501"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027523"
 ---
 # <a name="accelerator-keys-c"></a>Сочетания клавиш (C++)
 
@@ -23,7 +23,7 @@ ms.locfileid: "57210501"
 
 Существуют стандартные сочетания клавиш, которые могут быть использованы в проектах приложений Windows. Некоторые из этих виртуальных клавиш предназначены для среды Windows. Другие поддерживают браузера или приложения на базе Юникода. Вы можете использовать любую из этих клавиш в любом сочетании.
 
-|Ключ|Описание:|
+|Ключ|Описание|
 |---------|-----------------|
 |VK_ACCEPT|(IME) примите|
 |VK_BROWSER_BACK|(Windows) Браузер, **обратно** ключ|

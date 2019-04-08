@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295036"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780968"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>Класс CMFCToolBarsCustomizeDialog
 
@@ -47,14 +47,14 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarsCustomizeDialog::CMFCToolBarsCustomizeDialog](#cmfctoolbarscustomizedialog)|Создает объект `CMFCToolBarsCustomizeDialog`.|
 |`CMFCToolBarsCustomizeDialog::~CMFCToolBarsCustomizeDialog`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddButton](#addbutton)|Вставляет кнопки панели инструментов в списке команд на **команды** страницы|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::AddMenu](#addmenu)|Загружает меню из ресурсов и вызывает [CMFCToolBarsCustomizeDialog::AddMenuCommands](#addmenucommands) , добавляемый в список команд соответствующее меню на **команды** страницы.|
@@ -80,7 +80,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::CheckToolsValidity](#checktoolsvalidity)|Вызывается платформой для определения, является ли допустимым список пользовательских средств.|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnAfterChangeTool](#onafterchangetool)|Вызывается платформой при изменении свойств инструмента, определенного пользователем.|
@@ -96,7 +96,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarsCustomizeDialog` . В примере для замены на кнопке панели инструментов в окне списка команд **команды** странице, включите создание новых панелей инструментов с помощью **Настройка** диалоговое окно параметров отображения и  **Настройки** диалоговое окно. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarsCustomizeDialog` . В примере для замены на кнопке панели инструментов в окне списка команд **команды** странице, включите создание новых панелей инструментов с помощью **Настройка** диалоговое окно параметров отображения и  **Настройки** диалоговое окно. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -137,7 +137,7 @@ void AddButton(
 *uiCategoryId*<br/>
 [in] Указывает идентификатор категории, к которому следует вставить кнопку.
 
-*Кнопка*<br/>
+*button*<br/>
 [in] Указывает кнопку для вставки.
 
 *iInsertBefore*<br/>
@@ -158,7 +158,7 @@ void AddButton(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `AddButton` метод `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [пример ползунок](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `AddButton` метод `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [пример ползунок](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ BOOL AddToolBar(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `AddToolBar` метод в `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `AddToolBar` метод в `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ CMFCToolBarsCustomizeDialog(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание объекта класса `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [пример пользовательские страницы](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in] Указатель на родительское окно.
 
-*Точечный рисунок*<br/>
+*растровое изображение*<br/>
 [in] Ссылка на объект точечного рисунка для редактирования.
 
 *nBitsPerPixel*<br/>
@@ -716,7 +716,7 @@ void ReplaceButton(
 *uiCmd*<br/>
 [in] Указывает команду кнопки, чтобы заменить.
 
-*Кнопка*<br/>
+*button*<br/>
 [in] Объект **const** ссылку на объект кнопки панели инструментов, который заменяет старый кнопки.
 
 ### <a name="remarks"></a>Примечания
@@ -725,7 +725,7 @@ void ReplaceButton(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `ReplaceButton` метод в `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `ReplaceButton` метод в `CMFCToolBarsCustomizeDialog` класса. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 
@@ -754,4 +754,4 @@ BOOL SetUserCategory(LPCTSTR lpszCategory);
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CPropertySheet](../../mfc/reference/cpropertysheet-class.md)
+[Cpropertysheet-класс](../../mfc/reference/cpropertysheet-class.md)

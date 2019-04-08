@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetDefExt
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
-ms.openlocfilehash: 7fa2f0bc5717c7481b4ed415e89fbb0cc8df0ffc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289368"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777094"
 ---
 # <a name="cusertoolsmanager-class"></a>Класс CUserToolsManager
 
@@ -61,17 +61,17 @@ ms.locfileid: "57289368"
 class CUserToolsManager : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CUserToolsManager::CUserToolsManager](#cusertoolsmanager)|Создает документ `CUserToolsManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CUserToolsManager::CreateNewTool](#createnewtool)|Создает новый пользовательский инструмент.|
 |[CUserToolsManager::FindTool](#findtool)|Возвращает указатель на `CMFCUserTool` объект, связанный с указанным идентификатором команды.|
@@ -108,7 +108,7 @@ class CUserToolsManager : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как получить ссылку на `CUserToolsManager` объекта и как создавать новые пользовательские инструменты. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как получить ссылку на `CUserToolsManager` объекта и как создавать новые пользовательские инструменты. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#38](../../mfc/codesnippet/cpp/cusertoolsmanager-class_1.cpp)]
 

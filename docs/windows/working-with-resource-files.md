@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562969"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037741"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
@@ -44,15 +44,15 @@ ms.locfileid: "57562969"
 [Идентификаторы ресурсов (символы)](../windows/symbols-resource-identifiers.md)<br/>
 В этой статье описываются символы и использование диалогового окна **Символы ресурсов** для управления символами в проекте.
 
-[Редакторы ресурсов](../windows/resource-editors.md)<br/>
+[редакторы ресурсов](../windows/resource-editors.md)<br/>
 Описывает редакторы ресурсов, доступные в Visual Studio и типы ресурсов, которые можно изменять с каждым редактором. Также содержит ссылки на подробные сведения об использовании каждого редактора отдельно.
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Ссылки на документацию по Visual C++.
 
-[Обращайтесь к нам](/visualstudio/ide/talk-to-us)<br/>
+[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
 Ссылки на сведения об использовании документации, обращении в службу поддержки и использовании специальных возможностей.
 
 ## <a name="see-also"></a>См. также

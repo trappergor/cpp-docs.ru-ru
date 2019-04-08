@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641787"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041141"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641787"
 
 `_ReturnAddress` Предоставляет адрес памяти инструкции в вызывающей функции, который будет выполнен после возврата управления вызывающему объекту.
 
-Создавайте следующие программы и его пошагово в отладчике. При пошаговом выполнении программы, запишите адрес, возвращенный `_ReturnAddress`. Затем, сразу после возврата из функции где `_ReturnAddress` используется, и откройте [как: использование окна дизассемблирования](/visualstudio/debugger/how-to-use-the-disassembly-window) и обратите внимание, что адрес следующую инструкцию для выполнения совпадает с адрес, возвращенный `_ReturnAddress`.
+Создавайте следующие программы и его пошагово в отладчике. При пошаговом выполнении программы, запишите адрес, возвращенный `_ReturnAddress`. Затем, сразу после возврата из функции где `_ReturnAddress` используется, и откройте [как: Использование окна дизассемблирования](/visualstudio/debugger/how-to-use-the-disassembly-window) и обратите внимание на то, что адрес следующую инструкцию для выполнения совпадает с адрес, возвращенный методом `_ReturnAddress`.
 
 Оптимизацию, например встраивание может повлиять на обратный адрес. Например, если ниже пример программы компилируется с [/Ob1](../build/reference/ob-inline-function-expansion.md), `inline_func` будет подставляться в вызывающей функции — `main`. Таким образом, вызовы `_ReturnAddress` из `inline_func` и `main` каждый будет создавать то же значение.
 
@@ -66,5 +66,5 @@ int main(void)
 ## <a name="see-also"></a>См. также
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

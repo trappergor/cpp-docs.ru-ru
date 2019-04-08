@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267905"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781072"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Тестирование свойств и событий с использованием тестового контейнера
 
@@ -23,7 +23,7 @@ ms.locfileid: "57267905"
 
 ### <a name="to-access-the-activex-control-test-container"></a>Для доступа к контейнеру теста элемент управления ActiveX
 
-1. Построение [TSTCON образца: Тестовый контейнер элементов управления ActiveX](../visual-cpp-samples.md).
+1. Построение [TSTCON образца: Тестовый контейнер элементов управления ActiveX](../overview/visual-cpp-samples.md).
 
 ### <a name="to-test-your-activex-control"></a>Чтобы протестировать элемент управления ActiveX
 
@@ -56,5 +56,5 @@ ms.locfileid: "57267905"
 
 ## <a name="see-also"></a>См. также
 
-[Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
-[Практическое руководство. Отладка элемента управления ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+[Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Практическое руководство. отладку элемента управления ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)

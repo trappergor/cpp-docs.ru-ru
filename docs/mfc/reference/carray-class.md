@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779850"
 ---
 # <a name="carray-class"></a>CArray-класс
@@ -62,7 +62,7 @@ class CArray : public CObject
 
 #### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
+*TYPE*<br/>
 Параметр шаблона, определяющий тип объектов, хранящихся в массиве. *Тип* — это параметр, возвращаемый `CArray`.
 
 *ARG_TYPE*<br/>
@@ -102,7 +102,7 @@ class CArray : public CObject
 
 |name|Описание|
 |----------|-----------------|
-|[operator&#91;&#93;](#operator_at)|Получает или задает элемент с указанным индексом.|
+|[оператор&#91;&#93;](#operator_at)|Получает или задает элемент с указанным индексом.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -281,7 +281,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
+*TYPE*<br/>
 Параметр шаблона, указывающий тип элементов массива.
 
 *nIndex*<br/>
@@ -330,7 +330,7 @@ TYPE* GetData();
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
+*TYPE*<br/>
 Параметр шаблона, указывающий тип элементов массива.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -451,7 +451,7 @@ const TYPE& operator[](int_ptr nindex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ТИП*<br/>
+*TYPE*<br/>
 Параметр шаблона, указывающий тип элементов в этом массиве.
 
 *nIndex*<br/>

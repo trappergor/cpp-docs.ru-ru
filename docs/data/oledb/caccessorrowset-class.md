@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: dd7156575f551af1643dd3d1f8238ee1e3fe86f4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af38695ccee79e539782dc3f695a567f72fa41c7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420158"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033908"
 ---
 # <a name="caccessorrowset-class"></a>Класс CAccessorRowset
 
@@ -67,7 +67,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 
 |||
 |-|-|
-|[Bind](#bind)|Создает привязки (используется, когда `bBind` указывается как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md)).|
+|[Привязка](#bind)|Создает привязки (используется, когда `bBind` указывается как **false** в [CCommand::Open](../../data/oledb/ccommand-open.md)).|
 |[CAccessorRowset](#caccessorrowset)|Конструктор.|
 |[Закрыть](#close)|Закрывает набор строк и все методы доступа.|
 |[FreeRecordMemory](#freerecordmemory)|Освобождает все столбцы в текущей записи, которые следует освободиться.|
@@ -157,4 +157,4 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

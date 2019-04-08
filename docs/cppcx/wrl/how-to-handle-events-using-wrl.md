@@ -3,12 +3,12 @@ title: Практическое руководство. Обработка со�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1c77543f-7b0c-4a94-93bf-e3225885ed76
-ms.openlocfilehash: 35c806660c18ad234f37dba92780b7633e032644
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 959a85d6cf6de666ae56d09035acefe9a3828ae8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785900"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033181"
 ---
 # <a name="how-to-handle-events-using-wrl"></a>Практическое руководство. Обработка событий с помощью WRL
 

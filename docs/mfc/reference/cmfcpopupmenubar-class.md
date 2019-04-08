@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300782"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776782"
 ---
 # <a name="cmfcpopupmenubar-class"></a>Класс CMFCPopupMenuBar
 
@@ -67,7 +67,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPopupMenuBar::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области. (Переопределяет [CPane::AdjustSizeImmediate](../../mfc/reference/cpane-class.md#adjustsizeimmediate).)|
 |[CMFCPopupMenuBar::BuildOrigItems](#buildorigitems)|Загружает элементы всплывающего меню из меню указанного ресурса.|
@@ -91,7 +91,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPopupMenuBar::m_bDisableSideBarInXPMode](#m_bdisablesidebarinxpmode)|Указывает, будет ли отображаться серую полосу, когда приложение имеет внешний вид Windows XP.|
 
@@ -101,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует способы инициализации `CMFCPopupMenuBar` объекта из `CMFCPopupMenu` объекта. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
+Следующий пример демонстрирует способы инициализации `CMFCPopupMenuBar` объекта из `CMFCPopupMenu` объекта. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 

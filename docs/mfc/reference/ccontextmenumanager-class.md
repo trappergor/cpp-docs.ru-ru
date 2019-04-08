@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], ShowPopupMenu
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
-ms.openlocfilehash: 594b78fd36dcb1ff92c63867688c38eac7520eba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304341"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779798"
 ---
 # <a name="ccontextmenumanager-class"></a>Класс CContextMenuManager
 
@@ -49,14 +49,14 @@ class CContextMenuManager : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CContextMenuManager::CContextMenuManager](#ccontextmenumanager)|Создает объект `CContextMenuManager`.|
 |`CContextMenuManager::~CContextMenuManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CContextMenuManager::AddMenu](#addmenu)|Добавляет новый контекстное меню.|
 |[CContextMenuManager::GetMenuById](#getmenubyid)|Возвращает дескриптор для меню, связанное с идентификатором предоставленного ресурса.|
@@ -81,7 +81,7 @@ class CContextMenuManager : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует добавить меню `CContextMenuManager` , а также не удается закрыть активное всплывающее меню при `CContextMenuManager` объекта отобразится новое всплывающее меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).
+Следующий пример демонстрирует добавить меню `CContextMenuManager` , а также не удается закрыть активное всплывающее меню при `CContextMenuManager` объекта отобразится новое всплывающее меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#4](../../mfc/reference/codesnippet/cpp/ccontextmenumanager-class_1.cpp)]
 

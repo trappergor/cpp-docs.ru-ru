@@ -13,16 +13,16 @@ helpviewer_keywords:
 - preprocessor, pragmas
 - pragma directives (#pragma)
 ms.assetid: 9867b438-ac64-4e10-973f-c3955209873f
-ms.openlocfilehash: 9e79ba7378e28fdea863af010decb7064df415cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b6c2ff579c6fafa78cbfd0a2879a71fca2bfaa01
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660100"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027445"
 ---
 # <a name="pragma-directives-and-the-pragma-keyword"></a>Директивы Pragma и ключевое слово __Pragma
 
-Директивы pragma определяют возможности компилятора для конкретного компьютера или операционной системы. **__Pragma** ключевое слово, которое является специфичным для компилятора Microsoft, позволяет кодировать директивы pragma в определениях макросов.
+Директивы pragma определяют функции компилятора для конкретного компьютера или операционной системы. **__Pragma** ключевое слово, которое является специфичным для компилятора Microsoft, позволяет кодировать директивы pragma в определениях макросов.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -46,20 +46,20 @@ __pragma(token-string)
 ||||
 |-|-|-|
 |[alloc_text](../preprocessor/alloc-text.md)|[auto_inline](../preprocessor/auto-inline.md)|[bss_seg](../preprocessor/bss-seg.md)|
-|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[comment](../preprocessor/comment-c-cpp.md)|
+|[check_stack](../preprocessor/check-stack.md)|[code_seg](../preprocessor/code-seg.md)|[комментарий](../preprocessor/comment-c-cpp.md)|
 |[component](../preprocessor/component.md)|[соответствует](../preprocessor/conform.md) <sup>1</sup>|[const_seg](../preprocessor/const-seg.md)|
 |[data_seg](../preprocessor/data-seg.md)|[deprecated](../preprocessor/deprecated-c-cpp.md)|[detect_mismatch](../preprocessor/detect-mismatch.md)|
 |[fenv_access](../preprocessor/fenv-access.md)|[float_control](../preprocessor/float-control.md)|[fp_contract](../preprocessor/fp-contract.md)|
-|[function](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
+|[функцию](../preprocessor/function-c-cpp.md)|[hdrstop](../preprocessor/hdrstop.md)|[include_alias](../preprocessor/include-alias.md)|
 |[init_seg](../preprocessor/init-seg.md) <sup>1</sup>|[inline_depth](../preprocessor/inline-depth.md)|[inline_recursion](../preprocessor/inline-recursion.md)|
 |[intrinsic](../preprocessor/intrinsic.md)|[цикл](../preprocessor/loop.md) <sup>1</sup>|[make_public](../preprocessor/make-public.md)|
-|[Управляемые](../preprocessor/managed-unmanaged.md)|[message](../preprocessor/message.md)||
+|[managed](../preprocessor/managed-unmanaged.md)|[сообщение](../preprocessor/message.md)||
 |[omp](../preprocessor/omp.md)|[once](../preprocessor/once.md)||
 |[optimize](../preprocessor/optimize.md)|[pack](../preprocessor/pack.md)|[pointers_to_members](../preprocessor/pointers-to-members.md) <sup>1</sup>|
 |[pop_macro](../preprocessor/pop-macro.md)|[push_macro](../preprocessor/push-macro.md)|[region, endregion](../preprocessor/region-endregion.md)|
 |[runtime_checks](../preprocessor/runtime-checks.md)|[section](../preprocessor/section.md)|[setlocale](../preprocessor/setlocale.md)|
-|[strict_gs_check](../preprocessor/strict-gs-check.md)|[неуправляемые](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
-|[warning](../preprocessor/warning.md)|||
+|[strict_gs_check](../preprocessor/strict-gs-check.md)|[unmanaged](../preprocessor/managed-unmanaged.md)|[vtordisp](../preprocessor/vtordisp.md) <sup>1</sup>|
+|[предупреждение](../preprocessor/warning.md)|||
 
 <sup>1</sup> поддерживается только компилятором C++.
 
@@ -80,7 +80,7 @@ cl /Zp8 ...
 
 ## <a name="the-pragma-keyword"></a>Ключевое слово __pragma()
 
-**Системам Майкрософт**
+**Блок, относящийся только к системам Microsoft**
 
 Компилятор также поддерживает **__pragma** ключевое слово, которое имеет ту же функциональность как **#pragma** директивы, но может быть использоваться внутри определения макроса. **#Pragma** директива не может использоваться в определении макроса, так как компилятор интерпретирует символ номера (#) в директиве как [строковый оператор (#)](../preprocessor/stringizing-operator-hash.md).
 
@@ -104,10 +104,10 @@ END_CATCH_ALL \
 return _hr; \
 ```
 
-**Завершить системам Microsoft**
+**Завершение блока, относящегося только к системам Microsoft**
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Cправочник препроцессора /C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Прагмы C](../c-language/c-pragmas.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)

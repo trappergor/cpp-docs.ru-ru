@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525610"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034093"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Указывает, что библиотека типов записывается в файл .tlh с сохранением кода, созданного с атрибутами.
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 Допустимо одно из двух значений:
 
-- **emitidl**: сведения о типах, импортированные из библиотеки типов, которые будут представлены в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.  Это значение по умолчанию, которое будет действовать, если параметр для `embedded_idl` не указан.
+- **emitidl**: Сведения о типах, импортированные из библиотеки типов будет присутствовать в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.  Это значение по умолчанию, которое будет действовать, если параметр для `embedded_idl` не указан.
 
-- **no_emitidl**: сведения о типах, импортированные из библиотеки типов не присутствовать в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.
+- **no_emitidl**: Сведения о типах, импортированные из библиотеки типов будет отсутствовать в IDL-ФАЙЛЕ, созданный для помеченного атрибутом проекта.
 
 ## <a name="example"></a>Пример
 
@@ -46,9 +46,9 @@ embedded_idl[("param")]
 
 ## <a name="remarks"></a>Примечания
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

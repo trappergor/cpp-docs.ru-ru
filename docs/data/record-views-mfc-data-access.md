@@ -8,12 +8,12 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588491"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040203"
 ---
 # <a name="record-views--mfc-data-access"></a>Представления записей (доступ к данным MFC)
 
@@ -37,17 +37,17 @@ ms.locfileid: "50588491"
 
 Ниже приведен список разделов.
 
-- [Функциональные возможности классов представления записей](../data/features-of-record-view-classes-mfc-data-access.md)
+- [Возможности классов представлений записей](../data/features-of-record-view-classes-mfc-data-access.md)
 
 - [Обмен данными в представлениях записей](../data/data-exchange-for-record-views-mfc-data-access.md)
 
 - [Роль пользователя в работе с представлением записи](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [Проектирование и создание представления записей](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [Разработка и создание представления записей](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
 - [Использование представления записей](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>См. также
 
-[Доступ к данным, программирование (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
+[Программирование доступа к данным (MFC/ATL)](../data/data-access-programming-mfc-atl.md)<br/>
 [Список драйверов ODBC](../data/odbc/odbc-driver-list.md)

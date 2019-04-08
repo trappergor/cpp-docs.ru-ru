@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 2564d4d9b0a2e5df1f575d6f2627ce80f48533c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770816"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021921"
 ---
 # <a name="cdatasource-class"></a>Класс CDataSource
 
@@ -176,7 +176,7 @@ HRESULT GetProperty(const GUID& guid,
 
 #### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
+*guid*<br/>
 [in] Идентификатор GUID, определяющий свойство, для которого возвращаются свойства.
 
 *PropID*<br/>
@@ -264,7 +264,7 @@ HRESULT Open(LPCSTR szProgID,
 *szProgID*<br/>
 [входные данные] Идентификатор программы.
 
-*enumerator*<br/>
+*перечислитель*<br/>
 [in] Объект [CEnumerator](../../data/oledb/cenumerator-class.md) объект, используемый для получения моникера для открытия соединения, если вызывающий объект не указывает `CLSID`.
 
 *hWnd*<br/>
@@ -415,4 +415,4 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

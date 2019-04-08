@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58780474"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038771"
 ---
 # <a name="consuming-libraries-and-components"></a>Использование библиотек и компонентов
 
@@ -128,7 +128,7 @@ ms.locfileid: "58780474"
 
    Отображает имя сборки для сборки, на которую указывает ссылка.
 
-- **Язык и региональные параметры**
+- **culture**
 
    Отображает язык и региональные параметры выбранной ссылки.
 
@@ -140,15 +140,15 @@ ms.locfileid: "58780474"
 
    Отображает путь к каталогу сборки, на которую указывает ссылка.
 
-- **Удостоверение**
+- **идентификации**
 
    Для сборок .NET Framework отображает полный путь. Для компонентов COM отображает GUID.
 
-- **Label**
+- **Метка**
 
    Отображает метку ссылки.
 
-- **Name**
+- **name**
 
    Отображает имя ссылки.
 
@@ -160,11 +160,11 @@ ms.locfileid: "58780474"
 
    `true` , если сборка, на которую указывает ссылка, имеет строгое имя. Сборка строгого имени имеет уникальную версию.
 
-- **Version**
+- **Версия**
 
    Отображает версию сборки, на которую указывает ссылка.
 
 ## <a name="see-also"></a>См. также
 
 [Справочник по страницам свойств проекта C++](reference/property-pages-visual-cpp.md)<br>
-[Настройка компилятора C++ и свойства сборки в Visual Studio](working-with-project-properties.md)
+[Значение компилятора C++ и свойства в Visual Studio сборки](working-with-project-properties.md)

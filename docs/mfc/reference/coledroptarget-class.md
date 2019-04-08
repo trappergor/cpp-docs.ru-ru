@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300131"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781644"
 ---
 # <a name="coledroptarget-class"></a>Класс COleDropTarget
 
@@ -45,13 +45,13 @@ class COleDropTarget : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDropTarget::COleDropTarget](#coledroptarget)|Создает объект `COleDropTarget`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDropTarget::OnDragEnter](#ondragenter)|Вызывается, когда указатель мыши впервые входит окна.|
 |[COleDropTarget::OnDragLeave](#ondragleave)|Вызывается, когда курсор перемещается за пределы окна.|
@@ -386,8 +386,8 @@ virtual void Revoke();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDropSource](../../mfc/reference/coledropsource-class.md)

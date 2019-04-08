@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data members [C++], attributes
 - data members [C++]
 ms.assetid: 95b2397d-1daf-4ae4-8cd0-06956d005b13
-ms.openlocfilehash: e188f4d9ad2c553ff142e45ec84bc0a04630b816
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad21ed16eee8cd14e8f798450ff385d5f429a280
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512935"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041154"
 ---
 # <a name="data-member-attributes"></a>Атрибуты членов данных
 
@@ -31,7 +31,7 @@ ms.locfileid: "50512935"
 |[range](range-cpp.md)|Указывает диапазон допустимых значений для полей, значения которых устанавливаются во время выполнения и аргументы.|
 |[rdx](rdx.md)|Создает раздел реестра или изменяет существующий раздел реестра.|
 |[readonly](readonly-cpp.md)|Запрещает назначение элементу данных.|
-|[requestedit](requestedit.md)|Указывает, что свойство поддерживает `OnRequestEdit` уведомлений.|
+|[requestedit](requestedit.md)|Указывает, что свойство поддерживает уведомление `OnRequestEdit`.|
 
 ## <a name="see-also"></a>См. также
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
-ms.openlocfilehash: fad8960424cd73240d547ef894b2ae5cdf358601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498285"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027575"
 ---
 # <a name="linker-tools-error-lnk2039"></a>Ошибка средств компоновщика LNK2039
 
@@ -27,5 +27,5 @@ ms.locfileid: "50498285"
 
 ## <a name="see-also"></a>См. также
 
-[Ошибки и предупреждения средств компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
+[Ошибки и предупреждения инструментов компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
 [Ошибка средств компоновщика LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

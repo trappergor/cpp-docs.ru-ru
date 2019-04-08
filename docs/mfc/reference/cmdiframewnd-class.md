@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282452"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776535"
 ---
 # <a name="cmdiframewnd-class"></a>Класс CMDIFrameWnd
 
@@ -51,17 +51,17 @@ ms.locfileid: "57282452"
 class CMDIFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMDIFrameWnd::CMDIFrameWnd](#cmdiframewnd)|Создает документ `CMDIFrameWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMDIFrameWnd::CreateClient](#createclient)|Создает окно Windows MDICLIENT для данного `CMDIFrameWnd`. Вызывается средой `OnCreate` функцию-член `CWnd`.|
 |[CMDIFrameWnd::CreateNewChild](#createnewchild)|Создает новое дочернее окно.|
@@ -459,9 +459,9 @@ void MDITile(int nType);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
-[Пример MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Класс CFrameWnd](../../mfc/reference/cframewnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>

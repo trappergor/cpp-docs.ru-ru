@@ -6,12 +6,12 @@ helpviewer_keywords:
 - record views, refreshing controls
 - record views, application wizard code
 ms.assetid: 18fd4703-5939-491d-b759-985f767b951f
-ms.openlocfilehash: 5340926789925d8243ecd20c27537c9690582a41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e25ca9cad1390dd11ab7328ffefed31badf6fc0b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50427980"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036079"
 ---
 # <a name="record-view-code-created-by-application-wizard--mfc-data-access"></a>Код представления записей, создаваемый мастером приложений (доступ к данным MFC)
 

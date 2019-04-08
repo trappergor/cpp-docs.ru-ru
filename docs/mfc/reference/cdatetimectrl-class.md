@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422498"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779824"
 ---
 # <a name="cdatetimectrl-class"></a>Класс CDateTimeCtrl
 
@@ -61,13 +61,13 @@ class CDateTimeCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDateTimeCtrl::CDateTimeCtrl](#cdatetimectrl)|Создает объект `CDateTimeCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDateTimeCtrl::CloseMonthCal](#closemonthcal)|Закрывает текущий элемент управления выбора даты и времени.|
 |[CDateTimeCtrl::Create](#create)|Создает элемент управления выбора даты и времени и присоединяет его к `CDateTimeCtrl` объекта.|
@@ -379,7 +379,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*psize*|[out] Указатель на [размер](/windows/desktop/api/windef/ns-windef-tagsize) структуру, содержащую идеального размера для элемента управления.|
 
@@ -509,7 +509,7 @@ DWORD SetMonthCalStyle(DWORD dwStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwStyle*|[in] Новый месяц календаря стиль элемента управления, который представляет собой битовую комбинацию (OR) стили элемента управления Календарь месяца. Дополнительные сведения см. в разделе [стили элемента управления Calendar Month](/windows/desktop/Controls/month-calendar-control-styles).|
 
@@ -599,7 +599,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
-[Класс CMonthCalCtrl](../../mfc/reference/cmonthcalctrl-class.md)
+[Cmonthcalctrl-класс](../../mfc/reference/cmonthcalctrl-class.md)

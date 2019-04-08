@@ -1,5 +1,5 @@
 ---
-title: TN065. Поддержка сдвоенных интерфейсов для серверов автоматизации OLE
+title: 'TN065: Поддержка сдвоенных интерфейсов для серверов автоматизации OLE'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.ole
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575218"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776678"
 ---
-# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065. Поддержка сдвоенных интерфейсов для серверов автоматизации OLE
+# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065: Поддержка сдвоенных интерфейсов для серверов автоматизации OLE
 
 > [!NOTE]
 > Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
 
-Эта заметка описывает добавление поддержки сдвоенных интерфейсов в приложение сервера на базе MFC OLE-автоматизации. [ACDUAL](../visual-cpp-samples.md) примере описывается поддержка сдвоенных интерфейсов и пример кода в этой заметке берется из ACDUAL. Макросы, описанные в этой заметке, например DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART и IMPLEMENT_DUAL_ERRORINFO, которые входят в образце ACDUAL и можно найти в MFCDUAL. З.
+Эта заметка описывает добавление поддержки сдвоенных интерфейсов в приложение сервера на базе MFC OLE-автоматизации. [ACDUAL](../overview/visual-cpp-samples.md) примере описывается поддержка сдвоенных интерфейсов и пример кода в этой заметке берется из ACDUAL. Макросы, описанные в этой заметке, например DECLARE_DUAL_ERRORINFO, DUAL_ERRORINFO_PART и IMPLEMENT_DUAL_ERRORINFO, которые входят в образце ACDUAL и можно найти в MFCDUAL. З.
 
 ## <a name="dual-interfaces"></a>Сдвоенные интерфейсы
 
@@ -43,7 +43,7 @@ ms.locfileid: "50575218"
 
 Во-первых измените ODL-файла для сервера, чтобы определить сдвоенные интерфейсы для объектов. Чтобы определить сдвоенный интерфейс, необходимо использовать оператор interface вместо `DISPINTERFACE` инструкции для создания мастера Visual C++. Вместо удаления существующего `DISPINTERFACE` инструкции, добавьте оператор новый интерфейс. За счет сохранения `DISPINTERFACE` форму, можно продолжать использовать ClassWizard для добавления свойств и методов для объекта, но необходимо добавить в инструкцию интерфейс эквивалентные свойства и методы.
 
-Оператор interface для сдвоенный интерфейс должен иметь *OLEAUTOMATION* и *ДВОЙНОГО* атрибутов и интерфейс должен быть производным от `IDispatch`. Можно использовать [GUIDGEN](../visual-cpp-samples.md) образец для создания **IID** для сдвоенного интерфейса:
+Оператор interface для сдвоенный интерфейс должен иметь *OLEAUTOMATION* и *ДВОЙНОГО* атрибутов и интерфейс должен быть производным от `IDispatch`. Можно использовать [GUIDGEN](../overview/visual-cpp-samples.md) образец для создания **IID** для сдвоенного интерфейса:
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` отвечает за возвращение правильный код ошибки, при возникновении исключения. `CATCH_ALL_DUAL` Преобразует исключения MFC в OLE-автоматизации обработки ошибок с помощью `ICreateErrorInfo` интерфейс. (Пример `CATCH_ALL_DUAL` макрос находится в файле MFCDUAL. H в [ACDUAL](../visual-cpp-samples.md) образца. Функция вызывается для обработки исключений, `DualHandleException`, находится в файле MFCDUAL. CPP.) `CATCH_ALL_DUAL` определяет код ошибки для возврата в зависимости от типа созданного исключения:
+`CATCH_ALL_DUAL` отвечает за возвращение правильный код ошибки, при возникновении исключения. `CATCH_ALL_DUAL` Преобразует исключения MFC в OLE-автоматизации обработки ошибок с помощью `ICreateErrorInfo` интерфейс. (Пример `CATCH_ALL_DUAL` макрос находится в файле MFCDUAL. H в [ACDUAL](../overview/visual-cpp-samples.md) образца. Функция вызывается для обработки исключений, `DualHandleException`, находится в файле MFCDUAL. CPP.) `CATCH_ALL_DUAL` определяет код ошибки для возврата в зависимости от типа созданного исключения:
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) — в этом случае `HRESULT` создается с помощью следующий код:
 
@@ -332,7 +332,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 
 Наконец, реализовать класс, определенный для поддержки `ISupportErrorInfo`.
 
-( [ACDUAL](../visual-cpp-samples.md) образец содержит три макросы, чтобы помочь сделать эти три шага, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, и `IMPLEMENT_DUAL_ERRORINFO`, все содержащиеся в MFCDUAL. З.)
+( [ACDUAL](../overview/visual-cpp-samples.md) образец содержит три макросы, чтобы помочь сделать эти три шага, `DECLARE_DUAL_ERRORINFO`, `DUAL_ERRORINFO_PART`, и `IMPLEMENT_DUAL_ERRORINFO`, все содержащиеся в MFCDUAL. З.)
 
 В следующем примере реализуется класс, определенный для поддержки `ISupportErrorInfo`. `CAutoClickDoc` Имя класса службы автоматизации и `IID_IDualAClick` — **IID** для интерфейса, который является источником ошибки, сообщенные через объект error OLE-автоматизации:
 

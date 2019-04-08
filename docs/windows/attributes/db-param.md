@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328796"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038100"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,7 +25,7 @@ ms.locfileid: "58328796"
 
 ### <a name="parameters"></a>Параметры
 
-*Порядковый номер*<br/>
+*ordinal*<br/>
 Номер столбца (порядковый номер DBCOLUMNINFO), соответствующее полю в наборе строк, к которому требуется привязать данные.
 
 *paramtype*<br/>
@@ -40,16 +40,16 @@ ms.locfileid: "58328796"
 *dbType*<br/>
 (Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251(v=vs.85)) для записи в столбце.
 
-*precision*<br/>
+*точность*<br/>
 (Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*Масштаб*<br/>
+*число десятичных знаков*<br/>
 (Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
 (Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*.
 
-*length*<br/>
+*длина*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания
@@ -117,4 +117,4 @@ struct CSalesbyYear {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)
+[Атрибуты потребителя OLE DB](ole-db-consumer-attributes.md)

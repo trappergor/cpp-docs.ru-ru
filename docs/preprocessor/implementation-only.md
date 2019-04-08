@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
-ms.openlocfilehash: 9bc083b78cd0c3bd39241de2815580c9eca6a207
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654445"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026660"
 ---
 # <a name="implementationonly"></a>implementation_only
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Отключает создание файла заголовка .tlh (основного файла заголовка).
 
@@ -35,9 +35,9 @@ implementation_only
 > [!NOTE]
 > **Implementation_only** атрибут в одном `#import` инструкция должна быть использования в сочетании с другим `#import` инструкции одной и той же библиотеки типов с `no_implementation` атрибута. В противном случае возникнут ошибки компилятора. Это обусловлено тем, создаваемые определения класса-оболочки `#import` инструкции с `no_implementation` атрибута, должны компилировать реализации, создаваемые **implementation_only** атрибута.
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3181
 ms.assetid: 5d450f8b-6cef-4452-a0c4-2076e967451d
-ms.openlocfilehash: b37b28b4332b46aaaf803f58090a72c25e83f47f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc848d4108ed4a1a7b6646647a1bbb1ec8dcadf7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587763"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781813"
 ---
 # <a name="compiler-error-c3181"></a>Ошибка компилятора C3181
 
 «Тип»: недопустимый операнд для оператора
 
-Передан недопустимый параметр [typeid](../../windows/typeid-cpp-component-extensions.md) оператор. Параметр должен быть управляемым типом.
+Передан недопустимый параметр [typeid](../../extensions/typeid-cpp-component-extensions.md) оператор. Параметр должен быть управляемым типом.
 
 Обратите внимание на то, что компилятор использует псевдонимы для собственных типов, которые сопоставляются с типами в CLR.
 

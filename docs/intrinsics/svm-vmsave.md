@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556621"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023416"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>Примечания
 
-Функция `__svm_vmsave` эквивалентна инструкции компьютера `VMSAVE` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Функция `__svm_vmsave` эквивалентна инструкции компьютера `VMSAVE` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Системы программирования,» номер 24593, редакция 3.11 и более поздних версиях в "документа" [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -50,6 +50,6 @@ void __svm_vmsave(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
 [__svm_vmload](../intrinsics/svm-vmload.md)

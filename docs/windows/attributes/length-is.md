@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - length_is attribute
 ms.assetid: 1d99b883-84bb-4b1e-b098-eb780fc94f40
-ms.openlocfilehash: 54206dd82a550924169bf7bcccd4f70f9e5a657c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de168606b57c801bc3dc1fb9aee76eb6f3d54c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489568"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039914"
 ---
 # <a name="lengthis"></a>length_is
 
@@ -25,7 +25,7 @@ ms.locfileid: "50489568"
 
 ### <a name="parameters"></a>Параметры
 
-*Выражение*<br/>
+*выражение*<br/>
 Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
 
 ## <a name="remarks"></a>Примечания

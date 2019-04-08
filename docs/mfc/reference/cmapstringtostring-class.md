@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], RemoveKey
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
-ms.openlocfilehash: d18cad73f9cf42ffd04ecbcde840d50f6167743a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266228"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780370"
 ---
 # <a name="cmapstringtostring-class"></a>Класс CMapStringToString
 
@@ -71,19 +71,19 @@ class CMapStringToString : public CObject
 
 ### <a name="public-structures"></a>Открытые структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToString::CPair](#cpair)|Вложенные структура, содержащая значение ключа и значения связанных строковых объекта.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](../../mfc/reference/cmapstringtoob-class.md#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::GetCount](../../mfc/reference/cmapstringtoob-class.md#getcount)|Возвращает число элементов в данном сопоставлении.|
 |[CMapStringToOb::GetHashTableSize](../../mfc/reference/cmapstringtoob-class.md#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|
@@ -104,13 +104,13 @@ class CMapStringToString : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::operator \[ \]](../../mfc/reference/cmapstringtoob-class.md#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|
 
 ## <a name="remarks"></a>Примечания
 
-`CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, карты, хранящегося в архив, либо с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функция-член.
+`CMapStringToString` включает в себя `IMPLEMENT_SERIAL` макрос для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, карты, хранящегося в архив, либо с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функция-член.
 
 Если вам требуется дамп отдельных `CString` -  `CString` элементов, необходимо задать глубины контекста дампа 1 или более поздней версии.
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Параметры
 
-*key*<br/>
+*клавиша*<br/>
 Указатель на ключ для элемента для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -226,6 +226,6 @@ CPair* PLookup(LPCTSTR key);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

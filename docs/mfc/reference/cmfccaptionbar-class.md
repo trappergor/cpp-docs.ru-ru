@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264993"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781878"
 ---
 # <a name="cmfccaptionbar-class"></a>Класс CMFCCaptionBar
 
@@ -87,7 +87,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCCaptionBar::Create](#create)|Создает элемент управления панели заголовка и присоединяет его к `CMFCCaptionBar` объекта.|
 |[CMFCCaptionBar::DoesAllowDynInsertBefore](#doesallowdyninsertbefore)|Указывает, могут ли другой области динамически вставлены между заголовок и его родительского фрейма. (Переопределяет [CBasePane::DoesAllowDynInsertBefore](../../mfc/reference/cbasepane-class.md#doesallowdyninsertbefore).)|
@@ -114,7 +114,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCCaptionBar::OnDrawBackground](#ondrawbackground)|Вызывается платформой для заливки фона заголовка окна.|
 |[CMFCCaptionBar::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы заголовка окна.|
@@ -124,7 +124,7 @@ class CMFCCaptionBar : public CPane
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCCaptionBar::m_clrBarBackground](#m_clrbarbackground)|Цвет фона заголовка окна.|
 |[CMFCCaptionBar::m_clrBarBorder](#m_clrbarborder)|Цвет границы заголовка окна.|
@@ -148,7 +148,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCCaptionBar` . В примере показано создание элемента управления панели заголовка, задать трехмерной границы заголовка окна, задайте расстояние в пикселях между краем заголовка панели элементов и границей элемента управления панели заголовка, кнопки для строки заголовка , примените всплывающую подсказку для кнопки, задать текстовую метку для строки заголовка, растровое изображение для строки заголовка и подсказку для изображения в строке заголовка. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCCaptionBar` . В примере показано создание элемента управления панели заголовка, задать трехмерной границы заголовка окна, задайте расстояние в пикселях между краем заголовка панели элементов и границей элемента управления панели заголовка, кнопки для строки заголовка , примените всплывающую подсказку для кнопки, задать текстовую метку для строки заголовка, растровое изображение для строки заголовка и подсказку для изображения в строке заголовка. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]
@@ -353,7 +353,7 @@ virtual void OnDrawBackground(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства заголовка окна.
 
 *rect*<br/>
@@ -377,7 +377,7 @@ virtual void OnDrawBorder(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Контекст устройства, который используется для отображения границ.
 
 *rect*<br/>
@@ -403,7 +403,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
 *rect*<br/>
@@ -431,7 +431,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства, который используется для отображения изображения.
 
 *rect*<br/>
@@ -454,7 +454,7 @@ virtual void OnDrawText(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства, который используется для отображения кнопки.
 
 *rect*<br/>

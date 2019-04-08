@@ -1,5 +1,5 @@
 ---
-title: Обмен полями записей. Использование функций RFX
+title: 'Обмен полями записей: Использование функций RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC [C++], data types
@@ -10,19 +10,19 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], data types
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
-ms.openlocfilehash: 00b995890cf0cced5d06c52c4d702c1c89111dc3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489964"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035988"
 ---
-# <a name="record-field-exchange-using-the-rfx-functions"></a>Обмен полями записей. Использование функций RFX
+# <a name="record-field-exchange-using-the-rfx-functions"></a>Обмен полями записей: Использование функций RFX
 
 В этом разделе описываются способы использования функции RFX, составляющих тело вашей `DoFieldExchange` переопределить.
 
 > [!NOTE]
->  Этот раздел относится к классам, производным от [CRecordset](../../mfc/reference/crecordset-class.md) в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к классам, производным от [CRecordset](../../mfc/reference/crecordset-class.md) в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Глобальные функции RFX обмена данными между столбцами на члены данных источника и поля данных в набор записей. Записи в наборе записей вызовы функции RFX [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) функция-член. В этом разделе кратко описаны функции и показаны типы данных, для RFX доступных функций. [Технические заметки 43](../../mfc/tn043-rfx-routines.md) описывается, как создавать собственные функции RFX для дополнительных типов данных.
 
@@ -40,7 +40,7 @@ ms.locfileid: "50489964"
 
 - (Необязательно) В `RFX_Text` функции, иногда пятый параметр используется для указания типа данных столбца.
 
-Дополнительные сведения см. в разделе функций RFX [макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md) в *Справочник по библиотеке классов*. Пример, из которых может потребоваться специальное использование параметров, см. в разделе [набор записей: получение сумм и других статистических результатов (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
+Дополнительные сведения см. в разделе функций RFX [макросы и глобальные объекты](../../mfc/reference/mfc-macros-and-globals.md) в *Справочник по библиотеке классов*. Пример, из которых может потребоваться специальное использование параметров, см. в разделе [набор записей: Определение сумм и других статистических результатов (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md).
 
 ##  <a name="_core_rfx_data_types"></a> Типы данных RFX
 
@@ -64,8 +64,8 @@ ms.locfileid: "50489964"
 
 ## <a name="see-also"></a>См. также
 
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[Обмен данными с полями записей. Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [Набор записей. Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [Набор записей. Динамическая привязка столбцов данных (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>
 [Класс CRecordset](../../mfc/reference/crecordset-class.md)<br/>

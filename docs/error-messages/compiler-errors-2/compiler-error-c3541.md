@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3541
 ms.assetid: 252cfd4c-5fd2-415e-a17d-6b0c254350db
-ms.openlocfilehash: 356936ee09b75b6930840e015d00ccebb2fd8bc2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 03361fa3e8d4ecb9647d354dd402a9f2b0865eb6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596382"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037689"
 ---
 # <a name="compiler-error-c3541"></a>Ошибка компилятора C3541
 
 «Тип»: typeid нельзя применять к типу, содержащему «auto»
 
-[Typeid](../../windows/typeid-cpp-component-extensions.md) оператор не может применяться к указанному типу, так как она содержит `auto` спецификатор.
+[Typeid](../../extensions/typeid-cpp-component-extensions.md) оператор не может применяться к указанному типу, так как она содержит `auto` спецификатор.
 
 ## <a name="example"></a>Пример
 
@@ -39,4 +39,4 @@ int main() {
 
 [Ключевое слово auto](../../cpp/auto-keyword.md)<br/>
 [/Zc:auto (выведение типа переменной)](../../build/reference/zc-auto-deduce-variable-type.md)<br/>
-[typeid](../../windows/typeid-cpp-component-extensions.md)
+[typeid](../../extensions/typeid-cpp-component-extensions.md)

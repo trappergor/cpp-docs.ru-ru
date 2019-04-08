@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328497"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027601"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>Как выполнить: Создание значка или другого изображения
 
@@ -153,10 +153,10 @@ ms.locfileid: "58328497"
 
 **Пользовательский образ** диалоговое окно позволяет создавать новый образ с пользовательский размер и количество цветов. Будут включены следующие свойства:
 
-|Свойство.|Описание:|
+|Свойство.|Описание|
 |---|---|
-|**Width**|Место для ввода ширину пользовательского изображения в пикселях (1-512, предельное значение 2048).|
-|**Height**|Место для ввода высоту для пользовательского изображения в пикселях (1-512, предельное значение 2048).|
+|**По ширине**|Место для ввода ширину пользовательского изображения в пикселях (1-512, предельное значение 2048).|
+|**Высота**|Место для ввода высоту для пользовательского изображения в пикселях (1-512, предельное значение 2048).|
 |**Цвета**|Поле нужно указать число цветов для пользовательского образа: 2, 16 или 256.|
 
 Используйте **откройте &lt;устройства&gt; изображение** диалоговое окно, чтобы открыть изображениях устройств в проектах C++. В ней перечислены существующие образы устройство в текущий ресурс (изображения, которые являются частью текущего ресурса). — Включены следующие свойства:
@@ -320,9 +320,9 @@ ms.locfileid: "58328497"
 ## <a name="see-also"></a>См. также
 
 [Редактор изображений для значков](../windows/image-editor-for-icons.md)<br/>
-[Практическое руководство. Изменение изображения](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[Практическое руководство. Изменить изображение](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
 [Практическое руководство. Использование инструмента рисования](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[Практическое руководство. Работа с цветом](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[Практическое руководство. Работать с цветом](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [Сочетания клавиш](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

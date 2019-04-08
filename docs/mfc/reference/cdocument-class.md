@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CDocument [MFC], m_clrRichPreviewTextColor
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
-ms.openlocfilehash: b7358c2206c15660b9ffb283802283ee71e57f03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299079"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774187"
 ---
 # <a name="cdocument-class"></a>Класс CDocument
 
@@ -141,13 +141,13 @@ class CDocument : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDocument::CDocument](#cdocument)|Создает объект `CDocument`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDocument::AddView](#addview)|Присоединяет представление документа.|
 |[CDocument::BeginReadChunks](#beginreadchunks)|Инициализирует Фрагментирование чтения.|
@@ -200,14 +200,14 @@ class CDocument : public CCmdTarget
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDocument::OnFileSendMail](#onfilesendmail)|Отправляет сообщение электронной почты с вложенным документом.|
 |[CDocument::OnUpdateFileSendMail](#onupdatefilesendmail)|Включает команду Отправить почту, если присутствует поддержка электронной почты.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDocument::m_bGetThumbnailMode](#m_bgetthumbnailmode)|Указывает, что `CDocument` объект был создан при dllhost для эскизов. Должен быть установлен в `CView::OnDraw`.|
 |[CDocument::m_bPreviewHandlerMode](#m_bpreviewhandlermode)|Указывает, что `CDocument` объект был создан при prevhost для `Rich Preview`. Должен быть установлен в `CView::OnDraw`.|
@@ -372,10 +372,10 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Параметры
 
-*Идентификатор GUID*<br/>
+*guid*<br/>
 Указывает GUID фрагмент для поиска.
 
-*pid*<br/>
+*Идентификатор процесса*<br/>
 Указывает код продукта блока, для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Параметры
 
-*cx*<br/>
+*CX*<br/>
 Указывает ширину и высоту растрового изображения.
 
 *phbmp*<br/>
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 Указывает имя документа, которая находится в процессе сохранения или загрузки.
 
-*e*<br/>
+*й*<br/>
 Указывает исключение, вызванное исключение. Может иметь значение NULL.
 
 *bSaving*<br/>
@@ -1254,9 +1254,9 @@ void UpdateAllViews(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
-[Пример MFC NPP](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC NPP](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CCmdTarget](../../mfc/reference/ccmdtarget-class.md)<br/>

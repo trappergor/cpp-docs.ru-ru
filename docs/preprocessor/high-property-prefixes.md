@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - high_property_prefixes attribute
 ms.assetid: 91c6cc2b-19b6-4aba-8831-d9e5cccb58b5
-ms.openlocfilehash: 130d19f275612e153955ae49f299fe2f36d098bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f8975ec9737e02bb1216166cc6c241549e95a07
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579820"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029373"
 ---
 # <a name="highpropertyprefixes"></a>high_property_prefixes
 
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Задает другие префиксы для трех методов свойств.
 
@@ -40,9 +40,9 @@ high_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 По умолчанию высокоуровневые обработки ошибок `propget`, `propput`, и `propputref` методы предоставляются функциями-членами, префиксы `Get`, `Put`, и `PutRef`, соответственно.
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

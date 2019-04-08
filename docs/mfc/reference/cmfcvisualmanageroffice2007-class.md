@@ -230,12 +230,12 @@ helpviewer_keywords:
 - CMFCVisualManagerOffice2007 [MFC], OnUpdateSystemColors
 - CMFCVisualManagerOffice2007 [MFC], SetResourceHandle
 ms.assetid: fb687c74-6d08-4c72-8acf-27f75dda6d6b
-ms.openlocfilehash: 28e0c1f3ca593fed939b0cf3fa0fa3085d79d156
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4ea04ece6f381fb2bce1c33716c7e7248bca5b7b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282439"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778940"
 ---
 # <a name="cmfcvisualmanageroffice2007-class"></a>Класс CMFCVisualManagerOffice2007
 
@@ -253,7 +253,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCVisualManagerOffice2007::AlwaysHighlight3DTabs](#alwayshighlight3dtabs)||
 |[CMFCVisualManagerOffice2007::CleanStyle](#cleanstyle)||
@@ -376,7 +376,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется использование наглядный диспетчер Office 2007. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).
+В следующем примере демонстрируется использование наглядный диспетчер Office 2007. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#7](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2007-class_1.cpp)]
 
@@ -388,7 +388,7 @@ class CMFCVisualManagerOffice2007 : public CMFCVisualManagerOffice2003
 
 [CMFCVisualManager](../../mfc/reference/cmfcvisualmanager-class.md)
 
-[CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
+[Преобразованный CMFCVisualManagerOfficeXP](../../mfc/reference/cmfcvisualmanagerofficexp-class.md)
 
 [CMFCVisualManagerOffice2003](../../mfc/reference/cmfcvisualmanageroffice2003-class.md)
 

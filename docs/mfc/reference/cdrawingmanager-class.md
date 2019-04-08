@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278543"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781696"
 ---
 # <a name="cdrawingmanager-class"></a>Класс CDrawingManager
 
@@ -77,14 +77,14 @@ class CDrawingManager : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDrawingManager::CDrawingManager](#cdrawingmanager)|Создает объект `CDrawingManager`.|
 |`CDrawingManager::~CDrawingManager`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDrawingManager::CreateBitmap_32](#createbitmap_32)|Создает 32-разрядных аппаратно независимых точечный рисунок (DIB), приложения могут записывать данные в напрямую.|
 |[CDrawingManager::DrawAlpha](#drawalpha)|Отображает точечным рисункам, имеющим прозрачным или полупрозрачным пикселей.|
@@ -156,10 +156,10 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*size*|[in] Объект [CSize](../../atl-mfc-shared/reference/csize-class.md) параметр, указывающий размер растрового изображения.|
 |*pBits*|[out] Значения битов в указатель на указатель на данные, получающий расположение DIB.|
-|*Точечный рисунок*|Дескриптор для исходного растрового изображения|
+|*растровое изображение*|Дескриптор для исходного растрового изображения|
 |*clrTransparent*|Значение RGB, указав прозрачный цвет исходного растрового изображения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -296,7 +296,7 @@ void DrawLineA(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*x1*|[in] Координата x, в которой начинается строка.|
 |*y1*|[in] Координата y, в которой начинается строка.|
 |*x2*|[in] Координата x, которой заканчивается строке.|
@@ -389,7 +389,7 @@ BOOL DrawShadow(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `DrawShadow` метод `CDrawingManager` класса. Этот фрагмент кода является частью [Prop лист демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `DrawShadow` метод `CDrawingManager` класса. Этот фрагмент кода является частью [Prop лист демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `FillGradient` метод `CDrawingManager` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `FillGradient` метод `CDrawingManager` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ void FillGradient2 (
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `FillGradient2` метод `CDrawingManager` класса. Этот фрагмент кода является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `FillGradient2` метод `CDrawingManager` класса. Этот фрагмент кода является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
@@ -668,7 +668,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*H*|[in] Число от 0 до 360, указывающее оттенок цвета.|
 |*S*|[in] Число от 0 до 1, указывающее насыщенность цвета.|
 |*V*|[in] Число от 0 до 1, определяющее значение цвета.|
@@ -714,7 +714,7 @@ static BYTE __stdcall HueToRGB(
 *rm2*<br/>
 [in] См. в разделе "Примечания".
 
-*rh*<br/>
+*концентратор*<br/>
 [in] См. в разделе "Примечания".
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in] Начальный цвет пикселя.
 
-*Процентов*<br/>
+*percent*<br/>
 [in] Число, представляющее процент прозрачности от 0 до 100. Значение 100 указывает, что цвет полностью прозрачен.
 
 *percentR*<br/>
@@ -856,8 +856,8 @@ static void __stdcall RGBtoHSL(
 
 |||
 |-|-|
-|Параметр|Описание:|
-|*rgb*|[in] Цвет RGB-значения.|
+|Параметр|Описание|
+|*RGB*|[in] Цвет RGB-значения.|
 |*H*|[out] Указатель на значение типа double, где метод хранит оттенок цвета.|
 |*S*|[out] Указатель на значение типа double, где метод хранит насыщенность цвета.|
 |*L*|[out] Указатель на значение типа double, где метод хранит яркость выбранного цвета.|
@@ -882,7 +882,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="parameters"></a>Параметры
 
-*rgb*<br/>
+*RGB*<br/>
 [in] Цвет для преобразования в представление RGB.
 
 *H*<br/>
@@ -930,7 +930,7 @@ static void __stdcall SetAlphaPixel(
 *y*<br/>
 [in] Вертикальная координата пикселя к цвету.
 
-*Процентов*<br/>
+*percent*<br/>
 [in] Процент прозрачности.
 
 *iShadowSize*<br/>
@@ -966,9 +966,9 @@ static void __stdcall SetPixel(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pBits*|[in] Указатель на битовые значения растрового изображения.|
-|*cx*|[in] Общая ширина растрового изображения.|
+|*CX*|[in] Общая ширина растрового изображения.|
 |*CY*|[in] Общая высота растрового изображения.|
 |*x*|[in] Координата x пикселя в точечном рисунке для изменения.|
 |*y*|[in] Координата по оси y пикселя в точечном рисунке для изменения.|
@@ -991,12 +991,12 @@ static COLORREF __stdcall SmartMixColors(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*color1*|[in] Первый цвет смешивания.|
 |*цвет2*|[in] Второй цвет смешивания.|
 |*dblLumRatio*|[in] Отношение для нового цвета яркость. `SmartMixColors` Умножает яркость цвета смешанной перед определением окончательный цвет этого отношения.|
-|*k1*|[in] Взвешенное отношение для первого цвета.|
-|*k2*|[in] Взвешенное отношение для второй цвет.|
+|*K1*|[in] Взвешенное отношение для первого цвета.|
+|*K2*|[in] Взвешенное отношение для второй цвет.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 

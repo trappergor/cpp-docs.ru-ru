@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298208"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777367"
 ---
 # <a name="cmfcmenubutton-class"></a>Класс CMFCMenuButton
 
@@ -43,13 +43,13 @@ class CMFCMenuButton : public CMFCButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCMenuButton::CMFCMenuButton](#cmfcmenubutton)|Создает объект `CMFCMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|Вызывается платформой для преобразования сообщений окна перед их отправкой. (Переопределяет `CMFCButton::PreTranslateMessage`.)|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|Изменение размера кнопки в зависимости от размера текста и изображений.|
@@ -72,7 +72,7 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="example"></a>Пример
 
-Ниже приведен пример, как задавать дескриптор меню, подключенное к кнопке, изменить размер кнопки в зависимости от размера текста и изображений и задавать контекстном меню, которое отображается платформой. Этот фрагмент кода является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Ниже приведен пример, как задавать дескриптор меню, подключенное к кнопке, изменить размер кнопки в зависимости от размера текста и изображений и задавать контекстном меню, которое отображается платформой. Этот фрагмент кода является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

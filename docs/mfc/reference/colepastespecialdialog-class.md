@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303324"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776912"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
 
@@ -49,13 +49,13 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COlePasteSpecialDialog::COlePasteSpecialDialog](#colepastespecialdialog)|Создает объект `COlePasteSpecialDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePasteSpecialDialog::AddFormat](#addformat)|Добавляет в список форматов, которые можно вставить в приложение пользовательские форматы.|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|Добавляет новую запись в список поддерживаемых форматов буфера обмена.|
@@ -69,7 +69,7 @@ class COlePasteSpecialDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePasteSpecialDialog::m_ps](#m_ps)|Структура типа OLEUIPASTESPECIAL, который управляет функция диалогового окна.|
 
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Параметры
 
-*fmt*<br/>
+*FMT*<br/>
 Ссылка на тип данных для добавления.
 
 *lpszFormat*<br/>
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 Строка, описывающая результат, если выбран этот формат, в диалоговом окне.
 
-*flags*<br/>
+*флаги*<br/>
 Различные связь и внедрение параметры, доступные для данного формата. Этот флаг представляет собой битовую комбинацию одного или нескольких разных значений в OLEUIPASTEFLAG перечисляемый тип.
 
 *CF*<br/>
@@ -383,7 +383,7 @@ OLEUIPASTESPECIAL m_ps;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)

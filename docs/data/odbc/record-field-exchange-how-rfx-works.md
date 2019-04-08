@@ -1,5 +1,5 @@
 ---
-title: 'Обмен данными с полями записей: Принцип работы RFX'
+title: 'Обмен полями записей: Принцип работы RFX'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - record editing [C++], using RFX
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - scrolling [C++], RFX
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
-ms.openlocfilehash: efc08736f1b61bc634b819fc62545d886134cd35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534710"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032681"
 ---
-# <a name="record-field-exchange-how-rfx-works"></a>Обмен данными с полями записей: Принцип работы RFX
+# <a name="record-field-exchange-how-rfx-works"></a>Обмен полями записей: Принцип работы RFX
 
 В этом разделе объясняется процесс RFX. Это подробное объяснение темы:
 
@@ -26,7 +26,7 @@ ms.locfileid: "50534710"
 - [Процесс RFX](#_core_the_record_field_exchange_process)
 
 > [!NOTE]
->  Этот раздел относится к классам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к классам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_rfx_and_the_recordset"></a> RFX и набор записей
 
@@ -40,7 +40,7 @@ ms.locfileid: "50534710"
 
 ##  <a name="_core_the_record_field_exchange_process"></a> Процесс Exchange поля записей
 
-В этом разделе описана последовательность событий RFX при открытии объекта набора записей и по мере добавления, обновления и удаления записей. Таблицы [последовательность операций RFX во время открытия набора записей](#_core_sequence_of_rfx_operations_during_recordset_open) и таблице [последовательность операций RFX во время прокрутки](#_core_sequence_of_rfx_operations_during_scrolling) в этом разделе показано, как процессы RFX `Move` в команду набор записей, и как RFX управляет обновлением. В ходе этих процессов [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) вызывается для выполнения различных операций. `m_nOperation` Данными-членом [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) объект определяет, какие операции запрашивается. Могут оказаться полезными для чтения [набор записей: принцип наборы записей выберите записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) и [набор записей: принцип наборы записей обновления записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) перед прочтением этого материала.
+В этом разделе описана последовательность событий RFX при открытии объекта набора записей и по мере добавления, обновления и удаления записей. Таблицы [последовательность операций RFX во время открытия набора записей](#_core_sequence_of_rfx_operations_during_recordset_open) и таблице [последовательность операций RFX во время прокрутки](#_core_sequence_of_rfx_operations_during_scrolling) в этом разделе показано, как процессы RFX `Move` в команду набор записей, и как RFX управляет обновлением. В ходе этих процессов [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) вызывается для выполнения различных операций. `m_nOperation` Данными-членом [CFieldExchange](../../mfc/reference/cfieldexchange-class.md) объект определяет, какие операции запрашивается. Могут оказаться полезными для чтения [набор записей: Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) и [набор записей: Как записи обновления наборов записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) перед прочтением этого материала.
 
 ###  <a name="_mfc_rfx.3a_.initial_binding_of_columns_and_parameters"></a> RFX: Начальная привязки столбцов и параметров
 
@@ -63,12 +63,12 @@ ms.locfileid: "50534710"
 |||3. Отправьте код SQL.|
 ||4. Связывание элементов данных параметров.||
 ||5. Привязка поля элементов данных со столбцами.||
-|||6. ODBC выполняет перемещение и заполнение данных.|
+|||6.  ODBC выполняет перемещение и заполнение данных.|
 ||7. Привязка данных для C++.||
 
 Наборы записей используют подготовленное выполнение ODBC позволяет быстро обновления запросов с той же инструкции SQL. Дополнительные сведения о подготовленное выполнение, см. в разделе ODBC SDK *справочнике программиста* в библиотеке MSDN.
 
-###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: прокрутка
+###  <a name="_mfc_rfx.3a_.scrolling"></a> RFX: Прокрутка
 
 Во время перехода от одной записи в другую, платформа вызывает `DoFieldExchange` для замены значений, предварительно сохраненных в элементами данных полей со значениями для новой записи.
 
@@ -111,7 +111,7 @@ ms.locfileid: "50534710"
 ||3. Для `AddNew`, элементы данных полей как «чистым» и значение Null.||
 |4. Присвоение значений поля элементов данных набора записей.|||
 |5. Вызовите метод `Update`.|||
-||6. Проверьте наличие измененных полей.||
+||6.  Проверьте наличие измененных полей.||
 ||7. Сборки SQL **вставить** инструкции для `AddNew` или **обновление** инструкции для `Edit`.||
 |||8. Отправьте код SQL.|
 ||9. Для `AddNew`, восстанавливается в буфере резервных копий. Для `Edit`, удалить резервную копию.||
@@ -122,7 +122,7 @@ ms.locfileid: "50534710"
 
 ## <a name="see-also"></a>См. также
 
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Потребление MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Макросы, глобальные функции и глобальные переменные](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Класс CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>

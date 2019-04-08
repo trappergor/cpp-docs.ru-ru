@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCLinkCtrl [MFC], SizeToContent
 - CMFCLinkCtrl [MFC], OnDrawFocusRect
 ms.assetid: 80f3874d-7cc8-410e-9ff1-62a225f5034b
-ms.openlocfilehash: a4324fad7668907600cbaebeb5c9de4ad0e7c1e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 839448694cee17f5bc1a1e47f7c113026a1a4006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302728"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776431"
 ---
 # <a name="cmfclinkctrl-class"></a>Класс CMFCLinkCtrl
 
@@ -35,7 +35,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCLinkCtrl::SetURL](#seturl)|Отображает указанный URL-адрес в виде текста кнопки.|
 |[CMFCLinkCtrl::SetURLPrefix](#seturlprefix)|Задает неявный протокол (например, «http:») URL-адреса.|
@@ -43,7 +43,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCLinkCtrl::OnDrawFocusRect](#ondrawfocusrect)|Вызвано структурой перед началом рисования прямоугольника фокуса кнопки.|
 
@@ -53,7 +53,7 @@ class CMFCLinkCtrl : public CMFCButton
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как задать размер `CMFCLinkCtrl` , а также для задания URL-адрес и всплывающей подсказки в `CMFCLinkCtrl` объекта. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+В следующем примере показано, как задать размер `CMFCLinkCtrl` , а также для задания URL-адрес и всплывающей подсказки в `CMFCLinkCtrl` объекта. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#9](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#10](../../mfc/reference/codesnippet/cpp/cmfclinkctrl-class_2.cpp)]
@@ -88,7 +88,7 @@ virtual void OnDrawFocusRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rectClient*<br/>

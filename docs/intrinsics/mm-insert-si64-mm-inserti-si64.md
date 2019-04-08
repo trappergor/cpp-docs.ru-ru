@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: 062e7e56de16d8e8a18101dec0a8e9766e02967f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631048"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033022"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64, _mm_inserti_si64
 
@@ -48,7 +48,7 @@ __m128i _mm_inserti_si64(
 *Длина*<br/>
 [in] Целочисленная константа, указывающее длину этого поля для вставки.
 
-*Index*<br/>
+*Индекс*<br/>
 [in] Целочисленная константа, указывающее индекс поля, в который будут вставлены данные — наименее значащий бит.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -125,4 +125,4 @@ result3 = 0xfffffffff3210fff
 ## <a name="see-also"></a>См. также
 
 [_mm_extract_si64, _mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

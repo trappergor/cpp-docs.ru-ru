@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032418"
 ---
 # <a name="preprocessor-grammar"></a>Грамматика препроцессора
 
@@ -21,7 +21,7 @@ ms.locfileid: "50614192"
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#line** *последовательность цифр***"** *filename* **"**<sub>opt</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *идентификатор*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#error** *строке токена*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *строке токена*
 
@@ -34,22 +34,22 @@ ms.locfileid: "50614192"
 &nbsp;&nbsp;&nbsp;&nbsp;*IF часть* *elif части*<sub>opt</sub> *else часть*<sub>opt</sub> *endif строка*
 
 *IF часть* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*строки IF* *текста*
+&nbsp;&nbsp;&nbsp;&nbsp;*if-line* *text*
 
 *строки IF* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *константного выражения*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *идентификатор*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *идентификатор*
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *elif части* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif строка* *текста*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif части* *elif строка* *текста*
 
 *elif строка* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *константного выражения*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *Else часть* :<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*Else строка* *текста*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *Else строка* :<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**
