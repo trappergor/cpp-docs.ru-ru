@@ -1,41 +1,48 @@
 ---
 title: Предупреждение компилятора (уровень 4) C4062
-ms.date: 11/04/2016
+ms.date: 04/05/2019
 f1_keywords:
 - C4062
 helpviewer_keywords:
 - C4062
 ms.assetid: 36d1c6ae-c917-4b08-bf30-2eb49ee94169
-ms.openlocfilehash: 6a7129f71eebb33e7bde333dfd90ed4ca173d44c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79658afc31565b708cdbd8a88f49b887cdd10cf3
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602648"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237189"
 ---
 # <a name="compiler-warning-level-4-c4062"></a>Предупреждение компилятора (уровень 4) C4062
 
-перечислитель «identifier» в операторе switch для перечисления «enumeration» не обрабатывается
+> Перечислитель "*идентификатор*«в параметре перечисления»*перечисления*" не обрабатывается
 
-Перечисление не имеет связанного обработчика в инструкции `switch` , а также отсутствует метка **по умолчанию** .
+Перечислитель *идентификатор* не имеет связанного `case` обработчик в `switch` инструкции и не `default` метка, которую можно перехватить. Отсутствует случай может быть случайно и потенциальные ошибки в коде. Связанные предупреждения на неиспользуемые перечислители в `switch` инструкций, которые `default` вариантов, см. в разделе [C4061](compiler-warning-level-4-c4061.md).
 
-Это предупреждение отключено по умолчанию. Подробнее: [Выключенные по умолчанию предупреждения компилятора](../../preprocessor/compiler-warnings-that-are-off-by-default.md) .
+Это предупреждение отключено по умолчанию. Дополнительные сведения о том, как включить предупреждения, отключенные по умолчанию см. в разделе [компилятора предупреждения, Are Off by Default](../../preprocessor/compiler-warnings-that-are-off-by-default.md).
 
-Следующий пример приводит к возникновению ошибки C4062.
+## <a name="example"></a>Пример
 
-```
+Следующий пример приводит к возникновению ошибки C4062 и показаны способы ее устранения:
+
+```cpp
 // C4062.cpp
-// compile with: /W4
+// compile with: /EHsc /W4
 #pragma warning(default : 4062)
 enum E { a, b, c };
 void func ( E e ) {
    switch(e) {
       case a:
       case b:
+   // case c:  // to fix, uncomment this line
       break;   // no default label
-   }   // C4062, enumerate 'c' not handled
+   }   // C4062, enumerator 'c' not handled
 }
 
 int main() {
 }
 ```
+
+## <a name="see-also"></a>См. также
+
+[Предупреждение (уровень 4) C4061 компилятора](compiler-warning-level-4-c4061.md)

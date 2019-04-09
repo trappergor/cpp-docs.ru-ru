@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Visual C++, interoperability
 - native code [C++], .NET interoperatibility
 ms.assetid: f3ec6c99-c745-4256-b95b-f1d12ba17a5a
-ms.openlocfilehash: ae5a4583d5f074b98e346ba090246f533b80803d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 486796e404ad1aee39fbeb85251d26cc078b1160
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237150"
 ---
 # <a name="native-and-net-interoperability"></a>Взаимодействие исходного кода и платформы.NET
 
@@ -30,10 +30,8 @@ Visual C++ поддерживает возможности взаимодейс�
 [Смешанные (собственные и управляемые) сборки](../dotnet/mixed-native-and-managed-assemblies.md)<br/>
 Описание сборок, созданных с помощью [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) параметра компилятора, который одновременно содержать управляемые и неуправляемые функции.
 
-[Использование пользовательского элемента управления формы Windows Forms в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
+[Использование пользовательского элемента управления формы Windows Form в MFC](../dotnet/using-a-windows-form-user-control-in-mfc.md)<br/>
 В этой статье описывается использование вспомогательных классов MFC Windows Forms для размещения элементов управления Windows Forms в приложениях MFC.
 
 [Вызов неуправляемых функций из управляемого кода](../dotnet/calling-native-functions-from-managed-code.md)<br/>
 Описывает, как библиотеки DLL, не к CLR может использоваться в приложениях .NET.
-
-## <a name="see-also"></a>См. также
