@@ -2,12 +2,12 @@
 title: Слабые ссылки и устранение циклов (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 1acb6402-05f0-4951-af94-0e9dab41c53e
-ms.openlocfilehash: 252c9c1d2af0bc6911beca094d97f46e681ba2f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 19252b8684eade131394e98dc705f2f1d451f0cf
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237111"
 ---
 # <a name="weak-references-and-breaking-cycles-ccx"></a>Слабые ссылки и устранение циклов (C++/CX)
 
@@ -52,5 +52,3 @@ Class1::Class1()
 ```
 
 Когда обработчик событий создает исключение `DisconnectedException`, событие удаляет обработчик из списка подписчиков.
-
-## <a name="see-also"></a>См. также
