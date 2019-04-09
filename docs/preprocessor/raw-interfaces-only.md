@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - raw_interfaces_only attribute
 ms.assetid: 87056c6d-3f34-4248-af58-f5775a35bfb7
-ms.openlocfilehash: c07401036261b9f93bb2c07dcf3aff1ecf72e2fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48133b85ccb5ddb8de8e6cb614d41cde22dac66b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519357"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028264"
 ---
 # <a name="rawinterfacesonly"></a>raw_interfaces_only
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Отключает создание функций оболочки обработки ошибок и [свойство](../cpp/property-cpp.md) объявления, в которых используются такие функции оболочки.
 
@@ -30,9 +30,9 @@ raw_interfaces_only
 
 Этот атрибут позволяет предоставлять только низкоуровневое содержимое библиотеки типов.
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

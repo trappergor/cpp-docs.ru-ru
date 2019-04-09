@@ -78,12 +78,12 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: aa2996cba7d4839387d5801d2bab70b428134db4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298637"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780396"
 ---
 # <a name="cmfcribbongallery-class"></a>Класс CMFCRibbonGallery
 
@@ -100,13 +100,13 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Создает и инициализирует объект `CMFCRibbonGallery`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonGallery::AddGroup](#addgroup)|Добавляет новую группу в коллекции.|
 |[CMFCRibbonGallery::AddSubItem](#addsubitem)|Добавляет новый элемент меню в раскрывающемся меню.|
@@ -145,7 +145,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Вызывается платформой при рисовании значок в виде коллекции.|
 
@@ -155,7 +155,7 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonGallery` класс для настройки `CMFCRibbonGallery` объекта. Пример иллюстрирует способ указать количество элементов на каждую строку в коллекции, включить изменение размера панели меню, на боковой панели слева от всплывающего меню и отображения галереи ленты как палитра непосредственно на панели ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
+Следующий пример демонстрирует использование различных методов `CMFCRibbonGallery` класс для настройки `CMFCRibbonGallery` объекта. Пример иллюстрирует способ указать количество элементов на каждую строку в коллекции, включить изменение размера панели меню, на боковой панели слева от всплывающего меню и отображения галереи ленты как палитра непосредственно на панели ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
@@ -599,7 +599,7 @@ virtual void OnDrawPaletteIcon(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства, который используется для рисования.
 
 *rectIcon*<br/>
@@ -691,7 +691,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in] Родительское окно окна галереи ленты.
 
-*data*<br/>
+*Данные*<br/>
 [out] Объект `CAccessibilityData` объект, получающий данные специальных возможностей из галереи ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -821,4 +821,4 @@ void SetPaletteID(UINT nID);
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
 [Класс CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)<br/>
-[Класс CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CMFCRibbonGalleryMenuButton Class](../../mfc/reference/cmfcribbongallerymenubutton-class.md)

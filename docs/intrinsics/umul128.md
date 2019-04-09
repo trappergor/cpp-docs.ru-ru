@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __umul128 intrinsic
 ms.assetid: 13684df3-3ac7-467c-b258-a0e93bc490b5
-ms.openlocfilehash: 94f26a6baeb4d3440d7f16af298b9880b91860f2
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: afca1e62127ac2dbcfc407982dbe191d379b4acb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220495"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034969"
 ---
 # <a name="umul128"></a>_umul128
 
@@ -48,7 +48,7 @@ unsigned __int64 _umul128(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_umul128`|X64|\<Intrin.h >|
+|`_umul128`|X64|\<intrin.h>|
 
 ## <a name="example"></a>Пример
 
@@ -81,4 +81,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

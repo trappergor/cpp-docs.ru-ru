@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - R6018
 ms.assetid: f6dd40d1-a119-4d8b-b39e-97350ea23349
-ms.openlocfilehash: e0d229b4fd8c1a4f8e067c0e59a278344fd4e113
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b36e2184e5be131645fb4dd58a361fdb9a31da63
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531922"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774982"
 ---
 # <a name="c-runtime-error-r6018"></a>C R6018 ошибку во время выполнения
 
@@ -32,4 +32,4 @@ ms.locfileid: "50531922"
 
 Эта ошибка обычно возникает, если программа случайно изменяет данные кучи времени выполнения. Тем не менее она может также быть вызвана Внутренняя ошибка среды выполнения или операционной системы.
 
-Чтобы устранить эту проблему, проверьте наличие ошибки повреждения кучи в коде. Дополнительные сведения и примеры см. в разделе [сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Затем проверьте, что вы используете последние версии распространяемых компонентов для развертывания приложения. Сведения см. в разделе [развертывание в Visual C++](../../ide/deployment-in-visual-cpp.md).
+Чтобы устранить эту проблему, проверьте наличие ошибки повреждения кучи в коде. Дополнительные сведения и примеры см. в разделе [сведения о куче отладки CRT](/visualstudio/debugger/crt-debug-heap-details). Затем проверьте, что вы используете последние версии распространяемых компонентов для развертывания приложения. Сведения см. в разделе [развертывание в Visual C++](../../windows/deployment-in-visual-cpp.md).

@@ -2,16 +2,16 @@
 title: Схемы команд редактирования DHTML
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278266"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776158"
 ---
 # <a name="dhtml-editing-command-maps"></a>Схемы команд редактирования DHTML
 
-Следующие макросы можно использовать для сопоставления команд редактирования DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы. Пример их использования, см. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+Следующие макросы можно использовать для сопоставления команд редактирования DHTML [CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-производные классы. Пример их использования, см. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="dhtml-editing-command-map-macros"></a>Макросы схемы команд редактирования DHTML
 
@@ -46,7 +46,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -89,7 +89,7 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -113,7 +113,7 @@ HTML, команда, к которому изменения *cmdID* сопос�
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -140,7 +140,7 @@ HTML, команда, к которому изменения *cmdID* сопос�
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -167,7 +167,7 @@ HTML, команда, к которому изменения *cmdID* сопос�
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 
@@ -197,7 +197,7 @@ HTML, команда, к которому изменения *cmdID* сопос�
 
 ### <a name="example"></a>Пример
 
-См. в разделе [HTMLEdit пример](../../visual-cpp-samples.md).
+См. в разделе [HTMLEdit пример](../../overview/visual-cpp-samples.md).
 
 ### <a name="requirements"></a>Требования
 

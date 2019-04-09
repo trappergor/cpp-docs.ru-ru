@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: b17bf5fb5f44d5453de29febe001f9e8737102b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540443"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028721"
 ---
 # <a name="nonamespace"></a>no_namespace
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Указывает, что пространство имен не генерируется компилятором.
 
@@ -30,9 +30,9 @@ no_namespace
 
 Если вы хотите использовать другое имя пространства имен, используйте [rename_namespace](../preprocessor/rename-namespace.md) атрибутом.
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

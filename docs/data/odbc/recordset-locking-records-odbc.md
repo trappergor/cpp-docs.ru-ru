@@ -1,5 +1,5 @@
 ---
-title: 'Набор записей: блокировка (ODBC)'
+title: Набор записей. Блокировка записей (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - locks [C++], recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], locking records
 - data [C++], locking
 ms.assetid: 8fe8fcfe-b55a-41a8-9136-94a7cd1e4806
-ms.openlocfilehash: 08d7ca1db474a5735ccaabaa7d7d87b359730bb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1265899e7060527d7e586689eb4c3148eebc4080
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438705"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037293"
 ---
-# <a name="recordset-locking-records-odbc"></a>Набор записей: блокировка (ODBC)
+# <a name="recordset-locking-records-odbc"></a>Набор записей. Блокировка записей (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
@@ -30,7 +30,7 @@ ms.locfileid: "50438705"
 При использовании набора записей для обновления записи в источнике данных, приложение может выполнить блокировку записи, ни один другой пользователь может обновить запись, в то же время. Состояние записи обновлены двумя пользователями в то же время остается неопределенным, если система может гарантировать, что два пользователя не удается обновить запись одновременно.
 
 > [!NOTE]
->  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы реализовали выборка строк, некоторые данные не применяется. Например, нельзя вызывать `Edit` и `Update` функций-членов. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы реализовали выборка строк, некоторые данные не применяется. Например, нельзя вызывать `Edit` и `Update` функций-членов. Дополнительные сведения о массовой выборке строк см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 ##  <a name="_core_record.2d.locking_modes"></a> Режимы блокировки записей
 

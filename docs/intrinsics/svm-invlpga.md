@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544304"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031141"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -35,7 +35,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 ## <a name="remarks"></a>Примечания
 
-Функция `__svm_invlpga` эквивалентна инструкции компьютера `INVLPGA` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Функция `__svm_invlpga` эквивалентна инструкции компьютера `INVLPGA` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Номер 24593, редакция 3.11, System Programming,» документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -49,4 +49,4 @@ void __svm_invlpga(void *Va, int ASID);
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 7bc5d5763881b862487fa97e02da02d98bcd017d
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: dc5a823951e07af96efceec52d2aa23552c2d002
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562956"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029490"
 ---
 # <a name="dialog-editor-c"></a>Редактор диалоговых окон (C++)
 
@@ -92,7 +92,7 @@ ms.locfileid: "57562956"
 
 Ниже приведены по умолчанию сочетания клавиш для **редактор диалоговых окон** команды.  
 
-|Команда|Клавиши|Описание:|
+|Команда|Клавиши|Описание|
 |-------------|----------|-----------------|
 |Format.AlignBottoms|**CTRL** + **Shift** + **стрелка вниз**|Выравнивание по нижнему краю выбранных элементов управления с помощью главного элемента управления.|
 |Format.AlignCenters|**SHIFT** + **F9**|Вертикальное выравнивание элементов управления с помощью главного элемента управления.|
@@ -126,7 +126,7 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Редакторы ресурсов](../windows/resource-editors.md)<br/>
+[редакторы ресурсов](../windows/resource-editors.md)<br/>
 [Практическое руководство. Создание диалогового окна](../windows/creating-a-new-dialog-box.md)<br/>
 [Элементы управления диалогового окна](../windows/controls-in-dialog-boxes.md)<br/>
 <!--

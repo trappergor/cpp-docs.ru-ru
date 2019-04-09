@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets, requerying
 - refreshing recordsets
 ms.assetid: 4ebc3b5b-5b91-4f51-a967-245223c6b8e1
-ms.openlocfilehash: b8e7de569a8310fdad0273ae70449d2da544f6e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7edc1c04da617f96165b25a47ce169b266ae0003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482757"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024599"
 ---
 # <a name="recordset-requerying-a-recordset-odbc"></a>Набор записей. Выполнение обновления наборов записей (ODBC)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50482757"
 
 ##  <a name="_core_bringing_the_recordset_up_to_date"></a> Обновление набора записей с начала
 
-Часто требуется объекта набора записей для обеспечения ее в актуальном состоянии. В среде многопользовательской базы данных другие пользователи могут вносить изменения в данные в течение жизни набора записей. Дополнительные сведения о при набор записей отражает изменения, внесенные другими пользователями, и наборы записей других пользователей отражают изменения, см. в разделе [набор записей: принцип наборы записей обновления записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) и [динамический набор](../../data/odbc/dynaset.md).
+Часто требуется объекта набора записей для обеспечения ее в актуальном состоянии. В среде многопользовательской базы данных другие пользователи могут вносить изменения в данные в течение жизни набора записей. Дополнительные сведения о при набор записей отражает изменения, внесенные другими пользователями, и наборы записей других пользователей отражают изменения, см. в разделе [набор записей: Принципы обновления записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md) и [динамический набор](../../data/odbc/dynaset.md).
 
 ##  <a name="_core_requerying_based_on_new_parameters"></a> Выполнение обновления наборов на основе новых параметров
 
@@ -48,7 +48,7 @@ ms.locfileid: "50482757"
 
 Кроме того можно закрыть и снова открыть первоначальный набор записей. В любом случае новый набор записей представляет текущее состояние источника данных.
 
-Например, см. в разделе [представления записей: заполнение списка из второго набора записей](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
+Например, см. в разделе [представления записей: Заполнение списка из второго набора записей](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md).
 
 > [!TIP]
 >  Для оптимизации `Requery` производительность, избегайте вносить изменения в набор записей [фильтра](../../data/odbc/recordset-filtering-records-odbc.md) или [сортировки](../../data/odbc/recordset-sorting-records-odbc.md). Измените значение параметра перед вызовом `Requery`.

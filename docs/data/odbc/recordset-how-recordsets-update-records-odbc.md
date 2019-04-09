@@ -1,5 +1,5 @@
 ---
-title: Набор записей. Порядок обновления записей в наборе (ODBC)
+title: Набор записей. Принципы обновления записей в наборе записей (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510010"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034486"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>Набор записей. Порядок обновления записей в наборе (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>Набор записей. Принципы обновления записей в наборе записей (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
@@ -25,7 +25,7 @@ ms.locfileid: "50510010"
 >  SQL, на котором вашей `CRecordset` основан объект может повлиять на функцию обновления набора записей. Например если SQL имеет соединение или **GROUP BY** предложение, MFC задает функцию обновления значение FALSE.
 
 > [!NOTE]
->  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 Содержание раздела:
 
@@ -33,15 +33,15 @@ ms.locfileid: "50510010"
 
 - [Набор записей, как изменить буфер](#_core_the_edit_buffer) и [различия между динамических подмножеств данных и моментальные снимки](#_core_dynasets_and_snapshots).
 
-[Набор записей: Как AddNew, Edit и Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) описывает действия этих функций с точки зрения набора записей.
+[Набор записей. Как AddNew, Edit и Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md) описывает действия этих функций с точки зрения набора записей.
 
-[Набор записей: Дополнительные сведения об обновлениях (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) завершает рассказ влияние транзакций на обновления, как закрытие набора записей или прокрутки влияет на обновления в процессе выполнения и взаимодействие с обновлениями других обновлений пользователи.
+[Набор записей. Дополнительные сведения об обновлениях (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md) завершает рассказ влияние транзакций на обновления, как закрытие набора записей или прокрутки влияет на обновления в процессе выполнения и как обновления взаимодействуют с обновлениями для других пользователей.
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> Роль пользователя в обновлении набора записей
 
 В следующей таблице показаны роли с помощью наборов записей, чтобы добавить, изменить или удалить записи, а также то, что платформа делает за вас.
 
-### <a name="recordset-updating-you-and-the-framework"></a>Обновление набора записей: Вы и платформа
+### <a name="recordset-updating-you-and-the-framework"></a>Обновление набора записей. Вы и платформа
 
 |Вы|Платформа|
 |---------|-------------------|
@@ -73,4 +73,4 @@ ms.locfileid: "50510010"
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Наборы записей. Принципы работы функций AddNew, Edit и Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Набор записей. Как AddNew, Edit и Delete рабочих (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

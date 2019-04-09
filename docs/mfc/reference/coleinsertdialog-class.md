@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260690"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781488"
 ---
 # <a name="coleinsertdialog-class"></a>Класс COleInsertDialog
 
@@ -45,13 +45,13 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleInsertDialog::COleInsertDialog](#coleinsertdialog)|Создает объект `COleInsertDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleInsertDialog::CreateItem](#createitem)|Создает элемента, выбранного в диалоговом окне.|
 |[COleInsertDialog::DoModal](#domodal)|Отображает диалоговое окно вставки объекта OLE.|
@@ -63,7 +63,7 @@ class COleInsertDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleInsertDialog::m_io](#m_io)|Структура типа OLEUIINSERTOBJECT, которое управляет поведением окна.|
 
@@ -304,7 +304,7 @@ OLEUIINSERTOBJECT m_io;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDialog](../../mfc/reference/coledialog-class.md)

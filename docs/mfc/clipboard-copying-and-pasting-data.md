@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270739"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776106"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>Буфер обмена. Копирование и вставка данных
 
@@ -32,7 +32,7 @@ ms.locfileid: "57270739"
 
 1. Если пользователь решает операцию Cut вместо операции копирования, удаления выбранных данных из приложения.
 
-Пример этой последовательности см. в разделе `OnEditCut` и `OnEditCopy` функции в MFC OLE-пример программы [OCLIENT](../visual-cpp-samples.md) и [HIERSVR](../visual-cpp-samples.md). Обратите внимание на то, что в этих примерах сохраняют указатель на данный момент выбранные данные, шаг 1 уже завершена.
+Пример этой последовательности см. в разделе `OnEditCut` и `OnEditCopy` функции в MFC OLE-пример программы [OCLIENT](../overview/visual-cpp-samples.md) и [HIERSVR](../overview/visual-cpp-samples.md). Обратите внимание на то, что в этих примерах сохраняют указатель на данный момент выбранные данные, шаг 1 уже завершена.
 
 ##  <a name="_core_pasting_data"></a> Вставка данных
 
@@ -50,7 +50,7 @@ ms.locfileid: "57270739"
 
 1. Выполнение вставки формата.
 
-Пример того, как это работает, см. в разделе реализации `OnEditPaste` функций-членов в представлении классов, определенных в MFC OLE примеров программ [OCLIENT](../visual-cpp-samples.md) и [HIERSVR](../visual-cpp-samples.md).
+Пример того, как это работает, см. в разделе реализации `OnEditPaste` функций-членов в представлении классов, определенных в MFC OLE примеров программ [OCLIENT](../overview/visual-cpp-samples.md) и [HIERSVR](../overview/visual-cpp-samples.md).
 
 > [!TIP]
 >  Основные преимущества от раздельной операции вставки в собственную функцию — что может использоваться один и тот же код вставить, при удалении данных в приложении во время операции перетаскивания и вставки. Как и в OCLIENT и HIERSVR вашей `OnDrop` функция также может вызывать `DoPasteItem`, повторно используя код, написанный для реализации операции вставки.
@@ -63,7 +63,7 @@ ms.locfileid: "57270739"
 
 - [Объекты и данные источников данных OLE и универсальный код передачи данных](../mfc/data-objects-and-data-sources-ole.md)
 
-- [Перетаскивание OLE](../mfc/drag-and-drop-ole.md)
+- [перетаскивание OLE](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 

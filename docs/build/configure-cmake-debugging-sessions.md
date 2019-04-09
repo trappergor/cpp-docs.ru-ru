@@ -3,12 +3,12 @@ title: Настройка сеансов отладки CMake в Visual Studio
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356170"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035352"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>Настройка сеансов отладки CMake
 
@@ -42,7 +42,7 @@ ms.locfileid: "58356170"
 
 ## <a name="support-for-cmakesettings-variables"></a>Поддержка переменных CMakeSettings
 
- **Launch.VS.JSON** поддерживает переменные, объявленные в **CMakeSettings.json** (см. ниже), они применяются к выбранной конфигурации. Он также содержит ключ `currentDir`, задающий текущий каталог запускаемого приложения:
+ **Launch.VS.JSON** поддерживает переменные, объявленные в **CMakeSettings.json** (см. ниже), они применяются к выбранной конфигурации. Он также имеет ключ с именем `currentDir`, который задает текущий каталог запуска приложения для локального проекта:
 
 ```json
 {
@@ -59,6 +59,13 @@ ms.locfileid: "58356170"
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+Ключ «cwd» задает текущий каталог для проекта удаленного запуска приложения. Значение по умолчанию — «${debugInfo.defaultWorkingDirectory}» что равняется 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>См. также
 
 [Проекты CMake в Visual Studio](cmake-projects-in-visual-studio.md)<br/>

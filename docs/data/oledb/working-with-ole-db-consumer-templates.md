@@ -5,12 +5,12 @@ helpviewer_keywords:
 - sample applications [C++], OLE DB Templates
 - OLE DB consumer templates, about consumer templates
 ms.assetid: 526aa897-5961-4396-85cb-c84f77113551
-ms.openlocfilehash: 79eb11a2a9d6403eb267098bb4f893b4424d6a67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81bb80446ef3df09eaed7a8728e789de67c27122
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466343"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040810"
 ---
 # <a name="working-with-ole-db-consumer-templates"></a>Работа с шаблонами объекта-получателя OLE DB
 
@@ -18,15 +18,15 @@ ms.locfileid: "50466343"
 
 - [Упрощение доступа к данным с помощью атрибутов базы данных](../../data/oledb/simplifying-data-access-with-database-attributes.md)
 
-- [Статус поля элементов данных в методах доступа, создаваемых мастером](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
+- [Статус поля элементов данных в мастере создания методов доступа](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)
 
 - [Перебор простого набора строк](../../data/oledb/traversing-a-simple-rowset.md)
 
-- [Выполнение параметризованного запроса](../../data/oledb/issuing-a-parameterized-query.md)
+- [Выполнение параметризированного запроса](../../data/oledb/issuing-a-parameterized-query.md)
 
 - [Выборка данных](../../data/oledb/fetching-data.md)
 
-- [Обновление наборов строк](../../data/oledb/updating-rowsets.md)
+- [обновление наборов строк](../../data/oledb/updating-rowsets.md)
 
 - [Использование хранимых процедур](../../data/oledb/using-stored-procedures.md)
 
@@ -44,7 +44,7 @@ ms.locfileid: "50466343"
 
 - [Использование закладок](../../data/oledb/using-bookmarks.md)
 
-- [Извлечение большого двоичного объекта](../../data/oledb/retrieving-a-blob.md)
+- [Извлечение двоичного объекта (BLOB)](../../data/oledb/retrieving-a-blob.md)
 
 - [Получение уведомлений](../../data/oledb/receiving-notifications.md)
 
@@ -52,7 +52,7 @@ ms.locfileid: "50466343"
 
 Также можно найти примеры использования шаблонов потребителей OLE DB в следующих примерах:
 
-- ["CatDB"](https://github.com/Microsoft/VCSamples)
+- [CatDB](https://github.com/Microsoft/VCSamples)
 
 - [DBViewer](https://github.com/Microsoft/VCSamples)
 

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640832"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033063"
 ---
 # <a name="stand-alone-attributes"></a>Изолированные атрибуты
 
@@ -21,12 +21,12 @@ ms.locfileid: "50640832"
 |Атрибут|Описание|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|Выдает заданную строку, без знаков кавычек в создаваемого файла заголовка.|
-|[custom](custom-cpp.md)|Позволяет определять собственный атрибут.|
+|[пользовательский](custom-cpp.md)|Позволяет определять собственный атрибут.|
 |[db_command](db-command.md)|Создает команду OLE DB.|
 |[emitidl](emitidl.md)|Определяет, будет ли обработано и помещаются в созданного IDL-файла все последующие атрибуты IDL.|
 |[idl_module](idl-module.md)|Указывает точку входа в библиотеку DLL.|
 |[idl_quote](idl-quote.md)|Позволяет использовать конструкции IDL, которые не поддерживаются в текущей версии Visual C++ и их передачи через созданного IDL-файла.|
-|[import](import.md)|Указывает другой файл .idl, .odl или .h, содержащая определения, как нужно ссылаться из вашей основной IDL-файла.|
+|[импорт](import.md)|Указывает другой файл .idl, .odl или .h, содержащая определения, как нужно ссылаться из вашей основной IDL-файла.|
 |[importidl](importidl.md)|Вставляет указанный IDL-файла в созданного IDL-файла|
 |[importlib](importlib.md)|Делает типы, которые уже были скомпилированы в другую библиотеку типов, доступными для создаваемой библиотеки типов.|
 |[include](include-cpp.md)|Указывает один или несколько файлов заголовка для включения в созданного IDL-файла.|

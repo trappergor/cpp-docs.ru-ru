@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b90f4454e784907366ef6cf7e3e7e1b9ada799
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414031"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023845"
 ---
 # <a name="csimplerow-class"></a>Класс CSimpleRow
 
@@ -63,7 +63,7 @@ class CSimpleRow
 |||
 |-|-|
 |[AddRefRow](#addrefrow)|Добавляет счетчик ссылок в дескриптор существующей строки.|
-|[Compare](#compare)|Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.|
+|[Сравнение](#compare)|Сравнивает две строки, чтобы увидеть, если они ссылаются на один и тот же экземпляр строки.|
 |[CSimpleRow](#csimplerow)|Конструктор.|
 |[ReleaseRow](#releaserow)|Высвобождает строки.|
 

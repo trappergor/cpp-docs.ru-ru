@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: ff61fb4f918e25d430fc31ae55c3ad8794ce39f1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6f864a37c46158ab98776cd96d9f50d7cfaeb13d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425033"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776353"
 ---
 # <a name="cspinbuttonctrl-class"></a>Класс CSpinButtonCtrl
 
@@ -53,13 +53,13 @@ class CSpinButtonCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSpinButtonCtrl::CSpinButtonCtrl](#cspinbuttonctrl)|Создает объект `CSpinButtonCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSpinButtonCtrl::Create](#create)|Создает управления "Счетчик" и присоединяет его к `CSpinButtonCtrl` объекта.|
 |[CSpinButtonCtrl::CreateEx](#createex)|Создает управления "Счетчик" с указанным расширенные стили Windows и присоединяет его к `CSpinButtonCtrl` объекта.|
@@ -399,7 +399,7 @@ void SetRange32(
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CSliderCtrl](../../mfc/reference/csliderctrl-class.md)

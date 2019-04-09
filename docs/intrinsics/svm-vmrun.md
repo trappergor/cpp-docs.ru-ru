@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_vmrun intrinsic
 - VMRUN instruction
 ms.assetid: ae98a781-fc17-47b2-b40f-86fcebf1867b
-ms.openlocfilehash: ffedf366453a800ce420914376b8d9bb441a602a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e53b2ebd54fc109b47f3067e5f89ce50b327de
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603567"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041063"
 ---
 # <a name="svmvmrun"></a>__svm_vmrun
 
@@ -38,7 +38,7 @@ void __svm_vmrun(
 
 `__svm_vmrun` Функция использует минимальный объем сведений в VMCB, чтобы начать выполнение кода гостевой виртуальной машины. Используйте [__svm_vmsave](../intrinsics/svm-vmsave.md) или [__svm_vmload](../intrinsics/svm-vmload.md) работать, если вам требуется больше информации для обработки сложных прерывания или переключиться на другой виртуальной машины.
 
-Функция `__svm_vmrun` эквивалентна инструкции компьютера `VMRUN` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер документа 24593, редакция 3.11 и более поздних версиях в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Функция `__svm_vmrun` эквивалентна инструкции компьютера `VMRUN` . Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Системы программирования,» номер 24593, редакция 3.11 и более поздних версиях в "документа" [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -52,6 +52,6 @@ void __svm_vmrun(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmsave](../intrinsics/svm-vmsave.md)<br/>
 [__svm_vmload](../intrinsics/svm-vmload.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 921e5370303cb62830ec281bcefd7c03331efaeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50552754"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038178"
 ---
 # <a name="helpcontext"></a>helpcontext
 
@@ -26,7 +26,7 @@ ms.locfileid: "50552754"
 ### <a name="parameters"></a>Параметры
 
 *id*<br/>
-Идентификатор контекста справки. См. в разделе [HTML-справки: Context-Sensitive для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.
+Идентификатор контекста справки. См. в разделе [HTML-справки: Контекстная справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.
 
 ## <a name="remarks"></a>Примечания
 

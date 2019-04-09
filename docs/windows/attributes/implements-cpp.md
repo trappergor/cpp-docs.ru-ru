@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
-ms.openlocfilehash: 519bbe0bdbef786c95ca3f6711b344b7a4f6b641
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329894"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033687"
 ---
 # <a name="implements-c"></a>implements (C++)
 
@@ -26,10 +26,10 @@ ms.locfileid: "51329894"
 
 ### <a name="parameters"></a>Параметры
 
-*interfaces*<br/>
+*интерфейсы*<br/>
 Разделенный запятыми список интерфейсов, которые будут входить в компонентного класса IDL. Метод сокращением для указания единый интерфейс является **реализует (** *interface_name* **)**.
 
-*dispinterfaces*<br/>
+*диспетчерских интерфейсов.*<br/>
 Разделенный запятыми список disp-интерфейс, который будет входить компонентного класса IDL. Метод сокращением для указания одного disp-интерфейс является **реализует (диспетчерских =** *dispinterface_name* **)**.
 
 ## <a name="remarks"></a>Примечания

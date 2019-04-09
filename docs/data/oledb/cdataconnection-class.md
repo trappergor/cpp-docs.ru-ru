@@ -65,12 +65,12 @@ helpviewer_keywords:
 - operator CSession*
 - CSession* operator
 ms.assetid: 77432d85-4e20-49ec-a0b0-142137828471
-ms.openlocfilehash: 769dfc99f431cb5ba803075e28176713f9bd7092
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 94c7025185a24b07d5968157d49c856d4359b33a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021635"
 ---
 # <a name="cdataconnection-class"></a>Класс CDataConnection
 
@@ -105,8 +105,8 @@ class CDataConnection
 |[operator bool](#op_bool_ole)|Определяет, является ли текущий сеанс открытым.|
 |[оператор CDataSource &](#op_cdata_amp)|Возвращает ссылку на вложенный `CDataSource` объекта.|
 |[оператор CDataSource *](#op_cdata_star)|Возвращает указатель на вложенный `CDataSource` объекта.|
-|[оператор CSession &](#op_csession_amp)|Возвращает ссылку на вложенный `CSession` объекта.|
-|[оператор CSession *](#op_csession_star)|Возвращает указатель на вложенный `CSession` объекта.|
+|[оператор CSession&](#op_csession_amp)|Возвращает ссылку на вложенный `CSession` объекта.|
+|[оператор CSession*](#op_csession_star)|Возвращает указатель на вложенный `CSession` объекта.|
 
 ## <a name="remarks"></a>Примечания
 
@@ -132,7 +132,7 @@ CDataConnection(const CDataConnection &ds);
 
 #### <a name="parameters"></a>Параметры
 
-*доменных служб Active Directory*<br/>
+*ds*<br/>
 [in] Ссылка на существующее подключение к данным.
 
 ### <a name="remarks"></a>Примечания
@@ -153,7 +153,7 @@ CDataConnection& Copy(const CDataConnection & ds) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*доменных служб Active Directory*<br/>
+*ds*<br/>
 [in] Ссылка на существующее подключение к данным для копирования.
 
 ## <a name="open"></a> CDataConnection::Open
@@ -187,7 +187,7 @@ HRESULT OpenNewSession(CSession & session) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*Сеанс*<br/>
+*session*<br/>
 [входные/выходные данные] Ссылка на объект нового сеанса.
 
 ### <a name="remarks"></a>Примечания
@@ -307,4 +307,4 @@ operator const CSession*() throw();
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 39979d48eb7b0f7aba9dbe7bd42c2f91845af968
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295894"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781995"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>Класс CMFCRibbonButtonsGroup
 
@@ -51,13 +51,13 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::CMFCRibbonButtonsGroup](#cmfcribbonbuttonsgroup)|Создает объект `CMFCRibbonButtonsGroup`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonButtonsGroup::AddButton](#addbutton)|Добавляет кнопку в группу.|
 |[CMFCRibbonButtonsGroup::AddButtons](#addbuttons)|Добавляет список кнопок в группу.|
@@ -77,7 +77,7 @@ class CMFCRibbonButtonsGroup : public CMFCRibbonBaseElement
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonButtonsGroup` . В примере показано `CMFCRibbonButtonsGroup` объекта, назначать изображения для группы кнопок ленты и добавьте кнопку в группу кнопок ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonButtonsGroup` . В примере показано `CMFCRibbonButtonsGroup` объекта, назначать изображения для группы кнопок ленты и добавьте кнопку в группу кнопок ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#2](../../mfc/reference/codesnippet/cpp/cmfcribbonbuttonsgroup-class_1.cpp)]
 
@@ -193,7 +193,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства группы ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -228,7 +228,7 @@ virtual void OnDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст `CMFCRibbonButtonsGroup` объекта.
 
 *rectImage*<br/>

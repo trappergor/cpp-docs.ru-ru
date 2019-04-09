@@ -1,5 +1,5 @@
 ---
-title: Обмен данными с полями записей (RFX). Работа с кодом мастера
+title: 'Обмен полями записей: Работа с кодом мастера'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492122"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041297"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>Обмен данными с полями записей (RFX). Работа с кодом мастера
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>Обмен полями записей: Работа с кодом мастера
 
 В этом разделе объясняется, мастер приложений MFC и **Добавление класса** (как описано в разделе [Добавление потребителя ODBC MFC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) для поддержки RFX и как может потребоваться изменить этот код.
 
 > [!NOTE]
->  Этот раздел относится к классам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к классам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, реализуется блочный обмен полей записей (Bulk RFX). Bulk RFX аналогичен RFX. Сведения о различиях, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
 При создании класса набора записей с помощью мастера приложений MFC или **Добавление класса**, мастер создает следующие элементы RFX, вы, основанный на источнике данных, таблицы и выбора столбцов, вносимые в мастере:
 
@@ -99,7 +99,7 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - Вызов `CFieldExchange::SetFieldType`помощи `pFX` указатель. Этот вызов указывает, что все вызовы функций RFX до конца массива `DoFieldExchange` или следующего вызова `SetFieldType` выходных столбцов. Дополнительные сведения см. в разделе [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype).
 
-- Несколько вызовов `RFX_Text` глобальной функции — один на каждый элемент поля данных (все из которых `CString` переменных в примере). Эти вызовы определяют связь между именем столбца в источнике данных и элементом поля данных. Функции RFX выполняют передачи фактических данных. Библиотека классов предоставляет функции RFX для всех распространенных типов данных. Дополнительные сведения о функции RFX см. в разделе [обмен полями записей: использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
+- Несколько вызовов `RFX_Text` глобальной функции — один на каждый элемент поля данных (все из которых `CString` переменных в примере). Эти вызовы определяют связь между именем столбца в источнике данных и элементом поля данных. Функции RFX выполняют передачи фактических данных. Библиотека классов предоставляет функции RFX для всех распространенных типов данных. Дополнительные сведения о функции RFX см. в разделе [обмен полями записей: Использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md).
 
     > [!NOTE]
     >  Порядок столбцов результирующего набора должен соответствовать порядку вызовов функции RFX в `DoFieldExchange`.
@@ -140,4 +140,4 @@ m_nFields += 3;
 
 ## <a name="see-also"></a>См. также
 
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

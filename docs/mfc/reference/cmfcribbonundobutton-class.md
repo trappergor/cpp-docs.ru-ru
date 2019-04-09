@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonUndoButton [MFC], GetActionNumber
 - CMFCRibbonUndoButton [MFC], HasMenu
 ms.assetid: 5c42adf7-871d-4239-901e-47ae7fb816fc
-ms.openlocfilehash: e78cf26b32d424bc9cc9441787192cda6f7aeb54
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cd657ac035c004e7aa9bfcd2f6dbd2f3c90da80c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280385"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776470"
 ---
 # <a name="cmfcribbonundobutton-class"></a>Класс CMFCRibbonUndoButton
 
@@ -37,13 +37,13 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::CMFCRibbonUndoButton](#cmfcribbonundobutton)|Создает новый `CMFCRibbonUndoButton` объекта, используя идентификатор команды, указанной вами, текстовую метку и изображений из списка изображений родительского объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonUndoButton::AddUndoAction](#addundoaction)|Добавляет новое действие в список действий.|
 |[CMFCRibbonUndoButton::CleanUpUndoList](#cleanupundolist)|Очищает список действий, представляющий стрелку раскрывающегося списка.|
@@ -56,7 +56,7 @@ class CMFCRibbonUndoButton : public CMFCRibbonGallery
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCRibbonUndoButton` класса и добавьте новое действие в список действий. Этот фрагмент кода является частью [пример мини-приложения ленты](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание объекта класса `CMFCRibbonUndoButton` класса и добавьте новое действие в список действий. Этот фрагмент кода является частью [пример мини-приложения ленты](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#2](../../mfc/reference/codesnippet/cpp/cmfcribbonundobutton-class_1.cpp)]
 

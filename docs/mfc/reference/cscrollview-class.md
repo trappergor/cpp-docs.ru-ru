@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259260"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774157"
 ---
 # <a name="cscrollview-class"></a>Класс CScrollView
 
@@ -49,13 +49,13 @@ class CScrollView : public CView
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CScrollView::CScrollView](#cscrollview)|Создает объект `CScrollView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CScrollView::CheckScrollBars](#checkscrollbars)|Указывает, имеет ли представление прокрутки горизонтальные и вертикальные полосы прокрутки.|
 |[CScrollView::FillOutsideRect](#filloutsiderect)|Заполняет область представления за пределами области прокрутки.|
@@ -82,7 +82,7 @@ class CScrollView : public CView
 
 Колесико мыши, прокрутка самостоятельно путем переопределения размещенный сообщения можно обрабатывать [OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel) и [OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel) функций-членов. Как и для `CScrollView`, эти функции-члены поддерживают рекомендуемые поведение для [WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel), сообщением о повороте колеса.
 
-Чтобы воспользоваться преимуществами автоматическую прокрутку, являются производными от класса представления `CScrollView` вместо из `CView`. Когда сначала создается представление, чтобы вычислить размер прокручиваемой представления, в зависимости от размера документа, вызов `SetScrollSizes` функции-члена из переопределенный либо [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) или [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Необходимо написать собственный код, чтобы запросить размер документа. Например, см. в разделе [пример Scribble](../../visual-cpp-samples.md).)
+Чтобы воспользоваться преимуществами автоматическую прокрутку, являются производными от класса представления `CScrollView` вместо из `CView`. Когда сначала создается представление, чтобы вычислить размер прокручиваемой представления, в зависимости от размера документа, вызов `SetScrollSizes` функции-члена из переопределенный либо [CView::OnInitialUpdate](../../mfc/reference/cview-class.md#oninitialupdate) или [ CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate). (Необходимо написать собственный код, чтобы запросить размер документа. Например, см. в разделе [пример Scribble](../../overview/visual-cpp-samples.md).)
 
 Вызов `SetScrollSizes` функция-член задает режим сопоставления представления, общее размеры представления и суммы для прокрутки по горизонтали и вертикали. Все размеры, доступны в логических единицах. Логический размер представления обычно вычисляется на основе данных, хранящимся в документе, но в некоторых случаях может потребоваться указать фиксированный размер. Примеры обоих подходов, см. в разделе [CScrollView::SetScrollSizes](#setscrollsizes).
 
@@ -162,7 +162,7 @@ void FillOutsideRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Контекст устройства, в котором будет заполняться, которую требуется выполнить.
 
 *pBrush*<br/>
@@ -376,7 +376,7 @@ void SetScrollSizes(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Пример MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Класс CView](../../mfc/reference/cview-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CView](../../mfc/reference/cview-class.md)<br/>

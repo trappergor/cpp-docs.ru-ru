@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266065"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781800"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap-класс
 
@@ -40,14 +40,14 @@ class CTypedPtrMap : public BASE_CLASS
 *KEY*<br/>
 Класс объекта, используемое в качестве ключа к схеме.
 
-*ЗНАЧЕНИЕ*<br/>
+*VALUE*<br/>
 Класс объекта, хранимый в сопоставлении.
 
 ## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTypedPtrMap::GetNextAssoc](#getnextassoc)|Получает следующий элемент для выполнения итерации.|
 |[CTypedPtrMap::Lookup](#lookup)|Возвращает `KEY` на основе `VALUE`.|
@@ -56,7 +56,7 @@ class CTypedPtrMap : public BASE_CLASS
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CTypedPtrMap::operator \[ \]](#operator_at)|Вставляет элемент в схеме.|
 
@@ -100,7 +100,7 @@ void GetNextAssoc(
 *rKey*<br/>
 Указывает возвращаемый ключ полученного элемента.
 
-*ЗНАЧЕНИЕ*<br/>
+*VALUE*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 *rValue*<br/>
@@ -127,10 +127,10 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Параметр шаблона, указывающий базовый класс для класса этой карты.
 
-*key*<br/>
+*клавиша*<br/>
 Ключ элемента, который требуется найти.
 
-*ЗНАЧЕНИЕ*<br/>
+*VALUE*<br/>
 Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
 
 *rValue*<br/>
@@ -154,13 +154,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Параметры
 
-*ЗНАЧЕНИЕ*<br/>
+*VALUE*<br/>
 Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
 
 *BASE_CLASS*<br/>
 Параметр шаблона, указывающий базовый класс для класса этой карты.
 
-*key*<br/>
+*клавиша*<br/>
 Ключ элемента для поиска или создания в сопоставлении.
 
 ### <a name="remarks"></a>Примечания
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Параметр шаблона, указывающий тип карты ключей.
 
-*key*<br/>
+*клавиша*<br/>
 Ключ элемента, который требуется удалить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -204,10 +204,10 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Параметр шаблона, указывающий тип карты ключей.
 
-*key*<br/>
+*клавиша*<br/>
 Указывает значение ключа новое значение.
 
-*новое значение*<br/>
+*newValue*<br/>
 Задает указатель на объект, который является значением нового элемента.
 
 ### <a name="remarks"></a>Примечания
@@ -216,7 +216,7 @@ void SetAt(KEY key, VALUE newValue);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CMapPtrToPtr](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [Класс CMapPtrToWord](../../mfc/reference/cmapptrtoword-class.md)<br/>

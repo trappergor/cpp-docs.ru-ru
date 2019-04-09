@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - rename_search_namespace attribute
 ms.assetid: 47c9d7fd-59dc-4c62-87a1-9011a0040167
-ms.openlocfilehash: 1e8d682b3d52c80779d62443074614480ed514ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca5d24ca9cc12e9defaa395cf150bc3c04ee4439
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510740"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022857"
 ---
 # <a name="renamesearchnamespace"></a>rename_search_namespace
 
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Имеет ту же функциональность, что [rename_namespace](../preprocessor/rename-namespace.md) атрибут, однако применяется для библиотек типов, используемых вами `#import` директиву [auto_search](../preprocessor/auto-search.md) атрибута.
 
@@ -32,9 +32,9 @@ rename_search_namespace("NewName")
 
 ## <a name="remarks"></a>Примечания
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

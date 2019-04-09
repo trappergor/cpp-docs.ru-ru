@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612830"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025274"
 ---
 # <a name="comment-cc"></a>комментарий (C/C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50612830"
 
 Окружение *commentstring* в объектном файле. которая во время компоновки помещается в исполняемый файл. Эта строка не загружается в память вместе с исполняемым файлом, однако ее можно обнаружить при помощи программы, которая находит в файлах печатаемые строки. Записи комментариев этого типа позволяют, в частности, вставлять в исполняемый файл информацию о номере версии и т. д.
 
-Использовать параметр `exestr` не рекомендуется; в следующих выпусках он будет удален. Компоновщик не обрабатывает эту запись комментария.
+`exestr` является устаревшим и будет удален в будущем; Компоновщик не обрабатывает эту запись комментария.
 
 ### <a name="lib"></a>lib
 

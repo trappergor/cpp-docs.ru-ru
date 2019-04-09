@@ -4,12 +4,12 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: e8d5e5379a60128ace9502712a1d240f947ddcd5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826466"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021908"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Внутренние компоненты MSBuild для проектов C++
 
@@ -64,13 +64,13 @@ ms.locfileid: "57826466"
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
-### <a name="targets"></a>целевые объекты
+### <a name="targets"></a>Целевые объекты
 
 Существуют сотни целевых объектов в файлах поддержки Visual Studio. Однако большинство являются целевых объектов, ориентированных на системы, пользователь может их игнорировать. Большинство целевых объектов системы имеют префикс в виде символа подчеркивания (_) или иметь имя, которое начинается с «PrepareFor», «Вычисления», «До», «После», «Pre» или «Post».
 
 В следующей таблице перечислены несколько полезных целевых объектов, ориентированных на пользователя.
 
-|целевой объект|Описание|
+|целевого объекта|Описание|
 |------------|-----------------|
 |BscMake|Выполняет программу Microsoft Обзор программы управления информацией bscmake.exe.|
 |Построить|Выполняет построение проекта.<br /><br /> Это является целевым объектом по умолчанию для проекта.|
@@ -90,7 +90,7 @@ ms.locfileid: "57826466"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по задачам MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
+[Справочные сведения о задачах MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
 [Задача BscMake](/visualstudio/msbuild/bscmake-task)<br/>
 [Задача CL](/visualstudio/msbuild/cl-task)<br/>
 [Задача CPPClean](/visualstudio/msbuild/cppclean-task)<br/>

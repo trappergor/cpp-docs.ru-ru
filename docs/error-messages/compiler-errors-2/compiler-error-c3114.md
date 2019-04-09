@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3114
 ms.assetid: b5d2df4f-87d0-4292-9981-25c6a6013c05
-ms.openlocfilehash: 6ce5b9860cd75619f26a3585981af5807c33535a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5a4feae5c8805a27c020b532fd58e0562e46b6b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606678"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773779"
 ---
 # <a name="compiler-error-c3114"></a>Ошибка компилятора C3114
 
@@ -19,7 +19,7 @@ ms.locfileid: "50606678"
 
 Для элемента атрибута класса данных является допустимым именованный аргумент, он должен не быть помечен как `static`, `const`, или `literal`. Свойства, свойство не должно быть `static` и должен иметь get и set.
 
-Дополнительные сведения см. в разделе [свойство](../../windows/property-cpp-component-extensions.md) и [определяемые пользователем атрибуты](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [свойство](../../extensions/property-cpp-component-extensions.md) и [определяемые пользователем атрибуты](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

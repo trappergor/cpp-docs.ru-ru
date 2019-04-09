@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3831
 ms.assetid: a125d8dc-b75a-4ea0-b6c7-fe7b119dba25
-ms.openlocfilehash: f85f94afa796f4ccf0efecd8f9223c2c48ca623d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9aa703f12fd175d9f7fc00eb76e76097a32e860
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508840"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781670"
 ---
 # <a name="compiler-error-c3831"></a>Ошибка компилятора C3831
 
 «член»: «класс» не может иметь закрепленные данные-член или функция-член, возвращающую закрепляющий указатель
 
-[pin_ptr (C + +/ CLI)](../../windows/pin-ptr-cpp-cli.md) был использован неправильно.
+[pin_ptr (C + +/ CLI)](../../extensions/pin-ptr-cpp-cli.md) был использован неправильно.
 
 ## <a name="example"></a>Пример
 

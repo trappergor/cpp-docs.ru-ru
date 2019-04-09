@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5076ceef0c6626fac0232fadf6818edd78b4ccf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300414"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773558"
 ---
 # <a name="colelinkingdoc-class"></a>Класс COleLinkingDoc
 
@@ -33,31 +33,31 @@ ms.locfileid: "57300414"
 class COleLinkingDoc : public COleDocument
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleLinkingDoc::COleLinkingDoc](#colelinkingdoc)|Создает объект `COleLinkingDoc`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleLinkingDoc::Register](#register)|Регистрирует документа OLE системные библиотеки DLL.|
 |[COleLinkingDoc::Revoke](#revoke)|Отменяет регистрацию документа.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleLinkingDoc::OnFindEmbeddedItem](#onfindembeddeditem)|Находит указанный внедренный элемент.|
 |[COleLinkingDoc::OnGetLinkedItem](#ongetlinkeditem)|Выполняет поиск указанного связанного элемента.|
 
 ## <a name="remarks"></a>Примечания
 
-Приложение-контейнер, который поддерживает связывание с встроенными элементами называется «контейнер ссылку». [OCLIENT](../../visual-cpp-samples.md) пример приложения является примером контейнер ссылку.
+Приложение-контейнер, который поддерживает связывание с встроенными элементами называется «контейнер ссылку». [OCLIENT](../../overview/visual-cpp-samples.md) пример приложения является примером контейнер ссылку.
 
 Если связанный элемент источник относится к внедренного элемента в другой документ, содержащий документ загрузку для внедренного элемента для редактирования. По этой причине ссылку контейнер должен быть сможет быть запущено другим приложением контейнера, когда пользователь хочет изменить источник связанного элемента. Приложение также должно использовать [COleTemplateServer](../../mfc/reference/coletemplateserver-class.md) таким образом, чтобы можно было создать документы при запуске программным способом.
 
@@ -75,7 +75,7 @@ class COleLinkingDoc : public COleDocument
 
 [!code-cpp[NVC_MFCOleContainer#25](../../mfc/codesnippet/cpp/colelinkingdoc-class_3.cpp)]
 
-Пример `CWinApp`-производным определения класса и `InitInstance` функции, см. в разделе OCLIENT. H и OCLIENT. CPP, в образце MFC [OCLIENT](../../visual-cpp-samples.md).
+Пример `CWinApp`-производным определения класса и `InitInstance` функции, см. в разделе OCLIENT. H и OCLIENT. CPP, в образце MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 Дополнительные сведения об использовании `COleLinkingDoc`, см. в статьях [контейнеров: Реализация контейнера](../../mfc/containers-implementing-a-container.md) и [контейнеров: Дополнительные возможности](../../mfc/containers-advanced-features.md).
 
@@ -193,7 +193,7 @@ void Revoke();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleDocument](../../mfc/reference/coledocument-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CDocTemplate](../../mfc/reference/cdoctemplate-class.md)

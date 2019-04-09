@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB consumer templates, classes
 ms.assetid: cfc7f698-1a0e-4a09-a4d3-ccb99e6654fe
-ms.openlocfilehash: a476fefa4338e73bf6eaf70fa16a5328a427b56d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb0b24798b3f2682bbbec7624df34b40a2a9f4cc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649245"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032275"
 ---
 # <a name="ole-db-consumer-templates-reference"></a>Ссылка на шаблоны потребителя OLE DB
 
@@ -92,13 +92,13 @@ ms.locfileid: "50649245"
 [CRowset](../../data/oledb/crowset-class.md)<br/>
 Используется для управления, задание и получение данных набора строк.
 
-[CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
+[Класс CStreamRowset](../../data/oledb/cstreamrowset-class.md)<br/>
 Возвращает `ISequentialStream` объекта вместо набора строк; затем использовать `Read` метод для извлечения данных в формате XML. (SQL Server 2000 не форматирование, обратите внимание на то, что эта функция работает с SQL Server 2000 только).
 
 [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)<br/>
 Предоставляет реализацию для фиктивного `IRowsetNotify`, с пустым функциями для `IRowsetNotify` методы `OnFieldChange`, `OnRowChange`, и `OnRowsetChange`.
 
-[Классы Rowset и Typedef схемы](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
+[Классы схемы Rowset и Typedef](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)
 
 Шаблоны OLE DB предоставляют набор классов, соответствующие наборы строк схемы OLE DB.
 

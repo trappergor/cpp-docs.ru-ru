@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - tlbid attribute
 ms.assetid: 54b06785-191b-4e77-a9a5-485f2b4acb09
-ms.openlocfilehash: 31b71f7c195a7e2ee649b40197551e4ff5efda2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae79ce9245bb1c0425c3e9b92dd27b52fa443dba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584522"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037945"
 ---
 # <a name="tlbid"></a>tlbid
 
-**Конкретных C++**
+**Блок, относящийся только к языку C++**
 
 Позволяет загружать библиотеки, отличные от основной библиотеки типов.
 
@@ -27,7 +27,7 @@ tlbid(number)
 
 ### <a name="parameters"></a>Параметры
 
-*номер*<br/>
+*number*<br/>
 Номер библиотеки типов в файле с именем `filename`.
 
 ## <a name="remarks"></a>Примечания
@@ -46,9 +46,9 @@ tlbid(number)
 LoadTypeLib("MyResource.dll\\2");
 ```
 
-**КОНЕЦ конкретных C++**
+**Завершение блока, относящегося только к языку C++**
 
 ## <a name="see-also"></a>См. также
 
-[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[директива #import](../preprocessor/hash-import-directive-cpp.md)
+[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[Директива #import](../preprocessor/hash-import-directive-cpp.md)

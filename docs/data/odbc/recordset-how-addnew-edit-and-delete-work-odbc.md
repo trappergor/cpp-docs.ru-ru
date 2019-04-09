@@ -1,5 +1,5 @@
 ---
-title: Наборы записей. Принципы работы функций AddNew, Edit и Delete (ODBC)
+title: Набор записей. Как AddNew, Edit и Delete рабочих (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331975"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033213"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Наборы записей. Принципы работы функций AddNew, Edit и Delete (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Набор записей. Как AddNew, Edit и Delete рабочих (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
@@ -39,9 +39,9 @@ ms.locfileid: "51331975"
 - [Принципы удаления записей](#_core_deleting_a_record)
 
 > [!NOTE]
->  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, см. в разделе [набор записей: получение записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
+>  Этот раздел относится к объектам, производным от `CRecordset` в какой строке массовой выборка не был реализован. Если вы используете выборка строк, см. в разделе [набор записей: Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md).
 
-В дополнение, вы можете прочитать [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), которая описывает роль RFX в операциях обновления.
+В дополнение, вы можете прочитать [обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md), которая описывает роль RFX в операциях обновления.
 
 ##  <a name="_core_adding_a_record"></a> Добавление записи
 
@@ -118,7 +118,7 @@ ms.locfileid: "51331975"
 
    1. При наличии изменений, `Update` конструкции SQL **обновления** инструкции. Столбцы, перечисленные в **обновления** инструкции основаны на элементами данных полей, которые были изменены.
 
-   1. `Update` Фиксирует изменения, выполняет **обновления** инструкции — и запись в источнике данных изменяется, но если только транзакции не выполняется (см. в разделе [транзакции: выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) сведения о влиянии обновления транзакции). ODBC сохраняет копию записи, которая также изменяется.
+   1. `Update` Фиксирует изменения, выполняет **обновления** инструкции — и запись в источнике данных изменяется, но если только транзакции не выполняется (см. в разделе [транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md) сведения о влиянии обновления транзакции). ODBC сохраняет копию записи, которая также изменяется.
 
    1. В отличие от выполнения `AddNew`, `Edit` сохраненная запись не восстанавливается. Измененной записи остается в качестве текущей записи.
 
@@ -161,4 +161,4 @@ ms.locfileid: "51331975"
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Дополнительные сведения об обновлениях (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
-[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)

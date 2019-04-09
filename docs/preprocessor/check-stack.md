@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451991"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023384"
 ---
 # <a name="checkstack"></a>check_stack
 Указывает компилятору на необходимость выключения стековых зондов, если `off` (или `-`) указан, или если включить стековые зонды `on` (или `+`) указан.
@@ -38,8 +38,8 @@ ms.locfileid: "50451991"
 |------------|------------------------------------|------------|
 |`#pragma check_stack( )` или<br /><br /> `#pragma check_stack`|Да|Отключает проверку стека для последующих функций|
 |`#pragma check_stack( )` или<br /><br /> `#pragma check_stack`|Нет|Включает проверку стека для последующих функций|
-|`#pragma check_stack(on)`<br /><br /> Или `#pragma check_stack +`|"Да" или "Нет"|Включает проверку стека для последующих функций|
-|`#pragma check_stack(off)`<br /><br /> Или `#pragma check_stack -`|"Да" или "Нет"|Отключает проверку стека для последующих функций|
+|`#pragma check_stack(on)`<br /><br /> или `#pragma check_stack +`|"Да" или "Нет"|Включает проверку стека для последующих функций|
+|`#pragma check_stack(off)`<br /><br /> или `#pragma check_stack -`|"Да" или "Нет"|Отключает проверку стека для последующих функций|
 
 ## <a name="see-also"></a>См. также
 

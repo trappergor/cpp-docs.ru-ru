@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294659"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58774598"
 ---
 # <a name="cpanecontainermanager-class"></a>Класс CPaneContainerManager
 
@@ -128,7 +128,7 @@ class CPaneContainerManager : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPaneContainerManager::AddPane](#addpane)||
 |[CPaneContainerManager::AddPaneContainerManager](#addpanecontainermanager)||
@@ -189,7 +189,7 @@ class CPaneContainerManager : public CObject
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как получить ссылку на `CPaneContainerManager` объекта. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).
+В следующем примере показано, как получить ссылку на `CPaneContainerManager` объекта. Этот фрагмент кода является частью [задать размер области пример](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 

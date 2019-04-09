@@ -1,5 +1,5 @@
 ---
-title: 'Набор записей: пакетная выборка строк (ODBC)'
+title: Набор записей. Пакетная выборка строк (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628206"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027770"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>Набор записей: пакетная выборка строк (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>Набор записей. Пакетная выборка строк (ODBC)
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  Необходимо вызвать `Close` функция-член перед производного `CRecordset` класс выходит за пределы области. Это гарантирует, что память, выделенную средой освобождаются. Это рекомендуется всегда явно вызвать `Close`, независимо от того, реализуется ли пакетная выборка строк.
 
-Дополнительные сведения о обмен полями записей (RFX), см. в разделе [обмен полями записей: принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Дополнительные сведения об использовании параметров см. в разделе [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) и [набор записей: Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
+Дополнительные сведения о обмен полями записей (RFX), см. в разделе [обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md). Дополнительные сведения об использовании параметров см. в разделе [CFieldExchange::SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype) и [набор записей: Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md).
 
 ## <a name="see-also"></a>См. также
 

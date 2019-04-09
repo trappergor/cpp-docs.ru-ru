@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773792"
 ---
 # <a name="cmfcmaskededit-class"></a>Класс CMFCMaskedEdit
 
@@ -45,14 +45,14 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCMaskedEdit::CMFCMaskedEdit`|Конструктор по умолчанию.|
 |`CMFCMaskedEdit::~CMFCMaskedEdit`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCMaskedEdit::DisableMask](#disablemask)|Отключение проверки ввода пользователя.|
 |[CMFCMaskedEdit::EnableGetMaskedCharsOnly](#enablegetmaskedcharsonly)|Указывает, является ли `GetWindowText` метод извлекает только маскированные символы.|
@@ -66,7 +66,7 @@ class CMFCMaskedEdit : public CEdit
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCMaskedEdit::IsMaskedChar](#ismaskedchar)|Вызывается платформой для проверки указанного знака от соответствующего символа маски.|
 
@@ -88,7 +88,7 @@ class CMFCMaskedEdit : public CEdit
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как настроить маску (например, номер телефона) с помощью `EnableMask` метод для создания маски для скрытого элемента управления, edit `SetValidChars` метод, чтобы задать строку допустимые символы, которые пользователь может ввести и `SetWindowText` метод для отображения в строке в скрытого элемента управления edit. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Приведенный ниже показано, как настроить маску (например, номер телефона) с помощью `EnableMask` метод для создания маски для скрытого элемента управления, edit `SetValidChars` метод, чтобы задать строку допустимые символы, которые пользователь может ввести и `SetWindowText` метод для отображения в строке в скрытого элемента управления edit. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -340,4 +340,4 @@ void SetWindowText(LPCTSTR lpszString);
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CEdit](../../mfc/reference/cedit-class.md)
+[CEdit Class](../../mfc/reference/cedit-class.md)

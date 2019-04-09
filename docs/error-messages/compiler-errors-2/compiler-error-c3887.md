@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3887
 ms.assetid: a7e82426-ef99-437b-9562-2822004e18fe
-ms.openlocfilehash: e41ea1dbe1f2bd47f9b557d502ec95bcecb1e2a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85434cb8daba0db82843c09e2d1bb09d98960272
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428267"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777445"
 ---
 # <a name="compiler-error-c3887"></a>Ошибка компилятора C3887
 
 «var»: инициализатор данные-член литерала должно быть константным выражением
 
-Объект [литерала](../../windows/literal-cpp-component-extensions.md) данные-член можно инициализировать только с помощью выражения константы.
+Объект [литерала](../../extensions/literal-cpp-component-extensions.md) данные-член можно инициализировать только с помощью выражения константы.
 
 Следующий пример приводит к возникновению ошибки C3887:
 

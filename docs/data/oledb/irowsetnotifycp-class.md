@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: e3c85092b4abf074107eadb73ca0d589742c6ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a3ab63206ce7ac53ff996ecf1bb64bdaa0b79fcb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420860"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031690"
 ---
 # <a name="irowsetnotifycp-class"></a>Класс IRowsetNotifyCP
 
@@ -77,7 +77,7 @@ class IRowsetNotifyCP :
 
 ## <a name="remarks"></a>Примечания
 
-`IRowsetNotifyCP` реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.
+`IRowsetNotifyCP` Реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.
 
 Обратите внимание, что необходимо также реализовать и зарегистрировать `IRowsetNotify` на объекте-получателе (также называется «приемник») с помощью [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) потребитель может обрабатывать уведомления. См. в разделе [получение уведомлений](../../data/oledb/receiving-notifications.md) о реализации интерфейса точки подключения на объекте-получателе.
 

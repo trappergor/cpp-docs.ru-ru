@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303352"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776418"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
 
@@ -161,13 +161,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarImages::CMFCToolBarImages](#cmfctoolbarimages)|Создает объект `CMFCToolBarImages`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarImages::AdaptColors](#adaptcolors)||
 |[CMFCToolBarImages::AddIcon](#addicon)|Добавляет значок изображениям значков панели инструментов.|
@@ -236,13 +236,13 @@ class CMFCToolBarImages : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarImages::PreMultiplyAlpha](#premultiplyalpha)||
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarImages::m_bDisableTrueColorAlpha](#m_bdisabletruecoloralpha)|Значение TRUE, если отключена альфа-truecolor смешение (32-разрядный цвет).|
 
@@ -252,7 +252,7 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCToolBarImages` объекта с помощью различных методов в `CMFCToolBarImages` класса. Примере показано, как задать размер изображения панели инструментов, загрузить изображение и задать прозрачный цвет изображения. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CMFCToolBarImages` объекта с помощью различных методов в `CMFCToolBarImages` класса. Примере показано, как задать размер изображения панели инструментов, загрузить изображение и задать прозрачный цвет изображения. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Значение TRUE, если `CMFCToolBarImages` объект использует глубину цвета (бита на пиксель) нового изображения. Значение FALSE, если `CMFCToolbarImages` сохраняет текущую глубину цвета.
 
-*imageList*<br/>
+*ImageList*<br/>
 [in] Ссылку на `CMFCToolbarImages` , содержащий изображение для добавления.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Параметры
 
-*imageList*<br/>
+*ImageList*<br/>
 [in] Список изображений для использования в качестве источника для изображений на панели инструментов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -467,7 +467,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *x*<br/>
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Параметры
 
-*доменных служб Active Directory*<br/>
+*ds*<br/>
 [in] Ссылку на `CAfxDrawState` объект, который был передан `PrepareDrawImage` метод.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -582,7 +582,7 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*доменных служб Active Directory*<br/>
+*ds*<br/>
 [in] Ссылку на `CAfxDrawState` структуру, которая хранит выделенные ресурсы между этапами подготовки к просмотру изображения.
 
 *sizeImageDest*<br/>

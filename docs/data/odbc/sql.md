@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576844"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037861"
 ---
 # <a name="sql"></a>SQL-код
 
@@ -50,9 +50,9 @@ SQL (язык структурированных запросов) — это с
 |**SELECT**|Чтобы определить, какие таблицы и столбцы в источнике данных будут использоваться.|
 |**WHERE**|Применение фильтра, ограничивающего выборку.|
 |**ORDER BY**|Чтобы применить порядок сортировки для набора записей.|
-|**ВСТАВИТЬ**|Для добавления новых записей в набор записей.|
-|**УДАЛЕНИЕ**|Для удаления записей из набора записей.|
-|**ОБНОВЛЕНИЕ**|Для изменения полей записи.|
+|**INSERT**|Для добавления новых записей в набор записей.|
+|**DELETE**|Для удаления записей из набора записей.|
+|**UPDATE**|Для изменения полей записи.|
 
 Кроме того, классы базы данных распознают ODBC **ВЫЗОВИТЕ** инструкции, которые можно использовать для вызова предопределенного запроса (или хранимой процедуры) в некоторых источниках данных. Драйвер базы данных ODBC интерпретирует эти инструкции и подставляет команду, подходящую для каждой СУБД.
 
@@ -61,7 +61,7 @@ SQL (язык структурированных запросов) — это с
 
 Если классы не могут распознать предоставленную пользователем инструкцию в `CRecordset::Open`, он интерпретируется как имя таблицы.
 
-Описание инструкций SQL с платформой, см. в разделе [набор записей: принцип наборы записей выберите записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) и [SQL: инструкция SQL Настройка набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Описание инструкций SQL с платформой, см. в разделе [набор записей: Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md) и [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 Базы данных SQL использовать типы данных похожи на применяемые в C и C++. Описание этих сходства, см. в разделе [SQL: SQL и типы данных C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md).
 
@@ -79,11 +79,11 @@ SQL (язык структурированных запросов) — это с
 
 - [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL. Типы данных SQL и C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL: SQL и типы данных C++ (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL. Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL: Выполнение прямых вызовов SQL (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Основы ODBC](../../data/odbc/odbc-basics.md)

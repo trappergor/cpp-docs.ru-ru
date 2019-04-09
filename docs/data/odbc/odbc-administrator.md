@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ODBC Administrator [C++]
 - drivers [C++], ODBC
 ms.assetid: b8652790-3437-4e7d-bc83-6ea6981f008b
-ms.openlocfilehash: 5e83657462952be12a6a2d086aa2419093e06d0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac893981ff8c697dc090f1e6ad5ac61886a69f99
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454808"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035868"
 ---
 # <a name="odbc-administrator"></a>Администратор ODBC
 
@@ -52,5 +52,5 @@ ms.locfileid: "50454808"
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Источник данных (ODBC)](../../data/odbc/data-source-odbc.md)

@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295361"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58773987"
 ---
 # <a name="coleclientitem-class"></a>Класс COleClientItem
 
@@ -181,17 +181,17 @@ ms.locfileid: "57295361"
 class COleClientItem : public CDocItem
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleClientItem::COleClientItem](#coleclientitem)|Создает объект `COleClientItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleClientItem::Activate](#activate)|Открывает элемент OLE для операции, а затем выполняет указанную команду.|
 |[COleClientItem::ActivateAs](#activateas)|Активирует элемент другого типа.|
@@ -265,7 +265,7 @@ class COleClientItem : public CDocItem
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|Вызывается платформой для определения допустимости активации на месте.|
 |[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|Вызывается платформой при изменении положения элемента.|
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 Указатель на [COleDataObject](../../mfc/reference/coledataobject-class.md) объект, из которого будет создаваться объекта OLE.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -703,7 +703,7 @@ BOOL CreateFromFile(
 *CLSID*<br/>
 Зарезервировано для будущего использования.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 Указатель на [COleDataObject](../../mfc/reference/coledataobject-class.md) объект, из которого будет создаваться объекта OLE.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -807,7 +807,7 @@ BOOL CreateLinkFromFile(
 *lpszFileName*<br/>
 Указатель на имя файла, из которого будет создаваться объекта OLE.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *CLSID*<br/>
 Идентификатор, который однозначно определяет тип создаваемого элемента OLE.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>Параметры
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 Указатель на [COleDataObject](../../mfc/reference/coledataobject-class.md) объект, из которого будет создаваться объекта OLE.
 
-*визуализации*<br/>
+*render*<br/>
 Флаг, указывающий, как сервер будет отрисовки элемента OLE. Возможные значения см. в разделе [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) в пакете Windows SDK.
 
 *cfFormat*<br/>
@@ -1084,7 +1084,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 Указатель на [CDC](../../mfc/reference/cdc-class.md) объект, используемый для рисования элемента OLE.
 
 *lpBounds*<br/>
@@ -2187,8 +2187,8 @@ BOOL UpdateLink();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MFCBIND](../../visual-cpp-samples.md)<br/>
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleServerItem](../../mfc/reference/coleserveritem-class.md)

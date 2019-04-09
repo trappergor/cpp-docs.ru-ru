@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302888"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781215"
 ---
 # <a name="coletemplateserver-class"></a>Класс COleTemplateServer
 
@@ -31,17 +31,17 @@ ms.locfileid: "57302888"
 class COleTemplateServer : public COleObjectFactory
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleTemplateServer::COleTemplateServer](#coletemplateserver)|Создает объект `COleTemplateServer`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleTemplateServer::ConnectTemplate](#connecttemplate)|Подключается к основной шаблон документа `COleObjectFactory` объекта.|
 |[COleTemplateServer::Unregister](#unregister)|Отменяет регистрацию шаблона связанный документ.|
@@ -171,8 +171,8 @@ void UpdateRegistry(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
-[Класс COleObjectFactory](../../mfc/reference/coleobjectfactory-class.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
+[Coleobjectfactory-класс](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Класс COleServerItem](../../mfc/reference/coleserveritem-class.md)

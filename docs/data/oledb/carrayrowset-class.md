@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330987"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040242"
 ---
 # <a name="carrayrowset-class"></a>Класс CArrayRowset
 
@@ -157,5 +157,5 @@ ULONG m_nRowsRead;
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CRowset](../../data/oledb/crowset-class.md)

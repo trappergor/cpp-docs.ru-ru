@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
-ms.openlocfilehash: d031b55407d108b4f8be362156911bfae688326a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35df94ccfcd7942f9057cb37ceee349c09b80607
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512363"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777419"
 ---
 # <a name="compiler-error-c3900"></a>Ошибка компилятора C3900
 
 «член»: не допускается в текущей области
 
-Свойство блоки могут содержать объявления функций и определения встроенных функций только. Нет членов, отличных от функций разрешены в блоках свойств. Нет определения типов, операторы или дружественные функции допускаются. Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).
+Свойство блоки могут содержать объявления функций и определения встроенных функций только. Нет членов, отличных от функций разрешены в блоках свойств. Нет определения типов, операторы или дружественные функции допускаются. Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md).
 
 Определения событий может содержать только функции и методы доступа.
 

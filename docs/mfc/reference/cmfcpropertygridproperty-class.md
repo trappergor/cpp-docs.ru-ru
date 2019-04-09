@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305072"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779031"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
 
@@ -189,14 +189,14 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CMFCPropertyGridProperty](#cmfcpropertygridproperty)|Создает объект `CMFCPropertyGridProperty`.|
 |`CMFCPropertyGridProperty::~CMFCPropertyGridProperty`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::AddOption](#addoption)|Добавляет новый элемент списка в элементе управления списком свойств.|
 |[CMFCPropertyGridProperty::AddSubItem](#addsubitem)|Добавляет дочерний элемент свойства.|
@@ -269,7 +269,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::CreateCombo](#createcombo)|Вызывается платформой для добавления поля со списком к свойству.|
 |[CMFCPropertyGridProperty::HasButton](#hasbutton)|Указывает, содержит ли свойство кнопки.|
@@ -282,7 +282,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertyGridProperty::m_strFormatDouble](#m_strformatdouble)|Строка формата для значения типа double.|
 |[CMFCPropertyGridProperty::m_strFormatFloat](#m_strformatfloat)|Строка формата для значения типа float.|
@@ -297,7 +297,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCPropertyGridProperty` объекта. В примере также демонстрируются способы использования различных методов `CMFCPropertyGridProperty` класс добавить вариант, добавить вложенный элемент, включить свойство, и отобразить свойство. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+В следующем примере демонстрируется создание `CMFCPropertyGridProperty` объекта. В примере также демонстрируются способы использования различных методов `CMFCPropertyGridProperty` класс добавить вариант, добавить вложенный элемент, включить свойство, и отобразить свойство. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -651,7 +651,7 @@ int GetExpandedSubItems(BOOL bIncludeHidden=TRUE) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*bIncludeHidden*|[in] Значение TRUE для включения скрытых вложенных элементов в счетчик; в противном случае — значение FALSE. Значение по умолчанию — TRUE.|
 
@@ -902,7 +902,7 @@ CMFCPropertyGridProperty* HitTest(
 
 В следующей таблице перечислены значения, которые могут быть возвращены в *pnArea* параметра.
 
-|Область|Описание:|
+|Область|Описание|
 |----------|-----------------|
 |`ClickArea::ClickExpandBox`|Поле элемента развертывания, обозначенного знак плюса (+).|
 |`ClickArea::ClickName`|Имя свойства.|
@@ -1146,9 +1146,9 @@ virtual void OnClickName(CPoint C);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
+|*В*|[in] Точка, в координатах клиентской области окна.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1202,7 +1202,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *nCtlColor*<br/>
@@ -1257,7 +1257,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rectButton*<br/>
@@ -1277,7 +1277,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1299,7 +1299,7 @@ virtual void OnDrawExpandBox(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rectExpand*<br/>
@@ -1321,7 +1321,7 @@ virtual void OnDrawName(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1341,7 +1341,7 @@ virtual void OnDrawValue(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1396,7 +1396,7 @@ virtual BOOL OnKillFocus(CWnd*);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*CWnd*|[in] (Не используется). Указатель на окно.|
 
@@ -1446,9 +1446,9 @@ virtual void OnRClickName(CPoint C);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
+|*В*|[in] Точка, в координатах клиентской области окна.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1468,8 +1468,8 @@ virtual void OnRClickValue(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*C*|[in] Точка, в координатах клиентской области окна.|
-|*B*|[in] Логическое значение.|
+|*В*|[in] Точка, в координатах клиентской области окна.|
+|*С*|[in] Логическое значение.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*nChar*<br/>
+*NChar*<br/>
 [in] Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение

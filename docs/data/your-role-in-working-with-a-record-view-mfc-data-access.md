@@ -5,18 +5,18 @@ helpviewer_keywords:
 - record views, customizing default code
 - MFC, record views
 ms.assetid: 691e89a5-ff21-4ca3-9278-69d4678288bb
-ms.openlocfilehash: 1f1361baafa5bb3dc884adcc464a3571aee04dd3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5c35208f654cff90e3cdf87e697e654bdfbe307
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478641"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033009"
 ---
 # <a name="your-role-in-working-with-a-record-view--mfc-data-access"></a>Роль пользователя в работе с представлением записи (доступ к данным MFC)
 
 Следующая таблица показывает, что обычно необходимо сделать, чтобы работать с представлением записи и что платформа делает за вас.
 
-### <a name="working-with-a-record-view-you-and-the-framework"></a>Работа с представлением записи: вы и платформа
+### <a name="working-with-a-record-view-you-and-the-framework"></a>Работа с представлением записи: Вы и платформа
 
 |Вы|Платформа|
 |---------|-------------------|
@@ -29,7 +29,7 @@ ms.locfileid: "50478641"
 |[Дополнительно] Написание кода необязательно.||
 |[Дополнительно] Напишите код для добавления и удаления записей.||
 
-Программирование на основе формы является только одним подходом в работе с базой данных. Сведения о приложениях, использующих другой пользовательский интерфейс или нет пользовательского интерфейса, см. в разделе [MFC: использование классов базы данных с документами и представлениями](../data/mfc-using-database-classes-with-documents-and-views.md) и [MFC: использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md). Об альтернативных подходах к отображению записей базы данных см. в разделе классы [CListView](../mfc/reference/clistview-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).
+Программирование на основе формы является только одним подходом в работе с базой данных. Сведения о приложениях, использующих другой пользовательский интерфейс или нет пользовательского интерфейса, см. в разделе [MFC: Использование классов базы данных с документами и представлениями](../data/mfc-using-database-classes-with-documents-and-views.md) и [MFC: Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md). Об альтернативных подходах к отображению записей базы данных см. в разделе классы [CListView](../mfc/reference/clistview-class.md) и [CTreeView](../mfc/reference/ctreeview-class.md).
 
 ## <a name="see-also"></a>См. также
 

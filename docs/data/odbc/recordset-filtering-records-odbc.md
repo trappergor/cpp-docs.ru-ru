@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], filtering records
 - filters [C++], recordset object
 ms.assetid: 5c075f37-c837-464d-90c1-d028a9d1c175
-ms.openlocfilehash: 47ac2b83df4da5fcfe0cbe5e9546571a50ecdfac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 050524df840be28d661da89d04b685a44238f88c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514755"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041219"
 ---
 # <a name="recordset-filtering-records-odbc"></a>Набор записей. Фильтрация записей (ODBC)
 
@@ -82,15 +82,15 @@ m_strFilter = "StudentID = '100'";   // correct
 m_strFilter = "StudentID = 100";   // incorrect for some drivers
 ```
 
-Функция кавычек, представленная выше соответствует спецификации ODBC, но некоторые СУБД требуют других символов кавычек. Дополнительные сведения см. в разделе [SQL: инструкция SQL Настройка набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+Функция кавычек, представленная выше соответствует спецификации ODBC, но некоторые СУБД требуют других символов кавычек. Дополнительные сведения см. в разделе [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 > [!NOTE]
->  Если вы решили переопределить строку SQL набора записей по умолчанию, передав строку SQL для `Open`, не нужно устанавливать фильтр, если Настраиваемая строка имеет **ГДЕ** предложение. Дополнительные сведения о переопределении SQL по умолчанию, см. в разделе [SQL: инструкция SQL Настройка набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
+>  Если вы решили переопределить строку SQL набора записей по умолчанию, передав строку SQL для `Open`, не нужно устанавливать фильтр, если Настраиваемая строка имеет **ГДЕ** предложение. Дополнительные сведения о переопределении SQL по умолчанию, см. в разделе [SQL: Настройка инструкции SQL набора записей (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md).
 
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Сортировка записей (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)<br/>
-[Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Набор записей. Порядок обновления записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
-[Набор записей. Блокировка (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Набор записей. Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
+[Набор записей. Принципы обновления записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Набор записей. Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

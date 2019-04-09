@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: df7ca6ddbb80c21397beb91b8e671f248f2a1d9c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326294"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030372"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
@@ -36,7 +36,7 @@ void __outwordstring(
 *Порт*<br/>
 [in] Порт для отправки данных.
 
-*буфер*<br/>
+*Буфер*<br/>
 [in] Указатель на данные, которые будут отправлены для указанного порта.
 
 *Количество*<br/>
@@ -58,4 +58,4 @@ void __outwordstring(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

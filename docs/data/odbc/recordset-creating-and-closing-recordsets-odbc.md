@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041271"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Набор записей. Создание и закрытие наборов записей (ODBC)
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-После вызова метода `Open`, члены функции и данные члена объекта используются для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление recordset для включения изменений, которые произошли в источнике данных. Дополнительные сведения см. в разделе [набор записей: выполнение обновления наборов записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
+После вызова метода `Open`, члены функции и данные члена объекта используются для работы с записями. В некоторых случаях может потребоваться повторный запрос или обновление recordset для включения изменений, которые произошли в источнике данных. Дополнительные сведения см. в разделе [набор записей: Выполнение обновления наборов записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md).
 
 > [!TIP]
->  Строка подключения, которую можно использовать во время разработки может оказаться же строка подключения, которая требуется вашим конечным пользователям. Идеи подготовке приложения таким образом, см. в разделе [источника данных: управление подключениями (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
+>  Строка подключения, которую можно использовать во время разработки может оказаться же строка подключения, которая требуется вашим конечным пользователям. Идеи подготовке приложения таким образом, см. в разделе [источника данных: Управление соединениями (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md).
 
 ##  <a name="_core_setting_recordset_options"></a> Настройка параметров набора записей
 

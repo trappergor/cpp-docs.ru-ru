@@ -14,12 +14,12 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523459"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041342"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16, __lzcnt, __lzcnt64
 
@@ -43,7 +43,7 @@ unsigned __int64 __lzcnt64(
 
 #### <a name="parameters"></a>Параметры
 
-*значение*<br/>
+*value*<br/>
 [in] 16-, 32- или 64-разрядное целое число без знака для проверки на наличие начальных нулей.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -56,7 +56,7 @@ unsigned __int64 __lzcnt64(
 |---------------|------------------|
 |`__lzcnt16`|AMD: Расширенные побитовой обработки (ABM)<br /><br /> Intel: Haswell|
 |`__lzcnt`|AMD: Расширенные побитовой обработки (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD: Расширенные манипуляции бит (ABM) в 64-разрядном режиме.<br /><br /> Intel: Haswell|
+|`__lzcnt64`|AMD: Расширенные бит манипуляции (ABM) в 64-разрядном режиме.<br /><br /> Intel: Haswell|
 
 **Файл заголовка** \<intrin.h >
 
@@ -111,4 +111,4 @@ __lzcnt(0xffffffff) = 0
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

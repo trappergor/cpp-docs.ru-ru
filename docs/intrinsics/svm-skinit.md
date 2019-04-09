@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199cba2623f9d8e47c08be642ec485599b87976e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591221"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026140"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -40,7 +40,7 @@ void __svm_skinit(
 
 `SLB` Определяет физический адрес блока 64 КБ памяти, которая называется *защиты блока загрузчика* (SLB). SLB содержит программу под названием безопасный загрузчик, который устанавливает операционной среде для компьютера, а затем загружает ядро безопасности.
 
-Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: программирование,» номер 24593, 3.11, версия документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
+Эта функция поддерживает взаимодействие монитора виртуальной машины узла с гостевой операционной системой и ее приложениями. Дополнительные сведения см. в документе «архитектуре AMD64 для программистов вручную том 2: Номер 24593, редакция 3.11, System Programming,» документа в [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/) сайта.
 
 ## <a name="requirements"></a>Требования
 
@@ -54,4 +54,4 @@ void __svm_skinit(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - breakpoints, __debugbreak intrinsic
 - __debugbreak intrinsic
 ms.assetid: 1d1e1c0c-891a-4613-ae4b-d790094ba830
-ms.openlocfilehash: 72fe358f379656a05d840246c4d525bbabc9e9e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b52c34014402a235e03c45f82dcd1e5c542e4919
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591107"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023104"
 ---
 # <a name="debugbreak"></a>__debugbreak
 
@@ -31,14 +31,14 @@ void __debugbreak();
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`__debugbreak`|x86, ARM, x64|\<Intrin.h >|
+|`__debugbreak`|x86, ARM, x64|\<intrin.h>|
 
 ## <a name="remarks"></a>Примечания
 
 `__debugbreak` Компилятора встроенные, аналогичную [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297.aspx), — это переносимые Win32 способ создания точки останова.
 
 > [!NOTE]
->  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` будет компилироваться в MSIL. При использовании `asm int 3` функция компилируется в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).
+>  При компиляции с параметром **/CLR**, функция, содержащая `__debugbreak` будет компилироваться в MSIL. `asm int 3` вызывает функцию для компиляции в машинный код. Дополнительные сведения см. в разделе [__asm](../assembler/inline/asm.md).
 
 Пример:
 
@@ -66,5 +66,5 @@ main() {
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)
