@@ -1,6 +1,6 @@
 ---
 title: /Z7, /Zi, /ZI (формат отладочной информации)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816325"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424083"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7, /Zi, /ZI (формат отладочной информации)
 
@@ -52,7 +52,7 @@ ms.locfileid: "57816325"
 
 Для распространителей сторонних библиотек отладочных версий является преимуществом с отсутствием PDB-файл. Тем не менее файлы объектов для любого предкомпилированные заголовки необходимы этапе компоновки библиотеки, а также для отладки. Если существует только информация о типах (без кода) в объект PCH-файл, необходимо также использовать [/Yl (ввести ссылку PCH для библиотеки отладки)](yl-inject-pch-reference-for-debug-library.md) параметр, который включен по умолчанию при построении библиотеки.
 
-[/Gm (включение минимального перепостроения)](gm-enable-minimal-rebuild.md) параметр недоступен при **/Z7** указан.
+Устаревший [/Gm (включение минимального перепостроения)](gm-enable-minimal-rebuild.md) параметр недоступен при **/Z7** указан.
 
 ### <a name="zi"></a>/ZI
 

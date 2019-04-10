@@ -1,19 +1,19 @@
 ---
 title: лямбда-выражения constexpr в C++
-ms.date: 07/19/2017
+ms.date: 04/08/2019
 helpviewer_keywords:
 - lambda expressions [C++], constexpr
 ms.assetid: b56346cd-fbff-475f-aeaa-ed2010c6d6f7
-ms.openlocfilehash: 937fae7da0f20e81ac5450d597af7a822219d654
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bc60a6da813e54c857da38b0164f544216be00
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424187"
 ---
 # <a name="constexpr-lambda-expressions-in-c"></a>лямбда-выражения constexpr в C++
 
-**Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): лямбда-выражение может быть объявлен как **constexpr** или использовать в выражении констант при инициализации каждого элемент данных, он фиксирует или вводит допускается в константном выражении.
+**Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): Лямбда-выражение может быть объявлен как **constexpr** или использоваться в константном выражении, при инициализации каждого элемента данных, он фиксирует или вводит разрешено использовать в константном выражении.
 
 ```cpp
     int y = 32;
