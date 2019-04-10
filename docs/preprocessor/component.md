@@ -1,6 +1,6 @@
 ---
 title: component
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - vc-pragma.component
 - component_CPP
@@ -8,23 +8,22 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: cfb9d2bb9d6ddd2d430c2c031f3c8a51946391b1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59032970"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424070"
 ---
 # <a name="component"></a>component
-Контролирует сбор сведений о просмотре или зависимостях из файлов исходного кода.
+
+Управляет сбором сведений о просмотре или зависимостях из файлов исходного кода.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
-#pragma component( browser, { on | off }[, references [, name ]] )
-#pragma component( minrebuild, on | off )
-#pragma component( mintypeinfo, on | off )
-```
+> **компонента #pragma (обозревателе** { **на** | **off** } [**,** **ссылки** [**,** *имя* ]] **)** \
+> **компонента #pragma (minrebuild на** | **off)** \
+> **компонента #pragma (возможный на** | **off)**
 
 ## <a name="remarks"></a>Примечания
 
@@ -34,7 +33,7 @@ ms.locfileid: "59032970"
 
 Включение и отключение сбора информации контролирует сбор сведений о просмотре, начиная с директивы pragma. Пример:
 
-```
+```cpp
 #pragma component(browser, off)
 ```
 
@@ -45,7 +44,7 @@ ms.locfileid: "59032970"
 
 `references` Параметр может использоваться с или без *имя* аргумент. С помощью `references` без *имя* включает или выключает сбор ссылок (другие сведения о просмотре прежнему собираются, тем не менее). Пример:
 
-```
+```cpp
 #pragma component(browser, off, references)
 ```
 
@@ -53,13 +52,13 @@ ms.locfileid: "59032970"
 
 С помощью `references` с *имя* и `off` не позволяет ссылкам на *имя* появлялись в окне сведений о просмотре. Используйте этот синтаксис, чтобы игнорировать ненужные имена и типы, уменьшая тем самым размер файлов со сведениями о просмотре. Пример:
 
-```
+```cpp
 #pragma component(browser, off, references, DWORD)
 ```
 
 игнорирует ссылки на параметр DWORD с этого момента. Вы можете включить сбор ссылок на DWORD снова с помощью `on`:
 
-```
+```cpp
 #pragma component(browser, on, references, DWORD)
 ```
 
@@ -67,23 +66,23 @@ ms.locfileid: "59032970"
 
 Чтобы предотвратить расширение препроцессор *имя* (например, расширение NULL 0), поместите его в кавычки:
 
-```
+```cpp
 #pragma component(browser, off, references, "NULL")
 ```
 
 ### <a name="minimal-rebuild"></a>Минимальная повторная сборка
 
-Возможность минимальной повторной сборки Visual C++ требует, чтобы компилятор создавал и сохранял сведения о зависимости классов C++, что, в свою очередь, занимает место на диске. Чтобы сэкономить место на диске, можно использовать `#pragma component( minrebuild, off )` каждый раз, когда не нужно собирать сведения о зависимости, например, в неизменяемых файлах заголовка. Вставить `#pragma component(minrebuild, on)` после неизменяемых классов для включения зависимостей коллекции обратно на.
+Устаревший [/Gm (включение минимального перепостроения)](../build/reference/gm-enable-minimal-rebuild.md) функции требуется компилятор для создания и хранения C++ класса сведения о зависимостях, который занимает место на диске. Чтобы сэкономить место на диске, можно использовать `#pragma component( minrebuild, off )` каждый раз, когда не нужно собирать сведения о зависимости, например, в неизменяемых файлах заголовка. Вставить `#pragma component(minrebuild, on)` после неизменяемых классов для включения зависимостей коллекции обратно на.
 
 ### <a name="reduce-type-information"></a>Уменьшение сведений о типах
 
 `mintypeinfo` Снижает отладочная информация для определенной области. Эти сведения имеют значительный объем, что влияет на размер PDB- и OBJ-файлов. Невозможно отладить классы и структуры в области параметра mintypeinfo. Использование параметра mintypeinfo поможет избежать следующего предупреждения.
 
-```
+```cmd
 LINK : warning LNK4018: too many type indexes in PDB "filename", discarding subsequent type information
 ```
 
-Дополнительные сведения см. в разделе [включение минимального перепостроения](../build/reference/gm-enable-minimal-rebuild.md) (/ Gm) параметр компилятора.
+Дополнительные сведения см. в разделе [/Gm (включение минимального перепостроения)](../build/reference/gm-enable-minimal-rebuild.md) параметр компилятора.
 
 ## <a name="see-also"></a>См. также
 
