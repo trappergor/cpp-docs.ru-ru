@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292196"
+ms.lasthandoff: 04/10/2019
+ms.locfileid: "58780487"
 ---
 # <a name="cmfcribbonedit-class"></a>Класс CMFCRibbonEdit
 
@@ -94,13 +94,13 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonEdit::CanBeStretched](#canbestretched)|Указывает, является ли высоту `CMFCRibbonEdit` элемент управления может увеличиваться по вертикали в высоту строки ленты.|
 |[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|Создает объект `CMFCRibbonEdit`.|
@@ -140,7 +140,7 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCRibbonEdit` , Показать кнопки стрелками рядом с элемента управления редактирования и задайте текст элемента управления. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+В следующем примере демонстрируется создание `CMFCRibbonEdit` , Показать кнопки стрелками рядом с элемента управления редактирования и задайте текст элемента управления. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#7](../../mfc/reference/codesnippet/cpp/cmfcribbonedit-class_1.cpp)]
 
@@ -303,7 +303,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -336,7 +336,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -472,7 +472,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -487,7 +487,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -502,7 +502,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -523,7 +523,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Параметры
 
-*pDC*<br/>
+*основного контроллера домена*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 *strText*<br/>
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Указатель на родительское окно для `CMFCRibbonEdit` объекта.
 
-*data*<br/>
+*Данные*<br/>
 Данные специальных возможностей для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
