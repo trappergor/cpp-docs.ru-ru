@@ -2,12 +2,12 @@
 title: Руководство по переносу и обновлению Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767682"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898795"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
 
@@ -76,8 +76,8 @@ ms.locfileid: "58767682"
 |Заголовок|Описание|
 |-----------|-----------------|
 |[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Описываются способы использования проектов, созданных в предыдущих версиях Visual C++.|
-|[Новые возможности компилятора C++ в Visual Studio 2017 RC](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Изменения в интегрированной среде разработки и инструментах Visual Studio 2015–2017|
-|[Улучшения соответствия C++ в Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)|Улучшения соответствия стандартам в Visual Studio 2015–2017|
+|[Новые возможности компилятора C++ в Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Изменения в интегрированной среде разработки и средствах для текущей версии Visual Studio|
+|[Улучшения соответствия C++ в Visual Studio](../overview/cpp-conformance-improvements.md)|Улучшения соответствия стандартам с Visual Studio 2015 по Visual Studio|
 |[Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Список изменений в библиотеках Visual C++ и инструментах сборки Visual Studio 2003–2015, которые могут потребовать внесения изменений в код.|
 |[Новые возможности Visual C++ 2003–2015](visual-cpp-what-s-new-2003-through-2015.md)|Описание всех новых возможностей для Visual C++ в Visual Studio 2003–2015.|
 |[Перенос сторонних библиотек](porting-third-party-libraries.md)|Сведения об использовании средства командной строки **vcpkg** для переноса старых библиотек с открытым исходным кодом на версии, скомпилированные с помощью более новых наборов инструментов Visual C++.|
