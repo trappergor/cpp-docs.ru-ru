@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305059"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773207"
 ---
 # <a name="cmfcribbonpanel-class"></a>Класс CMFCRibbonPanel
 
@@ -137,13 +137,13 @@ class CMFCRibbonPanel : public CObject
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|Создает и инициализирует объект `CMFCRibbonPanel`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonPanel::Add](#add)|Добавляет элемент ленты на панель.|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|Добавляет разделитель на панель ленты.|
@@ -207,7 +207,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCRibbonPanel` объекта с помощью различных методов в `CMFCRibbonPanel` класса. Пример показано, как задать сочетание клавиш, которое отображает панель ленты, выровнять элементы на панели по вертикали по столбцу и включить обоснование столбца. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CMFCRibbonPanel` объекта с помощью различных методов в `CMFCRibbonPanel` класса. Пример показано, как задать сочетание клавиш, которое отображает панель ленты, выровнять элементы на панели по вертикали по столбцу и включить обоснование столбца. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 

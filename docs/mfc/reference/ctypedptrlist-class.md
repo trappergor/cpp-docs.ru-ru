@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9233e83a08fde87c15be5cc1c42a2f1dd3b56511
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286027"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767994"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList Class
 
@@ -56,7 +56,7 @@ class CTypedPtrList : public BASE_CLASS
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CTypedPtrList::AddHead](#addhead)|Добавляет элемент (или все элементы из другого списка) в начало списка (делает нового заголовка).|
 |[CTypedPtrList::AddTail](#addtail)|Добавляет в конец списка (делает новый tail) элемента (или все элементы из другого списка).|
@@ -379,7 +379,7 @@ void SetAt(POSITION pos, TYPE newElement);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CPtrList](../../mfc/reference/cptrlist-class.md)<br/>
 [Класс CObList](../../mfc/reference/coblist-class.md)

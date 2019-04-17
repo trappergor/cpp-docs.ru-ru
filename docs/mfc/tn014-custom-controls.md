@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297493"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772128"
 ---
 # <a name="tn014-custom-controls"></a>TN014: Пользовательские элементы управления
 
 Эта заметка описывает поддержку MFC для пользовательских и самостоятельно рисования элементов управления. Он также описывает динамического создания подклассов, а связь между [CWnd](../mfc/reference/cwnd-class.md) объектов и `HWND`s.
 
-Пример приложения MFC CTRLTEST показано, как использовать многие пользовательские элементы управления. Ознакомьтесь с исходным кодом примера MFC Общие [CTRLTEST](../visual-cpp-samples.md) и Справка в Интернете.
+Пример приложения MFC CTRLTEST показано, как использовать многие пользовательские элементы управления. Ознакомьтесь с исходным кодом примера MFC Общие [CTRLTEST](../overview/visual-cpp-samples.md) и Справка в Интернете.
 
 ## <a name="owner-draw-controlsmenus"></a>Владельцем элементов управления и меню
 
@@ -104,7 +104,7 @@ MFC предоставляет реализацию по умолчанию (в 
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>Примеры самостоятельно графических элементов управления и меню
 
-Пример MFC Общие [CTRLTEST](../visual-cpp-samples.md) примеры меню самостоятельно нарисовать и самостоятельно нарисовать список.
+Пример MFC Общие [CTRLTEST](../overview/visual-cpp-samples.md) примеры меню самостоятельно нарисовать и самостоятельно нарисовать список.
 
 Наиболее типичным примером самостоятельно рисования кнопки — это кнопка растрового изображения. Кнопка растрового изображения является кнопку для показа одного, двух или трех растровых изображений для различных состояний. Примером этого предоставляется в классе MFC [CBitmapButton](../mfc/reference/cbitmapbutton-class.md).
 
@@ -130,7 +130,7 @@ MFC предоставляет реализацию по умолчанию (в 
 
 Присоединить оба подпрограммы `CWnd` объекта к существующему `HWND`. `SubclassWindow` принимает `HWND` напрямую. `SubclassDlgItem` — это вспомогательная функция, которая принимает идентификатор элемента управления и родительского окна. `SubclassDlgItem` предназначен для присоединения объектов C++ к элементам управления диалогового окна, созданные на основе шаблона диалогового окна.
 
-См. в разделе [CTRLTEST](../visual-cpp-samples.md) примере некоторые примеры использования `SubclassWindow` и `SubclassDlgItem`.
+См. в разделе [CTRLTEST](../overview/visual-cpp-samples.md) примере некоторые примеры использования `SubclassWindow` и `SubclassDlgItem`.
 
 ## <a name="see-also"></a>См. также
 

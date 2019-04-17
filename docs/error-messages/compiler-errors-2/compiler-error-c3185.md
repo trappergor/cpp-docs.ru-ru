@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3185
 ms.assetid: 5bf96279-043c-4981-9d02-b4550071b192
-ms.openlocfilehash: db448b462cd3a3f325c529e730e5c8f65e2b8f51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45afe70b454f72dd8c9b8ce9771ce1f5aef6a10e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773195"
 ---
 # <a name="compiler-error-c3185"></a>Ошибка компилятора C3185
 
 typeid используется для управляемого типа или типа WinRT "type", вместо этого используйте operator
 
-Невозможно применить [typeid](../../cpp/typeid-operator.md) оператор в управляемый "или" WinRT типа; используйте [typeid](../../windows/typeid-cpp-component-extensions.md) вместо этого.
+Невозможно применить [typeid](../../cpp/typeid-operator.md) оператор в управляемый "или" WinRT типа; используйте [typeid](../../extensions/typeid-cpp-component-extensions.md) вместо этого.
 
 В следующем примере показано возникновение ошибки C3185 и приводятся сведения по ее устранению.
 

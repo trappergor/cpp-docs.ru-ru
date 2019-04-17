@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294675"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768138"
 ---
 # <a name="docking-and-floating-toolbars"></a>Закрепленные и плавающие панели инструментов
 
@@ -50,7 +50,7 @@ ms.locfileid: "57294675"
 
 - [Параметр wrap позиций для панели инструментов-style](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-Ознакомьтесь с примером MFC Общие [DOCKTOOL ПОКАЗАНА](../visual-cpp-samples.md) примеры.
+Ознакомьтесь с примером MFC Общие [DOCKTOOL ПОКАЗАНА](../overview/visual-cpp-samples.md) примеры.
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> Включение закрепления в окне фрейма
 
@@ -104,7 +104,7 @@ ms.locfileid: "57294675"
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-Пример MFC Общие [DOCKTOOL ПОКАЗАНА](../visual-cpp-samples.md) показано использование функции-члены классов [CControlBar](../mfc/reference/ccontrolbar-class.md) и [CToolBar](../mfc/reference/ctoolbar-class.md) для управления динамический макет панели инструментов. См. в файле EDITBAR. CPP в DOCKTOOL ПОКАЗАНА.
+Пример MFC Общие [DOCKTOOL ПОКАЗАНА](../overview/visual-cpp-samples.md) показано использование функции-члены классов [CControlBar](../mfc/reference/ccontrolbar-class.md) и [CToolBar](../mfc/reference/ctoolbar-class.md) для управления динамический макет панели инструментов. См. в файле EDITBAR. CPP в DOCKTOOL ПОКАЗАНА.
 
 ### <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
 

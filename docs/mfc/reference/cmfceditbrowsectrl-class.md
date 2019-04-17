@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273287"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770682"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>Класс CMFCEditBrowseCtrl
 
@@ -43,18 +43,18 @@ ms.locfileid: "57273287"
 class CMFCEditBrowseCtrl : public CEdit
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|Конструктор по умолчанию.|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|Включает или отключает (скрытие) кнопку обзора.|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|Активирует кнопку обзора и помещает Обзор элемента управления редактирования в *Обзор файлов* режим.|
@@ -88,7 +88,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
    Диалоговое окно выбора стандартные папки отображается в том случае, когда пользователь нажимает кнопку обзора.
 
-## <a name="how-to-specify-an-edit-browse-control"></a>Практическое руководство. Укажите элемент управления редактированием обзора
+## <a name="how-to-specify-an-edit-browse-control"></a>Руководство. Укажите элемент управления редактированием обзора
 
 Выполните следующие действия, чтобы включить элемент управления редактирования обзора в приложении.
 
@@ -120,7 +120,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 ## <a name="example"></a>Пример
 
-Приведенный ниже показано, как использовать два метода в `CMFCEditBrowseCtrl` класса: `EnableFolderBrowseButton` и `EnableFileBrowseButton`. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Приведенный ниже показано, как использовать два метода в `CMFCEditBrowseCtrl` класса: `EnableFolderBrowseButton` и `EnableFileBrowseButton`. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#6](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#7](../../mfc/reference/codesnippet/cpp/cmfceditbrowsectrl-class_2.cpp)]
@@ -207,7 +207,7 @@ CMFCEditBrowseCtrl::BrowseMode GetMode() const;
 
 В следующей таблице перечислены возможные возвращаемые значения.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`BrowseMode_Default`|**пользовательский режим**. Действия, определяемые программистом выполняются.|
 |`BrowseMode_File`|**режим файла**. Откроется диалоговое окно браузера стандартный файл.|

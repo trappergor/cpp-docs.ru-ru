@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleUpdateDialog [MFC], COleUpdateDialog
 - COleUpdateDialog [MFC], DoModal
 ms.assetid: 699ca980-52b1-4cf8-9ab1-ac6767ad5b0e
-ms.openlocfilehash: 74607a2a145025533c660ae68f20ffb8e59d3fad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b8e580130b025f07b8f85a624b7f5a224a00e49e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281737"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771114"
 ---
 # <a name="coleupdatedialog-class"></a>Класс COleUpdateDialog
 
@@ -31,13 +31,13 @@ class COleUpdateDialog : public COleLinksDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleUpdateDialog::COleUpdateDialog](#coleupdatedialog)|Создает объект `COleUpdateDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleUpdateDialog::DoModal](#domodal)|Отображает **изменить ссылки** диалоговое окно в режиме обновления.|
 
@@ -121,7 +121,7 @@ virtual INT_PTR DoModal();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC OCLIENT](../../visual-cpp-samples.md)<br/>
+[Пример MFC OCLIENT](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleLinksDialog](../../mfc/reference/colelinksdialog-class.md)

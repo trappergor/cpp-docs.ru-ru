@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: d3c3bca7932b9e9c7e7723b286c83ca3694a9968
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305098"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771356"
 ---
 # <a name="cdialog-class"></a>Класс CDialog
 
@@ -61,13 +61,13 @@ class CDialog : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDialog::CDialog](#cdialog)|Создает объект `CDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDialog::Create](#create)|Инициализирует `CDialog` объекта. Создает немодальное диалоговое окно и прикрепляет его к `CDialog` объекта.|
 |[CDialog::CreateIndirect](#createindirect)|Создает немодальное диалоговое окно на основе шаблона диалогового окна в памяти (не ресурсов на основе).|
@@ -86,7 +86,7 @@ class CDialog : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDialog::OnCancel](#oncancel)|Переопределение для выполнения действия клавиши ESC или кнопку "Отмена". Значение по умолчанию закрывает диалоговое окно и `DoModal` возвращает IDCANCEL.|
 |[CDialog::OnOK](#onok)|Переопределите, чтобы выполнить действие "ОК" в модальное диалоговое окно. Значение по умолчанию закрывает диалоговое окно и `DoModal` возвращает IDOK.|
@@ -558,7 +558,7 @@ void SetHelpID(UINT nIDR);
 
 ## <a name="see-also"></a>См. также
 
-[Образец DLGCBR32 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC DLGTEMPL](../../visual-cpp-samples.md)<br/>
+[Образец DLGCBR32 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC DLGTEMPL](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

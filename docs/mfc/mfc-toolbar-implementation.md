@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267814"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773181"
 ---
 # <a name="mfc-toolbar-implementation"></a>Реализация панели инструментов MFC
 
@@ -84,7 +84,7 @@ MFC также поддерживает всплывающие подсказк�
 > [!TIP]
 >  Если вы вложили сильно в более старой реализации MFC `CToolBar`, что поддержка по-прежнему доступна. См. в статье [с помощью Your старых панелей инструментов](../mfc/using-your-old-toolbars.md).
 
-Также ознакомьтесь с примером MFC Общие [DOCKTOOL ПОКАЗАНА](../visual-cpp-samples.md).
+Также ознакомьтесь с примером MFC Общие [DOCKTOOL ПОКАЗАНА](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_the_toolbar_bitmap"></a> Растровое изображение панели инструментов
 

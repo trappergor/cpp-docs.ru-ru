@@ -50,16 +50,16 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: f31adc77f50191191ffbc4f7eac89cc8c9caf439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263238"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767279"
 ---
 # <a name="cstringlist-class"></a>Класс CStringList
 
-Поддерживает списки объектов `CString`.
+Поддерживает списки объектов `CString` .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -67,7 +67,7 @@ ms.locfileid: "57263238"
 class CStringList : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 Функции-члены `CStringList` похожи на функции-члены класса [CObList](../../mfc/reference/coblist-class.md). Из-за этой схожести для изучения этой функции-члена можно использовать справочную документацию по классу `CObList`. Если вы видите `CObject` указатель как возвращаемое значение, замените `CString` (не `CString` указатель). Если вы видите `CObject` указатель как параметр функции, замените `LPCTSTR`.
 
@@ -87,13 +87,13 @@ class CStringList : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObList::CObList](../../mfc/reference/coblist-class.md#coblist)|Создается пустой список.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObList::AddHead](../../mfc/reference/coblist-class.md#addhead)|Добавляет элемент (или все элементы из другого списка) в начало списка (делает нового заголовка).|
 |[CObList::AddTail](../../mfc/reference/coblist-class.md#addtail)|Добавляет в конец списка (делает новый tail) элемента (или все элементы из другого списка).|
@@ -139,6 +139,6 @@ class CStringList : public CObject
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

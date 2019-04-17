@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259585"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775690"
 ---
 # <a name="crecttracker-class"></a>CRectTracker-класс
 
@@ -59,13 +59,13 @@ class CRectTracker
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRectTracker::CRectTracker](#crecttracker)|Создает объект `CRectTracker`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRectTracker::AdjustRect](#adjustrect)|Вызывается, когда изменяются размеры прямоугольника.|
 |[CRectTracker::Draw](#draw)|Отрисовывает прямоугольник.|
@@ -81,7 +81,7 @@ class CRectTracker
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRectTracker::m_nHandleSize](#m_nhandlesize)|Определяет размер маркеров изменения размера.|
 |[CRectTracker::m_nStyle](#m_nstyle)|Текущий style(s) средства отслеживания.|
@@ -481,8 +481,8 @@ BOOL TrackRubberBand(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC TRACKER](../../visual-cpp-samples.md)<br/>
-[Пример MFC ФУНКЦИЙ](../../visual-cpp-samples.md)<br/>
+[Пример MFC TRACKER](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC ФУНКЦИЙ](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleResizeBar](../../mfc/reference/coleresizebar-class.md)<br/>
 [Класс CRect](../../atl-mfc-shared/reference/crect-class.md)

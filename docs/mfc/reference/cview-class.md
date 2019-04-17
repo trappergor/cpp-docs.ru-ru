@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305020"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775313"
 ---
 # <a name="cview-class"></a>Класс CView
 
@@ -73,13 +73,13 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CView::CView](#cview)|Создает объект `CView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CView::DoPreparePrinting](#doprepareprinting)|Отображает диалоговое окно печати и создает контекст устройства принтера; При переопределении вызывать `OnPreparePrinting` функция-член.|
 |[CView::GetDocument](#getdocument)|Возвращает документ, связанный с представлением.|
@@ -97,7 +97,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|Вызывается, когда фрейм окна, содержащего представление активируется или деактивируется.|
 |[CView::OnActivateView](#onactivateview)|Вызывается при активации представления.|
@@ -351,7 +351,7 @@ virtual DROPEFFECT OnDragEnter(
 
 - DROPEFFECT_MOVE для MK_ALT создает копию объекта перетаскиваемый объект и удаления исходного объекта. Обычно это эффект падающей по умолчанию, если представление может принять этот объект данных.
 
-Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../visual-cpp-samples.md).
+Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -405,7 +405,7 @@ virtual DROPEFFECT OnDragOver(
 
 - DROPEFFECT_MOVE для MK_ALT создает копию объекта перетаскиваемый объект и удаления исходного объекта. Обычно это эффект падающей по умолчанию, если представление может принять объект данных.
 
-Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../visual-cpp-samples.md).
+Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -445,7 +445,7 @@ virtual DROPEFFECT OnDragScroll(
 
 - DROPEFFECT_SCROLL указывает, что операция перетаскивания прокрутки о или происходит в целевое представление.
 
-Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../visual-cpp-samples.md).
+Дополнительные сведения см. в примере основные понятия Advanced MFC [OCLIENT](../../overview/visual-cpp-samples.md).
 
 ### <a name="remarks"></a>Примечания
 
@@ -871,7 +871,7 @@ virtual void OnUpdate(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDIDOCVW](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDIDOCVW](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>

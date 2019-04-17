@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258948"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767669"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>Класс CMFCToolBarFontSizeComboBox
 
@@ -35,13 +35,13 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::CMFCToolBarFontSizeComboBox](#cmfctoolbarfontsizecombobox)|Создает объект `CMFCToolBarFontSizeComboBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarFontSizeComboBox::GetTwipSize](#gettwipsize)|Возвращает размер шрифта, выбранного в твипах.|
 |[CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)|Заполняет поле со списком всех размеров шрифта, поддерживаемых параметров выбранного шрифта.|
@@ -57,7 +57,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCToolBarFontSizeComboBox` класс для настройки `CMFCToolBarFontSizeComboBox` объекта. В примере показано получение размера шрифта, в твипах между из текстового поля и заполнить все допустимые размеры шрифта, заданного в поле со списком размер шрифта, определяющая размер шрифта в твипах. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+Следующий пример демонстрирует использование различных методов `CMFCToolBarFontSizeComboBox` класс для настройки `CMFCToolBarFontSizeComboBox` объекта. В примере показано получение размера шрифта, в твипах между из текстового поля и заполнить все допустимые размеры шрифта, заданного в поле со списком размер шрифта, определяющая размер шрифта в твипах. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

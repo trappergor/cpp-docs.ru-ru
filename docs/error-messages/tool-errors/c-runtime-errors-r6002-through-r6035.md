@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178267"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766890"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>Ошибки времени выполнения C с R6002 по R6035
 
@@ -17,7 +17,7 @@ ms.locfileid: "53178267"
 
 Можно найти дополнительную помощь для ошибок и предупреждений в открытых форумах корпорации Майкрософт. Можно искать ошибки или предупреждения с номером на [сообщества разработчиков](https://developercommunity.visualstudio.com) сайта. [Visual C++ Общие](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) форум предназначен для вопросов о Visual C++, которые не обсуждаются на других форумах. Можно также поиск ошибок и предупреждений и задавайте вопросы на [Stack Overflow](http://stackoverflow.com/) для поиска решений.
 
-Ссылки на дополнительную справку и ресурсы сообщества, см. в разделе [справки Visual C++ и сообщества](../../visual-cpp-help-and-community.md).
+Ссылки на дополнительную справку и ресурсы сообщества, см. в разделе [справки Visual C++ и сообщества](../../overview/visual-cpp-help-and-community.md).
 
 ## <a name="c-runtime-errors"></a>Ошибки времени выполнения C
 

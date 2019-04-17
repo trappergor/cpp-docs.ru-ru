@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288792"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769489"
 ---
 # <a name="ribbon-designer-mfc"></a>Конструктор лент (MFC)
 
@@ -107,7 +107,7 @@ ms.locfileid: "57288792"
 
 - **На панели:** Область панели ленты, в которой отображается группа связанных элементов управления. Каждая категория ленты содержит одну или несколько панелей ленты.
 
-- **Элементы ленты:** Элементы управления в панелях, например, кнопки и поля со списком. Чтобы просмотреть различные элементы управления, которые могут быть размещены на ленте, см. в разделе [пример RibbonGadgets: Приложение с гаджетами на ленте](../visual-cpp-samples.md).
+- **Элементы ленты:** Элементы управления в панелях, например, кнопки и поля со списком. Чтобы просмотреть различные элементы управления, которые могут быть размещены на ленте, см. в разделе [пример RibbonGadgets: Приложение с гаджетами на ленте](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>См. также
 

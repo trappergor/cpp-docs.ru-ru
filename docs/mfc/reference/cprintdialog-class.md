@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2a856c8067394e33976ba8ccdaa34be81ee11091
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274951"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771049"
 ---
 # <a name="cprintdialog-class"></a>Класс CPrintDialog
 
@@ -57,17 +57,17 @@ ms.locfileid: "57274951"
 class CPrintDialog : public CCommonDialog
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialog::CPrintDialog](#cprintdialog)|Создает объект `CPrintDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialog::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|
 |[CPrintDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|
@@ -87,7 +87,7 @@ class CPrintDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialog::m_pd](#m_pd)|Структура, используемая для настройки `CPrintDialog` объекта.|
 
@@ -508,7 +508,7 @@ BOOL PrintSelection() const;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Пример MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Структура CPrintInfo](../../mfc/reference/cprintinfo-structure.md)

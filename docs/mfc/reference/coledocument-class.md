@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1922c2f2d804c2a93d30dc0708b2d3ae037414d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259754"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768709"
 ---
 # <a name="coledocument-class"></a>Класс COleDocument
 
@@ -73,13 +73,13 @@ class COleDocument : public CDocument
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDocument::COleDocument](#coledocument)|Создает объект `COleDocument`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDocument::AddItem](#additem)|Добавляет элемент в список элементов, поддерживаемых в документе.|
 |[COleDocument::ApplyPrintDevice](#applyprintdevice)|Задает печати целевое устройство для всех клиентских элементов в документе.|
@@ -97,7 +97,7 @@ class COleDocument : public CDocument
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleDocument::OnEditChangeIcon](#oneditchangeicon)|Обрабатывает события в команду меню изменить значок.|
 |[COleDocument::OnEditConvert](#oneditconvert)|Выполняет преобразование внедренного или связанного объекта из одного типа в другой.|
@@ -544,7 +544,7 @@ virtual void UpdateModifiedFlag();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC КОНТЕЙНЕРА](../../visual-cpp-samples.md)<br/>
-[Пример MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Пример MFC КОНТЕЙНЕРА](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDocument](../../mfc/reference/cdocument-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

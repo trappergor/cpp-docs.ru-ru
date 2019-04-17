@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775963"
 ---
 # <a name="cmfcstatusbar-class"></a>Класс CMFCStatusBar
 
@@ -95,7 +95,7 @@ class CMFCStatusBar : public CPane
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCStatusBar::CalcFixedLayout](#calcfixedlayout)|(Переопределяет [CBasePane::CalcFixedLayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout).)|
 |[CMFCStatusBar::CommandToIndex](#commandtoindex)||
@@ -132,32 +132,32 @@ class CMFCStatusBar : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCStatusBar::OnDrawPane](#ondrawpane)|Вызывается платформой, когда он перерисовывает панели строки состояния.|
 
 ## <a name="remarks"></a>Примечания
 
-На следующей схеме показаны рис строки состояния из [состояние панели демонстрационного](../../visual-cpp-samples.md) приложения.
+На следующей схеме показаны рис строки состояния из [состояние панели демонстрационного](../../overview/visual-cpp-samples.md) приложения.
 
 ![Пример cmfcstatusbar](../../mfc/reference/media/cmfcstatusbar.png "пример cmfcstatusbar")
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется локальные переменные, которые приложение использует для вызова методов в `CMFCStatusBar` класса. Эти переменные объявляются в StatusBarDemoView.h. Главного фрейма объявляется в MainFrm.h документа объявляется в StatusBarDemoDoc.h и представление объявляется в StatusBarDemoView.h. Этот фрагмент кода является частью [состояние панели демонстрационного](../../visual-cpp-samples.md).
+В следующем примере демонстрируется локальные переменные, которые приложение использует для вызова методов в `CMFCStatusBar` класса. Эти переменные объявляются в StatusBarDemoView.h. Главного фрейма объявляется в MainFrm.h документа объявляется в StatusBarDemoDoc.h и представление объявляется в StatusBarDemoView.h. Этот фрагмент кода является частью [состояние панели демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как получить ссылку на `CMFCStatusBar` объекта путем введения `GetStatusBar` метод в MainFrm.h и последующего вызова данного метода из `GetStatusBar` метод в StatusBarDemoView.h. Этот фрагмент кода является частью [состояние панели демонстрационного](../../visual-cpp-samples.md).
+В следующем примере показано, как получить ссылку на `CMFCStatusBar` объекта путем введения `GetStatusBar` метод в MainFrm.h и последующего вызова данного метода из `GetStatusBar` метод в StatusBarDemoView.h. Этот фрагмент кода является частью [состояние панели демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует вызов методов `CMFCStatusBar` класс в StatusBarDemoView.cpp. Константы, объявляются в MainFrm.h. Пример показано, как задать значок, текст подсказки для панели строки состояния, отображать индикатор хода выполнения в указанной области, назначить анимации в указанную область, задать текст и ширину панели строки состояния и текущий индикатор хода выполнения из progr полоса ESS для панели строки состояния. Этот фрагмент кода является частью [состояние панели демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует вызов методов `CMFCStatusBar` класс в StatusBarDemoView.cpp. Константы, объявляются в MainFrm.h. Пример показано, как задать значок, текст подсказки для панели строки состояния, отображать индикатор хода выполнения в указанной области, назначить анимации в указанную область, задать текст и ширину панели строки состояния и текущий индикатор хода выполнения из progr полоса ESS для панели строки состояния. Этот фрагмент кода является частью [состояние панели демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 96b6204fe46cb624d22506b2d3e5c1d7621b1865
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273365"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772219"
 ---
 # <a name="cprintinfo-structure"></a>Cprintinfo-структура
 
@@ -23,11 +23,11 @@ ms.locfileid: "57273365"
 struct CPrintInfo
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPrintInfo::GetFromPage](#getfrompage)|Возвращает номер первой печатаемой страницы.|
 |[CPrintInfo::GetMaxPage](#getmaxpage)|Возвращает номер последней страницы документа.|
@@ -39,7 +39,7 @@ struct CPrintInfo
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintInfo::m_bContinuePrinting](#m_bcontinueprinting)|Содержит флаг, указывающий, следует ли продолжать печати цикла платформы.|
 |[CPrintInfo::m_bDirect](#m_bdirect)|Содержит флаг, указывающий, печатается ли документ напрямую (без отображения диалогового окна «Печать»).|
@@ -317,7 +317,7 @@ void SetMinPage(UINT nMinPage);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Пример MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>

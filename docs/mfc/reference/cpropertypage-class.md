@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9d4100037c5a6cd2eeef1a50fb2d5a46b2cb6505
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260755"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772727"
 ---
 # <a name="cpropertypage-class"></a>Cpropertypage-класс
 
@@ -61,13 +61,13 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPropertyPage::CPropertyPage](#cpropertypage)|Создает объект `CPropertyPage`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPropertyPage::CancelToClose](#canceltoclose)|Изменяет "ОК" для чтения Close и отключает кнопки "Отмена", при изменении неустранимой модальную страницу свойств на странице.|
 |[CPropertyPage::Construct](#construct)|Создает объект `CPropertyPage`. Используйте `Construct` , если вы хотите указать параметры во время выполнения или при использовании массивов.|
@@ -87,7 +87,7 @@ class CPropertyPage : public CDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPropertyPage::m_psp](#m_psp)|Windows [PROPSHEETPAGE](/windows/desktop/api/prsht/ns-prsht-_propsheetpagea_v2) структуры. Предоставляет доступ к параметрам страницу основных свойств.|
 
@@ -574,10 +574,10 @@ Framework хранит записи, из которых страницы явл
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
-[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Образец CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CPropertySheet](../../mfc/reference/cpropertysheet-class.md)<br/>

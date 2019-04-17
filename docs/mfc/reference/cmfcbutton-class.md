@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269816"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768222"
 ---
 # <a name="cmfcbutton-class"></a>Класс CMFCButton
 
@@ -101,14 +101,14 @@ class CMFCButton : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CMFCButton::CMFCButton`|Конструктор по умолчанию.|
 |`CMFCButton::~CMFCButton`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCButton::CleanUp](#cleanup)|Сбрасывает внутренних переменных и высвобождает выделенные ресурсы, такие как изображения, точечные рисунки и значки.|
 |`CMFCButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
@@ -143,7 +143,7 @@ class CMFCButton : public CButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCButton::OnDraw](#ondraw)|Вызвано структурой для отображения кнопки.|
 |[CMFCButton::OnDrawBorder](#ondrawborder)|Вызывается платформой для рисования границы кнопки.|
@@ -154,7 +154,7 @@ class CMFCButton : public CButton
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCButton::m_nAlignStyle](#m_nalignstyle)|Задает выравнивание текста кнопки.|
 |[CMFCButton::m_bDontUseWinXPTheme](#m_bDontUseWinXPTheme)|Указывает, следует ли использовать темы Windows XP.|
@@ -180,7 +180,7 @@ class CMFCButton : public CButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку свойств кнопки с помощью различных методов в `CMFCButton` класса. Пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку свойств кнопки с помощью различных методов в `CMFCButton` класса. Пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -503,7 +503,7 @@ AlignStyle m_nAlignStyle;
 
 Используйте один из следующих `CMFCButton::AlignStyle` значений перечисления, чтобы задать выравнивание текста кнопки:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |ALIGN_CENTER|(По умолчанию) Выравнивание текста кнопки в центр кнопки.|
 |ALIGN_LEFT|Кнопка текст выравнивается по левой кнопки.|
@@ -542,7 +542,7 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует задайте значения свойств `m_nFlatStyle` переменную-член в `CMFCButton` класса. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует задайте значения свойств `m_nFlatStyle` переменную-член в `CMFCButton` класса. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует способы использования различных версий `SetImage` метод в `CMFCButton` класса. Пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует способы использования различных версий `SetImage` метод в `CMFCButton` класса. Пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `SetMouseCursor` метод в `CMFCButton` класса. Пример является частью кода в [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `SetMouseCursor` метод в `CMFCButton` класса. Пример является частью кода в [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

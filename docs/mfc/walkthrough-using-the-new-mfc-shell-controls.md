@@ -4,12 +4,12 @@ ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ef0e4856a844503f8d13b7b6ed37318b76b6af69
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288796"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772154"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>Пошаговое руководство. С помощью новых элементов управления оболочки MFC
 
@@ -166,7 +166,7 @@ ms.locfileid: "57288796"
 
 - Мастер создал панель Outlook с обоими **папки** области и **календаря** области. Вероятно, нет смысла иметь **календаря** области в **Explorer** окно, поэтому теперь удалите этой области.
 
-- `CMFCShellListCtrl` Поддерживает просмотр файлов в различных режимах, таких как **крупные значки**, **мелкие значки**, **списка**, и **сведения**. Обновите приложение, чтобы реализовать эту функциональность. Подсказка: см. в разделе [примеры Visual C++](../visual-cpp-samples.md).
+- `CMFCShellListCtrl` Поддерживает просмотр файлов в различных режимах, таких как **крупные значки**, **мелкие значки**, **списка**, и **сведения**. Обновите приложение, чтобы реализовать эту функциональность. Подсказка: см. в разделе [примеры Visual C++](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>См. также
 

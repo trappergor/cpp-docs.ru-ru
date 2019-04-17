@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276017"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772362"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>Класс CMFCColorPickerCtrl
 
@@ -61,13 +61,13 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::CMFCColorPickerCtrl](#cmfccolorpickerctrl)|Создает объект `CMFCColorPickerCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::GetColor](#getcolor)|Получает цвет, выбранного пользователем.|
 |[CMFCColorPickerCtrl::GetHLS](#gethls)|Извлекает значения оттенка, освещенности и насыщенность цвета, выбранного пользователем.|
@@ -87,7 +87,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorPickerCtrl::DrawCursor](#drawcursor)|Вызвано структурой перед отображением курсор, указывающий на выбранный цвет.|
 
@@ -111,7 +111,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCColorPickerCtrl` объекта с помощью различных методов в `CMFCColorPickerCtrl` класса. В примере показано, как задать тип элемента управления выбора и как задать цвет, hue, освещенности и насыщенность. Пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CMFCColorPickerCtrl` объекта с помощью различных методов в `CMFCColorPickerCtrl` класса. В примере показано, как задать тип элемента управления выбора и как задать цвет, hue, освещенности и насыщенность. Пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

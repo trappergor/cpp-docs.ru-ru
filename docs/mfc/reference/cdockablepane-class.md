@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271918"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769697"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -149,17 +149,17 @@ ms.locfileid: "57271918"
 class CDockablePane : public CPane
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDockablePane::CDockablePane](#cdockablepane)|Создает и инициализирует объект `CDockablePane`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDockablePane::AttachToTabWnd](#attachtotabwnd)|Присоединяет панели на другую панель. При этом создается области с вкладками.|
 |[CDockablePane::CalcFixedLayout](#calcfixedlayout)|Возвращает размер области прямоугольника.|
@@ -229,7 +229,7 @@ class CDockablePane : public CPane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDockablePane::CheckAutoHideCondition](#checkautohidecondition)|Определяет, скрыт ли закрепляемой области (в режиме автоматического скрытия).|
 |[CDockablePane::CheckStopSlideCondition](#checkstopslidecondition)|Определяет, когда автоматическое скрытие закрепляемой области следует остановить скользящий.|
@@ -239,7 +239,7 @@ class CDockablePane : public CPane
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDockablePane::m_bDisableAnimation](#m_bdisableanimation)|Указывает, отключен ли анимация автоматического скрытия закрепляемую панель.|
 |[CDockablePane::m_bHideInAutoHideMode](#m_bhideinautohidemode)|Определяет поведение области, если панель находится в режиме автоматического скрытия.|
@@ -290,7 +290,7 @@ class CDockablePane : public CPane
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CDockablePane` объекта с помощью различных методов в `CDockablePane` класса. В примере показано включение автоматического скрытия все функции для закрепляемую панель, включите заголовок или захвата, включить режим автоматического скрытия, отображение области и анимировать область, в которой находится в режиме автоматического скрытия. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CDockablePane` объекта с помощью различных методов в `CDockablePane` класса. В примере показано включение автоматического скрытия все функции для закрепляемую панель, включите заголовок или захвата, включить режим автоматического скрытия, отображение области и анимировать область, в которой находится в режиме автоматического скрытия. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]
@@ -783,7 +783,7 @@ virtual BOOL DockPaneContainer(
 
 *dwAlignment* может быть любым из следующих значений:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Контейнер закрепляется в верхней части области.|
 |CBRS_ALIGN_BOTTOM|Контейнер закрепляется в нижней части области.|

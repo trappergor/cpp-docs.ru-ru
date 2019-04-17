@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279449"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770841"
 ---
 # <a name="handling-the-apply-button"></a>Обработка кнопки "Применить"
 
@@ -30,7 +30,7 @@ ms.locfileid: "57279449"
 
 Чтобы реализовать последствия кнопки "Применить", окно свойств необходимо сообщить его владельцем или других внешних объектов в приложении, чтобы применить текущие параметры на страницах свойств. В то же время, страницы свойств следует отключить кнопку «Применить» путем вызова `CPropertyPage::SetModified( FALSE )` для всех страниц, которые применены их изменения внешний объект.
 
-Пример того, этот процесс, см. в образце общие MFC [PROPDLG](../visual-cpp-samples.md).
+Пример того, этот процесс, см. в образце общие MFC [PROPDLG](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>См. также
 

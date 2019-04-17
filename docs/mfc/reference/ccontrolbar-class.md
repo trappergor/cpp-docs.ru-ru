@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291630"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773246"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -65,13 +65,13 @@ class CControlBar : public CWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CControlBar::CControlBar](#ccontrolbar)|Создает объект `CControlBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CControlBar::CalcDynamicLayout](#calcdynamiclayout)|Возвращает размер панели динамических элементов управления как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
 |[CControlBar::CalcFixedLayout](#calcfixedlayout)|Возвращает размер панели элементов управления, как [CSize](../../atl-mfc-shared/reference/csize-class.md) объекта.|
@@ -92,7 +92,7 @@ class CControlBar : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CControlBar::m_bAutoDelete](#m_bautodelete)|Если значение ненулевое, `CControlBar` объект удаляется при удалении панели элементов управления Windows.|
 |[CControlBar::m_pInPlaceOwner](#m_pinplaceowner)|Владелец на месте на панели управления.|
@@ -543,7 +543,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CToolBar](../../mfc/reference/ctoolbar-class.md)<br/>

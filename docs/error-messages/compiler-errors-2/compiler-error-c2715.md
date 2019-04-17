@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2715
 ms.assetid: c81567a7-5b65-468f-aaf9-835f91e468e4
-ms.openlocfilehash: 80dd28136b220585a62ed288795d565c07b360f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f0df136952e09d26fbf43104bbf13b001c87255
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600597"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769443"
 ---
 # <a name="compiler-error-c2715"></a>Ошибка компилятора C2715
 
 «Тип»: невозможно выдать или перехватить этот тип
 
-Типы значений не являются допустимыми аргументами, обработка исключений в управляемом коде (см. в разделе [обработка исключений](../../windows/exception-handling-cpp-component-extensions.md) Дополнительные сведения).
+Типы значений не являются допустимыми аргументами, обработка исключений в управляемом коде (см. в разделе [обработка исключений](../../extensions/exception-handling-cpp-component-extensions.md) Дополнительные сведения).
 
 ```
 // C2715a.cpp

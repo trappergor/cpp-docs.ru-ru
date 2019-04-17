@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 04136b3550675f0e50f905047fee551e27da7069
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271870"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768112"
 ---
 # <a name="cfont-class"></a>Класс CFont
 
@@ -41,13 +41,13 @@ class CFont : public CGdiObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFont::CFont](#cfont)|Создает объект `CFont`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFont::CreateFont](#createfont)|Инициализирует `CFont` с заданными характеристиками.|
 |[CFont::CreateFontIndirect](#createfontindirect)|Инициализирует `CFont` объекта с параметрами, приведенными в `LOGFONT` структуры.|
@@ -58,7 +58,7 @@ class CFont : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[HFONT CFont::operator](#operator_hfont)|Возвращает дескриптор шрифта Windows GDI подключен к `CFont` объекта.|
 
@@ -359,6 +359,6 @@ operator HFONT() const;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

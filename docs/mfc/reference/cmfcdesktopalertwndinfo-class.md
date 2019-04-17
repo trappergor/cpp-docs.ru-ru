@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301640"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768293"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>Класс CMFCDesktopAlertWndInfo
 
@@ -35,19 +35,19 @@ class CMFCDesktopAlertWndInfo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCDesktopAlertWndInfo::~CMFCDesktopAlertWndInfo`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::operator=](#operator_eq)||
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCDesktopAlertWndInfo::m_hIcon](#m_hicon)|Дескриптор для значка, который отображается.|
 |[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)|Идентификатор команды, связанные со ссылкой на окно оповещения.|
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWndInfo
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется использование различных элементов в `CMFCDesktopAlertWndInfo` класса. В примере, как задать дескриптор для значка, отображаемого, текст, отображаемый на окно оповещения, ссылки, которая отображается в окне предупреждения с рабочего стола и идентификатор команды, которая связана со ссылкой на окно оповещения. Этот пример является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).
+В следующем примере демонстрируется использование различных элементов в `CMFCDesktopAlertWndInfo` класса. В примере, как задать дескриптор для значка, отображаемого, текст, отображаемый на окно оповещения, ссылки, которая отображается в окне предупреждения с рабочего стола и идентификатор команды, которая связана со ссылкой на окно оповещения. Этот пример является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

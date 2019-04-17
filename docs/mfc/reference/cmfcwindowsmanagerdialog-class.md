@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCWindowsManagerDialog [MFC], CMFCWindowsManagerDialog
 ms.assetid: 35b4b0db-33c4-4b22-94d8-5e3396341340
-ms.openlocfilehash: 566eae1f1b2ca4e91ed2c4b41c36073c205a272e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5089decc7a118cd867aa14df51f5d7e269221108
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302797"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767409"
 ---
 # <a name="cmfcwindowsmanagerdialog-class"></a>Класс CMFCWindowsManagerDialog
 
@@ -29,7 +29,7 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCWindowsManagerDialog::CMFCWindowsManagerDialog](#cmfcwindowsmanagerdialog)|Создает объект `CMFCWindowsManagerDialog`.|
 
@@ -41,7 +41,7 @@ class CMFCWindowsManagerDialog : public CDialog
 
 ## <a name="example"></a>Пример
 
-В следующем примере демонстрируется создание `CMFCWindowsManagerDialog` путем вызова метода `CMDIFrameWndEx::ShowWindowsDialog`. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+В следующем примере демонстрируется создание `CMFCWindowsManagerDialog` путем вызова метода `CMDIFrameWndEx::ShowWindowsDialog`. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmfcwindowsmanagerdialog-class_1.cpp)]
 

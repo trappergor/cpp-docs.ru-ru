@@ -3,12 +3,12 @@ title: Основные понятия MFC
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633382"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766512"
 ---
 # <a name="mfc-concepts"></a>Основные понятия MFC
 
@@ -66,5 +66,5 @@ ms.locfileid: "50633382"
 [Справочник по библиотеке MFC](../mfc/mfc-desktop-applications.md)<br/>
 Предоставляет справочные материалы по библиотеке MFC, а также набор классов, образующих исполняющую среду, т.е. платформу приложения, написанного для интерфейса Windows API.
 
-[Примеры MFC](../visual-cpp-samples.md)<br/>
+[Примеры MFC](../overview/visual-cpp-samples.md)<br/>
 Содержит ссылки на примеры, показывающие, как использовать MFC в настольных приложений, библиотек DLL, приложений баз данных, элементы управления, веб-приложений и многое другое.

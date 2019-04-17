@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821369"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770932"
 ---
 # <a name="fatal-error-c1001"></a>Неустранимая ошибка C1001
 
@@ -23,4 +23,4 @@ ms.locfileid: "57821369"
 
 Если оптимизация, за которой возникла ошибка, попробуйте переписать строки, где возникла ошибка или несколько строк кода вокруг этой строки. Чтобы увидеть код так, как компилятор видит его после предварительной обработки, можно использовать [/P (Предварительная обработка в файл)](../../build/reference/p-preprocess-to-a-file.md) параметр.
 
-Дополнительные сведения о том, как выявить источник ошибки и как сообщить о внутренней ошибки компилятора в корпорацию Майкрософт, см. в разделе [как сообщить о проблеме с набором инструментов Visual C++](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md).
+Дополнительные сведения о том, как выявить источник ошибки и как сообщить о внутренней ошибки компилятора в корпорацию Майкрософт, см. в разделе [как сообщить о проблеме с набором инструментов Visual C++](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md).

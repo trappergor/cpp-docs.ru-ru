@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274431"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772063"
 ---
 # <a name="cpaintdc-class"></a>Cpaintdc-класс
 
@@ -33,19 +33,19 @@ class CPaintDC : public CDC
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPaintDC::CPaintDC](#cpaintdc)|Создает `CPaintDC` подключен к указанным [CWnd](../../mfc/reference/cwnd-class.md).|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPaintDC::m_ps](#m_ps)|Содержит [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) используется для рисования клиентской области.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPaintDC::m_hWnd](#m_hwnd)|HWND, к которому `CPaintDC` объект присоединен.|
 
@@ -128,6 +128,6 @@ PAINTSTRUCT m_ps;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDC](../../mfc/reference/cdc-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301458"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773142"
 ---
 # <a name="ctoolbar-class"></a>Класс CToolBar
 
@@ -65,13 +65,13 @@ class CToolBar : public CControlBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CToolBar::CToolBar](#ctoolbar)|Создает объект `CToolBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|Возвращает индекс кнопки с заданному идентификатору команды.|
 |[CToolBar::Create](#create)|На панели инструментов Windows создает и присоединяет его к `CToolBar` объекта.|
@@ -717,9 +717,9 @@ void SetSizes(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLBARS](../../visual-cpp-samples.md)<br/>
-[Образец DLGCBR32 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC DOCKTOOL ПОКАЗАНА](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[Образец DLGCBR32 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC DOCKTOOL ПОКАЗАНА](../../overview/visual-cpp-samples.md)<br/>
 [Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)<br/>

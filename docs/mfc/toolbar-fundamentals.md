@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258402"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775495"
 ---
 # <a name="toolbar-fundamentals"></a>Основные сведения о панелях инструментов
 
@@ -62,7 +62,7 @@ ms.locfileid: "57258402"
 1. Вызывает функции для реализации закрепления, с плавающей запятой и всплывающие подсказки. Подробные сведения об этих вызовов, см. в статье [закрепления и плавающие панели инструментов](../mfc/docking-and-floating-toolbars.md).
 
 > [!NOTE]
->  Пример MFC Общие [DOCKTOOL ПОКАЗАНА](../visual-cpp-samples.md) включает иллюстрации новых и старых панелей инструментов MFC. Панели инструментов, использующих `COldToolbar` требуют вызовов на шаге 2, чтобы `LoadBitmap` (а не `LoadToolBar`) и `SetButtons`. Новые панели инструментов требуют вызовов `LoadToolBar`.
+>  Пример MFC Общие [DOCKTOOL ПОКАЗАНА](../overview/visual-cpp-samples.md) включает иллюстрации новых и старых панелей инструментов MFC. Панели инструментов, использующих `COldToolbar` требуют вызовов на шаге 2, чтобы `LoadBitmap` (а не `LoadToolBar`) и `SetButtons`. Новые панели инструментов требуют вызовов `LoadToolBar`.
 
 Закрепление, с плавающей запятой и средство советы вызовы являются необязательными. Вы можете удалить эти строки из `OnCreate` при желании. Результат — панель инструментов, которая остается предопределенной, float или redock не удалось и не удалось отобразить всплывающие подсказки.
 

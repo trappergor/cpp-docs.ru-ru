@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296739"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769905"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -51,17 +51,17 @@ ms.locfileid: "57296739"
 class CBitmap : public CGdiObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBitmap::CBitmap](#cbitmap)|Создает объект `CBitmap`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|Инициализирует объект с зависящие от устройства памяти растрового изображения, который имеет заданную ширину, высоту и битовый шаблон.|
 |[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|Инициализирует объект с точечным рисунком ширину, высоту и битовый шаблон (если оно указано), заданный в `BITMAP` структуры.|
@@ -79,7 +79,7 @@ class CBitmap : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBitmap::operator HBITMAP](#operator_hbitmap)|Возвращает дескриптор Windows, подключенный к `CBitmap` объекта.|
 
@@ -521,6 +521,6 @@ GDI не использует эти значения, за исключение
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
 [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

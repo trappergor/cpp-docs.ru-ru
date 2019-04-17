@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276290"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769651"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 
@@ -45,13 +45,13 @@ class COleDocObjectItem : public COleClientItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Печать документа приложения-контейнера, используя параметры принтера по умолчанию.|
 |[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, указанные пользователем.|
@@ -151,7 +151,7 @@ HRESULT ExecCommand(
 
 Возвращает значение S_OK, если выполнение прошло успешно; в противном случае возвращает одно из следующих кодов ошибки.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |E_UNEXPECTED|Произошла непредвиденная ошибка.|
 |E_FAIL|Произошла ошибка.|
@@ -305,7 +305,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MFCBIND](../../visual-cpp-samples.md)<br/>
+[Пример MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
