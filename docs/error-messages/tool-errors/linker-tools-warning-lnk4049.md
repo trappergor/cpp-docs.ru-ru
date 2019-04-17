@@ -1,23 +1,25 @@
 ---
 title: Предупреждение средств компоновщика LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477357"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674257"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>Предупреждение средств компоновщика LNK4049
 
 > символ "*символ*«определен в»*filename.obj*" импортируется
 
-Символ был и экспортировать из импортирован в программу.
+[__declspec(dllimport)](../../cpp/dllexport-dllimport.md) был указан для *символ* несмотря на то, что этот символ определен в объектном файле *filename.obj* в одном образе. Удалить `__declspec(dllimport)` модификатор, чтобы устранить это предупреждение.
+
+## <a name="remarks"></a>Примечания
 
 Это предупреждение создается компоновщиком при определении символа в файле одного объекта и сослаться на него с помощью `__declspec(dllimport)` модификатора объявления в другом.
 
