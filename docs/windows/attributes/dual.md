@@ -7,10 +7,10 @@ helpviewer_keywords:
 - dual attribute
 ms.assetid: 5d4a9069-d819-42cd-ba56-bbcda17157d9
 ms.openlocfilehash: 8f02f6b69b31f10b41d5c920cfc2ad62dfa1cef2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023962"
 ---
 # <a name="dual"></a>dual
@@ -59,7 +59,7 @@ __interface IStatic : IDispatch
 
 |||
 |-|-|
-|**Применение**|**интерфейс**|
+|**Применение**|**interface**|
 |**Повторяемый**|Нет|
 |**Обязательные атрибуты**|Нет|
 |**Недопустимые атрибуты**|`dispinterface`|
@@ -70,7 +70,7 @@ __interface IStatic : IDispatch
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Список атрибутов по использованию](attributes-by-usage.md)<br/>
-[пользовательский](custom-cpp.md)<br/>
+[custom](custom-cpp.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [object](object-cpp.md)<br/>
 [__interface](../../cpp/interface.md)

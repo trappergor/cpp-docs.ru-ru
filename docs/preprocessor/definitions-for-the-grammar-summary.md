@@ -6,10 +6,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
 ms.openlocfilehash: 6e8671ba0d68b13f68db0f2b08dab4fe98f917e7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024959"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>Общие сведения об определениях для грамматики
@@ -18,7 +18,7 @@ ms.locfileid: "59024959"
 
 Нетерминальные слова — это местозаполнители в синтаксисе. Большая их часть определена в других местах этой сводки синтаксиса. Определения могут быть рекурсивными. Следующие Нетерминальные слова определены в [лексические соглашения](../cpp/lexical-conventions.md) раздел *Справочник по языку C++*:
 
-`constant`, *константное_выражение*, *идентификатор*, *ключевое слово*, `operator`, `punctuator`
+`constant`, *constant-expression*, *identifier*, *keyword*, `operator`, `punctuator`
 
 Необязательный компонент обозначается атрибутом <sub>opt</sub> в нижнем индексе. Например, ниже приведено необязательное выражение, заключенное в фигурные скобки:
 
