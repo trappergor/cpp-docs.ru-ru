@@ -7,10 +7,10 @@ helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
 ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040584"
 ---
 # <a name="module-c"></a>module (C++)
@@ -36,7 +36,7 @@ ms.locfileid: "59040584"
 
 - `unspecified` Отключает внедрение кода ATL, связанного с атрибутом module: внедрение класса ATL Module, глобальный экземпляр _AtlModule и запись функции точек. Не отключает внедрение кода ATL из-за других атрибутов в проекте.
 
-*имя*<br/>
+*name*<br/>
 (Необязательно) Имя блока библиотеки.
 
 *version*<br/>
@@ -48,7 +48,7 @@ ms.locfileid: "59040584"
 *lcid*<br/>
 Параметр локализации. Дополнительные сведения см. в описании [lcid](/windows/desktop/Midl/lcid) .
 
-*элемент управления*<br/>
+*control*<br/>
 (Необязательно) Указывает, что все коклассы в библиотеке являются элементами управления.
 
 *helpstring*<br/>
@@ -72,7 +72,7 @@ ms.locfileid: "59040584"
 *restricted*<br/>
 (Необязательно) Элементы библиотеки нельзя вызывать произвольным образом. Дополнительные сведения см. в описании атрибута MIDL [restricted](/windows/desktop/Midl/restricted) .
 
-*пользовательский*<br/>
+*custom*<br/>
 (Необязательно) Один или несколько атрибутов; Это похоже на [пользовательских](custom-cpp.md) атрибута. Первый параметр для *пользовательских* является идентификатором GUID атрибута. Пример:
 
 ```
@@ -95,19 +95,19 @@ ms.locfileid: "59040584"
 
 Если этот атрибут используется в проекте, где применяется ATL, поведение атрибута изменяется. Помимо описанного выше поведения, атрибут также вставляет глобальный объект (вызывается `_AtlModule`) правильного типа и дополнительный код поддержки. Если атрибут является автономным, он вставляет класс, производный от правильного типа module. Если атрибут применяется к классу, он добавляет базовый класс правильного типа module. Правильный тип определяется по значению *тип* параметр:
 
-- `type` = **библиотеки DLL**
+- `type` = **dll**
 
    [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) используется в качестве базового класса и стандартных точек входа библиотеки DLL, необходимых для COM-сервера. Это точки входа: [DllMain](/windows/desktop/Dlls/dllmain), [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver), [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver), [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)и [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891).
 
-- `type` = **EXE-файла**
+- `type` = **exe**
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **Службы**
+- `type` = **service**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) используется в качестве базового класса и стандартной точки входа исполняемого файла [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain).
 
-- `type` = **Этот атрибут не задан**
+- `type` = **unspecified**
 
    Отключает внедрение кода ATL, связанного с атрибутом module.
 
@@ -166,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[библиотека](/windows/desktop/Midl/library)<br/>
+[Библиотека](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
