@@ -9,10 +9,10 @@ helpviewer_keywords:
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
 ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041245"
 ---
 # <a name="codeseg"></a>code_seg
@@ -32,7 +32,7 @@ ms.locfileid: "59041245"
 **pop**<br/>
 (Необязательно) Удаление записи из верхней части внутреннего стека компилятора.
 
-*идентификатор*<br/>
+*identifier*<br/>
 (Необязательно) При использовании с **принудительной**, назначает имя записи во внутреннем стеке компилятора. При использовании с **pop**, извлекает записи из внутреннего стека до *идентификатор* удаляется; Если *идентификатор* не найден во внутреннем стеке не выводятся.
 
 *Идентификатор* позволяет вывести только с одним несколько записей **pop** команды.

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777587"
 ---
 # <a name="scrolling-and-scaling-views"></a>Изменение масштаба и прокрутка представлений
@@ -35,7 +35,7 @@ MFC поддерживает представления, прокрутите с
 
 Любое представление может обрабатывать сообщения полосы прокрутки в его `OnHScroll` и `OnVScroll` функций-членов. Вы можете либо реализуйте обработку сообщений полосы прокрутки в этих функциях делает всю работу, самостоятельно или воспользоваться `CScrollView` класс для обработки прокрутка для вас.
 
-`CScrollView` выполняет следующие функции:
+Метод `CScrollView` выполняет следующие действия.
 
 - Управляет размеры окна и окна просмотра и режимы сопоставления
 

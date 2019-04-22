@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
 ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778251"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777930"
 ---
 # <a name="compiler-error-c3821"></a>Ошибка компилятора C3821
 
@@ -19,7 +19,7 @@ ms.locfileid: "58778251"
 
 Функций во встроенной сборке или [setjmp](../../c-runtime-library/reference/setjmp.md) не может содержать типы значений или управляемые классы. Чтобы устранить эту ошибку, удалите встроенной сборке и `setjmp` или удаления управляемых объектов.
 
-C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделе [списками аргументов переменных (...) (C + +/ CLI) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [семантика стека C++ для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
+C3821 также может возникать при попытке использования автоматического хранения в функции с переменным количеством аргументов.  Дополнительные сведения см. в разделе [списками аргументов переменных (...) (C++Выполняет) ](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md) и [ C++ стека семантику для ссылочных типов](../../dotnet/cpp-stack-semantics-for-reference-types.md).
 
 ## <a name="example"></a>Пример
 

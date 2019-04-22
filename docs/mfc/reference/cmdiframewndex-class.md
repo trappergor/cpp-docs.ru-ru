@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778563"
 ---
 # <a name="cmdiframewndex-class"></a>Класс CMDIFrameWndEx
@@ -719,7 +719,7 @@ void EnableMDITabs(
 *bTabCloseButton*<br/>
 Задает необходимость отображения кнопок закрыть вкладку.
 
-*стиль*<br/>
+*Стиль*<br/>
 Задает стиль вкладок. Используйте STYLE_3D_SCROLLED обычные вкладки или STYLE_3D_ONENOTE для вкладок Microsoft OneNote.
 
 *bTabCustomTooltips*<br/>
@@ -1438,7 +1438,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *pMenuButton*<br/>
@@ -1888,7 +1888,7 @@ void SetupToolbarMenu(
 
 ### <a name="parameters"></a>Параметры
 
-*menu*<br/>
+*Меню*<br/>
 [in] Ссылку на [класс CMenu](../../mfc/reference/cmenu-class.md) объект для изменения.
 
 *uiViewUserToolbarCmdFirst*<br/>

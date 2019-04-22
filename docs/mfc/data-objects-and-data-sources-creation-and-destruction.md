@@ -16,23 +16,23 @@ helpviewer_keywords:
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775248"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>Объекты данных и источников данных: Создание и уничтожение
 
 Как описано в статье [объекты данных и источники данных (OLE)](../mfc/data-objects-and-data-sources-ole.md), объекты и источники данных представляют обе стороны передачи данных. В этой статье объясняется, когда нужно создавать и удалять эти объекты и источники для правильной передачи данных. В том числе описываются следующие операции:
 
-- [создание объектов данных;](#_core_creating_data_objects)
+- [Создание объектов данных](#_core_creating_data_objects)
 
-- [уничтожение объектов данных;](#_core_destroying_data_objects)
+- [Уничтожение объектов данных](#_core_destroying_data_objects)
 
-- [создание источников данных;](#_core_creating_data_sources)
+- [Создание источников данных](#_core_creating_data_sources)
 
-- [уничтожение источников данных.](#_core_destroying_data_sources)
+- [Уничтожение источников данных](#_core_destroying_data_sources)
 
 ##  <a name="_core_creating_data_objects"></a> Создание объектов данных
 

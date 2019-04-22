@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 03f9e5e0cac9cc71080bfe97d6a3115fd3cc99b5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419001"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58781657"
 ---
 # <a name="cpropertysheet-class"></a>Cpropertysheet-класс
 
@@ -73,13 +73,13 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPropertySheet::CPropertySheet](#cpropertysheet)|Создает объект `CPropertySheet`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|
 |[CPropertySheet::Construct](#construct)|Создает объект `CPropertySheet`.|
@@ -105,7 +105,7 @@ class CPropertySheet : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPropertySheet::m_psh](#m_psh)|Windows [PROPSHEETHEADER](/windows/desktop/api/prsht/ns-prsht-_propsheetheadera_v2) структуры. Предоставляет доступ к основным свойством параметров таблицы стилей.|
 
@@ -141,7 +141,7 @@ class CPropertySheet : public CWnd
 
 Обмен данными между `CPropertySheet` объекта и внешнего объекта похож на обмен данными с `CDialog` объекта. Важное отличие заключается, что параметры свойств как правило, переменные-члены `CPropertyPage` объектов, а не из `CPropertySheet` сам объект.
 
-Можно создать тип вкладки диалогового окна вызывается мастер, который состоит из свойств последовательностью страницы свойств, которые проводят пользователя через шаги операции, такие как Настройка устройства или создание информационного бюллетеня. В диалоговом окне вкладку тип мастера на страницах свойств не имеют вкладки и только одно свойство страница видна за раз. Кроме того, вместо того, **ОК** и **применить** имеет кнопки, диалоговое окно вкладки мастера **обратно** кнопки **Далее** или  **Готово** кнопки **отменить** кнопку и **помочь** кнопки.
+Можно создать тип вкладки диалогового окна вызывается мастер, который состоит из свойств последовательностью страницы свойств, которые проводят пользователя через шаги операции, такие как Настройка устройства или создание информационного бюллетеня. В диалоговом окне вкладку тип мастера на страницах свойств не имеют вкладки и только одно свойство страница видна за раз. Кроме того, вместо того, **ОК** и **применить** имеет кнопки, диалоговое окно вкладки мастера **обратно** кнопки **Далее** или **Готово** кнопки **отменить** кнопку и **помочь** кнопки.
 
 Чтобы создать диалоговое окно мастера, выполните те же действия, которые необходимо выполнить для создания стандартных свойств, но вызывает [SetWizardMode](#setwizardmode) перед вызовом метода [DoModal](#domodal). Чтобы включить кнопок мастера, вызовите [SetWizardButtons](#setwizardbuttons), используя флаги для настройки их функциональности и внешнему виду. Чтобы включить **Готово** "Кнопка", вызовите [SetFinishText](#setfinishtext) после пользователя были предприняты никакие меры на последней странице мастера.
 
@@ -830,9 +830,9 @@ void SetWizardMode();
 
 ## <a name="see-also"></a>См. также
 
-[Образец CMNCTRL1 MFC](../../visual-cpp-samples.md)<br/>
-[Образец CMNCTRL2 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC PROPDLG](../../visual-cpp-samples.md)<br/>
-[Пример MFC: SNAPVW](../../visual-cpp-samples.md)<br/>
+[Образец CMNCTRL1 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Образец CMNCTRL2 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC PROPDLG](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC: SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

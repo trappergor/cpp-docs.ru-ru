@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
 ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781020"
 ---
 # <a name="platformobject-class"></a>Класс Platform::Object
@@ -156,7 +156,7 @@ public:static bool ReferenceEquals(  Object^ obj1,   Object^ obj2);
 
 **значение true,** Если два объекта одинаковы; в противном случае **false**.
 
-## <a name="tostring"></a>  Метод Object::ToString (C + +/ CX)
+## <a name="tostring"></a>  Метод Object::ToString (C++/CX)
 
 Возвращает строку, представляющую текущий объект.
 

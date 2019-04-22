@@ -24,10 +24,10 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041511"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>Практическое руководство. Включение ресурсов во время компиляции (C++)
@@ -50,7 +50,7 @@ ms.locfileid: "59041511"
 
 Чтобы приступить к работе, откройте **включения ресурсов** диалоговое окно, щелкните правой кнопкой мыши RC-файла в [представление ресурсов](how-to-create-a-resource-script-file.md#create-resources)выберите **включения ресурсов** и запишите следующие свойства:
 
-| Свойство. | Описание |
+| Свойство | Описание |
 |---|---|
 | **Файл символов заголовков** | Позволяет изменить имя файла заголовка, где хранятся определения символов для файлов ресурсов.<br/><br/>Дополнительные сведения см. в разделе [изменение имен файлов символов заголовков](../windows/changing-the-names-of-symbol-header-files.md). |
 | **Директивы символов только для чтения** | Позволяет включать файлы заголовков, содержащие символы, которые не должно изменяться.<br/><br/>Например файлы символов для совместного использования с другими проектами. Это может также включать h-файлы MFC. Дополнительные сведения см. в разделе [Включение общих (только для чтения) или вычисляемых символов](../windows/including-shared-read-only-or-calculated-symbols.md). |
@@ -98,5 +98,5 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Файлы ресурсов](../windows/resource-files-visual-studio.md)<br/>
-[Практическое руководство. Создание ресурсов](../windows/how-to-create-a-resource-script-file.md)<br/>
+[Практическое руководство. Создать ресурсы](../windows/how-to-create-a-resource-script-file.md)<br/>
 [Практическое руководство. Управление ресурсами](../windows/how-to-copy-resources.md)<br/>
