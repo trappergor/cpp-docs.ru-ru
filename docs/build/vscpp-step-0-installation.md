@@ -1,5 +1,5 @@
 ---
-title: Установка поддержки C++ в Visual Studio
+title: Справка по установке средства С++ в Visual Studio
 description: Поддержка Visual C++ в Visual Studio
 ms.custom: mvc
 ms.date: 04/02/2019
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870784"
 ---
-# <a name="install-c-support-in-visual-studio"></a>Установка поддержки C++ в Visual Studio
+# <a name="install-c-support-in-visual-studio"></a>Справка по установке средства С++ в Visual Studio
 
 Если вы еще не скачали и установлен на компьютере Visual Studio и инструментов Visual C++, вот как приступить к работе.
 
@@ -49,7 +49,7 @@ ms.locfileid: "58870784"
 Теперь скачайте файл начального загрузчика Visual Studio. Чтобы сделать это, нажмите кнопку ниже, выберите выпуск Visual Studio, необходимо выбрать **Сохранить**, а затем выберите **открыть папку**.
 
  > [!div class="button"]
- > [Скачивание Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
+ > [Скачать Visual Studio 2012](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>Шаг 3. Установка установщика Visual Studio
 
@@ -146,7 +146,7 @@ ms.locfileid: "58870784"
 1. Скачайте последнюю версию установщика Visual Studio 2017 для Windows.
 
    > [!div class="nextstepaction"]
-   > [Установите Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+   > [Установить Visual Studio 2017 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
    > Выпуск Community предназначен для индивидуальных разработчиков, использования при аудиторном обучении и в научных исследованиях, а также разработки решений с открытым кодом. В других целях установите [Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) или [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017).

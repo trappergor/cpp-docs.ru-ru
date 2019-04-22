@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms [C++], MFC support
 ms.assetid: 63fb099b-1dff-469c-9e34-dab52e122fcd
 ms.openlocfilehash: 38c5c37712b430b137934d441056e60f2c130f78
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773103"
 ---
 # <a name="using-a-windows-form-user-control-in-mfc"></a>Использование пользовательского элемента управления формы Windows Form в MFC
@@ -32,7 +32,7 @@ ms.locfileid: "58773103"
 > Интеграция MFC Windows Forms работает только в проектах, которые динамически связываются с MFC (проекты, в котором `_AFXDLL` определен).
 
 > [!NOTE]
-> При создании приложения с помощью (изменено) частную копию интерфейсов MFC Windows Forms DLL (библиотеку mfcmifc80.dll), он не сможет установить в глобальном кэше СБОРОК, если ключ Майкрософт замените свой собственный ключ поставщика. Дополнительные сведения о подписи сборки см. в разделе [программирование с использованием сборок](/dotnet/framework/app-domains/programming-with-assemblies) и [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+> При создании приложения с помощью (изменено) частную копию интерфейсов MFC Windows Forms DLL (библиотеку mfcmifc80.dll), он не сможет установить в глобальном кэше СБОРОК, если ключ Майкрософт замените свой собственный ключ поставщика. Дополнительные сведения о подписи сборки см. в разделе [программирование с использованием сборок](/dotnet/framework/app-domains/programming-with-assemblies) и [сборки со строгими именами (подписывание сборок) (C++выполняет)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 Если приложение MFC использует Windows Forms, необходимо повторно распространить библиотеку mfcmifc80.dll с вашим приложением. Дополнительные сведения см. в разделе [распространение библиотеки MFC](../windows/redistributing-the-mfc-library.md).
 

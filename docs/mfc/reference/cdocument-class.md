@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774187"
 ---
 # <a name="cdocument-class"></a>Класс CDocument
@@ -372,10 +372,10 @@ virtual POSITION FindChunk(
 
 ### <a name="parameters"></a>Параметры
 
-*guid*<br/>
+*Идентификатор GUID*<br/>
 Указывает GUID фрагмент для поиска.
 
-*Идентификатор процесса*<br/>
+*pid*<br/>
 Указывает код продукта блока, для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -506,7 +506,7 @@ virtual BOOL GetThumbnail(
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Указывает ширину и высоту растрового изображения.
 
 *phbmp*<br/>
@@ -1116,7 +1116,7 @@ virtual void ReportSaveLoadException(
 *lpszPathName*<br/>
 Указывает имя документа, которая находится в процессе сохранения или загрузки.
 
-*й*<br/>
+*e*<br/>
 Указывает исключение, вызванное исключение. Может иметь значение NULL.
 
 *bSaving*<br/>

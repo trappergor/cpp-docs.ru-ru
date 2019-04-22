@@ -8,10 +8,10 @@ helpviewer_keywords:
 - movntsd instruction
 ms.assetid: 2b4bea5e-e64e-45fa-9afc-88a2e4b82cfc
 ms.openlocfilehash: 3555b71e15d6f9c618a83f573d6da3cda9e7b705
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023520"
 ---
 # <a name="mmstreamsd"></a>_mm_stream_sd
@@ -34,7 +34,7 @@ void _mm_stream_sd(
 *dest*<br/>
 [out] Указатель на расположение, куда будет записан исходных данных.
 
-*Исходный код*<br/>
+*Источник*<br/>
 [in] 128-разрядным значением, содержащим `double` значение для записи в его нижней 64 бита...
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -90,4 +90,4 @@ d[0] = -1, d[1] = 1
 [_mm_stream_ss](../intrinsics/mm-stream-ss.md)<br/>
 [_mm_store_sd](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_sd)<br/>
 [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

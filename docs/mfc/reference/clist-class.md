@@ -51,10 +51,10 @@ helpviewer_keywords:
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
 ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780955"
 ---
 # <a name="clist-class"></a>Класс CList
@@ -104,7 +104,7 @@ class CList : public CObject
 
 #### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Тип объекта, который хранится в списке.
 
 *ARG_TYPE*<br/>
@@ -288,10 +288,10 @@ const TYPE& GetAt(POSITION position) const;
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип объекта в списке.
 
-*Положение*<br/>
+*положение*<br/>
 Позиция элемента в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -340,7 +340,7 @@ TYPE& GetHead();
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип объекта в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -384,7 +384,7 @@ const TYPE& GetNext(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип элементов в списке.
 
 *rPosition*<br/>
@@ -419,7 +419,7 @@ const TYPE& GetPrev(POSITION& rPosition) const;
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип элементов в списке.
 
 *rPosition*<br/>
@@ -474,7 +474,7 @@ const TYPE& GetTail() const;
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип элементов в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Параметры
 
-*Положение*<br/>
+*положение*<br/>
 Значение ПОЗИЦИИ, возвращенное предыдущим `GetNext`, `GetPrev`, или `Find` вызова функции-члена.
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Параметры
 
-*Положение*<br/>
+*положение*<br/>
 Значение ПОЗИЦИИ, возвращенное предыдущим `GetNext`, `GetPrev`, или `Find` вызова функции-члена.
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>Параметры
 
-*Положение*<br/>
+*положение*<br/>
 Позиция элемента, который требуется удалить из списка.
 
 ### <a name="remarks"></a>Примечания
@@ -626,7 +626,7 @@ TYPE RemoveHead();
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип элементов в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -651,7 +651,7 @@ TYPE RemoveTail();
 
 ### <a name="parameters"></a>Параметры
 
-*TYPE*<br/>
+*ТИП*<br/>
 Параметр шаблона, указывающий тип элементов в списке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>Параметры
 
-*pos*<br/>
+*торговых терминалов*<br/>
 ПОЗИЦИЯ элемента, который требуется задать.
 
 *ARG_TYPE*<br/>
@@ -701,4 +701,4 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CMap](../../mfc/reference/cmap-class.md)<br/>
-[CArray-класс](../../mfc/reference/carray-class.md)
+[Класс CArray](../../mfc/reference/carray-class.md)

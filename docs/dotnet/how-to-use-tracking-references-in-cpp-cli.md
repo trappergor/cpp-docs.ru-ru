@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Использование отслеживаемых ссылок в C + +/ CLI
+title: Практическое руководство. Использование отслеживаемых ссылок в C++выполняет
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777055"
 ---
-# <a name="how-to-use-tracking-references-in-ccli"></a>Практическое руководство. Использование отслеживаемых ссылок в C + +/ CLI
+# <a name="how-to-use-tracking-references-in-ccli"></a>Практическое руководство. Использование отслеживаемых ссылок в C++выполняет
 
-В этой статье показано, как использовать отслеживаемую ссылку (%) в C + +/ CLI для передачи типов среды выполнения (CLR) общий язык по ссылке.
+В этой статье показано, как использовать отслеживаемую ссылку (%) в C++выполняет для передачи типов среды выполнения (CLR) общий язык по ссылке.
 
 ## <a name="to-pass-clr-types-by-reference"></a>Для передачи типов CLR по ссылке
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-В приведенном ниже примере показано, что получение адреса отслеживаемую ссылку возвращает [interior_ptr (C + +/ CLI)](../extensions/interior-ptr-cpp-cli.md)и показано, как изменять и доступ к данным через отслеживаемую ссылку.
+В приведенном ниже примере показано, что получение адреса отслеживаемую ссылку возвращает [interior_ptr (C++выполняет)](../extensions/interior-ptr-cpp-cli.md)и показано, как изменять и доступ к данным через отслеживаемую ссылку.
 
 ```cpp
 // tracking_reference_data.cpp

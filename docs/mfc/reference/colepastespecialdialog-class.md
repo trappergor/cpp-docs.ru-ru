@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776912"
 ---
 # <a name="colepastespecialdialog-class"></a>Класс COlePasteSpecialDialog
@@ -122,7 +122,7 @@ void AddFormat(
 
 ### <a name="parameters"></a>Параметры
 
-*FMT*<br/>
+*fmt*<br/>
 Ссылка на тип данных для добавления.
 
 *lpszFormat*<br/>
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 Строка, описывающая результат, если выбран этот формат, в диалоговом окне.
 
-*флаги*<br/>
+*flags*<br/>
 Различные связь и внедрение параметры, доступные для данного формата. Этот флаг представляет собой битовую комбинацию одного или нескольких разных значений в OLEUIPASTEFLAG перечисляемый тип.
 
 *CF*<br/>

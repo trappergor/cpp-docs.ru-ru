@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Определение и использование делегатов (C + +/ CLI)
+title: Практическое руководство. Определение и использование делегатов (C++выполняет)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
 ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771315"
 ---
-# <a name="how-to-define-and-use-delegates-ccli"></a>Практическое руководство. Определение и использование делегатов (C + +/ CLI)
+# <a name="how-to-define-and-use-delegates-ccli"></a>Практическое руководство. Определение и использование делегатов (C++выполняет)
 
-В этой статье показано, как определить и использовать делегатов в C + +/ CLI.
+В этой статье показано, как определить и использовать делегатов в C++выполняет.
 
 Несмотря на то, что платформа .NET Framework предоставляет ряд делегаты, иногда может потребоваться определить новые делегаты.
 
