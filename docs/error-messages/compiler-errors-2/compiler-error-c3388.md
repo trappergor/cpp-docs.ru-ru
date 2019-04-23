@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
 ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780032"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776734"
 ---
 # <a name="compiler-error-c3388"></a>Ошибка компилятора C3388
 
 "тип": не допускается в качестве ограничения; предполагается, что "класс ref" продолжит синтаксический разбор
 
-Ограничение для универсального типа указано неправильно. См. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Дополнительные сведения.
+Ограничение для универсального типа указано неправильно. См. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md) Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 
