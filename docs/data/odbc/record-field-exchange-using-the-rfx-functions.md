@@ -11,10 +11,10 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035988"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>Обмен полями записей: Использование функций RFX
@@ -64,7 +64,7 @@ ms.locfileid: "59035988"
 
 ## <a name="see-also"></a>См. также
 
-[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)<br/>
 [Набор записей. Параметризация набора записей (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)<br/>
 [Набор записей. Динамическая привязка столбцов данных (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)<br/>

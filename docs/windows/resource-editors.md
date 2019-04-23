@@ -22,10 +22,10 @@ helpviewer_keywords:
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
 ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038665"
 ---
 # <a name="resource-editors-c"></a>Редакторы ресурсов (C++)
@@ -40,9 +40,9 @@ ms.locfileid: "59038665"
 |Редактор|Редактируемый элемент|
 |----------------|----------------|
 |[Редактор сочетаний клавиш](../windows/accelerator-editor.md)|Таблицы сочетаний клавиш в проектах Visual C++|
-|[двоичный редактор](binary-editor.md)|Двоичные данные и настраиваемые ресурсы в проектах Visual C++, Visual Basic или Visual C#|
+|[Binary Editor](binary-editor.md)|Двоичные данные и настраиваемые ресурсы в проектах Visual C++, Visual Basic или Visual C#|
 |[Редактор диалоговых окон](../windows/dialog-editor.md)|Диалоговые окна в проектах Visual C++|
-|[редактор изображений](../windows/image-editor-for-icons.md)|Точечные рисунки, значки, курсоры и другие файлы изображений в проектах Visual C++, Visual Basic или Visual C#|
+|[Image Editor](../windows/image-editor-for-icons.md)|Точечные рисунки, значки, курсоры и другие файлы изображений в проектах Visual C++, Visual Basic или Visual C#|
 |[Редактор меню](../windows/menu-editor.md)|Ресурсы меню в проектах Visual C++|
 |[Редактор ленты (Ribbon)](../mfc/ribbon-designer-mfc.md)|Ресурсы ленты в проектах MFC|
 |[Редактор строк](../windows/string-editor.md)|Таблицы строк в проектах Visual C++|

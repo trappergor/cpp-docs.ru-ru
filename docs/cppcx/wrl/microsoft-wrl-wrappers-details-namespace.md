@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Details namespace
 ms.assetid: 6d3f04ac-9b53-4a82-a188-a85309ec34a4
 ms.openlocfilehash: deccd4519b2ddf18725dca5af13b94ac79d6e280
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038726"
 ---
 # <a name="microsoftwrlwrappersdetails-namespace"></a>Пространство имен Microsoft::WRL::Wrappers::Details
@@ -36,7 +36,7 @@ namespace Microsoft::WRL::Wrappers::Details;
 
 |name|Описание|
 |----------|-----------------|
-|[SyncLockT - класс](synclockt-class.md)|Представляет тип, который может занять монопольного или общее владение ресурсом.|
+|[Класс SyncLockT](synclockt-class.md)|Представляет тип, который может занять монопольного или общее владение ресурсом.|
 |[Класс SyncLockWithStatusT](synclockwithstatust-class.md)|Представляет тип, который может занять монопольного или общее владение ресурсом.|
 
 ### <a name="methods"></a>Методы

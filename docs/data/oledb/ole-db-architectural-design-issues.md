@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037676"
 ---
 # <a name="ole-db-architectural-design-issues"></a>Вопросы проектирования архитектуры OLE DB
@@ -33,7 +33,7 @@ ms.locfileid: "59037676"
 
 Учитывая возможные сочетания технологий (например, с помощью компонентов ADO с компонентами OLE DB и перенос кода ODBC OLE DB), охватывающий все ситуации выходит за рамки документации Visual C++. Тем не менее множество статей, в которых рассматриваются различные сценарии доступны на следующих веб-сайтах Microsoft:
 
-- [Справка и поддержка Майкрософт](https://support.microsoft.com/)
+- [Центр справки и поддержки Майкрософт](https://support.microsoft.com/)
 
 - [Обзор технических статей для доступа к данным Microsoft](https://msdn.microsoft.com/library/ms810811.aspx)
 

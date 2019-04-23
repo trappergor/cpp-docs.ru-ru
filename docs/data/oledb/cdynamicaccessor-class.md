@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040972"
 ---
 # <a name="cdynamicaccessor-class"></a>Класс CDynamicAccessor
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>Параметры
 
-*info*<br/>
+*Сведения о*<br/>
 [in] Объект `DBCOLUMNINFO` структура, содержащая сведения о столбце. См. в разделе «Структур DBCOLUMNINFO» в [IColumnsInfo::GetColumnInfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\)) в *справочнике программиста OLE DB*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -696,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in] Указатель на строку символов, содержащая имя столбца.
 
-*Данные*<br/>
+*data*<br/>
 [in] Указатель на буфер, содержащий данные.
 
 *nColumn*<br/>
@@ -711,7 +711,7 @@ bool SetValue(
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)

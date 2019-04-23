@@ -10,10 +10,10 @@ helpviewer_keywords:
 - OLE DB providers, notifications
 ms.assetid: 76e875fd-2bfd-4e4e-9f43-dbe5a3fa7382
 ms.openlocfilehash: 52c4313de5017b97a193be1afebc020c9896fe6a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035654"
 ---
 # <a name="supporting-notifications"></a>Поддержка уведомлений
@@ -22,7 +22,7 @@ ms.locfileid: "59035654"
 
 Чтобы реализовать уведомлений, должен наследовать класс поставщика [IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md) и [IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md).
 
-`IRowsetNotifyCP` Реализует поставщик сайта для точки подключения интерфейса [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` Реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.
+`IRowsetNotifyCP` реализует поставщик сайта для точки подключения интерфейса [IRowsetNotify](/previous-versions/windows/desktop/ms712959(v=vs.85)). `IRowsetNotifyCP` реализует широковещательных функции для в точке подключения `IID_IRowsetNotify` об изменениях содержимого набора строк.
 
 Необходимо также реализовать и зарегистрировать `IRowsetNotify` на объекте-получателе (приемник) с помощью [IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md) потребитель может обрабатывать уведомления. Сведения о реализации интерфейса точки подключения на потребителя, см. в разделе [получение уведомлений](../../data/oledb/receiving-notifications.md).
 
@@ -83,7 +83,7 @@ END_CONNECTION_POINT_MAP()
 
 Также необходимо добавить следующие свойства для поставщика. Необходимо только добавить свойства, основанные на интерфейсах, которые вы поддерживаете.
 
-|Свойство.|Добавить в случае поддержки|
+|Свойство|Добавить в случае поддержки|
 |--------------|------------------------|
 |DBPROP_IConnectionPointContainer|Всегда|
 |DBPROP_NOTIFICATIONGRANULARITY|Всегда|

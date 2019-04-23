@@ -10,10 +10,10 @@ helpviewer_keywords:
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035547"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>Разработка и создание представления записей (доступ к данным MFC)
@@ -34,11 +34,11 @@ ms.locfileid: "59035547"
 
 В следующих разделах представлены дополнительные сведения об использовании представления записей:
 
-- [Представления записей Поддержка навигации в представлении записей](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [Представления записей: Поддержка навигации в представлении записей](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [Представления записей Использование представления записей](../data/using-a-record-view-mfc-data-access.md)
+- [Представления записей: Использование представления записей](../data/using-a-record-view-mfc-data-access.md)
 
-- [Представления записей Заполнение списка из второго набора записей](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [Представления записей: Заполнение списка из второго набора записей](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>См. также
 

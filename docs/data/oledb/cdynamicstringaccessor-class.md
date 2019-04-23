@@ -13,10 +13,10 @@ helpviewer_keywords:
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
 ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035667"
 ---
 # <a name="cdynamicstringaccessor-class"></a>Класс CDynamicStringAccessor
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in] Указатель на строку символов, которая содержит имя столбца.
 
-*Данные*<br/>
+*data*<br/>
 [in] Указатель на строку данных для записи к указанному столбцу.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -126,7 +126,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)<br/>
 [Класс CManualAccessor](../../data/oledb/cmanualaccessor-class.md)<br/>
