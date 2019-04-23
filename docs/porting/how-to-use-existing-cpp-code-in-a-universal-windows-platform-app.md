@@ -1,15 +1,15 @@
 ---
-title: Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows
+title: Как выполнить Использование существующего кода C++ в приложении универсальной платформы Windows
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424200"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Практическое руководство. Использование существующего кода C++ в приложении универсальной платформы Windows
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>Как выполнить Использование существующего кода C++ в приложении универсальной платформы Windows
 
 Возможно, самым простым способом запуска классической программы в среде универсальной платформы Windows (UWP) является использование технологий "Мост для классических приложений". К ним относится Desktop App Converter, позволяющий преобразовывать имеющиеся классические приложения в приложения универсальной платформы Windows (UWP) без изменения кода. Дополнительные сведения см. в статье [Мост для классических приложений](/windows/uwp/porting/desktop-to-uwp-root).
 
