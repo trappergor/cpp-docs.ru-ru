@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -PROFILE linker option
 - /PROFILE linker option
 ms.assetid: e676baa1-5063-47a3-a357-ba0d1f0d1699
-ms.openlocfilehash: ca68ae090c6e4e6e3e10f37ac0d225faee96746a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 23cbccba9a8ec839252d553cc5cbafd37e66bbf9
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810007"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124776"
 ---
 # <a name="profile-performance-tools-profiler"></a>/PROFILE (профилировщик средств обеспечения производительности)
 
@@ -56,7 +56,22 @@ ms.locfileid: "57810007"
 
 1. См. раздел <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.Profile%2A>.
 
+### <a name="to-set-this-linker-option-within-visual-studio-cmake-project"></a>Установка данного параметра компоновщика в пределах проекта Visual Studio CMake
+
+**CMake** проект не содержит **страницы свойств**, параметры компоновщика можно установить с modifing CMakeLists.txt.
+
+1. Откройте CMakeLists.txt в корневом каталоге проекта.
+
+1. Добавьте приведенный ниже код. Дополнительные сведения см. в разделе [ссылки CMake](https://cmake.org/cmake/help/v3.0/command/set_target_properties.html)
+
+1. Постройте решение заново.
+
+```
+SET_TARGET_PROPERTIES(${PROJECT_NAME} PROPERTIES LINK_FLAGS "/PROFILE")
+```
+
 ## <a name="see-also"></a>См. также
 
 [Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)
+

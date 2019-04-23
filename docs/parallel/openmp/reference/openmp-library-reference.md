@@ -1,15 +1,15 @@
 ---
-title: Справочник по библиотеке OpenMP
-ms.date: 10/24/2018
+title: Справочные материалы по библиотеке OpenMP
+ms.date: 03/20/2019
 ms.assetid: a25188c6-edde-43d0-84b5-780e797b08fc
-ms.openlocfilehash: d43ee44157f16c1012667f5529f983036f4dfd8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f4bbeca54bff1fc44a3576362edca9c30926d5a
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491602"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124698"
 ---
-# <a name="openmp-library-reference"></a>Справочник по библиотеке OpenMP
+# <a name="openmp-library-reference"></a>Справочные материалы по библиотеке OpenMP
 
 Ссылки на конструкции, используемые в OpenMP API.
 
@@ -17,10 +17,23 @@ ms.locfileid: "50491602"
 
 |Конструкция|Описание|
 |---------------|-----------------|
-|[Библиотеки](openmp-libraries.md)|Описывает LIB-файлы, входящие в состав библиотеки среды выполнения OpenMP в Visual C++.|
-|[Типы данных](openmp-data-types.md)|Содержит ссылки на типы данных, используемые в OpenMP API.|
-|[Переменные среды](openmp-environment-variables.md)|Ссылки на переменные среды, используемые в OpenMP API.|
+|[Директивы](openmp-directives.md)|Ссылки на директивы, используемые в OpenMP API.|
+|[Предложения](openmp-directives.md)|Ссылки на предложения, используемые в OpenMP API.|
 |[Функции](openmp-functions.md)|Ссылки на функции, используемые в OpenMP API.|
+|[Переменные среды](openmp-environment-variables.md)|Ссылки на переменные среды, используемые в OpenMP API.|
+
+Визуальный элемент C++ функции библиотеки времени выполнения OpenMP содержатся в следующих библиотеках.
+
+|Библиотеки времени выполнения OpenMP|Характеристики|
+|------------------------------|---------------------|
+|VCOMP. LIB|Многопоточная, динамическая компоновка (библиотека импорта для VCOMP. LIB).|
+|VCOMPD.LIB|Многопоточная, динамическая компоновка (библиотека импорта для VCOMPD. КРЫШКИ) (Отладка)|
+
+Если _DEBUG определяется при компиляции и `#include omp.h` в исходном коде, VCOMPD. LIB будет lib по умолчанию, в противном случае VCOMP. LIB будет использоваться.
+
+Можно использовать [/NODEFAULTLIB (пропуск библиотек)](../../../build/reference/nodefaultlib-ignore-libraries.md) для удаления по умолчанию lib и явно выполнять компоновку с lib по своему усмотрению.
+
+Библиотеки OpenMP находятся в каталоге распространяемый компонент Visual C++ и необходимо распространить с приложениями, использующими OpenMP.
 
 ## <a name="see-also"></a>См. также
 

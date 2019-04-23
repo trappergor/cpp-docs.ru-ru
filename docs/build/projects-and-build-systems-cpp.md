@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775430"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124763"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>Проекты C/C++ и системы сборки в Visual Studio
 
@@ -35,7 +35,7 @@ Visual Studio 2017 можно использовать для редактиро
 
 ## <a name="the-msvc-toolset"></a>Набор инструментов MSVC
 
-Microsoft C++ компилятора, компоновщика, стандартные библиотеки и связанные служебные программы включают набор инструментов компилятора MSCV (также называемого это цепочка инструментов «средства сборки»). Эти данные включаются в Visual Studio. Можно также загрузить и использовать набор инструментов как изолированный пакет бесплатно из [расположение для скачивания средств Build Tools для Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
+Microsoft C++ компилятора, компоновщика, стандартные библиотеки и связанные служебные программы включают набор инструментов компилятора MSVC (также называемого это цепочка инструментов «средства сборки»). Эти данные включаются в Visual Studio. Можно также загрузить и использовать набор инструментов как изолированный пакет бесплатно из [расположение для скачивания средств Build Tools для Visual Studio 2017](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017).
 
 Можно создавать простые программы путем вызова MSVC компилятор (cl.exe) непосредственно из командной строки. Следующая команда принимает один исходный файл кода и вызывает cl.exe, чтобы создать исполняемый файл с именем *hello.exe*: 
 
