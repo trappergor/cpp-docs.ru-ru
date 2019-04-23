@@ -23,10 +23,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
 ms.openlocfilehash: 23467caf46d38175a74dab061f60e11009f1f481
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030184"
 ---
 # <a name="cenumerator-class"></a>Класс CEnumerator
@@ -128,7 +128,7 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 *pClsid*<br/>
 [in] Указатель на `CLSID` перечислителя.
 
-*перечислитель*<br/>
+*enumerator*<br/>
 [in] Ссылка на перечислитель.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -139,4 +139,4 @@ HRESULT Open(const CEnumerator& enumerator) throw();
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

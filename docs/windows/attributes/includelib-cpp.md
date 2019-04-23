@@ -7,10 +7,10 @@ helpviewer_keywords:
 - includelib attribute
 ms.assetid: cd90ea6e-5ae8-4f11-b8d1-662db95412b2
 ms.openlocfilehash: 57f039eeae527dd03884b12e7d9eb424d87f597f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030004"
 ---
 # <a name="includelib-c"></a>includelib (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59030004"
 
 ### <a name="parameters"></a>Параметры
 
-*name.idl*<br/>
+*Name.IDL*<br/>
 Имя IDL-файла, который будет частью созданного IDL-файла.
 
 ## <a name="remarks"></a>Примечания
@@ -60,7 +60,7 @@ ms.locfileid: "59030004"
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
-[импорт](import.md)<br/>
+[import](import.md)<br/>
 [importidl](importidl.md)<br/>
 [include](include-cpp.md)<br/>
 [importlib](importlib.md)

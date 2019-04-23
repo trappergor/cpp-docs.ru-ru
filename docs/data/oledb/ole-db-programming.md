@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
 ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031651"
 ---
 # <a name="ole-db-programming"></a>Программирование объектов OLE DB
@@ -25,14 +25,14 @@ Visual C++ также включает поддержку мастера для 
 
 |Для получения дополнительных сведений о|См.|
 |-------------------------|---------|
-|Использование пользовательских шаблонов OLE DB (основные разделы)|[шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
+|Использование пользовательских шаблонов OLE DB (основные разделы)|[Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)|
 |Использование шаблонов поставщика OLE DB (основные разделы)|[Шаблоны поставщика OLE DB](../../data/oledb/ole-db-provider-templates-cpp.md)|
 |Классы и макросы шаблонов OLE DB|[Ссылка на шаблоны OLE DB](../../data/oledb/ole-db-templates.md) (Visual C++)|
-|Атрибуты пользователя OLE DB|[Атрибуты потребителя OLE DB](../../windows/ole-db-consumer-attributes.md)|
+|Атрибуты пользователя OLE DB|[Атрибуты объекта-получателя OLE DB](../../windows/ole-db-consumer-attributes.md)|
 |Интерфейсы OLE DB|[Справочник программиста OLE DB](/sql/connect/oledb/oledb-driver-for-sql-server) (в пакете Windows SDK)|
 |Примеры шаблонов OLE DB|[Примеры шаблонов OLE DB](https://github.com/Microsoft/VCSamples)|
 |Общие сведения о программировании доступа к данным (Visual C++)|[Программирование доступа к данным](../../data/data-access-programming-mfc-atl.md)|
-|Основные разделы ODBC|[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)|
+|Основные разделы ODBC|[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)|
 
 ## <a name="see-also"></a>См. также
 

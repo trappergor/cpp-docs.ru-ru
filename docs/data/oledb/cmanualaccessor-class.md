@@ -33,10 +33,10 @@ helpviewer_keywords:
 - CreateParameterAccessor method
 ms.assetid: a0088074-7135-465c-b228-69097a50b8cc
 ms.openlocfilehash: 526415f14172911b26462fab97d9e0a7513b8cad
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027614"
 ---
 # <a name="cmanualaccessor-class"></a>Класс CManualAccessor
@@ -218,7 +218,7 @@ HRESULT CreateParameterAccessor(int nBindEntries,
 
 [DBViewer](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [Класс CAccessor](../../data/oledb/caccessor-class.md)<br/>
 [Класс CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)<br/>
 [Класс CDynamicParameterAccessor](../../data/oledb/cdynamicparameteraccessor-class.md)

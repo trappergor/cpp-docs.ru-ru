@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030437"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Проекты CMake в Visual Studio
@@ -164,7 +164,7 @@ Visual Studio использует файл с именем **CMakeSettings.json
 [Настройка проекта Linux CMake](../linux/cmake-linux-project.md)<br/>
 [Подключение к удаленному компьютеру Linux](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [Настройка параметров сборки CMake](customize-cmake-settings.md)<br/>
-[CMakeSettings.json reference](cmakesettings-reference.md)<br/>
+[Справочник по CMakeSettings.json](cmakesettings-reference.md)<br/>
 [Настройка сеансов отладки CMake](configure-cmake-debugging-sessions.md)<br/>
 [Развертывание, запуск и отладка проекта Linux](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [Справочник по предопределенной конфигурации CMake](cmake-predefined-configuration-reference.md)<br/>

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
 ms.openlocfilehash: 5c7b72ba3bf1bd60324704b774bcedaf5612240f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028390"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
@@ -60,5 +60,5 @@ unsigned char __vmx_vmread(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmwrite](../intrinsics/vmx-vmwrite.md)

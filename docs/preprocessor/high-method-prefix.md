@@ -7,15 +7,15 @@ helpviewer_keywords:
 - high_method_prefix attribute
 ms.assetid: cacebf09-12f5-4919-ad40-939e206e340c
 ms.openlocfilehash: 1575b2e3fee461ee0e3987aaf1e770d0611e31ec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028990"
 ---
 # <a name="highmethodprefix"></a>high_method_prefix
 
-**Блок, относящийся только к языку C++**
+**Конкретных C++**
 
 Задает префикс, используемый при именовании высокоуровневых свойств и методов.
 
@@ -27,16 +27,16 @@ high_method_prefix("Prefix")
 
 ### <a name="parameters"></a>Параметры
 
-*Префикс*<br/>
+*Prefix*<br/>
 Префикс, который следует использовать.
 
 ## <a name="remarks"></a>Примечания
 
 По умолчанию высокоуровневые свойства и методы обработки ошибок предоставляются функциями-членами с именами без префикса. Это имена из библиотеки типов.
 
-**Завершение блока, относящегося только к языку C++**
+**КОНЕЦ конкретных C++**
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

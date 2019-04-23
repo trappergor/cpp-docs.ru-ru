@@ -1,5 +1,5 @@
 ---
-title: first_is (атрибут COM C++)
+title: first_is (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.first_is
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033087"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033087"
 
 ### <a name="parameters"></a>Параметры
 
-*выражение*<br/>
+*Выражение*<br/>
 Одно или несколько выражений языка. Допускаются слотов пустой аргумент.
 
 ## <a name="remarks"></a>Примечания
 
-**First_is** атрибут C++ имеет ту же функциональность, что [first_is](/windows/desktop/Midl/first-is) описании атрибута MIDL.
+**First_is** C++ атрибут имеет ту же функциональность, что [first_is](/windows/desktop/Midl/first-is) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 
