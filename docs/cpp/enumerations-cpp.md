@@ -11,10 +11,10 @@ helpviewer_keywords:
 - declaring enumerations
 ms.assetid: 081829db-5dca-411e-a53c-bffef315bcb3
 ms.openlocfilehash: caec9ea7ac5482ff23b73676a3fd7b3d25ad293f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772569"
 ---
 # <a name="enumerations-c"></a>Перечисления (C++)
@@ -22,7 +22,7 @@ ms.locfileid: "58772569"
 Перечисление — это пользовательский тип, состоящий из набора целочисленных констант, называемых перечислителями.
 
 > [!NOTE]
->  В этой статье рассматриваются языка C++ стандарта ISO **перечисления** типа и области (или со строгой типизацией) **класс перечисления** тип, который впервые введен в C ++ 11. Сведения о **открытый класс перечисления** или **класс закрытого перечисления** типов в C + +/ CLI и C + +/ CX, см. в разделе [класс перечисления](../extensions/enum-class-cpp-component-extensions.md).
+>  В этой статье рассматриваются языка C++ стандарта ISO **перечисления** типа и области (или со строгой типизацией) **класс перечисления** тип, который впервые введен в C ++ 11. Сведения о **открытый класс перечисления** или **класс закрытого перечисления** типы в C++выполняет и C++/CX, см. в разделе [класс перечисления](../extensions/enum-class-cpp-component-extensions.md).
 
 ## <a name="syntax"></a>Синтаксис
 

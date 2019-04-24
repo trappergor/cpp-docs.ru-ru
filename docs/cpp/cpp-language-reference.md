@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774039"
 ---
 # <a name="c-language-reference"></a>Справочник по языку C++
@@ -81,7 +81,7 @@ ms.locfileid: "58774039"
 Модификаторы, используемые в Microsoft C++. Память адресации, соглашения о вызовах, **с атрибутом naked** функции, расширенные атрибуты классов хранения (**__declspec**), **__w64**.
 
 [Встроенный сборщик](../assembler/inline/inline-assembler.md)<br/>
-Использование языка ассемблера и C++ в **__asm** блоков.
+С использованием языка ассемблера и C++ в **__asm** блоков.
 
 [Поддержка COM компилятора](../cpp/compiler-com-support.md)<br/>
 Справочник по характерным для систем Microsoft классам и глобальным функциям, используемым для поддержки типов модели COM.

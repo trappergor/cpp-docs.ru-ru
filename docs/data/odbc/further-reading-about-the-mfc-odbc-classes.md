@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035193"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Дополнительные сведения о классах ODBC MFC
@@ -23,7 +23,7 @@ ms.locfileid: "59035193"
 
 - [Динамический набор](../../data/odbc/dynaset.md)
 
-- [Исключения: Исключения базы данных](../../mfc/exceptions-database-exceptions.md)
+- [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC. Использование классов базы данных с документами и представлениями](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
@@ -33,7 +33,7 @@ ms.locfileid: "59035193"
 
 - [Администратор ODBC](../../data/odbc/odbc-administrator.md)
 
-- [Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
+- [Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)
 
 - [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)
 
@@ -43,7 +43,7 @@ ms.locfileid: "59035193"
 
 - [Снимок](../../data/odbc/snapshot.md)
 
-- [SQL-код](../../data/odbc/sql.md)
+- [SQL](../../data/odbc/sql.md)
 
 - [Транзакция (ODBC)](../../data/odbc/transaction-odbc.md)
 
@@ -54,4 +54,4 @@ ms.locfileid: "59035193"
 ## <a name="see-also"></a>См. также
 
 [ODBC и MFC](../../data/odbc/odbc-and-mfc.md)<br/>
-[Программирование доступа к данным (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)
+[Доступ к данным, программирование (MFC/ATL)](../../data/data-access-programming-mfc-atl.md)

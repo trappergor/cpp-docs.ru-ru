@@ -1,5 +1,5 @@
 ---
-title: transmit_as (атрибут COM C++)
+title: transmit_as (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.transmit_as
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032106"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -30,7 +30,7 @@ ms.locfileid: "59032106"
 
 ## <a name="remarks"></a>Примечания
 
-**Transmit_as** атрибут C++ имеет ту же функциональность, что [transmit_as](/windows/desktop/Midl/transmit-as) описании атрибута MIDL.
+**Transmit_as** C++ атрибут имеет ту же функциональность, что [transmit_as](/windows/desktop/Midl/transmit-as) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 
@@ -81,4 +81,4 @@ struct _TREE_NODE_TYPE * right;
 
 [Атрибуты IDL](idl-attributes.md)<br/>
 [Атрибуты Typedef, Enum, Union и Struct](typedef-enum-union-and-struct-attributes.md)<br/>
-[экспорт](export.md)
+[export](export.md)

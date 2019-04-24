@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3638
 ms.assetid: 8d8bc5ca-75aa-480e-b6b6-3178fab51b1d
-ms.openlocfilehash: 8b1ef7f4cb38653f0ccdfae5684eb2907a735af7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33bb248faf946c39543de4a14a44e2ebbda49880
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486896"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776753"
 ---
 # <a name="compiler-error-c3638"></a>Ошибка компилятора C3638
 
@@ -19,7 +19,7 @@ ms.locfileid: "50486896"
 
 Компилятор определяет оператор преобразования для каждого управляемого класса для поддержки неявная упаковка-преобразование. Этот оператор не может быть переопределен.
 
-Дополнительные сведения см. в разделе [неявная упаковка-преобразование](../../windows/boxing-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [неявная упаковка-преобразование](../../extensions/boxing-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3638:
 

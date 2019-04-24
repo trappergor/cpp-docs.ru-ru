@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CBitmapButton [MFC], LoadBitmaps
 - CBitmapButton [MFC], SizeToContent
 ms.assetid: 9ad6cb45-c3c4-4fb1-96d3-1fe3df7bbcfc
-ms.openlocfilehash: c800b40fcf2bb3008b35614390e4aafcb43a54f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 45e0214cafb80c3e00a7e888a3170040f46113f1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296765"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58770282"
 ---
 # <a name="cbitmapbutton-class"></a>Класс CBitmapButton
 
@@ -35,13 +35,13 @@ class CBitmapButton : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBitmapButton::CBitmapButton](#cbitmapbutton)|Создает объект `CBitmapButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBitmapButton::AutoLoad](#autoload)|Связывает кнопку в диалоговом окне с объектом класса `CBitmapButton` классом, загружает bitmap(s) по имени и изменяет размер кнопки в соответствии с растрового изображения.|
 |[CBitmapButton::LoadBitmaps](#loadbitmaps)|Инициализирует объект путем загрузки один или несколько ресурсов именованный растрового изображения из файла ресурсов приложения и присоединение точечные рисунки в объект.|
@@ -224,6 +224,6 @@ void SizeToContent();
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [Класс CButton](../../mfc/reference/cbutton-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __ull_rshift intrinsic
 ms.assetid: b7ff5254-3540-4e6e-b57c-a6c4beb7dca2
 ms.openlocfilehash: 5d62ec1526aff595c14a53e9eca43a7a3118c8fa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034528"
 ---
 # <a name="ullrshift"></a>__ull_rshift
@@ -86,4 +86,4 @@ int main()
 
 [__ll_lshift](../intrinsics/ll-lshift.md)<br/>
 [__ll_rshift](../intrinsics/ll-rshift.md)<br/>
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

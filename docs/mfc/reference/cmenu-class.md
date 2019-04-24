@@ -84,16 +84,16 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293866"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58770854"
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 
-Инкапсуляция `HMENU` Windows.
+Инкапсуляция `HMENU`Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -101,17 +101,17 @@ ms.locfileid: "57293866"
 class CMenu : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMenu::CMenu](#cmenu)|Создает объект `CMenu`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMenu::AppendMenu](#appendmenu)|Добавляет новый элемент в конец этого меню.|
 |[CMenu::Attach](#attach)|Прикрепляет дескриптор меню Windows `CMenu` объекта.|
@@ -153,7 +153,7 @@ class CMenu : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMenu::operator HMENU](#operator_hmenu)|Извлекает дескриптор объекта меню.|
 |[CMenu::operator! =](#operator_neq)|Определяет, если два меню объекты не равны.|
@@ -161,7 +161,7 @@ class CMenu : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMenu::m_hMenu](#m_hmenu)|Указывает дескриптор меню Windows, подключенный к `CMenu` объекта.|
 
@@ -561,7 +561,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="example"></a>Пример
 
-Приведенный ниже код взят из MFC [CTRLTEST](../../visual-cpp-samples.md) пример:
+Приведенный ниже код взят из MFC [CTRLTEST](../../overview/visual-cpp-samples.md) пример:
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="example"></a>Пример
 
-Приведенный ниже код взят из MFC [CTRLTEST](../../visual-cpp-samples.md) пример:
+Приведенный ниже код взят из MFC [CTRLTEST](../../overview/visual-cpp-samples.md) пример:
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ BOOL TrackPopupMenuEx(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CTRLTEST](../../visual-cpp-samples.md)<br/>
-[Пример MFC DYNAMENU](../../visual-cpp-samples.md)<br/>
+[Пример MFC CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)

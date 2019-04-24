@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780487"
 ---
 # <a name="cmfcribbonedit-class"></a>Класс CMFCRibbonEdit
@@ -303,7 +303,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -336,7 +336,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -472,7 +472,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -487,7 +487,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -502,7 +502,7 @@ virtual void OnDrawLabelAndImage(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 ### <a name="remarks"></a>Примечания
@@ -523,7 +523,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для `CMFCRibbonEdit` элемента управления.
 
 *strText*<br/>
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Указатель на родительское окно для `CMFCRibbonEdit` объекта.
 
-*Данные*<br/>
+*data*<br/>
 Данные специальных возможностей для `CMFCRibbonEdit` объекта.
 
 ### <a name="return-value"></a>Возвращаемое значение

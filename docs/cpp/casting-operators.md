@@ -7,10 +7,10 @@ helpviewer_keywords:
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
 ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768956"
 ---
 # <a name="casting-operators"></a>Операторы приведения
@@ -25,7 +25,7 @@ ms.locfileid: "58768956"
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md) для простой повторной интерпретации разрядов.
 
-- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) используется в C + +/ CLI для создания проверяемых MSIL.
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) используется в C++выполняет для создания проверяемых MSIL.
 
 Используйте **const_cast** и **reinterpret_cast** в качестве последнего средства, так как же опасностях как приведения старого стиля представления этих операторов. Однако они необходимы, чтобы полностью заменить приведения старого стиля.
 

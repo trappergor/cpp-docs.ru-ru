@@ -11,10 +11,10 @@ helpviewer_keywords:
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
 ms.openlocfilehash: 977ef29095e652ab40028a2e8ba7feffabf56418
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781072"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>Тестирование свойств и событий с использованием тестового контейнера
@@ -56,5 +56,5 @@ ms.locfileid: "58781072"
 
 ## <a name="see-also"></a>См. также
 
-[Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
-[Практическое руководство. отладку элемента управления ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)
+[Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
+[Практическое руководство. Отладка элемента управления ActiveX](/visualstudio/debugger/how-to-debug-an-activex-control)

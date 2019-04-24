@@ -7,15 +7,15 @@ helpviewer_keywords:
 - rename attribute
 ms.assetid: 5c5c6153-1087-4b7b-87fb-fc59b90b9975
 ms.openlocfilehash: 0fbed04f040a47b5b389f40eeb15254da4a7940b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037071"
 ---
 # <a name="rename-import"></a>переименовать (\#импорт)
 
-**Блок, относящийся только к языку C++**
+**Конкретных C++**
 
 Обходит проблемы конфликтов имен.
 
@@ -56,9 +56,9 @@ rename("GetMyParent","GetMyParentX")
 
 Это происходит потому, что имя `GetMyParent` может возникать только в открывшемся файле заголовка библиотеки типов.
 
-**Завершение блока, относящегося только к языку C++**
+**КОНЕЦ конкретных C++**
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

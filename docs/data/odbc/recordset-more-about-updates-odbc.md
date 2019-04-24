@@ -11,10 +11,10 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 0353a742-d226-4fe2-8881-a7daeffe86cd
 ms.openlocfilehash: c29ff110fc507c4e449b2f3d082d98c159a35107
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040772"
 ---
 # <a name="recordset-more-about-updates-odbc"></a>Набор записей. Дополнительные сведения об обновлениях (ODBC)
@@ -106,6 +106,6 @@ ms.locfileid: "59040772"
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)<br/>
-[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[SQL-код](../../data/odbc/sql.md)<br/>
-[Исключения: Исключения базы данных](../../mfc/exceptions-database-exceptions.md)
+[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[SQL](../../data/odbc/sql.md)<br/>
+[Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)

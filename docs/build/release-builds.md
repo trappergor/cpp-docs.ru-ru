@@ -7,10 +7,10 @@ helpviewer_keywords:
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
 ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038167"
 ---
 # <a name="release-builds"></a>Построения выпуска
@@ -19,14 +19,14 @@ ms.locfileid: "59038167"
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-[Распространенные проблемы, возникающие при создании построений выпуска](common-problems-when-creating-a-release-build.md)<br/>
-[Устранение проблем построения выпуска](fixing-release-build-problems.md)<br/>
+[Распространенные проблемы, возникающие при создании сборок выпуска](common-problems-when-creating-a-release-build.md)<br/>
+[Устранение проблем сборки выпуска](fixing-release-build-problems.md)<br/>
 [Использование VERIFY вместо ASSERT](using-verify-instead-of-assert.md)<br/>
-[Использование отладочного построения для проверки затирания памяти](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
-[Практическое руководство. Отладка построения выпуска](how-to-debug-a-release-build.md)<br/>
-[Проверка затирания памяти](checking-for-memory-overwrites.md)<br/>
+[Использование отладочной сборки для проверки перезаписи памяти](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
+[Практическое руководство. Отладка сборки выпуска](how-to-debug-a-release-build.md)<br/>
+[Проверка перезаписи памяти](checking-for-memory-overwrites.md)<br/>
 [Оптимизация кода](optimizing-your-code.md)<br/>
 
 ## <a name="see-also"></a>См. также
 
-[Ссылка на сборку C/C++](reference/c-cpp-building-reference.md)
+[Справочные сведения о сборке C/C++](reference/c-cpp-building-reference.md)

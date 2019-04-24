@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
-ms.openlocfilehash: df2e52631ed75cc4a473429ea35e136ed0a88f98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606730"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775562"
 ---
 # <a name="compiler-error-c3646"></a>Ошибка компилятора C3646
 
@@ -23,7 +23,7 @@ ms.locfileid: "50606730"
 
 Например если нераспознанный *описатель* — **_NOEXCEPT**, замените ключевое слово **noexcept**.
 
-Дополнительные сведения см. в разделе [спецификаторы переопределения](../../windows/override-specifiers-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [спецификаторы переопределения](../../extensions/override-specifiers-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

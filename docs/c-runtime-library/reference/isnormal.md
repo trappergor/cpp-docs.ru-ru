@@ -6,16 +6,16 @@ f1_keywords:
 - math/isnormal
 helpviewer_keywords:
 - isnormal function
-ms.openlocfilehash: 93e3b8912ddf20bf8e190bb42e8413e6d909bbcc
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e426fbce71efff1e810a03b8347e7c48aa0d91d2
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703469"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124685"
 ---
 # <a name="isnormal"></a>isnormal
 
-Определяет, является ли значение с плавающей запятой бесконечности.
+Определяет, является ли значение с плавающей запятой значение normal.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,7 +27,7 @@ int isnormal(
 template <class FloatingType>
 inline bool isnormal(
    FloatingType x
-) throw(); /* C++-only template function */
+) throw(); /* C++-only function template */
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -37,11 +37,11 @@ inline bool isnormal(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**isnormal** возвращает ненулевое значение (**true** в коде C++) Если аргумент *x* является конечным и не subnormal. **isnormal** возвращает 0 (**false** в коде C++), если аргумент является subnormal, бесконечность или NAN.
+**isnormal** возвращает ненулевое значение (**true** в C++ кода) Если аргумент *x* не является ни ноль, subnormal, бесконечно, ни значение NaN. В противном случае **isnormal** возвращает 0 (**false** в C++ кода).
 
 ## <a name="remarks"></a>Примечания
 
-**isnormal** представляет собой макрос, если он компилируется как C и встроенная функция шаблона при компиляции как C++.
+**isnormal** представляет собой макрос, если он компилируется как C и функция встроенный шаблон при компиляции как C++.
 
 ## <a name="requirements"></a>Требования
 

@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289884"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768555"
 ---
 # <a name="cfile-class"></a>Класс CFile
 
@@ -81,13 +81,13 @@ class CFile : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFile::CFile](#cfile)|Создает `CFile` объекта из дескриптора путь или файл.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFile::Abort](#abort)|Закрывает файл, игнорируя все предупреждения и ошибки.|
 |[CFile::Close](#close)|Закрывает файл и удаляет объект.|
@@ -115,20 +115,20 @@ class CFile : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFile::operator ДЕСКРИПТОР](#operator_handle)|Дескриптор `CFile` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFile::hFileNull](#hfilenull)|Определяет, если `CFile` объект имеет допустимый дескриптор.|
 |[CFile::m_hFile](#m_hfile)|Обычно содержит дескриптор файла операционной системы.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFile::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|
 
@@ -238,7 +238,7 @@ CAtlTransactionManager* pTM);
 
 Выберите первый или и первый, и второй из следующих параметров режима создания файла. Режим создания по умолчанию — `CFile::modeNoTruncate`, т. е. открывается существующий файл.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`CFile::modeCreate`|Создает новый файл, если файл не существует. Если файл уже существует, перезаписываются и задано значение нулевой длины.|
 |`CFile::modeNoTruncate`|Создает файл, если он не существует. В противном случае файл присоединяется к объекту `CFile`.|
@@ -918,7 +918,7 @@ virtual void Write(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC ФУНКЦИЙ](../../visual-cpp-samples.md)<br/>
+[Пример MFC ФУНКЦИЙ](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CStdioFile](../../mfc/reference/cstdiofile-class.md)<br/>

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
-ms.openlocfilehash: 7d4ac6f21cfcfe0f37eb17ff81eabd3e6341a7d5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477406"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779353"
 ---
 # <a name="compiler-warning-c4958"></a>Предупреждение компилятора C4958
 
@@ -21,7 +21,7 @@ ms.locfileid: "50477406"
 
 Использование арифметики указателей создает непроверяемый образ.
 
-Дополнительные сведения см. в разделе [чистый и проверяемый код (C + +/ CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Дополнительные сведения см. в разделе [чистый и проверяемый код (C++выполняет)](../../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 **/CLR: safe** параметр компилятора в Visual Studio 2015 не рекомендуется и не поддерживается в Visual Studio 2017.
 
@@ -44,7 +44,7 @@ int main( ) {
 }
 ```
 
-Компилятор реализует операции с массивами с использованием арифметики указателей. Таким образом, собственные массивы не подлежат проверке; используйте вместо них массив CLR. Дополнительные сведения см. в описании [array](../../windows/arrays-cpp-component-extensions.md).
+Компилятор реализует операции с массивами с использованием арифметики указателей. Таким образом, собственные массивы не подлежат проверке; используйте вместо них массив CLR. Дополнительные сведения см. в описании [array](../../extensions/arrays-cpp-component-extensions.md).
 
 В следующем примере возникает ошибка C4958:
 

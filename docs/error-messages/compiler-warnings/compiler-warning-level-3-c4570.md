@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4570
 ms.assetid: feec1225-e6ad-4995-8d96-c22e864a77bd
-ms.openlocfilehash: 1c92bd7f632ea6662c3cee1bcaa1dd0c917fb2a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386d7c210c77469d67a75d66f7d8ae35c105b3b0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661309"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777917"
 ---
 # <a name="compiler-warning-level-3-c4570"></a>Предупреждение компилятора (уровень 3) C4570
 
 «Тип»: не был объявлен явно как абстрактный, однако содержит абстрактные функции
 
-Тип, содержащий [абстрактный](../../windows/abstract-cpp-component-extensions.md) функции должен быть помечен как абстрактный.
+Тип, содержащий [абстрактный](../../extensions/abstract-cpp-component-extensions.md) функции должен быть помечен как абстрактный.
 
 ## <a name="example"></a>Пример
 

@@ -44,10 +44,10 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025368"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>Как выполнить: Добавление, редактирование или удаление элементов управления (C++)
@@ -190,7 +190,7 @@ ms.locfileid: "59025368"
 
 **Вставка элемента ActiveX** диалоговом окне можно вставить элементы управления ActiveX в диалоговое окно при использовании [редактор диалоговых окон](../windows/dialog-editor.md). Это диалоговое окно содержит следующие свойства:
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |---|---|
 |**Элемент управления ActiveX**|Отображает список элементов управления ActiveX.<br/><br/>Вставка элемента управления в этом диалоговом окне не создает класс-оболочку. Если вам требуется класс-оболочку, используйте [представление классов](/visualstudio/ide/viewing-the-structure-of-code) для создания см. в разделе [Добавление класса](../ide/adding-a-class-visual-cpp.md).<br/><br/>В этом диалоговом окне не отображается элемент управления ActiveX, попробуйте установить элемент управления в соответствии с инструкциями производителя.|
 |**Путь**|Открывает файл, в котором находится элемент управления ActiveX.|
@@ -231,8 +231,8 @@ Win32
 ## <a name="see-also"></a>См. также
 
 [Управление элементам управления диалоговыми](controls-in-dialog-boxes.md)<br/>
-[Как выполнить: Элементы управления макета](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[Практическое руководство. Определить управление доступом и значения](defining-mnemonics-access-keys.md)<br/>
+[Практическое руководство. Элементы управления макета](arrangement-of-controls-on-dialog-boxes.md)<br/>
+[Практическое руководство. Общие сведения об управлении доступом и значениях](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

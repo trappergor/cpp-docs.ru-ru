@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898808"
 ---
 # <a name="visual-c-language-conformance"></a>Соответствие стандартам языка Visual C++
@@ -25,13 +25,13 @@ ms.locfileid: "58898808"
 
 |Область функции| |
 |----|---|
-|__Основные возможности языка C++03/11__|__Поддерживается__|
+|__Основные возможности языка C++03/11__|__Поддерживается__|
 |&nbsp;&nbsp;В любом другом месте|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;Двухэтапный поиск по имени|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 Выражение SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 Препроцессор C99](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|Частично <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 Расширенные целочисленные типы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|Н/Д <sup>[E](#note_E)</sup>|
-|__Основные возможности языка C++14__|__Поддерживается__|
+|__Основные возможности языка C++14__|__Поддерживается__|
 |&nbsp;&nbsp;[N3323 Настраиваемое контекстное преобразование](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 Двоичные литералы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 Возвращаемые типы auto и decltype(auto)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ ms.locfileid: "58898808"
 |&nbsp;&nbsp;[N3652 Расширенный constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 NSDMI для статистических выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 Предотвращение и объединение выделений ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|Н/Д <sup>[F](#note_F)</sup>|
-|__Основные возможности языка C++17__|__Поддерживается__|
+|__Основные возможности языка C++17__|__Поддерживается__|
 |&nbsp;&nbsp;[N4086 Удаление триграфов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 Новые правила для автоматического использования с braced-init-lists](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 Имя типа в параметрах шаблона](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -135,7 +135,7 @@ ms.locfileid: "58898808"
 |&nbsp;&nbsp; [P0767R1 Объявление is_pod нерекомендуемым](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Нет|
 |&nbsp;&nbsp; [P0768R1 Поддержка библиотеки для оператора сравнения "космический корабль"\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Нет|
 |&nbsp;&nbsp; [P0966R1 string::reserve() не должен сжимать](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|Нет|
-|__Функции стандартной библиотеки C++17__|__Поддерживается__|
+|__Функции стандартной библиотеки C++17__|__Поддерживается__|
 |&nbsp;&nbsp;[P0433R2 Интеграция вывода шаблонов для шаблонов классов в стандартной библиотеке](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 Улучшение интеграции аргумента шаблона класса со стандартной библиотекой](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0426R1 constexpr для char_traits](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0030R1 hypot(x, y, z)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0030r1.pdf)|VS 2017 15.7|
@@ -214,7 +214,7 @@ ms.locfileid: "58898808"
 |&nbsp;&nbsp;[N4389 bool_constant](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4389.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0063R3 Стандартная библиотека C11](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0063r3.html)|VS 2015 <sup>[C11](#note_C11), [14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4510 Поддержка неполных типов в vector/list/forward_list](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4510.html)|VS 2013 <sup>[14](#note_14)</sup>|
-|__Функции стандартной библиотеки C++14__|__Поддерживается__|
+|__Функции стандартной библиотеки C++14__|__Поддерживается__|
 |&nbsp;&nbsp;[N3462 SFINAE result_of](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3462.html)|VS 2015.2|
 |&nbsp;&nbsp;[N3302 constexpr для \<complex>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2011/n3302.html)|VS 2015|
 |&nbsp;&nbsp;[N3469 constexpr для \<chrono>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3469.html)|VS 2015|
@@ -316,7 +316,7 @@ __VS 2017 15.7__ — функции, которые поддерживают�
 [Справочник по языку C++](../cpp/cpp-language-reference.md)<br/>
 [Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
 [Улучшения соответствия C++ в Visual Studio](cpp-conformance-improvements.md)<br/>
-[Новые возможности Visual C++ в Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[What's New for Visual C++ in Visual Studio](what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)<br/>
 [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Новые возможности Visual C++ 2003–2015](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Блог команды разработчиков Visual C++](https://blogs.msdn.microsoft.com/vcblog/)

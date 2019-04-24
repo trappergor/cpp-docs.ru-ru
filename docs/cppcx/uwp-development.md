@@ -2,11 +2,11 @@
 title: Разработка приложений универсальной платформы Windows на C++
 ms.date: 03/13/2019
 ms.openlocfilehash: c6b92a3b85c08bc2d43ad297c410445ea974822b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58786025"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777397"
 ---
 # <a name="uwp-development-with-c"></a>Разработка приложений универсальной платформы Windows на C++
 
@@ -14,15 +14,15 @@ ms.locfileid: "58786025"
 
 Большая часть документации UWP находится в дереве содержимого Windows в [документация по универсальной платформе Windows](/windows/uwp/). Там вы найдете учебники начало также как и в справочной документации. 
 
-Для новых приложений универсальной платформы Windows и компонентов, мы рекомендуем использовать [C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/), это новый C ++ 17 проекция стандартного для API среды выполнения Windows. C + +/ WinRT доступна в пакете SDK для Windows 10 версии 1803 и далее. C + +/ WinRT реализуется полностью в файлы заголовков и предназначен для предоставления вам доступа первого класса в современных API Windows.
+Для новых приложений универсальной платформы Windows и компонентов, мы рекомендуем использовать [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), это новый C ++ 17 проекция стандартного для API среды выполнения Windows. C++/ WinRT доступна в пакете SDK для Windows 10 версии 1803 и далее. C++/ WinRT реализуется полностью в файлах заголовков и призвана предоставить вам доступ первого класса в современных API Windows.
 
 Содержимое в этом расположении охватывает две старые технологии UWP на C++:
 
-- [C + +/ CX расширение языка](visual-c-language-reference-c-cx.md)
+- [ C++/CX расширение языка](visual-c-language-reference-c-cx.md)
 - [библиотека шаблонов C++ среды выполнения Windows (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md).
 
 Обе эти технологии продолжают поддерживаться, но обычно не рекомендуется для разработки новых приложений.
 
 ## <a name="related-articles"></a>Связанные статьи
 [Начало работы с приложениями Windows 10](/windows/uwp/get-started/)
-[начало работы с C + +/ WinRT](/windows/uwp/cpp-and-winrt-apis/get-started)
+[приступить к работе с C++/WinRT](/windows/uwp/cpp-and-winrt-apis/get-started)

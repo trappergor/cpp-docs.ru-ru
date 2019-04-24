@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778524"
 ---
 # <a name="ccombobox-class"></a>CComboBox-класс
@@ -674,7 +674,7 @@ BOOL GetCueBanner(
 
 В первой перегрузке [CString](../../atl-mfc-shared/using-cstring.md) , содержащий текст баннера подсказки, если он существует; в противном случае `CString` объект, который имеет нулевую длину.
 
-- или -
+-или-
 
 Во второй перегрузке значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
 
@@ -1562,8 +1562,8 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Класс CButton](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
-[CListBox-класс](../../mfc/reference/clistbox-class.md)<br/>
+[Класс CEdit](../../mfc/reference/cedit-class.md)<br/>
+[Класс CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Класс CScrollBar](../../mfc/reference/cscrollbar-class.md)<br/>
 [Класс CStatic](../../mfc/reference/cstatic-class.md)<br/>
 [Класс CDialog](../../mfc/reference/cdialog-class.md)

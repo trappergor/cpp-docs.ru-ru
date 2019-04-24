@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779031"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>Класс CMFCPropertyGridProperty
@@ -801,7 +801,7 @@ CMFCPropertyGridProperty* GetSubItem(int nIndex) const;
 
 Указатель на объект свойства, является дочерним элементом этого свойства.
 
-- или -
+-или-
 
 В режиме розничной торговли, значение NULL, если *nIndex* является недопустимым. В режиме отладки этот метод утверждения.
 
@@ -1148,7 +1148,7 @@ virtual void OnClickName(CPoint C);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*В*|[in] Точка, в координатах клиентской области окна.|
+|*C*|[in] Точка, в координатах клиентской области окна.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1202,7 +1202,7 @@ virtual HBRUSH OnCtlColor(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *nCtlColor*<br/>
@@ -1257,7 +1257,7 @@ virtual void OnDrawButton(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectButton*<br/>
@@ -1277,7 +1277,7 @@ virtual void OnDrawDescription(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1299,7 +1299,7 @@ virtual void OnDrawExpandBox(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rectExpand*<br/>
@@ -1321,7 +1321,7 @@ virtual void OnDrawName(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1341,7 +1341,7 @@ virtual void OnDrawValue(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1448,7 +1448,7 @@ virtual void OnRClickName(CPoint C);
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*В*|[in] Точка, в координатах клиентской области окна.|
+|*C*|[in] Точка, в координатах клиентской области окна.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1468,8 +1468,8 @@ virtual void OnRClickValue(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*В*|[in] Точка, в координатах клиентской области окна.|
-|*С*|[in] Логическое значение.|
+|*C*|[in] Точка, в координатах клиентской области окна.|
+|*B*|[in] Логическое значение.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -1541,7 +1541,7 @@ virtual BOOL PushChar(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Символ.
 
 ### <a name="return-value"></a>Возвращаемое значение

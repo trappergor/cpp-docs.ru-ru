@@ -1,5 +1,5 @@
 ---
-title: db_column (атрибут COM C++)
+title: db_column (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_column
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_column attribute
 ms.assetid: 58da4afc-f69c-4ae6-af9a-3f9515f56081
 ms.openlocfilehash: e0e2c873452884275e97663ae2d9d6df2f790ffd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024846"
 ---
 # <a name="dbcolumn"></a>db_column
@@ -25,7 +25,7 @@ ms.locfileid: "59024846"
 
 #### <a name="parameters"></a>Параметры
 
-*ordinal*<br/>
+*Порядковый номер*<br/>
 Порядковый номер столбца (`DBCOLUMNINFO` порядковый номер) или имя столбца (строка ANSI или Юникод), соответствующее поле в наборе строк, к которому требуется привязать данные. Если вы используете номера, можно пропустить последовательных порядковые номера (например: 1, 2, 3, 5). Имя может содержать пробелы, если используемый поставщик OLE DB поддерживает его. Например можно использовать любой из следующих форматов:
 
 ```cpp
@@ -36,16 +36,16 @@ ms.locfileid: "59024846"
 *dbType*<br/>
 (Необязательно) OLE DB [индикатор типа](/previous-versions/windows/desktop/ms711251(v=vs.85)) для записи в столбце.
 
-*точность*<br/>
+*precision*<br/>
 (Необязательно) Точность должна использоваться для записи в столбце. Дополнительные сведения см. в описании `bPrecision` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*число десятичных знаков*<br/>
+*Масштаб*<br/>
 (Необязательно) Масштабирования, которая будет использоваться для записи в столбце. Дополнительные сведения см. в описании `bScale` элемент [структуры DBBINDING](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
 (Необязательно) Переменную-член используется для хранения состояния этого столбца. Состояние указывает, является ли значение столбца значение данных или любое другое значение, например значений NULL. Возможные значения см. в разделе [состояние](/previous-versions/windows/desktop/ms722617(v=vs.85)) в *Справочник программиста OLE DB по*.
 
-*длина*<br/>
+*length*<br/>
 (Необязательно) Переменную-член используется для хранения размера столбца в байтах.
 
 ## <a name="remarks"></a>Примечания
@@ -113,5 +113,5 @@ class CProducts {
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты потребителя OLE DB](ole-db-consumer-attributes.md)<br/>
+[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)<br/>
 [Атрибуты классов](class-attributes.md)

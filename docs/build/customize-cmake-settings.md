@@ -3,12 +3,12 @@ title: Настройка параметров сборки CMake в Visual Stud
 ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 4864e094ab967a563b153fa79fd0bf5c375f40f7
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59037527"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124893"
 ---
 # <a name="customize-cmake-build-settings"></a>Настройка параметров сборки CMake
 
@@ -79,14 +79,18 @@ JSON IntelliSense помогает изменить файл `CMakeSettings.json
 "variables": [
     {
       "name": "CMAKE_CXX_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     },
     {
       "name": "CMAKE_C_COMPILER",
-      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe",
+      "type": "FILEPATH"
     }
   ]
 ```
+
+Обратите внимание, что, если не определить `"type"`, тип «STRING» предполагается, что будет по умолчанию.
 
 - **cmakeCommandArgs**: указывает любые дополнительные параметры, которые нужно передать в CMake.exe.
 
@@ -100,16 +104,16 @@ JSON IntelliSense помогает изменить файл `CMakeSettings.json
 
 ## <a name="environment-variables"></a>Переменные среды
 
- `CMakeSettings.json` также поддерживает использование переменных среды, в каких-либо свойств, упомянутых выше. Для расширения переменной среды %FOO% используется синтаксис `${env.FOO}`.
+ `CMakeSettings.json` также поддерживает использование переменных среды в любом из указанных выше свойств. Для расширения переменной среды %FOO% используется синтаксис `${env.FOO}`.
 Вы также можете обращаться ко встроенным макросам внутри этого файла:
 
-- `${workspaceRoot}` — предоставляет полный путь к папке рабочей области
-- `${workspaceHash}` — хэш расположение рабочей области; полезно при создании уникальный идентификатор для текущей рабочей области (например, для использования в пути к папке)
-- `${projectFile}` — Полный путь к корневой файл CMakeLists.txt
-- `${projectDir}` — Полный путь к папке с файлом CMakeLists.txt корневой
-- `${thisFile}` — Полный путь к `CMakeSettings.json` файла
-- `${name}` — Имя конфигурации
-- `${generator}` — имя генератора CMake, используемый в этой конфигурации
+- `${workspaceRoot}` — предоставляет полный путь для папки рабочей области.
+- `${workspaceHash}` — хэш расположения рабочей области; удобен для создания уникального идентификатора для текущей рабочей области (например, для использования в путях папок).
+- `${projectFile}` — полный путь к корневому файлу CMakeLists.txt.
+- `${projectDir}` — полный путь к папке корневого файла CMakeLists.txt.
+- `${thisFile}` — полный путь к файлу `CMakeSettings.json`.
+- `${name}` — имя конфигурации.
+- `${generator}` — имя генератора CMake, используемого в этой конфигурации.
 
 ## <a name="ninja-command-line-arguments"></a>Аргументы командной строки Ninja
 
@@ -137,7 +141,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>Унаследованные среды
 
- `CMakeSettings.json` поддерживает наследуется сред. Эта функция позволяет: (1) наследовать среды по умолчанию; и (2) создавать пользовательские переменные среды, которые передаются CMake.exe при запуске.
+ `CMakeSettings.json` поддерживает унаследованные среды. Эта функция позволяет: (1) наследовать среды по умолчанию; и (2) создавать пользовательские переменные среды, которые передаются CMake.exe при запуске.
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -210,7 +214,9 @@ usage: ninja [options] [targets...]
       "environments": [
         {
           // Replace the global property entirely.
-          "BuildDir": "D:\\custom-builddir",
+          "BuildDir": "D:\\custom-builddir"
+          // This environment does not specify a namespace, hence by default "env" will be assumed.
+          // "namespace" : "name" would require that this variable be referenced with "${name.BuildDir}".
         }
       ],
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - print preview
 - printing [MFC], print preview
 ms.assetid: d15059cd-32de-4450-95f7-e73aece238f6
-ms.openlocfilehash: 4ca6663aefce219fad4d2e3be74215d2a78206a8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70740922ec7f2030d14eebee72144a373550aacc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263667"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768891"
 ---
 # <a name="printing-and-print-preview"></a>Печать и предварительный просмотр печати
 
@@ -29,7 +29,7 @@ MFC поддерживает печать и предварительный пр
 
 - [Архитектура предварительного просмотра](../mfc/print-preview-architecture.md)
 
-- [Пример](../visual-cpp-samples.md)
+- [Пример](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>См. также
 

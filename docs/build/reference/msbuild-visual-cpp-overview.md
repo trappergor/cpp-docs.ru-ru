@@ -5,10 +5,10 @@ helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
 ms.openlocfilehash: 6c8e891f6bf6ed6b3bb3d1c84dbc13b64ab7b868
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59021908"
 ---
 # <a name="msbuild-internals-for-c-projects"></a>Внутренние компоненты MSBuild для проектов C++
@@ -90,7 +90,7 @@ ms.locfileid: "59021908"
 
 ## <a name="see-also"></a>См. также
 
-[Справочные сведения о задачах MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
+[Справочник по задачам MSBuild](/visualstudio/msbuild/msbuild-task-reference)<br/>
 [Задача BscMake](/visualstudio/msbuild/bscmake-task)<br/>
 [Задача CL](/visualstudio/msbuild/cl-task)<br/>
 [Задача CPPClean](/visualstudio/msbuild/cppclean-task)<br/>

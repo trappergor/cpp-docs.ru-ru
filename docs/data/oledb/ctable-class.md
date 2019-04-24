@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Open method
 ms.assetid: f13fdaa3-e198-4557-977d-54b0bbc3454d
 ms.openlocfilehash: fab1ba2e496f4945eb56c0a67b833f6bf063404e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038778"
 ---
 # <a name="ctable-class"></a>Класс CTable
@@ -82,7 +82,7 @@ HRESULT Open(const CSession& session,
 
 #### <a name="parameters"></a>Параметры
 
-*session*<br/>
+*Сеанс*<br/>
 [in] Сеанс, в течение которого открыт таблицы.
 
 *wszTableName*<br/>
@@ -91,7 +91,7 @@ HRESULT Open(const CSession& session,
 *szTableName*<br/>
 [in] Имя таблицы, переданного как строку ANSI.
 
-*DBID*<br/>
+*dbid*<br/>
 [in] `DBID` Таблицы, чтобы открыть.
 
 *pPropSet*<br/>
@@ -111,4 +111,4 @@ HRESULT Open(const CSession& session,
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

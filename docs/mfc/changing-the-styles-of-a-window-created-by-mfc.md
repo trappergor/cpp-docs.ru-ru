@@ -21,12 +21,12 @@ helpviewer_keywords:
 - CMainFrame class [MFC]
 - styles [MFC], windows
 ms.assetid: 77fa4f03-96b4-4687-9ade-41e46f7e4b0a
-ms.openlocfilehash: c8a3a5d9b8b007887dfb31f7459c0269377b38fd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a002badf9c20ca7b2d1a129eca069e586893f3c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294165"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767240"
 ---
 # <a name="changing-the-styles-of-a-window-created-by-mfc"></a>Изменение стилей окна, созданного MFC
 
@@ -50,7 +50,7 @@ ms.locfileid: "57294165"
 
 [!code-cpp[NVC_MFCDocView#15](../mfc/codesnippet/cpp/changing-the-styles-of-a-window-created-by-mfc_1.cpp)]
 
-[CTRLBARS](../visual-cpp-samples.md) пример приложения демонстрирует этот метод для изменение атрибутов окна. В зависимости от изменений в приложении `PreCreateWindow`, может потребоваться Вызовите реализацию базового класса функции.
+[CTRLBARS](../overview/visual-cpp-samples.md) пример приложения демонстрирует этот метод для изменение атрибутов окна. В зависимости от изменений в приложении `PreCreateWindow`, может потребоваться Вызовите реализацию базового класса функции.
 
 Ниже представлено описание SDI так и [случай MDI](#_core_the_mdi_case).
 

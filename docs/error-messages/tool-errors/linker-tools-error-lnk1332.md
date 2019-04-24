@@ -7,10 +7,10 @@ helpviewer_keywords:
 - LNK1332
 ms.assetid: b31d5ca0-c27f-4177-896b-2637dccbde24
 ms.openlocfilehash: 3c071ae8ac8c212b5bf3cd3eba8b082d790f7d58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041566"
 ---
 # <a name="linker-tools-error-lnk1332"></a>Ошибка средств компоновщика LNK1332
@@ -26,4 +26,4 @@ ms.locfileid: "59041566"
 ## <a name="see-also"></a>См. также
 
 [Ошибка средств компоновщика LNK2039](../../error-messages/tool-errors/linker-tools-error-lnk2039.md)<br/>
-[Ошибки и предупреждения инструментов компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)
+[Ошибки и предупреждения средств компоновщика](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)

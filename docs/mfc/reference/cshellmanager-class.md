@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 3f58492c6adbb6c183d6498e4a58f3ce639d7d18
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ec2abf243e7f3865609f81fa4f3bf81e1b4c3d92
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269387"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769992"
 ---
 # <a name="cshellmanager-class"></a>Класс CShellManager
 
@@ -45,17 +45,17 @@ ms.locfileid: "57269387"
 class CShellManager : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CShellManager::CShellManager](#cshellmanager)|Создает объект `CShellManager`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CShellManager::BrowseForFolder](#browseforfolder)|Отображает диалоговое окно, которое позволяет пользователю выбрать папку оболочки.|
 |[CShellManager::ConcatenateItem](#concatenateitem)|Сцепляет два Pidl.|
@@ -128,7 +128,7 @@ BOOL BrowseForFolder(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как получить ссылку на `CShellManager` объекта с помощью `CWinAppEx::GetShellManager` метод и как использовать `BrowseForFolder` метод. Этот фрагмент кода является частью [пример Explorer](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как получить ссылку на `CShellManager` объекта с помощью `CWinAppEx::GetShellManager` метод и как использовать `BrowseForFolder` метод. Этот фрагмент кода является частью [пример Explorer](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_Explorer#6](../../mfc/reference/codesnippet/cpp/cshellmanager-class_1.cpp)]
 

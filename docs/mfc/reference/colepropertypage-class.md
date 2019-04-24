@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8253b2c2fa6b93ec51c7ede983ef710eed039970
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271259"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776990"
 ---
 # <a name="colepropertypage-class"></a>Класс COlePropertyPage
 
@@ -59,13 +59,13 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePropertyPage::COlePropertyPage](#colepropertypage)|Создает объект `COlePropertyPage`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COlePropertyPage::GetControlStatus](#getcontrolstatus)|Указывает, ли пользователь изменил значение в элементе управления.|
 |[COlePropertyPage::GetObjectArray](#getobjectarray)|Возвращает массив объектов, изменяется на страницу свойств.|
@@ -385,8 +385,8 @@ void SetPageName(LPCTSTR lpszPageName);
 
 ## <a name="see-also"></a>См. также
 
-[Пример CIRC3 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Пример CIRC3 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDialog](../../mfc/reference/cdialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CDialog](../../mfc/reference/cdialog-class.md)

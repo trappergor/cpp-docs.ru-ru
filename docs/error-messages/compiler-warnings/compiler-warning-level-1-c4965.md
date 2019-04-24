@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4965
 ms.assetid: 47f3f6dc-459b-4a25-9947-f394c8966cb5
-ms.openlocfilehash: 7d77df395d680b467d1a04a3f59c9822842f99f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2e93fdeba7f9b5b10340ccd1920807a3fcb345a0
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653106"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778154"
 ---
 # <a name="compiler-warning-level-1-c4965"></a>Предупреждение компилятора (уровень 1) C4965
 
@@ -19,7 +19,7 @@ ms.locfileid: "50653106"
 
 Visual C++ поддерживает неявная упаковка-преобразование типов значений. Инструкцию, которая привела к нулевому назначению с помощью управляемых расширений для C++ теперь становится назначением с упакованным
 
-Дополнительные сведения см. в разделе [Упаковка](../../windows/boxing-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [Упаковка](../../extensions/boxing-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

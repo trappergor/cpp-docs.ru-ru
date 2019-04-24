@@ -12,10 +12,10 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775053"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>Макросы отладки и отчеты об ошибках
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>Параметры
 
 *exp*<br/>
-[in] Строка и переменные для отправки в окне вывода Visual C++ или любого приложения, который перехватывает эти сообщения.
+[in] Строки и переменные для отправки его в визуализацию C++ окно вывода или любого приложения, который перехватывает эти сообщения.
 
 *category*<br/>
 [in] Тип события или метода, на котором в отчет. См. в разделе "Примечания" для списка категорий.
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>Параметры
 
 *exp*<br/>
-[in] Строка, для отправки в окне вывода Visual C++ или любого приложения, который перехватывает эти сообщения.
+[in] Строка, отправляемая в визуальный C++ окно вывода или любого приложения, который перехватывает эти сообщения.
 
 *category*<br/>
 [in] Тип события или метода, на котором в отчет. См. в разделе "Примечания" для списка категорий.

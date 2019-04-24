@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
-ms.openlocfilehash: 81372c7a2468becf6dba3b30b62ee266eed272ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562920"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779025"
 ---
 # <a name="compiler-error-c3461"></a>Ошибка компилятора C3461
 
 "тип": только управляемый тип может быть перенаправлен
 
-Перенаправление типа возможно только для типов среды CLR.  См. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md) Дополнительные сведения.
+Перенаправление типа возможно только для типов среды CLR.  См. в разделе [классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md) Дополнительные сведения.
 
-Дополнительные сведения см. в разделе [Переадресация типа (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Дополнительные сведения см. в разделе [Переадресация типа (C++выполняет)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

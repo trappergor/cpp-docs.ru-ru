@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ActivatableClassWithFactoryEx
 ms.assetid: 9bd64709-ec2c-4678-8c96-ea5982622bdd
 ms.openlocfilehash: 7d38db9e7d3fa94c89195b6379e14692f26f7ee5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037598"
 ---
 # <a name="activatableclass-macros"></a>Макрос ActivatableClass
@@ -46,7 +46,7 @@ ActivatableClassWithFactoryEx(
 *className*<br/>
 Имя создаваемого класса.
 
-*фабрика*<br/>
+*фабрики*<br/>
 Фабрика, которая будет создавать экземпляр указанного класса.
 
 *Имя_сервера*<br/>
@@ -64,4 +64,4 @@ ActivatableClassWithFactoryEx(
 
 ## <a name="see-also"></a>См. также
 
-[Module - класс](module-class.md)
+[Класс Module](module-class.md)

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CFontDialog [MFC], IsUnderline
 - CFontDialog [MFC], m_cf
 ms.assetid: 6228d500-ed0f-4156-81e5-ab0d57d1dcf4
-ms.openlocfilehash: 3dea0f2ba358582b49de107c234a66a751e8f0b0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b711ca65e552d495e466ea2e46a6779cf43ecbe3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267190"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767748"
 ---
 # <a name="cfontdialog-class"></a>Класс CFontDialog
 
@@ -55,13 +55,13 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFontDialog::CFontDialog](#cfontdialog)|Создает объект `CFontDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFontDialog::DoModal](#domodal)|Отображает диалоговое окно и позволяет пользователю сделать выбор.|
 |[CFontDialog::GetCharFormat](#getcharformat)|Извлекает форматирования знаков в выбранном шрифте.|
@@ -78,7 +78,7 @@ class CFontDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFontDialog::m_cf](#m_cf)|Структура, используемая для настройки `CFontDialog` объекта.|
 
@@ -394,6 +394,6 @@ CHOOSEFONT m_cf;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

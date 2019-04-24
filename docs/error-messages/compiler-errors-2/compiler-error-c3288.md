@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608420"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776773"
 ---
 # <a name="compiler-error-c3288"></a>Ошибка компилятора C3288
 
 «Тип»: недопустимая Отмена типа дескриптора
 
-Компилятор обнаружил недопустимое разыменование типа дескриптора. Можно разыменования дескриптора типа и назначить его ссылку. Дополнительные сведения см. в разделе [оператор отслеживания ссылок](../../windows/tracking-reference-operator-cpp-component-extensions.md).
+Компилятор обнаружил недопустимое разыменование типа дескриптора. Можно разыменования дескриптора типа и назначить его ссылку. Дополнительные сведения см. в разделе [оператор отслеживания ссылок](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

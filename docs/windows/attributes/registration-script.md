@@ -1,5 +1,5 @@
 ---
-title: registration_script (атрибут COM C++)
+title: registration_script (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.registration_script
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - registration_script attribute
 ms.assetid: 786f8072-9187-4163-a979-7a604dd4c888
 ms.openlocfilehash: 0b2c4d576a699dea7772821b5635944b2663c57c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024378"
 ---
 # <a name="registrationscript"></a>registration_script
@@ -25,12 +25,12 @@ ms.locfileid: "59024378"
 
 ### <a name="parameters"></a>Параметры
 
-*скрипт*<br/>
+*сценарий*<br/>
 Полный путь к файлу сценария (.rgs) регистрации. Значение **none**, такие как `script = "none"`, означает, что компонентный класс не требования для регистрации.
 
 ## <a name="remarks"></a>Примечания
 
-**Registration_script** атрибут C++ выполняет скрипт регистрации, определяемое *скрипт*. Если этот атрибут не указан, используется стандартный RGS-файл, (содержащий сведения о регистрации компонента). Дополнительные сведения о файлах .rgs, см. в разделе [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
+**Registration_script** C++ атрибут выполняет скрипт регистрации, определяемое *сценарий*. Если этот атрибут не указан, используется стандартный RGS-файл, (содержащий сведения о регистрации компонента). Дополнительные сведения о файлах .rgs, см. в разделе [компонент реестра ATL (регистратор)](../../atl/atl-registry-component-registrar.md).
 
 Этот атрибут требует, чтобы атрибут [coclass](coclass.md), [progid](progid.md)или [vi_progid](vi-progid.md) (или другой атрибут, который подразумевает один из них) также применялся к этому элементу.
 

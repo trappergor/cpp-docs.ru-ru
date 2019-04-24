@@ -15,10 +15,10 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
 ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781800"
 ---
 # <a name="ctypedptrmap-class"></a>Ctypedptrmap-класс
@@ -40,7 +40,7 @@ class CTypedPtrMap : public BASE_CLASS
 *KEY*<br/>
 Класс объекта, используемое в качестве ключа к схеме.
 
-*VALUE*<br/>
+*ЗНАЧЕНИЕ*<br/>
 Класс объекта, хранимый в сопоставлении.
 
 ## <a name="members"></a>Участники
@@ -100,7 +100,7 @@ void GetNextAssoc(
 *rKey*<br/>
 Указывает возвращаемый ключ полученного элемента.
 
-*VALUE*<br/>
+*ЗНАЧЕНИЕ*<br/>
 Параметр шаблона, указывающий тип значения карты.
 
 *rValue*<br/>
@@ -127,10 +127,10 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *BASE_CLASS*<br/>
 Параметр шаблона, указывающий базовый класс для класса этой карты.
 
-*клавиша*<br/>
+*key*<br/>
 Ключ элемента, который требуется найти.
 
-*VALUE*<br/>
+*ЗНАЧЕНИЕ*<br/>
 Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
 
 *rValue*<br/>
@@ -154,13 +154,13 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>Параметры
 
-*VALUE*<br/>
+*ЗНАЧЕНИЕ*<br/>
 Параметр шаблона, указывающий тип значения, хранящиеся в данном сопоставлении.
 
 *BASE_CLASS*<br/>
 Параметр шаблона, указывающий базовый класс для класса этой карты.
 
-*клавиша*<br/>
+*key*<br/>
 Ключ элемента для поиска или создания в сопоставлении.
 
 ### <a name="remarks"></a>Примечания
@@ -180,7 +180,7 @@ BOOL RemoveKey(KEY key);
 *KEY*<br/>
 Параметр шаблона, указывающий тип карты ключей.
 
-*клавиша*<br/>
+*key*<br/>
 Ключ элемента, который требуется удалить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -204,10 +204,10 @@ void SetAt(KEY key, VALUE newValue);
 *KEY*<br/>
 Параметр шаблона, указывающий тип карты ключей.
 
-*клавиша*<br/>
+*key*<br/>
 Указывает значение ключа новое значение.
 
-*newValue*<br/>
+*новое значение*<br/>
 Задает указатель на объект, который является значением нового элемента.
 
 ### <a name="remarks"></a>Примечания

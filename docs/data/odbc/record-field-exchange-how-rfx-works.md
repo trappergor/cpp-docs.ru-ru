@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032681"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>Обмен полями записей: Принцип работы RFX
@@ -63,7 +63,7 @@ ms.locfileid: "59032681"
 |||3. Отправьте код SQL.|
 ||4. Связывание элементов данных параметров.||
 ||5. Привязка поля элементов данных со столбцами.||
-|||6.  ODBC выполняет перемещение и заполнение данных.|
+|||6. ODBC выполняет перемещение и заполнение данных.|
 ||7. Привязка данных для C++.||
 
 Наборы записей используют подготовленное выполнение ODBC позволяет быстро обновления запросов с той же инструкции SQL. Дополнительные сведения о подготовленное выполнение, см. в разделе ODBC SDK *справочнике программиста* в библиотеке MSDN.
@@ -111,7 +111,7 @@ ms.locfileid: "59032681"
 ||3. Для `AddNew`, элементы данных полей как «чистым» и значение Null.||
 |4. Присвоение значений поля элементов данных набора записей.|||
 |5. Вызовите метод `Update`.|||
-||6.  Проверьте наличие измененных полей.||
+||6. Проверьте наличие измененных полей.||
 ||7. Сборки SQL **вставить** инструкции для `AddNew` или **обновление** инструкции для `Edit`.||
 |||8. Отправьте код SQL.|
 ||9. Для `AddNew`, восстанавливается в буфере резервных копий. Для `Edit`, удалить резервную копию.||
@@ -122,7 +122,7 @@ ms.locfileid: "59032681"
 
 ## <a name="see-also"></a>См. также
 
-[Обмен данными полями записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
+[Обмен данными полей записей (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
 [Потребление MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Макросы, глобальные функции и глобальные переменные](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [Класс CFieldExchange](../../mfc/reference/cfieldexchange-class.md)<br/>

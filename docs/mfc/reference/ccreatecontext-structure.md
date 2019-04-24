@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-ms.openlocfilehash: f84c0da7530a774ebe2b33aea0bddc5b0bf0fe17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 795b20cba41eeca8cc1a32e312edf065b718f364
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326352"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768490"
 ---
 # <a name="ccreatecontext-structure"></a>Структура CCreateContext
 
@@ -56,7 +56,7 @@ struct CCreateContext
 
 Как правило, при использовании значения по умолчанию framework, можно игнорировать `CCreateContext`. Если вы попытаетесь дополнительные изменения, исходный код библиотеки Microsoft Foundation Class или примеров программ, таких как приложения, поможет вам. Если вы забыли обязательного параметра, это утверждение framework сообщит, вы забыли.
 
-Дополнительные сведения о `CCreateContext`, см. пример для MFC [VIEWEX](../../visual-cpp-samples.md).
+Дополнительные сведения о `CCreateContext`, см. пример для MFC [VIEWEX](../../overview/visual-cpp-samples.md).
 
 ## <a name="requirements"></a>Требования
 

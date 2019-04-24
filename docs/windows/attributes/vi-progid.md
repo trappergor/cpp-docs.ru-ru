@@ -1,5 +1,5 @@
 ---
-title: vi_progid (атрибут COM C++)
+title: vi_progid (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.vi_progid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033593"
 ---
 # <a name="viprogid"></a>vi_progid
@@ -25,7 +25,7 @@ ms.locfileid: "59033593"
 
 ### <a name="parameters"></a>Параметры
 
-*имя*<br/>
+*name*<br/>
 Идентификатор ProgID независящим от версии, представляющий объект.
 
 Идентификаторы ProgID представляют удобное для восприятия версию идентификатор класса (CLSID), используемый для идентификации объектов COM/ActiveX.

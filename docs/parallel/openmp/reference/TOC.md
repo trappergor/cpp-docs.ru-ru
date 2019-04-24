@@ -1,7 +1,0 @@
-# [Директивы OpenMP](openmp-directives.md)
-# [Предложения OpenMP](openmp-clauses.md)
-# [Справочник по библиотекам OpenMP](openmp-library-reference.md)
-## [Библиотеки OpenMP](openmp-libraries.md)
-## [Типы данных OpenMP](openmp-data-types.md)
-## [Переменные среды OpenMP](openmp-environment-variables.md)
-## [Функции OpenMP](openmp-functions.md)

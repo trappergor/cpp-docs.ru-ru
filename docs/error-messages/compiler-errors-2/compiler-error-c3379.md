@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3379
 ms.assetid: a66c2c4e-091c-4426-9cde-7c4cfb2ffce1
-ms.openlocfilehash: 2d6b2cb15cfaa0b72b946c0edb3b451737b51772
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bf4e2e42b4534d47a2a7d3c9a838c404a99ba68
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553508"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769995"
 ---
 # <a name="compiler-error-c3379"></a>Ошибка компилятора C3379
 
@@ -19,7 +19,7 @@ ms.locfileid: "50553508"
 
 При применении к управляемому типу, например класса или структуры, [открытый](../../cpp/public-cpp.md) и [частного](../../cpp/private-cpp.md) означают возможность предоставления класса посредством метаданных сборки. `public` или `private` не может применяться к вложенному классу, доступ к сборке, включающего класса.
 
-При использовании с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` и `value` означают, что управляемый класс (см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md)).
+При использовании с [/CLR](../../build/reference/clr-common-language-runtime-compilation.md), `ref` и `value` означают, что управляемый класс (см. в разделе [классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md)).
 
 Следующий пример приводит к возникновению ошибки C3379:
 

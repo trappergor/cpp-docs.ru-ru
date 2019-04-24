@@ -1,5 +1,5 @@
 ---
-title: Практическое руководство. Определение статического конструктора интерфейса (C + +/ CLI)
+title: Практическое руководство. Определение статического конструктора интерфейса (C++выполняет)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
 ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772648"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Практическое руководство. Определение статического конструктора интерфейса (C + +/ CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>Практическое руководство. Определение статического конструктора интерфейса (C++выполняет)
 
 Интерфейс может иметь статический конструктор, который может использоваться для инициализации статических элементов данных.  Статический конструктор будет вызываться не более одного раза и будет вызываться до в первый раз доступ к члену статического интерфейс.
 
@@ -56,4 +56,4 @@ in MyInterface static constructor
 
 ## <a name="see-also"></a>См. также
 
-[класс интерфейса](../extensions/interface-class-cpp-component-extensions.md)
+[Класс interface](../extensions/interface-class-cpp-component-extensions.md)

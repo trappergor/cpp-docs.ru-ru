@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3465
 ms.assetid: aeb815e5-b3fc-4525-afe2-d738e9321df1
 ms.openlocfilehash: 117c9b9918950fd2e95e206c5aea457dee183b0a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58781579"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779262"
 ---
 # <a name="compiler-error-c3465"></a>Ошибка компилятора C3465
 
@@ -19,7 +19,7 @@ ms.locfileid: "58781579"
 
 Перенаправление типов будет работать для клиентского приложения до перекомпиляции клиента. При перекомпиляции потребуется ссылка для каждой сборки, содержащей определение типа, используемого в клиентском приложении.
 
-Дополнительные сведения см. в разделе [Переадресация типа (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Дополнительные сведения см. в разделе [Переадресация типа (C++выполняет)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

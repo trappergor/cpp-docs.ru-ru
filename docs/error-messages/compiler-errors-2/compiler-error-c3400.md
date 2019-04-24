@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3400
 ms.assetid: d44169a8-73b6-4766-b406-b3a6c93f2a4d
-ms.openlocfilehash: 70d23e22780b6efc8220675655d8ed095ca50bab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b4cb64da83115ab5b6a5234cda2ea3c7ba3a53
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557382"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778856"
 ---
 # <a name="compiler-error-c3400"></a>Ошибка компилятора C3400
 
@@ -19,7 +19,7 @@ ms.locfileid: "50557382"
 
 Компилятор обнаружил циклическую зависимость ограничений.
 
-Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292280"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776015"
 ---
 # <a name="cmfcpopupmenu-class"></a>Класс CMFCPopupMenu
 
@@ -182,13 +182,13 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPopupMenu::CMFCPopupMenu](#cmfcpopupmenu)|Создает объект `CMFCPopupMenu`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPopupMenu::ActivatePopupMenu](#activatepopupmenu)||
 |[CMFCPopupMenu::AlwaysShowEmptyToolsEntry](#alwaysshowemptytoolsentry)|Задает включение всплывающего меню для отображения пустой записи для пользовательских инструментов.|
@@ -266,7 +266,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPopupMenu::CreateTearOffBar](#createtearoffbar)||
 |[CMFCPopupMenu::OnChangeHot](#onchangehot)||
@@ -278,7 +278,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как настроить объект всплывающего меню. Пример показано, как задать эмблемы и звука из всплывающего меню, задать скорость анимации и тип, рисования shadows меню, когда во всплывающем меню находится за пределами главного фрейма, максимальную ширину и правом меню Выравнивание всплывающего меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).
+В следующем примере показано, как настроить объект всплывающего меню. Пример показано, как задать эмблемы и звука из всплывающего меню, задать скорость анимации и тип, рисования shadows меню, когда во всплывающем меню находится за пределами главного фрейма, максимальную ширину и правом меню Выравнивание всплывающего меню. Этот фрагмент кода является частью [пример пользовательские страницы](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `Create` метод `CMFCPopuMenu` класса. Этот фрагмент кода является частью [пример пользовательские страницы](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `Create` метод `CMFCPopuMenu` класса. Этот фрагмент кода является частью [пример пользовательские страницы](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295140"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769797"
 ---
 # <a name="cricheditdoc-class"></a>Класс CRichEditDoc
 
@@ -35,7 +35,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditDoc::CreateClientItem](#createclientitem)|Вызывается, чтобы выполнить очистку документа.|
 |[CRichEditDoc::GetStreamFormat](#getstreamformat)|Указывает, следует ли включать сведения о форматировании потока входных и выходных данных.|
@@ -43,7 +43,7 @@ class CRichEditDoc : public COleServerDoc
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRichEditDoc::m_bRTF](#m_brtf)|Указывает, должен ли поток ввода-вывода включать форматирование.|
 
@@ -55,7 +55,7 @@ class CRichEditDoc : public COleServerDoc
 
 Это Windows общего элемента управления (и, следовательно, [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md) и связанными классами) доступны только для программ, работающих в версиях Windows 95/98 и Windows NT 3.51 и более поздних версиях.
 
-Пример использования документа форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../visual-cpp-samples.md) пример приложения.
+Пример использования документа форматированным редактированием в приложении MFC, см. в разделе [WORDPAD](../../overview/visual-cpp-samples.md) пример приложения.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC WORDPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC WORDPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleServerDoc](../../mfc/reference/coleserverdoc-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CRichEditView](../../mfc/reference/cricheditview-class.md)<br/>

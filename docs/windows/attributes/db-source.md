@@ -1,5 +1,5 @@
 ---
-title: db_source (атрибут COM C++)
+title: db_source (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.db_source
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - db_source attribute
 ms.assetid: 0ec8bbf7-ade2-4899-bf4c-8608b92779bc
 ms.openlocfilehash: 884cab78d64c20bef00958f0cc0319281fd69921
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026335"
 ---
 # <a name="dbsource"></a>db_source
@@ -28,7 +28,7 @@ ms.locfileid: "59026335"
 *db_source*<br/>
 Строка подключения, используемая для подключения к источнику данных. Формат строки подключения, см. в разделе [строки соединения и ссылки на данные](/previous-versions/windows/desktop/ms718376(v=vs.85)) в Майкрософт данных Access Components (MDAC) SDK.
 
-*имя*<br/>
+*name*<br/>
 (Необязательно) При использовании **db_source** в классе, *имя* — это экземпляр объекта источника данных, имеющий **db_source** атрибут, примененный к нему (см. Пример 1). При использовании **db_source** , встроенный в реализации метода, *имя* — переменная (локальный метода), которая может использоваться для доступа к данным источника (см. Пример 2). Передать его *имя* для *source_name* параметр `db_command` должен быть сопоставлен команды в источнике данных.
 
 *hresult*<br/>
@@ -81,4 +81,4 @@ class CMyCommand {};
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты потребителя OLE DB](ole-db-consumer-attributes.md)
+[Атрибуты объекта-получателя OLE DB](ole-db-consumer-attributes.md)

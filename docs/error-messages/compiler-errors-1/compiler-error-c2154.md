@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2154
 ms.assetid: 98d6b044-5a3a-43ad-95fa-9b916b22468a
-ms.openlocfilehash: 924c5795af23aedec4c361e4aae4148ca71493dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74335a35b23f0e5c4f1ee22f01e4f9887c4a3c85
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530290"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778973"
 ---
 # <a name="compiler-error-c2154"></a>Ошибка компилятора C2154
 
@@ -19,4 +19,4 @@ type: в качестве аргумента характеристики под
 
 Получить можно только базовый тип типа перечисления.
 
-Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../../windows/compiler-support-for-type-traits-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [поддержка характеристик типов компилятором](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md).

@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281529"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769156"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>Класс CMFCToolBarMenuButton
 
@@ -114,13 +114,13 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CMFCToolBarMenuButton](#cmfctoolbarmenubutton)|Создает объект `CMFCToolBarMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::CompareWith](#comparewith)|Сравнивает данный экземпляр с предоставленным `CMFCToolBarButton` объекта. (Переопределяет [CMFCToolBarButton::CompareWith](../../mfc/reference/cmfctoolbarbutton-class.md#comparewith).)|
 |[CMFCToolBarMenuButton::CopyFrom](#copyfrom)|Копирует свойства другую кнопку панели инструментов для текущей кнопки. (Переопределяет [CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom).)|
@@ -165,7 +165,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarMenuButton::DrawDocumentIcon](#drawdocumenticon)|Рисует значка на кнопке меню.|
 
@@ -183,7 +183,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCToolBarMenuButton` объекта. Код иллюстрирует способ указать, что раскрывающееся меню находится в режиме палитры и укажите идентификатор для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопку меню из строки меню. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CMFCToolBarMenuButton` объекта. Код иллюстрирует способ указать, что раскрывающееся меню находится в режиме палитры и укажите идентификатор для перемещаемой панелью, которая создается, когда пользователь перетаскивает кнопку меню из строки меню. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ CMFCToolBarMenuButton(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует создание объекта класса `CMFCToolBarMenuButton` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+Следующий пример демонстрирует создание объекта класса `CMFCToolBarMenuButton` класса. Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

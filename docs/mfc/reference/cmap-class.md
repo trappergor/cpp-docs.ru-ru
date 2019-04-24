@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMap [MFC], RemoveKey
 - CMap [MFC], SetAt
 ms.assetid: 640a45ab-0993-4def-97ec-42cc78eb10b9
-ms.openlocfilehash: 81b52d6876b0691c09db0e9dcf7fa7d491f999ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 58f9efb19988be8487ec87ce0c63d90ee1a97911
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305176"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769840"
 ---
 # <a name="cmap-class"></a>Класс CMap
 
@@ -73,19 +73,19 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 ### <a name="public-structures"></a>Открытые структуры
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMap::CPair](#cpair)|Вложенные структуру, содержащую ключевое значение и значение из связанного объекта.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMap::CMap](#cmap)|Создает коллекцию, которая сопоставляет значения ключей.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMap::GetCount](#getcount)|Возвращает число элементов в данном сопоставлении.|
 |[CMap::GetHashTableSize](#gethashtablesize)|Возвращает число элементов в хэш-таблице.|
@@ -104,7 +104,7 @@ template<class KEY, class ARG_KEY, class VALUE, class ARG_VALUE>class CMap : pub
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMap::operator \[ \]](#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|
 
@@ -538,6 +538,6 @@ void SetAt(ARG_KEY key, ARG_VALUE newValue);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC СБОР](../../visual-cpp-samples.md)<br/>
+[Пример MFC СБОР](../../overview/visual-cpp-samples.md)<br/>
 [Класс CObject](../../mfc/reference/cobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

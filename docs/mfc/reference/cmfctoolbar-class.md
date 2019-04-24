@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283141"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58775638"
 ---
 # <a name="cmfctoolbar-class"></a>Класс CMFCToolBar
 
@@ -334,14 +334,14 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CMFCToolBar::CMFCToolBar`|Конструктор по умолчанию.|
 |`CMFCToolBar::~CMFCToolBar`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBar::AddBasicCommand](#addbasiccommand)|Добавляет в список команд, которые отображаются всегда, когда пользователь открывает меню команды меню.|
 |[CMFCToolBar::AddCommandUsage](#addcommandusage)|Увеличивает на единицу счетчик, который связан с заданной команде.|
@@ -493,7 +493,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBar::AllowShowOnList](#allowshowonlist)|Определяет, отображается ли панель инструментов в списке на **панелей инструментов** области **Настройка** диалоговое окно.|
 |[CMFCToolBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|Вычисляет максимальное Высота кнопки на панели инструментов.|
@@ -504,7 +504,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBar::m_bDontScaleImages](#m_bdontscaleimages)|Задает нужно ли выполнять масштабирование или не изображениям значков панели инструментов в режим высокой точек на ДЮЙМ.|
 |[CMFCToolBar::m_dblLargeImageRatio](#m_dbllargeimageratio)|Указывает соотношение между измерением (высоты или ширины) больших изображений и измерение обычных образов.|
@@ -525,7 +525,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBar` . В примере показано задать текст окна метки элемента панели инструментов, границ, стиль области и включить **добавить или удалить кнопки** кнопка, которая появляется на панели инструментов в конец. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBar` . В примере показано задать текст окна метки элемента панели инструментов, границ, стиль области и включить **добавить или удалить кнопки** кнопка, которая появляется на панели инструментов в конец. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `CreateEx` метод `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `CreateEx` метод `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `GetItemRect` метод `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `GetItemRect` метод `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ virtual BOOL LoadToolBar(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `LoadToolBar` метод в `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `LoadToolBar` метод в `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ int ReplaceButton(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `ReplaceButton` метод в `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `ReplaceButton` метод в `CMFCToolBar` класса. Этот фрагмент кода является частью [IE демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

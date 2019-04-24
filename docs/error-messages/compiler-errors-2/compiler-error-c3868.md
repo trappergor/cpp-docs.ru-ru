@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3868
 ms.assetid: f0e45c2a-2149-4885-a03b-0d230069f03a
-ms.openlocfilehash: 15152ee2e6535010b7045fe2d1362ba0064e3fbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d759d8e527bf38c7408f3497b27287e030d387e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529198"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776795"
 ---
 # <a name="compiler-error-c3868"></a>Ошибка компилятора C3868
 
 «Тип»: ограничения на универсальный параметр «параметр» отличаются от ограничений на объявление
 
-Несколько объявлений должны иметь те же универсальные ограничения.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../windows/generics-cpp-component-extensions.md).
+Несколько объявлений должны иметь те же универсальные ограничения.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
 ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033418"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
@@ -60,5 +60,5 @@ long _InterlockedAddLargeStatistic(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Конфликты с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

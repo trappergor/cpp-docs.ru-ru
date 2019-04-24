@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3722
 ms.assetid: 3cb28363-5eff-4548-bd0d-d5c615846353
-ms.openlocfilehash: d3c721490e0af32d91fcc51412e3c02b6a2d7f67
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e9a8c9cc26aeedf49484bb1f7357a76d0eb42bb5
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451003"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778401"
 ---
 # <a name="compiler-error-c3722"></a>Ошибка компилятора C3722
 
 Универсальное событие не допускается
 
-Компилятор разрешает только универсальные классы, структуры и функции.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../windows/generics-cpp-component-extensions.md).
+Компилятор разрешает только универсальные классы, структуры и функции.  Дополнительные сведения см. в статье [Универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3722:
 

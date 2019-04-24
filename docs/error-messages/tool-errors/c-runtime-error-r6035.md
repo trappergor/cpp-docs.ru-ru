@@ -1,5 +1,5 @@
 ---
-title: C R6035 ошибку во время выполнения
+title: Ошибка времени выполнения C R6035
 ms.date: 11/04/2016
 f1_keywords:
 - R6035
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6035
 ms.assetid: f8fb50b8-18bf-4258-b96a-b0a9de468d16
 ms.openlocfilehash: cbade3ce8686c8c293b8d40a73c546805e42215d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034025"
 ---
-# <a name="c-runtime-error-r6035"></a>C R6035 ошибку во время выполнения
+# <a name="c-runtime-error-r6035"></a>Ошибка времени выполнения C R6035
 
 Microsoft исполняемой библиотеки Visual C++, ошибка R6035 - модуля в этом приложении выполняется инициализация модуля глобальный файл cookie безопасности при активном как функция, использующая этот файл.  Вызовите __security_init_cookie ранее.
 

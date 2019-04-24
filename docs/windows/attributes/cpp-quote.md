@@ -1,5 +1,5 @@
 ---
-title: cpp_quote (атрибут COM C++)
+title: cpp_quote (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.cpp_quote
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024690"
 ---
 # <a name="cppquote"></a>cpp_quote

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326586"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58775547"
 ---
 # <a name="documentview-architecture"></a>Архитектура "документ-представление"
 
@@ -80,7 +80,7 @@ ms.locfileid: "57326586"
 
 - [Использование классов базы данных без документов и представлений](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [Примеры](../visual-cpp-samples.md)
+- [Примеры](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>См. также
 

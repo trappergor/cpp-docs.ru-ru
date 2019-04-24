@@ -1,6 +1,6 @@
 ---
 title: Переменные среды OpenMP
-ms.date: 10/23/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP environment variables
 - OMP_DYNAMIC
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 99868fec581d93f451d321af365f6c4546319077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449690"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124971"
 ---
 # <a name="openmp-environment-variables"></a>Переменные среды OpenMP
 
@@ -29,10 +29,10 @@ ms.locfileid: "50449690"
 
 |переменная среды;|Описание|
 |--------------------|-----------|
+|[OMP_SCHEDULE](#omp-schedule)|Изменяет поведение [расписание](openmp-clauses.md#schedule) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директива.|
+|[OMP_NUM_THREADS](#omp-num-threads)|Задает максимальное число потоков в параллельной области, если не переопределено [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).|
 |[OMP_DYNAMIC](#omp-dynamic)|Указывает, может ли изменять количество потоков в параллельной области OpenMP, время выполнения.|
 |[OMP_NESTED](#omp-nested)|Указывает, включен ли вложенный параллелизм, если не включена или отключена с помощью вложенных параллелизма `omp_set_nested`.|
-|[OMP_NUM_THREADS](#omp-num-threads)|Задает максимальное число потоков в параллельной области, если не переопределено [omp_set_num_threads](openmp-functions.md#omp-set-num-threads) или [num_threads](openmp-clauses.md#num-threads).|
-|[OMP_SCHEDULE](#omp-schedule)|Изменяет поведение [расписание](openmp-clauses.md#schedule) предложение при `schedule(runtime)` указывается в `for` или `parallel for` директива.|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -117,7 +117,7 @@ set OMP_NUM_THREADS[=num]
 
 ### <a name="example"></a>Пример
 
-Следующая команда задает `OMP_NUM_THREADS` переменной среды до 16:
+Следующая команда задает `OMP_NUM_THREADS` переменную среды, чтобы `16`:
 
 ```
 set OMP_NUM_THREADS=16
@@ -140,15 +140,10 @@ set OMP_SCHEDULE[=type[,size]]
 ### <a name="parameters"></a>Параметры
 
 *size*<br/>
-(Необязательно) Указывает размер итераций. `size` Должно быть положительным целым числом. Значение по умолчанию равно 1, за исключением случаев `type` является статическим. Не является допустимым, если `type` является `runtime`.
+(Необязательно) Указывает размер итераций. *размер* должно быть положительным целым числом. По умолчанию используется `1`, кроме случая, когда *типа* является статическим. Не является допустимым, если *тип* является `runtime`.
 
 *type*<br/>
-Тип расписания:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+Тип планирования, либо `dynamic`, `guided`, `runtime`, или `static`.
 
 ### <a name="remarks"></a>Примечания
 

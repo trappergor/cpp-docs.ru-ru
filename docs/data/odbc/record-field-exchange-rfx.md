@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032223"
 ---
 # <a name="record-field-exchange-rfx"></a>Обмен данными полями записей (RFX)
@@ -46,7 +46,7 @@ RFX по большей части прозрачна для вас. Если в
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
+[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Потребление MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [Поддержка базы данных, мастер приложений MFC](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>

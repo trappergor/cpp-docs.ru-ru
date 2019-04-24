@@ -19,10 +19,10 @@ helpviewer_keywords:
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
 ms.openlocfilehash: 54ea8b1ccac15eab600c91302969b606c188dc59
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040654"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>встроенные функции _interlockedbittestandreset
@@ -74,7 +74,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 #### <a name="parameters"></a>Параметры
 
-*пример*<br/>
+*a*<br/>
 [in] Указатель памяти для проверки.
 
 *b*<br/>
@@ -89,7 +89,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86, ARM, x64|\<intrin.h>|
-|`_interlockedbittestandreset_acq`значение `_interlockedbittestandreset_nf`значение `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandreset_acq`, `_interlockedbittestandreset_nf`, `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
 |`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86, x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|X64|\<intrin.h>|
 |`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
@@ -108,5 +108,5 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
-[Конфликты с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

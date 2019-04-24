@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3830
 ms.assetid: c9798f88-5001-4067-9fb1-09957ddc6fa8
-ms.openlocfilehash: 5c484b2b9267bf5f9be3593c20c8b261dafde206
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25f2b86e21d4672c9e0907c366da17072bafa183
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631417"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778687"
 ---
 # <a name="compiler-error-c3830"></a>Ошибка компилятора C3830
 
 «тип1»: не может наследовать от «тип2», значение типов может наследовать только от классов интерфейсов
 
-Тип значения не может наследовать базовому классу.  Дополнительные сведения см. в разделе [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md).
+Тип значения не может наследовать базовому классу.  Дополнительные сведения см. в разделе [классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

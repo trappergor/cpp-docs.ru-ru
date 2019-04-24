@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
 ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778043"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777956"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>Предупреждение компилятора (уровень 1) C4383
 
@@ -21,7 +21,7 @@ ms.locfileid: "58778043"
 
 Дополнительные сведения см. в разделе [оператор дескриптора объекта (^)](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md) и [оператор отслеживания ссылок](../../extensions/tracking-reference-operator-cpp-component-extensions.md).
 
-Кроме того оператор экземпляра не доступны в другие компиляторы языка с помощью ссылочных метаданных. Дополнительные сведения см. в разделе [определяемые пользователем операторы (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Кроме того оператор экземпляра не доступны в другие компиляторы языка с помощью ссылочных метаданных. Дополнительные сведения см. в разделе [определяемые пользователем операторы (C++выполняет)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

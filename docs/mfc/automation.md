@@ -20,12 +20,12 @@ helpviewer_keywords:
 - MFC COM, Automation
 - methods [MFC], Automation
 ms.assetid: 329117f0-c1aa-4680-a901-bfb71277dfba
-ms.openlocfilehash: b26a08bbe9ef9b9151910871201abe05a44d2f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7818aa708a762f2a284be029a6c3f3facd971d9a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265574"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767734"
 ---
 # <a name="automation"></a>автоматизация
 
@@ -55,17 +55,17 @@ ms.locfileid: "57265574"
 
 ## <a name="automation-samples"></a>Примеры автоматизации
 
-- [AUTOCLIK](../visual-cpp-samples.md) Используйте этот пример, чтобы освоить приемы автоматизации и изучить основы удаленной автоматизации.
+- [AUTOCLIK](../overview/visual-cpp-samples.md) Используйте этот пример, чтобы освоить приемы автоматизации и изучить основы удаленной автоматизации.
 
-- [ACDUAL](../visual-cpp-samples.md) Добавляет сдвоенные интерфейсы в приложение сервера автоматизации.
+- [ACDUAL](../overview/visual-cpp-samples.md) Добавляет сдвоенные интерфейсы в приложение сервера автоматизации.
 
-- [CALCDRIV](../visual-cpp-samples.md) Приложение клиента автоматизации для реализации MFCCALC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Приложение клиента автоматизации для реализации MFCCALC.
 
-- [INPROC](../visual-cpp-samples.md) Демонстрирует приложение внутрипроцессного сервера автоматизации.
+- [INPROC](../overview/visual-cpp-samples.md) Демонстрирует приложение внутрипроцессного сервера автоматизации.
 
-- [CALCDRIV](../visual-cpp-samples.md) Приложение клиента автоматизации для реализации INPROC.
+- [CALCDRIV](../overview/visual-cpp-samples.md) Приложение клиента автоматизации для реализации INPROC.
 
-- [MFCCALC](../visual-cpp-samples.md) Демонстрирует приложение клиента автоматизации.
+- [MFCCALC](../overview/visual-cpp-samples.md) Демонстрирует приложение клиента автоматизации.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Выберите для получения дополнительных сведений
 

@@ -50,10 +50,10 @@ helpviewer_keywords:
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
 ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039732"
 ---
 # <a name="ccommand-class"></a>Класс CCommand
@@ -80,7 +80,7 @@ class CCommand :
 *TRowset*<br/>
 Тип класса набора строк (таких как `CArrayRowset` или `CNoRowset`) возникает необходимость команду, чтобы использовать. Значение по умолчанию — `CRowset`.
 
-*TMultiple*<br/>
+*Тип TMultiple*<br/>
 Чтобы использовать команду OLE DB, может вернуть несколько результатов, укажите [CMultipleResults](../../data/oledb/cmultipleresults-class.md). В противном случае используйте [CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md). Дополнительные сведения см. в разделе [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85)).
 
 ## <a name="requirements"></a>Требования
@@ -101,7 +101,7 @@ class CCommand :
 
 |||
 |-|-|
-|[Создать](#create)|Создает новую команду для указанного сеанса, а затем задает текст команды.|
+|[Создание](#create)|Создает новую команду для указанного сеанса, а затем задает текст команды.|
 |[CreateCommand](#createcommand)|Создает новую команду.|
 |[GetParameterInfo](#getparameterinfo)|Получает список параметров команды, их имена и их типы.|
 |[Подготовка](#prepare)|Проверяет и оптимизировать текущую команду.|
@@ -209,7 +209,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>Параметры
 
-*session*<br/>
+*Сеанс*<br/>
 [in] Сеанс, в котором выполняется команда.
 
 *wszCommand*<br/>
@@ -276,7 +276,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>Параметры
 
-*session*<br/>
+*Сеанс*<br/>
 [in] Сеанс, для которых можно создать команду.
 
 *wszCommand*<br/>
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>Параметры
 
-*session*<br/>
+*Сеанс*<br/>
 [in] Объект `CSession` объекта, связываемого с новой команды.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -417,4 +417,4 @@ HRESULT CCommandBase::Unprepare() throw();
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

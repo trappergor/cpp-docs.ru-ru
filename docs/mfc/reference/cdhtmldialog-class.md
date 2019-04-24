@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: d53d3afb464b9dcfa32ab3cf4ee51446f8313a92
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565809"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771829"
 ---
 # <a name="cdhtmldialog-class"></a>Класс CDHtmlDialog
 
@@ -1524,6 +1524,6 @@ STDMETHOD(UpdateUI)(void);
 
 ## <a name="see-also"></a>См. также
 
-[Сложный пример MFC](../../visual-cpp-samples.md)<br/>
+[Сложный пример MFC](../../overview/visual-cpp-samples.md)<br/>
 [Вспомогательные макросы DDX_DHtml](#ddx_dhtml_helper_macros)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

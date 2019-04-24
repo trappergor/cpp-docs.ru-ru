@@ -8,10 +8,10 @@ helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
 ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776340"
 ---
 # <a name="auto-c"></a>auto (C++)
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 Выражение инициализации может представлять назначения (синтаксис со знаком равенства), прямую инициализацию (синтаксис в стиле функции), [оператор new](new-operator-cpp.md) выражение или выражение инициализации может быть  *для объявления диапазона* параметр в [по диапазону для инструкции (C++)](../cpp/range-based-for-statement-cpp.md) инструкции. Дополнительные сведения см. в разделе [инициализаторы](../cpp/initializers.md) и примеры кода далее в этом документе.
 
-**Автоматически** ключевое слово — это заполнитель для типа, но он сам не является типом. Таким образом **автоматически** ключевое слово не может использоваться в приведениях типов или операторы например [sizeof](../cpp/sizeof-operator.md) и (C + +/ CLI) [typeid](../extensions/typeid-cpp-component-extensions.md).
+**Автоматически** ключевое слово — это заполнитель для типа, но он сам не является типом. Таким образом **автоматически** ключевое слово не может использоваться в приведениях типов или операторы например [sizeof](../cpp/sizeof-operator.md) и (для C++выполняет) [typeid](../extensions/typeid-cpp-component-extensions.md).
 
 ## <a name="usefulness"></a>Удобство
 

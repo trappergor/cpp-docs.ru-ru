@@ -11,12 +11,12 @@ helpviewer_keywords:
 - paint messages in view class [MFC]
 - device contexts, screen drawings
 ms.assetid: e3761db6-0f19-4482-a4cd-ac38ef7c4d3a
-ms.openlocfilehash: 77844ebd31f624229870d27c72b08a987b7533bd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc461347b56379976cdf62014507e3a15529f081
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280775"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772557"
 ---
 # <a name="drawing-in-a-view"></a>Рисование в представлении
 
@@ -42,7 +42,7 @@ ms.locfileid: "57280775"
 
 В примере выводится любых строк, получаемый от документа, по центру представления. Если `OnDraw` будет на рисование экрана `CDC` переданный объект *pDC* — `CPaintDC` , конструктор которого уже вызван `BeginPaint`. Вызовы рисования функции выполняются через указатель контекста устройства. Сведения о контекстах устройств и вызовы рисования, см. в разделе класса [CDC](../mfc/reference/cdc-class.md) в *Справочник по библиотеке MFC* и [работа с объектами окон](../mfc/working-with-window-objects.md).
 
-Дополнительные примеры создания `OnDraw`, см. в разделе [примеры MFC](../visual-cpp-samples.md).
+Дополнительные примеры создания `OnDraw`, см. в разделе [примеры MFC](../overview/visual-cpp-samples.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -103,10 +103,10 @@ helpviewer_keywords:
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
 ms.openlocfilehash: ba6b41a708cd854e398cbaa80609472ebbe167e8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023234"
 ---
 # <a name="cbulkrowset-class"></a>Класс CBulkRowset
@@ -245,7 +245,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 #### <a name="parameters"></a>Параметры
 
-*закладка*<br/>
+*Закладка*<br/>
 [in] Закладка, расположения, из которого требуется извлечь данные.
 
 *lSkip*<br/>
@@ -322,4 +322,4 @@ void SetRows(DBROWCOUNT nRows) throw();
 ## <a name="see-also"></a>См. также
 
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

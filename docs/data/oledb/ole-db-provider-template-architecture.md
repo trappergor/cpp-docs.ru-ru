@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
 ms.openlocfilehash: 65a7e5b8f169d06ca11d8d27ec99ce3db4b63014
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028552"
 ---
 # <a name="ole-db-provider-template-architecture"></a>Архитектура шаблона поставщика OLE DB
@@ -29,7 +29,7 @@ ms.locfileid: "59028552"
 
 - [Источник данных](../../data/oledb/data-source-object-interfaces.md)
 
-- [Сеанс](../../data/oledb/session-object-interfaces.md)
+- [Session](../../data/oledb/session-object-interfaces.md)
 
 - [Набор строк](../../data/oledb/rowset-object-interfaces.md)
 

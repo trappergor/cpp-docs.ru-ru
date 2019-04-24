@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CColorDialog [MFC], OnColorOK
 - CColorDialog [MFC], m_cc
 ms.assetid: d013dc25-9290-4b5d-a97e-95ad7208e13b
-ms.openlocfilehash: 39868ed27a0dfb8756b4829ea7c378c798bd2ff3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc9bc76b328359d4c8ec7796de7dfaa7d3a9cf2c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304214"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772843"
 ---
 # <a name="ccolordialog-class"></a>Класс CColorDialog
 
@@ -41,13 +41,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CColorDialog::CColorDialog](#ccolordialog)|Создает объект `CColorDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CColorDialog::DoModal](#domodal)|Отображает диалоговое окно цвета и позволяет пользователю сделать выбор.|
 |[CColorDialog::GetColor](#getcolor)|Возвращает `COLORREF` структуру, содержащую значения выбранного цвета.|
@@ -56,13 +56,13 @@ class CColorDialog : public CCommonDialog
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CColorDialog::OnColorOK](#oncolorok)|Переопределите для проверки введенных в диалоговом окне цвет.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CColorDialog::m_cc](#m_cc)|Структура, используемая для настройки параметров диалогового окна.|
 
@@ -268,7 +268,7 @@ void SetCurrentColor(COLORREF clr);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MDI](../../visual-cpp-samples.md)<br/>
-[Пример MFC ФУНКЦИЙ](../../visual-cpp-samples.md)<br/>
+[Пример MFC MDI](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC ФУНКЦИЙ](../../overview/visual-cpp-samples.md)<br/>
 [Класс CCommonDialog](../../mfc/reference/ccommondialog-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
 ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781007"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>Элементы ActiveX в MFC. Добавление пользовательских событий
@@ -133,6 +133,6 @@ ms.locfileid: "58781007"
 
 ## <a name="see-also"></a>См. также
 
-[Элементы управления ActiveX MFC](../mfc/mfc-activex-controls.md)<br/>
+[Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
 [Элементы ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
-[Colecontrol-класс](../mfc/reference/colecontrol-class.md)
+[Класс COleControl](../mfc/reference/colecontrol-class.md)

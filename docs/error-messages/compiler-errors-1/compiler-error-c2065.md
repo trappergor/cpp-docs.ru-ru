@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
 ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778758"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779405"
 ---
 # <a name="compiler-error-c2065"></a>Ошибка компилятора C2065
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>Пример C + +/ ошибка выведение типа интерфейса командной строки
+## <a name="example-ccli-type-deduction-failure"></a>Пример C++Или ошибка определения типа интерфейса командной строки
 
-Эта ошибка может возникать при вызове универсальной функции, если заданный аргумент типа не может быть выведен из параметров, используемых. Дополнительные сведения см. в разделе [универсальные функции (C + +/ CLI)](../../extensions/generic-functions-cpp-cli.md).
+Эта ошибка может возникать при вызове универсальной функции, если заданный аргумент типа не может быть выведен из параметров, используемых. Дополнительные сведения см. в разделе [универсальные функции (C++выполняет)](../../extensions/generic-functions-cpp-cli.md).
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>Пример C + +/ CLI атрибута параметров
+## <a name="example-ccli-attribute-parameters"></a>Пример C++Или параметры атрибутов интерфейса командной строки
 
 Эта ошибка также может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: проверка параметров для атрибутов Visual C++.
 

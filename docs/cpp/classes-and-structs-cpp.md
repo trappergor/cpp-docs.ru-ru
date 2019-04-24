@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user-defined types, C++ classes
 ms.assetid: 516dd496-13fb-4f17-845a-e9ca45437873
 ms.openlocfilehash: c28f83e7853ffb09bba7721ec71ab43c85aedb0c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779395"
 ---
 # <a name="classes-and-structs-c"></a>Классы и структуры (C++)
@@ -51,7 +51,7 @@ ms.locfileid: "58779395"
 
 Существует три типа классов: структура, класс и объединение. Они объявляются с помощью [структуры](../cpp/struct-cpp.md), [класс](../cpp/class-cpp.md), и [объединение](../cpp/unions.md) ключевые слова. В следующей таблице показаны различия между этими тремя типами классов.
 
-Дополнительные сведения об объединениях см. в разделе [объединения](../cpp/unions.md). Сведения о классах и структурах в C + +/ CLI и C + +/ CX, см. в разделе [классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md).
+Дополнительные сведения об объединениях см. в разделе [объединения](../cpp/unions.md). Сведения о классах и структурах в C++выполняет и C++/CX, см. в разделе [классы и структуры](../extensions/classes-and-structs-cpp-component-extensions.md).
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>Управление доступом и ограничения для структур, классов и объединений
 

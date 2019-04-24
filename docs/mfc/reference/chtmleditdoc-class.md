@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditDoc [MFC], IsModified
 - CHtmlEditDoc [MFC], OpenURL
 ms.assetid: b2cca61f-e5d6-4099-b0d1-46bf85f0bd64
-ms.openlocfilehash: f468de46cf6d8a8bfcd60521df8b1076a98f0735
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2a00b2501647f6101fed8ed1d4cd23dad7ab209
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285338"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767071"
 ---
 # <a name="chtmleditdoc-class"></a>Класс CHtmlEditDoc
 
@@ -35,13 +35,13 @@ class AFX_NOVTABLE CHtmlEditDoc : public CDocument
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHtmlEditDoc::CHtmlEditDoc](#chtmleditdoc)|Создает объект `CHtmlEditDoc`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CHtmlEditDoc::GetView](#getview)|Извлекает `CHtmlEditView` объект присоединен к этому документу.|
 |[CHtmlEditDoc::IsModified](#ismodified)|Возвращает, содержит ли элемент управления WebBrowser связанного представления документа, которые были изменены пользователем.|
@@ -108,5 +108,5 @@ URL-адрес, чтобы открыть.
 
 ## <a name="see-also"></a>См. также
 
-[Пример HTMLEdit](../../visual-cpp-samples.md)<br/>
+[Пример HTMLEdit](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

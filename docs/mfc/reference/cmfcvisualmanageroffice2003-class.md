@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dd62ea4073ae1982f01a279a411c8d11e8e5cec3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273274"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776210"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>Класс CMFCVisualManagerOffice2003
 
@@ -109,11 +109,11 @@ ms.locfileid: "57273274"
 class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCVisualManagerOffice2003::DrawComboBorderWinXP](#drawcomboborderwinxp)|Рисует границу поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboBorderWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcomboborderwinxp).)|
 |[CMFCVisualManagerOffice2003::DrawComboDropButtonWinXP](#drawcombodropbuttonwinxp)|Рисует кнопку раскрывающегося списка поле со списком, с помощью текущей темы Windows XP. (Переопределяет [CMFCVisualManager::DrawComboDropButtonWinXP](../../mfc/reference/cmfcvisualmanager-class.md#drawcombodropbuttonwinxp).)|
@@ -207,7 +207,7 @@ class CMFCVisualManagerOffice2003 : public CMFCVisualManagerOfficeXP
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует установите наглядный диспетчер, office 2003. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует установите наглядный диспетчер, office 2003. Этот фрагмент кода является частью [Desktop оповещения демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#6](../../mfc/reference/codesnippet/cpp/cmfcvisualmanageroffice2003-class_1.cpp)]
 
