@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
-ms.openlocfilehash: 84b21f20cbc8203a9cd70e487738c34c6ad3a89b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598936"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778479"
 ---
 # <a name="compiler-error-c3908"></a>Ошибка компилятора C3908
 
@@ -19,7 +19,7 @@ ms.locfileid: "50598936"
 
 Метод доступа свойства (get или set) не может иметь менее строгий доступ, чем доступ, заданный на само свойство.  Аналогично для методов доступа к событию.
 
-Дополнительные сведения см. в разделе [свойство](../../windows/property-cpp-component-extensions.md) и [событий](../../windows/event-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [свойство](../../extensions/property-cpp-component-extensions.md) и [событий](../../extensions/event-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3908:
 

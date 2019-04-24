@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268218"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767552"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>Элементы ActiveX в MFC. Локализация элемента управления ActiveX
 
@@ -28,7 +28,7 @@ ms.locfileid: "57268218"
 
 Как правило элементы управления ActiveX всегда следует строить языковый стандарт на внешнее свойство LocaleID. Это можно сделать тремя способами:
 
-- Загрузка ресурсов, всегда по запросу, на основе текущего значения свойства окружения LocaleID. Элементы ActiveX в MFC образец [LOCALIZE](../visual-cpp-samples.md) применяет эту стратегию.
+- Загрузка ресурсов, всегда по запросу, на основе текущего значения свойства окружения LocaleID. Элементы ActiveX в MFC образец [LOCALIZE](../overview/visual-cpp-samples.md) применяет эту стратегию.
 
 - Загрузка ресурсов, при этом случае первый элемент управления, основываясь на свойстве LocaleID окружающей среды и использовать эти ресурсы для всех других экземпляров. В этой статье демонстрируется эта стратегия.
 
@@ -40,7 +40,7 @@ ms.locfileid: "57268218"
     > [!NOTE]
     >  Это будет работать для элемента управления, но библиотеки DLL времени выполнения не обновит динамически собственные ресурсы при изменении свойства окружения LocaleID. Кроме того библиотеки DLL времени выполнения для элементов управления ActiveX использовать национальную настройку потока для определения языкового стандарта для его ресурсов.
 
-В оставшейся части в этой статье описываются две стратегии локализацию. Первая стратегия [есть перевод элемента управления интерфейс](#_core_localizing_your_control.92.s_programmability_interface) (имена свойств, методов и событий). Вторая стратегия [есть перевод элемента управления пользовательского интерфейса](#_core_localizing_the_control.92.s_user_interface), с помощью контейнера внешнее свойство LocaleID. Пример локализации элемента управления, см. Пример элементов управления ActiveX в MFC [LOCALIZE](../visual-cpp-samples.md).
+В оставшейся части в этой статье описываются две стратегии локализацию. Первая стратегия [есть перевод элемента управления интерфейс](#_core_localizing_your_control.92.s_programmability_interface) (имена свойств, методов и событий). Вторая стратегия [есть перевод элемента управления пользовательского интерфейса](#_core_localizing_the_control.92.s_user_interface), с помощью контейнера внешнее свойство LocaleID. Пример локализации элемента управления, см. Пример элементов управления ActiveX в MFC [LOCALIZE](../overview/visual-cpp-samples.md).
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> Локализация интерфейса программирования элемента управления
 
@@ -88,7 +88,7 @@ ms.locfileid: "57268218"
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-Обратите внимание на то, что идентификатор варианта языка может проверяться в каждом случае оператора switch, чтобы предоставить более специализированный локализацию. Демонстрацию этой функции см. в разделе `GetResourceHandle` функции в MFC ActiveX управляет образец [LOCALIZE](../visual-cpp-samples.md).
+Обратите внимание на то, что идентификатор варианта языка может проверяться в каждом случае оператора switch, чтобы предоставить более специализированный локализацию. Демонстрацию этой функции см. в разделе `GetResourceHandle` функции в MFC ActiveX управляет образец [LOCALIZE](../overview/visual-cpp-samples.md).
 
 Когда элемент управления сначала загружается в контейнер, оно может вызвать [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid) для получения идентификатора языкового стандарта. Элемент управления затем можно передать значение возвращенного локали для `GetLocalizedResourceHandle` функцию, которая загружает библиотеку ресурсов. Элемент управления следует передавать полученный дескриптор, если таковое имеется, чтобы [AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273066"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58768046"
 ---
 # <a name="cchecklistbox-class"></a>Класс CCheckListBox
 
@@ -49,13 +49,13 @@ class CCheckListBox : public CListBox
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCheckListBox::CCheckListBox](#cchecklistbox)|Создает объект `CCheckListBox`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCheckListBox::Create](#create)|Создает поля со списком Windows и присоединяет его к `CCheckListBox` объекта.|
 |[CCheckListBox::DrawItem](#drawitem)|Вызывается платформой при изменении внешнего вида рисуемого владельцем список поля изменится.|
@@ -240,7 +240,7 @@ int GetCheck(int nIndex);
 
 Состояние указанного поля с флажком. В следующей таблице перечислены возможные значения.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |BST_CHECKED|Флажок установлен.|
 |BST_UNCHECKED|Флажок не установлен.|
@@ -344,7 +344,7 @@ void SetCheck(
 
 В следующей таблице перечислены возможные значения для *проверьте* параметра.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |BST_CHECKED|Установите указанный флажок.|
 |BST_UNCHECKED|Снимите флажок указанного.|
@@ -379,7 +379,7 @@ void SetCheckStyle(UINT nStyle);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC TSTCON](../../visual-cpp-samples.md)<br/>
+[Пример MFC TSTCON](../../overview/visual-cpp-samples.md)<br/>
 [Класс CListBox](../../mfc/reference/clistbox-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CListBox](../../mfc/reference/clistbox-class.md)

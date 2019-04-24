@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773077"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>Класс CMFCRibbonBaseElement
@@ -577,7 +577,7 @@ virtual void DrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *type*<br/>
@@ -685,7 +685,7 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -817,7 +817,7 @@ virtual CSize GetIntermediateSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -848,7 +848,7 @@ virtual CRect GetKeyTipRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *bIsMenu*<br/>
@@ -872,7 +872,7 @@ virtual CSize GetKeyTipSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1059,7 +1059,7 @@ virtual CSize GetRegularSize(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1081,7 +1081,7 @@ virtual CSize GetSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1606,7 +1606,7 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -1639,7 +1639,7 @@ virtual void OnCalcTextSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="remarks"></a>Примечания
@@ -1677,7 +1677,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания
@@ -1697,7 +1697,7 @@ virtual void OnDrawKeyTip(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1720,7 +1720,7 @@ virtual BOOL OnDrawMenuImage(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1748,7 +1748,7 @@ virtual void OnDrawOnList(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства для элемента ленты.
 
 *strText*<br/>
@@ -1820,7 +1820,7 @@ virtual BOOL OnProcessKey(UINT nChar);
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 [in] Этот параметр не используется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 Родительское окно для элемента ленты.
 
-*Данные*<br/>
+*data*<br/>
 Данные специальных возможностей для элемента ленты.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2235,7 +2235,7 @@ virtual BOOL StretchToWholeRow(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Этот параметр не используется.
 
 *nHeight*<br/>

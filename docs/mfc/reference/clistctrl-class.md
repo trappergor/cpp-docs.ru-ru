@@ -265,10 +265,10 @@ helpviewer_keywords:
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
 ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780617"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>Параметры
 
-*pos*<br/>
+*торговых терминалов*<br/>
 Ссылку на ПОЗИЦИЮ, возвращенное предыдущим вызовом `GetNextSelectedItem` или `GetFirstSelectedItemPosition`. Значение обновляется до следующей позиции этим вызовом.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>Параметры
 
-*индекс*<br/>
+*Индекс*<br/>
 Индекс элемента, где группа — для вставки.
 
 *pgrp*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*индекс*|[in] Отсчитываемый от нуля индекс элемента в текущего элемента управления представление списка.|
+|*Индекс*|[in] Отсчитываемый от нуля индекс элемента в текущего элемента управления представление списка.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*индекс*|[in] Отсчитываемый от нуля индекс элемента.|
+|*Индекс*|[in] Отсчитываемый от нуля индекс элемента.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -3320,7 +3320,7 @@ BOOL SetColumnWidth(
 *nCol*<br/>
 Индекс столбца, для которого будет устанавливаться ширину. В представлении списка этот параметр должен быть 0.
 
-*CX*<br/>
+*cx*<br/>
 Новая ширина столбца. Может быть LVSCW_AUTOSIZE или LVSCW_AUTOSIZE_USEHEADER, как описано в разделе [LVM_SETCOLUMNWIDTH](/windows/desktop/Controls/lvm-setcolumnwidth) в пакете Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3490,7 +3490,7 @@ CSize SetIconSpacing(CSize size);
 
 ### <a name="parameters"></a>Параметры
 
-*CX*<br/>
+*cx*<br/>
 Расстояние (в пикселях) между значками на оси x.
 
 *CY*<br/>

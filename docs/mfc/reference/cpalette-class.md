@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274665"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58770822"
 ---
 # <a name="cpalette-class"></a>Класс CPalette
 
@@ -47,13 +47,13 @@ class CPalette : public CGdiObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPalette::CPalette](#cpalette)|Создает `CPalette` объект с присоединенного палитры Windows. Необходимо инициализировать `CPalette` объекта с одним из функции-члены инициализации, прежде чем он может использоваться.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPalette::AnimatePalette](#animatepalette)|Заменяет записей в логическую палитру, идентифицируемый `CPalette` объекта. Приложения не требуется обновить свою клиентскую область, поскольку Windows сопоставляет новые записи в системной палитре немедленно.|
 |[CPalette::CreateHalftonePalette](#createhalftonepalette)|Создает полутоновой палитры для контекста устройства и присоединяет его к `CPalette` объекта.|
@@ -67,7 +67,7 @@ class CPalette : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPalette::operator HPALETTE](#operator_hpalette)|Возвращает HPALETTE подключен к `CPalette`.|
 
@@ -326,7 +326,7 @@ UINT SetPaletteEntries(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC DIBLOOK](../../visual-cpp-samples.md)<br/>
+[Пример MFC DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [Класс CGdiObject](../../mfc/reference/cgdiobject-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>

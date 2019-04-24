@@ -5,10 +5,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028578"
 ---
 # <a name="preprocessor"></a>Препроцессор
@@ -20,7 +20,7 @@ ms.locfileid: "59028578"
 
 - [Операторы препроцессора](../preprocessor/preprocessor-operators.md)
 
-- [Предустановленные макросы](../preprocessor/predefined-macros.md)
+- [Предопределенные макросы](../preprocessor/predefined-macros.md)
 
 - [Директивы pragma](../preprocessor/pragma-directives-and-the-pragma-keyword.md)
 
@@ -38,5 +38,5 @@ ms.locfileid: "59028578"
 
 ## <a name="see-also"></a>См. также
 
-[Cправочник препроцессора /C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
+[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)<br/>
 [Фазы трансляции](../preprocessor/phases-of-translation.md)

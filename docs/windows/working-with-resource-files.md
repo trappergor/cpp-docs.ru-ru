@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037741"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
@@ -18,7 +18,7 @@ ms.locfileid: "59037741"
 > [!WARNING]
 > Этот раздел относится к классическим приложениям Windows, написанным на C++.
 >
-> Сведения о ресурсах в приложениях универсальной платформы Windows, написанного на языке C++ см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/), или о добавлении ресурсов в C + +/ CLI (управляемые) проектов, см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) в Руководство разработчика .NET Framework.
+> Сведения о ресурсах в приложениях универсальной платформы Windows, написанных на C++, см. в разделе [определение ресурсов приложения](/windows/uwp/app-resources/), или о добавлении ресурсов в C++/проекты CLI (управляемый код), см. в разделе [ресурсы в приложениях для настольных систем](/dotnet/framework/resources/index) руководства разработчика .NET Framework.
 
 Ресурсы могут состоять из широкий спектр элементов, таких как:
 
@@ -44,7 +44,7 @@ ms.locfileid: "59037741"
 [Идентификаторы ресурсов (символы)](../windows/symbols-resource-identifiers.md)<br/>
 В этой статье описываются символы и использование диалогового окна **Символы ресурсов** для управления символами в проекте.
 
-[редакторы ресурсов](../windows/resource-editors.md)<br/>
+[Редакторы ресурсов](../windows/resource-editors.md)<br/>
 Описывает редакторы ресурсов, доступные в Visual Studio и типы ресурсов, которые можно изменять с каждым редактором. Также содержит ссылки на подробные сведения об использовании каждого редактора отдельно.
 
 ## <a name="related-sections"></a>Связанные разделы
@@ -52,7 +52,7 @@ ms.locfileid: "59037741"
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Ссылки на документацию по Visual C++.
 
-[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
+[Обращайтесь к нам](/visualstudio/ide/talk-to-us)<br/>
 Ссылки на сведения об использовании документации, обращении в службу поддержки и использовании специальных возможностей.
 
 ## <a name="see-also"></a>См. также

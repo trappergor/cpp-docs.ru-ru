@@ -1,5 +1,5 @@
 ---
-title: Скомпилируйте C + +/ CLI программы, предназначенной для среды CLR
+title: Скомпилируйте C++выполняет программу, предназначенной для среды CLR
 ms.date: 09/17/2018
 helpviewer_keywords:
 - command-line applications [C++], managed code
@@ -8,15 +8,15 @@ helpviewer_keywords:
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
 ms.openlocfilehash: fcac0079185b6ceef981b9acfeb555ef29d464e0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034674"
 ---
-# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Пошаговое руководство. Скомпилируйте C + +/ CLI программы, предназначенной для среды CLR в Visual Studio
+# <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>Пошаговое руководство. Скомпилируйте C++выполняет программу, предназначенной для среды CLR в Visual Studio
 
-С помощью C + +/ CLI расширений языка, можно создавать программы на C++, которые используются классы .NET и компилировать их с помощью среды разработки Visual Studio.
+С помощью C++/расширения языка интерфейса командной строки можно создавать C++ программы, которые используются классы .NET и компилировать их с помощью среды разработки Visual Studio.
 
 Для выполнения этой процедуры можно ввести собственную программу C++ или использовать один из примеров программ. Пример программы, используемый в этой процедуре, создает текстовый файл textfile.txt и сохраняет его в каталог проекта.
 

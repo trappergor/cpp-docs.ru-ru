@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259819"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58774481"
 ---
 # <a name="cbasepane-class"></a>Класс CBasePane
 
@@ -187,14 +187,14 @@ class CBasePane : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CBasePane::CBasePane`|Конструктор по умолчанию.|
 |`CBasePane::~CBasePane`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CBasePane::accHitTest`|Вызывается платформой для извлечения дочернего элемента или дочернего объекта в заданной точке экрана. (Переопределяет [CWnd::accHitTest](../../mfc/reference/cwnd-class.md#acchittest).)|
 |`CBasePane::accLocation`|Вызывается платформой для получения текущего положения экрана для указанного объекта. (Переопределяет [CWnd::accLocation](../../mfc/reference/cwnd-class.md#acclocation).)|
@@ -302,7 +302,7 @@ class CBasePane : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CBasePane::DoPaint](#dopaint)|Заполняет фон панели.|
 
@@ -342,7 +342,7 @@ class CBasePane : public CWnd
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CBasePane` . В примере показано получение области из `CFrameWndEx` класс и как задать режим закрепления панели выравнивание и стиль панели. Приведенный код взят из [примера Word Pad](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CBasePane` . В примере показано получение области из `CFrameWndEx` класс и как задать режим закрепления панели выравнивание и стиль панели. Приведенный код взят из [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -726,7 +726,7 @@ virtual BOOL CreateEx(
 
 Библиотека добавляет несколько новых стилей для панели. В следующей таблице описаны новые стили:
 
-|Стиль|Описание:|
+|Стиль|Описание|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Области может перемещаться.|
 |AFX_CBRS_AUTOHIDE|Область поддерживает режим автоматического скрытия|
@@ -1011,7 +1011,7 @@ virtual DWORD GetControlBarStyle() const
 
 Возвращаемое значение состоит из следующих значений.
 
-|Стиль|Описание:|
+|Стиль|Описание|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|
@@ -1826,7 +1826,7 @@ virtual void SetControlBarStyle(DWORD dwNewStyle);
 *dwNewStyle*<br/>
 [in] Побитовое или сочетание следующих значений.
 
-|Стиль|Описание:|
+|Стиль|Описание|
 |-----------|-----------------|
 |AFX_CBRS_FLOAT|Делает элемент управления панели число с плавающей запятой.|
 |AFX_CBRS_AUTOHIDE|Включает режим автоматического скрытия.|

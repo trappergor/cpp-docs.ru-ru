@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3833
 ms.assetid: 8152be53-e01e-48cd-9eef-9de38723664c
-ms.openlocfilehash: eb320dda9a69937e49f669153bb77e484c5a15fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99c18e899a46c5e1d7a643ba32546f827c320373
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549595"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775666"
 ---
 # <a name="compiler-error-c3833"></a>Ошибка компилятора C3833
 
 «Тип»: недопустимый целевой тип для "тип указателя"
 
-[Interior_ptr](../../windows/interior-ptr-cpp-cli.md) или [pin_ptr](../../windows/pin-ptr-cpp-cli.md) был объявлен неправильно.
+[Interior_ptr](../../extensions/interior-ptr-cpp-cli.md) или [pin_ptr](../../extensions/pin-ptr-cpp-cli.md) был объявлен неправильно.
 
 Следующий пример приводит к возникновению ошибки C3833:
 

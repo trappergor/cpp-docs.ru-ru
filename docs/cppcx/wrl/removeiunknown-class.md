@@ -6,10 +6,10 @@ f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
 ms.openlocfilehash: 3b54f6a3072d82d40db4ac698503f0939e745472
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036777"
 ---
 # <a name="removeiunknown-class"></a>Класс RemoveIUnknown
@@ -35,7 +35,7 @@ class RemoveIUnknown : public T;
 
 Создает тип, эквивалентный базовому типу `IUnknown`, но имеющий невиртуальные функции-члены `QueryInterface`, `AddRef` и `Release`.
 
-По умолчанию методы модели COM предоставляют виртуальные `QueryInterface`, `AddRef`, и `Release` методы. Однако для `ComPtr` не требуется нагрузка, связанная с виртуальными методами. `RemoveIUnknown` исключает эту нагрузку, предоставляя закрытые невиртуальные `QueryInterface`, `AddRef`, и `Release` методы.
+По умолчанию методы модели COM предоставляют виртуальные `QueryInterface`, `AddRef`, и `Release` методы. Однако для `ComPtr` не требуется нагрузка, связанная с виртуальными методами. Интерфейс `RemoveIUnknown` исключает эту нагрузку, предоставляя закрытые невиртуальные методы `QueryInterface`, `AddRef` и `Release`.
 
 ## <a name="members"></a>Участники
 

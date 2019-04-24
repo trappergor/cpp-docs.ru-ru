@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3903
 ms.assetid: cf47d7ad-a3bd-4f75-a253-71586e7a3be6
-ms.openlocfilehash: 0d650d5c3a361ae91e9a35a39866d30bff93f5f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bed6561d1e8d4281cd57e78808744d018c3cc9b3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654198"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778895"
 ---
 # <a name="compiler-error-c3903"></a>Ошибка компилятора C3903
 
 «свойство»: does не установлен или get-метод
 
-Свойство должно иметь по крайней мере `get` или `set` метод. Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md).
+Свойство должно иметь по крайней мере `get` или `set` метод. Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3903:
 

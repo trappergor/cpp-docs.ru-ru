@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3753
 ms.assetid: a5b99e28-796c-4107-a673-97c2ae3bb2b9
-ms.openlocfilehash: b6b1e8c3241a778b29045e734fffebb663554e62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c9c078e72babc85dc7092b8d6414625e9c0db7b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498375"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778830"
 ---
 # <a name="compiler-error-c3753"></a>Ошибка компилятора C3753
 
@@ -19,7 +19,7 @@ ms.locfileid: "50498375"
 
 Списки универсальных параметров могут отображаться только в управляемых классах, структурах или функциях.
 
-Дополнительные сведения см. в разделе [универсальные шаблоны](../../windows/generics-cpp-component-extensions.md) и [свойство](../../windows/property-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [универсальные шаблоны](../../extensions/generics-cpp-component-extensions.md) и [свойство](../../extensions/property-cpp-component-extensions.md).
 
 ## <a name="example"></a>Пример
 

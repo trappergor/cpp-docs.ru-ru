@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 041c0c22b7ae842073bfd6656d9cbb3b2a20af9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430060"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776383"
 ---
 # <a name="compiler-error-c3451"></a>Ошибка компилятора C3451
 
 «атрибут»: невозможно применить неуправляемый атрибут в «тип»
 
-Атрибут C++ не может применяться к типу CLR. См. в разделе [Справочник по атрибутам C++](../../windows/cpp-attributes-reference.md) Дополнительные сведения.
+Атрибут C++ не может применяться к типу CLR. См. в разделе [Справочник по атрибутам C++](../../windows/attributes/attributes-alphabetical-reference.md) Дополнительные сведения.
 
-Дополнительные сведения см. в разделе [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
 Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) атрибут больше не разрешен в пользовательском атрибуте, с помощью программирования в среде CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.
 

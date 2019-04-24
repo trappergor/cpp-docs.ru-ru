@@ -7,15 +7,15 @@ helpviewer_keywords:
 - raw_property_prefixes attribute
 ms.assetid: 03a0f48c-c460-4175-a762-9f7f8d84b12f
 ms.openlocfilehash: 23250b524fdaa2181c8e28229ccec680ffdae715
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033259"
 ---
 # <a name="rawpropertyprefixes"></a>raw_property_prefixes
 
-**Блок, относящийся только к языку C++**
+**Конкретных C++**
 
 Задает другие префиксы для трех методов свойств.
 
@@ -40,9 +40,9 @@ raw_property_prefixes("GetPrefix","PutPrefix","PutRefPrefix")
 
 По умолчанию низкоуровневые `propget`, `propput`, и `propputref` методы предоставляются функциями-членами, именами, содержащими префиксы **get_**, **put_**, и **putref_** соответственно. Эти префиксы совместимы с именами, используемыми в файлах заголовков, которые генерирует MIDL.
 
-**Завершение блока, относящегося только к языку C++**
+**КОНЕЦ конкретных C++**
 
 ## <a name="see-also"></a>См. также
 
-[Атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
-[Директива #import](../preprocessor/hash-import-directive-cpp.md)
+[атрибуты #import](../preprocessor/hash-import-attributes-cpp.md)<br/>
+[директива #import](../preprocessor/hash-import-directive-cpp.md)

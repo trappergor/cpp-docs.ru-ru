@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 630bc41ee20aa7cf6f62cd320b15b8dca0d3fedf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0e7a9d429acb1acd72942e5f10ac0815232ddc69
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268399"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776314"
 ---
 # <a name="cdataexchange-class"></a>Cdataexchange-класс
 
@@ -41,13 +41,13 @@ class CDataExchange
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDataExchange::CDataExchange](#cdataexchange)|Создает объект `CDataExchange`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDataExchange::Fail](#fail)|Вызывается при сбое проверки. Сбрасывает фокуса к предыдущему элементу управления и создает исключение.|
 |[CDataExchange::PrepareCtrl](#preparectrl)|Подготавливает заданный элемент управления для обмена данными или проверки. Используется для элементов управления nonedit.|
@@ -56,7 +56,7 @@ class CDataExchange
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDataExchange::m_bSaveAndValidate](#m_bsaveandvalidate)|Флаг для направления DDX и DDV к элементам Управления.|
 |[CDataExchange::m_pDlgWnd](#m_pdlgwnd)|Диалоговое окно или окно, где обмен данными выполняется.|
@@ -230,7 +230,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC: VIEWEX](../../visual-cpp-samples.md)<br/>
+[Пример MFC: VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)

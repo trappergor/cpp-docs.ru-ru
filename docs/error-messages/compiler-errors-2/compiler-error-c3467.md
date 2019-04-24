@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
 ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58780760"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776097"
 ---
 # <a name="compiler-error-c3467"></a>Ошибка компилятора C3467
 
@@ -19,7 +19,7 @@ ms.locfileid: "58780760"
 
 Компилятор обнаружил несколько объявлений перенаправления типа для одного типа. Для каждого типа допускается только одно объявление.
 
-Дополнительные сведения см. в разделе [Переадресация типа (C + +/ CLI)](../../extensions/type-forwarding-cpp-cli.md).
+Дополнительные сведения см. в разделе [Переадресация типа (C++выполняет)](../../extensions/type-forwarding-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

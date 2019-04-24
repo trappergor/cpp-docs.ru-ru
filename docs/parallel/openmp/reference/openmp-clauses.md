@@ -1,6 +1,6 @@
 ---
 title: Предложения OpenMP
-ms.date: 10/22/2018
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP clauses
 - copyin
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - schedule OpenMP clause
 - shared OpenMP clause
 ms.assetid: 806e7d8f-b204-4e4c-a12c-273ab540a7ca
-ms.openlocfilehash: 7d65b8315ad42f4993e54c07d31d42fffa43c4db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 590cb7d619895a04dfc511b6b77dad4074dc3f42
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519140"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124932"
 ---
 # <a name="openmp-clauses"></a>Предложения OpenMP
 
@@ -46,21 +46,28 @@ ms.locfileid: "51519140"
 
 Visual C++ поддерживает следующие предложения OpenMP.
 
+Для общих атрибутов:
+
 |Предложение|Описание|
 |------|-----------|
-|[copyin](#copyin)|Позволяет потокам для доступа к значение главного потока для [threadprivate](openmp-directives.md#threadprivate) переменной.|
-|[copyprivate](#copyprivate)|Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.|
-|[default](#default-openmp)|Задает поведение неограниченного переменных в параллельной области.|
-|[firstprivate](#firstprivate)|Указывает, что каждый поток должен иметь свой собственный экземпляр переменной, и что переменная должна быть инициализирована со значением переменной, так как она существует до параллельной конструкции.|
 |[if](#if-openmp)|Указывает, следует ли выполнять цикл параллельно или последовательно.|
-|[lastprivate](#lastprivate)|Указывает, что версия переменной в охватывающем контексте приравнивается к закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).|
-|[nowait](#nowait)|Переопределяет неявное в директиве барьера.|
 |[num_threads](#num-threads)|Задает количество потоков в группе потоков.|
 |[Упорядоченные](#ordered-openmp-clauses)|Требуется на параллельный [для](openmp-directives.md#for-openmp) инструкции Если [упорядоченные](openmp-directives.md#ordered-openmp-directives) директива будет использоваться в цикле.|
-|[private](#private-openmp)|Указывает, что каждый поток должен иметь свой собственный экземпляр переменной.|
-|[reduction](#reduction)|Указывает, что один или несколько переменных, которые принадлежат к каждому потоку предметом операцию редукции в конце область параллельной обработки.|
 |[schedule](#schedule)|Применяется к [для](openmp-directives.md#for-openmp) директива.|
+|[nowait](#nowait)|Переопределяет неявное в директиве барьера.|
+
+Для совместного использования данных атрибутов:
+
+|Предложение|Описание|
+|------|-----------|
+|[private](#private-openmp)|Указывает, что каждый поток должен иметь свой собственный экземпляр переменной.|
+|[firstprivate](#firstprivate)|Указывает, что каждый поток должен иметь свой собственный экземпляр переменной, и что переменная должна быть инициализирована со значением переменной, так как она существует до параллельной конструкции.|
+|[lastprivate](#lastprivate)|Указывает, что версия переменной в охватывающем контексте приравнивается к закрытой версии потока, который выполняет последней итерации (конструкция цикл "for") или последний раздел (#pragma разделов).|
 |[Общие](#shared-openmp)|Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.|
+|[default](#default-openmp)|Задает поведение неограниченного переменных в параллельной области.|
+|[reduction](#reduction)|Указывает, что один или несколько переменных, которые принадлежат к каждому потоку предметом операцию редукции в конце область параллельной обработки.|
+|[copyin](#copyin)|Позволяет потокам для доступа к значение главного потока для [threadprivate](openmp-directives.md#threadprivate) переменной.|
+|[copyprivate](#copyprivate)|Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.|
 
 ## <a name="copyin"></a>copyin
 
@@ -110,7 +117,7 @@ copyprivate(var)
 
 ### <a name="example"></a>Пример
 
-```
+```cpp
 // omp_copyprivate.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -174,7 +181,7 @@ Value = 1.008000, thread = 0
 Value = 1.008000, thread = 1
 ```
 
-## <a name="default-openmp"></a>по умолчанию (OpenMP)
+## <a name="default-openmp"></a>По умолчанию
 
 Задает поведение неограниченного переменных в параллельной области.
 
@@ -251,7 +258,7 @@ if(expression)
 
 ### <a name="example"></a>Пример
 
-```
+```cpp
 // omp_if.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -331,7 +338,7 @@ nowait
 
 ### <a name="example"></a>Пример
 
-```
+```cpp
 // omp_nowait.cpp
 // compile with: /openmp /c
 #include <stdio.h>
@@ -405,7 +412,7 @@ num_threads(num)
 
 См. в разделе [параллельных](openmp-directives.md#parallel) пример использования `num_threads` предложение.
 
-## <a name="ordered-openmp-clauses"></a>ORDERED (предложения OpenMP)
+## <a name="ordered-openmp-clauses"></a>Упорядоченные
 
 Требуется на параллельный [для](openmp-directives.md#for-openmp) инструкции Если [упорядоченные](openmp-directives.md#ordered-openmp-directives) директива будет использоваться в цикле.
 
@@ -423,7 +430,7 @@ ordered
 
 См. в разделе [упорядоченные](openmp-directives.md#ordered-openmp-directives) пример использования `ordered` предложение.
 
-## <a name="private-openmp"></a>Private (OpenMP)
+## <a name="private-openmp"></a>закрытый
 
 Указывает, что каждый поток должен иметь свой собственный экземпляр переменной.
 
@@ -449,7 +456,7 @@ private(var)
 
 ### <a name="example"></a>Пример
 
-```C
+```c
 // openmp_private.c
 // compile with: /openmp
 #include <windows.h>
@@ -636,7 +643,7 @@ reduction(operation:var)
 ### <a name="parameters"></a>Параметры
 
 *Операция*<br/>
-Оператор для операции на переменные (`var`) в конце область параллельной обработки.
+Оператор для операции на переменные *var* в конце область параллельной обработки.
 
 *var*<br/>
 Одну или несколько переменных, на которой следует выполнить скалярная редукция. Если указано более одной переменной, разделите имена переменных запятыми.
@@ -645,15 +652,15 @@ reduction(operation:var)
 
 `reduction` область применения следующих директив:
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
+- [for](openmp-directives.md#for-openmp)
 - [Разделы](openmp-directives.md#sections-openmp)
 
 Дополнительные сведения см. в разделе [2.7.2.6 сокращения](../../../parallel/openmp/2-7-2-6-reduction.md).
 
 ### <a name="example"></a>Пример
 
-```
+```cpp
 // omp_reduction.cpp
 // compile with: /openmp
 #include <stdio.h>
@@ -775,15 +782,10 @@ schedule(type[,size])
 ### <a name="parameters"></a>Параметры
 
 *type*<br/>
-Тип расписания:
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+Тип планирования, либо `dynamic`, `guided`, `runtime`, или `static`.
 
 *size*<br/>
-(Необязательно) Указывает размер итераций. `size` должен быть целым числом. Не является допустимым, если `type` является `runtime`.
+(Необязательно) Указывает размер итераций. *размер* должно быть целым числом. Не является допустимым, если *тип* является `runtime`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -903,7 +905,7 @@ int main( )
 ------------------------------------------------
 ```
 
-## <a name="shared-openmp"></a>Общие (OpenMP)
+## <a name="shared-openmp"></a>Общие
 
 Указывает, что один или несколько переменных следует использовать совместно используются всеми потоками.
 
@@ -922,8 +924,8 @@ shared(var)
 
 `shared` область применения следующих директив:
 
-- [for](openmp-directives.md#for-openmp)
 - [parallel](openmp-directives.md#parallel)
+- [for](openmp-directives.md#for-openmp)
 - [Разделы](openmp-directives.md#sections-openmp)
 
 Дополнительные сведения см. в разделе [2.7.2.4 общих](../../../parallel/openmp/2-7-2-4-shared.md).

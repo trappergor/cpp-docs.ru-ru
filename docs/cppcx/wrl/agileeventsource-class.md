@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - AgileEventSource class
 ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025870"
 ---
 # <a name="agileeventsource-class"></a>Класс AgileEventSource
@@ -40,7 +40,7 @@ class AgileEventSource :
 
 ## <a name="remarks"></a>Примечания
 
-Подавляющее большинство компонентов в среде выполнения Windows — agile компоненты. Дополнительные сведения см. в разделе [работа с потоками и маршалинг (C + +/ CX)](../../cppcx/threading-and-marshaling-c-cx.md).
+Подавляющее большинство компонентов в среде выполнения Windows — agile компоненты. Дополнительные сведения см. в разделе [работа с потоками и маршалинг (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -80,7 +80,7 @@ HRESULT Add(
 *delegateInterface*<br/>
 Интерфейс для объекта делегата, который представляет обработчик событий.
 
-*token*<br/>
+*Маркер*<br/>
 После завершения операции представляет дескриптор события. Использовать этот маркер в качестве параметра `Remove()` метод для удаления обработчика событий.
 
 ### <a name="return-value"></a>Возвращаемое значение

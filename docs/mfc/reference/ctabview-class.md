@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326599"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772100"
 ---
 # <a name="ctabview-class"></a>Класс CTabView
 
@@ -43,7 +43,7 @@ class CTabbedView : public CView
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTabView::AddView](#addview)|Добавляет новое представление вкладок элемента управления.|
 |[CTabView::FindTab](#findtab)|Возвращает индекс указанного представления в набор вкладок.|
@@ -54,7 +54,7 @@ class CTabbedView : public CView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTabView::IsScrollBar](#isscrollbar)|Вызывается платформой при создании представления вкладки, чтобы определить, имеет ли представление вкладки Общие горизонтальную полосу прокрутки.|
 |[CTabView::OnActivateView](#onactivateview)|Вызывается платформой, когда представление вкладки становится активным или неактивным.|
@@ -65,7 +65,7 @@ class CTabbedView : public CView
 
 Например, возможно, документ, который может быть представлен по-разному: как электронную таблицу, диаграмму, редактируемую форму и т. д. Можно создавать отдельные представления, графические данные, при необходимости, они вставляются в `CTabView`-объект, производной от и их с вкладками без дополнительного кодирования.
 
-[Образец TabbedView: Приложение представления с вкладками MFC](../../visual-cpp-samples.md) иллюстрирует использование `CTabView`.
+[Образец TabbedView: Приложение представления с вкладками MFC](../../overview/visual-cpp-samples.md) иллюстрирует использование `CTabView`.
 
 ## <a name="example"></a>Пример
 

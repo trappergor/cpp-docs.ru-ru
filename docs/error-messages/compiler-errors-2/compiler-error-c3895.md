@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3895
 ms.assetid: 771b9fe5-d6d4-4297-bf57-e2f857722155
-ms.openlocfilehash: 61dd280caa3c8c9b28dd77ecab2ed50ab9532d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4b1cad9ef48f1f16b411aab46e1bb9285d69ff3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501288"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779302"
 ---
 # <a name="compiler-error-c3895"></a>Ошибка компилятора C3895
 
 «var»: элементы данных типа не может быть «volatile»
 
-Некоторые виды элементов данных, например [литерала](../../windows/literal-cpp-component-extensions.md) или [initonly](../../dotnet/initonly-cpp-cli.md), не может быть [volatile](../../cpp/volatile-cpp.md).
+Некоторые виды элементов данных, например [литерала](../../extensions/literal-cpp-component-extensions.md) или [initonly](../../dotnet/initonly-cpp-cli.md), не может быть [volatile](../../cpp/volatile-cpp.md).
 
 В следующем примере возникает ошибка C3895:
 

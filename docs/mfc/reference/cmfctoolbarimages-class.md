@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776418"
 ---
 # <a name="cmfctoolbarimages-class"></a>Класс CMFCToolBarImages
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in] Значение TRUE, если `CMFCToolBarImages` объект использует глубину цвета (бита на пиксель) нового изображения. Значение FALSE, если `CMFCToolbarImages` сохраняет текущую глубину цвета.
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Ссылку на `CMFCToolbarImages` , содержащий изображение для добавления.
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>Параметры
 
-*ImageList*<br/>
+*imageList*<br/>
 [in] Список изображений для использования в качестве источника для изображений на панели инструментов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -467,7 +467,7 @@ BOOL Draw(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *x*<br/>
@@ -550,7 +550,7 @@ void EndDrawImage(CAfxDrawState& ds);
 
 ### <a name="parameters"></a>Параметры
 
-*ds*<br/>
+*доменных служб Active Directory*<br/>
 [in] Ссылку на `CAfxDrawState` объект, который был передан `PrepareDrawImage` метод.
 
 ##  <a name="extracticon"></a>  CMFCToolBarImages::ExtractIcon
@@ -582,7 +582,7 @@ static void FillDitheredRect(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 [in] Указатель на контекст устройства.
 
 *rect*<br/>
@@ -1120,7 +1120,7 @@ BOOL PrepareDrawImage(
 
 ### <a name="parameters"></a>Параметры
 
-*ds*<br/>
+*доменных служб Active Directory*<br/>
 [in] Ссылку на `CAfxDrawState` структуру, которая хранит выделенные ресурсы между этапами подготовки к просмотру изображения.
 
 *sizeImageDest*<br/>

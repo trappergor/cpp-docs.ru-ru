@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285286"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58777263"
 ---
 # <a name="coleserverdoc-class"></a>Класс COleServerDoc
 
@@ -103,13 +103,13 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleServerDoc::COleServerDoc](#coleserverdoc)|Создает объект `COleServerDoc`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleServerDoc::ActivateDocObject](#activatedocobject)|Активирует связанный документ DocObject.|
 |[COleServerDoc::ActivateInPlace](#activateinplace)|Активирует документ для редактирования на месте.|
@@ -140,7 +140,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleServerDoc::CreateInPlaceFrame](#createinplaceframe)|Вызывается платформой для создания окна фрейма для редактирования на месте.|
 |[COleServerDoc::DestroyInPlaceFrame](#destroyinplaceframe)|Вызывается платформой для уничтожения окна фрейма для встроенного редактирования.|
@@ -943,7 +943,7 @@ void UpdateAllItems(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleDocument](../../mfc/reference/coledocument-class.md)<br/>

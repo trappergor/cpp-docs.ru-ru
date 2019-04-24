@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3652
 ms.assetid: 15d68737-177e-41f1-80e0-7c3e2afdf0fc
-ms.openlocfilehash: acdb8f7687639e2b35e36ea9ebf514292f4631fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 350edcf409cf2a890a8f83147ce0ae13e9992694
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50470334"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777620"
 ---
 # <a name="compiler-error-c3652"></a>Ошибка компилятора C3652
 
 «override»: явно переопределяющая функция должна быть виртуальной
 
-Функция, которая явно переопределяет должна быть виртуальной. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+Функция, которая явно переопределяет должна быть виртуальной. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3652:
 

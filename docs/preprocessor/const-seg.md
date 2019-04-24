@@ -9,10 +9,10 @@ helpviewer_keywords:
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029626"
 ---
 # <a name="constseg"></a>const_seg
@@ -32,7 +32,7 @@ ms.locfileid: "59029626"
 **pop**<br/>
 (Необязательно) Удаление записи из верхней части внутреннего стека компилятора.
 
-*идентификатор*<br/>
+*identifier*<br/>
 (Необязательно) При использовании с **принудительной**, назначает имя записи во внутреннем стеке компилятора. При использовании с **pop**, извлекает записи из внутреннего стека до *идентификатор* удаляется; Если *идентификатор* не найден во внутреннем стеке не выводятся.
 
 С помощью *идентификатор* включает несколько записей, извлекаемых с помощью одного **pop** команды.

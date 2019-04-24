@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: b45794c2-fe6b-4edb-a8ca-faa03b57b4a8
 ms.openlocfilehash: ed717497866076681e39cdee7803a45eb8e097d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780370"
 ---
 # <a name="cmapstringtostring-class"></a>Класс CMapStringToString
@@ -110,7 +110,7 @@ class CMapStringToString : public CObject
 
 ## <a name="remarks"></a>Примечания
 
-`CMapStringToString` включает в себя `IMPLEMENT_SERIAL` макрос для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, карты, хранящегося в архив, либо с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функция-член.
+`CMapStringToString` использует макрос `IMPLEMENT_SERIAL` для поддержки сериализации и записи элементов в дамп. Каждый элемент сериализуется в свою очередь, карты, хранящегося в архив, либо с помощью перегруженных вставки ( **<<**) оператор или с `Serialize` функция-член.
 
 Если вам требуется дамп отдельных `CString` -  `CString` элементов, необходимо задать глубины контекста дампа 1 или более поздней версии.
 
@@ -209,7 +209,7 @@ CPair* PLookup(LPCTSTR key);
 
 ### <a name="parameters"></a>Параметры
 
-*клавиша*<br/>
+*key*<br/>
 Указатель на ключ для элемента для поиска.
 
 ### <a name="return-value"></a>Возвращаемое значение

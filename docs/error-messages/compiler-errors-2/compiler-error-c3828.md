@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3828
 ms.assetid: 8d9cee75-9504-4bc8-88b6-2413618a3f45
-ms.openlocfilehash: 68a82105a2ff7d58090e9f345bf7aafb34d492d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f499bb2a8fd6d3148935daec89835b79d2ff5b49
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515288"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777848"
 ---
 # <a name="compiler-error-c3828"></a>Ошибка компилятора C3828
 
 «Тип объекта»: аргументы размещения не разрешаются при создании экземпляров управляемых или WinRTclasses
 
-При создании объекта управляемого типа или типа среды выполнения Windows, нельзя использовать формы размещения оператора [ref new, gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md) или [новый](../../cpp/new-operator-cpp.md).
+При создании объекта управляемого типа или типа среды выполнения Windows, нельзя использовать формы размещения оператора [ref new, gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md) или [новый](../../cpp/new-operator-cpp.md).
 
 В следующем примере показано возникновение ошибки C3828 и приводятся сведения по ее устранению.
 

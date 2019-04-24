@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c4c026975e9884ac2a0e6aaef31e799c2b5b09bf
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270557"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58777380"
 ---
 # <a name="coleserveritem-class"></a>Класс COleServerItem
 
@@ -95,13 +95,13 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleServerItem::COleServerItem](#coleserveritem)|Создает объект `COleServerItem`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|Помещает форматов представления и преобразования в `COleDataSource` объекта.|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|Копирование элемента в буфер обмена.|
@@ -134,7 +134,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleServerItem::GetDataSource](#getdatasource)|Возвращает объект, используемый для хранения преобразования форматов.|
 |[COleServerItem::OnHide](#onhide)|Вызвано структурой для скрытия элемента OLE.|
@@ -143,7 +143,7 @@ class COleServerItem : public CDocItem
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleServerItem::m_sizeExtent](#m_sizeextent)|Сообщает серверу о какая часть элемента OLE является видимым.|
 
@@ -997,7 +997,7 @@ void SetItemName(LPCTSTR lpszItemName);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC HIERSVR](../../visual-cpp-samples.md)<br/>
+[Пример MFC HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDocItem](../../mfc/reference/cdocitem-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>

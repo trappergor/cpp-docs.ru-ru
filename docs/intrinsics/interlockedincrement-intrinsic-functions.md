@@ -45,10 +45,10 @@ helpviewer_keywords:
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
 ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039362"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>Встроенные функции _InterlockedIncrement
@@ -111,7 +111,7 @@ __int64 _InterlockedIncrement64_nf(
 
 |Встроенная функция|Архитектура|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`значение `_InterlockedIncrement16`значение `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
+|`_InterlockedIncrement`, `_InterlockedIncrement16`, `_InterlockedIncrement64`|x86, ARM, x64|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>Примечания
@@ -136,6 +136,6 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)<br/>
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)<br/>
 [Ключевые слова](../cpp/keywords-cpp.md)<br/>
-[Конфликты с компилятором x86](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
+[Конфликты с 32-разрядным (x86) компилятором](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

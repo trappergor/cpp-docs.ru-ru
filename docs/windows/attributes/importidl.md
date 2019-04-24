@@ -7,10 +7,10 @@ helpviewer_keywords:
 - importidl attribute
 ms.assetid: 4b0a4b55-6c57-4e6e-bc7b-a12cc8063941
 ms.openlocfilehash: 9db62d4f2a36b8cc0592c924b113077a758915c0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029918"
 ---
 # <a name="importidl"></a>importidl
@@ -30,7 +30,7 @@ ms.locfileid: "59029918"
 
 ## <a name="remarks"></a>Примечания
 
-**Importidl** атрибут C++ помещает разделе за пределами блока библиотеки (в *idl_file*) в вашей программе созданного IDL-файла и в разделе библиотеки (в *idl_file*) в библиотеку раздел для вашей программы создается IDL-файла.
+**Importidl** C++ атрибут помещает разделе за пределами блока библиотеки (в *idl_file*) в вашей программе созданного IDL-файла и в разделе библиотеки (в *idl_file*) в разделе library созданного IDL-файла программы.
 
 Вы можете использовать **importidl**, например, если вы хотите использовать с вашей созданного IDL-файла вручную IDL-файл.
 
@@ -60,7 +60,7 @@ ms.locfileid: "59029918"
 
 [Атрибуты компилятора](compiler-attributes.md)<br/>
 [Изолированные атрибуты](stand-alone-attributes.md)<br/>
-[импорт](import.md)<br/>
+[import](import.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
 [includelib](includelib-cpp.md)

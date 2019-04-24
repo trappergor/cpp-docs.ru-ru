@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
-ms.openlocfilehash: 219b8a4135fda963fdce038a75ce0543d6a3433b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465524"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778414"
 ---
 # <a name="compiler-error-c3656"></a>Ошибка компилятора C3656
 
 «override»: переопределение невозможно повторить, описатель
 
-Ключевое слово переопределения можно указать только один раз. Дополнительные сведения см. в разделе [явное переопределение](../../windows/explicit-overrides-cpp-component-extensions.md).
+Ключевое слово переопределения можно указать только один раз. Дополнительные сведения см. в разделе [явное переопределение](../../extensions/explicit-overrides-cpp-component-extensions.md).
 
 Следующий пример приводит к возникновению ошибки C3656:
 

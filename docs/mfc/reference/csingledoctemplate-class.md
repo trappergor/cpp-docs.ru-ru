@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299534"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771701"
 ---
 # <a name="csingledoctemplate-class"></a>Класс CSingleDocTemplate
 
@@ -29,7 +29,7 @@ class CSingleDocTemplate : public CDocTemplate
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSingleDocTemplate::CSingleDocTemplate](#csingledoctemplate)|Создает объект `CSingleDocTemplate`.|
 
@@ -117,7 +117,7 @@ END
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC DOCKTOOL ПОКАЗАНА](../../visual-cpp-samples.md)<br/>
+[Пример MFC DOCKTOOL ПОКАЗАНА](../../overview/visual-cpp-samples.md)<br/>
 [Класс CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CDocTemplate](../../mfc/reference/cdoctemplate-class.md)<br/>

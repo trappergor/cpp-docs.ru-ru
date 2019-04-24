@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303174"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772076"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>Класс CMFCToolBarComboBoxButton
 
@@ -85,13 +85,13 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::CMFCToolBarComboBoxButton](#cmfctoolbarcomboboxbutton)|Создает документ `CMFCToolBarComboBoxButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarComboBoxButton::AddItem](#additem)|Добавляет элемент в конец списка.|
 |[CMFCToolBarComboBoxButton::AddSortedItem](#addsorteditem)|Добавляет элемент в поле со списком. Порядок элементов в списке определяется `Compare`.|
@@ -136,7 +136,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarComboBoxButton` . В примере для включения поля редактирования и поля со списком, задайте поле кнопок вертикальное положение поля со списком в приложении, установите высоту окна списка, при его вставке, задайте плоский внешний вид кнопок поле со списком в приложении , а затем установите текст в поле ввода поля со списком кнопку в окне. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCToolBarComboBoxButton` . В примере для включения поля редактирования и поля со списком, задайте поле кнопок вертикальное положение поля со списком в приложении, установите высоту окна списка, при его вставке, задайте плоский внешний вид кнопок поле со списком в приложении , а затем установите текст в поле ввода поля со списком кнопку в окне. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

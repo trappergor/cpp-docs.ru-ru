@@ -5,11 +5,11 @@ description: Узнайте, как использовать C++ для разр
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62264443"
 ---
 <div id="main" class="v2">
     <div class="container">

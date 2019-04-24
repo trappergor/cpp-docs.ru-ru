@@ -8,10 +8,10 @@ helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
 ms.openlocfilehash: 6ed8156b6a0e71d40d1579fc9a33912f698e1773
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030398"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Пространство имен Microsoft::WRL::Wrappers::HandleTraits
@@ -30,15 +30,15 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 
 |name|Описание|
 |----------|-----------------|
-|[CriticalSectionTraits - структура](criticalsectiontraits-structure.md)|Специализируется `CriticalSection` объекта для поддержки недопустимую критическую секцию или функцию для освобождения критического раздела.|
-|[EventTraits - структура](eventtraits-structure.md)|Определяет характеристики `Event` дескриптора класса.|
-|[FileHandleTraits - структура](filehandletraits-structure.md)|Определяет характеристики дескриптора файла.|
-|[HANDLENullTraits - структура](handlenulltraits-structure.md)|Определяет общие характеристики дескриптора неинициализированным.|
-|[HANDLETraits - структура](handletraits-structure.md)|Определяет общие характеристики дескриптора.|
-|[MutexTraits - структура](mutextraits-structure.md)|Определяет общие характеристики [мьютекс](mutex-class.md) класса.|
-|[SemaphoreTraits - структура](semaphoretraits-structure.md)|Определяет общие характеристики объекта семафора.|
-|[SRWLockExclusiveTraits - структура](srwlockexclusivetraits-structure.md)|Описывает общие характеристики `SRWLock` класс в режиме эксклюзивной блокировки.|
-|[SRWLockSharedTraits - структура](srwlocksharedtraits-structure.md)|Описывает общие характеристики `SRWLock` класс в режим разделяемой блокировки.|
+|[Структура CriticalSectionTraits](criticalsectiontraits-structure.md)|Специализируется `CriticalSection` объекта для поддержки недопустимую критическую секцию или функцию для освобождения критического раздела.|
+|[Структура EventTraits](eventtraits-structure.md)|Определяет характеристики `Event` дескриптора класса.|
+|[Структура FileHandleTraits](filehandletraits-structure.md)|Определяет характеристики дескриптора файла.|
+|[Структура HANDLENullTraits](handlenulltraits-structure.md)|Определяет общие характеристики дескриптора неинициализированным.|
+|[Структура HANDLETraits](handletraits-structure.md)|Определяет общие характеристики дескриптора.|
+|[Структура MutexTraits](mutextraits-structure.md)|Определяет общие характеристики [мьютекс](mutex-class.md) класса.|
+|[Структура SemaphoreTraits](semaphoretraits-structure.md)|Определяет общие характеристики объекта семафора.|
+|[Структура SRWLockExclusiveTraits](srwlockexclusivetraits-structure.md)|Описывает общие характеристики `SRWLock` класс в режиме эксклюзивной блокировки.|
+|[Структура SRWLockSharedTraits](srwlocksharedtraits-structure.md)|Описывает общие характеристики `SRWLock` класс в режим разделяемой блокировки.|
 
 ## <a name="requirements"></a>Требования
 

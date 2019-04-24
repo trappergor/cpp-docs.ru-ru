@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3393
 ms.assetid: d57f7c69-0a02-4fe3-9e45-bc62644fd77c
-ms.openlocfilehash: d2822d5a36b2091881d354131b2a28d386f787c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5147e3e406fde73a05b7069e2a9336f27b3db622
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520472"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776266"
 ---
 # <a name="compiler-error-c3393"></a>Ошибка компилятора C3393
 
 синтаксическая ошибка в предложении ограничения: "идентификатор" не является типом
 
-Идентификатор, переданный в ограничение, которое должно быть типом, не является типом.  Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Идентификатор, переданный в ограничение, которое должно быть типом, не является типом.  Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

@@ -1,5 +1,5 @@
 ---
-title: event_receiver (атрибут COM C++)
+title: event_receiver (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.event_receiver
@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023299"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -54,7 +54,7 @@ ms.locfileid: "59023299"
 
 ## <a name="remarks"></a>Примечания
 
-**Event_receiver** C++ атрибут указывает, что класс или структура, к которому применяется приемник событий, с помощью модели единой событий Visual C++.
+**Event_receiver** C++ атрибут указывает, что класс или структура, к которому применяется приемника событий, с помощью визуального элемента C++ событий унифицированной модели.
 
 **event_receiver** используется с [event_source](event-source.md) атрибут и [__hook](../../cpp/hook.md) и [__unhook](../../cpp/unhook.md) ключевые слова. Используйте `event_source` для создания источников событий. Используйте **__hook** в методах приемника событий для связи («ловушка») методы приемника событий для события источника событий. Используйте **__unhook** отменить связь с ними.
 

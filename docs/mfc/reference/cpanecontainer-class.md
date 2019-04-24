@@ -120,12 +120,12 @@ helpviewer_keywords:
 - CPaneContainer [MFC], StoreRecentDockSiteInfo
 - CPaneContainer [MFC], StretchPaneContainer
 ms.assetid: beb79e08-f611-4d66-ba04-053baa79bf86
-ms.openlocfilehash: 099f1cccd178068f9b96bda6193b5ee9df3b66c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fab7415a71d8029952a840b83aae0f066c09084c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274964"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58775365"
 ---
 # <a name="cpanecontainer-class"></a>Класс CPaneContainer
 
@@ -143,13 +143,13 @@ class CPaneContainer : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPaneContainer::CPaneContainer](#cpanecontainer)|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPaneContainer::AddPane](#addpane)||
 |[CPaneContainer::AddRef](#addref)||
@@ -214,7 +214,7 @@ class CPaneContainer : public CObject
 
 ## <a name="example"></a>Пример
 
-В следующем примере показано, как создать экземпляр `CPaneContainer` класса. Этот фрагмент кода является частью [задать размер области пример](../../visual-cpp-samples.md).
+В следующем примере показано, как создать экземпляр `CPaneContainer` класса. Этот фрагмент кода является частью [задать размер области пример](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_SetPaneSize#2](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_1.h)]
 [!code-cpp[NVC_MFC_SetPaneSize#1](../../mfc/reference/codesnippet/cpp/cpanecontainer-class_2.cpp)]

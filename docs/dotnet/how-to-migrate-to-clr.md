@@ -11,10 +11,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781319"
 ---
 # <a name="how-to-migrate-to-clr"></a>Практическое руководство. Миграция в/CLR
@@ -154,7 +154,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 После компиляции приложения, ссылки и выполняется, вы можете использовать компоненты .NET в любом модуле, скомпилированном с **/CLR**. Дополнительные сведения см. в статье [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md).
 
-Если вы использовали управляемых расширений для C++, можно преобразовать код для использования нового синтаксиса. Дополнительные сведения о преобразовании управляемых расширений для C++ см. в разделе [C + +/ CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
+Если вы использовали управляемых расширений для C++, можно преобразовать код для использования нового синтаксиса. Дополнительные сведения о преобразовании управляемых расширений для C++, см. в разделе [ C++CLI Migration Primer](../dotnet/cpp-cli-migration-primer.md).
 
 Сведения о программировании на языке Visual C++ .NET см. в разделе:
 

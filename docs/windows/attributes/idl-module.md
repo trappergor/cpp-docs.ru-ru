@@ -1,5 +1,5 @@
 ---
-title: idl_module (атрибут COM C++)
+title: idl_module (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.idl_module
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034982"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -26,7 +26,7 @@ function declaration
 
 ### <a name="parameters"></a>Параметры
 
-*имя*<br/>
+*name*<br/>
 Определяемое пользователем имя для блока кода, который будет отображаться в IDL-файла.
 
 *dllname*<br/>

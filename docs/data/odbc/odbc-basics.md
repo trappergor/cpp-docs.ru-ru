@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
 ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033246"
 ---
 # <a name="odbc-basics"></a>Основы ODBC
@@ -67,4 +67,4 @@ ODBC часть базы данных из Microsoft Windows откройте с
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031989"
 ---
 # <a name="import-directive-c"></a>Директива #import (C++)
 
-**Блок, относящийся только к языку C++**
+**Конкретных C++**
 
 Используется для включения сведений из библиотеки типов. Содержимое библиотеки типов преобразовано в классы C++, в основном описывающие интерфейсы модели COM.
 
@@ -65,7 +65,7 @@ ms.locfileid: "59031989"
 
 - Любой другой формат файла, распознаваемые **LoadTypeLib** API.
 
-*атрибуты*<br/>
+*Атрибуты*<br/>
 Один или несколько [атрибуты #import](#_predir_the_23import_directive_import_attributes). Используйте в качестве разделителя атрибутов пробел или запятую. Пример:
 
 ```cpp
@@ -148,7 +148,7 @@ ms.locfileid: "59031989"
 
 - Необязательный определение старого стиля GUID: Содержит инициализации именованных констант GUID. Это имена вида `CLSID_CoClass` и `IID_Interface`, схожие с создаваемыми компилятором MIDL.
 
-- `#include` инструкции для заголовка второстепенной библиотеки типов.
+- Оператор `#include` для заголовка второстепенной библиотеки типов.
 
 - Стандартный нижний колонтитул: В настоящее время включает в себя `#pragma pack(pop)`.
 
@@ -189,7 +189,7 @@ using namespace MyLib;
 
 Дополнительные сведения см. в разделе [атрибуты #import](../preprocessor/hash-import-attributes-cpp.md).
 
-**Завершение блока, относящегося только к языку C++**
+**КОНЕЦ конкретных C++**
 
 ## <a name="see-also"></a>См. также
 

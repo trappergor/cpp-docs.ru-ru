@@ -12,10 +12,10 @@ helpviewer_keywords:
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
 ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037650"
 ---
 # <a name="snapshot"></a>Снимок
@@ -46,4 +46,4 @@ ms.locfileid: "59037650"
 
 ## <a name="see-also"></a>См. также
 
-[Интерфейс ODBC (ODBC)](../../data/odbc/open-database-connectivity-odbc.md)
+[Интерфейс ODBC](../../data/odbc/open-database-connectivity-odbc.md)

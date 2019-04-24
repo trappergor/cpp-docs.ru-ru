@@ -12,10 +12,10 @@ helpviewer_keywords:
 - _bittestandset64 intrinsic
 ms.assetid: 6d6c8670-fea0-4c1c-9aad-2bb842715203
 ms.openlocfilehash: dadeeae23b1808bbee13940727a3bdbace1dad54
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028591"
 ---
 # <a name="bittestandset-bittestandset64"></a>_bittestandset, _bittestandset64
@@ -39,7 +39,7 @@ unsigned char _bittestandset64(
 
 #### <a name="parameters"></a>Параметры
 
-*пример*<br/>
+*a*<br/>
 [in, out] Указатель памяти для проверки.
 
 *b*<br/>
@@ -151,4 +151,4 @@ Flags: 0x0
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

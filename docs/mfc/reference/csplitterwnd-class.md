@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781449"
 ---
 # <a name="csplitterwnd-class"></a>Класс CSplitterWnd
@@ -804,7 +804,7 @@ virtual void OnDrawSplitter(
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства, в котором выполняется отрисовка. Если *pDC* имеет значение NULL, затем [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow) вызывается с платформой и не разбиение рисуется окна.
 
 *nType*<br/>
@@ -1029,7 +1029,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-*основного контроллера домена*<br/>
+*pDC*<br/>
 Указатель на контекст устройства.
 
 ### <a name="remarks"></a>Примечания

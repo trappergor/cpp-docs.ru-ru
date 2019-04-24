@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4393
 ms.assetid: 353a0539-d1ea-4c1b-8849-c9b321ec9842
-ms.openlocfilehash: 21ea45963c7e3d2afe74ebf4aa5207629ec9c8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4226c8ecd41e890d70fa5741decae605d45b620f
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594262"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777046"
 ---
 # <a name="compiler-warning-level-1-c4393"></a>Предупреждение компилятора (уровень 1) C4393
 
 «var»: const не влияет на данные-член литерала; игнорируется
 
-Объект [литерала](../../windows/literal-cpp-component-extensions.md) данные-член также был задан как const.  Так как данные-член литерала подразумевает const, вам не обязательно должны добавить к объявлению.
+Объект [литерала](../../extensions/literal-cpp-component-extensions.md) данные-член также был задан как const.  Так как данные-член литерала подразумевает const, вам не обязательно должны добавить к объявлению.
 
 Следующий пример приводит к возникновению ошибки C4393:
 

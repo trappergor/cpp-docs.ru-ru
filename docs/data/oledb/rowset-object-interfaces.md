@@ -9,10 +9,10 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
 ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032957"
 ---
 # <a name="rowset-object-interfaces"></a>Интерфейсы объекта Rowset
@@ -23,7 +23,7 @@ ms.locfileid: "59032957"
 |---------------|---------------|--------------------------------------|
 |[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|Обязательный|Да|
 |[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Обязательный|Да|
-|[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Обязательный|Да|
+|[Интерфейс IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|Обязательный|Да|
 |[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|Обязательный|Да|
 |[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|Обязательный|Да|
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Optional|Нет|

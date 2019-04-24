@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041329"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Набор записей. Порядок выборки записей (ODBC)
@@ -101,5 +101,5 @@ ms.locfileid: "59041329"
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
 [Набор записей. Принципы обновления записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Основы ODBC](../../data/odbc/odbc-basics.md)<br/>
-[SQL-код](../../data/odbc/sql.md)<br/>
+[SQL](../../data/odbc/sql.md)<br/>
 [Набор записей. Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

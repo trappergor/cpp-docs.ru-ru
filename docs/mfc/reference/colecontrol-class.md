@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30d73d546ee68a25f1e59776020477d038da65e8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283427"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771504"
 ---
 # <a name="colecontrol-class"></a>Colecontrol-класс
 
@@ -351,17 +351,17 @@ ms.locfileid: "57283427"
 class COleControl : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleControl::COleControl](#colecontrol)|Создает объект `COleControl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleControl::AmbientAppearance](#ambientappearance)|Извлекает текущий внешний вид элемента управления.|
 |[COleControl::AmbientBackColor](#ambientbackcolor)|Возвращает значение свойства BackColor окружения.|
@@ -525,7 +525,7 @@ class COleControl : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleControl::DrawContent](#drawcontent)|Вызывается платформой, когда внешний вид элемента управления должен быть обновлен.|
 |[COleControl::DrawMetafile](#drawmetafile)|Вызывается платформой при использовании контексте устройства метафайла.|
@@ -947,7 +947,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1083,7 +1083,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>Параметры
 
 *pPX*<br/>
-Указатель на объект `CPropExchange`. Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
+Указатель на объект `CPropExchange` . Платформа предоставляет этот объект для формирования контекста обмена свойства, включая его направление.
 
 *dwVersionDefault*<br/>
 Текущий номер версии элемента управления.
@@ -4209,8 +4209,8 @@ virtual LRESULT WindowProc(
 
 ## <a name="see-also"></a>См. также
 
-[Пример CIRC3 MFC](../../visual-cpp-samples.md)<br/>
-[Пример MFC TESTHELP](../../visual-cpp-samples.md)<br/>
+[Пример CIRC3 MFC](../../overview/visual-cpp-samples.md)<br/>
+[Пример MFC TESTHELP](../../overview/visual-cpp-samples.md)<br/>
 [Класс COlePropertyPage](../../mfc/reference/colepropertypage-class.md)<br/>
 [Класс CWnd](../../mfc/reference/cwnd-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>

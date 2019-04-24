@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4484
 ms.assetid: 3d30e5b3-2297-45b7-a37a-1360056fdd0e
-ms.openlocfilehash: 71a3d903ba32fecac4b2d8bfc3e0a93f19d0f4ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29e99da02aa0144699d3c20e523b5e5e4b6b8f72
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473180"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58766804"
 ---
 # <a name="compiler-warning-c4484"></a>Предупреждение компилятора C4484
 
@@ -23,9 +23,9 @@ ms.locfileid: "50473180"
 
 - [/clr (компиляция среды выполнения)](../../build/reference/clr-common-language-runtime-compilation.md)
 
-- [override](../../windows/override-cpp-component-extensions.md)
+- [override](../../extensions/override-cpp-component-extensions.md)
 
-- [New (новый слот в vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+- [new (новая ячейка в таблице vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 C4484 всегда выдается как ошибка. Используйте [предупреждение](../../preprocessor/warning.md) директиву pragma, чтобы отключить предупреждение C4484.
 

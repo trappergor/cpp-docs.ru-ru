@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3298
 ms.assetid: 458c2680-95bb-4d5e-895f-ce4115844193
-ms.openlocfilehash: 8a2d8f6ab72a5e72a646cb1fca64635bc72dd2ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe6913d402c6ce4df3551c159eb56a12590799cb
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492850"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779132"
 ---
 # <a name="compiler-error-c3298"></a>Ошибка компилятора C3298
 
@@ -19,7 +19,7 @@ ms.locfileid: "50492850"
 
 Нельзя указывать взаимно исключающие характеристики для ограничения. Например, параметр универсального типа не может быть ограничен одновременно типом значения и ссылочным типом.
 
-Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C + +/ CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md).
+Дополнительные сведения см. в разделе [ограничений для параметров универсального типа (C++выполняет)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

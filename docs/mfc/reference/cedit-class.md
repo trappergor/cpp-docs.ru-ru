@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773753"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -966,7 +966,7 @@ CPoint PosFromChar(UINT nChar) const;
 
 ### <a name="parameters"></a>Параметры
 
-*NChar*<br/>
+*nChar*<br/>
 Отсчитываемый от нуля индекс заданного символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1196,7 +1196,7 @@ void SetPasswordChar(TCHAR ch);
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*ch*<br/>
 Задает символ, которые будут отображаться вместо символа, введенного пользователем. Если *ch* равно 0, отображаются фактические символы, введенные пользователем.
 
 ### <a name="remarks"></a>Примечания
@@ -1455,8 +1455,8 @@ BOOL Undo();
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс CWnd](cwnd-class.md)<br/>
 [Класс CButton](cbutton-class.md)<br/>
-[CComboBox-класс](ccombobox-class.md)<br/>
-[CListBox-класс](clistbox-class.md)<br/>
+[Класс CComboBox](ccombobox-class.md)<br/>
+[Класс CListBox](clistbox-class.md)<br/>
 [Класс CScrollBar](cscrollbar-class.md)<br/>
 [Класс CStatic](cstatic-class.md)<br/>
 [Класс CDialog](cdialog-class.md)

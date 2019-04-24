@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1211
 ms.assetid: df0ca70d-ec6e-4400-926a-b877e2599978
-ms.openlocfilehash: 01b9dbc63ec4dee7335579c4805d34b4ff7214fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f39ab027d8d81762ae1cf8f38405f3e21524da2e
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534398"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777774"
 ---
 # <a name="fatal-error-c1211"></a>Неустранимая ошибка C1211
 
@@ -23,4 +23,4 @@ ms.locfileid: "50534398"
 
 Чтобы устранить ошибку C1211, установите среду CLR, поставляемую вместе с используемым компилятором.
 
-Дополнительные сведения см. в разделе [Переадресация типа (C + +/ CLI)](../../windows/type-forwarding-cpp-cli.md).
+Дополнительные сведения см. в разделе [Переадресация типа (C++выполняет)](../../extensions/type-forwarding-cpp-cli.md).

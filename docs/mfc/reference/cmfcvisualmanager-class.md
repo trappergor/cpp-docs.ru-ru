@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294335"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58775170"
 ---
 # <a name="cmfcvisualmanager-class"></a>Класс CMFCVisualManager
 
@@ -363,17 +363,17 @@ ms.locfileid: "57294335"
 class CMFCVisualManager : public CMFCBaseVisualManager
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCVisualManager::CMFCVisualManager`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCVisualManager::AdjustFrames](#adjustframes)||
 |[CMFCVisualManager::AdjustToolbars](#adjusttoolbars)||
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует способ получения значения по умолчанию для `CMFCVisualManager` объекта. Этот фрагмент кода является частью [пример области задач](../../visual-cpp-samples.md).
+Следующий пример демонстрирует способ получения значения по умолчанию для `CMFCVisualManager` объекта. Этот фрагмент кода является частью [пример области задач](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -895,7 +895,7 @@ static CMFCVisualManager* GetInstance();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на объект `CMFCVisualManager`.
+Указатель на объект `CMFCVisualManager` .
 
 ### <a name="remarks"></a>Примечания
 
@@ -4331,7 +4331,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует, как использовать `OnFillBarBackground` в `CMFCVisualManager` класса. Этот фрагмент кода является частью [Outlook демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует, как использовать `OnFillBarBackground` в `CMFCVisualManager` класса. Этот фрагмент кода является частью [Outlook демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

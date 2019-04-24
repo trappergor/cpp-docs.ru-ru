@@ -7,10 +7,10 @@ helpviewer_keywords:
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026205"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>Алфавитный список встроенных функций
@@ -75,7 +75,7 @@ ms.locfileid: "59026205"
 
 [Встроенные функции _InterlockedAnd](../intrinsics/interlockedand-intrinsic-functions.md)
 
-[встроенные функции _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
+[Встроенные функции _interlockedbittestandreset](../intrinsics/interlockedbittestandreset-intrinsic-functions.md)
 
 [Встроенные функции _interlockedbittestandset](../intrinsics/interlockedbittestandset-intrinsic-functions.md)
 
@@ -153,7 +153,7 @@ ms.locfileid: "59026205"
 
 [__outdwordstring](../intrinsics/outdwordstring.md)
 
-[Встроенная функция __outword](../intrinsics/outword.md)
+[__outword](../intrinsics/outword.md)
 
 [__outwordstring](../intrinsics/outwordstring.md)
 
@@ -275,4 +275,4 @@ ms.locfileid: "59026205"
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)

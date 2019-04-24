@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d10aad92088a02a1cab0977ea174abdf919a05e9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262614"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769216"
 ---
 # <a name="mfc-activex-controls"></a>Элементы управления ActiveX MFC
 
@@ -116,7 +116,7 @@ Windows обработки сообщений в оконного элемент
 
    Содержит библиотеки, необходимые для разработки элементов управления ActiveX MFC
 
-Кроме того, существуют также примеры для элементов управления ActiveX в MFC. Дополнительные сведения об этих образцах см. в разделе [Примеры элементов управления: Элементы управления ActiveX на основе MFC](../visual-cpp-samples.md)
+Кроме того, существуют также примеры для элементов управления ActiveX в MFC. Дополнительные сведения об этих образцах см. в разделе [Примеры элементов управления: Элементы управления ActiveX на основе MFC](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>См. также
 

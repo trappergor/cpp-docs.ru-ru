@@ -298,7 +298,7 @@ virtual void ParseParam(
 
 ### <a name="remarks"></a>Примечания
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовы `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент *pszParam*. Если первый символ параметра " **-**«или» **/**", он будет удален и *bFlag* имеет значение TRUE. При синтаксическом анализе последний параметр, *bLast* имеет значение TRUE.
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовы `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент *pszParam*. Если первый символ параметра " **-** «или» **/**", он будет удален и *bFlag* имеет значение TRUE. При синтаксическом анализе последний параметр, *bLast* имеет значение TRUE.
 
 Реализация по умолчанию эта функция распознает следующие флаги: `/p`, `/pt`, `/dde`, `/Automation`, и `/Embedding`, как показано в следующей таблице:
 

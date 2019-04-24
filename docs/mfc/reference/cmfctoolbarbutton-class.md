@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275237"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58776392"
 ---
 # <a name="cmfctoolbarbutton-class"></a>Класс CMFCToolBarButton
 
@@ -181,14 +181,14 @@ class CMFCToolBarButton : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|Создает и инициализирует объект `CMFCToolBarButton`.|
 |`CMFCToolBarButton::~CMFCToolBarButton`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolBarButton::CanBeDropped](#canbedropped)|Указывает, является ли пользователь можно разместить кнопку на панели инструментов или меню во время настройки.|
 |[CMFCToolBarButton::CanBeStored](#canbestored)|Указывает, можно ли хранить кнопки.|
@@ -287,7 +287,7 @@ class CMFCToolBarButton : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку `CMFCToolBarButton` объекта с помощью различных методов в `CMFCToolBarButton` класса. В примере показано включение мышь и ввода с клавиатуры, задать индекс изображения кнопки значение ограничивающего прямоугольника кнопки и отображения кнопки. Этот фрагмент кода является частью [пример управления "Вкладка"](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку `CMFCToolBarButton` объекта с помощью различных методов в `CMFCToolBarButton` класса. В примере показано включение мышь и ввода с клавиатуры, задать индекс изображения кнопки значение ограничивающего прямоугольника кнопки и отображения кнопки. Этот фрагмент кода является частью [пример управления "Вкладка"](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]

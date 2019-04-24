@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285351"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771153"
 ---
 # <a name="coleipframewndex-class"></a>Класс COleIPFrameWndEx
 
@@ -116,7 +116,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleIPFrameWndEx::AddDockSite](#adddocksite)||
 |[COleIPFrameWndEx::AddPane](#addpane)||
@@ -164,13 +164,13 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleIPFrameWndEx::InitUserToobars](#initusertoobars)|Дает платформе команду инициализировать диапазон идентификаторов элементов управления, которые назначены панелям инструментов, определяемым пользователем.|
 
 ## <a name="example"></a>Пример
 
-В следующем примере кода показано, как создать подкласс экземпляра класса `COleIPFrameWndEx` и переопределить его методы. В примере демонстрируется переопределение методов `OnDestory` , `RepositionFrame` , `RecalcLayout` и `CalcWindowRect` . Этот фрагмент кода входит в состав [примера Word Pad](../../visual-cpp-samples.md).
+В следующем примере кода показано, как создать подкласс экземпляра класса `COleIPFrameWndEx` и переопределить его методы. В примере демонстрируется переопределение методов `OnDestory` , `RepositionFrame` , `RecalcLayout` и `CalcWindowRect` . Этот фрагмент кода входит в состав [примера Word Pad](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

@@ -41,10 +41,10 @@ helpviewer_keywords:
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
 ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041462"
 ---
 # <a name="csession-class"></a>класс CSession
@@ -67,9 +67,9 @@ class CSession
 
 |||
 |-|-|
-|[Прервать](#abort)|Отменяет (прекращает) транзакции.|
+|[Abort](#abort)|Отменяет (прекращает) транзакции.|
 |[Закрыть](#close)|Завершает сеанс.|
-|[Фиксация](#commit)|Завершает транзакцию.|
+|[Фиксации](#commit)|Завершает транзакцию.|
 |[GetTransactionInfo](#gettransactioninfo)|Возвращает сведения, касающиеся транзакции.|
 |[Открыть](#open)|Открывает новый сеанс для объекта источника данных.|
 |[StartTransaction](#starttransaction)|Начинает новую транзакцию для этого сеанса.|
@@ -172,7 +172,7 @@ HRESULT Open(const CDataSource& ds,
 
 #### <a name="parameters"></a>Параметры
 
-*ds*<br/>
+*доменных служб Active Directory*<br/>
 [in] Источник данных, для которого будет открыть сеанс.
 
 *pPropSet*<br/>
@@ -216,6 +216,6 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ## <a name="see-also"></a>См. также
 
-[CatDB](../../overview/visual-cpp-samples.md)<br/>
+["CatDB"](../../overview/visual-cpp-samples.md)<br/>
 [Шаблоны потребителей OLE DB](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[Ссылка на шаблоны потребителя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)
+[Ссылка на шаблоны объекта-получателя OLE DB](../../data/oledb/ole-db-consumer-templates-reference.md)

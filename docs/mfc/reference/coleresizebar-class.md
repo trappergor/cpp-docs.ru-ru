@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleResizeBar [MFC], COleResizeBar
 - COleResizeBar [MFC], Create
 ms.assetid: 56a708d9-28c5-4eb0-9404-77b688d91c63
-ms.openlocfilehash: 631276a065652ec991c4c1b5264e87b7244fb7b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0b950e7533ba6f95c76ef8d4569980a9a82ea591
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275952"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58769163"
 ---
 # <a name="coleresizebar-class"></a>Класс COleResizeBar
 
@@ -31,13 +31,13 @@ class COleResizeBar : public CControlBar
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleResizeBar::COleResizeBar](#coleresizebar)|Создает объект `COleResizeBar`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleResizeBar::Create](#create)|Создает и инициализирует дочернее окно Windows и связывает его к `COleResizeBar` объекта.|
 
@@ -105,7 +105,7 @@ virtual BOOL Create(
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC SUPERPAD](../../visual-cpp-samples.md)<br/>
+[Пример MFC SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [Класс CControlBar](../../mfc/reference/ccontrolbar-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleServerDoc](../../mfc/reference/coleserverdoc-class.md)

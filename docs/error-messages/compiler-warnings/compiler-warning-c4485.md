@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4485
 ms.assetid: a6f2b437-ca93-4dcd-b9cb-df415e10df86
-ms.openlocfilehash: 7138f1a3cecaaf75fbab01fd1aee18529b7a3a84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b5afb829485e0e9533a14e818e6d6785f268a83b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652477"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776367"
 ---
 # <a name="compiler-warning-c4485"></a>Предупреждение компилятора C4485
 
@@ -19,7 +19,7 @@ ms.locfileid: "50652477"
 
 Переопределяет метод доступа, с или без `virtual` ключевое слово, функцию доступа базового класса, но `override` или `new` описатель не была частью переопределения сигнатуры функции. Добавить `new` или `override` описатель, чтобы устранить это предупреждение.
 
-См. в разделе [переопределить](../../windows/override-cpp-component-extensions.md) и [new (новый слот в vtable)](../../windows/new-new-slot-in-vtable-cpp-component-extensions.md) Дополнительные сведения.
+См. в разделе [переопределить](../../extensions/override-cpp-component-extensions.md) и [new (новый слот в vtable)](../../extensions/new-new-slot-in-vtable-cpp-component-extensions.md) Дополнительные сведения.
 
 C4485 всегда выдается как ошибка. Используйте [предупреждение](../../preprocessor/warning.md) директиву pragma, чтобы отключить предупреждение C4485.
 

@@ -1,5 +1,5 @@
 ---
-title: async_uuid (атрибут COM C++)
+title: async_uuid (C++ атрибут COM)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.async_uuid
@@ -7,10 +7,10 @@ helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
 ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035800"
 ---
 # <a name="asyncuuid"></a>async_uuid
@@ -30,7 +30,7 @@ UUID, которое определяет версию интерфейса.
 
 ## <a name="remarks"></a>Примечания
 
-**Async_uuid** атрибут C++ имеет ту же функциональность, что [async_uuid](/windows/desktop/Midl/async-uuid) описании атрибута MIDL.
+**Async_uuid** C++ атрибут имеет ту же функциональность, что [async_uuid](/windows/desktop/Midl/async-uuid) описании атрибута MIDL.
 
 ## <a name="example"></a>Пример
 

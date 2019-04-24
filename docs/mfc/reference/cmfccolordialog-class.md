@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-ms.openlocfilehash: d94c223ed1e0b236ae8565d13a9f2c9652b6eb84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270323"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58772755"
 ---
 # <a name="cmfccolordialog-class"></a>Класс CMFCColorDialog
 
@@ -39,18 +39,18 @@ ms.locfileid: "57270323"
 class CMFCColorDialog : public CDialogEx
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorDialog::CMFCColorDialog](#cmfccolordialog)|Создает объект `CMFCColorDialog`.|
 |`CMFCColorDialog::~CMFCColorDialog`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|Возвращает текущий выбранный цвет.|
 |[CMFCColorDialog::GetPalette](#getpalette)|Возвращает цветовую палитру.|
@@ -63,7 +63,7 @@ class CMFCColorDialog : public CDialogEx
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`m_bIsMyPalette`|Значение TRUE, если диалоговое окно выбора цвета использует свою собственную цветовую палитру, или значение FALSE, если в диалоговом окне используются палитру, которая указана в `CMFCColorDialog` конструктор.|
 |`m_bPickerMode`|Значение TRUE, а пользователь выбирает цвет в диалоговом окне выбора; в противном случае — значение FALSE.|
@@ -100,7 +100,7 @@ class CMFCColorDialog : public CDialogEx
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует настройку цвета диалоговое окно с помощью различных методов в `CMFCColorDialog` класса. В примере показано, как задать текущего и нового цвета диалогового окна и настройке компонентов красного, зеленого и синего цвета, выбранного на страницах свойств два цвета диалогового окна. Этот пример является частью [пример новых элементов управления](../../visual-cpp-samples.md).
+Следующий пример демонстрирует настройку цвета диалоговое окно с помощью различных методов в `CMFCColorDialog` класса. В примере показано, как задать текущего и нового цвета диалогового окна и настройке компонентов красного, зеленого и синего цвета, выбранного на страницах свойств два цвета диалогового окна. Этот пример является частью [пример новых элементов управления](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 

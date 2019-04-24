@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3804
 ms.assetid: 7c4cda28-ec96-4d04-937b-36dbd9944722
-ms.openlocfilehash: e83380696aca3d6d45c235925b830bef9e3061a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3c00d1d07306a9e8dc67d3f75a5cb25d8f03aee
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544590"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775810"
 ---
 # <a name="compiler-error-c3804"></a>Ошибка компилятора C3804
 
@@ -19,7 +19,7 @@ ms.locfileid: "50544590"
 
 При определении нетривиального свойства, функции доступа могут быть либо статическими или экземпляр, но не оба.
 
-Дополнительные сведения см. в разделе [property](../../windows/property-cpp-component-extensions.md) .
+Дополнительные сведения см. в разделе [property](../../extensions/property-cpp-component-extensions.md) .
 
 ## <a name="example"></a>Пример
 

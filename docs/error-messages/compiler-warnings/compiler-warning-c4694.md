@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
-ms.openlocfilehash: 6eaaa4c1f16e2ac2c5029511430a145fd9b943e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428346"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778843"
 ---
 # <a name="compiler-warning-c4694"></a>Предупреждение компилятора C4694
 
@@ -19,7 +19,7 @@ ms.locfileid: "50428346"
 
 Абстрактный и запечатанный класс не может наследовать от ссылочного типа; запечатанный и абстрактный класс не может ни реализовывать функции базового класса, ни разрешать использовать себя в качестве базового класса.
 
-Дополнительные сведения см. в разделе [абстрактный](../../windows/abstract-cpp-component-extensions.md), [запечатанный](../../windows/sealed-cpp-component-extensions.md), и [классы и структуры](../../windows/classes-and-structs-cpp-component-extensions.md).
+Дополнительные сведения см. в разделе [абстрактный](../../extensions/abstract-cpp-component-extensions.md), [запечатанный](../../extensions/sealed-cpp-component-extensions.md), и [классы и структуры](../../extensions/classes-and-structs-cpp-component-extensions.md).
 
 Это предупреждение автоматически повышается до ошибки. Если вы хотите изменить это поведение, используйте [#pragma warning](../../preprocessor/warning.md).
 

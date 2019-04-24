@@ -10,12 +10,12 @@ helpviewer_keywords:
 - COleException [MFC], Process
 - COleException [MFC], m_sc
 ms.assetid: 2571e9fe-26cc-42f0-9ad9-8ad5b4311ec1
-ms.openlocfilehash: 4b5dd2de2924b62dd76d7f16a494566849357de8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6874df550103abf727573d8e34b8adadd9643db8
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300366"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767812"
 ---
 # <a name="coleexception-class"></a>Класс COleException
 
@@ -31,13 +31,13 @@ class COleException : public CException
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleException::Process](#process)|Преобразует перехваченного исключения в кодом возврата OLE.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleException::m_sc](#m_sc)|Содержит код состояния, который указывает причину возникновения исключения.|
 
@@ -109,6 +109,6 @@ static SCODE PASCAL Process(const CException* pAnyException);
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC CALCDRIV](../../visual-cpp-samples.md)<br/>
+[Пример MFC CALCDRIV](../../overview/visual-cpp-samples.md)<br/>
 [Класс CException](../../mfc/reference/cexception-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)

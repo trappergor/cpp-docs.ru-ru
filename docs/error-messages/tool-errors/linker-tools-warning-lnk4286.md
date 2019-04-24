@@ -1,18 +1,18 @@
 ---
-title: Предупреждение LNK4286 средств компоновщика
-ms.date: 04/09/2019
+title: Предупреждение средств компоновщика LNK4286
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4286
 helpviewer_keywords:
 - LNK4286
-ms.openlocfilehash: f4ab9104c68534eaf1278a6cacb91623c24a237b
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: 43ed18808ba5ce632dd7dc7095f7bc30e4497ec9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477641"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674231"
 ---
-# <a name="linker-tools-warning-lnk4286"></a>Предупреждение LNK4286 средств компоновщика
+# <a name="linker-tools-warning-lnk4286"></a>Предупреждение средств компоновщика LNK4286
 
 > символ "*символ*«определен в»*filename_1.obj*«импортируется путем»*filename_2.obj*"
 
@@ -31,5 +31,5 @@ ms.locfileid: "59477641"
 ## <a name="see-also"></a>См. также
 
 [Предупреждение средств компоновщика LNK4049](linker-tools-warning-lnk4049.md) \
-[Предупреждение LNK4286 средств компоновщика](linker-tools-warning-lnk4286.md) \
+[Предупреждение средств компоновщика LNK4217](linker-tools-warning-lnk4217.md) \
 [dllexport, dllimport](../../cpp/dllexport-dllimport.md)

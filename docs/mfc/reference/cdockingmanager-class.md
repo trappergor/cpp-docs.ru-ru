@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260391"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58771322"
 ---
 # <a name="cdockingmanager-class"></a>Класс CDockingManager
 
@@ -181,7 +181,7 @@ class CDockingManager : public CObject
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDockingManager::AddDockSite](#adddocksite)|Создает область закрепления и добавляет его в список панелей элементов управления.|
 |[CDockingManager::AddHiddenMDITabbedBar](#addhiddenmditabbedbar)|Добавляет маркер в панель области в список скрытых MDI с вкладками областями строки.|
@@ -292,7 +292,7 @@ class CDockingManager : public CObject
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CDockingManager` класс для настройки `CDockingManager` объекта. В примере показано, как отображать дополнительную кнопку, открывается всплывающее меню заголовков всех закрепляемых панелей и как задать режим закрепления объекта. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../visual-cpp-samples.md).
+Следующий пример демонстрирует использование различных методов `CDockingManager` класс для настройки `CDockingManager` объекта. В примере показано, как отображать дополнительную кнопку, открывается всплывающее меню заголовков всех закрепляемых панелей и как задать режим закрепления объекта. Этот фрагмент кода является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

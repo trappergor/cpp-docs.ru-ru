@@ -7,19 +7,19 @@ helpviewer_keywords:
 - single document interface (SDI), adding views
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
-ms.openlocfilehash: b665f090fc680221be70f170452d756dd5f68dc5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284285"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58767591"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>Добавление нескольких представлений в один документ
 
 В приложении однооконным интерфейсом (SDI), созданные с помощью библиотеки Microsoft Foundation Class (MFC) каждый тип документа связан с типом единое представление. В некоторых случаях желательно иметь возможность переключения текущего представления документа с помощью нового представления.
 
 > [!TIP]
->  Дополнительные процедуры по реализации нескольких представлений для одного документа, см. в разделе [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) и [СОБИРАТЬ](../visual-cpp-samples.md) пример MFC.
+>  Дополнительные процедуры по реализации нескольких представлений для одного документа, см. в разделе [CDocument::AddView](../mfc/reference/cdocument-class.md#addview) и [СОБИРАТЬ](../overview/visual-cpp-samples.md) пример MFC.
 
 Эту функциональность можно реализовать, добавив новый `CView`-производного класса, а также дополнительный код для динамического переключения представлений в существующее приложение MFC.
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rep insw instruction
 ms.assetid: 6de37939-017a-4740-9e3d-7de78a30daba
 ms.openlocfilehash: 52c36754e1eea56b84eeb494e82e37a5b043246e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030223"
 ---
 # <a name="inwordstring"></a>__inwordstring
@@ -36,7 +36,7 @@ void __inwordstring(
 *Порт*<br/>
 [in] Порт для чтения из.
 
-*Буфер*<br/>
+*буфер*<br/>
 [out] Данные, считанные из порта записывается здесь.
 
 *Количество*<br/>
@@ -58,4 +58,4 @@ void __inwordstring(
 
 ## <a name="see-also"></a>См. также
 
-[Встроенные объекты компилятора](../intrinsics/compiler-intrinsics.md)
+[Встроенные инструкции компилятора](../intrinsics/compiler-intrinsics.md)
