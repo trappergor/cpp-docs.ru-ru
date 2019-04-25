@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
 ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322060"
 ---
 # <a name="icommandui-interface"></a>Интерфейс ICommandUI
 
@@ -31,11 +31,11 @@ ms.locfileid: "57268178"
 interface class ICommandUI
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[icommandui__Check](#check)|Задает элемент пользовательского интерфейса для этой команды соответствующий проверки состояния.|
 |[ICommandUI::ContinueRouting](#continuerouting)|Указывает механизму маршрутизации команд продолжать маршрутизацию текущее сообщение по цепочке обработчиков.|

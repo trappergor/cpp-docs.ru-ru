@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDumpContext [MFC], SetDepth
 ms.assetid: 98c52b2d-14b5-48ed-b423-479a4d1c60fa
 ms.openlocfilehash: a5b53ced4e20c920aab8e7ebcda3e3f6f8798ba5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164102"
 ---
 # <a name="cdumpcontext-class"></a>Класс CDumpContext
 
@@ -39,13 +39,13 @@ class CDumpContext
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDumpContext::CDumpContext](#cdumpcontext)|Создает объект `CDumpContext`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDumpContext::DumpAsHex](#dumpashex)|Выводит указанный элемент в шестнадцатеричном формате.|
 |[CDumpContext::Flush](#flush)|Удаляет все данные в буфере контекста дампа.|
@@ -55,7 +55,7 @@ class CDumpContext
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDumpContext::operator &lt;&lt;](#operator_lt_lt)|Вставляет переменные и объекты в контекст дампа.|
 
