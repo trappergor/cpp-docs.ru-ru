@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
 ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323678"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -93,13 +93,13 @@ class CToolTipCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CToolTipCtrl::CToolTipCtrl](#ctooltipctrl)|Создает объект `CToolTipCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CToolTipCtrl::Activate](#activate)|Активирует и деактивирует всплывающая подсказка.|
 |[CToolTipCtrl::AddTool](#addtool)|Регистрирует средство управления всплывающей подсказки.|
@@ -397,7 +397,7 @@ BOOL GetCurrentTool(LPTOOLINFO lpToolInfo) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*lpToolInfo*|[out] Указатель на [TOOLINFO](/windows/desktop/api/commctrl/ns-commctrl-tagtoolinfoa) структуры, который получает сведения о текущем окне всплывающей подсказки.|
 
@@ -550,7 +550,7 @@ void GetTitle(PTTGETTITLE pttgt) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pttgt*|[out] Указатель на [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структуру, содержащую сведения об элементе управления ToolTip. При возвращении данного метода *pszTitle* членом [TTGETTITLE](/windows/desktop/api/commctrl/ns-commctrl-_ttgettitle) структура указывает на текст заголовка.|
 

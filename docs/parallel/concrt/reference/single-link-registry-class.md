@@ -14,11 +14,11 @@ helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
 ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160078"
 ---
 # <a name="singlelinkregistry-class"></a>Класс single_link_registry
 
@@ -40,14 +40,14 @@ class single_link_registry : public network_link_registry<_Block>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[single_link_registry](#ctor)|Создает объект `single_link_registry`.|
 |[~ single_link_registry деструктор](#dtor)|Уничтожает `single_link_registry` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[add](#add)|Добавляет ссылку на `single_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `single_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|

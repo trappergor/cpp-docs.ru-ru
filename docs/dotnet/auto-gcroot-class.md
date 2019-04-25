@@ -17,11 +17,11 @@ helpviewer_keywords:
 - msclr::auto_gcroot
 ms.assetid: b5790912-265d-463e-a486-47302e91042a
 ms.openlocfilehash: 81d4174943543db708090ad654a911980ecf026d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388934"
 ---
 # <a name="autogcroot-class"></a>Класс auto_gcroot
 
@@ -43,7 +43,7 @@ class auto_gcroot;
  
 ### <a name="public-constructors"></a>Открытые конструкторы 
  
-|name|Описание:| 
+|name|Описание| 
 |---------|-----------| 
 |[auto_gcroot::auto_gcroot](#auto-gcroot)|`auto_gcroot` Конструктор.| 
 |[auto_gcroot::~auto_gcroot](#tilde-auto-gcroot)|`auto_gcroot` Деструктор.
