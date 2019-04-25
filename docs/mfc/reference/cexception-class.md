@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
 ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164004"
 ---
 # <a name="cexception-class"></a>Класс CException
 
@@ -33,13 +33,13 @@ class AFX_NOVTABLE CException : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CException::CException](#cexception)|Создает объект `CException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CException::Delete](#delete)|Удаляет `CException` объекта.|
 |[CException::ReportError](#reporterror)|Отправит сообщение об ошибке в окне сообщения для пользователя.|

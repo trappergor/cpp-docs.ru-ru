@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323265"
 ---
 # <a name="cwinappex-class"></a>Класс CWinAppEx
 
@@ -140,13 +140,13 @@ class CWinAppEx : public CWinApp
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinAppEx::CWinAppEx](#cwinappex)|Создает объект `CWinAppEx`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CWinAppEx::CleanState](#cleanstate)|Удаляет сведения о приложении из реестра Windows.|
 |[CWinAppEx::EnableLoadWindowPlacement](#enableloadwindowplacement)|Указывает, будет ли приложение загрузить исходный размер и расположение фрейма главного окна из реестра.|
@@ -197,7 +197,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CWinAppEx::LoadCustomState](#loadcustomstate)|Вызывается платформой при загрузке состояния приложения.|
 |[CWinAppEx::LoadWindowPlacement](#loadwindowplacement)|Вызывается платформой при загрузке размер и расположение приложения из реестра. Загруженные данные включает размер и расположение основного фрейма во время последнего закрытия приложения.|
@@ -210,7 +210,7 @@ class CWinAppEx : public CWinApp
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinAppEx::m_bForceImageReset](#m_bforceimagereset)|Указывает ли платформа приведет к сбросу всех изображениям значков панели инструментов при загрузке окна фрейма, который содержит панели инструментов.|
 

@@ -10,11 +10,11 @@ f1_keywords:
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
 ms.openlocfilehash: 54817eeeba0b885cbf3de558c04fe2eb5d6e14fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159851"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -91,7 +91,7 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="classes"></a>Классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс directory_entry](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или `recursive_directory_iterator`, и содержит путь.|
 |[Класс directory_iterator](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|

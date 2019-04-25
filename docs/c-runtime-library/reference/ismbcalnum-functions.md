@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157313"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum, _ismbcalnum_l, _ismbcalpha, _ismbcalpha_l, _ismbcdigit, _ismbcdigit_l
 
@@ -112,7 +112,7 @@ int _ismbcdigit_l
 
 |Подпрограмма|Условие теста|Пример кодовой страницы 932|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**, **_ismbcalnum_l**|Буквенно-цифровой|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление английской буквы ASCII: см. в примерах **_ismbcdigit** и **_ismbcalpha**.|
+|**_ismbcalnum**, **_ismbcalnum_l**|Буквенно-цифровой|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление английской буквы ASCII: См. в примерах **_ismbcdigit** и **_ismbcalpha**.|
 |**_ismbcalpha**, **_ismbcalpha_l**|По алфавиту|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление английской буквы ASCII: 0x41 < =*c*< = 0x5A или 0x61 < =*c*< = 0x7A; или буква катаканы: 0xA6 < =*c*< = 0xDF.|
 |**_ismbcdigit**, **_ismbcdigit**|Цифровой|Возвращает ненулевое значение, только если *c* — это — однобайтовое представление цифры ASCII: 0x30 < =*c*< = 0x39.|
 
