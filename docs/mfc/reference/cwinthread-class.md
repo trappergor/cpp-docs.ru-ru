@@ -51,11 +51,11 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
 ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323285"
 ---
 # <a name="cwinthread-class"></a>Класс CWinThread
 
@@ -71,13 +71,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CWinThread::CWinThread](#cwinthread)|Создает объект `CWinThread`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinThread::CreateThread](#createthread)|Начинает выполнение `CWinThread` объекта.|
 |[CWinThread::ExitInstance](#exitinstance)|Переопределение для очистки при завершении потока.|
@@ -98,13 +98,13 @@ class CWinThread : public CCmdTarget
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinThread::operator ДЕСКРИПТОР](#operator_handle)|Извлекает дескриптор `CWinThread` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CWinThread::m_bAutoDelete](#m_bautodelete)|Указывает, следует ли уничтожать объект, находящийся в завершение потока.|
 |[CWinThread::m_hThread](#m_hthread)|Дескриптор текущего потока.|

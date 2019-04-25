@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CTreeView [MFC], GetTreeCtrl
 ms.assetid: 5df583a6-d69f-42ca-9d8d-57e04558afff
 ms.openlocfilehash: fec8379a3944d981672754274f50dd4e60f71b61
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323600"
 ---
 # <a name="ctreeview-class"></a>Класс CTreeView
 
@@ -31,13 +31,13 @@ class CTreeView : public CCtrlView
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CTreeView::CTreeView](#ctreeview)|Создает объект `CTreeView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTreeView::GetTreeCtrl](#gettreectrl)|Возвращает дерево, связанный с представлением.|
 

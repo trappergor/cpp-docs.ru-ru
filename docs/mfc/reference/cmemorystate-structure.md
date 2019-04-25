@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163758"
 ---
 # <a name="cmemorystate-structure"></a>Структура CMemoryState
 
@@ -29,13 +29,13 @@ struct CMemoryState
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMemoryState::CMemoryState](#cmemorystate)|Создает структуру стиле класса, которое управляет контрольных точек в памяти.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMemoryState::Checkpoint](#checkpoint)|Получает снимок текущего состояния памяти (контрольная точка).|
 |[CMemoryState::Difference](#difference)|Вычисляет разницу между двумя объектами типа `CMemoryState`.|
