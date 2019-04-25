@@ -16,11 +16,11 @@ helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160043"
 ---
 # <a name="concurrentpriorityqueue-class"></a>Класс concurrent_priority_queue
 
@@ -51,7 +51,7 @@ template <typename T,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди с приоритетом.|
 |`const_reference`|Тип, представляющий константную ссылку на элемент типа, хранящийся в параллельной очереди с приоритетом.|
@@ -61,13 +61,13 @@ template <typename T,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[concurrent_priority_queue](#ctor)|Перегружен. Создает параллельную очередь с приоритетом.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[clear](#clear)|Удаляет все элементы в параллельной очереди с приоритетом. Этот метод не является безопасным в режиме параллелизма.|
 |[empty](#empty)|Проверяет, пуста ли параллельная очередь с приоритетом в момент, когда этот метод вызывается. Этот метод безопасен в режиме параллелизма.|
@@ -79,7 +79,7 @@ template <typename T,
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_priority_queue` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 

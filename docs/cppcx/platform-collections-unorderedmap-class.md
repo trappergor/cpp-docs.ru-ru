@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
 ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161736"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Класс Platform::Collections::UnorderedMap
 
@@ -60,13 +60,13 @@ ref class Map sealed;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[UnorderedMap::UnorderedMap](#ctor)|Инициализирует новый экземпляр класса Map.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[UnorderedMap::Clear](#clear)|Удаляет все пары "ключ-значение" из текущего объекта Map.|
 |[UnorderedMap::First](#first)|Возвращает итератор, указывающий первый элемент в сопоставлении.|
@@ -81,7 +81,7 @@ ref class Map sealed;
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |[MAP::MapChanged](#mapchanged) событий|Происходит при изменении объекта Map.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования

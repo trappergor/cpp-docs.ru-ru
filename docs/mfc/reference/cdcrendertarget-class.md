@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CDCRenderTarget [MFC], m_pDCRenderTarget
 ms.assetid: aa8059c9-08e6-49e4-9b8c-00fa54077a61
 ms.openlocfilehash: 70169d2b89d9ea657898f7a96dea27556023d4e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168177"
 ---
 # <a name="cdcrendertarget-class"></a>Класс CDCRenderTarget
 
@@ -37,17 +37,17 @@ ms.locfileid: "57268282"
 class CDCRenderTarget : public CRenderTarget;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDCRenderTarget::CDCRenderTarget](#cdcrendertarget)|Создает объект CDCRenderTarget.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDCRenderTarget::Attach](#attach)|Присоединение существующих отрисовки целевой интерфейс к объекту|
 |[CDCRenderTarget::BindDC](#binddc)|Связывает целевой объект отрисовки на контекст устройства, к которому она выдает команд рисования|
@@ -57,13 +57,13 @@ class CDCRenderTarget : public CRenderTarget;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDCRenderTarget::operator ID2D1DCRenderTarget *](#operator_id2d1dcrendertarget_star)|Возвращает интерфейс ID2D1DCRenderTarget|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDCRenderTarget::m_pDCRenderTarget](#m_pdcrendertarget)|Указатель на объект ID2D1DCRenderTarget.|
 

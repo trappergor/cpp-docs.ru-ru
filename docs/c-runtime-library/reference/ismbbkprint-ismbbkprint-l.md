@@ -29,11 +29,11 @@ helpviewer_keywords:
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
 ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645982"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157530"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint, _ismbbkprint_l
 
@@ -61,7 +61,7 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-**_ismbbkprint** возвращает ненулевое значение, если целое число *c* является текст или символ знака препинания отличные от ASCII или 0, если это не. Например, только для кодовой страницы 932, **_ismbbkprint** проверяет на принадлежность к алфавитно-цифровым или пунктуационным символам катаканы (диапазон: 0xA1–0xDF). **_ismbbkprint** использует текущий языковой стандарт для параметров символов, зависящих от языкового стандарта. **_ismbbkprint_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
+**_ismbbkprint** возвращает ненулевое значение, если целое число *c* является текст или символ знака препинания отличные от ASCII или 0, если это не. Например, в только для кодовой страницы 932 **_ismbbkprint** тесты для катаканы буквенно-цифровые или пунктуационным символам катаканы (диапазон: 0xA1 – 0xDF). **_ismbbkprint** использует текущий языковой стандарт для параметров символов, зависящих от языкового стандарта. **_ismbbkprint_l** идентична за исключением того, что она использует переданный языковой стандарт. Для получения дополнительной информации см. [Locale](../../c-runtime-library/locale.md).
 
 ## <a name="requirements"></a>Требования
 

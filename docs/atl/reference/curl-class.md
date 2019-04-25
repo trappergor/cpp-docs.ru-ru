@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CUrl class
 ms.assetid: b3894d34-47b9-4961-9719-4197153793da
 ms.openlocfilehash: 913365e2b20015b22480dfd364d75b2be3c6355b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277257"
 ---
 # <a name="curl-class"></a>Класс cUrl
 
@@ -59,14 +59,14 @@ class CUrl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CUrl::CUrl](#curl)|Конструктор.|
 |[CUrl::~CUrl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CUrl::Canonicalize](#canonicalize)|Этот метод используется для преобразования строки URL-адрес в канонической форме.|
 |[CUrl::Clear](#clear)|Вызовите этот метод, чтобы очистить все поля URL-адрес.|
@@ -98,7 +98,7 @@ class CUrl
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CUrl::operator =](#operator_eq)|Назначает указанное `CUrl` объект с текущим `CUrl` объекта.|
 
@@ -189,7 +189,7 @@ BOOL CrackUrl(LPCTSTR lpszUrl, DWORD dwFlags = 0) throw();
 URL-адрес.
 
 *dwFlags*<br/>
-Укажите ATL_URL_DECODE или ATL_URL_ESCAPE, чтобы преобразовать все escape-символов в *lpszUrl* реальные значения после синтаксического анализа. (Ранее Visual C++ 2005 ATL_URL_DECODE преобразовать все escape-символы перед анализом.)
+Укажите ATL_URL_DECODE или ATL_URL_ESCAPE, чтобы преобразовать все escape-символов в *lpszUrl* реальные значения после синтаксического анализа. (Перед Visual C++ 2005 ATL_URL_DECODE преобразовать все escape-символы перед анализом.)
 
 ### <a name="return-value"></a>Возвращаемое значение
 

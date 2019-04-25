@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159786"
 ---
 # <a name="forwardlist-class"></a>Класс forward_list
 
@@ -219,7 +219,7 @@ void assign(InputIterator First, InputIterator Last);
 |*count*|Число элементов для присвоения.|
 |*Val*|Значение, присваиваемое каждому элементу.|
 |*Type*|Тип значения.|
-|* IList "|Копируемый initializer_list.|
+|* IList "| Копируемый initializer_list.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -512,7 +512,7 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Класс распределителя для использования с данным объектом.|
 |*Количество*|Количество элементов в создаваемом списке.|
 |*Val*|Значение элементов в создаваемом списке.|
-|*Справа*|Список, для которого создаваемый список станет копией.|
+|*Right*|Список, для которого создаваемый список станет копией.|
 |*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
 |*последний*|Положение первого элемента после диапазона копируемых элементов.|
 |*IList*|Копируемый initializer_list.|

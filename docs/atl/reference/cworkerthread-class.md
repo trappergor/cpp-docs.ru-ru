@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CWorkerThread class
 ms.assetid: be79a832-1345-4a36-a13e-a406cc65286f
 ms.openlocfilehash: d4645f4a57ce70c3683972c22e0f99cbce87ca6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276663"
 ---
 # <a name="cworkerthread-class"></a>Класс CWorkerThread
 
@@ -51,14 +51,14 @@ class CWorkerThread
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWorkerThread::CWorkerThread](#cworkerthread)|Конструктор для рабочего потока.|
 |[CWorkerThread:: ~ CWorkerThread](#dtor)|Деструктор для рабочего потока.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CWorkerThread::AddHandle](#addhandle)|Вызовите этот метод, чтобы добавить маркер этот объект в данный список рабочим потоком.|
 |[CWorkerThread::AddTimer](#addtimer)|Вызовите этот метод, чтобы добавить этот таймер в данный список рабочим потоком.|

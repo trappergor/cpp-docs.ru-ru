@@ -45,11 +45,11 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
 ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323834"
 ---
 # <a name="cstatusbarctrl-class"></a>Класс CStatusBarCtrl
 
@@ -65,13 +65,13 @@ class CStatusBarCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CStatusBarCtrl::CStatusBarCtrl](#cstatusbarctrl)|Создает объект `CStatusBarCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CStatusBarCtrl::Create](#create)|Создает элемент управления строка состояния и присоединяет его к `CStatusBarCtrl` объекта.|
 |[CStatusBarCtrl::CreateEx](#createex)|Создает элемент управления строка состояния с указанного расширенные стили Windows и присоединяет его к `CStatusBarCtrl` объекта.|
@@ -272,7 +272,7 @@ HICON GetIcon(int iPart) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iPart*|[in] Отсчитываемый от нуля индекс части, который содержит значок, который требуется получить. Если этот параметр имеет значение -1, строка состояния считается строка состояния простой режим.|
 
