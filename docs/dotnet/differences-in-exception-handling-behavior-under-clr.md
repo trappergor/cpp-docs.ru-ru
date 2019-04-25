@@ -6,10 +6,10 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772742"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>Различия в поведении при обработке исключений в /CLR
@@ -18,7 +18,7 @@ ms.locfileid: "58772742"
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> Выход из блока Finally
 
-В машинном коде C/C++, переход из __**наконец** блок, с помощью структурированной обработки исключений (SEH) допускается в том случае, несмотря на то, что он выдает предупреждение.  В разделе [/CLR](../build/reference/clr-common-language-runtime-compilation.md), выход из **наконец** блок вызывает ошибку:
+В машинном коде C /C++ кода, переход из __**наконец** блок, с помощью структурированной обработки исключений (SEH) допускается в том случае, несмотря на то, что он выдает предупреждение.  В разделе [/CLR](../build/reference/clr-common-language-runtime-compilation.md), выход из **наконец** блок вызывает ошибку:
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a>Разделенные реторы
 
-**/ CLR** не поддерживает повторное создание исключения за пределами обработчика catch (известный как Разделенные реторы). Исключения этого типа, обрабатываются как стандартный rethrow C++. Если םוסגחאםםץ rethrow при обнаружении active управляемого исключения, исключение упаковываться как исключения C++, а затем выдаваться повторно. Исключения этого типа может быть перехвачен только как исключение типа <xref:System.Runtime.InteropServices.SEHException>.
+**/ CLR** не поддерживает повторное создание исключения за пределами обработчика catch (известный как Разделенные реторы). Исключения этого типа, обрабатываются как стандартный rethrow C++. Если при активном управляемом исключении происходит повторное связывание с повторной привязкой, оно переносится как исключение C ++, а затем перебрасывается. Исключения этого типа может быть перехвачен только как исключение типа <xref:System.Runtime.InteropServices.SEHException>.
 
 В следующем примере показано управляемое исключение повторно создаются как исключения C++:
 
