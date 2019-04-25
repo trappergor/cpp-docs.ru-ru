@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898717"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124750"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -35,7 +35,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Улучшения соответствия C++ в Visual Studio](cpp-conformance-improvements.md)<br/>
 Сведения об улучшениях соответствия C++ в Visual Studio.
 
-[Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)<br/>
+[Соответствие стандартам языка Visual C++](visual-cpp-language-conformance.md)<br/>
 Список с данными о состоянии соответствия стандартам по каждой функции в компиляторе C++ MSVC.
 
 [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
@@ -43,7 +43,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Установка Visual Studio и обновление с более ранних версий
 
-[Справка по установке средства С++ в Visual Studio](../build/vscpp-step-0-installation.md)<br/>
+[Установка поддержки С++ в Visual Studio](../build/vscpp-step-0-installation.md)<br/>
 Скачайте Visual Studio 2015 или Visual Studio 2017 и установите набор инструментов Visual C++.
 
 [Руководство по переносу и обновлению Visual C++](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
@@ -71,7 +71,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 ## <a name="c-development-tools"></a>Средства разработки C++
 
-[Общие сведения о разработке на C++ в Visual Studio](overview-of-cpp-development.md)<br/>
+[Разработка приложений C++ в Visual Studio](overview-of-cpp-development.md)<br/>
 Использование интегрированной среды разработки Visual Studio для создания проектов, редактирования кода, создания ссылок на библиотеки, компиляции, отладки, создания модульных тестов, выполнения статического анализа, развертывания и многого другого.
 
 [Проекты и системы сборки](../build/projects-and-build-systems-cpp.md)<br/>
@@ -83,7 +83,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Отладка машинного кода](/visualstudio/debugger/debugging-native-code)<br/>
 Сведения об использовании отладчика Visual Studio с проектами C++.
 
-[Общие сведения об анализе кода в C/C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+[Общие сведения об анализе кода на C и C++](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
 Используйте заметки SAL или средства проверки C++ Core Guidelines для выполнения статического анализа.
 
 [Написание модульных тестов для C/C++ в Visual Studio](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
@@ -125,9 +125,9 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 
 [Справочник по языку C++](../cpp/cpp-language-reference.md)
 
-[Cправочник препроцессора /C++](../preprocessor/c-cpp-preprocessor-reference.md)
+[Справочник по препроцессору в C/C++](../preprocessor/c-cpp-preprocessor-reference.md)
 
-[Справочник по языку C](../c-language/c-language-reference.md)
+[Справочник по языку C#](../c-language/c-language-reference.md)
 
 [Внутренние объекты компилятора и язык ассемблера](../intrinsics/compiler-intrinsics-and-assembly-language.md)
 
@@ -147,7 +147,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Библиотеки Microsoft Foundation Class (MFC)](../mfc/mfc-desktop-applications.md)<br/>
 Поддержка создания классических приложений с традиционными пользовательскими интерфейсами или интерфейсами в стиле Office.
 
-[Библиотека параллельных шаблонов](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
+[Библиотека параллельных шаблонов (PPL)](../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 Асинхронные и параллельные алгоритмы, выполняемые в ЦП.
 
 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
@@ -168,14 +168,14 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Как сообщить о проблеме с набором инструментов Visual C++](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Сведения о создании эффективных отчетов об ошибках с использованием набора инструментов Visual C++ (компилятора, компоновщика и других средств) и информация о способах отправки отчета.
 
-[Блог команды разработчиков Visual C++](http://blogs.msdn.com/b/vcblog/)<br/>
-Описание новых возможностей и актуальная информация от разработчиков [!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)].
+[Блог группы разработчиков Microsoft по C++](https://devblogs.microsoft.com/cppblog/)<br/>
+Описание новых возможностей и актуальная информация от разработчиков инструментов C++ в Visual Studio.
 
 [Сообщество разработчиков Visual Studio](https://developercommunity.visualstudio.com/)<br/>
 Обращение за помощью, регистрация ошибок и предложения по Visual Studio.
 
 ## <a name="see-also"></a>См. также
 
-- [Справочник по языку C](../c-language/c-language-reference.md)
+- [Справочник по языку C#](../c-language/c-language-reference.md)
 - [Справочник по библиотеке времени выполнения C](../c-runtime-library/c-run-time-library-reference.md)
 - [Внутренние объекты компилятора и язык ассемблера](../intrinsics/compiler-intrinsics-and-assembly-language.md)
