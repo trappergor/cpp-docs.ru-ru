@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
 ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158582"
 ---
 # <a name="mutex-class-c-standard-library"></a>Класс mutex (Стандартная библиотека C++)
 
@@ -37,14 +37,14 @@ class mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Мьютекс](#mutex)|Создает объект `mutex`.|
 |[Деструктор mutex::~mutex](#dtormutex_destructor)|Освобождает ресурсы, используемые объектом `mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор мьютекса.|
@@ -57,7 +57,7 @@ class mutex;
 
 **Пространство имен:** std
 
-## <a name="lock"></a>  Mutex::LOCK
+## <a name="lock"></a>  mutex::lock
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -89,7 +89,7 @@ constexpr mutex() noexcept;
 
 Если при выполнении деструктора объект заблокирован, поведение не определено.
 
-## <a name="native_handle"></a>  Mutex::native_handle
+## <a name="native_handle"></a>  mutex::native_handle
 
 Возвращает тип реализации, представляющий дескриптор мьютекса. Дескриптор мьютекса может использоваться разными способами в зависимости от реализации.
 
@@ -117,7 +117,7 @@ bool try_lock();
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="unlock"></a>  Mutex::Unlock
+## <a name="unlock"></a>  mutex::unlock
 
 Освобождает права владения объектом `mutex`.
 

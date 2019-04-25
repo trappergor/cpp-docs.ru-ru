@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164915"
 ---
 # <a name="casyncsocket-class"></a>Класс CAsyncSocket
 
@@ -91,17 +91,17 @@ ms.locfileid: "57260014"
 class CAsyncSocket : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAsyncSocket::CAsyncSocket](#casyncsocket)|Создает объект `CAsyncSocket`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAsyncSocket::Accept](#accept)|Принимает подключения через сокет.|
 |[CAsyncSocket::AsyncSelect](#asyncselect)|Запросы уведомления о событии для сокета.|
@@ -132,7 +132,7 @@ class CAsyncSocket : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAsyncSocket::OnAccept](#onaccept)|Уведомляет прослушивающий сокет, который он может принять ожидающих запросов на подключение, вызвав `Accept`.|
 |[CAsyncSocket::OnClose](#onclose)|Уведомляет закрыл сокет, сокет подключен к нему.|
@@ -143,14 +143,14 @@ class CAsyncSocket : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAsyncSocket::operator =](#operator_eq)|Назначает новое значение для `CAsyncSocket` объекта.|
 |[CAsyncSocket::operator СОКЕТА](#operator_socket)|Этот оператор используется для получения дескриптор СОКЕТА `CAsyncSocket` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAsyncSocket::m_hSocket](#m_hsocket)|Указывает дескриптор СОКЕТА, прикрепленный к этому `CAsyncSocket` объекта.|
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CSmoothStopTransition [MFC], m_maximumDuration
 ms.assetid: e1a4b476-6f96-43dd-90db-870a64406b85
 ms.openlocfilehash: 89496c1b867d6fbb498f56271de7b45afef7edc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323886"
 ---
 # <a name="csmoothstoptransition-class"></a>Класс CSmoothStopTransition
 
@@ -35,19 +35,19 @@ class CSmoothStopTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSmoothStopTransition::CSmoothStopTransition](#csmoothstoptransition)|Создает переход с плавной остановкой и инициализирует его Максимальная длительность и конечное значение.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSmoothStopTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSmoothStopTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
 |[CSmoothStopTransition::m_maximumDuration](#m_maximumduration)|Максимальная длительность перехода.|

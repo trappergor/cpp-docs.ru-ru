@@ -26,11 +26,11 @@ helpviewer_keywords:
 - CSnapInPropertyPageImpl class
 ms.assetid: 75bdce5a-985e-4166-bd44-493132e023c4
 ms.openlocfilehash: d4e363f7de46de6f875a28a62d4ecdf929decdc3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277510"
 ---
 # <a name="csnapinpropertypageimpl-class"></a>Класс CSnapInPropertyPageImpl
 
@@ -49,13 +49,13 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::CSnapInPropertyPageImpl](#csnapinpropertypageimpl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::CancelToClose](#canceltoclose)|Изменяет состояние **ОК** и **отменить** кнопки.|
 |[CSnapInPropertyPageImpl::Create](#create)|Инициализирует только что созданный объект `CSnapInPropertyPageImpl` объекта.|
@@ -73,7 +73,7 @@ CSnapInPropertyPageImpl : public CDialogImplBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInPropertyPageImpl::m_psp](#m_psp)|Windows `PROPSHEETPAGE` структуру, используемую `CSnapInPropertyPageImpl` объекта.|
 

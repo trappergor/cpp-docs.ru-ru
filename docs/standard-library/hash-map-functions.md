@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::swap (hash_map)
 ms.assetid: 28748cd0-71f7-41b9-b068-579183645fba
 ms.openlocfilehash: dae2c47ef3b84247ab1747e37719a23b220b5d08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50627426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159448"
 ---
 # <a name="lthashmapgt-functions"></a>Функции &lt;hash_map&gt;
 
@@ -21,7 +21,7 @@ ms.locfileid: "50627426"
 ## <a name="swap_hash_map"></a>  swap (hash_map)
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Меняет местами элементы двух hash_map.
 
@@ -46,7 +46,7 @@ Hash_map, элементы которого должны быть заменен
 ## <a name="swap"></a>  swap
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_multimap](../standard-library/unordered-multimap-class.md).
 
 Меняет местами элементы двух hash_multimap.
 
