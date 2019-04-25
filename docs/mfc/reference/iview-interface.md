@@ -13,11 +13,11 @@ helpviewer_keywords:
 - views [MFC], classes
 ms.assetid: 9321f299-486e-4551-bee9-d2c4a7b91548
 ms.openlocfilehash: 22e08a70ff4cc742406a1489899c0ba1df7eb664
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321953"
 ---
 # <a name="iview-interface"></a>Интерфейс IView
 
@@ -33,7 +33,7 @@ interface class IView
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IView::OnActivateView](#onactivateview)|Вызывается средой MFC, когда представление активируется или деактивируется.|
 |[IView::OnInitialUpdate](#oninitialupdate)|Вызвано структурой после представления впервые присоединяется к документу, но до изначально отображается представление.|

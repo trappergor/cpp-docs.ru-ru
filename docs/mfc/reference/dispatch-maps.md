@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
 ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322518"
 ---
 # <a name="dispatch-maps"></a>Схемы подготовки к отправке
 
@@ -130,9 +130,9 @@ DISP_FUNCTION(
 
 *VtRetVal* аргумент имеет тип VARTYPE. Для этого аргумента следующие возможные значения берутся из `VARENUM` перечисления:
 
-|Символ|Тип возвращаемого значения|
+|Символ|Возвращаемый тип|
 |------------|-----------------|
-|ЗНАЧЕНИЕ VT_EMPTY|**void**|
+|VT_EMPTY|**void**|
 |VT_I2|**short**|
 |VT_I4|**long**|
 |VT_R4|**float**|

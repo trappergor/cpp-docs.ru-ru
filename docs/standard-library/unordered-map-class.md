@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159149"
 ---
 # <a name="unorderedmap-class"></a>Класс unordered_map
 
@@ -2631,7 +2631,7 @@ unordered_map(
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
 |*Bucket_count*|Минимальное количество блоков.|
-|*Справа*|Контейнер для копирования.|
+|*Right*|Контейнер для копирования.|
 |*Первый*||
 |*последний*||
 |*IList*|Список initializer_list с элементами, которые необходимо скопировать.|

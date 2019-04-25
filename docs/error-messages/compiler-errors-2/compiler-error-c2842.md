@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2842
 ms.assetid: 8674f08d-9f50-46ad-9229-abc6b74fa0e5
 ms.openlocfilehash: 99b2c86d1e914c9425c2664d4e858bba6cb99486
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51325578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62382948"
 ---
 # <a name="compiler-error-c2842"></a>Ошибка компилятора C2842
 
@@ -21,7 +21,7 @@ ms.locfileid: "51325578"
 
 Можно определить собственные **оператор new** или **оператор delete** для управления выделением памяти в неуправляемой куче. Однако эти операторы не могут быть определены в ссылочных классах , так как только они выделяются в управляемой куче.
 
-Дополнительные сведения см. в разделе [определяемые пользователем операторы (C + +/ CLI)](../../dotnet/user-defined-operators-cpp-cli.md).
+Дополнительные сведения см. в разделе [определяемые пользователем операторы (C++выполняет)](../../dotnet/user-defined-operators-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 
