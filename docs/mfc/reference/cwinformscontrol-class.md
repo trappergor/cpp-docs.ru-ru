@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
 ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323304"
 ---
 # <a name="cwinformscontrol-class"></a>Класс CWinFormsControl
 
@@ -41,13 +41,13 @@ class CWinFormsControl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinFormsControl::CWinFormsControl](#cwinformscontrol)|Создает объект управления оболочки MFC Windows Forms.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinFormsControl::CreateManagedControl](#createmanagedcontrol)|Создает элемент управления Windows Forms в контейнере MFC.|
 |[CWinFormsControl::GetControl](#getcontrol)|Извлекает указатель на элемент управления Windows Forms.|
@@ -55,7 +55,7 @@ class CWinFormsControl : public CWnd
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CWinFormsControl::operator-&gt;](#operator_-_gt)|Заменяет [CWinFormsControl::GetControl](#getcontrol) в выражениях.|
 |[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Приводит тип указателя на элемент управления Windows Forms.|
