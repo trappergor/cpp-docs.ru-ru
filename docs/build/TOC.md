@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [Практическое руководство. Слияние нескольких профилей для профильной оптимизации](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [Надстройка вероятностного оптимизатора Visual Studio 2013 в разделе производительности и диагностики](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [Использование набора средств MSVC из командной строки](building-on-the-command-line.md)
 ## [Пошаговое руководство: Компиляция собственной программы C++ из командной строки](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [Пошаговое руководство: Компиляция программы на языке C из командной строки](walkthrough-compile-a-c-program-on-the-command-line.md)
