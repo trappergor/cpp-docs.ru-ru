@@ -167,11 +167,11 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
 ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206363"
 ---
 # <a name="cdaorecordset-class"></a>Класс CDaoRecordset
 
@@ -187,13 +187,13 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoRecordset::CDaoRecordset](#cdaorecordset)|Создает объект `CDaoRecordset`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoRecordset::AddNew](#addnew)|Подготавливает для добавления новой записи. Вызовите [обновления](#update) для завершения добавления.|
 |[CDaoRecordset::CanAppend](#canappend)|Возвращает ненулевое значение, если новые записи добавляются в набор записей с помощью [AddNew](#addnew) функция-член.|
@@ -270,7 +270,7 @@ class CDaoRecordset : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoRecordset::m_bCheckCacheForDirtyFields](#m_bcheckcachefordirtyfields)|Содержит флаг, указывающее, является ли поля автоматически помечаются как измененный.|
 |[CDaoRecordset::m_nFields](#m_nfields)|Содержит число элементов данных полей в классе наборов записей и количество столбцов, выбранных в набор записей из источника данных.|
@@ -727,7 +727,7 @@ BOOL FindFirst(LPCTSTR lpszFilter);
 
 `Find` Поиск функций-членов из расположения и в направлении, указанным в следующей таблице:
 
-|Операции по поиску|Begin|Направление поиска|
+|Операции по поиску|начать|Направление поиска|
 |---------------------|-----------|----------------------|
 |`FindFirst`|Начало набора записей|Конец набора записей|
 |`FindLast`|Конец набора записей|Начало набора записей|

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
 ms.openlocfilehash: bcfdc94e8db80daec227d77c20ecec6b14d5af11
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195333"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>Экспортирование и импортирование с использованием AFX_EXT_CLASS
 
@@ -102,7 +102,7 @@ class CExampleView : public CView
 > [!NOTE]
 >  Если экспортируется весь класс, а не выбранные элементы класса, автоматически экспортируются статические данные-члены.
 
-### <a name="what-do-you-want-to-do"></a>Выберите действие.
+### <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Экспорт из DLL с использованием DEF-файлы](exporting-from-a-dll-using-def-files.md)
 

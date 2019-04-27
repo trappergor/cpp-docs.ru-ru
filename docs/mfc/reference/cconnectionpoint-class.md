@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CConnectionPoint [MFC], QuerySinkInterface
 ms.assetid: f0f23a1e-5e8c-41a9-aa6c-1a4793b28e8f
 ms.openlocfilehash: a75ce23cf55f26505c2584c3a021b654602a6a2b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182284"
 ---
 # <a name="cconnectionpoint-class"></a>Класс CConnectionPoint
 
@@ -45,13 +45,13 @@ class CConnectionPoint : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CConnectionPoint::CConnectionPoint](#cconnectionpoint)|Создает объект `CConnectionPoint`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CConnectionPoint::GetConnections](#getconnections)|Извлекает все точки подключения в сопоставлении подключения.|
 |[CConnectionPoint::GetContainer](#getcontainer)|Возвращает контейнер элемента управления, которому принадлежит схеме подключения.|

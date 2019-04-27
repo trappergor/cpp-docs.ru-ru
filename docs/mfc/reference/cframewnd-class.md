@@ -107,11 +107,11 @@ helpviewer_keywords:
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
 ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182065"
 ---
 # <a name="cframewnd-class"></a>Класс CFrameWnd
 
@@ -127,13 +127,13 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFrameWnd::CFrameWnd](#cframewnd)|Создает объект `CFrameWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFrameWnd::ActivateFrame](#activateframe)|Становится кадр отображаются и доступны пользователю.|
 |[CFrameWnd::BeginModalState](#beginmodalstate)|Задает фрейм окна к модальному окну.|
@@ -182,7 +182,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFrameWnd::OnCreateClient](#oncreateclient)|Создает окно клиента для кадра.|
 |[CFrameWnd::OnHideMenuBar](#onhidemenubar)|Вызывается перед меню в текущем приложении MFC является скрытым.|
@@ -190,7 +190,7 @@ class CFrameWnd : public CWnd
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFrameWnd::m_bAutoMenuEnable](#m_bautomenuenable)|Элементы управления автоматическое включение и отключение функциональные возможности для пунктов меню.|
 |[CFrameWnd::rectDefault](#rectdefault)|Передайте этот статический `CRect` как параметр при создании `CFrameWnd` объекта, чтобы разрешить Windows выбрать исходный размер и положение окна.|
@@ -1091,7 +1091,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nState*|[in] Указывает, следует ли отобразить или скрыть меню. *NState* параметр может иметь следующие значения:<br /><br />-AFX_MBS_VISIBLE (0x01) — открывает меню, если он скрыт, но не действует, если он видим.<br />-AFX_MBS_HIDDEN (0x02) — скрывает элемент управления menu, если она видна, но не действует, если он скрыт.|
 
@@ -1113,7 +1113,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nStyle*|[in] Указывает меню по умолчанию скрыт, или является видимым и имеет фокус. *NStyle* параметр может иметь следующие значения:<br /><br />- AFX_MBV_KEEPVISIBLE (0x01) -<br />     В меню отображается все время и по умолчанию не имеет фокус.<br />-AFX_MBV_DISPLAYONFOCUS (0X02 —)<br />     Меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу ALT, чтобы отобразить меню и сделать его активным. Если меню отображается, нажмите клавишу ALT или ESC для скрытия меню.<br />- AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (битовую комбинацию (OR)) — меню скрыта по умолчанию. Если меню скрыта, нажмите клавишу F10 для отображения меню и сделать его активным. Если меню отображается, нажмите клавишу F10, чтобы переключить фокус, или отключить меню. До нажатия клавиши ALT или ESC, чтобы скрыть его отображении меню.|
 

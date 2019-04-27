@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156308"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ size_t _msize_dbg(
 
 ## <a name="remarks"></a>Примечания
 
-**_msize_dbg** является отладочной версией функции _[msize](msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_msize_dbg** сокращается до вызова **_msize**. Оба **_msize** и **_msize_dbg** вычисляет размер блока памяти в основной куче, но **_msize_dbg** добавляет две функции отладки: буферы на обеих сторонах включает пользователя части блока памяти в возвращаемый размер и он позволяет рассчитать размер определенных типов блоков.
+**_msize_dbg** является отладочной версией функции _[msize](msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_msize_dbg** сокращается до вызова **_msize**. Оба **_msize** и **_msize_dbg** вычисляет размер блока памяти в основной куче, но **_msize_dbg** добавляет две функции отладки: Он включает в возвращаемый размер буферы с обеих сторон пользовательской части блока памяти, и позволяет рассчитать размер определенных типов блоков.
 
 Сведения о выделении, инициализации и управлении блоками памяти в отладочной версии базовой кучи, см. в статье [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details). Сведения о типах блоков выделения и способах их использования см. в разделе [Типы блоков в отладочной куче](/visualstudio/debugger/crt-debug-heap-details). Сведения о различиях между вызовом стандартной функции кучи и ее отладочной версии в сборке отладки приложения см. в разделе [Версии отладки функций выделения кучи](/visualstudio/debugger/debug-versions-of-heap-allocation-functions).
 

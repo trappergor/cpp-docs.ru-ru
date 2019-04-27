@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CDaoRecordView [MFC], OnMove
 ms.assetid: 5aa7d0e2-bd05-413e-b216-80c404ce18ac
 ms.openlocfilehash: f63aa8ed17619a9eef36e36bcc9243a3b973889a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207198"
 ---
 # <a name="cdaorecordview-class"></a>Класс CDaoRecordView
 
@@ -33,17 +33,17 @@ ms.locfileid: "57277781"
 class AFX_NOVTABLE CDaoRecordView : public CFormView
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoRecordView::CDaoRecordView](#cdaorecordview)|Создает объект `CDaoRecordView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoRecordView::IsOnFirstRecord](#isonfirstrecord)|Возвращает ненулевое значение, если текущая запись является первой записью в связанных записей.|
 |[CDaoRecordView::IsOnLastRecord](#isonlastrecord)|Возвращает ненулевое значение, если текущая запись является последней записи в наборе связанных записей.|

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
 ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206047"
 ---
 # <a name="cevent-class"></a>Класс CEvent
 
@@ -37,13 +37,13 @@ class CEvent : public CSyncObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CEvent::CEvent](#cevent)|Создает объект `CEvent`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CEvent::PulseEvent](#pulseevent)|Наборы события доступны (сигнал), освобождает потоков в состоянии ожидания и задает событие в состояние недоступности (несигнальное).|
 |[CEvent::ResetEvent](#resetevent)|Задает событие в состояние недоступности (несигнальное).|

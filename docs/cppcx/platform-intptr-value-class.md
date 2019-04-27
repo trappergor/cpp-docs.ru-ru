@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::IntPtr Struct
 ms.assetid: 6c0326e8-edfd-4e53-a963-240b845dcde8
 ms.openlocfilehash: 8101fa2c82a0ac3e3b573384d14d9a7eff6ecf61
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747116"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152742"
 ---
 # <a name="platformintptr-value-class"></a>Класс значения Platform::IntPtr
 
@@ -30,7 +30,7 @@ public value struct IntPtr
 
 Класс IntPtr имеет следующие члены:
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[IntPtr::IntPtr](#ctor)|Инициализирует новый экземпляр класса IntPtr.|
 |[Оператор IntPtr::op_explicit](#op-explicit)|Преобразует указанный параметр в объект IntPtr или указатель на значение IntPtr.|

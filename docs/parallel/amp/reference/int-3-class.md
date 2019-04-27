@@ -73,11 +73,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_3::set_yz
 ms.assetid: d4af182f-30f1-455c-b16d-aa99cd314038
 ms.openlocfilehash: c7cef5c8d6750ba6e971be14aafce65020d05c10
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180249"
 ---
 # <a name="int3-class"></a>Класс int_3
 
@@ -89,23 +89,23 @@ ms.locfileid: "57266852"
 class int_3;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор int_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |int_3::get_x||
 |int_3::get_xy||
@@ -146,7 +146,7 @@ class int_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |int_3::operator-||
 |int_3::operator--||
@@ -166,13 +166,13 @@ class int_3;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |int_3::b||
 |int_3::bg||

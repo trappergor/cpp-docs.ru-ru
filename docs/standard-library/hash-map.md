@@ -7,11 +7,11 @@ f1_keywords:
 helpviewer_keywords:
 - hash_map header
 ms.openlocfilehash: 5a7ea891a314d69b8bc3378edce9fa0de2d89ace
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159500"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -30,7 +30,7 @@ ms.locfileid: "51520326"
 
 |Версия hash_map|Версия hash_multimap|Описание|
 |-----------------------|----------------------------|-----------------|
-|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[Operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
+|[operator!= (hash_map)](hash-map-operators.md#op_neq)|[operator!=(hash_multimap)](hash-map-operators.md#op_neq_mm)|Проверяет неравенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 |[ operator== (hash_map)](hash-map-operators.md#op_eq_eq)|[ operator== (hash_multimap)](hash-map-operators.md#op_eq_eq_mm)|Проверяет равенство объекта hash_map или hash_multimap слева от оператора объекту hash_map или hash_multimap справа от оператора.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов

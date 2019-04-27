@@ -9,11 +9,11 @@ helpviewer_keywords:
 - GetProcAddress method
 ms.assetid: 48d14ae0-47ea-4c5d-96b1-2c158f1a26af
 ms.openlocfilehash: 5ee985da29e38bfb262c72315a57c0b588b2e82e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188981"
 ---
 # <a name="getprocaddress"></a>GetProcAddress
 
@@ -53,7 +53,7 @@ if (hDLL != NULL)
 
 Порядковый номер экспорта может получать только в случае, если создается ссылка на библиотеку DLL создается с помощью файла определения модуля (DEF) и если порядковые номера перечислены с помощью функций в **ЭКСПОРТОВ** разделе DEF-файла библиотеки DLL. Вызов **GetProcAddress** при экспорте порядковый номер, имя функции, в отличие от немного быстрее, если библиотека DLL имеется много экспортированных функций, поскольку порядковые номера экспорта служат индексов к динамической библиотеке Экспорт таблицы. По порядковому номеру **GetProcAddress** можно найти эту функцию напрямую в отличие от сравнения указанного имени с именами функций в таблице экспорта библиотеки DLL. Тем не менее, следует вызывать **GetProcAddress** по порядковому номеру только в том случае, если у вас есть контроль над присвоением порядковых номеров экспортированным функциям в DEF-файле.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие.
+## <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Связывание исполняемого файла с библиотекой DLL](linking-an-executable-to-a-dll.md#linking-implicitly)
 

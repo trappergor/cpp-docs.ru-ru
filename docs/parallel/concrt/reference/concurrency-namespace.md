@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160081"
 ---
 # <a name="concurrency-namespace"></a>Пространство имен concurrency
 
@@ -37,21 +37,20 @@ ms.locfileid: "57303395"
 namespace concurrency;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`runtime_object_identity`|Каждый экземпляр сообщения имеет идентификатор, который сопутствует ему при клонировании и передаче между компонентами обмена сообщениями. Он не может быть адресом объекта сообщения.|
 |`task_status`|Тип, который представляет конечное состояние задачи. Допустимые значения: `completed` и `canceled`.|
 |`TaskProc`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc)(void *)`. `TaskProc` вызывается для вызова тела задачи.|
-|`TaskProc_t`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc_t)(void *)`. 
-  `TaskProc` вызывается для вызова тела задачи.|
+|`TaskProc_t`|Простая абстракция для задачи, определенная как `void (__cdecl * TaskProc_t)(void *)`. `TaskProc` вызывается для вызова тела задачи.|
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс affinity_partitioner](affinity-partitioner-class.md)|Класс `affinity_partitioner` аналогичен классу `static_partitioner`, но он повышает сходство кэша путем подбора поддиапазонов сопоставления для потоков рабочего процесса. Он может значительно повысить производительность, если цикл повторно выполняется в одном и том же наборе данных и данные помещаются в кэш. Обратите внимание, что один и тот же объект `affinity_partitioner` должен использоваться с последующими итерациями параллельного цикла, выполняемого в указанном наборе данных, чтобы воспользоваться преимуществом локальности данных.|
 |[Класс agent](agent-class.md)|Класс, предназначенный для использования в качестве базового класса для всех независимых агентов. Он используется для скрытия состояния от других агентов и взаимодействия посредством передачи сообщений.|
@@ -134,7 +133,7 @@ namespace concurrency;
 
 ### <a name="structures"></a>Структуры
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Структура DispatchState](dispatchstate-structure.md)|Структура `DispatchState` используется для передачи состояния в метод `IExecutionContext::Dispatch`. Она описывает обстоятельства, при которых метод `Dispatch` вызывается для интерфейса `IExecutionContext`.|
 |[Структура IExecutionContext](iexecutioncontext-structure.md)|Интерфейс для контекста выполнения, который может выполняться на данном виртуальном процессоре и к которому может применяться совместное переключение контекста.|
@@ -155,7 +154,7 @@ namespace concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[agent_status](concurrency-namespace-enums.md#agent_status)|Допустимые состояния для объекта `agent`.|
 |[Agents_EventType](concurrency-namespace-enums.md#agents_eventtype)|Типы событий, которые можно отслеживать с помощью функции трассировки, предоставляемой библиотекой агентов.|
@@ -174,7 +173,7 @@ namespace concurrency;
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Функция Alloc](concurrency-namespace-functions.md#alloc)|Выделяет блок памяти указанного размера из подраспределителя кэширования среды параллелизма.|
 |[Функция asend](concurrency-namespace-functions.md#asend)|Перегружен. Асинхронная операция отправки, которая планирует задачу для распространения данных в целевой блок.|
@@ -221,11 +220,11 @@ namespace concurrency;
 
 ### <a name="operators"></a>Операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator!=](concurrency-namespace-operators.md#operator_neq)|Проверяет неравенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
 |[оператор&&](concurrency-namespace-operators.md#operator_amp_amp)|Перегружен. Создает задачу, которая завершается успешно, если обе задачи, предоставленные в качестве аргументов, завершаются успешно.|
-|[оператор&#124;&#124;](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
+|[оператор||](concurrency-namespace-operators.md#operator_lor)|Перегружен. Создает задачу, которая завершается успешно, если любая из задач, предоставленных в качестве аргументов, завершается успешно.|
 |[оператор<](concurrency-namespace-operators.md#operator_lt)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора.|
 |[оператор<=](concurrency-namespace-operators.md#operator_lt_eq)|Проверяет, меньше ли объект `concurrent_vector` слева от оператора, чем объект `concurrent_vector` справа от оператора, или равен ему.|
 |[operator==](concurrency-namespace-operators.md#operator_eq_eq)|Проверяет равенство объекта `concurrent_vector` слева от оператора объекту `concurrent_vector` справа от оператора.|
@@ -234,7 +233,7 @@ namespace concurrency;
 
 ### <a name="constants"></a>Константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[AgentEventGuid](concurrency-namespace-constants1.md#agenteventguid)|GUID категории ({B9B5B78C-0713-4898-A21A-C67949DCED07}), описывающий события трассировки Windows, запускаемые библиотекой агентов исполняющей среды с параллелизмом.|
 |[ChoreEventGuid](concurrency-namespace-constants1.md#choreeventguid)|GUID категории, описывающий события трассировки событий Windows, инициированные средой выполнения с параллелизмом, которые непосредственно связаны с делами или задачами.|

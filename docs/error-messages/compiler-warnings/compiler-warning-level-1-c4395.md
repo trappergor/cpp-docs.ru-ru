@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C4395
 ms.assetid: 8051469a-3a39-4677-80f7-1300fbffe8ea
 ms.openlocfilehash: 27503b94a18b949637293201203e18793f5e7788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182409"
 ---
 # <a name="compiler-warning-level-1-c4395"></a>Предупреждение компилятора (уровень 1) C4395
 
 «функция»: функция-член будет вызываться для копии данных initonly «член»
 
-Функция-член был вызван для [initonly (C + +/ CLI)](../../dotnet/initonly-cpp-cli.md) элемент данных.  C4395 предупреждение, что **initonly** член данных не может изменяться функцией.
+Функция-член был вызван для [initonly (C++выполняет)](../../dotnet/initonly-cpp-cli.md) данные-член.  C4395 предупреждение, что **initonly** член данных не может изменяться функцией.
 
 Следующий пример приводит к возникновению ошибки C4395:
 
