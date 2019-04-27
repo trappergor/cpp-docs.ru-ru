@@ -63,11 +63,11 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
 ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253729"
 ---
 # <a name="cdaoworkspace-class"></a>Класс CDaoWorkspace
 
@@ -83,13 +83,13 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoWorkspace::CDaoWorkspace](#cdaoworkspace)|Создает объект рабочей области. После этого вызовите `Create` или `Open`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoWorkspace::Append](#append)|Добавляет созданную рабочую область коллекции рабочих областей ядро базы данных.|
 |[CDaoWorkspace::BeginTrans](#begintrans)|Начинает новую транзакцию, которая применяется ко всем базам данных открытым в рабочей области.|
@@ -120,7 +120,7 @@ class CDaoWorkspace : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoWorkspace::m_pDAOWorkspace](#m_pdaoworkspace)|Точки к базовому объекту DAO рабочей области.|
 

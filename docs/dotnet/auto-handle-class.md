@@ -16,11 +16,11 @@ helpviewer_keywords:
 - msclr::auto_handle class
 ms.assetid: a65604d1-ecbb-44fd-ae2f-696ddeeed9d6
 ms.openlocfilehash: ad98bfa9ff447f08c458427961b427e0f2087e62
-ms.sourcegitcommit: 9813e146a4eb30929d8352872859e8fcb7ff6d2f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54806011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209273"
 ---
 # <a name="autohandle-class"></a>Класс auto_handle
 
@@ -42,7 +42,7 @@ ref class auto_handle;
 
 ### <a name="public-constructors"></a>Открытые конструкторы  
 
-|name|Описание:|  
+|name|Описание|  
 |---------|-----------|  
 |[auto_handle::auto_handle](#auto-handle)|`auto_handle` Конструктор.|  
 |[auto_handle::~auto_handle](#tilde-auto-handle)|`auto_handle` Деструктор.|  
@@ -58,7 +58,7 @@ ref class auto_handle;
 
 ### <a name="public-operators"></a>Открытые операторы 
 
-|name|Описание:|  
+|name|Описание|  
 |---------|-----------| 
 |[auto_handle::operator-&gt;](#operator-arrow)|Оператор доступа.|   
 |[auto_handle::operator=](#operator-assign)|Оператор присвоения.| 

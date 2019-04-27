@@ -9,11 +9,11 @@ helpviewer_keywords:
 - I/O [MFC], file-based options
 ms.assetid: d664b175-3b4a-40c3-b14b-39de6b12e419
 ms.openlocfilehash: 760c213c3af7f9c75374f04e3dfc6b9499eade5c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218568"
 ---
 # <a name="recommendations-for-handling-inputoutput"></a>Рекомендации по обработке ввода-вывода
 
@@ -49,4 +49,4 @@ ms.locfileid: "57261976"
 
 ## <a name="see-also"></a>См. также
 
-[Сериализация. Vs сериализации. Ввод/вывод баз данных](../mfc/serialization-serialization-vs-database-input-output.md)
+[Сериализация. Сериализация или Ввод/вывод баз данных](../mfc/serialization-serialization-vs-database-input-output.md)

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - composite controls, CComCompositeControl class
 ms.assetid: 1304b931-27e8-4fbc-be8e-bb226ad887fb
 ms.openlocfilehash: f1a9a2d0628b3683f047ce9858d809040438db03
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260244"
 ---
 # <a name="ccomcompositecontrol-class"></a>Класс CComCompositeControl
 
@@ -42,18 +42,18 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 *T*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md), как хорошо от любых других интерфейсов, которую требуется поддерживать для составного элемента управления.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComCompositeControl::CComCompositeControl](#ccomcompositecontrol)|Конструктор.|
 |[CComCompositeControl:: ~ CComCompositeControl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComCompositeControl::AdviseSinkMap](#advisesinkmap)|Этот метод используется для соединения или разъединения всех элементов управления, размещаемым в составной элемент управления.|
 |[CComCompositeControl::CalcExtent](#calcextent)|Вызовите этот метод, для которого требуется вычислить размер в единицах HIMETRIC ресурса диалогового окна, используемого для размещения составного элемента управления.|
@@ -63,7 +63,7 @@ class CComCompositeControl : public CComControl<T,CAxDialogImpl<T>>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComCompositeControl::m_hbrBackground](#m_hbrbackground)|Кисть фона.|
 |[CComCompositeControl::m_hWndFocus](#m_hwndfocus)|Дескриптор окна, которое в данный момент имеет фокус.|

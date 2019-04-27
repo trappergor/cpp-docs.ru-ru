@@ -15,11 +15,11 @@ helpviewer_keywords:
 - types [C++], alignment requirements
 ms.assetid: acb1eed7-6398-40bd-b0c5-684ceb64afbc
 ms.openlocfilehash: 96c85db83c133af6f1712baa8597ed3360277854
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258256"
 ---
 # <a name="alignof-operator"></a>Оператор __alignof
 
@@ -44,10 +44,10 @@ C ++ 11 доступны **alignof** оператор, возвращающий 
 |**__alignof (char)**|1|
 |**__alignof (short)**|2|
 |**__alignof (int)**|4|
-|**__alignof ( \__int64)**|8|
-|**__alignof (float)**|4|
-|**__alignof (double)**|8|
-|**__alignof (char\* )**|4|
+|**__alignof( \__int64 )**|8|
+|**__alignof( float )**|4|
+|**__alignof( double )**|8|
+|**__alignof( char\* )**|4|
 
 **__Alignof** значение совпадает со значением значение `sizeof` для основных типов. Однако рассмотрим следующий пример.
 

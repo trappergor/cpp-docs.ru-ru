@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CComTearOffObject class
 ms.assetid: d974b598-c6b2-42b1-8360-9190d9d0fbf3
 ms.openlocfilehash: fd35b1e9e69c97402dd1ec357fd25fa1dcd5dd49
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259421"
 ---
 # <a name="ccomtearoffobject-class"></a>Класс CComTearOffObject
 
@@ -44,14 +44,14 @@ ATL реализует его перемещаемые интерфейсы в �
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComTearOffObject::CComTearOffObject](#ccomtearoffobject)|Конструктор.|
 |[CComTearOffObject:: ~ CComTearOffObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComTearOffObject::AddRef](#addref)|Увеличивает счетчик ссылок для `CComTearOffObject` объекта.|
 |[CComTearOffObject::QueryInterface](#queryinterface)|Возвращает указатель на запрошенный интерфейс в классе перемещаемой или класс-владелец.|

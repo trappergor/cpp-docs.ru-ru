@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
 ms.openlocfilehash: 71cdda0abea8cec29c3b6e17ddfb584e32a931c6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219734"
 ---
 # <a name="general-mfc-topics"></a>Общие разделы по MFC
 
@@ -33,7 +33,7 @@ ms.locfileid: "58769723"
 
 [Сборка в платформе](../mfc/building-on-the-framework.md)
 
-[CWinApp: Класс приложений](../mfc/cwinapp-the-application-class.md)
+[CWinApp. Класс приложений](../mfc/cwinapp-the-application-class.md)
 
 [Шаблоны документов и процесс создания документов и представлений](../mfc/document-templates-and-the-document-view-creation-process.md)
 

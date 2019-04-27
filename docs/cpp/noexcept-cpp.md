@@ -5,23 +5,23 @@ f1_keywords:
 - noexcept_cpp
 ms.assetid: df24edb9-c6a6-4e37-9914-fd5c0c3716a8
 ms.openlocfilehash: c314b554abb6c10e62b143f554777af50267e4e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245365"
 ---
 # <a name="noexcept-c"></a>noexcept (C++)
 
-**C ++ 11:** указывает, может ли функция вызывать исключения.
+**C++11:** Указывает, может ли функция вызывать исключения.
 
 ## <a name="syntax"></a>Синтаксис
 
-> *выражение noexcept*: &nbsp; &nbsp; &nbsp; &nbsp; **noexcept** &nbsp; &nbsp; &nbsp; &nbsp; **noexcept (** *константное_выражение* **)**
+> *noexcept-expression*: &nbsp;&nbsp;&nbsp;&nbsp;**noexcept** &nbsp;&nbsp;&nbsp;&nbsp;**noexcept(** *constant-expression* **)**
 
 ### <a name="parameters"></a>Параметры
 
-*Константное выражение*<br/>
+*constant-expression*<br/>
 Константное выражение типа **bool** , представляет ли набор возможных типов исключений является пустым. Безусловная версия эквивалентна `noexcept(true)`.
 
 ## <a name="remarks"></a>Примечания

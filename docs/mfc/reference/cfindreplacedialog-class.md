@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CFindReplaceDialog [MFC], m_fr
 ms.assetid: 610f0b5d-b398-4ef6-8c05-e9d6641e50a8
 ms.openlocfilehash: de48d8f495802bdf1c5f69e7a4edc41153c9599f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206017"
 ---
 # <a name="cfindreplacedialog-class"></a>Класс CFindReplaceDialog
 
@@ -53,13 +53,13 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFindReplaceDialog::CFindReplaceDialog](#cfindreplacedialog)|Вызывайте эту функцию для создания `CFindReplaceDialog` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFindReplaceDialog::Create](#create)|Создает и отображает `CFindReplaceDialog` диалоговое окно.|
 |[CFindReplaceDialog::FindNext](#findnext)|Вызывайте эту функцию, чтобы определить, является ли пользователь хочет найти следующее вхождение строки поиска.|
@@ -75,7 +75,7 @@ class CFindReplaceDialog : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFindReplaceDialog::m_fr](#m_fr)|Структура, используемая для настройки `CFindReplaceDialog` объекта.|
 

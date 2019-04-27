@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245379"
 ---
 # <a name="nonstandard-behavior"></a>Нестандартное поведение
 
@@ -19,7 +19,7 @@ ms.locfileid: "50638208"
 
 Получает список ограничений компилятора, отличающихся от тех, которые определены в стандарте C++ в [ограничений компилятора](../cpp/compiler-limits.md).
 
-## <a name="covariant-return-types"></a>Ковариантные типы возвращаемого значения
+## <a name="covariant-return-types"></a>Ковариантные возвращаемые типы
 
 Виртуальные базовые классы не поддерживаются в качестве ковариантных возвращаемых типов, если виртуальная функция имеет виртуальное число аргументов. Это не соответствует пункту 7 раздела 10.3 спецификации C++ ISO. Следующий пример не компилируется, Ошибка компилятора [C2688](../error-messages/compiler-errors-2/compiler-error-c2688.md)
 
@@ -75,7 +75,7 @@ void g() throw();    // parsed and used
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-Стандарт C++ указывает, что [char_traits::eof](../standard-library/char-traits-struct.md#eof) не должен соответствовать допустимому `char_type` значение. Компилятор Visual C++ налагает это ограничение для типа **char**, но не для типа **wchar_t**. Это не соответствует требованиям в таблице 62 в разделе 12.1.1 спецификации ISO C++. Это демонстрируется в приведенном ниже примере.
+C++ Стандартные состояния [char_traits::eof](../standard-library/char-traits-struct.md#eof) не должен соответствовать допустимому `char_type` значение. Визуальный элемент C++ компилятор налагает это ограничение для типа **char**, но не для типа **wchar_t**. Это не соответствует требованиям в таблице 62 в разделе 12.1.1 спецификации ISO C++. Это демонстрируется в приведенном ниже примере.
 
 ```cpp
 #include <iostream>

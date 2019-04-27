@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
 ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259447"
 ---
 # <a name="ccomsafearray-class"></a>Класс CComSafeArray
 
@@ -55,14 +55,14 @@ class CComSafeArray
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComSafeArray::CComSafeArray](#ccomsafearray)|Конструктор.|
 |[CComSafeArray:: ~ CComSafeArray](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComSafeArray::Add](#add)|Добавляет один или несколько элементов, или `SAFEARRAY` структуру `CComSafeArray`.|
 |[CComSafeArray::Attach](#attach)|Присоединяет `SAFEARRAY` структуру `CComSafeArray` объекта.|
@@ -86,7 +86,7 @@ class CComSafeArray
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|Приводит значение к `SAFEARRAY` указатель.|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|Получает элемент из массива.|
@@ -94,7 +94,7 @@ class CComSafeArray
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComSafeArray::m_psa](#m_psa)|Этот элемент данных содержит адрес `SAFEARRAY` структуры.|
 

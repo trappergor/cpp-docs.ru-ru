@@ -24,11 +24,11 @@ helpviewer_keywords:
 - time, elapsed
 ms.assetid: ee1e42f6-1839-477a-8435-fb26ad475140
 ms.openlocfilehash: 3c80260c1f57e49a34b4e9f3331f4d0d69ab30ce
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252537"
 ---
 # <a name="ctimespan-class"></a>Класс CTimeSpan
 
@@ -44,13 +44,13 @@ class CTimeSpan
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTimeSpan::CTimeSpan](#ctimespan)|Создает `CTimeSpan` объекты различными способами.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CTimeSpan::Format](#format)|Преобразует `CTimeSpan` в форматированную строку.|
 |[CTimeSpan::GetDays](#getdays)|Возвращает значение, представляющее число дней завершения в этом `CTimeSpan`.|

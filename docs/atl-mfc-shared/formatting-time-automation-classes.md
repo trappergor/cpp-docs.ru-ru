@@ -7,11 +7,11 @@ helpviewer_keywords:
 - formatting [C++], time
 ms.assetid: 155c5bef-b555-4bed-9545-29afc49715f1
 ms.openlocfilehash: 2c3157bd29879ae5206a27e238d05a4b5c9a61e0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236043"
 ---
 # <a name="formatting-time-automation-classes"></a>Форматирование времени. Классы автоматизации
 
@@ -31,4 +31,4 @@ ms.locfileid: "57742690"
 
 ## <a name="see-also"></a>См. также
 
-[Дата и время: Поддержка модели автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)
+[Дата и время. Поддержка автоматизации](../atl-mfc-shared/date-and-time-automation-support.md)

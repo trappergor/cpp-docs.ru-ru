@@ -13,11 +13,11 @@ helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
 ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252975"
 ---
 # <a name="combinable-class"></a>Класс combinable
 
@@ -39,14 +39,14 @@ class combinable;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[combinable](#ctor)|Перегружен. Создает новый `combinable` объекта.|
 |[~ combinable деструктор](#dtor)|Уничтожает объект `combinable`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[clear](#clear)|Очищает все промежуточные вычислительные результаты из предыдущего использования.|
 |[combine](#combine)|Вычисляет конечное значение из набора локального потока вложенные вычисления, вызывая предоставленный функтор.|
@@ -55,7 +55,7 @@ class combinable;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Назначает `combinable` из другого объекта `combinable` объекта.|
 

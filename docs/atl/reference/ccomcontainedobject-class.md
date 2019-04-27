@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
 ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259517"
 ---
 # <a name="ccomcontainedobject-class"></a>Класс CComContainedObject
 
@@ -40,18 +40,18 @@ class CComContainedObject : public Base
 *Base*<br/>
 Ваш класс, производный от [CComObjectRoot](../../atl/reference/ccomobjectroot-class.md) или [CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md).
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|Конструктор. Инициализирует элемент указатель на объект владельца `IUnknown`.|
 |[CComContainedObject:: ~ CComContainedObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComContainedObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект владельца.|
 |[CComContainedObject::GetControllingUnknown](#getcontrollingunknown)|Извлекает объект владельца `IUnknown`.|

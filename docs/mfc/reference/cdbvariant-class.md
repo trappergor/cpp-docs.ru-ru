@@ -35,11 +35,11 @@ helpviewer_keywords:
 - CDBVariant [MFC], m_pstringW
 ms.assetid: de23609c-c560-4b24-bd6b-9d8903fd5b49
 ms.openlocfilehash: 48a2e08d056e3bfef8a06b80ae6607947923cbcb
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328952"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253326"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant-класс
 
@@ -55,25 +55,25 @@ class CDBVariant
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDBVariant::CDBVariant](#cdbvariant)|Создает объект `CDBVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDBVariant::Clear](#clear)|Очищает `CDBVariant` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDBVariant::m_dwType](#m_dwtype)|Содержит тип данных в настоящее время сохраненное значение. Введите `DWORD`.|
 
 ### <a name="public-union-members"></a>Открытые члены объединения
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDBVariant::m_boolVal](#m_boolval)|Содержит значение типа **BOOL**.|
 |[CDBVariant::m_chVal](#m_chval)|Содержит значение типа **unsigned char**.|

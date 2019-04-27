@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CComApartment class
 ms.assetid: dbc177d7-7ee4-45f2-b563-d578a467ca93
 ms.openlocfilehash: 92db42a45a0863f8b43f7c46da9624e424d1e488
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246782"
 ---
 # <a name="ccomapartment-class"></a>Класс CComApartment
 
@@ -36,17 +36,17 @@ ms.locfileid: "57290109"
 class CComApartment
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComApartment::CComApartment](#ccomapartment)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComApartment::Apartment](#apartment)|Отмечает начальный адрес потока.|
 |[CComApartment::GetLockCount](#getlockcount)|Возвращает текущий счетчик блокировок.|
@@ -55,7 +55,7 @@ class CComApartment
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComApartment::m_dwThreadID](#m_dwthreadid)|Содержит идентификатор потока.|
 |[CComApartment::m_hThread](#m_hthread)|Содержит дескриптор потока.|

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CGopherLocator [MFC], GetLocatorType
 ms.assetid: 6fcc015f-5ae6-4959-b936-858634c71019
 ms.openlocfilehash: 79adbf126438c7d9f2884987c53b573991f92cf1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205987"
 ---
 # <a name="cgopherlocator-class"></a>Класс CGopherLocator
 
@@ -34,19 +34,19 @@ class CGopherLocator : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGopherLocator::CGopherLocator](#cgopherlocator)|Создает объект `CGopherLocator`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGopherLocator::GetLocatorType](#getlocatortype)|Выполняет синтаксический анализ локатора gopher и определяет его атрибуты.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CGopherLocator::operator LPCTSTR](#operator_lpctstr)|Напрямую обращается к символов, сохраненных в `CGopherLocator` объект в виде строки C-стиля.|
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CMFCRibbonContextCaption [MFC], GetRightTabX
 ms.assetid: cce2c0a2-8370-4266-997e-f8d0eeb3d616
 ms.openlocfilehash: 26cc509db55bc95688123a7c6e673dcfc87c975b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237329"
 ---
 # <a name="cmfcribboncontextcaption-class"></a>Класс CMFCRibbonContextCaption
 
@@ -31,7 +31,7 @@ class CMFCRibbonContextCaption : public CMFCRibbonButton
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CMFCRibbonContextCaption::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |[CMFCRibbonContextCaption::GetColor](#getcolor)|Возвращает цвет заголовка.|

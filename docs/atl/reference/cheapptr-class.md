@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CHeapPtr class
 ms.assetid: e5c5bfd4-9bf1-4164-8a83-8155fe253454
 ms.openlocfilehash: 8cb35139e707d81a53edb762a2b7fc2ab41ff247
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258680"
 ---
 # <a name="cheapptr-class"></a>Класс CHeapPtr
 
@@ -43,20 +43,20 @@ class CHeapPtr : public CHeapPtrBase<T, Allocator>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtr::CHeapPtr](#cheapptr)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtr::Allocate](#allocate)|Этот метод используется для выделения памяти в куче для хранения объектов.|
 |[CHeapPtr::Reallocate](#reallocate)|Этот метод вызывается для повторного выделения памяти в куче.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtr::operator =](#operator_eq)|Оператор присваивания.|
 

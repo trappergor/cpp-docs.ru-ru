@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OnFileSendMail method [MFC]
 ms.assetid: cafbecb1-0427-4077-b4b8-159bae5b49b8
 ms.openlocfilehash: 9b873ca1b3384adab6487fb3af9dc1401aaad12c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225532"
 ---
 # <a name="mapi-support-in-mfc"></a>Поддержка MAPI в MFC
 
@@ -32,7 +32,7 @@ MAPI необходимо прочитать файл для отправки в
 
 #### <a name="to-implement-a-send-mail-command-with-mfc"></a>Реализация команды Отправка почты с MFC
 
-1. Редактор меню Visual C++ для добавления элемента меню, чей идентификатор команды — ID_FILE_SEND_MAIL.
+1. Использовать этот визуальный элемент C++ редактор меню, чтобы добавить элемент меню, чей идентификатор команды — ID_FILE_SEND_MAIL.
 
    Этот идентификатор команды предоставляется платформой в AFXRES. З. Команды могут добавляться к все меню, но он обычно добавляется **файл** меню.
 

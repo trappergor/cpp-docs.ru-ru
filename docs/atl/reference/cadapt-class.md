@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
 ms.openlocfilehash: 39184e952475fa0f05a6fc25c433191ea22b5c16
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260744"
 ---
 # <a name="cadapt-class"></a>Класс CAdapt
 
@@ -35,17 +35,17 @@ class CAdapt
 *T*<br/>
 Адаптированный тип.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAdapt::CAdapt](#cadapt)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAdapt::operator const T &](#operator_const_t_amp)|Возвращает **const** ссылка `m_T`.|
 |[CAdapt::operator T &](#operator_t_amp)|Возвращает ссылку на `m_T`.|
@@ -55,7 +55,7 @@ class CAdapt
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAdapt::m_T](#m_t)|Адаптируемые данные.|
 

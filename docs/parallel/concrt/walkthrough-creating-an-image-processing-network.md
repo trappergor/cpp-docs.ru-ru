@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Создание сети обработки изображений
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
 ms.openlocfilehash: 035d73190f3596044a35cbc45681807801385eab
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205846"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>Пошаговое руководство. Создание сети обработки изображений
 
@@ -116,7 +116,7 @@ ms.locfileid: "57262822"
 
 Следующая таблица описывает члены сети.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |`load_bitmap`|Объект [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md) объект, который загружает `Bitmap` с диска и добавляет запись в `map` для связи с исходным именем файла изображения.|
 |`loaded_bitmaps`|Объект [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md) объект, отправляющий загруженные изображения фильтрам обработки изображений.|
@@ -132,7 +132,7 @@ ms.locfileid: "57262822"
 
 Если приложение требует, что сообщение обрабатывалось несколькими блоками сообщений, а только одним блоком, сначала принимает сообщение, можно использовать другой тип блока сообщений, таких как `overwrite_buffer`. `overwrite_buffer` Класс содержит одно сообщение за раз, но он формирует и передает это сообщение на каждый из его целевых объектов.
 
-На следующем рисунке показан сеть обработки изображений:
+На следующем рисунке показана сеть обработки изображений:
 
 ![Сеть обработки изображений](../../parallel/concrt/media/concrt_imageproc.png "сеть обработки изображений")
 

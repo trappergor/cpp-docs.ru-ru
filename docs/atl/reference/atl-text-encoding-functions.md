@@ -26,11 +26,11 @@ f1_keywords:
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
 ms.openlocfilehash: 13c521bae6790a030212c4a8edac460c960ecfc0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247868"
 ---
 # <a name="atl-text-encoding-functions"></a>Функции кодировки текста ATL
 
@@ -362,7 +362,7 @@ ATL_ESC флаги, описывающие, каким образом будет
 
 В таблице показаны возможные преобразования, выполняемые этой функцией:
 
-|Исходный код|Назначение|
+|Source|Назначение|
 |------------|-----------------|
 |\<|&lt;|
 |>|&gt;|

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
 ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258992"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>Класс CComSingleThreadModel
 
@@ -35,7 +35,7 @@ class CComSingleThreadModel
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComSingleThreadModel::AutoCriticalSection](#autocriticalsection)|Ссылается на класс [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComSingleThreadModel::CriticalSection](#criticalsection)|Ссылается на класс `CComFakeCriticalSection`.|
@@ -43,7 +43,7 @@ class CComSingleThreadModel
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComSingleThreadModel::Decrement](#decrement)|Уменьшает значение заданной переменной. Эта реализация не поточно ориентированными.|
 |[CComSingleThreadModel::Increment](#increment)|Увеличивает значение указанной переменной. Эта реализация не поточно ориентированными.|

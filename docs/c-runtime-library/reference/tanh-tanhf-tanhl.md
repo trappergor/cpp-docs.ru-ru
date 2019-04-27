@@ -31,11 +31,11 @@ helpviewer_keywords:
 - trigonometric functions
 - hyperbolic functions
 ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258321"
 ---
 # <a name="tanh-tanhf-tanhl"></a>TANH, tanhf, tanhl
 
@@ -63,9 +63,9 @@ long double tanh( long double x );  // C++ only
 
 **Tanh** функции возвращают гиперболический тангенс *x*. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|**Matherr** исключение|
+|Входные данные|Исключение SEH|**Matherr** исключение|
 |-----------|-------------------|-------------------------|
-|± QNAN,IND|Нет|_DOMAIN|
+|± QNAN, IND|Нет|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания
 

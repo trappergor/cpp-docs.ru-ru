@@ -10,11 +10,11 @@ helpviewer_keywords:
 - MFC, library versions
 - libraries [MFC], versions
 ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62238510"
 ---
 # <a name="mfc-library-versions"></a>Версии библиотек MFC
 
@@ -104,7 +104,7 @@ ms.locfileid: "50537661"
 |UAFXCW. LIB|Статическая библиотека MFC с поддержкой Юникода, версия выпуска|
 |UAFXCWD. LIB|Статическая библиотека MFC с поддержкой Юникода, в отладочной версии|
 |AFXNMCD.LIB|Статическая библиотека MFC без элементов управления диалоговых окон MFC, версии выпуска|
-|AFXNMCDD. LIB|Статическая библиотека MFC без элементов управления диалоговых окон MFC, отладочная версия|
+|AFXNMCDD.LIB|Статическая библиотека MFC без элементов управления диалоговых окон MFC, отладочная версия|
 
 Файлы отладчика, имеющие такое же базовое имя и расширение .pdb также доступны для каждого из статических библиотек.
 

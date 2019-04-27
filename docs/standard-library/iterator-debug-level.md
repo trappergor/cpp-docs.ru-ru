@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _ITERATOR_DEBUG_LEVEL
 ms.assetid: 718549cd-a9a9-4ab3-867b-aac00b321e67
 ms.openlocfilehash: a584fe5a97e251205e750507b27e53e6e7b9a20e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502821"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224198"
 ---
 # <a name="iteratordebuglevel"></a>_ITERATOR_DEBUG_LEVEL
 
@@ -49,7 +49,7 @@ ms.locfileid: "50502821"
 
 ### <a name="example"></a>Пример
 
-Чтобы указать значение для макроса _ITERATOR_DEBUG_LEVEL, используйте [/D](../build/reference/d-preprocessor-definitions.md) параметр компилятора, чтобы определить его в командной строке, или использовать `#define` перед стандартной библиотеки C++ они включаются в исходных файлах. Например, в командной строке, чтобы скомпилировать *sample.cpp* в режиме отладки и использования поддержки отладки итераторов, можно указать определение макроса _ITERATOR_DEBUG_LEVEL:
+Чтобы указать значение для макроса _ITERATOR_DEBUG_LEVEL, используйте [/D](../build/reference/d-preprocessor-definitions.md) параметр компилятора, чтобы определить его в командной строке, или использовать `#define` перед C++ заголовки стандартной библиотеки, включаются в исходных файлах. Например, в командной строке, чтобы скомпилировать *sample.cpp* в режиме отладки и использования поддержки отладки итераторов, можно указать определение макроса _ITERATOR_DEBUG_LEVEL:
 
 `cl /EHsc /Zi /MDd /D_ITERATOR_DEBUG_LEVEL=1 sample.cpp`
 
@@ -69,4 +69,4 @@ ms.locfileid: "50502821"
 
 [Checked Iterators](../standard-library/checked-iterators.md)<br/>
 [Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>

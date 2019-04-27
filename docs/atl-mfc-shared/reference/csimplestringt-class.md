@@ -37,11 +37,11 @@ helpviewer_keywords:
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
 ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252642"
 ---
 # <a name="csimplestringt-class"></a>Класс CSimpleStringT
 
@@ -69,21 +69,21 @@ class CSimpleStringT
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleStringT::PCXSTR](#pcxstr)|Указатель на строковую константу.|
 |[CSimpleStringT::PXSTR](#pxstr)|Указатель на строку.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|Создает `CSimpleStringT` объекты различными способами.|
 |[CSimpleStringT:: ~ CSimpleStringT](#dtor)|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleStringT::Append](#append)|Добавляет `CSimpleStringT` объекта к существующему `CSimpleStringT` объекта.|
 |[CSimpleStringT::AppendChar](#appendchar)|Добавляет символ в существующий `CSimpleStringT` объекта.|
@@ -112,7 +112,7 @@ class CSimpleStringT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleStringT::operator PCXSTR](#operator_pcxstr)|Напрямую обращается к символов, сохраненных в `CSimpleStringT` объект в виде строки C-стиля.|
 |[CSimpleStringT::operator\[\]](#operator_at)|Возвращает символ в заданной позиции — оператор подстановки для `GetAt`.|

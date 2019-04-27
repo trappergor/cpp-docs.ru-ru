@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CAtlFileMappingBase class
 ms.assetid: be555723-2790-4f57-a8fb-be4d68460775
 ms.openlocfilehash: d31bc72e485fbb15ed595a7c777c3685a00865c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260348"
 ---
 # <a name="catlfilemappingbase-class"></a>Класс CAtlFileMappingBase
 
@@ -40,14 +40,14 @@ class CAtlFileMappingBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFileMappingBase::CAtlFileMappingBase](#catlfilemappingbase)|Конструктор.|
 |[CAtlFileMappingBase:: ~ CAtlFileMappingBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFileMappingBase::CopyFrom](#copyfrom)|Этот метод используется для копирования из объекта сопоставления файлов.|
 |[CAtlFileMappingBase::GetData](#getdata)|Этот метод используется для получения данных из объекта сопоставления файлов.|
@@ -60,7 +60,7 @@ class CAtlFileMappingBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlFileMappingBase::operator =](#operator_eq)|Задает текущий объект сопоставления файлов на другой объект сопоставления файлов.|
 

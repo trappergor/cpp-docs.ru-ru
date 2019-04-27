@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComQIPtr class
 ms.assetid: 969cacb5-05b6-4af4-b683-24911d70242d
 ms.openlocfilehash: 64716d945ffbc6802ec23fb47523464246065192
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258914"
 ---
 # <a name="ccomqiptr-class"></a>Класс CComQIPtr
 
@@ -38,13 +38,13 @@ COM-интерфейс, указав тип указателя для сохра
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComQIPtr::CComQIPtr](#ccomqiptr)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComQIPtr::operator =](#operator_eq)|Присваивает указатель на указатель элемента.|
 

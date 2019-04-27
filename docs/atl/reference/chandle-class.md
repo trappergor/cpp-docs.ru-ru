@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
 ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245638"
 ---
 # <a name="chandle-class"></a>Класс CHandle
 
@@ -29,18 +29,18 @@ ms.locfileid: "57292904"
 class CHandle
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHandle::CHandle](#chandle)|Конструктор.|
 |[CHandle:: ~ CHandle](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHandle::Attach](#attach)|Вызовите этот метод для присоединения `CHandle` объект для существующего дескриптора.|
 |[CHandle::Close](#close)|Вызовите этот метод, чтобы закрыть `CHandle` объекта.|
@@ -48,14 +48,14 @@ class CHandle
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CHandle::operator ДЕСКРИПТОР](#operator_handle)|Возвращает значение хранимых дескриптора.|
 |[CHandle::operator =](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CHandle::m_h](#m_h)|Переменную-член, сохраняет дескриптор.|
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
 ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225206"
 ---
 # <a name="clongbinary-class"></a>Класс CLongBinary
 
@@ -31,13 +31,13 @@ class CLongBinary : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CLongBinary::CLongBinary](#clongbinary)|Создает объект `CLongBinary`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CLongBinary::m_dwDataLength](#m_dwdatalength)|Содержит фактический размер в байтах для объекта данных, дескриптор которого хранится в `m_hData`.|
 |[CLongBinary::m_hData](#m_hdata)|Содержит дескриптор Windows HGLOBAL объекту фактическое изображение.|

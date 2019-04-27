@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
 ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246343"
 ---
 # <a name="ccomobject-class"></a>Класс CComObject
 
@@ -39,14 +39,14 @@ class CComObject : public Base
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|Конструктор.|
 |[CComObject::~CComObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComObject::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|
 |[CComObject::CreateInstance](#createinstance)|(Статический) Создает новый `CComObject` объекта.|

@@ -1,5 +1,5 @@
 ---
-title: C R6025 ошибку во время выполнения
+title: Ошибка времени выполнения C R6025
 ms.date: 11/04/2016
 f1_keywords:
 - R6025
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6025
 ms.assetid: afa06d98-9c36-445b-b3e7-b6409bc8e779
 ms.openlocfilehash: 461bfb2aa46053ec56fff67de70038b1fcd97389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62214172"
 ---
-# <a name="c-runtime-error-r6025"></a>C R6025 ошибку во время выполнения
+# <a name="c-runtime-error-r6025"></a>Ошибка времени выполнения C R6025
 
 вызов чистой виртуальной функции
 
