@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMapView
 ms.assetid: 545a3725-2efd-4cc1-b590-4a7cd2351f61
 ms.openlocfilehash: ebda6f179c365aaa009eb45425a36058105def10
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161639"
 ---
 # <a name="platformcollectionsunorderedmapview-class"></a>Класс Platform::Collections::UnorderedMapView
 
@@ -45,13 +45,13 @@ UnorderedMapView — это конкретная реализация C++ [Windo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[UnorderedMapView::UnorderedMapView](#ctor)|Инициализирует новый экземпляр класса UnorderedMapView.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[UnorderedMapView::First](#first)|Возвращает итератор, который инициализируется первым элементом в представлении карты.|
 |[UnorderedMapView::HasKey](#haskey)|Определяет, содержит ли текущий объект UnorderedMapView указанный ключ.|

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CAnimationColor [MFC], m_rValue
 ms.assetid: 88bfabd4-efeb-4652-87e8-304253d8e48c
 ms.openlocfilehash: ee6003a22db78c2a510579c3d717fec887f8a6ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151179"
 ---
 # <a name="canimationcolor-class"></a>Класс CAnimationColor
 
@@ -51,13 +51,13 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationColor::CAnimationColor](#canimationcolor)|Перегружен. Создает объект анимации цвета.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationColor::AddTransition](#addtransition)|Добавляет переходы для красного, зеленого и синего компонентов.|
 |[CAnimationColor::GetB](#getb)|Предоставляет доступ к CAnimationVariable, представляющий синего компонента.|
@@ -69,13 +69,13 @@ class CAnimationColor : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationColor::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationColor::operator COLORREF](#operator_colorref)||
 |[CAnimationColor::operator =](#operator_eq)|Назначает цвет CAnimationColor.|

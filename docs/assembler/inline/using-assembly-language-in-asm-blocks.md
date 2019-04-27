@@ -7,17 +7,17 @@ helpviewer_keywords:
 - __asm keyword [C++], assembly language in
 ms.assetid: ad699356-1d16-4984-871f-c5fd7797c1fb
 ms.openlocfilehash: e2da242bf22b8b01a315d5bb09498764b54e1504
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166572"
 ---
 # <a name="using-assembly-language-in-asm-blocks"></a>Использование языка ассемблера в блоках __asm
 
 **Блок, относящийся только к системам Microsoft**
 
-Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование возможностей языка ассемблера в блоках `__asm`.
+Встроенный код на языке ассемблера имеет много общего с другими сборщиками. Например, он принимает любое выражение, допустимое в MASM. В этом разделе описывается использование функций языка ассемблера в блоках `__asm`.
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 

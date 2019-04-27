@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _istlead function
 ms.assetid: 2abc6f75-ed5c-472e-bfd0-e905a1835ccf
 ms.openlocfilehash: 7bf8e8c88153e2f22cfa08bb35ff8d4ba01a8804
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157215"
 ---
 # <a name="ismbblead-ismbbleadl"></a>_ismbblead, _ismbblead_l
 
@@ -75,7 +75,7 @@ int _ismbblead_l(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istlead**|Всегда возвращает значение false|**_ismbblead**|Всегда возвращает значение false|
 

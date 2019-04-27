@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _wpopen function
 ms.assetid: eb718ff2-c87d-4bd4-bd2e-ba317c3d6973
 ms.openlocfilehash: 5284685f56a73c4c7e48fce981745220651399a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156165"
 ---
 # <a name="popen-wpopen"></a>_popen, _wpopen
 
@@ -92,7 +92,7 @@ FILE *_wpopen(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tpopen**|**_popen**|**_popen**|**_wpopen**|
 

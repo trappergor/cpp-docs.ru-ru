@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CGlobalUtils [MFC], StringFromDecimal
 ms.assetid: 2c5bd1a6-f80c-4e79-a476-b4ceebabfb2f
 ms.openlocfilehash: 5c92d3d74bac5e14ed791c6d77cca21eb66a4735
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182020"
 ---
 # <a name="cglobalutils-class"></a>Класс CGlobalUtils
 
@@ -59,7 +59,7 @@ class CGlobalUtils
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGlobalUtils::AdjustRectToWorkArea](#adjustrecttoworkarea)||
 |[CGlobalUtils::CalcExpectedDockedRect](#calcexpecteddockedrect)||

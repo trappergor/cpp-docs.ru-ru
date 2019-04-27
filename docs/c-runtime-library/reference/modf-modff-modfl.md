@@ -32,11 +32,11 @@ helpviewer_keywords:
 - modfl function
 ms.assetid: b1c7abf5-d476-43ca-a03c-02072a86e32d
 ms.openlocfilehash: 59d6e2b9b02ad182c5630d6dc9a989c035e8fa92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156334"
 ---
 # <a name="modf-modff-modfl"></a>modf, modff, modfl
 
@@ -60,7 +60,7 @@ long double modf( long double x, long double * intptr );  // C++ only
 *x*<br/>
 Значение с плавающей запятой.
 
-*IntPtr*<br/>
+*intptr*<br/>
 Указатель на сохраненное значение целой части числа.
 
 ## <a name="return-value"></a>Возвращаемое значение

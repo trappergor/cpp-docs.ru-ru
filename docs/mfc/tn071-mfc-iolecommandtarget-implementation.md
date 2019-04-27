@@ -8,11 +8,11 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62168002"
 ---
 # <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071: Реализация IOleCommandTarget в MFC
 
@@ -23,7 +23,7 @@ ms.locfileid: "50522230"
 
 `IOleCommandTarget` представляет собой интерфейс автоматизации стиле, в том, что он используется клиентом для вызова методов на сервере. Тем не менее, с помощью `IOleCommandTarget` экономит ресурсы выполнении вызовов через интерфейсы автоматизации, так как программистам не нужно использовать обычно самым дорогим `Invoke` метод `IDispatch`.
 
-В MFC `IOleCommandTarget` интерфейс используется серверы активных документов чтобы разрешить контейнеры активных документов для отправки команд на сервер. Класс сервера активных документов, `CDocObjectServerItem`, использует схемы интерфейсов MFC (см. в разделе [TN038: реализация MFC/OLE IUnknown](../mfc/tn038-mfc-ole-iunknown-implementation.md)) для реализации `IOleCommandTarget` интерфейс.
+В MFC `IOleCommandTarget` интерфейс используется серверы активных документов чтобы разрешить контейнеры активных документов для отправки команд на сервер. Класс сервера активных документов, `CDocObjectServerItem`, использует схемы интерфейсов MFC (см. в разделе [TN038: Реализация IUnknown MFC/OLE](../mfc/tn038-mfc-ole-iunknown-implementation.md)) для реализации `IOleCommandTarget` интерфейс.
 
 `IOleCommandTarget` также реализована в `COleFrameHook` класса. `COleFrameHook` является классом недокументированные MFC, который реализует функциональные возможности окна фрейма редактирования контейнеров на месте. `COleFrameHook` также использует схемы интерфейсов MFC для реализации `IOleCommandTarget` интерфейс. `COleFrameHook`в реализации `IOleCommandTarget` перенаправляет команды OLE для `COleDocObjectItem`-производным контейнеры активных документов. Это позволяет любой MFC активный контейнер документа, для получения сообщений от серверов автономной активного документа.
 

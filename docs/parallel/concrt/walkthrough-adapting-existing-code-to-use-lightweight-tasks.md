@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
 ms.openlocfilehash: 43e928e7d82b41b83fde5e8a7abaeeeb8d6fefa9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186027"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>Пошаговое руководство. Адаптация существующего кода для использования упрощенных задач
 
@@ -24,7 +24,7 @@ ms.locfileid: "57261223"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем примере демонстрируется типичное использование API Windows для создания и выполнения потока. В этом примере используется [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) функция, вызываемая `MyThreadFunction` в отдельном потоке.
 

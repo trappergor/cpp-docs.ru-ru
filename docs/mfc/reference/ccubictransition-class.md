@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CCubicTransition [MFC], m_duration
 ms.assetid: 4fc30e9c-160c-45e1-bdbe-51adf8fee9c5
 ms.openlocfilehash: f4d5898172c0544064fad82856e404f4fb12b561
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164011"
 ---
 # <a name="ccubictransition-class"></a>Класс CCubicTransition
 
@@ -33,23 +33,23 @@ ms.locfileid: "57294464"
 class CCubicTransition : public CBaseTransition;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCubicTransition::CCubicTransition](#ccubictransition)|Создает объект перехода и инициализирует его параметры.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCubicTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CCubicTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
 |[CCubicTransition::m_dblFinalVelocity](#m_dblfinalvelocity)|Скорость, переменной в конце перехода.|

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
 ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62182138"
 ---
 # <a name="cftpfilefind-class"></a>Класс CFtpFileFind
 
@@ -35,13 +35,13 @@ class CFtpFileFind : public CFileFind
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFtpFileFind::CFtpFileFind](#cftpfilefind)|Создает объект `CFtpFileFind`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CFtpFileFind::FindFile](#findfile)|Находит файл на FTP-сервере.|
 |[CFtpFileFind::FindNextFile](#findnextfile)|Продолжает поиск файла из предыдущего вызова [FindFile](#findfile).|

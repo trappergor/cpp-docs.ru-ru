@@ -15,11 +15,11 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
 ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148514"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI Class
 
@@ -35,13 +35,13 @@ class COleCmdUI : public CCmdUI
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleCmdUI::COleCmdUI](#colecmdui)|Создает объект `COleCmdUI`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleCmdUI::Enable](#enable)|Устанавливает или снимает флаг команды enable.|
 |[COleCmdUI::SetCheck](#setcheck)|Задает состояние включения/выключения переключателя команды.|

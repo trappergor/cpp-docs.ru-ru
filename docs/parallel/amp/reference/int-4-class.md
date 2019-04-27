@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_4::yxz
 ms.assetid: 01768c28-23a8-4965-8267-96834864f4eb
 ms.openlocfilehash: 7bcdd005ab5f530e08fc6e5326404d19f85faf4b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180217"
 ---
 # <a name="int4-class"></a>Класс int_4
 
@@ -289,19 +289,19 @@ class int_4;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор int_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |int_4::get_w||
 |int_4::get_wx||
@@ -442,7 +442,7 @@ class int_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |int_4::operator-||
 |int_4::operator--||
@@ -462,13 +462,13 @@ class int_4;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#int_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |int_4::a||
 |int_4::ab||

@@ -1,5 +1,5 @@
 ---
-title: db_command (атрибут COM C++)
+title: db_command (C++ атрибут COM)
 ms.date: 07/10/2018
 f1_keywords:
 - vc-attr.db_command
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - db_command attribute
 ms.assetid: 714c3e15-85d7-408b-9a7c-88505c3e5d24
 ms.openlocfilehash: 136c82b2674f3c08f053de9676068c0fb4baac11
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148202"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -122,7 +122,7 @@ TCHAR m_state[3] = 'CA';
 
 Этот образец определяет команду, которая выбирает первое и последнее имена из таблицы, в которой столбец состояния соответствует значению "CA". **db_command** создает и считывает набор строк, для которого можно вызывать создаваемые мастером функции, например [OpenAll и CloseAll](../../data/oledb/consumer-wizard-generated-methods.md), а также функции-члены `CRowset` , такие как [MoveNext](../../data/oledb/crowset-movenext.md).
 
-Обратите внимание, что в этом коде вам требуется предоставить собственную строку подключения, которая подключается к базе данных pubs. Сведения о том, как это сделать в среде разработки, см. в статьях [о подключении к базе данных и просмотре существующих объектов](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) и [о добавлении новых подключений](/visualstudio/data-tools/add-new-connections).
+Обратите внимание, что в этом коде вам требуется предоставить собственную строку подключения, которая подключается к базе данных pubs. Сведения о том, как это сделать в среде разработки, см. в разделе [как: Подключение к базе данных и просмотр существующих объектов](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects) и [Добавление новых подключений](/visualstudio/data-tools/add-new-connections).
 
 ```cpp
 // db_command.h
