@@ -131,11 +131,11 @@ helpviewer_keywords:
 - CMFCRibbonCategory [MFC], SetTabColor
 ms.assetid: 99ba25b6-d060-4fdd-bfab-3c46c22981bb
 ms.openlocfilehash: 14ce057c141f22c14361bafd55fce3ccd345d4dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237412"
 ---
 # <a name="cmfcribboncategory-class"></a>Класс CMFCRibbonCategory
 
@@ -151,13 +151,13 @@ class CMFCRibbonCategory : public CObject
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonCategory::CMFCRibbonCategory](#cmfcribboncategory)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCRibbonCategory::AddHidden](#addhidden)|Добавляет скрытый элемент в категорию ленты.|
 |[CMFCRibbonCategory::AddPanel](#addpanel)|Добавляет новую область категорию ленты.|

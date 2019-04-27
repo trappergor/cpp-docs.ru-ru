@@ -7,11 +7,11 @@ helpviewer_keywords:
 - string conversion, multibyte character strings
 ms.assetid: 9df522b5-6b23-41e0-bb96-e4e623baf141
 ms.openlocfilehash: eaf278fc2689f0afa9ab6ff30f1294c36de5d7ac
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217395"
 ---
 # <a name="windows-sockets-converting-strings"></a>Сокеты Windows. Преобразование строк
 
@@ -31,7 +31,7 @@ ms.locfileid: "57298366"
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 

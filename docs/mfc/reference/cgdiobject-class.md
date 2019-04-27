@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
 ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181994"
 ---
 # <a name="cgdiobject-class"></a>Класс CGdiObject
 
@@ -51,13 +51,13 @@ class CGdiObject : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CGdiObject::CGdiObject](#cgdiobject)|Создает объект `CGdiObject`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGdiObject::Attach](#attach)|Присоединяет объект Windows GDI для `CGdiObject` объекта.|
 |[CGdiObject::CreateStockObject](#createstockobject)|Извлекает дескриптор Windows предопределенные акций перья, кисти или шрифты.|
@@ -72,7 +72,7 @@ class CGdiObject : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGdiObject::operator! =](#operator_neq)|Определяет, если два объекта GDI логически не равны.|
 |[CGdiObject::operator ==](#operator_eq_eq)|Определяет, логически равны ли два объекта GDI.|
@@ -80,7 +80,7 @@ class CGdiObject : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGdiObject::m_hObject](#m_hobject)|МАРКЕР, содержащий HBITMAP, HPALETTE, HRGN, HBRUSH, HPEN или HFONT присоединен к этому объекту.|
 

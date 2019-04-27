@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222681"
 ---
 # <a name="compiler-error-c3287"></a>Ошибка компилятора C3287
 
@@ -19,7 +19,7 @@ ms.locfileid: "50538688"
 
 Классы пользовательских коллекций должны содержать определения для `MoveNext` и `Current`.
 
-Дополнительные сведения см. в разделе [Практическое руководство. Перебор элементов определенной пользователем коллекции с использованием цикла for each](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) .
+См. практическое руководство по [ Коллекции Over a User-Defined итерационных с для каждого](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) Дополнительные сведения.
 
 ## <a name="example"></a>Пример
 

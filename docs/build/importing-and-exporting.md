@@ -9,11 +9,11 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
 ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57815831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188851"
 ---
 # <a name="importing-and-exporting"></a>Импортирование и экспортирование
 
@@ -31,7 +31,7 @@ ms.locfileid: "57815831"
 
 ## <a name="using-declspec"></a>С помощью __declspec
 
-Visual C++ использует **__declspec(dllimport)** и **__declspec(dllexport)** для замены **__export** ключевое слово, используемое ранее в 16-разрядных версиях Visual C++.
+Visual C++ использует **__declspec(dllimport)** и **__declspec(dllexport)** для замены **__export** ранее используется 16-разрядных версиях Visual C++.
 
 Необходимо использовать **__declspec(dllimport)** для кода для компиляции правильно, но это позволяет компилятору создавать лучший код. Компилятор способен создавать лучший код, так как он может определить наличие функции в библиотеке DLL или нет, который позволяет компилятору создавать код, который пропускает уровень косвенного обращения, обычно может присутствовать в вызов функции, которая библиотеке. Тем не менее, необходимо использовать **__declspec(dllimport)** Импорт переменных, используемых в библиотеке DLL.
 
@@ -39,7 +39,7 @@ Visual C++ использует **__declspec(dllimport)** и **__declspec(dllexp
 
 Формат переносимого исполняемого файла Win32 позволяет свести к минимуму число страниц, предназначенных для отладки импортов. Чтобы сделать это, она помещает все адреса импорта по любой программе, в одном месте, именем таблицы адресов импорта. Благодаря этому загрузчик для изменения только одного или двух страниц при доступе к эти операции.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие.
+## <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Импорт в приложение](importing-into-an-application-using-declspec-dllimport.md)
 

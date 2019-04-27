@@ -19,11 +19,11 @@ helpviewer_keywords:
 - timer class
 ms.assetid: 4f4dea51-de9f-40f9-93f5-dd724c567b49
 ms.openlocfilehash: e36441f53c9b53c9826ee92b2892142a522d7243
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180125"
 ---
 # <a name="timer-class"></a>Класс timer
 
@@ -41,18 +41,18 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 *T*<br/>
 Тип полезных данных выходных сообщений этого блока.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Таймера](#ctor)|Перегружен. Создает `timer` блок обмена сообщениями, которое будет срабатывать данное сообщение через указанное время.|
 |[~ таймера деструктор](#dtor)|Уничтожает `timer` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Приостановка](#pause)|Останавливает `timer` блок обмена сообщениями. Если это повторяющееся `timer` блоке сообщений, его можно перезапустить с последующем `start()` вызова. — Для неповторяющихся таймеров, это имеет тот же эффект, что `stop` вызова.|
 |[start](#start)|Запускает `timer` блок обмена сообщениями. Указанное число миллисекунд, после этого вызывается, указанное значение будет распространяться подчиненных как `message`.|
@@ -60,7 +60,7 @@ class timer : public Concurrency::details::_Timer, public source_block<single_li
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `timer` блок обмена сообщениями, передача вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `timer` и зарезервированного целевым объектом, передавая владение вызывающему объекту.|

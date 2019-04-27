@@ -14,23 +14,23 @@ f1_keywords:
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
 ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180392"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Функции пространства имен Concurrency (AMP)
 
 ||||
 |-|-|-|
 |[all_memory_fence](#all_memory_fence)|[amp_uninitialize](#amp_uninitialize)|[atomic_compare_exchange](#atomic_compare_exchange)|
-|[atomic_exchange функции (C++ AMP)](#atomic_exchange)|[atomic_fetch_add функции (C++ AMP)](#atomic_fetch_add)|[atomic_fetch_and функции (C++ AMP)](#atomic_fetch_and)|
+|[Функция atomic_exchange (C++ AMP)](#atomic_exchange)|[Функция atomic_fetch_add (C++ AMP)](#atomic_fetch_add)|[Функция atomic_fetch_and (C++ AMP)](#atomic_fetch_and)|
 |[atomic_fetch_dec](#atomic_fetch_dec)|[atomic_fetch_inc](#atomic_fetch_inc)|[atomic_fetch_max](#atomic_fetch_max)|
-|[atomic_fetch_min](#atomic_fetch_min)|[atomic_fetch_or функции (C++ AMP)](#atomic_fetch_or)|[atomic_fetch_sub функции (C++ AMP)](#atomic_fetch_sub)|
-|[atomic_fetch_xor функции (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
+|[atomic_fetch_min](#atomic_fetch_min)|[Функция atomic_fetch_or (C++ AMP)](#atomic_fetch_or)|[Функция atomic_fetch_sub (C++ AMP)](#atomic_fetch_sub)|
+|[Функция atomic_fetch_xor (C++ AMP)](#atomic_fetch_xor)|[copy](#copy)|[copy_async](#copy_async)|
 |[direct3d_abort](#direct3d_abort)|[direct3d_errorf](#direct3d_errorf)|[direct3d_printf](#direct3d_printf)|
-|[global_memory_fence](#global_memory_fence)|[parallel_for_each функции (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
+|[global_memory_fence](#global_memory_fence)|[Функция parallel_for_each (C++ AMP)](#parallel_for_each)|[tile_static_memory_fence](#tile_static_memory_fence)|
 
 ##  <a name="all_memory_fence"></a>  all_memory_fence
 
@@ -86,7 +86,7 @@ inline bool atomic_compare_exchange(
 
 **значение true,** Если операция выполнена успешно; в противном случае — **false**.
 
-##  <a name="atomic_exchange"></a>  atomic_exchange функции (C++ AMP)
+##  <a name="atomic_exchange"></a>  Функция atomic_exchange (C++ AMP)
 
 Задает значение целевого расположения в виде атомарной операции.
 
@@ -119,7 +119,7 @@ inline float atomic_exchange(
 
 Исходное значение для нового местонахождения.
 
-##  <a name="atomic_fetch_add"></a>  atomic_fetch_add функции (C++ AMP)
+##  <a name="atomic_fetch_add"></a>  Функция atomic_fetch_add (C++ AMP)
 
 Атомарным образом добавьте значение к значению ячейки памяти.
 
@@ -147,7 +147,7 @@ inline unsigned int atomic_fetch_add(
 
 Исходное значение ячейки памяти.
 
-##  <a name="atomic_fetch_and"></a>  atomic_fetch_and функции (C++ AMP)
+##  <a name="atomic_fetch_and"></a>  Функция atomic_fetch_and (C++ AMP)
 
 Атомарным образом выполняет побитовую операцию и значение и значение ячейки памяти.
 
@@ -270,7 +270,7 @@ inline unsigned int atomic_fetch_min(
 
 Исходное значение, сохраненное в расположении, указанном расположении.
 
-##  <a name="atomic_fetch_or"></a>  atomic_fetch_or функции (C++ AMP)
+##  <a name="atomic_fetch_or"></a>  Функция atomic_fetch_or (C++ AMP)
 
 Атомарным образом выполняет побитовую операцию или со значением и значением области памяти.
 
@@ -298,7 +298,7 @@ inline unsigned int atomic_fetch_or(
 
 Исходное значение ячейки памяти.
 
-##  <a name="atomic_fetch_sub"></a>  atomic_fetch_sub функции (C++ AMP)
+##  <a name="atomic_fetch_sub"></a>  Функция atomic_fetch_sub (C++ AMP)
 
 Атомарным образом вычитает значение из ячейки памяти.
 
@@ -326,7 +326,7 @@ inline unsigned int atomic_fetch_sub(
 
 Исходное значение ячейки памяти.
 
-##  <a name="atomic_fetch_xor"></a>  atomic_fetch_xor функции (C++ AMP)
+##  <a name="atomic_fetch_xor"></a>  Функция atomic_fetch_xor (C++ AMP)
 
 Атомарным образом WordRight действует побитовой операции XOR значение и расположение в памяти.
 
@@ -453,7 +453,7 @@ void copy(
 
 ##  <a name="copy_async"></a>  copy_async
 
-Копирует объект C++ AMP и возвращает [completion_future](completion-future-class.md) объект, который можно использовать для ожидания. Не удается скопировать данные, при выполнении кода на ускорителе.  Эта функция выглядит `copy(src, dest)`.
+Копирует C++ AMP и возвращает [completion_future](completion-future-class.md) объект, который можно использовать для ожидания. Не удается скопировать данные, при выполнении кода на ускорителе.  Эта функция выглядит `copy(src, dest)`.
 
 ```
 template <typename value_type, int _Rank>
@@ -585,7 +585,7 @@ inline void global_memory_fence(const tile_barrier& _Barrier) restrict(amp);
 *_Barrier*<br/>
 Объект tile_barrier
 
-##  <a name="parallel_for_each"></a>  parallel_for_each функции (C++ AMP)
+##  <a name="parallel_for_each"></a>  Функция parallel_for_each (C++ AMP)
 
 Выполняет функцию в вычислительном домене. Дополнительные сведения см. в разделе [Обзор C++ AMP](../../../parallel/amp/cpp-amp-overview.md).
 

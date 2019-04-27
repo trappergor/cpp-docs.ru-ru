@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComPtr class
 ms.assetid: 22d9ea8d-ed66-4c34-940f-141db11e83bd
 ms.openlocfilehash: 5e3e510291daa50ddcf5d63451edef0428d66ed1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259109"
 ---
 # <a name="ccomptr-class"></a>Класс CComPtr
 
@@ -31,17 +31,17 @@ class CComPtr
 *T*<br/>
 COM-интерфейс, указав тип указателя для сохранения.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComPtr::CComPtr](#ccomptr)|Конструктор.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComPtr::operator =](#operator_eq)|Присваивает указатель на указатель элемента.|
 

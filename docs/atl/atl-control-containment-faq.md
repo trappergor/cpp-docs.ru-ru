@@ -9,11 +9,11 @@ helpviewer_keywords:
 - controls [ATL]
 ms.assetid: d4bdfbe0-82ca-4f2f-bb95-cb89bdcc9b53
 ms.openlocfilehash: 42f9b41b99e13fcfe2fb003acb348c9464e0fd05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223324"
 ---
 # <a name="atl-control-containment-faq"></a>Часто задаваемые вопросы о вложении элементов управления ATL
 
@@ -33,7 +33,7 @@ ms.locfileid: "57296570"
 
 ATL, размещение элементов управления API — это набор функций, позволяющий любое окно в качестве контейнера элементов управления ActiveX. Эти функции могут быть статически или динамически связанной в проект, так как они были доступны в виде исходного кода и предоставляемые ATL90.dll. Функции размещения элементов управления, перечислены в следующей таблице.
 
-|Функция|Описание:|
+|Функция|Описание|
 |--------------|-----------------|
 |[AtlAxAttachControl](reference/composite-control-global-functions.md#atlaxattachcontrol)|Создает объект главного приложения, подключает его к предоставленным окна, а затем присоединяет существующего элемента управления.|
 |[AtlAxCreateControl](reference/composite-control-global-functions.md#atlaxcreatecontrol)|Создает объект главного приложения, подключает его к предоставленным окна, а затем загружает в элемент управления.|

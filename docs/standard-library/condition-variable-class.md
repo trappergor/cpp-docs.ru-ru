@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
 ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212390"
 ---
 # <a name="conditionvariable-class"></a>Класс condition_variable
 
@@ -41,13 +41,13 @@ class condition_variable;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[condition_variable](#condition_variable)|Создает объект `condition_variable`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор condition_variable.|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable`.|

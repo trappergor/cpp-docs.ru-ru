@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4789
 ms.assetid: 5800c301-5afb-4af0-85c1-ceb54d775234
 ms.openlocfilehash: 36a5032098c5caabb1b050833e487fd58679a782
-ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58476859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62187235"
 ---
 # <a name="compiler-warning-level-1-c4789"></a>Предупреждение компилятора (уровень 1) C4789
 
@@ -42,7 +42,7 @@ Visual C++ может показывать данное предупрежден
 #pragma warning( pop )
 ```
 
-Эту идиому предотвращает Формирование предупреждений для определенного блока кода Visual C++. `#pragma warning(push)` сохраняет существующее состояние перед тем, как `#pragma warning(disable: 4789)` изменяет его. `#pragma warning(pop)` восстанавливает отмененное состояние и устраняет последствия `#pragma warning(disable:4789)`. Дополнительные сведения о директиве препроцессора C++ `#pragma`, см. в разделе [предупреждение](../../preprocessor/warning.md) и [директивы Pragma и ключевое слово __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
+Эту идиому предотвращает Формирование предупреждений для определенного блока кода Visual C++. `#pragma warning(push)` сохраняет существующее состояние перед тем, как `#pragma warning(disable: 4789)` изменяет его. `#pragma warning(pop)` восстанавливает отмененное состояние и устраняет последствия `#pragma warning(disable:4789)`. Дополнительные сведения о C++ директива препроцессора `#pragma`, см. в разделе [предупреждение](../../preprocessor/warning.md) и [директивы Pragma и ключевое слово __Pragma](../../preprocessor/pragma-directives-and-the-pragma-keyword.md).
 
 ## <a name="example"></a>Пример
 

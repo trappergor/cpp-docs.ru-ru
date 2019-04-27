@@ -16,11 +16,11 @@ helpviewer_keywords:
 - CComCachedTearOffObject class
 ms.assetid: ae19507d-a1de-4dbc-a988-da9f75a50c95
 ms.openlocfilehash: fb7821da03e1ca69c850fa1a295851faf4af4c5b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259681"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>Класс CComCachedTearOffObject
 
@@ -46,14 +46,14 @@ public CComObjectRootEx<contained
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComCachedTearOffObject::CComCachedTearOffObject](#ccomcachedtearoffobject)|Конструктор.|
 |[CComCachedTearOffObject:: ~ CComCachedTearOffObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComCachedTearOffObject::AddRef](#addref)|Увеличивает счетчик ссылок для `CComCachedTearOffObject` объекта.|
 |[CComCachedTearOffObject::FinalConstruct](#finalconstruct)|Вызовы `m_contained::FinalConstruct` (перемещаемой метода класса).|
@@ -63,7 +63,7 @@ public CComObjectRootEx<contained
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComCachedTearOffObject::m_contained](#m_contained)|Объект `CComContainedObject` объект, производный от класса перемещаемой (класс `contained`).|
 

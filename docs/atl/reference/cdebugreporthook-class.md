@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
 ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245931"
 ---
 # <a name="cdebugreporthook-class"></a>Класс CDebugReportHook
 
@@ -30,18 +30,18 @@ ms.locfileid: "57262458"
 class CDebugReportHook
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHook](#cdebugreporthook)|Вызовы [SetPipeName](#setpipename), [SetTimeout](#settimeout), и [SetHook](#sethook).|
 |[CDebugReportHook:: ~ CDebugReportHook](#dtor)|Вызовы [CDebugReportHook::RemoveHook](#removehook).|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDebugReportHook::CDebugReportHookProc](#cdebugreporthookproc)|(Статический) Настраиваемая функция, сообщающая, подключенное в отладку времени выполнения C, процедуры составления отчетности.|
 |[CDebugReportHook::RemoveHook](#removehook)|Вызовите этот метод, чтобы остановить отправку отчетов отладки к именованному каналу и восстановить предыдущие отчетные.|
