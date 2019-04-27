@@ -6,11 +6,11 @@ f1_keywords:
 - hash_set/std::swap (hash_multiset)
 ms.assetid: 557a0162-3728-4537-97dc-f9f6cc7ece94
 ms.openlocfilehash: 05a7ffd1e3bf02a88fe6a6cce841a440550c1057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159136"
 ---
 # <a name="lthashsetgt-functions"></a>Функции &lt;hash_set&gt;
 
@@ -21,7 +21,7 @@ ms.locfileid: "50551350"
 ## <a name="swap"></a>  swap
 
 > [!NOTE]
-> Этот элемент API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот API устарел. Альтернатива — [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Выполняет обмен элементами между двумя объектами hash_set.
 
@@ -54,7 +54,7 @@ Hash_set, элементы которого должны быть заменен
 ## <a name="swap_hash_multiset"></a>  swap (hash_multiset)
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_set](../standard-library/unordered-set-class.md).
 
 Меняет местами элементы двух объектов hash_multiset.
 

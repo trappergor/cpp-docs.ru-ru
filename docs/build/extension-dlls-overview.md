@@ -9,11 +9,11 @@ helpviewer_keywords:
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
 ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62196733"
 ---
 # <a name="mfc-extension-dlls-overview"></a>Библиотеки DLL расширений MFC: Обзор
 
@@ -25,7 +25,7 @@ ms.locfileid: "57816481"
 
 Обратите внимание, что термин AFXDLL больше не используется в документации по Visual C++. Библиотеки DLL расширения MFC имеет те же характеристики, что и прежние AFXDLL.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие.
+## <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Инициализация библиотеки DLL расширения MFC](run-time-library-behavior.md#initializing-extension-dlls)
 

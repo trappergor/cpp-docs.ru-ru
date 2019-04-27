@@ -41,11 +41,11 @@ helpviewer_keywords:
 - accelerator class
 ms.assetid: 37eed593-cf87-4611-9cdc-e98df6c2377a
 ms.openlocfilehash: 31008b398d17ac0c226f9359745067c4fefc08a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180439"
 ---
 # <a name="accelerator-class"></a>Класс accelerator
 
@@ -61,14 +61,14 @@ class accelerator;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор сочетаний клавиш](#ctor)|Инициализирует новый экземпляр класса `accelerator`.|
 |[~ accelerator, деструктор](#ctor)|Уничтожает `accelerator` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[create_view](#create_view)|Создает и возвращает `accelerator_view` на этом ускорителе.|
 |[get_all](#get_all)|Возвращает вектор `accelerator` объекты, которые представляют все допустимые ускорители.|
@@ -90,7 +90,7 @@ class accelerator;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator!=](#operator_neq)|Сравнивает этот `accelerator` объект с другим и возвращает **false** если они совпадают; в противном случае возвращает **true**.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `accelerator` в данный объект.|
@@ -98,7 +98,7 @@ class accelerator;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|Получает строковую константу для ЦП `accelerator`.|
 |[dedicated_memory](#dedicated_memory)|Получает выделенную память для `accelerator`, в килобайтах.|

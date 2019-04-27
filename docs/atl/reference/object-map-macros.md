@@ -7,11 +7,11 @@ f1_keywords:
 - atlcom/ATL::OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO
 ms.assetid: 680087f4-9894-41dd-a79c-6f337e1f13c1
 ms.openlocfilehash: 73dc924527bac8499adefab3d0d6b51afa500a5a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197384"
 ---
 # <a name="object-map-macros"></a>Макросы сопоставления объектов
 
@@ -65,10 +65,10 @@ OBJECT_ENTRY_AUTO( clsid, class )
 ### <a name="parameters"></a>Параметры
 
 *CLSID*<br/>
-[in] CLSID объекта COM-класса, реализованного в классе C++ с именем *класс*.
+[in] CLSID объекта COM-класса, реализованный C++ класс с именем *класс*.
 
 *class*<br/>
-[in] Имя класса C++, реализующего класс COM, представленный *clsid*.
+[in] Имя C++ класса, реализующего класс COM, представленный *clsid*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -97,10 +97,10 @@ OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO( clsid, class )
 ### <a name="parameters"></a>Параметры
 
 *CLSID*<br/>
-[in] CLSID объекта COM-класса, реализованного в классе C++ с именем *класс*.
+[in] CLSID объекта COM-класса, реализованный C++ класс с именем *класс*.
 
 *class*<br/>
-[in] Имя класса C++, реализующего класс COM, представленный *clsid*.
+[in] Имя C++ класса, реализующего класс COM, представленный *clsid*.
 
 ### <a name="remarks"></a>Примечания
 

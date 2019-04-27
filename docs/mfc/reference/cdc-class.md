@@ -403,11 +403,11 @@ helpviewer_keywords:
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
 ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62173564"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -423,13 +423,13 @@ class CDC : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDC::CDC](#cdc)|Создает объект `CDC`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDC::AbortDoc](#abortdoc)|Завершает текущее задание печати, удаляя все, что приложение написано на устройстве с момента последнего вызова из `StartDoc` функция-член.|
 |[CDC::AbortPath](#abortpath)|Закрывает и удаляет все пути в контексте устройства.|
@@ -629,13 +629,13 @@ class CDC : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDC::operator HDC](#operator_hdc)|Извлекает дескриптор контекста устройства.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDC::m_hAttribDC](#m_hattribdc)|Контекст атрибута устройства, используемые этим объектом `CDC` объекта.|
 |[CDC::m_hDC](#m_hdc)|Контекст устройства вывода, используемые этим объектом `CDC` объекта.|

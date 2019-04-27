@@ -10,11 +10,11 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
 ms.openlocfilehash: b0e9a7514704742524f97e55c06ef47c7b36631b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195372"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>Форматирование выходных данных этапа настраиваемого построения или события построения
 
@@ -34,7 +34,7 @@ ms.locfileid: "57827163"
 
 Где:
 
-- {*a* &#124; *b*} — Выбор любого *a* или *b*.
+- {*а* &#124; *б*} — это выбор между *а* и *б*.
 
 - \[<em>item</em>] — это необязательная строка или необязательный параметр.
 

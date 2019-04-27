@@ -3,11 +3,11 @@ title: Функции CRT, которые не поддерживаются в �
 ms.date: 12/30/2016
 ms.assetid: cbfc957d-6c60-48f4-97e3-1ed8526743b4
 ms.openlocfilehash: 763d76dd9eb139c10f4147e5fa069a0901fe5398
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62188386"
 ---
 # <a name="crt-functions-not-supported-in-universal-windows-platform-apps"></a>Функции CRT, которые не поддерживаются в приложениях универсальной платформы Windows
 

@@ -12,11 +12,11 @@ helpviewer_keywords:
 - RegistryDataExchange function, macros
 ms.assetid: c1bc5e79-2307-43d2-9d10-3a62ffadf473
 ms.openlocfilehash: 69b823cbcd85ebaaeb05979283ea4f8fea80f4b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197488"
 ---
 # <a name="registry-data-exchange-macros"></a>Макросы для обмена данными реестра
 
@@ -47,7 +47,7 @@ BEGIN_RDX_MAP
 
 Следующие макросы, используемые в схеме обмена данными реестра для чтения и записи в системном реестре.
 
-|Макрос|Описание:|
+|Макрос|Описание|
 |-----------|-----------------|
 |[RDX_BINARY](#rdx_binary)|Связывает указанной записи реестра с переменную-член указанного типа BYTE.|
 |[RDX_DWORD](#rdx_dword)|Связывает указанной записи реестра с указанного элемента переменной типа DWORD.|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
 ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180763"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Обновление существующего элемента управления ActiveX
 
@@ -274,4 +274,4 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 [Задачи программирования для интернет-решений MFC](../mfc/mfc-internet-programming-tasks.md)<br/>
 [Основы программирования для интернет-решений MFC](../mfc/mfc-internet-programming-basics.md)<br/>
-[Элементы ActiveX в MFC. Лицензирование элемента управления ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
+[Элементы управления ActiveX MFC. Лицензирование элемента управления ActiveX](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

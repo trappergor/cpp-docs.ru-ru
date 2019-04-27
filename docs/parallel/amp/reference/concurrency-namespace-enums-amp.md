@@ -6,11 +6,11 @@ f1_keywords:
 - amp/Concurrency::queuing_mode
 ms.assetid: 4c87457e-184f-4992-81ab-ca75e7d524ab
 ms.openlocfilehash: adfc1743d887f2a670111eff31cf4653d2df1bee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180457"
 ---
 # <a name="concurrency-namespace-enums-amp"></a>Перечисления пространства имен Concurrency (AMP)
 
@@ -28,7 +28,7 @@ enum access_type;
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`access_type_auto`|Автоматически выбирает наилучший `access_type` для сочетания клавиш.|
 |`access_type_none`|Выделенные. Выделение доступно только в сочетании клавиш и недоступно на ЦП.|
@@ -46,9 +46,9 @@ enum queuing_mode;
 
 ### <a name="values"></a>Значения
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|`queuing_mode_immediate`|Режим организации очереди, указывающий, что любые команды, например, [parallel_for_each функции (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), отправляемые в соответствующий ускоритель, как только они возвращаются вызывающему объекту.|
+|`queuing_mode_immediate`|Режим организации очереди, указывающий, что любые команды, например, [функция parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each), отправляемые в соответствующий ускоритель, как только они возвращаются вызывающему объекту.|
 |`queuing_mode_automatic`|Режим организации очереди, которое указывает, что команды будут ставиться в очередь, которая соответствует [accelerator_view](accelerator-view-class.md) объекта. Команды отправляются на устройство при [accelerator_view::flush](accelerator-view-class.md#flush) вызывается.|
 
 ## <a name="see-also"></a>См. также
