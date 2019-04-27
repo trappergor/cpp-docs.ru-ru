@@ -8,11 +8,11 @@ helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
 ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212096"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 

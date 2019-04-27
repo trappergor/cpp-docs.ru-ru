@@ -10,11 +10,11 @@ helpviewer_keywords:
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
 ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159422"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
@@ -74,7 +74,7 @@ ms.locfileid: "57006673"
 
 ## <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Класс, который описывает исключение, указывающий, что вызов `operator()` в объекте-[function](../standard-library/function-class.md) завершился ошибкой, так как объект был пуст.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной бинарной функции.<br/> (Устарело в C ++ 17). |
@@ -149,7 +149,7 @@ ms.locfileid: "57006673"
 
 ## <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|Запрещает сравнение вызываемых объектов на равенство.|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|Запрещает сравнение вызываемых объектов на неравенство.|

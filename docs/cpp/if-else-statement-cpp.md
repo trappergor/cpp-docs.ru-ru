@@ -10,11 +10,11 @@ helpviewer_keywords:
 - if keyword [C++], if-else
 ms.assetid: f8c45cde-6bce-42ae-81db-426b3dbd4caa
 ms.openlocfilehash: 16aa65ab64d9fd855ae3306da88f8eb14eec759c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183652"
 ---
 # <a name="if-else-statement-c"></a>Оператор if-else (C++)
 
@@ -165,7 +165,7 @@ int main()
 
 ## <a name="a-nameifconstexpr-if-constexpr-statements"></a><a name="if_constexpr"> Если инструкции constexpr
 
-**Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): В шаблонах функций, можно использовать **Если constexpr** инструкцию, чтобы принимать решения ветвления во время компиляции без приходится прибегать к несколько перегрузок функций. Например можно написать одну функцию параметра, дескрипторы, распаковки, (ни одной перегрузке не нулевой параметр является обязательным):
+**Visual Studio 2017 версии 15.3 и более поздние версии** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)): В шаблонах функций, можно использовать **Если constexpr** инструкцию, чтобы принимать решения ветвления во время компиляции, не прибегая к использованию нескольких перегрузок функций. Например можно написать одну функцию параметра, дескрипторы, распаковки, (ни одной перегрузке не нулевой параметр является обязательным):
 
 ```cpp
 template <class T, class... Rest>

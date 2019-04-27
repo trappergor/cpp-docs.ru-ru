@@ -10,11 +10,11 @@ helpviewer_keywords:
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
 ms.openlocfilehash: 08c496038efc9e24e1c1610da07b6824c3a50b64
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62216861"
 ---
 # <a name="basic-cstring-operations"></a>Базовые операции CString
 
@@ -36,7 +36,7 @@ ms.locfileid: "57746218"
 
 `CString`, `CStringA`, и `CStringW` каждого получить набор методов и операторы, определенные `CStringT` для использования со строковыми данными, они поддерживают. Некоторые методы повторяющиеся и, в некоторых случаях преодолеть служб строку из библиотеки времени выполнения C.
 
-Примечание: `CString` — это собственный класс. Для класса строки, который предназначен для использования в C + +/ CLI управляемый проект, используйте `System.String`.
+Примечание: `CString` — это собственный класс. Для класса строки, который предназначен для использования в C++выполняет управляемый проект, используйте `System.String`.
 
 ##  <a name="_core_creating_cstring_objects_from_standard_c_literal_strings"></a> Создание объектов CString из строковых литералов в стандартном языке C
 

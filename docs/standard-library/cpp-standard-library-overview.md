@@ -8,15 +8,15 @@ helpviewer_keywords:
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
 ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210805"
 ---
 # <a name="c-standard-library-overview"></a>Общие сведения о стандартной библиотеке C++
 
-Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map > и \<hash_set >, которые не требуются стандартом C++. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
+Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map > и \<hash_set >, которые не требуются C++ Standard. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
 
 Автономная реализация библиотеки С++ предоставляет только подмножество этих заголовков:
 
@@ -42,9 +42,9 @@ ms.locfileid: "50444997"
 
 - [Запуск и завершение программ C++](../standard-library/cpp-program-startup-and-termination.md)
 
-- [Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)
+- [Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)
 
-- [Проверяемые итераторы](../standard-library/checked-iterators.md)
+- [Checked Iterators](../standard-library/checked-iterators.md)
 
 - [Поддержка отладки итераторов](../standard-library/debug-iterator-support.md)
 

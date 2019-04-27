@@ -12,11 +12,11 @@ helpviewer_keywords:
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
 ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212913"
 ---
 # <a name="multithreading-creating-mfc-user-interface-threads"></a>Реализация многопоточности на языке: Создание потоков пользовательского интерфейса в MFC
 
@@ -51,9 +51,9 @@ MFC предоставляет две версии `AfxBeginThread` через �
 
 ## <a name="what-do-you-want-to-know-more-about"></a>Дополнительные сведения
 
-- [Реализация многопоточности на языке: Завершение потоков](multithreading-terminating-threads.md)
+- [Многопоточность. Завершение работы с потоками](multithreading-terminating-threads.md)
 
-- [Реализация многопоточности на языке: Создание рабочих потоков](multithreading-creating-worker-threads.md)
+- [Многопоточность. Создание рабочих потоков](multithreading-creating-worker-threads.md)
 
 - [Процессы и потоки](/windows/desktop/ProcThread/processes-and-threads)
 
