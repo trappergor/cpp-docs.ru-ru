@@ -16,11 +16,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
 ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62239339"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>Элементы ActiveX в MFC. Использование стандартных страниц свойств
 
@@ -31,9 +31,9 @@ ms.locfileid: "57304708"
 
 Дополнительные сведения об использовании страницы свойств в элементе управления ActiveX см. в разделе со следующими статьями:
 
-- [Элементы ActiveX в MFC. Страницы свойств](../mfc/mfc-activex-controls-property-pages.md)
+- [Элементы управления ActiveX MFC. Страницы свойств](../mfc/mfc-activex-controls-property-pages.md)
 
-- [Элементы ActiveX в MFC. Добавление другой страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [Элементы управления ActiveX MFC. Добавление дополнительной страницы пользовательских свойств](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC предоставляет три стандартных страниц свойств для использования с элементами управления ActiveX: `CLSID_CColorPropPage`, `CLSID_CFontPropPage`, и `CLSID_CPicturePropPage`. Эти страницы пользовательского интерфейса для стандартных цвета, шрифта и свойствах изображения, соответственно.
 
@@ -54,4 +54,4 @@ MFC предоставляет три стандартных страниц св
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Добавление стандартных свойств](../mfc/mfc-activex-controls-adding-stock-properties.md)
+[Элементы управления ActiveX MFC. Добавление стандартных свойств](../mfc/mfc-activex-controls-adding-stock-properties.md)

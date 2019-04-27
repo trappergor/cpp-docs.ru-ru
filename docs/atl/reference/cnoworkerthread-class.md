@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CNoWorkerThread class
 ms.assetid: 29f06bae-b658-4aac-9c14-331e996d25d1
 ms.openlocfilehash: fcd103283738ce7d573faa2fb1025ee2af642021
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258498"
 ---
 # <a name="cnoworkerthread-class"></a>Класс CNoWorkerThread
 
@@ -38,7 +38,7 @@ class CNoWorkerThread
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CNoWorkerThread::AddHandle](#addhandle)|Нефункциональные эквивалент [CWorkerThread::AddHandle](../../atl/reference/cworkerthread-class.md#addhandle).|
 |[CNoWorkerThread::AddTimer](#addtimer)|Нефункциональные эквивалент [CWorkerThread::AddTimer](../../atl/reference/cworkerthread-class.md#addtimer).|

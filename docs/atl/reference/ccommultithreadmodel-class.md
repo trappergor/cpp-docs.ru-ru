@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [ATL]
 ms.assetid: db8f1662-2f7a-44b3-b341-ffbfb6e422a3
 ms.openlocfilehash: 2ec83fc320d65f5f51c14f9523544972cd69c66c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246412"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel Class
 
@@ -35,7 +35,7 @@ class CComMultiThreadModel
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComMultiThreadModel::AutoCriticalSection](#autocriticalsection)|Ссылается на класс [CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md).|
 |[CComMultiThreadModel::CriticalSection](#criticalsection)|Ссылается на класс [CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md).|
@@ -43,7 +43,7 @@ class CComMultiThreadModel
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComMultiThreadModel::Decrement](#decrement)|(Статический) Уменьшает значение указанной переменной в потокобезопасным способом.|
 |[CComMultiThreadModel::Increment](#increment)|(Статический) Увеличивает значение указанной переменной в потокобезопасным способом.|

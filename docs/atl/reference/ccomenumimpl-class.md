@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
 ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259865"
 ---
 # <a name="ccomenumimpl-class"></a>Класс CComEnumImpl
 
@@ -55,14 +55,14 @@ COM-интерфейса перечислителя. См. в разделе [IE
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|Конструктор.|
 |[CComEnumImpl:: ~ CComEnumImpl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComEnumImpl::Clone](#clone)|Реализация **клона** метода интерфейса перечисления.|
 |[CComEnumImpl::Init](#init)|Инициализирует перечислитель.|
@@ -72,7 +72,7 @@ COM-интерфейса перечислителя. См. в разделе [IE
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComEnumImpl::m_begin](#m_begin)|Указатель на первый элемент в массиве.|
 |[CComEnumImpl::m_dwFlags](#m_dwflags)|Скопируйте флаги, передаваемые через `Init`.|

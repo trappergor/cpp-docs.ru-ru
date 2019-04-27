@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CMFCHeaderCtrl [MFC], OnFillBackground
 ms.assetid: 2f5fbf7b-5c75-42db-9216-640b1628f777
 ms.openlocfilehash: 86674e086da482e59b2711f5ba9154848ff05a6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269439"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218389"
 ---
 # <a name="cmfcheaderctrl-class"></a>CMFCHeaderCtrl Class
 
@@ -47,18 +47,18 @@ ms.locfileid: "57269439"
 class CMFCHeaderCtrl : public CHeaderCtrl
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCHeaderCtrl::CMFCHeaderCtrl](#cmfcheaderctrl)|Создает объект `CMFCHeaderCtrl`.|
 |`CMFCHeaderCtrl::~CMFCHeaderCtrl`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCHeaderCtrl::EnableMultipleSort](#enablemultiplesort)|Включает или отключает *несколько столбцов сортировки* режим для текущего элемента управления заголовка.|
 |[CMFCHeaderCtrl::GetColumnState](#getcolumnstate)|Указывает столбец не отсортирован, или сортируется в порядке возрастания или убывания.|
@@ -72,7 +72,7 @@ class CMFCHeaderCtrl : public CHeaderCtrl
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCHeaderCtrl::OnDrawItem](#ondrawitem)|Вызывается платформой для отрисовки элемента управления заголовка столбца.|
 |[CMFCHeaderCtrl::OnDrawSortArrow](#ondrawsortarrow)|Вызывается платформой для отрисовки стрелки сортировки.|
@@ -118,12 +118,12 @@ CMFCHeaderCtrl::CMFCHeaderCtrl()
 
 |Переменная-член|Значение|
 |---------------------|-----------|
-|`m_bIsMousePressed`|FALSE|
-|`m_bMultipleSort`|FALSE|
-|`m_bAscending`|TRUE|
+|`m_bIsMousePressed`|false|
+|`m_bMultipleSort`|false|
+|`m_bAscending`|true|
 |`m_nHighlightedItem`|-1|
-|`m_bTracked`|FALSE|
-|`m_bIsDlgControl`|FALSE|
+|`m_bTracked`|false|
+|`m_bIsDlgControl`|false|
 |`m_hFont`|NULL|
 
 ##  <a name="enablemultiplesort"></a>  CMFCHeaderCtrl::EnableMultipleSort
