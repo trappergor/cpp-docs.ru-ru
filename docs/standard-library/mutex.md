@@ -5,11 +5,11 @@ f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
 ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224081"
 ---
 # <a name="ltmutexgt"></a>&lt;Мьютекс&gt;
 
@@ -49,7 +49,7 @@ ms.locfileid: "50482567"
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс lock_guard](../standard-library/lock-guard-class.md)|Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.|
 |[Класс mutex (Стандартная библиотека C++)](../standard-library/mutex-class-stl.md)|Представляет тип мьютекса. Используйте объекты этого типа для принудительного взаимного исключения в программе.|
@@ -60,7 +60,7 @@ ms.locfileid: "50482567"
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Предоставляет механизм для однократного вызова указанного объекта во время выполнения.|
 |[lock](../standard-library/mutex-functions.md#lock)|Пытается заблокировать все аргументы без взаимоблокировки.|

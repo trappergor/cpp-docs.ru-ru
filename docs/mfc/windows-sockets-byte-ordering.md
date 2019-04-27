@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], byte order issues
 ms.assetid: 8a787a65-f9f4-4002-a02f-ac25a5dace5d
 ms.openlocfilehash: ca572ad32a9a46756cacf0221d80b2953b710723
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62217575"
 ---
 # <a name="windows-sockets-byte-ordering"></a>Сокеты Windows. Порядок байтов
 
@@ -83,7 +83,7 @@ ms.locfileid: "57278097"
 
 ### <a name="windows-sockets-byte-order-conversion-functions"></a>Функции преобразования порядка следования байтов сокеты Windows
 
-|Функция|Назначение|
+|Функция|Цель|
 |--------------|-------------|
 |**ntohs**|Преобразуйте 16-разрядное число из сетевого байтового формата узла порядка байтов (big-Endian для прямой порядок байтов).|
 |**ntohl**|Преобразуйте 32-разрядное число из сетевого байтового формата узла порядка байтов (big-Endian для прямой порядок байтов).|
@@ -96,13 +96,13 @@ ms.locfileid: "57278097"
 
 где `pMsg` — это указатель на объект с ++, производный от класса `CObject`. Это будет отправлять дополнительную информацию MFC, связанные с объектами и сервера, не может понять, как если бы он был в приложении MFC.
 
-Дополнительные сведения см. в следующих разделах.
+Дополнительные сведения:
 
 - [Сокеты Windows. Использование класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 

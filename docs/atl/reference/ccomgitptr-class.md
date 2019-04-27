@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
 ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296037"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246477"
 ---
 # <a name="ccomgitptr-class"></a>Класс CComGITPtr
 
@@ -41,14 +41,14 @@ class CComGITPtr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|Конструктор.|
 |[CComGITPtr::~CComGITPtr](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComGITPtr::Attach](#attach)|Этот метод используется для регистрации указателя интерфейса в глобальной таблицы интерфейсов (GIT).|
 |[CComGITPtr::CopyTo](#copyto)|Этот метод используется для копирования интерфейс из глобальной таблицы интерфейсов (GIT) в переданных указатель.|
@@ -58,14 +58,14 @@ class CComGITPtr
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComGITPtr::operator DWORD](#operator_dword)|Возвращает файл cookie из `CComGITPtr` объекта.|
 |[CComGITPtr::operator =](#operator_eq)|Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComGITPtr::m_dwCookie](#m_dwcookie)|Файл cookie.|
 

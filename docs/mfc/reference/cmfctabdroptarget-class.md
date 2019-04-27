@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
 ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252988"
 ---
 # <a name="cmfctabdroptarget-class"></a>Класс CMFCTabDropTarget
 
@@ -39,14 +39,14 @@ class CMFCTabDropTarget : public COleDropTarget
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |`CMFCTabDropTarget::CMFCTabDropTarget`|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCTabDropTarget::OnDragEnter](#ondragenter)|Вызывается платформой, когда пользователь перетаскивает объект в окно вкладки. (Переопределяет [COleDropTarget::OnDragEnter](../../mfc/reference/coledroptarget-class.md#ondragenter).)|
 |[CMFCTabDropTarget::OnDragLeave](#ondragleave)|Вызывается платформой, когда пользователь перетаскивает объект за пределами вкладки окна, имеющий фокус. (Переопределяет [COleDropTarget::OnDragLeave](../../mfc/reference/coledroptarget-class.md#ondragleave).)|
 |[CMFCTabDropTarget::OnDragOver](#ondragover)|Вызывается платформой, когда пользователь перетаскивает объект на вкладке окна, имеющий фокус. (Переопределяет [COleDropTarget::OnDragOver](../../mfc/reference/coledroptarget-class.md#ondragover).)|
@@ -156,7 +156,7 @@ virtual DROPEFFECT OnDragOver(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pWnd*|[in] Не используется.|
 |*pDataObject*|[in] Указатель на объект, который пользователь перетаскивает.|
 |*dwKeyState*|[in] Содержит состояние клавиши-модификаторы. Это сочетание любое количество следующих: MK_CONTROL, MK_SHIFT, MK_ALT, MK_LBUTTON, MK_MBUTTON и MK_RBUTTON.|
@@ -238,7 +238,7 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pOwner*|[in] Элемент управления вкладки, регистрируемый в качестве целевого объекта перетаскивания.|
 
 ### <a name="return-value"></a>Возвращаемое значение

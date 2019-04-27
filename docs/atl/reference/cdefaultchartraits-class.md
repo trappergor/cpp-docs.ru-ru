@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
 ms.openlocfilehash: fe599ee0e84c393bed656b7304fd13d55ce95a50
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258745"
 ---
 # <a name="cdefaultchartraits-class"></a>Класс CDefaultCharTraits
 
@@ -36,7 +36,7 @@ class CDefaultCharTraits
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDefaultCharTraits::CharToLower](#chartolower)|(Статический) Вызывайте эту функцию для преобразования символа в верхний регистр.|
 |[CDefaultCharTraits::CharToUpper](#chartoupper)|(Статический) Вызывайте эту функцию для преобразования символа в нижний регистр.|

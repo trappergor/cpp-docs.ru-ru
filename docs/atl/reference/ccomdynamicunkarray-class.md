@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
 ms.openlocfilehash: 39f137f199db1d7519801c19375baea6cd08db93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259486"
 ---
 # <a name="ccomdynamicunkarray-class"></a>Класс CComDynamicUnkArray
 
@@ -39,14 +39,14 @@ class CComDynamicUnkArray
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComDynamicUnkArray::CComDynamicUnkArray](#ccomdynamicunkarray)|Конструктор. Инициализирует коллекцию значения NULL и размер коллекции до нуля.|
 |[CComDynamicUnkArray:: ~ CComDynamicUnkArray](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComDynamicUnkArray::Add](#add)|Вызовите этот метод для добавления `IUnknown` указатель на массив.|
 |[CComDynamicUnkArray::begin](#begin)|Возвращает указатель на первый `IUnknown` указатель в коллекции.|

@@ -8,21 +8,21 @@ helpviewer_keywords:
 - pointers, declarations
 ms.assetid: 595387c5-8e58-4670-848f-344c7caf985e
 ms.openlocfilehash: a258a71b8b89643ee98785ee9dfbf30cdf128db7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62223070"
 ---
 # <a name="pointers-c"></a>Указатели (C++)
 
 Указатели объявляются с помощью следующей последовательности.
 
-> \[*Спецификаторы классов хранения*] \[ *cv квалификаторы*] *спецификаторы типа* \[ *ms модификатор*]  *декларатор* **;**
+> \[*storage-class-specifiers*] \[*cv-qualifiers*] *type-specifiers* \[*ms-modifier*] *declarator* **;**
 
 где можно использовать любой допустимый декларатор указателя для *декларатор*. Синтаксис простого декларатора указателя следующий:
 
-> __\*__ \[*CV квалификаторы*] *идентификатор* \[ **=** *выражение*]
+> __\*__ \[*cv-qualifiers*] *identifier* \[**=** *expression*]
 
 1. Спецификаторы объявления:
 
@@ -50,7 +50,7 @@ ms.locfileid: "50667874"
 
 Для массива указателей синтаксис следующий:
 
-> __\*__ *Идентификатор* **\[** \[ *константное_выражение*] **]**
+> __\*__ *identifier* **\[** \[*constant-expression*] **]**
 
 Несколько деклараторов и их инициализаторы могут присутствовать вместе в одном объявлении в разделенном запятыми списке после спецификатора объявления.
 

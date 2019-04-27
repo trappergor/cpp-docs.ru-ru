@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAcl class
 ms.assetid: 20bcb9af-dc1c-4737-b923-3864776680d6
 ms.openlocfilehash: 05d9d5fe9cc344be3f903f247f34003056404c9d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247656"
 ---
 # <a name="cacl-class"></a>Класс CAcl
 
@@ -42,11 +42,11 @@ ms.locfileid: "57258571"
 class CAcl
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAcl::CAccessMaskArray](#caccessmaskarray)|Массив ACCESS_MASKs.|
 |[CAcl::CAceFlagArray](#caceflagarray)|Массив байтов.|
@@ -54,14 +54,14 @@ class CAcl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAcl::CAcl](#cacl)|Конструктор.|
 |[CAcl:: ~ CAcl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAcl::GetAceCount](#getacecount)|Возвращает количество управления доступом объектов управления доступом.|
 |[CAcl::GetAclEntries](#getaclentries)|Получает записи списка управления Доступом управления доступом из `CAcl` объекта.|
@@ -77,7 +77,7 @@ class CAcl
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAcl::operator const ACL *](#operator_const_acl__star)|Приведения `CAcl` объект `ACL` структуры.|
 |[CAcl::operator =](#operator_eq)|Оператор присвоения.|

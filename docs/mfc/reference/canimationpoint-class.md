@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CAnimationPoint [MFC], m_yValue
 ms.assetid: 5dc4d46f-e695-4681-b15c-544b78b3e317
 ms.openlocfilehash: 15f06d2fa3478570d2f784879a13e7b68515e746
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218542"
 ---
 # <a name="canimationpoint-class"></a>Класс CAnimationPoint
 
@@ -43,17 +43,17 @@ ms.locfileid: "57271272"
 class CAnimationPoint : public CAnimationBaseObject;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationPoint::CAnimationPoint](#canimationpoint)|Перегружен. Создает объект CAnimationPoint.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationPoint::AddTransition](#addtransition)|Добавляет переходы для X и Y-координаты.|
 |[CAnimationPoint::GetDefaultValue](#getdefaultvalue)|Возвращает значения по умолчанию для X и Y-координаты.|
@@ -64,20 +64,20 @@ class CAnimationPoint : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationPoint::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationPoint::operator CPoint](#operator_cpoint)|Преобразует CAnimationPoint CPoint.|
 |[CAnimationPoint::operator =](#operator_eq)|Назначает ptSrc CAnimationPoint.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationPoint::m_xValue](#m_xvalue)|Инкапсулированный анимации переменной, представляющей X координат точки анимации.|
 |[CAnimationPoint::m_yValue](#m_yvalue)|Переменная инкапсулированный анимации, представляющее координату Y точки анимации.|

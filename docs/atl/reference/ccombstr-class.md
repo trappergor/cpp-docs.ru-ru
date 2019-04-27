@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
 ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246567"
 ---
 # <a name="ccombstr-class"></a>Класс CComBSTR
 
@@ -50,14 +50,14 @@ class CComBSTR
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|Конструктор.|
 |[CComBSTR:: ~ CComBSTR](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComBSTR::Append](#append)|Добавляет строку в `m_str`.|
 |[CComBSTR::AppendBSTR](#appendbstr)|Добавляет строку BSTR, чтобы `m_str`.|
@@ -80,7 +80,7 @@ class CComBSTR
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComBSTR::operator BSTR](#operator_bstr)|Приведения `CComBSTR` объекта на строку BSTR.|
 |[CComBSTR::operator!](#operator_not)|Возвращает значение TRUE или FALSE, в зависимости от того, следует ли `m_str`имеет значение NULL.|
@@ -94,7 +94,7 @@ class CComBSTR
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComBSTR::m_str](#m_str)|Содержит строку BSTR, связанные с `CComBSTR` объекта.|
 

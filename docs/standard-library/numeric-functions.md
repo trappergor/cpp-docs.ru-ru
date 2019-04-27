@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::iota [C++]
 - std::partial_sum [C++]
 ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236564"
 ---
 # <a name="ltnumericgt-functions"></a>Функции &lt;numeric&gt;
 
@@ -440,7 +440,7 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 *последний*<br/>
 Входной итератор, адресующий последний элемент в диапазоне для заполнения.
 
-*значение*<br/>
+*value*<br/>
 Начальное значение для сохранения в первом элементе и для последовательного приращения для последующих элементов.
 
 ### <a name="remarks"></a>Примечания

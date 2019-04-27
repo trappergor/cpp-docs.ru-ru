@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2872
 ms.assetid: c619ef97-6e0e-41d7-867c-f8d28a07d553
 ms.openlocfilehash: 103998c7872b683c7405796ee28bd550246ae9bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566222"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257618"
 ---
 # <a name="compiler-error-c2872"></a>Ошибка компилятора C2872
 
@@ -21,7 +21,7 @@ ms.locfileid: "50566222"
 
 C2872 может возникать, если в файле заголовка [директива using](../../cpp/namespaces-cpp.md#using_directives), и включается в последующем файле заголовка, содержащий тип, который также находится в пространстве имен, заданном в `using` директива. Укажите `using` директив только после всех указанных файлов заголовка с `#include`.
 
-C2872 может произойти в Visual Studio 2013 из-за конфликта между `Windows::Foundation::Metadata::Platform` перечисления типа и C + +/ CX определяемые `Platform` пространства имен. Чтобы обойти эту проблему, выполните следующие действия.
+C2872 может произойти в Visual Studio 2013 из-за конфликта между `Windows::Foundation::Metadata::Platform` перечисляемого типа и C++/определяемые CX `Platform` пространства имен. Чтобы обойти эту проблему, выполните следующие действия.
 
 - Удалите предложение «using Windows::Foundation::Metadata пространства имен» из файлов проекта.
 

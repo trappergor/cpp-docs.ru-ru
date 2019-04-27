@@ -52,11 +52,11 @@ helpviewer_keywords:
 - CD2DBitmap [MFC], m_uiResID
 ms.assetid: 2b3686f1-812c-462b-b449-9f0cb6949bf6
 ms.openlocfilehash: 288ba5e1503a4e3eefe83624cf9a489274a10823
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253946"
 ---
 # <a name="cd2dbitmap-class"></a>Класс CD2DBitmap
 
@@ -72,20 +72,20 @@ class CD2DBitmap : public CD2DResource;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap из HBITMAP.|
 |[CD2DBitmap::~CD2DBitmap](#_dtorcd2dbitmap)|Деструктор Вызывается при уничтожении объекта D2D растрового изображения.|
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::CD2DBitmap](#cd2dbitmap)|Перегружен. Создает объект CD2DBitmap.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
 |[CD2DBitmap::CopyFromBitmap](#copyfrombitmap)|Копирует указанную область в текущую битовую карту из указанного растрового изображения|
@@ -103,19 +103,19 @@ class CD2DBitmap : public CD2DResource;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::CommonInit](#commoninit)|Инициализирует объект|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::operator ID2D1Bitmap*](#operator_id2d1bitmap_star)|Возвращает интерфейс ID2D1Bitmap|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmap::m_bAutoDestroyHBMP](#m_bautodestroyhbmp)|Значение TRUE, если необходимо уничтожить m_hBmpSrc; в противном случае — значение FALSE.|
 |[CD2DBitmap::m_hBmpSrc](#m_hbmpsrc)|Дескриптор точечного рисунка источника.|

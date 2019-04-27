@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CComQIPtrElementTraits class
 ms.assetid: 9df9250a-5413-4362-b133-332932a597c4
 ms.openlocfilehash: 42662a971f5d293cff404ca1eda161a3b87b13b9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246173"
 ---
 # <a name="ccomqiptrelementtraits-class"></a>Класс CComQIPtrElementTraits
 
@@ -39,7 +39,7 @@ COM-интерфейс, указав тип указателя для сохра
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComQIPtrElementTraits::INARGTYPE](#inargtype)|Тип данных, который нужно использовать для добавления элементов в объекте класса коллекции.|
 

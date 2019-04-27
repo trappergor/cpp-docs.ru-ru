@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
 ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246262"
 ---
 # <a name="ccompolyobject-class"></a>Класс CComPolyObject
 
@@ -45,14 +45,14 @@ class CComPolyObject : public IUnknown,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|Конструктор.|
 |[CComPolyObject::~CComPolyObject](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComPolyObject::AddRef](#addref)|Увеличивает счетчик ссылок объекта.|
 |[CComPolyObject::CreateInstance](#createinstance)|(Статический) Позволяет создать новую **CComPolyObject <** `contained` **>** объекта без использования [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance).|
@@ -63,7 +63,7 @@ class CComPolyObject : public IUnknown,
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComPolyObject::m_contained](#m_contained)|Делегаты `IUnknown` вызывает внешняя Неизвестная строка, если объект является статистическим или `IUnknown` объекта, если объект не является агрегатом.|
 

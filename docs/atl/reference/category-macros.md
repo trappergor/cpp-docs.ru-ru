@@ -8,11 +8,11 @@ f1_keywords:
 - atlcom/ATL::REQUIRED_CATEGORY
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
 ms.openlocfilehash: 9c74b1e8e9fc101ed9b3acd842d38dcdb9eb48f3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57818496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247401"
 ---
 # <a name="category-macros"></a>Макросы категорий
 
@@ -94,7 +94,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий
 
-|Описание:|Символ|Реестр GUID|
+|Описание|Символ|Реестр GUID|
 |-----------------|------------|-------------------|
 |Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|
@@ -131,7 +131,7 @@ REQUIRED_CATEGORY( catID )
 
 ### <a name="a-selection-of-stock-categories"></a>Выбор из стандартных категорий
 
-|Описание:|Символ|Реестр GUID|
+|Описание|Символ|Реестр GUID|
 |-----------------|------------|-------------------|
 |Безопасно для сценариев|CATID_SafeForScripting|{7DD95801-9882-11CF-9FA9-00AA006C42C4}|
 |Безопасно для инициализации|CATID_SafeForInitializing|{7DD95802-9882-11CF-9FA9-00AA006C42C4}|

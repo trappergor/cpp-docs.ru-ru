@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CHeapPtrBase class
 ms.assetid: 501ac1b2-fb34-4c72-b7e6-a4f1fc8fda21
 ms.openlocfilehash: 558c9bd78257a06e123d47a0110375e7f448f90d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245612"
 ---
 # <a name="cheapptrbase-class"></a>Класс CHeapPtrBase
 
@@ -46,13 +46,13 @@ class CHeapPtrBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtrBase:: ~ CHeapPtrBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtrBase::AllocateBytes](#allocatebytes)|Этот метод используется для выделения памяти.|
 |[CHeapPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
@@ -62,7 +62,7 @@ class CHeapPtrBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtrBase::operator T*](#operator_t_star)|Оператор приведения типов.|
 |[CHeapPtrBase::operator &](#operator_amp)|& Оператор.|
@@ -70,7 +70,7 @@ class CHeapPtrBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtrBase::m_pData](#m_pdata)|Указатель данных переменная-член.|
 

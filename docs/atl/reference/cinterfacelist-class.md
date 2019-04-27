@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CInterfaceList class
 ms.assetid: 2077764d-25e5-4b3d-96c8-08a287bbcd25
 ms.openlocfilehash: e740d891e279bb29eeef898de52698dc3f04fc67
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258641"
 ---
 # <a name="cinterfacelist-class"></a>Класс CInterfaceList
 
@@ -40,7 +40,7 @@ COM-интерфейс, указав тип указателя для сохра
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CInterfaceList::CInterfaceList](#cinterfacelist)|Конструктор для списке интерфейсов.|
 

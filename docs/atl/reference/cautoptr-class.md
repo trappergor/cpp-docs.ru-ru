@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
 ms.openlocfilehash: 7f4f446aa97f2bf3843b830bd7fb4c4a5d74ffdb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260166"
 ---
 # <a name="cautoptr-class"></a>Класс CAutoPtr
 
@@ -42,14 +42,14 @@ class CAutoPtr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoPtr::CAutoPtr](#cautoptr)|Конструктор.|
 |[CAutoPtr:: ~ CAutoPtr](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
 |[CAutoPtr::Detach](#detach)|Вызовите этот метод для освобождения владения указатель.|
@@ -57,7 +57,7 @@ class CAutoPtr
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoPtr::operator T *](#operator_t_star)|Оператор приведения типов.|
 |[CAutoPtr::operator =](#operator_eq)|Оператор присваивания.|
@@ -65,7 +65,7 @@ class CAutoPtr
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAutoPtr::m_p](#m_p)|Указатель данных переменная-член.|
 

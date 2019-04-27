@@ -38,11 +38,11 @@ helpviewer_keywords:
 - CAtlList class
 ms.assetid: 09e98053-64b2-4efa-99ab-d0542caaf981
 ms.openlocfilehash: faed99197eb14da8ea095bef81d0d1a9845b18ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247018"
 ---
 # <a name="catllist-class"></a>Класс CAtlList
 
@@ -67,20 +67,20 @@ class CAtlList
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlList::INARGTYPE](#inargtype)||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlList::CAtlList](#catllist)|Конструктор.|
 |[CAtlList:: ~ CAtlList](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlList::AddHead](#addhead)|Вызовите этот метод, чтобы добавить элемент в начало списка.|
 |[CAtlList::AddHeadList](#addheadlist)|Этот метод используется для добавления существующего списка в начало списка.|

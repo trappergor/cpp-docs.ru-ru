@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
 ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283089"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258836"
 ---
 # <a name="clocalheap-class"></a>Класс CLocalHeap
 
@@ -35,7 +35,7 @@ class CLocalHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CLocalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
 |[CLocalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|

@@ -32,11 +32,11 @@ helpviewer_keywords:
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
 ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259278"
 ---
 # <a name="ccommodule-class"></a>CComModule-класс
 
@@ -55,7 +55,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComModule::GetClassObject](#getclassobject)|Создает объект с заданным идентификатором CLSID. Для DLL.|
 |[CComModule::GetModuleInstance](#getmoduleinstance)|Возвращает `m_hInst`.|
@@ -76,7 +76,7 @@ class CComModule : public _ATL_MODULE
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComModule::m_csObjMap](#m_csobjmap)|Гарантирует синхронизированного доступа к сведениям объекта карты.|
 |[CComModule::m_csTypeInfoHolder](#m_cstypeinfoholder)|Гарантирует синхронизированного доступа к информации о библиотеке типов.|

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
 ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259057"
 ---
 # <a name="ccomvariant-class"></a>Класс CComVariant
 
@@ -41,14 +41,14 @@ class CComVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|Конструктор.|
 |[CComVariant:: ~ CComVariant](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComVariant::Attach](#attach)|Присоединяет типа VARIANT в `CComVariant` объекта.|
 |[CComVariant::ChangeType](#changetype)|Преобразует `CComVariant` объекта в новый тип.|

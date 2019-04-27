@@ -35,15 +35,15 @@ helpviewer_keywords:
 - CMapStringToOb [MFC], SetAt
 ms.assetid: 09653980-b885-4f3a-8594-0aeb7f94c601
 ms.openlocfilehash: b56e9052533269ba62d248312f07ac16db71bf4a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62253053"
 ---
 # <a name="cmapstringtoob-class"></a>Класс CMapStringToOb
 
-Класс коллекции словаря, который сопоставляет уникальные объекты `CString` с указателями `CObject`.
+Класс коллекции словаря, который сопоставляет уникальные объекты `CString` с указателями `CObject` .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -51,17 +51,17 @@ ms.locfileid: "57280515"
 class CMapStringToOb : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::CMapStringToOb](#cmapstringtoob)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::GetCount](#getcount)|Возвращает число элементов в данном сопоставлении.|
 |[CMapStringToOb::GetHashTableSize](#gethashtablesize)|Определяет текущее число элементов в хэш-таблице.|
@@ -79,7 +79,7 @@ class CMapStringToOb : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMapStringToOb::operator \[ \]](#operator_at)|Вставляет элемент в карте — оператор подстановки для `SetAt`.|
 

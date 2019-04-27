@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CObArray [MFC], SetSize
 ms.assetid: 581be11e-ced6-47d1-8679-e0b8e7d99494
 ms.openlocfilehash: 8cc67e62d905710ba5d63bf93c7b8aa1bf50f69c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206135"
 ---
 # <a name="cdwordarray-class"></a>Класс CDWordArray
 
@@ -71,13 +71,13 @@ class CDWordArray : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::CObArray](../../mfc/reference/cobarray-class.md#cobarray)|Создает пустой массив.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::Add](../../mfc/reference/cobarray-class.md#add)|Добавляет элемент в конец массива. При необходимости размер массива увеличивается.|
 |[CObArray::Append](../../mfc/reference/cobarray-class.md#append)|Добавляет другой массив к массиву. При необходимости размер массива увеличивается.|
@@ -99,7 +99,7 @@ class CDWordArray : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObArray::operator \[ \]](../../mfc/reference/cobarray-class.md#operator_at)|Получает или задает элемент с указанным индексом.|
 

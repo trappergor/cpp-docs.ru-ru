@@ -15,11 +15,11 @@ helpviewer_keywords:
 - threading [ATL]
 ms.assetid: 2b3f7a45-fd72-452c-aaf3-ccdaa621c821
 ms.openlocfilehash: ef2038a203b6cbfb2564bbe11d508ee43df0fd1b
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62259226"
 ---
 # <a name="ccommultithreadmodelnocs-class"></a>CComMultiThreadModelNoCS Class
 
@@ -35,7 +35,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::AutoCriticalSection](#autocriticalsection)|Ссылается на класс [CComFakeCriticalSection](../../atl/reference/ccomfakecriticalsection-class.md).|
 |[CComMultiThreadModelNoCS::CriticalSection](#criticalsection)|Ссылается на класс `CComFakeCriticalSection`.|
@@ -43,7 +43,7 @@ class CComMultiThreadModelNoCS
 
 ### <a name="public-methods"></a>Открытые методы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComMultiThreadModelNoCS::Decrement](#decrement)|(Статический) Уменьшает значение указанной переменной в потокобезопасным способом.|
 |[CComMultiThreadModelNoCS::Increment](#increment)|(Статический) Увеличивает значение указанной переменной в потокобезопасным способом.|

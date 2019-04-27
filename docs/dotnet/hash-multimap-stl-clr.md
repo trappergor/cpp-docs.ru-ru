@@ -99,11 +99,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: cd78687b-8a05-48e0-9d22-8b8194ae3b0b
 ms.openlocfilehash: 2e3cd31ada54d1569cb7e5344ab471108b625558
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222966"
 ---
 # <a name="hashmultimap-stlclr"></a>hash_multimap (STL/CLR)
 
@@ -1541,7 +1541,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_multimap::Insert (STL/CLR)
+## <a name="insert"></a> hash_multimap::insert (STL/CLR)
 
 Добавляет элементы.
 
@@ -2174,7 +2174,7 @@ load_factor() = 0.0234375
 max_load_factor() = 0.25
 ```
 
-## <a name="op"></a> hash_multimap::operator = (STL/CLR)
+## <a name="op"></a> hash_multimap::operator= (STL/CLR)
 
 Заменяет управляемую последовательность.
 
@@ -2280,7 +2280,7 @@ int main()
 *++rbegin() = [b 2]
 ```
 
-## <a name="reference"></a> hash_multimap::Reference (STL/CLR)
+## <a name="reference"></a> hash_multimap::reference (STL/CLR)
 
 Тип ссылки на элемент.
 
@@ -2594,7 +2594,7 @@ int main()
 end()-begin() = 3
 ```
 
-## <a name="swap"></a> hash_multimap::Swap (STL/CLR)
+## <a name="swap"></a> hash_multimap::swap (STL/CLR)
 
 Меняет местами содержимое двух контейнеров.
 

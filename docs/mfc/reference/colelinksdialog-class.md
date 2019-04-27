@@ -13,11 +13,11 @@ helpviewer_keywords:
 - COleLinksDialog [MFC], m_el
 ms.assetid: fb2eb638-2809-46db-ac74-392a732affc7
 ms.openlocfilehash: c5069bc63d61016e6f3c2f983de23901b9f35814
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301419"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224440"
 ---
 # <a name="colelinksdialog-class"></a>Класс COleLinksDialog
 
@@ -29,23 +29,23 @@ ms.locfileid: "57301419"
 class COleLinksDialog : public COleDialog
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleLinksDialog::COleLinksDialog](#colelinksdialog)|Создает объект `COleLinksDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleLinksDialog::DoModal](#domodal)|Отображает диалоговое окно OLE изменить ссылки.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleLinksDialog::m_el](#m_el)|Структура типа OLEUIEDITLINKS, которое управляет поведением окна.|
 

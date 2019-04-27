@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4230
 ms.assetid: a4be8729-74b6-44df-a5ea-e3f45aad0f8f
 ms.openlocfilehash: c8d223a286b8d42ca404fbfe7cbc51b67b3dd497
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62207492"
 ---
 # <a name="compiler-warning-level-1-c4230"></a>Предупреждение компилятора (уровень 1) C4230
 
-устаревший элемент: модификаторов и квалификаторов; пропуск квалификатора
+anachronism used : modifiers/qualifiers interspersed; qualifier ignored
 
 С помощью квалификаторов перед модификатором Майкрософт, таких как `__cdecl` устарело.
 

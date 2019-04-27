@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CGlobalHeap class
 ms.assetid: e348d838-3aa7-4bee-a1b3-cd000c99f834
 ms.openlocfilehash: cba15421fd0329df7a66a35979ed54b863b7cca0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62258823"
 ---
 # <a name="cglobalheap-class"></a>Класс CGlobalHeap
 
@@ -35,7 +35,7 @@ class CGlobalHeap : public IAtlMemMgr
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CGlobalHeap::Allocate](#allocate)|Вызовите этот метод, чтобы выделить блок памяти.|
 |[CGlobalHeap::Free](#free)|Вызовите этот метод для освобождения блока памяти, выделенной данным диспетчером памяти.|

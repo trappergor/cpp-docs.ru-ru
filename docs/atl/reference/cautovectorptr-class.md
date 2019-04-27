@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CAutoVectorPtr class
 ms.assetid: 0030362b-6bc4-4a47-9b5b-3c3899dceab4
 ms.openlocfilehash: f614318125f3c6bce4003fee5fb4a945c7c88129
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260387"
 ---
 # <a name="cautovectorptr-class"></a>Класс CAutoVectorPtr
 
@@ -43,14 +43,14 @@ class CAutoVectorPtr
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAutoVectorPtr::CAutoVectorPtr](#cautovectorptr)|Конструктор.|
 |[CAutoVectorPtr:: ~ CAutoVectorPtr](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoVectorPtr::Allocate](#allocate)|Вызовите этот метод для выделения памяти, необходимый массив объектов, указываемых `CAutoVectorPtr`.|
 |[CAutoVectorPtr::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
@@ -59,14 +59,14 @@ class CAutoVectorPtr
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAutoVectorPtr::operator T *](#operator_t__star)|Оператор приведения типов.|
 |[CAutoVectorPtr::operator =](#operator_eq)|Оператор присваивания.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAutoVectorPtr::m_p](#m_p)|Указатель данных переменная-член.|
 

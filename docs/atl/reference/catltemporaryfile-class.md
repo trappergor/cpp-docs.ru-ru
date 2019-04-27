@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
 ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246906"
 ---
 # <a name="catltemporaryfile-class"></a>Класс CAtlTemporaryFile
 
@@ -46,14 +46,14 @@ class CAtlTemporaryFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlTemporaryFile::CAtlTemporaryFile](#catltemporaryfile)|Конструктор.|
 |[CAtlTemporaryFile:: ~ CAtlTemporaryFile](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlTemporaryFile::Close](#close)|Вызовите этот метод, чтобы закрыть во временный файл и удалить его содержимое или сохранять их под именем указанного файла.|
 |[CAtlTemporaryFile::Create](#create)|Вызовите этот метод, чтобы создать временный файл.|
@@ -72,7 +72,7 @@ class CAtlTemporaryFile
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlTemporaryFile::operator ДЕСКРИПТОР](#operator_handle)|Возвращает дескриптор во временный файл.|
 

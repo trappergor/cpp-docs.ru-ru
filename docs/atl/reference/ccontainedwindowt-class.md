@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
 ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246053"
 ---
 # <a name="ccontainedwindowt-class"></a>Класс CContainedWindowT
 
@@ -58,13 +58,13 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CContainedWindowT::CContainedWindowT](#ccontainedwindowt)|Конструктор. Инициализирует элементы данных, чтобы указать, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CContainedWindowT::Create](#create)|Создает окно.|
 |[CContainedWindowT::DefWindowProc](#defwindowproc)|Обеспечивает обработку сообщений по умолчанию.|
@@ -77,7 +77,7 @@ class CContainedWindowT : public TBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CContainedWindowT::m_dwMsgMapID](#m_dwmsgmapid)|Определяет, какие схемы сообщений будет обрабатывать содержащееся окно сообщения.|
 |[CContainedWindowT::m_lpszClassName](#m_lpszclassname)|Задает имя используемого существующий класс окон, на котором будет основан новый класс окна.|

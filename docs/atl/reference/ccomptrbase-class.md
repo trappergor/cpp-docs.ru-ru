@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
 ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246235"
 ---
 # <a name="ccomptrbase-class"></a>Класс CComPtrBase
 
@@ -40,17 +40,17 @@ class CComPtrBase
 *T*<br/>
 Тип объекта, на которые ссылается интеллектуального указателя.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComPtrBase::~CComPtrBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComPtrBase::Advise](#advise)|Вызовите этот метод, чтобы создать подключение между `CComPtrBase`в точку подключения и приемником клиента.|
 |[CComPtrBase::Attach](#attach)|Вызовите этот метод, чтобы стать владельцем существующего указателя.|
@@ -64,7 +64,7 @@ class CComPtrBase
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComPtrBase::operator T*](#operator_t_star)|Оператор приведения типов.|
 |[CComPtrBase::operator !](#operator_not)|Оператор NOT.|
@@ -76,7 +76,7 @@ class CComPtrBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComPtrBase::p](#p)|Указатель данных переменная-член.|
 

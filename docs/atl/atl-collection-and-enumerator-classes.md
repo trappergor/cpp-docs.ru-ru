@@ -6,17 +6,17 @@ helpviewer_keywords:
 - collection classes, ATL
 ms.assetid: 6818db73-7094-48d8-a0ca-18147beec362
 ms.openlocfilehash: b1ab9a160b01ea278d162a515e5121054bf398f7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62252329"
 ---
 # <a name="atl-collection-and-enumerator-classes"></a>Классы коллекций ATL и перечислителей
 
 Библиотека ATL предоставляет следующие классы для реализации коллекции и перечислители.
 
-|Класс|Описание:|
+|Класс|Описание|
 |-----------|-----------------|
 |[ICollectionOnSTLImpl](../atl/reference/icollectiononstlimpl-class.md)|Реализация интерфейса коллекции|
 |[IEnumOnSTLImpl](../atl/reference/ienumonstlimpl-class.md)|Реализация интерфейса перечислителя (предполагается, что данные, хранящиеся в контейнере совместимые библиотеки C++ Standard)|

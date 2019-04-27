@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CA2AEX class
 ms.assetid: 57dc65df-d9cf-4a84-99d3-6e031dde3664
 ms.openlocfilehash: 712e663ab58e2c9de4e2f25090b84b35d0bced71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247642"
 ---
 # <a name="ca2aex-class"></a>Класс CA2AEX
 
@@ -36,24 +36,24 @@ class CA2AEX
 *t_nBufferLength*<br/>
 Размер буфера, используемого в процессе перевода. Длина по умолчанию равен 128 байтам.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CA2AEX::CA2AEX](#ca2aex)|Конструктор.|
 |[CA2AEX:: ~ CA2AEX](#dtor)|Деструктор|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CA2AEX::operator LPSTR](#operator_lpstr)|Оператор преобразования.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CA2AEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|
 |[CA2AEX::m_szBuffer](#m_szbuffer)|Статический буфер, используемый для хранения преобразованную строку.|
