@@ -31,11 +31,11 @@ helpviewer_keywords:
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
 ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156140"
 ---
 # <a name="norm-normf-norml"></a>norm, normf, norml
 
@@ -65,7 +65,7 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **norm** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long double** значения. В программе на языке C **norm** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **norm** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float**или **long double** значения. В программе на языке C **norm** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 

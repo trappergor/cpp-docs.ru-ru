@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151287"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -682,7 +682,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 
 Имя, зарегистрированное для класса `AfxRegisterWndClass` исключительно зависит от параметров. При вызове метода `AfxRegisterWndClass` несколько раз с идентичными параметрами, она только регистрирует класс при первом вызове. Последующие вызовы `AfxRegisterWndClass` с идентичными параметрами просто возвращают имя класса уже зарегистрирован.
 
-Если вы вызываете `AfxRegisterWndClass` для нескольких классы, производные от CWnd, с идентичными параметрами, вместо получения класса отдельное окно для каждого класса, каждый класс использует один класс. Это может вызвать проблемы, если используется стиль класса CS_CLASSDC. Вместо нескольких классов окон CS_CLASSDC вы получите один класс CS_CLASSDC окна и всех windows на C++, использующих этот общий ресурс класса одного контроллера домена. Чтобы избежать этой проблемы, вызовите [AfxRegisterClass](#afxregisterclass) для регистрации класса.
+Если вы вызываете `AfxRegisterWndClass` для нескольких классы, производные от CWnd, с идентичными параметрами, вместо получения класса отдельное окно для каждого класса, каждый класс использует один класс. Это может вызвать проблемы, если используется стиль класса CS_CLASSDC. Вместо нескольких классов окон CS_CLASSDC, вы получите один класс окна CS_CLASSDC и все C++ windows, использующие этот класс совместного использования одного контроллера домена. Чтобы избежать этой проблемы, вызовите [AfxRegisterClass](#afxregisterclass) для регистрации класса.
 
 См. в техническом примечании [TN001: Регистрация класса Window](../../mfc/tn001-window-class-registration.md) Дополнительные сведения о регистрации класса окна и `AfxRegisterWndClass` функции.
 

@@ -55,11 +55,11 @@ helpviewer_keywords:
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
 ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62178115"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>Справочник по командной строке ML и ML64
 
@@ -89,7 +89,7 @@ ms.locfileid: "51331260"
 |**/Cx**|Сохраняет в символах public и extern.|
 |**/D** *символ*[[=*значение*]]|Определяет макрос text с заданным именем. Если *значение* является отсутствует, это свойство пусто. Несколько токенов, разделенных пробелами должны заключаться в кавычки.|
 |**/EP**|Создает обработанный исходный список (направляются в STDOUT). См. в разделе **/Sf**.|
-|**/ ERRORREPORT** [ **NONE** &AMP;#124; **PROMPT** &AMP;#124; **ОЧЕРЕДИ** &AMP;#124; **ОТПРАВКИ** ]|Если ml.exe и ml64.exe сбое во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.<br /><br /> Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
+|**/ERRORREPORT** [ **NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND** ]|Если ml.exe и ml64.exe сбое во время выполнения, можно использовать **/errorReport** в корпорацию Майкрософт сведения об этих ошибках.<br /><br /> Дополнительные сведения о **/errorReport**, см. в разделе [/errorReport (отчет внутренних ошибках компилятора)](../../build/reference/errorreport-report-internal-compiler-errors.md).|
 |**/F** *hexnum*|Задает размер для стека *hexnum* байт (так же, как это **/ссылку/STACK**:*номер*). Значение должно быть выражено в шестнадцатеричном формате. Должен быть пробел между **/F** и *hexnum*.|
 |**/FE** *имя файла*|Имя исполняемого файла.|
 |**/Fl**[[*filename*]]|Создает список собранного кода. См. в разделе **/Sf**.|

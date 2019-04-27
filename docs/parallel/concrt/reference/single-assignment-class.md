@@ -20,11 +20,11 @@ helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
 ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159916"
 ---
 # <a name="singleassignment-class"></a>Класс single_assignment
 
@@ -46,21 +46,21 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[single_assignment](#ctor)|Перегружен. Создает блок обмена сообщениями `single_assignment` .|
 |[~ single_assignment деструктор](#dtor)|Уничтожает `single_assignment` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[has_value](#has_value)|Проверяет, является ли это `single_assignment` блок обмена сообщениями еще была инициализирована со значением.|
 |[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `single_assignment` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `single_assignment` блок обмена сообщениями, возвращая копию сообщения вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `single_assignment` и зарезервированного целевым объектом, возвращая копию сообщения вызывающему объекту.|

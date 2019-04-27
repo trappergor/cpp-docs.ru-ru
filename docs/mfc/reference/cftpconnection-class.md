@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
 ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181981"
 ---
 # <a name="cftpconnection-class"></a>Класс CFtpConnection
 
@@ -51,13 +51,13 @@ class CFtpConnection : public CInternetConnection
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFtpConnection::CFtpConnection](#cftpconnection)|Создает объект `CFtpConnection`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFtpConnection::Command](#command)|Отправляет команду напрямую на FTP-сервер.|
 |[CFtpConnection::CreateDirectory](#createdirectory)|Создает каталог на сервере.|

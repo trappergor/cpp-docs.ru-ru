@@ -17,11 +17,11 @@ helpviewer_keywords:
 - task scheduler [Concurrency Runtime], wait function
 ms.assetid: 9aba278c-e0c9-4ede-b7c6-fedf7a365d90
 ms.openlocfilehash: c5d37d320344d2ebf83be2c939f5a7372d4af306
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286813"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180060"
 ---
 # <a name="task-scheduler-concurrency-runtime"></a>Планировщик задач (среда выполнения с параллелизмом)
 
@@ -45,7 +45,7 @@ ms.locfileid: "57286813"
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Экземпляры планировщика](../../parallel/concrt/scheduler-instances.md)|В этом разделе описываются экземпляры планировщиков и использование классов `concurrency::Scheduler` и `concurrency::CurrentScheduler` для управления ими. Используйте экземпляры планировщика, когда требуется связать явные политики планирования с определенными типами рабочих нагрузок.|
 |[Политики планировщика](../../parallel/concrt/scheduler-policies.md)|В этом разделе описывается роль политик планировщика. Используйте политики планировщика, если нужно управлять стратегией, которую планировщик применяет при управлении задачами.|

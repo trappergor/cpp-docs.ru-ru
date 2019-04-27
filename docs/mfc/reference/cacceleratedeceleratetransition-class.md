@@ -8,11 +8,11 @@ helpviewer_keywords:
 - CAccelerateDecelerateTransition class [MFC]
 ms.assetid: b1f31ee8-bb11-4ccc-b124-365fb02b025c
 ms.openlocfilehash: dbebe794ba76ae4abd3d1e3ea6bc8ee31bc3007f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151205"
 ---
 # <a name="cacceleratedeceleratetransition-class"></a>Класс CAccelerateDecelerateTransition
 
@@ -28,19 +28,19 @@ class CAccelerateDecelerateTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAccelerateDecelerateTransition::CAccelerateDecelerateTransition](#cacceleratedeceleratetransition)|Создает объект перехода.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAccelerateDecelerateTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAccelerateDecelerateTransition::m_accelerationRatio](#m_accelerationratio)|Доля времени, затраченный на ускорение длительности.|
 |[CAccelerateDecelerateTransition::m_decelerationRatio](#m_decelerationratio)|Доля времени, затраченного на замедление длительности.|
