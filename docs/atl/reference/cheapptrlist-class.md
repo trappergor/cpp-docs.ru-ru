@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CHeapPtrList class
 ms.assetid: cc70e585-362a-4007-81db-c705eb181226
 ms.openlocfilehash: 84b4241dcad8d54321aea37c7055c6669ff3ca87
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245651"
 ---
 # <a name="cheapptrlist-class"></a>Класс CHeapPtrList
 
@@ -39,11 +39,11 @@ class CHeapPtrList
 *Распределитель*<br/>
 Класс выделения памяти для использования. По умолчанию используется [CCRTAllocator](../../atl/reference/ccrtallocator-class.md).
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHeapPtrList::CHeapPtrList](#cheapptrlist)|Конструктор.|
 

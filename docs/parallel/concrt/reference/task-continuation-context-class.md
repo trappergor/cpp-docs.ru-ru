@@ -13,11 +13,11 @@ helpviewer_keywords:
 - task_continuation_context class
 ms.assetid: 1fb5a76a-3682-45c2-a615-8b6b527741f0
 ms.openlocfilehash: 5d7d92fcd1bb00513b9e05030afa56726e87183b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212861"
 ---
 # <a name="taskcontinuationcontext-class"></a>Класс task_continuation_context
 
@@ -33,7 +33,7 @@ class task_continuation_context : public details::_ContextCallback;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[get_current_winrt_context](#get_current_winrt_context)|Возвращает объект контекста продолжения задачи, представляющий текущий контекст потока winrt.|
 |[use_arbitrary](#use_arbitrary)|Создает контекст продолжения выполнения задачи, который позволяет среде выполнения возможность выбора контекста для продолжения.|
@@ -73,7 +73,7 @@ static task_continuation_context get_current_winrt_context();
 
 Значение, возвращенное `get_current_winrt_context` позволяют среде выполнения понять, что продолжение должно выполняться в модели подразделения в захваченном контексте (STA или MTA), даже если предшествующая задача является с поддержкой. Задача — это задача, развертывающая среды выполнения Windows с поддержкой `IAsyncInfo` интерфейс или задача, наследуемая от такой задачи.
 
-Этот метод аналогичен методу `use_current` метод, но она также доступна в машинный код C++ не используется C + +/ CX поддержка расширения. Он предназначен для использования Опытные пользователи написание C + +/ CX-независимый код библиотеки для машинного кода и вызывающие объекты среды выполнения Windows. Если данная функция необходима, мы не рекомендуем `use_current` метод, который доступен только для C + +/ CX клиентов.
+Этот метод аналогичен методу `use_current` метод, но она также доступна в машинный код C++ код без C++/CX поддержка расширения. Он предназначен для использования Опытные пользователи записи C++/CX-agnostic код библиотеки для машинного кода и вызывающие объекты среды выполнения Windows. Если данная функция необходима, мы не рекомендуем `use_current` метод, который доступен только для C++/CX клиентов.
 
 ##  <a name="use_arbitrary"></a> use_arbitrary
 

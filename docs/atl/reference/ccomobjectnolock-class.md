@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CComObjectNoLock class
 ms.assetid: 288c6506-7da8-4127-8d58-7f4bd779539a
 ms.openlocfilehash: 50dc4505c1da8df9efc0c9d0028461ef49c0840e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246304"
 ---
 # <a name="ccomobjectnolock-class"></a>Класс CComObjectNoLock
 
@@ -38,14 +38,14 @@ class CComObjectNoLock : public Base
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComObjectNoLock::CComObjectNoLock](#ccomobjectnolock)|Конструктор.|
 |[CComObjectNoLock::~CComObjectNoLock](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CComObjectNoLock::AddRef](#addref)|Увеличивает счетчик ссылок на объект.|
 |[CComObjectNoLock::QueryInterface](#queryinterface)|Возвращает указатель на запрашиваемый интерфейс.|

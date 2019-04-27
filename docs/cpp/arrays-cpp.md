@@ -7,20 +7,20 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184518"
 ---
 # <a name="arrays-c"></a>Массивы (C++)
 
 Массив — это коллекция похожих объектов. Простейший пример массива — вектор, который может быть объявлен следующей последовательностью:
 
-> *спецификатор decl* *идентификатор* **\[** *константное_выражение* **]**<br/>
+> *decl-specifier* *identifier* **\[** *constant-expression* **]**<br/>
 > *спецификатор decl* *идентификатор*  **\[]**<br/>
-> *спецификатор decl* *идентификатор* **\[]\[** *константное_выражение* **]** . . .<br/>
-> *спецификатор decl* *идентификатор* **\[** *константное_выражение* **]** **\[** *константное_выражение* **]** . . .
+> *decl-specifier* *identifer* **\[]\[** *constant-expression* **]** . . .<br/>
+> *decl-specifier* *identifier* **\[** *constant-expression* **]** **\[** *constant-expression* **]** . . .
 
 1. Спецификатор объявления:
 

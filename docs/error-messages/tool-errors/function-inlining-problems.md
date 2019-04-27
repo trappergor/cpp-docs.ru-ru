@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -Ob2 C++ compiler option
 - function inlining problems
 ms.assetid: 65d59943-4b3c-4a43-aeb6-dccbf7686740
-ms.openlocfilehash: fec3884dff0dda7140f18fa53e493c12996edcf0
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: f088b0f3ec94ad59c9c5576e6090a895bb88c3ad
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59031528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62255504"
 ---
 # <a name="function-inlining-problems"></a>Проблемы при встраивании функций
 
@@ -24,7 +24,7 @@ ms.locfileid: "59031528"
 
 - У встраивания в файле заголовка.
 
-```
+```cpp
 // LNK2019_function_inline.cpp
 // compile with: /c
 // post-build command: lib LNK2019_function_inline.obj
@@ -39,7 +39,7 @@ void _load_config_used::Test() { printf("in Test\n"); }
 
 Затем:
 
-```
+```cpp
 // LNK2019_function_inline_2.cpp
 // compile with: LNK2019_function_inline.lib
 struct _load_config_used {
@@ -60,7 +60,7 @@ int main() {
 
 Аналогичным образом проект, использующий встраивания функции определяет функции еще в CPP-файле, а не в заголовке файла также получат ошибку LNK2019. Файл заголовка включается необходимости везде, но функции являются только как встроенный когда CPP-файл проходит через компилятора. Таким образом компоновщик считает функции неразрешенных внешних элементов, при использовании в других модулях.
 
-```
+```cpp
 // LNK2019_FIP.h
 struct testclass {
    void PublicStatMemFunc1(void);
@@ -69,7 +69,7 @@ struct testclass {
 
 И потом
 
-```
+```cpp
 // LNK2019_FIP.cpp
 // compile with: /c
 #include "LNK2019_FIP.h"
@@ -78,7 +78,7 @@ inline void testclass::PublicStatMemFunc1(void) {}
 
 И потом
 
-```
+```cpp
 // LNK2019_FIP_2.cpp
 // compile with: LNK2019_FIP.cpp
 // LNK2019 expected

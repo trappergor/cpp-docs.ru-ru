@@ -17,11 +17,11 @@ helpviewer_keywords:
 - controls [C++], container running in ATL
 ms.assetid: 305c7c3b-889e-49dd-aca1-34379c1b9931
 ms.openlocfilehash: 44b1e0ae1b72a40b45abe0650eb69a279b5a84d1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62200343"
 ---
 # <a name="irunnableobjectimpl-class"></a>Класс IRunnableObjectImpl
 
@@ -46,7 +46,7 @@ class IRunnableObjectImpl
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IRunnableObjectImpl::GetRunningClass](#getrunningclass)|Возвращает идентификатор CLSID элемента управления выполнения. Реализация ATL задает CLSID значение GUID_NULL и возвращает E_UNEXPECTED.|
 |[IRunnableObjectImpl::IsRunning](#isrunning)|Определяет, работает ли элемент управления. Реализация ATL возвращает значение TRUE.|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - OLE [MFC], data sources
 ms.assetid: f7f27e77-bb5d-4131-b819-d71bf929ebaf
 ms.openlocfilehash: 81dfe911866c4d1ba1720ee2c9854076c499f0a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241553"
 ---
 # <a name="data-objects-and-data-sources-manipulation"></a>Объекты данных и источников данных: Манипуляции
 
@@ -37,7 +37,7 @@ ms.locfileid: "57286755"
 
 - Вызовите `COleDataSource::CacheGlobalData` несколько раз для каждого формат буфера обмена, в которой указываются данные. Формат буфера обмена для использования, передайте дескриптор памяти, содержащий данные, возможно, **FORMATETC** структуры, описывающий данные.
 
-     - или -
+     -или-
 
 - Если требуется работать непосредственно с **STGMEDIUM** структуры, вы вызываете `COleDataSource::CacheData` вместо `COleDataSource::CacheGlobalData` в параметре выше.
 
@@ -47,7 +47,7 @@ ms.locfileid: "57286755"
 
 - Вызовите `COleDataSource::DelayRenderData` несколько раз для каждого формат буфера обмена, в которой указываются данные. Передайте формат буфера обмена для использования и, возможно, **FORMATETC** структуры, описывающий данные. При запросе данных, платформа вызывает `COleDataSource::OnRenderData`, который необходимо переопределить.
 
-     - или -
+     -или-
 
 - Если вы используете `CFile` объект в качестве источника данных, вызовите `COleDataSource::DelayRenderFileData` вместо `COleDataSource::DelayRenderData` в предыдущем варианте. При запросе данных, платформа вызывает `COleDataSource::OnRenderFileData`, который необходимо переопределить.
 

@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195320"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Экспорт из библиотеки DLL с использованием __declspec(dllexport)
 
-Майкрософт ввел **__export** в версии 16-разрядный компилятор Visual C++, чтобы разрешить компилятору автоматически создавать экспортируемые имена и помещать их в LIB-файл. Затем этот LIB-файл можно использовать так же, как статический .lib для связывания с библиотекой DLL.
+Майкрософт ввел **__export** в 16-разрядный компилятор версии визуального элемента C++ позволяет компилятору автоматически создавать экспортируемые имена и помещать их в LIB-файл. Затем этот LIB-файл можно использовать так же, как статический .lib для связывания с библиотекой DLL.
 
 В новых версиях компилятора можно экспортировать данные, функции, классы и функции-члены класса из библиотеки DLL с помощью **__declspec(dllexport)** ключевое слово. **__declspec(dllexport)** добавляет директивы экспорта в объектный файл, поэтому необходимо создать DEF-файл.
 
@@ -68,7 +68,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 - [Определение подходящего метода экспорта для использования](determining-which-exporting-method-to-use.md)
 
-- [Импорт в приложение с помощью объявления __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
+- [Импорт в приложение с помощью __declspec(dllimport)](importing-into-an-application-using-declspec-dllimport.md)
 
 - [Инициализация библиотеки DLL](run-time-library-behavior.md#initializing-a-dll)
 

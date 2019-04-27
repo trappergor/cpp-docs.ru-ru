@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CMFCDropDownFrame [MFC], SetAutoDestroy
 ms.assetid: 09ff81a9-de00-43ec-9df9-b626f7728c4b
 ms.openlocfilehash: 534dc90443371c8440e0cb317540f2cf80f6eacc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62237377"
 ---
 # <a name="cmfcdropdownframe-class"></a>Класс CMFCDropDownFrame
 
@@ -39,7 +39,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCDropDownFrame::CMFCDropDownFrame`|Конструктор по умолчанию.|
 |`CMFCDropDownFrame::~CMFCDropDownFrame`|Деструктор.|
 
@@ -47,7 +47,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CMFCDropDownFrame::Create](#create)|Создает объект `CMFCDropDownFrame`.|
 |`CMFCDropDownFrame::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |[CMFCDropDownFrame::GetParentMenuBar](#getparentmenubar)|Извлекает меню родительского фрейма раскрывающегося списка.|
@@ -102,7 +102,7 @@ virtual BOOL Create(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pWndParent*|[in] Родительское окно фрейма раскрывающегося списка.|
 |*x*|[in] Горизонтальная координата экрана для расположения кадра в раскрывающемся списке.|
 |*y*|[in] Вертикальная координата экрана для расположения кадра в раскрывающемся списке.|
@@ -162,7 +162,7 @@ virtual void RecalcLayout(BOOL bNotify = TRUE);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*bNotify*|[in] Не используется.|
 
 ### <a name="remarks"></a>Примечания

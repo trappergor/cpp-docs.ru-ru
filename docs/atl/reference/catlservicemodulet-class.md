@@ -36,11 +36,11 @@ helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
 ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260205"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 
@@ -64,17 +64,17 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 *nServiceNameID*<br/>
 Идентификатор ресурса службы.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlServiceModuleT::CAtlServiceModuleT](#catlservicemodulet)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAtlServiceModuleT::Handler](#handler)|Подпрограмму обработчика для службы.|
 |[CAtlServiceModuleT::InitializeSecurity](#initializesecurity)|Предоставляет значение по умолчанию параметры безопасности для службы.|
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CAtlServiceModuleT : public CAtlExeModuleT<T>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlServiceModuleT::m_bService](#m_bservice)|Флаг, указывающий, что программа выполняется как служба.|
 |[CAtlServiceModuleT::m_dwThreadID](#m_dwthreadid)|Переменная-член хранения идентификатор потока.|

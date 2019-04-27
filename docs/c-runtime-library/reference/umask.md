@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155424"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ int _umask( int pmode );
 |-|-|
 | **_S_IWRITE** | Разрешена запись. |
 | **_S_IREAD** | Разрешено чтение. |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | Разрешены чтение и запись. |
+| **_S_IREAD** &#124; **_S_IWRITE** | Разрешены чтение и запись. |
 
 Если заданы обе константы, они объединяются с помощью оператора побитового или ( **&#124;** ). Если *pmode* аргумент **_S_IREAD**, чтение запрещено (файл доступен только для записи). Если *pmode* аргумент **_S_IWRITE**, запись запрещена (файл доступен только для чтения). Например, если в маске установлен бит записи, все новые файлы будут доступны только для чтения. Обратите внимание, что в операционных системах MS-DOS и Windows все файлы доступны для чтения; невозможно предоставить разрешение только на запись. Таким образом, Установка бита чтения с помощью **_umask** не влияет на режимы файла.
 

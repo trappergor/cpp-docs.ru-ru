@@ -8,11 +8,11 @@ helpviewer_keywords:
 - wmain function
 ms.assetid: 7abb1257-b85c-413a-b913-d45b1582a71d
 ms.openlocfilehash: 8cdc986d1582d2b26f137e3147ce78bc83e9daca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62257976"
 ---
 # <a name="using-wmain-instead-of-main"></a>Использование wmain вместо main
 
@@ -32,4 +32,4 @@ ms.locfileid: "50677764"
 
 ## <a name="see-also"></a>См. также
 
-[Функция main: запуск программы](../cpp/main-program-startup.md)
+[main: запуск программы](../cpp/main-program-startup.md)

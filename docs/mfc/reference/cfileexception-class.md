@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CFileException [MFC], m_strFileName
 ms.assetid: f6491bb9-bfbc-42fd-a952-b33f9b62323f
 ms.openlocfilehash: a3514c76d4136fe2bc0b096cc382e6f7f4dd3392
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205940"
 ---
 # <a name="cfileexception-class"></a>Класс CFileException
 
@@ -45,13 +45,13 @@ class CFileException : public CException
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileException::CFileException](#cfileexception)|Создает объект `CFileException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileException::ErrnoToException](#errnotoexception)|Возвращает вызвать код, соответствующий номеру ошибки времени выполнения.|
 |[CFileException::GetErrorMessage](#geterrormessage)|Получает сообщение, описывающее исключение.|
@@ -61,7 +61,7 @@ class CFileException : public CException
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileException::m_cause](#m_cause)|Содержит переносимого кода, соответствующий причине исключения.|
 |[CFileException::m_lOsError](#m_loserror)|Содержит число ошибок, связанных с операционной системы.|

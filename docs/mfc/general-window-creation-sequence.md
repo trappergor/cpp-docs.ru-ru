@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sequence [MFC]
 ms.assetid: 9cd8c7ea-5e24-429e-b6d9-d7b6041d8ba6
 ms.openlocfilehash: 949cf72910654b502ca4b57be72bedc2db63c315
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219571"
 ---
 # <a name="general-window-creation-sequence"></a>Общая последовательность создания окна
 
@@ -20,7 +20,7 @@ ms.locfileid: "57269231"
 
 Все классы окон, предоставляемые MFC используют [конструкции двухэтапное](../mfc/one-stage-and-two-stage-construction-of-objects.md). То есть во время вызова C++ **новый** оператора, конструктор выделяет и инициализирует объект с ++, но не создает соответствующее окно Windows. Можно впоследствии сделать, вызвав [создать](../mfc/reference/cwnd-class.md#create) функция-член объекта window.
 
-`Create` Функция-член делает окно Windows и сохраняет его `HWND` в объекте C++ открытый элемент данных [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` позволяет выполнить гибкость через параметры создания. Перед вызовом `Create`, может потребоваться зарегистрировать класс окна с помощью глобальной функции [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) Чтобы задать значок и класс стили рамки.
+`Create` Функция-член делает окно Windows и сохраняет его `HWND` в C++ объекта открытый элемент данных [m_hWnd](../mfc/reference/cwnd-class.md#m_hwnd). `Create` позволяет выполнить гибкость через параметры создания. Перед вызовом `Create`, может потребоваться зарегистрировать класс окна с помощью глобальной функции [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass) Чтобы задать значок и класс стили рамки.
 
 Для окна фрейма, можно использовать [LoadFrame](../mfc/reference/cframewnd-class.md#loadframe) функция-член вместо `Create`. `LoadFrame` делает окно Windows, с помощью меньшим числом параметров. Он получает множество значений по умолчанию из ресурсов, включая заголовок, значок, таблицу сочетаний клавиш и меню фрейма.
 
