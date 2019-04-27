@@ -3,15 +3,15 @@ title: Классы Array и WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
 ms.openlocfilehash: fd616487bd3c11544f12e84a7dc64f41e63d501a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62209420"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Классы Array и WriteOnlyArray (C++/CX)
 
-Можно свободно использовать обычные массивы в стиле C или [std::array](../standard-library/array-class-stl.md) в C + +/ CX программы (несмотря на то что [std::vector](../standard-library/vector-class.md) часто является наиболее предпочтительной), но в любом API, который публикуется в метаданных, необходимо преобразовать массив в стиле C или вектора синхронизации в [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.
+Можно свободно использовать обычные массивы в стиле C или [std::array](../standard-library/array-class-stl.md) в C++/CX программы (несмотря на то что [std::vector](../standard-library/vector-class.md) часто является наиболее предпочтительной), но в любом API, который публикуется в метаданных, необходимо преобразовать Массив в стиле C или вектор, который необходимо [Platform::Array](../cppcx/platform-array-class.md) или [Platform::WriteOnlyArray](../cppcx/platform-writeonlyarray-class.md) типа в зависимости от того, как он используется. Тип [Platform::Array](../cppcx/platform-array-class.md) не сравним по эффективности и широте возможностей с типом [std::vector](../standard-library/vector-class.md), поэтому в общем случае не рекомендуется использовать его во внутреннем коде, который выполняет множество операций над элементами массива.
 
 Следующие типы массивов могут передаваться через ABI:
 

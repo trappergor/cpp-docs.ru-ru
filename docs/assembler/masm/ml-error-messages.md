@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), ML error messages
 ms.assetid: e7e164b3-6d65-4b5b-8925-bfbebc043523
 ms.openlocfilehash: aa0440afae980e218c32ab3296bd7c6fb2b444d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62202215"
 ---
 # <a name="ml-error-messages"></a>Сообщения об ошибках ML
 
@@ -26,7 +26,7 @@ ms.locfileid: "50677803"
 
 Все сообщения об ошибках имеют следующий вид:
 
-> *Программа*: *Filename* (*строки*): {*Error_type*} (*кода*): *Message_text*
+> *Программа*: *Имя файла* (*строки*): {*Error_type*} (*код*): *Message_text*
 
 Здесь:
 

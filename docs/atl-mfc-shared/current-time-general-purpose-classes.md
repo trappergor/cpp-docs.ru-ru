@@ -1,5 +1,5 @@
 ---
-title: 'Текущее время: Классы общего назначения'
+title: Текущее время. Классы общего назначения
 ms.date: 11/04/2016
 helpviewer_keywords:
 - time, setting current
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - time, getting current
 ms.assetid: c39e6775-6a92-4b27-95a7-5c86ed371d8a
 ms.openlocfilehash: e883a47243feb7ad1555748ffdda9b8ae9594644
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62236218"
 ---
-# <a name="current-time-general-purpose-classes"></a>Текущее время: Классы общего назначения
+# <a name="current-time-general-purpose-classes"></a>Текущее время. Классы общего назначения
 
 Ниже показано, как создать `CTime` и инициализируйте его с текущим временем.
 

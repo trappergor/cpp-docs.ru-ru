@@ -1,17 +1,17 @@
 ---
-title: Как выполнить Создание и использование экземпляров weak_ptr
+title: Практическое руководство. Создание и использование экземпляров weak_ptr
 ms.custom: how-to
 ms.date: 07/12/2018
 ms.topic: conceptual
 ms.assetid: 8dd6909b-b070-4afa-9696-f2fc94579c65
 ms.openlocfilehash: 1a0e2880e97a77a0c9975553631a6024072745f0
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184705"
 ---
-# <a name="how-to-create-and-use-weakptr-instances"></a>Как выполнить Создание и использование экземпляров weak_ptr
+# <a name="how-to-create-and-use-weakptr-instances"></a>Практическое руководство. Создание и использование экземпляров weak_ptr
 
 Иногда объект должен хранить способ доступа к базовым объектом объекта `shared_ptr` не вызывая счетчик ссылок увеличивается. Как правило, такая ситуация возникает при наличии циклических ссылок между `shared_ptr` экземпляров.
 

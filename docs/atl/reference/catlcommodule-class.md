@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CAtlComModule class
 ms.assetid: af5dd71a-a0d1-4a2e-9a24-154a03381c75
 ms.openlocfilehash: 09adcb33ca9e6f8524063130d6aedca044d6ecb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62247195"
 ---
 # <a name="catlcommodule-class"></a>Класс CAtlComModule
 
@@ -33,14 +33,14 @@ class CAtlComModule : public _ATL_COM_MODULE
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlComModule::CAtlComModule](#catlcommodule)|Конструктор.|
 |[CAtlComModule::~CAtlComModule](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAtlComModule::RegisterServer](#registerserver)|Вызовите этот метод, чтобы обновить реестр для каждого объекта в карте объектов.|
 |[CAtlComModule::RegisterTypeLib](#registertypelib)|Вызовите этот метод для регистрации библиотеки типов.|
