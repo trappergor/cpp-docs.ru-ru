@@ -10,11 +10,11 @@ helpviewer_keywords:
 - foreground colors [MFC]
 ms.assetid: 8b98c8c5-5b69-4366-87bf-0e61e6668ecb
 ms.openlocfilehash: 940f61c9ce6ccb57843333582455e61c1f7ac73b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62225347"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>Элементы ActiveX в MFC. Добавление стандартных свойств
 
@@ -37,7 +37,7 @@ ms.locfileid: "57289693"
 
 ##  <a name="_core_using_classwizard_to_add_a_stock_property"></a> Используя мастер добавления свойства для добавления стандартных свойств
 
-Добавление стандартных свойств требует меньше кода, чем добавление пользовательских свойств, так как поддержка свойство обрабатывается автоматически в `COleControl`. Следующая процедура демонстрирует добавление хранения свойство Caption элемента управления ActiveX и также может использоваться для добавления других стандартных свойств. Замените имя выбранного стандартное свойство для заголовка.
+Добавление стандартных свойств требует меньше кода, чем добавление пользовательских свойств, так как поддержка свойство обрабатывается автоматически в `COleControl`. Следующая процедура демонстрирует добавление хранения свойство Caption כולוםע סענףךעףנ элемента управления ActiveX и также может использоваться для добавления других стандартных свойств. Замените имя выбранного стандартное свойство для заголовка.
 
 #### <a name="to-add-the-stock-caption-property-using-the-add-property-wizard"></a>Чтобы добавить стандартное свойство Caption, с помощью мастера добавления свойства
 
@@ -73,7 +73,7 @@ ms.locfileid: "57289693"
 
 `COleControl` Класс предоставляет девять стандартные свойства. Можно добавить свойства, которые с помощью мастера добавления свойства.
 
-|Свойство.|Запись сопоставления диспетчеризации|Как получить доступ к значению|
+|Свойство|Запись сопоставления диспетчеризации|Как получить доступ к значению|
 |--------------|------------------------|-------------------------|
 |`Appearance`|DISP_STOCKPROP_APPEARANCE( )|Значение, уровень доступности, как `m_sAppearance`.|
 |`BackColor`|(DISP_STOCKPROP_BACKCOLOR)|Значение, доступным путем вызова `GetBackColor`.|
@@ -103,6 +103,6 @@ ms.locfileid: "57289693"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Свойства](../mfc/mfc-activex-controls-properties.md)<br/>
-[Элементы ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
+[Элементы управления ActiveX MFC. Свойства](../mfc/mfc-activex-controls-properties.md)<br/>
+[Элементы управления ActiveX MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
 [Класс COleControl](../mfc/reference/colecontrol-class.md)
