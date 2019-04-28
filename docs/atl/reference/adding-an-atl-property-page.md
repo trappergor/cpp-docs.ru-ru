@@ -7,11 +7,11 @@ helpviewer_keywords:
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
 ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290024"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62249103"
 ---
 # <a name="adding-an-atl-property-page"></a>Добавление страницы свойств ATL
 
@@ -36,4 +36,4 @@ ms.locfileid: "57290024"
 
 [Страницы свойств](../../atl/atl-com-property-pages.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[Пример: Реализация страницы свойств](../../atl/example-implementing-a-property-page.md)
+[Пример: реализация страницы свойств](../../atl/example-implementing-a-property-page.md)

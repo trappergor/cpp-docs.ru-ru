@@ -81,11 +81,11 @@ helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
 ms.openlocfilehash: 698912100244189bdec99fa3726a063eb2e907a7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62260114"
 ---
 # <a name="ccomcontrolbase-class"></a>Класс CComControlBase
 
@@ -100,24 +100,24 @@ ms.locfileid: "57298221"
 class ATL_NO_VTABLE CComControlBase
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComControlBase::AppearanceType](#appearancetype)|Переопределить, если ваш `m_nAppearance` не стандартное свойство типа **короткие**.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComControlBase::CComControlBase](#ccomcontrolbase)|Конструктор.|
 |[CComControlBase:: ~ CComControlBase](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComControlBase::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
 |[CComControlBase::DoesVerbActivate](#doesverbactivate)|Проверяет, что *iVerb* параметра, используемого методом `IOleObjectImpl::DoVerb` либо активирует элемента управления пользовательского интерфейса (*iVerb* равно OLEIVERB_UIACTIVATE), определяет действие, выполняемое при двойном щелчке элемент управления (*iVerb* равно OLEIVERB_PRIMARY), отображает элемент управления (*iVerb* равно OLEIVERB_SHOW), или активирует элемент управления (*iVerb* равно OLEIVERB _INPLACEACTIVATE).|
@@ -168,7 +168,7 @@ class ATL_NO_VTABLE CComControlBase
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CComControlBase::m_bAutoSize](#m_bautosize)|Флаг, указывающий, что элемент управления не может быть любой другой размер.|
 |[CComControlBase::m_bDrawFromNatural](#m_bdrawfromnatural)|Флаг, указывающий, что `IDataObjectImpl::GetData` и `CComControlBase::GetZoomInfo` должен устанавливать размер элемента управления из `m_sizeNatural` , а не из `m_sizeExtent`.|
@@ -1219,9 +1219,9 @@ CComPtr<IOleInPlaceSiteWindowless>
 
 |m_spInPlaceSite тип|m_bWndLess значение|m_bInPlaceSiteEx значение|
 |---------------------------|-----------------------|-----------------------------|
-|`IOleInPlaceSiteWindowless`|TRUE|Значение TRUE или FALSE|
-|`IOleInPlaceSiteEx`|FALSE|TRUE|
-|`IOleInPlaceSite`|FALSE|FALSE|
+|`IOleInPlaceSiteWindowless`|true|Значение TRUE или FALSE|
+|`IOleInPlaceSiteEx`|false|true|
+|`IOleInPlaceSite`|false|false|
 
 ##  <a name="m_spoleadviseholder"></a>  CComControlBase::m_spOleAdviseHolder
 
