@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IObjectWithSiteImpl class
 ms.assetid: 4e1f774f-bc3d-45ee-9a1c-c3533a511588
 ms.openlocfilehash: ad27c4288d7e16949fe38ea6b8a686e3d6916ee6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275234"
 ---
 # <a name="iobjectwithsiteimpl-class"></a>Класс IObjectWithSiteImpl
 
@@ -39,7 +39,7 @@ template <class T>
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IObjectWithSiteImpl::GetSite](#getsite)|Запрашивает место для указателя на интерфейс.|
 |[IObjectWithSiteImpl::SetChildSite](#setchildsite)|Предоставляет объект с этим сайтом `IUnknown` указатель.|
@@ -47,7 +47,7 @@ template <class T>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IObjectWithSiteImpl::m_spUnkSite](#m_spunksite)|Управляет веб-узла `IUnknown` указатель.|
 

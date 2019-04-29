@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
 ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372222"
 ---
 # <a name="crecordview-class"></a>Класс CRecordView
 
@@ -38,13 +38,13 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRecordView::CRecordView](#crecordview)|Создает объект `CRecordView`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRecordView::IsOnFirstRecord](#isonfirstrecord)|Возвращает ненулевое значение, если текущая запись является первой записью в связанных записей.|
 |[CRecordView::IsOnLastRecord](#isonlastrecord)|Возвращает ненулевое значение, если текущая запись является последней записи в наборе связанных записей.|
@@ -53,7 +53,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRecordView::OnMove](#onmove)|При изменении текущей записи, обновляет его в источнике данных, а затем переходит к указанной записи (следующего, предыдущего, первого или последнего).|
 

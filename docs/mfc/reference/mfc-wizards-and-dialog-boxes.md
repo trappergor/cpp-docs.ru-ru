@@ -3,11 +3,11 @@ title: Мастеры и диалоговые окна MFC
 ms.date: 11/04/2016
 ms.assetid: 2fae0a2c-d147-4468-a547-f7b85df767a1
 ms.openlocfilehash: 4a82ee0b8eccde65aeffacb05695eed4b1f14cdc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310192"
 ---
 # <a name="mfc-wizards-and-dialog-boxes"></a>Мастеры и диалоговые окна MFC
 
@@ -15,7 +15,7 @@ Microsoft Foundation Class (MFC) мастер создает стандартн�
 
 ## <a name="related-articles"></a>Связанные статьи
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Создание проекта библиотеки DLL MFC](../../mfc/reference/creating-an-mfc-dll-project.md)|Создает библиотеку DLL, в зависимости от MFC.|
 |[Создание приложения MFC](../../mfc/reference/creating-an-mfc-application.md)|Создает приложение MFC.|

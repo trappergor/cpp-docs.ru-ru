@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Platform::Exception Class
 ms.assetid: ca1d5a67-3a5a-48fe-8099-f9c38a2d2dce
 ms.openlocfilehash: d37d55c56e3c23d8d9129c985cb4272d2e3ee47a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368738"
 ---
 # <a name="platformexception-class"></a>Класс Platform::Exception
 
@@ -35,7 +35,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 ### <a name="constructors"></a>Конструкторы
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[Exception::Exception](#ctor)|Инициализирует новый экземпляр класса `Exception`.|
 
@@ -51,7 +51,7 @@ public ref class Exception : Object,    IException,    IPrintable,    IEquatable
 
 Класс Exception также содержит следующие свойства.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|
 |[Exception::Message](#message)|Сообщение с описанием исключения. Это значение доступно только для чтения, его нельзя изменить после создания `Exception` .|
@@ -149,7 +149,7 @@ public:property String^ Message;
 
 ### <a name="remarks"></a>Примечания
 
-В Windows 8 это свойство доступно только для чтения, так как исключения в этой версии среды выполнения Windows передаются через интерфейс ABI только в качестве значения HRESULT. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Дополнительные сведения см. в разделе [исключения (C + +/ CX)](../cppcx/exceptions-c-cx.md).
+В Windows 8 это свойство доступно только для чтения, так как исключения в этой версии среды выполнения Windows передаются через интерфейс ABI только в качестве значения HRESULT. В Windows 8.1 через интерфейс ABI передается более подробная информация об исключениях, и можно задать пользовательское сообщение, к которому другие компоненты могут обращаться программным образом. Дополнительные сведения см. в разделе [исключения (C++/CX)](../cppcx/exceptions-c-cx.md).
 
 ## <a name="see-also"></a>См. также
 

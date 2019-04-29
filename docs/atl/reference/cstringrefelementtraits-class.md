@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CStringRefElementTraits class
 ms.assetid: cc15062d-5627-46cc-ac2b-1744afdc2dbd
 ms.openlocfilehash: c57fda64689a80dfa548977e56b0416641bb4360
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277413"
 ---
 # <a name="cstringrefelementtraits-class"></a>Класс CStringRefElementTraits
 
@@ -33,11 +33,11 @@ class CStringRefElementTraits : public CElementTraitsBase<T>
 *T*<br/>
 Тип данных, хранимых в коллекции.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CStringRefElementTraits::CompareElements](#compareelements)|Вызовите эту статическую функцию для сравнения двух строковых элементов на предмет равенства.|
 |[CStringRefElementTraits::CompareElementsOrdered](#compareelementsordered)|Вызовите эту статическую функцию для сравнения двух элементов строки.|

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
 ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279063"
 ---
 # <a name="conditionvariableany-class"></a>Класс condition_variable_any
 
@@ -39,13 +39,13 @@ class condition_variable_any;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|

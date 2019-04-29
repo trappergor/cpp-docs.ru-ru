@@ -22,11 +22,11 @@ helpviewer_keywords:
 - /Gr compiler option [C++]
 ms.assetid: fd3110cb-2d77-49f2-99cf-a03f9ead00a3
 ms.openlocfilehash: 7c4f7e6edb020f5c8d2abf80f14df33e18a915c5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62270956"
 ---
 # <a name="gd-gr-gv-gz-calling-convention"></a>/Gd, /Gr, /Gv, /Gz (соглашение о вызовах)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57817469"
 
 ## <a name="remarks"></a>Примечания
 
-**/Gd**, параметр по умолчанию, указывает [__cdecl](../../cpp/cdecl.md) соглашение о вызовах для всех функций за исключением членов C++, функций и функций, помеченных [__stdcall](../../cpp/stdcall.md), [__ fastcall](../../cpp/fastcall.md), или [__vectorcall](../../cpp/vectorcall.md).
+**/Gd**, параметр по умолчанию, указывает [__cdecl](../../cpp/cdecl.md) соглашение о вызовах для всех функций за исключением C++ функций-членов и функций, помеченных [__stdcall](../../cpp/stdcall.md), [__fastcall](../../cpp/fastcall.md), или [__vectorcall](../../cpp/vectorcall.md).
 
 **/GR** указывает `__fastcall` соглашение о вызовах для всех функций за исключением функций-членов C++, функций с именем `main`и функций, помеченных `__cdecl`, `__stdcall`, или `__vectorcall`. Все `__fastcall` функции должны иметь прототипы. Это соглашение о вызове доступна только в компиляторах, версией x86 и игнорируется компиляторами, нацеленными на другие архитектуры.
 
@@ -54,7 +54,7 @@ ms.locfileid: "57817469"
 **/Gd**, **/GR**, **/Gv** и **/Gz** не совместимы с [/CLR: safe](clr-common-language-runtime-compilation.md) или   **/CLR: pure**. **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
 > [!NOTE]
-> По умолчанию для x86 процессоров, функций-членов C++ используйте [__thiscall](../../cpp/thiscall.md).
+> По умолчанию для x86 процессоров, C++ использование функции-члены [__thiscall](../../cpp/thiscall.md).
 
 Для всех процессоров функция-член, которая явно помечена как `__cdecl`, `__fastcall`, `__vectorcall`, или `__stdcall` использует указанное соглашение о вызовах, если оно не игнорируется в данной архитектуре. Функция-член, которая принимает переменное число аргументов, всегда использует `__cdecl` соглашение о вызовах.
 

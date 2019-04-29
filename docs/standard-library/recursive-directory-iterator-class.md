@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::tr2::sys::recursive_directory_iterator
 ms.assetid: 79a061bd-5b64-404c-97e8-749c888c2ced
 ms.openlocfilehash: 52e6f738aa226dba26bae0cf6e97cd18d107d677
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370135"
 ---
 # <a name="recursivedirectoryiterator-class"></a>Класс recursive_directory_iterator
 
@@ -82,7 +82,7 @@ for (recursive_directory_iterator next(path("abc")), end; next != end; ++next)
 
 **Пространство имен:** std::tr2::sys
 
-## <a name="depth"></a> recursive_directory_iterator::Depth
+## <a name="depth"></a> recursive_directory_iterator::depth
 
 Возвращает `mystack.size() - 1`, поэтому `pval` находится на нулевой глубине.
 
@@ -98,7 +98,7 @@ int depth() const;
 void disable_recursion_pending();
 ```
 
-## <a name="increment"></a> recursive_directory_iterator::Increment
+## <a name="increment"></a> recursive_directory_iterator::increment
 
 Переходит к следующему файлу в последовательности.
 
@@ -115,7 +115,7 @@ recursive_directory_iterator& increment(error_code& ec) noexcept;
 
 Функция пытается перейти к имени следующего файла во вложенной последовательности. Если в случае успешного выполнения она сохраняет имя этого файла в `myentry`; в противном случае она создает итератор конец последовательности.
 
-## <a name="op_neq"></a> recursive_directory_iterator::operator! =
+## <a name="op_neq"></a> recursive_directory_iterator::operator!=
 
 Возвращает `!(*this == right)`.
 
@@ -128,7 +128,7 @@ bool operator!=(const recursive_directory_iterator& right) const;
 *right*<br/>
 [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для сравнения.
 
-## <a name="op_as"></a> recursive_directory_iterator::operator =
+## <a name="op_as"></a> recursive_directory_iterator::operator=
 
 Операторы-члены присваивания по умолчанию работают корректно.
 
@@ -155,7 +155,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 *right*<br/>
 [Recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md) для сравнения.
 
-## <a name="op_multiply"></a> recursive_directory_iterator::operator *
+## <a name="op_multiply"></a> recursive_directory_iterator::operator*
 
 Возвращает `myentry`.
 
@@ -163,7 +163,7 @@ bool operator==(const recursive_directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> recursive_directory_iterator::operator ->
+## <a name="op_cast"></a> recursive_directory_iterator::operator->
 
 Возвращает `&**this`.
 
@@ -190,7 +190,7 @@ recursive_directory_iterator& operator++(int);
 
 Первая функция-член вызывает `increment()`, затем возвращает `*this`. Вторая функция-член создает копию объекта, вызовы `increment()`, затем возвращает копию.
 
-## <a name="options"></a> recursive_directory_iterator::Options
+## <a name="options"></a> recursive_directory_iterator::options
 
 Возвращает `myoptions`.
 
@@ -198,7 +198,7 @@ recursive_directory_iterator& operator++(int);
 directory_options options() const;
 ```
 
-## <a name="pop"></a> recursive_directory_iterator::POP
+## <a name="pop"></a> recursive_directory_iterator::pop
 
 Возвращает следующий объект.
 

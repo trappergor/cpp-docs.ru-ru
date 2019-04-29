@@ -15,11 +15,11 @@ helpviewer_keywords:
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
 ms.openlocfilehash: 54231a4229db9a9afeecad878d695814565d776b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275546"
 ---
 # <a name="iconnectionpointimpl-class"></a>Класс IConnectionPointImpl
 
@@ -47,7 +47,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IConnectionPointImpl::Advise](#advise)|Устанавливает соединение между точкой подключения и приемника.|
 |[IConnectionPointImpl::EnumConnections](#enumconnections)|Создает перечислитель для итерации по соединениям для точки подключения.|
@@ -57,7 +57,7 @@ class ATL_NO_VTABLE IConnectionPointImpl : public _ICPLocator<piid>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IConnectionPointImpl::m_vec](#m_vec)|Управляет подключениями для точки подключения.|
 

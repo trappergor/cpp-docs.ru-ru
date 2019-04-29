@@ -43,11 +43,11 @@ helpviewer_keywords:
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
 ms.openlocfilehash: 01680a62e654112475a55bd8eac0cc14d254e2a2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285776"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint, lrintf, lrintl, llrint, llrintf, llrintl
 
@@ -116,7 +116,7 @@ long long int llrintl(
 
 Если *x* не представляет с плавающей запятой эквивалент целочисленного значения, эти функции вызывают **FE_INEXACT**.
 
-**Только для систем Майкрософт**. Если результат находится вне диапазона типа возвращаемого значения или параметр является значением NaN или бесконечностью, возвращаемое значение определяется реализацией. Компилятор Майкрософт возвращает нулевое значение (0).
+**Системам Microsoft**: Если результат находится вне диапазона типа возвращаемого значения, или параметр является значением NaN или бесконечностью, возвращаемое значение это определяется реализацией. Компилятор Майкрософт возвращает нулевое значение (0).
 
 ## <a name="requirements"></a>Требования
 

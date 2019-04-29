@@ -35,11 +35,11 @@ helpviewer_keywords:
 - _strtoll_l function
 ms.assetid: e2d05dcf-d3b2-4291-9e60-dee77e540fd7
 ms.openlocfilehash: 53ae4ab1d482478c50aa257acdc974569bfc05f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269154"
 ---
 # <a name="strtoll-strtolll-wcstoll-wcstolll"></a>strtoll, _strtoll_l, wcstoll, _wcstoll_l
 
@@ -121,7 +121,7 @@ long long _wcstoll_l(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**функции strtoll**, **_strtoll_l**|\<stdlib.h>|
+|**strtoll**, **_strtoll_l**|\<stdlib.h>|
 |**wcstoll**, **_wcstoll_l**|\<stdlib.h> или \<wchar.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - blocking mode sockets
 ms.assetid: 10aca9b1-bfba-41a8-9c55-ea8082181e63
 ms.openlocfilehash: 26a361bc63da5f6e75144cc91fe837498a7f656b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371968"
 ---
 # <a name="windows-sockets-blocking"></a>Сокеты Windows. Блокировки
 
@@ -38,7 +38,7 @@ ms.locfileid: "57272351"
 
 Дополнительные сведения о блокировке см. в спецификации Windows Sockets. Дополнительные сведения о функции «On», см. в разделе [сокеты Windows: Сокета уведомления](../mfc/windows-sockets-socket-notifications.md) и [сокеты Windows: Наследование от классов сокета](../mfc/windows-sockets-deriving-from-socket-classes.md).
 
-Дополнительные сведения см. в следующих разделах.
+Дополнительные сведения:
 
 - [Сокеты Windows. Использование класса CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)
 
@@ -46,7 +46,7 @@ ms.locfileid: "57272351"
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 

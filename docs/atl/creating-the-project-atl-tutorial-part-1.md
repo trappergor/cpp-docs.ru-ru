@@ -4,11 +4,11 @@ ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
 ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262090"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Создание проекта (учебник ATL, часть 1)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57273937"
 
 **Мастер проектов ATL** будет создан проект, создав несколько файлов. Вы можете просматривать эти файлы в **обозревателе решений** , развернув `Polygon` объекта. Ниже перечислены файлы.
 
-|Файл|Описание:|
+|Файл|Описание|
 |----------|-----------------|
 |Polygon.cpp|Содержит реализацию `DllMain`, `DllCanUnloadNow`, `DllGetClassObject`, `DllRegisterServer`, и `DllUnregisterServer`. Также содержит сопоставление объекта, который является списком объектов ATL в проект. Это поле пустым.|
 |Polygon.DEF|Этот файл определения модуля предоставляет сведения о экспортов, необходимых для библиотеки DLL для компоновщика.|

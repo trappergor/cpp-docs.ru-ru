@@ -14,11 +14,11 @@ helpviewer_keywords:
 - concurrent_unordered_multimap class
 ms.assetid: 4dada5d7-15df-4382-b9c9-348e75b2f3c1
 ms.openlocfilehash: 446060656a79380f85d3faac560bd48910bfb2db
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262766"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>Класс concurrent_unordered_multimap
 
@@ -62,11 +62,11 @@ true>>;
 *_Allocator_type*<br/>
 Тип, представляющий сохраненный объект распределителя, инкапсулирующий сведения о выделении и освобождении памяти для параллельного вектора. Этот аргумент является необязательным и значение по умолчанию — `std::allocator<std::pair<K`, `_Element_type>>`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -87,13 +87,13 @@ true>>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[concurrent_unordered_multimap](#ctor)|Перегружен. Создает параллельное неупорядоченное мультисопоставление.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|
 |[insert](#insert)|Перегружен. Добавляет элементы `concurrent_unordered_multimap` объекта.|
@@ -103,7 +103,7 @@ true>>;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_unordered_multimap` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 

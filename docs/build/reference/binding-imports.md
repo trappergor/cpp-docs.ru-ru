@@ -1,18 +1,18 @@
 ---
-title: Связывание Imports
+title: Привязка Imports
 ms.date: 11/04/2016
 helpviewer_keywords:
 - /DELAY:NOBIND linker option
 - DELAY:NOBIND linker option
 ms.assetid: bb766038-deb1-41b1-bcbc-29a30e8c1e2a
 ms.openlocfilehash: 4058d738b87b69a73e8f18d977be8435a7d96a14
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57819858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272927"
 ---
-# <a name="binding-imports"></a>Связывание Imports
+# <a name="binding-imports"></a>Привязка Imports
 
 Поведение компоновщика по умолчанию является создание связанной таблицы адресов импорта для библиотеки DLL, загружаемых с задержкой. Если библиотека DLL привязана, вспомогательная функция будет пытаться использовать данные привязки вместо вызова метода **GetProcAddress** на каждого из импортов, на который указывает ссылка. Если метка времени или предпочтительный адрес не совпадают с загружаемой библиотеки DLL, вспомогательная функция предполагает связанная таблица адресов импорта устарела и будет продолжена, как если бы он не существует.
 

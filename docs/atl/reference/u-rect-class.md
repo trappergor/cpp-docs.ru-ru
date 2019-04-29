@@ -10,11 +10,11 @@ helpviewer_keywords:
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
 ms.openlocfilehash: 306092a00a1e119263f4563eea181d7d3ee2b4b2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326378"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274529"
 ---
 # <a name="urect-class"></a>Класс _U_RECT
 
@@ -33,13 +33,13 @@ class _U_RECT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[_U_RECT::_U_RECT](#_u_rect___u_rect)|Конструктор.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[_U_RECT::m_lpRect](#_u_rect__m_lprect)|Указатель на `RECT`.|
 

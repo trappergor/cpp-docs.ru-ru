@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], properties
 ms.assetid: ec2e6759-5a8e-41d8-a275-99af8ff6f32e
 ms.openlocfilehash: 438c95c56961cc587b64e494678ade191f18ab6b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392808"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>Элементы ActiveX в MFC. Реализация расширенных свойств
 
@@ -74,6 +74,6 @@ ms.locfileid: "57266969"
 ## <a name="see-also"></a>См. также
 
 [Элементы ActiveX библиотеки MFC](../mfc/mfc-activex-controls.md)<br/>
-[Элементы ActiveX в MFC. Свойства](../mfc/mfc-activex-controls-properties.md)<br/>
-[Элементы ActiveX в MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
+[Элементы управления ActiveX MFC. Свойства](../mfc/mfc-activex-controls-properties.md)<br/>
+[Элементы управления ActiveX MFC. Методы](../mfc/mfc-activex-controls-methods.md)<br/>
 [Класс COleControl](../mfc/reference/colecontrol-class.md)

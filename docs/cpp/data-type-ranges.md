@@ -1,4 +1,4 @@
-﻿---
+---
 title: Диапазоны типов данных
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -36,11 +36,11 @@ helpviewer_keywords:
 - unsigned long int [C++]
 ms.assetid: 3691ceca-05fb-4b82-b1ae-5c4618cda91a
 ms.openlocfilehash: 88fbb128d995338e5976fbb3df939524f3ef8b63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495034"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392237"
 ---
 # <a name="data-type-ranges"></a>Диапазоны типов данных
 
@@ -73,9 +73,9 @@ ms.locfileid: "50495034"
 |**__int8**|1|**char**|От -128 до 127|
 |**__int8 без знака**|1|**unsigned char**|От 0 до 255|
 |**__int16**|2|**короткий**, **короткое целочисленное**, **короткое целочисленное число со знаком**|От -32 768 до 32 767|
-|**__int16 без знака**|2|**unsigned short**, **короткое целое число**|От 0 до 65 535|
+|**unsigned __int16**|2|**unsigned short**, **короткое целое число**|От 0 до 65 535|
 |**__int32**|4|**автоматический**, **целочисленное число со знаком**, **int**|От -2 147 483 648 до 2 147 483 647|
-|**__int32 без знака**|4|**без знака**, **типа int без знака**|От 0 до 4 294 967 295|
+|**unsigned __int32**|4|**без знака**, **типа int без знака**|От 0 до 4 294 967 295|
 |**__int64**|8|**Long long**, **со знаком длинное длинное**|От -9 223 372 036 854 775 808 до 9 223 372 036 854 775 807|
 |**unsigned __int64**|8|**long long без знака**|От 0 до 18 446 744 073 709 551 615|
 |**bool**|1|Нет|**false** или **true**|

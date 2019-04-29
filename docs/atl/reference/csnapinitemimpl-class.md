@@ -28,11 +28,11 @@ helpviewer_keywords:
 - snap-ins
 ms.assetid: 52caefbd-9eae-49b0-add2-d55524271aa7
 ms.openlocfilehash: 27f3e8a17a9538a72a6592177a88a9b415b1a27c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297818"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277712"
 ---
 # <a name="csnapinitemimpl-class"></a>Класс CSnapInItemImpl
 
@@ -60,13 +60,13 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInItemImpl::CSnapInItemImpl](#csnapinitemimpl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInItemImpl::AddMenuItems](#addmenuitems)|Добавляет пункты меню в контекстное меню.|
 |[CSnapInItemImpl::Command](#command)|Вызывается средой консоли, когда выбран пользовательский пункт меню.|
@@ -84,7 +84,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CSnapInItemImpl::m_bstrDisplayName](#m_bstrdisplayname)|Имя объекта оснастки.|
 |[CSnapInItemImpl::m_resultDataItem](#m_resultdataitem)|Windows `RESULTDATAITEM` структуру, используемую `CSnapInItemImpl` объекта.|

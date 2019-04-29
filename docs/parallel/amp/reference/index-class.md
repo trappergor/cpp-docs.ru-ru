@@ -1,6 +1,6 @@
 ---
 title: Класс index
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AMP/index
 - AMP/Concurrency::index::index
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - index structure
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
-ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5226440e49aab5766fc7992e0651e2b5ee5d4981
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62180242"
 ---
 # <a name="index-class"></a>Класс index
 
@@ -35,16 +35,16 @@ class index;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
-|[Индекс конструктора](#ctor)|Инициализирует новый экземпляр класса `index`.|
+|[Индекс конструктора](#index_ctor)|Инициализирует новый экземпляр класса `index`.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор--](#operator--)|Уменьшает каждый элемент `index` объекта.|
-|[Operator(MOD) =](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении этого элемента на число.|
+|[оператор%=](#operator_mod_eq)|Вычисляет модуль (остаток от деления) каждого элемента в `index` объекта при делении этого элемента на число.|
 |[оператор*=](#operator_star_eq)|Умножает каждый элемент объекта `index` на число.|
 |[оператор/=](#operator_div_eq)|Делит каждый элемент объекта `index` на число.|
 |[index::operator\[\]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
@@ -139,7 +139,7 @@ index operator--(
 
 Для префиксной формы оператора объект индекса (* это). Для суффиксной формы оператора, новый объект индекса.
 
-## <a name="operator_mod_eq"></a>  Operator(MOD) =
+## <a name="operator_mod_eq"></a>  оператор % =
 
 Вычисляет модуль (остаток от деления) каждого элемента в объект индекса, при делении этого элемента на заданную величину.
 

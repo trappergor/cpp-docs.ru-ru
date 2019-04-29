@@ -8,11 +8,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.ReplacementsFile
 ms.assetid: 457582b8-cfde-49c0-92e3-3a6b9e8c08eb
 ms.openlocfilehash: 2fda169ecf304373d27d699bf313bde124dc399f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269717"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Диалоговое окно страниц свойств &lt;Имя_проекта&gt; "Свойства конфигурации", "Инструмент манифеста", "Изолированный COM"
 
@@ -47,4 +47,4 @@ ms.locfileid: "57827496"
 [Изолированные приложения](/windows/desktop/SbsCs/isolated-applications)<br>
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Страницы свойств инструмента манифеста](manifest-tool-property-pages.md)<br>
-[Значение компилятора C++ и свойства в Visual Studio сборки](../working-with-project-properties.md)
+[Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md)

@@ -44,11 +44,11 @@ helpviewer_keywords:
 - Visual C++, writing to Windows Registry
 ms.assetid: b9a75cb4-0589-4d5b-92cb-5e8be42b4ac0
 ms.openlocfilehash: 413ccc3b66d76f8779861d4d65eb262ee8640725
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384379"
 ---
 # <a name="windows-operations-ccli"></a>Операции Windows (C++/CLI)
 
@@ -144,7 +144,7 @@ int main( )
 
 <xref:Microsoft.Win32.Registry> Класс является контейнером для статических экземпляров <xref:Microsoft.Win32.RegistryKey>. Каждый экземпляр представляет корневой узел реестра. Экземпляры <xref:Microsoft.Win32.Registry.ClassesRoot>, <xref:Microsoft.Win32.Registry.CurrentConfig>, <xref:Microsoft.Win32.Registry.CurrentUser>, <xref:Microsoft.Win32.Registry.LocalMachine>, и <xref:Microsoft.Win32.Registry.Users>.
 
-В дополнение к, статическим, объекты на <xref:Microsoft.Win32.Registry> , доступны только для чтения. Кроме того, экземпляры из <xref:Microsoft.Win32.RegistryKey> объектов класса, которые создаются для доступа к содержимому реестра, также доступны только для чтения. Пример того, как переопределить это поведение, см. в разделе [как: Запись данных в реестр Windows (C + +/ CLI)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
+В дополнение к, статическим, объекты на <xref:Microsoft.Win32.Registry> , доступны только для чтения. Кроме того, экземпляры из <xref:Microsoft.Win32.RegistryKey> объектов класса, которые создаются для доступа к содержимому реестра, также доступны только для чтения. Пример того, как переопределить это поведение, см. в разделе [как: Запись данных в реестр Windows (C++выполняет)](../dotnet/how-to-write-data-to-the-windows-registry-cpp-cli.md).
 
 Существует два дополнительных объектов в <xref:Microsoft.Win32.Registry> класса: <xref:Microsoft.Win32.Registry.DynData> и <xref:Microsoft.Win32.Registry.PerformanceData>. Оба значения являются экземплярами из <xref:Microsoft.Win32.RegistryKey> класса. <xref:Microsoft.Win32.Registry.DynData> Объект содержит динамические сведения реестра, который поддерживается только в Windows 98 и Windows Me. <xref:Microsoft.Win32.Registry.PerformanceData> Объект может использоваться для доступа к данным счетчиков производительности для приложений, использующих систему мониторинга производительности Windows. <xref:Microsoft.Win32.Registry.PerformanceData> Узел представляет сведения, которые фактически не сохраняются в реестре и поэтому нельзя просмотреть с помощью Regedit.exe.
 

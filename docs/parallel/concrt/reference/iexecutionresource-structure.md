@@ -12,11 +12,11 @@ helpviewer_keywords:
 - IExecutionResource structure
 ms.assetid: 6b27042b-b98c-4f7f-b831-566950af84cd
 ms.openlocfilehash: 9f8f5c5629e9794ca8ee2cc6bedbc4ba6bfdb24d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262519"
 ---
 # <a name="iexecutionresource-structure"></a>Структура IExecutionResource
 
@@ -28,11 +28,11 @@ ms.locfileid: "57264941"
 struct IExecutionResource;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IExecutionResource::CurrentSubscriptionLevel](#currentsubscriptionlevel)|Возвращает число активированных виртуальный процессор корней, подписка на внешних угроз, связанных с базовой аппаратный поток, который представляет этот ресурс выполнения.|
 |[IExecutionResource::GetExecutionResourceId](#getexecutionresourceid)|Возвращает уникальный идентификатор для аппаратного потока, который представляет этот ресурс выполнения.|

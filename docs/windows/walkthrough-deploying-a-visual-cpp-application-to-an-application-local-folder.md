@@ -5,11 +5,11 @@ helpviewer_keywords:
 - deploying Visual C++ applications
 ms.assetid: 47a81c47-9dbe-47c6-96cc-fbb2fda5e6ad
 ms.openlocfilehash: 33edf4bb736fad62928e11dd0550af6640d411ac
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58786365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387699"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-to-an-application-local-folder"></a>Пошаговое руководство. Развертывание приложения Visual C++ в локальную папку приложения
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
 ms.openlocfilehash: 648871464dbc99972b8ca40579046347727e81cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269392"
 ---
 # <a name="lib-input-files"></a>Входные LIB-файлы
 
 Входные файлы LIB ожидает зависят от режима, в котором он используется, как показано в следующей таблице.
 
-|Mode|Ввод|
+|Mode|Входные данные|
 |----------|-----------|
 |По умолчанию (Создание или изменение библиотеки)|COFF-файлы объектов (OBJ), COFF библиотеки (LIB), 32-разрядные файлы объектов (OBJ) формат объекта модели (OMF)|
 |Извлечение члена с/Extract|COFF библиотека (.lib)|

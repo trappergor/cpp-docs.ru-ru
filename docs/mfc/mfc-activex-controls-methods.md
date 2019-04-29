@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 ms.assetid: e20271de-6ffa-4ba0-848b-bafe6c9e510c
 ms.openlocfilehash: 71c4cdd5ea07b3468b7878a221129a0de5eb4974
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386373"
 ---
 # <a name="mfc-activex-controls-methods"></a>Элементы ActiveX в MFC. Методы
 
@@ -34,11 +34,11 @@ Microsoft Foundation Class Library (MFC) реализует механизм, п
 
 Методы подробно обсуждаются в следующих статьях:
 
-- [Элементы ActiveX в MFC. Добавление стандартных методов](../mfc/mfc-activex-controls-adding-stock-methods.md)
+- [Элементы управления ActiveX MFC. Добавление стандартных методов](../mfc/mfc-activex-controls-adding-stock-methods.md)
 
-- [Элементы ActiveX в MFC. Добавление пользовательских методов](../mfc/mfc-activex-controls-adding-custom-methods.md)
+- [Элементы управления ActiveX MFC. Добавление пользовательских методов](../mfc/mfc-activex-controls-adding-custom-methods.md)
 
-- [Элементы ActiveX в MFC. Возврат кодов ошибок из метода](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
+- [Элементы управления ActiveX MFC. Возврат кодов ошибок из метода](../mfc/mfc-activex-controls-returning-error-codes-from-a-method.md)
 
 ## <a name="see-also"></a>См. также
 

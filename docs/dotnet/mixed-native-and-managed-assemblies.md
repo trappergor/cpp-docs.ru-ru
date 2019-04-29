@@ -13,11 +13,11 @@ helpviewer_keywords:
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
 ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384859"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Смешанные (собственные и управляемые) сборки
 
@@ -27,14 +27,14 @@ ms.locfileid: "50428690"
 
 Visual C++ поддерживает только создание смешанных управляемых сборок с помощью **/CLR** параметр компилятора. **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017. Если вам требуется чистых и проверяемых управляемые сборки, мы рекомендуем создавать их с помощью C#.
 
-Более ранние версии набора инструментов компилятора Visual C++ поддерживают создание трех различных типов управляемых сборок: смешанных, чистых и проверяемых. Последний два рассматриваются в [чистый и проверяемый код (C + +/ CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Более ранние версии набора инструментов компилятора Visual C++ поддерживают создание трех различных типов управляемых сборок: смешанных, чистых и проверяемых. Последний два рассматриваются в [чистый и проверяемый код (C++выполняет)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Содержание раздела
 
-[Практическое: Миграция в/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
+[Практическое руководство. Миграция в/CLR](../dotnet/how-to-migrate-to-clr.md)<br/>
 Описание рекомендуемых действий по введению или обновлению функций .NET в приложении.
 
-[Практическое: компиляция MFC и ATL кода с помощью/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
+[Практическое руководство. Скомпилируйте MFC и ATL кода с помощью/CLR](../dotnet/how-to-compile-mfc-and-atl-code-by-using-clr.md)<br/>
 Описывает, как для компиляции программ MFC и ATL целевых среда CLR.
 
 [Инициализация смешанных сборок](../dotnet/initialization-of-mixed-assemblies.md)<br/>
@@ -55,7 +55,7 @@ Visual C++ поддерживает только создание смешанн
 [Способы избегания исключений в CLR завершение работы при использовании COM объектов, построенных с помощью/CLR](../dotnet/avoiding-exceptions-on-clr-shutdown-when-consuming-com-objects-built-with-clr.md)<br/>
 Описываются способы правильного завершения работы управляемого приложения, использующего объект COM, скомпилированные с использованием **/CLR**.
 
-[Практическое руководство. Создание приложения с частичным доверием путем удаления зависимости от библиотеки DLL CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
+[Практическое руководство. Создание частично доверенного приложения путем удаления зависимости от библиотеки DLL CRT](../dotnet/create-a-partially-trusted-application.md)<br/>
 В этой статье описывается создание приложения с частичным доверием среда CLR, с помощью Visual C++ путем удаления зависимости от библиотеки msvcm90.dll.
 
 Дополнительные сведения о рекомендации по кодированию для смешанных сборок см. в статье MSDN [Общие сведения об управляемых и неуправляемых кода совместимости](https://msdn.microsoft.com/library/ms973872.aspx).

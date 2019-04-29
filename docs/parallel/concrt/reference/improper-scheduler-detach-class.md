@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improper_scheduler_detach class
 ms.assetid: 30132102-c900-4951-a470-b63b4e3aa2d2
 ms.openlocfilehash: 7e85ff8ea7ffb817c141094649cd39b8becccf53
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262350"
 ---
 # <a name="improperschedulerdetach-class"></a>Класс improper_scheduler_detach
 
@@ -29,7 +29,7 @@ class improper_scheduler_detach : public std::exception;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[improper_scheduler_detach](#ctor)|Перегружен. Создает объект `improper_scheduler_detach`.|
 

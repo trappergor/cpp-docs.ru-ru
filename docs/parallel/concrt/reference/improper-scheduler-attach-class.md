@@ -9,11 +9,11 @@ helpviewer_keywords:
 - improper_scheduler_attach class
 ms.assetid: 5a76da0a-091b-4748-8f62-b3a28f674f9e
 ms.openlocfilehash: 2d6a7b53269d305c976bcc596fe85dc018442332
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262480"
 ---
 # <a name="improperschedulerattach-class"></a>Класс improper_scheduler_attach
 
@@ -29,7 +29,7 @@ class improper_scheduler_attach : public std::exception;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[improper_scheduler_attach](#ctor)|Перегружен. Создает объект `improper_scheduler_attach`.|
 

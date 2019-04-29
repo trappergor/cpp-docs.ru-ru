@@ -64,11 +64,11 @@ helpviewer_keywords:
 - unary_negate function [STL/CLR]
 ms.assetid: 88738b8c-5d37-4375-970e-a4442bf5efde
 ms.openlocfilehash: f4a99ea972c6d2ea9b9721664cc75dec257fd7b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393757"
 ---
 # <a name="functional-stlclr"></a>functional (STL/CLR)
 
@@ -322,7 +322,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|оператор delegate_type^()|Приводит функтора к делегату.|
+|operator delegate_type^()|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -597,7 +597,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|оператор delegate_type^()|Приводит функтора к делегату.|
+|operator delegate_type^()|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -702,7 +702,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|оператор delegate_type^()|Приводит функтора к делегату.|
+|operator delegate_type^()|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -806,7 +806,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|оператор delegate_type^()|Приводит функтора к делегату.|
+|operator delegate_type^()|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -907,7 +907,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|оператор delegate_type^()|Приводит функтора к делегату.|
+|operator delegate_type^()|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 
@@ -2579,7 +2579,7 @@ public:
 |Оператор|Описание|
 |--------------|-----------------|
 |operator()|Вычисляет нужной функции.|
-|delegate_type ^|Приводит функтора к делегату.|
+|delegate_type^|Приводит функтора к делегату.|
 
 ### <a name="remarks"></a>Примечания
 

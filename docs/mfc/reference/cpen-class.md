@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CPen [MFC], GetLogPen
 ms.assetid: 93175a3a-d46c-4768-be8d-863254f97a5f
 ms.openlocfilehash: 8510c29571e6a370c7948ebe49e53b2c22dbfb9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372924"
 ---
 # <a name="cpen-class"></a>Cpen-класс
 
@@ -35,17 +35,17 @@ ms.locfileid: "57293723"
 class CPen : public CGdiObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPen::CPen](#cpen)|Создает объект `CPen`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPen::CreatePen](#createpen)|Создает логический перо финальных или геометрическом с указанного стиля, ширины и атрибуты кисти и присоединяет его к `CPen` объекта.|
 |[CPen::CreatePenIndirect](#createpenindirect)|Создает перо с стиль, ширину и цвет, заданный в [LOGPEN](/windows/desktop/api/wingdi/ns-wingdi-taglogpen) структурировать и присоединяет его к `CPen` объекта.|
@@ -55,7 +55,7 @@ class CPen : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPen::operator HPEN](#operator_hpen)|Возвращает дескриптор Windows, подключенный к `CPen` объекта.|
 

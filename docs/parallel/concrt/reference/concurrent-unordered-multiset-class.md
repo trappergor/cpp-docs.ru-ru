@@ -14,11 +14,11 @@ helpviewer_keywords:
 - concurrent_unordered_multiset class
 ms.assetid: 219d7d67-1ff0-45f4-9400-e9cc272991a4
 ms.openlocfilehash: 7acb79bf5b7c1831027cc47f4da7faa6f1669c21
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296427"
 ---
 # <a name="concurrentunorderedmultiset-class"></a>Класс concurrent_unordered_multiset
 
@@ -59,7 +59,7 @@ _Allocator_type,
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`allocator_type`|Тип распределителя для управления хранилищем.|
 |`const_iterator`|Тип постоянного итератора для управляемой последовательности.|
@@ -79,13 +79,13 @@ _Allocator_type,
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[concurrent_unordered_multiset](#ctor)|Перегружен. Создает параллельный неупорядоченный мультинабора.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[hash_function](#hash_function)|Возвращает сохраненный объект хэш-функции.|
 |[insert](#insert)|Перегружен. Добавляет элементы `concurrent_unordered_multiset` объекта.|
@@ -95,7 +95,7 @@ _Allocator_type,
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Назначает содержимое другого объекта `concurrent_unordered_multiset` в данный объект. Этот метод не является безопасным в режиме параллелизма.|
 

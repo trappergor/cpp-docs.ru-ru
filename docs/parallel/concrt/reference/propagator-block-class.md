@@ -21,11 +21,11 @@ helpviewer_keywords:
 - propagator_block class
 ms.assetid: 86aa75fd-eda5-42aa-aadf-25c0c1c9742d
 ms.openlocfilehash: 7f466ad8f474ddb73d2235d9999c3dbeae627672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272949"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394368"
 ---
 # <a name="propagatorblock-class"></a>Класс propagator_block
 
@@ -55,27 +55,27 @@ public ITarget<typename _SourceLinkRegistry::type::source_type>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`source_iterator`|Тип итератора для `source_link_manager` для данного `propagator_block`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[propagator_block](#ctor)|Создает объект `propagator_block`.|
 |[~ propagator_block деструктор](#dtor)|Уничтожает объект `propagator_block`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[распространение](#propagate)|Асинхронно передает сообщение из блока источника этой целевой блок.|
 |[send](#send)|Синхронно запускает сообщение, этот блок. Вызывается средой `ISource` блока. По завершении этой функции сообщение уже будет распространено в блок.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[decline_incoming_messages](#decline_incoming_messages)|Указывает на блок, что новые сообщения должны быть отклонены.|
 |[initialize_source_and_target](#initialize_source_and_target)|Инициализирует базовый объект. В частности `message_processor` необходимо инициализировать объект.|

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - IPointerInactiveImpl class
 ms.assetid: e1fe9ea6-d38a-4527-9112-eb344771e0b7
 ms.openlocfilehash: d7d9f048fceb3a569b024d7fe2b87f30a828b68e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274832"
 ---
 # <a name="ipointerinactiveimpl-class"></a>Класс IPointerInactiveImpl
 
@@ -42,7 +42,7 @@ class IPointerInactiveImpl
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IPointerInactiveImpl::GetActivationPolicy](#getactivationpolicy)|Извлекает текущую политику активации для объекта. Реализация ATL возвращает E_NOTIMPL.|
 |[IPointerInactiveImpl::OnInactiveMouseMove](#oninactivemousemove)|Уведомляет объект, указатель мыши наведен на его, указав объект срабатывают события мыши. Реализация ATL возвращает E_NOTIMPL.|

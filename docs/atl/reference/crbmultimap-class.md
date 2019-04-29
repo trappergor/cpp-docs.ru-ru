@@ -14,11 +14,11 @@ helpviewer_keywords:
 - CRBMultiMap class
 ms.assetid: 94d3ec0c-3e30-4ab7-a101-d8da4fb8add3
 ms.openlocfilehash: 03a9639e8b0b3d11a414e5db0ce874d7ca8f2d45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278141"
 ---
 # <a name="crbmultimap-class"></a>Класс CRBMultiMap
 
@@ -52,14 +52,14 @@ class CRBMultiMap : public CRBTree<K, V, KTraits, VTraits>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBMultiMap::CRBMultiMap](#crbmultimap)|Конструктор.|
 |[CRBMultiMap::~CRBMultiMap](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBMultiMap::FindFirstWithKey](#findfirstwithkey)|Вызовите этот метод, чтобы определить позицию первого элемента с данным ключом.|
 |[CRBMultiMap::GetNextValueWithKey](#getnextvaluewithkey)|Вызовите этот метод, чтобы получить значение, связанное с данным ключом и обновите значение позиции.|

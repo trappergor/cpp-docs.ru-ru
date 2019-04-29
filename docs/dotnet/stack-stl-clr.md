@@ -60,11 +60,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 6ee96b9f-8a33-4cf7-b7e0-6535c24bdefb
 ms.openlocfilehash: ec3863796f7c49c155af61576c15c1ca8a9d5109
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384612"
 ---
 # <a name="stack-stlclr"></a>stack (STL/CLR)
 
@@ -123,7 +123,7 @@ template<typename Value,
 |[stack::top (STL/CLR)](#top)|Обращается к последнему элементу.|
 |[stack::to_array (STL/CLR)](#to_array)|Копирует управляемой последовательности в новый массив.|
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |--------------|-----------------|
 |[stack::top_item (STL/CLR)](#top_item)|Обращается к последнему элементу.|
 
@@ -248,7 +248,7 @@ int main()
 c b a
 ```
 
-## <a name="container_type"></a> STACK::container_type (STL/CLR)
+## <a name="container_type"></a> stack::container_type (STL/CLR)
 
 Тип базового контейнера.
 
@@ -811,7 +811,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> STACK::size_type (STL/CLR)
+## <a name="size_type"></a> stack::size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 

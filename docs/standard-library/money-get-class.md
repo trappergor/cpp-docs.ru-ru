@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::money_get [C++], get
 ms.assetid: 692d3374-3fe7-4b46-8aeb-f8d91ed66b2e
 ms.openlocfilehash: 40ce364d768e682c9e85506d2af9e46a01c76e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383533"
 ---
 # <a name="moneyget-class"></a>Класс money_get
 
@@ -291,11 +291,11 @@ explicit money_get(size_t _Refs = 0);
 
 Возможные значения *_Refs* параметра и их важность:
 
-- 0: время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
 
-- 1: время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \> 1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 

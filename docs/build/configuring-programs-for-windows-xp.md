@@ -3,11 +3,11 @@ title: Настройка программ для Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
 ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273806"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Настройка программ для Windows XP
 
@@ -25,7 +25,7 @@ ms.locfileid: "57814297"
 
 1. В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.
 
-1. В **страницы свойств** диалоговое окно проекта, в разделе **свойства конфигурации** > **Общие**, задайте **набор инструментов платформы** свойство нужный набор инструментов Windows XP. Например, выберите **Visual Studio 2017 г. — Windows XP (v141_xp)** для создания кода для Windows XP и Windows Server 2003 с помощью компилятора Microsoft Visual C++ 2017.
+1. В **страницы свойств** диалоговое окно проекта, в разделе **свойства конфигурации** > **Общие**, задайте **набор инструментов платформы** свойство нужный набор инструментов Windows XP. Например, выберите **Visual Studio 2017 г. — Windows XP (v141_xp)** для создания кода для Windows XP и Windows Server 2003 с помощью Microsoft Visual C++ компилятора 2017 г.
 
 ### <a name="c-runtime-support"></a>Поддержка среды выполнения C++
 
@@ -43,7 +43,7 @@ ms.locfileid: "57814297"
 |C++ AMP|X|X||
 
 > [!NOTE]
-> Приложения, которые создаются на языке C + +/ CLI и предназначенные для .NET Framework 4 под управлением Windows XP и Windows Server 2003.
+> Приложения, написанные в C++/CLI и предназначенные для .NET Framework 4 под управлением Windows XP и Windows Server 2003.
 
 ### <a name="differences-between-the-toolsets"></a>Различия между наборами инструментов
 
@@ -67,4 +67,4 @@ ms.locfileid: "57814297"
 
 - **Сборка HLSL**
 
-   По умолчанию набор инструментов Windows XP не компилирует файлы с исходным кодом HLSL. Для компиляции файлов HLSL скачайте и установите пакет SDK DirectX за июнь 2010 года, а затем включите его в каталоги VC проекта. Дополнительные сведения см. в разделе «пакет SDK DirectX не регистрирует пути Include/библиотеки с помощью Visual Studio 2010» раздел [за июнь 2010 странице загрузки пакета SDK DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   По умолчанию набор инструментов Windows XP не компилирует файлы с исходным кодом HLSL. Для компиляции файлов HLSL загрузите и установите пакет SDK DirectX за июнь 2010 года, а затем включите его в каталоги VC проекта. Дополнительные сведения см. в разделе «пакет SDK DirectX не регистрирует пути Include/библиотеки с помощью Visual Studio 2010» раздел [за июнь 2010 странице загрузки пакета SDK DirectX](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).

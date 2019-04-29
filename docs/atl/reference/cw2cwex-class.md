@@ -10,11 +10,11 @@ helpviewer_keywords:
 - CW2CWEX class
 ms.assetid: d654b22b-05a6-410f-a0ec-9a2cbbb4cca7
 ms.openlocfilehash: d1f960f8ec94b8e573490d4e708d4240b894b5ec
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277156"
 ---
 # <a name="cw2cwex-class"></a>Класс CW2CWEX
 
@@ -39,20 +39,20 @@ class CW2CWEX
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CW2CWEX::CW2CWEX](#cw2cwex)|Конструктор.|
 |[CW2CWEX::~CW2CWEX](#dtor)|Деструктор|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CW2CWEX::operator LPCWSTR](#operator_lpcwstr)|Оператор преобразования.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CW2CWEX::m_psz](#m_psz)|Элемент данных, который хранит исходную строку.|
 

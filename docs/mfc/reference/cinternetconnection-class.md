@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CInternetConnection [MFC], GetSession
 ms.assetid: 62a5d1c3-8471-4e36-a064-48831829b2a7
 ms.openlocfilehash: 9f17c3ade53ec45ddde654e83c77fe1d817d8495
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345700"
 ---
 # <a name="cinternetconnection-class"></a>Класс CInternetConnection
 
@@ -35,13 +35,13 @@ class CInternetConnection : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CInternetConnection::CInternetConnection](#cinternetconnection)|Создает объект `CInternetConnection`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CInternetConnection::GetContext](#getcontext)|Получает идентификатор контекста для данного объекта подключения.|
 |[CInternetConnection::GetServerName](#getservername)|Возвращает имя сервера, связанного с соединением.|
@@ -49,7 +49,7 @@ class CInternetConnection : public CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CInternetConnection::operator HINTERNET](#operator_hinternet)|Дескриптор для Интернет-сеанс.|
 

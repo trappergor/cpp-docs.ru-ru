@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CRgn [MFC], SetRectRgn
 ms.assetid: d904da84-76aa-481e-8780-b09485f49e64
 ms.openlocfilehash: 54018c3d59fe3d7e3d7a5062cda9b40da4f5d586
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372150"
 ---
 # <a name="crgn-class"></a>Crgn-класс
 
@@ -67,13 +67,13 @@ class CRgn : public CGdiObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRgn::CRgn](#crgn)|Создает объект `CRgn`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRgn::CombineRgn](#combinergn)|Наборы `CRgn` таким образом, чтобы она эквивалентна объединение двух указанных `CRgn` объектов.|
 |[CRgn::CopyRgn](#copyrgn)|Наборы `CRgn` таким образом, чтобы он является копией указанного `CRgn` объекта.|
@@ -97,7 +97,7 @@ class CRgn : public CGdiObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRgn::operator HRGN](#operator_hrgn)|Возвращает дескриптор Windows, содержащийся в `CRgn` объекта.|
 

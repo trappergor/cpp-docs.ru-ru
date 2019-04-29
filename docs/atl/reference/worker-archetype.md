@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Worker archetype
 ms.assetid: 834145cd-09d3-4149-bc99-620e1871cbfb
 ms.openlocfilehash: 790cf064fcffe1f0cd3c191c28ed0a0614062406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274503"
 ---
 # <a name="worker-archetype"></a>Рабочий Архетип
 
@@ -19,7 +19,7 @@ ms.locfileid: "57283456"
 
 Реализация класса, удовлетворяющие этот архетипа, класс должен предоставлять следующие возможности:
 
-|Метод|Описание:|
+|Метод|Описание|
 |------------|-----------------|
 |[Initialize](#initialize)|Вызывается для инициализации объекта рабочей роли, прежде чем все запросы передаются [Execute](#execute).|
 |[Execute](#execute)|Вызывается для обработки рабочего элемента.|

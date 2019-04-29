@@ -5,11 +5,11 @@ f1_keywords:
 - atomic/std::atomic
 ms.assetid: 261628ed-7049-41ac-99b9-cfe49f696b44
 ms.openlocfilehash: 258812f033d34f040d96847581d6f51692a933b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376673"
 ---
 # <a name="atomic-structure"></a>Структура atomic
 
@@ -28,7 +28,7 @@ struct atomic;
 |----------|-----------------|
 |**Конструктор**||
 |[atomic](#atomic)|Создает атомарный объект.|
-|**Операторы**||
+|**Инструкции**||
 |[оператор atomic::operator Ty](#op_ty)|Считывает и возвращает сохраненное значение. ([atomic::load](#load))|
 |[оператор atomic::operator =](#op_eq)|Использует указанное значение для замены сохраненного значения. ([atomic::store](#store))|
 |[оператор atomic::operator ++](#op_inc)|Увеличивает сохраненное значение. Используется только специализациями для целочисленных типов и указателей.|

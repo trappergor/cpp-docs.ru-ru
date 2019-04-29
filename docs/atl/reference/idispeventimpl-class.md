@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
 ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275325"
 ---
 # <a name="idispeventimpl-class"></a>Класс IDispEventImpl
 
@@ -66,19 +66,19 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IDispEventImpl::_tihclass](../../atl/reference/idispeventimpl-class.md)|Класс, используемый для управления сведения о типе. По умолчанию `CComTypeInfoHolder`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IDispEventImpl::IDispEventImpl](#idispeventimpl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IDispEventImpl::GetFuncInfoFromId](#getfuncinfofromid)|Находит индекс, функции с заданным идентификатором диспетчеризации.|
 |[IDispEventImpl::GetIDsOfNames](#getidsofnames)|Сопоставляет один элемент и необязательный набор имен аргументов соответствующему набору идентификаторов DispId целого числа.|

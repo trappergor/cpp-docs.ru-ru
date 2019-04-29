@@ -3,11 +3,11 @@ title: Настройка проектов C++ для процессоров ARM
 ms.date: 07/11/2018
 ms.assetid: 3d95f221-656a-480d-9651-9ad263895747
 ms.openlocfilehash: 7e6e0c97245c0941abc49096d1693a8d152c1709
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273832"
 ---
 # <a name="configure-c-projects-for-arm-processors"></a>Настройка проектов C++ для процессоров ARM
 
@@ -21,7 +21,7 @@ ms.locfileid: "57812477"
 [Общие сведения о соглашениях ABI ARM64](arm64-windows-abi-conventions.md)<br/>
 Описывает двоичный интерфейс приложений, используемых Windows для ARM64 для использования регистров, вызова соглашений и обработки исключений.
 
-[Общие вопросы ARM MSVC](common-visual-cpp-arm-migration-issues.md)<br/>
+[Общие сведения о миграции MSVC для процессоров ARM](common-visual-cpp-arm-migration-issues.md)<br/>
 Описывает элементы кода C++, которые повсеместно считаются переносимыми между архитектурами, однако их результаты для ARM отличаются от результатов для архитектур x86 и x64.
 
 [Обработка исключений ARM](arm-exception-handling.md)<br/>

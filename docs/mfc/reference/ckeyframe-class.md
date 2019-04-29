@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CKeyFrame [MFC], m_pTransition
 ms.assetid: d050a562-20f6-4c65-8ce5-ccb3aef1a20e
 ms.openlocfilehash: c2c6add30757e1d83b70001679b37a7a22b9d7d6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291362"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392613"
 ---
 # <a name="ckeyframe-class"></a>Класс CKeyFrame
 
@@ -43,17 +43,17 @@ ms.locfileid: "57291362"
 class CKeyFrame : public CBaseKeyFrame;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CKeyFrame::CKeyFrame](#ckeyframe)|Перегружен. Создает опорный кадр, зависящий от других опорного кадра.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CKeyFrame::AddToStoryboard](#addtostoryboard)|Добавляет опорного кадра раскадровки. (Переопределяет [CBaseKeyFrame::AddToStoryboard](../../mfc/reference/cbasekeyframe-class.md#addtostoryboard).)|
 |[CKeyFrame::AddToStoryboardAfterTransition](#addtostoryboardaftertransition)|Добавляет кадр в раскадровку после перехода.|
@@ -64,7 +64,7 @@ class CKeyFrame : public CBaseKeyFrame;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CKeyFrame::m_offset](#m_offset)|Задает смещение этот опорный кадр из хранящихся в m_pExistingKeyFrame опорного кадра.|
 |[CKeyFrame::m_pExistingKeyFrame](#m_pexistingkeyframe)|Содержит указатель на существующий keframe. Этот ключевой кадр добавляется в раскадровку с m_offset существующий ключевой кадр.|

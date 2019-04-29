@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
 ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293216"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (символ точки входа)
 
@@ -66,5 +66,5 @@ ms.locfileid: "57807862"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по MSVC компоновщика](linking.md)<br/>
+[Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)

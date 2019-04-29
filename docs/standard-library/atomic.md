@@ -49,11 +49,11 @@ f1_keywords:
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
 ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62376605"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -78,7 +78,7 @@ ms.locfileid: "50600490"
 
 На некоторых платформах бывает невозможно эффективно реализовать атомарные операции для некоторых типов без использования блокировок `mutex`. Атомарный тип является *неблокирующим*, если никакие атомарные операции с этим типом не используют блокировки.
 
-**C ++ 11**: в обработчиках сигналов можно выполнять атомарные операции с объектом `obj`, если `obj.is_lock_free()` или `atomic_is_lock_free(x)` имеет значение true.
+**C++11**: В обработчиках сигналов можно выполнять атомарные операции с объектом `obj` Если `obj.is_lock_free()` или `atomic_is_lock_free(x)` верны.
 
 Класс [atomic_flag](../standard-library/atomic-flag-structure.md) предоставляет минимальный атомарный тип, содержащий **bool** флаг. Его операции всегда являются неблокирующими.
 

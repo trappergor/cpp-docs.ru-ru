@@ -15,11 +15,11 @@ helpviewer_keywords:
 - std::recursive_mutex [C++], try_lock
 - std::recursive_mutex [C++], unlock
 ms.openlocfilehash: 8be17c8ab361272678c25326464261e153da6a49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369648"
 ---
 # <a name="recursivemutex-class"></a>Класс recursive_mutex
 
@@ -35,14 +35,14 @@ class recursive_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[recursive_mutex](#recursive_mutex)|Создает объект `recursive_mutex`.|
 |[Деструктор ~recursive_mutex](#dtorrecursive_mutex_destructor)|Освобождает все ресурсы, используемые объектом `recursive_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца мьютекса.|
 |[try_lock](#try_lock)|Попытки получить права владельца мьютекса без блокировки.|

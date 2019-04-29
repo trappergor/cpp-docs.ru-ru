@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization [C++], about serialization
 ms.assetid: 869010ca-74e1-4989-b409-4643cdb94084
 ms.openlocfilehash: 794a71ae9a146b691ba6a4377a7fdf2c3ddd3501
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57741385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384677"
 ---
 # <a name="serialization-ccli"></a>Сериализация (C++/CLI)
 
@@ -26,7 +26,7 @@ ms.locfileid: "57741385"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В следующем примере, класс `MyClass` (и свойство `m_nCount`) помечен как сериализуемый. Тем не менее `m_nData` свойство не сериализуется, обозначенный **NonSerialized** настраиваемого атрибута:
 

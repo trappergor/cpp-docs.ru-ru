@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4055
 ms.assetid: f9955421-16ab-46e5-8f9d-bf1639a519ef
 ms.openlocfilehash: e9fcb4356d993d86b622fd49c4a75d587554f7c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388609"
 ---
 # <a name="compiler-warning-level-1-c4055"></a>Предупреждение компилятора (уровень 1) C4055
 
@@ -19,7 +19,7 @@ ms.locfileid: "50601322"
 
 ## <a name="remarks"></a>Примечания
 
-**Устарело:** это предупреждение не создается, Visual Studio 2017 и более поздних версий.
+**Устаревшие:** Это предупреждение не создается, Visual Studio 2017 и более поздних версий.
 
 Указатель данных приведен (возможно некорректно) к указателю функции. Это предупреждение уровня 1 при использовании параметра /Za и предупреждение уровня 4 при использовании параметра /Ze.
 

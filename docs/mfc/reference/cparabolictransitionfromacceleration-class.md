@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CParabolicTransitionFromAcceleration [MFC], m_dblFinalVelocity
 ms.assetid: 1e59b86f-358b-4da0-a4fd-8eaf5e85e00f
 ms.openlocfilehash: 3d4a073a0fd74f7564d9183779acfd66b41a9540
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372976"
 ---
 # <a name="cparabolictransitionfromacceleration-class"></a>Класс CParabolicTransitionFromAcceleration
 
@@ -33,23 +33,23 @@ ms.locfileid: "57274418"
 class CParabolicTransitionFromAcceleration : public CBaseTransition;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CParabolicTransitionFromAcceleration::CParabolicTransitionFromAcceleration](#cparabolictransitionfromacceleration)|Создает переход с параболическим ускорением и инициализирует его с указанными параметрами.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CParabolicTransitionFromAcceleration::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CParabolicTransitionFromAcceleration::m_dblAcceleration](#m_dblacceleration)|Ускорение анимации переменной во время перехода.|
 |[CParabolicTransitionFromAcceleration::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|

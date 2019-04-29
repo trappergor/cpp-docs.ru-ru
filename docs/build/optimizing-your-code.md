@@ -1,6 +1,6 @@
 ---
 title: Оптимизация кода
-ms.date: 12/10/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: ae60070959c683a6365992e7b6cc510fd4111b36
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57828103"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341113"
 ---
 # <a name="optimizing-your-code"></a>Оптимизация кода
 
@@ -23,13 +23,13 @@ ms.locfileid: "57828103"
 
 Ниже описаны некоторые средства оптимизации на языке C/C++.
 
-[Директивы pragma и ключевые слова оптимизации](optimization-pragmas-and-keywords.md)<br/>
+[Оптимизации директивы pragma и ключевые слова](optimization-pragmas-and-keywords.md) \
 Список ключевых слов и директивы pragma, что в коде можно использовать для повышения производительности.
 
-[Параметры компилятора, упорядоченные по категориям](reference/compiler-options-listed-by-category.md)<br/>
+[Параметры компилятора, упорядоченные по категориям](reference/compiler-options-listed-by-category.md) \
 Список **/O** параметры компилятора, которые влияют на скорость выполнения или кода размер.
 
-[Декларатор ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md)<br/>
+[Декларатор ссылки rvalue: & &](../cpp/rvalue-reference-declarator-amp-amp.md) \
 Ссылки rvalue поддерживают реализацию *семантику перемещения*. Если перемещение семантику, используемые для реализации библиотеки шаблонов, производительность приложения, использующие эти шаблоны может значительно повысить.
 
 ### <a name="the-optimize-pragma"></a>Директива pragma optimize
@@ -52,10 +52,10 @@ ms.locfileid: "57828103"
 
 В следующих разделах рассматриваются рекомендуемые методы программирования.
 
-[Рекомендации по оптимизации срочного кода](tips-for-improving-time-critical-code.md)<br/>
+[Рекомендации по оптимизации срочного кода](tips-for-improving-time-critical-code.md) \
 Более эффективное кодирование методики может привести к повышению производительности. В этом разделе описываются методы, которые помогут вам убедитесь в том, что срочные части кода выполняются удовлетворительно написания кода.
 
-[Рекомендации по оптимизации](optimization-best-practices.md)<br/>
+[Рекомендации по оптимизации](optimization-best-practices.md) \
 Предоставляет общие рекомендации по оптимизации приложения.
 
 ## <a name="debugging-optimized-code"></a>Отладка оптимизированного кода
@@ -84,22 +84,21 @@ ms.locfileid: "57828103"
 - [Способы оптимизации следует использовать для повышения производительности клиентского приложения при загрузке?](../build/dll-frequently-asked-questions.md#mfc_optimization)
 
 
-## <a name="in-this-section"></a>В данном разделе
+## <a name="in-this-section"></a>Содержание раздела
 
-[Директивы pragma и ключевые слова оптимизации](optimization-pragmas-and-keywords.md)<br/>
-[Улучшение производительности компилятора](improving-compiler-throughput.md)<br/>
-[Почему может уменьшиться точность чисел с плавающей запятой](why-floating-point-numbers-may-lose-precision.md)<br/>
-[IEEE-представление с плавающей запятой](ieee-floating-point-representation.md)<br/>
-[Рекомендации по оптимизации срочного кода](tips-for-improving-time-critical-code.md)<br/>
-[При использовании имен функций без скобок () код не создается](using-function-name-without-parens-produces-no-code.md)<br/>
-[Рекомендации по оптимизации](optimization-best-practices.md)<br/>
-[Профильная оптимизация](profile-guided-optimizations.md)<br/>
-[Переменные среды для профильной оптимизации](environment-variables-for-profile-guided-optimizations.md)<br/>
-[PgoAutoSweep](pgoautosweep.md)<br/>
-[pgomgr](pgomgr.md)<br/>
-[pgosweep](pgosweep.md)<br/>
-[Практическое руководство. Слияние нескольких профилей для профильной оптимизации](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)<br/>
-[Надстройка вероятностного оптимизатора Visual Studio 2013 в разделе производительности и диагностики](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)<br/>
+[Оптимизации директивы pragma и ключевые слова](optimization-pragmas-and-keywords.md) \
+[Улучшение производительности компилятора](improving-compiler-throughput.md) \
+[Почему может уменьшиться точность чисел с плавающей запятой](why-floating-point-numbers-may-lose-precision.md) \
+[IEEE-представление с плавающей запятой](ieee-floating-point-representation.md) \
+[Рекомендации по оптимизации срочного кода](tips-for-improving-time-critical-code.md) \
+[При использовании имен функций без скобок () код не создается](using-function-name-without-parens-produces-no-code.md) \
+[Рекомендации по оптимизации](optimization-best-practices.md) \
+[Профильная оптимизация](profile-guided-optimizations.md) \
+[Переменные среды для профильной оптимизации](environment-variables-for-profile-guided-optimizations.md) \
+[Использованием PgoAutoSweep](pgoautosweep.md) \
+[pgomgr](pgomgr.md) \
+[pgosweep](pgosweep.md) \
+[Практическое руководство. Слияние нескольких профилей для профильной оптимизации](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
 
 ## <a name="see-also"></a>См. также
 

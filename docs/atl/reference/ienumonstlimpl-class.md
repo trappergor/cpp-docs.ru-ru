@@ -16,11 +16,11 @@ helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
 ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275273"
 ---
 # <a name="ienumonstlimpl-class"></a>Класс IEnumOnSTLImpl
 
@@ -55,7 +55,7 @@ COM-перечислитель. См. в разделе [IEnumString](/windows/d
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IEnumOnSTLImpl::Clone](#clone)|Реализация **клона**.|
 |[IEnumOnSTLImpl::Init](#init)|Инициализирует перечислитель.|
@@ -65,7 +65,7 @@ COM-перечислитель. См. в разделе [IEnumString](/windows/d
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IEnumOnSTLImpl::m_iter](#m_iter)|Итератор, который представляет текущей позиции перечислителя в коллекции.|
 |[IEnumOnSTLImpl::m_pcollection](#m_pcollection)|Указатель на контейнера стандартной библиотеки C++, содержащего элементы, которые необходимо перечислить.|

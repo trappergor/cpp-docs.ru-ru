@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C4431
 ms.assetid: 58434ab6-dd8d-427b-953a-602fb7453ae6
 ms.openlocfilehash: 1cef70ab02148924bf6a0f29e298b34c54b28bc4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391521"
 ---
 # <a name="compiler-warning-level-4-c4431"></a>Предупреждение компилятора (уровень 4) C4431
 
-отсутствует спецификатор типа — предполагается int. Примечание. C++ не поддерживает тип int по умолчанию
+отсутствует спецификатор типа — предполагается int. Примечание. C++ не поддерживает int по умолчанию
 
 Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: Visual C++ больше не создает нетипизированные идентификаторы как int по умолчанию. Тип идентификатора необходимо указывать явно.
 

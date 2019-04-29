@@ -134,11 +134,11 @@ helpviewer_keywords:
 - CPane [MFC], m_recentDockInfo
 ms.assetid: 5c651a64-3c79-4d94-9676-45f6402a6bc5
 ms.openlocfilehash: b660d181aada8abeb61b397fb30b097897e74f65
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373158"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -150,17 +150,17 @@ ms.locfileid: "57326781"
 class CPane : public CBasePane
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CPane::~CPane`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPane::AdjustSizeImmediate](#adjustsizeimmediate)|Сразу же повторно вычисляет макет области.|
 |[CPane::AllocElements](#allocelements)|Выделяет память для внутреннего использования.|
@@ -228,7 +228,7 @@ class CPane : public CBasePane
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPane::OnAfterDock](#onafterdock)|Вызывается платформой при область был закреплен.|
 |[CPane::OnAfterFloat](#onafterfloat)|Вызывается платформой при стала плавающей панели.|
@@ -237,7 +237,7 @@ class CPane : public CBasePane
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPane::m_bHandleMinSize](#m_bhandleminsize)|Позволяет согласованно обрабатывать минимальный размер для области.|
 |[CPane::m_recentDockInfo](#m_recentdockinfo)|Содержит сведения о последней закрепления.|
@@ -626,7 +626,7 @@ virtual BOOL DockPane(
 *dockMethod*<br/>
 [in] Задает метод закрепления для использования. Возможными значениями являются следующим образом:
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |DM_UNKNOWN|Инфраструктура использует этот параметр, если метод закрепления неизвестно. Области не хранит его последней позиции с плавающей запятой. Этот параметр позволяет программно закрепить в области, когда у вас нет для хранения последней позиции с плавающей запятой.|
 |DM_MOUSE|Используется внутренним образом.|
@@ -1106,7 +1106,7 @@ BOOL MoveByAlignment(
 
 *dwAlignment* может быть любым из следующих значений:
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |CBRS_ALIGN_TOP|Позволяет области быть закреплено в верхнюю часть клиентской области окна фрейма.|
 |CBRS_ALIGN_BOTTOM|Позволяет области быть закреплено в нижнюю часть клиентской области окна фрейма.|
