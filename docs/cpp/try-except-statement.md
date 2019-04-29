@@ -27,11 +27,11 @@ helpviewer_keywords:
 - _abnormal_termination keyword [C++]
 ms.assetid: 30d60071-ea49-4bfb-a8e6-7a420de66381
 ms.openlocfilehash: 400c831eec1c570f26dfc010b4e4c61e7d21b1c4
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266846"
 ---
 # <a name="try-except-statement"></a>Оператор try-except
 
@@ -69,7 +69,7 @@ ms.locfileid: "51326658"
 
 1. Если исключение возникает во время выполнения защищенного раздела или в любой процедуре вызывает защищенного раздела, **__except** *выражение* (вызывается *фильтра* выражение) вычисляется и значение определяет способ обработки исключения. Есть три возможных значения:
 
-   - Исключение EXCEPTION_CONTINUE_EXECUTION (– 1) (закрыто). Выполнение продолжается в точке, в которой возникло исключение.
+   - EXCEPTION_CONTINUE_EXECUTION (-1) Exception is dismissed. Выполнение продолжается в точке, в которой возникло исключение.
 
    - EXCEPTION_CONTINUE_SEARCH (0) исключение не распознано. Программа переходит к поиску обработчика в стеке (сначала находятся выражения с оператором **try-except**, а затем обработчики со следующим наивысшим приоритетом).
 

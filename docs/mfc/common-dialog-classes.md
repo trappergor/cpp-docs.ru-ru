@@ -12,11 +12,11 @@ helpviewer_keywords:
 - common dialog boxes [MFC]
 ms.assetid: 5c4f6443-896c-4b05-a7df-8169fdadc71d
 ms.openlocfilehash: 5efd885421d8c73c191e2a5603f37d1df85a5168
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388531"
 ---
 # <a name="common-dialog-classes"></a>Классы общих диалоговых окон
 
@@ -24,7 +24,7 @@ ms.locfileid: "57303077"
 
 ### <a name="common-dialog-classes"></a>Классы общих диалоговых окон
 
-|Диалоговое окно производного класса|Назначение|
+|Диалоговое окно производного класса|Цель|
 |--------------------------|-------------|
 |[CColorDialog](../mfc/reference/ccolordialog-class.md)|Позволяет пользователю выберите цвета.|
 |[CFileDialog](../mfc/reference/cfiledialog-class.md)|Позволяет пользователю выбрать имя файла для открытия или сохранения.|

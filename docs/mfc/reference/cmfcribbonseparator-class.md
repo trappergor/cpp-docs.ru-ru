@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMFCRibbonSeparator [MFC], OnDrawOnList
 ms.assetid: bedb1a53-cb07-4c3c-be12-698c5409e7cf
 ms.openlocfilehash: 4806582a226590459a104f64499ab6ae541570e7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62380238"
 ---
 # <a name="cmfcribbonseparator-class"></a>Класс CMFCRibbonSeparator
 
@@ -45,14 +45,14 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CMFCRibbonSeparator::CMFCRibbonSeparator](#cmfcribbonseparator)|Создает объект `CMFCRibbonSeparator`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCRibbonSeparator::AddToListBox](#addtolistbox)|Добавляет разделитель для **команды** в списке **Настройка** диалоговое окно. (Переопределяет [CMFCRibbonBaseElement::AddToListBox](../../mfc/reference/cmfcribbonbaseelement-class.md#addtolistbox).)|
 |`CMFCRibbonSeparator::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |`CMFCRibbonSeparator::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
@@ -61,7 +61,7 @@ class CMFCRibbonSeparator : public CMFCRibbonBaseElement
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CMFCRibbonSeparator::CopyFrom](#copyfrom)|Метод копирования, который задает разделитель элементов переменные из другого объекта.|
 |[CMFCRibbonSeparator::GetRegularSize](#getregularsize)|Возвращает размер разделителя.|
 |[CMFCRibbonSeparator::IsSeparator](#isseparator)|Указывает, является ли разделитель.|
@@ -231,7 +231,7 @@ virtual void OnDrawOnList(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pDC*|[in] Указатель на контекст устройства.|
 |*strText*|[in] Текст, отображаемый в списке.|
 |*nTextOffset*|[in] Расстояние между текстом и левой стороны обрамляющего прямоугольника.|

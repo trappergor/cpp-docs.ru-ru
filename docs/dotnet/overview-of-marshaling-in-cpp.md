@@ -11,17 +11,17 @@ helpviewer_keywords:
 - marshaling, about marshaling
 ms.assetid: 997dd4bc-5f98-408f-b890-f35de9ce3bb8
 ms.openlocfilehash: 9e3b8f561ce6609eb2afedb527a16c4803f69c53
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384742"
 ---
 # <a name="overview-of-marshaling-in-c"></a>Общие сведения о маршалировании в C++
 
 В смешанном режиме иногда необходимо выполнить маршалинг данных между неуправляемыми и управляемыми типами. Visual Studio 2008 появилась *библиотека маршалинга* для маршалинга и преобразования данных в простой способ.  Библиотека маршалинга состоит из набора функций и `marshal_context` класс, который выполняют маршалинг для типов. Библиотека определяется в эти заголовки в **включают msclr** каталог для других выпусков Visual Studio:
 
-|Header|Описание:|
+|Header|Описание|
 |---------------|-----------------|
 |Marshal.h|`marshal_context` класс и маршалинга функции, свободные контекста|
 |marshal_atl.h| Функции для маршалинга типов ATL|

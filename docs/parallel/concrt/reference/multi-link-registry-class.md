@@ -15,11 +15,11 @@ helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
 ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394459"
 ---
 # <a name="multilinkregistry-class"></a>Класс multi_link_registry
 
@@ -41,14 +41,14 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[multi_link_registry](#ctor)|Создает объект `multi_link_registry`.|
 |[~ multi_link_registry деструктор](#dtor)|Уничтожает `multi_link_registry` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[add](#add)|Добавляет ссылку на `multi_link_registry` объекта. (Переопределяет [network_link_registry::add](network-link-registry-class.md#add).)|
 |[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `multi_link_registry` объекта. (Переопределяет [network_link_registry::begin](network-link-registry-class.md#begin).)|

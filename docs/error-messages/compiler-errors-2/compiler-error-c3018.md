@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3018
 ms.assetid: 685be45f-f116-43a8-a88d-05ab6616e2f1
 ms.openlocfilehash: 7a16c81cf2b9c2a815d2e35d10ae82d5a75547b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62386724"
 ---
 # <a name="compiler-error-c3018"></a>Ошибка компилятора C3018
 
-"переменная1": в проверке или в приращении в операторе For директивы OpenMP должна использоваться переменная индекса "переменная2"
+«переменная1»: OpenMP «for» проверке или в приращении необходимо использовать переменную индекса «переменная2»
 
 Цикл `for` в операторе OpenMP должен использовать ту же переменную для проверки и увеличения, которую он использует для индекса.
 

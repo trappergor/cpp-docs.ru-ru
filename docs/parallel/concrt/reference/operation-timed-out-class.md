@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operation_timed_out class
 ms.assetid: 963efe1d-a6e0-477c-9a70-d93d8412c897
 ms.openlocfilehash: 2511be4669bc4abf75d5188e3aeabd7863f42dd7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394407"
 ---
 # <a name="operationtimedout-class"></a>Класс operation_timed_out
 
@@ -29,7 +29,7 @@ class operation_timed_out : public std::exception;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[operation_timed_out](#ctor)|Перегружен. Создает объект `operation_timed_out`.|
 

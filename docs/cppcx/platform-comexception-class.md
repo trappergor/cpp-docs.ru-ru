@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
 ms.openlocfilehash: 5a74184a8cbc4126988da2ba0be61d9f5b2bb71c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745216"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383351"
 ---
 # <a name="platformcomexception-class"></a>Класс Platform::COMException
 
@@ -34,7 +34,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 **Конструкторы**
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[COMException](#ctor)|Инициализирует новый экземпляр класса COMException.|
 
@@ -46,7 +46,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 Класс COMException имеет следующие свойства.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[Exception::HRESULT](#hresult)|Значение HRESULT, соответствующее исключению.|
 |[Exception::Message](#message)|Сообщение с описанием исключения.|
@@ -55,7 +55,7 @@ public ref class COMException : Exception,    IException,    IPrintable,    IEqu
 
 Следующие предопределенные исключения наследуются от класса COMException. Они отличаются от класса COMException только своими именами, именами своих конструкторов и значениями HRESULT.
 
-|name|Значение HRESULT|Описание:|
+|name|Значение HRESULT|Описание|
 |----------|------------------------|-----------------|
 |COMException|*Определяемое пользователем значение hresult*|Возникает при возвращении неизвестного значения HRESULT после вызова метода COM.|
 |AccessDeniedException|E_ACCESSDENIED|Возникает при запрете доступа к ресурсу или функции.|

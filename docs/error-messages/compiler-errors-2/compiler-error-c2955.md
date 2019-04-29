@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2955
 ms.assetid: 77709fb6-d69b-46fd-a62f-e8564563d01b
 ms.openlocfilehash: c012e5189b9ca1d0b0e786cbddacedee7c6728d2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62300743"
 ---
 # <a name="compiler-error-c2955"></a>Ошибка компилятора C2955
 
@@ -70,7 +70,7 @@ int main() {
 
 ## <a name="example"></a>Пример
 
-**Visual Studio 2017 и более поздних версий:** компилятор правильно диагностирует отсутствующие списки аргументов шаблона, когда шаблон появится в списке параметров шаблона (например, как часть аргумента шаблона по умолчанию или параметр шаблона, не являющийся типом). Следующий код компилируется в Visual Studio 2015, но выводит ошибку в Visual Studio 2017.
+**Visual Studio 2017 и более поздних версий:** Компилятор правильно диагностирует отсутствующие списки аргументов шаблона, когда шаблон появится в списке параметров шаблона (например, как часть аргумента шаблона по умолчанию или параметр шаблона, не являющийся типом). Следующий код компилируется в Visual Studio 2015, но выводит ошибку в Visual Studio 2017.
 
 ```
 template <class T> class ListNode;

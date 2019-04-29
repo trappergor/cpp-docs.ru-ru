@@ -9,11 +9,11 @@ helpviewer_keywords:
 - auto_partitioner class
 ms.assetid: 7cc08e5d-20b4-47a4-b4b5-c214a78f5a9e
 ms.openlocfilehash: 2d8bbb8e8af17dd19953487c47e5fd40343fe349
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391092"
 ---
 # <a name="autopartitioner-class"></a>Класс auto_partitioner
 
@@ -29,7 +29,7 @@ class auto_partitioner;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[auto_partitioner](#ctor)|Создает объект `auto_partitioner`.|
 |[~ auto_partitioner деструктор](#dtor)|Уничтожает объект `auto_partitioner`.|

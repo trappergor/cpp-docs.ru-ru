@@ -11,11 +11,11 @@ helpviewer_keywords:
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
 ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62389376"
 ---
 # <a name="windows-sockets-ports-and-socket-addresses"></a>Сокеты Windows. Порты и адреса сокета
 
@@ -46,7 +46,7 @@ ms.locfileid: "57277785"
 
 - [Сокеты Windows. Работа сокетов с архивами](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 

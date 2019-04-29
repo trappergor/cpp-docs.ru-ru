@@ -7,11 +7,11 @@ f1_keywords:
 - atomic/std::atomic_flag::test_and_set
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
 ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550427"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377261"
 ---
 # <a name="atomicflag-structure"></a>Структура atomic_flag
 
@@ -27,7 +27,7 @@ struct atomic_flag;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[clear](#clear)|Устанавливает сохраненный флаг **false**.|
 |[test_and_set](#test_and_set)|Устанавливает сохраненный флаг **true** и возвращает начальное значение флага.|
@@ -42,7 +42,7 @@ struct atomic_flag;
 
 **Пространство имен:** std
 
-## <a name="clear"></a>  atomic_flag::Clear
+## <a name="clear"></a>  atomic_flag::clear
 
 Наборы **bool** флаг, который хранится в `*this` для **false**, в течение указанного [memory_order](../standard-library/atomic-enums.md#memory_order_enum) ограничения.
 

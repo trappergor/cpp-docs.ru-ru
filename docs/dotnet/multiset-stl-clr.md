@@ -98,11 +98,11 @@ helpviewer_keywords:
 - operator>= member [STL/CLR]
 ms.assetid: 7c46e2b4-cd88-49b7-a9e6-63ad5ae7feb5
 ms.openlocfilehash: e7a0551c1d75993d588f5dbb369989c42a71d903
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384781"
 ---
 # <a name="multiset-stlclr"></a>multiset (STL/CLR)
 
@@ -338,7 +338,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> MULTISET::const_iterator (STL/CLR)
+## <a name="const_iterator"></a> multiset::const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -380,7 +380,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> MULTISET::const_reference (STL/CLR)
+## <a name="const_reference"></a> multiset::const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -425,7 +425,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> MULTISET::const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> multiset::const_reverse_iterator (STL/CLR)
 
 Тип постоянного обратного итератора для управляемой последовательности...
 
@@ -520,7 +520,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> MULTISET::difference_type (STL/CLR)
+## <a name="difference_type"></a> multiset::difference_type (STL/CLR)
 
 Типы со знаком расстояния между двумя элементами.
 
@@ -996,7 +996,7 @@ a b c
 a
 ```
 
-## <a name="generic_reverse_iterator"></a> MULTISET::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> multiset::generic_reverse_iterator (STL/CLR)
 
 Тип обратного итератора для использования с универсальный интерфейс для контейнера.
 
@@ -1261,7 +1261,7 @@ int main()
 a b c
 ```
 
-## <a name="key_comp"></a> MULTISET::key_comp (STL/CLR)
+## <a name="key_comp"></a> multiset::key_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух ключей.
 
@@ -1380,7 +1380,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> MULTISET::key_type (STL/CLR)
+## <a name="key_type"></a> multiset::key_type (STL/CLR)
 
 Тип ключа упорядочения.
 
@@ -1992,7 +1992,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> MULTISET::size_type (STL/CLR)
+## <a name="size_type"></a> multiset::size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2304,7 +2304,7 @@ compare(L'a', L'b') = True
 compare(L'b', L'a') = False
 ```
 
-## <a name="value_type"></a> MULTISET::value_type (STL/CLR)
+## <a name="value_type"></a> multiset::value_type (STL/CLR)
 
 Тип элемента.
 

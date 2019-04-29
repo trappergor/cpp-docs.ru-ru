@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CLinearTransition [MFC], m_duration
 ms.assetid: 7fcb2dba-beb8-4933-9f5d-3b7fb1585ef0
 ms.openlocfilehash: 4aa2d9955d2bbf98d2d7829806c4bcbd76340847
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392535"
 ---
 # <a name="clineartransition-class"></a>Класс CLinearTransition
 
@@ -35,19 +35,19 @@ class CLinearTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CLinearTransition::CLinearTransition](#clineartransition)|Создает объект линейный переход и инициализирует его длительностью и конечное значение.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CLinearTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CLinearTransition::m_dblFinalValue](#m_dblfinalvalue)|Значение переменной анимации в конце перехода.|
 |[CLinearTransition::m_duration](#m_duration)|Длительность перехода.|

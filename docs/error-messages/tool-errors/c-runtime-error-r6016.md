@@ -1,5 +1,5 @@
 ---
-title: Ошибкой R6016 ошибка времени выполнения C
+title: Ошибка времени выполнения C R6016
 ms.date: 11/04/2016
 f1_keywords:
 - R6016
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - R6016
 ms.assetid: 7bd3f274-d9c4-4bc4-8252-80bf168c4c3a
 ms.openlocfilehash: b617e3cf6d48a24b01479ef7ef3fb6ac425b3996
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556953"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279297"
 ---
-# <a name="c-runtime-error-r6016"></a>Ошибкой R6016 ошибка времени выполнения C
+# <a name="c-runtime-error-r6016"></a>Ошибка времени выполнения C R6016
 
 недостаточно памяти для данных потока
 

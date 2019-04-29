@@ -107,11 +107,11 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
 ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310387"
 ---
 # <a name="colecontrolsite-class"></a>Класс COleControlSite
 
@@ -127,13 +127,13 @@ class COleControlSite : public CCmdTarget
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleControlSite::COleControlSite](#colecontrolsite)|Создает объект `COleControlSite`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleControlSite::BindDefaultProperty](#binddefaultproperty)|Привязывает свойство по умолчанию размещенного элемента управления к источнику данных.|
 |[COleControlSite::BindProperty](#bindproperty)|Привязывает свойство размещенного элемента управления к источнику данных.|
@@ -170,13 +170,13 @@ class COleControlSite : public CCmdTarget
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleControlSite::GetControlInfo](#getcontrolinfo)|Извлекает сведения клавиатуры и назначенные клавиши для размещаемого элемента управления.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleControlSite::m_bIsWindowless](#m_biswindowless)|Определяет, является ли размещенный элемент управления элемента управления без окна.|
 |[COleControlSite::m_ctlInfo](#m_ctlinfo)|Содержит сведения о для элемента управления для обработки событий клавиатуры.|

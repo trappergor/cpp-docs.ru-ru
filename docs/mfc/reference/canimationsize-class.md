@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CAnimationSize [MFC], m_cyValue
 ms.assetid: ea06d1b5-502c-44a3-82ca-8bd6ba6a9364
 ms.openlocfilehash: f52016afe39da900dca4847d29beccb97d829b60
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325121"
 ---
 # <a name="canimationsize-class"></a>Класс CAnimationSize
 
@@ -47,13 +47,13 @@ class CAnimationSize : public CAnimationBaseObject;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationSize::CAnimationSize](#canimationsize)|Перегружен. Создает объект размер анимации.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationSize::AddTransition](#addtransition)|Добавляет переходы для ширины и высоты.|
 |[CAnimationSize::GetCX](#getcx)|Предоставляет доступ к CAnimationVariable, представляющее ширину.|
@@ -64,13 +64,13 @@ class CAnimationSize : public CAnimationBaseObject;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationSize::GetAnimationVariableList](#getanimationvariablelist)|Помещает инкапсулированный анимации переменные в список. (Переопределяет [CAnimationBaseObject::GetAnimationVariableList](../../mfc/reference/canimationbaseobject-class.md#getanimationvariablelist).)|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CAnimationSize::operator CSize](#operator_csize)|Преобразует CAnimationSize CSize.|
 |[CAnimationSize::operator =](#operator_eq)|Назначает szSrc CAnimationSize.|

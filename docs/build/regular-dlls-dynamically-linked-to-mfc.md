@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
 ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315005"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>Регулярные MFC DLL, динамически компонуемые с MFC
 
@@ -81,7 +81,7 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 Пример для написания, сборки и использовать обычную библиотеку DLL MFC, см. в образце [DLLScreenCap](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap). Дополнительные сведения о регулярных DLL MFC, динамически связываются с MFC см. в разделе «Преобразование DLLScreenCap для динамически ссылку с MFC DLL» в абстрактный пример.
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие.
+## <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Инициализация обычных библиотек DLL MFC](run-time-library-behavior.md#initializing-regular-dlls)
 

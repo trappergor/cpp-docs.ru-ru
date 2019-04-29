@@ -15,11 +15,11 @@ f1_keywords:
 - memory/std::pointer_traits::pointer_to
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
 ms.openlocfilehash: b661d4b36ce48a08faba6638c5114f3f4e6981a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434792"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370389"
 ---
 # <a name="pointertraits-struct"></a>Структура pointer_traits
 
@@ -51,7 +51,7 @@ struct Ptr
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`typedef T2 difference_type`|Тип `T2` — `Ptr::difference_type`, если этот тип существует, в противном случае — `ptrdiff_t`. Если `Ptr` является необработанным указателем, то тип — `ptrdiff_t`.|
 |`typedef T1 element_type`|Тип `T1` — `Ptr::element_type`, если этот тип существует, в противном случае — `Ty`. Если `Ptr` является необработанным указателем, то тип — `Ty`.|
@@ -65,7 +65,7 @@ struct Ptr
 
 ### <a name="methods"></a>Методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[pointer_to](#pointer_to)|Преобразует произвольную ссылку в объект класса `Ptr`.|
 

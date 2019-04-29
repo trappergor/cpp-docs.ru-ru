@@ -11,11 +11,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: e45172e8-eae3-400a-8139-0fa009a42fdc
 ms.openlocfilehash: 7b1eb0df439bcfde3aa295f23a90291e865df3a9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307839"
 ---
 # <a name="servers"></a>Серверы
 
@@ -43,21 +43,21 @@ Miniserver — это специальный тип серверного при�
 
 Дополнительные сведения о серверах см. в разделе:
 
-- [серверы: Реализация сервера](../mfc/servers-implementing-a-server.md)
+- [Серверы. Реализация сервера](../mfc/servers-implementing-a-server.md)
 
-- [серверы: Реализация документов сервера](../mfc/servers-implementing-server-documents.md)
+- [Серверы. Реализация документов сервера](../mfc/servers-implementing-server-documents.md)
 
-- [серверы: Реализация Windows фрейма на месте](../mfc/servers-implementing-in-place-frame-windows.md)
+- [Серверы. Реализация окон фрейма на месте](../mfc/servers-implementing-in-place-frame-windows.md)
 
-- [серверы: Элементы сервера](../mfc/servers-server-items.md)
+- [Серверы. Элементы сервера](../mfc/servers-server-items.md)
 
-- [серверы: Проблемы пользовательского интерфейса](../mfc/servers-user-interface-issues.md)
+- [Серверы. Проблемы пользовательского интерфейса](../mfc/servers-user-interface-issues.md)
 
 ## <a name="see-also"></a>См. также
 
 [OLE](../mfc/ole-in-mfc.md)<br/>
 [Контейнеры](../mfc/containers.md)<br/>
-[Контейнеры. Расширенные возможности](../mfc/containers-advanced-features.md)<br/>
+[Контейнеры. Дополнительные возможности](../mfc/containers-advanced-features.md)<br/>
 [Меню и ресурсы (OLE)](../mfc/menus-and-resources-ole.md)<br/>
 [Регистрация](../mfc/registration.md)<br/>
 [Серверы автоматизации](../mfc/automation-servers.md)

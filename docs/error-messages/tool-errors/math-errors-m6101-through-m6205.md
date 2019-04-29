@@ -1,18 +1,34 @@
 ---
-title: Математические ошибки от M6101 до M6205
-ms.date: 11/17/2017
+title: Математические ошибки
+ms.date: 04/16/2019
 ms.assetid: bdf3dc2a-d993-4f53-b0f2-9604e4914127
-ms.openlocfilehash: 323864dcae5b60b96e193487afd53fe004d38c7e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: 7d89a7b9f89342b973307f592e59d05cfe44f84f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59777241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393224"
 ---
-# <a name="math-errors-m6101-through-m6205"></a>Математические ошибки от M6101 до M6205
+# <a name="math-errors-mxxxx"></a>Математические ошибки (Mxxxx)
 
-Этот раздел представляет собой справочник по ошибкам библиотекой времени выполнения вычисления с плавающей запятой.
+Этот раздел представляет собой справочник по ошибкам библиотекой времени выполнения вычисления с плавающей запятой. Среда выполнения математических ошибок и предупреждений, имеют форму M*xxxx*, где *xxxx* состоит из четырех цифр.
 
-Можно найти дополнительную помощь для ошибок и предупреждений в открытых форумах корпорации Майкрософт. Можно искать ошибки или предупреждения с номером на [сообщества разработчиков](https://developercommunity.visualstudio.com) сайта. [Visual C++ Общие](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral) форум предназначен для вопросов о Visual C++, которые не обсуждаются на других форумах. Можно также поиск ошибок и предупреждений и задавайте вопросы на [Stack Overflow](http://stackoverflow.com/) для поиска решений.
+[!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
-Ссылки на дополнительную справку и ресурсы сообщества, см. в разделе [справки Visual C++ и сообщества](../../overview/visual-cpp-help-and-community.md).
+## <a name="math-errors"></a>Математические ошибки
+
+[Математическая ошибка M6101](math-error-m6101.md) \
+[Математическая ошибка M6102](math-error-m6102.md) \
+[Математическая ошибка M6107](math-error-m6107.md) \
+[Математическая ошибка M6108](math-error-m6108.md) \
+[Математическая ошибка M6110](math-error-m6110.md) \
+[Математическая ошибка M6111](math-error-m6111.md) \
+[Математическая ошибка M6201](math-error-m6201.md) \
+[Математическая ошибка M6202](math-error-m6202.md) \
+[Математическая ошибка M6203](math-error-m6203.md) \
+[Математическая ошибка M6205](math-error-m6205.md)
+
+## <a name="see-also"></a>См. также
+
+[C /C++ ошибки и предупреждения средств компиляции и построения](../compiler-errors-1/c-cpp-build-errors.md) \
+[Математические и поддержка плавающей запятой](../../c-runtime-library/floating-point-support.md)

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - STL/CLR, cross-assembly issues
 ms.assetid: 87efb41b-3db3-4498-a2e7-f3ef8a99f04d
 ms.openlocfilehash: 206a95cbaa808f54d7ae0e500b5a2bea272d974b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748441"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387335"
 ---
 # <a name="how-to-expose-an-stlclr-container-from-an-assembly"></a>Практическое руководство. Предоставление контейнера STL/CLR из сборки
 
@@ -197,7 +197,7 @@ namespace StlClrClassLibrary
 
 ## <a name="example-3"></a>Пример 3
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере мы создадим клиент C++, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует `generic_container` определения типов из контейнеров STL/CLR для выполнения итерации по контейнеры и для отображения их содержимого.
 
@@ -291,7 +291,7 @@ cliext::vector contents:
 
 ## <a name="example-4"></a>Пример 4
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 В этом примере мы создадим клиент C#, использующий библиотеку классов, созданных в примерах 1 и 2. Этот клиент использует <xref:System.Collections.Generic.ICollection%601> методы из контейнеров STL/CLR для выполнения итерации по контейнеры и для отображения их содержимого.
 

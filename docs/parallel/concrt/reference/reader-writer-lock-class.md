@@ -16,11 +16,11 @@ helpviewer_keywords:
 - reader_writer_lock class
 ms.assetid: 91a59cd2-ca05-4b74-8398-d826d9f86736
 ms.openlocfilehash: 111d48b9c4a575078f2342bfaa944871bbd628f5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394342"
 ---
 # <a name="readerwriterlock-class"></a>Класс reader_writer_lock
 
@@ -36,21 +36,21 @@ class reader_writer_lock;
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс reader_writer_lock::scoped_lock](#scoped_lock_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировка объектов разработчиком.|
 |[Класс reader_writer_lock::scoped_lock_read](#scoped_lock_read_class)|Исключение безопасная оболочка RAII, можно использовать для получения `reader_writer_lock` блокировка объектов в качестве средства чтения.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|Создает новый `reader_writer_lock` объекта.|
 |[~ reader_writer_lock деструктор](#dtor)|Уничтожает `reader_writer_lock` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Получает блокировку чтения записи писателя.|
 |[lock_read](#lock_read)|Получает блокировку чтения записи, как средство чтения. Если есть записи, активные модули нужно подождать, пока они выполняются. Средство чтения просто регистрирует интерес к блокировке и ожидает записи для его освобождения.|

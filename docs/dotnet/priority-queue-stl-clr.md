@@ -52,11 +52,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 4d0000d3-68ff-4c4b-8157-7060540136f5
 ms.openlocfilehash: ed5e190f0c64aca3876d1cd1f05c9d75224355cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384768"
 ---
 # <a name="priorityqueue-stlclr"></a>priority_queue (STL/CLR)
 
@@ -116,7 +116,7 @@ template<typename Value,
 |[priority_queue::to_array (STL/CLR)](#to_array)|Копирует управляемой последовательности в новый массив.|
 |[priority_queue::value_comp (STL/CLR)](#value_comp)|Копирует делегат упорядочения для двух элементов.|
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |--------------|-----------------|
 |[priority_queue::top_item (STL/CLR)](#top_item)|Обращается к элементу с наивысшим приоритетом.|
 

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
 ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392665"
 ---
 # <a name="cinterpolatorbase-class"></a>Класс CInterpolatorBase
 
@@ -43,17 +43,17 @@ ms.locfileid: "57302290"
 class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CInterpolatorBase::CInterpolatorBase](#cinterpolatorbase)|Создает `CInterpolatorBase` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CInterpolatorBase::CreateInstance](#createinstance)|Создает экземпляр класса `CInterpolatorBase` и содержит указатель на пользовательские интерполятора, который будет обрабатывать события.|
 |[CInterpolatorBase::GetDependencies](#getdependencies)|Возвращает зависимости интерполятор. (Переопределяет `CUIAnimationInterpolatorBase::GetDependencies`.)|

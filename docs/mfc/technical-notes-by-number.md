@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.mfc.technotes
 ms.assetid: aaa449be-9167-4510-a490-af872c4f60a2
 ms.openlocfilehash: c5a102f36c5556af48a1b3f79e39f256bc5797ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50634880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306409"
 ---
 # <a name="technical-notes-by-number"></a>Технические примечания по номеру
 
@@ -18,7 +18,7 @@ ms.locfileid: "50634880"
 |Число|Заголовок|
 |------------|-----------|
 |71|[Реализация IOleCommandTarget в MFC](../mfc/tn071-mfc-iolecommandtarget-implementation.md)|
-|70|[Имена классов окна MFC](../mfc/tn070-mfc-window-class-names.md)|
+|17|[Имена классов окна MFC](../mfc/tn070-mfc-window-class-names.md)|
 |68|[Выполнение транзакций с драйвером Microsoft Access 7 ODBC](../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)|
 |66|[Распространенные MFC 3.x в 4.0 проблемы](../mfc/tn066-common-mfc-3-x-to-4-0-porting-issues.md)|
 |65|[Поддержка сдвоенных интерфейсов для серверов автоматизации OLE](../mfc/tn065-dual-interface-support-for-ole-automation-servers.md)|

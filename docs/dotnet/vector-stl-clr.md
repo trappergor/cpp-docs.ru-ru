@@ -98,11 +98,11 @@ helpviewer_keywords:
 - vector member [STL/CLR]
 ms.assetid: f90060d5-097a-4e9d-9a26-a634b5b9c6c2
 ms.openlocfilehash: 09a0919cd47937960736c6cccf31343c5e12087d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384391"
 ---
 # <a name="vector-stlclr"></a>vector (STL/CLR)
 
@@ -179,7 +179,7 @@ template<typename Value>
 |[vector::to_array (STL/CLR)](#to_array)|Копирует управляемой последовательности в новый массив.|
 |[vector::vector (STL/CLR)](#vector)|Создает объект контейнера.|
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |--------------|-----------------|
 |[vector::back_item (STL/CLR)](#back_item)|Обращается к последнему элементу.|
 |[vector::front_item (STL/CLR)](#front_item)|Обращается к первому элементу.|

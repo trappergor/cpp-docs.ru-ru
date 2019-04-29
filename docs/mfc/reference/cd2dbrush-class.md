@@ -31,11 +31,11 @@ helpviewer_keywords:
 - CD2DBrush [MFC], m_pBrushProperties
 ms.assetid: 0d2c0857-2261-48a8-8ee0-a88cbf08499a
 ms.openlocfilehash: 1d079ec6c96f96919fde39b73297580ed2a0ac75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391300"
 ---
 # <a name="cd2dbrush-class"></a>Класс CD2DBrush
 
@@ -47,18 +47,18 @@ ms.locfileid: "57270986"
 class CD2DBrush : public CD2DResource;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBrush::CD2DBrush](#cd2dbrush)|Создает объект CD2DBrush.|
 |[CD2DBrush:: ~ CD2DBrush](#_dtorcd2dbrush)|Деструктор Вызывается при уничтожении объекта D2D кисти.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBrush::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
 |[CD2DBrush::destroy](#destroy)|Уничтожает объект CD2DBrush. (Переопределяет [CD2DResource::Destroy](../../mfc/reference/cd2dresource-class.md#destroy).)|
@@ -72,13 +72,13 @@ class CD2DBrush : public CD2DResource;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBrush::operator ID2D1Brush *](#operator_id2d1brush_star)|Возвращает интерфейс ID2D1Brush|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBrush::m_pBrush](#m_pbrush)|Содержит указатель на объект ID2D1Brush.|
 |[CD2DBrush::m_pBrushProperties](#m_pbrushproperties)|Свойства кисти.|

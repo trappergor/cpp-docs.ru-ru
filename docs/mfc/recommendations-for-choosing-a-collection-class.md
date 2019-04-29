@@ -17,11 +17,11 @@ helpviewer_keywords:
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
 ms.openlocfilehash: c72a57385b0036d98629d1ee24111500b9d2f8ad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62218616"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>Рекомендации по выбору класса коллекции
 
@@ -95,5 +95,5 @@ ms.locfileid: "57288042"
 
 [Коллекции](../mfc/collections.md)<br/>
 [Классы на основе шаблонов](../mfc/template-based-classes.md)<br/>
-[Практическое руководство. Создание безопасных типов коллекций](../mfc/how-to-make-a-type-safe-collection.md)<br/>
+[Практическое руководство. Создание типобезопасных коллекций](../mfc/how-to-make-a-type-safe-collection.md)<br/>
 [Доступ ко всем членам коллекции](../mfc/accessing-all-members-of-a-collection.md)

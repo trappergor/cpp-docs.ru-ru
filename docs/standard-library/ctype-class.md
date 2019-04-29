@@ -37,11 +37,11 @@ helpviewer_keywords:
 - std::ctype [C++], widen
 ms.assetid: 3627154c-49d9-47b5-b28f-5bbedee38e3b
 ms.openlocfilehash: e7c474e9112acadc11af889471b1e126dfeeb23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394147"
 ---
 # <a name="ctype-class"></a>Класс ctype
 
@@ -147,11 +147,11 @@ explicit ctype(size_t _Refs = 0);
 
 Возможные значения *_Refs* параметра и их важность:
 
-- 0: время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
 
-- 1: время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \> 1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 

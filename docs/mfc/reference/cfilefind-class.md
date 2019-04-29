@@ -57,11 +57,11 @@ helpviewer_keywords:
 - CFileFind [MFC], m_pTM
 ms.assetid: 9990068c-b023-4114-9580-a50182d15240
 ms.openlocfilehash: da08b04b314df4916a290d4929a4cbaac87434d8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296635"
 ---
 # <a name="cfilefind-class"></a>Класс CFileFind
 
@@ -73,17 +73,17 @@ ms.locfileid: "57289927"
 class CFileFind : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileFind::CFileFind](#cfilefind)|Создает объект `CFileFind`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileFind::Close](#close)|Закрывает этот запрос поиска.|
 |[CFileFind::FindFile](#findfile)|Осуществляет поиск указанного имени файла в каталоге.|
@@ -110,13 +110,13 @@ class CFileFind : public CObject
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileFind::CloseContext](#closecontext)|Закрывает файл, указанный параметром текущий дескриптор поиска.|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CFileFind::m_pTM](#m_ptm)|Указатель на `CAtlTransactionManager` объект.|
 
