@@ -3,11 +3,11 @@ title: Обзор соглашений ABI ARM
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
 ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295247"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>Обзор соглашений ABI ARM32
 
@@ -60,7 +60,7 @@ Windows на ARM выполняется в режиме с прямым поря
    |STR, STRB, STRH|Сохранение в память||
    |ADD, ADC, RSB, SBC, SUB|Сложение или вычитание|Но не формы ADD/SUB SP, SP, imm7<br /><br /> Rm != PC, Rdn != PC, Rdm != PC|
    |CMP, CMN|Сравнение|Rm != PC, Rn != PC|
-   |MUL|Умножение||
+   |MUL|Multiply||
    |ASR, LSL, LSR, ROR|Сдвиг битов||
    |AND, BIC, EOR, ORR, TST|Побитовая арифметика||
    |BX|Ветвление для регистра|Rm != PC|
@@ -116,7 +116,7 @@ Windows поддерживает только варианты ARM, имеющи
 
 В следующей таблице представлены битовые поля регистра управления и состояний для операций с плавающей точкой (FPSCR).
 
-|Биты|Значение|Переменный?|Роль|
+|Bits|Значение|Переменный?|Роль|
 |----------|-------------|---------------|----------|
 |31—28|NZCV|Переменный|Флаги состояния|
 |27|QC|Переменный|Совокупное насыщение|

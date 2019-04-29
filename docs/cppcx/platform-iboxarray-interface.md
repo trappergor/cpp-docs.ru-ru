@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Platform::IBoxArray
 ms.assetid: 6cd82c9e-4230-4147-9edb-7a652875dbf1
 ms.openlocfilehash: ea2517ad64cfd6742ef072d24e94a9b3899cea2d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392080"
 ---
 # <a name="platformiboxarray-interface"></a>Интерфейс Platform::IBoxArray
 
@@ -33,13 +33,13 @@ interface class IBoxArray
 
 ### <a name="remarks"></a>Примечания
 
-`IBoxArray` — Это C + +/ CX имя `Windows::Foundation::IReferenceArray`.
+`IBoxArray` — C++имя /CX `Windows::Foundation::IReferenceArray`.
 
 ### <a name="members"></a>Участники
 
 Интерфейс `IBoxArray` наследует от интерфейса `IValueType` . Интерфейс`IBoxArray` также содержит следующие члены:
 
-|Метод|Описание:|
+|Метод|Описание|
 |------------|-----------------|
 |[Значение](#value)|Возвращает распакованный массив, который ранее хранился в этом экземпляре `IBoxArray` .|
 
