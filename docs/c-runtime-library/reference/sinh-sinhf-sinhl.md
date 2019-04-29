@@ -32,11 +32,11 @@ helpviewer_keywords:
 - sinhl function
 - hyperbolic functions
 ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62356281"
 ---
 # <a name="sinh-sinhf-sinhl"></a>SINH, sinhf, sinhl
 
@@ -66,7 +66,7 @@ long double sinh(long double x);  // C++ only
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Нет|_DOMAIN|
+|± QNAN, IND|Нет|_DOMAIN|
 |&#124;x&#124; ≥ 7.104760e + 002|OVERFLOW+INEXACT|OVERFLOW|
 
 Дополнительные сведения о кодах возврата см. в разделе [errno, _doserrno, _sys_errlist и _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md).
@@ -79,7 +79,7 @@ long double sinh(long double x);  // C++ only
 
 |Подпрограмма|Обязательный заголовок (C)|Обязательный заголовок (C++)|
 |-|-|-|
-|**SINH**, **sinhf**, **sinhl**|\<math.h>|\<cmath> или \<math.h>|
+|**sinh**, **sinhf**, **sinhl**|\<math.h>|\<cmath> или \<math.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

@@ -28,11 +28,11 @@ helpviewer_keywords:
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
 ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357594"
 ---
 # <a name="rint-rintf-rintl"></a>rint, rintf, rintl
 
@@ -60,7 +60,7 @@ long double rint( long double x );  // C++ only
 
 **Rint** функции возвращают значение с плавающей запятой, представляющий ближайшее целое число *x*. Промежуточные значения округляются согласно текущей настройке с плавающей запятой режим округления, так же, как **nearbyint** функции. В отличие от **nearbyint** функции, **rint** могут вызывать **FE_INEXACT** исключения с плавающей запятой, если результат отличается в значении из аргумента. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|**_matherr** исключение|
+|Входные данные|Исключение SEH|**_matherr** исключение|
 |-----------|-------------------|--------------------------|
 |± ∞, QNAN, IND|Нет|Нет|
 |Денормализованные числа|EXCEPTION_FLT_UNDERFLOW|Нет|

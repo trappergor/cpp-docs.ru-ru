@@ -135,11 +135,11 @@ helpviewer_keywords:
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
 ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362742"
 ---
 # <a name="unorderedset-class"></a>Класс unordered_set
 
@@ -2431,7 +2431,7 @@ unordered_set(
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
 |*bucket_count*|Минимальное количество блоков.|
-|*Справа*|Контейнер для копирования.|
+|*Right*|Контейнер для копирования.|
 |*IList*|Объект initializer_list, содержащий копируемые элементы.|
 
 ### <a name="remarks"></a>Примечания

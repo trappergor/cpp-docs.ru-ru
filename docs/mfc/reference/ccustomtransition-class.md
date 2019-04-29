@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CCustomTransition [MFC], m_pInterpolator
 ms.assetid: 5bd3f492-940f-4290-a38b-fa68eb8f8401
 ms.openlocfilehash: e0e5250b27ce6b902939ebcbfa03bf022a202788
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391287"
 ---
 # <a name="ccustomtransition-class"></a>Класс CCustomTransition
 
@@ -45,13 +45,13 @@ class CCustomTransition : public CBaseTransition;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCustomTransition::CCustomTransition](#ccustomtransition)|Создает объект пользовательский переход.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CCustomTransition::Create](#create)|Вызывает переход библиотеку для создания инкапсулированный перехода COM-объекта. (Переопределяет [CBaseTransition::Create](../../mfc/reference/cbasetransition-class.md#create).)|
 |[CCustomTransition::SetInitialValue](#setinitialvalue)|Задает начальное значение, которые будут применяться к переменной анимации, связанные с такого перехода.|
@@ -59,7 +59,7 @@ class CCustomTransition : public CBaseTransition;
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CCustomTransition::m_bInitialValueSpecified](#m_binitialvaluespecified)|Указывает, задан ли параметр с SetInitialValue начальное значение.|
 |[CCustomTransition::m_bInitialVelocitySpecified](#m_binitialvelocityspecified)|Указывает, задан ли параметр с SetInitialVelocity начальную скорость.|
@@ -69,7 +69,7 @@ class CCustomTransition : public CBaseTransition;
 
 ## <a name="remarks"></a>Примечания
 
-Класс CCustomTransitions позволяет разработчикам реализовывать пользовательские переходов. Его создания, используется в качестве стандартных переход, но его конструктор принимает в качестве параметра указатель на пользовательские интерполятор. Выполните следующие действия, чтобы использовать пользовательские переходов. 1. Наследовать класс от CCustomInterpolator и реализуйте по крайней мере InterpolateValue метод. 2. Убедитесь, что время существования объекта пользовательских интерполятора должно быть длиннее продолжительность анимации места использования. 3. Создание экземпляра (с помощью оператора new) объекта CCustomTransition и передать указатель на пользовательские интерполятора в конструкторе. 4. Вызовите CCustomTransition::SetInitialValue и CCustomTransition::SetInitialVelocity, если эти параметры являются обязательными для пользовательской интерполяция. 5. Передайте указатель в пользовательский переход к методу AddTransition объекта анимации, значение которого для анимации с помощью пользовательского алгоритма. 6.  Когда следует изменить значение объекта анимации API анимации Windows вызывает InterpolateValue (и другие соответствующие методы) в CCustomInterpolator.
+Класс CCustomTransitions позволяет разработчикам реализовывать пользовательские переходов. Его создания, используется в качестве стандартных переход, но его конструктор принимает в качестве параметра указатель на пользовательские интерполятор. Выполните следующие действия, чтобы использовать пользовательские переходов. 1. Наследовать класс от CCustomInterpolator и реализуйте по крайней мере InterpolateValue метод. 2. Убедитесь, что время существования объекта пользовательских интерполятора должно быть длиннее продолжительность анимации места использования. 3. Создание экземпляра (с помощью оператора new) объекта CCustomTransition и передать указатель на пользовательские интерполятора в конструкторе. 4. Вызовите CCustomTransition::SetInitialValue и CCustomTransition::SetInitialVelocity, если эти параметры являются обязательными для пользовательской интерполяция. 5. Передайте указатель в пользовательский переход к методу AddTransition объекта анимации, значение которого для анимации с помощью пользовательского алгоритма. 6. Когда следует изменить значение объекта анимации API анимации Windows вызывает InterpolateValue (и другие соответствующие методы) в CCustomInterpolator.
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 

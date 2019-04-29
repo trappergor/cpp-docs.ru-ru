@@ -19,11 +19,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395629"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>Набор записей. Добавление, обновление и удаление записей (ODBC)
 
@@ -202,4 +202,4 @@ rsStudent.MoveNext( );
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Набор записей. Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Набор записей. Блокирование записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
