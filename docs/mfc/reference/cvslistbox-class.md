@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
 ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324444"
 ---
 # <a name="cvslistbox-class"></a>Класс CVSListBox
 
@@ -45,18 +45,18 @@ ms.locfileid: "57301524"
 class CVSListBox : public CVSListBoxBase
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CVSListBox::CVSListBox](#cvslistbox)|Создает объект `CVSListBox`.|
 |`CVSListBox::~CVSListBox`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CVSListBox::AddItem](#additem)|Добавляет строку в элементе управления списком. (Переопределяет `CVSListBoxBase::AddItem`.)|
 |[CVSListBox::EditItem](#edititem)|Начинает операцию изменения текста элемента управления списка. (Переопределяет `CVSListBoxBase::EditItem`.)|
@@ -71,7 +71,7 @@ class CVSListBox : public CVSListBoxBase
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CVSListBox::GetListHwnd](#getlisthwnd)|Возвращает дескриптор текущего элемента управления представления внедренным списком.|
 

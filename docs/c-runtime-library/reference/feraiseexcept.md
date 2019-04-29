@@ -22,11 +22,11 @@ helpviewer_keywords:
 - feraiseexcept function
 ms.assetid: 87e89151-83c2-4563-9a9a-45666245d437
 ms.openlocfilehash: 581dd4026a20ce7221945c5815af3ae102f132fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334363"
 ---
 # <a name="feraiseexcept"></a>feraiseexcept
 
@@ -66,7 +66,7 @@ int feraiseexcept(
 
 Чтобы использовать эту функцию, необходимо отключить оптимизацию вычислений с плавающей запятой, которая может препятствовать доступу. Для этого следует использовать директиву `#pragma fenv_access(on)` перед вызовом. Дополнительные сведения см. в разделе [fenv_access](../../preprocessor/fenv-access.md).
 
-**Систем Майкрософт:** исключения, указанные в *кроме* вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Тем не менее, FE_INEXACT может вызываться при возникновении FE_OVERFLOW или FE_UNDERFLOW, даже если не указан в *кроме*. **Завершение блока, относящегося только к системам Майкрософт**
+**Систем Майкрософт:** Исключения, указанные в *кроме* вызываются в порядке FE_INVALID, FE_DIVBYZERO, FE_OVERFLOW, FE_UNDERFLOW, FE_INEXACT. Тем не менее, FE_INEXACT может вызываться при возникновении FE_OVERFLOW или FE_UNDERFLOW, даже если не указан в *кроме*. **Завершение блока, относящегося только к системам Майкрософт**
 
 ## <a name="requirements"></a>Требования
 

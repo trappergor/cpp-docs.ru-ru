@@ -9,11 +9,11 @@ helpviewer_keywords:
 - serialization [MFC], bypassing
 ms.assetid: fb596a18-4522-47e0-96e0-192732d24c12
 ms.openlocfilehash: 5c7dec140635b6d83bdae936d1bb0cef144f825b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262146"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308217"
 ---
 # <a name="serialization-in-mfc"></a>Сериализация в MFC
 
@@ -40,7 +40,7 @@ MFC использует объект `CArchive` класс в качестве 
 
 - [Сериализация. Сериализация объекта](../mfc/serialization-serializing-an-object.md)
 
-Статья [сериализации: Vs сериализации. Базы данных ввода-вывода](../mfc/serialization-serialization-vs-database-input-output.md) описывает, когда сериализация является подходит ввода вывода в приложениях базы данных.
+Статья [сериализации: Сериализация или Базы данных ввода-вывода](../mfc/serialization-serialization-vs-database-input-output.md) описывает, когда сериализация является подходит ввода вывода в приложениях базы данных.
 
 ## <a name="see-also"></a>См. также
 

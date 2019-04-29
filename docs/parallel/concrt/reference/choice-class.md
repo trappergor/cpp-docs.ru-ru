@@ -21,11 +21,11 @@ helpviewer_keywords:
 - choice class
 ms.assetid: 4157a539-d5c2-4161-b1ab-536ce2888397
 ms.openlocfilehash: aa4945bb5f9ef28937487ba504e23c461992b263
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337574"
 ---
 # <a name="choice-class"></a>Класс choice
 
@@ -49,20 +49,20 @@ class choice: public ISource<size_t>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Выбор](#ctor)|Перегружен. Создает блок обмена сообщениями `choice` .|
 |[~ choice деструктор](#dtor)|Уничтожает `choice` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Принять](#accept)|Принимает сообщение, предложенное это `choice` блоком, передавая владение вызывающему объекту.|
 |[acquire_ref](#acquire_ref)|Получает значение счетчика ссылок на это `choice` блок обмена сообщениями, чтобы предотвратить удаление данных.|

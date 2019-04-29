@@ -30,11 +30,11 @@ helpviewer_keywords:
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
 ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331850"
 ---
 # <a name="getch-getwch"></a>_getch, _getwch
 
@@ -62,7 +62,7 @@ wint_t _getwch( void );
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch**|**_getch**|**_getch**|**_getwch**|
 

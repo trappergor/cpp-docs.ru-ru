@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334870"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ errno_t _fcvt_s(
 *sizeInBytes*<br/>
 Размер буфера в байтах.
 
-*значение*<br/>
+*value*<br/>
 Число, которое требуется преобразовать.
 
 *count*<br/>
@@ -118,7 +118,7 @@ errno_t _fcvt_s(
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-**Библиотеки:** все версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
+**Библиотеки:** Все версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
 
 ## <a name="example"></a>Пример
 

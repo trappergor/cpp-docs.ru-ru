@@ -8,11 +8,11 @@ helpviewer_keywords:
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
 ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62297012"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Мастер добавления классов из TypeLib
 
@@ -44,7 +44,7 @@ ms.locfileid: "57273885"
 
    Выводит список интерфейсов в библиотеке типов, выбранного в настоящий момент **доступные библиотеки типов** списка.
 
-   |Кнопка "Перенести"|Описание:|
+   |Кнопка "Перенести"|Описание|
    |---------------------|-----------------|
    |**>**|Добавляет интерфейс, выбранный в списке **Интерфейсы**. Недоступно, если нет выбранных интерфейсов.|
    |**>>**|Добавляет все интерфейсы в библиотеке типов, выбранного в настоящий момент **доступные библиотеки типов** списка.|

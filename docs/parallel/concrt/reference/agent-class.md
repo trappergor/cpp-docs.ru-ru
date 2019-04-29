@@ -18,11 +18,11 @@ helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
 ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337756"
 ---
 # <a name="agent-class"></a>Класс agent
 
@@ -38,14 +38,14 @@ class agent;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Агент](#ctor)|Перегружен. Создает агент.|
 |[~ агента деструктор](#dtor)|Уничтожает агент.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Отмена](#cancel)|Перемещает агент из либо `agent_created` или `agent_runnable` состояния следует `agent_canceled` состояния.|
 |[start](#start)|Перемещает агента `agent_created` состояние `agent_runnable` состояния и планирует его выполнение.|
@@ -57,7 +57,7 @@ class agent;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Договорились](#done)|Перемещает агент в `agent_done` состоянию с указанием, что агент завершено.|
 |[run](#run)|Представляет основную задачу агента. `run` должен быть переопределен в производном классе и указывает, что агент должен делать после его запуска.|

@@ -93,11 +93,11 @@ helpviewer_keywords:
 - _tfindnexti64 function
 ms.assetid: 75d97188-5add-4698-a46c-4c492378f0f8
 ms.openlocfilehash: c7df8649625488a83239a19e4afcecea129f9072
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333733"
 ---
 # <a name="findnext-findnext32-findnext32i64-findnext64-findnext64i32-findnexti64-wfindnext-wfindnext32-wfindnext32i64-wfindnext64-wfindnext64i32-wfindnexti64"></a>_findnext, _findnext32, _findnext32i64, _findnext64, _findnext64i32, _findnexti64, _wfindnext, _wfindnext32, _wfindnext32i64, _wfindnext64, _wfindnext64i32, _wfindnexti64
 
@@ -161,7 +161,7 @@ int _wfindnext64i32(
 *Дескриптор*<br/>
 Дескриптор поиска, возвращенный предыдущим вызовом **_findfirst**.
 
-*FileInfo*<br/>
+*fileinfo*<br/>
 Буфер сведений о файле.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -191,17 +191,17 @@ int _wfindnext64i32(
 |Функции|**_USE_32BIT_TIME_T** определенные?|Тип времени|Тип длины файла|
 |---------------|----------------------------------|---------------|----------------------|
 |**_findnext**, **_wfindnext**|Не определено|64-разрядная версия|32-разрядная версия|
-|**_findnext**, **_wfindnext**|Определено|32-разрядная|32-разрядная версия|
+|**_findnext**, **_wfindnext**|Определено|32-разрядная версия|32-разрядная версия|
 |**_findnext32**, **_wfindnext32**|Не затрагивается определением макроса|32-разрядная|32-разрядная версия|
 |**_findnext64**, **_wfindnext64**|Не затрагивается определением макроса|64-разрядная версия|64-разрядная версия|
 |**_findnexti64**, **_wfindnexti64**|Не определено|64-разрядная|64-разрядная версия|
 |**_findnexti64**, **_wfindnexti64**|Определено|32-разрядная версия|64-разрядная версия|
 |**_findnext32i64**, **_wfindnext32i64**|Не затрагивается определением макроса|32-разрядная версия|64-разрядная версия|
-|**_findnext64i32**, **_wfindnext64i32**|Не затрагивается определением макроса|64-разрядная версия|32-разрядная|
+|**_findnext64i32**, **_wfindnext64i32**|Не затрагивается определением макроса|64-разрядная версия|32-разрядная версия|
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tfindnext**|**_findnext**|**_findnext**|**_wfindnext**|
 |**_tfindnext32**|**_findnext32**|**_findnext32**|**_wfindnext32**|

@@ -27,11 +27,11 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
 ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345803"
 ---
 # <a name="chttpfile-class"></a>Класс CHttpFile
 
@@ -43,17 +43,17 @@ ms.locfileid: "57283739"
 class CHttpFile : public CInternetFile
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHttpFile::CHttpFile](#chttpfile)|Создает объект `CHttpFile`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CHttpFile::AddRequestHeaders](#addrequestheaders)|Добавляет заголовки запроса, отправленного на HTTP-сервер.|
 |[CHttpFile::EndRequest](#endrequest)|Завершает запрос, отправленный в HTTP-сервер с [SendRequestEx](#sendrequestex) функция-член.|
