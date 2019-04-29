@@ -32,11 +32,11 @@ helpviewer_keywords:
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
 ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335676"
 ---
 # <a name="acos-acosf-acosl"></a>acos, acosf, acosl
 
@@ -69,7 +69,7 @@ long double acos( long double x );   // C++ only
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
 |± ∞|INVALID|_DOMAIN|
-|± QNAN,IND|Нет|_DOMAIN|
+|± QNAN, IND|Нет|_DOMAIN|
 |&#124;x&#124;>1|INVALID|_DOMAIN|
 
 ## <a name="remarks"></a>Примечания

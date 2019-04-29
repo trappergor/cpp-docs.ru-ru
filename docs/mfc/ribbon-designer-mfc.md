@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309217"
 ---
 # <a name="ribbon-designer-mfc"></a>Конструктор лент (MFC)
 
@@ -89,7 +89,7 @@ ms.locfileid: "58769489"
 
 - [Практическое руководство. Настройка панели быстрого доступа](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [Практическое руководство. Добавление элементов управления ленты и обработчиков событий](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [Практическое руководство. Добавление элементов управления и обработчиков событий ленты](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
 - [Практическое руководство. Загрузка ресурса ленты из приложения MFC](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 

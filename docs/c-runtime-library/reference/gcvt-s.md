@@ -30,11 +30,11 @@ helpviewer_keywords:
 - CVTBUFSIZE
 ms.assetid: 0a8d8a26-5940-4ae3-835e-0aa6ec1b0744
 ms.openlocfilehash: 168e0657150d072bbe41cd0ad6e914ca1f53e512
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62332307"
 ---
 # <a name="gcvts"></a>_gcvt_s
 
@@ -65,7 +65,7 @@ errno_t _gcvt_s(
 *sizeInBytes*<br/>
 Размер буфера.
 
-*значение*<br/>
+*value*<br/>
 Преобразуемое значение.
 
 *digits*<br/>
@@ -77,7 +77,7 @@ errno_t _gcvt_s(
 
 ### <a name="error-conditions"></a>Условия ошибок
 
-|*buffer*|*sizeInBytes*|*значение*|*digits*|Назад|Значение в *буфера*|
+|*buffer*|*sizeInBytes*|*value*|*digits*|Назад|Значение в *буфера*|
 |--------------|-------------------|-------------|--------------|------------|-----------------------|
 |**NULL**|any|any|any|**EINVAL**|Без изменений.|
 |Не **NULL** (указывает на допустимую память)|нуль|any|any|**EINVAL**|Без изменений.|

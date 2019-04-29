@@ -89,11 +89,11 @@ helpviewer_keywords:
 - std::deque [C++], swap
 ms.assetid: 64842ee5-057a-4063-8c16-4267a0332584
 ms.openlocfilehash: 8a50d04751ac5b4abaf94d0d9fd16f57c6200f66
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394017"
 ---
 # <a name="deque-class"></a>Класс deque
 
@@ -774,10 +774,10 @@ deque(initializer_list<value_type> IList, const Allocator& Al);
 |*Al*|Класс распределителя для использования с данным объектом.|
 |*Количество*|Количество элементов в создаваемой очереди.|
 |*Val*|Значение элементов в создаваемой очереди.|
-|*Справа*|Очередь, для которой создаваемая очередь станет копией.|
+|*Right*|Очередь, для которой создаваемая очередь станет копией.|
 |*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
 |*последний*|Положение первого элемента за пределами диапазона копируемых элементов.|
-|* IList "|Копируемый initializer_list.|
+|* IList "| Копируемый initializer_list.|
 
 ### <a name="remarks"></a>Примечания
 

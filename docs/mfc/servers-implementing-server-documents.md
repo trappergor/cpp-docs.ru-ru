@@ -8,11 +8,11 @@ helpviewer_keywords:
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
 ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307917"
 ---
 # <a name="servers-implementing-server-documents"></a>серверы: Реализация документов сервера
 
@@ -37,6 +37,6 @@ ms.locfileid: "57261873"
 ## <a name="see-also"></a>См. также
 
 [Серверы](../mfc/servers.md)<br/>
-[серверы: Элементы сервера](../mfc/servers-server-items.md)<br/>
-[серверы: Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
-[серверы: Реализация Windows фрейма на месте](../mfc/servers-implementing-in-place-frame-windows.md)
+[Серверы. Элементы сервера](../mfc/servers-server-items.md)<br/>
+[Серверы. Реализация сервера](../mfc/servers-implementing-a-server.md)<br/>
+[Серверы. Реализация окон фрейма на месте](../mfc/servers-implementing-in-place-frame-windows.md)
