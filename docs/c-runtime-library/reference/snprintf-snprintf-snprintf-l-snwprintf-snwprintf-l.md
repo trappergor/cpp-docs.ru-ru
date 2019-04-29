@@ -1,4 +1,4 @@
-﻿---
+---
 title: snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 ms.date: 11/04/2016
 apiname:
@@ -49,11 +49,11 @@ helpviewer_keywords:
 - formatted text [C++]
 ms.assetid: 5976c9c8-876e-4ac9-a515-39f3f7fd0925
 ms.openlocfilehash: 202f2f12de3955a2c9b0f785c3e89280d91a4a95
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62355723"
 ---
 # <a name="snprintf-snprintf-snprintfl-snwprintf-snwprintfl"></a>snprintf, _snprintf, _snprintf_l, _snwprintf, _snwprintf_l
 
@@ -178,7 +178,7 @@ int _snwprintf_l(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_sntprintf**|**_snprintf**|**_snprintf**|**_snwprintf**|
 |**_sntprintf_l**|**_snprintf_l**|**_snprintf_l**|**_snwprintf_l**|
@@ -187,7 +187,7 @@ int _snwprintf_l(
 
 |Подпрограмма|Обязательный заголовок|
 |-------------|---------------------|
-|**snprintf**, **_snprintf**, **_snprintf_l**|\<stdio.h>|
+|**snprintf**, **_snprintf**,  **_snprintf_l**|\<stdio.h>|
 |**_snwprintf**, **_snwprintf_l**|\<stdio.h> или \<wchar.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).

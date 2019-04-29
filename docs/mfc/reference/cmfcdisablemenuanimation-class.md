@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CMFCDisableMenuAnimation [MFC], Restore
 ms.assetid: c6eb07da-c382-43d6-8028-007f2320e50e
 ms.openlocfilehash: bf8c598e9e105569e0a5676267e205b3d3939712
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62345608"
 ---
 # <a name="cmfcdisablemenuanimation-class"></a>Класс CMFCDisableMenuAnimation
 
@@ -25,13 +25,13 @@ ms.locfileid: "57267931"
 class CMFCDisableMenuAnimation
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCDisableMenuAnimation::CMFCDisableMenuAnimation`|Создает объект `CMFCDisableMenuAnimation`.|
 |`CMFCDisableMenuAnimation::~CMFCDisableMenuAnimation`|Деструктор.|
 
@@ -39,14 +39,14 @@ class CMFCDisableMenuAnimation
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCDisableMenuAnimation::Restore](#restore)|Восстановление предыдущей анимацией, используемый платформой для отображения всплывающего меню.|
 
 ### <a name="data-members"></a>Элементы данных
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCDisableMenuAnimation::m_animType`|Сохраняет предыдущий тип анимации всплывающего меню.|
 
 ### <a name="remarks"></a>Примечания

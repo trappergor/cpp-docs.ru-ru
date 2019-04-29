@@ -43,11 +43,11 @@ helpviewer_keywords:
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
 ms.openlocfilehash: 016be9a1d753787b6e0c3800df5a96baea1a19f5
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347302"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr, wcsrchr, _mbsrchr, _mbsrchr_l
 
@@ -133,7 +133,7 @@ const unsigned char *_mbsrchr_l(
 
 Функции`wcsrchr` и `_mbsrchr` are wide-character и multibyte-character versions of `strrchr`для расширенных и многобайтовых символов. Аргументы и возвращаемое значение `wcsrchr` представляют собой двухбайтовые строки; аргументы и возвращаемое значение `_mbsrchr` представляют собой многобайтовые строки.
 
-В языке C, эти функции принимают **const** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** возвращает указатель на **const**; версия, которая принимает указатель на не -**const** возвращает указатель на не -**const** . _CRT_CONST_CORRECT_OVERLOADS макрос определен в том случае, если оба **const** и не-**const** доступны версии этих функций. Если вам требуется отличного**const** поведение для обеих перегрузок C++, определите символ _CONST_RETURN.
+В языке C, эти функции принимают **const** указатель для первого аргумента. В языке C++ доступны две перегрузки. Перегрузка, принимающая указатель на **const** возвращает указатель на **const**; версия, которая принимает указатель на не -**const** возвращает указатель на не -**const** . _CRT_CONST_CORRECT_OVERLOADS макрос определен в том случае, если оба **const** и не-**const** доступны версии этих функций. Если вам требуется отличного**const** поведение для обоих C++ перегрузки, определите символ _CONST_RETURN.
 
 `_mbsrchr` проверяет свои параметры. Если *str* имеет значение NULL, вызывается обработчик недопустимого параметра, как описано в разделе [проверка параметров](../../c-runtime-library/parameter-validation.md). Если выполнение может быть продолжено, `errno` присваивается EINVAL и `_mbsrchr` возвращает 0. Функции `strrchr` и `wcsrchr` не проверяют свои параметры. В остальном эти три функции ведут себя идентично.
 

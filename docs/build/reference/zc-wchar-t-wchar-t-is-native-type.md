@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
 ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57815181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315642"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t – это собственный тип)
 
@@ -31,9 +31,9 @@ ms.locfileid: "57815181"
 
 Если **/Zc: wchar_t** , `wchar_t` является ключевым словом для встроенных целочисленного типа в коде, скомпилированном как C++. Если **/Zc:wchar_t-** (со знаком минус) указанного, или код компилируется как C, `wchar_t` не является встроенным типом. Вместо этого `wchar_t` определяется как `typedef` для `unsigned short` в канонический заголовок stddef.h. (Microsoft реализация определяет ее в другой заголовок, включенный по stddef.h и других стандартных заголовках.)
 
-Мы не рекомендуем **/Zc:wchar_t-** поскольку стандарт C++ требует, `wchar_t` был встроенным типом. Использование версии `typedef` может вызывать проблемы переносимости. При обновлении более ранних версиях Visual C++ и возникает ошибка компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) тем, что код пытается выполнить неявное преобразование `wchar_t` для `unsigned short`, рекомендуется изменить код, чтобы устранить ошибку, вместо этого параметра **/Zc:wchar_t-**.
+Мы не рекомендуем **/Zc:wchar_t-** поскольку C++ стандарт требует, `wchar_t` был встроенным типом. Использование версии `typedef` может вызывать проблемы переносимости. При обновлении с более ранних версиях Visual C++ возникает ошибка компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) тем, что код пытается выполнить неявное преобразование `wchar_t` для `unsigned short`, рекомендуется изменить код, чтобы устранить ошибку, Вместо того чтобы задавать **/Zc:wchar_t-**.
 
-**/Zc: wchar_t** параметр по умолчанию в компиляций C++ и учитывается в компиляциях C. [/ Permissive-](permissive-standards-conformance.md) параметр не влияет на **/Zc: wchar_t**.
+**/Zc: wchar_t** включен параметр по умолчанию в C++ компиляциям и учитывается в компиляции C. [/ Permissive-](permissive-standards-conformance.md) параметр не влияет на **/Zc: wchar_t**.
 
 Microsoft реализует тип `wchar_t` как двухбайтовое значение без знака. Он сопоставляется с типом собственного характерные для Майкрософт `__wchar_t`. Дополнительные сведения о `wchar_t`, см. в разделе [диапазоны типов данных](../../cpp/data-type-ranges.md) и [фундаментальные типы](../../cpp/fundamental-types-cpp.md).
 

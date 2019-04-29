@@ -10,11 +10,11 @@ helpviewer_keywords:
 - KEYFILE linker option
 ms.assetid: 9b71f8c0-541c-4fe5-a0c7-9364f42ecb06
 ms.openlocfilehash: d309390c1ac1a19d9d4a982908dbbbac0bd52714
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291565"
 ---
 # <a name="keyfile-specify-key-or-key-pair-to-sign-an-assembly"></a>/KEYFILE (задание ключа или пары ключей для подписи сборки)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57813777"
 
 Если компиляция выполняется с [/LN](ln-create-msil-module.md), имя файла ключа сохраняется в модуле и включается в сборку, которая создается при компиляции сборки, содержащей явную ссылку на модуль, с помощью [#using](../../preprocessor/hash-using-directive-cpp.md), или при связывании с [добавившей](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Можно также передать сведения о шифровании для компоновщика [/keycontainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Используйте [/delaysign](delaysign-partially-sign-an-assembly.md) Если требуется частично подписанную сборку. См. в разделе [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Дополнительные сведения о подписи сборки.
+Можно также передать сведения о шифровании для компоновщика [/keycontainer](keycontainer-specify-a-key-container-to-sign-an-assembly.md). Используйте [/delaysign](delaysign-partially-sign-an-assembly.md) Если требуется частично подписанную сборку. См. в разделе [сборки со строгими именами (подписывание сборок) (C++выполняет)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Дополнительные сведения о подписи сборки.
 
 Одновременно **/keyfile** и **/keycontainer** указаны (в командной строке или с помощью настраиваемого атрибута), компоновщик сначала попытаются использовать контейнер ключей. В случае успеха сборка подписывается данными контейнера ключей. Если компоновщику не удается найти контейнер ключей, он попытается файл, заданный параметром/keyfile. В случае успеха сборка подписывается данными из файла ключей, и эти данные о ключах будут помещены в контейнер ключей (аналогично команде sn -i); таким образом, при следующей компиляции контейнер ключей будет действителен.
 
@@ -69,5 +69,5 @@ ms.locfileid: "57813777"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по MSVC компоновщика](linking.md)<br/>
+[Справочник по компоновщику MSVC](linking.md)<br/>
 [Параметры компоновщика MSVC](linker-options.md)

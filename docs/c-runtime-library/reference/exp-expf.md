@@ -1,5 +1,5 @@
 ---
-title: EXP, expf, новыми концепциями
+title: exp, expf, expl
 ms.date: 04/05/2018
 apiname:
 - expf
@@ -31,13 +31,13 @@ helpviewer_keywords:
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
 ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288192"
 ---
-# <a name="exp-expf-expl"></a>EXP, expf, новыми концепциями
+# <a name="exp-expf-expl"></a>exp, expf, expl
 
 Вычисляет экспоненту.
 

@@ -30,11 +30,11 @@ helpviewer_keywords:
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
 ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347968"
 ---
 # <a name="asin-asinf-asinl"></a>asin, asinf, asinl
 
@@ -66,9 +66,9 @@ long double asin( long double x );  // C++ only
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± ∞|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
-|± **QNAN**, **IND**|Нет|**Д_ОМЕН ИМЯ**|
-|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
+|± ∞|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± **QNAN**, **IND**|Нет|**_DOMAIN**|
+|&#124;x&#124;>1|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 

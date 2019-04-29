@@ -1,6 +1,6 @@
 ---
 title: Сообщения векторизатора и параллелизатора
-ms.date: 11/04/2016
+ms.date: 04/17/2019
 f1_keywords:
 - C5011
 - C5002
@@ -8,34 +8,18 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
-ms.translationtype: MT
+ms.openlocfilehash: c38bfca4c1b93d373c86bbc710ccb30c43dafd4f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62346874"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>Сообщения векторизатора и параллелизатора
 
-Можно использовать параметры компилятора Visual C++ [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) и [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) присвоить [автоматическая параллелизация и автоматическая векторизация](../../parallel/auto-parallelization-and-auto-vectorization.md) на вывод кодов причины и информационные сообщения о его действиях. В этой статье описываются коды причины и сообщения.
+Можно использовать Microsoft C++ параметры компилятора [/qpar-Report](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) и [/Qvec-report](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md) присвоить [автоматическая параллелизация и автоматическая векторизация](../../parallel/auto-parallelization-and-auto-vectorization.md) делать выводы выходных данных коды и информационных сообщений о его действиях. В этой статье описываются коды причины и сообщения.
 
-- [Информационные сообщения](#BKMK_InformationalMessages)
-
-- [5xx](#BKMK_ReasonCode50x)
-
-- [10xx](#BKMK_ReasonCode100x)
-
-- [11xx](#BKMK_ReasonCode110x)
-
-- [12xx](#BKMK_ReasonCode120x)
-
-- [13xx](#BKMK_ReasonCode130x)
-
-- [14xx](#BKMK_ReasonCode140x)
-
-- [15xx](#BKMK_ReasonCode150x)
-
-##  <a name="BKMK_InformationalMessages"></a> Информационные сообщения
+## <a name="BKMK_InformationalMessages"></a> Информационные сообщения
 
 В зависимости от заданного уровня отчетов для каждого цикла выводится одно из следующих информационных сообщений.
 
@@ -43,27 +27,25 @@ ms.locfileid: "59023910"
 
 |Информационное сообщение|Описание|
 |---------------------------|-----------------|
-|5001|Цикл векторизирован.|
-|5002|Цикл не векторизован по причине "описание".|
-|5011|Цикл параллелизован.|
-|5012|Цикл не параллелизован по причине "описание".|
-|5021|Не удалось связать цикл с директивой pragma.|
+|5001|`Loop vectorized.`|
+|5002|`Loop not vectorized due to reason '*description*'.`|
+|5011|`Loop parallelized.`|
+|5012|`Loop not parallelized due to reason '*description*'.`|
+|5021|`Unable to associate loop with pragma.`|
 
-## <a name="reason-codes"></a>Коды причины
+В следующих разделах перечислены коды причины для сообщения векторизатора и параллелизатора.
 
-В следующих разделах перечислены коды причины для автоматического параллелизатора и автоматического векторизатора.
+## <a name="BKMK_ReasonCode50x"></a> коды причины 5xx
 
-###  <a name="BKMK_ReasonCode50x"></a> 5xx
-
-5*xx* коды причины применяются как к автоматическому параллелизатору, так и к автоматическому векторизатору.
+5*xx* коды причины применяются к сообщения векторизатора и параллелизатора.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|500|Это универсальное сообщение, охватывающее несколько случаев — например, цикл содержит несколько выходов или заголовок цикла не заканчивается приращением индукционной переменной.|
-|501|Индукционная переменная не является локальной или верхняя граница не является инвариантной для цикла.|
-|502|Индукционная переменная изменяется не простым приращением на 1, а каким-то другим образом.|
-|503|Цикл содержит обработку исключений или операторы switch.|
-|504|Тело цикла может вызвать исключение, которое требует удаления объекта C++.|
+|500|Универсальное сообщение, охватывающее несколько случаев — например, цикл содержит несколько выходов или заголовок цикла не заканчивается приращением индукционной переменной.|
+|501|`Induction variable is not local; or upper bound is not loop-invariant.`|
+|502|`Induction variable is stepped in some manner other than a simple +1.`|
+|503|`Loop includes exception-handling or switch statements.`|
+|504|`Loop body may throw an exception that requires destruction of a C++ object.`|
 
 ```cpp
 void code_500(int *A)
@@ -216,23 +198,23 @@ void code_504(int *A) {
 }
 ```
 
-###  <a name="BKMK_ReasonCode100x"></a> 10xx
+## <a name="BKMK_ReasonCode100x"></a> коды причины 10xx
 
-10*xx* коды причины применяются к автоматическому параллелизатору.
+10*xx* коды причины применяются к параллелизатора.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1000.|Компилятор обнаружил зависимость данных в теле цикла.|
-|1001|Компилятор обнаружил в теле цикла присваивание скалярной переменной, и эта скалярная переменная используется вне цикла.|
-|1002|Компилятор попытался распараллелить цикл, содержащий вложенный уже параллелизованный цикл.|
-|1003|Тело цикла содержит встроенный вызов, который может считывать данные из памяти и записывать их в память.|
-|1004|В теле цикла используется скалярная редукция. Скалярная редукция может возникать при векторизации цикла.|
-|1005|**No_parallel** указана директива pragma.|
-|1006|Эта функция содержит **openmp**. Решить эту проблему, удаление любого **openmp** в этой функции.|
-|1007|Индукционная переменная цикла или границы цикла не являются 32-разрядными числами со знаком (`int` или `long`). Для устранения проблемы измените тип индукционной переменной.|
-|1008|Компилятор обнаружил, что объем вычислений в этом цикле недостаточен для использования автоматической параллелизации.|
-|1009|Компилятор обнаружил попытку параллелизации цикла "do-while". Автоматические параллелизатор предназначен только для циклов `for`.|
-|1010|Компилятор обнаружил, что цикл использует "не равно" (!=) в качестве условия.|
+|1000.|`The compiler detected a data dependency in the loop body.`|
+|1001|`The compiler detected a store to a scalar variable in the loop body, and that scalar has a use beyond the loop.`|
+|1002|`The compiler tried to parallelize a loop that has an inner loop that was already parallelized.`|
+|1003|`The loop body contains an intrinsic call that may read or write to memory.`|
+|1004|`There is a scalar reduction in the loop body. Scalar reduction can occur if the loop has been vectorized.`|
+|1005|`The no_parallel pragma was specified.`|
+|1006|`This function contains openmp. Resolve this by removing any openmp in this function.`|
+|1007|`The loop induction variable or the loop bounds are not signed 32-bit numbers (int or long). Resolve this by changing the type of the induction variable.`|
+|1008|`The compiler detected that this loop does not perform enough work to warrant auto-parallelization.`|
+|1009|`The compiler detected an attempt to parallelize a "do-while" loop. The auto-parallelizer only targets "for" loops.`|
+|1010|`The compiler detected that the loop is using "not-equals" (!=) for its condition.`|
 
 ```cpp
 int A[1000];
@@ -425,19 +407,19 @@ void code_1010()
 }
 ```
 
-###  <a name="BKMK_ReasonCode110x"></a> 11xx
+## <a name="BKMK_ReasonCode110x"></a> коды причины 11xx
 
-11*xx* коды причины применяются к автоматическому векторизатору.
+11*xx* коды причины применяются к векторизатор.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1100|Цикл содержит управление потоком (например, "if" или "?").|
-|1101|Цикл содержит преобразование типа данных (возможно, неявное), которое не допускает векторизацию.|
-|1102|Цикл содержит неарифметические или другие невекторизуемые операции.|
-|1103|Тело цикла содержит операции сдвига, размер которых может меняться внутри цикла.|
-|1104|Тело цикла содержит скалярные переменные.|
-|1105|Цикл содержит нераспознанную операцию редукции.|
-|1106|Внешний цикл не векторизован.|
+|1100|`Loop contains control flow—for example, "if" or "?".`|
+|1101|`Loop contains datatype conversion—perhaps implicit—that cannot be vectorized.`|
+|1102|`Loop contains non-arithmetic or other non-vectorizable operations.`|
+|1103|`Loop body includes shift operations whose size might vary within the loop.`|
+|1104|`Loop body includes scalar variables.`|
+|1105|`Loop includes a unrecognized reduction operation.`|
+|1106|`Outer loop not vectorized.`|
 
 ```cpp
 void code_1100(int *A, int x)
@@ -573,16 +555,16 @@ void code_1106(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode120x"></a> 12xx
+## <a name="BKMK_ReasonCode120x"></a> коды причины 12xx
 
-12*xx* коды причины применяются к автоматическому векторизатору.
+12*xx* коды причины применяются к векторизатор.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1200|Цикл содержит связанные с циклом зависимости данных, исключающие векторизацию. Различные итерации цикла взаимодействуют между собой таким образом, что векторизация цикла приведет к получению ошибочных результатов; автоматический векторизатор не может удостовериться в отсутствии таких зависимостей данных.|
-|1201|База массива изменяется в цикле.|
-|1202|Поле в структуре не имеет ширину 32 или 64 бита.|
-|1203|Тело цикла содержит несмежный доступ к массиву.|
+|1200|`Loop contains loop-carried data dependences that prevent vectorization. Different iterations of the loop interfere with each other such that vectorizing the loop would produce wrong answers, and the auto-vectorizer cannot prove to itself that there are no such data dependences.`|
+|1201|`Array base changes during the loop.`|
+|1202|`Field in a struct is not 32 or 64 bits wide.`|
+|1203|`Loop body includes non-contiguous accesses into an array.`|
 
 ```cpp
 void fn();
@@ -648,18 +630,18 @@ void code_1203(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode130x"></a> 13xx
+## <a name="BKMK_ReasonCode130x"></a> коды причины 13xx
 
-13*xx* коды причины применяются к автоматическому векторизатору.
+13*xx* коды причины применяются к векторизатор.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1300|Тело цикла не содержит вычислений или объем вычислений очень мал.|
-|1301|Шаг цикла не равен +1.|
-|1302|Цикл «-хотя».|
-|1303|Слишком мало итераций цикла для эффективной векторизации.|
-|1304|Цикл содержит присваивания различных размеров.|
-|1305|Недостаточно сведений о типе.|
+|1300|`Loop body contains no—or very little—computation.`|
+|1301|`Loop stride is not +1.`|
+|1302|`Loop is a "do-while".`|
+|1303|`Too few loop iterations for vectorization to provide value.`|
+|1304|`Loop includes assignments that are of different sizes.`|
+|1305|`Not enough type information.`|
 
 ```cpp
 void code_1300(int *A, int *B)
@@ -780,18 +762,18 @@ void code_1305( S_1305 *s, S_1305 x)
 }
 ```
 
-###  <a name="BKMK_ReasonCode140x"></a> 14xx
+## <a name="BKMK_ReasonCode140x"></a> коды причины 14xx
 
-14*xx* причина коды возникают, если некоторые параметры несовместимы с автоматической векторизацией.
+14*xx* причина коды возникают, если некоторые заданные параметры несовместимы с векторизацией.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1400|**#pragma loop(no_vector)** указан.|
-|1401|**/ kernel** при нацеливании на x86 или ARM указан ключ.|
-|1402|**/ arch: SSE2** или более поздней версии не указан ключ x x86.|
-|1403|**/arch:Atom** указан ключ, и цикл содержит операции с типом Double.|
-|1404|**/ O1** или **/Os** указан ключ.|
-|1405|Векторизация отключается для упрощения оптимизации с переводом динамического инициализатора в статический.|
+|1400|`#pragma loop(no_vector) is specified.`|
+|1401|`/kernel switch is specified when targeting x86 or ARM.`|
+|1402|`/arch:SSE2 or higher switch is not specified when targeting x86.`|
+|1403|`/arch:ATOM switch is specified and the loop includes operations on doubles.`|
+|1404|`/O1 or /Os switch is specified.`|
+|1405|`Vectorization is disabled to aid in dynamic-initializer-to-static-initializer optimization.`|
 
 ```cpp
 void code_1400(int *A)
@@ -852,18 +834,18 @@ void code_1404(int *A)
 }
 ```
 
-###  <a name="BKMK_ReasonCode150x"></a> 15xx
+## <a name="BKMK_ReasonCode150x"></a> коды причины 15xx
 
-Блок 15*xx* применяются коды причин для присвоения псевдонимов. Совмещение имен возникает, когда одно и тоже расположение в памяти доступно под двумя разными именами.
+15*xx* применяются коды причин для присвоения псевдонимов. Совмещение имен возникает, когда одно и тоже расположение в памяти доступно под двумя разными именами.
 
 |Код причины|Объяснение|
 |-----------------|-----------------|
-|1500|Возможно совмещение имен для многомерных массивов.|
-|1501|Возможно совмещение имен для массивов структур.|
-|1502|Возможно совмещение имен, и индекс массива отличается от n + K.|
-|1503|Возможно совмещение имен, и индекс массива имеет несколько смещений.|
-|1504|Возможно совмещение имен; требуется слишком много проверок во время выполнения.|
-|1505|Возможно совмещение имен, а проверки во время выполнения слишком сложные.|
+|1500|`Possible aliasing on multi-dimensional arrays.`|
+|1501|`Possible aliasing on arrays-of-structs.`|
+|1502|`Possible aliasing and array index is other than n + K.`|
+|1503|`Possible aliasing and array index has multiple offsets.`|
+|1504|`Possible aliasing; would require too many runtime checks.`|
+|1505|`Possible aliasing, but runtime checks are too complex.`|
 
 ```cpp
 void code_1500(int A[100][100], int B[100][100])
@@ -982,9 +964,10 @@ void code_1505(int *A, int *B)
 
 ## <a name="see-also"></a>См. также
 
-[Автоматическая параллелизация и автоматическая векторизация](../../parallel/auto-parallelization-and-auto-vectorization.md)<br/>
-[Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
-[#pragma loop()](../../preprocessor/loop.md)<br/>
-[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md)<br/>
-[/Qpar/report (уровень отчетности автоматического параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
+[C /C++ ошибки и предупреждения средств компиляции и построения](../compiler-errors-1/c-cpp-build-errors.md)
+[автоматическая параллелизация и автоматическая векторизация](../../parallel/auto-parallelization-and-auto-vectorization.md) \
+[Автоматический Векторизатор в Visual Studio 2012 – Обзор](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/) \
+[#pragma loop()](../../preprocessor/loop.md) \
+[Параметры /Q (низкоуровневые операции)](../../build/reference/q-options-low-level-operations.md) \
+[/ Qpar-report (уровень отчетности автоматического Параллелизатора)](../../build/reference/qpar-report-auto-parallelizer-reporting-level.md) \
 [/Qvec/report (уровень отчетности автоматического векторизатора)](../../build/reference/qvec-report-auto-vectorizer-reporting-level.md)

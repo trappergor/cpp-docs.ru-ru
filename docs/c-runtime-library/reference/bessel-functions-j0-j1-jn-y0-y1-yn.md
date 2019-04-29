@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
 ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62341126"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Функции Бесселя: _j0, _j1, _jn, _y0, _y1, _yn
 
@@ -92,15 +92,15 @@ double _yn(
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
+|± **QNAN**, **IND**|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
 
 **_Y0**, **_y1**, и **_yn** подпрограммы возвращают Бесселя функции второго типа: порядка 0, 1 и n соответственно.
 
 |Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
-|± 0|**ZERODIVIDE**|**_ОДНОТРУБНЫЙ**|
-|&#124;x&#124; < 0,0|**НЕДОПУСТИМЫЙ**|**Д_ОМЕН ИМЯ**|
+|± **QNAN**, **IND**|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
+|± 0|**ZERODIVIDE**|**_SING**|
+|&#124;x&#124; < 0,0|**НЕДОПУСТИМЫЙ**|**_DOMAIN**|
 
 ## <a name="requirements"></a>Требования
 
