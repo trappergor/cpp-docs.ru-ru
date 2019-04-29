@@ -18,11 +18,11 @@ helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
 ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62296160"
 ---
 # <a name="currentscheduler-class"></a>Класс CurrentScheduler
 
@@ -38,7 +38,7 @@ class CurrentScheduler;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Создание](#create)|Создает новый планировщик, поведение которого описывается `_Policy` параметр и присоединяет его к контексту вызова. Вновь созданного планировщика станет текущего планировщика для вызывающего контекста.|
 |[CreateScheduleGroup](#createschedulegroup)|Перегружен. Создает новую группу расписания внутри планировщика, связанного с вызывающим контекстом. Версия, которая принимает параметр `_Placement` вызывает задачи в пределах группы вновь созданное расписание стремиться к выполнению в расположении, указанном этим параметром.|

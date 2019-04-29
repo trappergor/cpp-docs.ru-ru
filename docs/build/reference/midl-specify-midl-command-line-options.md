@@ -12,11 +12,11 @@ helpviewer_keywords:
 - MIDL, command line options
 ms.assetid: 22dc259e-b34c-4ed3-a380-4beb734482c1
 ms.openlocfilehash: 584958ac51bdc491ad1bdd16117ecaad6e000ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321076"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (Указание параметров командной строки MIDL)
 

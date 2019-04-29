@@ -21,11 +21,11 @@ helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
 ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394355"
 ---
 # <a name="overwritebuffer-class"></a>Класс overwrite_buffer
 
@@ -47,21 +47,21 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[overwrite_buffer](#ctor)|Перегружен. Создает `overwrite_buffer` блок обмена сообщениями.|
 |[~ overwrite_buffer деструктор](#dtor)|Уничтожает `overwrite_buffer` блок обмена сообщениями.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[has_value](#has_value)|Проверяет, является ли это `overwrite_buffer` блок обмена сообщениями еще имеет значение.|
 |[value](#value)|Получает ссылку на текущий полезные данные сообщения, хранящуюся в `overwrite_buffer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `overwrite_buffer` блок обмена сообщениями, возвращая копию сообщения вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `overwrite_buffer` блоке сообщений и зарезервированных целевым объектом, возвращая копию сообщения вызывающему объекту.|

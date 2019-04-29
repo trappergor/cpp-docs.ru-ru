@@ -100,11 +100,11 @@ helpviewer_keywords:
 - operator>= (map) member [STL/CLR]
 ms.assetid: 8b0a7764-b5e4-4175-a802-82b72eb8662a
 ms.openlocfilehash: 9150d603f67051df4a6f182366623935e59fe9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393718"
 ---
 # <a name="map-stlclr"></a>map (STL/CLR)
 
@@ -359,7 +359,7 @@ size() = 0
 size() = 0
 ```
 
-## <a name="const_iterator"></a> MAP::const_iterator (STL/CLR)
+## <a name="const_iterator"></a> map::const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -446,7 +446,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="const_reverse_iterator"></a> MAP::const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> map::const_reverse_iterator (STL/CLR)
 
 Тип постоянного обратного итератора для управляемой последовательности...
 
@@ -541,7 +541,7 @@ count(L'b') = 1
 count(L'C') = 0
 ```
 
-## <a name="difference_type"></a> MAP::difference_type (STL/CLR)
+## <a name="difference_type"></a> map::difference_type (STL/CLR)
 
 Типы со знаком расстояния между двумя элементами.
 
@@ -1301,7 +1301,7 @@ int main()
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="key_comp"></a> MAP::key_comp (STL/CLR)
+## <a name="key_comp"></a> map::key_comp (STL/CLR)
 
 Копирует делегат упорядочения для двух ключей.
 
@@ -1420,7 +1420,7 @@ compare(L'a', L'b') = False
 compare(L'b', L'a') = True
 ```
 
-## <a name="key_type"></a> MAP::key_type (STL/CLR)
+## <a name="key_type"></a> map::key_type (STL/CLR)
 
 Тип ключа упорядочения.
 
@@ -1746,7 +1746,7 @@ size() = 0
 [a 1] [b 2] [c 3]
 ```
 
-## <a name="mapped_type"></a> MAP::mapped_type (STL/CLR)
+## <a name="mapped_type"></a> map::mapped_type (STL/CLR)
 
 Тип сопоставленного значения, связанного с каждым ключом.
 
@@ -2156,7 +2156,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> MAP::size_type (STL/CLR)
+## <a name="size_type"></a> map::size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 

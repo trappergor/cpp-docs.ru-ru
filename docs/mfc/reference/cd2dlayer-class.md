@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CD2DLayer [MFC], m_pLayer
 ms.assetid: 2f96378e-66bb-40d1-9661-6afe324de3c1
 ms.openlocfilehash: 28ebe19b0f28692116a0b95721ff2e5490ad7e68
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62391235"
 ---
 # <a name="cd2dlayer-class"></a>Класс CD2DLayer
 
@@ -45,14 +45,14 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DLayer::CD2DLayer](#cd2dlayer)|Создает объект CD2DLayer.|
 |[CD2DLayer:: ~ CD2DLayer](#_dtorcd2dlayer)|Деструктор Вызывается при уничтожении объекта D2D слоя.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DLayer::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
 |[CD2DLayer::Create](#create)|Создает CD2DLayer. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -64,13 +64,13 @@ class CD2DLayer : public CD2DResource;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DLayer::operator ID2D1Layer*](#operator_id2d1layer_star)|Возвращает интерфейс ID2D1Layer|
 
 ### <a name="protected-data-members"></a>Защищенные члены данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DLayer::m_pLayer](#m_player)|Содержит указатель на объект ID2D1Layer.|
 

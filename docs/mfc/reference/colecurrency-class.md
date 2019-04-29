@@ -23,11 +23,11 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
 ms.openlocfilehash: 64f2b00c8a5aefe8a39c24d26af2a97625225059
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62375747"
 ---
 # <a name="colecurrency-class"></a>Класс COleCurrency
 
@@ -43,13 +43,13 @@ class COleCurrency
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleCurrency::COleCurrency](#colecurrency)|Создает объект `COleCurrency`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleCurrency::Format](#format)|Создает форматированное строковое представление `COleCurrency` объекта.|
 |[COleCurrency::GetStatus](#getstatus)|Получает состояние (действия) это `COleCurrency` объекта.|
@@ -59,7 +59,7 @@ class COleCurrency
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор =](#operator_eq)|Копирует `COleCurrency` значение.|
 |[оператор +, -](#operator_plus_minus)|Добавляет, вычитает и изменяет знак `COleCurrency` значения.|
@@ -73,7 +73,7 @@ class COleCurrency
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleCurrency::m_cur](#m_cur)|Содержит основной валюты для данного `COleCurrency` объекта.|
 |[COleCurrency::m_status](#m_status)|Содержит состояние данного объекта `COleCurrency` объекта.|

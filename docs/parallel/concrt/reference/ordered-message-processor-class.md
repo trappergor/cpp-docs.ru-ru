@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ordered_message_processor class
 ms.assetid: 787adfb7-7f79-4a70-864a-80e3b64088cd
 ms.openlocfilehash: b88544f399031a5f770fa39aa1f3300306158511
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394433"
 ---
 # <a name="orderedmessageprocessor-class"></a>Класс ordered_message_processor
 
@@ -41,20 +41,20 @@ class ordered_message_processor : public message_processor<T>;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[ordered_message_processor](#ctor)|Создает объект `ordered_message_processor`.|
 |[~ ordered_message_processor деструктор](#dtor)|Уничтожает `ordered_message_processor` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[async_send](#async_send)|Асинхронно добавляет сообщения в очередь и запускает задачу обработки, в том случае, если это еще не сделано. (Переопределяет [message_processor::async_send](message-processor-class.md#async_send).)|
 |[Инициализация](#initialize)|Инициализирует `ordered_message_processor` объекта с группой соответствующий обратный вызов функции, планировщик и расписание.|
@@ -64,7 +64,7 @@ class ordered_message_processor : public message_processor<T>;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[process_incoming_message](#process_incoming_message)|Функция обработки, которая вызывается асинхронно. Он удаляет сообщения из очереди и начинает их обработку. (Переопределяет [message_processor::process_incoming_message](message-processor-class.md#process_incoming_message).)|
 

@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
 ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335312"
 ---
 # <a name="creat-wcreat"></a>Функция _creat, _wcreat
 
@@ -84,7 +84,7 @@ int _wcreat(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
@@ -94,7 +94,7 @@ int _wcreat(
 |-----------|----------------|
 |**_S_IWRITE**|Разрешена запись.|
 |**_S_IREAD**|Разрешено чтение.|
-|**_S_IREAD** &AMP;#124; **_S_IWRITE**|Разрешены чтение и запись.|
+|**_S_IREAD** &#124; **_S_IWRITE**|Разрешены чтение и запись.|
 
 Если разрешение на запись не предоставлено, файл остается доступным только для чтения. Все файлы всегда доступны для чтения; невозможно предоставить разрешение только на запись. Режимы **_S_IWRITE** и **_S_IREAD** | **_S_IWRITE** эквивалентны. Файлы, открытые с помощью **_creat** всегда открываются в режиме совместимости (см. в разделе [_sopen](sopen-wsopen.md)) с **_SH_DENYNO**.
 
