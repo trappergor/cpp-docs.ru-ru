@@ -97,11 +97,11 @@ helpviewer_keywords:
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
 ms.openlocfilehash: fdc3705980ac8f763e0438f19920148437e7ed27
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377508"
 ---
 # <a name="array-class-c-standard-library"></a>Класс array (стандартная библиотека C++)
 
@@ -116,14 +116,14 @@ class array;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |`Ty`|Тип элемента.|
 |`N`|Количество элементов|
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание:|
+|Определение типа|Описание|
 |-|-|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
 |[const_pointer](#const_pointer)|Тип постоянного указателя на элемент.|
@@ -137,7 +137,7 @@ class array;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[array](#array)|Создает объект массива.|
 |[assign](#assign)|Заменяет все элементы.|
@@ -159,7 +159,7 @@ class array;
 |[size](#size)|Подсчитывает количество элементов.|
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[array::operator=](#op_eq)|Заменяет управляемую последовательность.|
 |[Array::operator\[\]](#op_at)|Обращается к элементу в указанной позиции.|
@@ -961,7 +961,7 @@ void fill(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента, вставляемого в массив.|
 

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
 ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62263091"
 ---
 # <a name="concurrentqueue-class"></a>Класс concurrent_queue
 
@@ -46,7 +46,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`allocator_type`|Тип, представляющий класс распределителя для параллельной очереди.|
 |`const_iterator`|Тип, представляющий не поточно ориентированной `const` итератор по элементам в параллельной очереди.|
@@ -59,14 +59,14 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[concurrent_queue](#ctor)|Перегружен. Создает параллельную очередь.|
 |[~ concurrent_queue деструктор](#dtor)|Уничтожает параллельной очереди.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[clear](#clear)|Очищает параллельную очередь, уничтожая все в данный момент элементов в очереди. Этот метод не является безопасным в режиме параллелизма.|
 |[empty](#empty)|Проверяет ли параллельная очередь пуста в данный момент этот метод вызывается. Этот метод безопасен в режиме параллелизма.|

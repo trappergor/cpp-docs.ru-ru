@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CMFCImageEditorPaletteBar [MFC], IsButtonExtraSizeAvailable
 ms.assetid: 3fb7ba8e-f254-4d56-b913-9941b4ed8138
 ms.openlocfilehash: 6812f3f425186484ef892d7f5c626c0dfce0f863
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62378106"
 ---
 # <a name="cmfcimageeditorpalettebar-class"></a>Класс CMFCImageEditorPaletteBar
 
@@ -27,13 +27,13 @@ ms.locfileid: "57302990"
 class CMFCImageEditorPaletteBar : public CMFCToolBar
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CMFCImageEditorPaletteBar::GetRowHeight](#getrowheight)|Возвращает высоту кнопки панели инструментов. (Переопределяет [CMFCToolBar::GetRowHeight](../../mfc/reference/cmfctoolbar-class.md#getrowheight).)|
 |[CMFCImageEditorPaletteBar::IsButtonExtraSizeAvailable](#isbuttonextrasizeavailable)|Определяет, может ли отображать кнопки, которые имеют дополнительные границы панели инструментов. (Переопределяет [CMFCToolBar::IsButtonExtraSizeAvailable](../../mfc/reference/cmfctoolbar-class.md#isbuttonextrasizeavailable).)|
 

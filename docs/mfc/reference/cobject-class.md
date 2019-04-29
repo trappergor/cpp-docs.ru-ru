@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
 ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62388323"
 ---
 # <a name="cobject-class"></a>Класс CObject
 
@@ -37,17 +37,17 @@ ms.locfileid: "57304071"
 class AFX_NOVTABLE CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="protected-constructors"></a>Защищенные конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObject::CObject](#cobject)|Конструктор по умолчанию.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CObject::AssertValid](#assertvalid)|Проверяет целостность этого объекта.|
 |[CObject::Dump](#dump)|Создает дамп диагностики этого объекта.|
@@ -58,7 +58,7 @@ class AFX_NOVTABLE CObject
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Удалить CObject::operator](#operator_delete)|Специальные **удалить** оператор.|
 |[Новый CObject::operator](#operator_new)|Специальные **новый** оператор.|

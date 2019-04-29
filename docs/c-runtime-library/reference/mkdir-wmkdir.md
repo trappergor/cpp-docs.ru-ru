@@ -34,11 +34,11 @@ helpviewer_keywords:
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
 ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285201"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir, _wmkdir
 
@@ -79,7 +79,7 @@ int _wmkdir(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 

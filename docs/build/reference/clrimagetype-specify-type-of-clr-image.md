@@ -9,11 +9,11 @@ helpviewer_keywords:
 - -CLRIMAGETYPE linker option
 ms.assetid: 04c60ee6-9dd7-4391-bc03-6926ad0fa116
 ms.openlocfilehash: b2a6df0f778ba079bffefeeacdad22cb398a529a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62272485"
 ---
 # <a name="clrimagetype-specify-type-of-clr-image"></a>/CLRIMAGETYPE (указание типа образа среды CLR)
 

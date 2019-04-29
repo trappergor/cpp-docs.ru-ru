@@ -10,17 +10,17 @@ helpviewer_keywords:
 - logical OR operator
 ms.assetid: 31837c99-2655-4bf3-8ded-f13b7a9dc533
 ms.openlocfilehash: 5db1af870644d1552aeac813edce0985a31d95b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62368686"
 ---
 # <a name="logical-or-operator-"></a>Оператор логического или: ||
 
 ## <a name="syntax"></a>Синтаксис
 
-> *логическое или выражение-* **||** *logical и expression*
+> *logical-or-expression* **||** *logical-and-expression*
 
 ## <a name="remarks"></a>Примечания
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - output_iterator_tag struct
 ms.assetid: c23a4331-b069-4fa0-9c3a-1c9be7095553
 ms.openlocfilehash: cb2a59d2c81e6d7cc80de2714ba86476c5fa837f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370857"
 ---
 # <a name="outputiteratortag-struct"></a>Структура output_iterator_tag
 
@@ -20,7 +20,7 @@ ms.locfileid: "50659316"
 
 ## <a name="syntax"></a>Синтаксис
 
-Структура output_iterator_tag {};
+struct output_iterator_tag {};
 
 ## <a name="remarks"></a>Примечания
 

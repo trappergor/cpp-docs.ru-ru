@@ -10,11 +10,11 @@ f1_keywords:
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
 ms.openlocfilehash: 9acdb7f5c934a8cabdd1803074778ac9f01f4960
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271034"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>Диалоговое окно страниц свойств &lt;Имя_проекта&gt; "Свойства конфигурации", "Инструмент манифеста", "Общие"
 
@@ -44,4 +44,4 @@ ms.locfileid: "57827766"
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [Страницы свойств инструмента манифеста](manifest-tool-property-pages.md)<br>
-[Значение компилятора C++ и свойства в Visual Studio сборки](../working-with-project-properties.md)
+[Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md)

@@ -39,11 +39,11 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
 ms.openlocfilehash: e5ddb2f7b5616acc0f275ad21599abedfbd8d060
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372846"
 ---
 # <a name="cprintdialogex-class"></a>Класс CPrintDialogEx
 
@@ -55,17 +55,17 @@ ms.locfileid: "57268967"
 class CPrintDialogEx : public CCommonDialog
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialogEx::CPrintDialogEx](#cprintdialogex)|Создает объект `CPrintDialogEx`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialogEx::CreatePrinterDC](#createprinterdc)|Создает контекст устройства принтера без отображения диалогового окна печати.|
 |[CPrintDialogEx::DoModal](#domodal)|Отображает диалоговое окно и пользователь может выбирать.|
@@ -84,7 +84,7 @@ class CPrintDialogEx : public CCommonDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPrintDialogEx::m_pdex](#m_pdex)|Структура, используемая для настройки `CPrintDialogEx` объекта.|
 

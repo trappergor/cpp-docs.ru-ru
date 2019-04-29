@@ -14,11 +14,11 @@ helpviewer_keywords:
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
 ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269405"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (тип знака по умолчанию не подписан)
 

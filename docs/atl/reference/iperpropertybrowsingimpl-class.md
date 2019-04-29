@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
 ms.openlocfilehash: 54c475e736425718e954b0e954ea2b327d938556
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62274923"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>Класс IPerPropertyBrowsingImpl
 
@@ -41,11 +41,11 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 *T*<br/>
 Ваш класс, производный от `IPerPropertyBrowsingImpl`.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IPerPropertyBrowsingImpl::GetDisplayString](#getdisplaystring)|Извлекает строку, описывающую данное свойство.|
 |[IPerPropertyBrowsingImpl::GetPredefinedStrings](#getpredefinedstrings)|Извлекает массив строк, соответствующее значениям, которые могут принимать заданного свойства.|

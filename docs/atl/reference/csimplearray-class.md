@@ -17,11 +17,11 @@ helpviewer_keywords:
 - CSimpleArray class
 ms.assetid: ee0c9f39-b61c-4c18-bc43-4eada21dca3a
 ms.openlocfilehash: 8c050002549fc6b7a18acb34f0e4f9a2f278db82
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278011"
 ---
 # <a name="csimplearray-class"></a>Класс CSimpleArray
 
@@ -46,14 +46,14 @@ class CSimpleArray
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleArray::CSimpleArray](#csimplearray)|Конструктор для простого массива.|
 |[CSimpleArray:: ~ CSimpleArray](#dtor)|Деструктор для простого массива.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleArray::Add](#add)|Добавляет новый элемент в массив.|
 |[CSimpleArray::Find](#find)|Поиск элемента в массиве.|
@@ -66,7 +66,7 @@ class CSimpleArray
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|Получает элемент из массива.|
 |[CSimpleArray::operator =](#operator_eq)|Оператор присвоения.|

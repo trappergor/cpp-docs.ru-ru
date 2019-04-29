@@ -12,11 +12,11 @@ helpviewer_keywords:
 - modal dialog boxes, ATL
 ms.assetid: 2ae65cc9-4f32-4168-aecd-200b4a480fdf
 ms.openlocfilehash: b0790d9c29b50b1ac454815cd2189e0efb31b9ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278063"
 ---
 # <a name="csimpledialog-class"></a>Класс CSimpleDialog
 
@@ -38,11 +38,11 @@ class CSimpleDialog : public CDialogImplBase
 *t_bCenter*<br/>
 Значение TRUE, если объект диалогового окна должен быть отцентрован в окно-владелец; в противном случае — значение FALSE.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleDialog::DoModal](#domodal)|Создает модальное диалоговое окно.|
 

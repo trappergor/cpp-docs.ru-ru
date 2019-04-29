@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
 ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62371481"
 ---
 # <a name="numpunct-class"></a>Класс numpunct
 
@@ -352,11 +352,11 @@ explicit numpunct(size_t _Refs = 0);
 
 Возможные значения *_Refs* параметра и их важность:
 
-- 0: время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
 
-- 1: время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \> 1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 

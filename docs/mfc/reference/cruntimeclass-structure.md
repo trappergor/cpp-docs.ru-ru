@@ -10,11 +10,11 @@ helpviewer_keywords:
 - run-time class [MFC], CRuntimeClass structure
 ms.assetid: de62b6ef-90d4-420f-8c70-f58b36976a2b
 ms.openlocfilehash: 92979a10c18d9759e0ecc9f0785e56a97c0f0642
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372053"
 ---
 # <a name="cruntimeclass-structure"></a>Структура CRuntimeClass
 
@@ -30,7 +30,7 @@ struct CRuntimeClass
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRuntimeClass::CreateObject](#createobject)|Создает объект во время выполнения.|
 |[CRuntimeClass::FromName](#fromname)|Создает объект во время выполнения, используя имя класса знакомы.|
@@ -38,7 +38,7 @@ struct CRuntimeClass
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRuntimeClass::m_lpszClassName](#m_lpszclassname)|Имя класса.|
 |[CRuntimeClass::m_nObjectSize](#m_nobjectsize)|Размер объекта в байтах.|

@@ -37,11 +37,11 @@ helpviewer_keywords:
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
 ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62285849"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround, lroundf, lroundl, llround, llroundf, llroundl
 
@@ -91,9 +91,9 @@ long long llroundl(
 
 **Lround** и **llround** функции возвращают ближайшее **long** или **long** **long** целое число *x*. Промежуточные значения округляются в сторону от нуля, независимо от настройки режима округления чисел с плавающей запятой. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± **QNAN**, **IND**|Нет|**Д_ОМЕН ИМЯ**|
+|± **QNAN**, **IND**|Нет|**_DOMAIN**|
 
 ## <a name="remarks"></a>Примечания
 

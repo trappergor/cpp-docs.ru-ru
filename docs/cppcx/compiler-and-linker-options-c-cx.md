@@ -3,15 +3,15 @@ title: Параметры компилятора и компоновщика (C+
 ms.date: 01/22/2017
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
 ms.openlocfilehash: cc1964c57d6700995bb283c245e4c63c8e9e313b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62383364"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>Параметры компилятора и компоновщика (C++/CX)
 
-Переменная среды, C + +/ CX параметры компилятора и параметры компоновщика поддерживают построение приложений для среды выполнения Windows.
+Переменная среды, C++/CX параметры компилятора и параметры компоновщика поддерживают построение приложений для среды выполнения Windows.
 
 ## <a name="library-path"></a>Путь к библиотеке
 
@@ -19,7 +19,7 @@ ms.locfileid: "57750914"
 
 ## <a name="compiler-options"></a>Параметры компилятора
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Включает расширения языка среды выполнения Windows.<br /><br /> Параметр `nostdlib` запрещает компилятору использовать стандартный предопределенный путь поиска сборки и WINMD-файлов.<br /><br /> Параметр компилятора **/ZW** неявно задает следующие параметры компилятора:<br /><br />- **/FI** vccorlib.h, который обеспечивает включение файла заголовка vccorlib.h, определяющего множество типов, необходимых для компилятора.<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) Windows.winmd, который обеспечивает включение файла метаданных Windows.winmd, предоставляемого операционной системой и определяет множество типов в среде выполнения Windows.<br />- **/FU** Platform.winmd, который обеспечивает включение файла метаданных Platform.winmd, предоставляемого компилятором. Этот файл определяет большинство типов семейства пространств имен Platform.|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|Добавляет каталог, определяемый параметром *каталог* , в путь поиска, который используется компилятором для поиска файлов сборки и WINMD-файлов.|
@@ -43,4 +43,4 @@ ms.locfileid: "57750914"
 
 ## <a name="see-also"></a>См. также
 
-[Создание приложений и библиотек](../cppcx/building-apps-and-libraries-c-cx.md)
+[Построение приложений и библиотек](../cppcx/building-apps-and-libraries-c-cx.md)

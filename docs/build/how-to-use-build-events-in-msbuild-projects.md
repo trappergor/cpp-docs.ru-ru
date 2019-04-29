@@ -7,11 +7,11 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
 ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273486"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Практическое руководство. Использование событий построения в проектах MSBuild
 
@@ -23,7 +23,7 @@ ms.locfileid: "57814125"
 
 В следующей таблице перечислены каждый элемент XML события сборки:
 
-|XML-элемент|Описание:|
+|XML-элемент|Описание|
 |-----------------|-----------------|
 |`PreBuildEvent`|Это событие выполняется до начала построения.|
 |`PreLinkEvent`|Это событие выполняется до начала этапа компоновки.|
@@ -31,7 +31,7 @@ ms.locfileid: "57814125"
 
 В следующей таблице перечислены все *использовать в построении* элемент:
 
-|XML-элемент|Описание:|
+|XML-элемент|Описание|
 |-----------------|-----------------|
 |`PreBuildEventUseInBuild`|Указывает, следует ли выполнять *перед сборкой* событий.|
 |`PreLinkEventUseInBuild`|Указывает, следует ли выполнять *перед компоновкой* событий.|

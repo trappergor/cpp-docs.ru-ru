@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
 ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277402"
 ---
 # <a name="cthreadpool-class"></a>Класс CThreadPool
 
@@ -50,14 +50,14 @@ class CThreadPool : public IThreadPoolConfig
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|Конструктор для пула потоков.|
 |[CThreadPool:: ~ CThreadPool](#dtor)|Деструктор для пула потоков.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CThreadPool::AddRef](#addref)|Реализация `IUnknown::AddRef`.|
 |[CThreadPool::GetNumThreads](#getnumthreads)|Вызовите этот метод, чтобы получить число потоков в пуле.|

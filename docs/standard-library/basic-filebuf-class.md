@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
 ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62377156"
 ---
 # <a name="basicfilebuf-class"></a>Класс basic_filebuf
 
@@ -405,7 +405,7 @@ basic_filebuf<Elem, Tr> *open(
 *_Filename*<br/>
 Имя файла, который необходимо открыть.
 
-*_Режим*<br/>
+*_Mode*<br/>
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -433,7 +433,7 @@ basic_filebuf<Elem, Tr> *open(
 
 Если **mode & ios_base::binary** имеет ненулевое значение, то функция добавляет `b` для `strmode` для открытия двоичного потока вместо текстового потока. Затем он сохраняет значение, возвращенное `fopen` в указатель файла `fp`. Если **mode & ios_base::ate** не равен нулю и указатель файла не является пустым указателем, то функция вызывает `fseek`( **fp**, 0, `SEEK_END`), чтобы разместить поток в конце файла. Если эта операция размещения завершается неудачно, эта функция вызывает [закрыть](#close)( `fp`) и сохраняет пустой указатель в указатель файла.
 
-Если указатель файла не является пустым указателем, функция определяет аспект преобразования файла `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)> >( [getloc](../standard-library/basic-streambuf-class.md#getloc)) для использования функциями [underflow](#underflow) и [overflow](#overflow).
+Если указатель файла не является пустым указателем, функция определяет аспект преобразования файла: `use_facet`< `codecvt`< **Elem**, `char`, **traits_type::**[state_type](../standard-library/char-traits-struct.md#state_type)>> ( [getloc](../standard-library/basic-streambuf-class.md#getloc)), для использования с [потери значимости](#underflow) и [переполнения](#overflow).
 
 Если указатель файла является пустым, эта функция возвращает пустой указатель. В противном случае возвращается **this**.
 

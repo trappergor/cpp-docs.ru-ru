@@ -5,11 +5,11 @@ f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
 ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62279077"
 ---
 # <a name="ltchronogt-operators"></a>Операторы &lt;chrono&gt;
 
@@ -46,10 +46,10 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 *Время*<br/>
@@ -84,10 +84,10 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -155,10 +155,10 @@ constexpr typename common_type<Rep1, Rep2>::type
 *ДИВ*<br/>
 Целочисленное значение.
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration`.
 
-*Справа*<br/>
+*Right*<br/>
 Правой объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -195,10 +195,10 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 *Время*<br/>
@@ -231,10 +231,10 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -261,10 +261,10 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -289,10 +289,10 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -319,10 +319,10 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -347,10 +347,10 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration` или объект `time_point`.
 
-*Справа*<br/>
+*Right*<br/>
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -383,10 +383,10 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 *ДИВ*<br/>
 Целочисленное значение.
 
-*Слева*<br/>
+*Left*<br/>
 Левый объект `duration`.
 
-*Справа*<br/>
+*Right*<br/>
 Правой объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение

@@ -21,11 +21,11 @@ helpviewer_keywords:
 - std::promise [C++], set_value_at_thread_exit
 - std::promise [C++], swap
 ms.openlocfilehash: 101c9939f1636d87780aa15aea9459ebb927684d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369960"
 ---
 # <a name="promise-class"></a>Класс promise
 
@@ -42,13 +42,13 @@ class promise;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Объект Promise](#promise)|Создает объект `promise`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[get_future](#get_future)|Возвращает [future](../standard-library/future-class.md), связанный с этим объектом promise.|
 |[set_exception](#set_exception)|Атомарно устанавливает результат этого объекта promise для обозначения исключения.|
@@ -59,7 +59,7 @@ class promise;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[promise::operator=](#op_eq)|Назначение общего состояния этого объекта promise.|
 
@@ -145,7 +145,7 @@ void set_exception(exception_ptr Exc);
 
 ### <a name="parameters"></a>Параметры
 
-*Исключенные*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), который сохраняется этим методом как результат исключения.
 
 ### <a name="remarks"></a>Примечания
@@ -166,7 +166,7 @@ void set_exception_at_thread_exit(exception_ptr Exc);
 
 ### <a name="parameters"></a>Параметры
 
-*Исключенные*<br/>
+*Exc*<br/>
 [Exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), который сохраняется этим методом как результат исключения.
 
 ### <a name="remarks"></a>Примечания

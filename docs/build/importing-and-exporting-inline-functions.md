@@ -13,11 +13,11 @@ helpviewer_keywords:
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
 ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273447"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>Импорт и экспорт встраиваемых функций
 
@@ -28,7 +28,7 @@ ms.locfileid: "57822045"
 > [!CAUTION]
 >  Следует соблюдать осторожность при передаче импортируемых встроенных функций, так как они могут вызвать конфликты версий. Встроенная функция разворачивается в код приложения; Таким образом Если позже вы повторное написание функции, она не обновится, если не перекомпилируется само приложение. (Как правило, функции DLL могут обновляться без повторной сборки приложения, которые их используют.)
 
-## <a name="what-do-you-want-to-do"></a>Выберите действие.
+## <a name="what-do-you-want-to-do"></a>Выберите действие
 
 - [Экспорт из библиотеки DLL](exporting-from-a-dll.md)
 

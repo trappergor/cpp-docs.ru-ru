@@ -5,11 +5,11 @@ helpviewer_keywords:
 - output streams [C++], member functions
 ms.assetid: 38aaf710-8035-4a34-a0c4-123a5327f28a
 ms.openlocfilehash: eba627c69437754a9c0a819167443aa00c025fef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62370844"
 ---
 # <a name="output-file-stream-member-functions"></a>Функции-члены потока выходного файла
 
@@ -109,7 +109,7 @@ int main( )
 |[good](basic-ios-class.md#good)|Возвращает значение **true**, если нет ошибок (неустранимых или других) и флаг конца файла не установлен.|
 |[eof](basic-ios-class.md#eof)|Возвращает значение **true** при достижении конца файла.|
 |[clear](basic-ios-class.md#clear)|Устанавливает внутреннее состояние ошибки. Если вызывается с аргументами по умолчанию, он очищает все биты ошибок.|
-|[rdstate] (basic-ios-class.md #rdstate|Возвращает текущее состояние ошибки.|
+|[rdstate](basic-ios-class.md#rdstate|Возвращает текущее состояние ошибки.|
 
 Оператор **!** перегружается для выполняют ту же функцию, как `fail` функции. Таким образом выражение:
 

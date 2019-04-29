@@ -21,11 +21,11 @@ helpviewer_keywords:
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
 ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373314"
 ---
 # <a name="colevariant-class"></a>Класс COleVariant
 
@@ -41,13 +41,13 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleVariant::COleVariant](#colevariant)|Создает объект `COleVariant`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleVariant::Attach](#attach)|Присоединяет типа VARIANT в `COleVariant`.|
 |[COleVariant::ChangeType](#changetype)|Изменяет тип варианта этого `COleVariant` объекта.|
@@ -58,7 +58,7 @@ class COleVariant : public tagVARIANT
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|Преобразует `COleVariant` значение в `LPCVARIANT`.|
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|Преобразует `COleVariant` в коллекцию `LPVARIANT`.|

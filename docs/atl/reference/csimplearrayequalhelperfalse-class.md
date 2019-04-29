@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
 ms.openlocfilehash: 35207fdcbffc0e0367d86682b5f731eef617d761
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62277959"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse Class
 
@@ -35,7 +35,7 @@ class CSimpleArrayEqualHelperFalse
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSimpleArrayEqualHelperFalse::IsEqual](#isequal)|(Статический) Возвращает значение false.|
 

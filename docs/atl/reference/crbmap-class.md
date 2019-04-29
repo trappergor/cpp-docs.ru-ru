@@ -12,11 +12,11 @@ helpviewer_keywords:
 - CRBMap class
 ms.assetid: 658e94dc-e835-4356-aed1-1513e1f66969
 ms.openlocfilehash: e5dedb26544bb2755bc74894cf36a622f5141f89
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278128"
 ---
 # <a name="crbmap-class"></a>Класс CRBMap
 
@@ -50,14 +50,14 @@ class CRBMap : public CRBTree<K, V, KTraits, VTraits>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBMap::CRBMap](#crbmap)|Конструктор.|
 |[CRBMap:: ~ CRBMap](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBMap::Lookup](#lookup)|Вызовите этот метод для поиска ключей и значений в `CRBMap` объекта.|
 |[CRBMap::RemoveKey](#removekey)|Вызовите этот метод для удаления элемента из `CRBMap` объекту, заданному ключу.|

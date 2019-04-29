@@ -8,11 +8,11 @@ helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
 ms.openlocfilehash: cf2078432f629a353e0c325b407db59681ffd9d3
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273499"
 ---
 # <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>Практическое руководство. Изменение требуемой версии .NET Framework и набора средств платформы
 
@@ -37,7 +37,7 @@ ms.locfileid: "57820082"
 
 1. В строке меню последовательно выберите **Файл**, **Открыть**, **Файл**. В диалоговом окне **Открыть файл** перейдите к папке проекта и откройте файл проекта (с расширением VCXPROJ).
 
-1. В файле проекта найдите запись для требуемой версии платформы. Например, если проект ориентирован на платформу .NET Framework 4.5, найдите запись `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` в элементе `<PropertyGroup Label="Globals">` элемента `<Project>`. Если элемент `<TargetFrameworkVersion>` отсутствует, проект не использует платформу .NET Framework и изменений не требуется.
+1. В файле проекта найдите запись для требуемой версии платформы. Например, если проект ориентирован на платформу .NET Framework 4.5, найдите запись `<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>` в элементе `<PropertyGroup Label="Globals">` элемента `<Project>` . Если элемент `<TargetFrameworkVersion>` отсутствует, проект не использует платформу .NET Framework и изменений не требуется.
 
 1. Измените значение на требуемую версию .NET Framework, например 3.5 или 4.6.
 

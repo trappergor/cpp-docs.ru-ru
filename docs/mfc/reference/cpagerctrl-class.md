@@ -49,11 +49,11 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
 ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62373249"
 ---
 # <a name="cpagerctrl-class"></a>Класс CPagerCtrl
 
@@ -69,13 +69,13 @@ class CPagerCtrl : public CWnd
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPagerCtrl::CPagerCtrl](#cpagerctrl)|Создает объект `CPagerCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPagerCtrl::Create](#create)|Создает элемент управления страничного навигатора с указанными стилями и присоединяет его к текущему `CPagerCtrl` объекта.|
 |[CPagerCtrl::CreateEx](#createex)|Создает элемент управления страничного навигатора с указанным расширенные стили и присоединяет его к текущему `CPagerCtrl` объекта.|
@@ -182,7 +182,7 @@ virtual BOOL CreateEx(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwExStyle*|[in] Побитовое сочетание расширенные стили для применения к элементу управления. Дополнительные сведения см. в разделе *dwExStyle* параметр [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa) функции.|
 |*dwStyle*|[in] Побитовое сочетание (OR) [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles) и [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles) для применения к элементу управления.|
@@ -208,7 +208,7 @@ void ForwardMouse(BOOL bForward);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*bForward*|[in] Значение true, чтобы сообщения мыши вперед, или FALSE не перенаправлять сообщения мыши.|
 
@@ -446,7 +446,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iButton*|[in] Указывает кнопку, для которого необходимо получить состояние. Если стиль элемента управления страничного навигатора PGS_HORZ, укажите для левой кнопки мыши и PGB_BOTTOMORRIGHT PGB_TOPORLEFT для правой кнопки. Если стиль элемента управления страничного навигатора PGS_VERT, укажите PGB_TOPORLEFT кнопка сверху и PGB_BOTTOMORRIGHT для нижней кнопки. Дополнительные сведения см. в разделе [стили элемента управления страничного навигатора](/windows/desktop/Controls/pager-control-styles).|
 
@@ -492,7 +492,7 @@ COLORREF SetBkColor(COLORREF clrBk);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*clrBk*|[in] Объект [COLORREF](/windows/desktop/gdi/colorref) значение, содержащее новый цвет фона элемента управления страничного навигатора.|
 
@@ -548,7 +548,7 @@ int SetButtonSize(int iButtonSize);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iButtonSize*|[in] Новый размер кнопок, измеряется в пикселах.|
 
@@ -604,7 +604,7 @@ void SetScrollPos(int iPos);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*iPos*|[in] Новая позиция прокрутки, измеряется в пикселах.|
 

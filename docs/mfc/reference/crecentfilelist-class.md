@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CRecentFileList [MFC], WriteList
 ms.assetid: a77f0524-7584-4582-849a-7e97b76d186e
 ms.openlocfilehash: 30536d91d057de4e551b5a28200dd903e12713b3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372183"
 ---
 # <a name="crecentfilelist-class"></a>Класс CRecentFileList
 
@@ -43,13 +43,13 @@ class CRecentFileList
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRecentFileList::CRecentFileList](#crecentfilelist)|Создает объект `CRecentFileList`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRecentFileList::Add](#add)|Добавляет файл в список последних Выбиравшихся файлов.|
 |[CRecentFileList::GetDisplayName](#getdisplayname)|Предоставляет отображаемое имя для отображения меню файла MRU.|
@@ -61,7 +61,7 @@ class CRecentFileList
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRecentFileList::operator \[ \]](#operator_at)|Возвращает `CString` объекта в заданной позиции.|
 

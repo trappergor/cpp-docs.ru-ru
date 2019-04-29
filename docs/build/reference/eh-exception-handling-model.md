@@ -13,11 +13,11 @@ helpviewer_keywords:
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
 ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271805"
 ---
 # <a name="eh-exception-handling-model"></a>Параметр /EH (модель обработки исключений)
 

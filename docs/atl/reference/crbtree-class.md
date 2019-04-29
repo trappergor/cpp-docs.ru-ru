@@ -28,11 +28,11 @@ helpviewer_keywords:
 - CRBTree class
 ms.assetid: a1b1cb63-38e4-4fc2-bb28-f774d1721760
 ms.openlocfilehash: 59416000eecf4be25746d9dedd86ea2af116087a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281347"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278076"
 ---
 # <a name="crbtree-class"></a>Класс CRBTree
 
@@ -66,7 +66,7 @@ class CRBTree
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBTree::KINARGTYPE](#kinargtype)|Тип, используемый при передаче ключа в качестве входного аргумента.|
 |[CRBTree::KOUTARGTYPE](#koutargtype)|Тип, используемый при возврате ключа в виде выходного аргумента.|
@@ -75,19 +75,19 @@ class CRBTree
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Класс CRBTree::CPair](#cpair_class)|Класс, содержащий элементы ключ и значение.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CRBTree:: ~ CRBTree](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CRBTree::FindFirstKeyAfter](#findfirstkeyafter)|Вызовите этот метод, чтобы определить позицию элемента, который использует следующего доступного ключа.|
 |[CRBTree::GetAt](#getat)|Вызовите этот метод для возвращения элемента в заданной позиции в дереве.|

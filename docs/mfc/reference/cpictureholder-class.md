@@ -29,11 +29,11 @@ helpviewer_keywords:
 - CPictureHolder [MFC], m_pPict
 ms.assetid: a4f59775-704a-41dd-b5bd-2e531c95127a
 ms.openlocfilehash: 5386240114550826e4bf557b63310a91590afb55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57284220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372885"
 ---
 # <a name="cpictureholder-class"></a>Класс CPictureHolder
 
@@ -49,13 +49,13 @@ class CPictureHolder
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPictureHolder::CPictureHolder](#cpictureholder)|Создает объект `CPictureHolder`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPictureHolder::CreateEmpty](#createempty)|Создает пустой объект `CPictureHolder`.|
 |[CPictureHolder::CreateFromBitmap](#createfrombitmap)|Создает `CPictureHolder` объекта из растрового изображения.|
@@ -69,7 +69,7 @@ class CPictureHolder
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CPictureHolder::m_pPict](#m_ppict)|Указатель на объект рисунка.|
 

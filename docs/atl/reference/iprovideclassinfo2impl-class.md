@@ -14,11 +14,11 @@ helpviewer_keywords:
 - class information, ATL
 ms.assetid: d74956e8-9c69-4cba-b99d-ca1ac031bb9d
 ms.openlocfilehash: 41a0756250e749a07d48ad4f090c2f1c322aa558
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62276046"
 ---
 # <a name="iprovideclassinfo2impl-class"></a>Класс IProvideClassInfo2Impl
 
@@ -59,13 +59,13 @@ class ATL_NO_VTABLE IProvideClassInfo2Impl : public IProvideClassInfo2
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::IProvideClassInfo2Impl](#iprovideclassinfo2impl)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[IProvideClassInfo2Impl::GetClassInfo](#getclassinfo)|Извлекает `ITypeInfo` указатель на сведения о типе компонентного класса.|
 |[IProvideClassInfo2Impl::GetGUID](#getguid)|Извлекает идентификатор GUID исходящего объекта disp-интерфейса.|

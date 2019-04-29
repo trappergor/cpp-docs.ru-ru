@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ATL Property Page Wizard, options
 ms.assetid: a7107779-b2ea-4f99-b84b-7f3e0c504bc8
 ms.openlocfilehash: c92c7a3f03c3ddedbea02647e2317d77a7655609
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275403"
 ---
 # <a name="options-atl-property-page-wizard"></a>Параметры, мастер страниц свойств ATL
 
@@ -23,7 +23,7 @@ ms.locfileid: "57298988"
 
    См. в разделе [указание потоковой модели проекта](../../atl/specifying-the-threading-model-for-a-project-atl.md) Дополнительные сведения.
 
-   |Параметр|Описание:|
+   |Параметр|Описание|
    |------------|-----------------|
    |**Single**|Страница свойств выполняется только в основном потоке COM.|
    |**Подразделения**|На странице свойств могут создаваться в любом однопотоковом подразделении. По умолчанию.|
