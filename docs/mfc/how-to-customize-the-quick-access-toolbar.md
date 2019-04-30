@@ -5,11 +5,11 @@ helpviewer_keywords:
 - quick access toolbar [MFC], customization
 ms.assetid: 2554099b-0c89-4605-9249-31bf9cbcefe0
 ms.openlocfilehash: c53e405eafe310c0bfc03a916ab85181ae67a34b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396434"
 ---
 # <a name="how-to-customize-the-quick-access-toolbar"></a>Практическое руководство. Настройка панели быстрого доступа
 
@@ -31,7 +31,7 @@ ms.locfileid: "57300729"
 
 Следующая таблица определяет свойства быстрого доступа.
 
-|Свойство.|Определение|
+|Свойство|Определение|
 |--------------|----------------|
 |Положение QAT|Задает положение панели быстрого доступа, при запуске приложения. Положение может быть либо **выше** или **ниже** элемент управления на ленте.|
 |Элементы QAT|Задает команды, доступные для быстрого доступа.|

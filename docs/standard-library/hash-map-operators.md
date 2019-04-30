@@ -6,11 +6,11 @@ f1_keywords:
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
 ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405057"
 ---
 # <a name="lthashmapgt-operators"></a>Операторы &lt;hash_map&gt;
 
@@ -22,7 +22,7 @@ ms.locfileid: "50559709"
 ## <a name="op_neq"></a> operator!=
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
 
 Проверяет неравенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.
 
@@ -91,7 +91,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_eq_eq"></a> operator==
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](unordered-map-class.md).
 
 Проверяет равенство объекта hash_map слева от оператора и объекта hash_map справа от оператора.
 
@@ -158,7 +158,7 @@ The hash_maps hm1 and hm3 are equal.
 ## <a name="op_neq_mm"></a>  оператор! = (hash_multimap)
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
 
 Проверяет неравенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.
 
@@ -225,7 +225,7 @@ The hash_multimaps hm1 and hm3 are equal.
 ## <a name="op_eq_eq_mm"></a>  оператор == (hash_multimap)
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
 
 Проверяет равенство объекта hash_multimap слева от оператора и объекта hash_multimap справа от оператора.
 

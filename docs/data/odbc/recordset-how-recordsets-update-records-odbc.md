@@ -9,11 +9,11 @@ helpviewer_keywords:
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
 ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397813"
 ---
 # <a name="recordset-how-recordsets-update-records-odbc"></a>Набор записей. Принципы обновления записей в наборе записей (ODBC)
 
@@ -73,4 +73,4 @@ ms.locfileid: "59034486"
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Набор записей. Как AddNew, Edit и Delete рабочих (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[Набор записей. Принципы работы функций AddNew, Edit и Delete (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

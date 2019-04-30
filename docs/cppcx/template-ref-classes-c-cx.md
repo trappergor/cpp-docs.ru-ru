@@ -3,11 +3,11 @@ title: Классы ссылки шаблонов (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: a24d5f45-8dbb-4540-958f-c76c90d8ed93
 ms.openlocfilehash: 4398cc2c545a57277289a6aa41fc4664d9734eed
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396041"
 ---
 # <a name="template-ref-classes-ccx"></a>Классы ссылки шаблонов (C++/CX)
 
@@ -15,7 +15,7 @@ ms.locfileid: "57744344"
 
 ## <a name="authoring-ref-class-templates"></a>Создание шаблонов классов ссылок
 
-В следующем примере показано, как объявить закрытый класс ссылки в виде шаблона, как объявить стандартный шаблон C++ и как объявить такие класс и шаблон в качестве членов открытого класса ссылки. Обратите внимание, что стандартный шаблон C++ может быть специализирован типом среды выполнения Windows, в данном случае Platform::String ^.
+В следующем примере показано, как объявить закрытый класс ссылки в виде шаблона, как объявить стандартный шаблон C++ и как объявить такие класс и шаблон в качестве членов открытого класса ссылки. Обратите внимание, что стандартный C++ шаблона может быть специализирован типом среды выполнения Windows, в данном случае Platform::String ^.
 
 [!code-cpp[cx_templates#01](../cppcx/codesnippet/CPP/templatedemo/class1.h#01)]
 
