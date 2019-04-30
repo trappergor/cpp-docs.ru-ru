@@ -31,11 +31,11 @@ helpviewer_keywords:
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
 ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340245"
 ---
 # <a name="cputs-cputws"></a>_cputs, _cputws
 
@@ -72,7 +72,7 @@ int _cputws(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cputts**|**_cputs**|**_cputs**|**_cputws**|
 

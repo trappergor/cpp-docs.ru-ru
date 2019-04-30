@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interoperability [C++], double thunking
 ms.assetid: a85090b2-dc3c-498a-b40c-340db229dd6f
 ms.openlocfilehash: f34af20ed3dd2c48659bdbf7794c443920dbb4e9
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404485"
 ---
 # <a name="double-thunking-c"></a>Двойное преобразование (С++)
 
@@ -89,7 +89,7 @@ __thiscall T::~T(void)
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 Приведенный выше образец было показано создание двойное преобразование. В этом примере показан результат. `for` Цикл вызывает виртуальную функцию и программа сообщает время выполнения. Максимальное время передается в том случае, если программа скомпилирована с **/CLR**. Минимальное время включаются в отчеты при компиляции без **/CLR** или если виртуальная функция объявлена с `__clrcall`.
 

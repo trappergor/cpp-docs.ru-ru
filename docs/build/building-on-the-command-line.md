@@ -11,11 +11,11 @@ helpviewer_keywords:
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
 ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
-ms.translationtype: MT
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812126"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342156"
 ---
 # <a name="use-the-msvc-toolset-from-the-command-line"></a>Использовать набор инструментов MSVC из командной строки
 
@@ -92,13 +92,13 @@ ms.locfileid: "57812126"
 |*Архитектура*|Компилятор|Архитектура компьютера узла|Архитектура выходных данных (целевой) сборки|
 |----------------------------|--------------|----------------------------------|-------------------------------|
 |**x86**|собственный 32-разрядный x86|x86, x64|x86|
-|**x86\_amd64** или **x86\_x64**|x64 на x86 cross|x86, x64|x64|
+|**x86\_amd64** или **x86\_x64**|x64 на x86 cross|x86, x64|X64|
 |**x86_arm**|ARM для x86 (кросс-компилятор)|x86, x64|ARM|
 |**x86_arm64**|ARM64 на x86 кросс-|x86, x64|ARM64|
-|**AMD64** или **x64**|x64 собственный 64-разрядный|x64|x64|
-|**AMD64\_x86** или **x64\_x86**|cross x86 в x64|x64|x86|
-|**AMD64\_arm** или **x64\_arm**|ARM в x64 кросс-|x64|ARM|
-|**AMD64\_arm64** или **x64\_arm64**|ARM64 в x64 кросс-|x64|ARM64|
+|**AMD64** или **x64**|x64 собственный 64-разрядный|X64|X64|
+|**AMD64\_x86** или **x64\_x86**|cross x86 в x64|X64|x86|
+|**AMD64\_arm** или **x64\_arm**|ARM в x64 кросс-|X64|ARM|
+|**AMD64\_arm64** или **x64\_arm64**|ARM64 в x64 кросс-|X64|ARM64|
 
 *platform_type*<br/>
 Этот необязательный аргумент позволяет указать **хранения** или **uwp** платформ. По умолчанию среды имеет значение для создания классических и консольных приложений.

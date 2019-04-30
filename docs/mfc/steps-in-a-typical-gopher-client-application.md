@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Internet client applications [MFC], gopher table
 ms.assetid: 3e4e1869-5da0-453d-8ba9-b648c894bb90
 ms.openlocfilehash: ca1a09a4a570fd705e726ac5a1124a4cf4ccb329
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307009"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>Шаги для организации типичного клиентского приложения Gopher
 
 Ниже приведены шаги, которые необходимо выполнять в организации типичного клиентского приложения gopher.
 
-|Ваша цель|Выполняемые действия|Эффекты|
+|Ваша цель|Выполняемые действия|Произведенный эффект|
 |---------------|----------------------|-------------|
 |Запустить сеанс gopher.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) объекта.|Инициализирует WinInet и подключается к серверу.|
 |Подключитесь к серверу gopher.|Используйте [CInternetSession::GetGopherConnection](../mfc/reference/cinternetsession-class.md#getgopherconnection).|Возвращает [CGopherConnection](../mfc/reference/cgopherconnection-class.md) объекта.|

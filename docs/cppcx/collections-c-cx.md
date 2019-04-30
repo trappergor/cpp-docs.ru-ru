@@ -3,17 +3,17 @@ title: Коллекции (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
 ms.openlocfilehash: 850ac0f4801a13a5407f8fe008740bbfa21cc02c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745421"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62347354"
 ---
 # <a name="collections-ccx"></a>Коллекции (C++/CX)
 
-В C + +/ CX программы, можно сделать свободно пользоваться контейнерами библиотеки стандартных шаблонов (STL) и любыми другими типами пользовательских коллекций. Тем не менее, при передаче коллекции и обратно через двоичный интерфейс приложений (ABI) среды выполнения Windows — например, элементу управления XAML или клиенту JavaScript, необходимо использовать типы коллекций среды выполнения Windows.
+В C++/CX программы, можно сделать свободно пользоваться контейнерами библиотеки стандартных шаблонов (STL) и любыми другими типами пользовательских коллекций. Тем не менее, при передаче коллекции и обратно через двоичный интерфейс приложений (ABI) среды выполнения Windows — например, элементу управления XAML или клиенту JavaScript, необходимо использовать типы коллекций среды выполнения Windows.
 
-Среда выполнения Windows определены интерфейсы коллекций и связанных типов и C + +/ CX предоставлены конкретные реализации C++ в файле заголовка collection.h. На этой иллюстрации показаны связи между типами коллекций:
+Среда выполнения Windows определены интерфейсы коллекций и связанных типов и C++/CX предоставляет конкретных C++ реализаций в файле заголовка collection.h. На этой иллюстрации показаны связи между типами коллекций:
 
 ![C&#43;&#43;&#47;дерево наследования CX для типов коллекций](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;дерево наследования CX для типов коллекций")
 
@@ -28,7 +28,7 @@ ms.locfileid: "57745421"
    > [!IMPORTANT]
    > Итераторы прокси-сервера `VectorIterator` и `VectorViewIterator` используют прокси-объекты `VectoryProxy<T>` и `ArrowProxy<T>` для включения использования с контейнерами STL. Дополнительные сведения см. в теме "Элементы VectorProxy" далее в этой статье.
 
-- C + +/ CX коллекции типов поддержки же гарантии потокобезопасности, контейнерами STL.
+- C++Типы коллекций /CX поддержки же гарантии потокобезопасности, контейнерами STL.
 
 - [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) и [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) определяют события, инициируемые при разнообразных изменениях коллекции. Реализуя эти интерфейсы, объекты  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) и [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) поддерживают привязку данных с коллекциями XAML. Например, если имеется объект `Vector` , данные которого связаны с `Grid`, то при добавлении данных в коллекцию их изменения отражаются в пользовательском интерфейсе таблицы.
 
@@ -96,7 +96,7 @@ void FindButton(UIElementCollection^ col)
 
 ## <a name="collection-types"></a>Типы коллекций
 
-Коллекции подразделяются на четыре категории: изменяемые и доступные только для чтения версии последовательных и ассоциативных коллекций. Кроме того, C + +/ CX повышает функциональные возможности коллекций, предоставляя три класса итераторов, упрощающих доступ к коллекции.
+Коллекции подразделяются на четыре категории: изменяемые и доступные только для чтения версии последовательных и ассоциативных коллекций. Кроме того C++/CX повышает функциональные возможности коллекций, предоставляя три класса итераторов, упрощающих доступ к коллекции.
 
 Элементы изменяемой коллекции можно изменять, тогда как к элементам коллекции, доступной только для чтения (также называемой *представлением*), можно обращаться только для чтения. Элементы [Platform::Collections:: vector](../cppcx/platform-collections-vector-class.md) или[Platform::Collections:: vectorview](../cppcx/platform-collections-vectorview-class.md) коллекции возможен с помощью итератора или коллекции [Vector::GetAt](../cppcx/platform-collections-vector-class.md#getat) и индекс. Элементам ассоциативной коллекции можно обращаться с помощью коллекции [Map::Lookup](../cppcx/platform-collections-map-class.md#lookup) и ключ.
 
@@ -125,7 +125,7 @@ void FindButton(UIElementCollection^ col)
 
 ### <a name="begin-and-end-functions"></a>Функции begin() и end()
 
-Чтобы упростить использование STL для обработки `Vector`, `VectorView`, `Map`, `MapView`и произвольные `Windows::Foundation::Collections` объектов, C + +/ CX поддерживает перегрузки функций [функция begin](../cppcx/begin-function.md) и [end Функция](../cppcx/end-function.md) не являющимися членами.
+Чтобы упростить использование STL для обработки `Vector`, `VectorView`, `Map`, `MapView`и произвольные `Windows::Foundation::Collections` объектов, C++/CX поддерживает перегрузки функций [функция begin](../cppcx/begin-function.md) и [end Function](../cppcx/end-function.md) не являющимися членами.
 
 В следующей таблице перечислены все доступные итераторы и функции.
 

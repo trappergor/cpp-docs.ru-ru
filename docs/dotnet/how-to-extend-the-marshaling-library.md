@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Marshaling Library, extending
 ms.assetid: 4c4a56d7-1d44-4118-b85f-f9686515e6e9
 ms.openlocfilehash: f289539807b1e9499cef51427d3f6a494545cc60
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62387309"
 ---
 # <a name="how-to-extend-the-marshaling-library"></a>Практическое руководство. Расширение библиотеки маршалинга
 
@@ -30,7 +30,7 @@ ms.locfileid: "57750367"
 
    - marshal_windows.h для типов данных windows.
 
-   - marshal_cppstd.h для типов данных стандартной библиотеки C++.
+   - marshal_cppstd.h для C++ Стандартная библиотека типов данных.
 
    - marshal_atl.h для ATL типов данных.
 
@@ -59,7 +59,7 @@ namespace msclr {
 
    - marshal_windows.h для типов данных windows.
 
-   - marshal_cppstd.h для типов данных стандартной библиотеки C++.
+   - marshal_cppstd.h для C++ Стандартная библиотека типов данных.
 
    - marshal_atl.h для ATL типов данных.
 

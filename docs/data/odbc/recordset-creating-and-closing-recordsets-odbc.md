@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
 ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395590"
 ---
 # <a name="recordset-creating-and-closing-recordsets-odbc"></a>Набор записей. Создание и закрытие наборов записей (ODBC)
 

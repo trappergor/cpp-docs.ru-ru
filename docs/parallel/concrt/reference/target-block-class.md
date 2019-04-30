@@ -26,11 +26,11 @@ helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
 ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385172"
 ---
 # <a name="targetblock-class"></a>Класс target_block
 
@@ -55,27 +55,27 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`source_iterator`|Тип итератора для `source_link_manager` для данного `target_block` объекта.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[target_block](#ctor)|Создает объект `target_block`.|
 |[~ target_block деструктор](#dtor)|Уничтожает `target_block` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[распространение](#propagate)|Асинхронно передает сообщение из блока источника этой целевой блок.|
 |[send](#send)|Синхронно передает сообщение из блока источника этой целевой блок.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[async_send](#async_send)|Асинхронно отправляет сообщение для обработки.|
 |[decline_incoming_messages](#decline_incoming_messages)|Указывает на блок, что новые сообщения должны быть отклонены.|

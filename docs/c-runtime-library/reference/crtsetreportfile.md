@@ -23,11 +23,11 @@ helpviewer_keywords:
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
 ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464250"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343022"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
@@ -106,7 +106,7 @@ _HFILE _CrtSetReportFile(
 
 Консоль не поддерживается в приложениях универсальной платформы Windows (UWP). Стандартные дескрипторы потока, которые связаны с консоли, **stdin**, **stdout**, и **stderr**, необходимо перенаправить, чтобы функции C времени выполнения могли использовать их в приложениях UWP . Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-**Библиотеки:** только отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
+**Библиотеки:** Отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md) только.
 
 ## <a name="see-also"></a>См. также
 

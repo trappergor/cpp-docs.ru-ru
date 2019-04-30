@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3063
 ms.assetid: 0ecf6f1f-e4a7-487a-9fd5-79d8ac470001
 ms.openlocfilehash: 9e53d9fe273a392695212df6dbeb679822a39068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50485550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404225"
 ---
 # <a name="compiler-error-c3063"></a>Ошибка компилятора C3063
 
 оператор «оператор»: все операнды должны иметь одинаковый тип перечисления
 
-При использовании операторов с перечислителями, оба операнда должны быть типа перечисления. Дополнительные сведения см. в разделе [как: определение и использование перечислений в C + +/ CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
+При использовании операторов с перечислителями, оба операнда должны быть типа перечисления. Дополнительные сведения см. в разделе [Как Определение и использование перечислений в C++выполняет](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md).
 
 ## <a name="example"></a>Пример
 

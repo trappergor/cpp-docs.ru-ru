@@ -25,11 +25,11 @@ helpviewer_keywords:
 - COleChangeSourceDialog [MFC], m_cs
 ms.assetid: d0e08be7-21ef-45e1-97af-fe27d99e3bac
 ms.openlocfilehash: 1d118b132fc110402967e9c7f2b1d74a2164d7c8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304617"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399724"
 ---
 # <a name="colechangesourcedialog-class"></a>Класс COleChangeSourceDialog
 
@@ -45,13 +45,13 @@ class COleChangeSourceDialog : public COleDialog
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleChangeSourceDialog::COleChangeSourceDialog](#colechangesourcedialog)|Создает объект `COleChangeSourceDialog`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[COleChangeSourceDialog::DoModal](#domodal)|Отображает диалоговое окно OLE изменение источника.|
 |[COleChangeSourceDialog::GetDisplayName](#getdisplayname)|Получает полный исходный отображаемое имя.|
@@ -63,7 +63,7 @@ class COleChangeSourceDialog : public COleDialog
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[COleChangeSourceDialog::m_cs](#m_cs)|Структура, которая управляет поведением окна.|
 

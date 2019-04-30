@@ -1,5 +1,5 @@
 ---
-title: Работы с файлами и ввод вывод (C + +/ CLI)
+title: Работы с файлами и ввод вывод (C++выполняет)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - .NET Framework [C++], file handling
@@ -25,11 +25,11 @@ helpviewer_keywords:
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
 ms.openlocfilehash: 7009c0b017c403c3f0108aa84b8ddb25a1d1564f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62325004"
 ---
 # <a name="file-handling-and-io-ccli"></a>Функции работы с файлами и операции ввода-вывода (C++/CLI)
 
@@ -136,7 +136,7 @@ int main()
 
 В следующем примере кода демонстрируется чтение двоичных данных из файла, используя два класса из <xref:System.IO?displayProperty=fullName> пространство имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryReader>. <xref:System.IO.FileStream> представляет фактический файл. <xref:System.IO.BinaryReader> предоставляет интерфейс для потока, который разрешает двоичный доступ.
 
-В примере кода считывает файл с именем data.bin и содержит целые числа в двоичном формате. Сведения об этом файле см. в разделе [как: Запись в двоичный файл (C + +/ CLI)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
+В примере кода считывает файл с именем data.bin и содержит целые числа в двоичном формате. Сведения об этом файле см. в разделе [как: Запись в двоичный файл (C++выполняет)](../dotnet/how-to-write-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Пример
 
@@ -177,7 +177,7 @@ int main()
 
 В следующем примере кода показано, как открыть и прочитать текст файла по одной строке за раз, с помощью <xref:System.IO.StreamReader> класс, который определен в <xref:System.IO?displayProperty=fullName> пространства имен. Экземпляр этого класса используется для открытия текстового файла и затем <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> метод используется для считывания каждой строки.
 
-Данный пример кода считывает файл с именем textfile.txt и содержит текст. Сведения об этом файле см. в разделе [как: Запись в текстовый файл (C + +/ CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
+Данный пример кода считывает файл с именем textfile.txt и содержит текст. Сведения об этом файле см. в разделе [как: Запись в текстовый файл (C++выполняет)](../dotnet/how-to-write-a-text-file-cpp-cli.md).
 
 ### <a name="example"></a>Пример
 
@@ -261,7 +261,7 @@ int main()
 
 В следующем примере кода демонстрируется запись двоичных данных в файл. Два класса из <xref:System.IO> используются пространства имен: <xref:System.IO.FileStream> и <xref:System.IO.BinaryWriter>. <xref:System.IO.FileStream> представляет фактический файл, хотя <xref:System.IO.BinaryWriter> предоставляет интерфейс для потока, который разрешает двоичный доступ.
 
-В следующем примере кода записывает файл, содержащий целые числа в двоичном формате. Этот файл может быть считан с код в [как: Прочитать двоичный файл (C + +/ CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
+В следующем примере кода записывает файл, содержащий целые числа в двоичном формате. Этот файл может быть считан с код в [как: Прочитать двоичный файл (C++выполняет)](../dotnet/how-to-read-a-binary-file-cpp-cli.md).
 
 ### <a name="example"></a>Пример
 

@@ -47,11 +47,11 @@ helpviewer_keywords:
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
 ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62349125"
 ---
 # <a name="moneypunct-class"></a>Класс moneypunct
 
@@ -530,11 +530,11 @@ explicit moneypunct(size_t _Refs = 0);
 
 Возможные значения *_Refs* параметра и их важность:
 
-- 0: время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
 
-- 1: время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно управляться вручную.
 
-- \> 1: эти значения не определены.
+- \> 1: Эти значения не определены.
 
 Прямые примеры привести нельзя, так как деструктор защищен.
 

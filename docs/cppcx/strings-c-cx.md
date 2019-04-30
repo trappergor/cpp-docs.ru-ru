@@ -3,15 +3,15 @@ title: Строки (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: 5b34e1df-7c2b-4269-aba8-b767d36c49d9
 ms.openlocfilehash: 8f7cbdd02cb1d38231c476ba939009a95533a046
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403247"
 ---
 # <a name="strings-ccx"></a>Строки (C++/CX)
 
-Текст в среде выполнения Windows представлена в C + +/ CX, [класс Platform::String](../cppcx/platform-string-class.md). Используйте `Platform::String Class` при передаче строки и обратно в методы в классах среды выполнения Windows, или когда выполняется взаимодействие с другими компонентами среды выполнения Windows через границы двоичного интерфейса (ABI) приложения. `Platform::String Class` предоставляет методы для некоторых типичных операций над строками, но он является полнофункциональным классом строки. При разработке модуля в C++ используйте стандартные строковые типы C++ (такие как [wstring](../standard-library/basic-string-class.md) ) для сложной обработки строк и преобразуйте конечный результат в тип [Platform::String^](../cppcx/platform-string-class.md) , прежде чем передать его открытому интерфейсу или получить его из такого интерфейса. Операция преобразования между типом `wstring` или `wchar_t*` и типом `Platform::String`проста и эффективна.
+Текст в среде выполнения Windows представлена в C++/CX по [класс Platform::String](../cppcx/platform-string-class.md). Используйте `Platform::String Class` при передаче строки и обратно в методы в классах среды выполнения Windows, или когда выполняется взаимодействие с другими компонентами среды выполнения Windows через границы двоичного интерфейса (ABI) приложения. `Platform::String Class` предоставляет методы для некоторых типичных операций над строками, но он является полнофункциональным классом строки. При разработке модуля в C++ используйте стандартные строковые типы C++ (такие как [wstring](../standard-library/basic-string-class.md) ) для сложной обработки строк и преобразуйте конечный результат в тип [Platform::String^](../cppcx/platform-string-class.md) , прежде чем передать его открытому интерфейсу или получить его из такого интерфейса. Операция преобразования между типом `wstring` или `wchar_t*` и типом `Platform::String`проста и эффективна.
 
 **Быстрая передача**
 

@@ -23,11 +23,11 @@ helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
 ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259027"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405512"
 ---
 # <a name="array-class"></a>Класс array
 
@@ -48,18 +48,18 @@ friend class array;
 *_Rank*<br/>
 Ранг массива.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Массив, конструктор](#ctor)|Инициализирует новый экземпляр класса `array`.|
 |[~ array деструктор](#dtor)|Уничтожает `array` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует содержимое массива в другой массив.|
 |[data](#data)|Возвращает указатель на необработанные данные массива.|
@@ -73,7 +73,7 @@ friend class array;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор std::vector&lt;value_type&gt;](#operator_vec)|Использует `copy(*this, vector)` выполнить неявное преобразование массива в объект std::[вектор](../../../standard-library/vector-class.md) объекта.|
 |[operator()](#operator_call)|Возвращает значение элемента, который указан в параметрах.|
@@ -82,13 +82,13 @@ friend class array;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Ранг константа](#rank)|Хранит ранг массива.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[accelerator_view](#accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) , представляющий расположение, где размещен массив. Это свойство может осуществляться только на ЦП.|
 |[associated_accelerator_view](#associated_accelerator_view)|Возвращает второй [accelerator_view](accelerator-view-class.md) объект, который передается в качестве параметра при вызове промежуточного конструктора для создания экземпляра `array` объекта.|
@@ -121,7 +121,7 @@ friend class array;
 
 **Заголовок** : amp.h
 
-**Пространство имен:** Параллельность
+**Пространство имен:** параллелизм
 
 ##  <a name="dtor"></a> ~ array
 

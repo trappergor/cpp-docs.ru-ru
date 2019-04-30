@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
 ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348215"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Класс scoped_allocator_adaptor
 
@@ -71,7 +71,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`const_pointer`|Этот тип является синонимом `const_pointer`, связанного с распределителем `Outer`.|
 |`const_void_pointer`|Этот тип является синонимом `const_void_pointer`, связанного с распределителем `Outer`.|
@@ -94,7 +94,7 @@ class scoped_allocator_adaptor;
 
 ### <a name="methods"></a>Методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[allocate](#allocate)|Выделяет память, используя распределитель `Outer`.|
 |[construct](#construct)|Создает объект.|
@@ -271,7 +271,7 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 Определяет тип `Outer::rebind\<Other>::other` как синоним для `scoped_allocator_adaptor\<Other, Inner...>`.
 
-структуру перепривязки {typedef Other_traits::rebind\<других > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, внутренний... > other;};
+struct rebind{ typedef Other_traits::rebind\<Other> Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other; };
 
 ## <a name="scoped_allocator_adaptor"></a> Конструктор scoped_allocator_adaptor::scoped_allocator_adaptor
 

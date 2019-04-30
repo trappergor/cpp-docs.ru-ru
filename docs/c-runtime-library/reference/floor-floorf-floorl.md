@@ -30,11 +30,11 @@ helpviewer_keywords:
 - floorl function
 ms.assetid: e9955f70-d659-414f-8050-132e13c8ff36
 ms.openlocfilehash: 050b7ea0eedf07666fa52145eeaf43f8fde2e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50647740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333590"
 ---
 # <a name="floor-floorf-floorl"></a>floor, floorf, floorl
 
@@ -69,9 +69,9 @@ long double floorl(
 
 **Floor** функции возвращают значение с плавающей запятой, которое представляет наибольшее целое число, меньшее или равное *x*. Ошибка не возвращается.
 
-|Ввод|Исключение SEH|Исключение Matherr|
+|Входные данные|Исключение SEH|Исключение Matherr|
 |-----------|-------------------|-----------------------|
-|± QNAN,IND|Нет|_DOMAIN|
+|± QNAN, IND|Нет|_DOMAIN|
 
 **функция FLOOR** имеет реализацию, которая использует Streaming SIMD Extensions 2 (SSE2). Сведения о реализации SSE2 и ограничениях на ее использование см. в разделе [_set_SSE2_enable](set-sse2-enable.md).
 

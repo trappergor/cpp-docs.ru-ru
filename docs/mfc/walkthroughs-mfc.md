@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC Feature Pack, walkthroughs
 ms.assetid: 20d5756f-ad58-46f4-8b6c-c7a1020b72eb
 ms.openlocfilehash: 5c4b6d507615d991e950897ea07c19c94a5be559
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57286118"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358264"
 ---
 # <a name="walkthroughs-mfc"></a>Пошаговые руководства (MFC)
 
@@ -17,7 +17,7 @@ ms.locfileid: "57286118"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Пошаговое руководство: С помощью новых элементов управления оболочки MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
+[Пошаговое руководство: Использование новых элементов управления оболочки MFC](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
 В этом пошаговом руководстве вы создадите приложение, которое проводнику Windows. Вы создадите окно, которое содержит две панели. На левой панели отображаются [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md) объект, который будет отображать свой рабочий стол в иерархическом представлении. На правой панели отображаются [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md) , отображающий файлы в папке, выбранной в левой области.
 
 [Пошаговое руководство: Размещение элементов управления на панели инструментов](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>

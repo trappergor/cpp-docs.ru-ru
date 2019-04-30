@@ -18,11 +18,11 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
 ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59033213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397839"
 ---
 # <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>Набор записей. Как AddNew, Edit и Delete рабочих (ODBC)
 

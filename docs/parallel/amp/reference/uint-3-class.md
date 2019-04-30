@@ -73,11 +73,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_3::operator-=
 ms.assetid: 5e22c277-9d4f-4a3a-b38c-a83d5fcab33c
 ms.openlocfilehash: c4f3c7e299c998989de24a07db3d607d21c958cf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396162"
 ---
 # <a name="uint3-class"></a>Класс uint_3
 
@@ -93,19 +93,19 @@ class uint_3;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор uint_3](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |uint_3::get_x||
 |uint_3::get_xy||
@@ -146,7 +146,7 @@ class uint_3;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |uint_3::operator--||
 |uint_3::operator%=||
@@ -165,13 +165,13 @@ class uint_3;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#uint_3__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |uint_3::b||
 |uint_3::bg||

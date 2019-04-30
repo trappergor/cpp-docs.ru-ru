@@ -7,15 +7,15 @@ helpviewer_keywords:
 - Windows::Foundation::Collections Namespace (C++/CX)
 ms.assetid: 04bd3543-e30f-4fd2-95ee-272a3fcd0158
 ms.openlocfilehash: 9a8118886f4556343f2e4a494fdbea6d240d1c77
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404615"
 ---
 # <a name="windowsfoundationcollections-namespace-ccx"></a>Windows::Foundation::Collections - пространство имен (C++/CX)
 
-C + +/ CX дополняет пространство имен Windows::Foundation:: Collections функциями, которые упрощают использование классов коллекций Vector, VectorView, Map и MapView.
+C++/CX дополняет пространство имен Windows::Foundation:: Collections функциями, которые упрощают использование классов коллекций Vector, VectorView, Map и MapView.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,7 +30,7 @@ namespace Windows {
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Функция back_inserter](../cppcx/back-inserter-function.md)|Возвращает итератор, который может использоваться для вставки значения в конец коллекции.|
 |[Функция begin](../cppcx/begin-function.md)|Возвращает итератор, который указывает на начало коллекции.|

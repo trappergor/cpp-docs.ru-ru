@@ -13,11 +13,11 @@ helpviewer_keywords:
 - enable run-time type information compiler option [C++]
 ms.assetid: d1f9f850-dcec-49fd-96ef-e72d01148906
 ms.openlocfilehash: 15ad453b10fd31de97bbc25f8062e628129076f5
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57820632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62292124"
 ---
 # <a name="gr-enable-run-time-type-information"></a>/GR (Предоставление информации о типах во время выполнения)
 

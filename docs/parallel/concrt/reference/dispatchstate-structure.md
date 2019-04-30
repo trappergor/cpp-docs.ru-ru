@@ -12,11 +12,11 @@ helpviewer_keywords:
 - DispatchState structure
 ms.assetid: 8c52546e-1650-48a0-985f-7e4a0fc26a90
 ms.openlocfilehash: c755675a69ce86bc03a3fdb59fa7d43a20676495
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295920"
 ---
 # <a name="dispatchstate-structure"></a>Структура DispatchState
 
@@ -32,13 +32,13 @@ struct DispatchState;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[DispatchState::DispatchState](#ctor)|Создает новый `DispatchState` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[DispatchState::m_dispatchStateSize](#m_dispatchstatesize)|Размер этой структуры, которая используется для управления версиями.|
 |[DispatchState::m_fIsPreviousContextAsynchronouslyBlocked](#m_fispreviouscontextasynchronouslyblocked)|Сообщает, вошел ли этот контекст `Dispatch` метод из-за предыдущего контекста асинхронно блокировки. Это используется только в контексте планирования UMS и присваивается значение `0` для всех остальных контекстов выполнения.|

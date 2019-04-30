@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
 ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59035193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395902"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>Дополнительные сведения о классах ODBC MFC
 
@@ -23,7 +23,7 @@ ms.locfileid: "59035193"
 
 - [Динамический набор](../../data/odbc/dynaset.md)
 
-- [Исключения. Исключения баз данных](../../mfc/exceptions-database-exceptions.md)
+- [Исключения. Исключения базы данных](../../mfc/exceptions-database-exceptions.md)
 
 - [MFC. Использование классов базы данных с документами и представлениями](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
@@ -39,7 +39,7 @@ ms.locfileid: "59035193"
 
 - [Представления записей](../../data/record-views-mfc-data-access.md)
 
-- [Сериализация. Vs сериализации. Ввод/вывод баз данных](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [Сериализация. Сериализация или Ввод/вывод баз данных](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [Снимок](../../data/odbc/snapshot.md)
 

@@ -43,11 +43,11 @@ helpviewer_keywords:
 - CD2DBitmapBrush [MFC], m_pBitmapBrushProperties
 ms.assetid: 46ebbe34-66e0-44c8-af1d-d129e851de5e
 ms.openlocfilehash: 1569039db8c1f85d3091282b55d7eda253444deb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294412"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405798"
 ---
 # <a name="cd2dbitmapbrush-class"></a>Класс CD2DBitmapBrush
 
@@ -63,14 +63,14 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmapBrush::CD2DBitmapBrush](#cd2dbitmapbrush)|Перегружен. Создает объект CD2DBitmapBrush из файла.|
 |[CD2DBitmapBrush:: ~ CD2DBitmapBrush](#dtor)|Деструктор Вызывается при уничтожении объекта D2D кисть растрового изображения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmapBrush::Attach](#attach)|Присоединяет существующий интерфейс ресурса к объекту|
 |[CD2DBitmapBrush::Create](#create)|Создает CD2DBitmapBrush. (Переопределяет [CD2DResource::Create](../../mfc/reference/cd2dresource-class.md#create).)|
@@ -88,13 +88,13 @@ class CD2DBitmapBrush : public CD2DBrush;
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmapBrush::CommonInit](#commoninit)|Инициализирует объект|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DBitmapBrush::operator ID2D1BitmapBrush *](#operator_id2d1bitmapbrush_star)|Возвращает интерфейс ID2D1BitmapBrush|
 

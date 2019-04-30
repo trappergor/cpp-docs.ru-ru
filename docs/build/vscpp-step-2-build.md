@@ -1,5 +1,5 @@
 ---
-title: Сборка и запуск проекта консольного приложения C++
+title: Создание и запуск проекта консольного приложения C++
 description: Собрать и запустить консольное приложение Hello World в Visual C++
 ms.custom: mvc
 ms.date: 12/12/2017
@@ -7,13 +7,13 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d71-719d-42dc-90d7-1d0ca31a2f55
 ms.openlocfilehash: 59813a553a9034503d8bf432400db31e6e3d9478
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62314275"
 ---
-# <a name="build-and-run-a-c-console-app-project"></a>Сборка и запуск проекта консольного приложения C++
+# <a name="build-and-run-a-c-console-app-project"></a>Создание и запуск проекта консольного приложения C++
 
 После создания проекта консольного приложения C++ и ввести код, можно создавать и запускается в рамках Visual Studio и запустите его как автономное приложение из командной строки.
 

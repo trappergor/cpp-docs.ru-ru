@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59032223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62395720"
 ---
 # <a name="record-field-exchange-rfx"></a>Обмен данными полями записей (RFX)
 
@@ -38,11 +38,11 @@ RFX по большей части прозрачна для вас. Если в
 
 В следующих разделах описаны сведения об использовании объекта набора записей:
 
-- [Обмен полями записей: Использование RFX](../../data/odbc/record-field-exchange-using-rfx.md)
+- [Обмен данными полей записей. Использование языка RFX](../../data/odbc/record-field-exchange-using-rfx.md)
 
-- [Обмен полями записей: Использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
+- [Обмен данными полей записей. Использование функций RFX](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)
 
-- [Обмен полями записей: Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
+- [Обмен данными полей записей. Принцип работы RFX](../../data/odbc/record-field-exchange-how-rfx-works.md)
 
 ## <a name="see-also"></a>См. также
 

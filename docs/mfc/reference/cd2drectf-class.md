@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
 ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396279"
 ---
 # <a name="cd2drectf-class"></a>Класс CD2DRectF
 
@@ -31,19 +31,19 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Создает `CD2DRectF` объекта из `D2D1_RECT_F` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DRectF::IsNull](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DRectF::operator CRect](#operator_crect)|Преобразует `CD2DRectF` для `CRect` объекта.|
 

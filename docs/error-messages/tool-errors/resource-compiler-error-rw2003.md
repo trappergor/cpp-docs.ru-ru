@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
 ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396790"
 ---
 # <a name="resource-compiler-error-rw2003"></a>Ошибка компилятора ресурсов RW2003
 
@@ -19,7 +19,7 @@ ms.locfileid: "51520612"
 
 ### <a name="to-fix-by-checking-the-following-possible-causes"></a>Чтобы устранить ошибку, проверьте указанные ниже возможные причины ее возникновения.
 
-1. **Ошибка: Файл ресурсов в файл точечного рисунка не в формате 3.00**
+1. **Ошибка: Файл ресурсов в файл точечного рисунка не находится в формате 3.00**
 
    Растровые файлы, использующие формат Windows версии 2.x, нельзя использовать в файлах ресурсов версии 3.x. Растровое изображение необходимо перерисовывается или преобразовать в формат 3.х.
 

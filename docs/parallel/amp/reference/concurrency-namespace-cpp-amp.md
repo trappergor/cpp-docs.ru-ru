@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: b5aab265-3bac-42c5-8ead-f92ce05ef267
 ms.openlocfilehash: e0870eb046f1cec091a72d49c94a2fea41484340
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278695"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346039"
 ---
 # <a name="concurrency-namespace-c-amp"></a>Пространство имен Concurrency (C++ AMP)
 
@@ -23,11 +23,11 @@ ms.locfileid: "57278695"
 namespace Concurrency;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="namespaces"></a>Пространства имен
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Пространство имен Concurrency::direct3d](concurrency-direct3d-namespace.md)|Предоставляет функции, которые поддерживают взаимодействие с D3D. Позволяет прозрачным образом использовать D3D-ресурсы для вычислений в AMP-коде и использование ресурсов, созданные в AMP в коде D3D без создания промежуточных резервных копий. Можно использовать C++ AMP инкрементально ускорять вычислительно части DirectX приложений и использовать D3D API на данных, полученных из AMP вычислений.|
 |[Пространство имен Concurrency::fast_math](concurrency-fast-math-namespace.md)|Функции в `fast_math` пространства имен не совместимы с C99. Предоставляются только версии одиночной точности каждой функции. Эти функции используют встроенные функции DirectX, которые работают быстрее, чем соответствующие функции в `precise_math` пространства имен и не требуют расширенной поддержки двойной точности в ускорителе, но они являются менее точными. Существует две версии каждой функции для источника на уровне совместимости с кодом C99; обе версии принимают и возвращают значения одиночной точности.|
@@ -36,7 +36,7 @@ namespace Concurrency;
 
 ### <a name="classes"></a>Классы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Класс accelerator](accelerator-class.md)|Представляет абстракцию физического DP-оптимизированного вычислительного узла.|
 |[Класс accelerator_view](accelerator-view-class.md)|Представляет абстракцию виртуального устройства на ускорителе с параллельными данными C++ AMP.|
@@ -57,14 +57,14 @@ namespace Concurrency;
 
 ### <a name="enumerations"></a>Перечисления
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Перечисление access_type](concurrency-namespace-enums-amp.md#access_type)|Указывает тип доступа к данным.|
 |[Перечисление queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)|Определяет режимы организации очереди, которые поддерживаются в сочетании клавиш.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |--------------|-----------------|
 |[оператор ==-оператор (C++ AMP)](concurrency-namespace-operators-amp.md#operator_eq_eq)|Определяет, равны ли две заданных структуры данных.|
 |[оператор! =-оператор (C++ AMP)](concurrency-namespace-operators-amp.md#operator_neq)|Определяет, являются ли две заданных структуры данных неравными.|
@@ -72,11 +72,11 @@ namespace Concurrency;
 |[Оператор Operator-(C++ AMP)](concurrency-namespace-operators-amp.md#operator-)|Вычисляет разность между указанными аргументами.|
 |[Оператор * Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_star)|Вычисляет покомпонентное произведение заданных аргументов.|
 |[Оператор / Operator (C++ AMP)](concurrency-namespace-operators-amp.md#operator_div)|Вычисляет покомпонентное частное двух заданных аргументов.|
-|[Оператор Operator (C++ AMP) %](concurrency-namespace-operators-amp.md#operator_mod)|Вычисляет остаток деления первого заданного аргумента с помощью второго заданного аргумента.|
+|[Оператор Operator % (C++ AMP)](concurrency-namespace-operators-amp.md#operator_mod)|Вычисляет остаток деления первого заданного аргумента с помощью второго заданного аргумента.|
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[all_memory_fence](concurrency-namespace-functions-amp.md#all_memory_fence)|Блокирует выполнение всех потоков в плитке, пока не будут завершены все доступы к памяти.|
 |[amp_uninitialize](concurrency-namespace-functions-amp.md#amp_uninitialize)|Отменяет инициализацию среды выполнения C++ AMP.|
@@ -92,17 +92,17 @@ namespace Concurrency;
 |[atomic_fetch_sub](concurrency-namespace-functions-amp.md#atomic_fetch_sub)|Перегружен. Задает значение, хранящееся в указанном месте на различие этого значения и заданное значение в виде атомарной операции.|
 |[atomic_fetch_xor](concurrency-namespace-functions-amp.md#atomic_fetch_xor)|Перегружен. Задает значение, сохраненное в заданном расположении, в побитовое `xor` этого значения и заданное значение в качестве атомарной операции.|
 |[copy](concurrency-namespace-functions-amp.md#copy)|Копирует объект C++ AMP. Выполнены все требования синхронной передачи данных. Не удается скопировать данные, когда код выполняется код на ускорителе. Эта функция выглядит `copy(src, dest)`.|
-|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Копирует объект C++ AMP и возвращает [completion_future](completion-future-class.md) , можно использовать для ожидания. Не удается скопировать данные, когда код выполняется на ускорителе. Эта функция выглядит `copy(src, dest)`.|
+|[copy_async](concurrency-namespace-functions-amp.md#copy_async)|Копирует C++ AMP и возвращает [completion_future](completion-future-class.md) , можно использовать для ожидания. Не удается скопировать данные, когда код выполняется на ускорителе. Эта функция выглядит `copy(src, dest)`.|
 |[direct3d_abort](concurrency-namespace-functions-amp.md#direct3d_abort)|Прерывает выполнение функции, которая имеет `restrict(amp)` предложение ограничения.|
 |[direct3d_errorf](concurrency-namespace-functions-amp.md#direct3d_errorf)|Выводит отформатированную строку в Visual Studio **вывода** окна и вызывает [runtime_exception](runtime-exception-class.md) строка исключение, которое имеет одинаковое форматирование.|
 |[direct3d_printf](concurrency-namespace-functions-amp.md#direct3d_printf)|Выводит отформатированную строку в Visual Studio **вывода** окна. Он вызывается из функции, которая имеет `restrict(amp)` предложение ограничения.|
 |[global_memory_fence](concurrency-namespace-functions-amp.md#global_memory_fence)|Блокирует выполнение всех потоков в плитке до всех глобального доступа к памяти будет завершена.|
-|[parallel_for_each функции (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Выполняет функцию в вычислительном домене.|
+|[Функция parallel_for_each (C++ AMP)](concurrency-namespace-functions-amp.md#parallel_for_each)|Выполняет функцию в вычислительном домене.|
 |[tile_static_memory_fence](concurrency-namespace-functions-amp.md#tile_static_memory_fence)|Блокирует выполнение всех потоков в плитке до `tile_static` будет завершено обращение к памяти.|
 
 ## <a name="constants"></a>Константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Константа HLSL_MAX_NUM_BUFFERS](concurrency-namespace-constants-amp.md#hlsl_max_num_buffers)|Максимальное количество буферов, допускаемое DirectX.|
 |[Modulename_max_length-константа](concurrency-namespace-constants-amp.md#modulename_max_length)|Хранит максимальную длину имени модуля. Это значение должно быть одинаковым на компилятор и среда выполнения.|

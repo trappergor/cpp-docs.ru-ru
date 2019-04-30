@@ -33,11 +33,11 @@ helpviewer_keywords:
 - CMFCToolTipInfo [MFC], m_nMaxDescrWidth
 ms.assetid: f9d3d7f8-1f08-4342-a7b2-683860e5d2a5
 ms.openlocfilehash: b38c3a62cca376ef7a19a111fe3a34c923983d1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338225"
 ---
 # <a name="cmfctooltipinfo-class"></a>Класс CMFCToolTipInfo
 
@@ -53,13 +53,13 @@ class CMFCToolTipInfo
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolTipInfo::operator =](#operator_eq)||
 
 ### <a name="data-members"></a>Элементы данных
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCToolTipInfo::m_bBalloonTooltip](#m_bballoontooltip)|Логическая переменная, указывающая, имеет ли всплывающая подсказка вид выноски.|
 |[CMFCToolTipInfo::m_bBoldLabel](#m_bboldlabel)|Логическая переменная, указывающая, выделяются ли заголовки всплывающих подсказок жирным шрифтом.|

@@ -31,11 +31,11 @@ helpviewer_keywords:
 - creall function
 ms.assetid: fa3ac62f-7aa3-4238-a71f-d6b00cd0c7c8
 ms.openlocfilehash: 32fd0898ccac80b74b467dbfe0a136eef139e642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62339760"
 ---
 # <a name="creal-crealf-creall"></a>creal, crealf, creall
 
@@ -65,7 +65,7 @@ long double creal( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Примечания
 
-Так как C++ допускает перегрузку, можно вызывать перегрузки **creal** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float** или **long double** значения. В программе на языке C **creal** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
+Так как C++ допускает перегрузку, можно вызывать перегрузки **creal** , принимающих **_Fcomplex** или **_Lcomplex** и возвращают **float**или **long double** значения. В программе на языке C **creal** всегда принимает **_Dcomplex** значения и возвращает **двойные** значение.
 
 ## <a name="requirements"></a>Требования
 

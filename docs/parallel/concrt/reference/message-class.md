@@ -13,11 +13,11 @@ helpviewer_keywords:
 - message class
 ms.assetid: 3e1f3505-6c0c-486c-8191-666d0880ec62
 ms.openlocfilehash: 83cfdb5807581f7092709691a1839052abdd657c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263082"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343856"
 ---
 # <a name="message-class"></a>Класс message
 
@@ -35,24 +35,24 @@ class message : public ::Concurrency::details::_Runtime_object;
 *T*<br/>
 Тип данных полезных данных в сообщении.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`type`|Псевдоним для `T`.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[message](#ctor)|Перегружен. Создает объект `message`.|
 |[~ сообщений деструктор](#dtor)|Уничтожает `message` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[add_ref](#add_ref)|Добавляет счетчик ссылок для `message` объекта. Используется для блоков сообщений, которые должны подсчет ссылок, чтобы определить время жизни сообщения.|
 |[msg_id](#msg_id)|Возвращает идентификатор `message` объекта.|
@@ -60,7 +60,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[полезные данные](#payload)|Полезные данные `message` объекта.|
 

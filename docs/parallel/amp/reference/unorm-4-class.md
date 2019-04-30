@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_4::get_wzyx
 ms.assetid: dd216a9d-95f7-4978-8e78-6cb9c781a7e9
 ms.openlocfilehash: e4996f65f4b7f707f6b86e05571cacd6987c83a4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302524"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405408"
 ---
 # <a name="unorm4-class"></a>Класс unorm_4
 
@@ -289,19 +289,19 @@ class unorm_4;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор unorm_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |unorm_4::get_w||
 |unorm_4::get_wx||
@@ -442,7 +442,7 @@ class unorm_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |unorm_4::operator-||
 |unorm_4::operator--||
@@ -455,13 +455,13 @@ class unorm_4;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#unorm_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |unorm_4::a||
 |unorm_4::ab||

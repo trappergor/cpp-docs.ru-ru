@@ -87,11 +87,11 @@ helpviewer_keywords:
 - RPTW1 macro
 ms.assetid: a5bf8b30-57f7-4971-8030-e773b7a1ae13
 ms.openlocfilehash: 61748cca2cdfcc2d72b6943bfeedd9597009e20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357511"
 ---
 # <a name="rpt-rptf-rptw-rptfw-macros"></a>Макросы _RPT, _RPTF, _RPTW, _RPTFW
 
@@ -165,8 +165,8 @@ _RPTFWn(
 |-----------|---------------------|
 |**Макросы _RPT** макросы|\<crtdbg.h>|
 |**_RPTF** макросы|\<crtdbg.h>|
-|**_RPTW** макросы|\<crtdbg.h>|
-|**_RPTFW** макросы|\<crtdbg.h>|
+|**_RPTW** macros|\<crtdbg.h>|
+|**_RPTFW** macros|\<crtdbg.h>|
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 

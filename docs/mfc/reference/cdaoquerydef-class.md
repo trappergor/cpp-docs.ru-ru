@@ -67,11 +67,11 @@ helpviewer_keywords:
 - CDaoQueryDef [MFC], m_pDatabase
 ms.assetid: 9676a4a3-c712-44d4-8c5d-d1cc78288d3a
 ms.openlocfilehash: 08fb2909a4fd2e5bda3dfc63d19224a515c7c699
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399750"
 ---
 # <a name="cdaoquerydef-class"></a>Класс CDaoQueryDef
 
@@ -87,13 +87,13 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoQueryDef::CDaoQueryDef](#cdaoquerydef)|Создает объект `CDaoQueryDef`. Затем вызовите метод `Open` или `Create`, в зависимости от потребностей.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoQueryDef::Append](#append)|Добавляет querydef querydefs-коллекция базы данных как сохраненный запрос.|
 |[CDaoQueryDef::CanUpdate](#canupdate)|Возвращает ненулевое значение, если запрос можно обновить базу данных.|
@@ -125,7 +125,7 @@ class CDaoQueryDef : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoQueryDef::m_pDAOQueryDef](#m_pdaoquerydef)|Указатель на интерфейс OLE для базового объекта querydef DAO.|
 |[CDaoQueryDef::m_pDatabase](#m_pdatabase)|Указатель на `CDaoDatabase` объект, с которым связан querydef. Querydef может быть сохранен в базе данных, или нет.|
@@ -636,7 +636,7 @@ short GetType();
 
 - `dbQSelect` Выберите
 
-- Действие `dbQAction`
+- `dbQAction` Действие
 
 - `dbQCrosstab` Перекрестный
 

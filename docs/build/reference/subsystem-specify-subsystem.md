@@ -12,11 +12,11 @@ helpviewer_keywords:
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
 ms.openlocfilehash: ecda3443d0422af4d5ceec9282d86590c53af2f5
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318249"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (укажите подсистему)
 
@@ -63,13 +63,13 @@ ms.locfileid: "57821267"
 
 |Подсистема|Минимум|Значение по умолчанию|
 |---------------|-------------|-------------|
-|BOOT_APPLICATION|1,0|1,0|
+|BOOT_APPLICATION|1.0|1.0|
 |CONSOLE|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
 |ОКНА|5.01 (x 86) 5.02 (x 64) 6.02 (ARM)|6.00 (x86, x64) 6.02 (ARM)|
 |Машинный код (и DRIVER: WDM)|1,00 (x 86) 1.10 (x64, ARM)|1,00 (x 86) 1.10 (x64, ARM)|
 |Машинный код (без /DRIVER:WDM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|4.00 (x 86) 5.02 (x 64) 6.02 (ARM)|
-|POSIX|1,0|19.90|
-|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1,0|1,0|
+|POSIX|1.0|19.90|
+|EFI_APPLICATION, EFI_BOOT_SERVICE_DRIVER, EFI_ROM, EFI_RUNTIME_DRIVER|1.0|1.0|
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 

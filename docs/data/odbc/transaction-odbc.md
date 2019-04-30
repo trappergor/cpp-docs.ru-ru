@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
 ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329924"
 ---
 # <a name="transaction-odbc"></a>Транзакция (ODBC)
 
@@ -43,9 +43,9 @@ ms.locfileid: "59023674"
 
 Дополнительные сведения о том, как выполняются операции в следующих разделах.
 
-- [Транзакции: Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [Транзакция. Выполнение транзакции в наборе записей (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [Транзакции: Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [Транзакция. Влияние транзакций на обновления (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>См. также
 

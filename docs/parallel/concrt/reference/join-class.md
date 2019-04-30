@@ -17,11 +17,11 @@ helpviewer_keywords:
 - join class
 ms.assetid: d2217119-70a1-40b6-809f-c1c13a571c3f
 ms.openlocfilehash: d04ef90750c609d77fc8bf963bb996a90444f079
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281594"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64343868"
 ---
 # <a name="join-class"></a>Класс join
 
@@ -44,18 +44,18 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 *_Jtype*<br/>
 Тип объекта `join` блок, это, либо `greedy` или `non_greedy`
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[join](#ctor)|Перегружен. Создает блок обмена сообщениями `join` .|
 |[~ join деструктор](#dtor)|Уничтожает `join` блока.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `join` блок обмена сообщениями, передача вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `join` блоке сообщений и зарезервированных целевым объектом, передавая владение вызывающему объекту.|

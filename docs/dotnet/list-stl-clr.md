@@ -110,11 +110,11 @@ helpviewer_keywords:
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
 ms.openlocfilehash: 8350e8b7036731cf3e09b9ce26278b2a656d80be
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62364614"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -196,7 +196,7 @@ template<typename Value>
 |[list::to_array (STL/CLR)](#to_array)|Копирует управляемой последовательности в новый массив.|
 |[list::unique (STL/CLR)](#unique)|Удаляет смежные элементы, которые прошли заданный тест.|
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |--------------|-----------------|
 |[list::back_item (STL/CLR)](#back_item)|Обращается к последнему элементу.|
 |[list::front_item (STL/CLR)](#front_item)|Обращается к первому элементу.|
@@ -369,7 +369,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> List::back_item (STL/CLR)
+## <a name="back_item"></a> list::back_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -532,7 +532,7 @@ a b
 size() = 0
 ```
 
-## <a name="const_iterator"></a> List::const_iterator (STL/CLR)
+## <a name="const_iterator"></a> list::const_iterator (STL/CLR)
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -573,7 +573,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reference"></a> List::const_reference (STL/CLR)
+## <a name="const_reference"></a> list::const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -617,7 +617,7 @@ int main()
 a b c
 ```
 
-## <a name="const_reverse_iterator"></a> List::const_reverse_iterator (STL/CLR)
+## <a name="const_reverse_iterator"></a> list::const_reverse_iterator (STL/CLR)
 
 Тип постоянного обратного итератора для управляемой последовательности...
 
@@ -659,7 +659,7 @@ int main()
 c b a
 ```
 
-## <a name="difference_type"></a> List::difference_type (STL/CLR)
+## <a name="difference_type"></a> list::difference_type (STL/CLR)
 
 Типы со знаком расстояния между двумя элементами.
 
@@ -950,7 +950,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> List::front_item (STL/CLR)
+## <a name="front_item"></a> list::front_item (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -1001,7 +1001,7 @@ front_item = a
 x b c
 ```
 
-## <a name="generic_container"></a> List::generic_container (STL/CLR)
+## <a name="generic_container"></a> list::generic_container (STL/CLR)
 
 Тип универсального интерфейса для контейнера.
 
@@ -1067,7 +1067,7 @@ a b c d
 a b c d e
 ```
 
-## <a name="generic_iterator"></a> List::generic_iterator (STL/CLR)
+## <a name="generic_iterator"></a> list::generic_iterator (STL/CLR)
 
 Тип итератора для использования с универсальный интерфейс для контейнера.
 
@@ -1125,7 +1125,7 @@ a b c
 a a c
 ```
 
-## <a name="generic_reverse_iterator"></a> List::generic_reverse_iterator (STL/CLR)
+## <a name="generic_reverse_iterator"></a> list::generic_reverse_iterator (STL/CLR)
 
 Тип обратного итератора для использования с универсальный интерфейс для контейнера.
 
@@ -1182,7 +1182,7 @@ a b c
 a c c
 ```
 
-## <a name="generic_value"></a> List::generic_value (STL/CLR)
+## <a name="generic_value"></a> list::generic_value (STL/CLR)
 
 Тип элемента для использования с универсальный интерфейс для контейнера.
 
@@ -1747,7 +1747,7 @@ a b c
 a b
 ```
 
-## <a name="pop_front"></a> List::pop_front (STL/CLR)
+## <a name="pop_front"></a> list::pop_front (STL/CLR)
 
 Удаляет первый элемент.
 
@@ -1834,7 +1834,7 @@ int main()
 a b c
 ```
 
-## <a name="push_front"></a> List::push_front (STL/CLR)
+## <a name="push_front"></a> list::push_front (STL/CLR)
 
 Добавляет новый первый элемент.
 
@@ -2043,7 +2043,7 @@ a b c
 a c
 ```
 
-## <a name="remove_if"></a> List::remove_if (STL/CLR)
+## <a name="remove_if"></a> list::remove_if (STL/CLR)
 
 Удаляет элементы, которые прошли заданный тест.
 
@@ -2270,7 +2270,7 @@ a b c
 c b a
 ```
 
-## <a name="reverse_iterator"></a> List::reverse_iterator (STL/CLR)
+## <a name="reverse_iterator"></a> list::reverse_iterator (STL/CLR)
 
 Тип обратного итератора для управляемой последовательности.
 
@@ -2372,7 +2372,7 @@ size() = 0 after clearing
 size() = 2 after adding 2
 ```
 
-## <a name="size_type"></a> List::size_type (STL/CLR)
+## <a name="size_type"></a> list::size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -2517,7 +2517,7 @@ void splice(iterator where, list<Value>% right,
 
 Первая функция-член вставляет последовательность, управляемую *правой* перед элементом в управляемой последовательности, на которые указывают *где*. Он также удаляет все элементы из *правой*. (`%right` не должно быть равно `this`.) Используется для присоединения всех одного списка в другой.
 
-Вторая функция-член удаляет элемент, на которые указывают *первый* в последовательности, управляемой *правой* и вставляет его перед элементом в управляемой последовательности, на которые указывают *где* . (Если `where` `==` `first` `||` `where` `== ++first`, изменений не происходит.) Используется для присоединения один элемент из одного списка в другой.
+Вторая функция-член удаляет элемент, на которые указывают *первый* в последовательности, управляемой *правой* и вставляет его перед элементом в управляемой последовательности, на которые указывают *где* . (Если `where` `==` `first` `||` `where` `== ++first`, изменений не происходит.) You use it to splice a single element of one list into another.
 
 Третья функция-член вставляет поддиапазон, обозначенный [`first`, `last`) из последовательности, управляемой *правой* перед элементом в управляемой последовательности, на которые указывают *где*. Он также удаляет исходный поддиапазон из последовательности, управляемой *правой*. (Если `right` `==` `this`, диапазон [`first`, `last`) не должен включать элемент, на которые указывают *где*.) Используется для присоединения дочерней последовательностью от нуля или более элементов из одного списка в другой.
 
@@ -2642,7 +2642,7 @@ x x x x x
 a b c
 ```
 
-## <a name="to_array"></a> List::to_array (STL/CLR)
+## <a name="to_array"></a> list::to_array (STL/CLR)
 
 Копирует управляемой последовательности в новый массив.
 
@@ -2757,7 +2757,7 @@ a b c
 a a
 ```
 
-## <a name="value_type"></a> List::value_type (STL/CLR)
+## <a name="value_type"></a> list::value_type (STL/CLR)
 
 Тип элемента.
 

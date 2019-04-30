@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VERBOSE linker option
 ms.assetid: 9c347d98-4c37-4724-a39e-0983934693ab
 ms.openlocfilehash: 7aed1e17034b40ffdad4da4136fc5a64361b3d77
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317306"
 ---
 # <a name="verbose-print-progress-messages"></a>/VERBOSE (печать сообщений о ходе выполнения)
 
@@ -30,7 +30,7 @@ ms.locfileid: "57809149"
 
 Компоновщик отправляет сведения о ходе выполнения сеанса компоновки для **вывода** окна. В командной строке данные отправляются в стандартный вывод и могут быть перенаправлены в файл.
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |/VERBOSE|Отображает подробные сведения о процессе компоновки.|
 |/VERBOSE:ICF|Отображает сведения о действиях компоновщика, полученный в результате применения [/OPT: ICF](opt-optimizations.md).|

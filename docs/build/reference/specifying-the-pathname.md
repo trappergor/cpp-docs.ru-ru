@@ -7,11 +7,11 @@ helpviewer_keywords:
 - output files, specifying pathnames
 ms.assetid: 7a6595ce-3383-44ae-957a-466bfa29c343
 ms.openlocfilehash: dcff3610255c40f4e06201e52a53eb5dd965a4be
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317943"
 ---
 # <a name="specifying-the-pathname"></a>Указание пути
 
@@ -24,7 +24,7 @@ ms.locfileid: "57821356"
 |Имя устройства|Представляет|
 |-----------------|----------------|
 |AUX|Дополнительное устройство|
-|CON|Параметр Console|
+|CON|Консоль|
 |PRN|Принтер|
 |NUL|NULL-устройство (файл не создается)|
 

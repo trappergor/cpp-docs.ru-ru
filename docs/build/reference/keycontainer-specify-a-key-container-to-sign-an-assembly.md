@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -KEYCONTAINER linker option
 ms.assetid: 94882d12-b77a-49c7-96d0-18a31aee001e
 ms.openlocfilehash: 96d2f5fed0e450224f82ee909cea9d56082505fb
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807849"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62291617"
 ---
 # <a name="keycontainer-specify-a-key-container-to-sign-an-assembly"></a>/KEYCONTAINER (задание контейнера ключей для подписи сборки)
 
@@ -33,7 +33,7 @@ ms.locfileid: "57807849"
 
 Если компиляция выполняется с [/LN](ln-create-msil-module.md), имя файла ключа сохраняется в модуле и включается в сборку, которая создается при компиляции сборки, содержащей явную ссылку на модуль, с помощью [#using](../../preprocessor/hash-using-directive-cpp.md), или при связывании с [добавившей](assemblymodule-add-a-msil-module-to-the-assembly.md).
 
-Можно также передать сведения о шифровании компилятору с помощью [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Используйте [/delaysign](delaysign-partially-sign-an-assembly.md) Если требуется частично подписанную сборку. См. в разделе [сборки со строгими именами (подписывание сборок) (C + +/ CLI)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Дополнительные сведения о подписи сборки.
+Можно также передать сведения о шифровании компилятору с помощью [/keyfile](keyfile-specify-key-or-key-pair-to-sign-an-assembly.md). Используйте [/delaysign](delaysign-partially-sign-an-assembly.md) Если требуется частично подписанную сборку. См. в разделе [сборки со строгими именами (подписывание сборок) (C++выполняет)](../../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md) Дополнительные сведения о подписи сборки.
 
 Доступны следующие параметры компоновщика, которые влияют на создание сборки.
 

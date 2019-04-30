@@ -5,11 +5,11 @@ helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
 ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294165"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -17,7 +17,7 @@ ms.locfileid: "57816338"
 
 ## <a name="optimization"></a>Оптимизация
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/O1](o1-o2-minimize-size-maximize-speed.md)|Уменьшает размер кода.|
 |[/O2](o1-o2-minimize-size-maximize-speed.md)|Создает быстрый код.|
@@ -33,14 +33,14 @@ ms.locfileid: "57816338"
 
 ## <a name="code-generation"></a>Создание кода
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/arch](arch-x86.md)|Использование инструкций SSE или SSE2 при создании кода. (только x86)|
 |[/clr](clr-common-language-runtime-compilation.md)|Создает выходной файл, предназначенный для выполнения в среде CLR.|
 |[/EH](eh-exception-handling-model.md)|Задает модель обработки исключений.|
 |[/fp](fp-specify-floating-point-behavior.md)|Указывает поведение чисел с плавающей запятой.|
 |[/GA](ga-optimize-for-windows-application.md)|Выполняет оптимизацию для приложений Windows.|
-|[/Gd](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__cdecl`. (только x86)|
+|[/Gd](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__cdecl` . (только x86)|
 |[/Ge](ge-enable-stack-probes.md)|Не рекомендуется. Включает стековые зонды.|
 |[/GF](gf-eliminate-duplicate-strings.md)|Включает объединение строк.|
 |[/Gh](gh-enable-penter-hook-function.md)|Вызывает функцию-обработчик `_penter`.|
@@ -58,12 +58,12 @@ ms.locfileid: "57816338"
 |[/GX](gx-enable-exception-handling.md)|Не рекомендуется. Включает синхронную обработку исключений. Используйте вместо этого параметр [/EH](eh-exception-handling-model.md) .|
 |[/Gy](gy-enable-function-level-linking.md)|Включает компоновку на уровне функций.|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|Не рекомендуется. Включает быстрые проверки. (Аналогично [/RTC1](rtc-run-time-error-checks.md))|
-|[/Gz](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__stdcall`. (только x86)|
+|[/Gz](gd-gr-gv-gz-calling-convention.md)|Использует соглашение о вызовах `__stdcall` . (только x86)|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|Принудительная запись параметров, переданных в регистрах, в соответствующие места в стеке при вхождении в функцию. Этот параметр компилятора предназначен только для x64 компиляторы (собственные и кросс-компиляция).|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|Создает образ, допускающий горячее обновление.|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|Создает быстрые трансцендентные функции.|
 |[/QIfist](qifist-suppress-ftol.md)|Не рекомендуется. Подавляет вызов вспомогательной функции `_ftol` при необходимости преобразования из типа с плавающей запятой в целочисленный тип. (только x86)|
-|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Удаляет команды `fwait` внутри блоков `try`.|
+|[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|Удаляет команды `fwait` внутри блоков `try` .|
 |[/Qpar](qpar-auto-parallelizer.md)|Включает автоматическую параллелизацию циклов.|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|Включает уровни отчетов для автоматической параллелизации.|
 |[/Qsafe_fp_loads](qsafe-fp-loads.md)|Использует целочисленные инструкции перемещения значений с плавающей запятой и отключает определенные оптимизации загрузки значений с плавающей запятой.|
@@ -89,7 +89,7 @@ ms.locfileid: "57816338"
 
 ## <a name="preprocessor"></a>Препроцессор
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/AI](ai-specify-metadata-directories.md)|Указывает каталог поиска для разрешения ссылок на файлы, указанные в директиве [#using](../../preprocessor/hash-using-directive-cpp.md) .|
 |[/C](c-preserve-comments-during-preprocessing.md)|Сохраняет комментарии на этапе предварительной обработки.|
@@ -107,11 +107,11 @@ ms.locfileid: "57816338"
 
 ## <a name="language"></a>Язык
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/constexpr](constexpr-control-constexpr-evaluation.md)|Управлять вычислением constexpr во время компиляции.|
 |[/openmp](openmp-enable-openmp-2-0-support.md)|Включает прагма-директиву [#pragma omp](../../preprocessor/omp.md) в исходном коде.|
-|[/vd](vd-disable-construction-displacements.md)|Подавляет или включает скрытые члены класса `vtordisp`.|
+|[/vd](vd-disable-construction-displacements.md)|Подавляет или включает скрытые члены класса `vtordisp` .|
 |[/vmb](vmb-vmg-representation-method.md)|Использует оптимальное основание для указателей на члены.|
 |[/vmg](vmb-vmg-representation-method.md)|Использует полное обобщение для указателей на члены.|
 |[/vmm](vmm-vms-vmv-general-purpose-representation.md)|Объявляет множественное наследование.|
@@ -131,7 +131,7 @@ ms.locfileid: "57816338"
 
 ## <a name="linking"></a>Компоновка
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/F](f-set-stack-size.md)|Задает размер стека.|
 |[/LD](md-mt-ld-use-run-time-library.md)|Создает библиотеку динамической компоновки.|
@@ -145,7 +145,7 @@ ms.locfileid: "57816338"
 
 ## <a name="miscellaneous"></a>Прочее
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/?](help-compiler-command-line-help.md)|Отображает список параметров компилятора.|
 |[@](at-specify-a-compiler-response-file.md)|Указывает файл ответа.|
@@ -197,7 +197,7 @@ ms.locfileid: "57816338"
 
 ## <a name="deprecated-and-removed-compiler-options"></a>Нерекомендуемые и удаленные параметры компилятора
 
-|Параметр|Назначение|
+|Параметр|Цель|
 |------------|-------------|
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|Не рекомендуется. Взамен рекомендуется использовать [/LN (Create MSIL Module)](ln-create-msil-module.md) .|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|Не рекомендуется. Создает файл информации об исходном коде без локальных переменных.|

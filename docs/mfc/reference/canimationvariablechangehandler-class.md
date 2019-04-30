@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
 ms.openlocfilehash: 92189ce5ea76811496d4462aa4254bbd03ebb219
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62338146"
 ---
 # <a name="canimationvariablechangehandler-class"></a>Класс CAnimationVariableChangeHandler
 
@@ -31,13 +31,13 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CAnimationVariableChangeHandler`|Создает объект `CAnimationVariableChangeHandler`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CreateInstance`|Создает экземпляр класса `CAnimationVariableChangeHandler` объекта.|
 |[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|Вызывается при изменении значения переменной анимации. (Переопределяет `CUIAnimationVariableChangeHandlerBase::OnValueChanged`.)|

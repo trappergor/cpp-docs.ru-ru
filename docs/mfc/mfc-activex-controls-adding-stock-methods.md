@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DoClick method [MFC]
 ms.assetid: bc4fad78-cabd-4cc0-a798-464b1a682f0b
 ms.openlocfilehash: 29cb0d6f53d4e8fbbce12a83b2eecb8658c82697
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396396"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>Элементы ActiveX в MFC. Добавление стандартных методов
 

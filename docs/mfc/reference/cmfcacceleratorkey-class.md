@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMFCAcceleratorKey [MFC], SetAccelerator
 ms.assetid: d140fbf7-23db-45ea-a63e-414a5ec7b3d5
 ms.openlocfilehash: 6a99ad00a43ac7912320ee469d542b6bf9cca3de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403962"
 ---
 # <a name="cmfcacceleratorkey-class"></a>Класс CMFCAcceleratorKey
 
@@ -29,17 +29,17 @@ ms.locfileid: "57292267"
 class CMFCAcceleratorKey : public CObject
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCAcceleratorKey::CMFCAcceleratorKey](#cmfcacceleratorkey)|Создает объект `CMFCAcceleratorKey`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMFCAcceleratorKey::Format](#format)|Преобразует структуру УСКОРЕНИЕ, визуальное представление.|
 |[CMFCAcceleratorKey::SetAccelerator](#setaccelerator)|Задает сочетание клавиш для `CMFCAcceleratorKey` объекта.|

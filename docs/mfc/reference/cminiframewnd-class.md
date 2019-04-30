@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
 ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337821"
 ---
 # <a name="cminiframewnd-class"></a>Класс CMiniFrameWnd
 
@@ -29,17 +29,17 @@ ms.locfileid: "57293268"
 class CMiniFrameWnd : public CFrameWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMiniFrameWnd::CMiniFrameWnd](#cminiframewnd)|Создает объект `CMiniFrameWnd`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMiniFrameWnd::Create](#create)|Создает `CMiniFrameWnd` объект после создания.|
 |[CMiniFrameWnd::CreateEx](#createex)|Создает `CMiniFrameWnd` объекта (с дополнительными параметрами) после создания.|

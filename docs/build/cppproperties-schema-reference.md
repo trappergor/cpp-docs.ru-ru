@@ -4,11 +4,11 @@ ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.openlocfilehash: 43ffa0e92649fe233c6a743d4b64a2749cb28f5a
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356105"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341644"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Справочник по схеме CppProperties.json
 
@@ -143,7 +143,7 @@ Visual Studio предоставляет предопределенные кон
 
  `CppProperties.json` поддерживает расширение системных переменных среды для путей включения и других значений свойств. Для расширения переменной среды `%FOODIR%` используется синтаксис `${env.FOODIR}`. Кроме того, поддерживаются следующие системные переменные.
 
-|Имя переменной|Описание:|
+|Имя переменной|Описание|
 |-----------|-----------------|
 |vsdev|Среда Visual Studio по умолчанию|
 |msvc_x86|Компиляция для x86 с помощью средств x86|
@@ -156,7 +156,7 @@ Visual Studio предоставляет предопределенные кон
 
 При установке рабочей нагрузки Linux для удаленной ориентации на Linux и WSL доступны следующие среды.
 
-|Имя переменной|Описание:|
+|Имя переменной|Описание|
 |-----------|-----------------|
 |linux_x86|Удаленная ориентация на Linux x86|
 |linux_x64|Удаленная ориентация на Linux x64|

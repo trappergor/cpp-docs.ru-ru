@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CrtSetReportMode function
 ms.assetid: 3ecc6a12-afdd-4242-b046-8187ff6d4b36
 ms.openlocfilehash: 2096d39a8ba316fc76c97517a16e34231940e7f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335299"
 ---
 # <a name="crtsetreportmode"></a>_CrtSetReportMode
 
@@ -83,7 +83,7 @@ int _CrtSetReportMode(
 |**_CRTDBG_MODE_DEBUG**|Выводит сообщение в окно вывода отладчика.|
 |**_CRTDBG_MODE_FILE**|Выводит сообщение в предоставленный пользователем дескриптор файла. Для определения конкретного файла или потока, используемого в качестве места назначения, необходимо вызвать функцию [_CrtSetReportFile](crtsetreportfile.md).|
 |**_CRTDBG_MODE_WNDW**|Создает окно сообщения для отображения сообщения вместе с [прервать](abort.md), **повторите**, и **пропустить** кнопки.|
-|**_CRTDBG_REPORT_MODE**|Возвращает *reportMode* для указанного *reportType*:<br /><br /> 1 **_CRTDBG_MODE_FILE**<br /><br /> 2 **_CRTDBG_MODE_DEBUG**<br /><br /> 4 **_CRTDBG_MODE_WNDW**|
+|**_CRTDBG_REPORT_MODE**|Возвращает *reportMode* для указанного *reportType*:<br /><br /> 1   **_CRTDBG_MODE_FILE**<br /><br /> 2   **_CRTDBG_MODE_DEBUG**<br /><br /> 4   **_CRTDBG_MODE_WNDW**|
 
 Каждый тип отчета может создаваться с использованием одного, двух или трех режимов или вообще без режима. Следовательно, для одного типа отчета может быть задано несколько мест назначения. Например, в следующем фрагменте кода вызывает сбои проверочных утверждений, отправляемых в обоих окно сообщений отладки и **stderr**:
 
@@ -102,7 +102,7 @@ _CrtSetReportFile( _CRT_ASSERT, _CRTDBG_FILE_STDERR );
 
 Дополнительные сведения о совместимости см. в разделе [Совместимость](../../c-runtime-library/compatibility.md).
 
-**Библиотеки:** только отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md).
+**Библиотеки:** Отладочные версии [функций библиотеки CRT](../../c-runtime-library/crt-library-features.md) только.
 
 ## <a name="see-also"></a>См. также
 

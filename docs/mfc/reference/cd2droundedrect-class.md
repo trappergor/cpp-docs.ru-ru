@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CD2DRoundedRect [MFC], CD2DRoundedRect
 ms.assetid: 06207fb5-e92b-41c0-bceb-b45d8f466531
 ms.openlocfilehash: 51913a0d261a0bc91aef8f8504547a10c3e1cf36
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396266"
 ---
 # <a name="cd2droundedrect-class"></a>Класс CD2DRoundedRect
 
@@ -29,7 +29,7 @@ class CD2DRoundedRect : public D2D1_ROUNDED_RECT;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DRoundedRect::CD2DRoundedRect](#cd2droundedrect)|Перегружен. Создает `CD2DRoundedRect` объекта из `D2D1_ROUNDED_RECT` объекта.|
 

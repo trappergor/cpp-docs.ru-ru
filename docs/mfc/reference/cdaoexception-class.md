@@ -19,11 +19,11 @@ helpviewer_keywords:
 - CDaoException [MFC], m_scode
 ms.assetid: b2b01fa9-7ce2-42a1-842e-40f13dc50da4
 ms.openlocfilehash: 8d49291c51f66ee837f9b31a2ade390cec48c51a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399808"
 ---
 # <a name="cdaoexception-class"></a>Класс CDaoException
 
@@ -35,24 +35,24 @@ ms.locfileid: "57289004"
 class CDaoException : public CException
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoException::CDaoException](#cdaoexception)|Создает объект `CDaoException`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoException::GetErrorCount](#geterrorcount)|Возвращает число ошибок в коллекцию ошибок для ядра СУБД.|
 |[CDaoException::GetErrorInfo](#geterrorinfo)|Возвращает сведения об объекте конкретную ошибку в коллекцию ошибок.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoException::m_nAfxDaoError](#m_nafxdaoerror)|Содержит расширенный код ошибки для любой ошибки в классах MFC DAO.|
 |[CDaoException::m_pErrorInfo](#m_perrorinfo)|Указатель на [CDaoErrorInfo](../../mfc/reference/cdaoerrorinfo-structure.md) , содержащий сведения о один объект ошибки DAO.|
@@ -153,7 +153,7 @@ void GetErrorInfo(int nIndex);
 
 - Код ошибки
 
-- Исходный код
+- Source
 
 - Описание
 
@@ -194,8 +194,8 @@ void GetErrorInfo(int nIndex);
 |Член CDaoErrorInfo|Сведения|Значение|
 |--------------------------|-----------------|-------------|
 |`m_lErrorCode`|Код ошибки|Код ошибки DAO|
-|`m_strSource`|Исходный код|Имя объекта или приложения, вызвавшего ошибку|
-|`m_strDescription`|Описание:|Строку описания, связанный с ошибкой|
+|`m_strSource`|Source|Имя объекта или приложения, вызвавшего ошибку|
+|`m_strDescription`|Описание|Строку описания, связанный с ошибкой|
 |`m_strHelpFile`|Файл справки|Путь к файлу справки Windows, в котором пользователь может получить информацию о проблеме|
 |`m_lHelpContext`|Контекст справки|Идентификатор контекста для раздела в файле справки DAO|
 

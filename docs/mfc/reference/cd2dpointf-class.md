@@ -9,11 +9,11 @@ helpviewer_keywords:
 - CD2DPointF [MFC], CD2DPointF
 ms.assetid: 30f72083-1c8a-4f50-adb2-72dbbe3522d4
 ms.openlocfilehash: b8fe808c3147fa52c5041e2988822ace0ba60896
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396344"
 ---
 # <a name="cd2dpointf-class"></a>Класс CD2DPointF
 
@@ -25,17 +25,17 @@ ms.locfileid: "57304045"
 class CD2DPointF : public D2D1_POINT_2F;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CD2DPointF::CD2DPointF](#cd2dpointf)|Перегружен. Создает `CD2DPointF` объекта из `D2D1_POINT_2F` объекта.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CD2DPointF::operator CPoint](#operator_cpoint)|Преобразует `CD2DPointF` для `CPoint` объекта.|
 

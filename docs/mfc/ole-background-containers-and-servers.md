@@ -15,11 +15,11 @@ helpviewer_keywords:
 - server applications [MFC]
 ms.assetid: dafbb31d-096c-4654-b774-12900d832919
 ms.openlocfilehash: c154562e58cf8f37d77df61556fe25b19ca54c70
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304825"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346117"
 ---
 # <a name="ole-background-containers-and-servers"></a>Поддержка OLE. Контейнеры и серверы
 
@@ -39,5 +39,5 @@ ms.locfileid: "57304825"
 [Поддержка OLE. Реализация MFC](../mfc/ole-background-mfc-implementation.md)<br/>
 [Контейнеры](../mfc/containers.md)<br/>
 [Серверы](../mfc/servers.md)<br/>
-[Контейнеры. Клиентские элементы](../mfc/containers-client-items.md)<br/>
-[серверы: Элементы сервера](../mfc/servers-server-items.md)
+[Контейнеры. Элементы клиентов](../mfc/containers-client-items.md)<br/>
+[Серверы. Элементы сервера](../mfc/servers-server-items.md)

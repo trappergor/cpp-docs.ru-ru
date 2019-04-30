@@ -8,11 +8,11 @@ helpviewer_keywords:
 - codecvt header
 ms.assetid: d44ee229-00d5-4761-9b48-0c702122789d
 ms.openlocfilehash: 56cd4263d3dcddd23246a05466275b8b7d370b95
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405213"
 ---
 # <a name="ltcodecvtgt"></a>&lt;codecvt&gt;
 
@@ -50,7 +50,7 @@ ms.locfileid: "53978248"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание:|
+|Класс|Описание|
 |-|-|
 |[codecvt_utf8](codecvt-utf8-class.md)|Представляет аспект языкового стандарта, который выполняет преобразование между расширенными символами в кодировке UCS-2 или UCS-4 и потоком байтов в кодировке UTF-8.|
 |[codecvt_utf8_utf16](codecvt-utf8-utf16-class.md)|Представляет аспект языкового стандарта, который выполняет преобразование между расширенными символами в кодировке UTF-16 и потоком байтов в кодировке UTF-8.|

@@ -26,11 +26,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_iterator::operator-&gt;
 - std::experimental::filesystem::directory_iterator::operator++
 ms.openlocfilehash: 6763f2a96b771fadbec311cf8740352fff53e29a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610201"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413850"
 ---
 # <a name="directoryiterator-class"></a>Класс directory_iterator
 
@@ -128,7 +128,7 @@ bool operator!=(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md) , с которым производится сравнение `directory_iterator`.
 
-## <a name="op_as"></a> directory_iterator::operator =
+## <a name="op_as"></a> directory_iterator::operator=
 
 Операторы-члены присваивания по умолчанию работают корректно.
 
@@ -155,7 +155,7 @@ bool operator==(const directory_iterator& right) const;
 *right*<br/>
 [Directory_iterator](../standard-library/directory-iterator-class.md) , с которым производится сравнение `directory_iterator`.
 
-## <a name="op_star"></a> directory_iterator::operator *
+## <a name="op_star"></a> directory_iterator::operator*
 
 Оператор-член возвращает `myentry`.
 
@@ -163,7 +163,7 @@ bool operator==(const directory_iterator& right) const;
 const directory_entry& operator*() const;
 ```
 
-## <a name="op_cast"></a> directory_iterator::operator ->
+## <a name="op_cast"></a> directory_iterator::operator->
 
 Функция-член возвращает значение `&**this`.
 

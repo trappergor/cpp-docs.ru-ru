@@ -14,11 +14,11 @@ helpviewer_keywords:
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
 ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397748"
 ---
 # <a name="recordset-odbc"></a>Набор записей (ODBC)
 
@@ -97,9 +97,9 @@ ms.locfileid: "59034499"
 
 - [Набор записей. Добавление, обновление и удаление записей (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [Набор записей. Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [Набор записей. Блокирование записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [Набор записей. Выполнение обновления наборов записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [Набор записей. Выполнение обновления набора записей (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>Разделы, посвященные немного более сложные приемы
 
@@ -109,7 +109,7 @@ ms.locfileid: "59034499"
 
 - [Набор записей. Динамическая привязка столбцов данных (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [Набор записей. Пакетная выборка строк (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [Набор записей. Пакетная выборка записей (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
 - [Набор записей. Работа с большими элементами данных (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
@@ -117,9 +117,9 @@ ms.locfileid: "59034499"
 
 ### <a name="topics-about-how-recordsets-work"></a>Разделы, посвященные работе с наборами записей
 
-- [Набор записей. Порядок выборки записей (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [Набор записей. Порядок выборки записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [Набор записей. Принципы обновления записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [Набор записей. Порядок обновления записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>См. также
 

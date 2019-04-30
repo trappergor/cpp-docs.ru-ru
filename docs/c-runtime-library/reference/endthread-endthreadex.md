@@ -31,11 +31,11 @@ helpviewer_keywords:
 - threading [C++], terminating threads
 ms.assetid: 18a91f2f-659e-40b4-b266-ec12dcf2abf5
 ms.openlocfilehash: 2f54ca9c4cd5e863ca960f1d9c3634b85e7896dd
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62288827"
 ---
 # <a name="endthread-endthreadex"></a>_endthread, _endthreadex
 
@@ -67,7 +67,7 @@ void _endthreadex(
 Win32, такие как **ExitThread** API, **_endthreadex** не закрывает дескриптор потока. Таким образом, при использовании **_beginthreadex** и **_endthreadex**, необходимо закрыть дескриптор потока вызовом Win32 **CloseHandle** API.
 
 > [!NOTE]
-> **_endthread** и **_endthreadex** деструкторов C++, ожидающих в потоке не для вызова.
+> **_endthread** и **_endthreadex** вызвать C++ деструкторы, ожидающих в потоке не для вызова.
 
 ## <a name="requirements"></a>Требования
 

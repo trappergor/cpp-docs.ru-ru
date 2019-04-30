@@ -5,11 +5,11 @@ f1_keywords:
 - <thread>
 ms.assetid: 0c858405-4efb-449d-bf76-70d3693c9234
 ms.openlocfilehash: 43fb79ceda6de7409e6f93797ce2f4ff213c43ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411985"
 ---
 # <a name="ltthreadgt"></a>&lt;thread&gt;
 
@@ -32,7 +32,7 @@ ms.locfileid: "50487520"
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс thread](../standard-library/thread-class.md)|Определяет объект, который позволяет наблюдать и управлять потоком выполнения в приложении.|
 
@@ -54,7 +54,7 @@ ms.locfileid: "50487520"
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор > =-оператор](../standard-library/thread-operators.md#op_gt_eq)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|
 |[оператор > оператор](../standard-library/thread-operators.md#op_gt)|Определяет, справедливо ли, что один из объектов `thread::id` больше другого или равен ему.|

@@ -25,11 +25,11 @@ helpviewer_keywords:
 - CMFCCaptionButton [MFC], SetMiniFrameButton
 ms.assetid: c5774b38-c0dd-414a-9ede-3b2f78f233ec
 ms.openlocfilehash: 2020f6cb2f0feec28996f69791899c648600b600
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403819"
 ---
 # <a name="cmfccaptionbutton-class"></a>Класс CMFCCaptionButton
 
@@ -45,13 +45,13 @@ class CMFCCaptionButton : public CObject
 
 ### <a name="constructors"></a>Конструкторы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCCaptionButton::CMFCCaptionButton](#cmfccaptionbutton)|Создает объект CMFCCaptionButton.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCCaptionButton::GetHit](#gethit)|Возвращает команду, представленный кнопки.|
 |[CMFCCaptionButton::GetIconID](#geticonid)|Возвращает идентификатор образа, связанный с кнопкой.|

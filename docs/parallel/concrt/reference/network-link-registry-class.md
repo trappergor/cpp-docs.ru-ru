@@ -13,11 +13,11 @@ helpviewer_keywords:
 - network_link_registry class
 ms.assetid: 3e7b4097-09f1-4252-964e-b15b8f7f7fc6
 ms.openlocfilehash: 2537ed857651b5210b104a270b3d827246b8339a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62385236"
 ---
 # <a name="networklinkregistry-class"></a>Класс network_link_registry
 
@@ -39,7 +39,7 @@ class network_link_registry;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент `network_link_registry` объекта.|
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `network_link_registry` объект для чтения и выполнения операций const.|
@@ -48,7 +48,7 @@ class network_link_registry;
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[add](#add)|При переопределении в производном классе добавляет ссылку на `network_link_registry` объекта.|
 |[begin](#begin)|При переопределении в производном классе, возвращает итератор, указывающий на первый элемент в `network_link_registry` объекта.|

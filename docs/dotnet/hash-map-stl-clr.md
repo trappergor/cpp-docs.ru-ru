@@ -100,11 +100,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: c3cfc69b-04c6-42ae-a30e-0eda953fe883
 ms.openlocfilehash: fb7db25785d041786f5dfc0d2c3986a76d776d5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404420"
 ---
 # <a name="hashmap-stlclr"></a>hash_map (STL/CLR)
 
@@ -1545,7 +1545,7 @@ hash(L'a') = 1616896120
 hash(L'b') = 570892832
 ```
 
-## <a name="insert"></a> hash_map::Insert (STL/CLR)
+## <a name="insert"></a> hash_map::insert (STL/CLR)
 
 Добавляет элементы.
 

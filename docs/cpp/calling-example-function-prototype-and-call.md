@@ -1,24 +1,24 @@
 ---
-title: Пример вызова. Прототип и вызов функции
+title: Пример вызова. Прототип функции и вызова
 ms.date: 11/04/2016
 helpviewer_keywords:
 - calling conventions, examples [C++]
 - examples [C++], calling conventions
 ms.assetid: e4275d1f-df2e-4bfc-a162-eb43ec69554a
 ms.openlocfilehash: f89f4f1917810baa585dd1661428e0809b93cca0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508190"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345113"
 ---
-# <a name="calling-example-function-prototype-and-call"></a>Пример вызова. Прототип и вызов функции
+# <a name="calling-example-function-prototype-and-call"></a>Пример вызова. Прототип функции и вызова
 
 ## <a name="microsoft-specific"></a>Блок, относящийся только к системам Microsoft
 
 В следующем примере показаны результаты вызова функции с использованием различных соглашений о вызовах.
 
-Этот пример основан на следующей схеме функции. Замените `calltype` соответствующим соглашением о вызовах.
+Этот пример основан на следующей схеме функции. Замените `calltype` соответствующим соглашением о вызове.
 
 ```
 void    calltype MyFunc( char c, short s, int i, double f );

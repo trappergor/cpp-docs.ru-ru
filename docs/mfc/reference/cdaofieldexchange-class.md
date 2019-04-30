@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CDaoFieldExchange [MFC], m_prs
 ms.assetid: 350a663e-92ff-44ab-ad53-d94efa2e5823
 ms.openlocfilehash: d28739ced9aedd29106937cb717c87a241993036
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399815"
 ---
 # <a name="cdaofieldexchange-class"></a>Класс CDaoFieldExchange
 
@@ -35,14 +35,14 @@ class CDaoFieldExchange
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoFieldExchange::IsValidOperation](#isvalidoperation)|Возвращает ненулевое значение, если текущая операция, соответствующие тип обновляемого поля.|
 |[CDaoFieldExchange::SetFieldType](#setfieldtype)|Указывает тип элемента данных набора записей — столбца или параметра, представленного до следующего вызова для всех последующих вызовов функций DFX `SetFieldType`.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoFieldExchange::m_nOperation](#m_noperation)|DFX операция, выполняемая при вызове текущего набора записей `DoFieldExchange` функция-член.|
 |[CDaoFieldExchange::m_prs](#m_prs)|Указатель на набор записей, на какие DFX выполняются операции.|

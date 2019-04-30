@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Размещение элементов управления на панели инструментов
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - Customize dialog box, adding controls
 - toolbars [MFC], adding controls
 ms.assetid: 8fc94bdf-0da7-45d9-8bc4-52b7b1edf205
 ms.openlocfilehash: 0b5b8685b3062bf63187a765b7e90e26f8c65681
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62392457"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>Пошаговое руководство. Размещение элементов управления на панели инструментов
 
@@ -62,7 +62,7 @@ ms.locfileid: "57291396"
 
 1. В `CFindComboBox` класса, переопределить `PreTranslateMessage` виртуального метода. Этот метод позволит поле со списком для обработки [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown) сообщения. Если пользователь нажимает клавишу escape (`VK_ESCAPE`), Возврат фокуса к фрейма главного окна. Если пользователь нажимает клавишу ВВОД (`VK_ENTER`), учет для фрейма главного окна `WM_COMMAND` сообщение, содержащее `ID_EDIT_FIND_COMBO` команды идентификатор.
 
-1. Создание класса для **найти** кнопку в окне со списком, производный от [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере он называется `CFindComboButton`.
+1. Создание класса для **найти** кнопку в окне со списком, производный от [класс CMFCToolBarComboBoxButton](../mfc/reference/cmfctoolbarcomboboxbutton-class.md). В этом примере используется имя `CFindComboButton`.
 
 1. Конструктор `CMFCToolbarComboBoxButton` принимает три параметра: идентификатор команды кнопки, кнопки индекс изображения и стиль поля со списком. Установите эти параметры следующим образом:
 

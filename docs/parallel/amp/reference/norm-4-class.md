@@ -269,11 +269,11 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::norm_4::wy
 ms.assetid: d628b2bf-2cdb-4dbb-95c6-cd778f5e991f
 ms.openlocfilehash: 06e08c24a92259e34be59a9f021ae13f38e974a5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351580"
 ---
 # <a name="norm4-class"></a>Класс norm_4
 
@@ -289,19 +289,19 @@ class norm_4;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`value_type`||
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор norm_4](#ctor)|Перегружен. По умолчанию конструктор инициализирует все элементы с 0.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |norm_4::get_w||
 |norm_4::get_wx||
@@ -442,7 +442,7 @@ class norm_4;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |norm_4::operator-||
 |norm_4::operator--||
@@ -455,13 +455,13 @@ class norm_4;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[размер константа](#norm_4__size)||
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |norm_4::a||
 |norm_4::ab||

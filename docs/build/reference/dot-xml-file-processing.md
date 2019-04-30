@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
 ms.openlocfilehash: 1a0d231a066209307041681232cc3410210d4d02
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62293567"
 ---
 # <a name="xml-file-processing"></a>Обработка XML-файлов
 
@@ -23,7 +23,7 @@ XML-файл не содержит иерархического представ
 
 - Первая часть строки идентификатора определяет тип идентифицируемого члена. Это один символ, за которым следует двоеточие. Используются следующие типы элементов.
 
-  | Знак | Описание: |
+  | Знак | Описание |
   |---------------|-----------------|
   | в | namespace<br /><br /> Вы не можете добавить комментарии документации для пространства имен, но можете создать для него cref-ссылки. |
   | T | тип: класс, интерфейс, структура, перечисление, делегат |

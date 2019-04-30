@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
 ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62410977"
 ---
 # <a name="allocatortraits-class"></a>Класс allocator_traits
 
@@ -60,7 +60,7 @@ class allocator_traits;
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |`allocator_traits::allocator_type`|Этот тип является синонимом для параметра-шаблона `Alloc`.|
 |`allocator_traits::const_pointer`|Этот тип — `Alloc::const_pointer`, если он правильно сформирован; в противном случае этот тип — `pointer_traits<pointer>::rebind<const value_type>`.|
@@ -147,7 +147,7 @@ static void construct(Alloc& al, Uty* ptr, Types&&... args);
 
 Эта статическая функция-член вызывает `al.construct(ptr, args...)`, если выражение правильно сформировано; в противном случае оно оценивается как `::new (static_cast<void *>(ptr)) Uty(std::forward<Types>(args)...)`.
 
-## <a name="deallocate"></a>  allocator_traits::DEALLOCATE
+## <a name="deallocate"></a>  allocator_traits::deallocate
 
 Статический метод, который используется указанным распределителем для освобождения указанного количества объектов.
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
 ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262874"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346342"
 ---
 # <a name="parallel-algorithms"></a>Параллельные алгоритмы
 
@@ -84,9 +84,9 @@ ms.locfileid: "57262874"
 
 ##  <a name="parallel_for_each"></a> Алгоритм parallel_for_each
 
-[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм выполняет задачи в итеративном контейнере, например предоставляемые компаниями стандартной библиотеки C++, в параллельном режиме. Он использует ту же логику секционирования, `parallel_for` алгоритмом.
+[Concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each) алгоритм выполняет задачи в итеративном контейнере, например предоставляемые компаниями C++ стандартной библиотеки, в параллельном режиме. Он использует ту же логику секционирования, `parallel_for` алгоритмом.
 
-`parallel_for_each` Алгоритм напоминает стандартной библиотеки C++ [std::for_each](../../standard-library/algorithm-functions.md#for_each) алгоритм, за исключением случаев, `parallel_for_each` алгоритм выполняет задачи параллельно. Другие параллельные алгоритмы, такие как `parallel_for_each` выполнения задач в определенном порядке.
+`parallel_for_each` Напоминает алгоритм C++ Стандартная библиотека [std::for_each](../../standard-library/algorithm-functions.md#for_each) алгоритм, за исключением случаев, `parallel_for_each` алгоритм выполняет задачи параллельно. Другие параллельные алгоритмы, такие как `parallel_for_each` выполнения задач в определенном порядке.
 
 Несмотря на то что `parallel_for_each` алгоритм работает как прямых итераторов, так и итераторы произвольного доступа, он более эффективен с итераторами произвольного доступа.
 
@@ -134,7 +134,7 @@ ms.locfileid: "57262874"
 
 ##  <a name="parallel_transform_reduce"></a> Алгоритмы parallel_transform и parallel_reduce
 
-[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) и [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) алгоритмы — это параллельные версии алгоритмов стандартной библиотеки C++ [std::transform](../../standard-library/algorithm-functions.md#transform)и [std::accumulate](../../standard-library/numeric-functions.md#accumulate), соответственно. Версии среды выполнения с параллелизмом ведут себя как версии стандартной библиотеки C++, за исключением того, что порядок операций не определен, поскольку они выполняются параллельно. Используйте эти алгоритмы при работе с набором, который достаточно велик для получения выигрыша в производительности и масштабируемости при параллельной обработке.
+[Concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform) и [concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce) алгоритмы являются параллельные версии C++ алгоритмы стандартной библиотеки [std::transform](../../standard-library/algorithm-functions.md#transform) и [std::accumulate](../../standard-library/numeric-functions.md#accumulate), соответственно. Версии среды выполнения с параллелизмом ведут себя как версии стандартной библиотеки C++, за исключением того, что порядок операций не определен, поскольку они выполняются параллельно. Используйте эти алгоритмы при работе с набором, который достаточно велик для получения выигрыша в производительности и масштабируемости при параллельной обработке.
 
 > [!IMPORTANT]
 >  Алгоритмы `parallel_transform` и `parallel_reduce` поддерживают только итераторы произвольного доступа, двунаправленные и прямые итераторы, поскольку эти итераторы создают стабильные адреса памяти. Кроме того, эти итераторы должны создавать l-значения, отличные от `const`.
@@ -239,7 +239,7 @@ PPL поддерживает три алгоритма сортировки: [co
 
 В следующей таблице перечислены важные свойства трех параллельных алгоритмов сортировки.
 
-|Алгоритм|Описание:|Механизм сортировки|Стабильность сортировки|Требования к памяти|Временная сложность|Доступ итераторов|
+|Алгоритм|Описание|Механизм сортировки|Стабильность сортировки|Требования к памяти|Временная сложность|Доступ итераторов|
 |---------------|-----------------|-----------------------|--------------------|-------------------------|---------------------|---------------------|
 |`parallel_sort`|Основанная на сравнениях сортировка общего назначения.|На основе сравнений (по возрастанию)|Нестабильная|Нет|O((N/P)log(N/P) + 2N((P-1)/P))|Случайный|
 |`parallel_buffered_sort`|Более быстрая сортировка общего назначения на основе сравнений, для которой требуется память O(N).|На основе сравнений (по возрастанию)|Нестабильная|Требуется дополнительное место O(N)|O((N/P)log(N))|Случайный|
@@ -311,7 +311,7 @@ PPL поддерживает три алгоритма сортировки: [co
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Практическое руководство. Написание цикла parallel_for](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|Демонстрируется использование `parallel_for` алгоритм для умножения матриц.|
 |[Практическое руководство. Написание цикла parallel_for_each](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|Демонстрируется использование `parallel_for_each` алгоритм для вычисления количества простых чисел в [std::array](../../standard-library/array-class-stl.md) объекта в параллельном режиме.|
@@ -322,7 +322,7 @@ PPL поддерживает три алгоритма сортировки: [co
 |[Отмена в библиотеке параллельных шаблонов](cancellation-in-the-ppl.md)|Объясняет роль отмены в PPL, как отменить параллельную работу и как определить, когда группа задач отменяется.|
 |[Обработка исключений](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|Объясняется роль обработки исключений в среде выполнения с параллелизмом.|
 
-## <a name="reference"></a>Ссылки
+## <a name="reference"></a>Ссылка
 
 [Функция parallel_for](reference/concurrency-namespace-functions.md#parallel_for)
 

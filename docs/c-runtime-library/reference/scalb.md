@@ -1,5 +1,5 @@
 ---
-title: _scalb _scalbf
+title: _scalb, _scalbf
 ms.date: 04/05/2018
 apiname:
 - _scalb
@@ -28,13 +28,13 @@ helpviewer_keywords:
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
 ms.openlocfilehash: c3f776ec27c365601d4fe57fb6cf0a5c9b9e0cbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62357217"
 ---
-# <a name="scalb-scalbf"></a>_scalb _scalbf
+# <a name="scalb-scalbf"></a>_scalb, _scalbf
 
 Масштабирует аргумент по степени числа 2.
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
 ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62358298"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>Пошаговое руководство. Обновление приложения MFC Scribble (часть 1)
 
@@ -269,4 +269,4 @@ ms.locfileid: "57258766"
 ## <a name="see-also"></a>См. также
 
 [Пошаговые руководства](../mfc/walkthroughs-mfc.md)<br/>
-[Пошаговое руководство: Обновление приложения MFC Scribble (часть 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[Пошаговое руководство: Обновление приложения MFC Scribble (часть 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

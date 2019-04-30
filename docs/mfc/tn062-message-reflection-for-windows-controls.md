@@ -1,5 +1,5 @@
 ---
-title: TN062. Отражение сообщений для элементов управления окнами
+title: 'TN062: Отражение сообщений для элементов управления Windows'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls.messages
@@ -28,13 +28,13 @@ helpviewer_keywords:
 - ON_CONTROL_REFLECT macro
 ms.assetid: 53efb0ba-fcda-4fa0-a3c7-14e0b78fb494
 ms.openlocfilehash: aa189eec430d72bef753fef7ebbe9ad929d76c87
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351853"
 ---
-# <a name="tn062-message-reflection-for-windows-controls"></a>TN062. Отражение сообщений для элементов управления окнами
+# <a name="tn062-message-reflection-for-windows-controls"></a>TN062: Отражение сообщений для элементов управления Windows
 
 > [!NOTE]
 > Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.
@@ -87,28 +87,28 @@ ClassWizard обычно можно добавить записи схемы с�
 
 |Запись сопоставления|Прототип функции|
 |---------------|------------------------|
-|**ON_CONTROL_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **();**|
-|**ON_NOTIFY_REFLECT (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *результат* **);**|
-|**ON_UPDATE_COMMAND_UI_REFLECT (** `memberFxn` **)**|**afx_msg void** `memberFxn` **(CCmdUI** <strong>\*</strong> `pCmdUI` **);**|
-|**ON_WM_CTLCOLOR_REFLECT)**|**afx_msg HBRUSH CtlColor (CDC** <strong>\*</strong> `pDC` **, целое число без знака** `nCtlColor` **);**|
+|**ON_CONTROL_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( );**|
+|**ON_NOTIFY_REFLECT(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg void** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_UPDATE_COMMAND_UI_REFLECT(** `memberFxn` **)**|**afx_msg void** `memberFxn` **( CCmdUI**<strong>\*</strong> `pCmdUI` **);**|
+|**ON_WM_CTLCOLOR_REFLECT( )**|**afx_msg HBRUSH CtlColor ( CDC**<strong>\*</strong> `pDC` **, UINT** `nCtlColor` **);**|
 |**ON_WM_DRAWITEM_REFLECT)**|**afx_msg void DrawItem (LPDRAWITEMSTRUCT** `lpDrawItemStruct` **);**|
-|**ON_WM_MEASUREITEM_REFLECT)**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
-|**ON_WM_DELETEITEM_REFLECT)**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
-|**ON_WM_COMPAREITEM_REFLECT)**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
+|**ON_WM_MEASUREITEM_REFLECT( )**|**afx_msg void MeasureItem (LPMEASUREITEMSTRUCT** `lpMeasureItemStruct` **);**|
+|**ON_WM_DELETEITEM_REFLECT( )**|**afx_msg void DeleteItem (LPDELETEITEMSTRUCT** `lpDeleteItemStruct` **);**|
+|**ON_WM_COMPAREITEM_REFLECT( )**|**afx_msg int CompareItem (LPCOMPAREITEMSTRUCT** `lpCompareItemStruct` **);**|
 |**ON_WM_CHARTOITEM_REFLECT)**|**afx_msg int CharToItem (целое число без знака** `nKey` **, целое число без знака** `nIndex` **);**|
-|**ON_WM_VKEYTOITEM_REFLECT)**|**afx_msg int VKeyToItem (целое число без знака** `nKey` **, целое число без знака** `nIndex` **);**|
-|**ON_WM_HSCROLL_REFLECT)**|**afx_msg void HScroll (целое число без знака** `nSBCode` **, целое число без знака** `nPos` **);**|
-|**ON_WM_VSCROLL_REFLECT)**|**afx_msg void VScroll (целое число без знака** `nSBCode` **, целое число без знака** `nPos` **);**|
-|**ON_WM_PARENTNOTIFY_REFLECT)**|**afx_msg void ParentNotify (целое число без знака** `message` **, LPARAM** `lParam` **);**|
+|**ON_WM_VKEYTOITEM_REFLECT( )**|**afx_msg int VKeyToItem (целое число без знака** `nKey` **, целое число без знака** `nIndex` **);**|
+|**ON_WM_HSCROLL_REFLECT( )**|**afx_msg void HScroll (целое число без знака** `nSBCode` **, целое число без знака** `nPos` **);**|
+|**ON_WM_VSCROLL_REFLECT( )**|**afx_msg void VScroll (целое число без знака** `nSBCode` **, целое число без знака** `nPos` **);**|
+|**ON_WM_PARENTNOTIFY_REFLECT( )**|**afx_msg void ParentNotify ( UINT** `message` **, LPARAM** `lParam` **);**|
 
 Встречаются различные версии ON_NOTIFY_REFLECT и ON_CONTROL_REFLECT макросы, которые позволяют более одного объекта (например, элемент управления и его родительским элементом) для обработки данного сообщения.
 
 |Запись сопоставления|Прототип функции|
 |---------------|------------------------|
-|**ON_NOTIFY_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **(NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT** <strong>\*</strong> *результат* **);**|
-|**ON_CONTROL_REFLECT_EX (** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **();**|
+|**ON_NOTIFY_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( NMHDR** <strong>\*</strong> `pNotifyStruct` **, LRESULT**<strong>\*</strong> *result* **);**|
+|**ON_CONTROL_REFLECT_EX(** `wNotifyCode` **,** `memberFxn` **)**|**afx_msg BOOL** `memberFxn` **( );**|
 
-## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Обработка сообщений отражен: Пример управления для повторного использования
+## <a name="handling-reflected-messages-an-example-of-a-reusable-control"></a>Обработка отраженных сообщений: Пример управления для повторного использования
 
 В этом простом примере создает повторно используемый элемент управления вызывается `CYellowEdit`. Элемент управления работает так же, как элемент управления редактирования регулярных, за исключением того, что отображается черный текст на желтом фоне. Было бы легко добавлять функции-члены, которые могут допустить `CYellowEdit` управления для отображения различных цветов.
 

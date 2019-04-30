@@ -39,11 +39,11 @@ helpviewer_keywords:
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
 ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62369128"
 ---
 # <a name="regextraits-class"></a>Класс regex_traits
 
@@ -97,7 +97,7 @@ class regex_traits
 |[transform_primary](#transform_primary)|Преобразует в эквивалентную упорядоченную последовательность без учета регистра.|
 |[Перевести](#translate)|Преобразует в эквивалентный соответствующий элемент.|
 |[translate_nocase](#translate_nocase)|Преобразует в эквивалентный соответствующий элемент без учета регистра.|
-|[значение](#value)|Преобразует элемент в цифровое значение.|
+|[value](#value)|Преобразует элемент в цифровое значение.|
 
 ## <a name="requirements"></a>Требования
 

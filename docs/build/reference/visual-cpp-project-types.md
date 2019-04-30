@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
 ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316760"
 ---
 # <a name="c-project-templates"></a>Шаблоны проектов C++
 
@@ -28,9 +28,9 @@ ms.locfileid: "57826893"
 
 Шаблоны проектов, входящие в Visual Studio, зависят от версии продукта и установленных рабочих нагрузок. Если вы уже установили рабочую нагрузку "Разработка классических приложений на C++", эти шаблоны проектов Visual C++ присутствуют в Visual Studio.
 
-### <a name="windows-desktop"></a>Рабочий стол Windows
+### <a name="windows-desktop"></a>Windows Desktop
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |[Консольное приложение Windows](../../windows/creating-a-console-application.md)|Проект для создания консольного приложения Windows.|
 |[Классическое приложение Windows](../../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Проект для создания классического приложения Windows (Win32).|
@@ -54,7 +54,7 @@ ms.locfileid: "57826893"
 
 ### <a name="test"></a>Тест
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |[Проект машинного модульного теста](/visualstudio/test/writing-unit-tests-for-c-cpp-with-the-microsoft-unit-testing-framework-for-cpp)|Проект, содержащий машинные модульные тесты C++.|
 
@@ -74,7 +74,7 @@ ms.locfileid: "57826893"
 
 Обзор универсальных приложений Windows на C++ см. в разделе [Универсальные приложения Windows (C++)](../../windows/universal-windows-apps-cpp.md).
 
-|Шаблон проекта|Описание:|
+|Шаблон проекта|Описание|
 |----------------------|-----------------------------|
 |Пустое приложение|Проект одностраничного приложения универсальной платформы Windows (UWP), которое не имеет предопределенных элементов управления или макета.|
 |Приложение DirectX 11|Проект приложения универсальной платформы Windows, которое использует DirectX 11.|
