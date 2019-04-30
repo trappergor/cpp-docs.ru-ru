@@ -17,11 +17,11 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
 ms.openlocfilehash: 9a8255a02c46a4ade33bd95635516e5d36fe8e64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409802"
 ---
 # <a name="basicofstream-class"></a>Класс basic_ofstream
 
@@ -124,7 +124,7 @@ basic_ofstream(
 *_Filename*<br/>
 Имя файла, который необходимо открыть.
 
-*_Режим*<br/>
+*_Mode*<br/>
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>
@@ -246,7 +246,7 @@ void open(
 *_Filename*<br/>
 Имя файла, который необходимо открыть.
 
-*_Режим*<br/>
+*_Mode*<br/>
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *_Prot*<br/>

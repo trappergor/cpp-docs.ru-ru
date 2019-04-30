@@ -40,11 +40,11 @@ helpviewer_keywords:
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
 ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660369"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345189"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p, _printf_p_l, _wprintf_p, _wprintf_p_l
 
@@ -105,7 +105,7 @@ int _wprintf_p_l(
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
 |**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|

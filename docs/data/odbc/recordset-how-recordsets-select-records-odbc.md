@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
 ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397826"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>Набор записей. Порядок выборки записей (ODBC)
 
@@ -99,7 +99,7 @@ ms.locfileid: "59041329"
 ## <a name="see-also"></a>См. также
 
 [Набор записей (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[Набор записей. Принципы обновления записей в наборе записей (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[Набор записей. Порядок обновления записей в наборе (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [Основы ODBC](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[Набор записей. Блокировка записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[Набор записей. Блокирование записей (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
 ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413766"
 ---
 # <a name="enableif-class"></a>Класс enable_if
 

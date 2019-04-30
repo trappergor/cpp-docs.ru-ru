@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Sockets [MFC], converting Unicode and MBCS strings
 ms.assetid: 825dae17-7c1b-4b86-8d6c-da7f1afb5d8d
 ms.openlocfilehash: 51274791393d95517bd8de5ae7248dc634018037
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399568"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Сокеты Windows. Использование класса CAsyncSocket
 
@@ -44,7 +44,7 @@ ms.locfileid: "57263117"
 
    [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
-     - или -
+     -или-
 
    [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
@@ -66,7 +66,7 @@ ms.locfileid: "57263117"
 
 1. Если сокет является клиентом, подключить объект сокета к серверу сокетов, с помощью [CAsyncSocket::Connect](../mfc/reference/casyncsocket-class.md#connect).
 
-     - или -
+     -или-
 
    Если сокет сервера, задайте сокета, чтобы начать прослушивать вызовы (с [CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) для попыток подключиться из клиента. При получении запроса на подключение, примите его с [CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept).
 
@@ -105,7 +105,7 @@ ms.locfileid: "57263117"
 
 - [Сокеты Windows. Фон](../mfc/windows-sockets-background.md)
 
-- [Сокеты Windows. Сокеты Stream](../mfc/windows-sockets-stream-sockets.md)
+- [Сокеты Windows. Сокеты потоков](../mfc/windows-sockets-stream-sockets.md)
 
 - [Сокеты Windows. Сокеты датаграмм](../mfc/windows-sockets-datagram-sockets.md)
 

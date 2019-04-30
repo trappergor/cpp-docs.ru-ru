@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
 ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414655"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64346279"
 ---
 # <a name="csplitbutton-class"></a>Класс CSplitButton
 
@@ -35,20 +35,20 @@ class CSplitButton : public CButton
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSplitButton::CSplitButton](#csplitbutton)|Создает объект `CSplitButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSplitButton::Create](#create)|Создает элемент управления split button с указанными стилями и присоединяет его к текущему `CSplitButton` объекта.|
 |[CSplitButton::SetDropDownMenu](#setdropdownmenu)|Задает раскрывающемся меню, которое отображается, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSplitButton::OnDropDown](#ondropdown)|Обрабатывает уведомление BCN_DROPDOWN, система отправляет, когда пользователь щелкает стрелку раскрывающегося списка для текущего управления SplitButton.|
 
@@ -94,7 +94,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*dwStyle*|[in] Побитовое сочетание (OR) стили элемента управления к элементу управления. Дополнительные сведения см. в разделе [стили кнопок](../../mfc/reference/styles-used-by-mfc.md#button-styles).|
 |*rect*|[in] Ссылку на [RECT](/previous-versions/dd162897\(v=vs.85\)) структура, содержащая положение и размер элемента управления.|
@@ -142,7 +142,7 @@ afx_msg void OnDropDown(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*pNMHDR*|[in] Указатель на [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую сведения о [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|
 |*pResult*|[out] (Не используется; значение не возвращается). Возвращаемое значение [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown) уведомлений.|
@@ -176,7 +176,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |---------------|-----------------|
 |*nMenuId*|[in] Идентификатор ресурса меню.|
 |*nSubMenuId*|[in] Идентификатор ресурса меню.|

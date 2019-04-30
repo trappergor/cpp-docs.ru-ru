@@ -3,11 +3,11 @@ title: упаковка-преобразование (C++/CLI)
 ms.date: 11/04/2016
 ms.assetid: f4ee27a8-6a34-432d-b9ec-39285d513b23
 ms.openlocfilehash: 3f756eaef59c24ca5b82c485bd8352dffe9fb1db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614504"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64345757"
 ---
 # <a name="boxing-ccli"></a>упаковка-преобразование (C++/CLI)
 
@@ -19,6 +19,6 @@ ms.locfileid: "50614504"
 |-----------|-----------------|
 |[Практическое руководство. Явный запрос упаковки-преобразования](../dotnet/how-to-explicitly-request-boxing.md)|В этой статье описывается явный запрос упаковки-преобразования переменной.|
 |[Практическое руководство. Использование gcnew для создания типов значений и использование неявной упаковки-преобразования](../dotnet/how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing.md)|Демонстрируется использование `gcnew` для создания упакованное значение типа, который можно поместить в куче, управляемой, сборщиком мусора.|
-|[Практическое руководство. Распаковка-преобразование](../dotnet/how-to-unbox.md)|Показано, как распаковать и измените значение.|
+|[Практическое руководство. Распаковка](../dotnet/how-to-unbox.md)|Показано, как распаковать и измените значение.|
 |[Стандартные преобразования и неявная упаковка-преобразование](../dotnet/standard-conversions-and-implicit-boxing.md)|Показывает, что стандартное преобразование выбирается компилятором для преобразования, которое требует упаковки-преобразования.|
 |[Программирование .NET с использованием C++/CLI (Visual C++)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Статья верхнего уровня для программирования .NET в документации по Visual C++.|

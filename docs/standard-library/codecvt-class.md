@@ -41,11 +41,11 @@ helpviewer_keywords:
 - std::codecvt [C++], unshift
 ms.assetid: 37d3efa1-2b7f-42b6-b04f-7a972c8c2c86
 ms.openlocfilehash: be1075da65284ac3f9672a839622b59c8926bfb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405244"
 ---
 # <a name="codecvt-class"></a>Класс codecvt
 
@@ -209,11 +209,11 @@ explicit codecvt(size_t _Refs = 0);
 
 Возможные значения *_Refs* параметра и их важность:
 
-- 0: время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
 
-- 1: время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно управляться вручную.
 
-- 2: эти значения не определены.
+- 2: Эти значения не определены.
 
 Конструктор инициализирует его `locale::facet` базовый объект с **языкового стандарта::**[аспекта](../standard-library/locale-class.md#facet_class)(`_Refs`).
 

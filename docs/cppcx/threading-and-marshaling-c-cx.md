@@ -9,11 +9,11 @@ helpviewer_keywords:
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
 ms.openlocfilehash: c5bce60e564bef490bcfafd6f8559dffe5fd4f1d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404641"
 ---
 # <a name="threading-and-marshaling-ccx"></a>Работа с потоками и маршалинг (C++/CX)
 
@@ -97,7 +97,7 @@ ref class MyOptions
 
 ## <a name="authoring-agile-windows-runtime-components"></a>Разработка гибких компонентов среды выполнения Windows
 
-При определении ссылочного класса в C + +/ CX, он является гибким по умолчанию — то есть он имеет `ThreadingModel`= Both и `MarshallingType`= Agile.  Если вы используете библиотека шаблонов C++ среды выполнения Windows, необходимо сделать класс agile путем наследования от `FtmBase`, которая использует `FreeThreadedMarshaller`.  Создавая класс с атрибутами `ThreadingModel`=Both или `ThreadingModel`=MTA, убедитесь, что он является потокобезопасным.
+При определении ссылочного класса в C++/CX, он является гибким по умолчанию — то есть он имеет `ThreadingModel`= Both и `MarshallingType`= Agile.  Если вы используете библиотека шаблонов C++ среды выполнения Windows, необходимо сделать класс agile путем наследования от `FtmBase`, которая использует `FreeThreadedMarshaller`.  Создавая класс с атрибутами `ThreadingModel`=Both или `ThreadingModel`=MTA, убедитесь, что он является потокобезопасным.
 
 Потоковую модель и поведение маршалинга класса ссылки можно изменять. Однако если внести изменения, которые делают класс негибким, необходимо четко понимать их последствия.
 

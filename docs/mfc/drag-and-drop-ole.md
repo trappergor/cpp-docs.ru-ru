@@ -10,11 +10,11 @@ helpviewer_keywords:
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
 ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58766811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405928"
 ---
 # <a name="drag-and-drop-ole"></a>Перетаскивание (OLE)
 
@@ -32,11 +32,11 @@ ms.locfileid: "58766811"
 
 Дополнительные сведения об операции перетаскивания см. в разделе:
 
-- [Путем перетаскивания: Реализация источника сброса](../mfc/drag-and-drop-implementing-a-drop-source.md)
+- [Перетаскивание. Реализация источника перетаскивания](../mfc/drag-and-drop-implementing-a-drop-source.md)
 
-- [Путем перетаскивания: Реализация конечного расположения сброса](../mfc/drag-and-drop-implementing-a-drop-target.md)
+- [Перетаскивание. Реализация цели перетаскивания](../mfc/drag-and-drop-implementing-a-drop-target.md)
 
-- [Путем перетаскивания: Настройка](../mfc/drag-and-drop-customizing.md)
+- [Перетаскивание. Настройка](../mfc/drag-and-drop-customizing.md)
 
 ## <a name="see-also"></a>См. также
 
