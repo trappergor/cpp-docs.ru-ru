@@ -6,11 +6,11 @@ helpviewer_keywords:
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
 ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62414039"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>Сравнение структур данных синхронизации с интерфейсом Windows API
 
@@ -42,7 +42,7 @@ ms.locfileid: "57275978"
 
 ## <a name="example"></a>Пример
 
-### <a name="description"></a>Описание:
+### <a name="description"></a>Описание
 
 Чтобы лучше понять разницу между `event` класс и события Windows, рассмотрим следующий пример. В этом примере позволяет создать не более двух одновременных задач, а затем вызывает две аналогичные функции, использующие планировщику `event` класс и событие ручного сброса Windows. Каждая функция сначала создает несколько задач, которые ожидают общего события в сигнальное. Каждая функция затем направляет выполняющихся задач и сигнализирует событие. Каждая функция ожидает отслеживаемого события.
 

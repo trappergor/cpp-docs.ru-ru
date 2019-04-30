@@ -7,11 +7,11 @@ helpviewer_keywords:
 - linear_congruential_engine class
 ms.assetid: 30e00ca6-1933-4701-9561-54f3e810a5a1
 ms.openlocfilehash: 83306e47995f652014682d6bcc94966aab75c062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413259"
 ---
 # <a name="linearcongruentialengine-class"></a>Класс linear_congruential_engine
 
@@ -49,13 +49,13 @@ class linear_congruential_engine{
 Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 *A*<br/>
-**Множитель**. **Предварительные условия** : см. раздел "Примечания".
+**Множитель**. **Предусловие**: См. раздел "Примечания".
 
 *C*<br/>
-**Приращение**. **Предварительные условия** : см. раздел "Примечания".
+**Приращение**. **Предусловие**: См. раздел "Примечания".
 
 *M*<br/>
-**Остаток от деления**. **Предварительные условия** : см. раздел "Примечания".
+**Остаток от деления**. **Предусловие**: См. в разделе "Примечания".
 
 ## <a name="members"></a>Участники
 
@@ -80,7 +80,7 @@ class linear_congruential_engine{
 
 Хотя можно создать генератор на основе этого механизма напрямую, также можно использовать одно из этих предварительно заданных определений типов.
 
-`minstd_rand0`: Минимальный стандартный механизм 1988 (Льюис, Гудман и Миллер, 1969).
+`minstd_rand0`: Минимальный стандартный механизм 1988 (Льюис, Гудмэн и Миллер, 1969).
 
 ```cpp
 typedef linear_congruential_engine<unsigned int, 16807, 0, 2147483647> minstd_rand0;

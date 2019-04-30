@@ -201,11 +201,11 @@ helpviewer_keywords:
 - std::partition_copy [C++]
 - std::swap [C++]
 ms.openlocfilehash: 260b2ee780956550678fcb01b3a018a60fb58deb
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411192"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
 
@@ -4261,7 +4261,7 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-шаблон возвращает `pair<const Type&, const Type&>( right , left )` Если *правой* — меньше, чем *левой*. В противном случае возвращает значение `pair<const Type&, const Type&>( left , right )`.
+Первая функция-шаблон возвращает `pair<const Type&, const Type&>( right , left )` Если *правой* — меньше, чем *левой*. В противном случае она возвращает `pair<const Type&, const Type&>( left , right )`.
 
 Вторая функция-член возвращает пару, где первый элемент меньше, а второй — больше при сравнении по предикату *comp*.
 

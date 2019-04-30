@@ -24,11 +24,11 @@ helpviewer_keywords:
 - std::thread [C++], native_handle
 - std::thread [C++], swap
 ms.openlocfilehash: d1405062ef553dbfea3b60b5f39e0546707343b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412076"
 ---
 # <a name="thread-class"></a>Класс thread
 
@@ -50,19 +50,19 @@ class thread;
 
 ### <a name="public-classes"></a>Открытые классы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Класс thread::id](#id_class)|Уникально идентифицирует соответствующий поток.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[thread](#thread)|Создает **поток** объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[отсоединение](#detach)|Отсоединяет связанный поток от **поток** объекта.|
 |[get_id](#get_id)|Возвращает уникальный идентификатор связанного потока.|
@@ -74,7 +74,7 @@ class thread;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[thread::operator=](#op_eq)|Связывает поток с текущим **поток** объекта.|
 
@@ -100,7 +100,7 @@ void detach();
 
 Если поток, связанный с вызывающим объектом, является недопустимым, функция создает ошибку `system_error` с кодом `no_such_process`.
 
-## <a name="get_id"></a>  Thread::get_id
+## <a name="get_id"></a>  thread::get_id
 
 Возвращает уникальный идентификатор связанного потока.
 
@@ -112,7 +112,7 @@ id get_id() const noexcept;
 
 Объект [thread::id](#id_class), уникально идентифицирующий связанный поток, или `thread::id()`, если с объектом не связан никакой поток.
 
-## <a name="hardware_concurrency"></a>  Thread::hardware_concurrency
+## <a name="hardware_concurrency"></a>  thread::hardware_concurrency
 
 Статический метод, который возвращает приблизительное число контекстов аппаратного потока.
 
@@ -168,7 +168,7 @@ bool joinable() const noexcept;
 
 Объект потока *присоединяем*, если `get_id() != id()`.
 
-## <a name="native_handle"></a>  Thread::native_handle
+## <a name="native_handle"></a>  thread::native_handle
 
 Возвращает тип реализации, представляющий дескриптор потока. Дескриптор потока может использоваться разными способами в зависимости от реализации.
 
@@ -203,7 +203,7 @@ thread& operator=(thread&& Other) noexcept;
 
 После установления связи `Other` присваивается состояние, созданное по умолчанию.
 
-## <a name="swap"></a>  Thread::Swap
+## <a name="swap"></a>  thread::swap
 
 Меняет местами состояния объекта с помощью заданного **поток** объекта.
 

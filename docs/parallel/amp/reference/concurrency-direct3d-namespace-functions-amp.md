@@ -22,11 +22,11 @@ f1_keywords:
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
 ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405590"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Функции пространства имен Concurrency::Direct3D (AMP)
 
@@ -44,7 +44,7 @@ ms.locfileid: "57281341"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** amp.h **пространство имен:** Параллельность
+**Заголовок:** amp.h **пространство имен:** параллелизм
 
 ##  <a name="abs"></a>  abs
 
@@ -156,7 +156,7 @@ accelerator_view create_accelerator_view(
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-Получить блокировку на accelerator_view для безопасного выполнения операций D3D на ресурсах общих с accelerator_view. Accelerator_view и все ресурсы C++ AMP, связанные с этим accelerator_view, внутренне принимают эту блокировку при выполнении операций и будут блокироваться, пока другой поток удерживает блокировку доступа D3D. Эта блокировка является нерекурсивным: Является неопределенным поведением, вызов этой функции из потока, который уже удерживает эту блокировку. Является неопределенным поведением для выполнения операций в accelerator_view или любых контейнерах данных, связанных с accelerator_view, из потока, который удерживает блокировку доступа D3D. См. также scoped_d3d_access_lock, класс стиле RAII для блокирования доступа D3D на уровне области.
+Получить блокировку на accelerator_view для безопасного выполнения операций D3D на ресурсах общих с accelerator_view. Accelerator_view и все C++ AMP ресурсы, связанные с этим accelerator_view, внутренне принимают эту блокировку при выполнении операций и будут блокироваться, пока другой поток удерживает блокировку доступа D3D. Эта блокировка является нерекурсивным: Является неопределенным поведением, вызов этой функции из потока, который уже удерживает эту блокировку. Является неопределенным поведением для выполнения операций в accelerator_view или любых контейнерах данных, связанных с accelerator_view, из потока, который удерживает блокировку доступа D3D. См. также scoped_d3d_access_lock, класс стиле RAII для блокирования доступа D3D на уровне области.
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);
