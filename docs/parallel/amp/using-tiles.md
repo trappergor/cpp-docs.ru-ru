@@ -3,11 +3,11 @@ title: Использование плиток
 ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
 ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405381"
 ---
 # <a name="using-tiles"></a>Использование плиток
 
@@ -291,13 +291,13 @@ t_idx.barrier.wait();
 
 Объект *барьер памяти* гарантирует, что доступ к памяти предоставляется для других потоков в плитке потоков и памяти доступы осуществляются в соответствии с порядком программы. Чтобы обеспечить это, компиляторы и процессоры не переупорядочивают чтения и записи через барьер. В C++ AMP барьер памяти создается путем вызова одного из этих методов:
 
-- [Метод tile_barrier::wait](reference/tile-barrier-class.md#wait): создает барьер вокруг глобальной и `tile_static` памяти.
+- [Метод tile_barrier::wait](reference/tile-barrier-class.md#wait): Создает барьер вокруг глобальной и `tile_static` памяти.
 
-- [Метод tile_barrier::wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): создает барьер вокруг глобальной и `tile_static` памяти.
+- [Метод tile_barrier::wait_with_all_memory_fence](reference/tile-barrier-class.md#wait_with_all_memory_fence): Создает барьер вокруг глобальной и `tile_static` памяти.
 
-- [Метод tile_barrier::wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): создает барьер только вокруг глобальной памяти.
+- [Метод tile_barrier::wait_with_global_memory_fence](reference/tile-barrier-class.md#wait_with_global_memory_fence): Создает барьер только вокруг глобальной памяти.
 
-- [Метод tile_barrier::wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): создает барьер только вокруг `tile_static` памяти.
+- [Метод tile_barrier::wait_with_tile_static_memory_fence](reference/tile-barrier-class.md#wait_with_tile_static_memory_fence): Создает барьер только вокруг `tile_static` памяти.
 
 Вызов конкретного барьера, которой требуется, можно повысить производительность приложения. Тип барьера влияет на том, как компилятор и оборудование переупорядочивает выражения. Например, при использовании барьера глобальной памяти, он применяется только к доступы к памяти и таким образом, компилятор и оборудование могут изменять порядок считывает и записывает `tile_static` переменные на обеих сторонах барьера.
 

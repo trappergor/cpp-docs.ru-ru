@@ -27,11 +27,11 @@ helpviewer_keywords:
 - array_view class
 ms.assetid: 7e7ec9bc-05a2-4372-b05d-752b50006c5a
 ms.openlocfilehash: e73639ffd11e08edb2fdb03471f2c6c88730f02d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405564"
 ---
 # <a name="arrayview-class"></a>Класс array_view
 
@@ -65,14 +65,14 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор array_view](#ctor)|Инициализирует новый экземпляр класса `array_view`. Нет конструктора по умолчанию для `array<T,N>`. Все конструкторы могут выполняться только на ЦП и не может быть выполнена на целевом объекте Direct3D.|
 |[~ array_view, деструктор](#ctor)|Уничтожает `array_view` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует содержимое объекта `array_view` объект в указанное место назначения путем вызова `copy(*this, dest)`.|
 |[data](#data)|Возвращает указатель на необработанные данные `array_view`.|
@@ -91,7 +91,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator()](#operator_call)|Возвращает значение элемента, который задается параметром или параметрами.|
 |[operator\[\]](#operator_at)|Возвращает элемент, задаваемый параметрами.|
@@ -99,7 +99,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Ранг константа](#rank)|Хранит ранг объекта `array_view` объекта.|
 

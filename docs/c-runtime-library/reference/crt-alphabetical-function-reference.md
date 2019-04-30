@@ -5,11 +5,11 @@ f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62340343"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>Справочник по UCRT алфавитный указатель функций
 
@@ -973,7 +973,7 @@ ms.locfileid: "55703120"
 
 [_fwscanf_s_l](fscanf-s-fscanf-s-l-fwscanf-s-fwscanf-s-l.md)
 
-## <a name="g"></a>З
+## <a name="g"></a>П
 
 [gcvt](posix-gcvt.md)
 

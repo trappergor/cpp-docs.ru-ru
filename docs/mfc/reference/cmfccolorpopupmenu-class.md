@@ -15,11 +15,11 @@ helpviewer_keywords:
 - CMFCColorPopupMenu [MFC], SetPropList
 ms.assetid: 0bf9efe8-aed5-4ab7-b23b-eb284b4668be
 ms.openlocfilehash: 0c2fed4aa239faa96abf692a46a27102ce9820a1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403689"
 ---
 # <a name="cmfccolorpopupmenu-class"></a>Класс CMFCColorPopupMenu
 
@@ -37,7 +37,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |[CMFCColorPopupMenu::CMFCColorPopupMenu](#cmfccolorpopupmenu)|Создает объект `CMFCColorPopupMenu`.|
 |`CMFCColorPopupMenu::~CMFCColorPopupMenu`|Деструктор.|
 
@@ -45,7 +45,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCColorPopupMenu::CreateTearOffBar](#createtearoffbar)|Создает фиксируемого перемещаемой цветовую шкалу. (Переопределяет [CMFCPopupMenu::CreateTearOffBar](../../mfc/reference/cmfcpopupmenu-class.md#createtearoffbar).)|
 |[CMFCColorPopupMenu::GetMenuBar](#getmenubar)|Возвращает [CMFCPopupMenuBar](../../mfc/reference/cmfcpopupmenubar-class.md) , внедренные во всплывающем меню. (Переопределяет [CMFCPopupMenu::GetMenuBar](../../mfc/reference/cmfcpopupmenu-class.md#getmenubar).)|
 |`CMFCColorPopupMenu::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
@@ -55,7 +55,7 @@ class CMFCColorPopupMenu : public CMFCPopupMenu
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |`m_bEnabledInCustomizeMode`|Логическое значение, определяющее, следует ли отображать цветовую шкалу.|
 |`m_wndColorBar`|`CMFCColorBar` Объект, предоставляющий выбранный цвет.|
 
@@ -141,7 +141,7 @@ CMFCColorPopupMenu(
 *lpszOtherColor*<br/>
 [in] Текстовая метка *других* кнопка, отображающая более цвета, или значение NULL.
 
-Стандартный метки другие кнопки **Дополнительные цвета...** .
+Стандартный метки другие кнопки **Дополнительные цвета...**.
 
 *lpszDocColors*<br/>
 [in] Текстовая подпись кнопки цветов документа. Палитра цветов документе перечислены все цвета, которые в настоящее время использует документ.
@@ -198,7 +198,7 @@ virtual CPane* CreateTearOffBar(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*pWndMain*|[in] Указатель на родительское окно перемещаемой панелью.|
 |*uiID*|[in] Идентификатор команды перемещаемой панелью.|
 |*lpszName*|[in] Текст окна перемещаемой панелью.|

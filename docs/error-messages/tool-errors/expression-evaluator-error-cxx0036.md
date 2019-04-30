@@ -8,15 +8,15 @@ helpviewer_keywords:
 - CAN0036
 ms.assetid: 383404be-df5b-4eec-b113-df21bb5d269d
 ms.openlocfilehash: d7961d92760cc5ac325b4bc9f187d4ee2298479a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62397033"
 ---
 # <a name="expression-evaluator-error-cxx0036"></a>Ошибка вычислителя выражений CXX0036
 
-Неправильный контекст {...} specification
+bad context {...} specification
 
 Это сообщение может возникать по любой из нескольких ошибок при использовании оператора контекста (**{}**).
 

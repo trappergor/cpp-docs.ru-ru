@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
 ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411959"
 ---
 # <a name="timedmutex-class"></a>Класс timed_mutex
 
@@ -39,14 +39,14 @@ class timed_mutex;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
-|[деструктор timed_mutex](#timed_mutex)|Создает объект `timed_mutex`, который не заблокирован.|
+|[timed_mutex](#timed_mutex)|Создает объект `timed_mutex`, который не заблокирован.|
 |[Деструктор timed_mutex::~timed_mutex](#dtortimed_mutex_destructor)|Освобождает все ресурсы, используемые объектом `timed_mutex`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[lock](#lock)|Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.|
 |[try_lock](#try_lock)|Попытки получить права владельца объекта `mutex` без блокировки.|
@@ -60,7 +60,7 @@ class timed_mutex;
 
 **Пространство имен:** std
 
-## <a name="lock"></a>  timed_mutex::LOCK
+## <a name="lock"></a>  timed_mutex::lock
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -154,7 +154,7 @@ bool try_lock_until(const xtime* Abs_time);
 
 Если вызывающий поток уже является владельцем `mutex`, поведение не определено.
 
-## <a name="unlock"></a>  timed_mutex::Unlock
+## <a name="unlock"></a>  timed_mutex::unlock
 
 Освобождает права владения объектом `mutex`.
 

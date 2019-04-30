@@ -31,11 +31,11 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
 ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62409763"
 ---
 # <a name="basicstringbuf-class"></a>Класс basic_stringbuf
 
@@ -128,7 +128,7 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Режим*<br/>
+*_Mode*<br/>
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 *str*<br/>
@@ -241,7 +241,7 @@ virtual pos_type seekoff(
 *_Way*<br/>
 Начальная точка для операций смещения. Возможные значения см. в разделе [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Режим*<br/>
+*_Mode*<br/>
 Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -277,7 +277,7 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 *_Sp*<br/>
 Позиция для поиска.
 
-*_Режим*<br/>
+*_Mode*<br/>
 Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -379,7 +379,7 @@ virtual int_type underflow();
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член пытается извлечь текущий элемент `byte` из входного буфера, переместить текущую позицию в потоке и возвратить элемент как **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **байтов**). Это можно сделать одним способом: если позиция чтения доступна, функция принимает `byte` как элемента, хранящегося в этой позиции чтения и перемещает следующий указатель для входного буфера.
+Защищенная функция-член пытается извлечь текущий элемент `byte` из входного буфера, переместить текущую позицию в потоке и возвратить элемент как **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **байтов**). Это можно сделать одним из способов: Если позиция чтения доступна, функция принимает `byte` как элемента, хранящегося в этой позиции чтения и перемещает следующий указатель для входного буфера.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 

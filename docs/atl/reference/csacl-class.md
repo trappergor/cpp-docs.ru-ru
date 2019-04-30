@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CSacl class
 ms.assetid: 8624889b-aebc-4183-9d29-a20f07837f05
 ms.openlocfilehash: f8820be3073c6ffaffdaa9d04a7338ad584d36ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278024"
 ---
 # <a name="csacl-class"></a>Класс CSacl
 
@@ -36,14 +36,14 @@ class CSacl : public CAcl
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSacl::CSacl](#csacl)|Конструктор.|
 |[CSacl::~CSacl](#dtor)|Деструктор|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSacl::AddAuditAce](#addauditace)|Добавляет запись аудита управления доступом (ACE) `CSacl` объекта.|
 |[CSacl::GetAceCount](#getacecount)|Возвращает количество элементов управления доступом (ACE) в `CSacl` объекта.|
@@ -52,7 +52,7 @@ class CSacl : public CAcl
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CSacl::operator =](#operator_eq)|Оператор присвоения.|
 

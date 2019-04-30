@@ -4,11 +4,11 @@ ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
 ms.openlocfilehash: c3def77d8b7a22be05259784e3b80562c8728c15
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62398918"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>Обработка ошибок и исключений (современный C++)
 
@@ -90,7 +90,7 @@ int main()
 
 ## <a name="c-exceptions-versus-windows-seh-exceptions"></a>Исключения C++ и исключениями Windows SEH
 
-Программы на языках C и C++ могут использовать механизм структурированной обработки исключений (SEH) в операционной системе Windows. Основные понятия в SEH напоминают эти исключения в C++, за исключением того, что SEH использует **__try**, **__except**, и **__finally** вместо конструкции **повторите** и **catch**. В Visual C++ исключения C++ реализованы для SEH. Тем не менее при написании кода C++, используйте синтаксис исключения C++.
+Программы на языках C и C++ могут использовать механизм структурированной обработки исключений (SEH) в операционной системе Windows. Основные понятия в SEH напоминают эти в C++ исключениями, за исключением того, что SEH использует **__try**, **__except**, и **__finally** вместо конструкции **попробуйте**  и **catch**. В Visual C++ исключения C++ реализованы для SEH. Тем не менее при написании кода C++, используйте синтаксис исключения C++.
 
 Дополнительные сведения о SEH см. в разделе [структурированная обработка исключений (C/C++)](../cpp/structured-exception-handling-c-cpp.md).
 

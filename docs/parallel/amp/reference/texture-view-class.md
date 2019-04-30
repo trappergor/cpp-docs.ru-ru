@@ -15,11 +15,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
 ms.openlocfilehash: 0f2b627afa216f03592fe913afece1a80f5bd5a6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351525"
 ---
 # <a name="textureview-class"></a>Класс texture_view
 
@@ -52,7 +52,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`value_type`|Тип элементов в агрегатах текстур.|
 |`coordinates_type`|Тип координаты, используемой для определения текселя в `texture_view`— то есть `short_vector` , имеет один и тот же ранг, связанной текстурой, имеющий тип значения `float`.|
@@ -60,14 +60,14 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор texture_view](#ctor)|Перегружен. Создает `texture_view` экземпляра.|
 |[~ texture_view деструктор](#ctor)|Уничтожает `texture_view` экземпляра.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[gather_alpha](#gather_alpha)|Перегружен. Создает пример текстуры в заданных координатах с помощью определенной конфигурации выборки и возвращает альфа (w) компоненты четыре текселей.|
 |[gather_blue](#gather_blue)|Перегружен. Создает пример текстуры в заданных координатах с помощью определенной конфигурации выборки и возвращает четыре текселей компоненты синего цвета (z).|
@@ -79,7 +79,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator()](#operator_call)|Перегружен. Получает значение элемента по индексу.|
 |[operator\[\]](#operator_at)|Перегружен. Получает значение элемента по индексу.|
@@ -87,7 +87,7 @@ class texture_view<const value_type, _Rank>
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[value_type](#value_type)|Тип значения элементов `texture_view`.|
 

@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::directory_entry::operator&gt;
 - std::experimental::filesystem::directory_entry::operator&gt;=
 ms.openlocfilehash: c1b68aefd44d8f0ac60c36307dee93333d801bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533826"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64342977"
 ---
 # <a name="directoryentry-class"></a>Класс directory_entry
 
@@ -177,7 +177,7 @@ bool operator==(const directory_entry& right) const noexcept;
 *right*<br/>
 [Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
-## <a name="op_lt"></a> Оператор&lt;
+## <a name="op_lt">Оператор </a>&lt;
 
 Функция-член возвращает значение `mypath < right.mypath`.
 
@@ -203,7 +203,7 @@ bool operator&lt;=(const directory_entry& right) const noexcept;
 *right*<br/>
 [Directory_entry](../standard-library/directory-entry-class.md) , с которым производится сравнение `directory_entry`.
 
-## <a name="op_gt"></a> Оператор&gt;
+## <a name="op_gt">Оператор </a>&gt;
 
 Функция-член возвращает значение `right < *this`.
 

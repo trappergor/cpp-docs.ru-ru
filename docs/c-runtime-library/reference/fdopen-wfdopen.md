@@ -34,11 +34,11 @@ helpviewer_keywords:
 - streams, associating with files
 ms.assetid: 262757ff-1e09-4472-a5b6-4325fc28f971
 ms.openlocfilehash: 0cde110bf1dd12c23a6b0b658809502743d9edd3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334779"
 ---
 # <a name="fdopen-wfdopen"></a>_fdopen, _wfdopen
 
@@ -114,11 +114,11 @@ FILE *_wfdopen(
 |Символы в *режим* строки|Эквивалентное *oflag* значение **_open** и **_sopen**|
 |---------------------------------|---------------------------------------------------|
 |**a**|**\_O\_WRONLY &#124; \_O\_APPEND** (обычно  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O \_APPEND**)|
-|**+**|**\_O\_RDWR &#124; \_O\_APPEND** (обычно  **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_ Создание СТРУКТУРЫ** )|
+|**+**|**\_O\_RDWR &#124; \_O\_APPEND** (usually **\_O\_RDWR &#124; \_O\_APPEND &#124; \_O\_CREAT** )|
 |**r**|**\_O\_: RDONLY**|
-|**r +**|**\_O\_RDWR**|
+|**r+**|**\_O\_RDWR**|
 |**w**|**\_O\_WRONLY** (обычно  **\_O\_WRONLY &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
-|**w +**|**\_O\_RDWR** (обычно  **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
+|**w +**|**\_O\_RDWR** (usually **\_O\_RDWR &#124; \_O\_CREAT &#124; \_O\_TRUNC**)|
 |**b**|**\_O\_ДВОИЧНЫЕ**|
 |**t**|**\_O\_ТЕКСТА**|
 |**c**|Нет|

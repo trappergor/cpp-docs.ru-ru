@@ -3,15 +3,15 @@ title: Использование объектов accelerator и accelerator_vi
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405395"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>Использование объектов accelerator и accelerator_view
 
-Можно использовать [accelerator](../../parallel/amp/reference/accelerator-class.md) и [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) классы для определения устройства или эмулятора для выполнения кода C++ AMP. Система может иметь несколько устройств или эмуляторов, которые отличаются объемом памяти, поддержкой общей памяти, поддержку отладки или поддержкой двойной точности. C++ Accelerated Massive Parallelism (C++ AMP) предоставляет API, которые можно использовать для проверки доступных ускорителей, задать один по умолчанию, укажите несколько представлений ускорителей для множественных вызовов parallel_for_each и выполнять специальные задачи отладки.
+Можно использовать [accelerator](../../parallel/amp/reference/accelerator-class.md) и [accelerator_view](../../parallel/amp/reference/accelerator-view-class.md) классы для определения устройства или эмулятора для запуска вашего C++ коде AMP на. Система может иметь несколько устройств или эмуляторов, которые отличаются объемом памяти, поддержкой общей памяти, поддержку отладки или поддержкой двойной точности. C++Accelerated Massive Parallelism (C++ AMP) предоставляет API, которые можно использовать для просмотра доступных ускорителей, задать один по умолчанию, укажите несколько представлений ускорителей для множественных вызовов parallel_for_each и выполнять специальные задачи отладки.
 
 ## <a name="using-the-default-accelerator"></a>Использование ускорителя по умолчанию
 

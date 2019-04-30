@@ -138,11 +138,11 @@ helpviewer_keywords:
 - std::unordered_multimap::swap
 ms.assetid: 4baead6c-5870-4b85-940f-a47d6b891c27
 ms.openlocfilehash: ca080cfee9869985c322bf1311fabf8aff72383a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362937"
 ---
 # <a name="unorderedmultimap-class"></a>Класс unordered_multimap
 
@@ -2543,7 +2543,7 @@ unordered_multimap(
 |*Зап.*|Объект функции сравнения для сохранения.|
 |*хэш*|Объект хэш-функции для сохранения.|
 |*Bucket_count*|Минимальное количество блоков.|
-|*Справа*|Контейнер для копирования.|
+|*Right*|Контейнер для копирования.|
 |*IList*|Объект initializer_list, из которого копируются элементы.|
 
 ### <a name="remarks"></a>Примечания

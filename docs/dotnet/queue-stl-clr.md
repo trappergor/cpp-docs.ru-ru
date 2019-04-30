@@ -64,11 +64,11 @@ helpviewer_keywords:
 - value_type member [STL/CLR]
 ms.assetid: 9ea7dec3-ea98-48ff-87d0-a5afc924aaf2
 ms.openlocfilehash: 2cf0467c2b4799c2009f866b7aa22be5e421f762
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384729"
 ---
 # <a name="queue-stlclr"></a>queue (STL/CLR)
 
@@ -128,7 +128,7 @@ template<typename Value,
 |[queue::size (STL/CLR)](#size)|Подсчитывает количество элементов.|
 |[queue::to_array (STL/CLR)](#to_array)|Копирует управляемой последовательности в новый массив.|
 
-|Свойство.|Описание|
+|Свойство|Описание|
 |--------------|-----------------|
 |[queue::back_item (STL/CLR)](#back_item)|Обращается к последнему элементу.|
 |[queue::front_item (STL/CLR)](#front_item)|Обращается к первому элементу.|
@@ -262,7 +262,7 @@ back() = c
 a b x
 ```
 
-## <a name="back_item"></a> Queue::back_item (STL/CLR)
+## <a name="back_item"></a> queue::back_item (STL/CLR)
 
 Обращается к последнему элементу.
 
@@ -314,7 +314,7 @@ back_item = c
 a b x
 ```
 
-## <a name="const_reference"></a> Queue::const_reference (STL/CLR)
+## <a name="const_reference"></a> queue::const_reference (STL/CLR)
 
 Тип постоянной ссылки на элемент.
 
@@ -358,7 +358,7 @@ int main()
 a b c
 ```
 
-## <a name="container_type"></a> Queue::container_type (STL/CLR)
+## <a name="container_type"></a> queue::container_type (STL/CLR)
 
 Тип базового контейнера.
 
@@ -400,7 +400,7 @@ int main()
 a b c
 ```
 
-## <a name="difference_type"></a> Queue::difference_type (STL/CLR)
+## <a name="difference_type"></a> queue::difference_type (STL/CLR)
 
 Типы со знаком расстояния между двумя элементами.
 
@@ -564,7 +564,7 @@ front() = a
 x b c
 ```
 
-## <a name="front_item"></a> Queue::front_item (STL/CLR)
+## <a name="front_item"></a> queue::front_item (STL/CLR)
 
 Обращается к первому элементу.
 
@@ -1117,7 +1117,7 @@ size() = 2 after popping
 size() = 4 after adding 2
 ```
 
-## <a name="size_type"></a> Queue::size_type (STL/CLR)
+## <a name="size_type"></a> queue::size_type (STL/CLR)
 
 Тип расстояния со знаком между двумя элементами.
 

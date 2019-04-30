@@ -5,11 +5,11 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
 ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405161"
 ---
 # <a name="filesystemerror-class"></a>Класс filesystem_error
 
@@ -93,7 +93,7 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::What
+## <a name="what"></a> filesystem_error::what
 
 Функция-член возвращает указатель на `NTBS`, предпочтительно составлены из `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, и `mypval2.native_string()`.
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - TN002
 ms.assetid: 553fe01d-c587-4c8d-a181-3244a15c2be9
 ms.openlocfilehash: 6d64799dc17b4b3ddc5c455333b10282e4748b09
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306198"
 ---
 # <a name="tn002-persistent-object-data-format"></a>TN002: Формат данных постоянного объекта
 
@@ -50,7 +50,7 @@ ar>> pObj;        // calls ar.ReadObject(RUNTIME_CLASS(CObj))
 
 Сохранение (Вставка) и восстановление объектов (извлечении) зависит от нескольких «констант манифеста.» Ниже приведены значения, которые хранятся в двоичном формате и содержащие важные сведения в архив (Обратите внимание, что префикс «w» указывает количества 16-разрядное).
 
-|Тег|Описание:|
+|Тег|Описание|
 |---------|-----------------|
 |wNullTag|Используется для указателей объект NULL (0).|
 |wNewClassTag|Указывает, что описание класса, который следует за является новой возможностью в этом контексте архива (-1).|

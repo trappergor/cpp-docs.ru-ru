@@ -7,15 +7,15 @@ helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
 ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62315720"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>Параметром/Zc: (enable обновленные __cplusplus-макрос)
 
-**Параметром/Zc:** включает параметр компилятора  **\_ \_cplusplus** макрос препроцессора сообщить обновленное значение последних поддержка стандартов языка C++. По умолчанию Visual Studio всегда возвращает значение «199711L» для  **\_ \_cplusplus** макрос препроцессора.
+**Параметром/Zc:** включает параметр компилятора  **\_ \_cplusplus** макрос препроцессора сообщить обновленное значение последних C++ стандарты языковой поддержки. По умолчанию Visual Studio всегда возвращает значение «199711L» для  **\_ \_cplusplus** макрос препроцессора.
 
 ## <a name="syntax"></a>Синтаксис
 

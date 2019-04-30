@@ -142,11 +142,11 @@ helpviewer_keywords:
 - upper_bound function [STL/CLR]
 ms.assetid: ee2718dc-a98d-40b8-8341-593fe7d2ac15
 ms.openlocfilehash: 6011aad0ef86bc0e633687a6d8e017e9b12771c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528730"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62350836"
 ---
 # <a name="algorithm-stlclr"></a>algorithm (STL/CLR)
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция ведет себя так же, как функция стандартной библиотеки C++ `inplace_merge` Дополнительные сведения см. в разделе [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
+Эта функция ведет себя так же, как C++ функция стандартной библиотеки `inplace_merge` Дополнительные сведения см. в разделе [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge).
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 

@@ -18,11 +18,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
 ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279748"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62351538"
 ---
 # <a name="texture-class"></a>Класс texture
 
@@ -47,21 +47,21 @@ class texture;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`scalar_type`|Скалярные типы.|
 |`value_type`|Типы значений.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор текстуры](#ctor)|Инициализирует новый экземпляр класса `texture`.|
 |[~ texture деструктор](#ctor)|Уничтожает `texture` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[copy_to](#copy_to)|Копирует `texture` в место назначения, выполнив глубокое копирование.|
 |[data](#data)|Возвращает указатель ЦП на необработанные данные этой текстуры.|
@@ -73,7 +73,7 @@ class texture;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[operator()](#operator_call)|Возвращает значение элемента, который указан в параметрах.|
 |[operator\[\]](#operator_at)|Возвращает элемент, находящийся по указанному индексу.|
@@ -81,13 +81,13 @@ class texture;
 
 ### <a name="public-constants"></a>Открытые константы
 
-|name|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Ранг константа](#rank)|Получает ранг объекта `texture` объекта.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[associated_accelerator_view](#associated_accelerator_view)|Получает [accelerator_view](accelerator-view-class.md) то есть предпочтительным целевым объектом для копирования для этой текстуры.|
 |[depth_pitch](#depth_pitch)|Возвращает число байтов между каждым срезом глубины в трехмерной промежуточной текстуре ЦП.|

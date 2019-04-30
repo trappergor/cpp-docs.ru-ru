@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CMemFile [MFC], Realloc
 ms.assetid: 20e86515-e465-4f73-b2ea-e49789d63165
 ms.openlocfilehash: a57f4e245ca1e93ec0edd454a7f407aeda5beca4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304951"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64341679"
 ---
 # <a name="cmemfile-class"></a>Класс CMemFile
 
@@ -43,20 +43,20 @@ class CMemFile : public CFile
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMemFile::CMemFile](#cmemfile)|Создает объект памяти файла.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMemFile::Attach](#attach)|Присоединяет блок памяти, чтобы `CMemFile`.|
 |[CMemFile::Detach](#detach)|Отсоединяет блок памяти из `CMemFile` и возвращает указатель на блок памяти, отсоединена.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CMemFile::Alloc](#alloc)|Переопределение, чтобы изменить поведение распределения памяти.|
 |[CMemFile::Free](#free)|Переопределение для изменения поведения освобождение памяти.|

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RW2002
 ms.assetid: b1d1a49b-b50b-4b0b-9f09-c7762e2dbe8f
 ms.openlocfilehash: 4cd922fff691b524ec9d278ac5948992fc096e09
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62396797"
 ---
 # <a name="resource-compiler-error-rw2002"></a>Ошибка компилятора ресурсов RW2002
 
@@ -69,7 +69,7 @@ ms.locfileid: "51523511"
 
 1. **Ожидалось имя элемента управления класса**
 
-   `class` Поле **УПРАВЛЕНИЯ** инструкции в **диалоговое ОКНО** инструкция должна быть одной из следующих типов: кнопки, поля со СПИСКОМ, EDIT, LISTBOX, полосы ПРОКРУТКИ, СТАТИЧЕСКИМ, или определяемые пользователем. Убедитесь, что класс написано правильно.
+   `class` Поле **УПРАВЛЕНИЯ** инструкции в **диалоговое ОКНО** инструкция должна быть одной из следующих типов: КНОПКИ, поля со СПИСКОМ, EDIT, LISTBOX, полосы ПРОКРУТКИ, СТАТИЧЕСКИМ, или определяемые пользователем. Убедитесь, что класс написано правильно.
 
 1. **Ожидалось имя гарнитуры шрифта**
 
@@ -141,7 +141,7 @@ ms.locfileid: "51523511"
 
 1. **Недопустимый тип элемента управления**
 
-   Каждого оператора control в **диалоговое ОКНО** инструкция должна быть одно из следующих: ФЛАЖОК, поле со СПИСКОМ, элемент УПРАВЛЕНИЯ, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, значок, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, полосы ПРОКРУТКИ. Убедитесь, что эти операторы управления написаны правильно.
+   Каждого оператора control в **диалоговое ОКНО** инструкция должна быть одно из следующих: CHECKBOX, COMBOBOX, CONTROL, CTEXT, DEFPUSHBUTTON, EDITTEXT, GROUPBOX, ICON, LISTBOX, LTEXT, PUSHBUTTON, RADIOBUTTON, RTEXT, SCROLLBAR. Убедитесь, что эти операторы управления написаны правильно.
 
 1. **Недопустимый тип**
 

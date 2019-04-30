@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/std
 ms.assetid: b3a41cfa-0b64-485d-9e79-23407dca07ba
 ms.openlocfilehash: 5fcad060f257c3c0018cf17aeed9af34d2efce8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268308"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337405"
 ---
 # <a name="std-namespace"></a>Пространство имен std
 
@@ -19,11 +19,11 @@ ms.locfileid: "57268308"
 namespace std;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="functions"></a>Функции
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Функция make_exception_ptr](make-exception-ptr-function.md)||
 

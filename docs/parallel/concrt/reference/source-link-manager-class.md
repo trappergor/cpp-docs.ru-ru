@@ -18,11 +18,11 @@ helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
 ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337587"
 ---
 # <a name="sourcelinkmanager-class"></a>Класс source_link_manager
 
@@ -44,7 +44,7 @@ class source_link_manager;
 
 ### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`const_pointer`|Тип, предоставляющий указатель на `const` элемент `source_link_manager` объекта.|
 |`const_reference`|Тип, предоставляющий ссылку на `const` элемент хранится в `source_link_manager` объект для чтения и выполнения операций const.|
@@ -53,14 +53,14 @@ class source_link_manager;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[source_link_manager](#ctor)|Создает объект `source_link_manager`.|
 |[~ source_link_manager деструктор](#dtor)|Уничтожает `source_link_manager` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[add](#add)|Добавляет ссылку на источник `source_link_manager` объекта.|
 |[begin](#begin)|Возвращает итератор, указывающий на первый элемент в `source_link_manager` объекта.|

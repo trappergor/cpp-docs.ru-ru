@@ -6,11 +6,11 @@ f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
 ms.openlocfilehash: ca8c9229d0ef5fa654f462282f257b1684984102
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62404654"
 ---
 # <a name="platformbox-class"></a>Класс Platform::Box
 
@@ -30,7 +30,7 @@ ref class Box abstract;
 
 ### <a name="members"></a>Участники
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[Box](#ctor) | Создает объект `Box`, который может инкапсулировать значение указанного типа. |
 |[оператор поле&lt;const T&gt;^](#box-const-t) | Позволяет осуществлять преобразования-упаковки класса значений `const``T` или `enum` класса `T` в `Box<T>`. |

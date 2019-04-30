@@ -28,11 +28,11 @@ helpviewer_keywords:
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
 ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62379445"
 ---
 # <a name="chartraits-struct"></a>Структура char_traits
 
@@ -255,7 +255,7 @@ static char_type *copy(char_type* _To,
 
 ### <a name="parameters"></a>Параметры
 
-*_В*<br/>
+*_To*<br/>
 Элемент в начале строки или массива символов, предназначенного для получения скопированной последовательности символов.
 
 *_На основе*<br/>
@@ -384,7 +384,7 @@ static int_type eof();
 
 Значение, представляющее конец файла (EOF или WEOF).
 
-Стандарт C++ гласит, что это значение не должно соответствовать допустимому значению `char_type`. Компилятор Visual C++ налагает это ограничение для типа **char**, но не для типа **wchar_t**. Это демонстрируется в приведенном ниже примере.
+Стандарт C++ гласит, что это значение не должно соответствовать допустимому значению `char_type`. Визуальный элемент C++ компилятор налагает это ограничение для типа **char**, но не для типа **wchar_t**. Это демонстрируется в приведенном ниже примере.
 
 ### <a name="example"></a>Пример
 
@@ -763,7 +763,7 @@ static char_type *move(char_type* _To,
 
 ### <a name="parameters"></a>Параметры
 
-*_В*<br/>
+*_To*<br/>
 Элемент в начале строки или массива символов, предназначенного для получения скопированной последовательности символов.
 
 *_На основе*<br/>

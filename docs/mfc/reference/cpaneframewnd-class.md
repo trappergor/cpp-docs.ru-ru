@@ -133,11 +133,11 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
 ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62372911"
 ---
 # <a name="cpaneframewnd-class"></a>Класс CPaneFrameWnd
 
@@ -151,11 +151,11 @@ ms.locfileid: "57278825"
 class CPaneFrameWnd : public CWnd
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPaneFrameWnd::AddPane](#addpane)|Добавляет панель.|
 |[CPaneFrameWnd::AddRemovePaneFromGlobalList](#addremovepanefromgloballist)|Добавляет панель в глобальный список или удаляет из него.|
@@ -222,14 +222,14 @@ class CPaneFrameWnd : public CWnd
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPaneFrameWnd::OnCheckRollState](#oncheckrollstate)|Определяет, требуется ли свертывание или развертывание окна области.|
 |[CPaneFrameWnd::OnDrawBorder](#ondrawborder)|Рисует границы окна области.|
 
 ### <a name="data-members"></a>Элементы данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CPaneFrameWnd::m_bUseSaveBits](#m_busesavebits)|Указывает, следует ли регистрация класса окна со стилем класса CS_SAVEBITS.|
 

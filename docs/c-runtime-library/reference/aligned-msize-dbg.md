@@ -21,11 +21,11 @@ helpviewer_keywords:
 - _aligned_msize_dbg
 ms.assetid: f1c44af0-3f66-4033-81d1-d71d3afecba0
 ms.openlocfilehash: 054f7b88f93eef37a9a88fbb7895452f7c158716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62342039"
 ---
 # <a name="alignedmsizedbg"></a>_aligned_msize_dbg
 
@@ -60,7 +60,7 @@ size_t _aligned_msize_dbg(
 
 *Выравнивание* и *смещение* значения должны быть так же, как значения, переданные функции, выделившей блок.
 
-**_aligned_msize_dbg** является отладочной версией [_aligned_msize](aligned-msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_msize_dbg** сокращается до вызова **_aligned_msize**. Оба **_aligned_msize** и **_aligned_msize_dbg** вычисляет размер блока памяти в основной куче, но **_aligned_msize_dbg** добавляет функцию отладки: она включает в возвращаемый размер блока буферов по обеим сторонам пользовательского участка памяти.
+**_aligned_msize_dbg** является отладочной версией [_aligned_msize](aligned-msize.md) функции. Когда [_DEBUG](../../c-runtime-library/debug.md) не определен, каждый вызов **_aligned_msize_dbg** сокращается до вызова **_aligned_msize**. Оба **_aligned_msize** и **_aligned_msize_dbg** вычисляет размер блока памяти в основной куче, но **_aligned_msize_dbg** добавляет функцию отладки: Его включает в возвращаемый размер буферы с обеих сторон пользовательской части блока памяти.
 
 Эта функция проверяет свои параметры. Если *memblock* является пустым указателем или *выравнивание* не является степенью двойки, **_msize** вызывает обработчик недопустимого параметра, как описано в [проверка параметров ](../../c-runtime-library/parameter-validation.md). Если ошибка обработана, функция задает **errno** для **EINVAL** и возвращает – 1.
 

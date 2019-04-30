@@ -35,11 +35,11 @@ helpviewer_keywords:
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
 ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62411049"
 ---
 # <a name="allocator-class"></a>Класс allocator
 
@@ -77,7 +77,7 @@ class allocator
 
 Эти `Type`определяют форму, должны принимать указатели и ссылки для выделенных элементов. ( [allocator::pointer](#pointer) не обязательно так же, как `Type*` для всех объектов распределителя, даже если он содержит это очевидное определение для класса `allocator`.)
 
-**C++11 and later:** чтобы включить операции перемещения в распределитель, используйте минимальный интерфейс распределителя и реализуйте конструктор копирования, операторы == и !=, функции allocate и deallocate. Дополнительные сведения и пример см. в статье [Распределители](../standard-library/allocators.md).
+**C ++ 11 и более поздних версий:**  Чтобы включить операции перемещения в распределитель, используйте минимальный интерфейс распределителя и реализуйте конструктор копирования, == и! =, операторы, выделять и освобождать. Дополнительные сведения и пример см. в статье [Распределители](../standard-library/allocators.md).
 
 ## <a name="members"></a>Участники
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CMFCPrintPreviewToolBar class [MFC], destructor
 ms.assetid: 7b9f641b-d402-4339-8815-e5247237e7e5
 ms.openlocfilehash: ac1fba453a539c6c311e672c1b26e34a3bf81ffd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285325"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403624"
 ---
 # <a name="cmfcprintpreviewtoolbar-class"></a>Класс CMFCPrintPreviewToolBar
 
@@ -28,14 +28,14 @@ class CMFCPrintPreviewToolBar : public CMFCToolBar
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCPrintPreviewToolBar::~CMFCPrintPreviewToolBar`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |||
 |-|-|
-|Имя|Описание|
+|name|Описание|
 |`CMFCPrintPreviewToolBar::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования

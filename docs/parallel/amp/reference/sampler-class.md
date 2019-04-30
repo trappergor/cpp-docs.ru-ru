@@ -13,11 +13,11 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::sampler::graphics::filter_mode
 ms.assetid: 9a6a9807-497d-402d-b092-8c4d86275b80
 ms.openlocfilehash: 1a66e4d025a7592b78839dbe5f25f9103da41224
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62352597"
 ---
 # <a name="sampler-class"></a>Класс sampler
 
@@ -33,13 +33,13 @@ class sampler;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Образец конструктор](#ctor)|Перегружен. Создает экземпляр дискретизатора.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[get_address_mode](#get_address_mode)|Возвращает `address_mode` , связанную с объектом образца.|
 |[get_border_color](#get_border_color)|Возвращает цвет границы, который связан с объектом образца.|
@@ -47,13 +47,13 @@ class sampler;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Перегружен. Оператор присвоения.|
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[address_mode](#address_mode)|Получает режим адресации объекта `sampler` объекта.|
 |[border_color](#border_color)|Возвращает цвет границы `sampler` объекта.|

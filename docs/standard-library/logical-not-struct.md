@@ -8,11 +8,11 @@ helpviewer_keywords:
 - logical_not struct
 ms.assetid: 892db678-31da-4540-974b-17b05efc0849
 ms.openlocfilehash: 7fd554a28775a6b625332ac250a46171dd369f50
-ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57006569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413103"
 ---
 # <a name="logicalnot-struct"></a>logical_not - структура
 
@@ -42,12 +42,12 @@ struct logical_not<void>
 *Type*<br/>
 Любой тип, поддерживающий `operator!`, принимающий операнды указанного или выводимого типа.
 
-*Слева*<br/>
-Операнд операции логического отрицания. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *тип*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
+*Left*<br/>
+Операнд операции логического отрицания. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *тип*.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Результат `!Left`. Специализированный шаблон выполняет точную пересылку результата типа, возвращаемого `operator!`.
+Результат `!Left`. Специализированный шаблон выполняет точную передачу результата типа, возвращаемого `operator!`.
 
 ## <a name="example"></a>Пример
 

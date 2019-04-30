@@ -34,11 +34,11 @@ helpviewer_keywords:
 - Unicode [C++], files
 ms.assetid: c534857e-39ee-4a3f-bd26-dfe551ac96c3
 ms.openlocfilehash: 1309f991b8251bde7d614aa274d8d2e9da7a8ed3
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62333330"
 ---
 # <a name="fopens-wfopens"></a>fopen_s, _wfopen_s
 
@@ -98,7 +98,7 @@ errno_t _wfopen_s(
 
 **fopen_s** поддерживает файловые потоки Юникода. Чтобы открыть новый или существующий файл Юникода, передайте *ccs* флаг, указывающий кодировку для **fopen_s**:
 
-**fopen_s (& fp, "newfile.txt", "rw, ccs =**_кодирование_**");**
+**fopen_s(&fp, "newfile.txt", "rw, ccs=**_encoding_**");**
 
 Допустимые значения *кодирование* являются **ЮНИКОДА**, **UTF-8**, и **UTF-16LE**. Если существует значение не указано для *кодирование*, **fopen_s** использует кодировку ANSI.
 
@@ -111,7 +111,7 @@ errno_t _wfopen_s(
 
 ### <a name="encodings-used-based-on-ccs-flag-and-bom"></a>Кодирования, используемые на основе CCS-флага и метки BOM
 
-|флаг CCS|Нет метки BOM (или новый файл)|BOM: UTF-8|BOM: UTF-16|
+|флаг CCS|Нет метки BOM (или новый файл)|СПЕЦИФИКАЦИИ: UTF-8|СПЕЦИФИКАЦИИ: UTF-16|
 |----------------|----------------------------|-----------------|------------------|
 |**ЮНИКОД**|**UTF-16LE**|**UTF-8**|**UTF-16LE**|
 |**UTF-8**|**UTF-8**|**UTF-8**|**UTF-16LE**|
@@ -174,12 +174,12 @@ errno_t _wfopen_s(
 
 |Символы в *режим* строки|Эквивалентное *oflag* значение _open/_sopen|
 |-------------------------------|----------------------------------------------------|
-|**a**|**_O_WRONLY** &#124; **_O_APPEND** (обычно **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND **)|
-|**+**|**_O_RDWR** &#124; **_O_APPEND** (обычно **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
+|**a**|**_O_WRONLY** &#124; **_O_APPEND** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_APPEND**)|
+|**+**|**_O_RDWR** &#124; **_O_APPEND** (usually **_O_RDWR** &#124; **_O_APPEND** &#124; **_O_CREAT** )|
 |**r**|**_O_RDONLY**|
-|**r +**|**_O_RDWR**|
-|**w**|**_O_WRONLY** (обычно **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC **)|
-|**w +**|**_O_RDWR** (обычно **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
+|**r+**|**_O_RDWR**|
+|**w**|**_O_WRONLY** (usually **_O_WRONLY** &#124; **_O_CREAT** &#124;** _O_TRUNC**)|
+|**w +**|**_O_RDWR** (usually **_O_RDWR** &#124; **_O_CREAT** &#124; **_O_TRUNC**)|
 |**b**|**_O_BINARY**|
 |**t**|**_O_TEXT**|
 |**c**|Нет|
@@ -188,9 +188,9 @@ errno_t _wfopen_s(
 |**R**|**_O_RANDOM**|
 |**T**|**_O_SHORTLIVED**|
 |**D**|**_O_TEMPORARY**|
-|**CCS = ЮНИКОДА**|**_O_WTEXT**|
-|**CCS = UTF-8**|**_O_UTF8**|
-|**CCS = UTF-16LE**|**_O_UTF16**|
+|**ccs=UNICODE**|**_O_WTEXT**|
+|**ccs=UTF-8**|**_O_UTF8**|
+|**ccs=UTF-16LE**|**_O_UTF16**|
 
 Если вы используете **rb** режиме, не нужно будет перенести свой код и планируете считывать большое количество файлов и/или вообще не заботятся о производительности сети, сопоставленных в памяти файлов Win32 также может быть приемлемым вариантом.
 

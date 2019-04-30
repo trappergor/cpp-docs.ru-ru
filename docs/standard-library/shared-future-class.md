@@ -19,11 +19,11 @@ helpviewer_keywords:
 - std::shared_future [C++], wait_for
 - std::shared_future [C++], wait_until
 ms.openlocfilehash: 2280c17c4ce58fe06365c107ad26d646c7ae2d72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412609"
 ---
 # <a name="sharedfuture-class"></a>Класс shared_future
 
@@ -46,13 +46,13 @@ class shared_future;
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[shared_future](#shared_future)|Создает объект `shared_future`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[get](#get)|Получает результат, который хранится в *связанном асинхронном состоянии*.|
 |[допустимый](#valid)|Указывает, является ли объект не пустым.|
@@ -62,7 +62,7 @@ class shared_future;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[shared_future::operator=](#op_eq)|Назначает новое связанное асинхронное состояние.|
 
@@ -72,7 +72,7 @@ class shared_future;
 
 **Пространство имен:** std
 
-## <a name="get"></a>  shared_future::Get
+## <a name="get"></a>  shared_future::get
 
 Получает результат, который хранится в *связанном асинхронном состоянии*.
 
@@ -105,7 +105,7 @@ shared_future& operator=(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа*<br/>
+*Right*<br/>
 Объект `shared_future`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -131,7 +131,7 @@ shared_future(const shared_future& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Справа*<br/>
+*Right*<br/>
 Класс [future](../standard-library/future-class.md) или объект `shared_future`.
 
 ### <a name="remarks"></a>Примечания
@@ -142,7 +142,7 @@ shared_future(const shared_future& Right);
 
 Четвертый конструктор создает `shared_future` объект, который имеет то же связанное асинхронное состояние как *справа*.
 
-## <a name="valid"></a>  shared_future::Valid
+## <a name="valid"></a>  shared_future::valid
 
 Указывает, имеет ли объект *связанное асинхронное состояние*.
 

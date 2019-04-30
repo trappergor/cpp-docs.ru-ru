@@ -3,11 +3,11 @@ title: Графика (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
 ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405668"
 ---
 # <a name="graphics-c-amp"></a>Графика (C++ AMP)
 
@@ -263,7 +263,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 
 ## <a name="texture-view-classes"></a>Классы представления текстуры
 
-C++ AMP появилась [класс texture_view](../../parallel/amp/reference/texture-view-class.md) в Visual Studio 2013. Представления текстуры поддерживают те же типы текселей и ранги, что [класс texture](../../parallel/amp/reference/texture-class.md), но в отличие от текстур, они предоставляют доступ к дополнительным функциям оборудования, таких как дискретизация текстур и MIP-карты. Представления текстуры поддерживают доступ только для чтения, только для записи и для чтения и записи к соответствующим данным текстуры.
+C++AMP появилась [класс texture_view](../../parallel/amp/reference/texture-view-class.md) в Visual Studio 2013. Представления текстуры поддерживают те же типы текселей и ранги, что [класс texture](../../parallel/amp/reference/texture-class.md), но в отличие от текстур, они предоставляют доступ к дополнительным функциям оборудования, таких как дискретизация текстур и MIP-карты. Представления текстуры поддерживают доступ только для чтения, только для записи и для чтения и записи к соответствующим данным текстуры.
 
 - Доступ только для чтения предоставляется специализацией шаблона `texture_view<const T, N>`, которая поддерживает элементы с 1, 2 или 4 компонентами, дискретизацию текстур и динамический доступ к диапазону уровней MIP-карты, определяемых при создании экземпляра представления.
 

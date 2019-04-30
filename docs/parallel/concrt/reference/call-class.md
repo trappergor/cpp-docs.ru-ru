@@ -14,11 +14,11 @@ helpviewer_keywords:
 - call class
 ms.assetid: 1521970a-1e9c-4b0c-a681-d18e40976f49
 ms.openlocfilehash: 9651a74fdb07ad96d6f01edb6818ea48d697c37c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337912"
 ---
 # <a name="call-class"></a>Класс call
 
@@ -39,18 +39,18 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 *_FunctorType*<br/>
 Сигнатура функции, которые могут принимать этот блок.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Вызов](#ctor)|Перегружен. Создает блок обмена сообщениями `call` .|
 |[~ вызова деструктора](#dtor)|Уничтожает `call` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[process_input_messages](#process_input_messages)|Выполняет функцию вызов для входящих сообщений.|
 |[process_message](#process_message)|Обрабатывает сообщение, которое ранее было принято данным `call` блок обмена сообщениями.|

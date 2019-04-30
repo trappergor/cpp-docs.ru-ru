@@ -99,11 +99,11 @@ helpviewer_keywords:
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
 ms.openlocfilehash: d990efb7d4c363b8d8e38f42f9edac7eea0a3882
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522536"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62413220"
 ---
 # <a name="list-class"></a>Класс list
 
@@ -1275,7 +1275,7 @@ list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*Al*|Класс распределителя для использования с данным объектом.|
 |*Количество*|Количество элементов в создаваемом списке.|
 |*Val*|Значение элементов в списке.|
-|*Справа*|Список, для которого создаваемый список станет копией.|
+|*Right*|Список, для которого создаваемый список станет копией.|
 |*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
 |*последний*|Положение первого элемента после диапазона копируемых элементов.|
 |*IList*|Список initializer_list с элементами, которые необходимо скопировать.|

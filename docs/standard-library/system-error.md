@@ -8,11 +8,11 @@ helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
 ms.openlocfilehash: 9bba893f63ca935e0feeb891faa4e141e1958306
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58172989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62412102"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
@@ -33,14 +33,14 @@ ms.locfileid: "58172989"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[make_error_code](../standard-library/system-error-functions.md#make_error_code)|Создает объект `error_code`.|
 |[make_error_condition](../standard-library/system-error-functions.md#make_error_condition)|Создает объект `error_condition`.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator==](../standard-library/system-error-operators.md#op_eq_eq)|Проверяет равенство объекта слева от оператора объекту справа от оператора.|
 |[operator!=](../standard-library/system-error-operators.md#op_neq)|Проверяет неравенство объекта слева от оператора объекту справа от оператора.|

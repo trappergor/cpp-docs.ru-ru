@@ -10,11 +10,11 @@ helpviewer_keywords:
 - await enable coroutine support [C++]
 ms.assetid: 302c8e69-09b6-4c58-bcdd-0a6a8713a8df
 ms.openlocfilehash: c0c8c0183c356900ba8f95d39e427d56eb1ec96b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809526"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62295010"
 ---
 # <a name="await-enable-coroutine-support"></a>/ await (Включение поддержки сопрограмм)
 
@@ -26,7 +26,7 @@ ms.locfileid: "57809526"
 
 ## <a name="remarks"></a>Примечания
 
-**/ Await** параметр компилятора включает поддержку компилятора для соподпрограмм C++ и ключевые слова **co_await**, **co_yield**, и **co_return**. По умолчанию она отключена. Сведения о поддержке сопрограммы в Visual Studio, см. в разделе [блоге команды разработчиков Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Дополнительные сведения о предложении standard сопрограммы см. в разделе [N4628 рабочего проекта, технические спецификации для расширения C++ для сопрограммы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).
+**/ Await** параметр компилятора включает поддержку компилятора для C++ сопрограммы и ключевые слова **co_await**, **co_yield**, и **co_return**. По умолчанию она отключена. Сведения о поддержке сопрограммы в Visual Studio, см. в разделе [блоге команды разработчиков Visual Studio](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/). Дополнительные сведения о предложении standard сопрограммы см. в разделе [N4628 рабочего проекта, технические спецификации для расширения C++ для сопрограммы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf).
 
 **/ Await** параметр доступно в Visual Studio 2015.
 

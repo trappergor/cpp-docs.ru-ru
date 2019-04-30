@@ -14,11 +14,11 @@ helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
 ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299300"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62337197"
 ---
 # <a name="structuredtaskgroup-class"></a>Класс structured_task_group
 
@@ -30,18 +30,18 @@ ms.locfileid: "57299300"
 class structured_task_group;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[structured_task_group](#ctor)|Перегружен. Создает новый `structured_task_group` объекта.|
 |[~ structured_task_group деструктор](#dtor)|Уничтожает объект `structured_task_group`. Вы должны вызвать либо метод `wait` или `run_and_wait` метода объекта до выполнения деструктора, если деструктор не выполняется в результате использования стека из-за исключения.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Отмена](#cancel)|Делает гарантируется и осуществляется попытка отменить поддерево с корнем в эту группу задач работы. Все задачи, запланированные в группе задач отменяются транзитивно, если это возможно.|
 |[is_canceling](#is_canceling)|Сообщает вызывающей стороне, находится ли группа задач состоянии отмены. Это не обязательно означает, что `cancel` метод был вызван для `structured_task_group` объекта (хотя это определенно позволяет этот метод для возврата **true**). Может оказаться так, `structured_task_group` объекта выполняется встроено и в группу задач вверх в дереве рабочего была отменена. В случаях, например сред, среда выполнения может определить заранее, что отмена будет передаваться через этот `structured_task_group` объекта, **true** будет возвращено.|

@@ -18,13 +18,13 @@ helpviewer_keywords:
 - assemblies [C++], pure code
 ms.assetid: 9050e110-fa11-4356-b56c-665187ff871c
 ms.openlocfilehash: 66f3b5a33791d20297cde6e6223ba65189a99682
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62384718"
 ---
-# <a name="pure-and-verifiable-code-ccli"></a>Чистый и проверяемый код (C + +/ CLI)
+# <a name="pure-and-verifiable-code-ccli"></a>Чистый и проверяемый код (C++выполняет)
 
 Для программирования .NET, Visual C++ в Visual Studio 2017 поддерживает создание смешанных сборок с помощью [/CLR (компиляция CLR)](../build/reference/clr-common-language-runtime-compilation.md) параметр компилятора. **/CLR: pure** и **CLR: safe** параметры признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017. Если ваш код должен быть безопасным или проверяемых, то мы рекомендуем портировать его с C#.
 

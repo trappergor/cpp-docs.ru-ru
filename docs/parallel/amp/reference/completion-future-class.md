@@ -14,11 +14,11 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
 ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405577"
 ---
 # <a name="completionfuture-class"></a>Класс completion_future
 
@@ -30,18 +30,18 @@ ms.locfileid: "57272923"
 class completion_future;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор completion_future](#ctor)|Инициализирует новый экземпляр класса `completion_future`.|
 |[~ completion_future деструктор](#dtor)|Уничтожает `completion_future` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[get](#get)|Ожидает, пока не завершится соответствующая асинхронная операция.|
 |[Затем](#then)|Добавляет объект функции обратного вызова для `completion_future` объект для выполнения после соответствующая асинхронная операция завершения выполнения.|
@@ -53,7 +53,7 @@ class completion_future;
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[оператор std::shared_future\<void >](#operator_shared_future)|Неявно преобразует `completion_future` объект `std::shared_future` объекта.|
 |[оператор=](#operator_eq)|Копирует содержимое указанного объекта `completion_future` в данный объект.|
@@ -91,7 +91,7 @@ completion_future(
 
 ### <a name="overloads-list"></a>Список перегрузок
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`completion_future();`|Инициализирует новый экземпляр класса `completion_future` класса|
 |`completion_future(const completion_future& _Other);`|Инициализирует новый экземпляр класса `completion_future` путем копирования конструктором.|
@@ -143,7 +143,7 @@ completion_future&  operator= (completion_future&& _Other );
 
 ## <a name="overloads-list"></a>Список перегрузок
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`completion_future& operator=(const completion_future& _Other);`|Копирует содержимое указанного объекта `completion_future` объекта в данный помощи глубокого копирования.|
 |`completion_future& operator=(completion_future&& _Other);`|Копирует содержимое указанного объекта `completion_future` объекта в данный помощи присваивания с перемещением.|

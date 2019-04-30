@@ -57,11 +57,11 @@ helpviewer_keywords:
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
 ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559094"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62353843"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp, _wcsicmp, _mbsicmp, _stricmp_l, _wcsicmp_l, _mbsicmp_l
 
@@ -141,7 +141,7 @@ int _mbsicmp_l(
 
 **_wcsicmp** и **wcscmp** ведут себя одинаково, за исключением случаев, **wcscmp** не выполняет преобразование аргументов в нижний регистр перед их сравнением. **_mbsicmp** и **_mbscmp** ведут себя одинаково, за исключением случаев, **_mbscmp** не выполняет преобразование аргументов в нижний регистр перед их сравнением.
 
-Вам потребуется вызвать [setlocale](setlocale-wsetlocale.md) для **_wcsicmp** для работы с символами Latin 1. По умолчанию действует языковой стандарт C, таким образом, например, ä не будет считаться равным Ä. Вызовите **setlocale** с любым языковым стандартом, отличным от C, перед вызовом **_wcsicmp**. В следующем образце показано как **_wcsicmp** чувствительна к языкового стандарта:
+Вам потребуется вызвать [setlocale](setlocale-wsetlocale.md) для **_wcsicmp** для работы с символами Latin 1. Языковой стандарт C является действует по умолчанию, таким образом, к примеру, д будет не считаются равными Д. Вызовите **setlocale** с любым языковым стандартом, отличным от C, перед вызовом **_wcsicmp**. В следующем образце показано как **_wcsicmp** чувствительна к языкового стандарта:
 
 ```C
 // crt_stricmp_locale.c

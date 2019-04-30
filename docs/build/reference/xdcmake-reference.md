@@ -7,11 +7,11 @@ helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
 ms.openlocfilehash: 097c105e005a3c734ba86139ed3b4b6ecdcf49d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316396"
 ---
 # <a name="xdcmake-reference"></a>Справочник по XDCMake
 
@@ -40,7 +40,7 @@ xdcmake `input_filename options`
 *options*<br/>
 От нуля до нескольких следующих параметров:
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |------------|-----------------|
 |/?, /help|Отображает справку для xdcmake.exe.|
 |/assembly:*имя_файла*|Позволяет задать значение тега \<assembly> в XML-файле.  По умолчанию значение тега \<assembly> совпадает с именем XML-файла.|

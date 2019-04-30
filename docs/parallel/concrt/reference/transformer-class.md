@@ -19,11 +19,11 @@ helpviewer_keywords:
 - transformer class
 ms.assetid: eea71925-7043-4a92-bfd4-dbc0ece5d081
 ms.openlocfilehash: c07017539bc0125e9e8c27e208480a50ccc7a719
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299183"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62408073"
 ---
 # <a name="transformer-class"></a>Класс transformer
 
@@ -49,14 +49,14 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[transformer](#ctor)|Перегружен. Создает блок обмена сообщениями `transformer` .|
 |[~ transformer деструктор](#dtor)|Уничтожает `transformer` блок обмена сообщениями.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[accept_message](#accept_message)|Принимает сообщение, предложенное это `transformer` блок обмена сообщениями, передача вызывающему объекту.|
 |[consume_message](#consume_message)|Получает сообщение, было предложено `transformer` и зарезервированного целевым объектом, передавая владение вызывающему объекту.|

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
 ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62394601"
 ---
 # <a name="cancellation-in-the-ppl"></a>Отмена в библиотеке параллельных шаблонов
 
@@ -242,7 +242,7 @@ Caught 50
 
 ## <a name="related-topics"></a>См. также
 
-|Заголовок|Описание:|
+|Заголовок|Описание|
 |-----------|-----------------|
 |[Практическое руководство. Использование отмены для выхода из параллельного цикла](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|Показывается, как использовать отмену для реализации алгоритма параллельного поиска.|
 |[Практическое руководство. Использование обработки исключений для выхода из параллельного цикла](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|Здесь приводятся способы использования класса `task_group` для записи алгоритма поиска для базовой структуры дерева.|
@@ -251,7 +251,7 @@ Caught 50
 |[Параллельные алгоритмы](../../parallel/concrt/parallel-algorithms.md)|В этом разделе описываются параллельные алгоритмы, одновременно выполняющие работу с коллекциями данных.|
 |[Библиотека параллельных шаблонов (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|Общие сведения о библиотеке параллельных задач.|
 
-## <a name="reference"></a>Ссылки
+## <a name="reference"></a>Ссылка
 
 [Класс task (среда выполнения с параллелизмом)](../../parallel/concrt/reference/task-class.md)
 

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - WinInet classes [MFC], HTTP
 ms.assetid: f86552e8-8acd-4b23-bdc5-0c3a247ebd74
 ms.openlocfilehash: 59b585d3e6b8c9f13c585f5a712d33abd6123f67
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306968"
 ---
 # <a name="steps-in-a-typical-http-client-application"></a>Шаги для организации типичного клиентского приложения HTTP
 
 В следующей таблице представлены действия, можно выполнять в типичном приложении клиента HTTP:
 
-|Ваша цель|Выполняемые действия|Эффекты|
+|Ваша цель|Выполняемые действия|Произведенный эффект|
 |---------------|----------------------|-------------|
 |Начните сеанс HTTP.|Создание [CInternetSession](../mfc/reference/cinternetsession-class.md) объекта.|Инициализирует WinInet и подключается к серверу.|
 |Подключение к HTTP-сервера.|Используйте [CInternetSession::GetHttpConnection](../mfc/reference/cinternetsession-class.md#gethttpconnection).|Возвращает [CHttpConnection](../mfc/reference/chttpconnection-class.md) объекта.|

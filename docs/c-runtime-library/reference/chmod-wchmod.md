@@ -30,11 +30,11 @@ helpviewer_keywords:
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
 ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62348475"
 ---
 # <a name="chmod-wchmod"></a>_chmod, _wchmod
 
@@ -67,7 +67,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 |-|-|
 | **\_S\_IREAD** | Разрешено только чтение. |
 | **\_S\_IWRITE** | Разрешена запись. (Если действует, разрешает чтение и запись.) |
-| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | Разрешены чтение и запись. |
+| **\_S\_IREAD** &#124; **\_S\_IWRITE** | Разрешены чтение и запись. |
 
 Если заданы обе константы, они объединяются побитовым или оператор (**\|**). Если разрешение на запись не предоставлено, файл остается доступным только для чтения. Обратите внимание на то, что все файлы всегда доступны для чтения; предоставить разрешение только на запись нельзя. Таким образом, режимы **_S_IWRITE** и **_S_IREAD** \| **_S_IWRITE** эквивалентны.
 
@@ -77,7 +77,7 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ### <a name="generic-text-routine-mappings"></a>Сопоставления подпрограмм обработки обычного текста
 
-|Подпрограмма Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
+|Процедура Tchar.h|_UNICODE и _MBCS не определены|_MBCS определено|_UNICODE определено|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
 

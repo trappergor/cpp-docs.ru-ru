@@ -9,11 +9,11 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
 ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405421"
 ---
 # <a name="writeonlytextureview-class"></a>Класс writeonly_texture_view
 
@@ -43,37 +43,37 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 *_Rank*<br/>
 Ранг текстуры.
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
-### <a name="public-typedefs"></a>Общедоступные Typedefs
+### <a name="public-typedefs"></a>Общедоступные определения типов
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`scalar_type`||
 |`value_type`|Тип элементов в текстуре.|
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Конструктор writeonly_texture_view](#ctor)|Инициализирует новый экземпляр класса `writeonly_texture_view`.|
 |[~ writeonly_texture_view деструктор](#ctor)|Уничтожает `writeonly_texture_view` объекта.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[set](#set)|Задает значение элемента по указанному индексу.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[оператор=](#operator_eq)|Копирует указанный `writeonly_texture_view` в данный объект.|
 
 ### <a name="public-constants"></a>Открытые константы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[Ранг константа](#rank)|Получает ранг объекта `writeonly_texture_view` объекта.|
 

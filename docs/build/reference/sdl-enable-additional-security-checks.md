@@ -5,11 +5,11 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
 ms.openlocfilehash: 0618b796d492395c3e0e5413047ac0260082baff
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814206"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62318450"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (включение дополнительных проверок безопасности)
 

@@ -41,11 +41,11 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
 ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294568"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "64344225"
 ---
 # <a name="cmfcpropertysheet-class"></a>Класс CMFCPropertySheet
 
@@ -57,18 +57,18 @@ ms.locfileid: "57294568"
 class CMFCPropertySheet : public CPropertySheet
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertySheet::CMFCPropertySheet](#cmfcpropertysheet)|Создает объект `CMFCPropertySheet`.|
 |`CMFCPropertySheet::~CMFCPropertySheet`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CMFCPropertySheet::AddPage](#addpage)|Добавляет страницу в таблицу свойств.|
 |[CMFCPropertySheet::AddPageToTree](#addpagetotree)|Добавляет новую страницу свойств в элемент управления «Дерево».|
@@ -508,7 +508,7 @@ void SetLook(
 
 В следующей таблице перечислены значения перечисления, которые могут быть указаны в *выглядеть* параметра.
 
-|Значение|Описание:|
+|Значение|Описание|
 |-----------|-----------------|
 |`CMFCPropertySheet::PropSheetLook_Tabs`|(По умолчанию) Отображает вкладки для каждой страницы свойств. Вкладки отображаются в верхней части страницы свойств и помещаются в стек, если есть несколько вкладок, чем может поместиться в одну строку.|
 |`CMFCPropertySheet::PropSheetLook_OutlookBar`|Отображает список кнопок навигации в стиле Microsoft Outlook линейки с левой стороны страницы свойств. Каждой кнопке в списке соответствует страницы свойств. Если доступны дополнительные кнопки, чем может поместиться в видимой части списка, платформа отображает стрелки прокрутки.|

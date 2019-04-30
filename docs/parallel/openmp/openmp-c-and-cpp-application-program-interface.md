@@ -3,11 +3,11 @@ title: API OpenMP C и C++
 ms.date: 03/20/2019
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
 ms.openlocfilehash: dc3ab50059f16abc2cc6148395ef6982e5f85449
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124841"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62362703"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>API OpenMP C и C++
 
@@ -25,7 +25,7 @@ Review Board об авторских правах 1997-2002 OpenMP архите�
 
 1. [Директивы](2-directives.md)
 
-1. [Функции библиотеки времени выполнения](3-run-time-library-functions.md)
+1. [Функции библиотеки среды выполнения](3-run-time-library-functions.md)
 
 1. [Переменные среды](4-environment-variables.md)
 
@@ -33,15 +33,15 @@ Review Board об авторских правах 1997-2002 OpenMP архите�
 
 О. [Примеры](a-examples.md)
 
-Б. [Заглушки для функций библиотеки времени выполнения](b-stubs-for-run-time-library-functions.md)
+Б. [Заглушки для функций библиотеки среды выполнения](b-stubs-for-run-time-library-functions.md)
 
 В. [Грамматика OpenMP C и C++](c-openmp-c-and-cpp-grammar.md)
 
-Г. [Предложения schedule](d-using-the-schedule-clause.md)
+Г. [Предложение schedule](d-using-the-schedule-clause.md)
 
-Д. [Поведения, определяемые реализацией в OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
+Д. [Поведения, определяемые реализацией, в OpenMP C/C++](e-implementation-defined-behaviors-in-openmp-c-cpp.md)
 
-Е. [Новые функции и разъяснения в версии 2.0](f-new-features-and-clarifications-in-version-2-0.md)
+Е. [Новые функции и разъяснения в версии 2.0](f-new-features-and-clarifications-in-version-2-0.md)
 
 ## <a name="see-also"></a>См. также
 
