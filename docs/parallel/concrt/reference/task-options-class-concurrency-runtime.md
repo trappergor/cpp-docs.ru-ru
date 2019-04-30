@@ -5,11 +5,11 @@ f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
 ms.openlocfilehash: c832ce759c556765fa412b2ef77333bc6612b8c3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62407878"
 ---
 # <a name="taskoptions-class-concurrency-runtime"></a>Класс task_options (среда выполнения с параллелизмом)
 
@@ -21,17 +21,17 @@ ms.locfileid: "57265214"
 class task_options;
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[(среда выполнения с параллелизмом) конструктор task_options::task_options](#ctor)|Перегружен. Заданный по умолчанию список параметров создания задачи|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[task_options::get_cancellation_token метод (среда выполнения с параллелизмом)](#get_cancellation_token)|Возвращает токен отмены|
 |[task_options::get_continuation_context метод (среда выполнения с параллелизмом)](#get_continuation_context)|Возвращает контекст продолжения|

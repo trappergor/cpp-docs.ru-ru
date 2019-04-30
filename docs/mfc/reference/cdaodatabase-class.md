@@ -59,11 +59,11 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
 ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399847"
 ---
 # <a name="cdaodatabase-class"></a>Класс CDaoDatabase
 
@@ -79,13 +79,13 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoDatabase::CDaoDatabase](#cdaodatabase)|Создает объект `CDaoDatabase`. Вызовите `Open` подключить объект к базе данных.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание|
+|name|Описание|
 |----------|-----------------|
 |[CDaoDatabase::CanTransact](#cantransact)|Возвращает ненулевое значение, если база данных поддерживает транзакции.|
 |[CDaoDatabase::CanUpdate](#canupdate)|Возвращает ненулевое значение, если `CDaoDatabase` объекта является обновляемым (не только для чтения).|
@@ -113,7 +113,7 @@ class CDaoDatabase : public CObject
 
 ### <a name="public-data-members"></a>Открытые члены данных
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |[CDaoDatabase::m_pDAODatabase](#m_pdaodatabase)|Указатель на базовый объект базы данных DAO.|
 |[CDaoDatabase::m_pWorkspace](#m_pworkspace)|Указатель на [CDaoWorkspace](../../mfc/reference/cdaoworkspace-class.md) объект, который содержит базу данных и определяет его место транзакций.|

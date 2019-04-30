@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CMFCBaseToolBar [MFC], OnAfterChangeParent
 ms.assetid: 5d79206d-55e4-46f8-b1b8-042e34d7f9da
 ms.openlocfilehash: 7a6ccdaf3d78b9973505dd4e90ca76f671fce889
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403871"
 ---
 # <a name="cmfcbasetoolbar-class"></a>Класс CMFCBaseToolBar
 
@@ -29,18 +29,18 @@ ms.locfileid: "57265383"
 class CMFCBaseToolBar : public CPane
 ```
 
-## <a name="members"></a>Члены
+## <a name="members"></a>Участники
 
 ### <a name="public-constructors"></a>Открытые конструкторы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCBaseToolBar::CMFCBaseToolBar`|Конструктор по умолчанию.|
 |`CMFCBaseToolBar::~CMFCBaseToolBar`|Деструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
-|Имя|Описание:|
+|name|Описание|
 |----------|-----------------|
 |`CMFCBaseToolBar::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
 |[CMFCBaseToolBar::GetDockingMode](#getdockingmode)|Возвращает режим закрепления. (Переопределяет [CBasePane::GetDockingMode](../../mfc/reference/cbasepane-class.md#getdockingmode).)|

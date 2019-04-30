@@ -89,16 +89,16 @@ helpviewer_keywords:
 - stdext::hash_map::value_comp
 ms.assetid: 40879dfc-51ba-4a59-9f9e-26208de568a8
 ms.openlocfilehash: da046a467333fba9aa106b97e21cf583c8cef75d
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62405070"
 ---
 # <a name="hashmap-class"></a>Класс hash_map
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Быстро сохраняет и возвращает данные из коллекции, в которой каждый элемент является парой, содержащей уникальный ключ сортировки и связанное с ним значение.
 
@@ -121,7 +121,7 @@ class hash_map
 Тип данных элемента для сохранения в hash_map.
 
 *Признаки*<br/>
-Тип, который включает два объекта-функции, один из классов compare, который может сравнить значения двух элементов как ключей сортировки, чтобы определить их относительный порядок, и хэш-функцию, которая является унарным предикатом, который сопоставляет значения ключей элементов с целыми числами без знака типа `size_t`. Этот аргумент является необязательным, а hash_compare<`Key`, less<`Key`> > является значением по умолчанию.
+Тип, который включает два объекта-функции, один из классов compare, который может сравнить значения двух элементов как ключей сортировки, чтобы определить их относительный порядок, и хэш-функцию, которая является унарным предикатом, который сопоставляет значения ключей элементов с целыми числами без знака типа `size_t`. Этот аргумент является необязательным, а hash_compare <`Key`, less <`Key`>> значение по умолчанию.
 
 *Распределитель*<br/>
 Тип, представляющий сохраненный объект распределителя, который инкапсулирует сведения о выделении и освобождении памяти для hash_map. Этот аргумент является необязательным, а значение по умолчанию — allocator<pair <const `Key`, `Type`>>.
@@ -158,13 +158,13 @@ hash_map:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание:|
+|Конструктор|Описание|
 |-|-|
 |[hash_map](#hash_map)|Создает контейнер `hash_map`, который является пустым или копией части или целого другого контейнера `hash_map`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание:|
+|Имя типа|Описание|
 |-|-|
 |[allocator_type](#allocator_type)|Тип, представляющий класс `allocator` для объекта `hash_map`.|
 |[const_iterator](#const_iterator)|Тип, предоставляющий двунаправленный итератор, который может считывать тот или иной элемент `const` в контейнере `hash_map`.|
@@ -184,7 +184,7 @@ hash_map:
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание:|
+|Функция-член|Описание|
 |-|-|
 |[at](#at)|Находит элемент в `hash_map` с указанным значением ключа.|
 |[begin](#begin)|Возвращает итератор, обращающийся к первый элемент в контейнере `hash_map`.|
@@ -215,7 +215,7 @@ hash_map:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание:|
+|Оператор|Описание|
 |-|-|
 |[operator&#91;&#93;](#op_at)|Вставляет элемент в `hash_map` с заданным значением ключа.|
 |[hash_map::operator=](#op_eq)|Заменяет элементы `hash_map` копией другого `hash_map`.|
@@ -229,7 +229,7 @@ hash_map:
 ## <a name="allocator_type"></a>  hash_map::allocator_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, представляющий класс распределителя для объекта hash_map.
 
@@ -244,7 +244,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::allo
 ## <a name="at"></a>  hash_map::at
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Находит элемент в hash_map с указанным значением ключа.
 
@@ -256,7 +256,7 @@ const Type& at(const Key& key) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*key*|Значение ключа элемента, который требуется найти.|
 
@@ -298,7 +298,7 @@ int main( )
 ## <a name="begin"></a>  hash_map::begin
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, адресующий первый элемент в hash_map.
 
@@ -359,7 +359,7 @@ The first element of hm1 is now 1.
 ## <a name="cbegin"></a>  hash_map::cbegin
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор const, адресующий первый элемент в hash_map.
 
@@ -403,7 +403,7 @@ The first element of hm1 is 2.
 ## <a name="cend"></a>  hash_map::cend
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор const, который обращается к месту, следующему за последним элементом в hash_map.
 
@@ -454,7 +454,7 @@ The value of last element of hm1 is 30.
 ## <a name="clear"></a>  hash_map::clear
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Стирает все элементы в объекте hash_map.
 
@@ -504,7 +504,7 @@ The size of the hash_map after clearing is 0.
 ## <a name="const_iterator"></a>  hash_map::const_iterator
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий двунаправленный итератор, который может читать элемент **const** в hash_map.
 
@@ -529,7 +529,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="const_pointer"></a>  hash_map::const_pointer
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий указатель на элемент **const** в hash_map.
 
@@ -546,7 +546,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::co
 ## <a name="const_reference"></a>  hash_map::const_reference
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий ссылку на элемент **const**, который хранится в hash_map, для чтения и выполнения операций **const**.
 
@@ -602,7 +602,7 @@ The data value of the first element in the hash_map is 10.
 ## <a name="const_reverse_iterator"></a>  hash_map::const_reverse_iterator
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий двунаправленный итератор, который может читать любой элемент **const** в hash_map.
 
@@ -627,7 +627,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::cons
 ## <a name="count"></a>  hash_map::count
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает число элементов в объекте hash_map, ключ которого совпадает с ключом, заданным параметром.
 
@@ -699,7 +699,7 @@ The number of elements in hm1 with a sort key of 3 is: 0.
 ## <a name="crbegin"></a>  hash_map::crbegin
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор const, указывающий на первый элемент в обратном hash_map.
 
@@ -751,7 +751,7 @@ The first element of the reversed hash_map hm1 is 3.
 ## <a name="crend"></a>  hash_map::crend
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор const, который обращается к месту, следующему за последним элементом в обращенном hash_map.
 
@@ -806,7 +806,7 @@ The last element of the reversed hash_map hm1 is 3.
 ## <a name="difference_type"></a>  hash_map::difference_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип целого числа со знаком, пригодный для представления количества элементов в hash_map в диапазоне между элементами, на которые указывают итераторы.
 
@@ -876,7 +876,7 @@ The values of the mapped elements are: 10 20 20.
 ## <a name="emplace"></a>  hash_map::emplace
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Вставляет созданный на месте элемент в hash_map.
 
@@ -889,7 +889,7 @@ emplace(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 
@@ -935,7 +935,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="emplace_hint"></a>  hash_map::emplace_hint
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Вставляет созданный на месте элемент в hash_map с подсказкой о размещении.
 
@@ -948,7 +948,7 @@ iterator emplace_hint(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение, используемое для перемещения, создает элемент для вставки в [hash_map](../standard-library/hash-map-class.md), кроме случаев, когда `hash_map` уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -995,7 +995,7 @@ After the emplace insertion, hm1 contains:
 ## <a name="empty"></a>  hash_map::empty
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Проверяет, что hash_map пуст.
 
@@ -1046,7 +1046,7 @@ The hash_map hm2 is empty.
 ## <a name="end"></a>  hash_map::end
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, который обращается к месту, следующему за последним элементом в hash_map.
 
@@ -1117,7 +1117,7 @@ The value of last element of hm1 is now 20.
 ## <a name="equal_range"></a>  hash_map::equal_range
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает пару итераторов соответственно на первый элемент в hash_map с ключом, который больше, чем указанный ключ, и на первый элемент в hash_map с ключом, который больше или равен данному ключу.
 
@@ -1204,7 +1204,7 @@ The hash_map hm1 doesn't have an element with a key less than 40.
 ## <a name="erase"></a>  hash_map::erase
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Удаляет элемент или диапазон элементов в объекте hash_map с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1328,7 +1328,7 @@ of the 2nd element is deleted, the hash_map hm3 is: 0 3.
 ## <a name="find"></a>  hash_map::find
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, адресующий расположение элемента в hash_map с ключом, эквивалентным указанному ключу.
 
@@ -1407,7 +1407,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="get_allocator"></a>  hash_map::get_allocator
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает копию объекта-распределителя, используемого для создания hash_map.
 
@@ -1483,7 +1483,7 @@ int main( )
 ## <a name="hash_map"></a>  hash_map::hash_map
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Создает hash_map, который пуст или является копией части или целого другого hash_map.
 
@@ -1533,11 +1533,11 @@ hash_map(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Al*|Класс распределителя памяти для данного объекта hash_map, по умолчанию — `Allocator`.|
 |*Зап.*|Функция сравнения типа const `Traits` используется для упорядочения элементов в hash_map, чье значение по умолчанию — `hash_compare`.|
-|*Справа*|hash_map, для которой создаваемая схема должна стать копией.|
+|*Right*|hash_map, для которой создаваемая схема должна стать копией.|
 |*Первый*|Положение первого элемента в диапазоне копируемых элементов.|
 |*последний*|Положение первого элемента после диапазона копируемых элементов.|
 |*IList*|initializer_list|
@@ -1561,7 +1561,7 @@ hash_map(
 ## <a name="insert"></a>  hash_map::insert
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Вставляет элемент или диапазон элементов в hash_map.
 
@@ -1591,7 +1591,7 @@ iterator insert(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*Val*|Значение элемента для вставки в hash_map, кроме случаев, когда hash_map уже содержит этот элемент (или, в более общем смысле, элемент, ключ которого эквивалентно упорядочен).|
 |*_Where*|Подсказка о месте начала поиска правильной точки вставки.|
@@ -1727,7 +1727,7 @@ After the move insertion, hm4 contains:
 ## <a name="iterator"></a>  hash_map::iterator
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий двунаправленный итератор, который может считывать или изменять любой элемент в hash_map.
 
@@ -1752,7 +1752,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::iter
 ## <a name="key_comp"></a>  hash_map::key_comp
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Извлекает копию объекта сравнения, который используется для упорядочивания ключей в hash_map.
 
@@ -1828,7 +1828,7 @@ int main( )
 ## <a name="key_compare"></a>  hash_map::key_compare
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий объект функции, который может сравнить два ключа сортировки для определения относительного порядка двух элементов в схеме.
 
@@ -1849,7 +1849,7 @@ typedef Traits key_compare;
 ## <a name="key_type"></a>  hash_map::key_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип описывает объект ключа сортировки, составляющий каждый элемент в hash_map.
 
@@ -1870,7 +1870,7 @@ typedef Key key_type;
 ## <a name="lower_bound"></a>  hash_map::lower_bound
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, указывающий на первый элемент в hash_map со значением ключа, которое больше или равно значению указанного ключа.
 
@@ -1947,7 +1947,7 @@ The element of hm1 with a key matching that of the last element is: 30.
 ## <a name="mapped_type"></a>  hash_map::mapped_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, представляющий тип данных, хранящийся в hash_map.
 
@@ -1968,7 +1968,7 @@ typedef Type mapped_type;
 ## <a name="max_size"></a>  hash_map::max_size
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает максимальную длину hash_map.
 
@@ -2007,7 +2007,7 @@ int main( )
 ## <a name="op_at"></a>  hash_map::operator[]
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Вставляет элемент в `hash_map` с заданным значением ключа.
 
@@ -2019,7 +2019,7 @@ Type& operator[](Key&& key);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*key*|Ключевое значение элемента для вставки.|
 
@@ -2104,7 +2104,7 @@ int main( )
 ## <a name="op_eq"></a>  hash_map::operator=
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Заменяет элементы hash_map копией другого hash_map.
 
@@ -2116,7 +2116,7 @@ hash_map& operator=(hash_map&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание:|
+|Параметр|Описание|
 |-|-|
 |*right*|[Класс hash_map](../standard-library/hash-map-class.md), который копируется в `hash_map`.|
 
@@ -2165,7 +2165,7 @@ int main( )
 ## <a name="pointer"></a>  hash_map::pointer
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий указатель на элемент в hash_map.
 
@@ -2182,7 +2182,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::po
 ## <a name="rbegin"></a>  hash_map::rbegin
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, адресующий первый элемент в обратном hash_map.
 
@@ -2266,7 +2266,7 @@ After the erasure, the first element in the reversed hash_map is 2.
 ## <a name="reference"></a>  hash_map::reference
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий ссылку на элемент, хранящийся в hash_map.
 
@@ -2329,7 +2329,7 @@ The modified data value of first element is 15.
 ## <a name="rend"></a>  hash_map::rend
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, адресующий расположение после последнего элемента в обратном hash_map.
 
@@ -2419,7 +2419,7 @@ After the erasure, the last element in the reversed hash_map is 2.
 ## <a name="reverse_iterator"></a>  hash_map::reverse_iterator
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, предоставляющий двунаправленный итератор, который может считывать или изменять элемент в обращенном hash_map.
 
@@ -2444,7 +2444,7 @@ typedef list<typename Traits::value_type, typename Traits::allocator_type>::reve
 ## <a name="size"></a>  hash_map::size
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает число элементов в hash_map.
 
@@ -2494,7 +2494,7 @@ The hash_map length is now 2.
 ## <a name="size_type"></a>  hash_map::size_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип целого числа без знака, который может представлять число элементов в hash_map.
 
@@ -2511,7 +2511,7 @@ typedef list<typename _Traits::value_type, typename _Traits::allocator_type>::si
 ## <a name="swap"></a>  hash_map::swap
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Меняет местами элементы двух hash_map.
 
@@ -2585,7 +2585,7 @@ After swapping with hm3, hash_map hm1 is: 300.
 ## <a name="upper_bound"></a>  hash_map::upper_bound
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает итератор, указывающий на первый элемент в hash_map со значением ключа, которое больше указанного ключа.
 
@@ -2663,7 +2663,7 @@ of the initial element of hm1 is: 20.
 ## <a name="value_comp"></a>  hash_map::value_comp
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Возвращает объект функции, который определяет порядок элементов в hash_map путем сравнения их значений ключей.
 
@@ -2731,7 +2731,7 @@ int main( )
 ## <a name="value_type"></a>  hash_map::value_type
 
 > [!NOTE]
-> Этот элемент API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
+> Этот API устарел. Вместо него следует использовать [класс unordered_map](../standard-library/unordered-map-class.md).
 
 Тип, представляющий тип объекта, который хранится в hash_map.
 

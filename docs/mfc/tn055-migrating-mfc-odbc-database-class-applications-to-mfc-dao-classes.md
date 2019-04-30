@@ -1,5 +1,5 @@
 ---
-title: TN055. Перенос приложений, использующих классы базы данных MFC ODBC, на классы MFC DAO
+title: 'TN055: Перенос приложений класса баз данных MFC ODBC на классы MFC DAO'
 ms.date: 06/20/2018
 f1_keywords:
 - vc.mfc.odbc
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - migrating database applications [MFC]
 ms.assetid: 0f858bd1-e168-4e2e-bcd1-8debd82856e4
 ms.openlocfilehash: f8e0d8e50f05e86c35e0f8b7f324533bffea6f25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487104"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399672"
 ---
-# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055. Перенос приложений, использующих классы базы данных MFC ODBC, на классы MFC DAO
+# <a name="tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes"></a>TN055: Перенос приложений класса баз данных MFC ODBC на классы MFC DAO
 
 > [!NOTE]
 > Среды Visual C++ и мастерах не поддерживают DAO (хотя классы DAO включены и их по-прежнему можно использовать). Корпорация Майкрософт рекомендует использовать [шаблоны OLE DB](../data/oledb/ole-db-templates.md) или [ODBC и MFC](../data/odbc/odbc-and-mfc.md) для новых проектов. DAO следует использовать только для поддержки существующих приложений.

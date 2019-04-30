@@ -1,5 +1,5 @@
 ---
-title: TN057. Локализация компонентов MFC
+title: 'TN057: Локализация компонентов MFC'
 ms.date: 06/28/2018
 f1_keywords:
 - vc.mfc.components
@@ -14,13 +14,13 @@ helpviewer_keywords:
 - localization [MFC], resources
 ms.assetid: 5376d329-bd45-41bd-97f5-3d895a9a0af5
 ms.openlocfilehash: 812c2d29c42b523d7b88b03741dc20f08ee70f44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62399633"
 ---
-# <a name="tn057-localization-of-mfc-components"></a>TN057. Локализация компонентов MFC
+# <a name="tn057-localization-of-mfc-components"></a>TN057: Локализация компонентов MFC
 
 > [!NOTE]
 > Следующее техническое примечание не было обновлено, поскольку сначала оно было включено в электронную документацию. В результате некоторые процедуры и разделы могут быть устаревшими или неверными. Для получения последних сведений рекомендуется выполнить поиск интересующей темы в алфавитном указателе документации в Интернете.

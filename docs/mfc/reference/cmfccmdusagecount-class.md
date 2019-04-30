@@ -21,11 +21,11 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
 ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62403806"
 ---
 # <a name="cmfccmdusagecount-class"></a>Класс CMFCCmdUsageCount
 
@@ -43,7 +43,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |`CMFCCmdUsageCount::CMFCCmdUsageCount`|Конструктор по умолчанию.|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|Деструктор.|
 
@@ -51,7 +51,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|Имя|Описание:|
+|name|Описание|
 |[CMFCCmdUsageCount::AddCmd](#addcmd)|Увеличивает на единицу счетчик, который связан с заданной команде.|
 |[CMFCCmdUsageCount::GetCount](#getcount)|Получает счетчик использования, который сопоставлен заданному идентификатору команды.|
 |[CMFCCmdUsageCount::HasEnoughInformation](#hasenoughinformation)|Определяет, собираются ли этот объект минимальный объем данных отслеживания.|
@@ -64,7 +64,7 @@ class CMFCCmdUsageCount : public CObject
 
 |||
 |-|-|
-|name|Описание:|
+|name|Описание|
 |`m_CmdUsage`|Объект `CMap` объект, который сопоставляет команды их счетчики использования.|
 |`m_nMinUsagePercentage`|Процент минимального срока использования команды часто использоваться.|
 |`m_nStartCount`|Счетчик начала, который используется для определения того, собираются ли этот объект минимальный объем данных отслеживания.|
@@ -98,7 +98,7 @@ void AddCmd(UINT uiCmd);
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*uiCmd*|[in] Указывает команду счетчик будет изменяться.|
 
 ### <a name="remarks"></a>Примечания
@@ -125,7 +125,7 @@ UINT GetCount(UINT uiCmd) const;
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*uiCmd*|[in] Идентификатор счетчика команду для извлечения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -162,7 +162,7 @@ BOOL IsFreqeuntlyUsedCmd(UINT uiCmd) const;
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*uiCmd*|[in] Указывает команду, чтобы проверить.|
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ static BOOL __stdcall SetOptions(
 
 |||
 |-|-|
-|Параметр|Описание:|
+|Параметр|Описание|
 |*nStartCount*|[in] Новый исходное количество всех отслеживаемых команд.|
 |*nMinUsagePercentage*|[in] Новый процент минимального срока использования.|
 
