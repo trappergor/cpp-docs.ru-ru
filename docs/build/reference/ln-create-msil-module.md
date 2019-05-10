@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -LN compiler option [C++]
 - /LN compiler option [C++]
 ms.assetid: 4f38f4f4-3176-4caf-8200-5c7585dc1ed3
-ms.openlocfilehash: 18b0e72d50f328afc1f2856f833cec1aa7d46f30
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2dbd5ae5ddf802185912c49caf37aa61c6a7d4c3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62176220"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446271"
 ---
 # <a name="ln-create-msil-module"></a>/LN (создание модуля MSIL)
 
@@ -36,7 +36,7 @@ ms.locfileid: "62176220"
 
 Расширение файла по умолчанию для модуля — .netmodule.
 
-В выпусках Visual C++ до Visual C++ 2005, модуль был создан с **/clr:noAssembly**.
+В предыдущих выпусках Visual Studio 2005, модуль был создан с **/clr:noAssembly**.
 
 Компоновщик MSVC в качестве входных данных принимает NETMODULE-файлы и выходной файл, создаваемый компоновщиком будет сборки или .netmodule с не зависят от времени выполнения на любом из netmodules-файлы, которые были введены в компоновщик.  Дополнительные сведения см. в разделе [NETMODULE-файлы в качестве входных файлов компоновщика](netmodule-files-as-linker-input.md).
 

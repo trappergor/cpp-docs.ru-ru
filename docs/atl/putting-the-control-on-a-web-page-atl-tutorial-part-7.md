@@ -1,14 +1,14 @@
 ---
 title: Размещение элемента управления на веб-странице (учебник ATL, часть 7)
 ms.custom: get-started-article
-ms.date: 09/27/2018
+ms.date: 05/06/2019
 ms.assetid: 50dc4c95-c95b-4006-b88a-9826f7bdb222
-ms.openlocfilehash: baf0ca56ae7512ac76f64b29e3060e0749c083c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: aab9557fd73e870c0362f876642e828616b538bd
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261544"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221231"
 ---
 # <a name="putting-the-control-on-a-web-page-atl-tutorial-part-7"></a>Размещение элемента управления на веб-странице (учебник ATL, часть 7)
 
@@ -74,7 +74,7 @@ ms.locfileid: "62261544"
 
 ## <a name="indicating-that-the-control-is-safe-for-scripting"></a>Указывающее, что элемент управления безопасен для скриптов
 
-Можно просмотреть веб-страницы с элементом управления в Internet Explorer или более удобно, используйте представление веб-браузера, встроенное в Visual C++. Чтобы просмотреть свой элемент управления в представление веб-браузера, щелкните правой кнопкой мыши файл PolyCtl.htm и нажмите кнопку **просмотреть в браузере**.
+Веб-страницы с элементом управления можно просмотреть только в Internet Explorer. Другие браузеры больше не поддерживает элементы управления ActiveX, из-за уязвимостей системы безопасности. 
 
 > [!NOTE]
 > Если элемент управления не отображается, знаете, что некоторые браузеры требуют корректировки параметров запускать элементы ActiveX. Обратитесь к документации браузера о том, как включить элементы управления ActiveX.

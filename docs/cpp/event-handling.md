@@ -1,17 +1,15 @@
 ---
 title: Обработка событий
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 helpviewer_keywords:
-- attributes [C++], event handling
-- intrinsic functions [C++], event handling
-- event handling [C++], Visual C++
+- event handling [C++]
 ms.assetid: 82de3f9a-2d88-470c-9527-8a5b54c8ced4
-ms.openlocfilehash: 4c6701f04544b336de97196e8b65f4d0cd4be296
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bd74ba0b20e2058f0b04d0d0d3c22c9d526157a0
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62392158"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222119"
 ---
 # <a name="event-handling"></a>Обработка событий
 
@@ -21,7 +19,7 @@ ms.locfileid: "62392158"
 
 Обработка событий поддерживает одно- и многопоточное использование и защищает данные от одновременного многопоточного доступа. Она также позволяет извлекать вложенные классы из источника события или классов приемника и поддерживать расширенный поиск и получение событий в производном классе.
 
-Visual C++ включает атрибуты и ключевые слова для объявления событий и обработчиков событий. Атрибуты событий и ключевые слова можно использовать в программах CLR и собственных программах С++.
+Microsoft C++ компилятор включает атрибуты и ключевые слова для объявления события и обработчики событий. Атрибуты событий и ключевые слова можно использовать в программах CLR и собственных программах С++.
 
 |Раздел|Описание|
 |-----------|-----------------|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 2f63b6860157e315d44f7c050812a7f0b97f2726
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209247"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448052"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>Преобразование проектов из смешанного режима в чистый промежуточный язык
 
@@ -21,7 +21,7 @@ ms.locfileid: "62209247"
 > [!IMPORTANT]
 > Рекомендуется использовать Visual Studio 2015 и Visual Studio 2017 больше не поддерживает создание **/CLR: pure** или **/CLR: safe** код для приложения CLR. Если вам требуется чистого и безопасного сборок, рекомендуется перевести приложения на C#.
 
-Если вы используете более раннюю версию набора инструментов компилятора Visual C++, который поддерживает **/CLR: pure** или **/CLR: safe**, эту процедуру можно использовать для преобразования кода в чистые MSIL-код:
+Если вы используете более раннюю версию Microsoft C++ набор инструментов компилятора, который поддерживает **/CLR: pure** или **/CLR: safe**, эту процедуру можно использовать для преобразования кода в чистые MSIL-код:
 
 ### <a name="to-convert-your-mixed-mode-application-into-pure-intermediate-language"></a>Чтобы преобразовать приложение смешанного режима в чистый промежуточный язык
 

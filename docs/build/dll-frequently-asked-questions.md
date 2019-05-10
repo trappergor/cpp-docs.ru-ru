@@ -1,17 +1,17 @@
 ---
 title: Вопросы и ответы по библиотеке DLL MFC
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - troubleshooting [C++], DLLs
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 9108aaf3fcface847b0391455a2aecd4d45658c4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274122"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220931"
 ---
 # <a name="dll-frequently-asked-questions"></a>Вопросы и ответы по библиотекам DLL
 
@@ -41,11 +41,7 @@ MFC DLL, которая создает новый поток MFC при запу
 
 ## <a name="mfc_multithreaded_2"></a> Можно многопоточного приложения доступ к библиотеке DLL MFC в различных потоках?
 
-Многопоточные приложения могут обращаться к обычные библиотеки DLL MFC, который динамически связан с MFC и библиотеки DLL расширения MFC из разных потоков. И, начиная с Visual C++ версии 4.2, приложение может получить доступ к обычные библиотеки DLL MFC, статической компоновке с MFC из нескольких потоков, которые созданы в приложении.
-
-До версии 4.2 только один внешний поток мог подключиться к обычной MFC DLL, статически компонуемые с MFC.
-
-Обратите внимание, что термин USRDLL больше не используется в документации по Visual C++. Обычной MFC DLL, статически компонуемые с MFC имеет те же характеристики, как бывший USRDLL.
+Многопоточные приложения могут обращаться к обычные библиотеки DLL MFC, который динамически связан с MFC и библиотеки DLL расширения MFC из разных потоков. Приложения могут обращаться к обычные библиотеки DLL MFC, статической компоновке с MFC из нескольких потоков, которые созданы в приложении.
 
 ## <a name="mfc_prohibited_classes"></a> Существуют ли классы MFC или функции, которые не могут использоваться в библиотеке DLL MFC?
 
@@ -69,4 +65,4 @@ MFC DLL, которая создает новый поток MFC при запу
 
 ## <a name="see-also"></a>См. также
 
-[DLL в Visual C++](dlls-in-visual-cpp.md)
+[Создание библиотек DLL на C/C++ в Visual Studio](dlls-in-visual-cpp.md)

@@ -1,6 +1,6 @@
 ---
 title: Класс CComSafeArrayBound
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CComSafeArrayBound
 - ATLSAFE/ATL::CComSafeArrayBound
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArrayBound class
 ms.assetid: dd6299db-5f84-4630-bbf0-f5add5318437
-ms.openlocfilehash: a79079c95536746cf5a4fa4b35caf39a55ca0f42
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 6d4650273661c0ce40558a37ef02bb2a3ff81809
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246144"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221150"
 ---
 # <a name="ccomsafearraybound-class"></a>Класс CComSafeArrayBound
 
@@ -76,7 +76,7 @@ CComSafeArrayBound(ULONG ulCount = 0, LONG lLowerBound = 0) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Если массив должен быть предоставлен доступ из программы Visual C++, рекомендуется, что нижняя граница быть определен как 0. Возможно, следует использовать значение другая нижняя граница, если нужно использовать с другими языками, например Visual Basic.
+Если массив должен быть предоставлен доступ из C++ программы, рекомендуется определить что нижняя граница как 0. Возможно, следует использовать значение другая нижняя граница, если нужно использовать с другими языками, например Visual Basic.
 
 ##  <a name="getcount"></a>  CComSafeArrayBound::GetCount
 

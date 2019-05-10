@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: a3a750565f16a0a01770cea16bf91918887095f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371429"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220502"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает `operator!=` для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3451
 ms.assetid: a4897a69-e3e7-40bb-bb1c-598644904012
-ms.openlocfilehash: 5ef4352101541391a7cda88471fbaa6aeae4ffb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07cfda76af26ddb285be4f77131aaf48a20a761f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62328722"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447858"
 ---
 # <a name="compiler-error-c3451"></a>Ошибка компилятора C3451
 
@@ -21,7 +21,7 @@ ms.locfileid: "62328722"
 
 Дополнительные сведения см. в разделе [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md).
 
-Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: [uuid](../../windows/uuid-cpp-attributes.md) атрибут больше не разрешен в пользовательском атрибуте, с помощью программирования в среде CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.
+Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: [uuid](../../windows/uuid-cpp-attributes.md) атрибут больше не разрешен в пользовательском атрибуте, с помощью программирования в среде CLR. Взамен рекомендуется использовать <xref:System.Runtime.InteropServices.GuidAttribute>.
 
 ## <a name="example"></a>Пример
 

@@ -1,17 +1,15 @@
 ---
 title: Практическое руководство. Добавление пользовательских средств построения в проекты MSBuild
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildtools
 helpviewer_keywords:
 - 'msbuild (c++), howto: add custom build tools'
 ms.assetid: de03899a-371d-4396-9bf9-34f45a65e909
-ms.openlocfilehash: 05f160e650c0dd717d7ce0f29259f866d751fdba
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 812932d9e668ab5ee0eb75eadbf75be3d791cddb
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188903"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220721"
 ---
 # <a name="how-to-add-custom-build-tools-to-msbuild-projects"></a>Практическое руководство. Добавление пользовательских средств построения в проекты MSBuild
 
@@ -50,6 +48,6 @@ ms.locfileid: "62188903"
 
 ## <a name="see-also"></a>См. также
 
-[Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Пошаговое руководство: Использование MSBuild для создания проекта C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Практическое руководство. Использование событий сборки в проектах MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Практическое руководство. Добавление пользовательского шага сборки в проекты MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)

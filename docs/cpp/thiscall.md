@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - __thiscall keyword [C++]
 ms.assetid: a6a22dd2-0101-4885-b33b-22f6057965df
-ms.openlocfilehash: fc5a32fedf52377889b61103856e2125733cd696
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e51879ae62b2881e0adadbe59859605f6cc58947
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62266793"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221912"
 ---
 # <a name="thiscall"></a>__thiscall
 
@@ -24,7 +24,7 @@ ms.locfileid: "62266793"
 
 При компиляции с параметром [/CLR: pure](../build/reference/clr-common-language-runtime-compilation.md), все функции и указатели функций являются `__clrcall` Если не указано иное. **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017.
 
-В предыдущих выпусках Visual C++ 2005 **__thiscall** соглашение о вызовах нельзя указывать явным образом в программе, поскольку **__thiscall** не являлось ключевым словом.
+В предыдущих выпусках Visual Studio 2005 **__thiscall** соглашение о вызовах нельзя указывать явным образом в программе, поскольку **__thiscall** не являлось ключевым словом.
 
 `vararg` Использование функции-члены **__cdecl** соглашение о вызовах. Все аргументы функции передаются в стеке, с помощью **это** указатель, помещаемый в стек последнего
 

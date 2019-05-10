@@ -2,16 +2,16 @@
 title: Библиотеки DLL (C++/CX)
 ms.date: 02/06/2018
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 13e733f0be27fe532af6109bdd6fc53291265e66
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62183292"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447236"
 ---
 # <a name="dlls-ccx"></a>Библиотеки DLL (C++/CX)
 
-Чтобы создать стандартную библиотеку DLL Win32 или библиотеку DLL, которые могут использоваться приложениями универсальной платформы Windows (UWP) компонента среды выполнения Windows можно использовать Visual Studio. Стандартную библиотеку DLL, который был создан с помощью версии Visual Studio или компилятор Visual C++, более ранняя, чем Visual Studio 2012 могут неправильно загружаться в приложении UWP и не может пройти проверку приложения в Microsoft Store.
+Чтобы создать стандартную библиотеку DLL Win32 или библиотеку DLL, которые могут использоваться приложениями универсальной платформы Windows (UWP) компонента среды выполнения Windows можно использовать Visual Studio. Стандартную библиотеку DLL, который был создан с помощью версии Visual Studio или Microsoft C++ компилятора, более ранняя, чем Visual Studio 2012 могут неправильно загружаться в приложении UWP и не может пройти проверку приложения в Microsoft Store.
 
 ## <a name="windows-runtime-component-dlls"></a>Библиотеки DLL среды выполнения Windows
 

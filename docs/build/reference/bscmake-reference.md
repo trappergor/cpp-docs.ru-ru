@@ -1,6 +1,6 @@
 ---
 title: Справочник ВSCMAKE
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - BSCMAKE, reference
 - Microsoft Browse Information Maintenance Utility
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 4303e48e3d02f0f69b177e8a888157a6f90aaa89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 72ad297ee5a24bc0c7ffd3ed25959031d0b8a309
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294893"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220557"
 ---
 # <a name="bscmake-reference"></a>Справочник ВSCMAKE
 
@@ -24,7 +24,7 @@ ms.locfileid: "62294893"
 
 Служебная программа Microsoft Browse Information Maintenance (BSCMAKE.EXE) создает файл информации об исходном коде (BSC) из SBR-файлов, созданных во время компиляции. Некоторые сторонние средства используйте BSC-файлы для анализа кода.
 
-При построении программы можно автоматически создать файл информации об исходном коде, используя программу BSCMAKE. Вам не требуется знать, как запускать BSCMAKE, если вы создаете файл информации об исходном коде в среде разработки Visual C++. Тем не менее можно прочитать этот раздел для понимания доступных возможностей.
+При построении программы можно автоматически создать файл информации об исходном коде, используя программу BSCMAKE. Необходимо знать, как запускать BSCMAKE, если вы создаете файл информации об в среде разработки Visual Studio. Тем не менее можно прочитать этот раздел для понимания доступных возможностей.
 
 При построении программы вне среды разработки вы по-прежнему можете создать пользовательский BSC-файл, который можно просмотреть в среде. Запустите BSCMAKE для SBR-файлов, созданных во время компиляции.
 

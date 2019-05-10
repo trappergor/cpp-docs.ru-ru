@@ -1,15 +1,15 @@
 ---
-title: Ошибки компилятора ресурсов и предупреждения
+title: Ошибки и предупреждения компилятора ресурсов
 ms.date: 04/17/2019
 ms.assetid: 0819f955-0561-491d-af3d-2453f4e2d035
 ms.openlocfilehash: c760e59e183b78122b7498ca8faf2c70ac454fd2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62297844"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857265"
 ---
-# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Ошибки компилятора ресурсов и предупреждения (RCxxxx, RWxxxx)
+# <a name="resource-compiler-errors-and-warnings-rcxxxx-rwxxxx"></a>Ошибки и предупреждения компилятора ресурсов (RCxxxx, RWxxxx)
 
 Этот раздел представляет ссылку на ошибки, создаваемые компилятором ресурсов. Ошибки компилятора ресурсов и предупреждения имеют форму версии-Кандидата*xxxx* или RW*xxxx*, где *xxxx* состоит из четырех цифр.
 

@@ -1,17 +1,17 @@
 ---
 title: Лямбда-выражения в C++
-ms.date: 11/19/2018
+ms.date: 05/07/2019
 helpviewer_keywords:
 - lambda expressions [C++]
 - lambda expressions [C++], overview
 - lambda expressions [C++], vs. function objects
 ms.assetid: 713c7638-92be-4ade-ab22-fa33417073bf
-ms.openlocfilehash: 9ebe4fec06996e908c619b6ac14af098b1c07a01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: c7543b3558da88b41102fa7b790bb9d9f3f18463
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62216501"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222384"
 ---
 # <a name="lambda-expressions-in-c"></a>Лямбда-выражения в C++
 
@@ -157,7 +157,7 @@ auto y = [] (auto first, auto second)
 
 ### <a name="exception-specification"></a>Спецификация исключений
 
-Можно использовать спецификацию исключений `noexcept`, чтобы указать, что лямбда-выражение не создает исключений. Как и с обычными функциями, компилятор Visual C++ создает предупреждение [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Если лямбда-выражение объявляет `noexcept` спецификация исключений и тело лямбда-выражения вызывает исключение, как показано ниже:
+Можно использовать спецификацию исключений `noexcept`, чтобы указать, что лямбда-выражение не создает исключений. Как и в случае с обычными функциями, Microsoft C++ компилятора приводит к возникновению предупреждения [C4297](../error-messages/compiler-warnings/compiler-warning-level-1-c4297.md) Если лямбда-выражение объявляет `noexcept` спецификация исключений и тело лямбда-выражения вызывает исключение, как показано ниже:
 
 ```cpp
 // throw_lambda_expression.cpp

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Managed Extensions for C++, compiling
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
-ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea4a878afea4453796277486da88b85e7f74883c
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272550"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446524"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (компиляция CLR)
 
@@ -53,7 +53,7 @@ ms.locfileid: "62272550"
 
    Управляемая программа, которая не содержит метаданных сборки в манифесте, называется *модулем*. Параметр **noAssembly** можно использовать только для создания модуля. Если компиляция выполняется с параметром [/c](c-compile-without-linking.md) и **/clr:noAssembly**, укажите параметр [/NOASSEMBLY](noassembly-create-a-msil-module.md) на фазе компоновщика, чтобы создать модуль.
 
-   До выпуска Visual C++ 2005 параметр **/clr:noAssembly** требовал указания **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.
+   До Visual Studio 2005 **/clr:noAssembly** требуется **/LD**. Теперь параметр **/LD** подразумевается при указании **/clr:noAssembly**.
 
 - **initialAppDomain**
 

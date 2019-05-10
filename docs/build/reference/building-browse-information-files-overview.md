@@ -1,24 +1,28 @@
 ---
 title: 'Информационные файлы просмотра сборки: Обзор'
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - .bsc files, about .bsc files
 - bsc files, about bsc files
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 5d33460ba63e50d31e44384be382e98cfbea4c91
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272888"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220547"
 ---
 # <a name="building-browse-information-files-overview"></a>Информационные файлы просмотра сборки: Обзор
 
+
+> [!WARNING]
+> Хотя средство BSCMAKE по-прежнему устанавливается вместе с Visual Studio, оно больше не используется в интегрированной среде разработки. Начиная с Visual Studio 2008 информация об исходном коде и символах автоматически сохраняется в SDF-файле SQL Server в папке решения.
+
 Чтобы создать просмотра для просмотра символов, компилятор создает SBR-файл для каждого исходного файла в проекте, а затем BSCMAKE. EXE Сцепляет SBR-файлов в один файл BSC-файл.
 
-Создание SBR и BSC файлов занимает некоторое время, поэтому Visual C++ эти функции будут отключены по умолчанию. Если вы хотите просмотреть текущую информацию, необходимо включить параметры просмотра и повторите сборку проекта.
+Создание SBR и BSC файлов занимает некоторое время, поэтому Visual Studio отключает эти функции по умолчанию. Если вы хотите просмотреть текущую информацию, необходимо включить параметры просмотра и повторите сборку проекта.
 
 Используйте [/FR](fr-fr-create-dot-sbr-file.md) или [/Fr](fr-fr-create-dot-sbr-file.md) сообщить компилятору создать SBR-файлов. Чтобы создать файл BSC, можно вызвать [BSCMAKE](bscmake-command-line.md) из командной строки. Использование BSCMAKE из командной строки позволяет более точно контролировать манипуляции файлы для просмотра информации. См. в разделе [Справочник по BSCMAKE](bscmake-reference.md) Дополнительные сведения.
 

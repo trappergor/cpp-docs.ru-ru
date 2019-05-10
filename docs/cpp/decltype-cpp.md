@@ -9,12 +9,12 @@ helpviewer_keywords:
 - operators [C++], type of an expression
 - operators [C++], deduce expression type
 ms.assetid: 6dcf8888-8196-4f13-af50-51e3797255d4
-ms.openlocfilehash: 6c1c91aec7d974836b1ec031a1e8b38e8abb65ce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0a4e9eb015df056dfe2a35da18cfa50875ced432
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399087"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222454"
 ---
 # <a name="decltype--c"></a>decltype (C++)
 
@@ -38,7 +38,7 @@ decltype( expression )
 
 ## <a name="remarks"></a>Примечания
 
-**Decltype** спецификатор типа поддерживается в Visual C++ 2010 или более поздней версии и может использоваться с машинный или управляемый код. `decltype(auto)` (C++ 14) поддерживается в Visual Studio 2015 и более поздних версиях.
+**Decltype** спецификатор типа в Visual Studio 2010 или более поздних версиях поддерживается и может использоваться с машинный или управляемый код. `decltype(auto)` (C++ 14) поддерживается в Visual Studio 2015 и более поздних версиях.
 
 Компилятор использует следующие правила для определения типа *выражение* параметра.
 
@@ -204,6 +204,6 @@ static_assert(test2, "PASS2");
 
 ## <a name="requirements"></a>Требования
 
-Visual C++ 2010 и выше.
+Visual Studio 2010 или более поздних версий.
 
 `decltype(auto)` требуется Visual Studio 2015 или более поздней версии.

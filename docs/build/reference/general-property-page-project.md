@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: c9b0eae9c0a1e074fb4f3f12ac38a737ef14c644
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e6d418c1668a0757349c7e5c3bb38f7cda801223
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270904"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446560"
 ---
 # <a name="general-property-page-project"></a>Страница свойств "Общие" (проект)
 
@@ -98,7 +98,7 @@ ms.locfileid: "62270904"
 
 - **Набор инструментов платформы**
 
-   Позволяет проекту ориентироваться на другую версию компилятора и библиотек Visual C++. Проекты Visual C++ можно ориентировать либо на набор инструментов по умолчанию, устанавливаемый Visual Studio, либо на один из наборов инструментов, установленных несколькими предыдущими версиями Visual Studio, включая наборы инструментов, создающие исполняемые файлы, которые можно запускать в Windowx XP. Дополнительные сведения об изменении набора инструментов платформы см. в разделе [как: Изменение требуемой версии .NET Framework и набора средств платформы](../how-to-modify-the-target-framework-and-platform-toolset.md).
+   Позволяет проекту ориентироваться на другую версию компилятора и библиотек Visual C++. Visual Studio C++ проекты могут ориентироваться либо средств по умолчанию установлены выпуском Visual Studio, или один из наборов инструментов, установленных несколько предыдущих версий Visual Studio, включая набор инструментов, создать исполняемые файлы, которые можно запускать в Windowx XP. Дополнительные сведения об изменении набора инструментов платформы см. в разделе [как: Изменение требуемой версии .NET Framework и набора средств платформы](../how-to-modify-the-target-framework-and-platform-toolset.md).
 
 - **Разрешить управляемую добавочную сборку**
 

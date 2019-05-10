@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2259
 ms.assetid: e458236f-bdea-4786-9aa6-a98d8bffa5f4
-ms.openlocfilehash: 0310f20854185a6f8a5ccb0ce7b087c4d7c5f29d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 562882f50edfe2d44ab1f08ee9dbe88fe468af63
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387075"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447379"
 ---
 # <a name="compiler-error-c2259"></a>Ошибка компилятора C2259
 
@@ -50,7 +50,7 @@ B b;  // OK, B defines func()
 
 - Используйте оператор разрешения области для методов интерфейса реализации в производном классе для уточнения имени реализованный метод с именем интерфейса.
 
-C2259 также может возникнуть в результате совместимости, выполненной в визуальном элементе C++ 2005 **/Zc: wchar_t** теперь включен по умолчанию. В этом случае можно устранить путем компиляции с C2599 **/Zc:wchar_t-**, чтобы получить поведение предыдущих версий. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
+C2259 также может возникнуть в результате изменений работы в Visual Studio 2005, **/Zc: wchar_t** теперь включен по умолчанию. В этом случае можно устранить путем компиляции с C2599 **/Zc:wchar_t-**, чтобы получить поведение предыдущих версий. Дополнительные сведения см. в разделе [/Zc:wchar_t (wchar_t — это собственный тип)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md).
 
 Следующий пример приводит к возникновению ошибки C2259:
 

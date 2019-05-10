@@ -1,6 +1,6 @@
 ---
 title: Переменные среды CL
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - cl
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: a15bedc0a5aa8215356a98c3635a2edd1f3cfc5f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 620ec386e06b1a0eed91c94e9b2b891d9955fd00
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294477"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217632"
 ---
 # <a name="cl-environment-variables"></a>Переменные среды CL
 
@@ -22,7 +22,7 @@ ms.locfileid: "62294477"
 
 - CL и \_CL\_, если определен. Средство CL добавляет параметры и аргументы, заданные в переменной среды компилятора CL к аргументам командной строки и добавляет параметры и определить аргументы в \_CL\_, перед обработкой.
 
-- INCLUDE, которая должна указывать на подкаталог \include папки установки Visual C++.
+- ВКЛЮЧИТЬ, которая должна указывать на подкаталог \include установку Visual Studio.
 
 - LIBPATH, которая указывает каталоги для поиска файлов метаданных, на которые ссылается [#using](../../preprocessor/hash-using-directive-cpp.md). Подробнее о переменной LIBPATH см. в статье `#using`.
 

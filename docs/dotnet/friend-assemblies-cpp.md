@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 05b9d8bcf5d7364e1dcd31940bc0db64a5e605f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404433"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447301"
 ---
 # <a name="friend-assemblies-c"></a>Дружественные сборки (C++)
 
@@ -47,7 +47,7 @@ ms.locfileid: "62404433"
 
 Ко всем типам в сборке, должен быть явно предоставлен доступ.  Например сборка C имеет доступ ко всем типам в сборке А если сборка C ссылается на сборку B, а сборка B имеет доступ ко всем типам в сборке A.
 
-Сведения о том, как подписать — то есть как можно присвоить строгое имя — сборки, созданное с помощью визуального C++ компилятора, см. в разделе [сборки со строгими именами (подписывание сборок) (C++выполняет)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
+Сведения о том, как подписать — то есть как можно присвоить строгое имя, сборку, которая создается с помощью Microsoft C++ компилятора, см. в разделе [сборки со строгими именами (подписывание сборок) (C++выполняет)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md).
 
 В качестве альтернативы использованию дружественные сборки, можно использовать <xref:System.Security.Permissions.StrongNameIdentityPermission> для ограничения доступа к отдельным типам.
 

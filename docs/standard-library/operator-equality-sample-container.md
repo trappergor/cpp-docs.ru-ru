@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: c49c58bdc168385d421cf942735b7473de70925f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9313df5d75efa043f2fb9df6090c125de75a2636
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371533"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220257"
 ---
 # <a name="operator-ltsample-containergt"></a>оператор== (&lt;образец контейнера&gt;)
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает `operator==` для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 

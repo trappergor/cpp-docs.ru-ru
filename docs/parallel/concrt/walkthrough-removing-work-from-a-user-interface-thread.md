@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Удаление задач из потока пользовательского интерфейса
-ms.date: 11/19/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 1838ad0d6adb146adacb8b3a395f44f76e2a8d3f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 3bd41b1815737730067929c4728b32181cb2fc03
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407812"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64857000"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>Пошаговое руководство. Удаление задач из потока пользовательского интерфейса
 
@@ -54,9 +54,9 @@ ms.locfileid: "62407812"
 
 ### <a name="to-create-a-visual-c-mfc-application"></a>Для создания приложения Visual C++ MFC
 
-1. В меню **Файл** последовательно выберите пункты **Создать**и **Проект**.
+1. Используйте **мастер приложений MFC** Создание приложения MFC с параметрами по умолчанию. См. [Пошаговое руководство: С помощью новых элементов управления оболочки MFC](../../mfc/walkthrough-using-the-new-mfc-shell-controls.md) инструкции о том, как открыть мастер для вашей версии Visual Studio.
 
-1. В **новый проект** отображаемое в диалоговом окне **установленные шаблоны** области выберите **Visual C++**, а затем в **шаблоны** области выберите **Приложения MFC**. Например, введите имя проекта, `Mandelbrot`, а затем нажмите кнопку **ОК** для отображения **мастер приложений MFC**.
+1. Например, введите имя проекта, `Mandelbrot`, а затем нажмите кнопку **ОК** для отображения **мастер приложений MFC**.
 
 1. В **тип приложения** области выберите **одного документа**. Убедитесь, что **поддержка архитектуры Document/View** флажок установлен.
 

@@ -93,12 +93,12 @@ helpviewer_keywords:
 - $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abb42db6a44f1c48d120eff1f117e06c970b6b44
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294450"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221781"
 ---
 # <a name="common-macros-for-msbuild-commands-and-properties"></a>Стандартные макросы для команд MSBuild и свойств
 
@@ -121,7 +121,7 @@ ms.locfileid: "62294450"
 |**$(FrameworkDir)**|Каталог, в котором установлена платформа .NET Framework.|
 |**$(FrameworkSDKDir)**|Каталог, в котором установлена платформа .NET Framework. Платформу .NET Framework можно установить в составе Visual Studio или отдельно.|
 |**$(FrameworkVersion)**|Версия платформы .NET Framework, используемая Visual Studio. В сочетании с **$(FrameworkDir)**— полный путь к версии .NET Framework, используемой Visual Studio.|
-|**$(FxCopDir)**|Путь к файлу fxcop.cmd. Файл fxcop.cmd устанавливается не со всеми выпусками Visual C++.|
+|**$(FxCopDir)**|Путь к файлу fxcop.cmd. Файл fxcop.cmd устанавливается не со всеми выпусками Visual Studio.|
 |**$(IntDir)**|Путь к каталогу, заданному для промежуточных файлов. Если это относительный путь, промежуточные файлы передаются по этому пути, добавленному к каталогу проекта. Этот путь должен содержать косую черту в конце. Путь разрешается в значение для свойства **Intermediate Directory** . Не используйте **$(OutDir)** для определения этого свойства.|
 |**$(OutDir)**|Путь к каталогу выходных файлов. Если это относительный путь, выходные файлы передаются по этому пути, добавленному к каталогу проекта. Этот путь должен содержать косую черту в конце. Путь разрешается в значение для свойства **Output Directory** . Не используйте **$(IntDir)** для определения этого свойства.|
 |**$(Platform)**|Имя текущей платформы проекта, например Win32.|
@@ -143,7 +143,7 @@ ms.locfileid: "62294450"
 |**$(TargetFileName)**|Имя основного выходного файла для сборки (определяется как базовое имя + расширение файла).|
 |**$(TargetName)**|Базовое имя основного выходного файла сборки.|
 |**$(TargetPath)**|Абсолютный путь к основному выходному файлу для сборки (определяется как диск + путь + базовое имя + расширение файла).|
-|**$(VCInstallDir)**|Каталог с содержимым C++ из установки Visual Studio. Это свойство содержит версию целевого набора инструментов Visual C++, которая может отличаться от основного приложения Visual Studio. Например, при сборке с помощью `$(PlatformToolset) = v140` макрос **$(VCInstallDir)** содержит путь к установке Visual C++ 2015.|
+|**$(VCInstallDir)**|Каталог с содержимым C++ из установки Visual Studio. Это свойство содержит версию целевой Microsoft C++ набор инструментов (MSVC), которая может отличаться, Visual Studio компьютера. Например, при построении с помощью `$(PlatformToolset) = v140`, **$(VCInstallDir)** содержит путь к установке Visual Studio 2015.|
 |**$(VSInstallDir)**|Каталог, в котором установлено программное обеспечение Visual Studio. Это свойство содержит версию целевого набора инструментов Visual Studio, которая может отличаться от основного приложения Visual Studio. Например, при построении с помощью `$(PlatformToolset) = v110`свойство **$(VSInstallDir)** содержит путь к установке Visual Studio 2012.|
 |**$(WebDeployPath)**|Относительный путь от корня веб-развертывания до каталога выходных данных проекта. Возвращает значение такого же типа, что и аргумент <xref:Microsoft.VisualStudio.VCProjectEngine.VCWebDeploymentTool.RelativePath%2A>.|
 |**$(WebDeployRoot)**|Абсолютный путь к расположению **\<localhost>**. Например, c:\inetpub\wwwroot.|

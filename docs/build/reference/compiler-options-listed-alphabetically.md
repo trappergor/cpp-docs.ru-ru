@@ -1,14 +1,14 @@
 ---
 title: Параметры компилятора в алфавитном порядке
-ms.date: 04/08/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ba4357f4c14e5cca9363ad2029374ede93529a2a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62272338"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221775"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>Параметры компилятора в алфавитном порядке
 
@@ -34,7 +34,7 @@ ms.locfileid: "62272338"
 |[/E](e-preprocess-to-stdout.md)|Копирует выходные данные препроцессора в стандартный вывод.|
 |[/EH](eh-exception-handling-model.md)|Задает модель обработки исключений.|
 |[/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|Копирует выходные данные препроцессора в стандартный вывод.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Разрешает передавать данные о внутренних ошибках компилятора (ICE) непосредственно в группу Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Позволяет передавать данные о внутренних ошибках (ICE) непосредственно в корпорацию Майкрософт C++ team.|
 |[/ Execution-CharSet](execution-charset-set-execution-character-set.md)|Задание набора символов исполнения.|
 |[/F](f-set-stack-size.md)|Задает размер стека.|
 |[/favor](favor-optimize-for-architecture-specifics.md)|Создает код, которая оптимизирована для конкретных x64 архитектуры или для специфики микроархитектур в AMD64 и расширенной памяти 64 архитектурах технологии (EM64T).|
@@ -153,7 +153,7 @@ ms.locfileid: "62272338"
 |[/Zc](zc-conformance.md)|Задает стандартное поведение [/Ze](za-ze-disable-language-extensions.md).[ / Za, /Ze (отключить расширения языка)](za-ze-disable-language-extensions.md)|
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
 |[/Zf](zf.md)|Улучшает время создания в параллельные сборки PDB-файла.|
-|[/Zg](zg-generate-function-prototypes.md)|Удален в Visual C++ 2015. Создает прототипы функций.|
+|[/Zg](zg-generate-function-prototypes.md)|Удален в Visual Studio 2015. Создает прототипы функций.|
 |[/ZI](z7-zi-zi-debug-information-format.md)|Включает отладочную информацию в базу данных программы, совместимую с функцией "Изменить и продолжить".|
 |[/Zi](z7-zi-zi-debug-information-format.md)|Создает полную отладочную информацию.|
 |[/Zl](zl-omit-default-library-name.md)|Удаляет имя библиотеки по умолчанию из файла OBJ (только архитектура x86).|

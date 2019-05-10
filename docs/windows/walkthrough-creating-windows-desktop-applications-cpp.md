@@ -1,17 +1,17 @@
 ---
 title: Пошаговое руководство. Создание традиционного приложения рабочего стола Windows (C++)
 ms.custom: get-started-article
-ms.date: 09/18/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bc9ef82863fde361964234cca54f12aac1e2abe
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388115"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877394"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>Пошаговое руководство. Создание традиционного приложения рабочего стола Windows (C++)
 
@@ -26,7 +26,7 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
 - Компьютер под управлением Microsoft Windows 7 или более поздних версий. Мы рекомендуем использовать Windows 10 для обеспечения оптимальной среды разработки.
 
-- Копия Visual Studio 2017. Сведения о том, как загрузить и установить Visual Studio, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio). Когда вы запускаете программу установки, убедитесь, что **разработка классических приложений C++** проверяется рабочей нагрузки. Не беспокойтесь, если эта рабочая нагрузка не были установлены при установке Visual Studio. Можно снова запустите установщик и установить его.
+- Копия Visual Studio. Сведения о том, как загрузить и установить Visual Studio, см. в разделе [установка Visual Studio](/visualstudio/install/install-visual-studio). Когда вы запускаете программу установки, убедитесь, что **разработка классических приложений C++** проверяется рабочей нагрузки. Не беспокойтесь, если эта рабочая нагрузка не были установлены при установке Visual Studio. Можно снова запустите установщик и установить его.
 
    ![Разработка классических приложений C++](../build/media/desktop-development-with-cpp.png "разработка классических приложений C++")
 
@@ -36,9 +36,37 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
 ## <a name="create-a-windows-desktop-project"></a>Создание проекта рабочего стола Windows
 
-Выполните следующие действия для создания вашего первого проекта рабочего стола Windows и введите код для рабочее приложение рабочего стола Windows. Если вы используете версию Visual Studio, старше, чем Visual Studio 2017 версии 15.3, перейти к шагу [для создания проекта рабочего стола Windows в Visual Studio 2017 RTM](#create-in-vs2017-rtm).
+Выполните следующие действия для создания вашего первого проекта рабочего стола Windows и введите код для рабочее приложение рабочего стола Windows. Убедитесь, что выбора версий в левом верхнем углу этой страницы присвоено правильную версию Visual Studio, которую вы используете.
 
-### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017-update-153-and-later"></a>Создание проекта рабочего стола Windows в Visual Studio 2017 с обновлением 15.3 и более поздних версий
+::: moniker range="vs-2019"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2019"></a>Создание проекта рабочего стола Windows в Visual Studio 2019 г.
+
+1. В главном меню выберите **файл** > **New** > **проекта** открыть **создайте новый проект** диалоговое окно поле.
+
+1. В верхней части диалогового окна, задайте **языка** для **C++**, задайте **платформы** для **Windows**и задайте **типпроекта** для **Desktop**. 
+
+1. В отфильтрованном списке типов проектов выберите **мастер создания классических приложений Windows** выберите **Далее**. На следующей странице введите имя для проекта и указать расположение проекта, при необходимости.
+
+1. Выберите **создать** кнопку, чтобы создать проект.
+
+1. **Проект приложения Windows** появится диалоговое окно. В разделе **тип приложения**выберите **Windows приложение (.exe)**. В поле **Дополнительные параметры**выберите **Пустой проект**. Выберите **ОК** для создания проекта.
+
+1. В **обозревателе решений**, щелкните правой кнопкой мыши **DesktopApp** проекта, выберите **добавить**, а затем выберите **новый элемент**.
+
+   ![Добавить новый элемент к проекту DesktopApp](../build/media/desktop-app-project-add-new-item-153.gif "добавить новый элемент к проекту DesktopApp")
+
+1. В диалоговом окне **Добавление нового элемента** выберите **Файл C++ (.cpp)**. В **имя** введите имя файла, например, *HelloWindowsDesktop.cpp*. Выберите **Добавить**.
+
+   ![Добавить CPP-файл к проекту DesktopApp](../build/media/desktop-app-add-cpp-file-153.png "добавить CPP-файл к проекту DesktopApp")
+
+Теперь создания проекта и исходный файл открывается в редакторе. Чтобы продолжить, сразу перейти к [создания кода](#create-the-code).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2017"></a>Создание проекта рабочего стола Windows в Visual Studio 2017
 
 1. В меню **Файл** выберите команду **Создать**, а затем пункт **Проект**.
 
@@ -62,7 +90,11 @@ API Windows (также называется Win32 API, Windows Desktop API и W
 
 Теперь создания проекта и исходный файл открывается в редакторе. Чтобы продолжить, сразу перейти к [создания кода](#create-the-code).
 
-### <a id="create-in-vs2017-rtm"></a> Чтобы создать проект для настольной системы Windows в Visual Studio 2017 RTM
+::: moniker-end
+
+::: moniker range="vs-2015"
+
+### <a name="to-create-a-windows-desktop-project-in-visual-studio-2015"></a>Создание проекта рабочего стола Windows в Visual Studio 2015
 
 1. В меню **Файл** выберите команду **Создать**, а затем пункт **Проект**.
 
@@ -89,6 +121,8 @@ API Windows (также называется Win32 API, Windows Desktop API и W
    ![Добавить CPP-файл к проекту DesktopApp](../build/media/desktop-app-add-cpp-file-150.png "добавить CPP-файл к проекту DesktopApp")
 
 Теперь создания проекта и исходный файл открывается в редакторе.
+
+::: moniker-end
 
 ## <a name="create-the-code"></a>Создание кода
 

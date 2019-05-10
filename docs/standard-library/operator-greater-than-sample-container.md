@@ -10,17 +10,17 @@ helpviewer_keywords:
 - '> operator, comparing specific objects'
 - operator >
 ms.assetid: 49bd417a-3305-4ffa-9884-39d3904ed87d
-ms.openlocfilehash: 7d6c1135632d57707812a6702d7226eafa49c0c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d195148e725857c16a0f037b87a7fa0f71841a4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371397"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220485"
 ---
 # <a name="operatorgt-ltsample-containergt"></a>оператор&gt; (&lt;образец контейнера&gt;)
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает **оператор>** для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 
