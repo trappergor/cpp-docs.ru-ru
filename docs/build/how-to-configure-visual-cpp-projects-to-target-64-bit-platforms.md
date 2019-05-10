@@ -1,19 +1,19 @@
 ---
-title: Практическое руководство. Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ
+title: Практическое руководство. Настройка Visual Studio C++ проектов для 64-разрядных x64 платформ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - platforms [C++], 64-bit
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: 21c812efd101c64e250a545d2a40df6adc31c414
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a063c2f333a755ab86a4f91c9d14d0c65a6d1414
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274477"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446392"
 ---
-# <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>Практическое руководство. Настройка проектов Visual C++ для 64-разрядная версия, x64 платформ
+# <a name="how-to-configure-visual-studio-c-projects-to-target-64-bit-x64-platforms"></a>Практическое руководство. Настройка Visual Studio C++ проектов для 64-разрядных x64 платформ
 
 Конфигурации проекта в Интегрированной среде разработки Visual Studio можно использовать для настройки приложений C++ для 64-разрядных, x64 платформ. Также можно перенести параметры проекта Win32 в конфигурацию 64-разрядного проекта.
 

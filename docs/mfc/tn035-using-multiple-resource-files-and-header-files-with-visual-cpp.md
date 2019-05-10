@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ce38c2f3f4effa993dfa32221d82bece65096dd
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62305519"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448545"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035: Использование нескольких файлов ресурсов и файлы заголовков в Visual C++
 
@@ -204,7 +204,7 @@ RESOURCE.H     AFXRES.H
     AFXPRINT.RC
 ```
 
-С помощью директив времени компиляции можно организовать редактируемые и нередактируемые в Visual C++ ресурсы в несколько RC-файлов, где "главный" файл MYAPP.RC не делает ничего, кроме включения других RC-файлов посредством оператора #include. При использовании MAK-файла проекта Visual C++ необходимо включить в проект "главный" RC-файл, чтобы все включенные посредством оператора #include ресурсы компилировались с приложением.
+С помощью директив времени компиляции можно организовать редактируемые и нередактируемые в Visual C++ ресурсы в несколько RC-файлов, где "главный" файл MYAPP.RC не делает ничего, кроме включения других RC-файлов посредством оператора #include. Если вы используете Visual Studio C++ проекта. Файл ключа MAK, то вы должны включать «master». Версия-Кандидат файл в проекте таким образом, все # посредством оператора #include ресурсы компилировались с приложением.
 
 **Применение файлов реализация нередактируемых в Visual C++**
 

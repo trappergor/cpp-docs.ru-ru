@@ -1,21 +1,21 @@
 ---
 title: Практическое руководство. Внедрение манифеста в приложения C/C++
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: 332d6d75080be3fdde6b8238ab79b8e5b1d1121e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ee60620f2815bb20e2d0f3ecec768d99533437a9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274386"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220705"
 ---
 # <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>Практическое руководство. Внедрение манифеста в приложения C/C++
 
-Рекомендуется наличие его манифестом, включаемым в конечный двоичный файл, так как это гарантирует нужная среда выполнения поведение в большинстве сценариев приложения C/C++ (или библиотека). По умолчанию Visual Studio пытается встроить манифест при построении проекта из файлов исходного кода; см. в разделе [Manifest Generation в Visual Studio](manifest-generation-in-visual-studio.md) Дополнительные сведения. Однако если приложение создается с помощью nmake, необходимы некоторые изменения в существующий файл makefile. В этом разделе показано, как изменить существующий файл makefile, чтобы автоматически встраивать манифест в конечный двоичный файл.
+Мы рекомендуем внедрить манифест приложения или библиотеки в конечный двоичный файл, так как это гарантирует нужная среда выполнения поведение в большинстве сценариев. По умолчанию Visual Studio пытается встроить манифест при построении проекта. Дополнительные сведения см. в разделе [Manifest Generation в Visual Studio](manifest-generation-in-visual-studio.md). Тем не менее если выполнить сборку приложения с помощью nmake, необходимо внести некоторые изменения в файл makefile. В этом разделе показано, как изменить файлы makefile, таким образом, чтобы он автоматически внедряет манифест в конечный двоичный файл.
 
 ## <a name="two-approaches"></a>Два подхода
 
@@ -23,15 +23,19 @@ ms.locfileid: "62274386"
 
 - Если вы не выполняете инкрементное построение можно напрямую внедрить манифест с помощью командной строки, аналогичную следующей, в качестве шага после сборки:
 
-   **MT.exe-манифеста MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   ```cmd
+   mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1
+   ```
 
    или
 
-   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
+   ```cmd
+   mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2
+   ```
 
-   (1 для EXE-файла, 2 для библиотеки DLL).
+   Используйте 1 для EXE-файла и 2 для библиотеки DLL.
 
-- Если вы выполняете инкрементное построение, прямое редактирование ресурса, как показано ниже, могут отключить добавочное построение и вызвать полное перестроение; Поэтому следует принимать другой подход:
+- Если вы выполняете инкрементное построение, выполните следующие действия:
 
    - Связывание двоичного файла для создания файла MyApp.exe.manifest.
 
@@ -63,7 +67,7 @@ clean :
     del MyApp.obj MyApp.exe
 ```
 
-Если этот сценарий выполняется без изменений в Visual C++, успешно создается MyApp.exe. Он также создает внешний файл манифеста MyApp.exe.manifest, который для использования операционной системой для загрузки зависимых сборок во время выполнения.
+Если этот сценарий выполняется без изменений в Visual Studio, он успешно создает MyApp.exe. Он также создает внешний файл манифеста MyApp.exe.manifest, который для использования операционной системой для загрузки зависимых сборок во время выполнения.
 
 Скрипт nmake для MyLibrary.dll очень похожа:
 
@@ -226,7 +230,7 @@ _VC_MANIFEST_CLEAN=
 ####################################################
 ```
 
-Теперь создайте makefile.targ.inc и скопируйте в него следующее:
+Теперь создайте **makefile.targ.inc** и скопируйте в него следующее:
 
 ```
 # makefile.targ.inc - include this at the very bottom of the existing makefile

@@ -4,12 +4,12 @@ ms.date: 09/18/2018
 helpviewer_keywords:
 - .vcxproj file structure
 ms.assetid: 14d0c552-29db-480e-80c1-7ea89d6d8e9c
-ms.openlocfilehash: 3b7c7bdad8848a3755db4ea565117459c72e939b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a1052d0a0eeeff177f0a22883fe06cd07d7b03f6
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317124"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446499"
 ---
 # <a name="vcxproj-and-props-file-structure"></a>Структура файлов VCXPROJ и PROPS
 
@@ -21,13 +21,13 @@ ms.locfileid: "62317124"
 
 1. Структура файла должна соответствовать предписанной форме, которая описана в этой статье.
 
-1. Сейчас система проектов Visual C++ не поддерживает подстановочные знаки в элементах проекта. Например, не поддерживается следующее:
+1. В Visual Studio C++ система проектов в настоящее время не поддерживает подстановочные знаки в элементах проекта. Например, не поддерживается следующее:
 
    ```xml
    <ClCompile Include="*.cpp"/>
    ```
 
-1. Сейчас система проектов Visual C++ не поддерживает макросы в путях элементов проекта. Например, не поддерживается следующее:
+1. В Visual Studio C++ система проектов в настоящее время не поддерживает макросов в пути элемента проекта. Например, не поддерживается следующее:
 
    ```xml
    <ClCompile Include="$(IntDir)\generated.cpp"/>
@@ -224,7 +224,7 @@ ms.locfileid: "62317124"
 </ItemGroup>
 ```
 
-Сейчас система проектов Visual C++ не поддерживает подстановочные знаки в элементах проекта.
+В Visual Studio C++ система проектов в настоящее время не поддерживает подстановочные знаки в элементах проекта.
 
 ```xml
 <ItemGroup>
@@ -232,7 +232,7 @@ ms.locfileid: "62317124"
 </ItemGroup>
 ```
 
-Сейчас система проектов Visual C++ не поддерживает макросы в элементах проекта.
+В Visual Studio C++ система проектов в настоящее время не поддерживает макросы в элементах проекта.
 
 ```xml
 <ItemGroup>

@@ -1,15 +1,15 @@
 ---
 title: Параметры компилятора, упорядоченные по категориям
-ms.date: 11/12/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0d12c0f82d3595ee6b61edcd21fb01dd7f49163b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294165"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221757"
 ---
 # <a name="compiler-options-listed-by-category"></a>Параметры компилятора, упорядоченные по категориям
 
@@ -153,7 +153,7 @@ ms.locfileid: "62294165"
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|Увеличивает число адресуемых секций в OBJ-файле.|
 |[/c](c-compile-without-linking.md)|Задает компиляцию без компоновки.|
 |[/cgthreads](cgthreads-code-generation-threads.md)|Задает число потоков cl.exe, используемых для оптимизации и создания кода.|
-|[/errorReport](errorreport-report-internal-compiler-errors.md)|Разрешает передавать данные о внутренних ошибках компилятора (ICE) непосредственно в группу Visual C++.|
+|[/errorReport](errorreport-report-internal-compiler-errors.md)|Позволяет передавать данные о внутренних ошибках (ICE) непосредственно в корпорацию Майкрософт C++ team.|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|Отображает полный путь файлов исходного кода, переданных программе cl.exe, в диагностическом тексте.|
 |[/FS](fs-force-synchronous-pdb-writes.md)|Обеспечивает принудительную сериализацию записей в файл базы данных программы (PDB) с помощью MSPDBSRV.EXE.|
 |[/H](h-restrict-length-of-external-names.md)|Не рекомендуется. Ограничивает длину внешних (открытых) имен.|
@@ -213,7 +213,7 @@ ms.locfileid: "62294165"
 |[/Yd](yd-place-debug-information-in-object-file.md)|Не рекомендуется. Размещает полную отладочную информацию во всех объектных файлах. Используйте вместо этого параметр [/Zi](z7-zi-zi-debug-information-format.md) .|
 |[/Zc:forScope-](zc-forscope-force-conformance-in-for-loop-scope.md)|Не рекомендуется. Отключает согласование видимости переменных, объявленных в заголовке оператора for.|
 |[/Ze](za-ze-disable-language-extensions.md)|Не рекомендуется. Включает расширения языка.|
-|[/Zg](zg-generate-function-prototypes.md)|Удален в Visual C++ 2015. Создает прототипы функций.|
+|[/Zg](zg-generate-function-prototypes.md)|Удален в Visual Studio 2015. Создает прототипы функций.|
 
 ## <a name="see-also"></a>См. также
 

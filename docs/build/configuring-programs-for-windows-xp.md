@@ -2,12 +2,12 @@
 title: Настройка программ для Windows XP
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: f27921e062fd8abb7bc9b63bfbb9b050f25ee54b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273806"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446373"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Настройка программ для Windows XP
 
@@ -25,7 +25,7 @@ ms.locfileid: "62273806"
 
 1. В **обозревателе решений** откройте контекстное меню своего проекта и выберите пункт **Свойства**.
 
-1. В **страницы свойств** диалоговое окно проекта, в разделе **свойства конфигурации** > **Общие**, задайте **набор инструментов платформы** свойство нужный набор инструментов Windows XP. Например, выберите **Visual Studio 2017 г. — Windows XP (v141_xp)** для создания кода для Windows XP и Windows Server 2003 с помощью Microsoft Visual C++ компилятора 2017 г.
+1. В **страницы свойств** диалоговое окно проекта, в разделе **свойства конфигурации** > **Общие**, задайте **набор инструментов платформы** свойство нужный набор инструментов Windows XP. Например, выберите **Visual Studio 2017 г. — Windows XP (v141_xp)** для создания кода для Windows XP и Windows Server 2003 с помощью Microsoft C++ компилятора в Visual Studio 2017.
 
 ### <a name="c-runtime-support"></a>Поддержка среды выполнения C++
 

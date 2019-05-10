@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 3702462ec892025cfb4f24d9c91e6db705b1b9a5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3818b0ff7d4e4c551c41726dd44935beb5d32842
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62179253"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448471"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>Влияние контроля учетных записей на приложение
 
@@ -22,7 +22,7 @@ ms.locfileid: "62179253"
 
 ## <a name="building-projects-after-enabling-uac"></a>Сборка проектов после включения контроля учетных записей
 
-Чтобы обеспечить корректную работу проекта Visual C++ для Windows Vista, собранного при отключенном контроле учетных записей, после включения контроля следует выполнить очистку и повторную сборку проекта.
+При построении Visual Studio C++ проекта в Windows Vista с контролем учетных Записей отключено и после включения Контроля, необходимо очистить и перестроить проект, чтобы обеспечить корректную работу.
 
 ## <a name="applications-that-require-administrative-privileges"></a>Приложения, для которых требуются права администратора
 
