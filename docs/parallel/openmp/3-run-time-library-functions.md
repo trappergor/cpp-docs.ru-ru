@@ -2,12 +2,12 @@
 title: 3. Функции библиотеки времени выполнения
 ms.date: 01/17/2019
 ms.assetid: b226e512-6822-4cbe-a2ca-74cc2bb7e880
-ms.openlocfilehash: 4e72d2d74bb26f8eeeb422881cabf92630cced43
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3eb6dc4110145a6c45dbdd772deaee3023e68e9d
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363236"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525033"
 ---
 # <a name="3-run-time-library-functions"></a>3. Функции библиотеки времени выполнения
 
@@ -40,7 +40,7 @@ ms.locfileid: "62363236"
 - [omp_set_nested](#319-omp_set_nested-function)
 - [omp_get_nested](#3110-omp_get_nested-function)
 
-### <a name="311-ompsetnumthreads-function"></a>3.1.1 функция omp_set_num_threads
+### <a name="311-omp_set_num_threads-function"></a>3.1.1 функция omp_set_num_threads
 
 `omp_set_num_threads` Функция задает значение по умолчанию количество потоков, используемых для более поздней версии параллельных регионов, которые не указывают `num_threads` предложение. Он следующий:
 
@@ -62,7 +62,7 @@ void omp_set_num_threads(int num_threads);
 - [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads) переменной среды
 - [num_threads](2-directives.md#23-parallel-construct) предложение
 
-### <a name="312-ompgetnumthreads-function"></a>3.1.2 функция omp_get_num_threads
+### <a name="312-omp_get_num_threads-function"></a>3.1.2 функция omp_get_num_threads
 
 `omp_get_num_threads` Функция возвращает число потоков в настоящее время в команде выполнения параллельной области, из которого он вызывается. Он следующий:
 
@@ -81,7 +81,7 @@ int omp_get_num_threads(void);
 - [num_threads](2-directives.md#23-parallel-construct)
 - [parallel](2-directives.md#23-parallel-construct)
 
-### <a name="313-ompgetmaxthreads-function"></a>3.1.3 функция omp_get_max_threads
+### <a name="313-omp_get_max_threads-function"></a>3.1.3 функция omp_get_max_threads
 
 `omp_get_max_threads` Функция возвращает целое число, которое гарантированно по крайней мере число потоков, которые используются для формирования команды, если параллельной области без `num_threads` предложения были распознается на этом этапе в коде. Он следующий:
 
@@ -109,7 +109,7 @@ threads-used-for-next-team
 - [omp_set_dynamic](#317-omp_set_dynamic-function)
 - [num_threads](2-directives.md#23-parallel-construct)
 
-### <a name="314-ompgetthreadnum-function"></a>3.1.4 функция omp_get_thread_num
+### <a name="314-omp_get_thread_num-function"></a>3.1.4 функция omp_get_thread_num
 
 `omp_get_thread_num` Функция возвращает номер потока, в его команды потока, выполняющего функции. Поток номеров лежит между 0 и `omp_get_num_threads()`-1, включительно. Главный поток команды является потоком 0.
 
@@ -126,7 +126,7 @@ int omp_get_thread_num(void);
 
 - [omp_get_num_threads](#312-omp_get_num_threads-function) функции
 
-### <a name="315-ompgetnumprocs-function"></a>3.1.5 функция omp_get_num_procs
+### <a name="315-omp_get_num_procs-function"></a>3.1.5 функция omp_get_num_procs
 
 `omp_get_num_procs` Функция возвращает количество процессоров, доступных для программы в момент вызова функции. Он следующий:
 
@@ -135,7 +135,7 @@ int omp_get_thread_num(void);
 int omp_get_num_procs(void);
 ```
 
-### <a name="316-ompinparallel-function"></a>3.1.6 функция omp_in_parallel
+### <a name="316-omp_in_parallel-function"></a>3.1.6 функция omp_in_parallel
 
 `omp_in_parallel` Функция возвращает ненулевое значение, если он вызывается в рамках динамического степень параллельной области, выполняя в параллельном режиме; в противном случае возвращает 0. Он следующий:
 
@@ -146,7 +146,7 @@ int omp_in_parallel(void);
 
 Эта функция возвращает ненулевое значение при вызове из в пределах региона параллельного выполнения, включая вложенные области, которые сериализуются.
 
-### <a name="317-ompsetdynamic-function"></a>3.1.7 функция omp_set_dynamic
+### <a name="317-omp_set_dynamic-function"></a>3.1.7 функция omp_set_dynamic
 
 `omp_set_dynamic` Функция включает или отключает динамическую настройку количество потоков, доступных для выполнения параллельных регионов. Он следующий:
 
@@ -171,7 +171,7 @@ void omp_set_dynamic(int dynamic_threads);
 - [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="318-ompgetdynamic-function"></a>3.1.8 функция omp_get_dynamic
+### <a name="318-omp_get_dynamic-function"></a>3.1.8 функция omp_get_dynamic
 
 `omp_get_dynamic` Функция возвращает ненулевое значение, если динамическую настройку потоков и в противном случае возвращает 0. Он следующий:
 
@@ -186,7 +186,7 @@ int omp_get_dynamic(void);
 
 - Описание динамического потока коррекции, см. в разделе [omp_set_dynamic](#317-omp_set_dynamic-function).
 
-### <a name="319-ompsetnested-function"></a>3.1.9 функция omp_set_nested
+### <a name="319-omp_set_nested-function"></a>3.1.9 функция omp_set_nested
 
 `omp_set_nested` Функция включает или отключает вложенных параллелизма. Он следующий:
 
@@ -208,7 +208,7 @@ void omp_set_nested(int nested);
 - [OMP_NESTED](4-environment-variables.md#44-omp_nested)
 - [omp_in_parallel](#316-omp_in_parallel-function)
 
-### <a name="3110-ompgetnested-function"></a>3.1.10 функция omp_get_nested
+### <a name="3110-omp_get_nested-function"></a>3.1.10 функция omp_get_nested
 
 `omp_get_nested` Функция возвращает ненулевое значение, если включен вложенный параллелизм, а значение 0, если она отключена. Дополнительные сведения о вложенных параллелизма, см. в разделе [omp_set_nested](#319-omp_set_nested-function). Он следующий:
 
@@ -241,7 +241,7 @@ int omp_get_nested(void);
 
 Функции OpenMP блокировки доступе к переменной блокировки таким образом, что они всегда чтения и обновления наиболее текущее значение переменной блокировки. Таким образом, нет необходимости для программы OpenMP для включения явных `flush` директивы, чтобы убедиться в том, что значение переменной блокировки согласована среди различных потоков. (Может возникнуть необходимость в `flush` директивы, чтобы согласовать значения других переменных.)
 
-### <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 функции omp_init_lock и omp_init_nest_lock
+### <a name="321-omp_init_lock-and-omp_init_nest_lock-functions"></a>3.2.1 функции omp_init_lock и omp_init_nest_lock
 
 Эти функции представляют собой единственный способ инициализации блокировки. Каждая функция инициализирует блокировкой, связанной с параметром *блокировки* для использования в будущих вызовах. Он следующий:
 
@@ -253,7 +253,7 @@ void omp_init_nest_lock(omp_nest_lock_t *lock);
 
 Начальное состояние разблокируется (то есть, ни один поток не владеет блокировкой). Вкладываемых блокировок исходное количество вложенности равен нулю. Он не соответствует требованиям, если ни один из этих подпрограмм с переменной блокировки, который уже был инициализирован.
 
-### <a name="322-ompdestroylock-and-ompdestroynestlock-functions"></a>3.2.2 функции omp_destroy_lock и omp_destroy_nest_lock функции
+### <a name="322-omp_destroy_lock-and-omp_destroy_nest_lock-functions"></a>3.2.2 функции omp_destroy_lock и omp_destroy_nest_lock функции
 
 Эти функции убедитесь, что указывает заблокировать переменную *блокировки* не инициализирована. Он следующий:
 
@@ -265,7 +265,7 @@ void omp_destroy_nest_lock(omp_nest_lock_t *lock);
 
 Он не соответствует политике для вызова одной из этих подпрограмм с переменной блокировки, которая не инициализирована или разблокирован.
 
-### <a name="323-ompsetlock-and-ompsetnestlock-functions"></a>3.2.3 функции omp_set_lock и omp_set_nest_lock функции
+### <a name="323-omp_set_lock-and-omp_set_nest_lock-functions"></a>3.2.3 функции omp_set_lock и omp_set_nest_lock функции
 
 Каждая из этих функций блокирует поток, выполняющий функции, пока указанная блокировка доступна, а затем устанавливает блокировку. Простой блокировка доступна, если это разблокирован. Вкладываемых блокировка доступна, если это разблокирован или если он уже принадлежит поток, выполняющий функции. Он следующий:
 
@@ -279,7 +279,7 @@ void omp_set_nest_lock(omp_nest_lock_t *lock);
 
 Вкладываемых блокировок, аргумент `omp_set_nest_lock` функции должен указывать на переменную инициализированный блокировки. Вложенности увеличивается, и предоставляется потоком, или же отслеживает владельца блокировки.
 
-### <a name="324-ompunsetlock-and-ompunsetnestlock-functions"></a>3.2.4 функции omp_unset_lock и omp_unset_nest_lock функции
+### <a name="324-omp_unset_lock-and-omp_unset_nest_lock-functions"></a>3.2.4 функции omp_unset_lock и omp_unset_nest_lock функции
 
 Эти функции предоставляют средства по освобождению владельца блокировки. Он следующий:
 
@@ -295,7 +295,7 @@ void omp_unset_nest_lock(omp_nest_lock_t *lock);
 
 Вкладываемых блокировок `omp_unset_nest_lock` уменьшает число вложенности и функции выпусков поток, выполняющий функцию с владельцем блокировки, если счетчик принял значение ноль.
 
-### <a name="325-omptestlock-and-omptestnestlock-functions"></a>3.2.5 функции omp_test_lock и omp_test_nest_lock функции
+### <a name="325-omp_test_lock-and-omp_test_nest_lock-functions"></a>3.2.5 функции omp_test_lock и omp_test_nest_lock функции
 
 Эти функции пытаются установить блокировку, но не блокировать выполнение потока. Он следующий:
 
@@ -318,7 +318,7 @@ int omp_test_nest_lock(omp_nest_lock_t *lock);
 - [Omp_get_wtime](#331-omp_get_wtime-function) функция возвращает прошедшее время.
 - [Omp_get_wtick](#332-omp_get_wtick-function) функция возвращает секунд между последовательными тактов.
 
-### <a name="331-ompgetwtime-function"></a>3.3.1 функция omp_get_wtime
+### <a name="331-omp_get_wtime-function"></a>3.3.1 функция omp_get_wtime
 
 `omp_get_wtime` Функция возвращает значение с плавающей запятой двойной точности, равным затраченного реального времени в секундах с момента некоторые «времени в прошлом».  Фактическое «время в прошлом» может быть произвольным, но он гарантировано не изменяется во время выполнения программы приложения. Он следующий:
 
@@ -340,7 +340,7 @@ printf_s("Work took %f sec. time.\n", end-start);
 
 Время, возвращаемое API являются «по потокам раз», что означало, что пользователям не нужно быть глобально согласованного для всех потоков, участвующих в приложении.
 
-### <a name="332-ompgetwtick-function"></a>3.3.2 функция omp_get_wtick
+### <a name="332-omp_get_wtick-function"></a>3.3.2 функция omp_get_wtick
 
 `omp_get_wtick` Функция возвращает значение двойной точности с плавающей запятой, равное количеству секунд между последовательными тактов. Он следующий:
 
