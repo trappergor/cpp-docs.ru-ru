@@ -1,18 +1,18 @@
 ---
 title: Пошаговое руководство. Отладка приложения C++ AMP
-ms.date: 11/19/2018
+ms.date: 04/23/2019
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f358f66d1e8a64c5042b60d7385de26a559642e
+ms.sourcegitcommit: 18d3b1e9cdb4fc3a76f7a650c31994bdbd2bde64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238046"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64877550"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>Пошаговое руководство. Отладка приложения C++ AMP
 
@@ -38,15 +38,37 @@ ms.locfileid: "62238046"
 
 - Убедитесь, что в этой строке отображаются числа в текстовом редакторе. Дополнительные сведения см. в разделе [Как Отображение номеров строк в редакторе](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor).
 
-- Убедитесь, что вы используете Windows 8 или Windows Server 2012 для поддержки отладки в эмуляторе программного обеспечения.
+- Убедитесь, что вы используете по крайней мере Windows 8 или Windows Server 2012 для поддержки отладки в эмуляторе программного обеспечения. 
 
 [!INCLUDE[note_settings_general](../../mfc/includes/note_settings_general_md.md)]
 
 ### <a name="to-create-the-sample-project"></a>Создание примера проекта
 
+Инструкции по созданию проекта зависит от используемой версии Visual Studio. Убедитесь, что у вас есть правильная версия, выбранного в левом верхнем углу этой страницы.
+
+::: moniker range="vs-2019"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2019"></a>Чтобы создать пример проекта в Visual Studio 2019
+
+1. В строке меню выберите **файл** > **New** > **проекта** открыть **создайте новый проект** диалоговое окно.
+
+1. В верхней части диалогового окна, задайте **языка** для **C++**, задайте **платформы** для **Windows**и задайте **типпроекта** для **консоли**. 
+
+1. В отфильтрованном списке типов проектов выберите **консольное приложение** выберите **Далее**. На следующей странице введите `AMPMapReduce` в **имя** поле для указания имени проекта и указать расположение проекта, при необходимости.
+
+   ![Назовите проект](../../build/media/mathclient-project-name-2019.png "назовите проект")
+
+1. Выберите **создать** кнопку, чтобы создать клиентский проект.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
+
+### <a name="to-create-the-sample-project-in-visual-studio-2017-or-visual-studio-2015"></a>Чтобы создать пример проекта в Visual Studio 2017 или Visual Studio 2015
+
 1. Запустите Visual Studio.
 
-2. В строке меню выберите **Файл** > **Создать** > **Проект**.
+2. В строке меню выберите **Файл** > **Создать** > **Проект**.
 
 3. В разделе **установленные** в области «Шаблоны» выберите **Visual C++**.
 
@@ -57,6 +79,9 @@ ms.locfileid: "62238046"
 6. Очистить **предкомпилированный заголовок** , а затем нажать **Готово** кнопки.
 
 7. В **обозревателе решений**, удалить файл stdafx.h, targetver.h и stdafx.cpp из проекта.
+
+::: moniker-end
+
 
 8. Откройте AMPMapReduce.cpp и замените его содержимое следующим кодом.
 

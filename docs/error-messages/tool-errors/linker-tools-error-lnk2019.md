@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: af40a48e36d316842ec9a744ad95d6c3b3af3731
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62386347"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447708"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Ошибка средств компоновщика LNK2019
 
@@ -86,7 +86,7 @@ ms.locfileid: "62386347"
 
 ### <a name="you-mix-code-that-uses-native-wchart-with-code-that-doesnt"></a>Код, который использует собственный wchar смешан\_t с кодом, который не
 
-Действия по согласованности языка C++, выполненные в Visual C++ 2005, привели к созданию собственного типа `wchar_t` по умолчанию. Для создания кода, совместимого с файлами библиотек и объектов, скомпилированными с помощью предыдущих версий Visual C++, необходимо использовать параметр компилятора [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) . Если не все файлы были скомпилированы с использованием тех же **/Zc:wchar\_t** параметры, тип ссылки не может разрешить в совместимые типы. Убедитесь в том, что типы `wchar_t` во всех файлах библиотек и объектов являются совместимыми. Для этого обновите используемые типы или используйте согласованные параметры **/Zc:wchar_t** при компиляции.
+C++язык по согласованию, выполненной в Visual Studio 2005, привели `wchar_t` собственный тип по умолчанию. Необходимо использовать [/Zc:wchar_t-](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md) параметр компилятора для создания кода, совместимого с файлами библиотек и объектов, скомпилированными с помощью более ранних версиях Visual Studio. Если не все файлы были скомпилированы с использованием тех же **/Zc:wchar\_t** параметры, тип ссылки не может разрешить в совместимые типы. Убедитесь в том, что типы `wchar_t` во всех файлах библиотек и объектов являются совместимыми. Для этого обновите используемые типы или используйте согласованные параметры **/Zc:wchar_t** при компиляции.
 
 ## <a name="third-party-library-issues-and-vcpkg"></a>Проблемы стороннюю библиотеку и Vcpkg
 

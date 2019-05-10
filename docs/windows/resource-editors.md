@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 774575e978a8e7f94868eb1b5dad90c6ac345460
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a752122d89b3d952aec664f0dec092af1599f143
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388180"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448914"
 ---
 # <a name="resource-editors-c"></a>Редакторы ресурсов (C++)
 
@@ -39,15 +39,15 @@ ms.locfileid: "62388180"
 
 |Редактор|Редактируемый элемент|
 |----------------|----------------|
-|[Редактор сочетаний клавиш](../windows/accelerator-editor.md)|Таблицы сочетаний клавиш в проектах Visual C++|
+|[Редактор сочетаний клавиш](../windows/accelerator-editor.md)|Таблицы сочетаний клавиш в Visual Studio C++ проектов.|
 |[Binary Editor](binary-editor.md)|Двоичные данные и настраиваемые ресурсы в проектах Visual C++, Visual Basic или Visual C#|
-|[Редактор диалоговых окон](../windows/dialog-editor.md)|Диалоговые окна в проектах Visual C++|
+|[Редактор диалоговых окон](../windows/dialog-editor.md)|Диалоговые окна в Visual Studio C++ проектов.|
 |[Image Editor](../windows/image-editor-for-icons.md)|Точечные рисунки, значки, курсоры и другие файлы изображений в проектах Visual C++, Visual Basic или Visual C#|
-|[Редактор меню](../windows/menu-editor.md)|Ресурсы меню в проектах Visual C++|
+|[Редактор меню](../windows/menu-editor.md)|Ресурсы меню в Visual Studio C++ проектов.|
 |[Редактор ленты (Ribbon)](../mfc/ribbon-designer-mfc.md)|Ресурсы ленты в проектах MFC|
-|[Редактор строк](../windows/string-editor.md)|Таблицы строк в проектах Visual C++|
-|[Редактор панелей инструментов](../windows/toolbar-editor.md)|Ресурсы панелей инструментов в проектах Visual C++ **Редактор панелей инструментов** является частью **редактор изображений**.|
-|[Редактор сведений о версии](../windows/version-information-editor.md)|Сведения о версиях в проектах Visual C++|
+|[Редактор строк](../windows/string-editor.md)|Таблицы строк в Visual Studio C++ проектов.|
+|[Редактор панелей инструментов](../windows/toolbar-editor.md)|Ресурсы панелей инструментов в Visual Studio C++ проектов. **Редактор панелей инструментов** является частью **редактор изображений**.|
+|[Редактор сведений о версии](../windows/version-information-editor.md)|Сведения о версии в Visual Studio C++ проектов.|
 
 > [!NOTE]
 > Если проект еще не содержит RC-файла, см. раздел [как: Создание ресурсов](../windows/how-to-create-a-resource-script-file.md).

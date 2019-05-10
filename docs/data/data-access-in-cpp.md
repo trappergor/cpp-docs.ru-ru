@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: a68c4a9df3b439ae641c5e4cbe6f3fbc8b8e6355
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398073"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222536"
 ---
 # <a name="data-access-in-visual-c"></a>Доступ к данным в Visual C++
 
@@ -40,11 +40,11 @@ ms.locfileid: "62398073"
 [Клиентская библиотека хранилища Microsoft Azure для C++](https://github.com/Azure/azure-storage-cpp)<br/>
 [Хранилище Azure](/azure/storage/storage-introduction) представляет собой решение облачного хранилища для современных приложений, которым необходима устойчивость, доступность и масштабируемость для удовлетворения потребностей пользователей. Подключитесь к хранилищу Azure из приложения на языке C++ с помощью клиентской библиотеки хранилища Azure для C++.
 
-[ODBC Driver 13.1 for SQL Server — Windows выпуска](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-Последняя версия драйвера ODBC обеспечивает надежный доступ к базам данных SQL Microsoft Azure и Microsoft SQL Server 2016 для приложений на языках C и C++. Предоставляет поддержку для функций, включая постоянного шифрования, Azure Active Directory и группы доступности AlwaysOn. Также доступен для MacOS и Linux.
+[Драйвер ODBC для SQL Server](/sql/connect/odbc/microsoft-odbc-driver-for-sql-server)<br/>
+Последнюю версию драйвера ODBC обеспечивает надежный доступ к данным Microsoft SQL Server и базы данных SQL Microsoft Azure для C /C++ приложений на основе. Предоставляет поддержку для функций, включая постоянного шифрования, Azure Active Directory и группы доступности AlwaysOn. Также доступен для MacOS и Linux.
 
-[Собственный клиент SQL Server](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
-Собственный клиент SQL Server — прикладной программный интерфейс (API) для автономного доступа к данным, который используется для OLE DB и ODBC и поддерживается в версиях SQL Server начиная с SQL Server 2005 и заканчивая SQL Server 2014. В новых приложениях следует использовать драйвер ODBC версии 13.1 для SQL Server.
+[Драйвер OLE DB для SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)<br/>
+Последнюю версию драйвера OLE DB — данных автономного доступа прикладной программный интерфейс (API), поддерживающий Microsoft SQL Server и базы данных SQL Microsoft Azure.
 
 [Microsoft Azure C и C++ Developer Center](https://azure.microsoft.com/develop/cpp/)<br/>
 Azure позволяет легко создавать приложения C++, обладающие высокой гибкостью, масштабируемостью и надежностью, с помощью тех инструментов, которые вам нравятся.

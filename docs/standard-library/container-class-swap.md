@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - swap method
 ms.assetid: 898c219c-bc8e-4d14-a149-6240426c693f
-ms.openlocfilehash: 2c2b87e8cc51248fd3d29df7f361fff92da72957
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b344747c42e9b8b751b97747aacec0b39d10d6a1
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210848"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221526"
 ---
 # <a name="container-classswap"></a>Класс контейнера::swap
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Меняет местами управляемые последовательности между **\*this**.
 

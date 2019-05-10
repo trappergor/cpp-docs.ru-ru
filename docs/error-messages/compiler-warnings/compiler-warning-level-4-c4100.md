@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4100
 ms.assetid: 478ed97d-e502-49e4-9afb-ac2a6c61194b
-ms.openlocfilehash: 84a0b27203cd43e8a8992c4ba599f1400c6909ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ccb438cf7c80edb1403683ac4817617ffccc690d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62401401"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447739"
 ---
 # <a name="compiler-warning-level-4-c4100"></a>Предупреждение компилятора (уровень 4) C4100
 
@@ -19,7 +19,7 @@ ms.locfileid: "62401401"
 
 Формальный параметр не используется в теле функции. Неиспользованный параметр игнорируется.
 
-C4100 также может быть выпущен, когда код вызывает деструктор для неиспользованного параметра типа-примитива.  Это ограничение компилятора Visual C++.
+C4100 также может быть выпущен, когда код вызывает деструктор для неиспользованного параметра типа-примитива.  Это ограничение Microsoft C++ компилятора.
 
 Следующий пример приводит к возникновению ошибки C4100:
 

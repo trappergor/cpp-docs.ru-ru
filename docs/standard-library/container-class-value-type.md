@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - value_type typedef
 ms.assetid: e89d5a71-b48c-47fa-aa78-682243e6e97f
-ms.openlocfilehash: 195cd6c72f392dc9308971bb4adb4b0a79ff9370
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bba94e290e691c807d9db7f40f2fa6f0d3c7965b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210792"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221359"
 ---
 # <a name="container-classvaluetype"></a>Класс контейнера::value_type
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Функционирует в качестве синонима параметра шаблона *Ty*.
 

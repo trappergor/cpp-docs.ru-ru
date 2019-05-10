@@ -1,13 +1,13 @@
 ---
 title: Атрибуты в C++
-ms.date: 06/01/2018
+ms.date: 05/06/2019
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: 81de2816c208d5ddc879f04d70912c3dddcd7832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: bc92e5f3e279edc6fbea7f99d52c469f9fdf04f8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62284751"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222302"
 ---
 # <a name="attributes-in-c"></a>Атрибуты в C++
 
@@ -41,7 +41,7 @@ void Foo(int);
 
 - `[[deprecated]]` **Visual Studio 2015 и более поздних версий:** Указывает, что функция не предназначена для использования и может отсутствовать в будущих версиях интерфейса библиотеки. Компилятор может использовать это для создания информационное сообщение, когда клиентский код пытается вызвать функцию. Могут применяться к объявлению класса, имя typedef, переменной, нестатические данные-член, функции, пространство имен, перечисления, перечислителя или специализацию шаблона.
 
-- `[[fallthrough]]` **Visual Studio 2017 и более поздних версий:** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` атрибут может использоваться в контексте [переключения](switch-statement-cpp.md) инструкции, как подсказку для компилятора (или если вы читаете код), поведение fallthrough предназначено. Компилятор Visual C++ в настоящее время не предупреждать о fallthrough поведение, поэтому этот атрибут не имеет эффекта компилятора поведения.
+- `[[fallthrough]]` **Visual Studio 2017 и более поздних версий:** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) `[[fallthrough]]` атрибут может использоваться в контексте [переключения](switch-statement-cpp.md) инструкции, как подсказку для компилятора (или если вы читаете код), поведение fallthrough предназначено. Microsoft C++ компилятора в настоящее время не предупреждать о fallthrough поведение, поэтому этот атрибут не имеет эффекта компилятора поведения.
 
 - `[[nodiscard]]` **Visual Studio 2017 версии 15.3 и более поздние версии:** (состав [/std: c ++ 17](../build/reference/std-specify-language-standard-version.md)) указывает, что возвращаемое значение функции не должен быть отброшены. Вызывает предупреждение C4834, как показано в следующем примере:
 

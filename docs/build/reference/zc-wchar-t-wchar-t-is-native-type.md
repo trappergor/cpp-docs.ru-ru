@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 962bb2aaa2f05ad0dc4c9c86cd5cc9694cfad98b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315642"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446157"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t – это собственный тип)
 
@@ -31,7 +31,7 @@ ms.locfileid: "62315642"
 
 Если **/Zc: wchar_t** , `wchar_t` является ключевым словом для встроенных целочисленного типа в коде, скомпилированном как C++. Если **/Zc:wchar_t-** (со знаком минус) указанного, или код компилируется как C, `wchar_t` не является встроенным типом. Вместо этого `wchar_t` определяется как `typedef` для `unsigned short` в канонический заголовок stddef.h. (Microsoft реализация определяет ее в другой заголовок, включенный по stddef.h и других стандартных заголовках.)
 
-Мы не рекомендуем **/Zc:wchar_t-** поскольку C++ стандарт требует, `wchar_t` был встроенным типом. Использование версии `typedef` может вызывать проблемы переносимости. При обновлении с более ранних версиях Visual C++ возникает ошибка компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) тем, что код пытается выполнить неявное преобразование `wchar_t` для `unsigned short`, рекомендуется изменить код, чтобы устранить ошибку, Вместо того чтобы задавать **/Zc:wchar_t-**.
+Мы не рекомендуем **/Zc:wchar_t-** поскольку C++ стандарт требует, `wchar_t` был встроенным типом. Использование версии `typedef` может вызывать проблемы переносимости. При обновлении более ранних версиях Visual Studio и возникает ошибка компилятора [C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md) тем, что код пытается выполнить неявное преобразование `wchar_t` для `unsigned short`, рекомендуется изменить код, чтобы устранить ошибку, Вместо того чтобы задавать **/Zc:wchar_t-**.
 
 **/Zc: wchar_t** включен параметр по умолчанию в C++ компиляциям и учитывается в компиляции C. [/ Permissive-](permissive-standards-conformance.md) параметр не влияет на **/Zc: wchar_t**.
 

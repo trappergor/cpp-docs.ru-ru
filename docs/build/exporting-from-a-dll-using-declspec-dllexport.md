@@ -1,6 +1,6 @@
 ---
 title: Экспорт из библиотеки DLL с использованием __declspec(dllexport)
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - dllexport
 - __declspec
@@ -10,18 +10,16 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 167060d0270004b8648d32af206865bfe66c3b4b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195320"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220790"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>Экспорт из библиотеки DLL с использованием __declspec(dllexport)
 
-Майкрософт ввел **__export** в 16-разрядный компилятор версии визуального элемента C++ позволяет компилятору автоматически создавать экспортируемые имена и помещать их в LIB-файл. Затем этот LIB-файл можно использовать так же, как статический .lib для связывания с библиотекой DLL.
-
-В новых версиях компилятора можно экспортировать данные, функции, классы и функции-члены класса из библиотеки DLL с помощью **__declspec(dllexport)** ключевое слово. **__declspec(dllexport)** добавляет директивы экспорта в объектный файл, поэтому необходимо создать DEF-файл.
+Можно экспортировать данные, функции, классы и функции-члены класса из библиотеки DLL с помощью **__declspec(dllexport)** ключевое слово. **__declspec(dllexport)** добавляет директивы экспорта в объектный файл, поэтому необходимо создать DEF-файл.
 
 Данное преимущество особенно заметно при экспорте декорированных имен функций C++. Так как нет стандартные спецификации по декорированию имен, имя экспортируемой функции может измениться между версиями компилятора. Если вы используете **__declspec(dllexport)**, перекомпиляция библиотеки DLL и .exe-файлов необходима только для учетной записи для изменений в соглашениях об именовании.
 
@@ -50,11 +48,6 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 **__declspec(dllexport)** сохраняет имена функций в таблице экспорта DLL. Если вы хотите оптимизировать размер таблицы, см. в разделе [Экспорт функций из библиотеки DLL по порядковому номеру, а не по имени](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md).
-
-> [!NOTE]
->  При переносе исходного кода библиотеки DLL с Win16 на Win32 необходимо заменить каждый экземпляр **__export** с **__declspec(dllexport)**.
-
-Как ссылка поиск в файле заголовка Win32 Winbase.h. Он содержит примеры **__declspec(dllimport)** использования.
 
 ## <a name="what-do-you-want-to-do"></a>Выберите действие
 

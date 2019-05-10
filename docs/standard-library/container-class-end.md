@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - end method
 ms.assetid: 6fa38a20-3798-4387-9c6e-20fc3e90d813
-ms.openlocfilehash: 458f22e76f03322c1a67a9ec93b953ad82d71a35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 43b8d82b86cbe1eae0412c82fdf1f8af897233dc
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211232"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221622"
 ---
 # <a name="container-classend"></a>Класс контейнера::end
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Возвращает итератор, который указывает на позицию непосредственно за концом последовательности.
 

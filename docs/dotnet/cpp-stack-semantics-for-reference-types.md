@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: 69771de120dc413496a3b7b0613e51a13d208e22
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 4d9aaa493eab39199ac75b6b9fe888c3e103f115
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62209165"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448067"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>Семантика стека C++ для ссылочных типов
 
-До Visual C++ 2005, экземпляр ссылочного типа может создаваться только с помощью `new` оператор, который создал объект в сборке мусора куче. Тем не менее теперь можно создать экземпляр ссылочного типа, используя тот же синтаксис, который используется для создания экземпляра собственного типа в стеке. Таким образом, не нужно использовать [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) для создания объекта ссылочного типа. И, когда объект выходит за пределы области, компилятор вызывает деструктор объекта.
+До Visual Studio 2005, экземпляр ссылочного типа может создаваться только с помощью `new` оператор, который создал объект в сборке мусора куче. Тем не менее теперь можно создать экземпляр ссылочного типа, используя тот же синтаксис, который используется для создания экземпляра собственного типа в стеке. Таким образом, не нужно использовать [ref new, gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md) для создания объекта ссылочного типа. И, когда объект выходит за пределы области, компилятор вызывает деструктор объекта.
 
 ## <a name="remarks"></a>Примечания
 

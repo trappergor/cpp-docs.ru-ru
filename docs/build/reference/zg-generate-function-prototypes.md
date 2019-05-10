@@ -10,12 +10,12 @@ helpviewer_keywords:
 - -Zg compiler option [C++]
 - generate function prototypes compiler option
 ms.assetid: c8df1b46-24ff-46f2-8356-e0a144b21dd2
-ms.openlocfilehash: 684174cf46e644c22e072e3fa60f75f9434c7e54
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 591460b78a461aa2e33f873b79d6dcec0277f99f
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315902"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446197"
 ---
 # <a name="zg-generate-function-prototypes"></a>/Zg (создание прототипов функций)
 
@@ -29,7 +29,7 @@ ms.locfileid: "62315902"
 
 ## <a name="remarks"></a>Примечания
 
-Этот параметр компилятора больше не доступен. Он был удален в Visual C++ 2015. Эта страница сохраняется для пользователей более ранних версий Visual C++.
+Этот параметр компилятора больше не доступен. Он был удален в Visual Studio 2015. Эта страница сохраняется для пользователей более ранних версиях Visual Studio.
 
 В состав прототипа функции входит тип возвращаемого значения функции и список типов аргументов. Список типов аргументов создается на основе типов формальных параметров функции. Все прототипы функций, присутствующие в исходном файле, пропускаются.
 

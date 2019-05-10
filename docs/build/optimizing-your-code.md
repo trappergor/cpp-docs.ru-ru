@@ -1,6 +1,6 @@
 ---
 title: Оптимизация кода
-ms.date: 04/23/2019
+ms.date: 05/06/2019
 helpviewer_keywords:
 - performance, optimizing code
 - optimization
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - optimization, C++ code
 - code, optimizing
 - performance, compiler
-ms.openlocfilehash: 430ac9ef1b2946e511d04f7ce18bb0f20d727d75
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: f44fb734c8441e10b656c5326c8df4bf6879499a
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64341113"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220179"
 ---
 # <a name="optimizing-your-code"></a>Оптимизация кода
 
-Оптимизировав исполняемый файл, можно добиться баланса между высокой скоростью выполнения и небольшим размером кода. В этом разделе рассматриваются некоторые из механизмов, предоставляемых Visual C++ для оптимизации кода.
+Оптимизировав исполняемый файл, можно добиться баланса между высокой скоростью выполнения и небольшим размером кода. В этом разделе рассматриваются некоторые из механизмов, предоставляемых Visual Studio для оптимизации кода.
 
 ## <a name="language-features"></a>Возможности языка
 

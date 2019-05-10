@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Desktop Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 43a47366475b227ccfc5918b07760cc582326e82
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b86536cb6177390ab89d235ecb8e093006dd8cff
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387737"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448567"
 ---
 # <a name="windows-desktop-wizard"></a>Мастер классических приложений Windows
 
@@ -83,8 +83,8 @@ ms.locfileid: "62387737"
 > [!NOTE]
 > Классы ATL добавить нельзя, а классы MFC можно добавить только в те типы классических приложений Windows, которые поддерживают MFC (см. предыдущую таблицу).
 
-Файлы, созданные мастером для проекта, можно просмотреть в **обозревателе решений**. Дополнительные сведения о файлах, мастер создает для проекта, см. в файле, созданном для проекта `ReadMe.txt`. Дополнительные сведения о типах файлов см. в разделе [Типы файлов, создаваемых для проектов Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md).
+Файлы, созданные мастером для проекта, можно просмотреть в **обозревателе решений**. Дополнительные сведения о файлах, мастер создает для проекта, см. в файле, созданном для проекта `ReadMe.txt`. Дополнительные сведения о типах файлов [типы файлов, создаваемых для визуального C++ проекты](../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 ## <a name="see-also"></a>См. также
 
-[Типы проектов Visual C++](../build/reference/visual-cpp-project-types.md)
+[C++типы проектов в Visual Studio](../build/reference/visual-cpp-project-types.md)

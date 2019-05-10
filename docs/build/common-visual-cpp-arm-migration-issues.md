@@ -1,17 +1,17 @@
 ---
 title: Общие вопросы использования Visual C++ ARM
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 78d87000240acd394edf823a778ae29060c6d09c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62195270"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220882"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Общие вопросы использования Visual C++ ARM
 
-При использовании Microsoft Visual C++ (MSVC), тот же исходный код C++ может давать разные результаты на основе архитектуры ARM, не так, как на x86 или x64 архитектурах.
+При использовании Microsoft C++ компилятор (MSVC), же C++ исходного кода может давать разные результаты на основе архитектуры ARM, не так, как на x86 или x64 архитектурах.
 
 ## <a name="sources-of-migration-issues"></a>Источники проблем миграции
 

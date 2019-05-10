@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 29761d814505d2c2dd435d3416fe2367e1c16073
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409555"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448417"
 ---
 # <a name="idl-attributes"></a>Атрибуты IDL
 
@@ -27,7 +27,7 @@ ms.locfileid: "62409555"
 
 Если не используется с [атрибуты COM](com-attributes.md), атрибуты IDL позволяют определять интерфейсы. Если исходный код компилируется, атрибуты используются для определения созданного IDL-файла. При использовании с атрибуты COM в проект ATL, некоторые атрибуты IDL, такие как `coclass`, код, которые следует вставить в проект.
 
-Обратите внимание, что [idl_quote](idl-quote.md) позволяет использовать MIDL конструкции, которые не поддерживаются в текущей версии визуального элемента C++. Это и другие атрибуты, такие как [importlib](importlib.md) и [includelib](includelib-cpp.md) позволяют использовать существующие IDL-файлы в текущем проекте Visual C++.
+Обратите внимание, что [idl_quote](idl-quote.md) позволяет использовать MIDL конструкции, которые не поддерживаются в текущей версии визуального элемента C++. Это и другие атрибуты, такие как [importlib](importlib.md) и [includelib](includelib-cpp.md) позволяют использовать существующие IDL-файлы в текущем Visual Studio C++ проекта.
 
 |Атрибут|Описание|
 |---------------|-----------------|

@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: de3389a52781f541143268e3ede79eae375ff1d3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317891"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446223"
 ---
 # <a name="std-specify-language-standard-version"></a>/ STD (указание стандартной версии языка)
 
@@ -48,10 +48,10 @@ ms.locfileid: "62317891"
 
 **/Std** фактически во время компиляции C++ могут быть обнаружены с помощью [ \_MSVC\_LANG](../../preprocessor/predefined-macros.md) макрос препроцессора. Дополнительные сведения см. в разделе [макросы препроцессора](../../preprocessor/predefined-macros.md).
 
-**/Std: c ++ 14** и **/std: c ++ последнюю** параметры будут доступны, начиная с Visual C++ 2015 с обновлением 3. **/Std: c ++ 17** параметр доступно в Visual C++ 2017 версии 15.3. Как отмечалось выше, некоторые стандарт C ++ 17 поведение включено по **/std: c ++ 14** параметр, но все остальные функции C ++ 17 включены по **/std: c ++ 17**.
+**/Std: c ++ 14** и **/std: c ++ последнюю** параметры будут доступны, начиная с Visual Studio 2015 с обновлением 3. **/Std: c ++ 17** параметр доступно в Visual Studio 2017 версии 15.3. Как отмечалось выше, некоторые стандарт C ++ 17 поведение включено по **/std: c ++ 14** параметр, но все остальные функции C ++ 17 включены по **/std: c ++ 17**.
 
 > [!NOTE]
-> В зависимости от MSVC версии или обновить уровень компилятора, определенных функций C ++ 14 и C ++ 17 могут быть реализованы не полностью или полностью соответствует стандартам при указании **/std: c ++ 14** или **/std: c ++ 17** параметры. Например, компилятор Visual C++ 2017 RTM не полностью поддерживает C ++ 14-совместимого `constexpr`, выражение SFINAE или поиск по имени этап 2. Обзор соответствие стандартам языка C++ в Visual C++ в версии выпуска, см. в разделе [соответствие стандартам языка Visual C++](../../overview/visual-cpp-language-conformance.md).
+> В зависимости от MSVC версии или обновить уровень компилятора, определенных функций C ++ 14 и C ++ 17 могут быть реализованы не полностью или полностью соответствует стандартам при указании **/std: c ++ 14** или **/std: c ++ 17** параметры. Например, компилятор Visual Studio 2017 RTM не полностью поддерживает C ++ 14-совместимого `constexpr`, выражение SFINAE или поиск по имени этап 2. Обзор соответствие стандартам языка C++ в Visual C++ в версии выпуска, см. в разделе [соответствие стандартам языка Visual C++](../../overview/visual-cpp-language-conformance.md).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0808f66c4d4c4e99b3038ea18a1f71f4ebaca89a
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315317"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446181"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (компиляция среды выполнения Windows)
 
-Компилирует исходный код для поддержки Visual C++ расширения компонентов C++/CX для создания приложений универсальной платформы Windows (UWP).
+Компилирует исходный код для поддержки Microsoft C++ расширения компонентов C++/CX для создания приложений универсальной платформы Windows (UWP).
 
 При использовании **/ZW** для компиляции, всегда указывайте **/EHsc** также.
 

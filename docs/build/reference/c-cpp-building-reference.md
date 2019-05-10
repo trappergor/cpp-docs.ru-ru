@@ -1,23 +1,23 @@
 ---
 title: Справочные сведения о сборке C/C++ - Visual Studio
 description: Справочные материалы по для системы проектов C/C++ и инструментов в Visual Studio сборки.
-ms.date: 12/10/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - compiling source code [C++], additional information
 - cl.exe compiler [C++], building programs
 - linker [C++], building reference
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
-ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: abe946ce516e915cd597a0f863c5949fed212bfa
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294763"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221445"
 ---
 # <a name="cc-building-reference"></a>Ссылка на сборку C/C++
 
-Visual C++ предоставляет два способа создания программы C/C++. Самым простым (и наиболее распространенным) способом является [построения в интегрированной среде разработки Visual Studio](../creating-and-managing-visual-cpp-projects.md). Другой способ — [построения из командной строки с помощью программы командной строки](../building-on-the-command-line.md). В любом случае можно создать и изменить исходные файлы с помощью Visual Studio или сторонних редактора по своему усмотрению.
+Visual Studio предоставляет два способа построения C /C++ программы. Самым простым (и наиболее распространенным) способом является [построения в интегрированной среде разработки Visual Studio](../creating-and-managing-visual-cpp-projects.md). Другой способ — [построения из командной строки с помощью программы командной строки](../building-on-the-command-line.md). В любом случае можно создать и изменить исходные файлы с помощью Visual Studio или сторонних редактора по своему усмотрению.
 
 ## <a name="in-this-section"></a>В этом разделе
 

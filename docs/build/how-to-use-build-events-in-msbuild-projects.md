@@ -1,17 +1,15 @@
 ---
 title: Практическое руководство. Использование событий построения в проектах MSBuild
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8f4ccea66f7346512df88fc4c6078752c624aaa9
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273486"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221469"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>Практическое руководство. Использование событий построения в проектах MSBuild
 
@@ -39,7 +37,7 @@ ms.locfileid: "62273486"
 
 ## <a name="example"></a>Пример
 
-Следующий пример можно добавить в элемент проекта myproject.vcxproj файла, созданного в [Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Объект *перед сборкой* событий делает копию main.cpp; *перед компоновкой* событий делает копию main.obj; а также *после построения* событий создается копия myproject.exe. Если проект создается с помощью конфигурации release, выполняются события построения. Если проект создается с помощью конфигурации отладки, события сборки, не выполняются.
+Следующий пример можно добавить в элемент проекта myproject.vcxproj файла, созданного в [Пошаговое руководство: Использование MSBuild для создания C++ проекта](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md). Объект *перед сборкой* событий делает копию main.cpp; *перед компоновкой* событий делает копию main.obj; а также *после построения* событий создается копия myproject.exe. Если проект создается с помощью конфигурации release, выполняются события построения. Если проект создается с помощью конфигурации отладки, события сборки, не выполняются.
 
 ```
 <ItemDefinitionGroup>
@@ -73,4 +71,4 @@ ms.locfileid: "62273486"
 ## <a name="see-also"></a>См. также
 
 [MSBuild в командной строке - C++](msbuild-visual-cpp.md)<br/>
-[Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[Пошаговое руководство: Использование MSBuild для создания проекта C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

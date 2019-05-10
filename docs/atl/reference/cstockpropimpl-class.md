@@ -1,6 +1,6 @@
 ---
 title: Класс CStockPropImpl
-ms.date: 11/06/2018
+ms.date: 05/06/2019
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -64,12 +64,12 @@ helpviewer_keywords:
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-ms.openlocfilehash: 148c9571bb37e2b9063ca9290f51caa1fabb2d21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 246e2a26db6adde0fec06523c1b8db09c5f552f3
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62277491"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221071"
 ---
 # <a name="cstockpropimpl-class"></a>Класс CStockPropImpl
 
@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 `CStockPropImpl` предоставляет **поместить** и **получить** методы для каждого стандартного свойства. Эти методы предоставляют код, необходимый для установки или получения данных элемент, связанный с каждого свойства, а также для уведомления и синхронизировать с контейнером при изменении любого свойства.
 
-Visual C++ поддерживает стандартные свойства через ее мастера. Дополнительные сведения о Добавление стандартных свойств для элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md).
+Visual Studio поддерживает стандартные свойства через ее мастера. Дополнительные сведения о Добавление стандартных свойств для элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md).
 
 Для обеспечения обратной совместимости `CStockPropImpl` также предоставляет `get_Window` и `put_Window` методы, которые просто вызовите `get_HWND` и `put_HWND`, соответственно. Реализация по умолчанию `put_HWND` вернет значение E_FAIL, поскольку HWND должен быть доступным только для чтения.
 

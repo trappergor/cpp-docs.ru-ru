@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b43658eda749e68c17659fcb41248b88fd843792
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411270"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448499"
 ---
 # <a name="security-best-practices-for-c"></a>Рекомендации по безопасности для C++
 
@@ -21,7 +21,7 @@ ms.locfileid: "62411270"
 
 ## <a name="visual-c-security-features"></a>Средства безопасности в Visual C++
 
-Эти средства обеспечения безопасности приложений встроены в компилятор и компоновщик Visual C++.
+Эти функции безопасности встроены в Microsoft C++ компилятора и компоновщика:
 
 [/guard (включение защиты потока управления)](../build/reference/guard-enable-control-flow-guard.md)<br/>
 Указывает компилятору на необходимость анализа потока управления для целевых объектов косвенного вызова во время компиляции и последующей вставки кода для проверки целевых объектов во время выполнения.

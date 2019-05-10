@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Создание приложения ленты с помощью MFC
-ms.date: 11/04/2016
+ms.date: 04/25/2019
 helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: a45df5258a16885b50e11d4cca8ba99eb4b3d458
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558224"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>Пошаговое руководство. Создание приложения ленты с помощью MFC
 
@@ -22,9 +22,7 @@ ms.locfileid: "62358311"
 
 ### <a name="to-create-an-mfc-application-that-has-a-ribbon"></a>Создание приложения MFC с лентой
 
-1. Используйте **мастер приложений MFC** Создание приложения MFC с лентой. Чтобы запустить мастер, на **файл** последовательно выберите пункты **New**и нажмите кнопку **проекта**.
-
-1. В **новый проект** диалогового окна последовательно раскройте элементы **Visual C++** в узле **установленные шаблоны**выберите **MFC**, а затем выберите  **Приложения MFC**. Например, введите имя проекта, *MFCRibbonApp*, а затем нажмите кнопку **ОК**.
+1. Используйте **мастер приложений MFC** Создание приложения MFC с лентой. См. [Пошаговое руководство: С помощью новых элементов управления оболочки MFC](walkthrough-using-the-new-mfc-shell-controls.md) инструкции о том, как открыть мастер для вашей версии Visual Studio.
 
 1. Задать следующие параметры **мастер приложений MFC**:
 
@@ -34,7 +32,7 @@ ms.locfileid: "62358311"
 
     1. В **свойства шаблона документа** раздела **расширение файла** введите расширение имени файла для документов, создаваемых этим приложением, например, *mfcrbnapp*.
 
-    1. В **Поддержка баз данных** разделе, убедитесь, что **None** выбран.
+    1. В **Поддержка баз данных** раздел (Visual Studio 2015 только), убедитесь, что **None** выбран.
 
     1. В **возможностей пользовательского интерфейса** разделе, убедитесь, что **использовать ленту** выбран.
 

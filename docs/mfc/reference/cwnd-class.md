@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e88c375560c617e970c70adda245125ac8242ae4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323504"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220349"
 ---
 # <a name="cwnd-class"></a>Класс CWnd
 
@@ -8262,7 +8262,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Один из проверки нажатия мыши перечисление значений, перечисленных ниже.
+Один из проверки нажатия мыши значений перечисления. См. в разделе [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) список значений.
 
 ### <a name="remarks"></a>Примечания
 
@@ -8282,7 +8282,7 @@ afx_msg void OnNcLButtonDblClk(
 ### <a name="parameters"></a>Параметры
 
 *nHitTest*<br/>
-Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
+Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора. См. в разделе [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) список значений.
 
 *point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
@@ -8307,7 +8307,7 @@ afx_msg void OnNcLButtonDown(
 ### <a name="parameters"></a>Параметры
 
 *nHitTest*<br/>
-Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
+Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора. См. в разделе [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) список значений.
 
 *point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.
@@ -8332,7 +8332,7 @@ afx_msg void OnNcLButtonUp(
 ### <a name="parameters"></a>Параметры
 
 *nHitTest*<br/>
-Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора.
+Указывает [код проверки нажатия](#onnchittest). Проверку нажатия является тест, который определяет расположение курсора. См. в разделе [WM_NCHITTEST](/windows/desktop/inputdev/wm-nchittest) список значений.
 
 *point*<br/>
 Указывает `CPoint` , содержащий x и y экранные координаты положения курсора. Эти координаты всегда относительны в левом верхнем углу экрана.

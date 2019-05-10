@@ -1,14 +1,14 @@
 ---
 title: Создание проекта (учебник ATL, часть 1)
 ms.custom: get-started-article
-ms.date: 09/26/2018
+ms.date: 05/06/2019
 ms.assetid: f6b727d1-390a-4b27-b82f-daadcd9fc059
-ms.openlocfilehash: 4a608fb3a096dee2420ef652ba213c534d8fb426
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 292faf1769baa2e1c3fc6e52ba6df065cf08766e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62262090"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221407"
 ---
 # <a name="creating-the-project-atl-tutorial-part-1"></a>Создание проекта (учебник ATL, часть 1)
 
@@ -36,9 +36,9 @@ ms.locfileid: "62262090"
 
 ### <a name="to-create-the-initial-atl-project-using-the-atl-project-wizard"></a>Для создания начального проекта ATL, используя мастер проектов ATL
 
-1. В среде разработки Visual Studio, нажмите кнопку **New** на **файл** меню, а затем щелкните **проекта**.
+1. В Visual Studio 2017 и более ранних версий: **Файл** > **новый** > **проекта**. Открыть **Visual C++**  и выберите **MFC/ATL**. Выберите **проекта ATL**.
 
-1. Откройте **Visual C++** и выберите **MFC/ATL**. Выберите **проекта ATL**.
+   В Visual Studio 2019 г.: Выберите **файл** > **New** > **проекта**, введите «atl» в поле поиска и выберите **проекта ATL**.
 
 1. Тип *многоугольника* как имя проекта.
 

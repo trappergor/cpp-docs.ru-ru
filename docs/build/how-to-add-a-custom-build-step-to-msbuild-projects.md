@@ -1,17 +1,15 @@
 ---
 title: Практическое руководство. Добавление пользовательского шага построения в проекты MSBuild
 ms.date: 11/04/2016
-f1_keywords:
-- msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d70f145a9d43463266a9c0bbff68e8e7f36ef2c6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62188929"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220730"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>Практическое руководство. Добавление пользовательского шага построения в проекты MSBuild
 
@@ -27,7 +25,7 @@ ms.locfileid: "62188929"
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>Для определения выполняемых настраиваемого этапа сборки
 
-1. Добавьте группу свойств в файл проекта. В этой группе свойств укажите команду, входные и выходные данные и сообщения, как показано в следующем примере. В этом примере создает CAB-файл в файле main.cpp, созданный в [Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
+1. Добавьте группу свойств в файл проекта. В этой группе свойств укажите команду, входные и выходные данные и сообщения, как показано в следующем примере. В этом примере создает CAB-файл в файле main.cpp, созданный в [Пошаговое руководство: Использование MSBuild для создания C++ проекта](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md).
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +50,6 @@ ms.locfileid: "62188929"
 
 ## <a name="see-also"></a>См. также
 
-[Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[Пошаговое руководство: Использование MSBuild для создания проекта C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
 [Практическое руководство. Использование событий сборки в проектах MSBuild](how-to-use-build-events-in-msbuild-projects.md)<br/>
 [Практическое руководство. Добавление пользовательских средств сборки в проекты MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)

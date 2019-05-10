@@ -9,16 +9,16 @@ helpviewer_keywords:
 - thread attribute
 - Thread Local Storage [C++]
 ms.assetid: 80801907-d792-45ca-b776-df0cf2e9f197
-ms.openlocfilehash: f5a75f7964b0291a980b22d36e7ce6a0a87d3dc3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5c7bf2ae7cb5bfe71be9a1d72147e97c894064b3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362729"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448910"
 ---
 # <a name="thread-local-storage-tls"></a>Локальное хранилище потока (TLS)
 
-Локальное хранилище потока (TLS) — это механизм, с помощью которого каждый поток в указанном многопоточном процессе может выделять расположения для хранения данных определенного потока. Динамически данные границы (во время выполнения) определенного потока поддерживаются посредством TLS API ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 и компилятор Visual C++ теперь поддерживают статически привязываемые (во время загрузки) данные потока, в дополнение к существующей реализации API.
+Локальное хранилище потока (TLS) — это механизм, с помощью которого каждый поток в указанном многопоточном процессе может выделять расположения для хранения данных определенного потока. Динамически данные границы (во время выполнения) определенного потока поддерживаются посредством TLS API ([TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc).  Win32 и Microsoft C++ компилятор теперь поддержки привязаны статически (во время загрузки) данные потока, в дополнение к существующей реализации API.
 
 ##  <a name="_core_compiler_implementation_for_tls"></a> Реализация компилятора для TLS
 
