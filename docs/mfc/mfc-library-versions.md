@@ -1,6 +1,6 @@
 ---
 title: Версии библиотек MFC
-ms.date: 1/09/2018
+ms.date: 05/08/2019
 helpviewer_keywords:
 - class libraries [MFC], building versions
 - version information [MFC], MFC library
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC libraries
 - MFC, library versions
 - libraries [MFC], versions
-ms.openlocfilehash: c0dc724566063066175ea54e2b7734892e3c6e05
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8e32366d9ff43bd6e5770f64f0ba9d8bf6e56ab
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62238510"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524789"
 ---
 # <a name="mfc-library-versions"></a>Версии библиотек MFC
 
@@ -129,7 +129,7 @@ MFC общих библиотек DLL также выполните структ
 
 Если вы динамически привязать общедоступную версию библиотеки DLL MFC, будь то из приложения или из библиотеки DLL расширения MFC, необходимо включить соответствующий MFC*версии*. Библиотеки DLL или MFC*версии*U.DLL при развертывании продукта.
 
-Список библиотек DLL Visual C++, которые можно использовать с приложениями, см. в разделе [распространяемый код для Microsoft Visual Studio 2017 и Microsoft Visual Studio 2017 SDK (включает служебные программы и файлы BuildServer)](http://go.microsoft.com/fwlink/p/?LinkId=823098).
+Список Visual C++ библиотеки DLL, которые могут распространяться с приложениями, см. в разделе [распространяемый код для Microsoft Visual Studio 2017 и Microsoft Visual Studio 2017 SDK (включает служебные программы и файлы BuildServer)](/visualstudio/productinfo/2017-redistribution-vs) или [ Распространяемый код для Visual Studio 2019](/visualstudio/releases/2019/redistribution).
 
 Дополнительные сведения о поддержке многобайтовой Кодировки и Юникода в MFC см. в разделе [многобайтовых кодировку (MBCS) поддержка Юникода и](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md).
 
