@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2383
 ms.assetid: 6696221d-879c-477a-a0f3-a6edc15fd3d7
-ms.openlocfilehash: 06d4c19208bd242169e1cd07a71e8a568f46f7b1
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: e9c1774fe7cd4a6883aa79f384cc64521a57ed17
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344820"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448004"
 ---
 # <a name="compiler-error-c2383"></a>Ошибка компилятора C2383
 
@@ -19,7 +19,7 @@ ms.locfileid: "64344820"
 
 Компилятор C++ не поддерживает аргументы по умолчанию в указателях на функции.
 
-Этот код был принят компилятором Visual C++ в версиях до Visual Studio 2005, но теперь выдает ошибку. Для кода, который работает во всех версиях Visual C++ не назначайте значение по умолчанию аргумент указателя на функцию.
+Этот код был принят для Microsoft C++ компилятора в версиях до Visual Studio 2005, но теперь выдает ошибку. Для кода, который работает во всех версиях Visual C++ не назначайте значение по умолчанию аргумент указателя на функцию.
 
 ## <a name="example"></a>Пример
 
