@@ -1,33 +1,32 @@
 ---
 title: Общие вопросы использования Visual C++ для 64-разрядных систем
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 64-bit programming [C++], migration
 - 64-bit compiler [C++], migration
 - porting 32-bit code to 64-bit code
-- upgrading Visual C++ applications, 32-bit code
 - migration [C++], 64-bit code issues
 - 32-bit code porting [C++]
 - 64-bit applications [C++]
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 937c00b7d3c40d9a5b92d53582ab1ebf4418ebc7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b03ccc76163d79688a98ec89df241292e3eef112
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62200081"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220870"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Общие вопросы использования Visual C++ для 64-разрядных систем
 
-При использовании Visual C++ для создания приложений, запуск которых планируется в 64-разрядной версии ОС Windows, следует знать следующее.
+При использовании Microsoft C++ компилятор (MSVC) для создания приложений для запуска в 64-разрядной операционной системе Windows, следует иметь в виду следующее:
 
 - В 64-разрядных версиях Windows `int` и `long` являются 32-разрядными значениями. В программах, которые планируется компилировать для 64-разрядных платформ, не следует назначать указателям 32-разрядные переменные. В 64-разрядных платформах указатели являются 64-разрядными, поэтому значение указателя будет усечено, если назначить ему 32-разрядную переменную.
 
 - `size_t`, `time_t`, и `ptrdiff_t` являются 64-разрядными значениями в операционных системах Windows 64-разрядной.
 
-- В версиях Visual C++ до Visual C++ 2005 `time_t` является 32-разрядным значением в 32-разрядных версиях Windows. Теперь `time_t` по умолчанию представляет собой 64-разрядное целое число. Дополнительные сведения см. в разделе [управление временем](../c-runtime-library/time-management.md).
+- `time_t` — Это 32-разрядное значение в операционных системах Windows 32-разрядных в Visual Studio 2005 и более ранних версий. Теперь `time_t` по умолчанию представляет собой 64-разрядное целое число. Дополнительные сведения см. в разделе [управление временем](../c-runtime-library/time-management.md).
 
    Следует знать, где ваш код принимает значение `int` и обрабатывает его как значение `size_t` или `time_t`. Разрядность может превысить 32 бита. В этом случае данные будут усечены при их возвращении в хранилище `int`.
 

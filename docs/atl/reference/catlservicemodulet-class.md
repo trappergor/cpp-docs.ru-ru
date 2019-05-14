@@ -1,6 +1,6 @@
 ---
 title: Класс CAtlServiceModuleT
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - CAtlServiceModuleT
 - ATLBASE/ATL::CAtlServiceModuleT
@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlServiceModuleT class
 ms.assetid: 8fc753ce-4a50-402b-9b4a-0a4ce5dd496c
-ms.openlocfilehash: 2d4d5d4a5c4d8a52f792cc04a968974967c1e13a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1d44e356d907afcb261c0b4a765f8807bb54dc19
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260205"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221187"
 ---
 # <a name="catlservicemodulet-class"></a>Класс CAtlServiceModuleT
 
@@ -186,7 +186,7 @@ HRESULT InitializeSecurity() throw();
 
 ### <a name="remarks"></a>Примечания
 
-В Visual Studio .NET 2003 этот метод не реализован в базовом классе. Мастер создания проекта Visual Studio включает в себя этот метод в созданном коде, но ошибка компиляции возникнет в том случае, если проект, созданный в более ранней версии Visual C++ компилируется с помощью ATL 7.1. Любой класс, производный от `CAtlServiceModuleT` необходимо реализовать этот метод в производном классе.
+Любой класс, производный от `CAtlServiceModuleT` необходимо реализовать этот метод в производном классе.
 
 Использовать проверку подлинности уровне PKT, уровень олицетворения для RPC_C_IMP_LEVEL_IDENTIFY и подходящий ненулевой дескриптор безопасности в вызове `CoInitializeSecurity`.
 

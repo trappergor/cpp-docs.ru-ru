@@ -1,23 +1,20 @@
 ---
 title: Справочник по языку C++
 ms.custom: index-page
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 helpviewer_keywords:
-- language reference
 - C++, language reference
-- language reference, Visual C++
-- Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 1790f5d7ecf834c97a9242e8f42d1fb402604ac6
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62154663"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222481"
 ---
 # <a name="c-language-reference"></a>Справочник по языку C++
 
-В этом справочнике описывается язык программирования С++ в том виде, в котором он реализован в компиляторе Microsoft C++. Его организация основана на [*Справочном руководстве по языку программирования С++ с комментариями*](http://www.stroustrup.com/arm.html) авторов Маргарет Эллис (Margaret Ellis) и Бьёрна Страуструпа (Bjarne Stroustrup) и международном стандарте ANSI/ISO C++ (ISO/IEC FDIS 14882). В него включены реализации компонентов языка С++, относящиеся только к корпорации Майкрософт.
+Этом справочном руководстве описывается C++ язык программирования, реализованное в Microsoft C++ компилятора. На основе организации [ *справочное руководство по C++ с заметками* ](http://www.stroustrup.com/arm.html) Маргарет Эллис (Margaret Ellis) и (Bjarne Stroustrup) и ANSI/ISO C++ международный стандарт (ISO/IEC FDIS 14882). Включены реализации компонентов языка С++ корпорацией Майкрософт.
 
 Обзор приемов программирования современного C++ см. в разделе [Возвращение к C++](welcome-back-to-cpp-modern-cpp.md).
 
@@ -90,7 +87,7 @@ ms.locfileid: "62154663"
 Расширения Майкрософт для C++.
 
 [Нестандартное поведение](../cpp/nonstandard-behavior.md)<br/>
-Сведения о нестандартном поведении компилятора Visual C++.
+Сведения о нестандартном поведении платформы Microsoft C++ компилятора.
 
 [Возвращение к C++](welcome-back-to-cpp-modern-cpp.md)<br/>
 Общие сведения о современных особенностях программирования на C++ и рекомендации по написанию безопасных, правильных и эффективных программ.
@@ -98,7 +95,7 @@ ms.locfileid: "62154663"
 ## <a name="related-sections"></a>Связанные разделы
 
 [Расширения компонентов для платформ среды выполнения](../extensions/component-extensions-for-runtime-platforms.md)<br/>
-Справочные материалы по использованию компилятора Microsoft C++ для разработки программ, ориентированных на .NET.
+Справочный материал по использованию Microsoft C++ компилятору ориентированных на .NET.
 
 [Справочные сведения о сборке C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Параметры компилятора, параметры компоновщика и другие средства сборки.
@@ -107,7 +104,7 @@ ms.locfileid: "62154663"
 Справочный материал по прагма-директивам, директивам препроцессора, предопределенным макросам и препроцессору.
 
 [Справочные материалы по библиотекам Visual C++](../standard-library/cpp-standard-library-reference.md)<br/>
-Список ссылок на начальные страницы справочников по различным библиотекам Visual C++.
+Список ссылок к ссылке начинать создание страниц для различных Microsoft C++ библиотеки.
 
 ## <a name="see-also"></a>См. также
 

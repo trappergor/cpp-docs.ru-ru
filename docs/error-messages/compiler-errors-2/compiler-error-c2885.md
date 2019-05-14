@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2885
 ms.assetid: 7743e5f3-a034-44b4-9ee8-5a6254c27f8c
-ms.openlocfilehash: 8174faed09bdffbdc6974390cceb7c17661eab4b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ff5e770052301e95f694d3712f95b82732c2faba
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388778"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447696"
 ---
 # <a name="compiler-error-c2885"></a>Ошибка компилятора C2885
 
@@ -21,7 +21,7 @@ ms.locfileid: "62388778"
 
 ## <a name="example"></a>Пример
 
-Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: он больше не может быть `using` объявление вложенного типа; следует явно квалифицировать каждой ссылки, внесенные во вложенный тип, поместить тип в имени пробел, или создайте typedef.
+Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: он больше не может быть `using` объявление вложенного типа; необходимо явно указывать каждой ссылки, внесенные во вложенный тип, поместить тип в n amespace, текущей.
 
 Следующий пример приводит к возникновению ошибки C2885.
 

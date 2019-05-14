@@ -1,6 +1,6 @@
 ---
 title: Макросы для параметров компилятора
-ms.date: 11/04/2016
+ms.date: 05/06/2019
 f1_keywords:
 - _ATL_ALL_WARNINGS
 - _ATL_APARTMENT_THREADED
@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
-ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e1d0f6e068989179dd9498e399ca5304a2b378b8
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278427"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221115"
 ---
 # <a name="compiler-options-macros"></a>Макросы для параметров компилятора
 
@@ -32,11 +32,11 @@ ms.locfileid: "62278427"
 |[_ATL_ALL_WARNINGS](#_atl_all_warnings)|Символ, который включает ошибки в проектах, преобразованные из предыдущих версий ATL.|
 |[_ATL_APARTMENT_THREADED](#_atl_apartment_threaded)|Определите, если один или несколько объектов использовать потоковое.|
 |[_ATL_CSTRING_EXPLICIT_CONSTRUCTORS](#_atl_cstring_explicit_constructors)|Гарантирует `CString` конструкторы, explicit, предотвращая все непреднамеренного преобразования.|
-|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Задать этот макрос, чтобы использовать C++ standard совместимый синтаксис, который создает ошибку компилятора C4867, когда не стандартный синтаксис, используемый для инициализации указателя на функцию-член.|
+|[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)|Задать этот макрос для использования C++ стандартный совместимый синтаксис, который создает ошибку компилятора C4867, когда нестандартный синтаксис используется для инициализации указателя на функцию-член.|
 |[_ATL_FREE_THREADED](#_atl_free_threaded)|Определите, если один или несколько объектов используйте бесплатную или нейтральным работа с потоками.|
 |[_ATL_MULTI_THREADED](#_atl_multi_threaded)|Символ, указывающий проект будет иметь объектов, помеченных как, бесплатный "или" Neutral. Макрос [_ATL_FREE_THREADED](#_atl_free_threaded) должны использоваться вместо нее.|
 |[_ATL_NO_AUTOMATIC_NAMESPACE](#_atl_no_automatic_namespace)|Символ, который не позволяет использовать по умолчанию пространство имен в качестве ATL.|
-|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Символ, предотвращающий код, связанный с COM, компилируемого с проекта.|
+|[_ATL_NO_COM_SUPPORT](#_atl_no_com_support)|Символ, который предотвращает код, связанный с COM, компилируемого с проекта.|
 |[ATL_NO_VTABLE](#atl_no_vtable)|Символ, который предотвращает инициализацию в конструктор и деструктор класса указателя vtable.|
 |[ATL_NOINLINE](#atl_noinline)|Символ, указывающий функцию, не должен выполняться как встроенный.|
 |[_ATL_SINGLE_THREADED](#_atl_single_threaded)|Определите, если все объекты использовать один потоковой модели.|
@@ -113,7 +113,7 @@ _ATL_CSTRING_EXPLICIT_CONSTRUCTORS
 
 ### <a name="remarks"></a>Примечания
 
-Библиотеки ATL и MFC были изменены в соответствии с улучшенные C++ соответствие стандартам компилятора Visual C++. В соответствии со стандартом ANSI C++, синтаксис указателя на функцию-член класса должен быть `&CMyClass::MyFunc`.
+Библиотеки ATL и MFC были изменены в соответствии с Microsoft C++ улучшенный стандарт компилятора C++ соответствия. В соответствии со стандартом ANSI C++, синтаксис указателя на функцию-член класса должен быть `&CMyClass::MyFunc`.
 
 Когда [также библиотеках](#_atl_enable_ptm_warning) не определен (вариант по умолчанию), ATL и MFC отключает ошибка C4867 в maps макрос (схемы очередь сообщений), так что код, который был создан в более ранних версий можно продолжать выполнять построение как и раньше. Если вы определяете **также библиотеках**, код должен быть C++ соответствует стандарту.
 
@@ -165,7 +165,7 @@ _ATL_NO_AUTOMATIC_NAMESPACE
 
 ##  <a name="_atl_no_com_support"></a>  _ATL_NO_COM_SUPPORT
 
-Символ, предотвращающий код, связанный с COM, компилируемого с проекта.
+Символ, который предотвращает код, связанный с COM, компилируемого с проекта.
 
 ```
 _ATL_NO_COM_SUPPORT

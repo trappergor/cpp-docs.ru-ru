@@ -1,16 +1,16 @@
 ---
 title: Пошаговое руководство. Добавление анимации в проект MFC
-ms.date: 09/20/2018
+ms.date: 04/25/2019
 helpviewer_keywords:
 - animation [MFC]
 - MFC, animation
 ms.assetid: 004f832c-9fd5-4f88-9ca9-ae65dececdc2
-ms.openlocfilehash: 25e29654f1e192e03a078e4a963f27abeea6056d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: HT
+ms.openlocfilehash: 07b0c5f712cd645246ecfb4e8c93543377a340a3
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62358608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558189"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>Пошаговое руководство. Добавление анимации в проект MFC
 
@@ -38,9 +38,9 @@ ms.locfileid: "62358608"
 
 ### <a name="to-create-an-mfc-application"></a>Создание приложения MFC
 
-1. В меню **Файл** выберите пункт **Создать** , а затем команду **Проект**.
+1. Используйте **мастер приложений MFC** для создания приложения MFC. См. [Пошаговое руководство: С помощью новых элементов управления оболочки MFC](walkthrough-using-the-new-mfc-shell-controls.md) инструкции о том, как открыть мастер для вашей версии Visual Studio.
 
-1. В **новый проект** диалоговое окно, в области слева в разделе **установленные шаблоны**, разверните **Visual C++** , а затем выберите **MFC**. В средней области выберите **приложения MFC**. В **имя** введите *MFCAnimationWalkthrough*. Нажмите кнопку **ОК**.
+1. В **имя** введите *MFCAnimationWalkthrough*. Нажмите кнопку **ОК**.
 
 1. В **мастер приложений MFC** диалогового окна убедитесь, что **тип приложения** — **несколько документов**, **стиль проекта** является  **Visual Studio**и **поддержка архитектуры Document/View** выбран параметр. Нажмите кнопку **Готово**.
 

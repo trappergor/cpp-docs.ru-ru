@@ -5,16 +5,16 @@ helpviewer_keywords:
 - .vcxproj files
 - C++ projects, project file format
 ms.assetid: 5261cf45-3136-40a6-899e-dc1339551401
-ms.openlocfilehash: cfe40d6520187212ab77607273c555f12012fd02
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 306b6a7b39db758c3712b1d57460268fc6414726
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62319828"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65217742"
 ---
 # <a name="project-files"></a>Файлы проекта
 
-Файл проекта Visual C++ представляет собой XML-файл с расширением VCXPROJ, который содержит сведения, необходимые для сборки проекта Visual C++. Обратите внимание, что файл проекта импортирует разные файлы проекта с расширением *.props* или *.targets*. Эти файлы содержат дополнительные сведения о сборке и могут сами ссылаться на другие файлы с расширением *.props* или *.targets*. Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и *.props* и *.targets* файлы, см. в разделе [страница свойств каталогов VC ++](vcpp-directories-property-page.md), [компилятор C++, задать и сборки свойства в Visual Studio](../working-with-project-properties.md) и [стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
+Объект C++ файл проекта в Visual Studio — это XML-файл имеет расширение имени файла с расширением VCXPROJ, содержащие сведения, необходимые для построения C++ проекта. Обратите внимание, что файл проекта импортирует разные файлы проекта с расширением *.props* или *.targets*. Эти файлы содержат дополнительные сведения о сборке и могут сами ссылаться на другие файлы с расширением *.props* или *.targets*. Макросы в пути к файлу (например, `$(VCTargetsPath)`) зависят от текущей установки Visual Studio. Дополнительные сведения об этих макросах и *.props* и *.targets* файлы, см. в разделе [страница свойств каталогов VC ++](vcpp-directories-property-page.md), [компилятор C++, задать и сборки свойства в Visual Studio](../working-with-project-properties.md) и [стандартные макросы для команд и свойств сборки](common-macros-for-build-commands-and-properties.md).
 
 ## <a name="example"></a>Пример
 

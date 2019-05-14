@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, creating
 - ATL Project Wizard
 ms.assetid: 564d2aaf-5b8e-4c2a-a925-ca40a283ea34
-ms.openlocfilehash: 4059961d70e6486f7417a5eff034b194d9860558
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 384847738f5410d750d53d3125c18f6a5256cccf
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261437"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221247"
 ---
 # <a name="atl-project-wizard"></a>Мастер проектов ATL
 
@@ -48,8 +48,8 @@ Active Template Library (ATL) — это набор основанных на ш
 
 ## <a name="see-also"></a>См. также
 
-[Создание проектов Visual C++ и управление ими](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
-[Типы проектов Visual C++](../../build/reference/visual-cpp-project-types.md)<br/>
+[Проекты Visual Studio — C++](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[C++типы проектов в Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Руководство](../../atl/active-template-library-atl-tutorial.md)

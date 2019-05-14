@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C1010
 ms.assetid: dfd035f1-a7a2-40bc-bc92-dc4d7f456767
-ms.openlocfilehash: 6974f0d82653203973be50b5ea709bd9487a215f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 204c7ef94d82513338f6635ec9eb22f26fc090a7
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62363977"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448016"
 ---
 # <a name="fatal-error-c1010"></a>Неустранимая ошибка C1010
 
 непредвиденный конец файла при поиске предкомпилированного заголовка. Возможно, вы забыли добавить "#include имя" в источник?
 
-Файл include, указанный с [/Yu](../../build/reference/yu-use-precompiled-header-file.md) отсутствует в исходном файле.  Этот параметр включен по умолчанию в большинстве типов проектов Visual C++ и «stdafx.h» имеет значение по умолчанию включаемый файл, указанные этим параметром.
+Файл include, указанный с [/Yu](../../build/reference/yu-use-precompiled-header-file.md) отсутствует в исходном файле.  Этот параметр включен по умолчанию в большинстве Visual Studio C++ типы проектов и «stdafx.h» имеет значение по умолчанию включаемый файл, указанные этим параметром.
 
 В среде Visual Studio используйте один из следующих методов для устранения этой ошибки.
 

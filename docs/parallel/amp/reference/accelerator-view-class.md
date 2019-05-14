@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: 4075051ec07fc1331d815534a715c0411160fe14
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 35bcd4d951ee0340709976807de3a1d5e984cf29
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405642"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65524831"
 ---
 # <a name="acceleratorview-class"></a>Класс accelerator_view
 
@@ -121,7 +121,7 @@ accelerator_view( const accelerator_view & other );
 *other*<br/>
 `accelerator_view` Копируемый объект.
 
-## <a name="createmarker"></a>create_marker
+## <a name="create_marker"></a>create_marker
 
 Возвращает фьючерс для отслеживания выполнения всех команд, отправленных до сих данному `accelerator_view` объекта.
 
@@ -149,7 +149,7 @@ void flush();
 
 Возвращает `void`.
 
-## <a name="getaccelerator"></a>get_accelerator
+## <a name="get_accelerator"></a>get_accelerator
 
 Возвращает объект ускорителя, объекта accelerator_view.
 ### <a name="syntax"></a>Синтаксис
@@ -162,7 +162,7 @@ accelerator get_accelerator() const;
 
 Объект ускорителя, объекта accelerator_view.
 
-## <a name="getisautoselection"></a>get_is_auto_selection
+## <a name="get_is_auto_selection"></a>get_is_auto_selection
 
 Возвращает логическое значение, указывающее, будет ли среда выполнения автоматически выбирать соответствующий ускоритель при передаче accelerator_view [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -176,7 +176,7 @@ bool get_is_auto_selection() const;
 
 **значение true,** Если среда выполнения будет автоматически выбирать соответствующий ускоритель; в противном случае **false**.
 
-## <a name="getisdebug"></a>get_is_debug
+## <a name="get_is_debug"></a> get_is_debug
 
 Возвращает логическое значение, указывающее, имеет ли объект accelerator_view уровень DEBUG для расширенных отчетов об ошибках.
 
@@ -190,7 +190,7 @@ bool get_is_debug() const;
 
 Логическое значение, указывающее, является ли `accelerator_view` объект имеет уровень DEBUG для расширенных отчетов об ошибках.
 
-## <a name="getqueuingmode"></a>get_queuing_mode
+## <a name="get_queuing_mode"></a>get_queuing_mode
 
 Возвращает режим организации очереди, объекта accelerator_view.
 
@@ -204,7 +204,7 @@ queuing_mode get_queuing_mode() const;
 
 Режим организации очереди для `accelerator_view` объекта.
 
-## <a name="getversion"></a>get_version
+## <a name="get_version"></a>get_version
 
 Возвращает версию accelerator_view.
 
@@ -218,7 +218,7 @@ unsigned int get_version() const;
 
 Версия `accelerator_view`.
 
-## <a name="isautoselection"></a>is_auto_selection
+## <a name="is_auto_selection"></a>is_auto_selection
 
 Возвращает логическое значение, указывающее, будет ли среда выполнения автоматически выбирать соответствующий ускоритель при передаче accelerator_view [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each).
 
@@ -228,7 +228,7 @@ unsigned int get_version() const;
 __declspec(property(get= get_is_auto_selection)) bool is_auto_selection;
 ```
 
-## <a name="isdebug"></a>is_debug
+## <a name="is_debug"></a>is_debug
 
 Возвращает логическое значение, указывающее, имеет ли объект accelerator_view уровень DEBUG для расширенных отчетов об ошибках.
 
@@ -295,7 +295,7 @@ bool operator== ( const accelerator_view & other ) const;
 
 **значение true,** Если два объекта одинаковы; в противном случае **false**.
 
-## <a name="queuingmode"></a>queuing_mode
+## <a name="queuing_mode"></a>queuing_mode
 
 Получает режим организации очереди для объекта accelerator_view.
 

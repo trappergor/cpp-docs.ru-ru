@@ -5,16 +5,16 @@ helpviewer_keywords:
 - cl-exe compiler, intrinsics
 - intrinsics, x64
 - intrinsics, amd64
-ms.openlocfilehash: 141ffa24a87d7794815c10f407ee23718071dacf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1a0b664d0b67925cd6a2ed01e128741e641b48
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62389662"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448580"
 ---
 # <a name="x64-amd64-intrinsics-list"></a>x64 (amd64) список встроенных объектов
 
-В этом документе перечислены встроенные функции, поддерживаемые компилятором Visual C++ при ориентировании на архитектуру x64 (также называемую amd64).
+В этом документе перечислены встроенные функции, Microsoft C++ поддерживаемые компилятором при ориентировании x64 (также называемую amd64).
 
 Дополнительные сведения об отдельных встроенных функциях см. на следующих ресурсах, в соответствии с целевым процессором:
 

@@ -1,6 +1,6 @@
 ---
 title: Параметры компилятора MSVC
-ms.date: 01/29/2018
+ms.date: 05/06/2019
 helpviewer_keywords:
 - cl.exe compiler
 - x86 MSVC compiler
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - compiler options, C++
 - x64 MSVC compiler
 ms.assetid: ed3376c8-bef4-4c9a-80e9-3b5da232644c
-ms.openlocfilehash: 831aade72cd728ec42aee5ef1f320deb7bdf173d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ab41a5de027f28b361937e58fb179fd72db54e4e
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62294269"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221740"
 ---
 # <a name="compiler-options"></a>Параметры компилятора
 
-CL.exe — это средство, которое управляет Microsoft Visual C++ (MSVC) C и C++ компиляторами и компоновщиком. CL.exe может выполняться только в операционных системах, поддерживающих Microsoft Visual Studio для Windows.
+CL.exe — это средство, которое управляет Microsoft C++ (MSVC) C и C++ компиляторами и компоновщиком. CL.exe может выполняться только в операционных системах, поддерживающих Microsoft Visual Studio для Windows.
 
 > [!NOTE]
 > Это средство можно запустить только из командной строки разработчика Visual Studio. В системной командной строке или проводнике это невозможно. Дополнительные сведения см. в разделе [использовать набор инструментов MSVC из командной строки](../building-on-the-command-line.md).

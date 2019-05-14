@@ -1,18 +1,18 @@
 ---
 title: Объединения
-ms.date: 11/19/2018
+ms.date: 05/06/2019
 f1_keywords:
 - union_cpp
 helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: f14f1197c4c835e9dfb753b1396e12e2d2f12772
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62312183"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222345"
 ---
 # <a name="unions"></a>Объединения
 
@@ -64,7 +64,6 @@ int main()
 В предыдущем примере для любого кода, который обращается к объединению, должно быть известно, в каком члене хранятся данные. Наиболее распространенное решение этой проблемы — заключить объединение в структуру вместе с дополнительным элементом перечисления, указывающим на тип данных, которые хранятся в объединении на текущий момент. Это называется *размеченные объединения* и в следующем примере показан базовый шаблон.
 
 ```cpp
-#include "stdafx.h"
 #include <queue>
 
 using namespace std;

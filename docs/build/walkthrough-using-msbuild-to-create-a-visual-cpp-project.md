@@ -1,21 +1,19 @@
 ---
 title: Пошаговое руководство. Использование MSBuild для создания проекта Visual C++
-ms.date: 09/24/2018
-f1_keywords:
-- msbuild.cpp.walkthrough.createproject
+ms.date: 05/06/2019
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 8fb985cbf4e471589946e730e8bb09b43f0a5d84
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62313601"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446213"
 ---
 # <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>Пошаговое руководство. Использование MSBuild для создания проекта Visual C++
 
-В этом пошаговом руководстве показано, как использовать MSBuild для сборки проекта Visual C++ в командной строке. Вы узнаете, как для создания исходных файлов C++ и XML файла проекта для консольного приложения Visual C++. После создания проекта, вы узнаете, как настроить процесс сборки.
+В этом пошаговом руководстве показано, как использовать MSBuild для построения Visual Studio C++ проекта в командной строке. Вы узнаете, как для создания исходных файлов C++ и XML файла проекта для консольного приложения Visual C++. После создания проекта, вы узнаете, как настроить процесс сборки.
 
 В данном пошаговом руководстве рассмотрены следующие задачи:
 
@@ -39,7 +37,7 @@ ms.locfileid: "62313601"
 > Не используйте этот подход, если вы собираетесь изменить файл проекта позже с помощью Visual Studio IDE. При создании VCXPROJ-файл вручную, Visual Studio IDE может оказаться возможность редактировать или загрузить его, особенно в том случае, если в проекте используются подстановочные знаки в элементах проекта.
 
 > [!NOTE]
-> Большая часть инструкций низкого уровня построения содержатся в **.targets** и **.props** файлы, которые определены в каталоге VCTargets, хранящегося в свойстве `$(VCTargetsPath)`. Путь по умолчанию для этих файлов в Visual Studio 2017 Enterprise Edition — C:\\Program Files (x86)\\Microsoft Visual Studio\\2017\\Enterprise\\Common7\\IDE\\ VC\\VCTargets\\.
+> Большая часть инструкций низкого уровня построения содержатся в **.targets** и **.props** файлы, которые определены в каталоге VCTargets, хранящегося в свойстве `$(VCTargetsPath)`. Путь по умолчанию для этих файлов в Visual Studio 2019 Enterprise Edition — C:\Program Files (x86) \Microsoft Visual Studio\2019\Enterprise\MSBuild\Microsoft\VC\v160\Microsoft.Cpp.Common.props.
 
 ## <a name="creating-the-c-source-files"></a>Создание исходных файлов C++
 
@@ -81,10 +79,10 @@ ms.locfileid: "62313601"
 
 ### <a name="to-create-the-msbuild-project-file"></a>Создание файла проекта MSBuild
 
-1. Используйте текстовый редактор для создания файла проекта, который называется `myproject.vcxproj`, а затем добавьте следующий корневой `<Project>` элемент. Вставить элементы, описанные ниже процедуры между корнем `<Project>` теги:
+1. Используйте текстовый редактор для создания файла проекта, который называется `myproject.vcxproj`, а затем добавьте следующий корневой `<Project>` элемент. Вставить элементы, описанные ниже процедуры между корнем `<Project>` теги. (Используйте ToolsVersion = «15.0», если вы используете Visual Studio 2017.)
 
     ```xml
-    <Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
     </Project>
     ```
 
@@ -109,12 +107,12 @@ ms.locfileid: "62313601"
     <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
     ```
 
-1. Добавьте следующий элемент группы свойств (`<PropertyGroup>`), задающий два свойства проекта:
+1. Добавьте следующий элемент группы свойств (`<PropertyGroup>`), задающий два свойства проекта. (Используйте v141, если вы используете Visual Studio 2017.)
 
     ```xml
     <PropertyGroup>
       <ConfigurationType>Application</ConfigurationType>
-      <PlatformToolset>v141</PlatformToolset>
+      <PlatformToolset>v142</PlatformToolset>
     </PropertyGroup>
     ```
 
@@ -151,10 +149,10 @@ ms.locfileid: "62313601"
 
 ### <a name="complete-project-file"></a>Полный файл проекта
 
-Ниже приведен полный файл проекта, созданный в предыдущей процедуре.
+Ниже приведен полный файл проекта, созданный в предыдущей процедуре. (Используйте ToolsVersion = «15.0» для Visual Studio 2017.)
 
 ```xml
-<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -168,7 +166,7 @@ ms.locfileid: "62313601"
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.default.props" />
   <PropertyGroup>
     <ConfigurationType>Application</ConfigurationType>
-    <PlatformToolset>v141</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ItemGroup>
@@ -235,7 +233,7 @@ MSBuild можно запустить выполнение целевых объ
 
 ### <a name="using-msbuild-with-the-64-bit-compiler-and-tools"></a>Использование MSBuild с 64-разрядный компилятор и средства
 
-Если вы установили Visual C++ для 64-разрядной Windows, по умолчанию, будет установлена 64-разрядных x64 родных и кроссплатформенных средств. Можно настроить MSBuild для использования 64-разрядный компилятор и средства для построения приложения, задав `PreferredToolArchitecture` свойство. Это свойство не влияет на свойства конфигурации или платформы проекта. По умолчанию используется 32-разрядной версии средства. Чтобы указать 64-разрядной версии компилятора и инструментов, добавьте следующий элемент группы свойств в файл проекта Myproject.vcxproj после `Microsoft.Cpp.default.props` \<Import / > элемент:
+Если вы установили Visual Studio на 64-разрядной Windows, по умолчанию, 64-разрядных x64 родных и кроссплатформенных средств будут установлены. Можно настроить MSBuild для использования 64-разрядный компилятор и средства для построения приложения, задав `PreferredToolArchitecture` свойство. Это свойство не влияет на свойства конфигурации или платформы проекта. По умолчанию используется 32-разрядной версии средства. Чтобы указать 64-разрядной версии компилятора и инструментов, добавьте следующий элемент группы свойств в файл проекта Myproject.vcxproj после `Microsoft.Cpp.default.props` \<Import / > элемент:
 
 ```xml
 <PropertyGroup>

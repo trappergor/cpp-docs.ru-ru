@@ -1,19 +1,19 @@
----
-title: Справочник по UCRT алфавитный указатель функций
+﻿---
+title: Алфавитный указатель функций UCRT
 ms.date: 01/31/2019
 f1_keywords:
 - vc.tables.runtime
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
 ms.openlocfilehash: 855af5b7518ba36418d58f1dc2ac5f0bb6e54208
 ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ru-RU
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "62340343"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>Справочник по UCRT алфавитный указатель функций
+# <a name="ucrt-alphabetical-function-reference"></a>Алфавитный указатель функций UCRT
 
-В справочной документации по библиотеке универсальная среда выполнения C (UCRT, зачастую это достигается просто CRT) является упорядочены по алфавиту подпрограммой. Для поиска процедуры CRT на основе функциональности, см. в разделе [C универсальные подпрограммы среды выполнения по категориям](../../c-runtime-library/run-time-routines-by-category.md).
+Справочная документация по библиотеке универсальной среды выполнения C (UCRT, часто называемой просто CRT) упорядочена по именам подпрограмм в алфавитном порядке. Для поиска подпрограмм CRT по их функциональности см. раздел  [Подпрограммы универсальной среды выполнения C по категориям](../../c-runtime-library/run-time-routines-by-category.md).
 
 ## <a name="a"></a>А
 

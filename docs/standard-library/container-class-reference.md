@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference method
 ms.assetid: ab85a9fb-c628-4761-9a5f-a0231fad7690
-ms.openlocfilehash: 4204571dba320de6248dac2cfb10ae21dc31e72c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bd58ffafb9be65067cbff5571fe9cbf9fcd0a55d
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210943"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221589"
 ---
 # <a name="container-classreference"></a>Класс контейнера::reference
 
 > [!NOTE]
-> Данный раздел включен в документацию Visual C++ в качестве нефункционального примера контейнеров, используемых в стандартной библиотеке C++. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Описывает объект, который можно использовать в качестве ссылки на элемент управляемой последовательности.
 

@@ -4,14 +4,14 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - verifiable assemblies [C++], creating
 - conversions, C++ projects
-- Visual C++ projects
+- Visual Studio C++ projects
 ms.assetid: 4ef2cc1a-e3e5-4d67-8d8d-9c614f8ec5d3
-ms.openlocfilehash: de3742717bf55c53ab4007aaed18b6ce687fbede
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 0784e6f202750e846c75434eef62a12dab3952f1
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387465"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448110"
 ---
 # <a name="how-to-create-verifiable-c-projects-ccli"></a>Практическое: создание проверяемых C++ проекты (C++выполняет)
 
@@ -20,7 +20,7 @@ ms.locfileid: "62387465"
 > [!IMPORTANT]
 > Рекомендуется использовать Visual Studio 2015 и Visual Studio 2017 не поддерживает **/CLR: pure** и **/CLR: safe** Создание проверяемых проектов. Если вам требуется проверяемый код, мы рекомендуем перевести код на C#.
 
-Тем не менее если вы используете более старую версию набора инструментов компилятора Visual C++, который поддерживает **/CLR: pure** и **/CLR: safe**, можно преобразовать в проверяемые проекты. В этом разделе описывается настройка свойств проекта и изменения исходных файлов проекта для преобразования проектов Visual C++ для создания проверяемые приложения.
+Тем не менее если вы используете более старую версию Microsoft C++ набор инструментов компилятора, который поддерживает **/CLR: pure** и **/CLR: safe**, можно преобразовать в проверяемые проекты. В этом разделе описывается настройка свойств проекта и изменения исходных файлов проекта для преобразования Visual Studio C++ проекты для создания проверяемые приложения.
 
 ## <a name="compiler-and-linker-settings"></a>Параметры компилятора и компоновщика
 

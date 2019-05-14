@@ -1,27 +1,18 @@
 ---
 title: Строковые и символьные литералы (C++)
-ms.date: 11/04/2016
+ms.date: 05/07/2019
 f1_keywords:
 - R
 helpviewer_keywords:
-- L constant
-- escape sequences
-- Null strings, null-terminated strings
-- literal strings, C++
-- Null strings
-- string literals, syntax
-- string literals
-- literal strings
-- strings [C++], string literals
-- NULL, character constant
-- wide characters, strings
+- literal strings [C++]
+- string literals [C++]
 ms.assetid: 61de8f6f-2714-4e7b-86b6-a3f885d3b9df
-ms.openlocfilehash: d3721f3624a64a24de0a5458d88de4836b07a9c1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: d3c85854256816d5553959a16526ad0d13cf14b4
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330847"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65221973"
 ---
 # <a name="string-and-character-literals--c"></a>Строковые и символьные литералы (C++)
 
@@ -328,7 +319,7 @@ const size_t byteSize = (wcslen(str) + 1) * sizeof(wchar_t);
 
 **Блок, относящийся только к системам Microsoft**
 
-В визуальном элементе C++ строковый литерал можно использовать для инициализации указателя не являющимся константным **char** или **wchar_t**. Это разрешено в коде C99, но не рекомендуется в С++98 и удалено из С++11. Попытка изменить строку вызовет нарушение прав доступа, как показано в следующем примере:
+В Microsoft C++ строковый литерал можно использовать для инициализации указателя не являющимся константным **char** или **wchar_t**. Это разрешено в коде C99, но не рекомендуется в С++98 и удалено из С++11. Попытка изменить строку вызовет нарушение прав доступа, как показано в следующем примере:
 
 ```cpp
 wchar_t* str = L"hello";

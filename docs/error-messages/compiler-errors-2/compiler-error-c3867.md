@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3867
 ms.assetid: bc5de03f-e01a-4407-88c3-2c63f0016a1e
-ms.openlocfilehash: 9308e238c86c7b8a957720228a823688fac289d3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9a5094b6c3d914c2f66ee8ed94bcdcce5827f130
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62242883"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447184"
 ---
 # <a name="compiler-error-c3867"></a>Ошибка компилятора C3867
 
@@ -19,7 +19,7 @@ ms.locfileid: "62242883"
 
 Вы попытались получить адрес функции-члена без указания полного имени класса и оператора взятия адреса функции-члена.
 
-Эта ошибка также может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: расширенным соответствием указателя на элемент. Код, скомпилированный в версии до Visual C++ 2005, будет выдавать ошибку C3867.
+Эта ошибка также может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: расширенным соответствием указателя на член. Код, скомпилированный в версии до Visual Studio 2005 будет выдавать ошибку C3867.
 
 ## <a name="example"></a>Пример
 

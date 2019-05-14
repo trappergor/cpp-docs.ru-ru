@@ -1,18 +1,21 @@
 ---
 title: Пошаговое руководство. Создание приложения универсальной платформы Windows, с использованием WRL и Media Foundation
-ms.date: 09/17/2018
+ms.date: 04/23/2019
 ms.topic: reference
 ms.assetid: 0336c550-fbeb-4dc4-aa9b-660f9fc45382
-ms.openlocfilehash: e0254be8c6fa185f75c46898d4da51742195550a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 28e8d4b2871dbd3bef0f30bae5480d346af50706
+ms.sourcegitcommit: 283cb64fd7958a6b7fbf0cd8534de99ac8d408eb
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64558266"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>Пошаговое руководство. Создание приложения универсальной платформы Windows, с использованием WRL и Media Foundation
 
-Сведения об использовании Windows шаблонов среды выполнения C++ Library (WRL), чтобы создать приложение универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
+> [!NOTE]
+> Для новых приложений универсальной платформы Windows и компонентов, мы рекомендуем использовать [ C++/WinRT](/windows/uwp/cpp-and-winrt-apis/), это новый C ++ 17 проекция стандартного для API среды выполнения Windows. C++/ WinRT доступна в пакете SDK для Windows 10 версии 1803 и далее. C++/ WinRT реализуется полностью в файлах заголовков и призвана предоставить вам доступ первого класса в современных API Windows.
+
+В этом руководстве вы узнаете, как использовать среду выполнения Windows C++ библиотеки шаблонов (WRL) для создания приложения универсальной платформы Windows (UWP), которое использует [Microsoft Media Foundation](/windows/desktop/medfound/microsoft-media-foundation-sdk).
 
 В этом примере создается пользовательский объект Media Foundation, который применяет эффект "оттенки серого" к изображениям, полученным с веб-камеры. Приложение использует C++ для определения пользовательского преобразования и C# для использования компонента и выполнения преобразования захваченного изображения.
 
@@ -25,6 +28,8 @@ ms.locfileid: "62409216"
 > Хотя этот пример кода является объемным, он показывает минимум, необходимый для создания полезных преобразований Media Foundation. Его можно использовать в качестве отправной точки для собственного пользовательского преобразования. Этот пример взят из [примера медиарасширений](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096), медиарасширения для применения эффектов к видео, декодирования видео и создания обработчиков схем, производящих медиапотоки.
 
 ## <a name="prerequisites"></a>Предварительные требования
+
+- В Visual Studio 2017 и более поздних версий поддержки универсальной платформы Windows является дополнительным компонентом. Чтобы установить его, откройте установщик Visual Studio в меню Windows Пуск и найдите вашей версии Visual Studio. Выберите **изменить** и убедитесь, что **разработка универсальной платформы Windows** проверяется плитки. В разделе **дополнительные компоненты** проверьте  **C++ средства для универсальной платформы Windows (версии 141)** для Visual Studio 2017 или  **C++ средства для универсальной платформы Windows (v142)** для Visual Studio 2019. Проверьте версию пакета SDK Windows, который вы хотите использовать. 
 
 - Благодаря [среды выполнения Windows](https://msdn.microsoft.com/library/windows/apps/br211377.aspx).
 

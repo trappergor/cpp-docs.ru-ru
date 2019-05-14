@@ -5,12 +5,12 @@ helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-ms.openlocfilehash: a9e5be5895d8a90d93d0060e2bd2a7d0a9f84dbd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9eb94b105af976d1e1f49e212e0117c43c430683
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62403522"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220401"
 ---
 # <a name="cc-preprocessor-reference"></a>Cправочник препроцессора /C++
 *Справочника по препроцессору C/C++* Описание препроцессора, так как она реализована в Microsoft C/C++. Препроцессор выполняет предварительные операции с файлами C и C++ перед их передачей компилятору. Препроцессор можно использовать для условной компиляции кода, вставки файлов, задания сообщений для ошибок времени компиляции, а также для применения правил, зависящих от компьютера, к разделам кода.
@@ -40,5 +40,5 @@ ms.locfileid: "62403522"
 [Сборка программы C/C++](../build/reference/c-cpp-building-reference.md)<br/>
 Ссылки на разделы, в которых рассматриваются параметры компилятора и компоновщика.
 
-[Создание проектов Visual C++ и управление ими](../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[Проекты Visual Studio — C++](../build/creating-and-managing-visual-cpp-projects.md)<br/>
 Описание пользовательского интерфейса в Visual Studio, позволяющего определять каталоги, в которых система проектов будет выполнять поиск файлов для проекта C++.

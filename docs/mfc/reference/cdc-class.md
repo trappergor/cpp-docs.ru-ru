@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62173564"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222577"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -3424,7 +3424,7 @@ CSize GetOutputTabbedTextExtent(
 Указывает строку символов, который необходимо измерить. Вы также можете передать [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для этого параметра.
 
 *nCount*<br/>
-Указывает количество знаков в строке. Если *nCount* равно -1, вычисляется длина.
+Указывает [длину строки](/windows/desktop/gdi/specifying-length-of-text-output-string) , на которые указывают *lpszString*.
 
 *nTabPositions*<br/>
 Указывает количество позиций табуляции в массиве, на которые указывают *lpnTabStopPositions*.
@@ -3467,7 +3467,7 @@ CSize GetOutputTextExtent(const CString& str) const;
 Указывает строку символов. Вы также можете передать [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для этого параметра.
 
 *nCount*<br/>
-Указывает количество знаков в строке. Если *nCount* равно -1, вычисляется длина.
+Указывает [длину строки](/windows/desktop/gdi/specifying-length-of-text-output-string) , на которые указывают *lpszString*.
 
 *str*<br/>
 Объект `CString` , содержащий указанные символы для измерения.
@@ -3669,7 +3669,7 @@ CSize GetTabbedTextExtent(
 Указывает строку символов. Вы также можете передать [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для этого параметра.
 
 *nCount*<br/>
-Указывает количество знаков в строке. Если *nCount* равно -1, вычисляется длина.
+Указывает [длину строки](/windows/desktop/gdi/specifying-length-of-text-output-string) , на которые указывают *lpszString*.
 
 *nTabPositions*<br/>
 Указывает количество позиций табуляции в массиве, на которые указывают *lpnTabStopPositions*.
@@ -4087,7 +4087,7 @@ virtual BOOL GrayString(
 Указывает дальний указатель на данные, передаваемые в функцию выходных данных. Если *lpfnOutput* имеет значение NULL, *lpData* должен быть длинный указатель на строку, чтобы ее выходные данные.
 
 *nCount*<br/>
-Указывает количество символов для вывода. Если этот параметр равен 0, `GrayString` вычисляет длину строки (предполагая, что *lpData* — это указатель на строку). Если *nCount* – 1 и функции, указанной параметром *lpfnOutput* возвращает значение 0, изображение показано, но не заблокирована.
+Указывает количество символов для вывода. Если этот параметр равен 0, `GrayString` вычисляет длину строки (предполагая, что *lpData* — это указатель на строку). Если *nCount* 1 и функции, указанной параметром *lpfnOutput* возвращает значение 0, изображение показано, но не заблокирована.
 
 *x*<br/>
 Указывает логическую координату x начальную позицию прямоугольник, ограничивающий строки.
@@ -6891,7 +6891,7 @@ CSize TabbedTextOut(
 Указывает строку символов для рисования. Можно передать указатель на массив символов или [CString](../../atl-mfc-shared/reference/cstringt-class.md) объект для этого параметра.
 
 *nCount*<br/>
-Указывает количество знаков в строке. Если *nCount* равно -1, вычисляется длина.
+Указывает [длину строки](/windows/desktop/gdi/specifying-length-of-text-output-string) , на которые указывают *lpszString*.
 
 *nTabPositions*<br/>
 Указывает число значений в массив позиций табуляции.

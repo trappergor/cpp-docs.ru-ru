@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 9598d7a0480ee762892d1026a1eb64dcc5c64399
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6d7e9c2e0a29c2871fd86922151f2226dd9078fc
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362313"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448455"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>Подготовка тестового компьютера для выполнения исполняемого файла отладки
 
@@ -25,7 +25,7 @@ ms.locfileid: "62362313"
 - Используйте локальное развертывание для установки отладочной версии конкретной библиотеки DLL Visual C++ в каталоге установки приложения, используя файлы, находящиеся в каталоге Program Files или Program Files (x86) внутри \Microsoft Visual Studio \<версия>\VC\redist\Debug_NonRedist\\.
 
     > [!NOTE]
-    >  Для удаленной отладки приложения, созданного с помощью Visual C++ 2005 или Visual C++ 2008 на другом компьютере, нужно развернуть отладочные версии библиотек DLL Visual C++ в качестве общих параллельных сборок. Вы можете использовать проект установки или установщик Windows для установки подходящих модулей слияния.
+    >  Для удаленной отладки приложения, созданного с помощью Visual Studio 2005 или Visual Studio 2008 на другом компьютере, необходимо развернуть отладочные версии визуального элемента C++ библиотеки DLL в качестве общих сборок side-by-side. Вы можете использовать проект установки или установщик Windows для установки подходящих модулей слияния.
 
 - Используйте параметр **Развернуть** в диалоговом окне **Диспетчер конфигураций** Visual Studio, чтобы скопировать выходные и другие файлы проекта на удаленный компьютер.
 

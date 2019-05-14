@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mixed assemblies [C++]
 - native code [C++], .NET interoperatibility
 ms.assetid: 4299dfce-392f-4933-8bf0-5da2f0d1c282
-ms.openlocfilehash: 78e95177282804369bac2065582a06b8acbc975b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 043390a2ebefcadac300b7fb0b05ae7f5ed411f3
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62384859"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447275"
 ---
 # <a name="mixed-native-and-managed-assemblies"></a>Смешанные (собственные и управляемые) сборки
 
@@ -27,7 +27,7 @@ ms.locfileid: "62384859"
 
 Visual C++ поддерживает только создание смешанных управляемых сборок с помощью **/CLR** параметр компилятора. **/CLR: pure** и **/CLR: safe** параметры компилятора признаны устаревшими в Visual Studio 2015 и не поддерживается в Visual Studio 2017. Если вам требуется чистых и проверяемых управляемые сборки, мы рекомендуем создавать их с помощью C#.
 
-Более ранние версии набора инструментов компилятора Visual C++ поддерживают создание трех различных типов управляемых сборок: смешанных, чистых и проверяемых. Последний два рассматриваются в [чистый и проверяемый код (C++выполняет)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
+Более ранних версиях Microsoft C++ набор инструментов компилятора поддерживается создание трех различных типов управляемых сборок: смешанных, чистых и проверяемых. Последний два рассматриваются в [чистый и проверяемый код (C++выполняет)](../dotnet/pure-and-verifiable-code-cpp-cli.md).
 
 ## <a name="in-this-section"></a>Содержание раздела
 

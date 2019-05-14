@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4581
 ms.assetid: 598bcd87-257d-4eb3-94e4-15bb31aadc99
-ms.openlocfilehash: 9e370bcff0c30fb508ebc22aaff1f6a56dd420a1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9868d33538a1f56906455f2b1772b53eb3a7734d
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397280"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447098"
 ---
 # <a name="compiler-warning-level-1-c4581"></a>Предупреждение компилятора (уровень 1) C4581
 
 Рекомендуется использовать поведение: «string1» заменяется на «строка»-2 для обработки атрибута
 
-Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual C++ 2005: проверка параметров для атрибутов Visual C++.
+Эта ошибка может возникать в результате действий по обеспечению совместимости компилятора с Visual Studio 2005: проверка параметров для Visual C++ атрибуты.
 
 В предыдущих версиях значения атрибутов были приняты ли они были заключены в кавычки. Если значение является перечислением, он должен быть не заключен в кавычки.
 

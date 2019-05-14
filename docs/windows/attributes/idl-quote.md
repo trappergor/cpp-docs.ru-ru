@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
-ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3fbec210d973926a312d3e750e806dd9ef13f5f9
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409490"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65448525"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -26,7 +26,7 @@ ms.locfileid: "62409490"
 ### <a name="parameters"></a>Параметры
 
 *текст*<br/>
-Имя атрибута, который предполагается компилятор Visual C++ для передачи созданного IDL-файла, не возвращая ошибку компилятора.
+Имя атрибута, в котором предстоит Microsoft C++ компилятора для передачи созданного IDL-файла, не возвращая ошибку компилятора.
 
 ## <a name="remarks"></a>Примечания
 

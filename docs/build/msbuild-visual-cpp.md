@@ -1,17 +1,15 @@
 ---
 title: MSBuild в командной строке - C++
 ms.date: 12/12/2018
-f1_keywords:
-- MSBuild
 helpviewer_keywords:
 - MSBuild
 ms.assetid: 7a1be7ff-0312-4669-adf2-5f5bf507d560
-ms.openlocfilehash: 565b1c47b4476fa7cb830e15b978b389f4344ee1
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: e95d99cf5c63c824bb9bade8e76bc3ca99079669
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62273317"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220573"
 ---
 # <a name="msbuild-on-the-command-line---c"></a>MSBuild в командной строке - C++
 
@@ -53,7 +51,7 @@ A *параметр задачи* свойство класса задачи, о
 
 |Термин|Определение|
 |----------|----------------|
-|[Пошаговое руководство: Использование MSBuild для создания проекта Visual C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Демонстрирует, как создать проект Visual C++ с помощью **MSBuild**.|
+|[Пошаговое руководство: Использование MSBuild для создания проекта C++](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)|Демонстрирует создание Visual Studio C++ проекта с помощью **MSBuild**.|
 |[Практическое руководство. Использование событий сборки в проектах MSBuild](how-to-use-build-events-in-msbuild-projects.md)|Показано, как указать действие, которое происходит на определенном этапе построения: перед началом сборки; Перед началом этапа компоновки; или после завершения построения.|
 |[Практическое руководство. Добавление пользовательского шага сборки в проекты MSBuild](how-to-add-a-custom-build-step-to-msbuild-projects.md)|Демонстрирует способы добавления пользовательского этапа построения последовательности.|
 |[Практическое руководство. Добавление пользовательских средств сборки в проекты MSBuild](how-to-add-custom-build-tools-to-msbuild-projects.md)|Описание способа сопоставления средства построения с определенным файлом.|

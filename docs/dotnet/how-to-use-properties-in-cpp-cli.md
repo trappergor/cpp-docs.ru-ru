@@ -5,12 +5,12 @@ helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: cd0748993b6ac92bbf9f66fa868ac6e814e21bb5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: 47cfd4c633942874b7b349da5635b34ea42090ee
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387153"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65447322"
 ---
 # <a name="how-to-use-properties-in-ccli"></a>Практическое руководство. Использование свойств C++выполняет
 
@@ -259,7 +259,7 @@ int main() {
 
 ## <a name="abstract-and-sealed-properties"></a>Абстрактные и запечатанные свойства
 
-Несмотря на то что [абстрактный](../extensions/abstract-cpp-component-extensions.md) и [запечатанный](../extensions/sealed-cpp-component-extensions.md) ключевые слова задаются как допустимый в стандарте ECMA C++выполняет спецификацию для визуального C++ компилятора, нельзя указать их на тривиальные свойства, ни на объявление свойства нетривиального свойства.
+Несмотря на то что [абстрактный](../extensions/abstract-cpp-component-extensions.md) и [запечатанный](../extensions/sealed-cpp-component-extensions.md) ключевые слова задаются как допустимый в стандарте ECMA C++выполняет спецификацию для Microsoft C++ компилятора, нельзя указать их на тривиальные свойства, ни на объявление свойства нетривиального свойства.
 
 Чтобы объявить закрытых или абстрактных свойства, необходимо определить нетривиальное свойство и затем укажите `abstract` или `sealed` слова get и набор функций метода доступа.
 
