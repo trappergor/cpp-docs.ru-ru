@@ -4,16 +4,16 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 266ea37510b636cd1dc1cfa5909552ace50df1bc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 21931fc4976c909c77120e696f25f93c0a0fda0b
+ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58782364"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65446769"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Как сообщить о проблеме с набором инструментов Visual C++ или документацией
 
-Если у вас возникают проблемы с компилятором, компоновщиком или другими инструментами и библиотеками Microsoft Visual C++, обязательно дайте нам знать об этом. Если проблема заключается в документации, нам нужно знать и об этом.
+Если у вас возникают проблемы с компилятором, компоновщиком или другими средствами и библиотеками Microsoft C++, мы хотим знать о них. Если проблема заключается в документации, нам нужно знать и об этом.
 
 ## <a name="how-to-report-a-c-toolset-issue"></a>Как сообщить о проблеме с набором инструментов C++
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
-ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
+ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "60124750"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65222602"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -103,7 +103,7 @@ Microsoft Visual C++ (обычно сокращают до Visual C++ или MSV
 [Программирование на Linux](../linux/index.md)<br/>
 Интегрированная среда разработки Visual Studio позволяет написать код и развернуть его на удаленном компьютере с ОС Linux для компиляции с помощью GCC.
 
-[DLL в Visual C++](../build/dlls-in-visual-cpp.md)<br/>
+[Создание библиотек DLL C/C++ в Visual Studio](../build/dlls-in-visual-cpp.md)<br/>
 Использование Win32, ATL и MFC для создания классических библиотек DLL для Windows, а также сведения о компиляции и регистрации библиотеки DLL.
 
 [Параллельное программирование](../parallel/parallel-programming-in-visual-cpp.md)<br/>
