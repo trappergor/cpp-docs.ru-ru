@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd04b2aa6dd1d539e357a69666bafc80e3ea5eba
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62152180"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708160"
 ---
 # <a name="coleclientitem-class"></a>Класс COleClientItem
 
@@ -2151,7 +2151,7 @@ BOOL SetPrintDevice(const PRINTDLG* ppd);
 Указатель на [DVTARGETDEVICE](/windows/desktop/api/objidl/ns-objidl-tagdvtargetdevice) структуры данных, который содержит сведения о новых печати целевого устройства. Может иметь значение NULL.
 
 *PPD*<br/>
-Указатель на [PRINTDLG](https://msdn.microsoft.com/library/windows/desktop/ms646940) структуры данных, который содержит сведения о новых печати целевого устройства. Может иметь значение NULL.
+Указатель на [PRINTDLG](/windows/desktop/ms646940) структуры данных, который содержит сведения о новых печати целевого устройства. Может иметь значение NULL.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

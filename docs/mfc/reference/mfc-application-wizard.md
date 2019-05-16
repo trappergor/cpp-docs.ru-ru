@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: f69f0a19cdcd3526d8afac2e1492da806c2dffd3
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: e97c7a29dd56a69fad99e85c206ca2104fa71798
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448489"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708202"
 ---
 # <a name="mfc-application-wizard"></a>мастер приложений MFC
 
 Мастер приложений MFC создает приложения, при компиляции, реализует базовые возможности приложения Windows исполняемый файл (.exe). Начальное приложение MFC включает в себя (.cpp) исходные файлы C++, файлы ресурсов (.rc), файлы заголовков (.h) и файл проекта (VCXPROJ-файл). Код, созданный в этих файлах starter зависит от MFC.
 
 > [!NOTE]
->  В зависимости от выбранных параметров мастер создает дополнительные файлы в проекте. Например, если вы выберите **контекстной справки** на [дополнительные функции](../../mfc/reference/advanced-features-mfc-application-wizard.md) страницы, мастер создает файлы, необходимые для компиляции файлов справки проекта. Дополнительные сведения о файлах, создаваемых мастером, см. в разделе [типы файлов, создаваемых для визуального C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md)и содержатся в файле Readme.txt в проекте.
+>  В зависимости от выбранных параметров мастер создает дополнительные файлы в проекте. Например, если вы выберите **контекстной справки** на [дополнительные функции](../../mfc/reference/advanced-features-mfc-application-wizard.md) страницы, мастер создает файлы, необходимые для компиляции файлов справки проекта. Дополнительные сведения о файлах, создаваемых мастером, см. в разделе [типы файлов, создаваемых для Visual Studio C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md)и содержатся в файле Readme.txt в проекте.
 
 ## <a name="overview"></a>Обзор
 
