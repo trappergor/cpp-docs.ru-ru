@@ -95,7 +95,7 @@
 ## [Классы коллекций ATL](atl-collection-classes.md)
 ## [Компонент реестра ATL (регистратор)](atl-registry-component-registrar.md)
 ### [Создание скриптов регистратора](creating-registrar-scripts.md)
-#### [Основные сведения о синтаксисе формы Бэкуса-Наура (BNF)](understanding-backus-nauer-form-bnf-syntax.md)
+#### [Основные сведения о синтаксисе формы Бэкуса-Наура (BNF)](understanding-backus-naur-form-bnf-syntax.md)
 #### [Основные сведения о деревьях синтаксического анализа](understanding-parse-trees.md)
 #### [Примеры скриптов реестра](registry-scripting-examples.md)
 #### [Использование подстановочных параметров (препроцессор регистратора)](using-replaceable-parameters-the-registrar-s-preprocessor.md)
