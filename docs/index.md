@@ -4,12 +4,12 @@ title: Документация по Visual C++
 description: Узнайте, как использовать C++ для разработки приложений, служб и средств для платформ и устройств.
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5db891bd1ed7a51a623dadfd5cc4e40a081cf0e7
+ms.sourcegitcommit: bc1b14f29a02685f97c7ef5c098d16db6eaf369f
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62264443"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65789018"
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -423,7 +423,7 @@ ms.locfileid: "62264443"
                                 </a>
                             </li>
                             <li>
-                                <a href="https://github.com/Microsoft/cpprestsdk">
+                                <a href="/cpp/cloud/cloud-and-web-programming-in-visual-cpp">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -433,8 +433,8 @@ ms.locfileid: "62264443"
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Сетевые библиотеки</h3>
-                                                    <p>Библиотека с открытым исходным кодом C++ REST SDK (кодовое имя "Casablanca") для веб-программирования.</p>
+                                                    <h3>Облачные и сетевые библиотеки</h3>
+                                                    <p>Используйте пакеты SDK Microsoft Azure C/C++ для Интернета вещей, хранения и многого другого, а библиотеку с открытым исходным кодом C++ REST SDK — для веб-программирования.</p>
                                                 </div>
                                             </div>
                                         </div>
