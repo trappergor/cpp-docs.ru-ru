@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-ms.openlocfilehash: 47fee2291d201fca04674b07926ed88aaed0a95c
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 5808a99d376ab3640c955156688d64bc0285e67e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524530"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706978"
 ---
 # <a name="atl-property-page-wizard"></a>Мастер страницы свойств ATL
 
@@ -22,7 +22,7 @@ ms.locfileid: "65524530"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Этот мастер [добавляет страницу свойств в проект ATL](../../atl/reference/adding-an-atl-property-page.md) или в проект MFC с поддержкой ATL. Страница свойств ATL предоставляет пользовательский интерфейс для задания свойств (или вызова методов) одного или нескольких COM-объектов.
 

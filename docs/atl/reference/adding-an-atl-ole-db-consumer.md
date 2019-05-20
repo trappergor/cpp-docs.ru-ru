@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - ATL OLE DB consumers
 ms.assetid: f940a513-4e42-4148-b521-dd0d7dc89fa2
-ms.openlocfilehash: 7925063e03522c96d251748b23b6b929733999a1
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 1e384a283a2a149faa5b8d6e0817eac3cacfeff9
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524642"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706909"
 ---
 # <a name="adding-an-atl-ole-db-consumer"></a>Добавление потребителя ATL OLE DB
 
@@ -19,7 +19,7 @@ ms.locfileid: "65524642"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 Этот мастер используется для добавления потребителя ATL OLE DB в проект. Потребитель ATL OLE DB содержит класс OLE DB и привязки данных для доступа к источнику данных. Проект необходимо создать как ATL COM-приложение либо как приложение MFC или Win32, содержащее поддержку ATL (которая автоматически добавляет мастер потребителя ATL OLE DB).
 
