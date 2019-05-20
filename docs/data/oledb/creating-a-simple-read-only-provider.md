@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: ade8ccdd-9ea4-4e46-a964-18460c2a2401
-ms.openlocfilehash: c0f31818002ce4611926d942b3bc556e31c1ae6f
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 466530cb8c2ebca7f1c87370389309d3a0486e26
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65524715"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707612"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>Создание простого поставщика только для чтения
 
@@ -20,7 +20,7 @@ ms.locfileid: "65524715"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 После создания поставщика OLE DB с помощью **мастера проектов ATL** и **мастера поставщика OLE DB в ATL** вы можете добавить другие функциональные возможности, поддержку которых нужно обеспечить. Начните разработку вашего поставщика с изучения того, какие данные вы будете отправлять объекту-получателю и при каких условиях. Особенно важно определить, требуется ли поддержка команд, транзакций и других дополнительных объектов. Качественное планирование процесса ускорит реализацию и тестирование.
 

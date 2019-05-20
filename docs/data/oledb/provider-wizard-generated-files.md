@@ -4,12 +4,12 @@ ms.date: 05/09/2019
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 ms.assetid: 6e1ac94b-eb90-4abf-82b3-06944b947ebc
-ms.openlocfilehash: de5c9056402cb1db25240772eb3c592523daafae
-ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.openlocfilehash: 0638680482546f56f26b70660ab43bd9848438a3
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/10/2019
-ms.locfileid: "65525320"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707475"
 ---
 # <a name="provider-wizard-generated-files"></a>Созданные мастером поставщика файлы
 
@@ -19,7 +19,7 @@ ms.locfileid: "65525320"
 
 ::: moniker-end
 
-::: moniker range="vs-2017"
+::: moniker range="<=vs-2017"
 
 **Мастер поставщика OLE DB в ATL** создает следующие файлы. В указанных ниже разделах используется короткое имя *Custom*, но точные имена файлов зависят от выбора при создании поставщика.
 
