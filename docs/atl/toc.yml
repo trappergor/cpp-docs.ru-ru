@@ -1,0 +1,966 @@
+- name: Библиотека шаблонных классов (ATL)
+  href: atl-com-desktop-components.md
+- name: Основные понятия библиотеки шаблонных классов (ATL)
+  expanded: false
+  items:
+    - name: Основные понятия библиотеки шаблонных классов (ATL)
+      href: active-template-library-atl-concepts.md
+    - name: Введение в модель COM и ATL
+      expanded: false
+      items:
+        - name: Введение в модель COM и ATL
+          href: introduction-to-com-and-atl.md
+        - name: Введение в модель COM
+          expanded: false
+          items:
+            - name: Введение в модель COM
+              href: introduction-to-com.md
+            - name: Интерфейсы (ATL)
+              href: interfaces-atl.md
+            - name: IUnknown
+              href: iunknown.md
+            - name: Подсчет ссылок
+              href: reference-counting.md
+            - name: QueryInterface
+              href: queryinterface.md
+            - name: Маршалинг
+              href: marshaling.md
+            - name: Статистическая обработка
+              href: aggregation.md
+        - name: Введение в ATL
+          expanded: false
+          items:
+            - name: Введение в ATL
+              href: introduction-to-atl.md
+            - name: Использование библиотеки шаблонов
+              href: using-a-template-library.md
+            - name: Область применения ATL
+              href: scope-of-atl.md
+            - name: Рекомендации по выбору между ATL и MFC
+              href: recommendations-for-choosing-between-atl-and-mfc.md
+    - name: Основы COM-объектов ATL
+      expanded: false
+      items:
+        - name: Основы COM-объектов ATL
+          href: fundamentals-of-atl-com-objects.md
+        - name: Реализация CComObjectRootEx
+          href: implementing-ccomobjectrootex.md
+        - name: 'Реализация CComObject, CComAggObject и CComPolyObject'
+          href: implementing-ccomobject-ccomaggobject-and-ccompolyobject.md
+        - name: Поддержка IDispatch и IErrorInfo
+          href: supporting-idispatch-and-ierrorinfo.md
+        - name: Поддержка IDispEventImpl
+          href: supporting-idispeventimpl.md
+        - name: Изменение модели агрегирования и фабрики класса по умолчанию
+          href: changing-the-default-class-factory-and-aggregation-model.md
+        - name: Создание объединенного объекта
+          href: creating-an-aggregated-object.md
+    - name: Сдвоенные интерфейсы и ATL
+      expanded: false
+      items:
+        - name: Сдвоенные интерфейсы и ATL
+          href: dual-interfaces-and-atl.md
+        - name: Реализация сдвоенного интерфейса
+          href: implementing-a-dual-interface.md
+        - name: Несколько сдвоенных интерфейсов
+          href: multiple-dual-interfaces.md
+        - name: Атрибут nonextensible
+          href: nonextensible-attribute.md
+        - name: Сдвоенные интерфейсы и события
+          href: dual-interfaces-and-events.md
+    - name: Коллекции и перечислители ATL
+      expanded: false
+      items:
+        - name: Коллекции и перечислители ATL
+          href: atl-collections-and-enumerators.md
+        - name: Классы коллекций и перечислителей ATL
+          href: atl-collection-and-enumerator-classes.md
+        - name: Принципы разработки интерфейсов для коллекций и перечислителей
+          href: design-principles-for-collection-and-enumerator-interfaces.md
+        - name: Реализация коллекции на основе стандартной библиотеки C++
+          expanded: false
+          items:
+            - name: Реализация коллекции на основе стандартной библиотеки C++
+              href: implementing-an-stl-based-collection.md
+            - name: Классы политики копирования ATL
+              href: atl-copy-policy-classes.md
+    - name: Основные сведения о составном элементе управления ATL
+      expanded: false
+      items:
+        - name: Основные сведения о составном элементе управления ATL
+          href: atl-composite-control-fundamentals.md
+        - name: Вставка составного элемента управления
+          href: inserting-a-composite-control.md
+        - name: Изменение проекта ATL
+          href: modifying-the-atl-project.md
+        - name: Добавление функциональных возможностей в составной элемент управления
+          href: adding-functionality-to-the-composite-control.md
+        - name: Сборка и тестирование проекта ATL
+          href: building-and-testing-the-atl-project.md
+    - name: Часто задаваемые вопросы о вложении элементов управления ATL
+      href: atl-control-containment-faq.md
+    - name: Страницы свойств COM в ATL
+      expanded: false
+      items:
+        - name: Страницы свойств COM в ATL
+          href: atl-com-property-pages.md
+        - name: Указание страниц свойств
+          href: specifying-property-pages.md
+        - name: Реализация страниц свойств
+          expanded: false
+          items:
+            - name: Реализация страниц свойств
+              href: implementing-property-pages.md
+            - name: Пример Реализация страницы свойств
+              href: example-implementing-a-property-page.md
+    - name: Поддержка элементов управления DHTML в ATL
+      expanded: false
+      items:
+        - name: Поддержка элементов управления DHTML в ATL
+          href: atl-support-for-dhtml-controls.md
+        - name: Определение элементов для проекта элемента управления DHTML
+          href: identifying-the-elements-of-the-dhtml-control-project.md
+        - name: Вызов кода на языке C++ из DHTML
+          href: calling-cpp-code-from-dhtml.md
+        - name: Создание элемента управления DHTML в ATL
+          href: creating-an-atl-dhtml-control.md
+        - name: Тестирование элемента управления DHTML в ATL
+          href: testing-the-atl-dhtml-control.md
+        - name: Изменение элемента управления DHTML в ATL
+          href: modifying-the-atl-dhtml-control.md
+        - name: Тестирование измененного элемента управления DHTML в ATL
+          href: testing-the-modified-atl-dhtml-control.md
+    - name: Точки подключения ATL
+      expanded: false
+      items:
+        - name: Точки подключения ATL
+          href: atl-connection-points.md
+        - name: Классы точки подключения библиотеки ATL
+          href: atl-connection-point-classes.md
+        - name: Добавление точек подключения к объекту
+          href: adding-connection-points-to-an-object.md
+        - name: Пример точки подключения ATL
+          href: atl-connection-point-example.md
+    - name: Обработка событий и ATL
+      expanded: false
+      items:
+        - name: Обработка событий и ATL
+          href: event-handling-and-atl.md
+        - name: Принципы обработки событий
+          href: event-handling-principles.md
+        - name: Реализация интерфейса обработки событий
+          href: implementing-the-event-handling-interface.md
+        - name: Использование IDispEventImpl
+          href: using-idispeventimpl.md
+        - name: Использование IDispEventSimpleImpl
+          href: using-idispeventsimpleimpl.md
+        - name: Сводка по обработке событий ATL
+          href: atl-event-handling-summary.md
+    - name: ATL и упаковщик в режиме свободного потока
+      href: atl-and-the-free-threaded-marshaler.md
+    - name: Указание потоковой модели для проекта (ATL)
+      href: specifying-the-threading-model-for-a-project-atl.md
+    - name: Модульные классы ATL
+      href: atl-module-classes.md
+    - name: Службы ATL
+      expanded: false
+      items:
+        - name: Службы ATL
+          href: atl-services.md
+        - name: 'Функция CAtlServiceModuleT::Start'
+          href: catlservicemodulet-start-function.md
+        - name: 'Функция CAtlServiceModuleT::ServiceMain'
+          href: catlservicemodulet-servicemain-function.md
+        - name: 'Функция CAtlServiceModuleT::Run'
+          href: catlservicemodulet-run-function.md
+        - name: 'Функция CAtlServiceModuleT::Handler'
+          href: catlservicemodulet-handler-function.md
+        - name: Записи реестра
+          href: registry-entries.md
+        - name: DCOMCNFG
+          href: dcomcnfg.md
+        - name: Советы по отладке
+          expanded: false
+          items:
+            - name: Советы по отладке
+              href: debugging-tips.md
+            - name: Использование диспетчера задач
+              href: using-task-manager.md
+            - name: Отображение утверждений
+              href: displaying-assertions.md
+            - name: Запуск программы как локального сервера
+              href: running-the-program-as-a-local-server.md
+    - name: Классы окон ATL
+      expanded: false
+      items:
+        - name: Классы окон ATL
+          href: atl-window-classes.md
+        - name: Введение в классы окон ATL
+          href: introduction-to-atl-window-classes.md
+        - name: Использование окна
+          href: using-a-window.md
+        - name: Реализация окна
+          expanded: false
+          items:
+            - name: Реализация окна
+              href: implementing-a-window.md
+            - name: Добавление обработчика сообщений ATL
+              href: adding-an-atl-message-handler.md
+            - name: Схемы сообщений (ATL)
+              href: message-maps-atl.md
+            - name: Функции обработчиков сообщений
+              expanded: false
+              items:
+                - name: Функции обработчиков сообщений
+                  href: message-handler-functions.md
+                - name: CommandHandler
+                  href: commandhandler.md
+                - name: MessageHandler
+                  href: messagehandler.md
+                - name: NotifyHandler
+                  href: notifyhandler.md
+            - name: Реализация окна с помощью CWindowImpl
+              href: implementing-a-window-with-cwindowimpl.md
+        - name: Реализация диалогового окна
+          href: implementing-a-dialog-box.md
+        - name: Использование размещенных окон
+          href: using-contained-windows.md
+        - name: Основные сведения о характеристиках окна
+          href: understanding-window-traits.md
+    - name: Классы коллекций ATL
+      href: atl-collection-classes.md
+    - name: Компонент реестра ATL (регистратор)
+      expanded: false
+      items:
+        - name: Компонент реестра ATL (регистратор)
+          href: atl-registry-component-registrar.md
+        - name: Создание скриптов регистратора
+          expanded: false
+          items:
+            - name: Создание скриптов регистратора
+              href: creating-registrar-scripts.md
+            - name: Основные сведения о синтаксисе формы Бэкуса-Наура (BNF)
+              href: understanding-backus-nauer-form-bnf-syntax.md
+            - name: Основные сведения о деревьях синтаксического анализа
+              href: understanding-parse-trees.md
+            - name: Примеры скриптов реестра
+              href: registry-scripting-examples.md
+            - name: Использование подстановочных параметров (препроцессор регистратора)
+              href: using-replaceable-parameters-the-registrar-s-preprocessor.md
+            - name: Вызов скриптов
+              href: invoking-scripts.md
+        - name: Настройка статической ссылки на код регистратора (только C++)
+          href: setting-up-a-static-link-to-the-registrar-code-cpp-only.md
+    - name: Программирование с использованием ATL и кода среды выполнения C
+      expanded: false
+      items:
+        - name: Программирование с использованием ATL и кода среды выполнения C
+          href: programming-with-atl-and-c-run-time-code.md
+        - name: 'Преимущества и недостатки метода, используемого для ссылки на CRT'
+          href: benefits-and-tradeoffs-of-the-method-used-to-link-to-the-crt.md
+        - name: Связывание с CRT в проекте ATL
+          href: linking-to-the-crt-in-your-atl-project.md
+    - name: Программирование с использованием CComBSTR (ATL)
+      href: programming-with-ccombstr-atl.md
+    - name: Справочник по кодировке ATL
+      href: atl-encoding-reference.md
+    - name: Справочник по служебным программам ATL
+      href: atl-utilities-reference.md
+- name: Учебник по активной библиотеке шаблонных классов (ATL)
+  expanded: false
+  items:
+    - name: Учебник по активной библиотеке шаблонных классов (ATL)
+      href: active-template-library-atl-tutorial.md
+    - name: "Создание проекта (учебник ATL, часть\_1)"
+      href: creating-the-project-atl-tutorial-part-1.md
+    - name: "Добавление элемента управления (учебник ATL, часть\_2)"
+      href: adding-a-control-atl-tutorial-part-2.md
+    - name: "Добавление свойства в элемент управления (учебник ATL, часть\_3)"
+      href: adding-a-property-to-the-control-atl-tutorial-part-3.md
+    - name: "Изменение кода отрисовки (учебник ATL, часть\_4)"
+      href: changing-the-drawing-code-atl-tutorial-part-4.md
+    - name: "Добавление события (учебник ATL, часть\_5)"
+      href: adding-an-event-atl-tutorial-part-5.md
+    - name: "Добавление страницы свойств (учебник ATL, часть\_6)"
+      href: adding-a-property-page-atl-tutorial-part-6.md
+    - name: "Размещение элемента управления на веб-странице (учебник ATL, часть\_7)"
+      href: putting-the-control-on-a-web-page-atl-tutorial-part-7.md
+- name: Общие сведения о классах ATL по категории
+  expanded: false
+  items:
+    - name: Общие сведения о классах ATL
+      href: atl-class-overview.md
+    - name: Классы фабрик классов
+      href: class-factories-classes.md
+    - name: Классы сведений о классах
+      href: class-information-classes.md
+    - name: Классы коллекций
+      href: collection-classes.md
+    - name: Классы модулей COM
+      href: com-modules-classes.md
+    - name: Классы составных элементов управления
+      href: composite-controls-classes.md
+    - name: Классы точек подключения
+      href: connection-points-classes.md
+    - name: Классы автономности элементов управления
+      href: control-containment-classes.md
+    - name: 'Элементы управления: Общие вспомогательные классы'
+      href: controls-general-support-classes.md
+    - name: Классы передачи данных
+      href: data-transfer-classes.md
+    - name: Классы типов данных
+      href: data-types-classes.md
+    - name: Классы для отладки и работы с исключениями
+      href: debugging-and-exceptions-classes.md
+    - name: Классы сдвоенных интерфейсов
+      href: dual-interfaces-classes.md
+    - name: Классы перечислителей и коллекций
+      href: enumerators-and-collections-classes.md
+    - name: Классы сведений об ошибках
+      href: error-information-classes.md
+    - name: Классы обработки файлов
+      href: file-handling-classes.md
+    - name: Классы указателей интерфейса
+      href: interface-pointers-classes.md
+    - name: Классы для реализации IUnknown
+      href: iunknown-implementation-classes.md
+    - name: Классы для управления памятью
+      href: memory-management-classes.md
+    - name: Классы оснасток MMC
+      href: mmc-snap-in-classes.md
+    - name: Классы безопасности объектов
+      href: object-safety-classes.md
+    - name: Классы сохраняемости
+      href: persistence-classes.md
+    - name: Классы свойства и страниц свойств
+      href: properties-and-property-pages-classes.md
+    - name: Классы с поддержкой реестра
+      href: registry-support-classes.md
+    - name: Классы выполняемых объектов
+      href: running-objects-classes.md
+    - name: Классы безопасности
+      href: security-classes.md
+    - name: Классы для поддержки поставщиков служб
+      href: service-provider-support-classes.md
+    - name: Классы сведений о сайтах
+      href: site-information-classes.md
+    - name: Строковые и текстовые классы
+      href: string-and-text-classes.md
+    - name: Классы перемещаемых интерфейсов
+      href: tear-off-interfaces-classes.md
+    - name: Классы группировки потоков в пул
+      href: thread-pooling-classes.md
+    - name: Классы потоковых моделей и критических разделов
+      href: threading-models-and-critical-sections-classes.md
+    - name: Классы с поддержкой пользовательского интерфейса
+      href: ui-support-classes.md
+    - name: Служебные классы
+      href: utility-classes.md
+    - name: Классы с поддержкой окон
+      href: windows-support-classes.md
+- name: Справочник по библиотеке ATL
+  expanded: false
+  items:
+    - name: Различия классов и структур
+      expanded: false
+      items:
+        - name: Классы и структуры библиотеки ATL
+          href: reference/atl-classes.md
+        - name: Структура _ATL_BASE_MODULE70
+          href: reference/atl-base-module70-structure.md
+        - name: Структура _ATL_COM_MODULE70
+          href: reference/atl-com-module70-structure.md
+        - name: Структура _ATL_FUNC_INFO
+          href: reference/atl-func-info-structure.md
+        - name: Структура _ATL_MODULE70
+          href: reference/atl-module70-structure.md
+        - name: Структура _ATL_WIN_MODULE70
+          href: reference/atl-win-module70-structure.md
+        - name: Структура _AtlCreateWndData
+          href: reference/atlcreatewnddata-structure.md
+        - name: Структура ATL_DRAWINFO
+          href: reference/atl-drawinfo-structure.md
+        - name: Класс _U_MENUorID
+          href: reference/u-menuorid-class.md
+        - name: Класс _U_RECT
+          href: reference/u-rect-class.md
+        - name: Класс _U_STRINGorID
+          href: reference/u-stringorid-class.md
+        - name: Класс CA2AEX
+          href: reference/ca2aex-class.md
+        - name: Класс CA2CAEX
+          href: reference/ca2caex-class.md
+        - name: Класс CA2WEX
+          href: reference/ca2wex-class.md
+        - name: Класс CAccessToken
+          href: reference/caccesstoken-class.md
+        - name: Класс CAcl
+          href: reference/cacl-class.md
+        - name: Класс CAdapt
+          href: reference/cadapt-class.md
+        - name: Класс CAtlArray
+          href: reference/catlarray-class.md
+        - name: Класс CAtlAutoThreadModule
+          href: reference/catlautothreadmodule-class.md
+        - name: Класс CAtlAutoThreadModuleT
+          href: reference/catlautothreadmodulet-class.md
+        - name: Класс CAtlBaseModule
+          href: reference/catlbasemodule-class.md
+        - name: Класс CAtlComModule
+          href: reference/catlcommodule-class.md
+        - name: Класс CAtlDebugInterfacesModule
+          href: reference/catldebuginterfacesmodule-class.md
+        - name: Класс CAtlDllModuleT
+          href: reference/catldllmodulet-class.md
+        - name: Класс CAtlException
+          href: reference/catlexception-class.md
+        - name: Класс CAtlExeModuleT
+          href: reference/catlexemodulet-class.md
+        - name: Класс CAtlFile
+          href: reference/catlfile-class.md
+        - name: Класс CAtlFileMapping
+          href: reference/catlfilemapping-class.md
+        - name: Класс CAtlFileMappingBase
+          href: reference/catlfilemappingbase-class.md
+        - name: Класс CAtlList
+          href: reference/catllist-class.md
+        - name: Класс CAtlMap
+          href: reference/catlmap-class.md
+        - name: Класс CAtlModule
+          href: reference/catlmodule-class.md
+        - name: Класс CAtlModuleT
+          href: reference/catlmodulet-class.md
+        - name: Класс CAtlPreviewCtrlImpl
+          href: reference/catlpreviewctrlimpl-class.md
+        - name: Класс CAtlServiceModuleT
+          href: reference/catlservicemodulet-class.md
+        - name: Класс CAtlTemporaryFile
+          href: reference/catltemporaryfile-class.md
+        - name: Класс CAtlTransactionManager
+          href: reference/catltransactionmanager-class.md
+        - name: Класс CAtlWinModule
+          href: reference/catlwinmodule-class.md
+        - name: Класс CAutoPtr
+          href: reference/cautoptr-class.md
+        - name: Класс CAutoPtrArray
+          href: reference/cautoptrarray-class.md
+        - name: Класс CAutoPtrElementTraits
+          href: reference/cautoptrelementtraits-class.md
+        - name: Класс CAutoPtrList
+          href: reference/cautoptrlist-class.md
+        - name: Класс CAutoRevertImpersonation
+          href: reference/cautorevertimpersonation-class.md
+        - name: Класс CAutoVectorPtr
+          href: reference/cautovectorptr-class.md
+        - name: Класс CAutoVectorPtrElementTraits
+          href: reference/cautovectorptrelementtraits-class.md
+        - name: Класс CAxDialogImpl
+          href: reference/caxdialogimpl-class.md
+        - name: Класс CAxWindow
+          href: reference/caxwindow-class.md
+        - name: Класс CAxWindow2T
+          href: reference/caxwindow2t-class.md
+        - name: Класс CBindStatusCallback
+          href: reference/cbindstatuscallback-class.md
+        - name: Класс CComAggObject
+          href: reference/ccomaggobject-class.md
+        - name: Класс CComAllocator
+          href: reference/ccomallocator-class.md
+        - name: Класс CComApartment
+          href: reference/ccomapartment-class.md
+        - name: Класс CComAutoCriticalSection
+          href: reference/ccomautocriticalsection-class.md
+        - name: Класс CComAutoDeleteCriticalSection
+          href: reference/ccomautodeletecriticalsection-class.md
+        - name: Класс CComAutoThreadModule
+          href: reference/ccomautothreadmodule-class.md
+        - name: Класс CComBSTR
+          href: reference/ccombstr-class.md
+        - name: Класс CComCachedTearOffObject
+          href: reference/ccomcachedtearoffobject-class.md
+        - name: Класс CComClassFactory
+          href: reference/ccomclassfactory-class.md
+        - name: Класс CComClassFactory2
+          href: reference/ccomclassfactory2-class.md
+        - name: Класс CComClassFactoryAutoThread
+          href: reference/ccomclassfactoryautothread-class.md
+        - name: Класс CComClassFactorySingleton
+          href: reference/ccomclassfactorysingleton-class.md
+        - name: Класс CComCoClass
+          href: reference/ccomcoclass-class.md
+        - name: Класс CComCompositeControl
+          href: reference/ccomcompositecontrol-class.md
+        - name: Класс CComContainedObject
+          href: reference/ccomcontainedobject-class.md
+        - name: Класс CComControl
+          href: reference/ccomcontrol-class.md
+        - name: Класс CComControlBase
+          href: reference/ccomcontrolbase-class.md
+        - name: Класс CComCriticalSection
+          href: reference/ccomcriticalsection-class.md
+        - name: Класс CComCritSecLock
+          href: reference/ccomcritseclock-class.md
+        - name: Класс CComCurrency
+          href: reference/ccomcurrency-class.md
+        - name: Класс CComDynamicUnkArray
+          href: reference/ccomdynamicunkarray-class.md
+        - name: Класс CComEnum
+          href: reference/ccomenum-class.md
+        - name: Класс CComEnumImpl
+          href: reference/ccomenumimpl-class.md
+        - name: Класс CComEnumOnSTL
+          href: reference/ccomenumonstl-class.md
+        - name: Класс CComFakeCriticalSection
+          href: reference/ccomfakecriticalsection-class.md
+        - name: Класс CComGITPtr
+          href: reference/ccomgitptr-class.md
+        - name: Класс CComHeap
+          href: reference/ccomheap-class.md
+        - name: Класс CComHeapPtr
+          href: reference/ccomheapptr-class.md
+        - name: Класс CComModule
+          href: reference/ccommodule-class.md
+        - name: Класс CComMultiThreadModel
+          href: reference/ccommultithreadmodel-class.md
+        - name: Класс CComMultiThreadModelNoCS
+          href: reference/ccommultithreadmodelnocs-class.md
+        - name: Класс CComObject
+          href: reference/ccomobject-class.md
+        - name: Класс CComObjectGlobal
+          href: reference/ccomobjectglobal-class.md
+        - name: Класс CComObjectNoLock
+          href: reference/ccomobjectnolock-class.md
+        - name: Класс CComObjectRoot
+          href: reference/ccomobjectroot-class.md
+        - name: Класс CComObjectRootEx
+          href: reference/ccomobjectrootex-class.md
+        - name: Класс CComObjectStack
+          href: reference/ccomobjectstack-class.md
+        - name: Класс CComPolyObject
+          href: reference/ccompolyobject-class.md
+        - name: Класс CComPtr
+          href: reference/ccomptr-class.md
+        - name: Класс CComPtrBase
+          href: reference/ccomptrbase-class.md
+        - name: Класс CComQIPtr
+          href: reference/ccomqiptr-class.md
+        - name: Класс CComQIPtrElementTraits
+          href: reference/ccomqiptrelementtraits-class.md
+        - name: Класс CComSafeArray
+          href: reference/ccomsafearray-class.md
+        - name: Класс CComSafeArrayBound
+          href: reference/ccomsafearraybound-class.md
+        - name: Класс CComSafeDeleteCriticalSection
+          href: reference/ccomsafedeletecriticalsection-class.md
+        - name: Класс CComSimpleThreadAllocator
+          href: reference/ccomsimplethreadallocator-class.md
+        - name: Класс CComSingleThreadModel
+          href: reference/ccomsinglethreadmodel-class.md
+        - name: Класс CComTearOffObject
+          href: reference/ccomtearoffobject-class.md
+        - name: Класс CComUnkArray
+          href: reference/ccomunkarray-class.md
+        - name: Класс CComVariant
+          href: reference/ccomvariant-class.md
+        - name: Класс CContainedWindowT
+          href: reference/ccontainedwindowt-class.md
+        - name: Класс CCRTAllocator
+          href: reference/ccrtallocator-class.md
+        - name: Класс CCRTHeap
+          href: reference/ccrtheap-class.md
+        - name: Класс CDacl
+          href: reference/cdacl-class.md
+        - name: Класс CDebugReportHook
+          href: reference/cdebugreporthook-class.md
+        - name: Класс CDefaultCharTraits
+          href: reference/cdefaultchartraits-class.md
+        - name: Класс CDefaultCompareTraits
+          href: reference/cdefaultcomparetraits-class.md
+        - name: Класс CDefaultElementTraits
+          href: reference/cdefaultelementtraits-class.md
+        - name: Класс CDefaultHashTraits
+          href: reference/cdefaulthashtraits-class.md
+        - name: Класс CDialogImpl
+          href: reference/cdialogimpl-class.md
+        - name: Класс CDynamicChain
+          href: reference/cdynamicchain-class.md
+        - name: Класс CElementTraits
+          href: reference/celementtraits-class.md
+        - name: Класс CElementTraitsBase
+          href: reference/celementtraitsbase-class.md
+        - name: Класс CFirePropNotifyEvent
+          href: reference/cfirepropnotifyevent-class.md
+        - name: Класс CGlobalHeap
+          href: reference/cglobalheap-class.md
+        - name: Класс CHandle
+          href: reference/chandle-class.md
+        - name: Класс CHeapPtr
+          href: reference/cheapptr-class.md
+        - name: Класс CHeapPtrBase
+          href: reference/cheapptrbase-class.md
+        - name: Класс CHeapPtrElementTraits
+          href: reference/cheapptrelementtraits-class.md
+        - name: Класс CHeapPtrList
+          href: reference/cheapptrlist-class.md
+        - name: Класс CInterfaceArray
+          href: reference/cinterfacearray-class.md
+        - name: Класс CInterfaceList
+          href: reference/cinterfacelist-class.md
+        - name: Класс CLocalHeap
+          href: reference/clocalheap-class.md
+        - name: Класс CMessageMap
+          href: reference/cmessagemap-class.md
+        - name: Класс CNonStatelessWorker
+          href: reference/cnonstatelessworker-class.md
+        - name: Класс CNoWorkerThread
+          href: reference/cnoworkerthread-class.md
+        - name: Класс CPathT
+          href: reference/cpatht-class.md
+        - name: Класс CPrimitiveElementTraits
+          href: reference/cprimitiveelementtraits-class.md
+        - name: Класс CPrivateObjectSecurityDesc
+          href: reference/cprivateobjectsecuritydesc-class.md
+        - name: Класс CRBMap
+          href: reference/crbmap-class.md
+        - name: Класс CRBMultiMap
+          href: reference/crbmultimap-class.md
+        - name: Класс CRBTree
+          href: reference/crbtree-class.md
+        - name: Класс CRegKey
+          href: reference/cregkey-class.md
+        - name: Класс CRTThreadTraits
+          href: reference/crtthreadtraits-class.md
+        - name: Класс CSacl
+          href: reference/csacl-class.md
+        - name: Класс CSecurityAttributes
+          href: reference/csecurityattributes-class.md
+        - name: Класс CSecurityDesc
+          href: reference/csecuritydesc-class.md
+        - name: Класс CSid
+          href: reference/csid-class.md
+        - name: Класс CSimpleArray
+          href: reference/csimplearray-class.md
+        - name: Класс CSimpleArrayEqualHelper
+          href: reference/csimplearrayequalhelper-class.md
+        - name: Класс CSimpleArrayEqualHelperFalse
+          href: reference/csimplearrayequalhelperfalse-class.md
+        - name: Класс CSimpleDialog
+          href: reference/csimpledialog-class.md
+        - name: Класс CSimpleMap
+          href: reference/csimplemap-class.md
+        - name: Класс CSimpleMapEqualHelper
+          href: reference/csimplemapequalhelper-class.md
+        - name: Класс CSimpleMapEqualHelperFalse
+          href: reference/csimplemapequalhelperfalse-class.md
+        - name: Класс CSnapInItemImpl
+          href: reference/csnapinitemimpl-class.md
+        - name: Класс CSnapInPropertyPageImpl
+          href: reference/csnapinpropertypageimpl-class.md
+        - name: Класс CSocketAddr
+          href: reference/csocketaddr-class.md
+        - name: Класс CStockPropImpl
+          href: reference/cstockpropimpl-class.md
+        - name: Класс CStringElementTraits
+          href: reference/cstringelementtraits-class.md
+        - name: Класс CStringElementTraitsI
+          href: reference/cstringelementtraitsi-class.md
+        - name: Класс CStringRefElementTraits
+          href: reference/cstringrefelementtraits-class.md
+        - name: Класс CThreadPool
+          href: reference/cthreadpool-class.md
+        - name: Класс CTokenGroups
+          href: reference/ctokengroups-class.md
+        - name: Класс CTokenPrivileges
+          href: reference/ctokenprivileges-class.md
+        - name: Класс CUrl
+          href: reference/curl-class.md
+        - name: Класс CW2AEX
+          href: reference/cw2aex-class.md
+        - name: Класс CW2CWEX
+          href: reference/cw2cwex-class.md
+        - name: Класс CW2WEX
+          href: reference/cw2wex-class.md
+        - name: Класс CWin32Heap
+          href: reference/cwin32heap-class.md
+        - name: Класс CWindow
+          href: reference/cwindow-class.md
+        - name: Класс CWindowImpl
+          href: reference/cwindowimpl-class.md
+        - name: Класс CWinTraits
+          href: reference/cwintraits-class.md
+        - name: Класс CWinTraitsOR
+          href: reference/cwintraitsor-class.md
+        - name: Класс CWndClassInfo
+          href: reference/cwndclassinfo-class.md
+        - name: Класс CWorkerThread
+          href: reference/cworkerthread-class.md
+        - name: Класс IAtlAutoThreadModule
+          href: reference/iatlautothreadmodule-class.md
+        - name: Класс IAtlMemMgr
+          href: reference/iatlmemmgr-class.md
+        - name: Интерфейс IAxWinAmbientDispatch
+          href: reference/iaxwinambientdispatch-interface.md
+        - name: Интерфейс IAxWinAmbientDispatchEx
+          href: reference/iaxwinambientdispatchex-interface.md
+        - name: Интерфейс IAxWinHostWindow
+          href: reference/iaxwinhostwindow-interface.md
+        - name: Интерфейс IAxWinHostWindowLic
+          href: reference/iaxwinhostwindowlic-interface.md
+        - name: Класс ICollectionOnSTLImpl
+          href: reference/icollectiononstlimpl-class.md
+        - name: Класс IConnectionPointContainerImpl
+          href: reference/iconnectionpointcontainerimpl-class.md
+        - name: Класс IConnectionPointImpl
+          href: reference/iconnectionpointimpl-class.md
+        - name: Класс IDataObjectImpl
+          href: reference/idataobjectimpl-class.md
+        - name: Класс IDispatchImpl
+          href: reference/idispatchimpl-class.md
+        - name: Класс IDispEventImpl
+          href: reference/idispeventimpl-class.md
+        - name: Класс IDispEventSimpleImpl
+          href: reference/idispeventsimpleimpl-class.md
+        - name: Интерфейс IDocHostUIHandlerDispatch
+          href: reference/idochostuihandlerdispatch-interface.md
+        - name: Класс IEnumOnSTLImpl
+          href: reference/ienumonstlimpl-class.md
+        - name: Класс IObjectSafetyImpl
+          href: reference/iobjectsafetyimpl-class.md
+        - name: Класс IObjectWithSiteImpl
+          href: reference/iobjectwithsiteimpl-class.md
+        - name: Класс IOleControlImpl
+          href: reference/iolecontrolimpl-class.md
+        - name: Класс IOleInPlaceActiveObjectImpl
+          href: reference/ioleinplaceactiveobjectimpl-class.md
+        - name: Класс IOleInPlaceObjectWindowlessImpl
+          href: reference/ioleinplaceobjectwindowlessimpl-class.md
+        - name: Класс IOleObjectImpl
+          href: reference/ioleobjectimpl-class.md
+        - name: Класс IPerPropertyBrowsingImpl
+          href: reference/iperpropertybrowsingimpl-class.md
+        - name: Класс IPersistPropertyBagImpl
+          href: reference/ipersistpropertybagimpl-class.md
+        - name: Класс IPersistStorageImpl
+          href: reference/ipersiststorageimpl-class.md
+        - name: Класс IPersistStreamInitImpl
+          href: reference/ipersiststreaminitimpl-class.md
+        - name: Класс IPointerInactiveImpl
+          href: reference/ipointerinactiveimpl-class.md
+        - name: Класс IPropertyNotifySinkCP
+          href: reference/ipropertynotifysinkcp-class.md
+        - name: Класс IPropertyPage2Impl
+          href: reference/ipropertypage2impl-class.md
+        - name: Класс IPropertyPageImpl
+          href: reference/ipropertypageimpl-class.md
+        - name: Класс IProvideClassInfo2Impl
+          href: reference/iprovideclassinfo2impl-class.md
+        - name: Класс IQuickActivateImpl
+          href: reference/iquickactivateimpl-class.md
+        - name: Интерфейс IRegistrar
+          href: reference/iregistrar-class.md
+        - name: Класс IRunnableObjectImpl
+          href: reference/irunnableobjectimpl-class.md
+        - name: Класс IServiceProviderImpl
+          href: reference/iserviceproviderimpl-class.md
+        - name: Класс ISpecifyPropertyPagesImpl
+          href: reference/ispecifypropertypagesimpl-class.md
+        - name: Класс ISupportErrorInfoImpl
+          href: reference/isupporterrorinfoimpl-class.md
+        - name: Интерфейс IThreadPoolConfig
+          href: reference/ithreadpoolconfig-interface.md
+        - name: Класс IViewObjectExImpl
+          href: reference/iviewobjecteximpl-class.md
+        - name: Интерфейс IWorkerThreadClient
+          href: reference/iworkerthreadclient-interface.md
+        - name: Класс Win32ThreadTraits
+          href: reference/win32threadtraits-class.md
+        - name: Рабочий архетип
+          href: reference/worker-archetype.md
+    - name: Перечисление ATL_URL_SCHEME
+      href: reference/atl-url-scheme-enum.md
+    - name: Ссылка на функцию ATL
+      expanded: false
+      items:
+        - name: Функции ATL
+          href: reference/atl-functions.md
+        - name: Служебные функции HTTP ATL
+          href: reference/atl-http-utility-functions.md
+        - name: Функции кодировки текста ATL
+          href: reference/atl-text-encoding-functions.md
+        - name: Функции пути ATL
+          href: reference/atl-path-functions.md
+        - name: Глобальные функции сопоставления COM
+          href: reference/com-map-global-functions.md
+        - name: Глобальные функции составных элементов управления
+          href: reference/composite-control-global-functions.md
+        - name: Глобальные функции точек подключения
+          href: reference/connection-point-global-functions.md
+        - name: Глобальные функции для отладки и создания отчетов об ошибках
+          href: reference/debugging-and-error-reporting-global-functions.md
+        - name: Глобальные функции контекста устройства
+          href: reference/device-context-global-functions.md
+        - name: Глобальные функции для обработки событий
+          href: reference/event-handling-global-functions.md
+        - name: Глобальные функции для маршалинга
+          href: reference/marshaling-global-functions.md
+        - name: Глобальные функции преобразования пикселей в единицы HIMETRIC
+          href: reference/pixel-himetric-conversion-global-functions.md
+        - name: Глобальные функции реестра и библиотеки типов
+          href: reference/registry-and-typelib-global-functions.md
+        - name: Глобальные функции безопасности
+          href: reference/security-global-functions.md
+        - name: Глобальные функции для работы с идентификаторами безопасности
+          href: reference/security-identifier-global-functions.md
+        - name: Глобальные функции регистрации серверов
+          href: reference/server-registration-global-functions.md
+        - name: Глобальные функции WinModule
+          href: reference/winmodule-global-functions.md
+    - name: Ссылка на макрос ATL
+      expanded: false
+      items:
+        - name: Макросы ATL
+          href: reference/atl-macros.md
+        - name: Макросы агрегирования и фабрик классов
+          href: reference/aggregation-and-class-factory-macros.md
+        - name: Макросы категорий
+          href: reference/category-macros.md
+        - name: Макросы сопоставления COM
+          href: reference/com-map-macros.md
+        - name: Макрос точки входа в интерфейс модели COM
+          href: reference/com-interface-entry-macros.md
+        - name: Макросы для параметров компилятора
+          href: reference/compiler-options-macros.md
+        - name: Макросы для работы с составными элементами управления
+          href: reference/composite-control-macros.md
+        - name: Макросы для работы с точками подключения
+          href: reference/connection-point-macros.md
+        - name: Макросы для отладки и создания отчетов об ошибках
+          href: reference/debugging-and-error-reporting-macros.md
+        - name: Макросы для обработки исключений
+          href: reference/exception-handling-macros.md
+        - name: Макросы схемы сообщений (ATL)
+          href: reference/message-map-macros-atl.md
+        - name: Макросы сопоставления объектов
+          href: reference/object-map-macros.md
+        - name: Макросы состояния объектов
+          href: reference/object-status-macros.md
+        - name: Макросы сопоставления свойств
+          href: reference/property-map-macros.md
+        - name: Макросы для обмена данными с реестром
+          href: reference/registry-data-exchange-macros.md
+        - name: Макросы реестра
+          href: reference/registry-macros.md
+        - name: Макросы схемы услуги
+          href: reference/service-map-macros.md
+        - name: Макросы объекта оснастки
+          href: reference/snap-in-object-macros.md
+        - name: Макросы преобразования строк
+          href: reference/string-conversion-macros.md
+        - name: Макросы класса окна
+          href: reference/window-class-macros.md
+        - name: Макросы сообщений Windows
+          href: reference/windows-messages-macros.md
+    - name: Справочник операторов ATL
+      href: reference/atl-operators.md
+    - name: Справочник по глобальным переменным ATL
+      href: reference/atl-global-variables.md
+    - name: Справочник по ATL typedef
+      href: reference/atl-typedefs.md
+- name: Проекты ATL в Visual Studio
+  expanded: false
+  items:
+    - name: Справочник по диалоговым окнам и мастерам ATL
+      expanded: false
+      items:
+        - name: Мастеры и диалоговые окна ATL
+          href: reference/atl-wizards-and-dialog-boxes.md
+        - name: Справочник по мастеру компонентов страницы активного сервера ATL
+          expanded: false
+          items:
+            - name: Мастер ASP-компонента ATL
+              href: reference/atl-active-server-page-component-wizard.md
+            - name: 'Мастер компонентов страницы активного сервера ATL, ASP'
+              href: reference/asp-atl-active-server-page-component-wizard.md
+            - name: 'Мастер компонентов страницы активного сервера ATL, параметры'
+              href: reference/options-atl-active-server-page-component-wizard.md
+        - name: "Справочник по мастеру компонентов ATL COM+\_1.0"
+          expanded: false
+          items:
+            - name: Мастер компонентов ATL COM+ 1.0
+              href: reference/atl-com-plus-1-0-component-wizard.md
+            - name: 'COM+ 1.0, мастер компонентов ATL COM+ 1.0'
+              href: reference/com-plus-1-0-atl-com-plus-1-0-component-wizard.md
+        - name: Справочник по мастеру элементов управления ATL
+          expanded: false
+          items:
+            - name: Мастер элементов управления ATL
+              href: reference/atl-control-wizard.md
+            - name: 'Мастер элементов управления ATL, внешний вид'
+              href: reference/appearance-atl-control-wizard.md
+            - name: 'Мастер элементов управления ATL, интерфейсы'
+              href: reference/interfaces-atl-control-wizard.md
+            - name: 'Мастер элементов управления ATL, параметры'
+              href: reference/options-atl-control-wizard.md
+            - name: 'Мастер элементов управления ATL, стандартные свойства'
+              href: reference/stock-properties-atl-control-wizard.md
+        - name: Мастер диалоговых окон ATL
+          href: reference/atl-dialog-wizard.md
+        - name: Справочник по мастеру объекта-получателя ATL OLE DB
+          href: reference/atl-ole-db-consumer-wizard.md
+        - name: Справочник по мастеру поставщика ATL OLE DB
+          href: reference/atl-ole-db-provider-wizard.md
+        - name: Справочник по мастеру проектов ATL
+          expanded: false
+          items:
+            - name: Мастер проектов ATL
+              href: reference/atl-project-wizard.md
+            - name: 'Параметры приложений, мастер проектов ATL'
+              href: reference/application-settings-atl-project-wizard.md
+        - name: Справочник по мастеру страницы свойств ATL
+          expanded: false
+          items:
+            - name: Мастер страницы свойств ATL
+              href: reference/atl-property-page-wizard.md
+            - name: 'Мастер страницы свойств ATL, параметры'
+              href: reference/options-atl-property-page-wizard.md
+            - name: 'Мастер страницы свойств ATL, строки'
+              href: reference/strings-atl-property-page-wizard.md
+        - name: Справочник по мастеру простых объектов ATL
+          expanded: false
+          items:
+            - name: Мастер простых объектов ATL
+              href: reference/atl-simple-object-wizard.md
+            - name: 'Мастер простых объектов ATL, параметры'
+              href: reference/options-atl-simple-object-wizard.md
+    - name: Добавление нового интерфейса в проект ATL
+      href: reference/adding-a-new-interface-in-an-atl-project.md
+    - name: Добавление ASP-компонента ATL
+      href: reference/adding-an-atl-active-server-page-component.md
+    - name: "Добавление компонента COM+\_1.0 ATL"
+      href: reference/adding-an-atl-com-plus-1-0-component.md
+    - name: Добавление элемента управления ATL
+      href: reference/adding-an-atl-control.md
+    - name: Добавление диалогового окна ATL
+      href: reference/adding-an-atl-dialog-box.md
+    - name: Добавление объекта-получателя ATL OLE DB
+      href: reference/adding-an-atl-ole-db-consumer.md
+    - name: Добавление поставщика ATL OLE DB
+      href: reference/adding-an-atl-ole-db-provider.md
+    - name: Добавление страницы свойств ATL
+      href: reference/adding-an-atl-property-page.md
+    - name: Добавление простого объекта ATL
+      href: reference/adding-an-atl-simple-object.md
+    - name: Добавление объектов и элементов управления в проект ATL
+      href: reference/adding-objects-and-controls-to-an-atl-project.md
+    - name: Создание проекта ATL
+      href: reference/creating-an-atl-project.md
+    - name: "Поддержка COM+\_1.0 в проектах ATL"
+      href: reference/com-plus-1-0-support-in-atl-projects.md
+    - name: Конфигурации проектов ATL по умолчанию
+      href: reference/default-atl-project-configurations.md
+    - name: Отключение возможности создания объекта ATL
+      href: reference/making-an-atl-object-noncreatable.md
+    - name: Поддержка MFC в проектах ATL
+      href: reference/mfc-support-in-atl-projects.md
+    - name: Настройка оптимизации компилятора для проекта ATL
+      href: reference/specifying-compiler-optimization-for-an-atl-project.md
