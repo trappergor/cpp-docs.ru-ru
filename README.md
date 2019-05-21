@@ -1,10 +1,18 @@
+---
+ms.openlocfilehash: 279d5c5cbc86297df51ad3862a2e32d5e7bae5d2
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.translationtype: HT
+ms.contentlocale: ru-RU
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934195"
+---
 # <a name="visual-studio-2017-documentation-for-visual-c"></a>Документация по Visual Studio 2017 для Visual C++
 
 Добро пожаловать! Этот репозиторий содержит исходные файлы для технической документации по проводимым работам для Visual C++. Эти разделы опубликованы на [сайте документации по Visual C++](https://docs.microsoft.com/cpp).
 
 Этот репозиторий был перемещен из Microsoft/vcppdocs в MicrosoftDocs/cpp-docs-pr 23 июня 2017 г.
 
-Документация для Visual Basic и Visual C# находится в отдельном репозитории по адресу [http://github.com/dotnet/core-docs](http://github.com/dotnet/core-docs), а документация по Visual Studio 2017 — в репозитории по адресу [http://github.com/Microsoft/visualstudio-docs](http://github.com/Microsoft/visualstudio-docs).
+Документация для Visual Basic и Visual C# находится в отдельном репозитории по адресу [https://github.com/dotnet/core-docs](https://github.com/dotnet/core-docs), а документация по Visual Studio 2017 — в репозитории по адресу [https://github.com/Microsoft/visualstudio-docs](https://github.com/Microsoft/visualstudio-docs).
 
 ## <a name="contributing-to-the-documentation"></a>Участие в работе над документацией
 
