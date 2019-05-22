@@ -1,6 +1,6 @@
 ---
 title: Добавление объектов и элементов управления в проект ATL
-ms.date: 11/04/2016
+ms.date: 05/09/2019
 f1_keywords:
 - vc.appwiz.ATL.controls
 helpviewer_keywords:
@@ -11,43 +11,46 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: d16e9a9e7b92d2a98f8994227c5641994677fdda
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: deaac8f2d6aac02d0cd751e6abebb3b67051200f
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221204"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706846"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>Добавление объектов и элементов управления в проект ATL
 
-Один из мастеров кода ATL можно использовать для добавления объекта или элемента управления в проекты на основе ATL или MFC. Для каждого COM-объект или элемент управления можно добавить мастер формирует .cpp и .h файлы, а также RGS-файл для поддержки реестра на основе сценария. Следующие мастера кода ATL, доступны в Visual Studio:
+> [!NOTE] 
+> Мастер компонентов ATL COM+ 1.0, мастер объекта-получателя ATL OLE DB и мастер компонентов ASP ATL недоступны в Visual Studio 2019 и более поздних версий.
+
+Вы можете использовать один из мастеров кода ATL, чтобы добавить объект или элемент управления в проекты на основе ATL или MFC. Для каждого COM-объекта или элемента управления, который вы добавляете, мастер создает файлы CPP и H, а также RGS-файл для поддержки реестра на основе скрипта. Следующие мастера кода ATL доступны в Visual Studio.
 
 ||||
 |-|-|-|
-|[Простой объект ATL](../../atl/reference/atl-simple-object-wizard.md)|[Диалоговое окно ATL](../../atl/reference/atl-dialog-wizard.md)|[Элемент управления ATL](../../atl/reference/atl-control-wizard.md)|
-|[Страницы свойств ATL](../../atl/reference/atl-property-page-wizard.md)|[ASP-компонента ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Потребителя ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
-|[Добавление в MFC поддержки ATL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Мастер компонентов ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Поставщик OLE DB ATL](../../atl/reference/atl-ole-db-provider-wizard.md)|
+|[Простой объект ATL](../../atl/reference/atl-simple-object-wizard.md)|[Диалог ATL](../../atl/reference/atl-dialog-wizard.md)|[Элемент управления ATL](../../atl/reference/atl-control-wizard.md)|
+|[Свойства ATL](../../atl/reference/atl-property-page-wizard.md)|[ASP-компонент библиотеки ATL](../../atl/reference/atl-active-server-page-component-wizard.md)|[Добавление объекта-получателя ATL OLE DB](../../atl/reference/atl-ole-db-consumer-wizard.md)|
+|[Добавление в MFC поддержки ATL](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)|[Мастер компонентов ATL COM+ 1.0](../../atl/reference/atl-com-plus-1-0-component-wizard.md)|[Поставщик ATL OLE DB](../../atl/reference/atl-ole-db-provider-wizard.md)|
 
 > [!NOTE]
 > Прежде чем добавить объект ATL в проект, изучите сведения и требования для объекта в соответствующих разделах справки.
 
-## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Чтобы добавить объект или элемент управления с помощью мастера управления ATL
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>Добавление объекта или элемента управления с помощью мастера управления ATL
 
-1. В **обозревателе решений**, щелкните правой кнопкой мыши узел проекта и нажмите кнопку **добавить** в контекстном меню. Нажмите кнопку **добавьте класс**.
+1. Щелкните правой кнопкой мыши узел проекта в **обозревателе решений** и выберите в контекстном меню пункт **Добавить**. Нажмите **Добавить класс**.
 
-   [Добавление класса](../../ide/add-class-dialog-box.md) откроется диалоговое окно.
+   Откроется диалоговое окно [Добавление класса](../../ide/add-class-dialog-box.md).
 
-1. С помощью **ATL** папке, выбранной в **категории** панели выберите объект для вставки из **шаблоны** области. Нажмите кнопку **Открыть**. Откроется мастер кода для выбранного объекта.
+1. Выберите папку **ATL** на панели **Категории** и выберите объект для вставки на панели **Шаблоны**. Нажмите кнопку **Открыть**. Откроется мастер кода для выбранного объекта.
 
    > [!NOTE]
-   > Если вы хотите добавить объект ATL в проект MFC, необходимо добавить поддержку ATL в существующий проект. Это можно сделать, следуя инструкциям в [Добавление поддержки ATL в проект MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
+   > Если вы хотите добавить объект ATL в проект MFC, необходимо добавить поддержку ATL в существующий проект. Это можно сделать, следуя инструкциям в разделе [Добавление поддержки ATL в проект MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md).
 
-   Кроме того при попытке добавить объект ATL в проект MFC без ранее Добавление поддержки ATL, Visual Studio предложит укажите нужное поддержки ATL, добавлен в проект. Нажмите кнопку **Да** Добавление поддержки ATL в проект и открыть выбранный мастер ATL.
+   Кроме того, если вы пытаетесь добавить объект ATL в проект MFC, не добавив предварительно поддержку ATL, Visual Studio предложит указать, хотите ли вы добавить поддержку ATL в проект. Нажмите **Да**, чтобы добавить поддержку ATL в проект, и откройте выбранный мастер ATL.
 
 ## <a name="see-also"></a>См. также
 
 [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md)<br/>
-[C++типы проектов в Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
+[Типы проектов C++ в Visual Studio](../../build/reference/visual-cpp-project-types.md)<br/>
 [Основы COM-объектов ATL](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [Программирование с использованием ATL и кода среды выполнения C](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [Конфигурации проектов ATL по умолчанию](../../atl/reference/default-atl-project-configurations.md)

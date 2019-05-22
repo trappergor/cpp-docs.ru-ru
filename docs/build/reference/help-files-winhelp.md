@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], WinHelp files
 ms.assetid: 4fdcbd66-66b0-4866-894a-fd7b4c2557e4
-ms.openlocfilehash: 835300d2fe39688f3b9c41dad801f1a79984c803
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 6810b3f608b9fa7892b686d72056994fb98c92db
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446556"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707471"
 ---
 # <a name="help-files-winhelp"></a>Файлы справки (WinHelp)
 
@@ -35,4 +35,4 @@ ms.locfileid: "65446556"
 
 ## <a name="see-also"></a>См. также
 
-[Файл создавать типы для визуального C++ проектов](file-types-created-for-visual-cpp-projects.md)
+[Типы файлов, создаваемых для проектов Visual Studio C++](file-types-created-for-visual-cpp-projects.md)

@@ -1,28 +1,31 @@
 ---
-title: Набор записей. Объявление класса таблицы (ODBC)
-ms.date: 11/04/2016
+title: Набор записей. Объявление класса для таблицы (ODBC)
+ms.date: 05/09/2019
 helpviewer_keywords:
 - ODBC recordsets, declaring class for tables
 - recordsets, declaring classes for tables
 ms.assetid: 3fe286c2-3f3d-493d-9d8c-762310939d08
-ms.openlocfilehash: 17adc6e26dcbb39453d9009d82843d213271cc78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: ea17f131552fe7f71d9106a8979bb661955fe850
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62397878"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707948"
 ---
-# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Набор записей. Объявление класса таблицы (ODBC)
+# <a name="recordset-declaring-a-class-for-a-table-odbc"></a>Набор записей. Объявление класса для таблицы (ODBC)
+
+> [!NOTE] 
+> Мастер потребителя MFC ODBC недоступен в Visual Studio 2019 и более поздних версиях. При этом вы по-прежнему можете создать потребитель вручную.
 
 Этот раздел относится к классам ODBC библиотеки MFC.
 
-Наиболее распространенные класса набора записей для открытия одной таблицы. Чтобы объявить класс набора записей для одной таблицы, используйте [Мастер потребителя MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) из **Добавление класса** и выберите каждый столбец, присвоив имена соответствующим членам данных полей набора записей.
+Наиболее распространенный класс набора записей открывает одну таблицу. Чтобы объявить класс набора записей для одной таблицы, используйте [Мастер объекта-получателя MFC ODBC](../../mfc/reference/adding-an-mfc-odbc-consumer.md) из **Добавления класса** и выберите каждый нужный столбец, присвоив имена соответствующим элементам данных полей набора записей.
 
-Другие способы для набора записей:
+Другие применения набора записей:
 
 - Объединение двух или более таблиц.
 
-- Содержащая результаты предопределенного запроса.
+- Хранение результатов предопределенного запроса.
 
 ## <a name="see-also"></a>См. также
 
