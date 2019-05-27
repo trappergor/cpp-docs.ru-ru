@@ -1,14 +1,14 @@
 ---
 title: Справочник по схеме CppProperties.json
-ms.date: 03/21/2019
+ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual Studio
-ms.openlocfilehash: 05bb92b0fe791ad8b0037665c2db32a08fa52d7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: e80f4e8a189510a9a3e8860609d74121b7cbb0ef
+ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220852"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65837041"
 ---
 # <a name="cpppropertiesjson-schema-reference"></a>Справочник по схеме CppProperties.json
 
@@ -115,9 +115,9 @@ Visual Studio предоставляет предопределенные кон
 |`compilerSwitches`|Один или несколько дополнительных параметров, которые могут повлиять на поведение IntelliSense|
 |`forcedInclude`|Заголовок, автоматически включаемый в каждый блок компиляции (сопоставляется с /FI для MSVC или с -include для clang)|
 |`undefines`|Список макросов, которые должны быть неопределенными (сопоставляется с /U для MSVC)|
-|`intelliSenseMode`|Используемая подсистема IntelliSense. Для MSVC, gcc или Clang вы можете указать варианты, привязанные к конкретной архитектуре:<br/><br/>— windows — msvc-x86 (по умолчанию)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
+|`intelliSenseMode`|Используемая подсистема IntelliSense. Для MSVC, gcc или Clang вы можете указать варианты, привязанные к конкретной архитектуре:<br/><br/>- windows-msvc-x86 (по умолчанию)<br/>- windows-msvc-x64<br/>- msvc-arm<br/>- windows-clang-x86<br/>- windows-clang-x64<br/>- windows-clang-arm<br/>- Linux-x64<br/>- Linux-x86<br/>- Linux-arm<br/>- gccarm|
 
-Примечание. Значения `msvc-x86` и `msvc-x64` поддерживаются для обеспечения обратной совместимости. Используйте `windows-msvc*` вариантов.
+Примечание. Значения `msvc-x86` и `msvc-x64` поддерживаются только для обеспечения обратной совместимости. Взамен рекомендуется использовать варианты `windows-msvc*`.
 
 ## <a name="custom-configurations"></a>Настраиваемые конфигурации
 
@@ -264,7 +264,7 @@ Visual Studio предоставляет предопределенные кон
 |-|-|
 |`${workspaceRoot}`| полный путь к папке рабочей области;|
 |`${projectRoot}`| полный путь к папке, где находится `CppProperties.json`;|
-|`${vsInstallDir}`| полный путь к папке, где установлен запущенный экземпляр Visual Studio 2017.|
+|`${vsInstallDir}`| полный путь к папке, где установлен запущенный экземпляр Visual Studio.|
 
 Например, если проект имеет папку включения, а также включает windows.h и другие общие заголовки из Windows SDK, может потребоваться обновить файл конфигурации `CppProperties.json` с учетом этих включений:
 
@@ -289,7 +289,7 @@ Visual Studio предоставляет предопределенные кон
 ```
 
 > [!Note]
-> `%WindowsSdkDir%` и `%VCToolsInstallDir%` не заданы в качестве глобальных переменных среды, поэтому запустите из командной строки разработчика для VS 2017 программу devenv.exe, определяющую эти переменные.
+> `%WindowsSdkDir%` и `%VCToolsInstallDir%` не заданы в качестве глобальных переменных среды, поэтому запустите из командной строки разработчика программу devenv.exe, определяющую эти переменные. (Введите "разработчик" в меню Windows "Пуск".)
 
 ## <a name="troubleshoot-intellisense-errors"></a>Устранение ошибок IntelliSense
 

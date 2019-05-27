@@ -1,28 +1,29 @@
 ---
 title: C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
-ms.date: 09/26/2018
+ms.date: 05/13/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: a01c6448174a35da900b7b50a1df5916a2983201
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 2706d232dba2a7971edd8d84da2b1d1399ed6e25
+ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222602"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65934146"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
 > [!NOTE]
-> Эта документация для разработчиков применима к Visual Studio 2015 и Visual Studio 2017.
+> Эта документация для разработчиков применима к Visual Studio 2015 и более поздней версии. Выберите нужную версию Visual Studio с помощью раскрывающего списка в верхнем углу страницы слева.
 >
 > Если вам нужен определенный распространяемый пакет Visual C++ для запуска программы, перейдите в [Центр загрузки Майкрософт](http://www.microsoft.com/download/) и введите в поле поиска **Visual C++**.
 
-
 Microsoft Visual C++ (обычно сокращают до Visual C++ или MSVC) является названием для библиотек и средств разработки на языке ассемблера, C++ и C, входящих в состав Visual Studio в Windows. Эти средства и библиотеки позволяют создавать приложения универсальной платформы Windows (UWP), собственные классические и серверные приложения Windows, кроссплатформенные библиотеки и приложения для Windows, Linux, Android и iOS, а также управляемые приложения и библиотеки, использующие платформу .NET Framework. С помощью Visual C++ можно разработать что угодно — от простых консольных приложений до самых сложных приложений для настольных систем Windows, от драйверов устройств и компонентов операционной системы до кроссплатформенных игр для мобильных устройств и от мельчайших устройств Интернета вещей до многосерверных высокопроизводительных вычислительных систем в облаке Azure.
+
+Visual Studio 2015, 2017 и 2019 можно установить параллельно. С помощью Visual Studio 2019 (набор средств компилятора версии 142) можно изменять и собирать программы, используя набор средств из Visual Studio 2015 (версия 140) и Visual Studio 2017 (версия 141).
 
 ## <a name="whats-new-and-conformance-history"></a>Новые возможности и журнал соответствий
 
