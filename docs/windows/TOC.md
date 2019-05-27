@@ -3,7 +3,7 @@
 # [Пошаговое руководство: создание классических приложений Windows](walkthrough-creating-windows-desktop-applications-cpp.md)
 # [Мастер классических приложений Windows](win32-application-wizard.md)
 # [Библиотека шаблонных классов (ATL)](../atl/atl-com-desktop-components.md)
-# [Microsoft Foundation Classes (MFC)](../mfc/TOC.md)
+# [Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)
 # [ATL и общие классы MFC](../atl-mfc-shared/TOC.md)
 # [Доступ к данным](../data/data-access-in-cpp.md)
 # [Текст и строки](../text/text-and-strings-in-visual-cpp.md)
