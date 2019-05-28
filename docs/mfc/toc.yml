@@ -1,0 +1,2945 @@
+- name: Приложения MFC для рабочего стола
+  href: mfc-desktop-applications.md
+- name: 'Основные понятия, связанные с MFC'
+  expanded: false
+  items:
+    - name: 'Основные понятия, связанные с MFC'
+      href: mfc-concepts.md
+    - name: Общие разделы по MFC
+      expanded: false
+      items:
+        - name: Общие разделы по MFC
+          href: general-mfc-topics.md
+        - name: Использование файлов с исходным кодом MFC
+          expanded: false
+          items:
+            - name: Использование файлов с исходным кодом MFC
+              href: using-the-mfc-source-files.md
+            - name: Пример комментариев
+              href: an-example-of-the-comments.md
+            - name: — Комментарий реализации
+              href: decrement-implementation-comment.md
+            - name: — Комментарий конструкторов
+              href: decrement-constructors-comment.md
+            - name: — Комментарий атрибутов
+              href: decrement-attributes-comment.md
+            - name: — Комментарий операций
+              href: decrement-operations-comment.md
+            - name: — Комментарий переопределяемости
+              href: decrement-overridables-comment.md
+        - name: Версии библиотек MFC
+          expanded: false
+          items:
+            - name: Версии библиотек MFC
+              href: mfc-library-versions.md
+            - name: Надстройка DLL MBCS MFC
+              href: mfc-mbcs-dll-add-on.md
+        - name: Использование классов для создания приложений для Windows
+          expanded: false
+          items:
+            - name: Использование классов для создания приложений для Windows
+              href: using-the-classes-to-write-applications-for-windows.md
+            - name: Платформа (MFC)
+              href: framework-mfc.md
+            - name: SDI и MDI
+              href: sdi-and-mdi.md
+            - name: 'Документы, представления и платформа'
+              href: documents-views-and-the-framework.md
+            - name: Мастеры и редакторы ресурсов
+              href: wizards-and-the-resource-editors.md
+        - name: Сборка в платформе
+          expanded: false
+          items:
+            - name: Сборка в платформе
+              href: building-on-the-framework.md
+            - name: Последовательность операций при создании приложений MFC
+              href: sequence-of-operations-for-building-mfc-applications.md
+            - name: Последовательность операций при создании приложений OLE
+              href: sequence-of-operations-for-creating-ole-applications.md
+            - name: Последовательность операций при создании элементов ActiveX
+              href: sequence-of-operations-for-creating-activex-controls.md
+            - name: Последовательность операций при создании приложений баз данных
+              href: sequence-of-operations-for-creating-database-applications.md
+            - name: Вызовы кода со стороны платформы
+              href: how-the-framework-calls-your-code.md
+        - name: CWinApp. Класс Application
+          expanded: false
+          items:
+            - name: CWinApp. Класс Application
+              href: cwinapp-the-application-class.md
+            - name: Использование CWinApp и мастера приложений MFC
+              href: cwinapp-and-the-mfc-application-wizard.md
+            - name: Переопределяемые функции-члены CWinApp
+              href: overridable-cwinapp-member-functions.md
+            - name: Функция-член InitInstance
+              href: initinstance-member-function.md
+            - name: Выполнение функции-члена
+              href: run-member-function.md
+            - name: Функция-член ExitInstance
+              href: exitinstance-member-function.md
+            - name: Функция-член OnIdle
+              href: onidle-member-function.md
+            - name: Специальные службы CWinApp
+              href: special-cwinapp-services.md
+        - name: Шаблоны документов и создание документов и представлений
+          expanded: false
+          items:
+            - name: Шаблоны документов и создание документов и представлений
+              href: document-templates-and-the-document-view-creation-process.md
+            - name: Создание шаблонов документов
+              href: document-template-creation.md
+            - name: Создание документа или представления
+              href: document-view-creation.md
+            - name: Отношения между объектами MFC
+              href: relationships-among-mfc-objects.md
+            - name: 'Создание документов, окон и представлений'
+              href: creating-new-documents-windows-and-views.md
+        - name: Управление данными состояния модулей MFC
+          expanded: false
+          items:
+            - name: Управление данными состояния модулей MFC
+              href: managing-the-state-data-of-mfc-modules.md
+            - name: Точки входа экспортированных функций DLL
+              href: exported-dll-function-entry-points.md
+            - name: Точки входа интерфейса COM
+              href: com-interface-entry-points.md
+            - name: Точки входа процедуры окна
+              href: window-procedure-entry-points.md
+        - name: Обработка пустых циклов
+          href: idle-loop-processing.md
+        - name: Включение поддержки контекстов активации в состоянии модуля MFC
+          href: support-for-activation-contexts-in-the-mfc-module-state.md
+        - name: Изоляция библиотеки общих элементов управления MFC
+          href: isolation-of-the-mfc-common-controls-library.md
+        - name: Требования к сборке для использования стандартных элементов управления в Windows Vista
+          expanded: false
+          items:
+            - name: Требования к сборке для использования стандартных элементов управления в Windows Vista
+              href: build-requirements-for-windows-vista-common-controls.md
+            - name: Нерекомендуемые API ANSI
+              href: deprecated-ansi-apis.md
+        - name: Практическое руководство. Включение поддержки диспетчера перезапуска
+          href: how-to-add-restart-manager-support.md
+        - name: Динамический макет
+          href: dynamic-layout.md
+    - name: Использование CObject
+      expanded: false
+      items:
+        - name: Использование CObject
+          href: using-cobject.md
+        - name: Наследование класса от CObject
+          expanded: false
+          items:
+            - name: Наследование класса от CObject
+              href: deriving-a-class-from-cobject.md
+            - name: Определение уровней функциональности
+              href: specifying-levels-of-functionality.md
+        - name: Доступ к сведениям о классе во время выполнения
+          href: accessing-run-time-class-information.md
+        - name: Динамическое создание объектов
+          href: dynamic-object-creation.md
+        - name: Класс CObject. Вопросы и ответы
+          expanded: false
+          items:
+            - name: Класс CObject. Вопросы и ответы
+              href: cobject-class-frequently-asked-questions.md
+            - name: Необходимо ли создавать классы как производные от CObject?
+              href: do-i-have-to-derive-new-classes-from-cobject-q.md
+            - name: Каковы издержки при наследовании классов от CObject?
+              href: what-does-it-cost-me-to-derive-a-class-from-cobject-q.md
+    - name: Коллекции
+      expanded: false
+      items:
+        - name: Коллекции
+          href: collections.md
+        - name: Рекомендации по выбору класса коллекции
+          href: recommendations-for-choosing-a-collection-class.md
+        - name: Классы на основе шаблонов
+          href: template-based-classes.md
+        - name: Практическое руководство. Создание типобезопасных коллекций
+          href: how-to-make-a-type-safe-collection.md
+        - name: Доступ ко всем членам коллекции
+          expanded: false
+          items:
+            - name: Доступ ко всем членам коллекции
+              href: accessing-all-members-of-a-collection.md
+            - name: Удаление всех объектов из коллекции CObject
+              href: deleting-all-objects-in-a-cobject-collection.md
+        - name: Создание коллекций стеков и очередей
+          href: creating-stack-and-queue-collections.md
+    - name: Обработка исключений в MFC
+      expanded: false
+      items:
+        - name: Обработка исключений в MFC
+          href: exception-handling-in-mfc.md
+        - name: "Исключения. Изменения макроса исключений в версии\_3.0"
+          href: exceptions-changes-to-exception-macros-in-version-3-0.md
+        - name: Исключения. Перехват и удаление исключений
+          href: exceptions-catching-and-deleting-exceptions.md
+        - name: Исключения. Преобразование из макроса исключений MFC
+          href: exceptions-converting-from-mfc-exception-macros.md
+        - name: Исключения. Использование макросов MFC и исключений C++
+          href: exceptions-using-mfc-macros-and-cpp-exceptions.md
+        - name: Исключения. Анализ содержимого исключений
+          href: exceptions-examining-exception-contents.md
+        - name: Исключения. Высвобождение объектов в исключениях
+          href: exceptions-freeing-objects-in-exceptions.md
+        - name: Исключения. Создание исключений из собственных функций
+          href: exceptions-throwing-exceptions-from-your-own-functions.md
+        - name: Исключения. Исключения в конструкторах
+          href: exceptions-exceptions-in-constructors.md
+        - name: Исключения. Исключения базы данных
+          href: exceptions-database-exceptions.md
+        - name: Исключения. исключения OLE
+          href: exceptions-ole-exceptions.md
+    - name: Файлы в MFC
+      expanded: false
+      items:
+        - name: Файлы в MFC
+          href: files-in-mfc.md
+        - name: Открытие файлов
+          href: opening-files.md
+        - name: Чтение и запись файлов
+          href: reading-and-writing-files.md
+        - name: Закрытие файлов
+          href: closing-files.md
+        - name: Получение доступа к состоянию файла
+          href: accessing-file-status.md
+    - name: Элементы интерфейса
+      href: interface-elements.md
+    - name: MAPI
+      expanded: false
+      items:
+        - name: MAPI
+          href: mapi.md
+        - name: Включение поддержки MAPI в MFC
+          href: mapi-support-in-mfc.md
+        - name: Примеры MAPI
+          href: mapi-samples.md
+    - name: Управление памятью
+      expanded: false
+      items:
+        - name: Управление памятью
+          href: memory-management.md
+        - name: Управление памятью. Выделение кадров
+          href: memory-management-frame-allocation.md
+        - name: Управление памятью. Выделение кучи
+          expanded: false
+          items:
+            - name: Управление памятью. Выделение кучи
+              href: memory-management-heap-allocation.md
+            - name: Управление памятью. Примеры
+              href: memory-management-examples.md
+            - name: Управление памятью. Изменяемые блоки памяти
+              href: memory-management-resizable-memory-blocks.md
+    - name: Обработка и сопоставление сообщений
+      expanded: false
+      items:
+        - name: Обработка и сопоставление сообщений
+          href: message-handling-and-mapping.md
+        - name: Сообщения и команды платформы
+          expanded: false
+          items:
+            - name: Сообщения и команды платформы
+              href: messages-and-commands-in-the-framework.md
+            - name: Сообщения
+              href: messages.md
+            - name: Обработчики сообщений
+              href: message-handlers.md
+            - name: Категории сообщений
+              href: message-categories.md
+            - name: Сопоставление сообщений
+              href: mapping-messages.md
+            - name: Объекты пользовательского интерфейса и идентификаторы команд
+              expanded: false
+              items:
+                - name: Объекты пользовательского интерфейса и идентификаторы команд
+                  href: user-interface-objects-and-command-ids.md
+                - name: Идентификаторы команд
+                  href: command-ids.md
+                - name: Стандартные команды
+                  href: standard-commands.md
+            - name: Целевые объекты команды
+              href: command-targets.md
+        - name: Вызовы платформы к обработчику
+          expanded: false
+          items:
+            - name: Вызовы платформы к обработчику
+              href: how-the-framework-calls-a-handler.md
+            - name: Отправка и получение сообщений
+              href: message-sending-and-receiving.md
+            - name: Получение доступа некомандных сообщений к обработчикам
+              href: how-noncommand-messages-reach-their-handlers.md
+            - name: Маршрутизация команд
+              href: command-routing.md
+            - name: Демонстрация маршрутизации команд
+              href: command-routing-illustration.md
+            - name: Обработчик OnCmdMsg
+              href: oncmdmsg-handler.md
+            - name: Переопределение стандартной маршрутизации команд
+              href: overriding-the-standard-command-routing.md
+        - name: Выполнение платформой поиска по схемам сообщений
+          expanded: false
+          items:
+            - name: Выполнение платформой поиска по схемам сообщений
+              href: how-the-framework-searches-message-maps.md
+            - name: Расположение схем сообщений
+              href: where-to-find-message-maps.md
+            - name: Производные схемы сообщений
+              href: derived-message-maps.md
+        - name: Объявление функций обработчиков сообщений
+          expanded: false
+          items:
+            - name: Объявление функций обработчиков сообщений
+              href: declaring-message-handler-functions.md
+            - name: Обработчики для стандартных сообщений Windows
+              href: handlers-for-standard-windows-messages.md
+            - name: Обработчики для команд и уведомлений элементов управления
+              href: handlers-for-commands-and-control-notifications.md
+            - name: Обработчики для диапазонов схем сообщений
+              href: handlers-for-message-map-ranges.md
+            - name: Обработка отраженных сообщений
+              href: handling-reflected-messages.md
+        - name: Практическое руководство. Отображение сведений о команде в строке состояния
+          href: how-to-display-command-information-in-the-status-bar.md
+        - name: Практическое руководство. Создание схемы сообщений для класса шаблона
+          href: how-to-create-a-message-map-for-a-template-class.md
+    - name: MFC COM
+      expanded: false
+      items:
+        - name: MFC COM
+          href: mfc-com.md
+        - name: Вложение активного документа
+          expanded: false
+          items:
+            - name: Вложение активного документа
+              href: active-document-containment.md
+            - name: Пример вложения активного документа. Office Binder
+              href: example-of-active-document-containment-office-binder.md
+            - name: Создание приложения с контейнером активных документов
+              href: creating-an-active-document-container-application.md
+            - name: Контейнеры активных документов
+              expanded: false
+              items:
+                - name: Контейнеры активных документов
+                  href: active-document-containers.md
+                - name: Слияние меню "Справка"
+                  href: help-menu-merging.md
+                - name: Печать программными средствами
+                  href: programmatic-printing.md
+                - name: Обработка сообщений и целевые объекты команд
+                  href: message-handling-and-command-targets.md
+            - name: Серверы активных документов
+              href: active-document-servers.md
+            - name: Активные документы
+              href: active-documents.md
+        - name: автоматизация
+          expanded: false
+          items:
+            - name: автоматизация
+              href: automation.md
+            - name: Клиенты службы автоматизации
+              expanded: false
+              items:
+                - name: Клиенты службы автоматизации
+                  href: automation-clients.md
+                - name: Клиенты службы автоматизации. Использование библиотек типов
+                  href: automation-clients-using-type-libraries.md
+            - name: Серверы службы автоматизации
+              expanded: false
+              items:
+                - name: Серверы службы автоматизации
+                  href: automation-servers.md
+                - name: Серверы службы автоматизации. Проблемы с временем существования объектов
+                  href: automation-servers-object-lifetime-issues.md
+        - name: Точки подключения
+          href: connection-points.md
+    - name: Основы программирования для интернет-решений MFC
+      expanded: false
+      items:
+        - name: Основы программирования для интернет-решений MFC
+          href: mfc-internet-programming-basics.md
+        - name: 'Классы MFC, связанные с Интернетом'
+          href: internet-related-mfc-classes.md
+        - name: Сведения о работе с Интернетом по разделам
+          href: internet-information-by-topic.md
+        - name: Сведения о работе с Интернетом по задачам
+          href: internet-information-by-task.md
+        - name: Технология Active в Интернете
+          href: active-technology-on-the-internet.md
+        - name: Основы WinInet
+          href: wininet-basics.md
+        - name: Основы HTML
+          href: html-basics.md
+    - name: Задачи программирования для интернет-решений MFC
+      expanded: false
+      items:
+        - name: Задачи программирования для интернет-решений MFC
+          href: mfc-internet-programming-tasks.md
+        - name: Решения о разработке приложения
+          href: application-design-choices.md
+        - name: Создание приложений MFC
+          href: writing-mfc-applications.md
+        - name: Элементы ActiveX в Интернете
+          href: activex-controls-on-the-internet.md
+        - name: Обновление существующего элемента ActiveX
+          href: upgrading-an-existing-activex-control.md
+        - name: Асинхронные моникеры в Интернете
+          href: asynchronous-monikers-on-the-internet.md
+        - name: Тестирование интернет-приложений
+          href: testing-internet-applications.md
+        - name: Безопасность в Интернете (C++)
+          href: internet-security-cpp.md
+    - name: OLE в MFC
+      expanded: false
+      items:
+        - name: OLE в MFC
+          href: ole-in-mfc.md
+        - name: Включение поддержки OLE
+          expanded: false
+          items:
+            - name: Включение поддержки OLE
+              href: ole-background.md
+            - name: Включение поддержки OLE. Связывание и внедрение
+              href: ole-background-linking-and-embedding.md
+            - name: Включение поддержки OLE. Контейнеры и серверы
+              href: ole-background-containers-and-servers.md
+            - name: Включение поддержки OLE. Стратегии реализации
+              href: ole-background-implementation-strategies.md
+            - name: Включение поддержки OLE. Реализация MFC
+              href: ole-background-mfc-implementation.md
+        - name: Активация (C++)
+          expanded: false
+          items:
+            - name: Активация (C++)
+              href: activation-cpp.md
+            - name: Активация. Команды
+              href: activation-verbs.md
+        - name: Контейнеры
+          expanded: false
+          items:
+            - name: Контейнеры
+              href: containers.md
+            - name: Контейнеры. Реализация контейнера
+              href: containers-implementing-a-container.md
+            - name: Контейнеры. Элементы клиентов
+              href: containers-client-items.md
+            - name: Контейнеры. Уведомления элементов клиентов
+              href: containers-client-item-notifications.md
+            - name: Контейнеры. Состояния элементов клиентов
+              href: containers-client-item-states.md
+            - name: Контейнеры. Составные файлы
+              href: containers-compound-files.md
+            - name: Контейнеры. Проблемы с пользовательским интерфейсом
+              href: containers-user-interface-issues.md
+            - name: Контейнеры. Дополнительные возможности
+              href: containers-advanced-features.md
+        - name: Объекты и источники данных (OLE)
+          expanded: false
+          items:
+            - name: Объекты и источники данных (OLE)
+              href: data-objects-and-data-sources-ole.md
+            - name: Объекты и источники данных. Создание и удаление
+              href: data-objects-and-data-sources-creation-and-destruction.md
+            - name: Объекты и источники данных. Управление
+              href: data-objects-and-data-sources-manipulation.md
+        - name: Перетаскивание (OLE)
+          expanded: false
+          items:
+            - name: Перетаскивание (OLE)
+              href: drag-and-drop-ole.md
+            - name: Перетаскивание. Реализация источника перетаскивания
+              href: drag-and-drop-implementing-a-drop-source.md
+            - name: Перетаскивание. Реализация цели перетаскивания
+              href: drag-and-drop-implementing-a-drop-target.md
+            - name: Перетаскивание. Настройка
+              href: drag-and-drop-customizing.md
+        - name: Меню и ресурсы (OLE)
+          expanded: false
+          items:
+            - name: Меню и ресурсы (OLE)
+              href: menus-and-resources-ole.md
+            - name: Меню и ресурсы. Добавление контейнеров
+              href: menus-and-resources-container-additions.md
+            - name: Меню и ресурсы. Добавление серверов
+              href: menus-and-resources-server-additions.md
+            - name: Меню и ресурсы. Слияние меню
+              href: menus-and-resources-menu-merging.md
+        - name: Регистрация
+          href: registration.md
+        - name: Серверы
+          expanded: false
+          items:
+            - name: Серверы
+              href: servers.md
+            - name: Серверы. Реализация сервера
+              href: servers-implementing-a-server.md
+            - name: Серверы. Реализация документов сервера
+              href: servers-implementing-server-documents.md
+            - name: Серверы. Реализация окон фрейма на месте
+              href: servers-implementing-in-place-frame-windows.md
+            - name: Серверы. Элементы сервера
+              href: servers-server-items.md
+            - name: Серверы. Проблемы с пользовательским интерфейсом
+              href: servers-user-interface-issues.md
+        - name: Средства отслеживания
+          expanded: false
+          items:
+            - name: Средства отслеживания
+              href: trackers.md
+            - name: Средства отслеживания. Реализация средств отслеживания в приложении OLE
+              expanded: false
+              items:
+                - name: Средства отслеживания. Реализация средств отслеживания в приложении OLE
+                  href: trackers-implementing-trackers-in-your-ole-application.md
+                - name: Практическое руководство. Реализация отслеживания в коде
+                  href: how-to-implement-tracking-in-your-code.md
+                - name: Эластичные соединения и средства отслеживания
+                  href: rubber-banding-and-trackers.md
+    - name: Сериализация в MFC
+      expanded: false
+      items:
+        - name: Сериализация в MFC
+          href: serialization-in-mfc.md
+        - name: Сериализация. Создание сериализуемого класса
+          href: serialization-making-a-serializable-class.md
+        - name: Сериализация. Сериализация объекта
+          expanded: false
+          items:
+            - name: Сериализация. Сериализация объекта
+              href: serialization-serializing-an-object.md
+            - name: Общие сведения об объекте CArchive
+              href: what-is-a-carchive-object.md
+            - name: Два способа создать объект CArchive
+              href: two-ways-to-create-a-carchive-object.md
+            - name: Использование операторов CArchive << и >>
+              href: using-the-carchive-output-and-input-operators.md
+            - name: Сохранение и загрузка CObjects через архив
+              href: storing-and-loading-cobjects-via-an-archive.md
+        - name: Сериализация. Сериализация и ввод-вывод баз данных
+          expanded: false
+          items:
+            - name: Сериализация. Сериализация и ввод-вывод баз данных
+              href: serialization-serialization-vs-database-input-output.md
+            - name: Рекомендации по обработке ввода-вывода
+              href: recommendations-for-handling-input-output.md
+            - name: Меню "Файл" в приложении базы данных MFC
+              href: file-menu-in-an-mfc-database-application.md
+    - name: Элементы пользовательского интерфейса (MFC)
+      expanded: false
+      items:
+        - name: Элементы пользовательского интерфейса (MFC)
+          href: user-interface-elements-mfc.md
+        - name: Элементы управления ActiveX
+          expanded: false
+          items:
+            - name: Элементы управления ActiveX
+              href: activex-controls.md
+            - name: Элементы ActiveX MFC
+              expanded: false
+              items:
+                - name: Элементы ActiveX MFC
+                  href: mfc-activex-controls.md
+                - name: Элементы ActiveX MFC. Оптимизация
+                  expanded: false
+                  items:
+                    - name: Элементы ActiveX MFC. Оптимизация
+                      href: mfc-activex-controls-optimization.md
+                    - name: Оптимизация сохраняемости и инициализации
+                      href: optimizing-persistence-and-initialization.md
+                    - name: Предоставление активации без окна
+                      href: providing-windowless-activation.md
+                    - name: Отключение параметра "Активация при отображении"
+                      href: turning-off-the-activate-when-visible-option.md
+                    - name: Обеспечение взаимодействия с мышью в неактивном режиме
+                      href: providing-mouse-interaction-while-inactive.md
+                    - name: Предоставление активации без мерцания
+                      href: providing-flicker-free-activation.md
+                    - name: Использование необрезанного контекста устройства
+                      href: using-an-unclipped-device-context.md
+                    - name: Оптимизация рисования элементов управления
+                      href: optimizing-control-drawing.md
+                - name: Элементы ActiveX MFC. Закраска элементов ActiveX
+                  href: mfc-activex-controls-painting-an-activex-control.md
+                - name: Элементы ActiveX MFC. События
+                  href: mfc-activex-controls-events.md
+                - name: Элементы ActiveX MFC. Добавление стандартных событий в элемент ActiveX
+                  href: mfc-activex-controls-adding-stock-events-to-an-activex-control.md
+                - name: Элементы ActiveX MFC. Добавление пользовательских событий
+                  href: mfc-activex-controls-adding-custom-events.md
+                - name: Элементы ActiveX MFC. Методы
+                  href: mfc-activex-controls-methods.md
+                - name: Элементы ActiveX MFC. Добавление стандартных методов
+                  href: mfc-activex-controls-adding-stock-methods.md
+                - name: Элементы ActiveX MFC. Добавление пользовательских методов
+                  href: mfc-activex-controls-adding-custom-methods.md
+                - name: Элементы ActiveX MFC. Получение кодов ошибок из метода
+                  href: mfc-activex-controls-returning-error-codes-from-a-method.md
+                - name: Элементы ActiveX MFC. Свойства
+                  href: mfc-activex-controls-properties.md
+                - name: Элементы ActiveX MFC. Добавление стандартных свойств
+                  href: mfc-activex-controls-adding-stock-properties.md
+                - name: Элементы ActiveX MFC. Добавление пользовательских свойств
+                  href: mfc-activex-controls-adding-custom-properties.md
+                - name: Элементы ActiveX MFC. Реализация расширенных свойств
+                  href: mfc-activex-controls-advanced-property-implementation.md
+                - name: Элементы ActiveX MFC. Доступ ко внешним свойствам
+                  href: mfc-activex-controls-accessing-ambient-properties.md
+                - name: Элементы ActiveX MFC. страницы свойств
+                  href: mfc-activex-controls-property-pages.md
+                - name: Элементы ActiveX MFC. Добавление дополнительной страницы пользовательских свойств
+                  href: mfc-activex-controls-adding-another-custom-property-page.md
+                - name: Элементы ActiveX MFC. Использование стандартных страниц свойств
+                  href: mfc-activex-controls-using-stock-property-pages.md
+                - name: Элементы ActiveX MFC. Создание сервера автоматизации
+                  href: mfc-activex-controls-creating-an-automation-server.md
+                - name: Элементы ActiveX MFC. Использование шрифтов
+                  href: mfc-activex-controls-using-fonts.md
+                - name: Элементы ActiveX MFC. Использование изображений в элементе ActiveX
+                  href: mfc-activex-controls-using-pictures-in-an-activex-control.md
+                - name: Элементы ActiveX MFC. Дополнительные разделы
+                  href: mfc-activex-controls-advanced-topics.md
+                - name: Элементы ActiveX MFC. Распространение элементов ActiveX
+                  href: mfc-activex-controls-distributing-activex-controls.md
+                - name: Элементы ActiveX MFC. Лицензирование элементов ActiveX
+                  href: mfc-activex-controls-licensing-an-activex-control.md
+                - name: Элементы ActiveX MFC. Локализация элементов ActiveX
+                  href: mfc-activex-controls-localizing-an-activex-control.md
+                - name: Элементы ActiveX MFC. Сериализация
+                  href: mfc-activex-controls-serializing.md
+                - name: Элементы ActiveX MFC. Создание подкласса элемента управления Windows
+                  expanded: false
+                  items:
+                    - name: Элементы ActiveX MFC. Создание подкласса элемента управления Windows
+                      href: mfc-activex-controls-subclassing-a-windows-control.md
+                    - name: Отраженные идентификаторы сообщений окон
+                      href: reflected-window-message-ids.md
+                - name: Элементы ActiveX MFC. Использование привязки данных в элементе ActiveX
+                  href: mfc-activex-controls-using-data-binding-in-an-activex-control.md
+            - name: Контейнеры элементов ActiveX
+              expanded: false
+              items:
+                - name: Контейнеры элементов ActiveX
+                  href: activex-control-containers.md
+                - name: Контейнеры для элементов ActiveX
+                  href: containers-for-activex-controls.md
+                - name: Контейнеры элементов ActiveX. Включение вложения элемента ActiveX вручную
+                  href: activex-control-containers-manually-enabling-activex-control-containment.md
+                - name: Контейнеры элементов ActiveX. Вставка элемента управления в приложение контейнера элементов управления
+                  href: inserting-a-control-into-a-control-container-application.md
+                - name: Контейнеры элементов ActiveX. Соединение элемента ActiveX с переменной-членом
+                  href: activex-control-containers-connecting-an-activex-control-to-a-member-variable.md
+                - name: Контейнеры элементов ActiveX. Обработка событий из элемента ActiveX
+                  href: activex-control-containers-handling-events-from-an-activex-control.md
+                - name: Контейнеры элементов ActiveX. Просмотр и изменение свойств элементов управления
+                  href: activex-control-containers-viewing-and-modifying-control-properties.md
+                - name: Контейнеры элементов ActiveX. Программирование элементов ActiveX в контейнере элементов ActiveX
+                  href: programming-activex-controls-in-a-activex-control-container.md
+                - name: Контейнеры элементов ActiveX. Использование элементов управления в контейнере без диалоговых окон
+                  href: activex-control-containers-using-controls-in-a-non-dialog-container.md
+            - name: Тестирование свойств и событий с использованием тестового контейнера
+              href: testing-properties-and-events-with-test-container.md
+        - name: буфер обмена
+          expanded: false
+          items:
+            - name: буфер обмена
+              href: clipboard.md
+            - name: Буфер обмена. Выбор механизма буфера обмена
+              href: clipboard-when-to-use-each-clipboard-mechanism.md
+            - name: Буфер обмена. Использование буфера обмена Windows
+              href: clipboard-using-the-windows-clipboard.md
+            - name: Буфер обмена. Использование буфера обмена OLE
+              expanded: false
+              items:
+                - name: Буфер обмена. Использование буфера обмена OLE
+                  href: clipboard-using-the-ole-clipboard-mechanism.md
+                - name: Буфер обмена. Копирование и вставка данных
+                  href: clipboard-copying-and-pasting-data.md
+                - name: Буфер обмена. Добавление других форматов
+                  href: clipboard-adding-other-formats.md
+        - name: Элементы управления (MFC)
+          expanded: false
+          items:
+            - name: Элементы управления (MFC)
+              href: controls-mfc.md
+            - name: Список примеров общих элементов управления
+              href: common-control-sample-list.md
+            - name: Создание и использование элементов управления
+              expanded: false
+              items:
+                - name: Создание и использование элементов управления
+                  href: making-and-using-controls.md
+                - name: Использование стандартных элементов управления в диалоговом окне
+                  href: using-common-controls-in-a-dialog-box.md
+                - name: Использование редактора диалоговых окон для добавления элементов управления
+                  href: using-the-dialog-editor-to-add-controls.md
+                - name: Добавление элементов управления вручную
+                  href: adding-controls-by-hand.md
+                - name: Наследование элементов управления от стандартного элемента управления
+                  href: deriving-controls-from-a-standard-control.md
+                - name: Использование общего элемента управления как дочернего окна
+                  href: using-a-common-control-as-a-child-window.md
+                - name: Получение уведомления от стандартных элементов управления
+                  href: receiving-notification-from-common-controls.md
+            - name: Использование CAnimateCtrl
+              expanded: false
+              items:
+                - name: Использование CAnimateCtrl
+                  href: using-canimatectrl.md
+                - name: Использование элемента управления "Анимация"
+                  href: using-an-animation-control.md
+                - name: 'Уведомления, отправленные элементами управления "Анимация"'
+                  href: notifications-sent-by-animation-controls.md
+            - name: Использование CDateTimeCtrl
+              expanded: false
+              items:
+                - name: Использование CDateTimeCtrl
+                  href: using-cdatetimectrl.md
+                - name: Создание элемента управления для выбора даты и времени
+                  href: creating-the-date-and-time-picker-control.md
+                - name: Примеры элемента управления для выбора даты и времени
+                  href: date-and-time-picker-control-examples.md
+                - name: Получение доступа к встроенному элементу управления "Календарь на месяц"
+                  href: accessing-the-embedded-month-calendar-control.md
+                - name: Использование строк пользовательского формата в элементе управления для выбора даты и времени
+                  href: using-custom-format-strings-in-a-date-and-time-picker-control.md
+                - name: Использование полей обратного вызова элемента управления для выбора даты и времени
+                  href: using-callback-fields-in-a-date-and-time-picker-control.md
+                - name: Обработка уведомляющих сообщений в элементах управления для выбора даты и времени
+                  href: processing-notification-messages-in-date-and-time-picker-controls.md
+            - name: Использование CComboBoxEx
+              expanded: false
+              items:
+                - name: Использование CComboBoxEx
+                  href: using-ccomboboxex.md
+                - name: Создание элемента управления "поле со списком"
+                  href: creating-an-extended-combo-box-control.md
+                - name: Использование списков изображений в элементе управления "поле со списком"
+                  href: using-image-lists-in-an-extended-combo-box-control.md
+                - name: Выбор изображений для отдельного элемента
+                  href: setting-the-images-for-an-individual-item.md
+                - name: Обработка уведомляющих сообщений в элементах управления "поле со списком"
+                  href: processing-notification-messages-in-extended-combo-box-controls.md
+            - name: Использование CHeaderCtrl
+              expanded: false
+              items:
+                - name: Использование CHeaderCtrl
+                  href: using-cheaderctrl.md
+                - name: Элементы управления "Заголовок" и "Список"
+                  href: header-control-and-list-control.md
+                - name: Примеры элемента управления "Заголовок"
+                  href: header-control-examples.md
+                - name: Элементы заголовка в элементе управления "Заголовок"
+                  href: header-items-in-a-header-control.md
+                - name: Настройка внешнего вида элемента заголовка
+                  href: customizing-the-header-item-s-appearance.md
+                - name: Включение поддержки перетаскивания для элементов заголовка
+                  href: providing-drag-and-drop-support-for-header-items.md
+                - name: Использование списков изображений с элементами управления "Заголовок"
+                  href: using-image-lists-with-header-controls.md
+                - name: Создание определяемых владельцем элементов управления "Заголовок"
+                  href: making-owner-drawn-header-controls.md
+                - name: Использование элемента управления "Заголовок"
+                  href: working-with-a-header-control.md
+                - name: Создание элемента управления "Заголовок"
+                  href: creating-the-header-control.md
+                - name: Добавление элементов в элемент управления "Заголовок"
+                  href: adding-items-to-the-header-control.md
+                - name: Сортировка элементов в элементе управления "Заголовок"
+                  href: ordering-items-in-the-header-control.md
+                - name: Обработка уведомлений элемента управления "Заголовок"
+                  href: processing-header-control-notifications.md
+            - name: Использование CHotKeyCtrl
+              expanded: false
+              items:
+                - name: Использование CHotKeyCtrl
+                  href: using-chotkeyctrl.md
+                - name: Использование элемента управления "Сочетание клавиш"
+                  href: using-a-hot-key-control.md
+                - name: Настройка сочетания клавиш
+                  href: setting-a-hot-key.md
+                - name: Глобальные сочетания клавиш
+                  href: global-hot-keys.md
+                - name: Сочетания клавиш для определенного потока
+                  href: thread-specific-hot-keys.md
+            - name: Использование CImageList
+              expanded: false
+              items:
+                - name: Использование CImageList
+                  href: using-cimagelist.md
+                - name: Типы списков изображений
+                  href: types-of-image-lists.md
+                - name: Использование списка изображений
+                  href: using-an-image-list.md
+                - name: Управление списками изображений
+                  href: manipulating-image-lists.md
+                - name: Рисование изображений из списка изображений
+                  href: drawing-images-from-an-image-list.md
+                - name: Перекрытия изображений в списках изображений
+                  href: image-overlays-in-image-lists.md
+                - name: Перетаскивание изображений из списка изображений
+                  href: dragging-images-from-an-image-list.md
+                - name: Сведения об изображениях в списках изображений
+                  href: image-information-in-image-lists.md
+            - name: Использование CListCtrl
+              expanded: false
+              items:
+                - name: Использование CListCtrl
+                  href: using-clistctrl.md
+                - name: Элемент управления "Список" и представление списка
+                  href: list-control-and-list-view.md
+                - name: Элементы списков и списки изображений
+                  href: list-items-and-image-lists.md
+                - name: Элементы обратного вызова и маска обратного вызова
+                  href: callback-items-and-the-callback-mask.md
+                - name: Создание элемента управления "Список"
+                  href: creating-the-list-control.md
+                - name: Создание списков изображений
+                  href: creating-the-image-lists.md
+                - name: Добавление столбцов в элемент управления (представление отчета)
+                  href: adding-columns-to-the-control-report-view.md
+                - name: Добавление элементов в элемент управления
+                  href: adding-items-to-the-control.md
+                - name: 'Прокрутка, расположение, сортировка и поиск в элементах управления "Список"'
+                  href: scrolling-arranging-sorting-and-finding-in-list-controls.md
+                - name: Реализация рабочих областей в элементах управления "Список"
+                  href: implementing-working-areas-in-list-controls.md
+                - name: Обработка уведомляющих сообщений в элементах управления "Список"
+                  href: processing-notification-messages-in-list-controls.md
+                - name: Изменение стилей элемента управления "Список"
+                  href: changing-list-control-styles.md
+                - name: Виртуальные элементы управления "Список"
+                  href: virtual-list-controls.md
+                - name: Уничтожение элемента управления "Список"
+                  href: destroying-the-list-control.md
+            - name: Использование CMonthCalCtrl
+              expanded: false
+              items:
+                - name: Использование CMonthCalCtrl
+                  href: using-cmonthcalctrl.md
+                - name: Создание элементов управления "Календарь на месяц"
+                  href: creating-the-month-calendar-control.md
+                - name: Примеры элемента управления "Календарь на месяц"
+                  href: month-calendar-control-examples.md
+                - name: Обработка уведомляющих сообщений в элементах управления "Календарь на месяц"
+                  href: processing-notification-messages-in-month-calendar-controls.md
+                - name: Настройка состояния дня в элементе управления "Календарь на месяц"
+                  href: setting-the-day-state-of-a-month-calendar-control.md
+            - name: Использование CProgressCtrl
+              expanded: false
+              items:
+                - name: Использование CProgressCtrl
+                  href: using-cprogressctrl.md
+                - name: Стили для элемента управления "Индикатор выполнения"
+                  href: styles-for-the-progress-control.md
+                - name: Параметры элемента управления "Индикатор выполнения"
+                  href: settings-for-the-progress-control.md
+                - name: Управление элементом управления "Индикатор выполнения"
+                  href: manipulating-the-progress-control.md
+            - name: Использование CReBarCtrl
+              expanded: false
+              items:
+                - name: Использование CReBarCtrl
+                  href: using-crebarctrl.md
+                - name: CReBar или CReBarCtrl
+                  href: crebar-vs-crebarctrl.md
+                - name: Создание элемента управления "Главная панель"
+                  href: creating-a-rebar-control.md
+                - name: Элементы управления "Главная панель" и зоны
+                  href: rebar-controls-and-bands.md
+                - name: Использование списка изображений с элементом управления "Главная панель"
+                  href: using-an-image-list-with-a-rebar-control.md
+                - name: Использование диалоговой панели с элементом управления "Главная панель"
+                  href: using-a-dialog-bar-with-a-rebar-control.md
+                - name: Обработка уведомляющих сообщений в элементах управления "Главная панель"
+                  href: processing-notification-messages-in-a-rebar-control.md
+            - name: Использование CRichEditCtrl
+              expanded: false
+              items:
+                - name: Использование CRichEditCtrl
+                  href: using-cricheditctrl.md
+                - name: Общие сведения об элементе управления "Rich Edit"
+                  href: overview-of-the-rich-edit-control.md
+                - name: 'Классы, связанные с элементами управления "Rich Edit"'
+                  href: classes-related-to-rich-edit-controls.md
+                - name: Примеры элементов управления "Rich Edit"
+                  href: rich-edit-control-examples.md
+                - name: Форматирование знаков с использованием элементов управления "Rich Edit"
+                  href: character-formatting-in-rich-edit-controls.md
+                - name: Форматирование абзацев с использованием элементов управления "Rich Edit"
+                  href: paragraph-formatting-in-rich-edit-controls.md
+                - name: Текущее выделение в элементе управления "Rich Edit"
+                  href: current-selection-in-a-rich-edit-control.md
+                - name: Разбиение слов с использованием элементов управления "Rich Edit"
+                  href: word-breaks-in-rich-edit-controls.md
+                - name: Операции буфера обмена с использованием элементов управления "Rich Edit"
+                  href: clipboard-operations-in-rich-edit-controls.md
+                - name: Потоковые операции с использованием элементов управления "Rich Edit"
+                  href: stream-operations-in-rich-edit-controls.md
+                - name: Печать в элементах управления "Rich Edit"
+                  href: printing-in-rich-edit-controls.md
+                - name: Элементы управления "Rich Edit" "без дна"
+                  href: bottomless-rich-edit-controls.md
+                - name: Уведомления из элемента управления "Rich Edit"
+                  href: notifications-from-a-rich-edit-control.md
+            - name: Использование CSliderCtrl
+              expanded: false
+              items:
+                - name: Использование CSliderCtrl
+                  href: using-csliderctrl.md
+                - name: Использование ползунков
+                  href: using-slider-controls.md
+                - name: Стили ползунков
+                  href: slider-control-styles.md
+                - name: Функции-члены ползунков
+                  href: slider-control-member-functions.md
+                - name: Уведомляющие сообщения ползунка
+                  href: slider-notification-messages.md
+            - name: Использование CSpinButtonCtrl
+              expanded: false
+              items:
+                - name: Использование CSpinButtonCtrl
+                  href: using-cspinbuttonctrl.md
+                - name: Стили счетчика
+                  href: spin-button-styles.md
+                - name: Функции-члены счетчика
+                  href: spin-button-member-functions.md
+            - name: Использование CStatusBarCtrl
+              expanded: false
+              items:
+                - name: Использование CStatusBarCtrl
+                  href: using-cstatusbarctrl.md
+                - name: Способы создания строки состояния
+                  href: methods-of-creating-a-status-bar.md
+                - name: Параметры для CStatusBarCtrl
+                  href: settings-for-the-cstatusbarctrl.md
+                - name: Использование CStatusBarCtrl для создания объекта CStatusBarCtrl
+                  href: using-cstatusbarctrl-to-create-a-cstatusbarctrl-object.md
+                - name: Выбор режима объекта CStatusBarCtrl
+                  href: setting-the-mode-of-a-cstatusbarctrl-object.md
+                - name: Инициализация частей объекта CStatusBarCtrl
+                  href: initializing-the-parts-of-a-cstatusbarctrl-object.md
+                - name: Использование всплывающих подсказок в объекте CStatusBarCtrl
+                  href: using-tooltips-in-a-cstatusbarctrl-object.md
+            - name: Использование CTabCtrl
+              expanded: false
+              items:
+                - name: Использование CTabCtrl
+                  href: using-ctabctrl.md
+                - name: Элементы управления "Вкладка" и страницы свойств
+                  href: tab-controls-and-property-sheets.md
+                - name: Вкладки и атрибуты элемента управления "Вкладка"
+                  href: tabs-and-tab-control-attributes.md
+                - name: Создание определяемых владельцем вкладок
+                  href: making-owner-drawn-tabs.md
+                - name: Использование элемента управления "Вкладка"
+                  href: working-with-a-tab-control.md
+                - name: Создание элемента управления "Вкладка"
+                  href: creating-the-tab-control.md
+                - name: Добавление вкладок в элемент управления "Вкладка"
+                  href: adding-tabs-to-a-tab-control.md
+                - name: Обработка уведомляющих сообщений элемента управления "Вкладка"
+                  href: processing-tab-control-notification-messages.md
+            - name: Использование CToolBarCtrl
+              expanded: false
+              items:
+                - name: Использование CToolBarCtrl
+                  href: using-ctoolbarctrl.md
+                - name: Методы создания панели инструментов
+                  href: methods-of-creating-a-toolbar.md
+                - name: Параметры панели инструментов
+                  href: settings-for-the-toolbar-control.md
+                - name: Создание объекта CToolBarCtrl
+                  href: creating-a-ctoolbarctrl-object.md
+                - name: Использование списков изображений в элементе управления "Панель инструментов"
+                  href: using-image-lists-in-a-toolbar-control.md
+                - name: Использование разворачивающихся кнопок в элементе управления "Панель инструментов"
+                  href: using-drop-down-buttons-in-a-toolbar-control.md
+                - name: Настройка внешнего вида элементов управления "Панель инструментов"
+                  href: customizing-the-appearance-of-a-toolbar-control.md
+                - name: Обработка уведомлений всплывающих подсказок
+                  href: handling-tool-tip-notifications.md
+                - name: Обработка уведомлений о настройке
+                  href: handling-customization-notifications.md
+            - name: Использование CToolTipCtrl
+              expanded: false
+              items:
+                - name: Использование CToolTipCtrl
+                  href: using-ctooltipctrl.md
+                - name: Методы создания всплывающих подсказок
+                  href: methods-of-creating-tool-tips.md
+                - name: Параметры для элемента управления "Подсказка"
+                  href: settings-for-the-tool-tip-control.md
+                - name: Использование CToolTipCtrl для создания объекта CToolTipCtrl и управления им
+                  href: using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object.md
+                - name: Управление элементом управления всплывающей подсказки
+                  href: manipulating-the-tool-tip-control.md
+            - name: Использование CTreeCtrl
+              expanded: false
+              items:
+                - name: Использование CTreeCtrl
+                  href: using-ctreectrl.md
+                - name: CTreeCtrl или CTreeView
+                  href: ctreectrl-vs-ctreeview.md
+                - name: Использование древовидных элементов управления
+                  href: using-tree-controls.md
+                - name: Установка связи с древовидным элементом управления
+                  href: communicating-with-a-tree-control.md
+                - name: Стили древовидного элемента управления
+                  href: tree-control-styles.md
+                - name: Родительские и дочерние элементы древовидного элемента управления
+                  href: tree-control-parent-and-child-items.md
+                - name: Положение элемента древовидного элемента управления
+                  href: tree-control-item-position.md
+                - name: Метки элементов древовидного элемента управления
+                  href: tree-control-item-labels.md
+                - name: Редактирование меток древовидного элемента управления
+                  href: tree-control-label-editing.md
+                - name: Общие сведения о состояниях элемента древовидного элемента управления
+                  href: tree-control-item-states-overview.md
+                - name: Списки изображений древовидного элемента управления
+                  href: tree-control-image-lists.md
+                - name: Выбор элемента древовидного элемента управления
+                  href: tree-control-item-selection.md
+                - name: Операции перетаскивания древовидного элемента управления
+                  href: tree-control-drag-and-drop-operations.md
+                - name: Сведения об элементе древовидного элемента управления
+                  href: tree-control-item-information.md
+                - name: Уведомляющие сообщения древовидного элемента управления
+                  href: tree-control-notification-messages.md
+        - name: Панели элементов управления
+          href: control-bars.md
+        - name: Диалоговые панели
+          href: dialog-bars.md
+        - name: Диалоговые окна
+          expanded: false
+          items:
+            - name: Диалоговые окна
+              href: dialog-boxes.md
+            - name: Пример Отображение диалогового окна через команду меню
+              href: example-displaying-a-dialog-box-via-a-menu-command.md
+            - name: Список примеров диалоговых окон
+              href: dialog-sample-list.md
+            - name: Компоненты диалоговых окон в платформе
+              href: dialog-box-components-in-the-framework.md
+            - name: Модальные и немодальные диалоговые окна
+              href: modal-and-modeless-dialog-boxes.md
+            - name: Вкладки свойств и страницы свойств (MFC)
+              href: property-sheets-and-property-pages-mfc.md
+            - name: Создание ресурса диалогового окна
+              href: creating-the-dialog-resource.md
+            - name: Создание класса диалогового окна с помощью мастеров кода
+              expanded: false
+              items:
+                - name: Создание класса диалогового окна с помощью мастеров кода
+                  href: creating-a-dialog-class-with-code-wizards.md
+                - name: Создание классов диалоговых окон
+                  href: creating-your-dialog-class.md
+            - name: Жизненный цикл диалогового окна
+              expanded: false
+              items:
+                - name: Жизненный цикл диалогового окна
+                  href: life-cycle-of-a-dialog-box.md
+                - name: Создание и отображение диалоговых окон
+                  href: creating-and-displaying-dialog-boxes.md
+                - name: Создание модальных диалоговых окон
+                  href: creating-modal-dialog-boxes.md
+                - name: Создание немодальных диалоговых окон
+                  href: creating-modeless-dialog-boxes.md
+                - name: Использование шаблона диалогового окна в памяти
+                  href: using-a-dialog-template-in-memory.md
+                - name: Выбор цвета фона диалогового окна
+                  href: setting-the-dialog-boxs-background-color.md
+                - name: Инициализация диалогового окна
+                  href: initializing-the-dialog-box.md
+                - name: Обработка сообщений Windows для диалогового окна
+                  href: handling-windows-messages-in-your-dialog-box.md
+                - name: Извлечение данных из объекта диалогового окна
+                  href: retrieving-data-from-the-dialog-object.md
+                - name: Закрытие диалогового окна
+                  href: closing-the-dialog-box.md
+                - name: Уничтожение диалогового окна
+                  href: destroying-the-dialog-box.md
+            - name: Обмен данными и проверка диалоговых окон
+              expanded: false
+              items:
+                - name: Обмен данными и проверка диалоговых окон
+                  href: dialog-data-exchange-and-validation.md
+                - name: Обмен данными диалоговых окон
+                  href: dialog-data-exchange.md
+                - name: Проверка данных диалогового окна
+                  href: dialog-data-validation.md
+            - name: Типобезопасный доступ к элементам управления в диалоговом окне
+              expanded: false
+              items:
+                - name: Типобезопасный доступ к элементам управления в диалоговом окне
+                  href: type-safe-access-to-controls-in-a-dialog-box.md
+                - name: Типобезопасный доступ к элементам управления без мастеров кода
+                  href: type-safe-access-to-controls-without-code-wizards.md
+                - name: Типобезопасный доступ к элементам управления с использованием мастеров кода
+                  href: type-safe-access-to-controls-with-code-wizards.md
+            - name: Сопоставление сообщений Windows с классом
+              href: mapping-windows-messages-to-your-class.md
+            - name: Часто переопределяемые функции-члены
+              href: commonly-overridden-member-functions.md
+            - name: Часто добавляемые функции-члены
+              href: commonly-added-member-functions.md
+            - name: Классы общих диалоговых окон
+              href: common-dialog-classes.md
+            - name: Диалоговые окна в OLE
+              href: dialog-boxes-in-ole.md
+            - name: Пошаговое руководство. Добавление объекта CTaskDialog в приложение
+              href: walkthrough-adding-a-ctaskdialog-to-an-application.md
+        - name: "Архитектура \"документ\_— представление\""
+          expanded: false
+          items:
+            - name: "Архитектура \"документ\_— представление\""
+              href: document-view-architecture.md
+            - name: Список примеров документов и представлений
+              href: document-view-sample-list.md
+            - name: Архитектура "документ-представление"
+              href: a-portrait-of-the-document-view-architecture.md
+            - name: Преимущества архитектуры "документ-представление"
+              href: advantages-of-the-document-view-architecture.md
+            - name: 'Классы документов и представлений, создаваемые с помощью мастера приложений MFC'
+              href: document-and-view-classes-created-by-the-mfc-application-wizard.md
+            - name: Альтернативы для архитектуры "документ-представление"
+              href: alternatives-to-the-document-view-architecture.md
+            - name: Использование документов
+              expanded: false
+              items:
+                - name: Использование документов
+                  href: using-documents.md
+                - name: Наследование класса документов от CDocument
+                  href: deriving-a-document-class-from-cdocument.md
+                - name: Управление данными с помощью переменных данных документа
+                  href: managing-data-with-document-data-variables.md
+                - name: Сериализация данных в файлы и из них
+                  href: serializing-data-to-and-from-files.md
+                - name: Обход механизма сериализации
+                  href: bypassing-the-serialization-mechanism.md
+                - name: Обработка команд в документе
+                  href: handling-commands-in-the-document.md
+            - name: Использование представлений
+              expanded: false
+              items:
+                - name: Использование представлений
+                  href: using-views.md
+                - name: 'Производные классы представлений, доступные в MFC'
+                  href: derived-view-classes-available-in-mfc.md
+                - name: Рисование в представлении
+                  href: drawing-in-a-view.md
+                - name: Интерпретация ввода пользователя через представление
+                  href: interpreting-user-input-through-a-view.md
+                - name: Роль просмотра при печати
+                  href: role-of-the-view-in-printing.md
+                - name: Изменение масштаба и прокрутка представлений
+                  href: scrolling-and-scaling-views.md
+            - name: 'Множественные типы документов, представления и окна фреймов'
+              href: multiple-document-types-views-and-frame-windows.md
+            - name: Инициализация и очистка документов и представлений
+              expanded: false
+              items:
+                - name: Инициализация и очистка документов и представлений
+                  href: initializing-and-cleaning-up-documents-and-views.md
+                - name: Инициализация документов и представлений
+                  href: initializing-documents-and-views.md
+                - name: Очистка документов и представлений
+                  href: cleaning-up-documents-and-views.md
+            - name: Добавление нескольких представлений в один документ
+              href: adding-multiple-views-to-a-single-document.md
+        - name: Представления форм (MFC)
+          expanded: false
+          items:
+            - name: Представления форм (MFC)
+              href: form-views-mfc.md
+            - name: Вставка формы в проект
+              href: inserting-a-form-into-a-project.md
+        - name: Справка HTML. Контекстная справка для программ
+          href: html-help-context-sensitive-help-for-your-programs.md
+        - name: Группы с вкладками MDI
+          href: mdi-tabbed-groups.md
+        - name: Меню (MFC)
+          expanded: false
+          items:
+            - name: Меню (MFC)
+              href: menus-mfc.md
+            - name: Список примеров меню
+              href: menu-sample-list.md
+            - name: Управление меню во время выполнения программы
+              href: manipulating-menus-during-program-execution.md
+            - name: Практическое руководство. Обновление объектов пользовательского интерфейса
+              expanded: false
+              items:
+                - name: Практическое руководство. Обновление объектов пользовательского интерфейса
+                  href: how-to-update-user-interface-objects.md
+                - name: Вызовы обработчиков обновления
+                  href: when-update-handlers-are-called.md
+                - name: Макрос ON_UPDATE_COMMAND_UI
+                  href: on-update-command-ui-macro.md
+                - name: Класс CCmdUI
+                  href: the-ccmdui-class.md
+        - name: OLE (MFC)
+          href: ole-mfc.md
+        - name: Печать и предварительный просмотр печати
+          expanded: false
+          items:
+            - name: Печать и предварительный просмотр печати
+              href: printing-and-print-preview.md
+            - name: Печать
+              expanded: false
+              items:
+                - name: Печать
+                  href: printing.md
+                - name: Печать по умолчанию
+                  href: how-default-printing-is-done.md
+                - name: Многостраничные документы
+                  href: multipage-documents.md
+                - name: Верхние и нижние колонтитулы
+                  href: headers-and-footers.md
+                - name: Выделение ресурсов GDI
+                  href: allocating-gdi-resources.md
+            - name: Архитектура предварительного просмотра
+              href: print-preview-architecture.md
+        - name: Страницы свойств (MFC)
+          expanded: false
+          items:
+            - name: Страницы свойств (MFC)
+              href: property-sheets-mfc.md
+            - name: Страницы свойств в MFC
+              href: property-sheets-and-property-pages-in-mfc.md
+            - name: Использование страниц свойств в приложении
+              href: using-property-sheets-in-your-application.md
+            - name: Добавление элементов управления на страницу свойств
+              href: adding-controls-to-a-property-sheet.md
+            - name: Обмен данными
+              href: exchanging-data.md
+            - name: Создание безрежимной страницы свойств
+              href: creating-a-modeless-property-sheet.md
+            - name: Обработка кнопки "Применить"
+              href: handling-the-apply-button.md
+            - name: Использование страниц свойств как мастеров
+              href: property-sheets-as-wizards.md
+        - name: Конструктор лент (MFC)
+          expanded: false
+          items:
+            - name: Конструктор лент (MFC)
+              href: ribbon-designer-mfc.md
+            - name: Практическое руководство. Преобразование существующей ленты MFC в ресурс ленты
+              href: how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md
+            - name: Практическое руководство. Настройка кнопки приложения
+              href: how-to-customize-the-application-button.md
+            - name: Практическое руководство. Настройка панели быстрого доступа
+              href: how-to-customize-the-quick-access-toolbar.md
+            - name: Практическое руководство. Добавление элементов управления и обработчиков событий ленты
+              href: how-to-add-ribbon-controls-and-event-handlers.md
+            - name: Практическое руководство. Загрузка ресурса ленты из приложения MFC
+              href: how-to-load-a-ribbon-resource-from-an-mfc-application.md
+            - name: Пошаговое руководство. Создание приложения ленты с помощью MFC
+              href: walkthrough-creating-a-ribbon-application-by-using-mfc.md
+            - name: "Пошаговое руководство. Обновление приложения MFC Scribble (часть\_1)"
+              href: walkthrough-updating-the-mfc-scribble-application-part-1.md
+            - name: "Пошаговое руководство. Обновление приложения MFC Scribble (часть\_2)"
+              href: walkthrough-updating-the-mfc-scribble-application-part-2.md
+        - name: Строки состояния
+          expanded: false
+          items:
+            - name: Строки состояния
+              href: status-bars.md
+            - name: Реализация строки состояния в MFC
+              expanded: false
+              items:
+                - name: Реализация строки состояния в MFC
+                  href: status-bar-implementation-in-mfc.md
+                - name: Обновление текста на панели строки состояния
+                  href: updating-the-text-of-a-status-bar-pane.md
+        - name: Всплывающие подсказки
+          expanded: false
+          items:
+            - name: Всплывающие подсказки
+              href: tool-tips.md
+            - name: 'Всплывающие подсказки в Windows, не являющиеся производными от CFrameWnd'
+              expanded: false
+              items:
+                - name: 'Всплывающие подсказки в Windows, не являющиеся производными от CFrameWnd'
+                  href: tool-tips-in-windows-not-derived-from-cframewnd.md
+                - name: Включение всплывающих подсказок
+                  href: enabling-tool-tips.md
+                - name: Обработка уведомления TTN_NEEDTEXT для всплывающих подсказок
+                  href: handling-ttn-needtext-notification-for-tool-tips.md
+                - name: Структура TOOLTIPTEXT
+                  href: tooltiptext-structure.md
+        - name: Панели инструментов
+          expanded: false
+          items:
+            - name: Панели инструментов
+              href: toolbars.md
+            - name: Список примеров панелей инструментов
+              href: toolbar-sample-list.md
+            - name: Реализация панели инструментов MFC
+              expanded: false
+              items:
+                - name: Реализация панели инструментов MFC
+                  href: mfc-toolbar-implementation.md
+                - name: Общие сведения о панелях инструментов
+                  href: toolbar-fundamentals.md
+                - name: Закрепленные и плавающие панели инструментов
+                  href: docking-and-floating-toolbars.md
+                - name: Всплывающие подсказки панели инструментов
+                  href: toolbar-tool-tips.md
+                - name: Использование элемента управления "Панель инструментов"
+                  href: working-with-the-toolbar-control.md
+                - name: Использование старых панелей инструментов
+                  href: using-your-old-toolbars.md
+        - name: Диспетчер визуализации
+          href: visualization-manager.md
+        - name: Windows
+          expanded: false
+          items:
+            - name: Windows
+              href: windows.md
+            - name: Объекты окон
+              expanded: false
+              items:
+                - name: Объекты окон
+                  href: window-objects.md
+                - name: Связь между объектом окна C++ и HWND
+                  href: relationship-between-a-cpp-window-object-and-an-hwnd.md
+                - name: Производные классы окон
+                  href: derived-window-classes.md
+                - name: Создание окон
+                  expanded: false
+                  items:
+                    - name: Создание окон
+                      href: creating-windows.md
+                    - name: Регистрация классов окон
+                      href: registering-window-classes.md
+                    - name: Общая последовательность создания окна
+                      href: general-window-creation-sequence.md
+                - name: Уничтожение объектов окон
+                  expanded: false
+                  items:
+                    - name: Уничтожение объектов окон
+                      href: destroying-window-objects.md
+                    - name: Последовательность уничтожения окна
+                      href: window-destruction-sequence.md
+                    - name: Выделение и освобождение памяти окна
+                      href: allocating-and-deallocating-window-memory.md
+                - name: Отсоединение CWnd от HWND
+                  href: detaching-a-cwnd-from-its-hwnd.md
+                - name: Использование объектов окон
+                  href: working-with-window-objects.md
+                - name: Контексты устройств
+                  href: device-contexts.md
+                - name: Графические объекты
+                  expanded: false
+                  items:
+                    - name: Графические объекты
+                      href: graphic-objects.md
+                    - name: Одноэтапная и двухэтапная конструкция объектов
+                      href: one-stage-and-two-stage-construction-of-objects.md
+                    - name: Выбор графического объекта в контексте устройства
+                      href: selecting-a-graphic-object-into-a-device-context.md
+            - name: Окна фрейма
+              expanded: false
+              items:
+                - name: Окна фрейма
+                  href: frame-windows.md
+                - name: Классы окна фрейма
+                  expanded: false
+                  items:
+                    - name: Классы окна фрейма
+                      href: frame-window-classes.md
+                    - name: 'Классы окна фрейма, создаваемые с помощью мастера приложений'
+                      href: frame-window-classes-created-by-the-application-wizard.md
+                - name: Стили окна фрейма (C++)
+                  expanded: false
+                  items:
+                    - name: Стили окна фрейма (C++)
+                      href: frame-window-styles-cpp.md
+                    - name: 'Изменение стилей окна, созданного MFC'
+                      href: changing-the-styles-of-a-window-created-by-mfc.md
+                - name: Функция окон фрейма
+                  href: what-frame-windows-do.md
+                - name: Использование окон фрейма
+                  expanded: false
+                  items:
+                    - name: Использование окон фрейма
+                      href: using-frame-windows.md
+                    - name: Создание окон фрейма документа
+                      href: creating-document-frame-windows.md
+                    - name: Время инициализации объектов CWnd
+                      href: when-to-initialize-cwnd-objects.md
+                    - name: Уничтожение окон фрейма
+                      href: destroying-frame-windows.md
+                    - name: Управление дочерними окнами MDI
+                      href: managing-mdi-child-windows.md
+                    - name: Управление текущим представлением
+                      href: managing-the-current-view.md
+                    - name: 'Управление меню, панелями элементов управления и ускорителями'
+                      href: managing-menus-control-bars-and-accelerators.md
+                    - name: Перетаскивание файлов в окне фрейма
+                      href: dragging-and-dropping-files-in-a-frame-window.md
+                    - name: Реакция на динамический обмен данными (DDE)
+                      href: responding-to-dynamic-data-exchange-dde.md
+                    - name: Оркестрация других действий окна
+                      href: orchestrating-other-window-actions.md
+    - name: Сокеты Windows
+      expanded: false
+      items:
+        - name: Сокеты Windows
+          href: windows-sockets.md
+        - name: Сокеты Windows в MFC
+          expanded: false
+          items:
+            - name: Сокеты Windows в MFC
+              href: windows-sockets-in-mfc.md
+            - name: Сокеты Windows. Фон
+              href: windows-sockets-background.md
+            - name: Сокеты Windows. Сокеты потоков
+              href: windows-sockets-stream-sockets.md
+            - name: Сокеты Windows. Сокеты датаграмм
+              href: windows-sockets-datagram-sockets.md
+            - name: Сокеты Windows. Использование сокетов с архивами
+              href: windows-sockets-using-sockets-with-archives.md
+            - name: Сокеты Windows. Последовательность операций
+              href: windows-sockets-sequence-of-operations.md
+            - name: Сокеты Windows. Пример сокетов с использованием архивов
+              href: windows-sockets-example-of-sockets-using-archives.md
+            - name: Сокеты Windows. Использование сокетов с архивами
+              href: windows-sockets-how-sockets-with-archives-work.md
+            - name: Сокеты Windows. Использование класса CAsyncSocket
+              href: windows-sockets-using-class-casyncsocket.md
+            - name: Сокеты Windows. Наследование от классов сокета
+              href: windows-sockets-deriving-from-socket-classes.md
+            - name: Сокеты Windows. Уведомления сокетов
+              href: windows-sockets-socket-notifications.md
+            - name: Сокеты Windows. Блокировка
+              href: windows-sockets-blocking.md
+            - name: Сокеты Windows. Порядок байтов
+              href: windows-sockets-byte-ordering.md
+            - name: Сокеты Windows. Преобразование строк
+              href: windows-sockets-converting-strings.md
+            - name: Сокеты Windows. Порты и адреса сокета
+              href: windows-sockets-ports-and-socket-addresses.md
+    - name: Расширения Интернета Win32 (WinInet)
+      expanded: false
+      items:
+        - name: Расширения Интернета Win32 (WinInet)
+          href: win32-internet-extensions-wininet.md
+        - name: Использование WinInet для упрощения создания клиентских приложений в Интернете
+          href: how-wininet-makes-it-easier-to-create-internet-client-applications.md
+        - name: Использование MFC для упрощения создания клиентских приложений в Интернете
+          href: how-mfc-makes-it-easier-to-create-internet-client-applications.md
+        - name: Использование классов MFC для создания клиентских приложений в Интернете
+          href: mfc-classes-for-creating-internet-client-applications.md
+        - name: Необходимые компоненты для клиентских классов в Интернете
+          href: prerequisites-for-internet-client-classes.md
+        - name: Создание клиентских приложений в Интернете с использованием классов MFC WinInet
+          href: writing-an-internet-client-application-using-mfc-wininet-classes.md
+        - name: Организация типичного клиентского приложения в Интернете
+          href: steps-in-a-typical-internet-client-application.md
+        - name: Организация типичного клиентского приложения FTP
+          href: steps-in-a-typical-ftp-client-application.md
+        - name: Удаление файла в типичном клиентском приложении FTP
+          href: steps-in-a-typical-ftp-client-application-to-delete-a-file.md
+        - name: Организация типичного клиентского приложения Gopher
+          href: steps-in-a-typical-gopher-client-application.md
+        - name: Организация типичного клиентского приложения HTTP
+          href: steps-in-a-typical-http-client-application.md
+- name: Диаграмма иерархии
+  expanded: false
+  items:
+    - name: Диаграмма иерархии
+      href: hierarchy-chart.md
+    - name: Категории таблицы иерархии
+      href: hierarchy-chart-categories.md
+- name: Настройка для MFC
+  expanded: false
+  items:
+    - name: Настройка для MFC
+      href: customization-for-mfc.md
+    - name: Настройка мыши и клавиатуры
+      href: keyboard-and-mouse-customization.md
+    - name: Определяемые пользователем инструменты
+      href: user-defined-tools.md
+    - name: Безопасность во время настройки
+      href: security-implications-of-customization.md
+- name: Технические примечания MFC
+  expanded: false
+  items:
+    - name: Технические примечания MFC
+      href: mfc-technical-notes.md
+    - name: Технические примечания по категории
+      href: technical-notes-by-category.md
+    - name: Технические примечания по номеру
+      href: technical-notes-by-number.md
+    - name: TN001. Регистрация класса Window
+      href: tn001-window-class-registration.md
+    - name: TN002. Формат данных постоянного объекта
+      href: tn002-persistent-object-data-format.md
+    - name: TN003. Сопоставление дескрипторов Windows с объектами
+      href: tn003-mapping-of-windows-handles-to-objects.md
+    - name: TN006. Схемы сообщений
+      href: tn006-message-maps.md
+    - name: TN011. Использование MFC как части библиотеки DLL
+      href: tn011-using-mfc-as-part-of-a-dll.md
+    - name: TN014. Пользовательские элементы управления
+      href: tn014-custom-controls.md
+    - name: TN016. Использование множественного наследования C++ с MFC
+      href: tn016-using-cpp-multiple-inheritance-with-mfc.md
+    - name: TN017. Уничтожение объектов окон
+      href: tn017-destroying-window-objects.md
+    - name: TN020. Соглашения об именовании и нумерации идентификаторов
+      href: tn020-id-naming-and-numbering-conventions.md
+    - name: TN021. Маршрутизация команд и сообщений
+      href: tn021-command-and-message-routing.md
+    - name: TN022. Реализация стандартных команд
+      href: tn022-standard-commands-implementation.md
+    - name: TN023. Стандартные ресурсы MFC
+      href: tn023-standard-mfc-resources.md
+    - name: 'TN024. Сообщения и ресурсы, определяемые MFC'
+      href: tn024-mfc-defined-messages-and-resources.md
+    - name: 'TN025. Создание документов, представлений и фреймов'
+      href: tn025-document-view-and-frame-creation.md
+    - name: TN026. Процедуры DDX и DDV
+      href: tn026-ddx-and-ddv-routines.md
+    - name: TN028. Включение поддержки контекстной справки
+      href: tn028-context-sensitive-help-support.md
+    - name: TN029. Окна разделителей
+      href: tn029-splitter-windows.md
+    - name: TN030. Настройка печати и предварительного просмотра
+      href: tn030-customizing-printing-and-print-preview.md
+    - name: TN031. Панели элементов управления
+      href: tn031-control-bars.md
+    - name: TN032. Механизм исключений MFC
+      href: tn032-mfc-exception-mechanism.md
+    - name: TN033. Версия библиотеки DLL MFC
+      href: tn033-dll-version-of-mfc.md
+    - name: TN035. Использование нескольких файлов ресурсов и файлов заголовков в Visual C++
+      href: tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md
+    - name: TN036. Использование CFormView с AppWizard и ClassWizard
+      href: tn036-using-cformview-with-appwizard-and-classwizard.md
+    - name: "TN037. Многопоточные приложения MFC\_2.1"
+      href: tn037-multithreaded-mfc-2-1-applications.md
+    - name: TN038. Реализация MFC-OLE IUnknown
+      href: tn038-mfc-ole-iunknown-implementation.md
+    - name: TN039. Реализация автоматизации MFC-OLE
+      href: tn039-mfc-ole-automation-implementation.md
+    - name: TN040. Изменение размеров и масштабирование MFC-OLE на месте
+      href: tn040-mfc-ole-in-place-resizing-and-zooming.md
+    - name: TN041. Миграция MFC-OLE1 на MFC-OLE 2
+      href: tn041-mfc-ole1-migration-to-mfc-ole-2.md
+    - name: TN042. Рекомендации по использованию драйвера ODBC для разработчиков
+      href: tn042-odbc-driver-developer-recommendations.md
+    - name: TN043. Процедуры RFX
+      href: tn043-rfx-routines.md
+    - name: TN044. Включение поддержки MFC для DBCS
+      href: tn044-mfc-support-for-dbcs.md
+    - name: TN045. Включение поддержки MFC и баз данных для типов Long Varchar и Varbinary
+      href: tn045-mfc-database-support-for-long-varchar-varbinary.md
+    - name: TN046. Соглашения о комментариях для классов MFC
+      href: tn046-commenting-conventions-for-the-mfc-classes.md
+    - name: TN047. Снижение требований к транзакциям баз данных
+      href: tn047-relaxing-database-transaction-requirements.md
+    - name: TN048. Написание программ настройки и администрирования ODBC для приложений баз данных MFC
+      href: tn048-writing-odbc-setup-and-administration-programs.md
+    - name: TN049. Слой трансляции MFC-OLE MBCS в Юникод (MFCANS32)
+      href: tn049-mfc-ole-mbcs-to-unicode-translation-layer-mfcans32.md
+    - name: TN050. Общие диалоговые окна MFC-OLE (MFCUIx32)
+      href: tn050-mfc-ole-common-dialogs-mfcuix32.md
+    - name: TN051. Использование CTL3D сегодня и в будущем
+      href: tn051-using-ctl3d-now-and-in-the-future.md
+    - name: TN053. Пользовательские процедуры DFX для классов баз данных DAO
+      href: tn053-custom-dfx-routines-for-dao-database-classes.md
+    - name: TN054. Вызов DAO напрямую при использовании классов DAO MFC
+      href: tn054-calling-dao-directly-while-using-mfc-dao-classes.md
+    - name: 'TN055. Миграция приложений, использующих классы базы данных MFC ODBC, в классы MFC DAO'
+      href: tn055-migrating-mfc-odbc-database-class-applications-to-mfc-dao-classes.md
+    - name: TN056. Установка локализированных компонентов MFC
+      href: tn056-installation-of-localized-mfc-components.md
+    - name: TN057. Локализация компонентов MFC
+      href: tn057-localization-of-mfc-components.md
+    - name: TN058. Реализация состояния модуля MFC
+      href: tn058-mfc-module-state-implementation.md
+    - name: TN059. Использование макросов преобразования MFC из MBCS в Юникод
+      href: tn059-using-mfc-mbcs-unicode-conversion-macros.md
+    - name: TN060. Новые общие элементы управления Windows
+      href: tn060-the-new-windows-common-controls.md
+    - name: TN061. Сообщения ON_NOTIFY и WM_NOTIFY
+      href: tn061-on-notify-and-wm-notify-messages.md
+    - name: TN062. Отражение сообщений для элементов управления окнами
+      href: tn062-message-reflection-for-windows-controls.md
+    - name: "TN063. Отладка библиотек\_DLL расширений\_MFC для Интернета"
+      href: tn063-debugging-internet-extension-dlls.md
+    - name: TN064. Потоки изолированной модели в элементах управления ActiveX
+      href: tn064-apartment-model-threading-in-activex-controls.md
+    - name: TN065. Включение поддержки сдвоенных интерфейсов для серверов автоматизации OLE
+      href: tn065-dual-interface-support-for-ole-automation-servers.md
+    - name: "TN066. Обычные проблемы переноса приложений из MFC\_3.x в\_4.0"
+      href: tn066-common-mfc-3-x-to-4-0-porting-issues.md
+    - name: "TN068. Выполнение транзакций с драйвером Microsoft Access\_7 ODBC"
+      href: tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md
+    - name: TN070. Имена классов окна MFC
+      href: tn070-mfc-window-class-names.md
+    - name: TN071. Реализация IOleCommandTarget в MFC
+      href: tn071-mfc-iolecommandtarget-implementation.md
+- name: Общие сведения о библиотеке классов
+  expanded: false
+  items:
+    - name: Общие сведения о библиотеке классов
+      href: class-library-overview.md
+    - name: Общие принципы разработки классов
+      expanded: false
+      items:
+        - name: Общие принципы разработки классов
+          href: general-class-design-philosophy.md
+        - name: Платформа приложения
+          href: application-framework.md
+        - name: Связь с API языка C
+          href: relationship-to-the-c-language-api.md
+    - name: Корневой класс. CObject
+      href: root-class-cobject.md
+    - name: Классы архитектуры приложений MFC
+      expanded: false
+      items:
+        - name: Классы архитектуры приложений MFC
+          href: mfc-application-architecture-classes.md
+        - name: Классы поддержки приложений и потоков
+          href: application-and-thread-support-classes.md
+        - name: Классы маршрутизации команд
+          href: command-routing-classes.md
+        - name: Классы документов
+          href: document-classes.md
+        - name: Классы представления (архитектура)
+          href: view-classes-architecture.md
+        - name: Классы окна фрейма (архитектура)
+          href: frame-window-classes-architecture.md
+        - name: Классы шаблонов документов
+          href: document-template-classes.md
+    - name: 'Классы окон, диалоговых окон и элементов управления'
+      expanded: false
+      items:
+        - name: 'Классы окон, диалоговых окон и элементов управления'
+          href: window-dialog-and-control-classes.md
+        - name: Классы окна фрейма (Windows)
+          href: frame-window-classes-windows.md
+        - name: Классы представления (Windows)
+          href: view-classes-windows.md
+        - name: Классы диалоговых окон
+          href: dialog-box-classes.md
+        - name: Классы элементов управления
+          href: control-classes.md
+        - name: Классы панели элементов управления
+          href: control-bar-classes.md
+    - name: Классы рисования и печати
+      expanded: false
+      items:
+        - name: Классы рисования и печати
+          href: drawing-and-printing-classes.md
+        - name: Классы вывода (контекст устройства)
+          href: output-device-context-classes.md
+        - name: Классы инструмента рисования
+          href: drawing-tool-classes.md
+    - name: Классы простых типов данных
+      href: simple-data-type-classes.md
+    - name: 'Классы массивов, списков и схем'
+      expanded: false
+      items:
+        - name: 'Классы массивов, списков и схем'
+          href: array-list-and-map-classes.md
+        - name: 'Классы шаблонов для массивов, списков и схем'
+          href: template-classes-for-arrays-lists-and-maps.md
+        - name: Готовые классы массивов
+          href: ready-to-use-array-classes.md
+        - name: Готовые классы списков
+          href: ready-to-use-list-classes.md
+        - name: Готовые классы схем
+          href: ready-to-use-map-classes.md
+    - name: Классы файлов и баз данных
+      expanded: false
+      items:
+        - name: Классы файлов и баз данных
+          href: file-and-database-classes.md
+        - name: Классы операций ввода-вывода файлов
+          href: file-i-o-classes.md
+        - name: Классы OLE DB
+          href: ole-db-classes.md
+        - name: Классы DAO
+          href: dao-classes.md
+        - name: Классы ODBC
+          href: odbc-classes.md
+    - name: Классы сети и Интернета
+      expanded: false
+      items:
+        - name: Классы сети и Интернета
+          href: internet-and-networking-classes.md
+        - name: Классы сокетов Windows
+          href: windows-sockets-classes.md
+        - name: Классы Win32 для работы в Интернете
+          href: win32-internet-classes.md
+    - name: Классы OLE
+      expanded: false
+      items:
+        - name: Классы OLE
+          href: ole-classes.md
+        - name: Классы контейнера OLE
+          href: ole-container-classes.md
+        - name: Классы сервера OLE
+          href: ole-server-classes.md
+        - name: Классы перетаскивания и передачи данных OLE
+          href: ole-drag-and-drop-and-data-transfer-classes.md
+        - name: Классы общих диалоговых окон OLE
+          href: ole-common-dialog-classes.md
+        - name: Классы автоматизации OLE
+          href: ole-automation-classes.md
+        - name: Классы элементов управления OLE
+          href: ole-control-classes.md
+        - name: Классы активных документов
+          href: active-document-classes.md
+        - name: 'Классы, связанные с OLE'
+          href: ole-related-classes.md
+    - name: Классы для отладки и работы с исключениями
+      expanded: false
+      items:
+        - name: Классы для отладки и работы с исключениями
+          href: debugging-and-exception-classes.md
+        - name: Классы поддержки отладки
+          href: debugging-support-classes.md
+        - name: Классы исключений
+          href: exception-classes.md
+- name: Пошаговые руководства (MFC)
+  expanded: false
+  items:
+    - name: Пошаговые руководства (MFC)
+      href: walkthroughs-mfc.md
+    - name: Пошаговое руководство. Использование новых элементов управления оболочки MFC
+      href: walkthrough-using-the-new-mfc-shell-controls.md
+    - name: Пошаговое руководство. Размещение элементов управления на панели инструментов
+      href: walkthrough-putting-controls-on-toolbars.md
+    - name: Пошаговое руководство. Добавление объекта D2D в проект MFC
+      href: walkthrough-adding-a-d2d-object-to-an-mfc-project.md
+    - name: Пошаговое руководство. Добавление анимации в проект MFC
+      href: walkthrough-adding-animation-to-an-mfc-project.md
+- name: Справочник по API WIF
+  items:
+    - name: Классы MFC
+      expanded: false
+      items:
+        - name: Классы MFC
+          href: reference/mfc-classes.md
+        - name: Класс CAccelerateDecelerateTransition
+          href: reference/cacceleratedeceleratetransition-class.md
+        - name: Класс CAnimateCtrl
+          href: reference/canimatectrl-class.md
+        - name: Класс CAnimationBaseObject
+          href: reference/canimationbaseobject-class.md
+        - name: Класс CAnimationColor
+          href: reference/canimationcolor-class.md
+        - name: Класс CAnimationController
+          href: reference/canimationcontroller-class.md
+        - name: Класс CAnimationGroup
+          href: reference/canimationgroup-class.md
+        - name: Класс CAnimationManagerEventHandler
+          href: reference/canimationmanagereventhandler-class.md
+        - name: Класс CAnimationPoint
+          href: reference/canimationpoint-class.md
+        - name: Класс CAnimationRect
+          href: reference/canimationrect-class.md
+        - name: Класс CAnimationSize
+          href: reference/canimationsize-class.md
+        - name: Класс CAnimationStoryboardEventHandler
+          href: reference/canimationstoryboardeventhandler-class.md
+        - name: Класс CAnimationTimerEventHandler
+          href: reference/canimationtimereventhandler-class.md
+        - name: Класс CAnimationValue
+          href: reference/canimationvalue-class.md
+        - name: Класс CAnimationVariable
+          href: reference/canimationvariable-class.md
+        - name: Класс CAnimationVariableChangeHandler
+          href: reference/canimationvariablechangehandler-class.md
+        - name: Класс CAnimationVariableIntegerChangeHandler
+          href: reference/canimationvariableintegerchangehandler-class.md
+        - name: Класс CArchive
+          href: reference/carchive-class.md
+        - name: Класс CArchiveException
+          href: reference/carchiveexception-class.md
+        - name: Класс CArray
+          href: reference/carray-class.md
+        - name: Класс CAsyncMonikerFile
+          href: reference/casyncmonikerfile-class.md
+        - name: Класс CAsyncSocket
+          href: reference/casyncsocket-class.md
+        - name: Класс CAutoHideDockSite
+          href: reference/cautohidedocksite-class.md
+        - name: Класс CBaseKeyFrame
+          href: reference/cbasekeyframe-class.md
+        - name: Класс CBasePane
+          href: reference/cbasepane-class.md
+        - name: Класс CBaseTabbedPane
+          href: reference/cbasetabbedpane-class.md
+        - name: Класс CBaseTransition
+          href: reference/cbasetransition-class.md
+        - name: Класс CBitmap
+          href: reference/cbitmap-class.md
+        - name: Класс CBitmapButton
+          href: reference/cbitmapbutton-class.md
+        - name: Класс CBitmapRenderTarget
+          href: reference/cbitmaprendertarget-class.md
+        - name: Класс CBrush
+          href: reference/cbrush-class.md
+        - name: Класс CButton
+          href: reference/cbutton-class.md
+        - name: Класс CByteArray
+          href: reference/cbytearray-class.md
+        - name: Класс CCachedDataPathProperty
+          href: reference/ccacheddatapathproperty-class.md
+        - name: Класс CCheckListBox
+          href: reference/cchecklistbox-class.md
+        - name: Класс CClientDC
+          href: reference/cclientdc-class.md
+        - name: Класс CCmdTarget
+          href: reference/ccmdtarget-class.md
+        - name: Класс CCmdUI
+          href: reference/ccmdui-class.md
+        - name: Класс CColorDialog
+          href: reference/ccolordialog-class.md
+        - name: Класс CComboBox
+          href: reference/ccombobox-class.md
+        - name: CComboBoxEx - класс
+          href: reference/ccomboboxex-class.md
+        - name: Класс CCommandLineInfo
+          href: reference/ccommandlineinfo-class.md
+        - name: Класс CCommonDialog
+          href: reference/ccommondialog-class.md
+        - name: Класс CConnectionPoint
+          href: reference/cconnectionpoint-class.md
+        - name: Класс CConstantTransition
+          href: reference/cconstanttransition-class.md
+        - name: Класс CContextMenuManager
+          href: reference/ccontextmenumanager-class.md
+        - name: Класс CControlBar
+          href: reference/ccontrolbar-class.md
+        - name: Структура CCreateContext
+          href: reference/ccreatecontext-structure.md
+        - name: Класс CCriticalSection
+          href: reference/ccriticalsection-class.md
+        - name: Класс CCtrlView
+          href: reference/cctrlview-class.md
+        - name: Класс CCubicTransition
+          href: reference/ccubictransition-class.md
+        - name: Класс CCustomInterpolator
+          href: reference/ccustominterpolator-class.md
+        - name: Класс CCustomTransition
+          href: reference/ccustomtransition-class.md
+        - name: Класс CD2DBitmap
+          href: reference/cd2dbitmap-class.md
+        - name: Класс CD2DBitmapBrush
+          href: reference/cd2dbitmapbrush-class.md
+        - name: Класс CD2DBrush
+          href: reference/cd2dbrush-class.md
+        - name: Класс CD2DBrushProperties
+          href: reference/cd2dbrushproperties-class.md
+        - name: Класс CD2DEllipse
+          href: reference/cd2dellipse-class.md
+        - name: Класс CD2DGeometry
+          href: reference/cd2dgeometry-class.md
+        - name: Класс CD2DGeometrySink
+          href: reference/cd2dgeometrysink-class.md
+        - name: Класс CD2DGradientBrush
+          href: reference/cd2dgradientbrush-class.md
+        - name: Класс CD2DLayer
+          href: reference/cd2dlayer-class.md
+        - name: Класс CD2DLinearGradientBrush
+          href: reference/cd2dlineargradientbrush-class.md
+        - name: Класс CD2DMesh
+          href: reference/cd2dmesh-class.md
+        - name: Класс CD2DPathGeometry
+          href: reference/cd2dpathgeometry-class.md
+        - name: Класс CD2DPointF
+          href: reference/cd2dpointf-class.md
+        - name: Класс CD2DPointU
+          href: reference/cd2dpointu-class.md
+        - name: Класс CD2DRadialGradientBrush
+          href: reference/cd2dradialgradientbrush-class.md
+        - name: Класс CD2DRectF
+          href: reference/cd2drectf-class.md
+        - name: Класс CD2DRectU
+          href: reference/cd2drectu-class.md
+        - name: Класс CD2DResource
+          href: reference/cd2dresource-class.md
+        - name: Класс CD2DRoundedRect
+          href: reference/cd2droundedrect-class.md
+        - name: Класс CD2DSizeF
+          href: reference/cd2dsizef-class.md
+        - name: Класс CD2DSizeU
+          href: reference/cd2dsizeu-class.md
+        - name: Класс CD2DSolidColorBrush
+          href: reference/cd2dsolidcolorbrush-class.md
+        - name: Класс CD2DTextFormat
+          href: reference/cd2dtextformat-class.md
+        - name: Класс CD2DTextLayout
+          href: reference/cd2dtextlayout-class.md
+        - name: Класс CDaoDatabase
+          href: reference/cdaodatabase-class.md
+        - name: Класс CDaoException
+          href: reference/cdaoexception-class.md
+        - name: Класс CDaoFieldExchange
+          href: reference/cdaofieldexchange-class.md
+        - name: Класс CDaoQueryDef
+          href: reference/cdaoquerydef-class.md
+        - name: Класс CDaoRecordset
+          href: reference/cdaorecordset-class.md
+        - name: Класс CDaoRecordView
+          href: reference/cdaorecordview-class.md
+        - name: Класс CDaoTableDef
+          href: reference/cdaotabledef-class.md
+        - name: Класс CDaoWorkspace
+          href: reference/cdaoworkspace-class.md
+        - name: Класс CDatabase
+          href: reference/cdatabase-class.md
+        - name: Класс CDataExchange
+          href: reference/cdataexchange-class.md
+        - name: Класс CDataPathProperty
+          href: reference/cdatapathproperty-class.md
+        - name: Класс CDataRecoveryHandler
+          href: reference/cdatarecoveryhandler-class.md
+        - name: Класс CDateTimeCtrl
+          href: reference/cdatetimectrl-class.md
+        - name: Класс CDBException
+          href: reference/cdbexception-class.md
+        - name: Класс CDBVariant
+          href: reference/cdbvariant-class.md
+        - name: Класс CDC
+          href: reference/cdc-class.md
+        - name: Класс CDCRenderTarget
+          href: reference/cdcrendertarget-class.md
+        - name: Класс CDHtmlDialog
+          expanded: false
+          items:
+            - name: Класс CDHtmlDialog
+              href: reference/cdhtmldialog-class.md
+            - name: Вспомогательные макросы DDX_DHtml
+              href: reference/ddx-dhtml-helper-macros.md
+        - name: Класс CDialog
+          href: reference/cdialog-class.md
+        - name: Класс CDialogBar
+          href: reference/cdialogbar-class.md
+        - name: Класс CDialogEx
+          href: reference/cdialogex-class.md
+        - name: Класс CDiscreteTransition
+          href: reference/cdiscretetransition-class.md
+        - name: Класс CDocItem
+          href: reference/cdocitem-class.md
+        - name: Класс CDockablePane
+          href: reference/cdockablepane-class.md
+        - name: Класс CDockablePaneAdapter
+          href: reference/cdockablepaneadapter-class.md
+        - name: Класс CDockingManager
+          href: reference/cdockingmanager-class.md
+        - name: Класс CDockingPanesRow
+          href: reference/cdockingpanesrow-class.md
+        - name: Класс CDockSite
+          href: reference/cdocksite-class.md
+        - name: Класс CDockState
+          href: reference/cdockstate-class.md
+        - name: Класс CDocObjectServer
+          href: reference/cdocobjectserver-class.md
+        - name: Класс CDocObjectServerItem
+          href: reference/cdocobjectserveritem-class.md
+        - name: Класс CDocTemplate
+          href: reference/cdoctemplate-class.md
+        - name: Класс CDocument
+          href: reference/cdocument-class.md
+        - name: Класс CDragListBox
+          href: reference/cdraglistbox-class.md
+        - name: Класс CDrawingManager
+          href: reference/cdrawingmanager-class.md
+        - name: Класс CDumpContext
+          href: reference/cdumpcontext-class.md
+        - name: Класс CDWordArray
+          href: reference/cdwordarray-class.md
+        - name: Класс CEdit
+          href: reference/cedit-class.md
+        - name: Класс CEditView
+          href: reference/ceditview-class.md
+        - name: Класс CEvent
+          href: reference/cevent-class.md
+        - name: Класс CException
+          href: reference/cexception-class.md
+        - name: Класс CFieldExchange
+          href: reference/cfieldexchange-class.md
+        - name: Класс CFile
+          href: reference/cfile-class.md
+        - name: Класс CFileDialog
+          href: reference/cfiledialog-class.md
+        - name: Класс CFileException
+          href: reference/cfileexception-class.md
+        - name: Класс CFileFind
+          href: reference/cfilefind-class.md
+        - name: Класс CFindReplaceDialog
+          href: reference/cfindreplacedialog-class.md
+        - name: Класс CFolderPickerDialog
+          href: reference/cfolderpickerdialog-class.md
+        - name: Класс CFont
+          href: reference/cfont-class.md
+        - name: Класс CFontDialog
+          href: reference/cfontdialog-class.md
+        - name: Класс CFontHolder
+          href: reference/cfontholder-class.md
+        - name: Класс CFormView
+          href: reference/cformview-class.md
+        - name: Класс CFrameWnd
+          href: reference/cframewnd-class.md
+        - name: Класс CFrameWndEx
+          href: reference/cframewndex-class.md
+        - name: Класс CFtpConnection
+          href: reference/cftpconnection-class.md
+        - name: Класс CFtpFileFind
+          href: reference/cftpfilefind-class.md
+        - name: Класс CGdiObject
+          href: reference/cgdiobject-class.md
+        - name: Класс CGlobalUtils
+          href: reference/cglobalutils-class.md
+        - name: Класс CGopherConnection
+          href: reference/cgopherconnection-class.md
+        - name: Класс CGopherFile
+          href: reference/cgopherfile-class.md
+        - name: Класс CGopherFileFind
+          href: reference/cgopherfilefind-class.md
+        - name: Класс CGopherLocator
+          href: reference/cgopherlocator-class.md
+        - name: Класс CHeaderCtrl
+          href: reference/cheaderctrl-class.md
+        - name: Класс CHotKeyCtrl
+          href: reference/chotkeyctrl-class.md
+        - name: Класс CHtmlEditCtrl
+          href: reference/chtmleditctrl-class.md
+        - name: Класс CHtmlEditCtrlBase
+          href: reference/chtmleditctrlbase-class.md
+        - name: Класс CHtmlEditDoc
+          href: reference/chtmleditdoc-class.md
+        - name: Класс CHtmlEditView
+          href: reference/chtmleditview-class.md
+        - name: Класс CHtmlView
+          href: reference/chtmlview-class.md
+        - name: Класс CHttpConnection
+          href: reference/chttpconnection-class.md
+        - name: Класс CHttpFile
+          href: reference/chttpfile-class.md
+        - name: Класс CHwndRenderTarget
+          href: reference/chwndrendertarget-class.md
+        - name: Класс CImageList
+          href: reference/cimagelist-class.md
+        - name: Класс CInstantaneousTransition
+          href: reference/cinstantaneoustransition-class.md
+        - name: Класс CInternetConnection
+          href: reference/cinternetconnection-class.md
+        - name: Класс CInternetException
+          href: reference/cinternetexception-class.md
+        - name: Класс CInternetFile
+          href: reference/cinternetfile-class.md
+        - name: Класс CInternetSession
+          href: reference/cinternetsession-class.md
+        - name: Класс CInterpolatorBase
+          href: reference/cinterpolatorbase-class.md
+        - name: Класс CInvalidArgException
+          href: reference/cinvalidargexception-class.md
+        - name: Класс CIPAddressCtrl
+          href: reference/cipaddressctrl-class.md
+        - name: Класс CJumpList
+          href: reference/cjumplist-class.md
+        - name: Класс CKeyboardManager
+          href: reference/ckeyboardmanager-class.md
+        - name: Класс CKeyFrame
+          href: reference/ckeyframe-class.md
+        - name: Класс CLinearTransition
+          href: reference/clineartransition-class.md
+        - name: Класс CLinearTransitionFromSpeed
+          href: reference/clineartransitionfromspeed-class.md
+        - name: Класс CLinkCtrl
+          href: reference/clinkctrl-class.md
+        - name: Класс CList
+          href: reference/clist-class.md
+        - name: Класс CListBox
+          href: reference/clistbox-class.md
+        - name: CListCtrl - класс
+          href: reference/clistctrl-class.md
+        - name: Класс CListView
+          href: reference/clistview-class.md
+        - name: Класс CLongBinary
+          href: reference/clongbinary-class.md
+        - name: Класс CMap
+          href: reference/cmap-class.md
+        - name: Класс CMapPtrToPtr
+          href: reference/cmapptrtoptr-class.md
+        - name: Класс CMapPtrToWord
+          href: reference/cmapptrtoword-class.md
+        - name: Класс CMapStringToOb
+          href: reference/cmapstringtoob-class.md
+        - name: Класс CMapStringToPtr
+          href: reference/cmapstringtoptr-class.md
+        - name: Класс CMapStringToString
+          href: reference/cmapstringtostring-class.md
+        - name: Класс CMapWordToOb
+          href: reference/cmapwordtoob-class.md
+        - name: Класс CMapWordToPtr
+          href: reference/cmapwordtoptr-class.md
+        - name: Класс CMDIChildWnd
+          href: reference/cmdichildwnd-class.md
+        - name: Класс CMDIChildWndEx
+          href: reference/cmdichildwndex-class.md
+        - name: Класс CMDIFrameWnd
+          href: reference/cmdiframewnd-class.md
+        - name: Класс CMDIFrameWndEx
+          href: reference/cmdiframewndex-class.md
+        - name: Класс CMDITabInfo
+          href: reference/cmditabinfo-class.md
+        - name: Класс CMemFile
+          href: reference/cmemfile-class.md
+        - name: Класс CMemoryException
+          href: reference/cmemoryexception-class.md
+        - name: Структура CMemoryState
+          href: reference/cmemorystate-structure.md
+        - name: Класс CMenu
+          href: reference/cmenu-class.md
+        - name: Класс CMenuTearOffManager
+          href: reference/cmenutearoffmanager-class.md
+        - name: Класс CMetaFileDC
+          href: reference/cmetafiledc-class.md
+        - name: Класс CMFCAcceleratorKey
+          href: reference/cmfcacceleratorkey-class.md
+        - name: Класс CMFCAcceleratorKeyAssignCtrl
+          href: reference/cmfcacceleratorkeyassignctrl-class.md
+        - name: Класс CMFCAutoHideBar
+          href: reference/cmfcautohidebar-class.md
+        - name: Класс CMFCAutoHideButton
+          href: reference/cmfcautohidebutton-class.md
+        - name: Класс CMFCBaseTabCtrl
+          href: reference/cmfcbasetabctrl-class.md
+        - name: Класс CMFCBaseToolBar
+          href: reference/cmfcbasetoolbar-class.md
+        - name: Класс CMFCBaseVisualManager
+          href: reference/cmfcbasevisualmanager-class.md
+        - name: Класс CMFCButton
+          href: reference/cmfcbutton-class.md
+        - name: Класс CMFCCaptionBar
+          href: reference/cmfccaptionbar-class.md
+        - name: Класс CMFCCaptionButton
+          href: reference/cmfccaptionbutton-class.md
+        - name: Класс CMFCCmdUsageCount
+          href: reference/cmfccmdusagecount-class.md
+        - name: Класс CMFCColorBar
+          href: reference/cmfccolorbar-class.md
+        - name: Класс CMFCColorButton
+          href: reference/cmfccolorbutton-class.md
+        - name: Класс CMFCColorDialog
+          href: reference/cmfccolordialog-class.md
+        - name: Класс CMFCColorMenuButton
+          href: reference/cmfccolormenubutton-class.md
+        - name: Класс CMFCColorPickerCtrl
+          href: reference/cmfccolorpickerctrl-class.md
+        - name: Класс CMFCColorPopupMenu
+          href: reference/cmfccolorpopupmenu-class.md
+        - name: Класс CMFCCustomColorsPropertyPage
+          href: reference/cmfccustomcolorspropertypage-class.md
+        - name: Класс CMFCDesktopAlertDialog
+          href: reference/cmfcdesktopalertdialog-class.md
+        - name: Класс CMFCDesktopAlertWnd
+          href: reference/cmfcdesktopalertwnd-class.md
+        - name: Класс CMFCDesktopAlertWndButton
+          href: reference/cmfcdesktopalertwndbutton-class.md
+        - name: Класс CMFCDesktopAlertWndInfo
+          href: reference/cmfcdesktopalertwndinfo-class.md
+        - name: Класс CMFCDisableMenuAnimation
+          href: reference/cmfcdisablemenuanimation-class.md
+        - name: Класс CMFCDragFrameImpl
+          href: reference/cmfcdragframeimpl-class.md
+        - name: Класс CMFCDropDownFrame
+          href: reference/cmfcdropdownframe-class.md
+        - name: Класс CMFCDropDownToolBar
+          href: reference/cmfcdropdowntoolbar-class.md
+        - name: Класс CMFCDropDownToolbarButton
+          href: reference/cmfcdropdowntoolbarbutton-class.md
+        - name: Класс CMFCDynamicLayout
+          href: reference/cmfcdynamiclayout-class.md
+        - name: Класс CMFCEditBrowseCtrl
+          href: reference/cmfceditbrowsectrl-class.md
+        - name: Класс CMFCFilterChunkValueImpl
+          href: reference/cmfcfilterchunkvalueimpl-class.md
+        - name: Класс CMFCFontComboBox
+          href: reference/cmfcfontcombobox-class.md
+        - name: Класс CMFCFontInfo
+          href: reference/cmfcfontinfo-class.md
+        - name: Класс CMFCHeaderCtrl
+          href: reference/cmfcheaderctrl-class.md
+        - name: Класс CMFCImageEditorDialog
+          href: reference/cmfcimageeditordialog-class.md
+        - name: Класс CMFCImageEditorPaletteBar
+          href: reference/cmfcimageeditorpalettebar-class.md
+        - name: Класс CMFCImagePaintArea
+          href: reference/cmfcimagepaintarea-class.md
+        - name: Класс CMFCKeyMapDialog
+          href: reference/cmfckeymapdialog-class.md
+        - name: Класс CMFCLinkCtrl
+          href: reference/cmfclinkctrl-class.md
+        - name: Класс CMFCListCtrl
+          href: reference/cmfclistctrl-class.md
+        - name: Класс CMFCMaskedEdit
+          href: reference/cmfcmaskededit-class.md
+        - name: Класс CMFCMenuBar
+          href: reference/cmfcmenubar-class.md
+        - name: Класс CMFCMenuButton
+          href: reference/cmfcmenubutton-class.md
+        - name: Класс CMFCOutlookBar
+          href: reference/cmfcoutlookbar-class.md
+        - name: Класс CMFCOutlookBarPane
+          href: reference/cmfcoutlookbarpane-class.md
+        - name: Класс CMFCOutlookBarTabCtrl
+          href: reference/cmfcoutlookbartabctrl-class.md
+        - name: Класс CMFCPopupMenu
+          href: reference/cmfcpopupmenu-class.md
+        - name: Класс CMFCPopupMenuBar
+          href: reference/cmfcpopupmenubar-class.md
+        - name: Класс CMFCPreviewCtrlImpl
+          href: reference/cmfcpreviewctrlimpl-class.md
+        - name: Класс CMFCPrintPreviewToolBar
+          href: reference/cmfcprintpreviewtoolbar-class.md
+        - name: Класс CMFCPropertyGridColorProperty
+          href: reference/cmfcpropertygridcolorproperty-class.md
+        - name: Класс CMFCPropertyGridCtrl
+          href: reference/cmfcpropertygridctrl-class.md
+        - name: Класс CMFCPropertyGridFileProperty
+          href: reference/cmfcpropertygridfileproperty-class.md
+        - name: Класс CMFCPropertyGridFontProperty
+          href: reference/cmfcpropertygridfontproperty-class.md
+        - name: Класс CMFCPropertyGridProperty
+          href: reference/cmfcpropertygridproperty-class.md
+        - name: Класс CMFCPropertyGridToolTipCtrl
+          href: reference/cmfcpropertygridtooltipctrl-class.md
+        - name: Класс CMFCPropertyPage
+          href: reference/cmfcpropertypage-class.md
+        - name: Класс CMFCPropertySheet
+          href: reference/cmfcpropertysheet-class.md
+        - name: Класс CMFCReBar
+          href: reference/cmfcrebar-class.md
+        - name: Класс CMFCRibbonApplicationButton
+          href: reference/cmfcribbonapplicationbutton-class.md
+        - name: Класс CMFCRibbonBar
+          href: reference/cmfcribbonbar-class.md
+        - name: Класс CMFCRibbonBaseElement
+          href: reference/cmfcribbonbaseelement-class.md
+        - name: Класс CMFCRibbonButton
+          href: reference/cmfcribbonbutton-class.md
+        - name: Класс CMFCRibbonButtonsGroup
+          href: reference/cmfcribbonbuttonsgroup-class.md
+        - name: Класс CMFCRibbonCategory
+          href: reference/cmfcribboncategory-class.md
+        - name: Класс CMFCRibbonCheckBox
+          href: reference/cmfcribboncheckbox-class.md
+        - name: Класс CMFCRibbonColorButton
+          href: reference/cmfcribboncolorbutton-class.md
+        - name: Класс CMFCRibbonComboBox
+          href: reference/cmfcribboncombobox-class.md
+        - name: Класс CMFCRibbonContextCaption
+          href: reference/cmfcribboncontextcaption-class.md
+        - name: Класс CMFCRibbonCustomizeDialog
+          href: reference/cmfcribboncustomizedialog-class.md
+        - name: Класс CMFCRibbonCustomizePropertyPage
+          href: reference/cmfcribboncustomizepropertypage-class.md
+        - name: Класс CMFCRibbonEdit
+          href: reference/cmfcribbonedit-class.md
+        - name: Класс CMFCRibbonFontComboBox
+          href: reference/cmfcribbonfontcombobox-class.md
+        - name: Класс CMFCRibbonGallery
+          href: reference/cmfcribbongallery-class.md
+        - name: Класс CMFCRibbonGalleryMenuButton
+          href: reference/cmfcribbongallerymenubutton-class.md
+        - name: Класс CMFCRibbonLabel
+          href: reference/cmfcribbonlabel-class.md
+        - name: Класс CMFCRibbonLinkCtrl
+          href: reference/cmfcribbonlinkctrl-class.md
+        - name: Класс CMFCRibbonMainPanel
+          href: reference/cmfcribbonmainpanel-class.md
+        - name: Класс CMFCRibbonMiniToolBar
+          href: reference/cmfcribbonminitoolbar-class.md
+        - name: Класс CMFCRibbonPanel
+          href: reference/cmfcribbonpanel-class.md
+        - name: Класс CMFCRibbonProgressBar
+          href: reference/cmfcribbonprogressbar-class.md
+        - name: Класс CMFCRibbonQuickAccessToolBarDefaultState
+          href: reference/cmfcribbonquickaccesstoolbardefaultstate-class.md
+        - name: Класс CMFCRibbonSeparator
+          href: reference/cmfcribbonseparator-class.md
+        - name: Класс CMFCRibbonSlider
+          href: reference/cmfcribbonslider-class.md
+        - name: Класс CMFCRibbonStatusBar
+          href: reference/cmfcribbonstatusbar-class.md
+        - name: Класс CMFCRibbonStatusBarPane
+          href: reference/cmfcribbonstatusbarpane-class.md
+        - name: Класс CMFCRibbonUndoButton
+          href: reference/cmfcribbonundobutton-class.md
+        - name: Класс CMFCShellListCtrl
+          href: reference/cmfcshelllistctrl-class.md
+        - name: Класс CMFCShellTreeCtrl
+          href: reference/cmfcshelltreectrl-class.md
+        - name: Класс CMFCSpinButtonCtrl
+          href: reference/cmfcspinbuttonctrl-class.md
+        - name: Класс CMFCStandardColorsPropertyPage
+          href: reference/cmfcstandardcolorspropertypage-class.md
+        - name: Класс CMFCStatusBar
+          href: reference/cmfcstatusbar-class.md
+        - name: Класс CMFCTabCtrl
+          href: reference/cmfctabctrl-class.md
+        - name: Класс CMFCTabDropTarget
+          href: reference/cmfctabdroptarget-class.md
+        - name: Структура CMFCTabToolTipInfo
+          href: reference/cmfctabtooltipinfo-structure.md
+        - name: Класс CMFCTasksPane
+          href: reference/cmfctaskspane-class.md
+        - name: Класс CMFCTasksPaneTask
+          href: reference/cmfctaskspanetask-class.md
+        - name: Класс CMFCTasksPaneTaskGroup
+          href: reference/cmfctaskspanetaskgroup-class.md
+        - name: Класс CMFCToolBar
+          href: reference/cmfctoolbar-class.md
+        - name: Класс CMFCToolBarButton
+          href: reference/cmfctoolbarbutton-class.md
+        - name: Класс CMFCToolBarComboBoxButton
+          href: reference/cmfctoolbarcomboboxbutton-class.md
+        - name: Класс CMFCToolBarComboBoxEdit
+          href: reference/cmfctoolbarcomboboxedit-class.md
+        - name: Класс CMFCToolBarDateTimeCtrl
+          href: reference/cmfctoolbardatetimectrl-class.md
+        - name: Класс CMFCToolBarEditBoxButton
+          href: reference/cmfctoolbareditboxbutton-class.md
+        - name: Класс CMFCToolBarFontComboBox
+          href: reference/cmfctoolbarfontcombobox-class.md
+        - name: Класс CMFCToolBarFontSizeComboBox
+          href: reference/cmfctoolbarfontsizecombobox-class.md
+        - name: Класс CMFCToolBarImages
+          href: reference/cmfctoolbarimages-class.md
+        - name: Класс CMFCToolBarMenuButton
+          href: reference/cmfctoolbarmenubutton-class.md
+        - name: Класс CMFCToolBarInfo
+          href: reference/cmfctoolbarinfo-class.md
+        - name: Класс CMFCToolBarsCustomizeDialog
+          href: reference/cmfctoolbarscustomizedialog-class.md
+        - name: Класс CMFCToolTipCtrl
+          href: reference/cmfctooltipctrl-class.md
+        - name: Класс CMFCToolTipInfo
+          href: reference/cmfctooltipinfo-class.md
+        - name: Класс CMFCVisualManager
+          href: reference/cmfcvisualmanager-class.md
+        - name: Класс CMFCVisualManagerOffice2003
+          href: reference/cmfcvisualmanageroffice2003-class.md
+        - name: Класс CMFCVisualManagerOffice2007
+          href: reference/cmfcvisualmanageroffice2007-class.md
+        - name: Класс CMFCVisualManagerOfficeXP
+          href: reference/cmfcvisualmanagerofficexp-class.md
+        - name: Класс CMFCVisualManagerVS2005
+          href: reference/cmfcvisualmanagervs2005-class.md
+        - name: Класс CMFCVisualManagerWindows
+          href: reference/cmfcvisualmanagerwindows-class.md
+        - name: Класс CMFCVisualManagerWindows7
+          href: reference/cmfcvisualmanagerwindows7-class.md
+        - name: Класс CMFCWindowsManagerDialog
+          href: reference/cmfcwindowsmanagerdialog-class.md
+        - name: Класс CMiniFrameWnd
+          href: reference/cminiframewnd-class.md
+        - name: Класс CMonikerFile
+          href: reference/cmonikerfile-class.md
+        - name: Класс CMonthCalCtrl
+          href: reference/cmonthcalctrl-class.md
+        - name: Класс CMouseManager
+          href: reference/cmousemanager-class.md
+        - name: Класс CMultiDocTemplate
+          href: reference/cmultidoctemplate-class.md
+        - name: Класс CMultiLock
+          href: reference/cmultilock-class.md
+        - name: Класс CMultiPageDHtmlDialog
+          href: reference/cmultipagedhtmldialog-class.md
+        - name: Класс CMultiPaneFrameWnd
+          href: reference/cmultipaneframewnd-class.md
+        - name: Класс CMutex
+          href: reference/cmutex-class.md
+        - name: Класс CNetAddressCtrl
+          href: reference/cnetaddressctrl-class.md
+        - name: Класс CNotSupportedException
+          href: reference/cnotsupportedexception-class.md
+        - name: Класс CObArray
+          href: reference/cobarray-class.md
+        - name: Класс CObject
+          href: reference/cobject-class.md
+        - name: Класс CObList
+          href: reference/coblist-class.md
+        - name: Класс COccManager
+          href: reference/coccmanager-class.md
+        - name: Класс COleBusyDialog
+          href: reference/colebusydialog-class.md
+        - name: Класс COleChangeIconDialog
+          href: reference/colechangeicondialog-class.md
+        - name: Класс COleChangeSourceDialog
+          href: reference/colechangesourcedialog-class.md
+        - name: Класс COleClientItem
+          href: reference/coleclientitem-class.md
+        - name: Класс COleCmdUI
+          href: reference/colecmdui-class.md
+        - name: Класс COleControl
+          href: reference/colecontrol-class.md
+        - name: Класс COleControlContainer
+          href: reference/colecontrolcontainer-class.md
+        - name: Класс COleControlModule
+          href: reference/colecontrolmodule-class.md
+        - name: Класс COleControlSite
+          href: reference/colecontrolsite-class.md
+        - name: Класс COleConvertDialog
+          href: reference/coleconvertdialog-class.md
+        - name: Класс COleCurrency
+          href: reference/colecurrency-class.md
+        - name: Класс COleDataObject
+          href: reference/coledataobject-class.md
+        - name: Класс COleDataSource
+          href: reference/coledatasource-class.md
+        - name: Класс COleDBRecordView
+          href: reference/coledbrecordview-class.md
+        - name: Класс COleDialog
+          href: reference/coledialog-class.md
+        - name: Класс COleDispatchDriver
+          href: reference/coledispatchdriver-class.md
+        - name: Класс COleDispatchException
+          href: reference/coledispatchexception-class.md
+        - name: Класс COleDocObjectItem
+          href: reference/coledocobjectitem-class.md
+        - name: Класс COleDocument
+          href: reference/coledocument-class.md
+        - name: Класс COleDropSource
+          href: reference/coledropsource-class.md
+        - name: Класс COleDropTarget
+          href: reference/coledroptarget-class.md
+        - name: Класс COleException
+          href: reference/coleexception-class.md
+        - name: Класс COleInsertDialog
+          href: reference/coleinsertdialog-class.md
+        - name: Класс COleIPFrameWnd
+          href: reference/coleipframewnd-class.md
+        - name: Класс COleIPFrameWndEx
+          href: reference/coleipframewndex-class.md
+        - name: Класс COleLinkingDoc
+          href: reference/colelinkingdoc-class.md
+        - name: Класс COleLinksDialog
+          href: reference/colelinksdialog-class.md
+        - name: Класс COleMessageFilter
+          href: reference/colemessagefilter-class.md
+        - name: Класс COleObjectFactory
+          href: reference/coleobjectfactory-class.md
+        - name: Класс COlePasteSpecialDialog
+          href: reference/colepastespecialdialog-class.md
+        - name: Класс COlePropertiesDialog
+          href: reference/colepropertiesdialog-class.md
+        - name: Класс COlePropertyPage
+          href: reference/colepropertypage-class.md
+        - name: Класс COleResizeBar
+          href: reference/coleresizebar-class.md
+        - name: Класс COleSafeArray
+          href: reference/colesafearray-class.md
+        - name: Класс COleServerDoc
+          href: reference/coleserverdoc-class.md
+        - name: Класс COleServerItem
+          href: reference/coleserveritem-class.md
+        - name: Класс COleStreamFile
+          href: reference/colestreamfile-class.md
+        - name: Класс COleTemplateServer
+          href: reference/coletemplateserver-class.md
+        - name: Класс COleUpdateDialog
+          href: reference/coleupdatedialog-class.md
+        - name: Класс COleVariant
+          href: reference/colevariant-class.md
+        - name: Класс CPagerCtrl
+          href: reference/cpagerctrl-class.md
+        - name: Класс CPageSetupDialog
+          href: reference/cpagesetupdialog-class.md
+        - name: Класс CPaintDC
+          href: reference/cpaintdc-class.md
+        - name: Класс CPalette
+          href: reference/cpalette-class.md
+        - name: Класс CPane
+          href: reference/cpane-class.md
+        - name: Класс CPaneContainer
+          href: reference/cpanecontainer-class.md
+        - name: Класс CPaneContainerManager
+          href: reference/cpanecontainermanager-class.md
+        - name: Класс CPaneDialog
+          href: reference/cpanedialog-class.md
+        - name: Класс CPaneDivider
+          href: reference/cpanedivider-class.md
+        - name: Класс CPaneFrameWnd
+          href: reference/cpaneframewnd-class.md
+        - name: Класс CParabolicTransitionFromAcceleration
+          href: reference/cparabolictransitionfromacceleration-class.md
+        - name: Класс CPen
+          href: reference/cpen-class.md
+        - name: Класс CPictureHolder
+          href: reference/cpictureholder-class.md
+        - name: Класс CPrintDialog
+          href: reference/cprintdialog-class.md
+        - name: Класс CPrintDialogEx
+          href: reference/cprintdialogex-class.md
+        - name: Структура CPrintInfo
+          href: reference/cprintinfo-structure.md
+        - name: Класс CProgressCtrl
+          href: reference/cprogressctrl-class.md
+        - name: Класс CPropertyPage
+          href: reference/cpropertypage-class.md
+        - name: Класс CPropertySheet
+          href: reference/cpropertysheet-class.md
+        - name: Класс CPropExchange
+          href: reference/cpropexchange-class.md
+        - name: Класс CPtrArray
+          href: reference/cptrarray-class.md
+        - name: Класс CPtrList
+          href: reference/cptrlist-class.md
+        - name: Класс CReBar
+          href: reference/crebar-class.md
+        - name: CReBarCtrl - класс
+          href: reference/crebarctrl-class.md
+        - name: Класс CRecentDockSiteInfo
+          href: reference/crecentdocksiteinfo-class.md
+        - name: Класс CRecentFileList
+          href: reference/crecentfilelist-class.md
+        - name: Класс CRecordset
+          href: reference/crecordset-class.md
+        - name: Класс CRecordView
+          href: reference/crecordview-class.md
+        - name: Класс CRectTracker
+          href: reference/crecttracker-class.md
+        - name: Класс CRenderTarget
+          href: reference/crendertarget-class.md
+        - name: Класс CResourceException
+          href: reference/cresourceexception-class.md
+        - name: Класс CReversalTransition
+          href: reference/creversaltransition-class.md
+        - name: Класс CRgn
+          href: reference/crgn-class.md
+        - name: Класс CRichEditCntrItem
+          href: reference/cricheditcntritem-class.md
+        - name: Класс CRichEditCtrl
+          href: reference/cricheditctrl-class.md
+        - name: Класс CRichEditDoc
+          href: reference/cricheditdoc-class.md
+        - name: Класс CRichEditView
+          href: reference/cricheditview-class.md
+        - name: Структура CRuntimeClass
+          href: reference/cruntimeclass-structure.md
+        - name: Класс CScrollBar
+          href: reference/cscrollbar-class.md
+        - name: Класс CScrollView
+          href: reference/cscrollview-class.md
+        - name: Класс CSemaphore
+          href: reference/csemaphore-class.md
+        - name: Класс CSettingsStore
+          href: reference/csettingsstore-class.md
+        - name: Класс CSettingsStoreSP
+          href: reference/csettingsstoresp-class.md
+        - name: Класс CSharedFile
+          href: reference/csharedfile-class.md
+        - name: Класс CShellManager
+          href: reference/cshellmanager-class.md
+        - name: Класс CSimpleException
+          href: reference/csimpleexception-class.md
+        - name: Класс CSingleDocTemplate
+          href: reference/csingledoctemplate-class.md
+        - name: Класс CSingleLock
+          href: reference/csinglelock-class.md
+        - name: Класс CSinusoidalTransitionFromRange
+          href: reference/csinusoidaltransitionfromrange-class.md
+        - name: Класс CSinusoidalTransitionFromVelocity
+          href: reference/csinusoidaltransitionfromvelocity-class.md
+        - name: Класс CSliderCtrl
+          href: reference/csliderctrl-class.md
+        - name: Класс CSmartDockingInfo
+          href: reference/csmartdockinginfo-class.md
+        - name: Класс CSmoothStopTransition
+          href: reference/csmoothstoptransition-class.md
+        - name: Класс CSocket
+          href: reference/csocket-class.md
+        - name: Класс CSocketFile
+          href: reference/csocketfile-class.md
+        - name: Класс CSpinButtonCtrl
+          href: reference/cspinbuttonctrl-class.md
+        - name: Класс CSplitButton
+          href: reference/csplitbutton-class.md
+        - name: Класс CSplitterWnd
+          href: reference/csplitterwnd-class.md
+        - name: Класс CSplitterWndEx
+          href: reference/csplitterwndex-class.md
+        - name: Класс CStatic
+          href: reference/cstatic-class.md
+        - name: Класс CStatusBar
+          href: reference/cstatusbar-class.md
+        - name: Класс CStatusBarCtrl
+          href: reference/cstatusbarctrl-class.md
+        - name: Класс CStdioFile
+          href: reference/cstdiofile-class.md
+        - name: Класс CStringArray
+          href: reference/cstringarray-class.md
+        - name: Класс CStringList
+          href: reference/cstringlist-class.md
+        - name: Класс CSyncObject
+          href: reference/csyncobject-class.md
+        - name: Класс CTabCtrl
+          href: reference/ctabctrl-class.md
+        - name: Класс CTabbedPane
+          href: reference/ctabbedpane-class.md
+        - name: Класс CTabView
+          href: reference/ctabview-class.md
+        - name: Класс CTaskDialog
+          href: reference/ctaskdialog-class.md
+        - name: Класс CToolBar
+          href: reference/ctoolbar-class.md
+        - name: CToolBarCtrl - класс
+          href: reference/ctoolbarctrl-class.md
+        - name: CToolTipCtrl - класс
+          href: reference/ctooltipctrl-class.md
+        - name: Класс CTooltipManager
+          href: reference/ctooltipmanager-class.md
+        - name: Класс CTreeCtrl
+          href: reference/ctreectrl-class.md
+        - name: Класс CTreeView
+          href: reference/ctreeview-class.md
+        - name: Класс CTypedPtrArray
+          href: reference/ctypedptrarray-class.md
+        - name: Класс CTypedPtrList
+          href: reference/ctypedptrlist-class.md
+        - name: Класс CTypedPtrMap
+          href: reference/ctypedptrmap-class.md
+        - name: Класс CUIntArray
+          href: reference/cuintarray-class.md
+        - name: Класс CUserException
+          href: reference/cuserexception-class.md
+        - name: Класс CUserTool
+          href: reference/cusertool-class.md
+        - name: Класс CUserToolsManager
+          href: reference/cusertoolsmanager-class.md
+        - name: Класс CView
+          href: reference/cview-class.md
+        - name: Класс CVSListBox
+          href: reference/cvslistbox-class.md
+        - name: Класс CWaitCursor
+          href: reference/cwaitcursor-class.md
+        - name: Класс CWinApp
+          href: reference/cwinapp-class.md
+        - name: Класс CWinAppEx
+          href: reference/cwinappex-class.md
+        - name: Класс CWindowDC
+          href: reference/cwindowdc-class.md
+        - name: Класс CWinFormsControl
+          href: reference/cwinformscontrol-class.md
+        - name: Класс CWinFormsDialog
+          href: reference/cwinformsdialog-class.md
+        - name: Класс CWinFormsView
+          href: reference/cwinformsview-class.md
+        - name: Класс CWinThread
+          href: reference/cwinthread-class.md
+        - name: Класс CWnd
+          href: reference/cwnd-class.md
+        - name: Класс CWordArray
+          href: reference/cwordarray-class.md
+        - name: Интерфейс ICommandSource
+          href: reference/icommandsource-interface.md
+        - name: Интерфейс ICommandTarget
+          href: reference/icommandtarget-interface.md
+        - name: Интерфейс ICommandUI
+          href: reference/icommandui-interface.md
+        - name: Интерфейс IView
+          href: reference/iview-interface.md
+    - name: Внутренние классы
+      href: reference/internal-classes.md
+    - name: Макросы и глобальные объекты MFC
+      expanded: false
+      items:
+        - name: Макросы и глобальные объекты MFC
+          href: reference/mfc-macros-and-globals.md
+        - name: Типы данных (MFC)
+          href: reference/data-types-mfc.md
+        - name: Приведение типов объектов классов MFC
+          href: reference/type-casting-of-mfc-class-objects.md
+        - name: Службы модели объекта во время выполнения
+          href: reference/run-time-object-model-services.md
+        - name: Службы диагностики
+          href: reference/diagnostic-services.md
+        - name: Модули и библиотеки DLL
+          href: reference/extension-dll-macros.md
+        - name: Обработка исключений
+          href: reference/exception-processing.md
+        - name: Форматирование CString и отображение окна сообщения
+          href: reference/cstring-formatting-and-message-box-display.md
+        - name: Сведения о приложении и управление им
+          href: reference/application-information-and-management.md
+        - name: Стандартная команда и идентификаторы окон
+          href: reference/standard-command-and-window-ids.md
+        - name: Вспомогательные функции классов коллекции
+          href: reference/collection-class-helpers.md
+        - name: Функции серого цвета и сглаживания точечного рисунка
+          href: reference/gray-and-dithered-bitmap-functions.md
+        - name: Функции обмена данными полями записей
+          href: reference/record-field-exchange-functions.md
+        - name: Функции обмена данными в диалоговых окнах для CRecordView и CDaoRecordView
+          href: reference/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md
+        - name: Функции обмена данными диалоговых окон для элементов управления OLE
+          href: reference/dialog-data-exchange-functions-for-ole-controls.md
+        - name: Макросы и глобальные объекты баз данных
+          href: reference/database-macros-and-globals.md
+        - name: Инициализация и прекращение работы ядра СУБД DAO
+          href: reference/dao-database-engine-initialization-and-termination.md
+        - name: Инициализация OLE
+          href: reference/ole-initialization.md
+        - name: Управление приложением
+          href: reference/application-control.md
+        - name: Схемы подготовки к отправке
+          href: reference/dispatch-maps.md
+        - name: Константы типа параметра Variant
+          href: reference/variant-parameter-type-constants.md
+        - name: Доступ к библиотеке типов
+          href: reference/type-library-access.md
+        - name: Страницы свойств (MFC)
+          href: reference/property-pages-mfc.md
+        - name: Схемы событий
+          href: reference/event-maps.md
+        - name: Схемы приемников событий
+          href: reference/event-sink-maps.md
+        - name: Схемы подключения
+          href: reference/connection-maps.md
+        - name: Регистрация элементов управления OLE
+          href: reference/registering-ole-controls.md
+        - name: Фабрики классов и лицензирование
+          href: reference/class-factories-and-licensing.md
+        - name: Сохраняемость элементов управления OLE
+          href: reference/persistence-of-ole-controls.md
+        - name: Глобальные объекты анализа URL-адресов
+          href: reference/internet-url-parsing-globals.md
+        - name: Схемы событий DHTML
+          href: reference/dhtml-event-maps.md
+        - name: Схемы команд редактирования DHTML
+          href: reference/dhtml-editing-command-maps.md
+        - name: Стандартные процедуры обмена данных диалоговых окон
+          href: reference/standard-dialog-data-exchange-routines.md
+        - name: Стандартные процедуры проверки данных диалоговых окон
+          href: reference/standard-dialog-data-validation-routines.md
+        - name: Сообщения AFX
+          href: reference/afx-messages.md
+        - name: Стили элемента управления "Панель инструментов"
+          href: reference/toolbar-control-styles.md
+        - name: 'Перечисление CMFCImagePaintArea::IMAGE_EDIT_MODE'
+          href: reference/cmfcimagepaintarea-image-edit-mode-enumeration.md
+        - name: Перечисление UICheckState
+          href: reference/uicheckstate-enumeration.md
+    - name: 'Структуры, стили, обратные вызовы и схемы сообщений'
+      expanded: false
+      items:
+        - name: 'Структуры, стили, обратные вызовы и схемы сообщений'
+          href: reference/structures-styles-callbacks-and-message-maps.md
+        - name: 'Структуры, используемые MFC'
+          expanded: false
+          items:
+            - name: 'Структуры, используемые MFC'
+              href: reference/structures-used-by-mfc.md
+            - name: Структура AFX_EXTENSION_MODULE
+              href: reference/afx-extension-module-structure.md
+            - name: Структура AFX_GLOBAL_DATA
+              href: reference/afx-global-data-structure.md
+            - name: Структура CDaoDatabaseInfo
+              href: reference/cdaodatabaseinfo-structure.md
+            - name: Структура CDaoErrorInfo
+              href: reference/cdaoerrorinfo-structure.md
+            - name: Структура CDaoFieldInfo
+              href: reference/cdaofieldinfo-structure.md
+            - name: Структура CDaoIndexInfo
+              href: reference/cdaoindexinfo-structure.md
+            - name: Структура CDaoIndexFieldInfo
+              href: reference/cdaoindexfieldinfo-structure.md
+            - name: Структура CDaoParameterInfo
+              href: reference/cdaoparameterinfo-structure.md
+            - name: Структура CDaoQueryDefInfo
+              href: reference/cdaoquerydefinfo-structure.md
+            - name: Структура CDaoRelationInfo
+              href: reference/cdaorelationinfo-structure.md
+            - name: Структура CDaoRelationFieldInfo
+              href: reference/cdaorelationfieldinfo-structure.md
+            - name: Структура CDaoTableDefInfo
+              href: reference/cdaotabledefinfo-structure.md
+            - name: Структура CDaoWorkspaceInfo
+              href: reference/cdaoworkspaceinfo-structure.md
+            - name: Структура CODBCFieldInfo
+              href: reference/codbcfieldinfo-structure.md
+            - name: DHtmlUrlEventMapEntry Structure
+              href: reference/dhtmlurleventmapentry-structure.md
+            - name: Структура HSE_VERSION_INFO
+              href: reference/hse-version-info-structure.md
+        - name: 'Стили, используемые MFC'
+          href: reference/styles-used-by-mfc.md
+        - name: 'Функции обратного вызова, используемые MFC'
+          href: reference/callback-functions-used-by-mfc.md
+        - name: Схемы сообщений (MFC)
+          expanded: false
+          items:
+            - name: Схемы сообщений (MFC)
+              href: reference/message-maps-mfc.md
+            - name: Макросы схемы сообщений (MFC)
+              href: reference/message-map-macros-mfc.md
+            - name: Макросы схем делегата и интерфейса
+              href: reference/delegate-and-interface-maps.md
+            - name: Практическое руководство. Использование перекрестной ссылки для схемы сообщений
+              href: reference/how-to-use-the-message-map-cross-reference.md
+            - name: Обработчики для уведомляющих сообщений дочернего окна
+              href: reference/child-window-notification-message-handlers.md
+            - name: Обработчик универсального элемента управления
+              href: reference/generic-control-handler.md
+            - name: Обработчики пользовательских кнопок
+              href: reference/user-button-handlers.md
+            - name: Обработчики элементов управления "поле со списком"
+              href: reference/combo-box-handlers.md
+            - name: Обработчики элементов управления "Изменение"
+              href: reference/edit-control-handlers.md
+            - name: Обработчики списков
+              href: reference/list-box-handlers.md
+            - name: Обработчики для сообщений WM_
+              href: reference/handlers-for-wm-messages.md
+            - name: "Обработчики сообщений WM_. A\_— C"
+              href: reference/wm-message-handlers-a-c.md
+            - name: "Обработчики сообщений WM_. D\_— E"
+              href: reference/wm-message-handlers-d-e.md
+            - name: "Обработчики сообщений WM_. F\_— K"
+              href: reference/wm-message-handlers-f-k.md
+            - name: Обработчики сообщений WM_. L–M
+              href: reference/wm-message-handlers-l-m.md
+            - name: "Обработчики сообщений WM_. N\_— O"
+              href: reference/wm-message-handlers-n-o.md
+            - name: "Сообщения WM_. P\_— R"
+              href: reference/wm-messages-p-r.md
+            - name: Сообщения WM_. S
+              href: reference/wm-messages-s.md
+            - name: "Сообщения WM_. T\_— Z"
+              href: reference/wm-messages-t-z.md
+            - name: Определяемые пользователем обработчики
+              href: reference/user-defined-handlers.md
+- name: Мастеры и диалоговые окна MFC
+  expanded: false
+  items:
+    - name: Мастеры и диалоговые окна MFC
+      href: reference/mfc-wizards-and-dialog-boxes.md
+    - name: Создание проекта библиотеки DLL MFC
+      expanded: false
+      items:
+        - name: Создание проекта библиотеки DLL MFC
+          href: reference/creating-an-mfc-dll-project.md
+        - name: Мастер DLL MFC
+          expanded: false
+          items:
+            - name: Мастер DLL MFC
+              href: reference/mfc-dll-wizard.md
+            - name: "Параметры приложения\_— мастер библиотек DLL MFC"
+              href: reference/application-settings-mfc-dll-wizard.md
+        - name: 'Классы и функции, создаваемые мастером MFC DLL'
+          href: reference/classes-and-functions-generated-by-the-mfc-dll-wizard.md
+    - name: Создание приложения MFC
+      expanded: false
+      items:
+        - name: Создание приложения MFC
+          href: reference/creating-an-mfc-application.md
+        - name: Мастер приложений MFC
+          expanded: false
+          items:
+            - name: Мастер приложений MFC
+              href: reference/mfc-application-wizard.md
+            - name: "Тип приложения\_— мастер приложений MFC"
+              href: reference/application-type-mfc-application-wizard.md
+            - name: "Включение поддержки составных документов\_— мастер приложений MFC"
+              href: reference/compound-document-support-mfc-application-wizard.md
+            - name: "Строки шаблонов документов\_— мастер приложений MFC"
+              href: reference/document-template-strings-mfc-application-wizard.md
+            - name: "Включение поддержки базы данных\_— мастер приложений MFC"
+              href: reference/database-support-mfc-application-wizard.md
+            - name: "Параметры пользовательского интерфейса\_— мастер приложений MFC"
+              href: reference/user-interface-features-mfc-application-wizard.md
+            - name: "Дополнительные возможности\_— мастер приложений MFC"
+              href: reference/advanced-features-mfc-application-wizard.md
+            - name: "Создаваемые классы\_— мастер приложений MFC"
+              href: reference/generated-classes-mfc-application-wizard.md
+        - name: Создание приложений MFC на основе форм
+          href: reference/creating-a-forms-based-mfc-application.md
+        - name: Создание приложения MFC в стиле проводника
+          href: reference/creating-a-file-explorer-style-mfc-application.md
+        - name: Создание приложения MFC в стиле браузера
+          href: reference/creating-a-web-browser-style-mfc-application.md
+    - name: Создание контейнеров элементов ActiveX MFC
+      href: reference/creating-an-mfc-activex-control-container.md
+    - name: Создание элемента ActiveX MFC
+      expanded: false
+      items:
+        - name: Создание элемента ActiveX MFC
+          href: reference/creating-an-mfc-activex-control.md
+        - name: Мастер элементов MFC ActiveX
+          expanded: false
+          items:
+            - name: Мастер элементов MFC ActiveX
+              href: reference/mfc-activex-control-wizard.md
+            - name: "Параметры приложения\_— мастер элементов ActiveX MFC"
+              href: reference/application-settings-mfc-activex-control-wizard.md
+            - name: "Имена элементов управления\_— мастер элементов ActiveX MFC"
+              href: reference/control-names-mfc-activex-control-wizard.md
+            - name: "Параметры элемента управления\_— мастер элементов ActiveX MFC"
+              href: reference/control-settings-mfc-activex-control-wizard.md
+    - name: Добавление класса MFC
+      expanded: false
+      items:
+        - name: Добавление класса MFC
+          href: reference/adding-an-mfc-class.md
+        - name: Мастер добавления классов MFC
+          expanded: false
+          items:
+            - name: Мастер добавления классов MFC
+              href: reference/mfc-add-class-wizard.md
+            - name: "Строки шаблонов документов\_— мастер добавления классов MFC"
+              href: reference/document-template-strings-mfc-add-class-wizard.md
+    - name: Добавление класса MFC из библиотеки типов
+      expanded: false
+      items:
+        - name: Добавление класса MFC из библиотеки типов
+          href: reference/adding-an-mfc-class-from-a-type-library.md
+        - name: Мастер добавления классов из TypeLib
+          href: reference/add-class-from-typelib-wizard.md
+    - name: Добавление обработчика сообщения MFC
+      expanded: false
+      items:
+        - name: Добавление обработчика сообщения MFC
+          href: reference/adding-an-mfc-message-handler.md
+        - name: Сопоставление сообщений с функциями
+          expanded: false
+          items:
+            - name: Сопоставление сообщений с функциями
+              href: reference/mapping-messages-to-functions.md
+            - name: 'Типы сообщений, связанные с объектами пользовательского интерфейса'
+              href: reference/message-types-associated-with-user-interface-objects.md
+            - name: Редактирование обработчика сообщений
+              href: reference/editing-a-message-handler.md
+            - name: Определение обработчика сообщений для отраженного сообщения
+              href: reference/defining-a-message-handler-for-a-reflected-message.md
+            - name: Объявление переменной на основании нового класса элемента управления
+              href: reference/declaring-a-variable-based-on-your-new-control-class.md
+    - name: Добавление потребителя ODBC MFC
+      expanded: false
+      items:
+        - name: Добавление потребителя ODBC MFC
+          href: reference/adding-an-mfc-odbc-consumer.md
+        - name: Мастер потребителя ODBC MFC
+          href: reference/mfc-odbc-consumer-wizard.md
+    - name: Включение поддержки ATL в проекте MFC
+      expanded: false
+      items:
+        - name: Включение поддержки ATL в проекте MFC
+          href: reference/adding-atl-support-to-your-mfc-project.md
+        - name: Общие сведения о добавлении поддержки ATL мастером ATL
+          href: reference/details-of-atl-support-added-by-the-atl-wizard.md
+    - name: Мастер классов MFC
+      href: reference/mfc-class-wizard.md
