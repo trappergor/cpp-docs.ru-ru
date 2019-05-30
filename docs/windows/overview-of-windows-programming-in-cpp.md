@@ -2,12 +2,12 @@
 title: Общие сведения о программировании на C++ в Windows
 ms.date: 05/06/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 957e3565ad4caa12da5e7d10915ca159d00954b8
-ms.sourcegitcommit: 79e985d3c6e8ccaf94f6e641972887cae8c6eeb0
+ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
+ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66197741"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66355568"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Общие сведения о программировании на C++ в Windows
 
@@ -101,7 +101,7 @@ Visual Studio включает многофункциональный отлад
 |[Мастер классических приложений Windows](windows-desktop-wizard.md)|Используйте мастер для создания новых проектов Windows.|
 |[Библиотека шаблонных классов (ATL)](../atl/atl-com-desktop-components.md)|Используйте библиотеку ATL для создания COM-компонентов в C++.|
 |[Microsoft Foundation Classes (MFC)](../mfc/mfc-desktop-applications.md)|Использование MFC для создания больших или маленьких приложений Windows с помощью диалоговых окон и элементов управления|
-|[ATL и общие классы MFC](../atl-mfc-shared/TOC.md)|Используйте, например CString общие классы ATL и MFC.|
+|[ATL и общие классы MFC](../atl-mfc-shared/atl-mfc-shared-classes.md)|Используйте, например CString общие классы ATL и MFC.|
 |[Доступ к данным](../data/data-access-in-cpp.md)| OLE DB и ODBC|
 |[Текст и строки](../text/text-and-strings-in-visual-cpp.md)|Различных типов строк на Windows.|
 |[Ресурсы для создания игры с использованием DirectX](resources-for-creating-a-game-using-directx.md)
