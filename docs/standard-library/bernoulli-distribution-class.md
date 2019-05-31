@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: b5ddbadea4d16d7a76df332074ec5c80fae57eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414130"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450861"
 ---
 # <a name="bernoullidistribution-class"></a>Класс bernoulli_distribution
 
@@ -90,7 +90,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](http://go.microsoft.com/fwlink/p/?linkid=398467).
+Дополнительные сведения о дискретной функции вероятности распределения Бернулли см. в статье [Распределение Бернулли](https://go.microsoft.com/fwlink/p/?linkid=398467).
 
 ## <a name="example"></a>Пример
 

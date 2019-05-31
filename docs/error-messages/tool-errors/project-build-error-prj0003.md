@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 00d101e62d49078ebfcfff9455497f30224b84fe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e30a63ba48434196478b52283880864d3e4ae6ea
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62359700"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450756"
 ---
 # <a name="project-build-error-prj0003"></a>Ошибка построения проекта PRJ0003
 
@@ -21,7 +21,7 @@ ms.locfileid: "62359700"
 
 Возможные причины этой ошибки включают:
 
-- Сервер ATL зависит ваш проект. Начиная с Visual Studio 2008, сервера ATL больше не входит в состав Visual Studio, но была выпущена в виде исходного проекта на сайте CodePlex. Чтобы загрузить исходный код ATL-сервера и средства, перейдите к [библиотеки ATL Server и средств](http://go.microsoft.com/fwlink/p/?linkid=81979).
+- Сервер ATL зависит ваш проект. Начиная с Visual Studio 2008, сервера ATL больше не входит в состав Visual Studio, но была выпущена в виде исходного проекта на сайте CodePlex. Чтобы загрузить исходный код ATL-сервера и средства, перейдите к [библиотеки ATL Server и средств](https://go.microsoft.com/fwlink/p/?linkid=81979).
 
 - Нехватка системных ресурсов. Закройте некоторые приложения, чтобы устранить эту проблему.
 

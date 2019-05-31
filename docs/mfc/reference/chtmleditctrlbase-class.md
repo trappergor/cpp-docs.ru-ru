@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: a3c90f4b75b79dc51091c87a5a84b5c59a70646f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a336804889a3ad10818ff0883c55f9141f9e210d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375825"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450274"
 ---
 # <a name="chtmleditctrlbase-class"></a>Класс CHtmlEditCtrlBase
 
@@ -1700,7 +1700,7 @@ long QueryStatus(long cmdID) const;
 ### <a name="parameters"></a>Параметры
 
 *cmdID*<br/>
-Идентификатор команды. Идентификаторы команд, взяты из CGID_MSHTML группы команд. Эти команды определены в Mshtmcid.h. Также можно найти в списке online [идентификаторы команд MSHTML](http://go.microsoft.com/fwlink/p/?linkid=149220).
+Идентификатор команды. Идентификаторы команд, взяты из CGID_MSHTML группы команд. Эти команды определены в Mshtmcid.h. Также можно найти в списке online [идентификаторы команд MSHTML](https://go.microsoft.com/fwlink/p/?linkid=149220).
 
 ### <a name="return-value"></a>Возвращаемое значение
 

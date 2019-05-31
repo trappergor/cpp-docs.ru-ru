@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 2f2bec446fcec522857b4c05a34311e6c26c9b75
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d3fb5c601d9534215a46594884be5d168fe0aa
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62270893"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449544"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (Исключение повторяющихся строк)
 
@@ -50,11 +50,11 @@ char *t = "This is a character buffer";
 > [!NOTE]
 >  **/GF** параметр компилятора создает адресуемый раздел для каждого уникальную строку. И по умолчанию объектный файл может содержать до 65 536 адресуемых секций. Если программа содержит более 65 536 строк, используйте [/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md) параметр компилятора, чтобы создать дополнительные разделы.
 
-**/GF** вступает в силу, когда [/O1](o1-o2-minimize-size-maximize-speed.md) или **/O2** используется.
+**/GF** вступает в силу, когда [/O1](o1-o2-minimize-size-maximize-speed.md) или [/O2](o1-o2-minimize-size-maximize-speed.md) используется.
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 

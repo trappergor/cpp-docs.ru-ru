@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nochkclr.obj
 - LNK2019
 - _check_commonlanguageruntime_version
-ms.openlocfilehash: 0ef0bfd565b8c76816cc1f8a20b1521da238cdfc
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: eb28ff3673c054b8ac1876d8ba736ceddfa5fd1a
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447708"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449610"
 ---
 # <a name="linker-tools-error-lnk2019"></a>Ошибка средств компоновщика LNK2019
 
@@ -213,9 +213,9 @@ int main() {
 }
 ```
 
-Чтобы устранить эту ошибку, измените `unsigned short` для `wchar_t` или `WCHAR`, или выполните компиляцию с помощью LNK2019g.cpp **/Zc:wchar_t-**.
+Чтобы устранить эту ошибку, измените `unsigned short` для `wchar_t` или `WCHAR`, или выполните компиляцию с помощью LNK2019g.cpp **/Zc:wchar_t-** .
 
 ## <a name="additional-resources"></a>Дополнительные ресурсы
 
-Дополнительные сведения о возможных причинах проблем и решениях для LNK2001, см. в разделе по вопросу переполнения стека [что представляет ошибка неопределенной ссылки или неразрешенного внешнего символа и как ее устранить?](http://stackoverflow.com/q/12573816/2002113).
+Дополнительные сведения о возможных причинах проблем и решениях для LNK2001, см. в разделе по вопросу переполнения стека [что представляет ошибка неопределенной ссылки или неразрешенного внешнего символа и как ее устранить?](https://stackoverflow.com/q/12573816/2002113).
 

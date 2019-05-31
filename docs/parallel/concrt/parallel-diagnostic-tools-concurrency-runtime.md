@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 182171bfcfbaf1476cc25fe3160114bc1d96ca7e
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346318"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449249"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>Средства диагностики параллельного выполнения (среда выполнения с параллелизмом)
 
@@ -27,7 +27,7 @@ Visual Studio предоставляет расширенную поддержк
 
 Среда выполнения с параллелизмом использует [трассировки событий для Windows](/windows/desktop/ETW/event-tracing-portal) (ETW), чтобы уведомлять средства инструментирования, такие как средства профилирования, при возникновении различных событий. Эти события: при активации или отключении планировщика, контекст начинается, завершается, блокирует, разблокирует или возвращает, или когда параллельный алгоритм начинается или заканчивается.
 
-Средства, такие как [визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) с помощью этой функции; таким образом, вы обычно нет необходимости работать непосредственно с этими событиями. Тем не менее, эти события полезны при разработке пользовательского профилировщика или при использовании средств трассировки событий, таких как [Xperf](http://go.microsoft.com/fwlink/p/?linkid=160628).
+Средства, такие как [визуализатор параллелизма](/visualstudio/profiling/concurrency-visualizer) с помощью этой функции; таким образом, вы обычно нет необходимости работать непосредственно с этими событиями. Тем не менее, эти события полезны при разработке пользовательского профилировщика или при использовании средств трассировки событий, таких как [Xperf](https://go.microsoft.com/fwlink/p/?linkid=160628).
 
 Среда выполнения с параллелизмом создает эти события только в том случае, если трассировка включена. Вызовите [concurrency::EnableTracing](reference/concurrency-namespace-functions.md#enabletracing) функции, чтобы включить трассировку событий и [concurrency::DisableTracing](reference/concurrency-namespace-functions.md#disabletracing) функцию отключения трассировки.
 
