@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 92226d8db9fa87ce829ae96b4802ad2f45bc3e54
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414000"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450182"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>Создание асинхронных операций в C++ для приложений универсальной платформы Windows
 
@@ -126,7 +126,7 @@ ms.locfileid: "62414000"
 
 ![Приложение Primes для среды выполнения Windows](../../parallel/concrt/media/concrt_windows_primes.png "приложение Primes для среды выполнения Windows")
 
-Дополнительную информацию о примерах, которые применяют `create_async` для создания асинхронных задач, которые могут использоваться другими языками, см. в разделе [Использование C++ в примере Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) и [Асинхронные операции в Windows 8 в C++ с PPL](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+Дополнительную информацию о примерах, которые применяют `create_async` для создания асинхронных задач, которые могут использоваться другими языками, см. в разделе [Использование C++ в примере Bing Maps Trip Optimizer](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) и [Асинхронные операции в Windows 8 в C++ с PPL](https://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
 
 ##  <a name="exethread"></a> Управление потоком выполнения
 

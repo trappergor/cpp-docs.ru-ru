@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadata
 ms.assetid: bcfb4901-411e-4c9e-9f78-23028b6e5fcc
-ms.openlocfilehash: 93db20d14d3477734e35d33111246f9459310b90
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 45d6492c87b7543a54d031f02dcf09e319150131
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62317163"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449721"
 ---
 # <a name="winmd-generate-windows-metadata"></a>/WINMD (создавать метаданные Windows)
 
 Включает создание файла метаданных среды выполнения Windows (.winmd).
 
-> **/ WINMD**\[**:**{**НЕТ**\|**ТОЛЬКО**}]
+> **/ WINMD**\[ **:** {**НЕТ**\|**ТОЛЬКО**}]
 
 ## <a name="arguments"></a>Аргументы
 
@@ -30,13 +30,13 @@ ms.locfileid: "62317163"
 
 ## <a name="remarks"></a>Примечания
 
-**/WINMD** параметр компоновщика используется для приложений универсальной платформы Windows и компонентов среды выполнения Windows для создания файла метаданных (с расширением winmd) среды выполнения Windows. Winmd-файл представляет собой библиотеку DLL, содержащую метаданные для типов среды выполнения Windows, а в случае компонентов среды выполнения, реализации этих типов. Порядок импорта метаданных [ECMA-335](http://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
+**/WINMD** параметр компоновщика используется для приложений универсальной платформы Windows и компонентов среды выполнения Windows для создания файла метаданных (с расширением winmd) среды выполнения Windows. Winmd-файл представляет собой библиотеку DLL, содержащую метаданные для типов среды выполнения Windows, а в случае компонентов среды выполнения, реализации этих типов. Порядок импорта метаданных [ECMA-335](https://www.ecma-international.org/publications/standards/Ecma-335.htm) standard.
 
 По умолчанию имя выходного файла имеет форму *binaryname*.winmd. Чтобы указать другое имя файла, используйте [/WINMDFILE](winmdfile-specify-winmd-file.md) параметр.
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Задание данного параметра компоновщика в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** > **метаданных Windows** страницу свойств.
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eee045e198f61c088e302c40deb2de406adab428
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62239141"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449716"
 ---
 # <a name="mfc-internet-programming-basics"></a>Основы программирования для интернет-решений MFC
 
@@ -70,11 +70,11 @@ MFC предоставляет классы, поддерживающие про
 
 ##  <a name="_core_web_sites_for_more_information"></a> Веб-сайтов Дополнительные сведения
 
-Дополнительные сведения о технологии Microsoft Internet см. в разделе [Microsoft Developer Network (MSDN)](http://go.microsoft.com/fwlink/p/?linkid=56322) веб-сайта. (Ссылки могут изменяться без уведомления).
+Дополнительные сведения о технологии Microsoft Internet см. в разделе [Microsoft Developer Network (MSDN)](https://go.microsoft.com/fwlink/p/?linkid=56322) веб-сайта. (Ссылки могут изменяться без уведомления).
 
 Этот веб-сайт для разработчиков, содержит сведения об использовании средства разработки Майкрософт и технологий и Важнейшие материалы о недавно прошедшие и предстоящие конференциях. На этой странице можно перейти к многие дополнительные сайты для разработчиков, включая .NET, а также центры разработчиков XML. Можно также загрузить бета-версии SDK и примеры.
 
-[World Wide Web Consortium (W3C)](http://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других веб-технологий.
+[World Wide Web Consortium (W3C)](https://go.microsoft.com/fwlink/p/?linkid=37125) публикует спецификации для HTML, HTTP, CGI и других веб-технологий.
 
 ##  <a name="_core_more_internet_help"></a> Дополнительная помощь по Интернету
 

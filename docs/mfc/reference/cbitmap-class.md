@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60086c428166bd021095ec6fe2c52d031b335d81
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388453"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450032"
 ---
 # <a name="cbitmap-class"></a>Класс CBitmap
 
@@ -408,7 +408,7 @@ BOOL LoadMappedBitmap(
 
 По умолчанию `LoadMappedBitmap` сопоставит цветов, обычно используемых в кнопку глифов.
 
-Сведения о создании сопоставленной точечного рисунка, см. в разделе Windows функция [CreateMappedBitmap](http://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) структуры в пакете Windows SDK.
+Сведения о создании сопоставленной точечного рисунка, см. в разделе Windows функция [CreateMappedBitmap](https://go.microsoft.com/fwlink/p/?linkid=230562) и [COLORMAP](/windows/desktop/api/commctrl/ns-commctrl-_colormap) структуры в пакете Windows SDK.
 
 ##  <a name="loadoembitmap"></a>  CBitmap::LoadOEMBitmap
 

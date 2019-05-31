@@ -2,12 +2,12 @@
 title: Автоматическая параллелизация и автоматическая векторизация
 ms.date: 11/04/2016
 ms.assetid: ec71583a-287b-4599-8767-1d255e080fe3
-ms.openlocfilehash: 018289bc9499aee8d1739ebeed0c1cb847769a08
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ff908d1c7d45c8f757b8efe29f4f392102dc61d
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236703"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450236"
 ---
 # <a name="auto-parallelization-and-auto-vectorization"></a>Автоматическая параллелизация и автоматическая векторизация
 
@@ -107,12 +107,12 @@ for (int i = 0; i < 1000; ++i)
 
 Дополнительные сведения о кодах причин и сообщениях см. в разделе [сообщения Векторизатора и Параллелизатора](../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md).
 
-Пример, показывающий, как векторизатор работает на практике, см. в разделе [проекта Остин часть 2 из 6: Страница Curling](http://blogs.msdn.com/b/vcblog/archive/2012/09/27/10348494.aspx)
+Пример, показывающий, как векторизатор работает на практике, см. в разделе [проекта Остин часть 2 из 6: Страница Curling](https://devblogs.microsoft.com/cppblog/project-austin-part-2-of-6-page-curling/)
 
 ## <a name="see-also"></a>См. также
 
 [loop](../preprocessor/loop.md)<br/>
-[Параллельное программирование в машинном коде](http://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
+[Параллельное программирование в машинном коде](https://go.microsoft.com/fwlink/p/?linkid=263662)<br/>
 [/Qpar (автоматический параллелизатор)](../build/reference/qpar-auto-parallelizer.md)<br/>
 [/Qpar/report (уровень отчетности автоматического параллелизатора)](../build/reference/qpar-report-auto-parallelizer-reporting-level.md)<br/>
 [/Qvec/report (уровень отчетности автоматического векторизатора)](../build/reference/qvec-report-auto-vectorizer-reporting-level.md)<br/>

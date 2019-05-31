@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: 6f7b70dcbee639bdd44a195709bddde9e06dee21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fa64e2536fd1697e839f1b4921a290e1b7a30a35
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62414013"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449692"
 ---
 # <a name="concurrency-runtime"></a>Среда выполнения с параллелизмом
 
@@ -63,7 +63,7 @@ ms.locfileid: "62414013"
 |-|-|
 |[Создание асинхронных операций на C++ для приложений UWP](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)|Здесь описываются некоторые ключевые аспекты, которые следует помнить при использовании среды выполнения с параллелизмом для создания асинхронных операций в приложении UWP.|
 |[Пошаговое руководство: Подключение с использованием задач и HTTP-запросов XML](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)|Показано, как объединить задачи PPL с `IXMLHTTPRequest2` и `IXMLHTTPRequest2Callback` интерфейсы для отправки запросов HTTP GET и POST веб-службы в приложении UWP.|
-|[Примеры приложений для среды выполнения Windows](http://code.msdn.microsoft.com/windowsapps)|Содержит загружаемые примеры кода и демонстрации приложений для Windows 8.x. Примеры на C++ используют функции исполняющей среды с параллелизмом, например задачи PPL, для обработки данных в фоновом режиме с целью сохранения пользовательского интерфейса в откликающемся состоянии.|
+|[Примеры приложений для среды выполнения Windows](https://code.msdn.microsoft.com/windowsapps)|Содержит загружаемые примеры кода и демонстрации приложений для Windows 8.x. Примеры на C++ используют функции исполняющей среды с параллелизмом, например задачи PPL, для обработки данных в фоновом режиме с целью сохранения пользовательского интерфейса в откликающемся состоянии.|
 
 ## <a name="dataflow-programming-in-the-asynchronous-agents-library"></a>Программирование потоков данных в библиотеке асинхронных агентов
 
@@ -99,8 +99,8 @@ ms.locfileid: "62414013"
 |||
 |-|-|
 |[Шаблоны асинхронного программирования и советы по Hilo (приложения Магазина Windows на C++ и XAML)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|Узнайте, как мы использовали среды выполнения с параллелизмом для реализации асинхронных операций в Hilo, приложении среды выполнения Windows на C++ и XAML.|
-|[Блог Parallel Programming in Native Code](http://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|
-|[Форум Parallel Computing in C++ and Native Code](http://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|
+|[Блог Parallel Programming in Native Code](https://go.microsoft.com/fwlink/p/?linkid=183873)|Содержит дополнительные подробные статьи о параллельном программировании в среде выполнения с параллелизмом.|
+|[Форум Parallel Computing in C++ and Native Code](https://go.microsoft.com/fwlink/p/?linkid=183874)|Позволяет участвовать в обсуждениях сообщества о среде выполнения с параллелизмом.|
 |[Параллельное программирование](/dotnet/standard/parallel-programming/index)|Содержит сведения о модель параллельного программирования, который доступен в .NET Framework.|
 
 ## <a name="see-also"></a>См. также

@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: b419869785e9b6c2086ec6614363af3a3e12cb50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371573"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451242"
 ---
 # <a name="exponentialdistribution-class"></a>Класс exponential_distribution
 
@@ -88,7 +88,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения об экспоненциальном распределении см. в статье [Экспоненциальное распределение](http://go.microsoft.com/fwlink/p/?linkid=401098) на веб-сайте Wolfram MathWorld.
+Дополнительные сведения об экспоненциальном распределении см. в статье [Экспоненциальное распределение](https://go.microsoft.com/fwlink/p/?linkid=401098) на веб-сайте Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 

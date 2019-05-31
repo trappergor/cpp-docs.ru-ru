@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 258266768d3f456fb761a9d5a403a92c502dbe32
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4098a1467b0f81b5f66a2e45a4bb2138e8c1c262
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62349909"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449946"
 ---
 # <a name="c-amp-overview"></a>Общие сведения о C++ AMP
 
@@ -431,7 +431,7 @@ for (int i = 0; i <4; i++) {
 
 ## <a name="math-libraries"></a>Математические библиотеки
 
-C++ AMP включает в себя две математические библиотеки. Библиотека двойной точности в [пространство имен Concurrency::precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) обеспечивает поддержку функций двойной точности. Он также предоставляет поддержку для функций одиночной точности, несмотря на то, что по-прежнему необходима поддержка двойной точности на оборудовании. Он соответствует [спецификации C99 (ISO/IEC 9899)](http://go.microsoft.com/fwlink/p/?linkid=225887). Ускоритель должен полностью поддерживать двойную точность. Можно определить путем проверки значения [элемент данных accelerator::supports_double_precision](reference/accelerator-class.md#supports_double_precision). Быстрая математическая библиотека в [пространство имен Concurrency::fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), содержит другой набор математических функций. Эти функции, которые поддерживают только `float` операндов, выполняются быстрее, но не с такой точностью, что и в библиотеке математики двойной точности. Функции содержатся в \<amp_math.h > файл заголовка и все объявлены с `restrict(amp)`. Функции в \<cmath > импортированы в файле заголовка `fast_math` и `precise_math` пространства имен. **Ограничить** ключевое слово используется для различения \<cmath > версию и C++ AMP. В следующем коде вычисляется логарифм по основанию 10, используя быстрый метод для каждого значения, которое находится в домене вычислений.
+C++ AMP включает в себя две математические библиотеки. Библиотека двойной точности в [пространство имен Concurrency::precise_math](../../parallel/amp/reference/concurrency-precise-math-namespace.md) обеспечивает поддержку функций двойной точности. Он также предоставляет поддержку для функций одиночной точности, несмотря на то, что по-прежнему необходима поддержка двойной точности на оборудовании. Он соответствует [спецификации C99 (ISO/IEC 9899)](https://go.microsoft.com/fwlink/p/?linkid=225887). Ускоритель должен полностью поддерживать двойную точность. Можно определить путем проверки значения [элемент данных accelerator::supports_double_precision](reference/accelerator-class.md#supports_double_precision). Быстрая математическая библиотека в [пространство имен Concurrency::fast_math](../../parallel/amp/reference/concurrency-fast-math-namespace.md), содержит другой набор математических функций. Эти функции, которые поддерживают только `float` операндов, выполняются быстрее, но не с такой точностью, что и в библиотеке математики двойной точности. Функции содержатся в \<amp_math.h > файл заголовка и все объявлены с `restrict(amp)`. Функции в \<cmath > импортированы в файле заголовка `fast_math` и `precise_math` пространства имен. **Ограничить** ключевое слово используется для различения \<cmath > версию и C++ AMP. В следующем коде вычисляется логарифм по основанию 10, используя быстрый метод для каждого значения, которое находится в домене вычислений.
 
 ```cpp
 #include <amp.h>
@@ -473,13 +473,13 @@ C++ AMP включает в себя графическую библиотеку
 
 - [Использование C++ AMP в приложениях UWP](../../parallel/amp/using-cpp-amp-in-windows-store-apps.md)
 
-- [Пошаговое руководство: Создание базового компонента среды выполнения Windows в C++ и вызов его из JavaScript](http://go.microsoft.com/fwlink/p/?linkid=249077)
+- [Пошаговое руководство: Создание базового компонента среды выполнения Windows в C++ и вызов его из JavaScript](https://go.microsoft.com/fwlink/p/?linkid=249077)
 
-- [Bing Maps Trip Optimizer в приложение Store окно в JavaScript и C++](http://go.microsoft.com/fwlink/p/?linkid=249078)
+- [Bing Maps Trip Optimizer в приложение Store окно в JavaScript и C++](https://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Как использовать C++ AMP из C# с помощью среды выполнения Windows](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Как использовать C++ AMP из C# с помощью среды выполнения Windows](https://go.microsoft.com/fwlink/p/?linkid=249080)
 
-- [Как использовать C++ AMP из C#](http://go.microsoft.com/fwlink/p/?linkid=249081)
+- [Как использовать C++ AMP из C#](https://go.microsoft.com/fwlink/p/?linkid=249081)
 
 - [Вызов неуправляемых функций из управляемого кода](../../dotnet/calling-native-functions-from-managed-code.md)
 
@@ -508,4 +508,4 @@ C++ AMP включает в себя графическую библиотеку
 [C++ AMP (C++ Accelerated Massive Parallelism)](../../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)<br/>
 [Синтаксис лямбда-выражений](../../cpp/lambda-expression-syntax.md)<br/>
 [Справочник (C++ AMP)](../../parallel/amp/reference/reference-cpp-amp.md)<br/>
-[Параллельное программирование в блоге машинного кода](http://go.microsoft.com/fwlink/p/?linkid=238472)
+[Параллельное программирование в блоге машинного кода](https://go.microsoft.com/fwlink/p/?linkid=238472)

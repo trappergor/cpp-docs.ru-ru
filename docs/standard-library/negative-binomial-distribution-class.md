@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::negative_binomial_distribution [C++], param_type
 - std::negative_binomial_distribution [C++], param_type
 ms.assetid: 7f5f0967-7fdd-4578-99d4-88f292b4fe9c
-ms.openlocfilehash: a2cc6479c9da3b51c28e5408eb44ff1d02b97023
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8f6552d9f9b0b34b1cb721e726c95845210c8bb9
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62223679"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449268"
 ---
 # <a name="negativebinomialdistribution-class"></a>Класс negative_binomial_distribution
 
@@ -95,7 +95,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Подробные сведения о отрицательное биномиальное распределение дискретной функции вероятности см. в статье в Wolfram mathworld [отрицательное биномиальное распределение](http://go.microsoft.com/fwlink/p/?linkid=400516).
+Подробные сведения о отрицательное биномиальное распределение дискретной функции вероятности см. в статье в Wolfram mathworld [отрицательное биномиальное распределение](https://go.microsoft.com/fwlink/p/?linkid=400516).
 
 ## <a name="example"></a>Пример
 

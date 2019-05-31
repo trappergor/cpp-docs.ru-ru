@@ -8,17 +8,17 @@ helpviewer_keywords:
 - file redistribution [C++]
 - redistributing applications [C++], about redistributing applications
 ms.assetid: d201b2ce-36f1-44e5-a96c-0db81a1ba652
-ms.openlocfilehash: 2bf4297a6c61d16c68d6a9cb893aed78b9d7609d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b64fac7086dcc22199ca359a163074b967c56f95
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388167"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450619"
 ---
 # <a name="redistributing-visual-c-files"></a>Распространение файлов Visual C++
 
 > [!NOTE]
-> Вы попали сюда, так хотите скачать один из файлов среды выполнения Visual C++? Перейдите к [веб-сайте Майкрософт](http://www.microsoft.com/) и введите **распространяемый компонент Visual C++** в поле поиска. Скачайте и установите распространяемый пакет для архитектуры своего компьютера (например, x64, если у вас 64-разрядная версия Windows) и нужную версию Visual C++ (например, 2015).
+> Вы попали сюда, так хотите скачать один из файлов среды выполнения Visual C++? Перейдите к [веб-сайте Майкрософт](https://www.microsoft.com/) и введите **распространяемый компонент Visual C++** в поле поиска. Скачайте и установите распространяемый пакет для архитектуры своего компьютера (например, x64, если у вас 64-разрядная версия Windows) и нужную версию Visual C++ (например, 2015).
 
 При развертывании приложения необходимо также развернуть файлы, поддерживающие это приложение. Если какие-либо из этих файлов предоставляются Майкрософт, убедитесь в наличии разрешений на их повторное распространение. Чтобы просмотреть условия лицензионного соглашения для Visual Studio, воспользуйтесь ссылкой "Условия лицензии" в диалоговом окне "О Microsoft Visual Studio" в интегрированной среде разработки или скачайте файл [Условия лицензионного соглашения на использование программного обеспечения корпорации Майкрософт](https://visualstudio.microsoft.com/license-terms/mlt687465/). Для просмотра "списка REDIST", на который ссылается раздел "Распространяемый код" условий лицензионного соглашения на использование программного обеспечения корпорации Майкрософт для некоторых выпусков Visual Studio, см. раздел [Распространяемый код для Microsoft Visual Studio 2017 и Microsoft Visual Studio 2017 SDK (включает служебные программы и файлы BuildServer)](/visualstudio/productinfo/2017-redistribution-vs), а для Visual Studio 2015 см. раздел [Распространяемый код для Microsoft Visual Studio 2015 и Microsoft Visual Studio 2015 SDK](/visualstudio/productinfo/2015-redistribution-vs). Дополнительные сведения о повторно распространяемых файлах см. в разделах [Определение библиотек DLL для распространения](determining-which-dlls-to-redistribute.md) и [Примеры развертывания](deployment-examples.md).
 

@@ -1931,22 +1931,22 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: 8590f6ac056bf561960f9c02ff4a4cc6a4d3bfa0
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: 0f63112f04da317371c15e1fd6ba22fc7e2bd6e1
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65447717"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450784"
 ---
 # <a name="arm-intrinsics"></a>Встроенные объекты ARM
 
-Microsoft C++ компилятор (MSVC) доступны следующие встроенные функции на основе архитектуры ARM. Дополнительные сведения о ARM см. в разделе [справочных руководствах по архитектуре ARM](http://go.microsoft.com/fwlink/p/?LinkId=522049) и [руководство по средствам ассемблера ARM](http://go.microsoft.com/fwlink/p/?LinkId=246102) на веб-сайте справочного центра ARM.
+Microsoft C++ компилятор (MSVC) доступны следующие встроенные функции на основе архитектуры ARM. Дополнительные сведения о ARM см. в разделе [справочных руководствах по архитектуре ARM](https://go.microsoft.com/fwlink/p/?LinkId=522049) и [руководство по средствам ассемблера ARM](https://go.microsoft.com/fwlink/p/?LinkId=246102) на веб-сайте справочного центра ARM.
 
 ##  <a name="top"></a> NEON
 
 Расширения набора векторных инструкций NEON для ARM предоставляют возможности Single Instruction Multiple Data (SIMD), которые опираются на векторные наборы инструкций в MMX и SSE, являющиеся общими для процессоров архитектуры x86 и x 64.
 
-Встроенные функции NEON поддерживаются, как указано в файле заголовка `arm_neon.h`. Поддержка встроенных функций NEON MSVC напоминает компилятора ARM, который описан в приложении G [цепочка инструментов компилятора ARM, версия 4.1 компилятора ссылку](http://go.microsoft.com/fwlink/p/?LinkId=251083) на веб-сайте справочного центра ARM.
+Встроенные функции NEON поддерживаются, как указано в файле заголовка `arm_neon.h`. Поддержка встроенных функций NEON MSVC напоминает компилятора ARM, который описан в приложении G [цепочка инструментов компилятора ARM, версия 4.1 компилятора ссылку](https://go.microsoft.com/fwlink/p/?LinkId=251083) на веб-сайте справочного центра ARM.
 
 Основное различие между MSVC и компилятором ARM — что MSVC добавляет `_ex` разновидности `vldX` и `vstX` vector загрузки и сохранения инструкции. Варианты `_ex` получают дополнительный параметр, определяющий выравнивание аргумента указателя, а все другие идентичны аналогичным не -`_ex`.
 
@@ -2180,7 +2180,7 @@ __iso_volatile_store32(p, a);        // equivalent to: *(volatile __int32*)p = a
 
 ###  <a name="MoveFromCo"></a> _MoveFromCoprocessor, _MoveFromCoprocessor2
 
-Следующие встроенные функции считывают данных  из сопроцессора ARM с помощью инструкций передачи данных сопроцессора. 
+Следующие встроенные функции считывают данных  из сопроцессора ARM с помощью инструкций передачи данных сопроцессора.
 
 ```
 int _MoveFromCoprocessor(

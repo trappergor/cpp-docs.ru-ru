@@ -2,12 +2,12 @@
 title: Настройка программ для Windows XP
 ms.date: 05/16/2019
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 6c94c6a66d0f22b8707012856a65df4b19965acb
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 55753737b4868f33487ed980eaf37a8801f59638
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837136"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450701"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Настройка программ для Windows XP
 
@@ -69,4 +69,4 @@ Visual Studio 2019 и более поздних версий не поддерж
 
 - **Сборка HLSL**
 
-   По умолчанию набор инструментов Windows XP не компилирует файлы с исходным кодом HLSL. Для компиляции файлов HLSL загрузите и установите пакет SDK DirectX за июнь 2010 года, а затем включите его в каталоги VC проекта. Дополнительные сведения см. в разделе "Пакет SDK DirectX не регистрирует пути включения и пути к библиотекам в Visual Studio 2010" на [странице загрузки пакета SDK DirectX за июнь 2010 года](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
+   По умолчанию набор инструментов Windows XP не компилирует файлы с исходным кодом HLSL. Для компиляции файлов HLSL загрузите и установите пакет SDK DirectX за июнь 2010 года, а затем включите его в каталоги VC проекта. Дополнительные сведения см. в разделе "Пакет SDK DirectX не регистрирует пути включения и пути к библиотекам в Visual Studio 2010" на [странице загрузки пакета SDK DirectX за июнь 2010 года](https://www.microsoft.com/download/details.aspx?displaylang=en&id=6812).
