@@ -298,7 +298,7 @@ virtual void ParseParam(
 
 ### <a name="remarks"></a>Примечания
 
-[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовы `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент *pszParam*. Если первый символ параметра " **-** «или» **/**", он будет удален и *bFlag* имеет значение TRUE. При синтаксическом анализе последний параметр, *bLast* имеет значение TRUE.
+[CWinApp::ParseCommandLine](../../mfc/reference/cwinapp-class.md#parsecommandline) вызовы `ParseParam` один раз для каждого параметра или флаг в командной строке, передав аргумент *pszParam*. Если первый символ параметра " **-** «или» **/** ", он будет удален и *bFlag* имеет значение TRUE. При синтаксическом анализе последний параметр, *bLast* имеет значение TRUE.
 
 Реализация по умолчанию эта функция распознает следующие флаги: `/p`, `/pt`, `/dde`, `/Automation`, и `/Embedding`, как показано в следующей таблице:
 
@@ -314,7 +314,7 @@ virtual void ParseParam(
 |*Приложение* `/Register`<br /><br /> *Приложение* `/Regserver`|Сообщает приложению выполнения задач регистрации.|
 |*Приложение* `/Unregister`<br /><br /> *Приложение* `/Unregserver`|Информирует приложение для выполнения задач, отмены регистрации.|
 
-Эти сведения хранятся в [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), и [m_nShellCommand](#m_nshellcommand). Флаги, помечены либо прямая косая черта " **/**«или дефиса» **-**".
+Эти сведения хранятся в [m_bRunAutomated](#m_brunautomated), [m_bRunEmbedded](#m_brunembedded), и [m_nShellCommand](#m_nshellcommand). Флаги, помечены либо прямая косая черта " **/** «или дефиса» **-** ".
 
 Реализация по умолчанию помещает первый параметр без флага в [m_strFileName](#m_strfilename). В случае использования `/pt` флаг, реализация по умолчанию помещает второй, третий и четвертый параметры без флага в [m_strPrinterName](#m_strprintername), [m_strDriverName](#m_strdrivername), и [m_ strPortName](#m_strportname), соответственно.
 
