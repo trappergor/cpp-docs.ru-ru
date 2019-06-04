@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [MFC], worker threads
 - threading [C++], user input not required
 ms.assetid: 670adbfe-041c-4450-a3ed-be14aab15234
-ms.openlocfilehash: f36e02d1ba6074a7ec8203bea761b3528a120162
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 38757337b1bfe5c7994f9a9f26aad2526aa0279c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212831"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504581"
 ---
 # <a name="multithreading-creating-worker-threads-in-mfc"></a>Реализация многопоточности на языке: Создание рабочих потоков в MFC
 
@@ -43,7 +43,7 @@ ms.locfileid: "62212831"
 
 - (Необязательно) CREATE_SUSPENDED, если необходимо создать в приостановленном состоянии потока. По умолчанию равно 0 или запустите потока в обычном режиме.
 
-- (Необязательно) Желаемые атрибуты безопасности. По умолчанию используется тот же уровень доступа как родительского потока. Дополнительные сведения о формате информации о безопасности см. в разделе [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) в пакете Windows SDK.
+- (Необязательно) Желаемые атрибуты безопасности. По умолчанию используется тот же уровень доступа как родительского потока. Дополнительные сведения о формате информации о безопасности см. в разделе [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) в пакете Windows SDK.
 
 `AfxBeginThread` Создает и инициализирует `CWinThread` объекта, запускает его и возвращает его адрес, чтобы обращаться к нему позже. Проверки выполняются на протяжении процедуры, чтобы убедиться в том, что все объекты, освобожденные должным образом вызывать любую часть создания.
 

@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0b61d38d141392dc85a150ddd2caf50b28146ae7
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62235126"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503175"
 ---
 # <a name="cimage-class"></a>Класс CImage
 
@@ -158,7 +158,7 @@ class CImage
 > [!NOTE]
 > С помощью глобального `CImage` объектов в библиотеке DLL не рекомендуется. Если необходимо использовать глобальную `CImage` объекта в библиотеке DLL, вызов [CImage::ReleaseGDIPlus](#releasegdiplus) явно освободить ресурсы, используемые GDI +.
 
-`CImage` не могут быть выбраны в новую [CDC](../../mfc/reference/cdc-class.md). `CImage` создает свой собственный HDC для образа. Поскольку HBITMAP можно выбрать только в один HDC одновременно, сопоставленный HBITMAP `CImage` не могут быть выбраны в другой HDC. Если вам нужна CDC, получить HDC из `CImage` и передать его [CDC::FromHandle] (.. /.. /MFC/Reference/CDC-Class.md#cdc__fromhandle.
+`CImage` не могут быть выбраны в новую [CDC](../../mfc/reference/cdc-class.md). `CImage` создает свой собственный HDC для образа. Поскольку HBITMAP можно выбрать только в один HDC одновременно, сопоставленный HBITMAP `CImage` не могут быть выбраны в другой HDC. Если вам нужна CDC, получить HDC из `CImage` и присвойте ей для [CDC::FromHandle](../../mfc/reference/cdc-class.md#fromhandle).
 
 ## <a name="example"></a>Пример
 
@@ -480,7 +480,7 @@ BOOL CreateEx(
 - BI_BITFIELDS формат без сжатия и таблицы цветов состоит из трех маски цвет DWORD, определяющие красного, зеленого и синего компонентов, соответственно, каждого пикселя. Это допустимо, при использовании с 16 и 32 bpp точечных рисунков.
 
 *pdwBitfields*<br/>
-Используется, только если *eCompression* задается для BI_BITFIELDS, в противном случае он должен иметь значение NULL. Указатель на массив из трех DWORD битовой маски, указав, какие биты каждого пикселя, используются для красного, зеленого и синего компонентов цвета, соответственно. Сведения об ограничениях для битовые поля, см. в разделе [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете Windows SDK.
+Используется, только если *eCompression* задается для BI_BITFIELDS, в противном случае он должен иметь значение NULL. Указатель на массив из трех DWORD битовой маски, указав, какие биты каждого пикселя, используются для красного, зеленого и синего компонентов цвета, соответственно. Сведения об ограничениях для битовые поля, см. в разделе [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) в пакете Windows SDK.
 
 *dwFlags*<br/>
 Указывает, если объект растровое изображение содержит альфа-канал. Может представлять собой сочетание нуля или более из следующих значений:
@@ -648,7 +648,7 @@ int GetBPP() const throw();
 
 Это значение определяет количество битов, которые определяют каждый пиксель и максимальное число цветов в точечном рисунке.
 
-Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. См. в разделе `biBitCount` членом [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) в пакете SDK для Windows, Дополнительные сведения об этом значении.
+Бит на пиксель, обычно является 1, 4, 8, 16, 24 или 32. См. в разделе `biBitCount` членом [BITMAPINFOHEADER](/previous-versions//dd183376\(v=vs.85\)) в пакете SDK для Windows, Дополнительные сведения об этом значении.
 
 ##  <a name="getcolortable"></a>  CImage::GetColorTable
 

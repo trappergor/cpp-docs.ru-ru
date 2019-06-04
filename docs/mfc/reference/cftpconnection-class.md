@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8940b1d028edc76383470f913ccbe16cb8c0e9f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62181981"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503702"
 ---
 # <a name="cftpconnection-class"></a>Класс CFtpConnection
 
@@ -208,7 +208,7 @@ BOOL CreateDirectory(LPCTSTR pstrDirName);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается ошибкой, функция Windows [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. Если вызов завершается ошибкой, функция Windows [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -246,7 +246,7 @@ BOOL GetCurrentDirectory(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -284,7 +284,7 @@ BOOL GetCurrentDirectoryAsURL(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -344,7 +344,7 @@ BOOL GetFile(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -434,7 +434,7 @@ BOOL PutFile(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -457,7 +457,7 @@ BOOL Remove(LPCTSTR pstrFileName);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -478,7 +478,7 @@ BOOL RemoveDirectory(LPCTSTR pstrDirName);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -506,7 +506,7 @@ BOOL Rename(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -527,7 +527,7 @@ BOOL SetCurrentDirectory(LPCTSTR pstrDirName);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Имеет ненулевое значение в случае успешного выполнения, иначе — 0. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ### <a name="remarks"></a>Примечания
 

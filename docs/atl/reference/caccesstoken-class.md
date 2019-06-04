@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: 0b98df740b751d019c9b2852d682f61a51384818
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce5c29c2399fd47bdb1ad0135257b41617094aa9
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62260731"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503382"
 ---
 # <a name="caccesstoken-class"></a>Класс CAccessToken
 
@@ -246,7 +246,7 @@ bool CreatePrimaryToken(
 Указывает права доступа, запрошенный для нового токена. По умолчанию, MAXIMUM_ALLOWED, запрашивает все права доступа, которые являются допустимыми для вызывающего объекта. См. в разделе [права доступа и масок доступа](/windows/desktop/SecAuthZ/access-rights-and-access-masks) дополнительные права на доступ.
 
 *pTokenAttributes*<br/>
-Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового токена и определяет, могут ли дочерние процессы наследуют маркер. Если *pTokenAttributes* имеет значение NULL, маркер возвращает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структура, которая указывает дескриптор безопасности для нового токена и определяет, могут ли дочерние процессы наследуют маркер. Если *pTokenAttributes* имеет значение NULL, маркер возвращает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -295,10 +295,10 @@ bool CreateProcessAsUser(
 Значение TRUE, если профиль пользователя загружен с [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea).
 
 *pProcessAttributes*<br/>
-Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового процесса и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pProcessAttributes* имеет значение NULL, процесс получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структура, которая указывает дескриптор безопасности для нового процесса и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pProcessAttributes* имеет значение NULL, процесс получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
 *pThreadAttributes*<br/>
-Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, которая указывает дескриптор безопасности для нового потока и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pThreadAttributes* имеет значение NULL, поток получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структура, которая указывает дескриптор безопасности для нового потока и определяет, могут ли дочерние процессы наследуют возвращенный дескриптор. Если *pThreadAttributes* имеет значение NULL, поток получает дескриптор безопасности по умолчанию и не может быть унаследован дескриптор.
 
 *bInherit*<br/>
 Указывает, является ли новый процесс наследует маркеры из вызывающего процесса. Значение TRUE, если каждый наследуемые открытый дескриптор в вызывающий процесс наследуется новый процесс. Унаследованные дескрипторы обладают теми же привилегиями значение и доступа исходные дескрипторы.

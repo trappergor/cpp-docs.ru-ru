@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1d386072b67568ecf58afd0853df2d7fbaeac68d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310442"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504565"
 ---
 # <a name="colecontrolcontainer-class"></a>Класс COleControlContainer
 
@@ -473,7 +473,7 @@ virtual UINT GetDlgItemInt(
 Указатель на логическое переменной, получающей значение успешное завершение или сбой функции (значение TRUE указывает на успешное завершение, значение FALSE указывает на ошибку).
 
 *bSigned*<br/>
-Указывает ли функция изучить текст для знак «минус» в начале и возвращать целое число со знаком, если таковая найдена. Если *bSigned* параметр имеет значение TRUE, указывается, что значение извлекаемого является целое число со знаком, привести возвращаемое значение к **int** типа. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Указывает ли функция изучить текст для знак «минус» в начале и возвращать целое число со знаком, если таковая найдена. Если *bSigned* параметр имеет значение TRUE, указывается, что значение извлекаемого является целое число со знаком, привести возвращаемое значение к **int** типа. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -515,7 +515,7 @@ virtual int GetDlgItemText(
 
 Если функция выполняется успешно, возвращаемое значение указывает количество символов, копируемых в буфер, не включая завершающий нуль-символ.
 
-Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ##  <a name="handlesetfocus"></a>  COleControlContainer::HandleSetFocus
 

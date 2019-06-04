@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 54501e5ff690b855ca65652e76d45b9c6cfb6259
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62206047"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503720"
 ---
 # <a name="cevent-class"></a>Класс CEvent
 
@@ -110,7 +110,7 @@ CEvent(
 Имя объекта `CEvent`. Необходимо указать, если объект будет использоваться через границы процессов. Если имя совпадает с существующего события, конструктор создает новый `CEvent` объект, который ссылается на событие этим именем. Если имя совпадает с существующий объект синхронизации, не является событием, построение завершится ошибкой. Если значение равно NULL, имя будет иметь значение null.
 
 *lpsaAttribute*<br/>
-Атрибуты безопасности для объекта события. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) в пакете Windows SDK.
+Атрибуты безопасности для объекта события. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -119,7 +119,7 @@ CEvent(
 Чтобы изменить состояние `CEvent` объект сигнальным (потоки не имеют ожидания), вызовите [выполнить SetEvent](#setevent) или [PulseEvent](#pulseevent). Чтобы задать состояние `CEvent` объекта несигнальное (потоки должны ждать), вызовите [ResetEvent](#resetevent).
 
 > [!IMPORTANT]
->  После создания `CEvent` , используйте [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) для проверки того, что мьютекс не существует. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
+>  После создания `CEvent` , используйте [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) для проверки того, что мьютекс не существует. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
 
 ##  <a name="pulseevent"></a>  CEvent::PulseEvent
 

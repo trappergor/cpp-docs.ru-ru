@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - IPersistPropertyBagImpl class
 ms.assetid: 712af24d-99f8-40f2-9811-53b3ff6e5b19
-ms.openlocfilehash: 800c38c15e4ec8028fba9188d75e49be7ca51146
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 569a24fd08801de952e998f772afbc3478096628
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274897"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503149"
 ---
 # <a name="ipersistpropertybagimpl-class"></a>Класс IPersistPropertyBagImpl
 
@@ -50,9 +50,9 @@ class ATL_NO_VTABLE IPersistPropertyBagImpl : public IPersistPropertyBag
 
 ## <a name="remarks"></a>Примечания
 
-[IPersistPropertyBag](https://msdn.microsoft.com/library/aa768205.aspx) интерфейс позволяет объекту сохранить свои свойства в контейнер свойств, предоставляемых клиентом. Класс `IPersistPropertyBagImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
+[IPersistPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768205\(v=vs.85\)) интерфейс позволяет объекту сохранить свои свойства в контейнер свойств, предоставляемых клиентом. Класс `IPersistPropertyBagImpl` предоставляет стандартную реализацию этого интерфейса и реализует `IUnknown` , отправляя данные в дамп сборок устройства в режиме отладки.
 
-`IPersistPropertyBag` работает в сочетании с [IPropertyBag](https://msdn.microsoft.com/library/aa768196.aspx) и [IErrorLog](https://msdn.microsoft.com/library/aa768231.aspx). Эти последний два интерфейса должен быть реализован с помощью клиента. Через `IPropertyBag`, клиент сохраняет и загружает отдельных свойств объекта. Через `IErrorLog`, объект и на клиенте можно сообщить о каких-либо ошибок.
+`IPersistPropertyBag` работает в сочетании с [IPropertyBag](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768196\(v=vs.85\)) и [IErrorLog](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768231\(v=vs.85\)). Эти последний два интерфейса должен быть реализован с помощью клиента. Через `IPropertyBag`, клиент сохраняет и загружает отдельных свойств объекта. Через `IErrorLog`, объект и на клиенте можно сообщить о каких-либо ошибок.
 
 **Связанные статьи** [учебник по ATL](../../atl/active-template-library-atl-tutorial.md), [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md)
 
@@ -92,7 +92,7 @@ STDMETHOD(InitNew)();
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IPersistPropertyBag::InitNew](https://msdn.microsoft.com/library/aa768204.aspx) в Windows SDK.
+См. в разделе [IPersistPropertyBag::InitNew](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768204\(v=vs.85\)) в Windows SDK.
 
 ##  <a name="load"></a>  IPersistPropertyBagImpl::Load
 
@@ -106,7 +106,7 @@ STDMETHOD(Load)(LPPROPERTYBAG pPropBag, LPERRORLOG pErrorLog);
 
 ATL использует сопоставление свойств объекта для извлечения этой информации.
 
-См. в разделе [IPersistPropertyBag::Load](https://msdn.microsoft.com/library/aa768206.aspx) в Windows SDK.
+См. в разделе [IPersistPropertyBag::Load](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768206\(v=vs.85\)) в Windows SDK.
 
 ##  <a name="save"></a>  IPersistPropertyBagImpl::Save
 
@@ -123,7 +123,7 @@ STDMETHOD(Save)(
 
 ATL использует сопоставление свойств объекта для хранения подобной информации. По умолчанию этот метод сохраняет все свойства, независимо от значения *fSaveAllProperties*.
 
-См. в разделе [IPersistPropertyBag::Save](https://msdn.microsoft.com/library/aa768207.aspx) в Windows SDK.
+См. в разделе [IPersistPropertyBag::Save](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768207\(v=vs.85\)) в Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

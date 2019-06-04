@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5df6515573cfca784d1e59f34342466dde2e42e4
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62375799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504848"
 ---
 # <a name="cmenu-class"></a>CMenu-класс
 
@@ -769,7 +769,7 @@ BOOL GetMenuItemInfo(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.
+Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), как описано в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1267,7 +1267,7 @@ BOOL SetDefaultItem(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360), как описано в пакете Windows SDK.
+Если функция выполняется успешно, возвращается ненулевое значение. Если функция выполняется неудачно, возвращается нулевое значение. Чтобы получить расширенные сведения об ошибке, используйте функцию Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror), как описано в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1476,7 +1476,7 @@ BOOL TrackPopupMenuEx(
 
 Если указать TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является идентификатором пунктов меню элемента, выбранного пользователем. Если пользователь отменяет меню без выбора или при возникновении ошибки, возвращаемое значение равно 0.
 
-Если вы не укажете TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является ненулевым, если функция выполняется успешно и 0 в случае неудачи. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Если вы не укажете TPM_RETURNCMD в *fuFlags* параметр, возвращаемое значение является ненулевым, если функция выполняется успешно и 0 в случае неудачи. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 

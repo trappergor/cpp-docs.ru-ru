@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c518b6a9ad0fe857b0878bcecd3020ba97174e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62324211"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504715"
 ---
 # <a name="csemaphore-class"></a>Класс CSemaphore
 
@@ -83,14 +83,14 @@ CSemaphore(
 Имя семафора. Необходимо указать, если семафора будет осуществляться через границы процессов. Если `NULL`, объект будет без имени. Если имя соответствует существующей semaphore, конструктор создает новый `CSemaphore` объект, который ссылается на семафоре этим именем. Если имя совпадает с существующий объект синхронизации, не семафор, построение завершится ошибкой.
 
 *lpsaAttributes*<br/>
-Атрибуты безопасности для объекта семафора. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) в пакете Windows SDK.
+Атрибуты безопасности для объекта семафора. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
 Для доступа к или выпуска `CSemaphore` следует создать [CMultiLock](../../mfc/reference/cmultilock-class.md) или [CSingleLock](../../mfc/reference/csinglelock-class.md) и вызовите его [блокировки](../../mfc/reference/csinglelock-class.md#lock) и [Unlock](../../mfc/reference/csinglelock-class.md#unlock) функции-члены.
 
 > [!IMPORTANT]
->  После создания `CSemaphore` , используйте [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) чтобы убедиться, что мьютекс не существовал. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
+>  После создания `CSemaphore` , используйте [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) чтобы убедиться, что мьютекс не существовал. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
 
 ## <a name="see-also"></a>См. также
 
