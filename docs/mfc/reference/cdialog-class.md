@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDialog [MFC], OnCancel
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
-ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 23d170cf023374fe61e13d907e3c3466c0352fe6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62168327"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504443"
 ---
 # <a name="cdialog-class"></a>Класс CDialog
 
@@ -276,7 +276,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**Int** значение, указывающее значение *nResult* параметр, который был передан [CDialog::EndDialog](#enddialog) функцией-членом, которая используется, чтобы закрыть диалоговое окно. Возвращаемое значение-1, если функция не удалось создать диалоговое окно, то есть IDABORT Если возникла другая ошибка, в этом случае в окне вывода будет содержать сведения об ошибке из [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+**Int** значение, указывающее значение *nResult* параметр, который был передан [CDialog::EndDialog](#enddialog) функцией-членом, которая используется, чтобы закрыть диалоговое окно. Возвращаемое значение-1, если функция не удалось создать диалоговое окно, то есть IDABORT Если возникла другая ошибка, в этом случае в окне вывода будет содержать сведения об ошибке из [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 

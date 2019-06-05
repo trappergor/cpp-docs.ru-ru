@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bcb2f354314a0b0d1220a1ecb1c0fa2b8a913d5e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62372105"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504736"
 ---
 # <a name="cricheditctrl-class"></a>Класс CRichEditCtrl
 
@@ -503,7 +503,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `CreateEx` вместо `Create` применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**.
+Используйте `CreateEx` вместо `Create` применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_** .
 
 ##  <a name="cricheditctrl"></a>  CRichEditCtrl::CRichEditCtrl
 
@@ -1122,7 +1122,7 @@ long GetSelText(LPSTR lpBuf) const;  CString GetSelText() const;
 
 ### <a name="remarks"></a>Примечания
 
-Если вы используете первой форме **GetSelText (** `lpBuf` **)**, необходимо убедиться, что буфер достаточно большим для текста, он будет получать. Вызовите [GetSel](#getsel) для определения количества символов в текущем выделении.
+Если вы используете первой форме **GetSelText (** `lpBuf` **)** , необходимо убедиться, что буфер достаточно большим для текста, он будет получать. Вызовите [GetSel](#getsel) для определения количества символов в текущем выделении.
 
 Дополнительные сведения см. в разделе [EM_GETSELTEXT](/windows/desktop/Controls/em-getseltext) в пакете Windows SDK.
 
@@ -1354,7 +1354,7 @@ int LineIndex(int nLine = -1) const;
 
 Индекс символа — количество символов с начала элемента управления форматированным редактированием в указанную строку.
 
-Дополнительные сведения см. в разделе [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 

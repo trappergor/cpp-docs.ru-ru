@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: f0105a8ee33a57f7431a9c6a97b4b132f291f42a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1dc29a675f6ab3883683b3afae7e22e7ed0f1cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373184"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504774"
 ---
 # <a name="cpalette-class"></a>Класс CPalette
 
@@ -111,7 +111,7 @@ void AnimatePalette(
 Указывает количество записей в палитре анимировать.
 
 *lpPaletteColors*<br/>
-Указывает на первый элемент массива [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) структур для замены элементы палитры, идентифицируемый *nStartIndex* и *nNumEntries*.
+Указывает на первый элемент массива [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) структур для замены элементы палитры, идентифицируемый *nStartIndex* и *nNumEntries*.
 
 ### <a name="remarks"></a>Примечания
 
@@ -245,7 +245,7 @@ UINT GetPaletteEntries(
 Указывает количество записей в логической палитры требуется получить.
 
 *lpPaletteColors*<br/>
-Указывает на массив из [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) структур данных для получения элементы палитры. Этот массив должен содержать по крайней мере столько структур данных в соответствии с *nNumEntries*.
+Указывает на массив из [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) структур данных для получения элементы палитры. Этот массив должен содержать по крайней мере столько структур данных в соответствии с *nNumEntries*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -312,7 +312,7 @@ UINT SetPaletteEntries(
 Указывает количество записей в логическую палитру устанавливаемое значение.
 
 *lpPaletteColors*<br/>
-Указывает на массив из [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) структур данных для получения элементы палитры. Этот массив должен содержать по крайней мере столько структур данных в соответствии с *nNumEntries*.
+Указывает на массив из [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) структур данных для получения элементы палитры. Этот массив должен содержать по крайней мере столько структур данных в соответствии с *nNumEntries*.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -322,7 +322,7 @@ UINT SetPaletteEntries(
 
 Если логическую палитру выбирается в контексте устройства, когда приложение вызывает `SetPaletteEntries`, изменения не вступят в силу пока приложение не вызовет [CDC::RealizePalette](../../mfc/reference/cdc-class.md#realizepalette).
 
-Дополнительные сведения о структуре Windows `PALETTEENTRY`, см. в разделе [PALETTEENTRY](https://msdn.microsoft.com/library/windows/desktop/dd162769) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [PALETTEENTRY](/previous-versions/dd162769\(v=vs.85\)) в пакете Windows SDK.
 
 ## <a name="see-also"></a>См. также
 

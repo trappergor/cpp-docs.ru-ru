@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f0faa93cd4ea1fdc2fad90a5d4d47f2feeef65e6
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387906"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504236"
 ---
 # <a name="toolbar-editor-c"></a>Редактор панелей инструментов (C++)
 
@@ -107,7 +107,7 @@ ms.locfileid: "62387906"
 
 1. В **добавить ресурс** выберите **инструментов** в **тип ресурса** списке, а затем выберите **New**.
 
-   Если знак плюс (**+**) отображается рядом **инструментов** тип ресурса, это означает, что доступны шаблоны. Выберите знак «плюс», чтобы развернуть список шаблонов, выберите шаблон и выберите **New**.
+   Если знак плюс ( **+** ) отображается рядом **инструментов** тип ресурса, это означает, что доступны шаблоны. Выберите знак «плюс», чтобы развернуть список шаблонов, выберите шаблон и выберите **New**.
 
 ### <a name="to-convert-bitmaps-to-toolbar-resources"></a>Чтобы преобразовывать растровые изображения в ресурс панели инструментов
 
@@ -204,6 +204,5 @@ MFC или ATL
 ## <a name="see-also"></a>См. также
 
 [Редакторы ресурсов](../windows/resource-editors.md)
-<!--
-[Menus and Other Resources](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)<br/>
-[Toolbar Button Properties](../windows/toolbar-button-properties.md)<br/>-->
+[меню и другие ресурсы](/windows/desktop/menurc/resources)<br/>
+[Свойства кнопок на панели инструментов](../windows/toolbar-button-properties.md)<br/>

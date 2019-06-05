@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMutex [MFC], CMutex
 ms.assetid: 6330c050-4f01-4195-a099-2029b92f8cf1
-ms.openlocfilehash: f85e562af9d048503be20d1ab5d219fe8d2d039f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c55da8a7692982fc18589fa69e9e2b0749cb6eb
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62373652"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504192"
 ---
 # <a name="cmutex-class"></a>Класс CMutex
 
@@ -77,14 +77,14 @@ CMutex(
 Имя объекта `CMutex`. Если существует другой мьютекс с тем же именем, *lpszName* должно указываться, если объект будет использоваться через границы процессов. Если **NULL**, мьютекс будет без имени. Если имя соответствует существующей mutex, конструктор создает новый `CMutex` объект, который ссылается на мьютекс этим именем. Если имя совпадает с существующий объект синхронизации, не мьютекс, построение завершится ошибкой.
 
 *lpsaAttribute*<br/>
-Атрибуты безопасности для объекта мьютекса. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) в пакете Windows SDK.
+Атрибуты безопасности для объекта мьютекса. Полное описание этой структуры, см. в разделе [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
 Для доступа к или выпуска `CMutex` следует создать [CMultiLock](../../mfc/reference/cmultilock-class.md) или [CSingleLock](../../mfc/reference/csinglelock-class.md) и вызовите его [блокировки](../../mfc/reference/csinglelock-class.md#lock) и [Unlock](../../mfc/reference/csinglelock-class.md#unlock) функции-члены. Если `CMutex` объекта используется автономный, вызвать его `Unlock` функция-член для его освобождения.
 
 > [!IMPORTANT]
->  После создания `CMutex` , используйте [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) чтобы убедиться, что мьютекс не существовал. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
+>  После создания `CMutex` , используйте [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) чтобы убедиться, что мьютекс не существовал. Если мьютексом существовала неожиданно, это может указывать нелегальные процессы — занятие и может вы собираетесь использовать мьютекс злоумышленником. В этом случае соображениям безопасности рекомендуется закрыть дескриптор и продолжить как, если произошел сбой при создании объекта.
 
 ## <a name="see-also"></a>См. также
 

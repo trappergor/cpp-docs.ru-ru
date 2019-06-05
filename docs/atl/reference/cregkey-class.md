@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 1215c66f1f40cfbc96b813d4eb5084f07698bc01
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 58b7b180f5b4925f64078f8c799036252003549e
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278089"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503240"
 ---
 # <a name="cregkey-class"></a>Класс CRegKey
 
@@ -195,7 +195,7 @@ LONG Create(
 Безопасный доступ для ключа. Значение по умолчанию — KEY_READ &#124; KEY_WRITE. Список возможных значений и описаний, см. в разделе `RegCreateKeyEx`.
 
 *lpSecAttr*<br/>
-Указатель на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структуру, которая указывает, может ли дескриптор ключа наследоваться дочерним процессом. По умолчанию этот параметр имеет значение NULL (что означает, что дескриптор не наследуется).
+Указатель на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структуру, которая указывает, может ли дескриптор ключа наследоваться дочерним процессом. По умолчанию этот параметр имеет значение NULL (что означает, что дескриптор не наследуется).
 
 *lpdwDisposition*<br/>
 [out] Если не NULL, извлекает REG_CREATED_NEW_KEY (если ключ не существовал и был создан) или REG_OPENED_EXISTING_KEY (если ключ существовал и был открыт).

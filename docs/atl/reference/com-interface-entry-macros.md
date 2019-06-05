@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8439e973c935108d645076bb7e2bfae7207e65d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245586"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503341"
 ---
 # <a name="cominterfaceentry-macros"></a>Макросы COM_INTERFACE_ENTRY
 
@@ -39,7 +39,7 @@ ms.locfileid: "62245586"
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|Совпадение с кодом [COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate), кроме *punk* имеет значение NULL, он автоматически создает статистическое выражение, описываемое *clsid*.|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|Совпадение с кодом [COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate), за исключением того, что запрос любой IID приводит пересылки запрос, чтобы *punk*и если *punk* имеет значение NULL, автоматически создавая статистическое выражение, описываемое *clsid*.|
-|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.|
+|[COM_INTERFACE_ENTRY_BREAK](#com_interface_entry_break)|Выполняется вызов [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) при запросе указанный интерфейс.|
 |[COM_INTERFACE_ENTRY_CACHED_TEAR_OFF](#com_interface_entry_cached_tear_off)|Сохраняет данные на уровне интерфейса для каждого экземпляра.|
 |[COM_INTERFACE_ENTRY_TEAR_OFF](#com_interface_entry_tear_off)|Представляет перемещаемые интерфейсы.|
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|Выполняет сопоставление COM базового класса, когда будет достигнут эту запись в карту COM.|
@@ -243,7 +243,7 @@ COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND(punk, clsid)
 
 ##  <a name="com_interface_entry_break"></a>  COM_INTERFACE_ENTRY_BREAK
 
-Выполняется вызов [DebugBreak](https://msdn.microsoft.com/library/windows/desktop/ms679297) при запросе указанный интерфейс.
+Выполняется вызов [DebugBreak](/windows/desktop/api/debugapi/nf-debugapi-debugbreak) при запросе указанный интерфейс.
 
 ```
 COM_INTERFACE_ENTRY_BREAK(x)
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-Обратите внимание на то, что первая запись в карту COM, должен быть интерфейсом на объекте, содержащем COM карты. Таким образом, не может начинаться на записях сопоставления COM. с COM_INTERFACE_ENTRY_CHAIN, что приводит к COM карты другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** отображается в ваш объект COM карты. Если вы хотите сначала поиск COM карты другого объекта, добавьте запись интерфейс для `IUnknown` в сопоставление COM, затем объединить в цепочку другой объект COM карты. Пример:
+Обратите внимание на то, что первая запись в карту COM, должен быть интерфейсом на объекте, содержащем COM карты. Таким образом, не может начинаться на записях сопоставления COM. с COM_INTERFACE_ENTRY_CHAIN, что приводит к COM карты другого объекта для поиска в точке, где **COM_INTERFACE_ENTRY_CHAIN (** `COtherObject` **)** отображается в ваш объект COM карты. Если вы хотите сначала поиск COM карты другого объекта, добавьте запись интерфейс для `IUnknown` в сопоставление COM, затем объединить в цепочку другой объект COM карты. Пример:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 

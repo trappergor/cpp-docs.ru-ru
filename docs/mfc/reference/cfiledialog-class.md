@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4994b91813e2965972b47c838ddaf5333cc5f0
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385369"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503756"
 ---
 # <a name="cfiledialog-class"></a>Класс CFileDialog
 
@@ -512,7 +512,7 @@ void ApplyOFNToShellDialog();
 
 ### <a name="remarks"></a>Примечания
 
-В версиях Windows до Windows Vista, член [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) структуру данных непрерывно был синхронизирован с состоянием `CFileDialog`. Любые изменения [m_ofn](#m_ofn) переменной-члена были немедленно отражаются в состоянии диалогового окна. Кроме того, любые изменения состояния окна немедленно обновлять `m_ofn` переменной-члена.
+В версиях Windows до Windows Vista, член [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) структуру данных непрерывно был синхронизирован с состоянием `CFileDialog`. Любые изменения [m_ofn](#m_ofn) переменной-члена были немедленно отражаются в состоянии диалогового окна. Кроме того, любые изменения состояния окна немедленно обновлять `m_ofn` переменной-члена.
 
 В Windows Vista или более поздней версии значения в `m_ofn` переменной-члена и состояние `CFileDialog` , не обязательно быть синхронизирована. Эта функция вызывает состояние `CFileDialog` обновляться в соответствии с `m_ofn` структуры. Windows вызывает эту функцию автоматически во время [CFileDialog::DoModal](#domodal).
 
@@ -1626,7 +1626,7 @@ void UpdateOFNFromShellDialog();
 
 ### <a name="remarks"></a>Примечания
 
-В версиях Windows до Windows Vista, член [OPENFILENAME](https://msdn.microsoft.com/library/ms911906.aspx) структуру данных непрерывно был синхронизирован с состоянием `CFileDialog`. Любые изменения [m_ofn](#m_ofn) переменной-члена непосредственно влияет состояние диалогового окна. Кроме того любые изменения состояния диалогового окна немедленно обновить переменную-член m_ofn.
+В версиях Windows до Windows Vista, член [OPENFILENAME](/previous-versions/windows/embedded/ms911906\(v=msdn.10\)) структуру данных непрерывно был синхронизирован с состоянием `CFileDialog`. Любые изменения [m_ofn](#m_ofn) переменной-члена непосредственно влияет состояние диалогового окна. Кроме того любые изменения состояния диалогового окна немедленно обновить переменную-член m_ofn.
 
 В Windows Vista или более поздней версии `m_ofn` структура данных не обновляется автоматически. Чтобы гарантировать точность данных в `m_ofn` переменную-член, следует вызывать `UpdateOFNFromShellDialog` функцию перед доступом к данным. Windows вызывает эту функцию автоматически во время обработки [IFileDialog::OnFileOK](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialogevents-onfileok).
 
