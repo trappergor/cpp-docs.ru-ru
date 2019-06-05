@@ -4246,6 +4246,8 @@
           href: compiler-warnings/c5046.md
 - name: Предупреждения компилятора по версиям компилятора
   href: compiler-warnings/compiler-warnings-by-compiler-version.md
+- name: 'Предупреждения компилятора, выключенные по умолчанию'
+  href: ../preprocessor/compiler-warnings-that-are-off-by-default.md
 - name: Ошибки среды выполнения C
   expanded: false
   items:
