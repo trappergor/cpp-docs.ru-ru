@@ -8,12 +8,12 @@ helpviewer_keywords:
 - control classes [MFC], variables
 - classes [MFC], declaring variables based on
 ms.assetid: 5722dc38-c0eb-40bd-93da-67a808140d03
-ms.openlocfilehash: b3b1a168619c1c111db3e71e1a9562d441cc710d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d550b80beb124f3d8ec36ba81dad1a9ca7e9fa15
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323012"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741607"
 ---
 # <a name="declaring-a-variable-based-on-your-new-control-class"></a>Объявление переменной на основании нового класса элемента управления
 
@@ -52,4 +52,4 @@ ms.locfileid: "62323012"
 [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Перемещение по структуре класса](../../ide/navigate-code-cpp.md)
