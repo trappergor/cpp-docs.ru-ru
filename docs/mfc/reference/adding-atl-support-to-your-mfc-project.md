@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, ATL support
 - ATL, MFC projects
 ms.assetid: b5fe15d6-7752-4818-b9f9-62482ad35c95
-ms.openlocfilehash: 2870bf70492dc09d1a0af3664d1a819aec354b92
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f75ffd09da1502e5f1488dbce0d8d2b9623d396
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296713"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741725"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>Добавление поддержки ATL в проект MFC
 
@@ -28,7 +28,7 @@ ms.locfileid: "62296713"
 
 1. В обозревателе решений щелкните правой кнопкой мыши проект, к которому вы хотите добавить поддержку ATL.
 
-1. В контекстном меню, щелкните **добавить**, а затем нажмите кнопку **Добавление класса**.
+1. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
 
 1. Выберите **Добавление поддержки ATL в проект MFC** значок.
 
@@ -47,4 +47,4 @@ ms.locfileid: "62296713"
 [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [Обработчик сообщений MFC](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
-[Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)
+[Перемещение по структуре класса](../../ide/navigate-code-cpp.md)

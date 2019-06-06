@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - message handling [MFC], adding handlers
 ms.assetid: 4251cfce-76ca-443d-bd2f-6303afa6d942
-ms.openlocfilehash: c4b0a4507df7f352355fc95354e1e83aa7b6d0a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 90d7f843c91956b679fe794c68adab12d85122b7
+ms.sourcegitcommit: 65ed563a8a1d4d90f872a2a6edcb086f84ec9f77
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62296700"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66741746"
 ---
 # <a name="adding-an-mfc-message-handler"></a>Добавление обработчика сообщения MFC
 
@@ -29,5 +29,5 @@ ms.locfileid: "62296700"
 [Добавление функции-члена](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [Добавление переменной-члена](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
 [Переопределение виртуальной функции](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
-[Перемещение по структуре класса](../../ide/navigating-the-class-structure-visual-cpp.md)<br/>
+[Перемещение по структуре класса](../../ide/navigate-code-cpp.md)<br/>
 [Редактор диалоговых окон](../../windows/dialog-editor.md)
