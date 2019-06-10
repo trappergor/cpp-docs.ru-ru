@@ -2,12 +2,12 @@
 title: Руководство по переносу и обновлению Visual C++
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 8798d8b3da5a91adfc6f77912d4f34bf62549f54
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 5659ca362204c62ab8fb21a74dccf8e29f33912c
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58898795"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450375"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Руководство по переносу и обновлению Visual C++
 
@@ -53,7 +53,7 @@ ms.locfileid: "58898795"
 
 8. Ошибки среды выполнения или непредвиденные результаты из-за изменения в поведении.
 
-9. Ошибки из-за ошибок, которые появились в инструментах. В случае обнаружения проблемы сообщите о ней разработчикам Visual C++ через обычные каналы технической поддержки или через [Центр обратной связи Visual Studio](http://connect.microsoft.com/VisualStudio/Feedback).
+9. Ошибки из-за ошибок, которые появились в инструментах. В случае обнаружения проблемы сообщите о ней разработчикам Visual C++ через обычные каналы технической поддержки или на странице [Сообщества разработчиков Visual Studio C++](https://developercommunity.visualstudio.com/spaces/62/index.html).
 
 Кроме изменений, которых нельзя избежать из-за ошибок компилятора, в процессе обновления могут появляться и другие, менее критичные изменения, например:
 
@@ -75,7 +75,7 @@ ms.locfileid: "58898795"
 
 |Заголовок|Описание|
 |-----------|-----------------|
-|[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Описываются способы использования проектов, созданных в предыдущих версиях Visual C++.|
+|[Обновление проектов, созданных в предыдущих версиях Visual C++](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|Описываются способы использования проектов, созданных в предыдущих версиях Visual Studio.|
 |[Новые возможности компилятора C++ в Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Изменения в интегрированной среде разработки и средствах для текущей версии Visual Studio|
 |[Улучшения соответствия C++ в Visual Studio](../overview/cpp-conformance-improvements.md)|Улучшения соответствия стандартам с Visual Studio 2015 по Visual Studio|
 |[Журнал изменений Visual C++ 2003–2015](visual-cpp-change-history-2003-2015.md)|Список изменений в библиотеках Visual C++ и инструментах сборки Visual Studio 2003–2015, которые могут потребовать внесения изменений в код.|
@@ -88,4 +88,4 @@ ms.locfileid: "58898795"
 
 ## <a name="see-also"></a>См. также
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)
+[C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)

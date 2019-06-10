@@ -1,16 +1,16 @@
 ---
 title: Соответствие Microsoft Visual C++ стандартам языка
-ms.date: 05/19/2019
+ms.date: 05/20/2019
 ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: c36256988e2698cb6f04e0ab71dbf6211b596033
-ms.sourcegitcommit: 61121faf879cc581a4d39e4baccabf7cf1f673a5
+ms.openlocfilehash: 994878509c4fc1bf14390fad8ff4c112a4af8242
+ms.sourcegitcommit: a61d17cffdd50f1c3c6e082a01bbcbc85b6cc5a7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65934180"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65975169"
 ---
 # <a name="microsoft-c-language-conformance-table"></a>Соответствие Microsoft Visual C++ стандартам языка
 
@@ -89,32 +89,33 @@ ms.locfileid: "65934180"
 |----|---|
 |__Основные возможности языка C++17 (сообщения о дефектах)__|__Поддерживается__|
 |&nbsp;&nbsp;[P0702R1 Исправление выведения шаблона аргумента класса для конструкторов списка инициализаторов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 Упрощение неявного захвата в лямбда-выражении](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Нет|
 |&nbsp;&nbsp;[P0961R1 Ослабление правил поиска точки настройки структурированных привязок](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0962R2 Ослабление правил поиска точки настройки выражений for, основанных на диапазоне](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Нет|
 |&nbsp;&nbsp;[P0969R0 Разрешение структурированных привязок для доступных членов](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|VS 2019 16.0 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0859R0 CWG 1581: когда определяются функции-члены constexpr?](https://wg21.link/P0859R0)|Нет|
+|&nbsp;&nbsp;[P0588R1 Упрощение неявного захвата в лямбда-выражении](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|Нет|
+|&nbsp;&nbsp;[P0962R2 Ослабление правил поиска точки настройки выражений for, основанных на диапазоне](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|Нет|
 |&nbsp;&nbsp;[P0929R2 Проверка на наличие типов абстрактного класса](https://wg21.link/P0929R2)|Нет|
 |&nbsp;&nbsp;[P1009R2 Определение размера массива в новых выражениях](https://wg21.link/P1009R2)|Нет|
 |&nbsp;&nbsp;[P1286R2 Альтернативное решение для CWG DR1778](https://wg21.link/P1286R2)|Нет|
-
 |Область функции| |
 |----|---|
 |__Основные возможности языка C++20__|__Поддерживается__|
 |&nbsp;&nbsp;[P0704R1 Исправления указателей элементов const lvalue, проверенных по ссылке](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|VS 2015 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0972R0 noexcept для \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P1041R4 Использование char16_t и char32_t в формате UTF-16 и UTF-32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1330R0 Изменение активного элемента объединения внутри constexpr](https://wg21.link/P1330R0)|VS 2017 15.0 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0972R0 noexcept для \<chrono> zero(), min(), max()](https://wg21.link/P0972R0)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0515R3 Оператор трехстороннего сравнения (космический корабль) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P1008R1 Запрет агрегирования с объявленными пользователем конструкторами](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0329R4 Назначенный конструктор инициализации](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0409R2 Разрешение в лямбда-выражении захвата объекта\[=, this\]](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0515R3 Оператор трехстороннего сравнения ("космический корабль") <=>](https://wg21.link/P0515R3) и [P0905R1 Симметрия "космического корабля"](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0905r1.html)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0515R3 Оператор трехстороннего сравнения (космический корабль) <=>](https://wg21.link/P0515R3)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0941R2 Макросы тестирования функций](https://wg21.link/P0941R2)|VS 2019 16.0 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1008R1 Запрет агрегирования с объявленными пользователем конструкторами](https://wg21.link/P1008R1)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0846R0 ADL и шаблоны функций, которые не отображаются](https://wg21.link/P0846R0)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0641R2 Несовпадение const с конструктором копирования по умолчанию](https://wg21.link/P0641R2)|Partial|
-|&nbsp;&nbsp;[P0306R4 Добавление \_\_VA_OPT\_\_ для пропуска и удаления запятых](https://wg21.link/P0306R4) и [P1042R1 Уточнения формулировки \_\_VA_OPT\_\_](https://wg21.link/P1042R1)|Нет|
+|&nbsp;&nbsp;[P0306R4 Добавление \_\_VA_OPT\_\_ для пропуска и удаления запятых](https://wg21.link/P0306R4)|Нет|
 |&nbsp;&nbsp;[P0315R4 Разрешение лямбда-выражений в невычисляемых контекстах](https://wg21.link/P0315R4)|Нет|
 |&nbsp;&nbsp;[P0409R2 Разрешение в лямбда-выражении захвата объекта\[=, this\]](https://wg21.link/P0409R2)|Нет|
-|&nbsp;&nbsp;[P0428R2 Знакомый синтаксис шаблона для универсальных лямбда-выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|Нет|
+|&nbsp;&nbsp;[P0428R2 Знакомый синтаксис шаблона для универсальных лямбда-выражений](http://www.open-std.org/jtc1/sc22/wg21/docs/pa pers/2017/p0428r2.pdf)|Нет|
 |&nbsp;&nbsp;[P0479R5 Атрибуты \[\[likely\]\] и \[\[unlikely\]\]](https://wg21.link/P0479R5)|Нет|
 |&nbsp;&nbsp;[P0542R5 Контракты](https://wg21.link/P0542R5)|Нет|
 |&nbsp;&nbsp;[P0614R1 Циклы for на основе диапазона с инициализаторами](https://wg21.link/P0614R1)|Нет|
@@ -133,7 +134,6 @@ ms.locfileid: "65934180"
 |&nbsp;&nbsp;[P0912R5 Сопрограммы](https://wg21.link/P0912R5)|Нет|
 |&nbsp;&nbsp;[P0960R3 Разрешение инициализации агрегатов из списка значений в скобках](https://wg21.link/P0960R3)|Нет|
 |&nbsp;&nbsp;[P1002R1 Блоки try-catch в функциях constexpr](https://wg21.link/P1002R1)|Нет|
-|&nbsp;&nbsp;[P1041R4 Использование char16_t и char32_t в формате UTF-16 и UTF-32](https://wg21.link/P1041R4)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P1064R0 Разрешение вызовов виртуальных функций в константных выражениях](https://wg21.link/P1064R0)|Нет|
 |&nbsp;&nbsp;[P1073R3 Немедленные функции](https://wg21.link/P1073R3)|Нет|
 |&nbsp;&nbsp;[P1084R2 Текущая недостаточность требований к типу возврата](https://wg21.link/P1084R2)|Нет|
@@ -156,12 +156,21 @@ ms.locfileid: "65934180"
 |Область функции| |
 |---|---|
 |__Функции стандартной библиотеки C++20__|__Поддерживается__|
+|&nbsp;&nbsp;[P0809R0 Сравнение неупорядоченных контейнеров](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0858R0 Требования к итератору constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[P0777R1 Отказ от излишнего использования decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
+|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0457R2 Starts_with()/ends_with() для basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0458R2 contains() для упорядоченных и неупорядоченных ассоциативных контейнеров](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0646R1 Возвращаемый size_type для list/forward_list remove()/remove_if()/unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
+|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0019R8 atomic_ref](https://wg21.link/P0019R8)|Нет|
 |&nbsp;&nbsp;[P0020R6 atomic\<float>, atomic\<double>, atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|Нет|
 |&nbsp;&nbsp;[P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br/>&nbsp;&nbsp;[P0753R2 Манипуляторы osyncstream](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|Нет|
 |&nbsp;&nbsp;[P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|Нет|
 |&nbsp;&nbsp;[P0202R3 constexpr для \<algorithm> и exchange()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|Нет|
-|&nbsp;&nbsp;[P0318R1 unwrap_reference, unwrap_ref_decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0318r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0339R6 polymorphic_allocator<>](https://wg21.link/P0339R6)|Нет|
 |&nbsp;&nbsp;[P0340R3 underlying_type с поддержкой SFINAE](https://wg21.link/P0340R3)|Нет|
 |&nbsp;&nbsp; [P0355R7 \<chrono > для календарей и часовых поясов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|Нет|
@@ -169,22 +178,18 @@ ms.locfileid: "65934180"
 |&nbsp;&nbsp;[P0357R3 Поддержка неполных типов в reference_wrapper](https://wg21.link/P0357R3)|Нет|
 |&nbsp;&nbsp;[P0415R1 constexpr для \<complex> (повторно)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|Нет|
 |&nbsp;&nbsp;[P0439R0 Класс перечисления memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|Нет|
-|&nbsp;&nbsp;[P0457R2 Starts_with()/ends_with() для basic_string/basic_string_view](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
-|&nbsp;&nbsp;[P0458R2 contains() для упорядоченных и неупорядоченных ассоциативных контейнеров](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0458r2.html)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0463R1 Порядок байтов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|Нет|
 |&nbsp;&nbsp;[P0475R1 Гарантированный пропуск копирования для конструктора кусочно-заданной функции](https://wg21.link/P0475R1)|Нет|
 |&nbsp;&nbsp;[P0476R2 <bit> bit_cast](https://wg21.link/P0476R2)|Нет|
 |&nbsp;&nbsp;[P0482R6 char8_t: тип для символов и строк UTF-8](https://wg21.link/P0482R6)|Нет|
 |&nbsp;&nbsp;[P0487R1 Исправление operator>>(basic_istream&, CharT*)](https://wg21.link/P0487R1)|Нет|
 |&nbsp;&nbsp;[P0528R3 Атомарная инструкция сравнения и обмена с битами заполнения](https://wg21.link/P0528R3)|Нет|
-|&nbsp;&nbsp;[P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0556R3 <bit> ispow2(), ceil2(), floor2(), log2p1()](https://wg21.link/P0556R3)|Нет|
 |&nbsp;&nbsp;[P0591R4 Служебные функции для состава Uses-Allocator](https://wg21.link/P0591R4)|Нет|
 |&nbsp;&nbsp;[P0600R1 \[\[nodiscard\]\] для STL, часть 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|Нет|
 |&nbsp;&nbsp;[P0608R3 Улучшение конструктора преобразования и назначения variant](https://wg21.link/P0608R3)|Нет|
 |&nbsp;&nbsp;[P0616R0 Использование move() в \<numeric>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|Нет|
 |&nbsp;&nbsp;[P0619R4 Удаление нерекомендуемых функций C++17 в C++20](https://wg21.link/P0619R4)|Нет|
-|&nbsp;&nbsp;[P0646R1 Возвращаемый size_type для list/forward_list remove()/remove_if()/unique()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0646r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|Нет|
 |&nbsp;&nbsp;[P0655R1 visit<R>()](https://wg21.link/P0655R1)|Нет|
 |&nbsp;&nbsp;[P0674R1 make_shared() для массивов](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|Нет|
@@ -194,14 +199,9 @@ ms.locfileid: "65934180"
 |&nbsp;&nbsp;[P0758R1 is_nothrow_convertible](https://wg21.link/P0758R1)|Нет|
 |&nbsp;&nbsp;[P0767R1 Отказ от использования is_pod](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|Нет|
 |&nbsp;&nbsp;[P0768R1 Поддержка библиотеки для оператора сравнения "космический корабль"\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|Нет|
-|&nbsp;&nbsp;[P0769R2 shift_left(), shift_right()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0769r2.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0771R1 noexcept для конструктора перемещения std::function](https://wg21.link/P0771R1)|Нет|
-|&nbsp;&nbsp;[P0777R1 Отказ от излишнего использования decay](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0809R0 Сравнение неупорядоченных контейнеров](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0811R3 midpoint(), lerp()](https://wg21.link/P0811R3)|Нет|
-|&nbsp;&nbsp;[P0858R0 Требования к итератору constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0879R0 constexpr для функций замены](https://wg21.link/P0879R0)|Нет|
-|&nbsp;&nbsp;[P0887R1 type_identity](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0887r1.pdf)|VS 2019 16.1 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P0896R4 \<ranges\>](https://wg21.link/P0896R4)|Нет|
 |&nbsp;&nbsp;[P0898R3 Основные понятия стандартной библиотеки](https://wg21.link/P0898R3)|Нет|
 |&nbsp;&nbsp;[P0912R5 Поддержка библиотеки для сопрограмм](https://wg21.link/P0912R5)|Нет|
@@ -215,7 +215,6 @@ ms.locfileid: "65934180"
 |&nbsp;&nbsp;[P1020R1 Создание интеллектуальных указателей с инициализацией по умолчанию](https://wg21.link/P1020R1)|Нет|
 |&nbsp;&nbsp;[P1023R0 constexpr для операций сравнения std::array](https://wg21.link/P1023R0)|Нет|
 |&nbsp;&nbsp;[P1032R1 Прочие описатели constexpr](https://wg21.link/P1032R1)|Нет|
-|&nbsp;&nbsp;[P1164R1 Повышение удобства работы с create_directory() Intuitive (отчет об ошибках)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2019/p1164r1.pdf)|VS 2019 16.0 <sup>[20](#note_20)</sup>|
 |&nbsp;&nbsp;[P1165R1 Согласованно распространяющиеся распределители с сохранением состояния в operator+() для basic_string](https://wg21.link/P1165R1)|Нет|
 |&nbsp;&nbsp;[P1209R0 erase_if(), erase()](https://wg21.link/P1209R0)|Нет|
 |&nbsp;&nbsp;[P1227R2 std::ssize() со знаком, span::size() без знака](https://wg21.link/P1227R2)|Нет|
@@ -274,7 +273,7 @@ ms.locfileid: "65934180"
 |&nbsp;&nbsp;[P0185R1 is_swappable, is_nothrow_swappable](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0185r1.html)|VS 2015.3|
 |&nbsp;&nbsp;[P0209R2 make_from_tuple()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0209r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0218R1 \<filesystem>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0218r1.html)<br/>&nbsp;&nbsp;[P0219R1 Относительные пути для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0219r1.html)<br/>&nbsp;&nbsp;[P0317R1 Кэширование записей каталога для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0317r1.html)<br/>&nbsp;&nbsp;[P0392R0 Поддержка string_view в путях файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0392r0.pdf)<br/>&nbsp;&nbsp;[P0430R2 Поддержка файловых систем, отличных от POSIX](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0430r2.pdf)<br/>&nbsp;&nbsp;[P0492R2 Разрешение комментариев NB для файловой системы](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0492r2.html)|VS 2017 15.7 <sup>[E](#note_E)</sup>|
-|&nbsp;&nbsp;[P0220R1 Основы работы с библиотеками V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6 <sup>[F](#note_F)</sup>|
+|&nbsp;&nbsp;[P0220R1 Основы работы с библиотеками V1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0220r1.html)|VS 2017 15.6|
 |&nbsp;&nbsp;[P0226R1 Специальные математические функции](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0226r1.pdf)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0254R2 Интеграция string_view и std::string](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0254r2.pdf)|VS 2017 15.0|
 |&nbsp;&nbsp;[P0258R2 has_unique_object_representations](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0258r2.html)|VS 2017 15.3 <sup>[G](#note_G)</sup>|
@@ -362,15 +361,13 @@ __VS 2019 16.1__ — функции, которые поддерживают�
 
 <a name="note_E"></a>__E__ Это совершенно новая, несовместимая с предыдущей версией `std::experimental` реализация, необходимость в которой вызвана добавлением поддержки символьных ссылок, исправлением ошибок и изменениями в поведении, которое требуется для соблюдения стандарта. В настоящее время включение \<filesystem> предоставляет новую функцию `std::filesystem` и предыдущую функцию `std::experimental::filesystem`, а включение \<experimental/filesystem> предоставляет только старую экспериментальную реализацию. Экспериментальная реализация будет УДАЛЕНА в следующем выпуске библиотек, содержащем изменения в ABI.
 
-<a name="note_F"></a>__F__ Функции, которые не были завершены в Visual Studio 2015, указаны в другом месте в этой таблице.
-
 <a name="note_G"></a>__G__ Поддерживается встроенными функциями компилятора.
 
 <a name="note_14"></a>__14__ Эти функции C++17/20 всегда включены, даже если указано значение по умолчанию [/std:c++14](../build/reference/std-specify-language-standard-version.md). Это происходит, потому что функция реализована до введения параметров **/std** или из-за сложных условий реализации.
 
 <a name="note_17"></a>__17__ Эти функции выключены параметром компилятора [/std:c++17](../build/reference/std-specify-language-standard-version.md) (или [/std:c++latest](../build/reference/std-specify-language-standard-version.md)).
 
-<a name="note_20"></a>__20__ Эти функции включены параметром компилятора [/std:c++latest](../build/reference/std-specify-language-standard-version.md). После завершения реализации C++20 будет добавлен новый параметр компилятора **/std:c++20**.
+<a name="note_20"></a>__20__ Эти функции включены параметром компилятора [/std:c++latest](../build/reference/std-specify-language-standard-version.md). После завершения реализации C++20 будет добавлен новый параметр компилятора **/std:c++20**, с которым эти функции также будут доступны.
 
 <a name="note_byte"></a>__byte__ `std::byte` поддерживают [/std:c++17](../build/reference/std-specify-language-standard-version.md) (или [/std:c++latest](../build/reference/std-specify-language-standard-version.md)), но так в некоторых случаях эта версия может конфликтовать с заголовками Windows SDK, предусмотрен детально настроенный макрос явного отказа. Его можно отключить, определив `_HAS_STD_BYTE` как `0`.
 
