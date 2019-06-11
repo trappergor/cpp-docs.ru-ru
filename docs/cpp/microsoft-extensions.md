@@ -14,27 +14,27 @@ ms.locfileid: "62301777"
 # <a name="microsoft-extensions"></a>Расширения Майкрософт
 
 *оператор ASM*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm***инструкции ассемблера* **;** <sub>opt  </sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__asm {**  *assembly-instruction-list*  **} ;**<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm** *инструкции ассемблера* **;** <sub>opt  </sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__asm {**  *assembly-instruction-list*  **} ;** <sub>opt</sub>
 
 *список сборок инструкция*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*инструкции ассемблера* **;** <sub>opt</sub> <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;** <sub>opt</sub>
 
 *ms-modifier-list*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ms-modifier* *ms-modifier-list*<sub>opt</sub>
 
 *ms-modifier*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__cdecl**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__fastcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__stdcall**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__syscall** (зарезервировано для будущих реализаций)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__oldcall** (зарезервировано для будущих реализаций)<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__unaligned** (зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__cdecl**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__fastcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__stdcall**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__syscall** (зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__oldcall** (зарезервировано для будущих реализаций)<br/>
+&nbsp;&nbsp;&nbsp;&nbsp; **__unaligned** (зарезервировано для будущих реализаций)<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*based-modifier*
 
 *на основе модификатор*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**__based (** *на основе типа* **)**
+&nbsp;&nbsp;&nbsp;&nbsp; **__based (** *на основе типа* **)**
 
 *на основе типа*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*Имя*
