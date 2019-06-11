@@ -1,31 +1,47 @@
 ---
 title: Настройка проекта Linux CMake в Visual Studio
-description: Настройка проекта Linux CMake в Visual Studio
-ms.date: 11/01/2018
+description: Настройка, изменение и компиляция проекта Linux CMake в Visual Studio
+ms.date: 05/21/2019
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: e2cda5e9b942342cca035c48054aadb5425b69cf
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57815870"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66182894"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Настройка проекта Linux CMake
 
 При открытии папки, содержащей проект CMake, Visual Studio использует метаданные, создаваемые CMake, для автоматической настройки IntelliSense и сборок. Локальные параметры конфигурации и отладки хранятся в JSON-файлах, которыми при необходимости можно поделиться с другими пользователями, работающими с Visual Studio. 
 
-Visual Studio не изменяет файлы CMakeLists.txt или исходный кэш CMake, чтобы другие сотрудники, работающие над тем же проектом, могли продолжить использование привычных средств.  
+Visual Studio не изменяет файлы CMakeLists.txt или исходный кэш CMake, чтобы другие сотрудники, работающие над тем же проектом, могли продолжить использование привычных средств.
+
+Общие сведения о поддержке CMake в Visual Studio см. в статье о [средствах CMake для Visual Studio](../build/cmake-projects-in-visual-studio.md). Прочитайте статью, прежде чем продолжить чтение этого раздела.
 
 ## <a name="before-you-begin"></a>Подготовка к работе
 
-Сначала убедитесь, что вы установили рабочую нагрузку **Разработка для Linux на C++**, включая компонент CMake. См. раздел [Установка рабочей нагрузки Linux для проектов C++ в Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+Сначала убедитесь, что вы установили рабочую нагрузку **Разработка для Linux на C++** , включая компонент CMake. См. раздел [Установка рабочей нагрузки Linux для проектов C++ в Visual Studio](download-install-and-setup-the-linux-development-workload.md). 
+
+Убедитесь, что на компьютере Linux установлены следующие компоненты: 
+
+- gcc
+- gdb
+- rsync
+- zip 
+
+::: moniker range="vs-2019"
+
+Поддержка проектов CMake в Linux требует последнюю версию CMake на целевом компьютере. Часто версия, предлагаемая диспетчером пакетов распространения по умолчанию, не является актуальной и не поддерживает все функции IDE. Visual Studio 2019 может автоматически устанавливать пользовательскую локальную копию CMake на удаленных компьютерах Linux, у которых нет последней версии CMake. Если совместимая версия CMake не обнаруживается, при первом выполнении сборки проекта вы увидите предложение установить CMake.
+
+Двоичные файлы установятся в папку `~/.vs/cmake`. После развертывания двоичных файлов проект будет повторно создан автоматически. Обратите внимание, что если файл CMake, указанный в поле `cmakeExecutable` в `CMakeSettings.json`, является недопустимым (файл не существует или версия файла не поддерживается), то при наличии предварительно созданных двоичных файлов Visual Studio проигнорирует `cmakeExecutable` и будет использовать эти предварительно созданные двоичные файлы.
+
+::: moniker-end
+
+::: moniker range="vs-2017"
 
 Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
 
-В этом разделе предполагается, что вы прочитали статью [Средства CMake для Visual Studio](../build/cmake-projects-in-visual-studio.md). 
-
-> [!NOTE]
-> Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases). В Visual Studio 2019 предварительно созданные двоичные файлы можно развернуть автоматически (см. раздел [Скачивание предварительно созданных двоичных файлов CMake](#download-prebuilt-cmake-binaries)).
+:::moniker-end
 
 ## <a name="open-a-folder"></a>Открытие папки
 
@@ -60,7 +76,6 @@ add_executable(hello-cmake hello.cpp)
 
 ![Создание кэша CMake в Linux](media/cmake-linux-1.png "Создание кэша CMake в Linux")
 
-**Visual Studio 2017 версии 15.7 и выше**<br/>
 Чтобы обеспечить поддержку IntelliSense для удаленных заголовков, Visual Studio автоматически копирует их с компьютера Linux в папку на локальном компьютере Windows. Подробнее см. в разделе [IntelliSense для удаленных заголовков](configure-a-linux-project.md#remote_intellisense).
 
 ## <a name="debug-the-project"></a>Отладка проекта
@@ -71,7 +86,23 @@ add_executable(hello-cmake hello.cpp)
 
 ## <a name="configure-cmake-settings-for-linux"></a>Настройка параметров CMake для Linux
 
-Файл CMakeSettings.json в проекте Linux CMake может указывать все свойства, перечисленные в разделе [Настройка параметров CMake](../build/customize-cmake-settings.md), а также дополнительные свойства, определяющие параметры сборки на удаленном компьютере Linux. Чтобы изменить параметры CMake по умолчанию, в основном меню выберите **CMake | Изменить параметры CMake | CMakeLists.txt** либо щелкните правой кнопкой мыши файл CMakeSettings.txt в **обозревателе решений** и выберите **Изменить параметры CMake**. Затем Visual Studio создает файл `CMakeSettings.json` в корневой папке проекта. Вы можете открыть этот файл с помощью редактора **параметров CMake** либо изменить файл напрямую. 
+Файл CMakeSettings.json в проекте Linux CMake может указывать все свойства, перечисленные в разделе [Настройка параметров CMake](../build/customize-cmake-settings.md), а также дополнительные свойства, определяющие параметры сборки на удаленном компьютере Linux. 
+
+::: moniker range="vs-2019"
+
+Чтобы изменить параметры CMake по умолчанию в Visual Studio 2019, на главной панели инструментов откройте раскрывающийся список **Конфигурация** и выберите **Управление конфигурациями**. 
+
+   ![Управление конфигурациями CMake](../build/media/vs2019-cmake-manage-configurations.png "Раскрывающийся список конфигураций CMake")
+
+Откроется **редактор параметров CMake**, в котором можно изменить файл `CMakeSettings.json` в корневой папке проекта. Вы также можете открыть файл напрямую, нажав кнопку **Изменить JSON** в редакторе. Дополнительные сведения см. в статье [Настраиваемые параметры CMake](../build/customize-cmake-settings.md).
+
+::: moniker-end
+
+::: moniker range="vs-2017"
+
+Чтобы изменить параметры CMake по умолчанию в Visual Studio 2017, в основном меню выберите **CMake | Изменить параметры CMake | CMakeLists.txt** либо щелкните правой кнопкой мыши файл CMakeSettings.txt в **обозревателе решений** и выберите **Изменить параметры CMake**. Затем Visual Studio создает файл `CMakeSettings.json` в корневой папке проекта. Вы можете открыть этот файл с помощью редактора **параметров CMake** либо изменить файл напрямую. Дополнительные сведения см. в статье [Настраиваемые параметры CMake](../build/customize-cmake-settings.md).
+
+::: moniker-end
 
 Ниже приведен пример конфигурации по умолчанию для Linux-Debug на основании предыдущего примера кода.
 
@@ -121,20 +152,19 @@ add_executable(hello-cmake hello.cpp)
 
 ```json
 {
-      "remotePreBuildCommand": "",
+      "remotePrebuildCommand": "",
       "remotePreGenerateCommand": "",
-      "remotePostBuildCommand": "",
+      "remotePostbuildCommand": "",
 }
 ```
 
 Эти параметры позволяют вам выполнять команды на удаленной системе до и после сборки и до создания CMake. Они могут быть любой командой, допустимой на удаленной системе. Выходные данные передаются обратно в Visual Studio.
 
-## <a name="download-prebuilt-cmake-binaries"></a>Скачивание предварительно созданных двоичных файлов CMake
+::: moniker range="vs-2019"
 
-В дистрибутиве Linux может быть более ранняя версия CMake. Для поддержки CMake в Visual Studio требуется поддержка режима сервера, которая была введена в CMake 3.8. Для версии CMake от Майкрософт скачайте последние готовые двоичные файлы по адресу [https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases).
+В Visual Studio 2019 можно изменить эти параметры в **редакторе параметров CMake**.
 
-**Visual Studio 2019**<br/>
-Если допустимый файл CMake не будет найден на удаленном компьютере, появится информационная панель и вам будет предоставлена возможность автоматически развернуть предварительно созданные двоичные файлы CMake. Двоичные файлы установятся в папку `~/.vs/cmake`. После развертывания двоичных файлов проект будет повторно создан автоматически. Обратите внимание, что если файл CMake, указанный в поле `cmakeExecutable` в `CMakeSettings.json`, является недопустимым (файл не существует или версия файла не поддерживается), то при наличии предварительно созданных двоичных файлов Visual Studio проигнорирует `cmakeExecutable` и будет использовать эти предварительно созданные двоичные файлы.
+::: moniker-end
 
 ## <a name="see-also"></a>См. также
 

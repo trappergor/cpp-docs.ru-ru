@@ -1,35 +1,39 @@
 ---
 title: Добавление функциональных возможностей с помощью мастеров кода (C++)
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.classes
+ms.date: 05/14/2019
 helpviewer_keywords:
 - code wizards [C++]
-- wizards [C++], code
-- Visual C++ projects, adding functionality
-- projects [C++], adding functionality
-- class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: 87c46be17c20bf9d592dd2b5c537897fa629e9c2
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: 8c88936edcb9110fe7482281f483f11c542b83c1
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57822578"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182654"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>Добавление функциональных возможностей с помощью мастеров кода (C++)
 
 После создания проекта вам потребуется изменить или добавить его функциональные возможности. Такие задачи включают в себя создание классов, добавление новых функций-членов и переменных, а также добавление методов и свойств автоматизации. Именно для этого предназначены мастеры кода.
 
-> [!WARNING]
-> Несколько мастеров кода ATL и MFC устарели и будут удалены из будущей версии Visual Studio. Эти мастеры использовались в редких случаях. Удаление этих мастеров не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
+> [!NOTE]
+> Перечисленные ниже редко используемые мастеры удалены в Visual Studio 2019. Удаление этих мастеров не влияет на общую поддержку для ATL и MFC. Пример кода для этих технологий находится в архиве в документации Майкрософт и репозитории VCSamples на GitHub.
+
+- Мастер компонентов ATL COM+ 1.0
+- Мастер компонентов ATL ASP
+- Мастер поставщика ATL OLE DB
+- Мастер страницы свойств ATL
+- Мастер потребителя ATL OLE DB
+- Потребитель ODBC MFC
+- Класс MFC из элемента управления ActiveX
+- Класс MFC из TypeLib.
+
 
 > [!NOTE]
 >  Теперь вы можете добавить обработчики сообщений, сопоставлять с ними сообщения и переопределять виртуальные функции MFC с помощью [окна свойств](/visualstudio/ide/reference/properties-window).
 
-## <a name="accessing-visual-c-code-wizards"></a>Доступ к мастерам кода Visual C++
+## <a name="accessing-c-code-wizards"></a>Доступ к мастерам кода C++
 
-Обратиться к мастерам кода Visual C++ можно в трех расположениях:
+Обратиться к мастерам кода C++ можно в трех расположениях:
 
 - Команда **Добавить новый элемент** в меню **Проект** позволяет открыть диалоговое окно `Add New Item`, где можно добавить в проект новые файлы. Команда **Добавить класс** отображает диалоговое окно [Добавление класса](../ide/add-class-dialog-box.md), которое открывает мастер для каждого из типов классов, доступных для добавления в проект. Команда **Добавить ресурс** отображает диалоговое окно [Добавление ресурса](../windows/add-resource-dialog-box.md), где можно создать или выбрать ресурс для добавления в проект.
 
@@ -73,5 +77,5 @@ ms.locfileid: "57822578"
 
 [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [Перемещение по структуре класса](../ide/navigating-the-class-structure-visual-cpp.md)<br>
-[Типы проектов Visual C++](../build/reference/visual-cpp-project-types.md)<br>
-[Типы файлов, создаваемых для проектов Visual C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
+[Типы проектов C++ в Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
+[Типы файлов, создаваемых для проектов Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)

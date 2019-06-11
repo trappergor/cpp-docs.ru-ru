@@ -1,18 +1,18 @@
 ---
 title: Поддержка операций с комплексными числами в C
-ms.date: 03/30/2018
+ms.date: 05/14/2019
 f1_keywords:
 - c.complex
 helpviewer_keywords:
 - complex numbers, math routines
 - math routines
 - complex numbers
-ms.openlocfilehash: 12ba858993d3712cbf390288df60faedc602c90a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 493886fcf1dbfd3dc16487dd8650206c428bb06d
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452615"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66186095"
 ---
 # <a name="c-complex-math-support"></a>Поддержка операций с комплексными числами в C
 
@@ -28,19 +28,19 @@ ms.locfileid: "50452615"
 
 |Стандартный тип|Тип Майкрософт|
 |-|-|
-|**float complex** или **float _Complex**|**_FComplex**|
-|**double complex** или **double _Complex**|**_DComplex**|
-|**long double complex** или **long double _Complex**|**_LComplex**|
+|**float complex** или **float _Complex**|**_Fcomplex**|
+|**double complex** или **double _Complex**|**_Dcomplex**|
+|**long double complex** или **long double _Complex**|**_Lcomplex**|
 
 В файле заголовка math.h определен отдельный тип **struct _complex**, используемый для функции [_cabs](../c-runtime-library/reference/cabs.md). Тип **struct _complex** не используется в эквивалентных функциях для работы с комплексными числами [cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md).
 
 ## <a name="complex-constants-and-macros"></a>Комплексные константы и макросы
 
-**I** определяется в качестве комплексного типа **_FComplex** (для типа **float**), который инициализируется `{ 0.0f, 1.0f }`.
+**I** определяется в качестве комплексного типа **_Fcomplex** (для типа **float**), который инициализируется `{ 0.0f, 1.0f }`.
 
 ## <a name="trigonometric-functions"></a>Тригонометрические функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[cacos, cacosf, cacosl](../c-runtime-library/reference/cacos-cacosf-cacosl.md)|Вычисляет комплексный арккосинус комплексного числа|
 |[casin, casinf, casinl](../c-runtime-library/reference/casin-casinf-casinl.md)|Вычисляет комплексный арксинус комплексного числа|
@@ -51,7 +51,7 @@ ms.locfileid: "50452615"
 
 ## <a name="hyperbolic-functions"></a>Гиперболические функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[cacosh, cacoshf, cacoshl](../c-runtime-library/reference/cacosh-cacoshf-cacoshl.md)|Вычисляет комплексный гиперболический арккосинус комплексного числа|
 |[casinh, casinhf, casinhl](../c-runtime-library/reference/casinh-casinhf-casinhl.md)|Вычисляет комплексный гиперболический арксинус комплексного числа|
@@ -62,7 +62,7 @@ ms.locfileid: "50452615"
 
 ## <a name="exponential-and-logarithmic-functions"></a>Экспоненциальные и логарифмические функции
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[cexp, cexpf, cexpl](../c-runtime-library/reference/cexp-cexpf-cexpl.md)|Вычисляет комплексную экспоненту комплексного числа с основанием *e*|
 |[clog, clogf, clogl](../c-runtime-library/reference/clog-clogf-clogl.md)|Вычисляет комплексный натуральный (по основанию *e*) логарифм комплексного числа|
@@ -70,7 +70,7 @@ ms.locfileid: "50452615"
 
 ## <a name="power-and-absolute-value-functions"></a>Функции возведения в степень и вычисления абсолютного значения
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[cabs, cabsf, cabsl](../c-runtime-library/reference/cabs-cabsf-cabsl.md)|Вычисляет комплексное абсолютное значение (также называемое нормой, модулем или порядком величины) комплексного числа|
 |[cpow, cpowf, cpowl](../c-runtime-library/reference/cpow-cpowf-cpowl.md)|Возводит комплексное число в степень x<sup>y</sup>|
@@ -78,7 +78,7 @@ ms.locfileid: "50452615"
 
 ## <a name="manipulation-functions"></a>Функции для манипуляции с комплексными числами
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[_Cbuild, _FCbuild, _LCbuild](../c-runtime-library/reference/cbuild-fcbuild-lcbuild.md)|Формирует комплексное число из вещественной и мнимой частей|
 |[carg, cargf, cargl](../c-runtime-library/reference/carg-cargf-cargl.md)|Вычисляет аргумент комплексного числа (также называемый фазовым углом)|
@@ -92,7 +92,7 @@ ms.locfileid: "50452615"
 
 Так как комплексные числа не относятся к собственным типам компилятора Майкрософт, для них не определены стандартные арифметические операторы. Для удобства представлены следующие библиотечные функции, которые позволяют выполнять некоторые операции с комплексными числами в пользовательском коде.
 
-|Функция|Описание:|
+|Функция|Описание|
 |-|-|
 |[_Cmulcc, _FCmulcc, _LCmulcc](../c-runtime-library/reference/cmulcc-fcmulcc-lcmulcc.md)|Произведение двух комплексных чисел|
 |[_Cmulcr, _FCmulcr, _LCmulcr](../c-runtime-library/reference/cmulcr-fcmulcr-lcmulcr.md)|Умножает комплексное число на число с плавающей запятой|
