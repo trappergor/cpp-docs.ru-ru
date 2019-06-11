@@ -10,6 +10,8 @@
   href: create-a-new-linux-project.md
 - name: Подключение к удаленному компьютеру Linux
   href: connect-to-your-remote-linux-computer.md
+- name: Настройка проектов Linux для использования санитайзера адресов
+  href: linux-asan-configuration.md
 - name: 'Развертывание, запуск и отладка проекта Linux'
   href: deploy-run-and-debug-your-linux-project.md
 - name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
