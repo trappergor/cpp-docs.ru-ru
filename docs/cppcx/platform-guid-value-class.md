@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: 64c70b619380d7c2ed4aaaecad3ee01a1d0f79c7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d6c71028e4f93064c7b4df978678b5f7c26d6bc
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383325"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504521"
 ---
 # <a name="platformguid-value-class"></a>Класс значения Platform::Guid
 
-Представляет тип [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) в системе типов среды выполнения Windows.
+Представляет тип [GUID](/previous-versions/aa373931\(v=vs.80\)) в системе типов среды выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -115,7 +115,7 @@ Guid(
 Следующий байт `GUID`.
 
 *m*<br/>
-Объект `GUID` в форме [структуры GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Объект `GUID` в форме [структуры GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 *n*<br/>
 Оставшиеся 8 байтов `GUID`.
@@ -194,7 +194,7 @@ static bool Platform::Guid::operator<(Platform::Guid guid1, Platform::Guid guid2
 
 ## <a name="operator-call"></a> Оператор GUID:: operator()
 
-Неявно преобразует `Platform::Guid` для [структуры GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Неявно преобразует `Platform::Guid` для [структуры GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 ### <a name="syntax"></a>Синтаксис
 
@@ -204,7 +204,7 @@ const GUID& Platform::Guid::operator();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [структуры GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931).
+Объект [структуры GUID](/previous-versions/aa373931\(v=vs.80\)).
 
 ## <a name="see-also"></a>См. также
 

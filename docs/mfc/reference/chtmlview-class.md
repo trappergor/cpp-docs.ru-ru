@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 17979dce7899820db3da3c24968385914c3a57e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5ea7b59ccb95078324ae85bbf04c11c537f0f525
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62337899"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503566"
 ---
 # <a name="chtmlview-class"></a>Класс CHtmlView
 
@@ -493,7 +493,7 @@ void ExecWB(
 
 ### <a name="remarks"></a>Примечания
 
-См. в разделе [IWebBrowser2::ExecWB](https://msdn.microsoft.com/library/aa752117.aspx) в Windows SDK.
+См. в разделе [IWebBrowser2::ExecWB](/previous-versions//aa752117\(v=vs.85\)) в Windows SDK.
 
 ##  <a name="getaddressbar"></a>  CHtmlView::GetAddressBar
 
@@ -759,7 +759,7 @@ READYSTATE GetReadyState() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Объект [READYSTATE](https://msdn.microsoft.com/library/aa768362.aspx) значение, как описано в пакете Windows SDK.
+Объект [READYSTATE](/previous-versions//aa768362\(v=vs.85\)) значение, как описано в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1307,7 +1307,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
-Эта функция-член вызывается платформой при [полноэкранном режиме](https://msdn.microsoft.com/library/aa752119.aspx) свойство изменилось.
+Эта функция-член вызывается платформой при [полноэкранном режиме](/previous-versions/aa752119\(v=vs.85\)) свойство изменилось.
 
 ```
 virtual void OnFullScreen(BOOL bFullScreen);
@@ -1430,7 +1430,7 @@ S_OK в случае успешного выполнения, или код ош
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
-Эта функция-член вызывается платформой при [MenuBar](https://msdn.microsoft.com/library/aa752131.aspx) свойство изменилось.
+Эта функция-член вызывается платформой при [MenuBar](/previous-versions/aa752131\(v=vs.85\)) свойство изменилось.
 
 ```
 virtual void OnMenuBar(BOOL bMenuBar);
@@ -1481,7 +1481,7 @@ URL-адрес, для которого не удалось навигации.
 Имя кадра, в котором будет отображаться, или значение NULL, если нет именованных кадра был нацелен на ресурс ресурса.
 
 *dwError*<br/>
-Код состояния ошибки, если он доступен. Список возможных кодов состояния HRESULT и HTTP, см. в разделе [коды состояния NavigateError событий.](https://msdn.microsoft.com/library/aa768365.aspx)
+Код состояния ошибки, если он доступен. Список возможных кодов состояния HRESULT и HTTP, см. в разделе [коды состояния событий NavigateError.](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768365\(v=vs.85\)).
 
 *pbCancel*<br/>
 Указывает необходимость отмены перехода на страницу ошибки или любые дальнейшие Автопоиск. Если значение TRUE (по умолчанию), продолжите выполнение перехода к странице ошибки или Автопоиск; Если значение равно FALSE, отмены перехода к странице ошибки или Автопоиск.
@@ -1490,7 +1490,7 @@ URL-адрес, для которого не удалось навигации.
 
 Переопределите этот метод, чтобы обеспечить обработку ошибок в пользовательских переходов.
 
-Дополнительные сведения см. в разделе [DWebBrowserEvents2::NavigateError](https://msdn.microsoft.com/library/aa768286.aspx)
+Дополнительные сведения см. в разделе [DWebBrowserEvents2::NavigateError](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768286\(v=vs.85\))
 
 ##  <a name="onnewwindow2"></a>  CHtmlView::OnNewWindow2
 
@@ -1661,7 +1661,7 @@ virtual HRESULT OnShowUI(
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
-Эта функция-член вызывается платформой при [StatusBar](https://msdn.microsoft.com/library/aa768270.aspx) свойство изменилось.
+Эта функция-член вызывается платформой при [StatusBar](/previous-versions//aa768270\(v=vs.85\)) свойство изменилось.
 
 ```
 virtual void OnStatusBar(BOOL bStatusBar);
@@ -1687,7 +1687,7 @@ virtual void OnStatusTextChange(LPCTSTR lpszText);
 
 ##  <a name="ontheatermode"></a>  CHtmlView::OnTheaterMode
 
-Эта функция-член вызывается платформой при [TheaterMode](https://msdn.microsoft.com/library/aa768273.aspx) свойство изменилось.
+Эта функция-член вызывается платформой при [TheaterMode](/previous-versions/aa768273\(v=vs.85\)) свойство изменилось.
 
 ```
 virtual void OnTheaterMode(BOOL bTheaterMode);
@@ -1717,7 +1717,7 @@ virtual void OnTitleChange(LPCTSTR lpszText);
 
 ##  <a name="ontoolbar"></a>  CHtmlView::OnToolBar
 
-Эта функция-член вызывается платформой при [инструментов](https://msdn.microsoft.com/library/aa768274.aspx) свойство изменилось.
+Эта функция-член вызывается платформой при [инструментов](/previous-versions/aa768274\(v=vs.85\)) свойство изменилось.
 
 ```
 virtual void OnToolBar(BOOL bToolBar);
@@ -1956,7 +1956,7 @@ void Refresh2(int nLevel);
 ### <a name="parameters"></a>Параметры
 
 *nLevel*<br/>
-Адрес переменной, указывающие уровень обновления. Возможные переменные определяются в [RefreshConstants](https://msdn.microsoft.com/library/aa768363.aspx), в пакете Windows SDK.
+Адрес переменной, указывающие уровень обновления. Возможные переменные определяются в [RefreshConstants](/previous-versions/aa768363\(v=vs.85\)), в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 

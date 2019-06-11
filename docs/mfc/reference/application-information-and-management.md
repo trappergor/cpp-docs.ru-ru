@@ -1,17 +1,15 @@
 ---
 title: Сведения о приложении и управление им
 ms.date: 11/04/2016
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b106a8874d1b0243f408a6c6c7311a9ce791e019
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62151287"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504497"
 ---
 # <a name="application-information-and-management"></a>Сведения о приложении и управление им
 
@@ -100,7 +98,7 @@ RUNTIME_CLASS объекта, производного от [CWinThread](../../m
 - **0** запустить поток сразу после создания.
 
 *lpSecurityAttrs*<br/>
-Указывает на [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) структура, задающая атрибуты безопасности для потока. Если значение равно NULL, будет использоваться те же атрибуты безопасности, что и для создания потока. Дополнительные сведения об этой структуре см. в разделе Windows SDK.
+Указывает на [SECURITY_ATTRIBUTES](/previous-versions/windows/desktop/legacy/aa379560\(v=vs.85\)) структура, задающая атрибуты безопасности для потока. Если значение равно NULL, будет использоваться те же атрибуты безопасности, что и для создания потока. Дополнительные сведения об этой структуре см. в разделе Windows SDK.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -112,7 +110,7 @@ RUNTIME_CLASS объекта, производного от [CWinThread](../../m
 
 `AfxBeginThread` Создает новый `CWinThread` объекта, вызывает его [CreateThread](../../mfc/reference/cwinthread-class.md#createthread) функцию до запуска выполнения потока и возвращает указатель на поток. Проверки выполняются на протяжении процедуры, чтобы убедиться в том, что все объекты, освобожденные должным образом вызывать любую часть создания. Чтобы завершить поток, вызовите [AfxEndThread](#afxendthread) из в пределах потока или возврата из функции управления рабочего потока.
 
-Многопоточность должна быть включена приложением; в противном случае функция завершится ошибкой. Дополнительные сведения о включении многопоточности см [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) под *параметры компилятора Visual C++*.
+Многопоточность должна быть включена приложением; в противном случае функция завершится ошибкой. Дополнительные сведения о включении многопоточности см [/MD, / MT, /LD (использование библиотеки времени выполнения)](../../build/reference/md-mt-ld-use-run-time-library.md) под *параметры компилятора Visual C++* .
 
 Дополнительные сведения о `AfxBeginThread`, см. в статьях [Многопоточность: Создание рабочих потоков](../../parallel/multithreading-creating-worker-threads.md) и [многопоточности: Создание потоков пользовательского интерфейса](../../parallel/multithreading-creating-user-interface-threads.md).
 
@@ -650,7 +648,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>Параметры
 
 *nClassStyle*<br/>
-Задает стиль класса Windows или сочетание стили, созданные с помощью побитового или ( **&#124;**) оператора для класса окна. Список стилей класса, см. в разделе [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) структуры в пакете Windows SDK. Если значение равно NULL, значения по умолчанию устанавливается следующим образом:
+Задает стиль класса Windows или сочетание стили, созданные с помощью побитового или ( **&#124;** ) оператора для класса окна. Список стилей класса, см. в разделе [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) структуры в пакете Windows SDK. Если значение равно NULL, значения по умолчанию устанавливается следующим образом:
 
 - Устанавливает стиль мыши CS_DBLCLKS, которая отправляет дважды щелкните сообщения в процедуру при двойном щелчке мыши.
 

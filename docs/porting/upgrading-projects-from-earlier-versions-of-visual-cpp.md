@@ -1,16 +1,17 @@
 ---
 title: Обновление проектов, созданных в предыдущих версиях Visual C++
-ms.date: 11/04/2016
+description: Обновление проектов Microsoft C++ с предыдущих версий Visual Studio.
+ms.date: 05/03/2019
 helpviewer_keywords:
 - 32-bit code porting
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
-ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: fca4a87310f7ba0c21a6a7512dd93dce0f915f6b
+ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59034917"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65220384"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>Обновление проектов, созданных в предыдущих версиях Visual C++
 
@@ -45,6 +46,6 @@ ms.locfileid: "59034917"
 
 ## <a name="see-also"></a>См. также
 
-[Новые возможности Visual C++ в Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[What's New for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md) (Новые возможности Visual C++ в Visual Studio)<br/>
 [Журнал изменений Visual C++ 2003–2015](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [Нестандартное поведение](../cpp/nonstandard-behavior.md)

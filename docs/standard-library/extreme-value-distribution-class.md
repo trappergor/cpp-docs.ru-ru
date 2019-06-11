@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 7eb75fb7b76399fd4bf1d3bea94dcec4b52230f9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405148"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451188"
 ---
 # <a name="extremevaluedistribution-class"></a>Класс extreme_value_distribution
 
@@ -90,7 +90,7 @@ public:
 
 Дополнительные сведения о классах распределения и их членах см. в разделе [\<random>](../standard-library/random.md).
 
-Дополнительные сведения о распределении экстремальных значений см. в статье [Распределение экстремальных значений](http://go.microsoft.com/fwlink/p/?linkid=401110) на веб-сайте Wolfram MathWorld.
+Дополнительные сведения о распределении экстремальных значений см. в статье [Распределение экстремальных значений](https://go.microsoft.com/fwlink/p/?linkid=401110) на веб-сайте Wolfram MathWorld.
 
 ## <a name="example"></a>Пример
 

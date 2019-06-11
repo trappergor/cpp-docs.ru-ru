@@ -1,29 +1,29 @@
 ---
 title: Ошибка компилятора C2362
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 f1_keywords:
 - C2362
 helpviewer_keywords:
 - C2362
 ms.assetid: 7aafecbc-b3cf-45a6-9ec3-a17e3f222511
-ms.openlocfilehash: 17656b2a48a3680a9269d3ca300fd4188eda6b84
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d48806982bbb6cdda4d29e47f6692e7e3601d6de
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62364328"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503216"
 ---
 # <a name="compiler-error-c2362"></a>Ошибка компилятора C2362
 
-Пропуск инициализации «идентификатор», «goto "Метка»
+> Инициализация "*идентификатор*" пропускается "goto *метка*"
 
-При компиляции с параметром [/Za](../../build/reference/za-ze-disable-language-extensions.md), переходе к метке предотвращает инициализацию идентификатор.
+При компиляции с помощью [/Za](../../build/reference/za-ze-disable-language-extensions.md), перехода к метке предотвращает инициализацию идентификатор.
 
-Нельзя перейти назад объявление с помощью инициализатора, только если объявление в блоке, который не выполняется, или переменная уже инициализирован.
+Вы может переходить только после объявления с инициализатором Если объявление содержится в блоке, который не введен, или в том случае, если переменная уже инициализирован.
 
-При компиляции следующего примера возникнет ошибка C2326:
+Следующий пример приводит к возникновению ошибки C2362:
 
-```
+```cpp
 // C2362.cpp
 // compile with: /Za
 int main() {
@@ -35,7 +35,7 @@ label1:;
 
 Возможное решение
 
-```
+```cpp
 // C2362b.cpp
 // compile with: /Za
 int main() {

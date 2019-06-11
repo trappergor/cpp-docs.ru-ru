@@ -1,19 +1,23 @@
 ---
 title: Хранение строк в поставщике OLE DB
-ms.date: 10/26/2018
+ms.date: 05/09/2019
 helpviewer_keywords:
 - user records, editing
 ms.assetid: 36cb9635-067c-4cad-8f85-962f28026f6a
-ms.openlocfilehash: 5dce7dac84ef69da17baac135a68bd78698c4456
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
-ms.translationtype: MT
+ms.openlocfilehash: f0ae4a3718858c4de5417aaf5a4f9bc0c0ba9984
+ms.sourcegitcommit: 00e26915924869cd7eb3c971a7d0604388abd316
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344975"
+ms.lasthandoff: 05/10/2019
+ms.locfileid: "65525352"
 ---
 # <a name="storing-strings-in-the-ole-db-provider"></a>Хранение строк в поставщике OLE DB
 
-В *Custom*RS.h, **мастер поставщика ATL OLE DB** создает запись пользователя по умолчанию с именем `CWindowsFile`. Для обработки двух строк, изменить `CWindowsFile` как показано в следующем коде:
+> [!NOTE] 
+> Мастер поставщика OLE DB в ATL недоступен в Visual Studio 2019 и более поздних версиях.
+
+
+В файле *Custom*RS.h **мастер поставщика OLE DB в ATL** создает запись пользователя по умолчанию с именем `CWindowsFile`. Для обработки этих двух строк измените `CWindowsFile` следующим образом:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -48,9 +52,9 @@ END_PROVIDER_COLUMN_MAP()
 };
 ```
 
-Члены данных `szCommand` и `szText` представляют две строки с `szCommand2` и `szText2` с дополнительными столбцами, при необходимости. Элемент данных `dwBookmark` не нужен для этого простого поставщика только для чтения, но будет использоваться позднее для добавления `IRowsetLocate` интерфейс; см. в разделе [Усовершенствование простого чтения только поставщика](../../data/oledb/enhancing-the-simple-read-only-provider.md). `==` Оператор сравнивает экземпляры (реализация этот оператор является необязательным).
+Элементы данных `szCommand` и `szText` представляют две строки с `szCommand2` и `szText2` с дополнительными столбцами (при необходимости). Элемент данных `dwBookmark` не нужен для этого простого поставщика с доступом только для чтения, но будет использоваться позднее для добавления интерфейса `IRowsetLocate`; см. статью [Enhancing the Simple Read Only Provider](../../data/oledb/enhancing-the-simple-read-only-provider.md) (Улучшение простого поставщика с доступом только для чтения). Оператор `==` сравнивает экземпляры (реализация этого оператора необязательна).
 
-Если это сделано, можно добавить функциональные возможности [чтение строк в поставщике OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
+По завершении вы можете добавить функциональность для [считывания строк в поставщик OLE DB](../../data/oledb/reading-strings-into-the-ole-db-provider.md).
 
 ## <a name="see-also"></a>См. также
 

@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2428c94eaa5dd371d58680f6317173709f684507
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323639"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66449572"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -375,7 +375,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**.
+Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_** .
 
 ##  <a name="createdragimage"></a>  CTreeCtrl::CreateDragImage
 
@@ -1505,7 +1505,7 @@ HTREEITEM MapAccIdToItem(UINT uAccId) const;
 
 ### <a name="remarks"></a>Примечания
 
-Специальные возможности — это приложения, помогающие людям с ограниченными возможностями использования компьютеров. Используемый идентификатор специальных возможностей `IAccessible` интерфейс, чтобы уникальным образом определять элемент в окне. Дополнительные сведения об идентификаторах специальных возможностей см. в разделе «О Active поддержка специальных возможностей» по адресу [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Специальные возможности — это приложения, помогающие людям с ограниченными возможностями использования компьютеров. Используемый идентификатор специальных возможностей `IAccessible` интерфейс, чтобы уникальным образом определять элемент в окне. Дополнительные сведения об идентификаторах специальных возможностей см. в разделе «О Active поддержка специальных возможностей» по адресу [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Этот метод отправляет [TVM_MAPACCIDTOHTREEITEM](/windows/desktop/Controls/tvm-mapaccidtohtreeitem) сообщения, который описан в пакете Windows SDK.
 
@@ -1541,7 +1541,7 @@ UINT MapItemToAccID(HTREEITEM hItem) const;
 
 ### <a name="remarks"></a>Примечания
 
-Специальные возможности — это приложения, помогающие людям с ограниченными возможностями использования компьютеров. Используемый идентификатор специальных возможностей `IAccessible` интерфейс, чтобы уникальным образом определять элемент в окне. Дополнительные сведения об идентификаторах специальных возможностей см. в разделе «О Active поддержка специальных возможностей» по адресу [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Специальные возможности — это приложения, помогающие людям с ограниченными возможностями использования компьютеров. Используемый идентификатор специальных возможностей `IAccessible` интерфейс, чтобы уникальным образом определять элемент в окне. Дополнительные сведения об идентификаторах специальных возможностей см. в разделе «О Active поддержка специальных возможностей» по адресу [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Этот метод отправляет [TVM_MAPHTREEITEMTOACCID](/windows/desktop/Controls/tvm-maphtreeitemtoaccid) сообщения, который описан в пакете Windows SDK.
 
@@ -2281,7 +2281,7 @@ void ShowInfoTip(HTREEITEM hItem);
 
 ### <a name="remarks"></a>Примечания
 
-Дополнительные сведения о различиях между подсказки и всплывающих подсказках см. в разделе «Подсказки и всплывающих подсказках» по адресу [Microsoft Developer Network](http://go.microsoft.com/fwlink/p/?linkid=56322).
+Дополнительные сведения о различиях между подсказки и всплывающих подсказках см. в разделе «Подсказки и всплывающих подсказках» по адресу [Microsoft Developer Network](https://go.microsoft.com/fwlink/p/?linkid=56322).
 
 Этот метод отправляет [TVM_SHOWINFOTIP](/windows/desktop/Controls/tvm-showinfotip) сообщения, который описан в пакете Windows SDK.
 

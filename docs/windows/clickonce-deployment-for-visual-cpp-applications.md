@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: f78aca6621462ccbd86cfe09ae71b715b5e56f09
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: a7b738c2deb909d2a8f222bf7f62dc80cf8eeb8b
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65448460"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504782"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Развертывание с помощью технологии ClickOnce для приложений Visual C++
 
@@ -42,7 +42,7 @@ Visual Studio предоставляет две различные технол�
 
 [Mage.exe (средство создания и редактирования манифеста)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (средство создания и редактирования манифестов, графический клиент)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>
-[Makecert.exe (средство создания сертификатов)](https://msdn.microsoft.com/library/windows/desktop/aa386968)<br>
+[Makecert.exe (средство создания сертификатов)](/windows/desktop/SecCrypto/makecert)<br>
 [Развертывание классических приложений](deploying-native-desktop-applications-visual-cpp.md)<br>
 [Развертывание приложений, служб и компонентов](/visualstudio/deployment/deploying-applications-services-and-components)<br>
 [Развертывание и безопасность технологии ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment)<br>

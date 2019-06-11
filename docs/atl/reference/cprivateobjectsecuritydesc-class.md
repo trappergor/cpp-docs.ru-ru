@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 99b47c15af4cdb87fb35d5c7342ea2719d341868
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cc726892515ea38a559bdf182affa96f84be3449
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278154"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503307"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>Класс CPrivateObjectSecurityDesc
 
@@ -173,7 +173,7 @@ bool Create(
 Указывает, является ли новый объект может содержать другие объекты. Значение true указывает, что новый объект является контейнером. Значение false указывает, что новый объект не является контейнером.
 
 *AutoInheritFlags*<br/>
-Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.
+Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод вызывает метод [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) или [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581).
+Этот метод вызывает метод [CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity) или [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex).
 
 Второй метод позволяет указать идентификатор GUID типа объекта нового объекта или управление как элементы управления доступом наследуются.
 
@@ -224,7 +224,7 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 
 ### <a name="parameters"></a>Параметры
 
-*правая часть*<br/>
+*rhs*<br/>
 `CPrivateObjectSecurityDesc` Объект текущему объекту.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -265,7 +265,7 @@ bool Set(
 Ссылка на [CAccessToken](../../atl/reference/caccesstoken-class.md) объекта для процесса клиента, от имени которого создается объект.
 
 *AutoInheritFlags*<br/>
-Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581) для получения дополнительных сведений.
+Набор битовые флаги, определяющие, как элементы управления доступом (ACE) наследуются от *pParent*. См. в разделе [CreatePrivateObjectSecurityEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurityex) для получения дополнительных сведений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 

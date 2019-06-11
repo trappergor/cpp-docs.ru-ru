@@ -1,38 +1,44 @@
 ---
-title: Добавление компонентов страницы активного сервера ATL
-ms.date: 11/04/2016
-helpviewer_keywords:
-- ASP components, adding
-- ASP components
-- ATL, ASP components
-- ATL ASP components
+title: Добавление ASP-компонента ATL
+ms.date: 05/09/2019
 ms.assetid: 7be2204c-6e58-4099-8892-001b848c8987
-ms.openlocfilehash: 2f7ad08cb514e33224c877bcbf1c5e8128e26185
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
-ms.translationtype: MT
+ms.openlocfilehash: b6c1d23efdff6885cc8ab900aaf552db39631e6e
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
+ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261316"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65706931"
 ---
-# <a name="adding-an-atl-active-server-page-component"></a>Добавление компонентов страницы активного сервера ATL
+# <a name="adding-an-atl-active-server-page-component"></a>Добавление ASP-компонента ATL
 
-Чтобы добавить объект Active Template Library (ATL) в проект, проект должен будут созданы как ATL COM-приложение или приложение MFC с поддержкой ATL. Можно использовать [мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL, можно выбрать **Добавление поддержки ATL в MFC** из [класс диалоговое окно Добавление](../../ide/add-class-dialog-box.md) диалогового окна, или вы можете [Добавление объекта ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) для реализации поддержки ATL в приложении MFC.
 
-ASP-компоненты являются частью архитектуры служб IIS, который предоставляет следующие дополнительные возможности веб-разработки:
+::: moniker range="vs-2019"
 
-- ASP-компоненты можно внедрять в HTML-страницы для создания динамического содержимого зависит от обозревателя.
+Мастер ASP-компонентов ATL недоступен в Visual Studio 2019 и более поздних версиях.
 
-- ASP-страницах можно использовать для подключения к базам данных на основе стандартов.
+::: moniker-end
 
-- Можно использовать функции обработки ошибок ASP для веб-приложений.
+::: moniker range="<=vs-2017"
 
-## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Чтобы добавить компонент ATL Active Server Pages в проект
+Чтобы добавить объект библиотеки шаблонных классов (ATL) в проект, необходимо создавать проект как COM-приложение ATL или приложение MFC с поддержкой ATL. Вы можете использовать [Мастер проектов ATL](../../atl/reference/atl-project-wizard.md) для создания приложения ATL, выбрать пункт **Добавить в MFC поддержку ATL** в диалоговом окне [Добавить класс](../../ide/add-class-dialog-box.md), либо [добавить объект ATL в приложение MFC](../../mfc/reference/adding-atl-support-to-your-mfc-project.md), чтобы реализовать поддержку ATL для приложения MFC.
 
-1. В **обозревателе решений** щелкните правой кнопкой мыши имя проекта, к которому вы хотите добавить компонент ATL ASP-страницы.
+ASP-компоненты входят в состав архитектуры служб IIS, которая реализует следующие дополнительные возможности веб-разработки.
+
+- Внедрение ASP-компонентов на HTML-страницы для создания динамического содержимого, не зависящего от браузера.
+
+- Использование ASP-страниц для обеспечения подключений к базе данных на основе стандартов.
+
+- Использование возможностей обработки ошибок ASP для веб-приложений.
+
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>Добавление ASP-компонента ATL в проект
+
+1. В **обозревателе решений** щелкните правой кнопкой мыши имя проекта, в который вы хотите добавить ASP-компонент ATL.
 
 1. В контекстном меню выберите команду **Добавить**, а затем — **Добавить класс**.
 
-1. В [Добавление класса](../../ide/add-class-dialog-box.md) отображаемое в диалоговом окне **шаблоны** панели щелкните **компонент библиотеки ATL**и нажмите кнопку **откройте** для отображения [Мастер компонентов страницы активного сервера ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+1. В диалоговом окне [Добавить класс](../../ide/add-class-dialog-box.md) в области **Шаблоны** щелкните **ASP-компонент библиотеки ATL**, а затем щелкните **Открыть**, чтобы запустить [мастер ASP-компонентов ATL](../../atl/reference/atl-active-server-page-component-wizard.md).
+
+::: moniker-end
 
 ## <a name="see-also"></a>См. также
 

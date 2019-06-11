@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3283e974dc2b933049599fba0b6cf51c32a18ef3
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348696"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66450831"
 ---
 # <a name="cbutton-class"></a>Класс CButton
 
@@ -153,7 +153,7 @@ class CButton : public CWnd
 
 Каждая запись схемы сообщений имеет следующий вид:
 
-**ON\_**_уведомления_ **(** _идентификатор_, _memberFxn_ **)**
+**ON\_** _уведомления_ **(** _идентификатор_, _memberFxn_ **)**
 
 где *идентификатор* указывает идентификатор дочернего окна элемента управления, отправляющего уведомление и *memberFxn* имя функции-члена родительской вы написали для обработки уведомления.
 
@@ -808,7 +808,7 @@ BOOL SetElevationRequired(BOOL fElevationRequired);
 
 ### <a name="remarks"></a>Примечания
 
-Если элемент управления связями кнопки или команды требуется полномочие безопасности с повышенными правами для выполнения действия, значение элемента управления `elevation required` состояние. Как следствие Windows отображает значок щита контроля учетных записей (UAC) в элементе управления. Дополнительные сведения см. в разделе «Контроль учетных записей пользователей» в [MSDN](http://go.microsoft.com/fwlink/p/?linkid=18507).
+Если элемент управления связями кнопки или команды требуется полномочие безопасности с повышенными правами для выполнения действия, значение элемента управления `elevation required` состояние. Как следствие Windows отображает значок щита контроля учетных записей (UAC) в элементе управления. Дополнительные сведения см. в разделе «Контроль учетных записей пользователей» в [MSDN](https://go.microsoft.com/fwlink/p/?linkid=18507).
 
 Этот метод отправляет [BCM_SETSHIELD](/windows/desktop/Controls/bcm-setshield) сообщения, который описан в пакете Windows SDK.
 

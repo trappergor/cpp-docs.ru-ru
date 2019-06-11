@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d6d319a963fbc24e89bf8c4c0858cd80ec5a9d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62345595"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503455"
 ---
 # <a name="cinternetsession-class"></a>Класс CInternetSession
 
@@ -156,7 +156,7 @@ CInternetSession(
 
 - INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
 
-- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;**) оператор.
+- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;** ) оператор.
 
 ### <a name="remarks"></a>Примечания
 
@@ -258,7 +258,7 @@ static BOOL GetCookie(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Если вызов завершается неудачно, вызывается функция Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) для определения причины ошибки. Применяются следующие значения ошибок:
+В противном случае возвращает значение TRUE, если успешно, или значение FALSE. Если вызов завершается неудачно, вызывается функция Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) для определения причины ошибки. Применяются следующие значения ошибок:
 
 - ERROR_NO_MORE_ITEMS имеется cookie не для указанного URL-адреса и все его родительские элементы.
 
@@ -536,7 +536,7 @@ CStdioFile* OpenURL(
 
 ### <a name="remarks"></a>Примечания
 
-Параметр *dwFlags* должен включать INTERNET_FLAG_TRANSFER_ASCII или INTERNET_FLAG_TRANSFER_BINARY, но не оба. Остальные флаги можно объединить с помощью побитовой операции **или** оператор ( **&#124;**).
+Параметр *dwFlags* должен включать INTERNET_FLAG_TRANSFER_ASCII или INTERNET_FLAG_TRANSFER_BINARY, но не оба. Остальные флаги можно объединить с помощью побитовой операции **или** оператор ( **&#124;** ).
 
 `OpenURL`, который создает оболочку для функции Win32 `InternetOpenURL`, позволяет только загрузка, получение и считывание данных с сервера в Интернете. `OpenURL` позволяет не файлами в удаленном расположении, поэтому он не требует [CInternetConnection](../../mfc/reference/cinternetconnection-class.md) объекта.
 
@@ -616,11 +616,11 @@ DWORD, содержащее значение параметра.
 
 - INTERNET_FLAG_DONT_CACHE не кэшировать данные, локально или в любой серверов шлюзов.
 
-- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;**) оператор.
+- Скачайте INTERNET_FLAG_OFFLINE операции выполняются через постоянный кэш только. Если элемент не существует в кэше, соответствующего кода ошибки возвращается. Этот флаг можно использовать совместно с побитовым **или** ( **&#124;** ) оператор.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если операция выполнена успешно, возвращается значение TRUE. Если произошла ошибка, возвращается значение FALSE. При сбое вызова функции Win32 [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) может вызываться для определения причины ошибки.
+Если операция выполнена успешно, возвращается значение TRUE. Если произошла ошибка, возвращается значение FALSE. При сбое вызова функции Win32 [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) может вызываться для определения причины ошибки.
 
 ## <a name="see-also"></a>См. также
 

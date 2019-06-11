@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 27b82fb7a688c8cc7a3df734a7e60a17f7ffa184
-ms.sourcegitcommit: 7d64c5f226f925642a25e07498567df8bebb00d4
+ms.openlocfilehash: c67f925773854258111b3a2aa1967f51de4df127
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65446761"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65708256"
 ---
 # <a name="creating-an-mfc-activex-control"></a>Создание элемента управления ActiveX MFC
 
@@ -36,7 +36,7 @@ ms.locfileid: "65446761"
 
 1. Нажмите кнопку **Готово** закрыть мастер и открыть проект в среде разработки.
 
-После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для визуального C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md).
+После создания проекта можно просмотреть файлы, созданные в **обозревателе решений**. Дополнительные сведения о файлах, создаваемых мастером для проекта, см. в созданном для проекта файле ReadMe.txt. Дополнительные сведения о типах файлов см. в разделе [типы файлов, создаваемых для Visual Studio C++ проекты](../../build/reference/file-types-created-for-visual-cpp-projects.md).
 
 После создания проекта, можно использовать мастеры кода для добавления [функции](../../ide/add-member-function-wizard.md), [переменных](../../ide/add-member-variable-wizard.md), [события](../../ide/add-event-wizard.md), [свойства](../../ide/names-add-property-wizard.md), и [методы](../../ide/add-method-wizard.md). Дополнительные сведения о настройке элементов управления ActiveX, см. в разделе [элементы ActiveX в MFC](../../mfc/mfc-activex-controls.md).
 

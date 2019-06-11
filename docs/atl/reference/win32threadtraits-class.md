@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [ATL], creation functions
 - Win32ThreadTraits class
 ms.assetid: 50279c38-eae1-4301-9ea6-97ccea580f3e
-ms.openlocfilehash: da4b8b3d5a41ab16dc2027fd632c56158afd3b97
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cae5faea7938918da2656e21648282c1a2e1a66d
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62275942"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503760"
 ---
 # <a name="win32threadtraits-class"></a>Класс Win32ThreadTraits
 
@@ -90,7 +90,7 @@ static HANDLE CreateThread(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает дескриптор в только что созданному потоку или значение NULL в случае сбоя. Вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360) Чтобы получить расширенные сведения об ошибке.
+Возвращает дескриптор в только что созданному потоку или значение NULL в случае сбоя. Вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror) Чтобы получить расширенные сведения об ошибке.
 
 ### <a name="remarks"></a>Примечания
 

@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225258"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503444"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 
 ### <a name="remarks"></a>Примечания
 
-Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_**.
+Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_** .
 
 `CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) в пакете Windows SDK.
 
@@ -1367,7 +1367,7 @@ BOOL GetGroupInfoByIndex(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод отправляет [LVM_GETGROUPINFOBYINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774933) --> сообщение, который описан в пакете Windows SDK.
+Этот метод отправляет [LVM_GETGROUPINFOBYINDEX](/windows/desktop/controls/lvm-getgroupinfobyindex) --> сообщение, который описан в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -1787,7 +1787,7 @@ BOOL GetItemIndexRect(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pItemIndex*|[in] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру для родительского элемента данного подэлемента.<br /><br /> Вызывающий объект отвечает за выделение и определения участников [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуры. Этот параметр не может иметь значение NULL.|
+|*pItemIndex*|[in] Указатель на [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) структуру для родительского элемента данного подэлемента.<br /><br /> Вызывающий объект отвечает за выделение и определения участников [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) структуры. Этот параметр не может иметь значение NULL.|
 |*iColumn*|[in] Отсчитываемый от нуля индекс столбца в элементе управления.|
 |*rectType*|[in] Часть подэлемента представление списка, для которого извлекается прямоугольник. Укажите одно из следующих значений.<br /><br /> LVIR_BOUNDS - Возвращает прямоугольник, ограничивающий всего вложенного элемента, включая значок и метку.<br /><br /> LVIR_ICON - Возвращает ограничивающий прямоугольник значка или мелкого значка подэлемента.<br /><br /> LVIR_LABEL - Возвращает прямоугольник, ограничивающий текста данного подэлемента.|
 |*pRect*|[out] Указатель на [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры, который получает сведения о ограничивающий прямоугольник данного подэлемента.<br /><br /> Вызывающий объект отвечает за распределение [RECT](/previous-versions/dd162897\(v=vs.85\)) структуры. Этот параметр не может иметь значение NULL.|
@@ -2093,8 +2093,8 @@ BOOL GetNextItemIndex(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pItemIndex*|[in, out] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|
-|*nFlags*|[in] Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения.|
+|*pItemIndex*|[in, out] Указатель на [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) структуру, которая описывает элемент, в которой начинается поиск, или значение -1, чтобы найти первый элемент, соответствующий флаги в *nFlags* параметра.<br /><br /> При успешном выполнении, этот метод `LVITEMINDEX` структура описывает элемент, найденный в ходе поиска.|
+|*nFlags*|[in] Побитовое сочетание (OR) флагов, определяющих, как выполняется поиск.<br /><br /> Поиск может зависеть от индекса, состояние или внешний вид целевой элемент или конечный элемент физическое расположение относительно элемента указано посредством *pItemIndex* параметра. Дополнительные сведения см. в разделе *флаги* параметр в [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) сообщения.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -2104,7 +2104,7 @@ BOOL GetNextItemIndex(
 
 Вызывающий объект отвечает за выделение и определения участников `LVITEMINDEX` структуры, на которые указывают *pItemIndex* параметра.
 
-Этот метод отправляет [LVM_GETNEXTITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761059) сообщения, который описан в пакете Windows SDK.
+Этот метод отправляет [LVM_GETNEXTITEMINDEX](/windows/desktop/controls/lvm-getnextitemindex) сообщения, который описан в пакете Windows SDK.
 
 ## <a name="getnextselecteditem"></a>  CListCtrl::GetNextSelectedItem
 
@@ -2909,7 +2909,7 @@ UINT MapIDToIndex(UINT id) const;
 
 Обратите внимание на то, что в многопоточной среде индекс гарантируется только в потоке, который размещает элемент управления представление списка, не в фоновых потоках.
 
-Этот метод отправляет [LVM_MAPIDTOINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761137) сообщения, который описан в пакете Windows SDK.
+Этот метод отправляет [LVM_MAPIDTOINDEX](/windows/desktop/controls/lvm-mapidtoindex) сообщения, который описан в пакете Windows SDK.
 
 ## <a name="mapindextoid"></a>  CListCtrl::MapIndexToID
 
@@ -3641,7 +3641,7 @@ BOOL SetItem(
 ### <a name="parameters"></a>Параметры
 
 *pItem*<br/>
-Адрес [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуру, содержащую новый элемент атрибуты, как описано в пакете Windows SDK. Структура `iItem` и `iSubItem` члены определения элемента или подэлемента и структуры `mask` элемент указывает, какие атрибуты следует задать. Дополнительные сведения о `mask` член, см. в разделе **"Примечания"**.
+Адрес [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) структуру, содержащую новый элемент атрибуты, как описано в пакете Windows SDK. Структура `iItem` и `iSubItem` члены определения элемента или подэлемента и структуры `mask` элемент указывает, какие атрибуты следует задать. Дополнительные сведения о `mask` член, см. в разделе **"Примечания"** .
 
 *nItem*<br/>
 Индекс элемента, атрибуты которого должны устанавливаться.
@@ -3822,7 +3822,7 @@ BOOL SetItemIndexState(
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*pItemIndex*|[in] Указатель на [LVITEMINDEX](https://msdn.microsoft.com/library/windows/desktop/bb774762) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|
+|*pItemIndex*|[in] Указатель на [LVITEMINDEX](/windows/desktop/api/commctrl/ns-commctrl-lvitemindex) структура, описывающая элемент. Вызывающий объект отвечает за выделение эту структуру и установке его членов.|
 |*dwState*|[in] Состояние, чтобы задать элемент, который представляет собой битовую комбинацию из [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states). Укажите ноль для сброса или одну для установки, состояния.|
 |*dwMask*|[in] Маска допустимых битов состоянии, указанном *dwState* параметра. Побитовое сочетание (OR) укажите [список состояний представления элементов](/windows/desktop/Controls/list-view-item-states).|
 

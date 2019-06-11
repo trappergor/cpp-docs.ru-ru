@@ -1,17 +1,15 @@
 ---
 title: Службы модели объекта во время выполнения
 ms.date: 03/27/2019
-f1_keywords:
-- vc.mfc.macros
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: 59f5be1d8bb38295b50732583fea47924160cecf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e9c3dcc02cb4307787f3e0baf5e99ac31b3d183
+ms.sourcegitcommit: bde3279f70432f819018df74923a8bb895636f81
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310036"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66174838"
 ---
 # <a name="run-time-object-model-services"></a>Службы модели объекта во время выполнения
 
@@ -62,7 +60,7 @@ OLE часто требуется динамическое создание об
 
 ### <a name="syntax"></a>Синтаксис
 
-  ```
+```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
 
@@ -167,7 +165,7 @@ DECLARE_DYNCREATE(class_name)
 
 **Заголовок:** afx.h
 
-## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
+## <a name="declare_olectltype"></a> DECLARE_OLECTLTYPE
 
 Объявляет `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
 
@@ -190,7 +188,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 **Заголовок:** afxctl.h
 
-## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
+## <a name="declare_proppageids"></a> DECLARE_PROPPAGEIDS
 
 Объявляет, что элемент управления OLE предоставляет список страниц свойств для отображения его свойств.
 
@@ -363,7 +361,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 **Заголовок:** afxdisp.h
 
-## <a name="implementolectltype"></a>IMPLEMENT_OLECTLTYPE
+## <a name="implement_olectltype"></a> IMPLEMENT_OLECTLTYPE
 
 Реализует `GetUserTypeNameID` и `GetMiscStatus` функции-члены класса элемента управления.
 

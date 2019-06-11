@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 09a85231f871ef1a21b2f2adb309d94bb4a29e1a
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62387673"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504509"
 ---
 # <a name="working-with-resource-files"></a>Работа с файлами ресурсов
 
@@ -49,7 +49,7 @@ ms.locfileid: "62387673"
 
 ## <a name="related-sections"></a>Связанные разделы
 
-[Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
+[C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)<br/>
 Ссылки на документацию по Visual C++.
 
 [Обращайтесь к нам](/visualstudio/ide/talk-to-us)<br/>
@@ -58,4 +58,4 @@ ms.locfileid: "62387673"
 ## <a name="see-also"></a>См. также
 
 [Классические приложения Windows](../windows/windows-desktop-applications-cpp.md)<br/>
-[Меню и другие ресурсы](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[Меню и другие ресурсы](/windows/desktop/menurc/resources)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 450664f71851778cc40160e55cbb80bcb51330d5
+ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413766"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66451250"
 ---
 # <a name="enableif-class"></a>Класс enable_if
 
@@ -46,7 +46,7 @@ template <bool B, class T = void>
 using enable_if_t = typename enable_if<B,T>::type;
 ```
 
-В C++ ошибка замены параметров шаблона не является ошибкой — этот факт называют *SFINAE* (неудачная замена не ошибка). Обычно `enable_if` используется для удаления кандидатов из разрешения перегрузки, т. е. функция отбраковывает набор перегрузки, чтобы одно определение было отброшено в пользу другого. Это соответствует поведению SFINAE. Дополнительные сведения об SFINAE см. в статье [Ошибка замены не ошибка](http://go.microsoft.com/fwlink/p/?linkid=394798) на веб-сайте Википедии.
+В C++ ошибка замены параметров шаблона не является ошибкой — этот факт называют *SFINAE* (неудачная замена не ошибка). Обычно `enable_if` используется для удаления кандидатов из разрешения перегрузки, т. е. функция отбраковывает набор перегрузки, чтобы одно определение было отброшено в пользу другого. Это соответствует поведению SFINAE. Дополнительные сведения об SFINAE см. в статье [Ошибка замены не ошибка](https://go.microsoft.com/fwlink/p/?linkid=394798) на веб-сайте Википедии.
 
 Вот 4 примера сценариев.
 

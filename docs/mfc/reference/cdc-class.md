@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 2ff6cd6e0817f74c7688fc573d4b98f70704f96c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a6b6c872963dbbdf991d013cceba66ffd20bac5c
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222577"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504389"
 ---
 # <a name="cdc-class"></a>Класс CDC
 
@@ -3220,7 +3220,7 @@ int GetGraphicsMode() const;
 
 Возвращает значение 0 в случае сбоя.
 
-Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 
@@ -3276,7 +3276,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-В случае успешного выполнения макета флагов для текущего контекста устройства. В противном случае GDI_ERROR. Сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360). Список флагов, макет, см. в разделе [CDC::SetLayout](#setlayout).
+В случае успешного выполнения макета флагов для текущего контекста устройства. В противном случае GDI_ERROR. Сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror). Список флагов, макет, см. в разделе [CDC::SetLayout](#setlayout).
 
 ### <a name="remarks"></a>Примечания
 
@@ -4012,7 +4012,7 @@ BOOL GetWorldTransform(XFORM& rXform) const;
 
 Возвращает значение 0 в случае сбоя.
 
-Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 
@@ -4459,7 +4459,7 @@ BOOL ModifyWorldTransform(
 
 Возвращает значение 0 в случае сбоя.
 
-Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 
@@ -6003,7 +6003,7 @@ int SetGraphicsMode(int iMode);
 
 В случае успеха, возвращает старый графический режим.
 
-Возвращает значение 0 в случае сбоя. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Возвращает значение 0 в случае сбоя. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 
@@ -6032,7 +6032,7 @@ DWORD SetLayout(DWORD dwLayout);
 
 В случае успешного выполнения предыдущих макет контекст устройства.
 
-Если операция завершилась неудачей, GDI_ERROR. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Если операция завершилась неудачей, GDI_ERROR. Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 
@@ -6657,7 +6657,7 @@ BOOL SetWorldTransform(const XFORM& rXform);
 
 Возвращает значение 0 в случае сбоя.
 
-Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360).
+Чтобы получить расширенные сведения об ошибке, вызовите [GetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-getlasterror).
 
 ### <a name="remarks"></a>Примечания
 

@@ -2,16 +2,16 @@
 layout: LandingPage
 title: Документация по разработке для Linux на C++
 description: Создание и отладка приложений на платформе Linux.
-ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393146"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821651"
 ---
 # <a name="linux-development-with-c-documentation"></a>Документация по разработке для Linux на C++
 
-Используйте Visual Studio 2017 для создания и отладки приложений на платформе Linux.
+Используйте Visual Studio 2017 и более поздние версии для создания и отладки приложений, выполняющихся на удаленных компьютерах Linux или в подсистеме Windows для Linux.
 
 <ul class="panelContent cardsF">
     <li>
@@ -64,8 +64,8 @@ ms.locfileid: "62393146"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">Visual C++</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Интегрированная среда и средства разработки Visual C++</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ в Visual Studio</a></h3>
+                        <p><a href="/cpp/overview-of-cpp-development">Разработка приложений C++ в Visual Studio</a></p>
                     </div>
                 </div>
             </div>

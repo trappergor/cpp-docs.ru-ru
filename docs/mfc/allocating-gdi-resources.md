@@ -1,24 +1,24 @@
 ---
 title: Выделение ресурсов GDI
-ms.date: 11/04/2016
+ms.date: 06/03/2019
 helpviewer_keywords:
 - resources [MFC], printing
 - GDI objects [MFC], allocating during printing
 - printing [MFC], allocating GDI resources
 ms.assetid: cef7e94d-5a27-4aea-a9ee-8369fc895d3a
-ms.openlocfilehash: 5f5f6c6585217393a6008fafa875a83e67ab8016
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: adfd8b19f683b82eec213890c8e1345e070ff3ec
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305007"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504633"
 ---
 # <a name="allocating-gdi-resources"></a>Выделение ресурсов GDI
 
 В этой статье объясняется, как выделять и освобождать объекты интерфейса графических устройств (GDI) Windows, необходимые для печати.
 
 > [!NOTE]
->  Дополнительные сведения см. в документации по GDI + SDK на: [ https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/GDIPlus/GDIPlus.asp ](https://msdn.microsoft.com/library/default.aspurl=/library/gdicpp/gdiplus/gdiplus.asp).
+>  Дополнительные сведения см. в разделе [документации GDI + SDK](/windows/desktop/gdiplus/-gdiplus-gdi-start).
 
 Предположим, что вам требуется использовать определенные шрифты, перья или другие объекты GDI для печати, но не для отображения на экране. Из-за необходимого им объема памяти неэффективно выделить эти объекты при запуске приложения. Если приложение не печатает документ, эта память может потребоваться для других целей. Лучше выделить их, когда печать начинается, и затем удалите их.
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 22cbeaa5ac0f92e2b7bcc9dcbd06df9ab4ccaff5
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62180763"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503834"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>Обновление существующего элемента управления ActiveX
 
@@ -181,7 +181,7 @@ HKEY_CLASSES_ROOT\CLSID\{06889605-B8D0-101A-91F1-00608CEAD5B3}\Implemented Categ
 
 - Использование параметра базы кода
 
-Чтобы использовать лицензированный элемент управления в HTML-страницу nonlicensed компьютера, необходимо создать файл пакета лицензий (LPK). Файл LPK содержит лицензии времени выполнения для Лицензированные элементы управления на HTML-странице. Этот файл создается с помощью LPK_TOOL. EXE-файла, который поставляется вместе с пакетом SDK ActiveX. Дополнительные сведения см. на сайте MSDN в [ http://msdn.microsoft.com ](http://msdn.microsoft.com).
+Чтобы использовать лицензированный элемент управления в HTML-страницу nonlicensed компьютера, необходимо создать файл пакета лицензий (LPK). Файл LPK содержит лицензии времени выполнения для Лицензированные элементы управления на HTML-странице. Этот файл создается с помощью LPK_TOOL. EXE-файла, который поставляется вместе с пакетом SDK ActiveX.
 
 #### <a name="to-create-an-lpk-file"></a>Чтобы создать файл LPK
 

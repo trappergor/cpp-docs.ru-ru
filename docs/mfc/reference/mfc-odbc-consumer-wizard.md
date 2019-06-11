@@ -1,23 +1,25 @@
 ---
 title: мастер потребителей ODBC MFC
-ms.date: 10/03/2018
-f1_keywords:
-- vc.codewiz.class.mfc.consumer.overview
+ms.date: 05/09/2019
 helpviewer_keywords:
-- MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 2e8741677031ff9b12989d75243a13550d74b608
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62310317"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65707386"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>мастер потребителей ODBC MFC
 
-> [!WARNING]
-> В Visual Studio 2017 версии 15.9 этот мастер кода является нерекомендуемым и будет удален из будущей версии Visual Studio. Этот мастер используется редко. Удаление этого мастера не влияет на общую поддержку для ATL и MFC. Если вы хотите поделиться своим мнением об устаревании этого мастера, пройдите [этот опрос](https://www.surveymonkey.com/r/QDWKKCN). Ваше мнение важно для нас.
+::: moniker range="vs-2019"
+
+Этот мастер не доступны в Visual Studio 2019 г. и более поздних версий.
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 Этот мастер устанавливает класс набора записей ODBC и привязки данных для доступа к указанному источнику данных.
 
@@ -73,6 +75,8 @@ ms.locfileid: "62310317"
 - **Привязать все столбцы**
 
    Указывает, связаны ли все столбцы в выбранной таблице. Если установить этот флажок (по умолчанию), все столбцы привязаны; Если этот флажок не установлен, столбцы не привязаны, и необходимо привязать их вручную в классе наборов записей.
+
+::: moniker-end
 
 ## <a name="see-also"></a>См. также
 

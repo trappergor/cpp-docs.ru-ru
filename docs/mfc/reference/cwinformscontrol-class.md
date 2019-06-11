@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c1c7a394317fefba7911e9500126919e83389f20
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62323304"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504665"
 ---
 # <a name="cwinformscontrol-class"></a>Класс CWinFormsControl
 
@@ -108,7 +108,7 @@ inline BOOL CreateManagedControl(
 ### <a name="parameters"></a>Параметры
 
 *pType*<br/>
-Тип данных создаваемого элемента управления. Должно быть [тип](https://msdn.microsoft.com/library/system.type) тип данных.
+Тип данных создаваемого элемента управления. Должно быть [тип](/dotnet/api/system.type) тип данных.
 
 *dwStyle*<br/>
 Стиль окна, чтобы применить к элементу управления. Укажите сочетание [стили окна](../../mfc/reference/styles-used-by-mfc.md#window-styles). В настоящее время поддерживаются только следующие стили: WS_TABSTOP, WS_VISIBLE, WS_DISABLED и WS_GROUP.
@@ -136,7 +136,7 @@ inline BOOL CreateManagedControl(
 
 Этот метод создает экземпляр элемента управления .NET Framework Windows Forms в контейнеров MFC.
 
-Первая перегрузка метода принимает тип данных .NET Framework *pType* таким образом, чтобы MFC можно создать новый объект этого типа. *pType* должно быть [тип](https://msdn.microsoft.com/library/system.type) тип данных.
+Первая перегрузка метода принимает тип данных .NET Framework *pType* таким образом, чтобы MFC можно создать новый объект этого типа. *pType* должно быть [тип](/dotnet/api/system.type) тип данных.
 
 Вторая перегрузка метода создает элемент управления Windows Forms, на основе `TManagedControl` параметр шаблона `CWinFormsControl` класса. Размер и положение элемента управления основан на `RECT` структуры передается в метод. Только *dwStyle* имеет значение для стилей.
 

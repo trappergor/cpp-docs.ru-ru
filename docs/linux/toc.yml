@@ -1,0 +1,43 @@
+- name: Документация по использованию Linux с Visual Studio C++
+  href: index.md
+- name: 'Скачивание, установка и настройка рабочей нагрузки разработки Linux'
+  href: download-install-and-setup-the-linux-development-workload.md
+- name: Настройка проекта Linux
+  href: configure-a-linux-project.md
+- name: Настройка проекта Linux CMake
+  href: cmake-linux-project.md
+- name: Создание проекта Linux
+  href: create-a-new-linux-project.md
+- name: Подключение к удаленному компьютеру Linux
+  href: connect-to-your-remote-linux-computer.md
+- name: Настройка проектов Linux для использования санитайзера адресов
+  href: linux-asan-configuration.md
+- name: 'Развертывание, запуск и отладка проекта Linux'
+  href: deploy-run-and-debug-your-linux-project.md
+- name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
+  href: ../build/get-started-linux-cmake.md
+- name: Справочник по страницам свойств проекта Linux
+  expanded: false
+  items:
+    - name: Справочник по страницам свойств проекта Linux
+      href: prop-pages-linux.md
+    - name: Общие свойства (Linux)
+      href: prop-pages/general-linux.md
+    - name: Свойства отладки (Linux)
+      href: prop-pages/debugging-linux.md
+    - name: Свойства каталогов VC++ (Linux)
+      href: prop-pages/directories-linux.md
+    - name: Свойства копирования источников (Linux)
+      href: prop-pages/copy-sources-project.md
+    - name: Свойства C/C++ (Linux)
+      href: prop-pages/c-cpp-linux.md
+    - name: Свойства компоновщика (Linux)
+      href: prop-pages/linker-linux.md
+    - name: Свойства событий сборки (Linux)
+      href: prop-pages/build-events-linux.md
+    - name: Свойства настраиваемого этапа сборки (Linux)
+      href: prop-pages/custom-build-step-linux.md
+    - name: Свойства проекта Makefile (Linux)
+      href: prop-pages/makefile-linux.md
+    - name: Свойства удаленного архива (Linux)
+      href: prop-pages/remote-ar-linux.md

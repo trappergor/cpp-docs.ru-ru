@@ -1,8 +1,7 @@
 ---
 title: Добавление класса
-ms.date: 11/08/2018
+ms.date: 05/14/2019
 f1_keywords:
-- vc.codewiz.classes.adding
 - vc.addclass
 helpviewer_keywords:
 - ATL projects, adding classes
@@ -10,16 +9,16 @@ helpviewer_keywords:
 - classes [C++], adding
 - Add Class dialog box
 ms.assetid: c34b5f70-4e72-4faa-ba21-e2b05361c4d9
-ms.openlocfilehash: 21dd4b1936eda201df8283146ba9f41fa81e11de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fa53c2af5cd3e81c2d4877ef255430eac9525aad
+ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693585"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "66182684"
 ---
 # <a name="add-a-class"></a>Добавление класса
 
-Чтобы добавить класс в проект Visual C++, в **обозревателе решений** щелкните правой кнопкой мыши проект, выберите **Добавить**, а затем **Класс**. Откроется диалоговое окно [Добавление класса](#add-class-dialog-box).
+Чтобы добавить класс в проект Visual Studio C++, в **обозревателе решений** щелкните правой кнопкой мыши проект, выберите **Добавить**, а затем **Класс**. Откроется диалоговое окно [Добавление класса](#add-class-dialog-box).
 
 При добавлении класса нужно указать имя, которое отличается от классов, уже существующих в MFC или ATL. Если указать имя, которое уже существует в одной из библиотек, интегрированная среда разработки выводит сообщение об ошибке.
 
@@ -32,7 +31,7 @@ ms.locfileid: "51693585"
 
 ## <a name="what-kind-of-class-do-you-want-to-add"></a>Класс какого типа вы хотите добавить?
 
-В диалоговом окне **Добавление класса** при развертывании узла **Visual C++** на левой панели отображаются несколько групп установленных шаблонов. К этим группам относятся **CLR**, **ATL**, **MFC** и **C++**. При выборе группы на средней панели отображается список доступных шаблонов в этой группе. Каждый шаблон содержит необходимые для класса файлы и исходный код.
+В диалоговом окне **Добавление класса** при развертывании узла **Visual C++** на левой панели отображаются несколько групп установленных шаблонов. К этим группам относятся **CLR**, **ATL**, **MFC** и **C++** . При выборе группы на средней панели отображается список доступных шаблонов в этой группе. Каждый шаблон содержит необходимые для класса файлы и исходный код.
 
 Чтобы создать класс, выберите шаблон в средней области, введите имя класса в поле **Имя** и нажмите **Добавить**. Открывается **мастер добавления классов**, где можно указать параметры для класса.
 
@@ -81,13 +80,8 @@ ms.locfileid: "51693585"
 |Шаблон|Мастер|
 |--------------|------------|
 |Добавление в MFC поддержки ATL|Недоступно|
-|ASP-компонент библиотеки ATL|[Мастер ASP-компонента ATL](../atl/reference/atl-active-server-page-component-wizard.md)|
 |Элемент управления ATL|[Мастер элементов управления ATL](../atl/reference/atl-control-wizard.md)|
 |Диалог ATL|[Мастер диалоговых окон ATL](../atl/reference/atl-dialog-wizard.md)|
-|Компонент COM+ 1.0 библиотеки ATL|[Мастер компонентов ATL COM+ 1.0](../atl/reference/atl-com-plus-1-0-component-wizard.md)|
-|Потребитель OLEDB библиотеки ATL|[Мастер объекта-получателя OLE DB в ATL](../atl/reference/atl-ole-db-consumer-wizard.md)|
-|Поставщик OLEDB библиотеки ATL|[Мастер поставщика OLE DB в ATL](../atl/reference/atl-ole-db-provider-wizard.md)|
-|Свойства ATL|[Мастер страницы свойств ATL](../atl/reference/atl-property-page-wizard.md)|
 |Простой объект ATL|[Мастер простых объектов ATL](../atl/reference/atl-simple-object-wizard.md)|
 |Поставщик событий WMI|Мастер поставщика событий WMI|
 |Поставщик экземпляров WMI|Мастер поставщика экземпляра WMI|
@@ -97,9 +91,6 @@ ms.locfileid: "51693585"
 |Шаблон|Мастер|
 |--------------|------------|
 |Класс MFC|[Мастер добавления классов MFC](../mfc/reference/mfc-add-class-wizard.md)|
-|Класс MFC из элемента управления ActiveX|[Мастер добавления классов из элемента ActiveX](../ide/add-class-from-activex-control-wizard.md)|
-|Класс MFC из TypeLib|[Мастер добавления классов из библиотеки типов](../mfc/reference/add-class-from-typelib-wizard.md)|
-|Потребитель ODBC MFC|[Мастер потребителя MFC ODBC](../mfc/reference/mfc-odbc-consumer-wizard.md)|
 
 #### <a name="generic-classes"></a>Универсальные классы
 

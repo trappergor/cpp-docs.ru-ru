@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 295a58a86f35fca3b8d25706857162facc9cb3ea
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62164076"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66503749"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ class CEdit : public CWnd
 
 Каждая запись схемы сообщений имеет следующий вид:
 
-  **ON_**_уведомления_**(** _идентификатор_**,** _memberFxn_ **)**
+  **ON_** _уведомления_ **(** _идентификатор_ **,** _memberFxn_ **)**
 
 где `id` указывает идентификатор дочернего окна элемента управления, отправляющего уведомление, и `memberFxn` имя функции-члена родительской вы написали для обработки уведомления.
 
@@ -708,7 +708,7 @@ TCHAR GetPasswordChar() const;
 
 ### <a name="remarks"></a>Примечания
 
-При создании элемента управления редактирования в стиле ES_PASSWORD, библиотеки DLL, которая поддерживает элемент управления определяет знак пароля по умолчанию. Манифест или [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) метод определяет, какие библиотеки DLL поддерживает поле ввода. Если user32.dll поддерживает поле ввода, знак пароля по умолчанию — символ ЗВЕЗДОЧКИ ("*", U + 002A). Если comctl32.dll версии 6 поддерживает поле ввода, символ по умолчанию — ЧЕРНЫЙ КРУГ («●», U + 25CF). Дополнительные сведения о какие библиотеки DLL и версии поддерживает общие элементы управления, см. в разделе [оболочка и версии общих элементов управления](https://msdn.microsoft.com/library/windows/desktop/bb776779).
+При создании элемента управления редактирования в стиле ES_PASSWORD, библиотеки DLL, которая поддерживает элемент управления определяет знак пароля по умолчанию. Манифест или [InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex) метод определяет, какие библиотеки DLL поддерживает поле ввода. Если user32.dll поддерживает поле ввода, знак пароля по умолчанию — символ ЗВЕЗДОЧКИ ("*", U + 002A). Если comctl32.dll версии 6 поддерживает поле ввода, символ по умолчанию — ЧЕРНЫЙ КРУГ («●», U + 25CF). Дополнительные сведения о какие библиотеки DLL и версии поддерживает общие элементы управления, см. в разделе [оболочка и версии общих элементов управления](/previous-versions/windows/desktop/legacy/bb776779\(v=vs.85\)).
 
 Этот метод отправляет [EM_GETPASSWORDCHAR](/windows/desktop/Controls/em-getpasswordchar) сообщения, который описан в пакете Windows SDK.
 
@@ -867,7 +867,7 @@ int LineIndex(int nLine = -1) const;
 
 Эта функция-член обрабатывается только редактирование многострочных элементов управления.
 
-Дополнительные сведения см. в разделе [EM_LINEINDEX](https://msdn.microsoft.com/library/windows/desktop/bb761611) в пакете Windows SDK.
+Дополнительные сведения см. в разделе [EM_LINEINDEX](/windows/desktop/controls/em-lineindex) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 

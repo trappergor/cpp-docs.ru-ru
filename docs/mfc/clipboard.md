@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard, programming
 - transferring data
 ms.assetid: a71b2824-1f14-4914-8816-54578d73ad4e
-ms.openlocfilehash: 4fcf53f1d861a85d830d0fb4244e8af9c11af163
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5814b2fdfc7fbcaca00037cc64dd71aa27d65cc3
+ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326910"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66504616"
 ---
 # <a name="clipboard"></a>буфер обмена
 
@@ -39,7 +39,7 @@ ms.locfileid: "62326910"
 
 - [Добавление других форматов](../mfc/clipboard-adding-other-formats.md)
 
-- [В буфер обмена Windows](https://msdn.microsoft.com/library/ms648709)
+- [В буфер обмена Windows](/windows/desktop/dataxchg/clipboard)
 
 - [Реализация перетаскивание (OLE)](../mfc/drag-and-drop-ole.md)
 
