@@ -1,32 +1,59 @@
 ---
 title: Развертывание, запуск и отладка проекта C++ для Linux в Visual Studio
 description: Компиляция, выполнение и отладка кода в удаленной системе в проекте C++ для Linux в Visual Studio.
-ms.date: 09/12/2018
+ms.date: 06/07/2019
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-ms.openlocfilehash: cdafb064f8a6269c5ccae938e280b5f47bff3b00
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 707915a502aafefee47af7e84b534e06ba678b3d
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562891"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821618"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Развертывание, запуск и отладка проекта Linux
 
+::: moniker range="vs-2015"
+
+Поддержка Linux, доступные в Visual Studio 2017 и более поздних версий.
+
+::: moniker-end
+
 После создания проекта Linux для C++ в Visual Studio и подключения к проекту с помощью [диспетчера подключений Linux](connect-to-your-remote-linux-computer.md) можно запускать и отлаживать проект. Компиляция, выполнение и отладка кода осуществляются в удаленной системе.
+
+::: moniker range="vs-2019"
+
+**Visual Studio 2019 версии 16.1** можно ориентироваться на различные системы Linux, для отладки и построения. Укажите компьютер сборки, на **Общие** страницу свойств и отладки машинного на **Отладка** страницу свойств.
+
+::: moniker-end
 
 Существует несколько способов взаимодействия с проектом Linux и его отладки.
 
 - Использование традиционных средств Visual Studio, таких как точки останова, окна контрольных значений и наведение указателя мыши на переменную. С их помощью вы можете выполнять отладку так, как вы делаете это для других типов проектов.
 
-- Просмотр выходных данных с целевого компьютера в специальном окне "Консоль Linux". Консоль можно также использовать для отправки входных данных на целевой компьютер.
+- Просмотр выходных данных с конечного компьютера в окне консоли Linux. Консоль можно также использовать для отправки входных данных на целевой компьютер.
 
 ## <a name="debug-your-linux-project"></a>Отладка проекта Linux
 
 1. Выберите режим отладки на странице свойств **Отладка**.
 
+   
+   
+   ::: moniker range="vs-2019"
+
+   GDB используется для отладки приложений на платформе Linux. При отладке на удаленном компьютере (не WSL) GDB выполняется в двух разных режимах, которые могут быть выбраны из **режим отладки** параметр в проекте **Отладка** страница свойств:
+
+   ![Параметры GDB](media/vs2019-debugger-settings.png)
+
+   ::: moniker-end
+
+   ::: moniker range="vs-2017"
+
    GDB используется для отладки приложений на платформе Linux. GDB может работать в двух разных режимах, которые выбираются в параметре **Режим отладки** на странице свойств **Отладка** проекта:
 
-   ![Параметры GDB](media/settings_debugger.png)
+   ![Параметры GDB](media/vs2017-debugger-settings.png)
+
+   ::: moniker-end
+
 
    - В режиме **gdbserver** GDB выполняется в локальной среде, подключенной к gdbserver в удаленной системе.  Обратите внимание, что это единственный режим, который поддерживает окно консоли Linux.
 
@@ -77,11 +104,30 @@ ms.locfileid: "57562891"
 
    `handle SIGILL nostop noprint`
 
+## <a name="debug-with-attach-to-process"></a>Отладка с помощью присоединить к процессу
+
+[Отладка](prop-pages/debugging-linux.md) страницу свойств для проектов Visual Studio и **Launch.vs.json** параметры для проектов CMake, имеют параметры, которые позволяют присоединить к выполняющемуся процессу. Если требуется дополнительный контроль рамками в эти параметры, можно поместить файл с именем `Microsoft.MIEngine.Options.xml` в корневом каталоге решения или рабочей области. Ниже приведен простой пример:
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<SupplementalLaunchOptions>
+    <AttachOptions>
+      <AttachOptionsForConnection AdditionalSOLibSearchPath="/home/user/solibs">
+        <ServerOptions MIDebuggerPath="C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\VC\Linux\bin\gdb\7.9\x86_64-linux-gnu-gdb.exe"
+ExePath="C:\temp\ConsoleApplication17\ConsoleApplication17\bin\x64\Debug\ConsoleApplication17.out"/>
+        <SetupCommands>
+          <Command IgnoreFailures="true">-enable-pretty-printing</Command>
+        </SetupCommands>
+      </AttachOptionsForConnection>
+    </AttachOptions>
+</SupplementalLaunchOptions>
+```
+
+**AttachOptionsForConnection** имеет большинство атрибутов, которые могут потребоваться. Приведенный выше пример показано, как указать расположение для поиска дополнительных .so библиотек. Дочерний элемент **ServerOptions** позволяет подключить удаленный процесс с gdbserver вместо этого. Для этого необходимо указать локальный gdb клиентом (тот, в состав в Visual Studio 2017 показано выше) и локальную копию двоичного файла с символами. **SetupCommands** элемент позволяет передавать команды непосредственно в gdb. Можно найти все параметры, доступные в [LaunchOptions.xsd схемы](https://github.com/Microsoft/MIEngine/blob/master/src/MICore/LaunchOptions.xsd) на сайте GitHub.
+
 ## <a name="next-steps"></a>Следующие шаги
 
 - Для отладки устройств ARM в Linux см. записи блога: [Отладка встроенного устройства ARM в Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/debugging-an-embedded-arm-device-in-visual-studio/).
-
-- Для отладки с помощью команды **Присоединение к процессу** см. запись блога: [Изменения в рабочих нагрузках C++ в Linux для системы проектов, консольного окна Linux, rsync и команды "Присоединение к процессу"](https://blogs.msdn.microsoft.com/vcblog/2018/03/13/linux-c-workload-improvements-to-the-project-system-linux-console-window-rsync-and-attach-to-process/).
 
 ## <a name="see-also"></a>См. также
 
