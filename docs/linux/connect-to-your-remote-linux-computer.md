@@ -1,18 +1,30 @@
 ---
 title: Подключение к удаленному компьютеру Linux в Visual Studio
 description: Подключение к удаленному компьютеру Linux в проекте C++ Visual Studio.
-ms.date: 07/20/2018
+ms.date: 06/07/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: e20714308448349ee5dac8951a7b5d7bfd2f29ef
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6348681ecc8e6f7863b2119810db24879526a1c6
+ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562852"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66821607"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>Подключение к удаленному компьютеру Linux
 
-При сборке проекта C++ в Visual Studio код Linux копируется на удаленный компьютер Linux, а затем компилируется в соответствии с параметрами Visual Studio. Настройка удаленного подключения.
+::: moniker range="vs-2015"
+
+Поддержка Linux, доступные в Visual Studio 2017 и более поздних версий.
+
+::: moniker-end
+
+::: moniker range="vs-2019"
+
+Когда целевой подсистемы Windows для Linux (WSL) Visual Studio взаимодействует с дистрибутив Linux напрямую с помощью файловой системы; Нет удаленного подключения не требуется.
+
+::: moniker-end
+
+При построении C++ проекта Linux для удаленной системе Linux (виртуальная машина или физический компьютер), Linux, код копируется на удаленный компьютер Linux, а затем скомпилированные с учетом параметров Visual Studio. Настройка удаленного подключения.
 
 1. Постройте проект в первый раз или вручную создайте новую запись, выбрав в меню  **> Параметры**, затем открыв узел **Кроссплатформенный > Диспетчер подключений** и нажав кнопку **Добавить**.
 
