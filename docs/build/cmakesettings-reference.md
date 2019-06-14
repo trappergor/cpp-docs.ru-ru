@@ -4,12 +4,12 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 018a755aa4f3acde44fe1dbb33b07b49c8d1c223
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837257"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042588"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
@@ -121,7 +121,7 @@ ms.locfileid: "65837257"
 
 - `remoteMachineName`: задает имя удаленного компьютера Linux, на котором размещается CMake, сборки и отладчик. Используйте диспетчер подключений для добавления новых компьютеров Linux. Поддерживаемые макросы: `${defaultRemoteMachineName}`.
 - `remoteCopySourcesOutputVerbosity`: задает уровень детализации для операции копирования исходных файлов на удаленный компьютер. Может быть нормальным, подробным или диагностическим.
-- `remoteCopySourcesConcurrentCopies`: задает количество одновременных операций копирования при синхронизации исходных файлов на удаленном компьютере.
+- `remoteCopySourcesConcurrentCopies`: Указывает количество одновременных операций копирования при синхронизации источников на удаленный компьютер (sftp).
 - `remoteCopySourcesMethod`: задает метод для копирования файлов на удаленный компьютер. Может быть "rsync" или "sftp".
 - `remoteCMakeListsRoot`: задает каталог на удаленном компьютере, в которой содержится проект CMake. Поддерживаемые макросы: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
 - `remoteBuildRoot`: задает каталог на удаленном компьютере, в котором CMake создает скрипты сборки для выбранного генератора. Поддерживаемые макросы: `${workspaceRoot}`, `${workspaceHash}`, `${projectFile}`, `${projectDir}`, `${thisFile}`, `${thisFileDir}`, `${name}`, `${generator}`, `${env.VARIABLE}`.
@@ -134,7 +134,7 @@ ms.locfileid: "65837257"
 - `remotePreGenerateCommand`: задает команду, выполняемую перед запуском CMake для синтаксического анализа CMakeLists.txt.
 - `remotePrebuildCommand`: задает команду, выполняемую на удаленном компьютере перед сборкой.
 - `remotePostbuildCommand`: задает команду, выполняемую на удаленном компьютере после сборки.
-- `variables`: содержит пару имя-значение для переменных CMake, которая передается в CMake в виде **-D** *_имя_=_значение_*. Если инструкции сборки проекта CMake указывают добавление каких-либо переменных непосредственно в файл кэша CMake, рекомендуется вместо этого добавить их сюда. В следующем примере показано, как задать пары имя-значение для набора инструментов 14.14.26428 MSVC:
+- `variables`: содержит пару имя-значение для переменных CMake, которая передается в CMake в виде **-D** *_имя_=_значение_* . Если инструкции сборки проекта CMake указывают добавление каких-либо переменных непосредственно в файл кэша CMake, рекомендуется вместо этого добавить их сюда. В следующем примере показано, как задать пары имя-значение для набора инструментов 14.14.26428 MSVC:
 
 ```json
 "variables": [
