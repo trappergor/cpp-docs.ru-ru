@@ -1,6 +1,6 @@
 ---
 title: Класс CListCtrl
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - CListCtrl
 - AFXCMN/CListCtrl
@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 1cdc4bfacee4913d3a38aaa45aadf0a430e547ab
-ms.sourcegitcommit: ecf274bcfe3a977c48745aaa243e5e731f1fdc5f
+ms.openlocfilehash: 63668de8134267880b48a3406c552d06376ea4f7
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66503444"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141679"
 ---
 # <a name="clistctrl-class"></a>Класс CListCtrl
 
@@ -522,8 +522,7 @@ class CListCtrl : public CWnd
 
 ```
 CSize ApproximateViewRect(
-    CSize sz = CSize(-1,
--1),
+    CSize sz = CSize(-1, -1),
     int iCount = -1) const;
 ```
 
@@ -683,7 +682,7 @@ virtual BOOL CreateEx(
 
 Используйте `CreateEx` вместо [создать](#create) применение расширенных стилей Windows, определяемое префикс расширенного стиля Windows **WS_EX_** .
 
-`CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанную в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) в пакете Windows SDK.
+`CreateEx` Создает элемент управления с помощью расширенных стилей Windows, определяемое *dwExStyle*. Чтобы задать расширенные стили к элементу управления, вызовите [SetExtendedStyle](#setextendedstyle). Например, использовать `CreateEx` такие стили заданы как WS_EX_CONTEXTHELP, но используют `SetExtendedStyle` должны стать LVS_EX_FULLROWSELECT подобные стили. Дополнительные сведения см. в разделе стили, описанные в статье [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) в пакете Windows SDK.
 
 ## <a name="createdragimage"></a>  CListCtrl::CreateDragImage
 
@@ -971,7 +970,7 @@ COLORREF GetBkColor() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetBkColor](#setbkcolor).
+См. в примере [CListCtrl::SetBkColor](#setbkcolor).
 
 ## <a name="getbkimage"></a>  CListCtrl::GetBkImage
 
@@ -1027,7 +1026,7 @@ UINT GetCallbackMask() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetCallbackMask](#setcallbackmask).
+См. в примере [CListCtrl::SetCallbackMask](#setcallbackmask).
 
 ## <a name="getcheck"></a>  CListCtrl::GetCheck
 
@@ -1052,7 +1051,7 @@ BOOL GetCheck(int nItem) const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetCheck](#setcheck).
+См. в примере [CListCtrl::SetCheck](#setcheck).
 
 ## <a name="getcolumn"></a>  CListCtrl::GetColumn
 
@@ -1134,7 +1133,7 @@ BOOL GetColumnOrderArray(
             int  nColumnCount = pHeaderCtrl->GetItemCount();
             LPINT pnOrder = (LPINT) malloc(nColumnCount*sizeof(int));
             ASSERT(pnOrder != NULL);
-m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
+            m_myListCtrl.GetColumnOrderArray(pnOrder, nColumnCount);
 
             int i, j, nTemp;
             for (i = 0, j = nColumnCount-1; i < j; i++, j--)
@@ -1188,7 +1187,7 @@ int GetCountPerPage() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetTopIndex](#gettopindex).
+См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="geteditcontrol"></a>  CListCtrl::GetEditControl
 
@@ -1243,7 +1242,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сочетание расширенные стили в настоящий момент в списке просмотра элемента управления. Список этих расширенных стилей, см. в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) темы в Windows SDK.
+Сочетание расширенные стили в настоящий момент в списке просмотра элемента управления. Список этих расширенных стилей, см. в разделе [расширенных стилей представления списка](/windows/desktop/Controls/extended-list-view-styles) статье в пакете Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1251,7 +1250,7 @@ DWORD GetExtendedStyle();
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetExtendedStyle](#setextendedstyle).
+См. в примере [CListCtrl::SetExtendedStyle](#setextendedstyle).
 
 ## <a name="getfirstselecteditemposition"></a>  CListCtrl::GetFirstSelectedItemPosition
 
@@ -1381,7 +1380,7 @@ public:
 
 ### <a name="example"></a>Пример
 
-В следующем примере кода показано `GetGroupInfoByIndex` метод. В предыдущем разделе этого кода-примеры, мы создали управления представление списка отображает два столбца, под названием «ClientID» и «Grade» в представлении отчета. В следующем примере кода извлекает сведения о группе, индекс которого равно 0, если такая группа существует.
+В следующем примере кода показано `GetGroupInfoByIndex` метод. В предыдущем разделе этого примера кода мы создали управления представление списка, в котором отображаются два столбца, под названием «ClientID» и «Grade» в представлении отчета. В следующем примере кода извлекает сведения о группе, индекс которого равно 0, если такая группа существует.
 ```cpp
     // GetGroupInfoByIndex
     const int GROUP_HEADER_BUFFER_SIZE = 40;
@@ -1528,7 +1527,7 @@ CHeaderCtrl* GetHeaderCtrl();
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
+См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
 ## <a name="gethotcursor"></a>  CListCtrl::GetHotCursor
 
@@ -1634,7 +1633,7 @@ CImageList* GetImageList(int nImageList) const;
 
 ```cpp
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == NULL);
-m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
+        m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
         ASSERT(m_myListCtrl.GetImageList(LVSIL_NORMAL) == &m_lcImageList);
 ```
 
@@ -1643,12 +1642,12 @@ m_myListCtrl.SetImageList(&m_lcImageList, LVSIL_NORMAL);
 Извлекает текущее положение знака вставки.
 
 ```
-BOOL GetInsertMark(LPLVINSERTMARK lvim) const;
+BOOL GetInsertMark(LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lvim*<br/>
+*plvim*<br/>
 Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структуру, содержащую сведения для знак вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1735,7 +1734,7 @@ int GetItemCount() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::DeleteItem](#deleteitem).
+См. в примере [CListCtrl::DeleteItem](#deleteitem).
 
 ## <a name="getitemdata"></a>  CListCtrl::GetItemData
 
@@ -1905,7 +1904,7 @@ BOOL GetItemRect(
 void CListCtrlDlg::OnClick(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
 
     // Get the current mouse location and convert it to client
     // coordinates.
@@ -1995,7 +1994,7 @@ UINT GetItemState(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetTopIndex](#gettopindex).
+См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="getitemtext"></a>  CListCtrl::GetItemText
 
@@ -2228,7 +2227,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 
 ## <a name="getselectedcolumn"></a>  CListCtrl::GetSelectedColumn
 
-Получает индекс столбца выбранных в настоящий момент в элементе управления списком.
+Получает индекс столбца, выбранного в элементе управления списком.
 
 ```
 UINT GetSelectedColumn() const;
@@ -2388,7 +2387,7 @@ COLORREF GetTextBkColor() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetTextBkColor](#settextbkcolor).
+См. в примере [CListCtrl::SetTextBkColor](#settextbkcolor).
 
 ## <a name="gettextcolor"></a>  CListCtrl::GetTextColor
 
@@ -2404,19 +2403,19 @@ COLORREF GetTextColor() const;
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::SetTextColor](#settextcolor).
+См. в примере [CListCtrl::SetTextColor](#settextcolor).
 
 ## <a name="gettileinfo"></a>  CListCtrl::GetTileInfo
 
 Извлекает сведения о плитки в элементе управления представления списка.
 
 ```
-BOOL GetTileInfo(PLVTILEINFO pti) const;
+BOOL GetTileInfo(PLVTILEINFO plvti) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*PTI*<br/>
+*plvti*<br/>
 Указатель на [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) структуру, которая получает сведений о плитке.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2548,15 +2547,15 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ```
 void GetWorkAreas(
     int nWorkAreas,
-    LPRECT prc) const;
+    LPRECT pRect) const;
 ```
 
 ### <a name="parameters"></a>Параметры
 
 *nWorkAreas*<br/>
-Число `RECT` структур, содержащихся в *prc* массива.
+Число `RECT` структур, содержащихся в *pRect* массива.
 
-*КНР*<br/>
+*pRect*<br/>
 Указатель на массив `RECT` структуры (или [CRect](../../atl-mfc-shared/reference/crect-class.md) объекты) получают рабочие области элемента управления представления списка. Значения в этих структурах находятся в координатах клиентской области окна.
 
 ### <a name="remarks"></a>Примечания
@@ -2565,7 +2564,7 @@ void GetWorkAreas(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
+См. в примере [CListCtrl::GetNumberOfWorkAreas](#getnumberofworkareas).
 
 ## <a name="hasgroup"></a>  CListCtrl::HasGroup
 
@@ -2781,10 +2780,10 @@ int InsertItem(
 *NMask* параметр указывает, какой элемент атрибуты, которые передаются как параметры являются допустимыми. Он может иметь одно или несколько из значения маски, описанного в [LVITEM структуры](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) в пакете Windows SDK. Допустимые значения могут объединяться с помощью битового оператора или.
 
 *nState*<br/>
-Указывает состояние элемента, изображения и изображение для наложения. См. в разделах пакета Windows SDK [структуры LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Дополнительные сведения и [состояния элементов в представлении списка](/windows/desktop/Controls/list-view-item-states) список Допустимые флаги.
+Указывает состояние элемента, изображения и изображение для наложения. Дополнительные сведения см. в разделах пакета Windows SDK [структуры LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) и [состояния элементов в представлении списка](/windows/desktop/Controls/list-view-item-states) список Допустимые флаги.
 
 *nStateMask*<br/>
-Указывает, какие биты состояния элемента будут извлечены или изменены. См. в разделе [LVITEM структуры](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) в пакете SDK для Windows, Дополнительные сведения.
+Указывает, какие биты состояния элемента будут извлечены или изменены. Дополнительные сведения см. в разделе [LVITEM структуры](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) в пакете Windows SDK.
 
 *lParam*<br/>
 32-разрядное значение конкретного приложения, связанный с элементом. Если этот параметр задан, необходимо задать *nMask* атрибут LVIF_PARAM.
@@ -2795,7 +2794,7 @@ int InsertItem(
 
 ### <a name="remarks"></a>Примечания
 
-Вызов этого метода может привести к LVM_INSERTITEM сообщение должно отправляться окна элемента управления. Обработчик связанных сообщений для элемента управления может завершиться ошибкой задать текст элемента при определенных условиях (например, с помощью стилей окна, такие как LVS_OWNERDRAW). Дополнительные сведения об этих условиях см. [LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) в пакете Windows SDK.
+Вызов этого метода может привести к LVM_INSERTITEM сообщение должно отправляться окна элемента управления. Обработчик связанных сообщений для элемента управления может завершиться ошибкой задать текст элемента при определенных условиях (например, с помощью стилей окна, такие как LVS_OWNERDRAW). Дополнительные сведения об этих условиях см. в разделе [LVM_INSERTITEM](/windows/desktop/Controls/lvm-insertitem) в пакете Windows SDK.
 
 ### <a name="example"></a>Пример
 
@@ -2828,7 +2827,7 @@ int InsertItem(
 ```
 int InsertMarkHitTest(
     LPPOINT pPoint,
-    LPLVINSERTMARK lvim) const;
+    LPLVINSERTMARK plvim) const;
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -2836,7 +2835,7 @@ int InsertMarkHitTest(
 *pPoint*<br/>
 Указатель на [ТОЧКИ](/previous-versions/dd162805\(v=vs.85\)) структуру, содержащую нажатия координаты относительно клиентской области элемента управления списком.
 
-*lvim*<br/>
+*plvim*<br/>
 Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структура, задающая точке вставки, ближайшей к значениям координат, заданного параметром точки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2879,7 +2878,7 @@ BOOL IsItemVisible(int index) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если указанный элемент является видимым; в противном случае — значение FALSE.
+Значение TRUE, если указанный элемент является видимым. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
@@ -3138,7 +3137,7 @@ BOOL SetBkColor(COLORREF cr);
 BOOL SetBkImage(LVBKIMAGE* plvbkImage);
 
 BOOL SetBkImage(
-    HBITMAP hbm,
+    HBITMAP hBitmap,
     BOOL fTile = TRUE,
     int xOffsetPercent = 0,
     int yOffsetPercent = 0);
@@ -3155,7 +3154,7 @@ BOOL SetBkImage(
 *plvbkImage*<br/>
 Адрес `LVBKIMAGE` структура, содержащая новые данные фонового изображения.
 
-*hbm*<br/>
+*hBitmap*<br/>
 Дескриптор растрового изображения.
 
 *pszUrl*<br/>
@@ -3181,7 +3180,7 @@ BOOL SetBkImage(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetBkImage](#getbkimage).
+См. в примере [CListCtrl::GetBkImage](#getbkimage).
 
 ## <a name="setcallbackmask"></a>  CListCtrl::SetCallbackMask
 
@@ -3273,7 +3272,7 @@ BOOL SetColumn(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetColumn](#getcolumn).
+См. в примере [CListCtrl::GetColumn](#getcolumn).
 
 ## <a name="setcolumnorderarray"></a>  CListCtrl::SetColumnOrderArray
 
@@ -3303,7 +3302,7 @@ BOOL SetColumnOrderArray(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
+См. в примере [CListCtrl::GetColumnOrderArray](#getcolumnorderarray).
 
 ## <a name="setcolumnwidth"></a>  CListCtrl::SetColumnWidth
 
@@ -3424,7 +3423,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetHotCursor](#gethotcursor).
+См. в примере [CListCtrl::GetHotCursor](#gethotcursor).
 
 ## <a name="sethotitem"></a>  CListCtrl::SetHotItem
 
@@ -3449,7 +3448,7 @@ int SetHotItem(int iIndex);
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetHotItem](#gethotitem).
+См. в примере [CListCtrl::GetHotItem](#gethotitem).
 
 ## <a name="sethovertime"></a>  CListCtrl::SetHoverTime
 
@@ -3474,7 +3473,7 @@ DWORD SetHoverTime(DWORD dwHoverTime = (DWORD)-1);
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetHoverTime](#gethovertime).
+См. в примере [CListCtrl::GetHoverTime](#gethovertime).
 
 ## <a name="seticonspacing"></a>  CListCtrl::SetIconSpacing
 
@@ -3544,7 +3543,7 @@ CImageList* SetImageList(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetImageList](#getimagelist).
+См. в примере [CListCtrl::GetImageList](#getimagelist).
 
 ## <a name="setinfotip"></a>  CListCtrl::SetInfoTip
 
@@ -3572,12 +3571,12 @@ BOOL SetInfoTip(PLVSETINFOTIP plvInfoTip);
 Задает курсор в определенной позиции.
 
 ```
-BOOL SetInsertMark(LPLVINSERTMARK lvim);
+BOOL SetInsertMark(LPLVINSERTMARK plvim);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*lvim*<br/>
+*plvim*<br/>
 Указатель на [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark) структуру, указав место установки точки вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3686,7 +3685,7 @@ BOOL SetItem(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::HitTest](#hittest).
+См. в примере [CListCtrl::HitTest](#hittest).
 
 ## <a name="setitemcount"></a>  CListCtrl::SetItemCount
 
@@ -3868,7 +3867,7 @@ BOOL SetItemPosition(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetItemPosition](#getitemposition).
+См. в примере [CListCtrl::GetItemPosition](#getitemposition).
 
 ## <a name="setitemstate"></a>  CListCtrl::SetItemState
 
@@ -3909,7 +3908,7 @@ BOOL SetItemState(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetTopIndex](#gettopindex).
+См. в примере [CListCtrl::GetTopIndex](#gettopindex).
 
 ## <a name="setitemtext"></a>  CListCtrl::SetItemText
 
@@ -3943,7 +3942,7 @@ BOOL SetItemText(
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::InsertItem](#insertitem).
+См. в примере [CListCtrl::InsertItem](#insertitem).
 
 ## <a name="setoutlinecolor"></a>  CListCtrl::SetOutlineColor
 
@@ -4010,7 +4009,7 @@ int SetSelectionMark(int iIndex);
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetSelectionMark](#getselectionmark).
+См. в примере [CListCtrl::GetSelectionMark](#getselectionmark).
 
 ## <a name="settextbkcolor"></a>  CListCtrl::SetTextBkColor
 
@@ -4070,12 +4069,12 @@ COLORREF, указав новый цвет текста. Сведения см. 
 Задает информацию для плитки элемента управления представления списка.
 
 ```
-BOOL SetTileInfo(PLVTILEINFO pti);
+BOOL SetTileInfo(PLVTILEINFO pTileInfo);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*PTI*<br/>
+*pTileInfo*<br/>
 Указатель на [LVTILEINFO](/windows/desktop/api/commctrl/ns-commctrl-taglvtileinfo) структура, содержащая сведения о задаваемых.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4257,7 +4256,7 @@ int CALLBACK CListCtrlDlg::MyCompareProc(LPARAM lParam1, LPARAM lParam2,
     LPARAM lParamSort)
 {
     UNREFERENCED_PARAMETER(lParamSort);
-return (int)(lParam1 - lParam2);
+    return (int)(lParam1 - lParam2);
 }
 ```
 
@@ -4381,7 +4380,7 @@ int SubItemHitTest(LPLVHITTESTINFO pInfo);
 void CListCtrlDlg::OnDblClk(NMHDR* pNMHDR, LRESULT* pResult)
 {
     UNREFERENCED_PARAMETER(pResult);
-LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
+    LPNMITEMACTIVATE pia = (LPNMITEMACTIVATE)pNMHDR;
     LVHITTESTINFO lvhti;
 
     // Clear the subitem text the user clicked on.
@@ -4418,7 +4417,7 @@ BOOL Update(int nItem);
 
 ### <a name="example"></a>Пример
 
-  См. в примере [CListCtrl::GetSelectedCount](#getselectedcount).
+См. в примере [CListCtrl::GetSelectedCount](#getselectedcount).
 
 ## <a name="see-also"></a>См. также
 

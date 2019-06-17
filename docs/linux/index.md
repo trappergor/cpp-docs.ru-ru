@@ -2,12 +2,12 @@
 layout: LandingPage
 title: Документация по разработке для Linux на C++
 description: Создание и отладка приложений на платформе Linux.
-ms.openlocfilehash: f57777451e861a8ea0df1eb81fc97553c176ebec
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: ac80c6ad3b0650d7da20f18b049af0242ffa5704
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821651"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042730"
 ---
 # <a name="linux-development-with-c-documentation"></a>Документация по разработке для Linux на C++
 
@@ -34,7 +34,7 @@ ms.locfileid: "66821651"
         </a>
     </li>
     <li>
-        <a href="https://blogs.msdn.microsoft.com/vcblog/2016/03/30/visual-c-for-linux-development/">
+        <a href="https://devblogs.microsoft.com/cppblog/">
         <div class="cardSize">
             <div class="cardPadding">
                 <div class="card">
@@ -44,8 +44,8 @@ ms.locfileid: "66821651"
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>Блог по Visual C++ для Linux</h3>
-                        <p>Следите за новыми функциями Visual C++ для рабочих нагрузок Linux.</p>
+                        <h3>Блог группы разработчиков C++</h3>
+                        <p>Будьте в курсе реализации новейших функций C++ в Visual Studio.</p>
                     </div>
                 </div>
             </div>
@@ -64,8 +64,7 @@ ms.locfileid: "66821651"
             <div class="cardPadding">
                 <div class="card">
                     <div class="cardText">
-                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio.md">C++ в Visual Studio</a></h3>
-                        <p><a href="/cpp/overview-of-cpp-development">Разработка приложений C++ в Visual Studio</a></p>
+                        <h3><a href="/cpp/overview/visual-cpp-in-visual-studio">C++ в Visual Studio</a></h3>
                     </div>
                 </div>
             </div>

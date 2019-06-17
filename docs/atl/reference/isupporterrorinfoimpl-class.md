@@ -1,6 +1,6 @@
 ---
 title: Класс ISupportErrorInfoImpl
-ms.date: 11/04/2016
+ms.date: 06/13/2019
 f1_keywords:
 - ISupportErrorInfoImpl
 - ATLCOM/ATL::ISupportErrorInfoImpl
@@ -10,29 +10,29 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 650d90c9ec98754e11586f63e0871b70ebbe34f3
+ms.sourcegitcommit: e79188287189b76b34eb7e8fb1bfe646bdb586bc
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62274769"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67141706"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>Класс ISupportErrorInfoImpl
 
 Этот класс предоставляет реализацию по умолчанию [ISupportErrorInfo интерфейс](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo) и может использоваться, когда только один интерфейс выдает ошибки для объекта.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+> Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
-```
+```cpp
 template<const IID* piid>
 class ATL_NO_VTABLE ISupportErrorInfoImpl
    : public ISupportErrorInfo
 ```
 
-#### <a name="parameters"></a>Параметры
+### <a name="parameters"></a>Параметры
 
 *piid*<br/>
 Указатель на идентификатор IID интерфейса, поддерживающего [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo).
@@ -67,101 +67,13 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 Указывает, определяется ли интерфейс `riid` поддерживает [IErrorInfo](/windows/desktop/api/oaidl/nn-oaidl-ierrorinfo) интерфейс.
 
-```
+```cpp
 STDMETHOD(InterfaceSupportsErrorInfo)(REFIID riid);
 ```
 
 ### <a name="remarks"></a>Примечания
 
 См. в разделе [ISupportErrorInfo::InterfaceSupportsErrorInfo](/windows/desktop/api/oaidl/nf-oaidl-isupporterrorinfo-interfacesupportserrorinfo) в Windows SDK.
-
-##  <a name="getsize"></a>  IThreadPoolConfig::GetSize
-
-Вызовите этот метод, чтобы получить число потоков в пуле.
-
-```
-STDMETHOD(GetSize)(int* pnNumThreads);
-```
-
-### <a name="parameters"></a>Параметры
-
-*pnNumThreads*<br/>
-[out] Адрес переменной, которая, в случае успешного выполнения получает количество потоков в пуле.
-
-### <a name="return-value"></a>Возвращаемое значение
-
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
-
-### <a name="example"></a>Пример
-
-[!code-cpp[NVC_ATL_Utilities#134](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_2.cpp)]
-
-##  <a name="gettimeout"></a>  IThreadPoolConfig::GetTimeout
-
-Вызовите этот метод, чтобы получить максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
-
-```
-STDMETHOD(GetTimeout)(DWORD* pdwMaxWait);
-```
-
-### <a name="parameters"></a>Параметры
-
-*pdwMaxWait*<br/>
-[out] Адрес переменной, которая, в случае успешного выполнения Получает максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
-
-### <a name="return-value"></a>Возвращаемое значение
-
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
-
-### <a name="example"></a>Пример
-
-См. в разделе [IThreadPoolConfig::GetSize](#getsize).
-
-##  <a name="setsize"></a>  IThreadPoolConfig::SetSize
-
-Вызовите этот метод, чтобы задать количество потоков в пуле.
-
-```
-STDMETHOD(SetSize)int nNumThreads);
-```
-
-### <a name="parameters"></a>Параметры
-
-*nNumThreads*<br/>
-Запрашиваемое количество потоков в пуле.
-
-Если *nNumThreads* является отрицательным, его абсолютное значение будет умножена на число процессоров в компьютере для получения общего числа потоков.
-
-Если *nNumThreads* равен нулю, ATLS_DEFAULT_THREADSPERPROC будет умножена на число процессоров в компьютере для получения общего числа потоков.
-
-### <a name="return-value"></a>Возвращаемое значение
-
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
-
-### <a name="example"></a>Пример
-
-См. в разделе [IThreadPoolConfig::GetSize](#getsize).
-
-##  <a name="settimeout"></a>  IThreadPoolConfig::SetTimeout
-
-Вызовите этот метод, чтобы задать максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
-
-```
-STDMETHOD(SetTimeout)(DWORD dwMaxWait);
-```
-
-### <a name="parameters"></a>Параметры
-
-*dwMaxWait*<br/>
-Запрошенное максимальное время в миллисекундах, пул потоков будет ожидать поток для завершения работы.
-
-### <a name="return-value"></a>Возвращаемое значение
-
-Возвращает S_OK в случае успеха или ошибки HRESULT в случае сбоя.
-
-### <a name="example"></a>Пример
-
-См. в разделе [IThreadPoolConfig::GetSize](#getsize).
 
 ## <a name="see-also"></a>См. также
 
