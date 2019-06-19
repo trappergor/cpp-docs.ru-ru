@@ -13,7 +13,7 @@ ms.locfileid: "66821295"
 
 ::: moniker range="vs-2015"
 
-Поддержка Linux, доступные в Visual Studio 2017 и более поздних версий.
+Поддержка Linux реализована в Visual Studio версии 2017 и выше.
 
 ::: moniker-end
 

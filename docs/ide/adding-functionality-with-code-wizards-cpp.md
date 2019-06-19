@@ -76,6 +76,6 @@ ms.locfileid: "66741641"
 ## <a name="see-also"></a>См. также
 
 [Переопределение виртуальной функции](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[Перейдите к C++ кода в Visual Studio](../ide/navigate-code-cpp.md)<br>
+[Перемещение по базе кода С++ в Visual Studio](../ide/navigate-code-cpp.md)<br>
 [Типы проектов C++ в Visual Studio](../build/reference/visual-cpp-project-types.md)<br>
 [Типы файлов, создаваемых для проектов Visual Studio C++](../build/reference/file-types-created-for-visual-cpp-projects.md)
