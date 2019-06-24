@@ -19,19 +19,19 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 8bb73c1a9e8d253492a7068c444dd7ddea8417da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d03246d2c701961c824b55fb0cbb781ee3f65028
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62350953"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344203"
 ---
 # <a name="how-to-create-symbols-c"></a>Практическое руководство. Создание символов (C++)
 
 Когда Вы приступаете новый проект, может оказаться удобным спланировать необходимые перед созданием ресурсов, к которым они будут назначены имена символов.
 
 > [!NOTE]
-> Если проект еще не содержит RC-файла, см. раздел [как: Создание ресурсов](../windows/how-to-create-a-resource-script-file.md).
+> Если проект еще не содержит RC-файла, см. в разделе [как: Создание ресурсов](../windows/how-to-create-a-resource-script-file.md).
 
 **Символы ресурсов** диалоговое окно позволяет добавить новые символы ресурсов, изменить символы, которые отображаются, или перейти в то место в исходном коде, где символ уже используется.
 
