@@ -17,12 +17,12 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: c9abf46907c473d4cf6d9e945038f70aa75bfc48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1010e4d1c11c9408ef73f4db0a449314b36059a7
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376722"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400766"
 ---
 # <a name="menu-commands-c"></a>Команды меню (C++)
 
@@ -55,7 +55,7 @@ ms.locfileid: "62376722"
 
    - Сразу после заголовка меню введите escape-последовательность для табуляции (\t), чтобы все сочетания клавиш в меню были выровнены по левому краю.
 
-   - Введите имя клавиши-модификатора (**Ctrl**, **Alt**, или **Shift**) следуют знак плюс (**+**) и имя, букву, или символ дополнительной клавиши.
+   - Введите имя клавиши-модификатора (**Ctrl**, **Alt**, или **Shift**) следуют знак плюс ( **+** ) и имя, букву, или символ дополнительной клавиши.
 
    Например, чтобы назначить **Ctrl**+**O** для **откройте** команды **файл** меню изменить команды меню  **Заголовок** , чтобы он выглядел следующим образом:
 
@@ -88,7 +88,7 @@ Win32
 
 ## <a name="see-also"></a>См. также
 
-[Редактор меню](../windows/menu-editor.md)<br/>
+[Редактор меню](../windows/menu-editor.md)
 
 <!--
 [Strings (ATL/MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>-->

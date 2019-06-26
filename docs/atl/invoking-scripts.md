@@ -22,8 +22,8 @@ ms.locfileid: "62250471"
 |**ResourceUnregister**|**HRESULT ResourceUnregister( LPCOLESTR**  *resFileName* **, UINT**  `nID` **, LPCOLESTR**  `szType` **);**<br /><br /> Отменяет регистрацию скрипт, содержащийся в модуля ресурсов. *resFileName* указывает путь UNC к сам модуль. *nID* и *szType* содержат идентификатор ресурса и тип, соответственно.|
 |**ResourceRegisterSz**|**HRESULT ResourceRegisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Регистрирует скрипт, содержащийся в модуля ресурсов. *resFileName* указывает путь UNC к сам модуль. *szID* и *szType* содержат строковый идентификатор ресурса и тип, соответственно.|
 |**ResourceUnregisterSz**|**HRESULT ResourceUnregisterSz (LPCOLESTR***resFileName* **, LPCOLESTR***szID* **, LPCOLESTR** `szType` **);**<br /><br /> Отменяет регистрацию скрипт, содержащийся в модуля ресурсов. *resFileName* указывает путь UNC к сам модуль. *szID* и *szType* содержат строковый идентификатор ресурса и тип, соответственно.|
-|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName***);**<br /><br /> Регистрирует скрипт в файле. *Имя файла* является UNC-путь в файл, содержащий (или является) сценарий ресурсов.|
-|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName***);**<br /><br /> Отменяет регистрацию скрипта в файле. *Имя файла* является UNC-путь в файл, содержащий (или является) сценарий ресурсов.|
+|**FileRegister**|**HRESULT FileRegister (LPCOLESTR***fileName* **);**<br /><br /> Регистрирует скрипт в файле. *Имя файла* является UNC-путь в файл, содержащий (или является) сценарий ресурсов.|
+|**FileUnregister**|**HRESULT FileUnregister (LPCOLESTR***fileName* **);**<br /><br /> Отменяет регистрацию скрипта в файле. *Имя файла* является UNC-путь в файл, содержащий (или является) сценарий ресурсов.|
 |**StringRegister**|**HRESULT StringRegister( LPCOLESTR**  *data*  **);**<br /><br /> Регистрирует скрипт в строке. *данные* содержит самого сценария.|
 |**StringUnregister**|**HRESULT StringUnregister( LPCOLESTR**  *data*  **);**<br /><br /> Отменяет регистрацию сценария в строке. *данные* содержит самого сценария.|
 

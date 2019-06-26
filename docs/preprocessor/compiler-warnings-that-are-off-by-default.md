@@ -5,14 +5,14 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0f306ef11b17ac94281dc9a5fdba55a34d236eb1
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236574"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400924"
 ---
-# <a name="compiler-warnings-that-are-off-by-default"></a>Выключенные по умолчанию предупреждения компилятора
+# <a name="compiler-warnings-that-are-off-by-default"></a>Предупреждения компилятора, выключенные по умолчанию
 
 Компилятор поддерживает предупреждения, отключенные по умолчанию, так как большинство разработчиков не целесообразны. В некоторых случаях они Предупреждать о Стилистические варианты выбора, а также о стандартные практики в старом коде. Другие предупреждения, о способах применения расширением Microsoft для языка. В других случаях они указывают, где программисты часто делают неверные предположения, что может привести к непредвиденное или не определено поведение области. Если параметр включен, некоторые из этих предупреждений может появляться множество раз в заголовках библиотеки. Библиотеки времени выполнения C и стандартных библиотек C++, предназначены для выдачи предупреждения, не только на уровне предупреждений [/W4](../build/reference/compiler-option-warning-level.md).
 
@@ -159,7 +159,7 @@ ms.locfileid: "62236574"
 ::: moniker range=">= vs-2019"
 <sup>16.0</sup> это предупреждение доступна, начиная с Visual Studio RTM 2019 г.<br/>
 ::: moniker-end
-<sup>Разрешение</sup> это предупреждение отключено Если [/ permissive-](../build/reference/permissive-standards-conformance.md) используется параметр компилятора.<br/>
+<sup>Разрешение</sup> это предупреждение отключено Если [/ permissive-](../build/reference/permissive-standards-conformance.md) используется параметр компилятора.
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>Предупреждения из системы по умолчанию в более ранних версий
 
