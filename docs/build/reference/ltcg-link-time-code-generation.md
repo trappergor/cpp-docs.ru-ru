@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-ms.openlocfilehash: a8f13c32593d1cfef690d63d506faf14490de02d
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 1e33d62694fe782b1a1719fa3c5a36c6fb04670a
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837272"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400617"
 ---
 # <a name="ltcg-link-time-code-generation"></a>Параметр /LTCG (создание кода во время компоновки)
 
@@ -26,11 +26,11 @@ ms.locfileid: "65837272"
 
 ## <a name="syntax"></a>Синтаксис
 
-> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]<br/>
+> **/LTCG**[ **:** {**INCREMENTAL**|**NOSTATUS**|**STATUS**|**OFF**}]
 
 Эти параметры являются нерекомендуемыми начиная с Visual Studio 2015:
 
-> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}<br/>
+> **/LTCG:** {**PGINSTRUMENT**|**PGOPTIMIZE**|**PGUPDATE**}
 
 ### <a name="arguments"></a>Аргументы
 
