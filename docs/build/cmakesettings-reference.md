@@ -4,16 +4,16 @@ ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 0dcd05833af005807d874d71e8f6a07d4e738e8c
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: cc9b9a788f17e9257bed628024e3f65dfc89fb23
+ms.sourcegitcommit: b233f05adae607f75815111006a771c432df5a9d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042588"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67516381"
 ---
 # <a name="cmakesettingsjson-schema-reference"></a>Справочник по схеме CMakeSettings.json
 
-Файл **cmakesettings.json** содержит сведения о том, как среда Visual Studio должна взаимодействовать с CMake для сборки проекта для указанной платформы. В нем хранятся такие сведения, как переменные среды или аргументы, для среды cmake.exe. Этот файл можно изменить напрямую или с помощью **редактора параметров CMake** (в Visual Studio 2019 и более поздних версий). Дополнительные сведения о редакторе см. в статье [Настройка параметров сборки CMake в Visual Studio](customize-cmake-settings.md).
+**Cmakesettings.json** файл содержит сведения о том, как Visual Studio должна взаимодействовать с CMake для построения проекта для указанной платформы. В нем хранятся такие сведения, как переменные среды или аргументы, для среды cmake.exe. Этот файл можно изменить напрямую или с помощью **редактора параметров CMake** (в Visual Studio 2019 и более поздних версий). Дополнительные сведения о редакторе см. в статье [Настройка параметров сборки CMake в Visual Studio](customize-cmake-settings.md).
 
 ## <a name="environments"></a>Среды
 
