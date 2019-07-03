@@ -1,15 +1,15 @@
 ---
 title: Мастер потребителя ATL OLE DB
-ms.date: 05/09/2019
+ms.date: 07/02/2019
 helpviewer_keywords:
 - ATL projects, adding ATL OLE DB consumers
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: bd7af5c9788f5075f38f85bd035ba8cd09e8baec
-ms.sourcegitcommit: fc1de63a39f7fcbfe2234e3f372b5e1c6a286087
-ms.translationtype: HT
+ms.openlocfilehash: 7195d712474765258ac0319539697b3517cb91b3
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65706997"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552227"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>Мастер потребителя ATL OLE DB
 
@@ -30,7 +30,7 @@ ms.locfileid: "65706997"
 
 - **Источник данных**
 
-   С помощью кнопки **Источник данных** можно настроить указанный источник данных, используя указанный поставщик OLE DB. При нажатии этой кнопки появится диалоговое окно **Свойства канала передачи данных**. Дополнительные сведения о построении строк подключения и диалоговом окне **Свойства канала передачи данных** см. [в обзоре API канала передачи данных](/previous-versions/windows/desktop/ms718102) в документации по Windows SDK.
+   С помощью кнопки **Источник данных** можно настроить указанный источник данных, используя указанный поставщик OLE DB. При нажатии этой кнопки появится диалоговое окно **Свойства канала передачи данных**. Дополнительные сведения о построении строк подключения и диалоговом окне **Свойства канала передачи данных** см. [в обзоре API канала передачи данных](/previous-versions/windows/desktop/ms718102(v=vs.85)) в документации по Windows SDK.
 
    В следующих дополнительных сведениях описаны вкладки в диалоговом окне **Свойства канала передачи данных**.
 
@@ -171,7 +171,7 @@ ms.locfileid: "65706997"
 
 - **Поддержка**
 
-   Установите флажки, чтобы указать типы обновлений, которые должны поддерживаться в объекте-получателе (по умолчанию не используется). Каждое из перечисленных ниже задаст [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892) и соответствующие записи для [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676) в сопоставлении набора свойств.
+   Установите флажки, чтобы указать типы обновлений, которые должны поддерживаться в объекте-получателе (по умолчанию не используется). Каждое из перечисленных ниже задаст [DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892(v=vs.85)) и соответствующие записи для [DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676(v=vs.85)) в сопоставлении набора свойств.
 
    - **Изменение**
 
@@ -191,4 +191,4 @@ ms.locfileid: "65706997"
 
 [Adding an ATL OLE DB Consumer](../../atl/reference/adding-an-atl-ole-db-consumer.md) (Добавление объекта-получателя ATL OLE DB)<br/>
 [Добавление функциональных возможностей с помощью мастеров кода](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[Connection Strings and Data Links (OLE DB)](/previous-versions/windows/desktop/ms718376) (Строки подключения и каналы передачи данных (OLE DB))
+[Connection Strings and Data Links (OLE DB)](/previous-versions/windows/desktop/ms718376(v=vs.85)) (Строки подключения и каналы передачи данных (OLE DB))
