@@ -1,13 +1,13 @@
 ---
 title: Общие сведения о программировании на C++ в Windows
-ms.date: 05/06/2019
+ms.date: 07/02/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 585fda614acce85e286e25b807d0fda57d03758b
-ms.sourcegitcommit: af580f3a11b19d22288424eac7ceae1bc24ab312
+ms.openlocfilehash: 1f49c9f8f78f83d6ae991b7427b28f7f5cbf7f0c
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66355568"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552304"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>Общие сведения о программировании на C++ в Windows
 
@@ -118,5 +118,5 @@ Visual Studio включает многофункциональный отлад
 |[C++ в Visual Studio](../overview/visual-cpp-in-visual-studio.md)|Родительский раздел для содержимого разработчиков Visual C++.|
 [Разработка .NET с использованием C++/CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|Создание оболочек для собственных библиотек C++, делающие его возможным обмен данными с приложениями .NET и компонентами.|
 |[Расширения компонентов для .NET и UWP](../extensions/component-extensions-for-runtime-platforms.md)|Справочник по синтаксические элементы, используемые C++/CX и C++выполняет.|
-|[Универсальные приложения Windows (C++)](universal-windows-apps-cpp.md)|Создавать приложения универсальной платформы Windows с помощью C++/CX или библиотеки шаблонов среды выполнения Windows (WRL).|
+|[Универсальные приложения Windows (C++)](../cppcx/universal-windows-apps-cpp.md)|Создавать приложения универсальной платформы Windows с помощью C++/CX или библиотеки шаблонов среды выполнения Windows (WRL).|
 |[Атрибуты C++ для модели COM и .NET](attributes/cpp-attributes-com-net.md)|Нестандартные атрибуты Windows только для программирования с использованием .NET или COM.|

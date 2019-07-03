@@ -1,13 +1,13 @@
 ---
 title: Исключения (C++/CX)
-ms.date: 01/18/2018
+ms.date: 07/02/2019
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 93a3c096c79140787a46dcbd0ae6ec7edc0bf2e4
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62301530"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552185"
 ---
 # <a name="exceptions-ccx"></a>Исключения (C++/CX)
 
@@ -63,7 +63,7 @@ C++/CX поддерживает набор стандартных исключе
 
 ## <a name="unhandlederrordetected-event"></a>Событие UnhandledErrorDetected
 
-В Windows 8.1 можно подписаться на [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected) статическое событие, которое предоставляет доступ к необработанным ошибкам, которые должны завершите процесс. Независимо от того, где возникла ошибка, она достигнет этого обработчика в виде объекта [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) , который передается с аргументами события. При вызове метода `Propagate` для объекта он создает исключение `Platform::*Exception` типа, соответствующего коду ошибки. В блоках catch можно при необходимости сохранить состояние пользователя, а затем либо разрешить завершение процесса путем вызова `throw`, либо каким-либо образом вернуть программу в известное состояние. В следующем примере демонстрируется использование основного подхода:
+В Windows 8.1 можно подписаться на [Windows::ApplicationModel::Core::CoreApplication::UnhandledErrorDetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror.unhandlederrordetected) статическое событие, которое предоставляет доступ к необработанным ошибкам, которые должны завершите процесс. Независимо от того, где возникла ошибка, она достигнет этого обработчика в виде объекта [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) , который передается с аргументами события. При вызове метода `Propagate` для объекта он создает исключение `Platform::*Exception` типа, соответствующего коду ошибки. В блоках catch можно при необходимости сохранить состояние пользователя, а затем либо разрешить завершение процесса путем вызова `throw`, либо каким-либо образом вернуть программу в известное состояние. В следующем примере демонстрируется использование основного подхода:
 
 В app.xaml.h:
 
