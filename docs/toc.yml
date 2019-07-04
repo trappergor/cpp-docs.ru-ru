@@ -1691,7 +1691,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: Поддержка Юникода и многобайтовой кодировки
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: Ссылка
+        - name: Справочники
           expanded: false
           items:
             - name: Класс CSize
@@ -2917,7 +2917,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
       href: security/developer-guidance-speculative-execution.md
-- name: Ссылка
+- name: Справочники
   expanded: false
   items:
     - name: Справочники по языкам
@@ -10220,7 +10220,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: Общие рекомендации в среде выполнения с параллелизмом
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: Ссылка
+                - name: Справочники
                   expanded: false
                   items:
                     - name: Справочные материалы (среда выполнения с параллелизмом)
