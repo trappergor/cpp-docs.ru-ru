@@ -1,6 +1,6 @@
 ---
 title: localtime_s, _localtime32_s, _localtime64_s
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 apiname:
 - _localtime64_s
 - _localtime32_s
@@ -32,12 +32,12 @@ helpviewer_keywords:
 - time, converting values
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
-ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454ab492fbe8a31b9ceeca518fa5e590271dbf06
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62157297"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693417"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s, _localtime32_s, _localtime64_s
 
@@ -84,9 +84,9 @@ errno_t _localtime64_s(
 
 ## <a name="remarks"></a>Примечания
 
-**_Localtime32_s** функция преобразует время, хранящееся в виде [time_t](../../c-runtime-library/standard-types.md) значение и сохраняет результат в структуре типа [tm](../../c-runtime-library/standard-types.md). **Long** значение *sourceTime* представляет секунд, истекших после полуночи (00: 00:00), 1 января 1970 года в формате UTC. Это значение обычно получается из [время](time-time32-time64.md) функции.
+**Localtime_s** функция преобразует время, хранящееся в виде [time_t](../../c-runtime-library/standard-types.md) значение и сохраняет результат в структуре типа [tm](../../c-runtime-library/standard-types.md). **Time_t** значение *sourceTime* представляет секунд, истекших после полуночи (00: 00:00), 1 января 1970 года в формате UTC. Это значение обычно получается из [время](time-time32-time64.md) функции.
 
-**_localtime32_s** исправляет для местного часового пояса, если пользователь сначала задает глобальную переменную среды **TZ**. Когда **TZ** задано три других переменных среды (**_timezone**, **_daylight**, и **_tzname**) также автоматически устанавливаются. Если **TZ** переменная не задана, **localtime32_s** пытается использовать данные часового пояса, определенные в приложении Дата/время в панели управления. Если эти сведения недоступны, по умолчанию используется значение PST8PDT, что означает тихоокеанский часовой пояс. Описание этих переменных см. в разделе [_tzset](tzset.md). **TZ** — это расширение Microsoft и не является частью стандарта ANSI для **localtime**.
+**localtime_s** исправляет для местного часового пояса, если пользователь сначала задает глобальную переменную среды **TZ**. Когда **TZ** задано три других переменных среды ( **_timezone**, **_daylight**, и **_tzname**) также автоматически устанавливаются. Если **TZ** переменная не задана, **localtime_s** пытается использовать данные часового пояса, определенные в приложении Дата/время в панели управления. Если эти сведения недоступны, по умолчанию используется значение PST8PDT, что означает тихоокеанский часовой пояс. Описание этих переменных см. в разделе [_tzset](tzset.md). **TZ** — это расширение Microsoft и не является частью стандарта ANSI для **localtime**.
 
 > [!NOTE]
 > Целевая среда должна попытаться определить, действует ли летнее время.
