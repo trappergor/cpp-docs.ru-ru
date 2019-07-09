@@ -1,18 +1,18 @@
 ---
 title: C++ в Visual Studio
 description: Под Visual C++ подразумевается компилятор Microsoft C++, редактор кода и связанные инструменты в Интегрированной среде разработки Visual Studio. Используйте Visual C++ для разработки программ для Windows, Linux, Android и iOS.
-ms.date: 05/14/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: c2a38d13cd7b34880b64521af99103ed8192bfd0
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 67bed9a8ce9b5cfbe11a5383d2f67ea6c02d1106
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451202"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552378"
 ---
 # <a name="c-in-visual-studio"></a>C++ в Visual Studio
 
@@ -92,7 +92,7 @@ Visual Studio 2015, 2017 и 2019 можно установить паралле
 
 ## <a name="write-applications-in-c"></a>Создание приложений на C++
 
-[Универсальные приложения Windows](../windows/universal-windows-apps-cpp.md)<br/>
+[Универсальные приложения Windows (C++)](../cppcx/universal-windows-apps-cpp.md)<br/>
 Руководства и справочные материалы в Центре разработчика Windows. Сведения о разработке приложений UWP см. в разделах [Введение в универсальную платформу Windows](/windows/uwp/get-started/universal-application-platform-guide) и [Создание первого приложения UWP на C++](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp).
 
 [Классические приложения (C++)](../windows/desktop-applications-visual-cpp.md)<br/>
