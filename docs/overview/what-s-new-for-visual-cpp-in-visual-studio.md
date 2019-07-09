@@ -1,22 +1,22 @@
 ---
 title: Новые возможности C++ в Visual Studio
-ms.date: 06/17/2019
+ms.date: 07/02/2019
 ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: b408036fdee3d8163ef48cdbdab6e0f0a9c939ab
-ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
+ms.openlocfilehash: f02c5878f5f741c216499f619bfd1392483bfa86
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67344189"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552346"
 ---
 # <a name="whats-new-for-c-in-visual-studio"></a>Новые возможности C++ в Visual Studio
 
 ::: moniker range=">=vs-2019"
 
-В Visual Studio 2019 реализовано множество изменений и исправлений для среды Microsoft C++. Мы исправили множество ошибок и проблем с компилятором и средствами. Сообщения о многих из них были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) и [Отправить предложение](https://developercommunity.visualstudio.com/spaces/62/index.html) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [What's new in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019) (Новые возможности Visual Studio 2019). Сведения о новых возможностях для C++ в Visual Studio 2017 см. в статье [What's New for C++ in Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017) (Новые возможности для C++ в Visual Studio 2017). Сведения о новых возможностях для C++ в Visual Studio 2015 и более ранних версиях см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ в версиях с 2003 по 2015).
+В Visual Studio 2019 реализовано множество изменений и исправлений для среды Microsoft C++. Мы исправили множество ошибок и проблем с компилятором и средствами. Сообщения о многих из них были отправлены клиентами с помощью инструментов [Сообщить о проблеме](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2019) и [Отправить предложение](https://developercommunity.visualstudio.com/spaces/62/index.html) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [What's new in Visual Studio 2019](/visualstudio/ide/whats-new-visual-studio-2019) (Новые возможности Visual Studio 2019). Сведения о новых возможностях для C++ в Visual Studio 2017 см. в статье [What's New for C++ in Visual Studio 2017](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2017) (Новые возможности для C++ в Visual Studio 2017). Сведения о новых возможностях для C++ в Visual Studio 2015 и более ранних версиях см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ в версиях с 2003 по 2015).
 
 ## <a name="c-compiler"></a>компилятор C++
 
@@ -241,7 +241,7 @@ C++ для Android теперь по умолчанию равняется на 
 
 ::: moniker range="=vs-2017"
 
-В Visual Studio 2017 реализовано множество изменений и исправлений для среды C++. Мы исправили более 250 ошибок и отчитались о проблемах с компилятором и средствами, о многих из которых сообщили клиенты с помощью инструментов ["Сообщить о проблеме" и "Отправить предложение"](/visualstudio/how-to-report-a-problem-with-visual-studio-2017) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Сведения о новых возможностях для C++ в Visual Studio 2019 см. в статье [What's New for C++ in Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019) (Новые возможности для C++ в Visual Studio). Сведения о новых возможностях для C++ в Visual Studio 2015 и более ранних версиях см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ в версиях с 2003 по 2015).
+В Visual Studio 2017 реализовано множество изменений и исправлений для среды C++. Мы исправили более 250 ошибок и отчитались о проблемах с компилятором и средствами, о многих из которых сообщили клиенты с помощью инструментов ["Сообщить о проблеме" и "Отправить предложение"](/visualstudio/ide/how-to-report-a-problem-with-visual-studio?view=vs-2017) в разделе **Отправить отзыв**. Спасибо, что сообщаете нам об ошибках! Дополнительные сведения о новых возможностях всех компонентов Visual Studio см. на странице [Новые возможности Visual Studio 2017](/visualstudio/ide/whats-new-visual-studio-2017?view=vs-2017). Сведения о новых возможностях для C++ в Visual Studio 2019 см. в статье [What's New for C++ in Visual Studio](/cpp/overview/what-s-new-for-visual-cpp-in-visual-studio?view=vs-2019) (Новые возможности для C++ в Visual Studio). Сведения о новых возможностях для C++ в Visual Studio 2015 и более ранних версиях см. в статье [Visual C++ What's New 2003 through 2015](/cpp/porting/visual-cpp-what-s-new-2003-through-2015) (Новые возможности Visual C++ в версиях с 2003 по 2015).
 
 ## <a name="c-compiler"></a>компилятор C++
 

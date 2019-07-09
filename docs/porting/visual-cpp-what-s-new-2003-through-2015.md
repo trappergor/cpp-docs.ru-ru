@@ -1,13 +1,13 @@
 ---
 title: Новые возможности Visual C++ 2003–2015
-ms.date: 11/04/2016
+ms.date: 07/02/2019
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 4bcf661284d447b18542bb158940d539ef9c0686
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 1aff65ff998d9b3bb86fbf7288850287f4445275
+ms.sourcegitcommit: 9b904e490b1e262293a602bd1291a8f3045e755b
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449806"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67552202"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Новые возможности Visual C++ 2003–2015
 
@@ -1682,7 +1682,7 @@ MSVC поддерживает следующие функции языка C++11
 ### <a name="windows-runtime-app-development-support"></a>Поддержка разработки приложений среды выполнения Windows
 
 - **Модель собственного пользовательского интерфейса на базе XAML.** Для приложений среды выполнения Windows вы можете использовать новую собственную модель пользовательского интерфейса на базе XAML.
-- **Расширения компонентов Visual C++** . Эти расширения упрощают использование объектов среды выполнения Windows, являющихся неотъемлемой частью ее приложений. Дополнительные сведения: [Roadmap for Windows Runtime apps using C++](../windows/universal-windows-apps-cpp.md) (Стратегия создания приложений среды выполнения Windows на C++), [Справочник по языку Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
+- **Расширения компонентов Visual C++** . Эти расширения упрощают использование объектов среды выполнения Windows, являющихся неотъемлемой частью ее приложений. Дополнительные сведения: [Roadmap for Windows Runtime apps using C++](../cppcx/universal-windows-apps-cpp.md) (Стратегия создания приложений среды выполнения Windows на C++), [Справочник по языку Visual C++ (C++/CX)](../cppcx/visual-c-language-reference-c-cx.md)
 - **Игры DirectX**. Разрабатывайте захватывающие игры, используя поддержку новой версии DirectX для приложений среды выполнения Windows.
 - **Взаимодействие XAML и DirectX**. Мы обеспечили более эффективное внутреннее взаимодействие между XAML и DirectX в приложениях среды выполнения Windows.
 - **Разработка библиотеки DLL для компонента среды выполнения Windows**. Разработка библиотеки DLL для компонента делает среду выполнения Windows расширяемой.
