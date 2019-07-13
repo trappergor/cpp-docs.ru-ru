@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b2588a4fe9903de624cbd3517c290a5439fe284a
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62252949"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860979"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -348,7 +348,7 @@ BOOL Create(
 
 В следующей таблице перечислены значения, указываемые для *расположение* параметра.
 
-|Расположение|Описание|
+|Местоположение|Описание|
 |--------------|-----------------|
 |LOCATION_BOTTOM|Вкладки расположены в нижней части вкладок.|
 |LOCATION_TOP|Вкладки расположены в верхней части вкладок.|
@@ -1139,6 +1139,5 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Классы](../../mfc/reference/mfc-classes.md)<br/>
-[Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Класс CDockablePane](../../mfc/reference/cdockablepane-class.md)<br/>
 [Класс CMFCBaseTabCtrl](../../mfc/reference/cmfcbasetabctrl-class.md)
