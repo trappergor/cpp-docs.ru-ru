@@ -7,14 +7,17 @@ helpviewer_keywords:
 - class types [C++], unions as
 - union keyword [C++]
 ms.assetid: 25c4e219-fcbb-4b7b-9b64-83f3252a92ca
-ms.openlocfilehash: 58f4940d209b783b00c7167265ff1a2a733c947c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: c15ec782d16aebab85d57de2dea1e91b91620c74
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65222345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894472"
 ---
 # <a name="unions"></a>Объединения
+
+> [!NOTE]
+> В C ++ 17 и более поздних версиях **std::variant** класс является типобезопасной альтернативой для объединения.
 
 Объект **объединение** — это определяемый пользователем тип, в которой все члены имеют тот же адрес памяти. Это означает, что в любой момент времени объединение не может содержать больше одного объекта из списка своих членов. Независимо от количества членов объединения, оно использует лишь количество памяти, необходимое для хранения своего крупнейшего члена.
 

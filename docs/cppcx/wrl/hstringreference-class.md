@@ -1,11 +1,12 @@
 ---
 title: Класс HStringReference
-ms.date: 09/25/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
@@ -21,12 +22,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HStringReference::operator!= operator
 - Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
-ms.openlocfilehash: b9d2e49d0a7e1321e2259c06e1313a90d55dc90e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9c17a9df8fcc7d849bbbd4f613bf5dce6dae8983
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398281"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894395"
 ---
 # <a name="hstringreference-class"></a>Класс HStringReference
 
@@ -56,6 +57,7 @@ name                                                    | Описание
 ----------------------------------- | ------------------------------------------------------------------
 [HStringReference::CopyTo](#copyto) | Копирует текущий `HStringReference` объект в объект HSTRING.
 [HStringReference::Get](#get)       | Получает значение базового дескриптора HSTRING.
+[HStringReference::GetRawBuffer](#getrawbuffer) | Извлекает указатель на основные данные строки.
 
 ### <a name="public-operators"></a>Открытые операторы
 
@@ -106,6 +108,21 @@ HSTRING Get() const throw()
 ### <a name="return-value"></a>Возвращаемое значение
 
 Значение базового дескриптора HSTRING.
+
+## <a name="getrawbuffer"></a>HStringReference::GetRawBuffer
+
+Извлекает указатель на основные данные строки.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Параметры
+
+*Длина* указатель на **int** переменную, которая получает длину данных.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект **const** указатель на основные данные строки.
 
 ## <a name="hstringreference"></a>HStringReference::HStringReference
 
@@ -184,7 +201,7 @@ inline bool operator==(
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* может быть `HStringReference` объекта или дескриптором HSTRING.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения.  *правая часть* может быть `HStringReference` объекта или дескриптором HSTRING.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -214,7 +231,7 @@ inline bool operator!=(
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* может быть `HStringReference` объекта или дескриптором HSTRING.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения.  *правая часть* может быть `HStringReference` объекта или дескриптором HSTRING.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -236,7 +253,7 @@ inline bool operator<(
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* можно ссылаться на `HStringReference`.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения.  *правая часть* можно ссылаться на `HStringReference`.
 
 ### <a name="return-value"></a>Возвращаемое значение
