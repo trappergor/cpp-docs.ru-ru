@@ -1,6 +1,6 @@
 ---
-title: Ссылка страницы свойств проекта C++ - Visual Studio
-ms.date: 05/06/2019
+title: C++Справочник по страницам свойств проекта — Visual Studio
+ms.date: 07/16/2019
 f1_keywords:
 - VC.Project.NotAProp.Edit
 helpviewer_keywords:
@@ -14,22 +14,30 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 7b10e3c7eef846d72220545b89a217da7a4bb9a1
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
-ms.translationtype: HT
+ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65217788"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299729"
 ---
-# <a name="c-project-property-page-reference"></a>Справочник по страницам свойств проекта C++
+# <a name="c-project-property-page-reference"></a>C++Справочник по страницам свойств проекта
 
-С помощью страниц свойств можно задать параметры для проектов Visual Studio. Чтобы открыть диалоговое окно **Страницы свойств** для проекта Visual Studio, в меню **Проект** выберите пункт **Свойства**. Дополнительные сведения о свойствах проекта см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+В Visual Studio вы указываете параметры компилятора и компоновщика, пути к файлам и другие параметры сборки на страницах свойств проекта. Чтобы открыть **страницы свойств**, в главном меню выберите**Свойства** **проекта** > или щелкните правой кнопкой мыши узел проекта в **Обозреватель решений** и выберите пункт **Свойства**. Дополнительные сведения о свойствах проекта см. [в C++ разделе Установка компилятора и свойств сборки в Visual Studio](../working-with-project-properties.md).
 
-Страницы свойств в проектах, отличных от Windows, см. в разделе [Справочник по страницам свойств C++ Linux](../../linux/prop-pages-linux.md).
+Сведения о страницах свойств в проектах Linux см. в разделе [Справочник по страницам свойств Linux C++ ](../../linux/prop-pages-linux.md).
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Дополнительно"](advanced-manifest-tool.md)
+[Страница свойств "Общие" (проект)](general-property-page-project.md)
+
+[Страница свойств каталогов VC++](vcpp-directories-property-page.md)
+
+[Средство манифеста, средство общего](general-manifest-tool-configuration-properties.md)
+манифеста, средство манифеста[входных и выходных данных](input-and-output-manifest-tool.md)
+[, изолированное](isolated-com-manifest-tool.md)
+[средство манифеста COM, дополнительно](advanced-manifest-tool.md)
+
 
 [Страницы свойств командной строки](command-line-property-pages.md)
 
@@ -39,9 +47,9 @@ ms.locfileid: "65217788"
 
 [Страница свойств "Общие" (файл)](general-property-page-file.md)
 
-[Страница свойств "Общие" (проект)](general-property-page-project.md)
 
-[Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Общие"](general-manifest-tool-configuration-properties.md)
+
+
 
 [Страницы свойств HLSL](hlsl-property-pages.md)
 
@@ -51,9 +59,9 @@ ms.locfileid: "65217788"
 
 [Страницы свойств HLSL: выходные файлы](hlsl-property-pages-output-files.md)
 
-[Диалоговое окно страниц свойств ](input-and-output-manifest-tool.md)Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Вход и выход"\<
 
-[Диалоговое окно страниц свойств \<Имя_проекта> "Свойства конфигурации", "Инструмент манифеста", "Изолированный COM"](isolated-com-manifest-tool.md)
+
+
 
 [Страницы свойств компоновщика](linker-property-pages.md)
 
@@ -73,7 +81,7 @@ ms.locfileid: "65217788"
 
 [Страницы свойств ресурсов](resources-property-pages.md)
 
-[Страница свойств каталогов VC++](vcpp-directories-property-page.md)
+
 
 [Страница свойств веб-ссылок](web-references-property-page.md)
 
