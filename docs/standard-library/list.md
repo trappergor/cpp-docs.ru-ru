@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - list header
 ms.assetid: 2345823b-5612-44d8-95d3-aa96ed076d17
-ms.openlocfilehash: cfe6e8b4f75a3dbf824574654bfba83dcbbd8ba6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f2c04bb73bfa379ea87ba4c950bf805931c16ba1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413207"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245566"
 ---
 # <a name="ltlistgt"></a>&lt;list&gt;
 
@@ -24,9 +24,14 @@ ms.locfileid: "62413207"
 #include <list>
 ```
 
+> [!NOTE]
+> \<Списка > Библиотека также использует `#include <initializer_list>` инструкции.
+
+## <a name="members"></a>Участники
+
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator!=](../standard-library/list-operators.md#op_neq)|Проверяет неравенство объекта-списка слева от оператора объекту-списку справа от оператора.|
 |[оператор<](../standard-library/list-operators.md#op_lt)|Проверяет, меньше ли объект-список слева от оператора, чем объект-список справа от оператора.|
@@ -35,9 +40,15 @@ ms.locfileid: "62413207"
 |[оператор>](../standard-library/list-operators.md#op_gt)|Проверяет, больше ли объект-список слева от оператора, чем объект-список справа от оператора.|
 |[оператор>=](../standard-library/list-operators.md#op_gt_eq)|Проверяет, что объект-список слева от оператора больше или равен объекту-списку справа от оператора.|
 
+### <a name="functions"></a>Функции
+
+|||
+|-|-|
+|[swap](../standard-library/list-functions.md#swap)|Меняет местами элементы двух списков.|
+
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс list](../standard-library/list-class.md)|Класс шаблона контейнеров последовательностей, содержащих элементы в линейном порядке и позволяющие вставлять и удалять элементы в любом месте в пределах этих последовательностей.|
 

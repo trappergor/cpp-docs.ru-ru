@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - complex header
 ms.assetid: 5e728995-3059-496a-9ce9-61d1bfbe4f2b
-ms.openlocfilehash: afcdb1246d9c02f83dbc8708326d10e802ad2779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3d4330f8b0fcbce940f6647ebb8920f0b1969b6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212096"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244682"
 ---
 # <a name="ltcomplexgt"></a>&lt;complex&gt;
 
 Определяет класс шаблона контейнеров `complex` и его вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <complex>
-```
+**Заголовок**: \<complex>
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -42,7 +42,7 @@ ms.locfileid: "62212096"
 
    (*a*/(*a*<sup>2</sup> + *b*<sup>2</sup>), -*b*/(*a*<sup>2</sup> + *b*<sup>2</sup>))
 
-Представляя комплексное число *z* = (*a*, *b*) в виде *z* = *a*  +  *bi*, где *я*<sup>2</sup> = -1, правила алгебры набора вещественных чисел могут применяться к набору комплексных чисел и их компонентам. Пример:
+Представляя комплексное число *z* = (*a*, *b*) в виде *z* = *a*  +  *bi*, где *я*<sup>2</sup> = -1, правила алгебры набора вещественных чисел могут применяться к набору комплексных чисел и их компонентам. Например:
 
    (1 + 2*я*) \* (2 + 3*я*) = 1 \* (2 + 3*я*) + 2*я* \* (2 + 3*i*) = (2 + 3*я*) + (4*я* + 6*я*<sup>2</sup>) = (2-6) + (3 + 4)*я* = -4 + 7*я*
 
@@ -68,12 +68,20 @@ ms.locfileid: "62212096"
 
 Если не указано иное, функции, которые могут возвращать несколько значений должны возвращать основное значение аргумента больше - π и меньше чем или равно, + π, чтобы обеспечить одно значение. Все углы должны выражаться в радианах, где в круге 2π радиан (360 градусов).
 
+## <a name="members"></a>Участники
+
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[abs](../standard-library/complex-functions.md#abs)|Вычисляет модуль комплексного числа.|
+|[acos](../standard-library/complex-functions.md#acos)||
+|[acosh](../standard-library/complex-functions.md#acosh)||
 |[arg](../standard-library/complex-functions.md#arg)|Извлекает аргумент из комплексного числа.|
+|[asin](../standard-library/complex-functions.md#asin)||
+|[asinh](../standard-library/complex-functions.md#asinh)||
+|[atan](../standard-library/complex-functions.md#atan)||
+|[atanh](../standard-library/complex-functions.md#atanh)||
 |[conj](../standard-library/complex-functions.md#conj)|Возвращает комплексно-сопряженную величину комплексного числа.|
 |[cos](../standard-library/complex-functions.md#cos)|Возвращает косинус комплексного числа.|
 |[cosh](../standard-library/complex-functions.md#cosh)|Возвращает гиперболический косинус комплексного числа.|
@@ -84,6 +92,7 @@ ms.locfileid: "62212096"
 |[norm](../standard-library/complex-functions.md#norm)|Извлекает норму комплексного числа.|
 |[polar](../standard-library/complex-functions.md#polar)|Возвращает комплексное число, соответствующее указанному модулю и аргументу, в декартовой форме.|
 |[pow](../standard-library/complex-functions.md#pow)|Вычисляет комплексное число, получаемое в результате возведения основания (комплексное число) в степень другого комплексного числа.|
+|[proj](../standard-library/complex-functions.md#proj)||
 |[real](../standard-library/complex-functions.md#real)|Извлекает вещественную часть комплексного числа.|
 |[sin](../standard-library/complex-functions.md#sin)|Возвращает синус комплексного числа.|
 |[sinh](../standard-library/complex-functions.md#sinh)|Возвращает гиперболический синус комплексного числа.|
@@ -93,7 +102,7 @@ ms.locfileid: "62212096"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator!=](../standard-library/complex-operators.md#op_neq)|Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|
 |[оператор*](../standard-library/complex-operators.md#op_star)|Умножает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.|
@@ -106,7 +115,7 @@ ms.locfileid: "62212096"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[complex\<double>](../standard-library/complex-double.md)|Явно специализированный класс шаблона описывает объект, который хранит упорядоченную пару объектов, оба типа **двойные**, где первый представляет вещественную часть комплексного числа, а вторая представляет мнимой части.|
 |[complex\<float>](../standard-library/complex-float.md)|Явно специализированный класс шаблона описывает объект, который хранит упорядоченную пару объектов, оба типа **float**, где первый представляет вещественную часть комплексного числа, а вторая представляет мнимой части.|

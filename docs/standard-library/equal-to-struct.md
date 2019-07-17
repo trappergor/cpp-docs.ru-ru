@@ -7,12 +7,12 @@ helpviewer_keywords:
 - equal_to function
 - equal_to struct
 ms.assetid: 8e4f2b50-b2db-48e3-b4cc-6cc03362c2a6
-ms.openlocfilehash: 9dc388c5e4248b6d0cd6ad4842be7252601dec13
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ac7c5a3ed8d85e6ea3ad46ec61c7968bc19cd15e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413740"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245831"
 ---
 # <a name="equalto-struct"></a>equal_to - структура
 
@@ -39,12 +39,13 @@ struct equal_to<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*, *T*, *U* любой тип, поддерживающий `operator==`, принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Любой тип, поддерживающий `operator==`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд в операции равенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд в операции равенства. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение

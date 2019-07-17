@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun_t class
 ms.assetid: f169d381-019b-4a0e-a9a3-54da6d948270
-ms.openlocfilehash: 10a39d4b7871e08a5bf3ec56f6d11df5ad8b646c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0bdfdbac7a23a4b0e3b830b05990bf028c7bb316
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212032"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244549"
 ---
 # <a name="constmemfunt-class"></a>Класс const_mem_fun_t
 
@@ -30,10 +30,10 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ### <a name="parameters"></a>Параметры
 
-*PM*<br/>
+*PM*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*Pleft*<br/>
+*Pleft*\
 Объект, *Pm* вызывается функция-член.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -42,19 +42,8 @@ class const_mem_fun_t : public unary_function <Type *, Result>
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( `Pleft`->\* `Pm`)() **const**.
+Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую (`Pleft` -> \* `Pm`) () **const**.
 
 ## <a name="example"></a>Пример
 
 Конструктор `const_mem_fun_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun`. Пример использования адаптера функции-члена см. в разделе [mem_fun](../standard-library/functional-functions.md#mem_fun).
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

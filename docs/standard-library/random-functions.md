@@ -6,16 +6,16 @@ f1_keywords:
 ms.assetid: 2ac9ec59-619b-4b85-a425-f729277c1bc8
 helpviewer_keywords:
 - std::generate_canonical
-ms.openlocfilehash: 80bdb1ca83be5fb390035d7f3b005793a2f03715
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 87b640d4f3aa3fbfa23ad5603d84102301e71ea4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370350"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240390"
 ---
 # <a name="ltrandomgt-functions"></a>Функции &lt;random&gt;
 
-## <a name="generate_canonical"></a>  generate_canonical
+## <a name="generate_canonical"></a> generate_canonical
 
 Возвращает значение с плавающей запятой из случайной последовательности.
 
@@ -29,19 +29,15 @@ RealType generate_canonical(Generator& Gen);
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
+*RealType*\
 Тип с плавающей запятой. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*BITS*<br/>
+*BITS*\
 Генератор случайных чисел.
 
-*Gen*<br/>
+*Gen*\
 Генератор случайных чисел.
 
 ### <a name="remarks"></a>Примечания
 
 Эта функция вызывает шаблон `operator()` из *Gen* многократно и преобразует возвращенные значения в значение с плавающей запятой `x` типа *RealType* пока она собрала заданного числа бит мантиссы в `x`. Является наименьшее значение из заданного числа *Bits* (который должно быть нулевым) и полное число разрядов мантиссы в *RealType*. Первый вызов предоставляет младшие разряды. Функция возвращает `x`.
-
-## <a name="see-also"></a>См. также
-
-[\<random>](../standard-library/random.md)<br/>

@@ -7,26 +7,28 @@ f1_keywords:
 helpviewer_keywords:
 - limits header
 ms.assetid: e07d6379-5b00-4a3d-a789-40d41538b59e
-ms.openlocfilehash: c029095d5298048874a7eb6f1a41209d6a6f4779
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e23c47b3eaecec92e462af7b2cc47627c5bad86a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413246"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245319"
 ---
 # <a name="ltlimitsgt"></a>&lt;limits&gt;
 
 Определяет класс шаблона `numeric_limits` и два перечисления, касающиеся представления значений с плавающей запятой и округления.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <limits>
-```
+**Заголовок:** \<limits>
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
 Явные специализации `numeric_limits` описывают множество свойств базовых типов, включая символ, целое число и типы с плавающей запятой и **bool** , являются реализацией определен, а не исправить с помощью правила языка C++. Свойства, описанные в \<limits>, включают точность, представления минимального и максимального размера, округление и сообщение об ошибках типа.
+
+## <a name="members"></a>Участники
 
 ### <a name="enumerations"></a>Перечисления
 
@@ -37,9 +39,9 @@ ms.locfileid: "62413246"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
-|[Класс numeric_limits](../standard-library/numeric-limits-class.md)|Класс шаблона описывает арифметические свойства встроенных числовых типов.|
+|[numeric_limits Class](../standard-library/numeric-limits-class.md)|Класс шаблона описывает арифметические свойства встроенных числовых типов.|
 
 ## <a name="see-also"></a>См. также
 

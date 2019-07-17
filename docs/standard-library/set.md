@@ -6,29 +6,32 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 633571f00cfe761b687e9b76624029f57ab6043e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412583"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246382"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
 Определяет классы шаблонов контейнеров set и multiset и их вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <set>
-```
+**Заголовок:** \<set>
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Задать > Библиотека также использует `#include <initializer_list>` инструкции.
 
 ## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
 |Версия Set|Версия Multiset|Описание|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[operator!= (set)](../standard-library/set-operators.md#op_neq)|[operator!= (multiset)](../standard-library/set-operators.md#op_neq)|Проверяет неравенство объекта set или multiset слева от оператора объекту set или multiset справа от оператора.|
 |[operator< (set)](../standard-library/set-operators.md#op_lt)|[operator< (multiset)](../standard-library/set-operators.md#op_lt_multiset)|Проверяет, меньше ли объект set или multiset слева от оператора объекта set или multiset справа от оператора.|
 |[operator<= (set)](../standard-library/set-operators.md#op_lt_eq)|[operator\<= (multiset)](../standard-library/set-operators.md#op_lt_eq_multiset)|Проверяет, меньше или равен ли объект set или multiset слева от оператора объекту set или multiset справа от оператора.|
@@ -39,12 +42,12 @@ ms.locfileid: "62412583"
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
 |Версия Set|Версия Multiset|Описание|
-|-----------------|----------------------|-----------------|
+|-|-|-|
 |[swap](../standard-library/set-functions.md#swap)|[swap (multiset)](../standard-library/set-functions.md#swap_multiset)|Меняет местами элементы двух объектов set или multiset.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс set](../standard-library/set-class.md)|Используется для хранения и извлечения данных из коллекции, в которой значения элементов должны быть уникальными и в которой они служат в качестве значений ключей, согласно которым данные автоматически упорядочиваются.|
 |[Класс multiset](../standard-library/multiset-class.md)|Используется для хранения и извлечения данных из коллекции, в которой значения элементов не должны быть уникальными и в которой они служат в качестве значений ключей, согласно которым данные автоматически упорядочиваются.|

@@ -11,12 +11,12 @@ f1_keywords:
 - filesystem/std::filesystem::perms
 - filesystem/std::experimental::filesystem::perms
 ms.assetid: 0096c046-d101-464c-8259-b878a48280b0
-ms.openlocfilehash: 9c4efa145455240c4420a51c4a01662a30dc0761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9bf5f0231fbc5b694c1f4ae507feb82b0d19d600
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405135"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240745"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>Перечисления &lt;filesystem&gt;
 
@@ -119,6 +119,14 @@ enum class file_type {
 |`fifo`|6|Представляет файл FIFO в системе UNIX. (Не поддерживается.)|
 |`socket`|7|Представляет сокет в системе UNIX. (Не поддерживается.)|
 |`unknown`|8|Представляет файл, состояние которого невозможно определить.|
+
+## <a name="perm_options"></a>  perm_options
+
+Содержит значения `replace`, `add`, `remove`, и `nofollow`.
+
+```cpp
+enum class perm_options;
+```
 
 ## <a name="perms"></a>  perms
 

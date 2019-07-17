@@ -24,23 +24,16 @@ helpviewer_keywords:
 - std::terminate [C++]
 - std::uncaught_exception [C++]
 - std::unexpected [C++]
-ms.openlocfilehash: 22c5b34f1c87d10b48a797229bc987305fca8f9d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 34a34c48be8bb0e319a7d0eebeccba805cafbc1f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412661"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246063"
 ---
 # <a name="ltexceptiongt-functions"></a>Функции &lt;exception&gt;
 
-||||
-|-|-|-|
-|[current_exception](#current_exception)|[get_terminate](#get_terminate)|[get_unexpected](#get_unexpected)|
-|[make_exception_ptr](#make_exception_ptr)|[rethrow_exception](#rethrow_exception)|[set_terminate](#set_terminate)|
-|[set_unexpected](#set_unexpected)|[terminate](#terminate)|[uncaught_exception](#uncaught_exception)|
-|[unexpected](#unexpected)|
-
-## <a name="current_exception"></a>  current_exception
+## <a name="current_exception"></a> current_exception
 
 Получает интеллектуальный указатель на текущее исключение.
 
@@ -62,18 +55,18 @@ exception_ptr current_exception();
 
 Последующие вызовы функции `current_exception` возвращают объекты `exception_ptr`, которые ссылаются на различные копии текущего исключения. Соответственно, при сравнении объекты не признаются равными, поскольку они ссылаются на различные копии, даже если эти копии имеют одинаковые бинарные значения.
 
-## <a name="make_exception_ptr"></a>  make_exception_ptr
+## <a name="make_exception_ptr"></a> make_exception_ptr
 
 Создает объект [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), содержащий копию исключения.
 
 ```cpp
 template <class E>
-exception_ptr make_exception_ptr(E Except);
+    exception_ptr make_exception_ptr(E Except);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*За исключением*<br/>
+*За исключением*\
 Класс с исключением, подлежащим копированию. Обычно объект [класс исключений](../standard-library/exception-class.md) указывается в качестве аргумента функции `make_exception_ptr`, однако аргументом может быть любой объект класса.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -86,7 +79,7 @@ exception_ptr make_exception_ptr(E Except);
 
 Приложение обычно не требует функции `make_exception_ptr`, и мы не рекомендуем использовать ее.
 
-## <a name="rethrow_exception"></a>  rethrow_exception
+## <a name="rethrow_exception"></a> rethrow_exception
 
 Создает исключение, переданное в качестве параметра.
 
@@ -96,14 +89,14 @@ void rethrow_exception(exception_ptr P);
 
 ### <a name="parameters"></a>Параметры
 
-*P*<br/>
+*P*\
 Перехваченное исключение, подлежащее повторному вызову. Если *P* равно null, [exception_ptr](../standard-library/exception-typedefs.md#exception_ptr), функция создает [std::bad_exception](../standard-library/bad-exception-class.md).
 
 ### <a name="remarks"></a>Примечания
 
 После сохранения перехваченного исключения в объект `exception_ptr` основной поток может обработать этот объект. В основном потоке вызовите функцию `rethrow_exception`, указав объект `exception_ptr` в качестве аргумента. Функция `rethrow_exception` извлекает исключение из объекта `exception_ptr` и затем вызывает это исключение в контексте основного потока.
 
-## <a name="get_terminate"></a>  get_terminate
+## <a name="get_terminate"></a> get_terminate
 
 Получает текущую функцию `terminate_handler`.
 
@@ -111,7 +104,7 @@ void rethrow_exception(exception_ptr P);
 terminate_handler get_terminate();
 ```
 
-## <a name="set_terminate"></a>  set_terminate
+## <a name="set_terminate"></a> set_terminate
 
 Создает новый `terminate_handler`, подлежащий вызову при завершении программы.
 
@@ -121,7 +114,7 @@ terminate_handler set_terminate(terminate_handler fnew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*fnew*<br/>
+*fnew*\
 Функция, которая должна вызываться при завершении.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -160,7 +153,7 @@ int main()
 }
 ```
 
-## <a name="get_unexpected"></a>  get_unexpected
+## <a name="get_unexpected"></a> get_unexpected
 
 Получает текущую функцию `unexpected_handler`.
 
@@ -168,7 +161,18 @@ int main()
 unexpected_handler get_unexpected();
 ```
 
-## <a name="set_unexpected"></a>  set_unexpected
+## <a name="rethrow_if_nested"></a> rethrow_if_nested
+
+```cpp
+template <class E> 
+    void rethrow_if_nested(const E& e);
+```
+
+### <a name="remarks"></a>Примечания
+
+Если не полиморфного типа классов или `nested_exception` является недоступной или неоднозначной, это никак не повлияет. В противном случае выполняет динамическое приведение.
+
+## <a name="set_unexpected"></a> set_unexpected
 
 Создает новый `unexpected_handler`, подлежащий вызову при обнаружении неожиданного исключения.
 
@@ -178,7 +182,7 @@ unexpected_handler set_unexpected(unexpected_handler fnew) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*fnew*<br/>
+*fnew*\
 Функция, предназначенная для вызова при обнаружении непредвиденного исключения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -216,7 +220,7 @@ int main()
 }
 ```
 
-## <a name="terminate"></a>  terminate
+## <a name="terminate"></a> завершить
 
 Вызывает обработчик завершения.
 
@@ -234,7 +238,18 @@ void terminate();
 
 См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `terminate`.
 
-## <a name="uncaught_exception"></a>  uncaught_exception
+## <a name="throw_with_nested"></a> throw_with_nested
+
+```cpp
+template <class T> [[noreturn]]
+    void throw_with_nested(T&& t);
+```
+
+### <a name="remarks"></a>Примечания
+
+Создает исключение с вложенные исключения.
+
+## <a name="uncaught_exception"></a> uncaught_exception
 
 Возвращает **true**, только если созданное исключение в настоящий момент обрабатывается.
 
@@ -299,7 +314,7 @@ In Test::~Test("outside try block")
         std::uncaught_exception( ) = 0
 ```
 
-## Непредвиденная <a name="unexpected"></a>
+## <a name="unexpected"></a> Непредвиденная
 
 Вызывает обработчик неожиданных исключений.
 
@@ -326,7 +341,3 @@ void unexpected();
 ### <a name="example"></a>Пример
 
 См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `unexpected`.
-
-## <a name="see-also"></a>См. также
-
-[\<exception>](../standard-library/exception.md)<br/>

@@ -74,38 +74,27 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6199c97e19c18075007d5c682c2199a2e5886b29
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412856"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243839"
 ---
 # <a name="ltmemorygt-functions"></a>Функции &lt;memory&gt;
 
-||||
-|-|-|-|
-|[addressof](#addressof)|[align](#align)|[allocate_shared](#allocate_shared)|
-|[const_pointer_cast](#const_pointer_cast)|[declare_no_pointers](#declare_no_pointers)|[declare_reachable](#declare_reachable)|
-|[default_delete](#default_delete)|[dynamic_pointer_cast](#dynamic_pointer_cast)|[get_deleter](#get_deleter)|
-|[get_pointer_safety](#get_pointer_safety)|[get_temporary_buffer](#get_temporary_buffer)|[make_shared](#make_shared)|
-|[make_unique](#make_unique)|[owner_less](#owner_less)|[return_temporary_buffer](#return_temporary_buffer)|
-|[static_pointer_cast](#static_pointer_cast)|[swap (стандартная библиотека C++)](#swap)|[undeclare_no_pointers](#undeclare_no_pointers)|
-|[undeclare_reachable](#undeclare_reachable)|[uninitialized_copy](#uninitialized_copy)|[uninitialized_copy_n](#uninitialized_copy_n)|
-|[uninitialized_fill](#uninitialized_fill)|[uninitialized_fill_n](#uninitialized_fill_n)|
-
-## <a name="addressof"></a>  addressof
+## <a name="addressof"></a> AddressOf
 
 Получает истинный адрес объекта.
 
 ```cpp
 template <class T>
-T* addressof(T& Val);
+    T* addressof(T& Val);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Объект или функция, для которой необходимо получить истинный адрес.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -114,7 +103,7 @@ T* addressof(T& Val);
 
 ### <a name="remarks"></a>Примечания
 
-## <a name="align"></a>  align
+## <a name="align"></a> Выравнивание
 
 Помещает хранилище определенного размера — выровненное по заданной спецификации выравнивания — по первому возможному адресу заданного хранилища.
 
@@ -129,16 +118,16 @@ void* align(
 
 ### <a name="parameters"></a>Параметры
 
-*Выравнивание*<br/>
+*Выравнивание*\
 Граница выравнивания для выполнения попытки.
 
-*Size*<br/>
+*Размер*\
 Размер в байтах для выровненного хранилища.
 
-*PTR*<br/>
+*PTR*\
 Начальный адрес доступного смежного пула хранилища для использования. Этот параметр также является параметром output и присваивается содержать новый начальный адрес в том случае, если выравнивание выполняется успешно. Если `align()` выполняется неудачно, этот параметр не изменяется.
 
-*ПРОБЕЛ*<br/>
+*Пространство*\
 Полный размер пространства, доступного `align()`, для использования при создании выровненного хранилища. Этот параметр также является параметром вывода и содержит откорректированное пространство, оставшееся в хранилище после вычитания выровненного хранилища и всей связанной с ним дополнительной нагрузки.
 
 Если `align()` выполняется неудачно, этот параметр не изменяется.
@@ -174,47 +163,122 @@ while (std::align(alignment, sizeof(MyObj), ptr, space)) {
 // possible to allow more aligned storage in this buffer.
 ```
 
-## <a name="allocate_shared"></a>  allocate_shared
+## <a name="allocate_shared"></a> allocate_shared
 
 Создает `shared_ptr` для объектов, выделенных и созданных для заданного типа с помощью указанного распределителя. Возвращает `shared_ptr`.
 
 ```cpp
 template <class Type, class Allocator, class... Types>
-shared_ptr<Type>
-allocate_shared(Allocator Alloc, Types&&... Args);
+    shared_ptr<Type> allocate_shared(Allocator Alloc, Types&&... Args);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc*<br/>
+*Alloc*\
 Распределитель используется для создания объектов.
 
-*Args*<br/>
+*аргументы*\
 Ноль или более аргументов, которые будут объектами.
 
 ### <a name="remarks"></a>Примечания
 
 Функция создает объект `shared_ptr<Type>`, указатель на `Type(Args...)` как выделенный и созданный *Alloc*.
 
-## <a name="const_pointer_cast"></a>  const_pointer_cast
+## <a name="atomic_compare_exchange_strong"></a> atomic_compare_exchange_strong
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_weak"></a> atomic_compare_exchange_weak
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w);
+```
+
+## <a name="atomic_compare_exchange_strong_explicit"></a> atomic_compare_exchange_strong_explicit
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_strong_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_compare_exchange_weak_explicit"></a> atomic_compare_exchange_weak_explicit
+
+```cpp
+template<class T>
+    bool atomic_compare_exchange_weak_explicit(shared_ptr<T>* p, shared_ptr<T>* v, shared_ptr<T> w, memory_order success, memory_order failure);
+```
+
+## <a name="atomic_exchange"></a> atomic_exchange
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_exchange_explicit"></a> atomic_exchange_explicit
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_exchange_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
+
+## <a name="atomic_is_lock_free"></a> atomic_is_lock_free
+
+```cpp
+template<class T>
+    bool atomic_is_lock_free(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load"></a> atomic_load
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load(const shared_ptr<T>* p);
+```
+
+## <a name="atomic_load_explicit"></a> atomic_load_explicit
+
+```cpp
+template<class T>
+    shared_ptr<T> atomic_load_explicit(const shared_ptr<T>* p, memory_order mo);
+```
+
+## <a name="atomic_store"></a> atomic_store
+
+```cpp
+template<class T>
+    void atomic_store(shared_ptr<T>* p, shared_ptr<T> r);
+```
+
+## <a name="atomic_store_explicit"></a> atomic_store_explicit
+
+```cpp
+template<class T>
+    void atomic_store_explicit(shared_ptr<T>* p, shared_ptr<T> r, memory_order mo);
+```
+
+## <a name="const_pointer_cast"></a> const_pointer_cast
 
 Приведение константы к shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-const_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> const_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый возвращаемым общим указателем.
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый общим указателем на аргумент.
 
-*Другое*<br/>
+*Другие*\
 Общий указатель на аргумент.
 
 ### <a name="remarks"></a>Примечания
@@ -246,28 +310,27 @@ int main()
 sp1 == 3
 ```
 
-## <a name="declare_no_pointers"></a>  declare_no_pointers
+## <a name="declare_no_pointers"></a> declare_no_pointers
 
 Сообщает сборщику мусора, что символы в блоке памяти, определенном указателем на базовый адрес и размером блока, не содержат трассируемых указателей.
 
 ```cpp
-void declare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void declare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Адрес первого символа, который больше не содержит трассируемых указателей.|
-|*_Размер*|Размер блока, который начинается с позиции *ptr* , не содержит трассируемых указателей.|
+*PTR*\
+Адрес первого символа, который больше не содержит трассируемых указателей.
+
+*_Размер*\
+Размер блока, который начинается с позиции *ptr* , не содержит трассируемых указателей.
 
 ### <a name="remarks"></a>Примечания
 
 Функция сообщает любому сборщику мусора, диапазон адресов `[ ptr, ptr + _Size)` больше не содержат трассируемых указателей. (Все указатели на выделенную память не должны быть разыменованными том случае, если доступен.)
 
-## <a name="declare_reachable"></a>  declare_reachable
+## <a name="declare_reachable"></a> declare_reachable
 
 Уведомляет сборщик мусора, что указанный адрес относится к выделенной памяти и является доступным.
 
@@ -277,14 +340,14 @@ void declare_reachable(void* ptr);
 
 ### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*PTR*\
 Указатель на доступную, выделенную, допустимую область хранения.
 
 ### <a name="remarks"></a>Примечания
 
 Если *ptr* не равно null, функция сообщает любому сборщику мусора, *ptr* Далее является доступным (указывает на допустимую выделенную память).
 
-## <a name="default_delete"></a>  default_delete
+## <a name="default_delete"></a> default_delete
 
 Удаляет объекты, выделенные с **оператор new**. Подходит для использования с `unique_ptr`.
 
@@ -292,42 +355,68 @@ void declare_reachable(void* ptr);
 struct default_delete {
    constexpr default_delete() noexcept = default;
    template <class Other, class = typename enable_if<is_convertible<Other*, T*>::value, void>::type>>
-   default_delete(const default_delete<Other>&) noexcept;
+        default_delete(const default_delete<Other>&) noexcept;
    void operator()(T* Ptr) const noexcept;
 };
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*PTR*<br/>
+*PTR*\
 Указатель на объект, который нужно удалить.
 
-*Другое*<br/>
+*Другие*\
 Тип представленных в массиве элементов, который нужно удалить.
 
 ### <a name="remarks"></a>Примечания
 
 Класс шаблона описывает `deleter` , удаляет скалярные объекты, выделенные с **оператор new**, подходящий для использования с классом шаблона `unique_ptr`. Также имеет явную специализацию `default_delete<Type[]>`.
 
-## <a name="dynamic_pointer_cast"></a>  dynamic_pointer_cast
+## <a name="destroy_at"></a> destroy_at
+
+```cpp
+template <class T>
+    void destroy_at(T* location);
+```
+
+Эквивалентно `location->~T()`.
+
+## <a name="destroy"></a> уничтожить
+
+```cpp
+template <class ForwardIterator>
+    void destroy(ForwardIterator first, ForwardIterator last);
+```
+
+Эквивалентно `for (; first!=last; ++first) destroy_at(addressof(*first)); `.
+
+## <a name="destroy_n"></a> destroy_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator destroy_n(ForwardIterator first, Size n);
+```
+
+Эквивалентно `for (; n > 0; (void)++first, --n) destroy_at(addressof(*first)); return first;`.
+
+## <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
 
 Динамическое приведение к типу shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-dynamic_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> dynamic_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый возвращаемым общим указателем.
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый общим указателем на аргумент.
 
-*sp*<br/>
+*SP*\
 Общий указатель на аргумент.
 
 ### <a name="remarks"></a>Примечания
@@ -370,24 +459,24 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="get_deleter"></a>  get_deleter
+## <a name="get_deleter"></a> get_deleter
 
 Получение метода удаления из shared_ptr.
 
 ```cpp
 template <class D, class Ty>
-D* get_deleter(const shared_ptr<Ty>& sp);
+    D* get_deleter(const shared_ptr<Ty>& sp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*D*<br/>
+*D*\
 Тип метода удаления.
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый общим указателем.
 
-*sp*<br/>
+*SP*\
 Общий указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -438,7 +527,7 @@ get_deleter(sp0) != 0 == false
 get_deleter(sp1) != 0 == true
 ```
 
-## <a name="get_pointer_safety"></a>  get_pointer_safety
+## <a name="get_pointer_safety"></a> get_pointer_safety
 
 Возвращает тип безопасности указателя, подразумеваемый любым сборщиком мусора.
 
@@ -450,18 +539,18 @@ pointer_safety get_pointer_safety();
 
 Функция возвращает тип безопасности указателя, подразумеваемый любым автоматического сборщиком мусора.
 
-## <a name="get_temporary_buffer"></a>  get_temporary_buffer
+## <a name="get_temporary_buffer"></a> get_temporary_buffer
 
 Выделяет временное хранилище для последовательности элементов, которая не превышает заданное число элементов.
 
 ```cpp
 template <class Type>
-pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
+    pair<Type *, ptrdiff_t> get_temporary_buffer(ptrdiff_t count);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*count*<br/>
+*число*\
 Максимальное количество запрошенных элементов, для которых нужно выделить память.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -507,21 +596,19 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 9.
 ```
 
-## <a name="make_shared"></a>  make_shared
+## <a name="make_shared"></a> make_shared
 
 Создает и возвращает `shared_ptr`, указывающий на выделенные объекты, созданные без аргументов или с помощью нескольких аргументов с использованием распределителя по умолчанию. Выделяет и создает объект указанного типа и `shared_ptr` для управления общим владением объекта и возвращает `shared_ptr`.
 
 ```cpp
 template <class Type, class... Types>
-shared_ptr<Type>
-make_shared(Types&&... _Args);
+    shared_ptr<Type> make_shared(Types&&... _Args);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*_Args*|Без аргументов или несколько аргументов конструктора. Функция определяет перегрузку конструктора, которую нужно вызвать, на основе переданных аргументов.|
+*_Args*\
+Без аргументов или несколько аргументов конструктора. Функция определяет перегрузку конструктора, которую нужно вызвать, на основе переданных аргументов.
 
 ### <a name="remarks"></a>Примечания
 
@@ -602,47 +689,45 @@ Playing Yesterday by The Beatles, use count: 3
 Playing Blackbird by The Beatles, use count: 3
 ```
 
-## <a name="make_unique"></a>  make_unique
+## <a name="make_unique"></a> make_unique
 
 Создает и возвращает [unique_ptr](../standard-library/unique-ptr-class.md) на объект указанного типа, который создается с помощью использования указанных аргументов.
 
 ```cpp
 // make_unique<T>
 template <class T, class... Types>
-unique_ptr<T>
-make_unique(Types&&... Args)
-{
-    return (unique_ptr<T>(new T(forward<Types>(Args)...)));
-}
+    unique_ptr<T> make_unique(Types&&... Args)
+    {
+        return (unique_ptr<T>(new T(forward<Types>(Args)...)));
+    }
 
 // make_unique<T[]>
 template <class T>
-make_unique(size_t Size)
-{
-    return (unique_ptr<T>(new Elem[Size]()));
-}
+    make_unique(size_t Size)
+    {
+        return (unique_ptr<T>(new Elem[Size]()));
+    }
 
 // make_unique<T[N]> disallowed
 template <class T, class... Types>
-typename enable_if<extent<T>::value != 0, void>::type
-make_unique(Types&&...) = delete;
+    typename enable_if<extent<T>::value != 0, void>::type make_unique(Types&&...) = delete;
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип объекта, на который будет указывать `unique_ptr`.
 
-*Типы*<br/>
+*Типы*\
 Типы аргументов конструктора, заданных параметром *Args*.
 
-*Args*<br/>
+*аргументы*\
 Аргументы, передаваемые конструктору объекта типа *T*.
 
-*Elem*<br/>
+*Elem*\
 Массив элементов типа *T*.
 
-*Size*<br/>
+*Размер*\
 Количество элементов, для которых нужно выделить место в новом массиве.
 
 ### <a name="remarks"></a>Примечания
@@ -659,13 +744,13 @@ make_unique(Types&&...) = delete;
 
 При появлении ошибки C2280 в связи с `unique_ptr`, это почти наверняка связано с тем, что вы пытаетесь вызвать его конструктор копированием, который является удаленной функцией.
 
-## <a name="owner_less"></a>  owner_less
+## <a name="owner_less"></a> owner_less
 
 Разрешает смешанные сравнения общих и слабых указателей на основе собственности. Возвращает **true** Если левый параметр размещен по порядку перед правым параметром функцией-членом `owner_before`.
 
 ```cpp
 template <class Type>
-struct owner_less; // not defined
+    struct owner_less; // not defined
 
 template <class Type>
 struct owner_less<shared_ptr<Type>> {
@@ -700,28 +785,28 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>Параметры
 
-*_left*<br/>
+*_слева*\
 Общий или слабый указатель.
 
-*right*<br/>
+*Правильно*\
 Общий или слабый указатель.
 
 ### <a name="remarks"></a>Примечания
 
 Классы-шаблоны определяют все свои операторы-члены как возвращающие `left.owner_before(right)`.
 
-## <a name="return_temporary_buffer"></a>  return_temporary_buffer
+## <a name="return_temporary_buffer"></a> return_temporary_buffer
 
 Отменяет выделение временной памяти, выделенной с помощью функции шаблона `get_temporary_buffer`.
 
 ```cpp
 template <class Type>
-void return_temporary_buffer(Type* _Pbuf);
+    void return_temporary_buffer(Type* _Pbuf);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Pbuf*<br/>
+*_Pbuf*\
 Указатель на память, которую нужно освободить.
 
 ### <a name="remarks"></a>Примечания
@@ -766,25 +851,24 @@ The number of elements that the allocated memory
 could store is given by: resultPair.second = 7.
 ```
 
-## <a name="static_pointer_cast"></a>  static_pointer_cast
+## <a name="static_pointer_cast"></a> static_pointer_cast
 
 Статическое приведение к shared_ptr.
 
 ```cpp
 template <class Ty, class Other>
-shared_ptr<Ty>
-static_pointer_cast(const shared_ptr<Other>& sp);
+    shared_ptr<Ty> static_pointer_cast(const shared_ptr<Other>& sp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый возвращаемым общим указателем.
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый общим указателем на аргумент.
 
-*Другое*<br/>
+*Другие*\
 Общий указатель на аргумент.
 
 ### <a name="remarks"></a>Примечания
@@ -826,30 +910,30 @@ int main()
 sp1->val == 3
 ```
 
-## <a name="swap"></a> swap (стандартная библиотека C++)
+## <a name="swap"></a> Swap
 
 Переключение двух объектов shared_ptr или weak_ptr.
 
 ```cpp
 template <class Ty, class Other>
-void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
+    void swap(shared_ptr<Ty>& left, shared_ptr<Other>& right);
 
 template <class Ty, class Other>
-void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
+    void swap(weak_ptr<Ty>& left, weak_ptr<Other>& right);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый левым общим указателем или слабым указателем.
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый правым общим указателем или слабым указателем.
 
-*left*<br/>
+*Слева*\
 Левый общий или слабый указатель.
 
-*right*<br/>
+*Правильно*\
 Правый общий или слабый указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -909,57 +993,54 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="undeclare_no_pointers"></a>  undeclare_no_pointers
+## <a name="undeclare_no_pointers"></a> undeclare_no_pointers
 
 Сообщает сборщику мусора, что символы в блоке памяти, определенном указателем на базовый адрес и размером блока, теперь могут содержать трассируемые указатели.
 
 ```cpp
-void undeclare_no_pointers(
-    char* ptr,
-    size_t _Size);
+void undeclare_no_pointers(char* ptr, size_t _Size);
 ```
 
 ### <a name="remarks"></a>Примечания
 
 Функция сообщает любому сборщику мусора, диапазон адресов `[ptr, ptr + _Size)` теперь могут содержать трассируемых указателей.
 
-## <a name="undeclare_reachable"></a>  undeclare_reachable
+## <a name="undeclare_reachable"></a> undeclare_reachable
 
 Отменяет объявление информировать указанную область памяти.
 
 ```cpp
 template <class Type>
-Type *undeclare_reachable(Type* ptr);
+    Type *undeclare_reachable(Type* ptr);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель на адрес памяти, который нужно объявить недоступным.|
+*PTR*\
+Указатель на адрес памяти, который нужно объявить недоступным.
 
 ### <a name="remarks"></a>Примечания
 
 Если *ptr* не **nullptr**, функция сообщает любому сборщику мусора, *ptr* больше не доступна. Возвращает указатель безопасно производным, сравнивающий равным *ptr*.
 
-## <a name="uninitialized_copy"></a>  uninitialized_copy
+## <a name="uninitialized_copy"></a> uninitialized_copy
 
 Копирует объекты из указанного исходного диапазона в неинициализированный конечный диапазон.
 
 ```cpp
 template <class InputIterator, class ForwardIterator>
-ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
+    ForwardIterator uninitialized_copy(InputIterator first, InputIterator last, ForwardIterator dest);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода, обращающийся к первому элементу в исходном диапазоне.
 
-*последний*<br/>
+*последний*\
 Итератор ввода, обращающийся к последнему элементу в исходном диапазоне.
 
-*dest*<br/>
+*dest*\
 Прямой оператор, обращающийся к первому элементу в диапазоне назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1047,7 +1128,7 @@ int main()
 }
 ```
 
-## <a name="uninitialized_copy_n"></a>  uninitialized_copy_n
+## <a name="uninitialized_copy_n"></a> uninitialized_copy_n
 
 Создает копию заданного числа элементов из итератора ввода. Копии помещаются в прямой итератор.
 
@@ -1061,13 +1142,13 @@ ForwardIterator uninitialized_copy_n(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода, который ссылается на объект, подлежащий копированию.
 
-*count*<br/>
+*число*\
 Целочисленный тип со знаком или без знака, указывающий количество операций копирования объекта.
 
-*dest*<br/>
+*dest*\
 Прямой итератор, ссылающийся на место размещения новых копий.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1087,24 +1168,58 @@ ForwardIterator uninitialized_copy_n(
 
 если код не создает исключение. В этом случае все созданные объекты уничтожаются, и создается исключение.
 
-## <a name="uninitialized_fill"></a>  uninitialized_fill
+## <a name="uninitialized_default_construct"></a> uninitialized_default_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_default_construct(ForwardIterator first, ForwardIterator last); 
+```
+
+### <a name="remarks"></a>Примечания
+
+Так же, как:
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type;
+```
+
+## <a name="uninitialized_default_construct_n"></a> uninitialized_default_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_default_construct_n(ForwardIterator first, Size n)
+```
+
+### <a name="remarks"></a>Примечания
+
+Так же, как:
+
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type; return first;
+```
+
+## <a name="uninitialized_fill"></a> uninitialized_fill
 
 Копирует объекты с указанным значением в неинициализированный конечный диапазон.
 
 ```cpp
 template <class ForwardIterator, class Type>
-void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
+    void uninitialized_fill(ForwardIterator first, ForwardIterator last, const Type& val);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, обращающийся к первому элементу в диапазоне назначения, подлежащем инициализации.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, обращающийся к последнему элементу в диапазоне назначения, подлежащем инициализации.
 
-*Val*<br/>
+*Val*\
 Значение, используемое для инициализации диапазона назначения.
 
 ### <a name="remarks"></a>Примечания
@@ -1159,24 +1274,24 @@ int main( )
 The initialized Array contains: 25 25 25 25 25 25 25 25 25 25
 ```
 
-## <a name="uninitialized_fill_n"></a>  uninitialized_fill_n
+## <a name="uninitialized_fill_n"></a> uninitialized_fill_n
 
 Копирует объекты с указанным значением в указанное число элементов в неинициализированном диапазоне назначения.
 
 ```cpp
 template <class FwdIt, class Size, class Type>
-void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
+    void uninitialized_fill_n(ForwardIterator first, Size count, const Type& val);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой оператор, обращающийся к первому элементу в диапазоне назначения, подлежащем инициализации.
 
-*count*<br/>
+*число*\
 Число подлежащих инициализации элементов.
 
-*Val*<br/>
+*Val*\
 Значение, используемое для инициализации диапазона назначения.
 
 ### <a name="remarks"></a>Примечания
@@ -1221,6 +1336,83 @@ int main() {
    for ( i = 0 ; i < N; i++ )
       cout << Array [ i ].get( ) <<  " ";
 }
+```
+
+## <a name="uninitialized_move"></a> uninitialized_move
+
+```cpp
+template <class InputIterator, class ForwardIterator>
+    ForwardIterator uninitialized_move(InputIterator first, InputIterator last, ForwardIterator result); 
+```
+
+### <a name="remarks"></a>Примечания
+
+Так же, как:
+
+```cpp
+for (; first != last; (void)++result, ++first)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); 
+        return result;
+```
+
+Если создается исключение, некоторые объекты в диапазоне может остаться в допустимо, но неопределенное состояние.
+
+## <a name="uninitialized_move_n"></a> uninitialized_move_n
+
+```cpp
+template <class InputIterator, class Size, class ForwardIterator>
+    pair<InputIterator, ForwardIterator> uninitialized_move_n(InputIterator first, Size n, ForwardIterator result);
+```
+
+### <a name="remarks"></a>Примечания
+
+Так же, как:
+
+```cpp
+for (; n > 0; ++result, (void) ++first, --n)
+    ::new (static_cast<void*>(addressof(*result)))
+        typename iterator_traits<ForwardIterator>::value_type(std::move(*first)); return {first,result};
+```
+
+Если создается исключение, некоторые объекты в диапазоне может остаться в допустимо, но неопределенное состояние.
+
+## <a name="uninitialized_value_construct"></a> uninitialized_value_construct
+
+```cpp
+template <class ForwardIterator>
+    void uninitialized_value_construct(ForwardIterator first, ForwardIterator last);
+```
+
+### <a name="remarks"></a>Примечания
+
+Так же, как:
+
+```cpp
+for (; first != last; ++first)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type();
+```
+
+## <a name="uninitialized_value_construct_n"></a> uninitialized_value_construct_n
+
+```cpp
+template <class ForwardIterator, class Size>
+    ForwardIterator uninitialized_value_construct_n(ForwardIterator first, Size n);
+```
+
+Так же, как:
+```cpp
+for (; n>0; (void)++first, --n)
+    ::new (static_cast<void*>(addressof(*first)))
+        typename iterator_traits<ForwardIterator>::value_type(); return first;
+```
+
+## <a name="uses_allocator_v"></a> uses_allocator_v
+
+```cpp
+template <class T, class Alloc>
+    inline constexpr bool uses_allocator_v = uses_allocator<T, Alloc>::value;
 ```
 
 ## <a name="see-also"></a>См. также

@@ -7,29 +7,30 @@ helpviewer_keywords:
 - <bitset> header
 - bitset header
 ms.assetid: af30a9b9-489e-46e3-9d29-5f3ea07ae6dc
-ms.openlocfilehash: d90e49190ef2f22ce7ba2dfe30c2c68c6275f5b0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b0a5a01ca04d01d9535291e3c4a254143bc09e5a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380134"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243298"
 ---
 # <a name="ltbitsetgt"></a>&lt;bitset&gt;
 
 Определяет битовый массив класса шаблона и две вспомогательные функции шаблона для представления и обработки последовательности битов фиксированного размера.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```
+**Заголовок:** \<bitset>
 
-#include <bitset>
-```
+**Пространство имен:** std
+
+## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
-|[оператор&](../standard-library/bitset-operators.md#op_amp)|Выполняет побитовую операцию И между двумя битовыми массивами.|
+|[operator&](../standard-library/bitset-operators.md#op_amp)|Выполняет побитовую операцию И между двумя битовыми массивами.|
 |[оператор<\<](../standard-library/bitset-operators.md#op_lt_lt)|Вставляет текстовое представление битовой последовательности в стандартный поток вывода.|
 |[оператор>>](../standard-library/bitset-operators.md#op_gt_gt)|Вставляет текстовое представление битовой последовательности в стандартный входной поток.|
 |[operator^](../standard-library/bitset-operators.md#op_xor)|Выполняет побитовую операцию ИСКЛЮЧАЮЩЕЕ-ИЛИ между двумя битовыми массивами.|
@@ -37,9 +38,9 @@ ms.locfileid: "62380134"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
-|[Класс bitset](../standard-library/bitset-class.md)|Этот класс шаблона описывает тип объекта, который хранит последовательность, состоящую из фиксированного числа битов, предоставляющих компактный способ хранения флагов для набора элементов или условий.|
+|[bitset](../standard-library/bitset-class.md)|Этот класс шаблона описывает тип объекта, который хранит последовательность, состоящую из фиксированного числа битов, предоставляющих компактный способ хранения флагов для набора элементов или условий.|
 
 ## <a name="see-also"></a>См. также
 

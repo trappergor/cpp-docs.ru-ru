@@ -6,18 +6,14 @@ f1_keywords:
 - exception/std::terminate_handler
 - exception/std::unexpected_handler
 ms.assetid: 2a338480-35e2-46f7-b223-52d4e84a5768
-ms.openlocfilehash: 98a7e8197a0d729ab3a4e9ec0daf55a28cdaeb2d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e3904393096422a8986414a253d515342c7382f0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412648"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246045"
 ---
 # <a name="ltexceptiongt-typedefs"></a>Определения типов &lt;exception&gt;
-
-||||
-|-|-|-|
-|[exception_ptr](#exception_ptr)|[terminate_handler](#terminate_handler)|[unexpected_handler](#unexpected_handler)|
 
 ## <a name="exception_ptr"></a>  exception_ptr
 
@@ -43,7 +39,7 @@ typedef unspecified exception_ptr;
 
 Можно использовать операторы равенства (`==`) и неравенства (`!=`) для сравнения двух объектов `exception_ptr`. Эти операторы не сравнивают бинарное значение (битовый шаблон) структур `EXCEPTION_RECORD`, которые представляют исключения. Вместо этого операторы сравнивают адреса в поле ссылки на исключение объектов `exception_ptr`. Поэтому `exception_ptr` со значением null и значение NULL при сравнении считаются равными.
 
-## <a name="terminate_handler"></a>  terminate_handler
+## <a name="terminate_handler"></a> terminate_handler
 
 Тип, который описывает указатель на функцию, подходящую для использования в качестве `terminate_handler`.
 
@@ -59,7 +55,7 @@ typedef void (*terminate_handler)();
 
 См. [set_terminate](../standard-library/exception-functions.md#set_terminate), чтобы ознакомиться с примером использования `terminate_handler`.
 
-## <a name="unexpected_handler"></a>  unexpected_handler
+## <a name="unexpected_handler"></a> unexpected_handler
 
 Тип, который описывает указатель на функцию, подходящую для использования в качестве `unexpected_handler`.
 
@@ -70,7 +66,3 @@ typedef void (*unexpected_handler)();
 ### <a name="example"></a>Пример
 
 См. [set_unexpected](../standard-library/exception-functions.md#set_unexpected) в качестве примера использования `unexpected_handler`.
-
-## <a name="see-also"></a>См. также
-
-[\<exception>](../standard-library/exception.md)<br/>

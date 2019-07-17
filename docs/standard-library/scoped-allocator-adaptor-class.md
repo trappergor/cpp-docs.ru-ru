@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::scoped_allocator_adaptor::outer_allocator
 - std::scoped_allocator_adaptor::select_on_container_copy_construction
 ms.assetid: 0d9b06a1-9a4a-4669-9470-8805cae48e89
-ms.openlocfilehash: c02f5171fac862b6f79e194f5940b0adeb2e93e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5101f5c7b6ae1a032df94b912252c24f2c2853bf
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348215"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245593"
 ---
 # <a name="scopedallocatoradaptor-class"></a>Класс scoped_allocator_adaptor
 
@@ -104,6 +104,14 @@ class scoped_allocator_adaptor;
 |[max_size](#max_size)|Определяет максимальное число объектов, которые могут быть распределены внешним распределителем.|
 |[outer_allocator](#outer_allocator)|Извлекает ссылку на сохраненный объект типа `outer_allocator_type`.|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|Создает новый объект `scoped_allocator_adaptor` с каждым сохраненным объектом распределителя, который инициализируется вызовом метода `select_on_container_copy_construction` для каждого соответствующего распределителя.|
+
+### <a name="operators"></a>Операторы
+
+|Оператор|Описание|
+|-|-|
+|[оператор=](#op_as)||
+|[operator==](#op_eq_eq)||
+|[operator!=](#op_noeq)||
 
 ## <a name="requirements"></a>Требования
 
@@ -254,6 +262,29 @@ size_type max_size();
 
 `Outer_traits::max_size(outer_allocator())`
 
+## <a name="a-nameopas--scopedallocatoradaptoroperator"></a><a name="op_as">  scoped_allocator_adaptor::operator =
+
+```cpp
+scoped_allocator_adaptor& operator=(const scoped_allocator_adaptor&) = default;
+scoped_allocator_adaptor& operator=(scoped_allocator_adaptor&&) = default;
+```
+
+## <a name="a-nameopeqeq--scopedallocatoradaptoroperator"></a><a name="op_eq_eq">  scoped_allocator_adaptor::operator ==
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator==(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
+## <a name="a-nameopnoeq--scopedallocatoradaptoroperator"></a><a name="op_noeq">  scoped_allocator_adaptor::operator! =
+
+```cpp
+template <class OuterA1, class OuterA2, class... InnerAllocs>
+bool operator!=(const scoped_allocator_adaptor<OuterA1, InnerAllocs...>& a,
+const scoped_allocator_adaptor<OuterA2, InnerAllocs...>& b) noexcept;
+```
+
 ## <a name="outer_allocator"></a>  scoped_allocator_adaptor::outer_allocator
 
 Извлекает ссылку на сохраненный объект типа `outer_allocator_type`.
@@ -271,11 +302,11 @@ const outer_allocator_type& outer_allocator() const noexcept;
 
 Определяет тип `Outer::rebind\<Other>::other` как синоним для `scoped_allocator_adaptor\<Other, Inner...>`.
 
-struct rebind{ typedef Other_traits::rebind\<Other> Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, Inner...> other; };
+структуру перепривязки {typedef Other_traits::rebind\<других > Other_alloc; typedef scoped_allocator_adaptor\<Other_alloc, внутренний... >; };
 
 ## <a name="scoped_allocator_adaptor"></a> Конструктор scoped_allocator_adaptor::scoped_allocator_adaptor
 
-Создает объект `scoped_allocator_adaptor`.
+Создает объект `scoped_allocator_adaptor`. Также содержит деструктор.
 
 ```cpp
 scoped_allocator_adaptor();
@@ -290,6 +321,8 @@ scoped_allocator_adaptor<Outer2, Inner...>&& right) noexcept;
 template <class Outer2>
 scoped_allocator_adaptor(Outer2&& al,
     const Inner&... rest) noexcept;
+
+~scoped_allocator_adaptor();
 ```
 
 ### <a name="parameters"></a>Параметры

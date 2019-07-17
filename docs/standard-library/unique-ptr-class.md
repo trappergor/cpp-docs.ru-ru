@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::unique_ptr [C++], reset
 - std::unique_ptr [C++], swap
 ms.assetid: acdf046b-831e-4a4a-83aa-6d4ee467db9a
-ms.openlocfilehash: b0751d7716e2f8587ab410e57c2bea17c5dd3e21
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3aff30e2e23feb85c6b93d79ddd4552849d3ba05
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295465"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243477"
 ---
 # <a name="uniqueptr-class"></a>Класс unique_ptr
 
@@ -93,16 +93,16 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Right*<br/>
+*Правильно*\
 Объект `unique_ptr`.
 
-*Nptr*<br/>
+*Nptr*\
 Интерфейс `rvalue` типа `std::nullptr_t`.
 
-*PTR*<br/>
+*PTR*\
 Объект `pointer`.
 
-*Метод удаления*<br/>
+*Метод удаления*\
 Функция `deleter`, которая привязана к `unique_ptr`.
 
 ## <a name="exceptions"></a>Исключения
@@ -125,21 +125,21 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[unique_ptr](#unique_ptr)|Для `unique_ptr` предусмотрено семь конструкторов.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[deleter_type](#deleter_type)|Синоним параметра шаблона `Del`.|
 |[element_type](#element_type)|Синоним параметра шаблона `T`.|
 |[pointer](#pointer)|Синоним для `Del::pointer`, если определен; в противном случае — значение `T *`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[get](#get)|Возвращает `stored_ptr`.|
 |[get_deleter](#get_deleter)|Возвращает ссылку на `stored_deleter`.|
@@ -149,20 +149,14 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |**operator bool**|Оператор возвращает значение типа, которое можно преобразовать в **bool**. Результат преобразования **bool** — **true** при `get() != pointer()`, в противном случае **false**.|
 |`operator->`|Функция-член возвращает значение `stored_ptr`.|
 |`operator*`|Функция-член возвращает значение `*stored_ptr`.|
-|[unique_ptr operator=](#unique_ptr_operator_eq)|Присваивает значение `unique_ptr`(или `pointer-type`) текущему `unique_ptr`.|
+|[оператор=](#unique_ptr_operator_eq)|Присваивает значение `unique_ptr`(или `pointer-type`) текущему `unique_ptr`.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<memory>
-
-**Пространство имен:** std
-
-## <a name="deleter_type"></a>  deleter_type
+### <a name="deleter_type"></a> deleter_type
 
 Этот тип является синонимом для параметра шаблона `Del`.
 
@@ -170,11 +164,11 @@ public:
 typedef Del deleter_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом для параметра шаблона `Del`.
 
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> element_type
 
 Этот тип является синонимом для параметра шаблона `Type`.
 
@@ -182,11 +176,11 @@ typedef Del deleter_type;
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом для параметра шаблона `Ty`.
 
-## <a name="get"></a>  unique_ptr::get
+### <a name="get"></a> Получить
 
 Возвращает `stored_ptr`.
 
@@ -194,11 +188,11 @@ typedef Type element_type;
 pointer get() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает значение `stored_ptr`.
 
-## <a name="get_deleter"></a>  unique_ptr::get_deleter
+### <a name="get_deleter"></a> get_deleter
 
 Возвращает ссылку на `stored_deleter`.
 
@@ -208,11 +202,11 @@ Del& get_deleter();
 const Del& get_deleter() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает ссылку на `stored_deleter`.
 
-## <a name="unique_ptr_operator_eq"></a>  unique_ptr operator=
+### <a name="unique_ptr_operator_eq"></a> оператор =
 
 Назначает адрес предоставленного `unique_ptr` текущему.
 
@@ -223,15 +217,15 @@ unique_ptr& operator=(unique_ptr<Type, Del>&& right);
 unique_ptr& operator=(pointer-type);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
 Ссылка `unique_ptr`, используемая для назначения значения текущему `unique_ptr`.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функции-члены вызывают `reset(right.release())` и перемещают `right.stored_deleter` в `stored_deleter`, а затем возвращают `*this`.
 
-## <a name="pointer"></a>  pointer
+### <a name="pointer"></a> указатель
 
 Синоним для `Del::pointer`, если определен; в противном случае — значение `Type *`.
 
@@ -239,11 +233,11 @@ unique_ptr& operator=(pointer-type);
 typedef T1 pointer;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Данный тип — это синоним для `Del::pointer`, если он определен; в противном случае — значение `Type *`.
 
-## <a name="release"></a>  unique_ptr::release
+### <a name="release"></a> выпуск
 
 Освобождает владение возвращаемого сохраненного указателя в вызывающий объект и задает сохраненному указателю значение **nullptr**.
 
@@ -251,11 +245,11 @@ typedef T1 pointer;
 pointer release();
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Используйте `release` для получения прав на владение необработанным указателем, сохраненным `unique_ptr`. Вызывающий объект отвечает за удаление возвращаемого указателя. Указателю `unique-ptr` присвоено пустое состояние, созданное по умолчанию. Для `unique_ptr` можно назначить другой указатель совместимого типа после вызова `release`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 В этом примере показано, каким образом объект, вызывающий освобождение, отвечает за возвращенный объект.
 
@@ -296,8 +290,6 @@ int main() {
 }
 ```
 
-Выходные данные компьютера
-
 ```Output
 Constructing Sample(3)
 Constructing Sample(42)
@@ -305,7 +297,7 @@ Deleting Sample(42)
 Deleting Sample(3)
 ```
 
-## <a name="reset"></a>  unique_ptr::reset
+### <a name="reset"></a> Сброс
 
 Принимает право на владение параметром указателя, а затем удаляет исходный сохраненный указатель. Если новый указатель совпадает с исходным сохраненным указателем `reset` удаляет указатель и задает для сохраненного указателя **nullptr**.
 
@@ -314,19 +306,18 @@ void reset(pointer ptr = pointer());
 void reset(nullptr_t ptr);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель на ресурс для получения права на владение.|
+*PTR*\
+Указатель на ресурс для получения права на владение.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Используйте `reset` Чтобы изменить сохраненный [указатель](#pointer) владельцем `unique_ptr` для *ptr* , а затем удалите исходный сохраненный указатель. Если указатель `unique_ptr` не был пуст, `reset` вызывает функцию удаления, возвращенную [get_deleter](#get_deleter), для исходного сохраненного указателя.
 
 Так как `reset` сначала сохраняет новый указатель *ptr*и затем удаляет исходный сохраненный указатель, возможна `reset` немедленно удалить *ptr* Если это так же, как исходный сохраненный указатель.
 
-## <a name="swap"></a>  unique_ptr::swap
+### <a name="swap"></a> Swap
 
 Меняет местами указатели между двумя объектами `unique_ptr`.
 
@@ -334,16 +325,16 @@ void reset(nullptr_t ptr);
 void swap(unique_ptr& right);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект `unique_ptr`, используемый для замены указателей.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Эта функция-член меняет местами `stored_ptr` с `right.stored_ptr` и `stored_deleter` с `right.stored_deleter`.
 
-## <a name="unique_ptr"></a>  unique_ptr::unique_ptr
+### <a name="unique_ptr"></a> unique_ptr
 
 Для `unique_ptr` предусмотрено семь конструкторов.
 
@@ -363,24 +354,27 @@ unique_ptr(
 unique_ptr(pointer ptr, typename remove_reference<Del>::type&& _Deleter);
 unique_ptr(unique_ptr&& right);
 template <class Ty2, Class Del2>
-unique_ptr(unique_ptr<Ty2, Del2>&& right);
+    unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*ptr*|Указатель на ресурс, который будет назначен `unique_ptr.`.|
-|*_Deleter*|`deleter`, который будет назначен `unique_ptr`.|
-|*right*|Объект `rvalue reference` в `unique_ptr`, из которого поля `unique_ptr` присваиваются перемещением в созданный `unique_ptr`.|
+*PTR*\
+Указатель на ресурс, чтобы назначить `unique_ptr`.
 
-### <a name="remarks"></a>Примечания
+*_Deleter*\
+`deleter`, который будет назначен `unique_ptr`.
+
+*Правильно*\
+Объект `rvalue reference` в `unique_ptr`, из которого поля `unique_ptr` присваиваются перемещением в созданный `unique_ptr`.
+
+#### <a name="remarks"></a>Примечания
 
 Первые два конструктора создают объект, который не управляет никакими ресурсами. Третий конструктор сохраняет *ptr* в `stored_ptr`. Четвертый конструктор сохраняет *ptr* в `stored_ptr` и `deleter` в `stored_deleter`.
 
 Пятый конструктор сохраняет *ptr* в `stored_ptr` и перемещает `deleter` в `stored_deleter`. Шестой и седьмой конструкторы сохраняют `right.release()` в `stored_ptr` и перемещают `right.get_deleter()` в `stored_deleter`.
 
-## <a name="dtorunique_ptr"></a>  unique_ptr ~unique_ptr
+### <a name="dtorunique_ptr"></a> ~ unique_ptr
 
 Деструктор для `unique_ptr`, уничтожает объект `unique_ptr`.
 
@@ -388,10 +382,6 @@ unique_ptr(unique_ptr<Ty2, Del2>&& right);
 ~unique_ptr();
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Деструктор вызывает `get_deleter()(stored_ptr)`.
-
-## <a name="see-also"></a>См. также
-
-[\<memory>](../standard-library/memory.md)<br/>

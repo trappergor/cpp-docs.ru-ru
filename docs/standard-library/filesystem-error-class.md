@@ -4,12 +4,12 @@ ms.date: 09/10/2018
 f1_keywords:
 - filesystem/std::experimental::filesystem::filesystem_error
 ms.assetid: c53aac27-c1fa-43e4-8967-48ea8ba1f172
-ms.openlocfilehash: add1e0da43a44c35f39c96e8d65e36aeea0d3afb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c3dbfc080f0a1494950016f42189d932be05b0f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405161"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240734"
 ---
 # <a name="filesystemerror-class"></a>Класс filesystem_error
 
@@ -25,15 +25,17 @@ class filesystem_error    : public system_error;
 
 Этот класс служит базовым классом для всех исключений, уведомляющих об ошибке в функциях \<filesystem>. Он хранит объект типа `string`, который называется `mymesg` здесь в целях надстройках. Он также хранит два объекта типа `path`, который называется `mypval1` и `mypval2`.
 
+## <a name="members"></a>Участники
+
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[filesystem_error](#filesystem_error)|Создает `filesystem_error` сообщения.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[path1](#path1)|Возвращает `mypval1`.|
 |[path2](#path2)|Возвращает `mypval2`.|
@@ -45,7 +47,7 @@ class filesystem_error    : public system_error;
 
 **Пространство имен:** std::experimental::filesystem
 
-## <a name="filesystem_error"></a> filesystem_error::filesystem_error
+## <a name="filesystem_error"></a> filesystem_error
 
 Первый конструктор создает сообщение из *what_arg* и *ec*. Второй конструктор также создает сообщение из *pval1*, который хранит в `mypval1`. Третий конструктор также создает сообщение из *pval1*, сохраняет ее в `mypval1`и из *pval2*, который хранит в `mypval2`.
 
@@ -65,19 +67,19 @@ filesystem_error(const string& what_arg,
 
 ### <a name="parameters"></a>Параметры
 
-*what_arg*<br/>
+*what_arg*\
 Указанное сообщение.
 
-*EC*<br/>
+*EC*\
 Указанный код ошибки.
 
-*mypval1*<br/>
+*mypval1*\
 Дополнительно указанным параметром сообщения.
 
-*mypval2*<br/>
+*mypval2*\
 Дополнительно оповещены с помощью указанного параметра.
 
-## <a name="path1"></a> filesystem_error::path1
+## <a name="path1"></a> path1
 
 Функция-член возвращает значение `mypval1`.
 
@@ -85,7 +87,7 @@ filesystem_error(const string& what_arg,
 const path& path1() const noexcept;
 ```
 
-## <a name="path2"></a> filesystem_error::path2
+## <a name="path2"></a> path2
 
 Функция-член возвращает значение `mypval2`.
 
@@ -93,17 +95,10 @@ const path& path1() const noexcept;
 const path& path2() const noexcept;
 ```
 
-## <a name="what"></a> filesystem_error::what
+## <a name="what"></a> что
 
 Функция-член возвращает указатель на `NTBS`, предпочтительно составлены из `runtime_error::what()`, `system_error::what()`, `mymesg`, `mypval1.native_string()`, и `mypval2.native_string()`.
 
 ```cpp
 const char *what() const noexcept;
 ```
-
-## <a name="see-also"></a>См. также
-
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Класс system_error](../standard-library/system-error-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
-[\<exception>](../standard-library/exception.md)<br/>

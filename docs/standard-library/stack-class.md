@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::stack [C++], size
 - std::stack [C++], top
 ms.assetid: 02151c1e-eab0-41b8-be94-a839ead78ecf
-ms.openlocfilehash: cc18a62db3f39bc85c0a3bb7e84e6a27011c2b5a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36074f75830f92ba3fb9e5edb4e1507aa5ae1407
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412440"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68241064"
 ---
 # <a name="stack-class"></a>Класс stack
 
@@ -40,11 +40,11 @@ class stack
 
 ### <a name="parameters"></a>Параметры
 
-*Type*<br/>
+*Тип*\
 Тип данных элемента для сохранения в стеке.
 
-*Контейнер*<br/>
-Тип базового контейнера, используемый для реализации стека. Значение по умолчанию — класс `deque`*\<Type>*.
+*Контейнер*\
+Тип базового контейнера, используемый для реализации стека. Значение по умолчанию — класс `deque` *\<Type>* .
 
 ## <a name="remarks"></a>Примечания
 
@@ -60,23 +60,25 @@ class stack
 
 - [Класс priority_queue](../standard-library/priority-queue-class.md) упорядочивает элементы, чтобы наибольший элемент всегда находился сверху. Он поддерживает вставку элемента, а также проверку и удаление верхнего элемента. Хороший аналог такого подхода — очередь из людей, упорядоченная по возрасту, росту или любому другому критерию.
 
+## <a name="members"></a>Участники
+
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[stack](#stack)|Создает `stack`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для принятия `stack`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `stack`.|
 |[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `stack`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[empty](#empty)|Проверяет, является ли `stack` пустым.|
 |[pop](#pop)|Удаляет элемент из верхней части `stack`.|
@@ -84,13 +86,7 @@ class stack
 |[size](#size)|Возвращает количество элементов в контейнере `stack`.|
 |[top](#top)|Возвращает ссылку на элемент в верхней части `stack`.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<stack>
-
-**Пространство имен:** std
-
-## <a name="container_type"></a> stack::container_type
+## <a name="container_type"></a> container_type
 
 Тип, предоставляющий базовый контейнер для изменения.
 
@@ -108,7 +104,7 @@ typedef Container container_type;
 
 См. пример объявления и использования `container_type` в разделе [stack::stack](#stack).
 
-## <a name="empty"></a> stack::empty
+## <a name="empty"></a> пустой
 
 Проверяет, пуст ли стек.
 
@@ -153,7 +149,7 @@ The stack s1 is not empty.
 The stack s2 is empty.
 ```
 
-## <a name="pop"></a> stack::pop
+## <a name="pop"></a> POP
 
 Удаляет элемент из верхней части стека.
 
@@ -209,7 +205,7 @@ After a pop, the stack length is 2.
 After a pop, the element at the top of the stack is 20.
 ```
 
-## <a name="push"></a> stack::push
+## <a name="push"></a> Push-уведомлений
 
 Добавляет элемент в верхней части стека.
 
@@ -219,7 +215,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Элемент, добавленный в верх стека.
 
 ### <a name="remarks"></a>Примечания
@@ -258,7 +254,7 @@ The stack length is 3.
 The element at the top of the stack is 30.
 ```
 
-## <a name="size"></a> stack::size
+## <a name="size"></a> Размер
 
 Возвращает количество элементов в стеке.
 
@@ -299,7 +295,7 @@ The stack length is 1.
 The stack length is now 2.
 ```
 
-## <a name="size_type"></a> stack::size_type
+## <a name="size_type"></a> size_type
 
 Целочисленный тип без знака, который может представлять количество элементов в стеке.
 
@@ -315,7 +311,7 @@ typedef typename Container::size_type size_type;
 
 См. пример объявления и использования `size_type` в разделе [size](#size).
 
-## <a name="stack"></a> stack::stack
+## <a name="stack"></a> Стек
 
 Создает стек, который является пустым или представляет собой копию класса базового контейнера.
 
@@ -327,7 +323,7 @@ explicit stack(const container_type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Контейнер, копией которого должен стать создаваемый стек.
 
 ### <a name="example"></a>Пример
@@ -369,7 +365,7 @@ int main( )
 The element at the top of stack vsi2 is 1.
 ```
 
-## <a name="top"></a> stack::top
+## <a name="top"></a> Вверх
 
 Возвращает ссылку на элемент вверху стека.
 
@@ -420,7 +416,7 @@ The top integer of the stack s1 is 2.
 The next integer down is 1.
 ```
 
-## <a name="value_type"></a> stack::value_type
+## <a name="value_type"></a> value_type
 
 Тип, представляющий тип объекта, который хранится в стеке в виде элемента.
 

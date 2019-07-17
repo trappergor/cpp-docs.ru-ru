@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3d84f4707af33f44a930f7f67b7f751e2ead627c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412310"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245396"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -48,7 +48,7 @@ ms.locfileid: "62412310"
 |Оператор|Описание|
 |-|-|
 |[operator+](../standard-library/string-operators.md#op_add)|Сцепляет два строковых объекта.|
-|[operator!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора. |
+|[operator!=](../standard-library/string-operators.md#op_neq)|Проверяет, что строковый объект слева от оператора не равен строковому объекту справа от оператора.|
 |[operator==](../standard-library/string-operators.md#op_eq_eq)|Проверяет, равен ли строковый объект слева от оператора строковому объекту справа от оператора.|
 |[оператор<](../standard-library/string-operators.md#op_lt)|Проверяет, что строковый объект слева от оператора меньше строкового объекта справа от оператора.|
 |[оператор<=](../standard-library/string-operators.md#op_lt_eq)|Проверяет, что строковый объект слева от оператора меньше или равен строковому объекту справа от оператора.|
@@ -61,6 +61,7 @@ ms.locfileid: "62412310"
 
 |||
 |-|-|
+|[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|
 |[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов **двойные**.|
 |[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов **float**.|
