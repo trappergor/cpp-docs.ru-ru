@@ -3,12 +3,12 @@ title: Настройка параметров сборки CMake в Visual Stud
 ms.date: 05/16/2019
 helpviewer_keywords:
 - CMake build settings
-ms.openlocfilehash: d8102250fa59dc787cc48fc293ac740b81b4446c
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: a00b18f163758be0238a05c4d2af3195014d79b0
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837106"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042537"
 ---
 # <a name="customize-cmake-build-settings"></a>Настройка параметров сборки CMake
 
@@ -82,7 +82,7 @@ Visual Studio предоставляет две конфигурации по у
 
 Эти параметры позволяют задать переменные CMake и сохранить их в CMakeSettings.json. Они передаются в CMake во время сборки и переопределяют любые значения в файле CMakeLists.txt. Этот раздел можно использовать так же, как вы используете CMakeGUI для просмотра списка всех доступных для изменения переменных CMake. Нажмите кнопку **Сохранить и создать кэш**, чтобы просмотреть список всех переменных CMake, доступных для редактирования, включая дополнительные переменные (для CMakeGUI). Вы можете отфильтровать список по имени переменных. 
 
-Соответствует **variables**: содержит пару имя-значение для переменных CMake, которая передается в CMake в виде **-D** *_имя_=_значение_*. Если инструкции сборки проекта CMake указывают добавление каких-либо переменных непосредственно в файл кэша CMake, рекомендуется вместо этого добавить их сюда.
+Соответствует **variables**: содержит пару имя-значение для переменных CMake, которая передается в CMake в виде **-D** *_имя_=_значение_* . Если инструкции сборки проекта CMake указывают добавление каких-либо переменных непосредственно в файл кэша CMake, рекомендуется вместо этого добавить их сюда.
 
 ## <a name="advanced-settings"></a>Дополнительные параметры
 
@@ -94,7 +94,7 @@ Visual Studio предоставляет две конфигурации по у
   - "Unix Makefiles"
   - "Visual Studio 16 2019"
   - "Visual Studio 16 2019 Win64"
-  - - "Visual Studio 16 2019 ARM"
+  - "Visual Studio 16 2019 ARM"
   - Visual Studio 15 2017
   - Visual Studio 15 2017 Win64
   - Visual Studio 15 2017 ARM

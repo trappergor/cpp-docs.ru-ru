@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0aa79d458c964bf3e8bdd34e564bba4965546930
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158595"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245303"
 ---
 # <a name="iosbase-class"></a>Класс ios_base
 
@@ -135,15 +135,17 @@ ms.locfileid: "62158595"
 
 Объект класса ios_base также хранит сведения о состоянии потока в объекте типа [iostate](#iostate) и стеке обратных вызовов.
 
+## <a name="members"></a>Участники
+
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[ios_base](#ios_base)|Создает объект `ios_base`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[event_callback](#event_callback)|Описывает функцию, передаваемую в [register_call](#register_callback).|
 |[fmtflags](#fmtflags)|Константы для определения внешнего вида выходных данных.|
@@ -193,9 +195,9 @@ ms.locfileid: "62158595"
 |[unitbuf](#fmtflags)|Обеспечивает запись выходных данных на диск после каждой вставки.|
 |[uppercase](#fmtflags)|Задает вставку эквивалентных прописных букв для букв нижнего регистра в определенных вставках.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[failure](#failure)|Класс-член служит базовым классом для всех исключений, выдаваемых функцией-членом [clear](../standard-library/basic-ios-class.md#clear) в классе шаблона [basic_ios](../standard-library/basic-ios-class.md).|
 |[flags](#flags)|Задает или возвращает текущие параметры флага.|
@@ -214,7 +216,7 @@ ms.locfileid: "62158595"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[оператор=](#op_eq)|Оператор присваивания для объектов `ios_base`.|
 
@@ -224,7 +226,7 @@ ms.locfileid: "62158595"
 
 **Пространство имен:** std
 
-## <a name="event"></a>  ios_base::event
+## <a name="event"></a> Событие
 
 Задает типы событий.
 
@@ -249,7 +251,7 @@ enum event {
 
 Для примера см. [register_callback](#register_callback).
 
-## <a name="event_callback"></a>  ios_base::event_callback
+## <a name="event_callback"></a> event_callback
 
 Описывает функцию, передаваемую в [register_call](#register_callback).
 
@@ -262,13 +264,13 @@ typedef void (__cdecl *event_callback)(
 
 ### <a name="parameters"></a>Параметры
 
-*_E*<br/>
+*_ЭЛЕКТРОННОЙ*\
 [Event](#event).
 
-*_Базовому*<br/>
+*_Базовому*\
 Поток, в котором был вызов события.
 
-*_I*<br/>
+*_I*\
 Определенное пользователем число.
 
 ### <a name="remarks"></a>Примечания
@@ -279,7 +281,7 @@ typedef void (__cdecl *event_callback)(
 
 См. [register_call](#register_callback) для примера с использованием `event_callback`.
 
-## <a name="failure"></a>  ios_base::failure
+## <a name="failure"></a> Сбой
 
 Класс `failure` определяет базовый класс для типов всех объектов, вызываемых как исключения, с помощью функций в библиотеке `iostreams`, для отчетов об ошибках, обнаруженных во время операций буфера потока.
 
@@ -331,7 +333,7 @@ int main ( )
 Caught an exception: ios_base::failbit set
 ```
 
-## <a name="flags"></a>  ios_base::flags
+## <a name="flags"></a> флаги
 
 Задает или возвращает текущие параметры флага.
 
@@ -342,7 +344,7 @@ fmtflags flags(fmtflags fmtfl);
 
 ### <a name="parameters"></a>Параметры
 
-*fmtfl*<br/>
+*fmtfl*\
 Новое значение `fmtflags`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -377,7 +379,7 @@ int main ( )
 16896
 ```
 
-## <a name="fmtflags"></a>  ios_base::fmtflags
+## <a name="fmtflags"></a> fmtflags
 
 Константы для определения внешнего вида выходных данных.
 
@@ -453,7 +455,7 @@ public:
 
 Примеры функций, которые изменяют эти флажки формата, см. в разделе [\<iomanip>](../standard-library/iomanip.md).
 
-## <a name="getloc"></a>  ios_base::getloc
+## <a name="getloc"></a> getloc
 
 Возвращает сохраненный объект языкового стандарта.
 
@@ -483,7 +485,7 @@ int main( )
 C
 ```
 
-## <a name="imbue"></a>  ios_base::imbue
+## <a name="imbue"></a> imbue
 
 Изменяет языковой стандарт.
 
@@ -493,7 +495,7 @@ locale imbue(const locale& _Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*_Loc*<br/>
+*_Loc*\
 Новое значение языкового стандарта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -508,7 +510,7 @@ locale imbue(const locale& _Loc);
 
 Пример см. в разделе [basic_ios::imbue](../standard-library/basic-ios-class.md#imbue).
 
-## <a name="init"></a>  ios_base::Init
+## <a name="init"></a> init
 
 Создает стандартные объекты iostream при построении.
 
@@ -520,7 +522,7 @@ class Init { };
 
 Вложенный класс описывает объект, конструкция которого гарантирует, что стандартные объекты iostreams создаются должным образом, еще до выполнения конструктора произвольного статического объекта.
 
-## <a name="ios_base"></a>  ios_base::ios_base
+## <a name="ios_base"></a> ios_base
 
 Создает объекты ios_base.
 
@@ -530,9 +532,9 @@ ios_base();
 
 ### <a name="remarks"></a>Примечания
 
-(Защищенный) конструктор ничего не делает. Последующий вызов **basic_ios::**[init](../standard-library/basic-ios-class.md#init) должен инициализировать объект для возможности его безопасного уничтожения. Таким образом, единственным безопасным использованием класса ios_base является базовый класс для класса шаблона [basic_ios](../standard-library/basic-ios-class.md).
+(Защищенный) конструктор ничего не делает. Последующий вызов **basic_ios::** [init](../standard-library/basic-ios-class.md#init) должен инициализировать объект для возможности его безопасного уничтожения. Таким образом, единственным безопасным использованием класса ios_base является базовый класс для класса шаблона [basic_ios](../standard-library/basic-ios-class.md).
 
-## <a name="iostate"></a>  ios_base::iostate
+## <a name="iostate"></a> iostate
 
 Тип констант, описывающих состояние потока.
 
@@ -560,7 +562,7 @@ public:
 
 Кроме того, полезным является значение `goodbit`, где устанавливаются никакие из упомянутых ранее бит (`goodbit` гарантированно ноль).
 
-## <a name="iword"></a>  ios_base::iword
+## <a name="iword"></a> iword
 
 Присваивает значение, сохраняемое в виде `iword`.
 
@@ -570,14 +572,14 @@ long& iword(int idx);
 
 ### <a name="parameters"></a>Параметры
 
-*IDX*<br/>
+*IDX*\
 Индекс значения для сохранения как `iword`.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает ссылку на элемент *idx* расширяемого массива с элементами типа **long**. Все элементы эффективно присутствуют и изначально хранят нулевое значение. Возвращаемая ссылка является недействительной после следующего вызова `iword` для объекта, после изменения объекта с помощью вызова **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) или после уничтожения объекта.
+Функция-член возвращает ссылку на элемент *idx* расширяемого массива с элементами типа **long**. Все элементы эффективно присутствуют и изначально хранят нулевое значение. Возвращаемая ссылка является недействительной после следующего вызова `iword` для объекта, после изменения объекта с помощью вызова **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) или после уничтожения объекта.
 
-Если *idx* является отрицательным или уникальное хранилище недоступно для элемента, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** и возвращает ссылку, которая может не быть уникальным.
+Если *idx* является отрицательным или уникальное хранилище недоступно для элемента, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** и возвращает ссылку, которая может не быть уникальным.
 
 Чтобы получить уникальный индекс для использования со всеми объектами типа `ios_base`, вызовите [xalloc](#xalloc).
 
@@ -585,7 +587,7 @@ long& iword(int idx);
 
 См. [xalloc](#xalloc) для примера использования `iword`.
 
-## <a name="openmode"></a>  ios_base::openmode
+## <a name="openmode"></a> OpenMode
 
 Описывает процесс взаимодействия с потоком.
 
@@ -635,7 +637,7 @@ int main ( )
 }
 ```
 
-## <a name="op_eq"></a>  ios_base::operator=
+## <a name="op_eq"></a> оператор =
 
 Оператор присваивания для объектов ios_base.
 
@@ -645,7 +647,7 @@ ios_base& operator=(const ios_base& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект типа `ios_base`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -658,7 +660,7 @@ ios_base& operator=(const ios_base& right);
 
 Этот оператор используется только классами, производными от `ios_base`.
 
-## <a name="precision"></a>  ios_base::precision
+## <a name="precision"></a> Точность
 
 Задает количество цифр для отображения числа с плавающей запятой.
 
@@ -669,7 +671,7 @@ streamsize precision(streamsize _Prec);
 
 ### <a name="parameters"></a>Параметры
 
-*_Prec*<br/>
+*_Prec*\
 Количество значащих цифр при отображении, или количество цифр после десятичной запятой в фиксированной нотации.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -704,7 +706,7 @@ int main( )
 31.312
 ```
 
-## <a name="pword"></a>  ios_base::pword
+## <a name="pword"></a> pword
 
 Присваивает значение, сохраняемое в виде `pword`.
 
@@ -714,14 +716,14 @@ void *& pword(int _Idx);
 
 ### <a name="parameters"></a>Параметры
 
-*_Idx*<br/>
+*_Idx*\
 Индекс значения для сохранения как `pword`.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает ссылку на элемент _ *Idx* расширяемого массива с элементами типа **void** указатель. Все элементы эффективно присутствуют и изначально хранят нулевой указатель. Возвращаемая ссылка является недействительной после следующего вызова `pword` для объекта, после изменения объекта с помощью вызова **basic_ios::**[copyfmt](../standard-library/basic-ios-class.md#copyfmt) или после уничтожения объекта.
+Функция-член возвращает ссылку на элемент _ *Idx* расширяемого массива с элементами типа **void** указатель. Все элементы эффективно присутствуют и изначально хранят нулевой указатель. Возвращаемая ссылка является недействительной после следующего вызова `pword` для объекта, после изменения объекта с помощью вызова **basic_ios::** [copyfmt](../standard-library/basic-ios-class.md#copyfmt) или после уничтожения объекта.
 
-Если _ *Idx* является отрицательным или уникальное хранилище для элемента недоступно, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)**(badbit)** и возвращает ссылку, которая может не быть уникальной.
+Если _ *Idx* является отрицательным или уникальное хранилище для элемента недоступно, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate) **(badbit)** и возвращает ссылку, которая может не быть уникальной.
 
 Чтобы получить уникальный индекс для использования со всеми объектами типа `ios_base`, вызовите [xalloc](#xalloc).
 
@@ -729,7 +731,7 @@ void *& pword(int _Idx);
 
 См. [xalloc](#xalloc) с примером использования `pword`.
 
-## <a name="register_callback"></a>  ios_base::register_callback
+## <a name="register_callback"></a> register_callback
 
 Задает функцию обратного вызова.
 
@@ -740,10 +742,10 @@ void register_callback(
 
 ### <a name="parameters"></a>Параметры
 
-*pfn-имени*<br/>
+*pfn-имени*\
 Указатель на функцию обратного вызова.
 
-*IDX*<br/>
+*IDX*\
 Определенное пользователем число.
 
 ### <a name="remarks"></a>Примечания
@@ -837,7 +839,7 @@ in callback2
 an erase event
 ```
 
-## <a name="seekdir"></a> ios_base::seekdir
+## <a name="seekdir"></a> seekdir
 
 Задает начальную точку для операций смещения.
 
@@ -886,7 +888,7 @@ int main ( )
 }
 ```
 
-## <a name="setf"></a> ios_base::setf
+## <a name="setf"></a> setf
 
 Задает указанные флаги.
 
@@ -902,10 +904,10 @@ fmtflags setf(
 
 ### <a name="parameters"></a>Параметры
 
-*Применяемая _маска*<br/>
+*Применяемая _маска*\
 Флажки, которые нужно включить.
 
-*_Unset*<br/>
+*_Unset*\
 Флажки, которые нужно отключить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -940,7 +942,7 @@ int main( )
 }
 ```
 
-## <a name="sync_with_stdio"></a> ios_base::sync_with_stdio
+## <a name="sync_with_stdio"></a> sync_with_stdio
 
 Гарантирует, что операции с iostream и библиотекой времени выполнения C выполняются в том порядке, в котором они расположены в исходном коде.
 
@@ -952,7 +954,7 @@ static bool sync_with_stdio(
 
 ### <a name="parameters"></a>Параметры
 
-*_Sync*<br/>
+*_Sync*\
 Являются ли все потоки в соответствии с `stdio`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -963,7 +965,7 @@ static bool sync_with_stdio(
 
 Функция сохраняет статический член `stdio` синхронизировать флаг, который изначально **true**. Когда **true**, этот флаг обеспечивает синхронизацию операций на том же файле между правильно [iostreams](../standard-library/iostreams-conventions.md) функции и параметрами, определенными в стандартной библиотеке C++. В противном случае синхронизация может или не может быть гарантирована, но производительность может быть улучшена. Функция сохраняет *_Sync* в `stdio` синхронизировать флаг и возвращает его предыдущее сохраненное значение. Его можно вызвать надежно только перед выполнением любых операций в стандартных потоков.
 
-## <a name="unsetf"></a> ios_base::unsetf
+## <a name="unsetf"></a> unsetf
 
 Отключает указанные флаги.
 
@@ -975,18 +977,18 @@ void unsetf(
 
 ### <a name="parameters"></a>Параметры
 
-*Применяемая _маска*<br/>
+*Применяемая _маска*\
 Флаги для сброса в off.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член эффективно вызывает [флаги](#flags)(`~`*_Mask* **& флаги**) (очистить выбранные bits).
+Функция-член эффективно вызывает [флаги](#flags)(`~` *_Mask* **& флаги**) (очистить выбранные bits).
 
 ### <a name="example"></a>Пример
 
 См. в разделе [ios_base::setf](#setf) образец с помощью `unsetf`.
 
-## <a name="width"></a> ios_base::width
+## <a name="width"></a> Ширина
 
 Задает длину потока вывода.
 
@@ -999,7 +1001,7 @@ streamsize width(
 
 ### <a name="parameters"></a>Параметры
 
-*_Wide*<br/>
+*_Wide*\
 Нужный размер выходного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1031,7 +1033,7 @@ int main( ) {
 0
 ```
 
-## <a name="xalloc"></a> ios_base::xalloc
+## <a name="xalloc"></a> xalloc
 
 Указывает, что переменная является частью потока.
 

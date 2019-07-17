@@ -22,7 +22,7 @@ ms.locfileid: "56150315"
 |**auto**|**double**|**int**|**struct**|
 |**break**|**else**|**long**|**switch**|
 |**case**|**enum**|**register**|**typedef**|
-|**char**|**extern**|**return**|**объединение**|
+|**char**|**extern**|**return**|**union**|
 |**const**|**float**|**short**|**unsigned**|
 |**continue**|**for**|**signed**|**void**|
 |**default**|**goto**|**sizeof**|**volatile**|

@@ -1,6 +1,6 @@
 ---
 title: Класс CHandle
-ms.date: 11/04/2016
+ms.date: 07/09/2019
 f1_keywords:
 - CHandle
 - ATLBASE/ATL::CHandle
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CHandle class
 ms.assetid: 883e9db5-40ec-4e29-9c74-4dd2ddd2e35d
-ms.openlocfilehash: 19e761ea8eb133db55b4d24600f2a1fd01ac3e34
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86d2cba6c3ee2e914d96ae2a09b642d556d46027
+ms.sourcegitcommit: 07b34ca1c1fecced9fadc95de15dc5fee4f31e5a
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62245638"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67693398"
 ---
 # <a name="chandle-class"></a>Класс CHandle
 
@@ -85,7 +85,7 @@ void Attach(HANDLE h) throw();
 
 ### <a name="remarks"></a>Примечания
 
-Назначает `CHandle` объект *h* обработки. В сборках отлаживает ATLASSERT будет вызвано, если *h* имеет значение NULL. Проверка других допустимость дескриптора не проводится.
+Назначает `CHandle` объект *h* дескриптор, а затем вызывает **h.Detach()** . В сборках отлаживает ATLASSERT будет вызвано, если *h* имеет значение NULL. Проверка других допустимость дескриптора не проводится.
 
 ##  <a name="chandle"></a>  CHandle::CHandle
 

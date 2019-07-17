@@ -6,16 +6,19 @@ f1_keywords:
 helpviewer_keywords:
 - cstddef header
 ms.assetid: be8d1e39-5974-41ee-b41d-eafa6c82ffce
-ms.openlocfilehash: 089c4fc9a9bc33809f20ad6c13048a8740c95fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15d13a3af35cb41950df8aeba0c86d779e701ddb
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394264"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244450"
 ---
 # <a name="ltcstddefgt"></a>&lt;cstddef&gt;
 
-Включает заголовок \<stddef.h> стандартной библиотеки C и добавляет связанные имена в пространство имен `std`.
+Включает заголовок стандартной библиотеки C, \<stddef.h > и добавляет связанные имена в `std` пространства имен. Включение этого заголовка гарантирует, что имена, объявленные с внешней компоновкой в заголовке стандартной библиотеки C, объявляются в `std` пространства имен.
+
+> [!NOTE]
+> \<cstddef > включает тип **байтов** и не включает тип **wchar_t**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -23,9 +26,56 @@ ms.locfileid: "62394264"
 #include <cstddef>
 ```
 
-## <a name="remarks"></a>Примечания
+## <a name="namespace-and-macros"></a>Пространство имен и макросы
 
-Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.
+```cpp
+namespace std {
+    using ptrdiff_t = see definition;
+    using size_t = see definition;
+    using max_align_t = see definition;
+    using nullptr_t = decltype(nullptr);
+}
+
+#define NULL  // an implementation-defined null pointer constant
+#define offsetof(type, member-designator)
+```
+
+### <a name="parameters"></a>Параметры
+
+*ptrdiff_t*\
+Определяемое реализацией целочисленный тип, который может содержать различие двух индексов в объекте массива со знаком.
+
+*size_t*\
+Тип определяемого реализацией целое число без знака, достаточное для хранения размер в байтах любого объекта.
+
+*max_align_t*\
+Тип POD, требование к выравниванию по крайней мере значительной, как и для каждого скалярного типа, и, требование к выравниванию поддерживается в любом контексте.
+
+*nullptr_t*\
+Синоним для типа **nullptr** выражение. Несмотря на то что **nullptr** адрес не может быть выполнено, адресом другого *nullptr_t* объект, который является ссылкой lvalue следует выполнить.
+
+## <a name="byte-class"></a>Класс байтов
+
+```cpp
+enum class byte : unsigned char {};
+
+template <class IntType>
+    constexpr byte& operator<<=(byte& b, IntType shift) noexcept;
+    constexpr byte operator<<(byte b, IntType shift) noexcept;
+    constexpr byte& operator>>=(byte& b, IntType shift) noexcept;
+    constexpr byte operator>>(byte b, IntType shift) noexcept;
+
+constexpr byte& operator|=(byte& left, byte right) noexcept;
+constexpr byte operator|(byte left, byte right) noexcept;
+constexpr byte& operator&=(byte& left, byte right) noexcept;
+constexpr byte operator&(byte left, byte right) noexcept;
+constexpr byte& operator^=(byte& left, byte right) noexcept;
+constexpr byte operator^(byte left, byte right) noexcept;
+constexpr byte operator~(byte b) noexcept;
+
+template <class IntType>
+    IntType to_integer(byte b) noexcept;
+```
 
 ## <a name="see-also"></a>См. также
 

@@ -1,17 +1,22 @@
 ---
 title: Установка рабочей нагрузки Linux для проектов C++ в Visual Studio
 description: Скачивание, установка и настройка рабочей нагрузки Linux для проектов C++ в Visual Studio.
-ms.date: 06/07/2019
+ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: af4e3ec0ac21951163e92786555559cd02e8148f
-ms.sourcegitcommit: 8adabe177d557c74566c13145196c11cef5d10d4
+ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
+ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66821577"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67042743"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Загрузка, установка и настройка рабочей нагрузки Linux
 
+::: moniker range="vs-2015"
+
+Проекты Linux поддерживаются в Visual Studio версии 2017 и выше.
+
+::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
@@ -25,9 +30,9 @@ Visual Studio IDE в Windows можно использовать для созд
 
 ::: moniker range="vs-2019"
 
-В Visual Studio 2019 г. можно указать отдельные целевые устройства для сборки и отладки. При нацеливании WSL, больше не бывает необходимо добавить подключение к удаленному или настроить SSH.
+В Visual Studio 2019 можно указать отдельные целевые объекты для сборки и отладки. При использовании WSL больше не нужно добавлять удаленное подключение или настраивать SSH.
 
-Поддержка [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) интегрирован в Visual Studio для проектов Linux.
+Поддержка [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) реализована в Visual Studio для проектов Linux.
 
 ::: moniker-end
 
@@ -35,12 +40,15 @@ Visual Studio IDE в Windows можно использовать для созд
 
 ## <a name="visual-studio-setup"></a>Установка Visual Studio
 
-1. В поле поиска Windows введите "Visual Studio Installer": ![Поле поиска Windows](media/visual-studio-installer-search.png)
+1. В поле поиска Windows введите "Visual Studio Installer":
+
+   ![Поле поиска Windows](media/visual-studio-installer-search.png)
+
 2. Найдите установщик в разделе **Приложения** и дважды щелкните его. Когда откроется установщик, щелкните **Изменить** и перейдите на вкладку **Рабочие нагрузки**. Прокрутите вниз до раздела **Другие наборы инструментов** и выберите рабочую нагрузку **Разработка для Linux на C++** .
 
    ![Рабочая нагрузка "Разработка на Visual C++ для Linux"](media/linuxworkload.png)
 
-1. Если вы ориентируетесь, IoT или внедренные платформы, перейдите к **сведения об установке** панели справа в разделе **разработка приложений Linux на C++** , разверните **дополнительные компоненты**и выбрать нужные компоненты. По умолчанию выбирается поддержка CMake для Linux.
+1. Если вы используете Интернет вещей или внедренные платформы, в разделе **Разработка для Linux на C++** перейдите к панели **Сведения об установке** справа, разверните элемент **Дополнительные компоненты** и выберите нужные компоненты. Поддержка CMake для Linux включена по умолчанию.
 
 1. Для продолжения установки нажмите кнопку **Изменить**.
 
@@ -48,26 +56,26 @@ Visual Studio IDE в Windows можно использовать для созд
 
 Если у вас нет компьютера Linux, можно создать виртуальную машину Linux в Azure. Дополнительные сведения см. в разделе [Краткое руководство. Создание виртуальной машины Linux на портале Azure](/azure/virtual-machines/linux/quick-create-portal).
 
-В Windows 10 можно установить и целевой избранные дистрибутив Linux в подсистеме Windows для Linux (WSL). Дополнительные сведения см. в разделе [подсистемы Windows для руководство по установке Linux для Windows 10](/windows/wsl/install-win10). WSL — это среда удобный консоли, но не рекомендуется для приложения. 
+В Windows 10 можно установить и настроить использование определенного дистрибутива Linux в подсистеме Windows для Linux (WSL). См. подробнее руководство по [установке подсистемы Windows для Linux в Windows 10](/windows/wsl/install-win10). WSL — это удобная среда консоли, которую не рекомендуется использовать для графических приложений. 
 
 ::: moniker-end
 
 ::: moniker range="vs-2019"
 
-## <a name="linux-setup-ubuntu-on-wsl"></a>Установка Linux: Ubuntu в WSL
+## <a name="linux-setup-ubuntu-on-wsl"></a>Установка Linux: Использование Ubuntu в WSL
 
-На WSL нет удаленного подключения не требуется. **ZIP** и **rsync** являются обязательными для автоматической синхронизации заголовков Linux с помощью Visual Studio для поддержки Intellisense. Если необходимые приложения еще не сделано, их можно установить следующим образом:
+Если вы используете WSL, для сборки и отладки не обязательно добавлять удаленное подключение или настраивать SSH. Использование **zip** и **rsync** является обязательным для автоматической синхронизации заголовков Linux в Visual Studio и включения поддержки Intellisense. Если требуемые приложения отсутствуют, их можно установить следующим образом:
 
 ```bash
-sudo g++ gdb make rsync zip
+sudo apt-get install g++ gdb make rsync zip
 ```
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="ubuntu-on-remote-linux-systems"></a>Ubuntu в удаленных системах Linux
+## <a name="ubuntu-on-remote-linux-systems"></a>Использование Ubuntu в удаленных системах Linux
 
-Целевой системе Linux должен иметь **openssh-server**, **g ++** , **gdb**, и **gdbserver** установлен и ssh управляющую программу должна быть запущена. **ZIP** необходим для автоматической синхронизации удаленных заголовков на локальном компьютере, чтобы обеспечить поддержку Intellisense. Если эти приложения отсутствуют, их можно установить следующим образом.
+В целевой системе Linux нужно установить **openssh-server**, **g++** , **gdb** и **gdbserver**, а также запустить управляющую программу SSH. **ZIP** необходим для автоматической синхронизации удаленных заголовков на локальном компьютере, чтобы обеспечить поддержку Intellisense. Если эти приложения отсутствуют, их можно установить следующим образом.
 
 1. В командной строке оболочки на компьютере Linux выполните следующую команду:
 
@@ -88,21 +96,21 @@ sudo g++ gdb make rsync zip
 
 ::: moniker range="vs-2019"
 
-## <a name="fedora-on-wsl"></a>Fedora на WSL
+## <a name="fedora-on-wsl"></a>Использование Fedora в WSL
 
-Использует Fedora **dnf** пакет установщика. Чтобы скачать **g ++** , **gdb**, **rsync** и **zip**, выполните:
+В Fedora используются установщик пакетов **dnf**. Чтобы скачать **g ++** , **gdb**, **rsync** и **zip**, выполните следующую команду:
 
    ```bash
    sudo dnf install gcc-g++ gdb rsync zip
    ```
 
-**ZIP** и **rsync** являются обязательными для автоматической синхронизации заголовков Linux с помощью Visual Studio для поддержки Intellisense.
+Использование **zip** и **rsync** является обязательным для автоматической синхронизации заголовков Linux в Visual Studio и включения поддержки Intellisense.
 
 ::: moniker-end
 
 ::: moniker range=">=vs-2017"
 
-## <a name="fedora-on-remote-linux-systems"></a>Fedora в удаленных системах Linux
+## <a name="fedora-on-remote-linux-systems"></a>Использование Fedora в удаленных системах Linux
 
 На целевой машине под управлением Fedora используются установщик пакетов **dnf**. Чтобы скачать **openssh-server**, **g ++** , **gdb**, **gdbserver** и **zip**, а затем перезапустить ssh управляющую программу, сделайте следующее:
 
@@ -125,13 +133,13 @@ sudo g++ gdb make rsync zip
 
 ::: moniker range="vs-2015"
 
-Поддержка Linux C++ разработки в Visual Studio 2017 и более поздних версий.
+Поддержка разработки для Linux на C++ в Visual Studio версии 2017 и выше.
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>Следующие шаги
 
-Теперь вы готовы для создания или открытия проекта Linux и настроить его для работы в целевой системе. Дополнительные сведения:
+Теперь вы можете создать или открыть проект Linux, а также настроить его для выполнения в целевой системе. Дополнительные сведения:
 
 - [Создание проекта Linux](create-a-new-linux-project.md)
 - [Настройка проекта Linux CMake](cmake-linux-project.md)

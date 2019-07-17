@@ -7,22 +7,22 @@ f1_keywords:
 helpviewer_keywords:
 - iterator header
 ms.assetid: c61a3962-f3ed-411a-b5a3-e8b3c2b500bd
-ms.openlocfilehash: 1b0d3282075246f3b217f0c8acac19ed8ece79cb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f859c2e11d8a800c44b93e69e4b862300c6d3a13
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224094"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245768"
 ---
 # <a name="ltiteratorgt"></a>&lt;iterator&gt;
 
 Определяет примитивы итератора, предопределенные итераторы и итераторы потока, а также несколько поддерживаемых шаблонов. Предопределенные итераторы включают адаптеры вставки и обратные адаптеры. Существует три класса адаптеров итераторов вставки: передний, задний и общий. Они предоставляют семантику вставки вместо семантики переписи, которую предоставляют итераторы функции-члена контейнера.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <iterator>
-```
+**Заголовок:** \<iterator>
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -42,17 +42,23 @@ ms.locfileid: "62224094"
 
 Visual Studio добавляет расширения к итераторам стандартной библиотеки C++, чтобы обеспечить поддержку различных ситуаций режима отладки для проверенных и непроверенных итераторов. Дополнительные сведения см. в разделе [безопасные библиотеки: C++Стандартная библиотека](../standard-library/safe-libraries-cpp-standard-library.md).
 
+## <a name="members"></a>Участники
+
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[advance](../standard-library/iterator-functions.md#advance)|Увеличивает итератор на указанное количество позиций.|
 |[back_inserter](../standard-library/iterator-functions.md#back_inserter)|Создает итератор, может вставлять элементы с обратной стороны указанного контейнера.|
 |[begin](../standard-library/iterator-functions.md#begin)|Извлекает итератор для первого элемента в указанном контейнере.|
 |[cbegin](../standard-library/iterator-functions.md#cbegin)|Извлекает постоянный итератор для первого элемента в указанном контейнере.|
 |[cend](../standard-library/iterator-functions.md#cend)|Извлекает постоянный итератор для элемента, следующего за последним элементом в указанном контейнере.|
+|[crbegin](../standard-library/iterator-functions.md#crbegin)||
+|[crend](../standard-library/iterator-functions.md#crend)||
+|[data](../standard-library/iterator-functions.md#data)||
 |[distance](../standard-library/iterator-functions.md#distance)|Указывает количество приращений между позициями, которые адресуют два итератора.|
 |[end](../standard-library/iterator-functions.md#end)|Извлекает итератор для элемента, следующего за последним элементом в указанном контейнере.|
+|[empty](../standard-library/iterator-functions.md#empty)||
 |[front_inserter](../standard-library/iterator-functions.md#front_inserter)|Создает итератор, может вставлять элементы с передней стороны указанного контейнера.|
 |[inserter](../standard-library/iterator-functions.md#inserter)|Адаптер итератора, добавляющий в контейнер новый элемент в указанной позиции.|
 |[make_checked_array_iterator](../standard-library/iterator-functions.md#make_checked_array_iterator)|Создает [checked_array_iterator](../standard-library/checked-array-iterator-class.md), который может использоваться другими алгоритмами. **Примечание.**  Эта функция — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.|
@@ -60,12 +66,15 @@ Visual Studio добавляет расширения к итераторам с
 |[make_unchecked_array_iterator](../standard-library/iterator-functions.md#make_unchecked_array_iterator)|Создает [unchecked_array_iterator](../standard-library/unchecked-array-iterator-class.md), который может использоваться другими алгоритмами. **Примечание.**  Эта функция — расширение Майкрософт для стандартной библиотеки C++. Код, реализованный с помощью этой функции, нельзя перенести в стандартные среды сборки C, не поддерживающие это расширение Microsoft.|
 |[next](../standard-library/iterator-functions.md#next)|Выполняет итерацию заданное число раз и возвращает новую позицию итератора.|
 |[prev](../standard-library/iterator-functions.md#prev)|Выполняет обратную итерацию заданное число раз и возвращает новую позицию итератора.|
+|[rbegin](../standard-library/iterator-functions.md#rbegin)||
+|[rend](../standard-library/iterator-functions.md#rend)||
+|[size](../standard-library/iterator-functions.md#size)||
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
-|[operator!=](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|
+|[оператор!= ](../standard-library/iterator-operators.md#op_neq)|Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.|
 |[operator==](../standard-library/iterator-operators.md#op_eq_eq)|Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.|
 |[оператор<](../standard-library/iterator-operators.md#op_lt)|Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.|
 |[operator\<=](../standard-library/iterator-operators.md#op_gt_eq)|Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.|
@@ -76,7 +85,7 @@ Visual Studio добавляет расширения к итераторам с
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[back_insert_iterator](../standard-library/back-insert-iterator-class.md)|Класс шаблона описывает объект итератора вывода. Он добавляет элементы в контейнер типа `Container`, к которому обращается посредством защищенного `pointer` вызова объекта, он сохраняет контейнера.|
 |[bidirectional_iterator_tag](../standard-library/bidirectional-iterator-tag-struct.md)|Класс, предоставляющий тип возвращаемого значения для `iterator_category` функцию, которая представляет собой Двунаправленный итератор.|

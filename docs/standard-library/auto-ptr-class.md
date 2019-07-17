@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c64865c98f52f68fcb6d38160ac885657a7b8916
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244008"
 ---
 # <a name="autoptr-class"></a>Класс auto_ptr
 
@@ -33,7 +33,6 @@ ms.locfileid: "62377986"
 
 ```cpp
 class auto_ptr {
-public:
     typedef Type element_type;
     explicit auto_ptr(Type* ptr = 0) throw();
     auto_ptr(auto_ptr<Type>& right) throw()
@@ -56,10 +55,10 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 `auto_ptr`, из которого необходимо получить существующий ресурс.
 
-*ptr*<br/>
+*PTR*\
 Указатель, указанный для замены сохраненного указателя.
 
 ## <a name="remarks"></a>Примечания
@@ -72,19 +71,19 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[auto_ptr](#auto_ptr)|Конструктор для объектов типа `auto_ptr`.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[element_type](#element_type)|Этот тип является синонимом для параметра шаблона `Type`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[get](#get)|Эта функция-член возвращает сохраненный указатель `myptr`.|
 |[release](#release)|Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.|
@@ -92,7 +91,7 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[оператор=](#op_eq)|Оператор присваивания, который передает право владения от одного объекта `auto_ptr` другому.|
 |[оператор*](#op_star)|Оператор удаления ссылки для объектов типа `auto_ptr`.|
@@ -100,13 +99,7 @@ public:
 |[оператор auto_ptr\<Other>](#op_auto_ptr_lt_other_gt)|Приводит из одного вида `auto_ptr` в другой вид `auto_ptr`.|
 |[оператор auto_ptr_ref\<Other>](#op_auto_ptr_ref_lt_other_gt)|Приводит из `auto_ptr` в `auto_ptr_ref`.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<memory>
-
-**Пространство имен:** std
-
-## <a name="auto_ptr"></a>  auto_ptr::auto_ptr
+### <a name="auto_ptr"></a> auto_ptr
 
 Конструктор для объектов типа `auto_ptr`.
 
@@ -121,15 +114,15 @@ template <class Other>
 auto _ptr(auto _ptr<Other>& right) throw();
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*PTR*\
 Указатель на объект, который инкапсулирует `auto_ptr`.
 
-*right*<br/>
+*Правильно*\
 Объект `auto_ptr` для копирования конструктором.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Первый конструктор сохраняет *ptr* в `myptr`, сохраненный указатель на выделенный объект. Второй конструктор передает право владения указателем, сохраненным в *правой*, размещая *правой*. [выпуск](#release) в `myptr`.
 
@@ -137,7 +130,7 @@ auto _ptr(auto _ptr<Other>& right) throw();
 
 Конструктор шаблона работает так же, как второй конструктор, при условии, что указатель на `Other` может быть неявно преобразован в указатель на `Type`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_auto_ptr.cpp
@@ -196,16 +189,15 @@ Constructing 00311AF8
 Destructing 00311AF8
 ```
 
-## <a name="element_type"></a>  auto_ptr::element_type
+### <a name="element_type"></a> element_type
 
 Этот тип является синонимом для параметра шаблона `Type`.
 
 ```cpp
-
 typedef Type element  _type;
 ```
 
-## <a name="get"></a>  auto_ptr::get
+### <a name="get"></a> Получить
 
 Эта функция-член возвращает сохраненный указатель `myptr`.
 
@@ -213,11 +205,11 @@ typedef Type element  _type;
 Type *get() const throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Сохраненный указатель `myptr`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_get.cpp
@@ -264,35 +256,35 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="op_eq"></a>  auto_ptr::operator=
+### <a name="op_eq"></a> оператор =
 
 Оператор присваивания, который передает право владения от одного объекта `auto_ptr` другому.
 
 ```cpp
 template <class Other>
-auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
+    auto_ptr<Type>& operator=(auto_ptr<Other>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr<Type>& right) throw();
 auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект типа `auto_ptr`.
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на объект типа `auto_ptr<Type>`.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Это присваивание вычисляет выражение `delete myptr`, но только если сохраненный указатель `myptr` изменяется в результате присваивания. Затем он передает право владения указателем, сохраненным в *правой*, размещая *правой*.[ выпуск](#release) в `myptr`. Функция возвращает __\*this__.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
-Пример использования этого оператора-члена см. в разделе [auto_ptr::auto_ptr](#auto_ptr).
+Пример использования этого оператора-члена, см. в разделе [auto_ptr](#auto_ptr).
 
-## <a name="op_star"></a>  auto_ptr::operator*
+### <a name="op_star"></a> оператор *
 
 Оператор удаления ссылки для объектов типа `auto_ptr`.
 
@@ -300,19 +292,19 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 Type& operator*() const throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Ссылку на объект типа `Type` , которому принадлежит указатель.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Оператор косвенного обращения возвращает `*`[get](#get). Следовательно, сохраненный указатель не должен быть пустым.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
-Пример использования функции-члена см. в разделе [auto_ptr::auto_ptr](#auto_ptr).
+Пример того, как использовать функцию-член, см. в разделе [auto_ptr](#auto_ptr).
 
-## <a name="op_arrow"></a>  auto_ptr::operator-&gt;
+### <a name="op_arrow"></a> оператор-&gt;
 
 Оператор для разрешения доступа к членам.
 
@@ -320,19 +312,19 @@ Type& operator*() const throw();
 Type * operator->() const throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Член объекта, `auto_ptr` владеет.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Оператор выбора возвращает [get](#get)`( )`, поэтому выражение *ap*-> **member** ведет себя так же, как ( *ap*. **get**( ) )-> **member**, где *ap* — это объект класса `auto_ptr`\< **Type**>. Таким образом, сохраненный указатель не должен иметь значение null, и `Type` должен быть класса, структуры или типом объединения с `member` член.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
-Пример использования функции-члена см. в разделе [auto_ptr::auto_ptr](#auto_ptr).
+Пример того, как использовать функцию-член, см. в разделе [auto_ptr](#auto_ptr).
 
-## <a name="op_auto_ptr_lt_other_gt"></a>  auto_ptr::operator auto_ptr&lt;Other&gt;
+### <a name="op_auto_ptr_lt_other_gt"></a> оператор auto_ptr&lt;других&gt;
 
 Приводит из одного вида `auto_ptr` в другой вид `auto_ptr`.
 
@@ -341,11 +333,11 @@ template <class Other>
 operator auto _ptr<Other>() throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Оператор приведения типов возвращает `auto_ptr` \< **Other**>( **\*this**).
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_op_auto_ptr.cpp
@@ -362,7 +354,7 @@ int main()
 }
 ```
 
-## <a name="op_auto_ptr_ref_lt_other_gt"></a>  auto_ptr::operator auto_ptr_ref&lt;Other&gt;
+### <a name="op_auto_ptr_ref_lt_other_gt"></a> оператор auto_ptr_ref&lt;других&gt;
 
 Приводит из `auto_ptr` в `auto_ptr_ref`.
 
@@ -371,11 +363,11 @@ template <class Other>
 operator auto _ptr  _ref<Other>() throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Оператор приведения типов возвращает **auto_ptr_ref**\< **Other**>( **\*this**).
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_op_auto_ptr_ref.cpp
@@ -423,7 +415,7 @@ main exiting
 ~C:  1
 ```
 
-## <a name="release"></a>  auto_ptr::release
+### <a name="release"></a> выпуск
 
 Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.
 
@@ -431,15 +423,15 @@ main exiting
 Type *release() throw();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Ранее сохраненный указатель.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот член заменяет сохраненный указатель `myptr` на пустой указатель и возвращает сохраненный ранее указатель.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_release.cpp
@@ -485,7 +477,7 @@ pi2 == pi3
 Destructing 00311B88 Value: 6
 ```
 
-## <a name="reset"></a>  auto_ptr::reset
+### <a name="reset"></a> Сброс
 
 Функция-член вычисляет выражение `delete myptr`, но только если значение сохраненного указателя `myptr` изменяется в результате вызова функции. Затем она заменяет сохраненный указатель на `ptr`.
 
@@ -493,12 +485,12 @@ Destructing 00311B88 Value: 6
 void reset(Type* ptr = 0);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*PTR*\
 Указатель, заданный для замены сохраненного указателя `myptr`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // auto_ptr_reset.cpp
@@ -547,5 +539,4 @@ Destructing 00311B88 Value: 6
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
 [Класс unique_ptr](../standard-library/unique-ptr-class.md)<br/>

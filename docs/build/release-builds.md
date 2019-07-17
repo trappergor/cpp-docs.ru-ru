@@ -6,12 +6,12 @@ helpviewer_keywords:
 - release builds
 - debug builds, converting to release build
 ms.assetid: fa9a78fa-f4b5-4722-baf4-aec655c4ff0f
-ms.openlocfilehash: cf11e63354502be000ba5f7259d9e36dfa774060
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b1db396136af4a6ce8cc005753dded9eea2bfbeb
+ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62315070"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400470"
 ---
 # <a name="release-builds"></a>Построения выпуска
 
@@ -25,7 +25,7 @@ ms.locfileid: "62315070"
 [Использование отладочной сборки для проверки перезаписи памяти](using-the-debug-build-to-check-for-memory-overwrite.md)<br/>
 [Практическое руководство. Отладка сборки выпуска](how-to-debug-a-release-build.md)<br/>
 [Проверка перезаписи памяти](checking-for-memory-overwrites.md)<br/>
-[Оптимизация кода](optimizing-your-code.md)<br/>
+[Оптимизация кода](optimizing-your-code.md)
 
 ## <a name="see-also"></a>См. также
 

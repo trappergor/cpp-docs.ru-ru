@@ -7,12 +7,12 @@ helpviewer_keywords:
 - minus struct
 - minus class
 ms.assetid: 7bce784e-2be6-413a-b516-004e9ecb2a39
-ms.openlocfilehash: 8683aca2656a4fd519be1dd7929448dfd221feac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e57023c78f944a038e94d851abdbf7909545295c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295790"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246797"
 ---
 # <a name="minus-struct"></a>minus - структура
 
@@ -39,12 +39,13 @@ struct minus<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*, *T*, *U* тип, поддерживающий бинарный `operator-` , принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Тип, поддерживающий бинарный `operator-`, который принимает операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд в операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд в операции. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -99,20 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 1 5 9 13 17 21 )
 The vector v2 = ( -1 2 5 8 11 14 )
 The element-wise differences between v1 and v2 are: ( 2 3 4 5 6 7 )
-*/
 ```
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

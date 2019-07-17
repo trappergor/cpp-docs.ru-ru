@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - <forward_list>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: cbde6268be0f501a220721cae498254dd0588eb4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d20c5b83e0ce00c7634d32e6b63c92242c24d1b2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159383"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240650"
 ---
 # <a name="ltforwardlistgt"></a>&lt;forward_list&gt;
 
 Определяет прямой список классов шаблонов контейнеров и некоторые вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <forward_list>
-```
+**Заголовок:** \<forward_list>
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Forward_list > Библиотека также использует `#include <initializer_list>` инструкции.
+
+## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator==](../standard-library/forward-list-operators.md#op_eq_eq)|Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
 |[operator!=](../standard-library/forward-list-operators.md#op_neq)|Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.|
@@ -36,13 +41,13 @@ ms.locfileid: "62159383"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[swap](../standard-library/forward-list-functions.md#swap)|Меняет местами элементы двух прямых списков.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[forward_list](../standard-library/forward-list-class.md)|Описывает объект, управляющий последовательностью элементов переменной длины. Последовательность хранится в виде однонаправленного связанного списка элементов, каждый из которых содержит член типа `Type`.|
 

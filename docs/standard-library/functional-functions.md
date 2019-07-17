@@ -29,34 +29,27 @@ helpviewer_keywords:
 - std::bit_xor [C++]
 - std::cref [C++]
 ms.assetid: c34d0b45-50a7-447a-9368-2210d06339a4
-ms.openlocfilehash: 93b61f1d0342d7d4b7ddfc7fce4d64ea5e10a2eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 546d8c61e875dd7c295e892359e39fa5a76867b4
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159578"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243780"
 ---
 # <a name="ltfunctionalgt-functions"></a>Функции &lt;functional&gt;
-
-||||
-|-|-|-|
-| [bind](#bind) | [bit_and](#bit_and) | [bit_not](#bit_not) |
-| [bit_or](#bit_or) | [bit_xor](#bit_xor) | [cref](#cref) |
-| [Вызвать](#invoke) | [mem_fn](#mem_fn) | [not_fn](#not_fn) |
-| [ref](#ref) | [swap](#swap) | |
 
 Эти функции являются нерекомендуемыми в C ++ 11 и удалены в C ++ 17:
 
 ||||
 |-|-|-|
-| [bind1st](#bind1st) | [bind2nd](#bind2nd) | [mem_fun](#mem_fun) |
-| [mem_fun_ref](#mem_fun_ref) | [ptr_fun](#ptr_fun) | |
+|[bind1st](#bind1st) |[bind2nd](#bind2nd)|[mem_fun](#mem_fun)|
+|[mem_fun_ref](#mem_fun_ref)|[ptr_fun](#ptr_fun)||
 
 Эти функции являются устаревшими в C ++ 17:
 
 |||
 |-|-|
-| [not1](#not1) | [not2](#not2) |
+|[not1](#not1)|[not2](#not2)|
 
 ## <a name="bind"></a> Привязка
 
@@ -64,24 +57,24 @@ ms.locfileid: "62159578"
 
 ```cpp
 template <class FT, class T1, class T2, ..., class TN>
-unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
+    unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 
 template <class RTy, class FT, class T1, class T2, ..., class TN>
-unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
+    unspecified bind(FT fn, T1 t1, T2 t2, ..., TN tN);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Fey*<br/>
+*Fey*\
 Тип объекта для вызова.
 
-*TN*<br/>
+*TN*\
 Тип N-го аргумента вызова.
 
-*fn*<br/>
+*fn*\
 Объект для вызова.
 
-*TN*<br/>
+*TN*\
 N-й аргумент вызова.
 
 ### <a name="remarks"></a>Примечания
@@ -165,15 +158,15 @@ int main()
 
 ```cpp
 template <class Operation, class Type>
-binder1st <Operation> bind1st (const Operation& func, const Type& left);
+    binder1st <Operation> bind1st (const Operation& func, const Type& left);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*func*<br/>
+*Func*\
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
-*left*<br/>
+*Слева*\
 Значение, к которому необходимо привязать первый аргумент объекта бинарной функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -184,7 +177,7 @@ binder1st <Operation> bind1st (const Operation& func, const Type& left);
 
 Модули привязки функций представляют собой разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в определенных типах Композиция функций для создания более сложных и мощных выражений.
 
-Если *func* — это объект типа `Operation` и `c` — константа, то `bind1st( func, c )` совпадает со значением [binder1st](../standard-library/binder1st-class.md) конструктор класса `binder1st<Operation>( func, c )`и является более удобным для используете.
+Если *func* — это объект типа `Operation` и `c` — константа, то `bind1st( func, c )` совпадает со значением [binder1st](../standard-library/binder1st-class.md) конструктор класса `binder1st<Operation>(func, c)`и является более удобным для используете.
 
 ### <a name="example"></a>Пример
 
@@ -259,15 +252,15 @@ The number of elements in v1 less than 10 is: 2.
 
 ```cpp
 template <class Operation, class Type>
-binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
+    binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*func*<br/>
+*Func*\
 Объект бинарной функции, который необходимо преобразовать в объект унарной функции.
 
-*right*<br/>
+*Правильно*\
 Значение, к которому необходимо привязать второй аргумент объекта бинарной функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -278,7 +271,7 @@ binder2nd <Operation> bind2nd(const Operation& func, const Type& right);
 
 Модули привязки функций представляют собой разновидность адаптера функций. Так как они возвращают объекты функций, их можно использовать в определенных типах Композиция функций для создания более сложных и мощных выражений.
 
-Если *func* — это объект типа `Operation` и `c` — константа, то `bind2nd( func, c )` совпадает со значением [binder2nd](../standard-library/binder2nd-class.md) конструктор класса `binder2nd<Operation>( func, c )`и является более удобным для использования.
+Если *func* — это объект типа `Operation` и `c` — константа, то `bind2nd(func, c)` совпадает со значением [binder2nd](../standard-library/binder2nd-class.md) конструктор класса `binder2nd<Operation>(func, c)`и является более удобным для использования.
 
 ### <a name="example"></a>Пример
 
@@ -371,12 +364,13 @@ struct bit_and<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*, *T*, *U* любой тип, поддерживающий `operator&`, принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Любой тип, поддерживающий `operator&`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд побитовой операции И. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -409,10 +403,10 @@ struct bit_not<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*<br/>
+*Тип*\
 Тип, поддерживающий унарный `operator~`.
 
-*Right*<br/>
+*Правильно*\
 Операнд побитовой операции дополнения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue или ссылочного аргумента rvalue выводимого типа *тип*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -447,12 +441,13 @@ struct bit_or<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*, *T*, *U* любой тип, поддерживающий `operator|`, принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Любой тип, поддерживающий `operator|`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд побитовой операции ИЛИ. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -487,12 +482,13 @@ struct bit_xor<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*, *T*, *U* любой тип, поддерживающий `operator^`, принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Любой тип, поддерживающий `operator^`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд побитовой операции "исключающее ИЛИ". Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -517,10 +513,10 @@ reference_wrapper<const Ty> cref(const reference_wrapper<Ty>& arg);
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип аргумента, для которого создается оболочка.
 
-*arg*<br/>
+*Arg*\
 Аргумент для создания оболочки.
 
 ### <a name="remarks"></a>Примечания
@@ -571,19 +567,19 @@ invoke_result_t<Callable, Args...>
 
 ### <a name="parameters"></a>Параметры
 
-*Вызываемый*<br/>
+*Вызываемый*\
 Тип объекта для вызова.
 
-*Args*<br/>
+*аргументы*\
 Типы аргументы вызова.
 
-*fn*<br/>
+*fn*\
 Объект для вызова.
 
-*аргументы*<br/>
+*аргументы*\
 Аргументы вызова.
 
-*Спецификация*<br/>
+*Спецификация*\
 **Noexcept** спецификации `std::is_nothrow_invocable_v<Callable, Args>)`.
 
 ### <a name="remarks"></a>Примечания
@@ -691,10 +687,10 @@ unspecified mem_fn(RTy Ty::*pm);
 
 ### <a name="parameters"></a>Параметры
 
-*Клона*<br/>
+*Клона*\
 Тип возвращаемого значения функции в оболочке.
 
-*Ty*<br/>
+*За этот год*\
 Тип указателя функции-члена.
 
 ### <a name="remarks"></a>Примечания
@@ -763,7 +759,7 @@ const_mem_fun1_t<Result, Type, Arg> mem_fun(Result (Type::* pMem)(Arg) const);
 
 ### <a name="parameters"></a>Параметры
 
-*pMem*<br/>
+*pMem*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -850,7 +846,7 @@ const_mem_fun1_ref_t<Result, Type, Arg> mem_fun_ref(Result (T::* pMem)(Arg) cons
 
 ### <a name="parameters"></a>Параметры
 
-*pMem*<br/>
+*pMem*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -946,7 +942,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="parameters"></a>Параметры
 
-*предикат*<br/>
+*предикат*\
 Унарный предикат, знак которого должен быть изменен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -955,7 +951,7 @@ unary_negate<UnaryPredicate> not1(const UnaryPredicate& predicate);
 
 ### <a name="remarks"></a>Примечания
 
-Если `unary_negate` создан на основе унарного предиката `predicate( x )`, то он возвращает `!predicate( x )`.
+Если `unary_negate` создан на основе унарного предиката `predicate(x)`, то он возвращает `!predicate(x)`.
 
 ### <a name="example"></a>Пример
 
@@ -1018,7 +1014,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="parameters"></a>Параметры
 
-*func*<br/>
+*Func*\
 Бинарный предикат, знак которого должен быть изменен.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1027,7 +1023,7 @@ binary_negate<BinaryPredicate> not2(const BinaryPredicate& func);
 
 ### <a name="remarks"></a>Примечания
 
-Если `binary_negate` создан на основе бинарного предиката `binary_predicate( x, y )`, то он возвращает `!binary_predicate( x, y )`.
+Если `binary_negate` создан на основе бинарного предиката `binary_predicate(x, y)`, то он возвращает `!binary_predicate(x, y)`.
 
 ### <a name="example"></a>Пример
 
@@ -1094,7 +1090,7 @@ template <class Callable>
 
 ### <a name="parameters"></a>Параметры
 
-*func*<br/>
+*Func*\
 Вызываемый объект, используемый для создания переадресации вызова программы-оболочки.
 
 ### <a name="remarks"></a>Примечания
@@ -1197,12 +1193,12 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ### <a name="parameters"></a>Параметры
 
-*pfunc*<br/>
+*pfunc*\
 Указатель на унарную или бинарную функцию, который должен быть преобразован в адаптируемую функцию.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция-шаблон возвращает унарную функцию [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) < `Arg`, **результат**> (\* `pfunc`).
+Первая функция-шаблон возвращает унарную функцию [pointer_to_unary_function](../standard-library/pointer-to-unary-function-class.md) <`Arg`, **результат**> (\* `pfunc`).
 
 Вторая функция-шаблон возвращает бинарную функцию [pointer_to_binary_function](../standard-library/pointer-to-binary-function-class.md) \< **Arg1**, **Arg2**, **результат**> (\* `pfunc`).
 
@@ -1220,10 +1216,10 @@ pointer_to_binary_function<Arg1, Arg2, Result, Result (*)(Arg1, Arg2)> ptr_fun(R
 
 ```cpp
 template <class Ty>
-reference_wrapper<Ty> ref(Ty& arg);
+    reference_wrapper<Ty> ref(Ty& arg);
 
 template <class Ty>
-reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
+    reference_wrapper<Ty> ref(reference_wrapper<Ty>& arg);
 ```
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1312,18 +1308,18 @@ tiger cougar
 
 ```cpp
 template <class FT>
-void swap(function<FT>& f1, function<FT>& f2);
+    void swap(function<FT>& f1, function<FT>& f2);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*FT*<br/>
+*FT*\
 Тип, управляемый объектами функции.
 
-*f1*<br/>
+*F1*\
 Первый объект функции.
 
-*f2*<br/>
+*F2*\
 Второй объект функции.
 
 ### <a name="remarks"></a>Примечания
@@ -1371,7 +1367,3 @@ empty == true
 empty == false
 val == -3
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<functional>](../standard-library/functional.md)<br/>

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::weak_ptr [C++], swap
 - std::weak_ptr [C++], use_count
 ms.assetid: 2db4afb2-c7be-46fc-9c20-34ec2f8cc7c2
-ms.openlocfilehash: e2efb5d534ad43e2492ac4fb0bf76db402dca272
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e491c376f110f48b0b02a30fc39f6c6da1a5ab02
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62410866"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240909"
 ---
 # <a name="weakptr-class"></a>Класс weak_ptr
 
@@ -57,17 +57,18 @@ public:
       weak_ptr& operator=(const weak_ptr<Other>&);
    template <class Other>
       weak_ptr& operator=(shared_ptr<Other>&);
+      
    void swap(weak_ptr&);
    void reset();
    long use_count() const;
    bool expired() const;
    shared_ptr<Ty> lock() const;
-   };
+};
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый слабым указателем.
 
 ## <a name="remarks"></a>Примечания
@@ -84,7 +85,7 @@ public:
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[weak_ptr](#weak_ptr)|Создает документ `weak_ptr`.|
 
@@ -102,17 +103,11 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[оператор=](#op_eq)|Заменяет ресурс, которым владеет.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<memory>
-
-**Пространство имен:** std
-
-## <a name="element_type"></a>  element_type
+### <a name="element_type"></a> element_type
 
 Тип элемента.
 
@@ -120,11 +115,11 @@ public:
 typedef Ty element_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом для параметра шаблона `Ty`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_element_type.cpp
@@ -148,7 +143,7 @@ int main()
 *wp0.lock() == 5
 ```
 
-## <a name="expired"></a>  expired
+### <a name="expired"></a> истек срок действия
 
 Проверяет, истек ли срок действия владения.
 
@@ -156,11 +151,11 @@ int main()
 bool expired() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает **true** Если `*this` истек, в противном случае **false**.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_expired.cpp
@@ -205,7 +200,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="lock"></a>  lock
+### <a name="lock"></a> Блокировки
 
 Получает эксклюзивные права владения ресурсом.
 
@@ -213,11 +208,11 @@ wp.expired() == true
 shared_ptr<Ty> lock() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает пустой объект shared_ptr, если `*this` истек; в противном случае возвращается [класса shared_ptr](../standard-library/shared-ptr-class.md)\<Ty > объекта, которому принадлежит ресурс, `*this` указывает.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_lock.cpp
@@ -262,7 +257,7 @@ wp.expired() == true
 (bool)wp.lock() == false
 ```
 
-## <a name="op_eq"></a>  оператор=
+### <a name="op_eq"></a> оператор =
 
 Заменяет ресурс, которым владеет.
 
@@ -270,28 +265,28 @@ wp.expired() == true
 weak_ptr& operator=(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr& operator=(const weak_ptr<Other>& wp);
+    weak_ptr& operator=(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr& operator=(const shared_ptr<Other>& sp);
+    weak_ptr& operator=(const shared_ptr<Other>& sp);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Другое*<br/>
+*Другие*\
 Тип, которым управляет общий или слабый указатель на аргумент.
 
-*wp*<br/>
+*WP*\
 Слабый указатель для копирования.
 
-*sp*<br/>
+*SP*\
 Общий указатель для копирования.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Все операторы освобождают ресурс, на который указывает `*this`, и назначают `*this` в качестве владельца ресурса, название которого указано в последовательности операндов. Если оператор завершается сбоем, значение `*this` остается неизменным.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_operator_as.cpp
@@ -323,28 +318,28 @@ int main()
 *wp1.lock() == 10
 ```
 
-## <a name="owner_before"></a>  owner_before
+### <a name="owner_before"></a> owner_before
 
 Возвращает **true** Если `weak_ptr` упорядочен до (или меньше) заданного указателя.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*PTR*\
 Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает **true** Если `*this` — `ordered before` `ptr`.
 
-## <a name="reset"></a>  reset
+### <a name="reset"></a> Сброс
 
 Освобождает ресурс, которым владеет.
 
@@ -352,11 +347,11 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член освобождает ресурс, на который указывает `*this`, и преобразует `*this` в пустой объект weak_ptr.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_reset.cpp
@@ -386,7 +381,7 @@ wp.expired() == false
 wp.expired() == true
 ```
 
-## <a name="swap"></a>  swap
+### <a name="swap"></a> Swap
 
 Меняет местами два объекта `weak_ptr`.
 
@@ -394,16 +389,23 @@ wp.expired() == true
 void swap(weak_ptr& wp);
 ```
 
-### <a name="parameters"></a>Параметры
+Также включает специализации.
 
-*wp*<br/>
+```cpp
+template<class T>
+    void swap(weak_ptr<T>& a, weak_ptr<T>& b) noexcept;
+```
+
+#### <a name="parameters"></a>Параметры
+
+*WP*\
 Слабый указатель, который будет заменен.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член устанавливает ресурсов, первоначально указывал `*this` на *wp*и ресурсов, первоначально указывал *wp* на `*this`. Функция не изменяет подсчет ссылок для двух ресурсов и не создает исключений.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_swap.cpp
@@ -456,7 +458,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="use_count"></a>  use_count
+### <a name="use_count"></a> use_count
 
 Считает количество назначенных объектов `shared_ptr`.
 
@@ -464,11 +466,11 @@ int main()
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает число объектов `shared_ptr`, которые являются владельцем ресурса, на который указывает `*this`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_use_count.cpp
@@ -496,9 +498,9 @@ wp.use_count() == 1
 wp.use_count() == 2
 ```
 
-## <a name="weak_ptr"></a>  weak_ptr
+### <a name="weak_ptr"></a> weak_ptr
 
-Создает документ `weak_ptr`.
+Создает документ `weak_ptr`. Также содержит деструктор.
 
 ```cpp
 weak_ptr();
@@ -506,28 +508,30 @@ weak_ptr();
 weak_ptr(const weak_ptr& wp);
 
 template <class Other>
-weak_ptr(const weak_ptr<Other>& wp);
+    weak_ptr(const weak_ptr<Other>& wp);
 
 template <class Other>
-weak_ptr(const shared_ptr<Other>& sp);
+    weak_ptr(const shared_ptr<Other>& sp);
+
+~weak_ptr();
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Другое*<br/>
+*Другие*\
 Тип, которым управляет общий или слабый указатель на аргумент.
 
-*wp*<br/>
+*WP*\
 Слабый указатель для копирования.
 
-*sp*<br/>
+*SP*\
 Общий указатель для копирования.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Каждый из конструкторов создает объект, который указывает на ресурс, имя которого указано в последовательности операндов.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__weak_ptr_construct.cpp
@@ -559,7 +563,3 @@ wp0.expired() == true
 *wp1.lock() == 5
 *wp2.lock() == 5
 ```
-
-## <a name="see-also"></a>См. также
-
-[Класс shared_ptr](../standard-library/shared-ptr-class.md)<br/>

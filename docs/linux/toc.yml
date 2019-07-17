@@ -2,14 +2,14 @@
   href: index.md
 - name: 'Скачивание, установка и настройка рабочей нагрузки разработки Linux'
   href: download-install-and-setup-the-linux-development-workload.md
-- name: Настройка проекта Linux
-  href: configure-a-linux-project.md
-- name: Настройка проекта Linux CMake
-  href: cmake-linux-project.md
-- name: Создание проекта Linux
-  href: create-a-new-linux-project.md
 - name: Подключение к удаленному компьютеру Linux
   href: connect-to-your-remote-linux-computer.md
+- name: Создание проекта Linux
+  href: create-a-new-linux-project.md
+- name: Настройка проекта Linux
+  href: configure-a-linux-project.md
+- name: Создание и настройка проекта Linux CMake
+  href: cmake-linux-project.md
 - name: Настройка проектов Linux для использования санитайзера адресов
   href: linux-asan-configuration.md
 - name: 'Развертывание, запуск и отладка проекта Linux'

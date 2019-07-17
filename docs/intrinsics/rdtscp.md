@@ -1,6 +1,6 @@
 ---
 title: __rdtscp
-ms.date: 11/04/2016
+ms.date: 07/11/2019
 f1_keywords:
 - __rdtscp
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8a31c6d19cd171cbe909c75a27c2389866bd578
+ms.sourcegitcommit: 0e3da5cea44437c132b5c2ea522bd229ea000a10
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263065"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67861117"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
@@ -42,7 +42,7 @@ unsigned __int64 __rdtscp(
 
 |Встроенная функция|Архитектура|
 |---------------|------------------|
-|`__rdtscp`|Семейство NPT AMD 0Fh или более поздней версии|
+|`__rdtscp`|x86, x64|
 
 **Файл заголовка** \<intrin.h >
 
@@ -50,25 +50,22 @@ unsigned __int64 __rdtscp(
 
 Эта встроенная функция создает `rdtscp` инструкции. Чтобы определить аппаратная поддержка для данной инструкции, вызовите `__cpuid` встроенная функция с `InfoType=0x80000001` и проверьте бит 27 `CPUInfo[3] (EDX)`. Этот бит равен 1, если инструкция поддерживается и 0 в противном случае.  Если вы запустите код, использующий этой встроенной функции на оборудовании, которое не поддерживает `rdtscp` инструкции, результаты будут непредсказуемыми.
 
-> [!CAUTION]
->  В отличие от `rdtsc`, `rdtscp` сериализации инструкция; тем не менее, компилятор может переместить код этой проблемы внутренние.
-
-Интерпретация TSC значения в этом поколении оборудования отличается от более ранних версий x64.  См. в разделе руководства оборудования, Дополнительные сведения.
+Эта инструкция ожидает, пока не выполнены все предыдущие инструкции и всех предыдущих загрузок видимы глобально. Тем не менее это не инструкцию сериализации. См. в разделе руководства Intel и AMD, Дополнительные сведения.
 
 Смысл значения в `TSC_AUX[31:0]` зависит от операционной системы.
 
 ## <a name="example"></a>Пример
 
-```
+```cpp
 #include <intrin.h>
 #include <stdio.h>
 int main()
 {
-unsigned __int64 i;
-unsigned int ui;
-i = __rdtscp(&ui);
-printf_s("%I64d ticks\n", i);
-printf_s("TSC_AUX was %x\n", ui);
+    unsigned __int64 i;
+    unsigned int ui;
+    i = __rdtscp(&ui);
+    printf_s("%I64d ticks\n", i);
+    printf_s("TSC_AUX was %x\n", ui);
 }
 ```
 
@@ -79,7 +76,6 @@ TSC_AUX was 0
 
 **Завершение блока, относящегося только к системам Майкрософт**
 
-Авторское право 2007 Дополнительно Micro устройств, Inc. Все права защищены. Воспроизвести с помощью разрешения Advanced Micro устройств, Inc.
 
 ## <a name="see-also"></a>См. также
 

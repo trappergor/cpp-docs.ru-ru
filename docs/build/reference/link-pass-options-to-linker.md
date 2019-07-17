@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C++]
 - cl.exe compiler [C++], passing options to linker
 ms.assetid: 16902a94-c094-4328-841f-3ac94ca04848
-ms.openlocfilehash: ef81a6617df811660506c08434f3b65e29155794
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37743e855c933b6236b5e7a837db257f332a3037
+ms.sourcegitcommit: bbaf65f8ed1af12828b38f8eacd24f934ac0e538
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62290687"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67155784"
 ---
 # <a name="link-pass-options-to-linker"></a>/link (Передача параметров компоновщику)
 
@@ -33,7 +33,7 @@ ms.locfileid: "62290687"
 
 ## <a name="remarks"></a>Примечания
 
-**/Link** параметр и его параметры компоновщика должны располагаться после имен файлов и параметров CL. Пробел между **/link** и `linkeroptions`. Дополнительные сведения см. в разделе [ссылку компоновщика MSVC](linking.md).
+**/Link** параметр и его параметры компоновщика должны располагаться после имен файлов и параметров CL. Пробел между **/link** и любые параметры компоновщика. Дополнительные сведения см. в разделе [ссылку компоновщика MSVC](linking.md).
 
 ## <a name="example"></a>Пример
 
@@ -45,7 +45,7 @@ ms.locfileid: "62290687"
 
 Интегрированная среда разработки обычно отправляет отдельные команды для компиляции и компоновки кода. Параметры компоновщика можно задать на страницах свойств проекта.
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Выберите **свойства конфигурации** > **компоновщика** папки.
 

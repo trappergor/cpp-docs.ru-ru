@@ -6,26 +6,31 @@ f1_keywords:
 helpviewer_keywords:
 - array header
 ms.assetid: 084147c1-e805-478e-8201-76846020f187
-ms.openlocfilehash: 8915a652fe442af84f2582b9b9d47a243f416eeb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fce204e3873151eafa0c4fa9c2b1e0af9971cfae
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377248"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243889"
 ---
 # <a name="ltarraygt"></a>&lt;array&gt;
 
 Определяет класс шаблона контейнеров **массива** и некоторые вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <array>
-```
+**Header:** \<array>
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Массива > Библиотека также использует `#include <initializer_list>` инструкции.
+
+## <a name="members"></a>Участники
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[array](../standard-library/array-class-stl.md)|Хранит последовательность элементов фиксированной длины.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Заключает в оболочку тип элемента массива.|
@@ -33,7 +38,7 @@ ms.locfileid: "62377248"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator==](../standard-library/array-operators.md#op_eq_eq)|Сравнение массивов на равенство.|
 |[operator!=](../standard-library/array-operators.md#op_neq)|Сравнение массивов на неравенство.|
@@ -44,7 +49,7 @@ ms.locfileid: "62377248"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[get](../standard-library/array-functions.md#get)|Получает указанный элемент массива.|
 |[swap](../standard-library/array-functions.md#swap)|Меняет местами содержимое одного массива с содержимым другого массива.|

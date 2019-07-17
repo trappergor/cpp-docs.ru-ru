@@ -200,48 +200,16 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: b914b3d2ed61c81629c06739eac86692d1444e58
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 7b0a8b427b919b624928a7d37d67937ac04884db
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450421"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245978"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;функции&gt; алгоритмов
 
-||||
-|-|-|-|
-|[move](#alg_move)|[adjacent_find](#adjacent_find)|[all_of](#all_of)|
-|[any_of](#any_of)|[binary_search](#binary_search)|[copy](#copy)|
-|[copy_backward](#copy_backward)|[copy_if](#copy_if)|[copy_n](#copy_n)|
-|[count](#count)|[count_if](#count_if)|[equal](#equal)|
-|[equal_range](#equal_range)|[fill](#fill)|[fill_n](#fill_n)|
-|[find](#find)|[find_end](#find_end)|[find_first_of](#find_first_of)|
-|[find_if](#find_if)|[find_if_not](#find_if_not)|[for_each](#for_each)|
-|[generate](#generate)|[generate_n](#generate_n)|[includes](#includes)|
-|[inplace_merge](#inplace_merge)|[is_heap](#is_heap)|[is_heap_until](#is_heap_until)|
-|[is_partitioned](#is_partitioned)|[is_permutation](#is_permutation)|[is_sorted](#is_sorted)|
-|[is_sorted_until](#is_sorted_until)|[iter_swap](#iter_swap)|[lexicographical_compare](#lexicographical_compare)|
-|[lower_bound](#lower_bound)|[make_heap](#make_heap)|[max](#max)|
-|[max_element](#max_element)|[merge](#merge)|[min](#min)|
-|[min_element](#min_element)|[minmax](#minmax)|[minmax_element](#minmax_element)|
-|[mismatch](#mismatch)|[move_backward](#move_backward)|[next_permutation](#next_permutation)|
-|[none_of](#none_of)|[nth_element](#nth_element)|[partial_sort](#partial_sort)|
-|[partial_sort_copy](#partial_sort_copy)|[partition](#partition)|[partition_copy](#partition_copy)|
-|[partition_point](#partition_point)|[pop_heap](#pop_heap)|[prev_permutation](#prev_permutation)|
-|[push_heap](#push_heap)|[random_shuffle](#random_shuffle)|[remove](#remove)|
-|[remove_copy](#remove_copy)|[remove_copy_if](#remove_copy_if)|[remove_if](#remove_if)|
-|[replace](#replace)|[replace_copy](#replace_copy)|[replace_copy_if](#replace_copy_if)|
-|[replace_if](#replace_if)|[reverse](#reverse)|[reverse_copy](#reverse_copy)|
-|[rotate](#rotate)|[rotate_copy](#rotate_copy)|[search](#search)|
-|[search_n](#search_n)|[set_difference](#set_difference)|[set_intersection](#set_intersection)|
-|[set_symmetric_difference](#set_symmetric_difference)|[set_union](#set_union)|[sort](#sort)|
-|[sort_heap](#sort_heap)|[stable_partition](#stable_partition)|[stable_sort](#stable_sort)|
-|[shuffle](#shuffle)|[swap](#swap)|[swap_ranges](#swap_ranges)|
-|[transform](#transform)|[unique](#unique)|[unique_copy](#unique_copy)|
-|[upper_bound](#upper_bound)|
-
-## <a name="adjacent_find"></a>  adjacent_find
+## <a name="adjacent_find"></a> adjacent_find
 
 Поиск двух соседних элементов, которые либо равны, либо удовлетворяют указанному условию.
 
@@ -256,17 +224,30 @@ ForwardIterator adjacent_find(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator adjacent_find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*Зап.*<br/>
+*Зап.* \
 Двоичный предикат, задающий условие, которому должны удовлетворять значения соседних элементов в диапазоне, по которому выполняется поиск.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -317,19 +298,21 @@ int main()
       cout << "There are not two adjacent elements that are equal."
            << endl;
    else
-      cout << "There are two adjacent elements that are equal."
-           << "\n They have a value of "
-           <<  *( result1 ) << "." << endl;
+      cout << "There are two adjacent elements that are equal.\n"
+           << "They have a value of "
+           << *( result1 ) << "." << endl;
 
    result2 = adjacent_find( L.begin( ), L.end( ), twice );
    if ( result2 == L.end( ) )
       cout << "There are not two adjacent elements where the "
-           << " second is twice the first." << endl;
+           << "second is twice the first." << endl;
    else
+   {
       cout << "There are two adjacent elements where "
-           << "the second is twice the first."
-           << "\n They have values of " << *(result2++);
-      cout << " & " << *result2 << "." << endl;
+           << "the second is twice the first.\n"
+           << "They have values of " << *(result2++)
+           << " & " << *result2 << "." << endl;
+   }
 }
 ```
 
@@ -341,7 +324,7 @@ There are two adjacent elements where the second is twice the first.
 They have values of 10 & 20.
 ```
 
-## <a name="all_of"></a>  all_of
+## <a name="all_of"></a> all_of
 
 Возвращает **true** когда условие выполняется каждым элементом заданного диапазона.
 
@@ -351,14 +334,21 @@ bool all_of(
     InputIterator first,
     InputIterator last,
     BinaryPredicatecomp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool all_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, откуда должна начинаться проверка условия. Итератор отмечает, где начинается диапазон элементов.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона элементов для проверки условия.
 
 *Зап.*<br/>
@@ -366,13 +356,48 @@ bool all_of(
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает **true** при обнаружении этого условия в каждом элементе в указанном диапазоне соответствует условию, и **false** Если условие не будет обнаружен по крайней мере один раз.
+Возвращает **true** Если условие выполняется каждым элементом в указанном диапазоне соответствует условию, или если диапазон пуст, и **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
 
 Функция шаблона возвращает **true** только если для каждого `N` в диапазоне `[0,Last - first)`, предикат `comp(*(_First + N))` — **true**.
 
-## <a name="any_of"></a>  any_of
+### <a name="example"></a>Пример
+
+```cpp
+// alg_all_of.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    list<int> li { 50, 40, 10, 20, 20 };
+    list<int>::iterator iter;
+
+    cout << "li = ( ";
+    for (iter = li.begin(); iter != li.end(); iter++)
+        cout << *iter << " ";
+    cout << ")" << endl;
+
+    // Check if all elements in li are even.
+    auto is_even = [](int elem){ return !(elem % 2); };
+    if (all_of(li.begin(), li.end(), is_even))
+        cout << "All the elements are even numbers.\n";
+    else
+        cout << "Not all the elements are even numbers.\n";
+}
+```
+
+```Output
+li = ( 50 40 10 20 20 )
+All the elements are even numbers.
+```
+
+## <a name="any_of"></a> any_of
 
 Возвращает **true** Если условие выполняется хотя бы один раз в указанный диапазон элементов.
 
@@ -382,17 +407,24 @@ bool any_of(
     InputIterator first,
     InputIterator last,
     UnaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool any_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, откуда должна начинаться проверка диапазона элементов на соответствие условию.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона элементов для проверки условия.
 
-*Зап.*<br/>
+*Зап.* \
 Условие для проверки. Оно предоставляется определенным пользователем объектом функции предиката. Предикат задает условие, которому должен соответствовать проверяемый элемент. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -405,7 +437,41 @@ bool any_of(
 
 `[0, last - first)`, предикат `comp(*(first + N))` имеет значение true.
 
-## <a name="binary_search"></a>  binary_search
+### <a name="example"></a>Пример
+
+```cpp
+// alg_any_of.cpp
+// compile with: /EHsc
+#include <list>
+#include <algorithm>
+#include <iostream>
+
+int main()
+{
+    using namespace std;
+
+    list<int> li { 51, 41, 11, 21, 20 };
+
+    cout << "li = ( ";
+    for (auto const& el : li)
+        cout << el << " ";
+    cout << ")" << endl;
+
+    // Check if there is an even elememt in li.
+    auto is_even = [](int const elem){ return !(elem % 2); };
+    if (any_of(li.begin(), li.end(), is_even))
+        cout << "There's an even element in li.\n";
+    else
+        cout << "There are no even elements in li.\n";
+}
+```
+
+```Output
+li = ( 51 41 11 21 20 )
+There's an even element in li.
+```
+
+## <a name="binary_search"></a> binary_search
 
 Проверяет, есть ли в отсортированном диапазоне элемент, равный указанному значению или эквивалентный ему в смысле, заданном двоичным предикатом.
 
@@ -426,16 +492,16 @@ bool binary_search(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*value*<br/>
+*value*\
 Значение должно соответствовать значению элемента или удовлетворять условию со значением элемента, заданному двоичным предикатом.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -536,7 +602,16 @@ int main()
 }
 ```
 
-## <a name="copy"></a>  copy
+## <a name="clamp"></a> CLAMP
+
+```cpp
+template<class T>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi);
+template<class T, class Compare>
+constexpr const T& clamp(const T& v, const T& lo, const T& hi, Compare comp);
+```
+
+## <a name="copy"></a> копирование
 
 Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в прямом направлении.
 
@@ -546,17 +621,23 @@ OutputIterator copy(
     InputIterator first,
     InputIterator last,
     OutputIterator destBeg);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода, обращающийся к позиции первого элемента в исходном диапазоне.
 
-*последний*<br/>
+*последний*\
 Итератор ввода, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в исходном диапазоне.
 
-*destBeg*<br/>
+*destBeg*\
 Итератор вывода указывает на позицию первого элемента в диапазоне назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -629,7 +710,7 @@ v2 with v1 insert = ( 0 3 6 9 0 10 20 21 24 27 30 )
 v2 with shifted insert = ( 0 3 0 10 20 10 20 21 24 27 30 )
 ```
 
-## <a name="copy_backward"></a>  copy_backward
+## <a name="copy_backward"></a> copy_backward
 
 Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.
 
@@ -643,13 +724,13 @@ BidirectionalIterator2 copy_backward(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, обращающийся к положению первого элемента в исходном диапазоне.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в исходном диапазоне.
 
-*destEnd*<br/>
+*destEnd*\
 Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -719,7 +800,7 @@ int main() {
 }
 ```
 
-## <a name="copy_if"></a>  copy_if
+## <a name="copy_if"></a> copy_if
 
 Копирует диапазон элементов, элементы, которые являются **true** заданного условия.
 
@@ -730,20 +811,27 @@ OutputIterator copy_if(
     InputIterator last,
     OutputIterator dest,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, ForwardIterator1 last,
+    ForwardIterator2 result, Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий начало диапазона для проверки условия.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона.
 
-*dest*<br/>
+*dest*\
 Выходной итератор, указывающий место назначения для скопированных элементов.
 
-*_Pred*<br/>
+*_Pred*\
 Условие, на соответствие которому проверяется каждый элемент в диапазоне. Это условие предоставляется определенным пользователем объектом функции предиката. Предикат принимает один аргумент и возвращает **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -758,7 +846,7 @@ OutputIterator copy_if(
 
 один раз для каждого `N` в диапазоне `[0, last - first)` строго на увеличение значений `N`, начиная с наименьшего значения. Если *dest* и *первый* обозначают области хранилища, *dest* не должны находиться в диапазоне `[ first, last )`.
 
-## <a name="copy_n"></a>  copy_n
+## <a name="copy_n"></a> copy_n
 
 Копирует указанное количество элементов.
 
@@ -768,17 +856,24 @@ OutputIterator copy_n(
     InputIterator first,
     Size count,
     OutputIterator dest);
+
+template<class ExecutionPolicy, class ForwardIterator1, class Size,
+class ForwardIterator2>
+ForwardIterator2 copy_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, Size n,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, откуда копировать элементы.
 
-*count*<br/>
+*число*\
 Целое число со знаком или без знака, указывающее количество копируемых элементов.
 
-*dest*<br/>
+*dest*\
 Выходной итератор, указывающий, куда копировать элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -789,7 +884,36 @@ OutputIterator copy_n(
 
 Функция шаблона проверяет `*(dest + N) = *(first + N))` один раз для каждого `N` в диапазоне `[0, count)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если *dest* и *первый* обозначают области хранилища, *dest* не должны находиться в диапазоне `[first, last)`.
 
-## <a name="count"></a>  count
+### <a name="example"></a>Пример
+
+```cpp
+// alg_copy_n.cpp
+// compile with: cl /EHsc /W4 alg_copy_n.cpp
+#include <algorithm>
+#include <iostream>
+#include <string>
+
+int main()
+{
+    using namespace std;
+    string s1{"dandelion"};
+    string s2{"badger"};
+
+    cout << s1 << " + " << s2 << " = ";
+    
+    // Copy the first 3 letters from s1 
+    // to the first 3 positions in s2
+    copy_n(s1.begin(), 3, s2.begin());
+
+    cout << s2 << endl;
+}
+```
+
+```Output
+dandelion + badger = danger
+```
+
+## <a name="count"></a> число
 
 Возвращает количество элементов в диапазоне, значения которых соответствуют заданному значению.
 
@@ -799,17 +923,25 @@ typename iterator_traits<InputIterator>::difference_type count(
     InputIterator first,
     InputIterator last,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+typename iterator_traits<ForwardIterator>::difference_type
+count(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий положение первого элемента в диапазоне для прохода.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий позицию, следующую за последним элементом в диапазоне для прохода.
 
-*Val*<br/>
+*Val*\
 Значение элементов для подсчета.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -859,7 +991,7 @@ v1 = ( 10 20 10 40 10 )
 The number of 10s in v2 is: 3.
 ```
 
-## <a name="count_if"></a>  count_if
+## <a name="count_if"></a> count_if
 
 Возвращает количество элементов в диапазоне, значения которых соответствуют заданному условию.
 
@@ -869,17 +1001,25 @@ typename iterator_traits<InputIterator>::difference_type count_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+typename iterator_traits<ForwardIterator>::difference_type
+count_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*_Pred*<br/>
+*_Pred*\
 Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был подсчитан. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -933,7 +1073,7 @@ v1 = ( 10 20 10 40 10 )
 The number of elements in v1 greater than 10 is: 2.
 ```
 
-## <a name="equal"></a>  equal
+## <a name="equal"></a> равно
 
 Сравнивает два диапазона поэлементно на признак равенства или равноценности в смысле, заданном бинарным предикатом.
 
@@ -969,23 +1109,50 @@ bool equal(
     InputIterator2  First2,
     InputIterator2  Last2,
     BinaryPredicate Comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+bool equal(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, ForwardIterator1 last1,
+    ForwardIterator2 first2, ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на положение первого элемента в первом диапазоне для тестирования.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на положение, следующее за последним элементом, в первом диапазоне для тестирования.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на положение первого элемента во втором диапазоне для тестирования.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на положение, следующее за последним элементом, во втором диапазоне для тестирования.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1033,7 +1200,7 @@ int main()
 }
 ```
 
-## <a name="equal_range"></a>  equal_range
+## <a name="equal_range"></a> equal_range
 
 Принимая во внимание упорядоченный диапазон, находит поддиапазон, в котором все элементы эквивалентны заданному значению.
 
@@ -1054,16 +1221,16 @@ pair<ForwardIterator, ForwardIterator> equal_range(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*Val*<br/>
+*Val*\
 Значение для поиска в упорядоченном диапазоне.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1199,7 +1366,7 @@ int main()
 }
 ```
 
-## <a name="fill"></a>  fill
+## <a name="fill"></a> Заливка
 
 Присваивает одно и то же новое значение каждому элементу в заданном диапазоне.
 
@@ -1209,17 +1376,24 @@ void fill(
     ForwardIterator first,
     ForwardIterator last,
     const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void fill(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне для прохода.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для прохода.
 
-*Val*<br/>
+*Val*\
 Значение, которое назначается элементам в диапазоне [ *первый*, *последнего*).
 
 ### <a name="remarks"></a>Примечания
@@ -1267,7 +1441,7 @@ Vector v1 = ( 0 5 10 15 20 25 30 35 40 45 )
 Modified v1 = ( 0 5 10 15 20 2 2 2 2 2 )
 ```
 
-## <a name="fill_n"></a>  fill_n
+## <a name="fill_n"></a> fill_n
 
 Назначает новое значение указанному количеству элементов в диапазоне, начиная с определенного элемента.
 
@@ -1277,17 +1451,25 @@ OutputIterator fill_n(
     OutputIterator First,
     Size Count,
     const Type& Val);
+
+template<class ExecutionPolicy, class ForwardIterator,
+class Size, class T>
+ForwardIterator fill_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Выходной итератор, указывающий позицию первого элемента в диапазоне присваиваемое значение *Val*.
 
-*Количество*<br/>
+*число*\
 Целое число со знаком или без знака, указывающее количество элементов, которым следует назначить значение.
 
-*Val*<br/>
+*Val*\
 Значение, которое назначается элементам в диапазоне [ *первый*, *First + Count*).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1346,7 +1528,7 @@ int main()
 }
 ```
 
-## <a name="find"></a>  find
+## <a name="find"></a> найти
 
 Находит позицию первого вхождения элемента с заданным значением в диапазон.
 
@@ -1356,17 +1538,24 @@ InputIterator find(
     InputIterator first,
     InputIterator last,
     const T& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator find(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий положение первого элемента в диапазоне для поиска заданного значения.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий положение после последнего элемента в диапазоне для поиска заданного значения.
 
-*Val*<br/>
+*Val*\
 Значение, которое нужно найти.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1379,7 +1568,7 @@ InputIterator find(
 
 Пример кода с использованием `find()` см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="find_end"></a>  find_end
+## <a name="find_end"></a> find_end
 
 Ищет в диапазоне последнюю подпоследовательность, совпадающую с заданной последовательностью, или эквивалентной согласно условию, заданному двоичным предикатом.
 
@@ -1398,23 +1587,43 @@ ForwardIterator1 find_end(
     ForwardIterator2 First2,
     ForwardIterator2 Last2,
     Pred Comp);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_end(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, указывающий на положение, следующее за последним элементом в диапазоне для поиска.
 
-*first2*<br/>
+*first2*\
 Прямой итератор, указывающий на положение первого элемента в диапазоне для поиска.
 
-*last2*<br/>
+*last2*\
 Прямой итератор, указывающий на положение, следующее за последним элементом в диапазоне для поиска.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1523,7 +1732,7 @@ There is a sequence of elements in v1 that are equivalent to those
 in v2 under the binary predicate twice and that begins at position 8.
 ```
 
-## <a name="find_first_of"></a>  find_first_of
+## <a name="find_first_of"></a> find_first_of
 
 Выполняет поиск первого вхождения любого из нескольких значений в заданный диапазон или первого вхождения любого из нескольких элементов, равноценных в смысле, заданном бинарным предикатом, в указанный набор элементов.
 
@@ -1542,23 +1751,43 @@ ForwardIterator1 find_first_of(
     ForwardIterator2  first2,
     ForwardIterator2 Last2,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2, class BinaryPredicate>
+ForwardIterator1
+find_first_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*first2*<br/>
+*first2*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для сравнения.
 
-*last2*<br/>
+*last2*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для сравнения.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1670,7 +1899,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="find_if"></a>  find_if
+## <a name="find_if"></a> find_if
 
 Находит позицию первого вхождения элемента, удовлетворяющего определенному условию, в диапазон.
 
@@ -1680,17 +1909,23 @@ InputIterator find_if(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*Пред*<br/>
+*Пред*\
 Определенный пользователем объект функции предиката или [лямбда-выражение](../cpp/lambda-expressions-in-cpp.md), определяющее условие, которому должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает **true** (выполняется) или **false** (не выполнено). Подпись *pred* должна быть `bool pred(const T& arg);`, где `T` — это тип, к которому `InputIterator` может быть неявно преобразован при разыменовании. **Const** ключевое слово, отображается только для демонстрации того, что объект функции или лямбда не должен изменять аргумент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1786,7 +2021,7 @@ int main()
 }
 ```
 
-## <a name="find_if_not"></a>  find_if_not
+## <a name="find_if_not"></a> find_if_not
 
 Возвращает первый элемент, который не удовлетворяет условию, в указанном диапазоне.
 
@@ -1796,17 +2031,23 @@ InputIterator find_if_not(
     InputIterator first,
     InputIterator last,
     Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator find_if_not(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*Пред*<br/>
+*Пред*\
 Определенный пользователем объект функции предиката или [лямбда-выражение](../cpp/lambda-expressions-in-cpp.md), определяющее условие, которому не должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает **true** (выполняется) или **false** (не выполнено). Подпись *pred* должна быть `bool pred(const T& arg);`, где `T` — это тип, к которому `InputIterator` может быть неявно преобразован при разыменовании. **Const** ключевое слово, отображается только для демонстрации того, что объект функции или лямбда не должен изменять аргумент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1819,7 +2060,7 @@ InputIterator find_if_not(
 
 Пример кода, готовый для адаптации к `find_if_not()`, см. в разделе [find_if](../standard-library/algorithm-functions.md#find_if).
 
-## <a name="for_each"></a>  for_each
+## <a name="for_each"></a> for_each
 
 Применяет заданный объект функции к каждому элементу в прямом порядке в пределах диапазона и возвращает объект функции.
 
@@ -1829,17 +2070,24 @@ Function for_each(
     InputIterator first,
     InputIterator last,
     Function func);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Function>
+void for_each(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Function f);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода содержит позицию первого элемента из нужного диапазона.
 
-*последний*<br/>
+*последний*\
 Итератор ввода содержит положение элемента, стоящего за последним рассматриваемым элементом в нужном диапазоне.
 
-*_Func*<br/>
+*_Func*\
 Определенный пользователем объект функции, который применяется к каждому элементу в диапазоне.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1852,7 +2100,7 @@ Function for_each(
 
 Указанный диапазон должен быть допустимым. Все указатели должны поддерживать удаление ссылок, а последняя позиция в последовательности должна быть доступна из первой позиции за счет увеличения на один.
 
-Отношение сложности линейное с не более ( *последнего* -  *первый*) сравнений.
+Отношение сложности линейное с не более (*последнего* - *первый*) сравнений.
 
 ### <a name="example"></a>Пример
 
@@ -1967,7 +2215,24 @@ The average of the elements of v1 is:
 Average ( v1mod2 ) = 10.
 ```
 
-## <a name="generate"></a>  generate
+## <a name="for_each_n"></a> for_each_n
+
+```cpp
+template<class InputIterator, class Size, class Function>
+InputIterator for_each_n(
+    InputIterator first, 
+    Size n, 
+    Function f);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Function>
+ForwardIterator for_each_n(
+    ExecutionPolicy&& exec, 
+    ForwardIterator first, 
+    Size n, 
+    Function f);
+```
+
+## <a name="generate"></a> создать
 
 Присваивает значения, создаваемые объектом функции, каждому элементу в диапазоне.
 
@@ -1977,17 +2242,23 @@ void generate(
     ForwardIterator first,
     ForwardIterator last,
     Generator _Gen);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Generator>
+void generate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, ForwardIterator last,
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий позицию первого элемента в диапазоне, которому назначаются значения.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий позицию, следующую за последним элементом в диапазоне, которому назначаются значения.
 
-*_Gen*<br/>
+*_Gen*\
 Объект функции, который вызывается без аргументов и используется для формирования значений, которые необходимо назначить каждому из элементов в диапазоне.
 
 ### <a name="remarks"></a>Примечания
@@ -2041,7 +2312,7 @@ Vector v1 is ( 41 18467 6334 26500 19169 ).
 Deque deq1 is ( 15724 11478 29358 26962 24464 ).
 ```
 
-## <a name="generate_n"></a>  generate_n
+## <a name="generate_n"></a> generate_n
 
 Присваивает значения, создаваемые объектом функции, указанному количеству элементов в диапазоне и возвращается на позицию, следующую за последним присвоенным значением.
 
@@ -2051,17 +2322,24 @@ void generate_n(
     OutputIterator First,
     Diff Count,
     Generator Gen);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class Generator>
+ForwardIterator generate_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    Size n, 
+    Generator gen);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Выходной итератор, обращающийся к позиции первого элемента в диапазоне, которому назначаются значения.
 
-*Количество*<br/>
+*число*\
 Целочисленный тип со знаком или без знака, указывающий количество элементов, которым функция генератора назначит значение.
 
-*Gen*<br/>
+*Gen*\
 Объект функции, который вызывается без аргументов и используется для формирования значений, которые необходимо назначить каждому из элементов в диапазоне.
 
 ### <a name="remarks"></a>Примечания
@@ -2115,7 +2393,7 @@ int main()
 }
 ```
 
-## <a name="includes"></a>  includes
+## <a name="includes"></a> включает в себя
 
 Проверяет, содержит ли один отсортированный диапазон все элементы, содержащиеся во втором отсортированном диапазоне, где порядок сортировки или критерий эквивалентности элементов можно задать бинарным предикатом.
 
@@ -2134,23 +2412,41 @@ bool includes(
     InputIterator2 first2,
     InputIterator2 last2,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool includes(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые должны проверяться на наличие в первом диапазоне всех элементов из второго диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2320,7 +2616,7 @@ At least one of the elements in vector v2b is not contained in vector v2a.
 At least one of the elements in vector v3b is  not contained under mod_lesser in vector v3a.
 ```
 
-## <a name="inplace_merge"></a>  inplace_merge
+## <a name="inplace_merge"></a> inplace_merge
 
 Объединяет элементы из двух последовательных упорядоченных диапазонов в один упорядоченный диапазон, где критерий порядка сортировки может быть указан бинарным предикатом.
 
@@ -2337,20 +2633,35 @@ void inplace_merge(
     BidirectionalIterator middle,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class BidirectionalIterator>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Compare>
+void inplace_merge(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator middle,
+    BidirectionalIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, указывающий позицию первого элемента в первом из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*среднего*<br/>
+*среднего*\
 Двунаправленный итератор, указывающий позицию первого элемента во втором из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий позицию, следующую за последним элементом во втором из двух последовательных упорядоченных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="remarks"></a>Примечания
@@ -2472,7 +2783,7 @@ Merged inplace with binary predicate mod_lesser specified,
 vector v3mod = ( 0 0 1 -1 2 -2 3 -3 4 -4 5 -5 )
 ```
 
-## <a name="is_heap"></a>  is_heap
+## <a name="is_heap"></a> is_heap
 
 Возвращает **true** Если элементы в указанном диапазоне образуют кучу.
 
@@ -2487,17 +2798,30 @@ bool is_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+bool is_heap(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, указывающий начало диапазона для проверки кучи.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Условие для проверки порядка элементов. Двоичный предикат принимает один аргумент и возвращает **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2512,7 +2836,7 @@ bool is_heap(
 
 `is_heap_until(first, last, comp) == last`.
 
-## <a name="is_heap_until"></a>  is_heap_until
+## <a name="is_heap_until"></a> is_heap_until
 
 Возвращает итератор, расположенный на первый элемент в диапазоне [ `begin`, `end`), не удовлетворяет условию упорядочения кучи, или *окончания* Если диапазон образует кучу.
 
@@ -2527,17 +2851,30 @@ RandomAccessIterator is_heap_until(
     RandomAccessIterator begin,
     RandomAccessIterator end,
     BinaryPredicate compare);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+RandomAccessIterator is_heap_until(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*begin*<br/>
+*начать*\
 Итератор произвольного доступа, который задает первый элемент диапазона для проверки кучи.
 
-*end*<br/>
+*End*\
 Итератор произвольного доступа, который задает конец диапазона для проверки кучи.
 
-*compare*<br/>
+*Сравнение*\
 Двухместный предикат, который задает условие строгого слабого упорядочения, определяющее кучу. Предикат по умолчанию, когда *сравнения* не указан — `std::less<>`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2546,11 +2883,11 @@ RandomAccessIterator is_heap_until(
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-шаблон возвращает последний итератор `next` в `[ begin , end ]` где `[ begin , next)` — это куча, упорядоченная по объекту функции `std::less<>`. Если расстояние `end - begin < 2`, функция возвращает *окончания*.
+Первая функция-шаблон возвращает последний итератор `next` в `[begin , end]` где `[begin , next)` — это куча, упорядоченная по объекту функции `std::less<>`. Если расстояние `end - begin < 2`, функция возвращает *окончания*.
 
 Вторая функция-шаблон работает так же, как первая, но использует в качестве условия упорядочения кучи предикат `compare` вместо `std::less<>`.
 
-## <a name="is_partitioned"></a>  is_partitioned
+## <a name="is_partitioned"></a> is_partitioned
 
 Возвращает **true** Если все элементы в заданном диапазоне, возвращающие **true** для условие располагаются перед всеми элементами, возвращающими **false**.
 
@@ -2560,17 +2897,24 @@ bool is_partitioned(
     InputIterator first,
     InputIterator last,
     BinaryPredicate comp);
+    
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool is_partitioned(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, где начинается диапазон для проверки условия.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Условие для проверки. Оно предоставляется определенным пользователем объектом функции, задающим условие, которому должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2579,9 +2923,9 @@ bool is_partitioned(
 
 ### <a name="remarks"></a>Примечания
 
-Функция шаблона возвращает **true** только если все элементы в `[` `first ,` `last )` разделяются по *comp*; то есть все элементы `X` в `[` `first ,` `last )` для которого `comp (X)` имеет значение true, находятся перед всеми элементами `Y` для которого `comp (Y)` — **false**.
+Функция шаблона возвращает **true** только если все элементы в `[first, last)` разделяются по *comp*; то есть все элементы `X` в `[first, last)` для которого `comp (X)` имеет значение true находятся перед всеми элементами `Y` для которого `comp (Y)` — **false**.
 
-## <a name="is_permutation"></a>  is_permutation
+## <a name="is_permutation"></a> is_permutation
 
 Возвращает значение true, если оба диапазона содержат одинаковые элементы и не важно, располагаются ли элементы в одном и том же порядке. Используйте двух-диапазонные перегрузки в коде C++ 14. Перегрузки, использующие только один итератор для второго диапазона, не обнаруживают различия в тех случаях, когда второй диапазон длиннее, чем первый, и их поведение может быть непредсказуемо, если второй диапазон короче, чем первый.
 
@@ -2618,19 +2962,19 @@ bool is_permutation(
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, указывающий на первый элемент диапазона.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, указывающий на место, следующее за последним элементом диапазона.
 
-*first2*<br/>
+*first2*\
 Прямой итератор, указывающий на первый элемент второго диапазона, используемый для сравнения.
 
-*last2*<br/>
+*last2*\
 Прямой итератор, указывающий на место, следующее за последним элементом второго диапазона, используемым для сравнения.
 
-*Пред*<br/>
+*Пред*\
 Предикат, который проверяет равенство и возвращает **bool**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2701,7 +3045,7 @@ int main()
 }
 ```
 
-## <a name="is_sorted"></a>  is_sorted
+## <a name="is_sorted"></a> is_sorted
 
 Возвращает **true** Если элементы в указанном диапазоне расположены в порядке сортировки.
 
@@ -2716,17 +3060,30 @@ bool is_sorted(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+bool is_sorted(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий, где начинается диапазон для проверки.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Условие теста для определения порядка между двумя элементами. Предикат принимает один аргумент и возвращает значение **true** или **false**. Он выполняет ту же задачу, что и `operator<`.
 
 ### <a name="remarks"></a>Примечания
@@ -2735,7 +3092,7 @@ bool is_sorted(
 
 Вторая функция-шаблон возвращает `is_sorted_until( first, last , comp ) == last`. *Comp* функции предиката выполняет сравнение порядка.
 
-## <a name="is_sorted_until"></a>  is_sorted_until
+## <a name="is_sorted_until"></a> is_sorted_until
 
 Возвращает `ForwardIterator`, установленный в последний элемент в порядке сортировки из указанного диапазона.
 
@@ -2751,17 +3108,30 @@ ForwardIterator is_sorted_until(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator is_sorted_until(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий, где начинается диапазон для проверки.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Условие теста для определения порядка между двумя элементами. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -2770,11 +3140,11 @@ ForwardIterator is_sorted_until(
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-шаблон возвращает последний итератор `next` в `[` `first ,` `last ]`, так что `[` `first , next)` — это последовательность, упорядоченная по `operator<`. Если `distance()` `< 2` функция возвращает *последнего*.
+Первая функция-шаблон возвращает последний итератор `next` в `[first, last]` таким образом, чтобы `[first, next)` это последовательность, упорядоченная по `operator<`. Если `distance()` `< 2` функция возвращает *последнего*.
 
 Вторая функция шаблона работает так же, за исключением того, что она заменяет `operator<(X, Y)` на `comp (X, Y)`.
 
-## <a name="iter_swap"></a>  iter_swap
+## <a name="iter_swap"></a> iter_swap
 
 Меняет местами два значения, указанные парой определенных итераторов.
 
@@ -2785,15 +3155,15 @@ void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из прямых итераторов, значение которого должно быть изменено.
 
-*right*<br/>
+*Правильно*\
 Второй из прямых итераторов, значение которого должно быть изменено.
 
 ### <a name="remarks"></a>Примечания
 
-Рекомендуется использовать функцию `swap` вместо i **ter_swap**, которая включена в стандарт C++ для обеспечения обратной совместимости. Если `Fit1` и `Fit2` являются прямыми итераторами, затем `iter_swap` ( `Fit1`, `Fit2` ), эквивалентно `swap` ( \* `Fit1`, \* `Fit2` ).
+Рекомендуется использовать функцию `swap` вместо i **ter_swap**, которая включена в стандарт C++ для обеспечения обратной совместимости. Если `Fit1` и `Fit2` являются прямыми итераторами, затем `iter_swap(Fit1, Fit2)`, эквивалентно `swap( *Fit1, *Fit2)`.
 
 Типы значений входных прямых итераторов должны иметь одно и то же значение.
 
@@ -2930,7 +3300,7 @@ vector v1 is: v1 = ( 4 1 2 3 ).
 & deque deq2 is: deq2 = ( 0 5 ).
 ```
 
-## <a name="lexicographical_compare"></a>  lexicographical_compare
+## <a name="lexicographical_compare"></a> lexicographical_compare
 
 Сравнивает две последовательности поэлементно для определения того, какой элемент из двух меньше.
 
@@ -2949,23 +3319,41 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Compare>
+bool lexicographical_compare(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на положение первого элемента в первом диапазоне для сравнения.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на положение, следующее за последним элементом в первом диапазоне для сравнения.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на положение первого элемента во втором диапазоне для сравнения.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на положение, следующее за последним элементом во втором диапазоне для сравнения.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3077,7 +3465,7 @@ Vector v1 is lexicographically_less than L1.
 Vector v1 is not lexicographically_less than v2 under twice.
 ```
 
-## <a name="lower_bound"></a>  lower_bound
+## <a name="lower_bound"></a> lower_bound
 
 Находит позицию первого элемента в упорядоченном диапазоне, значение которого больше или равно указанному значению, где критерий упорядочивания может быть задан бинарным предикатом.
 
@@ -3098,16 +3486,16 @@ ForwardIterator lower_bound(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*value*<br/>
+*value*\
 Значение, чья первая позиция или возможная первая позиция ищется в упорядоченном диапазоне.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3216,7 +3604,7 @@ int main()
 }
 ```
 
-## <a name="make_heap"></a>  make_heap
+## <a name="make_heap"></a> make_heap
 
 Преобразует элементы из указанного диапазона в кучу, в которой первый элемент является наибольшим и для которой критерий сортировки может быть определен бинарным предикатом.
 
@@ -3235,13 +3623,13 @@ void make_heap(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в диапазоне, подлежащем преобразованию в кучу.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне, подлежащем преобразованию в кучу.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -3298,7 +3686,7 @@ int main() {
 }
 ```
 
-## <a name="max"></a>  max
+## <a name="max"></a> max
 
 Сравнивает два объекта и возвращает больший из них, где критерий упорядочивания может быть указан бинарным предикатом.
 
@@ -3323,16 +3711,16 @@ constexpr Type& max(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Второй из сравниваемых объектов.
 
-*Зап.*<br/>
+*Зап.* \
 Двоичный предикат, используемый для сравнения двух объектов.
 
-*_IList*<br/>
+*_IList*\
 Список initializer с объектами, которые необходимо сравнить.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3511,7 +3899,7 @@ Vector v4 = max (v1,v2) is ( 0 1 2 ).
 Vector v5 = max (v1,v3) is ( 0 2 4 ).
 ```
 
-## <a name="max_element"></a>  max_element
+## <a name="max_element"></a> max_element
 
 Находит первое вхождение наибольшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.
 
@@ -3521,17 +3909,30 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator max_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий положение первого элемента в диапазоне для поиска наибольшего элемента.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий положение, следующее за последним элементом в диапазоне для поиска наибольшего элемента.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3644,7 +4045,7 @@ int main()
 }
 ```
 
-## <a name="merge"></a>  merge
+## <a name="merge"></a> Слияние
 
 Объединяет все элементы из двух исходных упорядоченных диапазонов в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.
 
@@ -3665,26 +4066,47 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator merge(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, обращающийся к позиции первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*last1*<br/>
+*last1*\
 Входной итератор, обращающийся к позиции, следующей за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*first2*<br/>
+*first2*\
 Входной итератор, обращающийся к позиции первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*last2*<br/>
+*last2*\
 Входной итератор, обращающийся к позиции, следующей за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон.
 
-*result*<br/>
+*результат*\
 Выходной итератор, обращающийся к позиции первого элемента в диапазоне назначения, где два исходных диапазона следует объединить в один диапазон.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -3817,7 +4239,7 @@ int main() {
 }
 ```
 
-## <a name="min"></a>  min
+## <a name="min"></a> мин.
 
 Сравнивает два объекта и возвращает меньший из них, где критерий упорядочивания может быть указан бинарным предикатом.
 
@@ -3842,16 +4264,16 @@ constexpr Type min(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Второй из сравниваемых объектов.
 
-*Зап.*<br/>
+*Зап.* \
 Двоичный предикат, используемый для сравнения двух объектов.
 
-*_IList*<br/>
+*_IList*\
 Списокinitializer_list с объектами для сравнения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4029,7 +4451,7 @@ Vector v4 = min ( v1,v2 ) is ( 0 1 2 ).
 Vector v5 = min ( v1,v3 ) is ( 0 1 2 ).
 ```
 
-## <a name="min_element"></a>  min_element
+## <a name="min_element"></a> min_element
 
 Находит первое вхождение наименьшего элемента в указанном диапазоне, где критерий упорядочивания может быть указан бинарным предикатом.
 
@@ -4042,17 +4464,30 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
+
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+ForwardIterator min_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий положение первого элемента в диапазоне для поиска наименьшего элемента.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий положение, следующее за последним элементом в диапазоне для поиска наименьшего элемента.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4175,7 +4610,7 @@ The smallest element in v1 under the mod_lesser
 binary predicate is: 0
 ```
 
-## <a name="minmax_element"></a>  minmax_element
+## <a name="minmax_element"></a> minmax_element
 
 Выполняет работу, которую делают `min_element` и `max_element`, в одном вызове.
 
@@ -4189,17 +4624,32 @@ constexpr pair<ForwardIterator, ForwardIterator> minmax_element(
     ForwardIterator  first,
     ForwardIterator Last,
     BinaryPredicate  comp);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class Compare>
+pair<ForwardIterator, ForwardIterator>
+minmax_element(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий начало диапазона.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Дополнительный тест, используемый для упорядочивания элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4222,7 +4672,7 @@ Returns
 
 Если последовательность является пустым, функция выполняет не более `3 * (last - first - 1) / 2` сравнения.
 
-## <a name="minmax"></a>  minmax
+## <a name="minmax"></a> minmax
 
 Сравнивает два входных параметра и возвращает их в виде пары, в порядке от меньшего к большему.
 
@@ -4247,16 +4697,16 @@ constexpr pair<Type&, Type&> minmax(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Второй из сравниваемых объектов.
 
-*Зап.*<br/>
+*Зап.* \
 Двоичный предикат, используемый для сравнения двух объектов.
 
-*_IList*<br/>
+*_IList*\
 Списокinitializer_list с объектами для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -4269,7 +4719,7 @@ constexpr pair<Type&, Type&> minmax(
 
 Функция выполняет точно одно сравнение.
 
-## <a name="mismatch"></a>  mismatch
+## <a name="mismatch"></a> Несоответствие
 
 Сравнивает поэлементно два диапазона и находит первую позицию, где элементы отличаются.
 
@@ -4306,23 +4756,62 @@ mismatch(
     InputIterator2 First2,
     InputIterator2 Last2,
     BinaryPredicate Comp);
+
+//C++17
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    BinaryPredicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+pair<ForwardIterator1, ForwardIterator2>
+mismatch(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на положение первого элемента в первом диапазоне для тестирования.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на положение, следующее за последним элементом, в первом диапазоне для тестирования.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на положение первого элемента во втором диапазоне для тестирования.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на положение, следующее за последним элементом, во втором диапазоне для тестирования.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, который сравнивает текущие элементы в каждом диапазоне и определяет, являются ли они равными. Он возвращает значение **true** при выполнении условия и значение **false** — в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4422,9 +4911,9 @@ int main()
     cin >> c;
 
 }
+```
 
-/*
-Output:
+```Output
 C++03: vec_1 and vec_2 are a mismatch: false
 C++14: vec_1 and vec_2: mismatch. Left iterator at end right iterator at 30
 C++14 vec_1 v. vec_2 modified: mismatch. Left iterator at 15 right iterator at 42
@@ -4432,10 +4921,9 @@ C++14 vec_3 v. vec_4 with pred:  match.
 C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right iterator at 31
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
-*/
 ```
 
-## <a name="alg_move"></a>  &lt;alg&gt; move
+## <a name="alg_move"></a> &lt;ALG&gt; перемещения
 
 Перемещает элементы, связанные с заданным диапазоном.
 
@@ -4445,24 +4933,32 @@ OutputIterator move(
     InputIterator first,
     InputIterator last,
     OutputIterator dest);
+    
+template<class ExecutionPolicy, class ForwardIterator1,
+class ForwardIterator2>
+ForwardIterator2 move(
+    ExecutionPolicy&& exec, 
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, откуда начинается диапазон элементов для перемещения.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона элементов для перемещения.
 
-*dest*<br/>
+*dest*\
 Выходной итератор, который должен содержать перемещенные элементы.
 
 ### <a name="remarks"></a>Примечания
 
 Функция шаблона проверяет `*(dest + N) = move(*(first + N))` один раз для каждого `N` в диапазоне `[0, last - first)`, строго на увеличение значений `N` начиная с наименьшего значения. Затем оно возвращает значение `dest + N`. Если `dest` и *первый* обозначают области хранилища, *dest* не должны находиться в диапазоне `[first, last)`.
 
-## <a name="move_backward"></a>  move_backward
+## <a name="move_backward"></a> move_backward
 
 Перемещает элементы одного итератора в другой. Перемещение начинается с последнего элементом в указанном диапазоне и завершается первым элементом в этом диапазоне.
 
@@ -4476,13 +4972,13 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор, указывающий начало диапазона, из которого должны перемещаться элементы.
 
-*последний*<br/>
+*последний*\
 Итератор, указывающий конец диапазона, из которого должны перемещаться элементы. Этот элемент не перемещается.
 
-*destEnd*<br/>
+*destEnd*\
 Двунаправленный итератор, обращающийся к позиции, которая на единицу превышает позицию завершающего элемента в диапазоне назначения.
 
 ### <a name="remarks"></a>Примечания
@@ -4491,7 +4987,7 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
 
 `move` и `move_backward` — функциональный эквивалент использованию `copy` и `copy_backward` с итератором перемещения.
 
-## <a name="next_permutation"></a>  next_permutation
+## <a name="next_permutation"></a> next_permutation
 
 Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически следующий больший", если такая существует, где смысл термина "следующий" может быть задан бинарным предикатом.
 
@@ -4505,13 +5001,13 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, B
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, указывающий позицию первого элемента в диапазоне, в котором переставляются элементы.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4665,7 +5161,7 @@ After another next_permutation of vector v1,
 v1 =   ( -3 -2 -1 1 0 2 3 ).
 ```
 
-## <a name="nth_element"></a>  nth_element
+## <a name="nth_element"></a> nth_element
 
 Разделяет диапазон элементов, правильно находя *n*-й элемент последовательности в диапазоне, чтобы все элементы перед ним были меньше или равны ему, а все элементы в последовательности после него — больше либо равны ему.
 
@@ -4675,20 +5171,35 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
+
+template<class ExecutionPolicy, class RandomAccessIterator>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void nth_element(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator nth,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, указывающий позицию первого элемента в разделяемом диапазоне.
 
-*_Nth*<br/>
+*_Nth*\
 Итератор произвольного доступа, указывающий позицию элемента для правильного упорядочивания на границе раздела.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в разделяемом диапазоне.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -4767,24 +5278,31 @@ int main() {
 }
 ```
 
-## <a name="none_of"></a>  none_of
+## <a name="none_of"></a> none_of
 
 Возвращает **true** Если условие не выполняется ни одним элементом заданного диапазона.
 
 ```cpp
 template<class InputIterator, class BinaryPredicate>
 bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
+
+template <class ExecutionPolicy, class ForwardIterator, class Predicate>
+bool none_of(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий, откуда должна начинаться проверка диапазона элементов на соответствие условию.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона элементов.
 
-*Зап.*<br/>
+*Зап.* \
 Условие для проверки. Это условие предоставляется определенным пользователем объектом функции предиката, который задает условие. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -4795,7 +5313,7 @@ bool none_of(InputIterator first, InputIterator last, BinaryPredicate comp);
 
 Функция шаблона возвращает **true** только если для некоторых `N` в диапазоне `[0, last - first)`, предикат `comp(*(first + N))` всегда **false**.
 
-## <a name="partial_sort"></a>  partial_sort
+## <a name="partial_sort"></a> partial_sort
 
 Упорядочивает указанное число меньших элементов в диапазоне в не нисходящий порядок или согласно критерию упорядочивания, заданному бинарным предикатом.
 
@@ -4812,20 +5330,35 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void partial_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first,
+    RandomAccessIterator middle,
+    RandomAccessIterator last, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в сортируемом диапазоне.
 
-*sortEnd*<br/>
+*sortEnd*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в сортируемом поддиапазоне.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне для частичной сортировки.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -4909,7 +5442,7 @@ Partially resorted (UDgreater) vector:
 v1 = ( 11 10 9 8 7 6 5 4 0 1 2 3 )
 ```
 
-## <a name="partial_sort_copy"></a>  partial_sort_copy
+## <a name="partial_sort_copy"></a> partial_sort_copy
 
 Копирует элементы из исходного диапазона в диапазон назначения, где исходные элементы упорядочены по критерию "меньше либо равно" или согласно другому заданному бинарному предикату.
 
@@ -4928,23 +5461,41 @@ RandomAccessIterator partial_sort_copy(
     RandomAccessIterator first2,
     RandomAccessIterator last2,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last);
+
+template<class ExecutionPolicy, class ForwardIterator, class RandomAccessIterator,
+class Compare>
+RandomAccessIterator partial_sort_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    RandomAccessIterator result_first,
+    RandomAccessIterator result_last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Итератор ввода, обращающийся к позиции первого элемента в исходном диапазоне.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий позицию, следующую за последним элементом в исходном диапазоне.
 
-*first2*<br/>
+*first2*\
 Итератор произвольного доступа, указывающий позицию первого элемента в сортируемом диапазоне назначения.
 
-*last2*<br/>
+*last2*\
 Итератор произвольного доступа, указывающий позицию, следующую за последним элементом в сортируемом диапазоне назначения.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5033,7 +5584,7 @@ int main() {
 }
 ```
 
-## <a name="partition"></a>  partition
+## <a name="partition"></a> секции
 
 Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют.
 
@@ -5043,17 +5594,24 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator partition(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор адресует позицию первого элемента в разделяемом диапазоне.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий позицию, следующую за последним элементом в разделяемом диапазоне.
 
-*Зап.*<br/>
+*Зап.* \
 Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был классифицирован. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5107,7 +5665,7 @@ int main() {
 }
 ```
 
-## <a name="partition_copy"></a>  partition_copy
+## <a name="partition_copy"></a> partition_copy
 
 Копирует элементы, для которых является условие **true** в одно место назначения, и для которого задано условие **false** в другой. Эти элементы должны поступать из указанного диапазона.
 
@@ -5120,30 +5678,41 @@ pair<OutputIterator1, OutputIterator2>
     OutputIterator1 dest1,
     OutputIterator2 dest2,
     Predicate pred);
+    
+template <class ExecutionPolicy, class ForwardIterator, class ForwardIterator1,
+class ForwardIterator2, class Predicate>
+pair<ForwardIterator1, ForwardIterator2>
+partition_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    ForwardIterator1 out_true, 
+    ForwardIterator2 out_false,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий начало диапазона для проверки условия.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий конец диапазона.
 
-*dest1*<br/>
+*dest1*\
 Выходной итератор, используемый для копирования элементов, возвращающих значение true, если условие, проверены с использованием *_Pred*.
 
-*dest2*<br/>
+*dest2*\
 Выходной итератор, используемый для копирования элементов, которые возвращают значение false, если условие, проверены с использованием *_Pred*.
 
-*_Pred*<br/>
+*_Pred*\
 Условие для проверки. Это условие предоставляется определенным пользователем объектом функции предиката, который задает условие для проверки. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="remarks"></a>Примечания
 
 Функция шаблона копирует каждый элемент `X` в `[first,last)` для `*dest1++` Если `_Pred(X)` имеет значение true, или к `*dest2++` в противном случае. Он возвращает `pair<OutputIterator1, OutputIterator2>(dest1, dest2)`.
 
-## <a name="partition_point"></a>  partition_point
+## <a name="partition_point"></a> partition_point
 
 Возвращает первый элемент, который не удовлетворяет условию, в данном диапазоне. Элементы сортируются так, чтобы те, которые соответствуют условию, располагались перед теми, что не соответствуют.
 
@@ -5157,13 +5726,13 @@ ForwardIterator partition_point(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 `ForwardIterator`, указывающий начало диапазона для проверки условия.
 
-*последний*<br/>
+*последний*\
 `ForwardIterator`, указывающий конец диапазона.
 
-*Зап.*<br/>
+*Зап.* \
 Условие для проверки. Оно предоставляется определенным пользователем объектом функции, задающим условие, которому должен соответствовать искомый элемент. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5174,7 +5743,7 @@ ForwardIterator partition_point(
 
 Функция шаблона находит первый итератор `it` в `[first, last)` для которого `comp(*it)` — **false**. Последовательности должны быть упорядочены по *comp*.
 
-## <a name="pop_heap"></a>  pop_heap
+## <a name="pop_heap"></a> pop_heap
 
 Удаляет наибольший элемент из начала кучи до позиции, следующей за последней, в диапазоне, а затем формирует новую кучу из оставшихся элементов.
 
@@ -5188,13 +5757,13 @@ void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredi
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в куче.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в куче.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -5277,7 +5846,7 @@ int main()  {
 }
 ```
 
-## <a name="prev_permutation"></a>  prev_permutation
+## <a name="prev_permutation"></a> prev_permutation
 
 Изменяет порядок элементов в диапазоне, чтобы исходный порядок был заменен перестановкой "лексикографически предыдущий больший", если такая существует, где смысл термина "предыдущий" может быть задан бинарным предикатом.
 
@@ -5296,13 +5865,13 @@ bool prev_permutation(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, указывающий позицию первого элемента в диапазоне, в котором переставляются элементы.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5451,7 +6020,7 @@ After another prev_permutation of vector v1,
 v1 =   ( -3 -2 0 2 -1 1 3 ).
 ```
 
-## <a name="push_heap"></a>  push_heap
+## <a name="push_heap"></a> push_heap
 
 Добавляет элемент, находящийся в конце диапазона, в существующую кучу, состоящую из предыдущих элементов диапазона.
 
@@ -5465,13 +6034,13 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPre
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в куче.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в диапазоне, подлежащем преобразованию в кучу.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -5559,28 +6128,35 @@ int main() {
 }
 ```
 
-## <a name="random_shuffle"></a>  random_shuffle
+## <a name="random_shuffle"></a> random_shuffle
 
 Функция std:: random_shuffle() является устаревшим, заменены [std::shuffle](../standard-library/algorithm-functions.md#shuffle). Дополнительные сведения и пример кода см. в разделе [ \<случайных >](../standard-library/random.md) и запись Stack Overflow [почему методы std::random_shuffle удалены устарели в C ++ 14?](https://go.microsoft.com/fwlink/p/?linkid=397954).
 
-## <a name="remove"></a>  remove
+## <a name="remove"></a> удалить
 
 Удаляет указанное значение из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.
 
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator, class T>
+ForwardIterator remove(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, обращающийся к положению первого элемента в диапазоне, в котором удаляются элементы.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, обращающийся к положению за последним элементом в диапазоне, в котором удаляются элементы.
 
-*Val*<br/>
+*Val*\
 Значение, которое необходимо удалить из диапазона.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5645,27 +6221,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy"></a>  remove_copy
+## <a name="remove_copy"></a> remove_copy
 
 Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы с заданным значением не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class T>
+ForwardIterator2 remove_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    const T& value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором удаляются элементы.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором удаляются элементы.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который удаляются элементы.
 
-*Val*<br/>
+*Val*\
 Значение, которое необходимо удалить из диапазона.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5727,27 +6312,36 @@ int main() {
 }
 ```
 
-## <a name="remove_copy_if"></a>  remove_copy_if
+## <a name="remove_copy_if"></a> remove_copy_if
 
 Копирует элементы из исходного диапазона в диапазон назначения за исключением того, что элементы, соответствующие предикату, не копируются, не нарушая порядок остальных элементов и возвращая конец нового диапазона назначения.
 
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate>
+ForwardIterator2 remove_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором удаляются элементы.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором удаляются элементы.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который удаляются элементы.
 
-*_Pred*<br/>
+*_Pred*\
 Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5818,7 +6412,7 @@ int main() {
 }
 ```
 
-## <a name="remove_if"></a>  remove_if
+## <a name="remove_if"></a> remove_if
 
 Удаляет элементы, соответствующие предикату, из заданного диапазона без нарушения порядка остальных элементов и возвращает конец нового диапазона после удаления указанного значения.
 
@@ -5828,17 +6422,24 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate>
+ForwardIterator remove_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне, из которого удаляются элементы.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне, из которого удаляются элементы.
 
-*_Pred*<br/>
+*_Pred*\
 Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -5907,7 +6508,7 @@ int main() {
 }
 ```
 
-## <a name="replace"></a>  replace
+## <a name="replace"></a> Замените
 
 Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному значению.
 
@@ -5918,20 +6519,28 @@ void replace(
     ForwardIterator last,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator, class T>
+void replace(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.
 
-*_OldVal*<br/>
+*_OldVal*\
 Старое значение заменяемых элементов.
 
-*_NewVal*<br/>
+*_NewVal*\
 Новое значение, присваиваемое элементам со старым значением.
 
 ### <a name="remarks"></a>Примечания
@@ -5982,7 +6591,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy"></a>  replace_copy
+## <a name="replace_copy"></a> replace_copy
 
 Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному значению, одновременно копируя результат в новый диапазон назначения.
 
@@ -5994,23 +6603,32 @@ OutputIterator replace_copy(
     OutputIterator result,
     const Type& oldVal,
     const Type& newVal);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 replace_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    const T& old_value, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на первый элемент в диапазоне назначения, в который копируется измененная последовательность элементов.
 
-*_OldVal*<br/>
+*_OldVal*\
 Старое значение заменяемых элементов.
 
-*_NewVal*<br/>
+*_NewVal*\
 Новое значение, присваиваемое элементам со старым значением.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6084,7 +6702,7 @@ int main() {
 }
 ```
 
-## <a name="replace_copy_if"></a>  replace_copy_if
+## <a name="replace_copy_if"></a> replace_copy_if
 
 Проверяет каждый элемент в исходном диапазоне и заменяет его, если он соответствует заданному предикату, одновременно копируя результат в новый диапазон назначения.
 
@@ -6096,23 +6714,33 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class Predicate, class T>
+ForwardIterator2 replace_copy_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.
 
-*последний*<br/>
+*последний*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который копируются элементы.
 
-*_Pred*<br/>
+*_Pred*\
 Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.
 
-*Val*<br/>
+*Val*\
 Новое значение, присваиваемое элементам, старые значения которых удовлетворяют предикату.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6193,7 +6821,7 @@ int main() {
 }
 ```
 
-## <a name="replace_if"></a>  replace_if
+## <a name="replace_if"></a> replace_if
 
 Проверяет каждый элемент в диапазоне и заменяет его, если он соответствует заданному предикату.
 
@@ -6204,20 +6832,28 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Predicate, class T>
+void replace_if(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Predicate pred, 
+    const T& new_value);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне, в котором заменяются элементы.
 
-*последний*<br/>
+*последний*\
 Итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором заменяются элементы.
 
-*_Pred*<br/>
+*_Pred*\
 Унарный предикат, который должен быть удовлетворен, является значением заменяемого элемента.
 
-*Val*<br/>
+*Val*\
 Новое значение, присваиваемое элементам, старые значения которых удовлетворяют предикату.
 
 ### <a name="remarks"></a>Примечания
@@ -6276,21 +6912,27 @@ int main() {
 }
 ```
 
-## <a name="reverse"></a>  reverse
+## <a name="reverse"></a> обратный
 
 Изменяет порядок элементов в диапазоне на обратный.
 
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
+
+template<class ExecutionPolicy, class BidirectionalIterator>
+void reverse(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first, 
+    BidirectionalIterator last);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, указывающий на позицию первого элемента в диапазоне, в котором переставляются элементы.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий на позицию, следующую за последним элементом в диапазоне, в котором переставляются элементы.
 
 ### <a name="remarks"></a>Примечания
@@ -6339,7 +6981,7 @@ The modified vector v1 with values reversed is:
 ( 9 8 7 6 5 4 3 2 1 0 ).
 ```
 
-## <a name="reverse_copy"></a>  reverse_copy
+## <a name="reverse_copy"></a> reverse_copy
 
 Изменяет порядок элементов в исходном диапазоне на обратный, одновременно копируя их в диапазон назначения
 
@@ -6349,17 +6991,24 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class ForwardIterator>
+ForwardIterator reverse_copy(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    ForwardIterator result);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор, указывающий на позицию первого элемента в исходном диапазоне, в котором переставляются элементы.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий на позицию, следующую за последним элементом в исходном диапазоне, в котором переставляются элементы.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в который копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6410,7 +7059,7 @@ int main() {
 }
 ```
 
-## <a name="rotate"></a>  rotate
+## <a name="rotate"></a> Поворот
 
 Меняет местами элементы в двух соседних диапазонах.
 
@@ -6420,17 +7069,24 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
+    
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator rotate(
+    ExecutionPolicy&& exec,
+    ForwardIterator first,
+    ForwardIterator middle,
+    ForwardIterator last);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне для изменения места.
 
-*среднего*<br/>
+*среднего*\
 Прямой итератор, определяющий границу в диапазоне и указывающий на позицию первого элемента во второй части диапазона, элементы которого должны поменяться местами с элементами в первой части диапазона.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для изменения места.
 
 ### <a name="remarks"></a>Примечания
@@ -6514,7 +7170,7 @@ After the rotation of a single deque element to the back,
 d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="rotate_copy"></a>  rotate_copy
+## <a name="rotate_copy"></a> rotate_copy
 
 Меняет местами элементы в двух соседних диапазонах в пределах исходного диапазона и копирует результат в диапазон назначения.
 
@@ -6525,19 +7181,28 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 rotate_copy(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 middle,
+    ForwardIterator1 last, 
+    ForwardIterator2 result);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в диапазоне для изменения места.
 
-*среднего*<br/>
+*среднего*\
 Прямой итератор, определяющий границу в диапазоне и указывающий на позицию первого элемента во второй части диапазона, элементы которого должны поменяться местами с элементами в первой части диапазона.
 
-_ *Последнего* прямой итератор, указывающий позицию, следующую за последним элементом в диапазоне для изменения места.
+*последний*\
+Прямой итератор, указывающий на позицию, следующую за последним элементом в диапазоне для изменения места.
 
-*result*<br/>
+*результат*\
 Итератор вывода указывает на позицию первого элемента в диапазоне назначения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6609,7 +7274,17 @@ int main() {
 }
 ```
 
-## <a name="search"></a>  search
+## <a name="sample"></a> Пример
+
+```cpp
+template<class PopulationIterator, class SampleIterator,
+class Distance, class UniformRandomBitGenerator>
+SampleIterator sample(PopulationIterator first, PopulationIterator last,
+SampleIterator out, Distance n,
+UniformRandomBitGenerator&& g);
+```
+
+## <a name="search"></a> Поиск
 
 Выполняет поиск первого вхождения последовательности в целевой диапазон, элементы которого равны указанным в заданной последовательности элементов или элементы которого равноценны в смысле, заданным бинарным предикатом, элементам в заданной последовательности.
 
@@ -6628,23 +7303,47 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator1 search(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    BinaryPredicate pred);
+    
+template <class ForwardIterator, class Searcher>
+ForwardIterator search(
+    ForwardIterator first, 
+    ForwardIterator last,
+    const Searcher& searcher);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*first2*<br/>
+*first2*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для сравнения.
 
-*last2*<br/>
+*last2*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для сравнения.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6757,7 +7456,7 @@ to those in v2 under the binary predicate twice
 and the first one begins at position 2.
 ```
 
-## <a name="search_n"></a>  search_n
+## <a name="search_n"></a> search_n
 
 Выполняет поиск первой подпоследовательности в диапазоне заданного числа элементов, имеющих определенное значение или связанных с этим значением отношением, указанным бинарным предикатом.
 
@@ -6776,23 +7475,40 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
+    
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, const T& value);
+
+template<class ExecutionPolicy, class ForwardIterator, class Size, class T,
+class BinaryPredicate>
+ForwardIterator search_n(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    Size count, 
+    const T& value,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, адресующий положение первого элемента в диапазоне для поиска.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, адресующий положение на единицу после последнего элемента в диапазоне для поиска.
 
-*count*<br/>
+*число*\
 Размер искомой последовательности.
 
-*Val*<br/>
+*Val*\
 Значение элементов в искомой последовательности.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -6890,7 +7606,7 @@ There is a match of a sequence ( 5 5 5 ) under the equivalence
 predicate one_half in v1 and the first one begins at position 15.
 ```
 
-## <a name="set_difference"></a>  set_difference
+## <a name="set_difference"></a> set_difference
 
 Объединяет все элементы, принадлежащие одному отсортированному исходному диапазону, но не второму отсортированному исходному диапазону, в один отсортированный диапазон назначения, где критерий упорядочивания может быть указан бинарным предикатом.
 
@@ -6911,26 +7627,47 @@ OutputIterator set_difference(
     InputIterator2  last2,
     OutputIterator  result,
     BinaryPredicate  comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий разность двух исходных диапазонов.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, в котором два исходных диапазона следует объединить в один упорядоченный диапазон, представляющий разность двух исходных диапазонов.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -7070,7 +7807,7 @@ int main()
 }
 ```
 
-## <a name="set_intersection"></a>  set_intersection
+## <a name="set_intersection"></a> set_intersection
 
 Объединяет все элементы, входящие в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.
 
@@ -7091,25 +7828,46 @@ OutputIterator set_intersection(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_intersection(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий пересечение двух исходных диапазонов.
 
 **_** *Результат* выходной итератор, обращающийся к позиции первого элемента в диапазоне назначения, где два источника диапазоны, следует объединить в один упорядоченный диапазон, представляющий пересечение двух исходных диапазоны.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, определяющий условие, когда один элемент больше другого. Бинарный предикат принимает два аргумента и должен возвращать значение **true** , когда первый элемент меньше второго элемента, и значение **false** в противном случае.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -7243,7 +8001,7 @@ int main() {
 }
 ```
 
-## <a name="set_symmetric_difference"></a>  set_symmetric_difference
+## <a name="set_symmetric_difference"></a> set_symmetric_difference
 
 Объединяет все элементы, входящие в один, но не в оба исходных упорядоченных диапазона, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.
 
@@ -7264,20 +8022,41 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_symmetric_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий симметрическую разность двух исходных диапазонов.
 
 **_** *Результат* выходной итератор, обращающийся к позиции первого элемента в диапазоне назначения, где два источника диапазоны, следует объединить в один упорядоченный диапазон, представляющий симметрическую разность двух исходных диапазонов.
@@ -7422,7 +8201,7 @@ int main()
 }
 ```
 
-## <a name="set_union"></a>  set_union
+## <a name="set_union"></a> set_union
 
 Объединяет все элементы, входящие в хотя бы один из двух исходных упорядоченных диапазонов, в один упорядоченный диапазон назначения, где критерий порядка сортировки может быть указан бинарным предикатом.
 
@@ -7443,20 +8222,41 @@ OutputIterator set_union(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class Compare>
+ForwardIterator set_union(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator2 last2,
+    ForwardIterator result, 
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, указывающий на позицию первого элемента в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.
 
-*last1*<br/>
+*last1*\
 Входной итератор, указывающий на позицию, следующую за последним элементом в первом из двух упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.
 
-*first2*<br/>
+*first2*\
 Входной итератор, указывающий на позицию первого элемента во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.
 
-*last2*<br/>
+*last2*\
 Входной итератор, указывающий на позицию, следующую за последним элементом во втором из двух последовательных упорядоченных исходных диапазонов, которые следует объединить и упорядочить в один диапазон, представляющий объединение двух исходных диапазонов.
 
 **_** *Результат* выходной итератор, обращающийся к позиции первого элемента в диапазоне назначения, где два источника диапазоны, следует объединить в один упорядоченный диапазон, представляющий объединение двух исходных диапазонов.
@@ -7601,7 +8401,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  в случайном порядке
+## <a name="shuffle"></a> в случайном порядке
 
 Перемешивает (изменяет порядок) элементы в указанном диапазоне, используя генератор случайных чисел.
 
@@ -7614,20 +8414,20 @@ void shuffle(RandomAccessIterator first,
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор первого элемента в диапазоне, который необходимо перемешать (инклюзивно). Должен соответствовать требованиям `RandomAccessIterator` и `ValueSwappable`.
 
-*последний*<br/>
+*последний*\
 Итератор последнего элемента в диапазоне, который необходимо перемешать (эксклюзивно). Должен соответствовать требованиям `RandomAccessIterator` и `ValueSwappable`.
 
-*Gen*<br/>
+*Gen*\
 Генератор случайных чисел, который будет использовать функция `shuffle()`. Должен соответствовать требованиям `UniformRandomNumberGenerator`.
 
 ### <a name="remarks"></a>Примечания
 
 Дополнительные сведения и пример кода, использующего `shuffle()`, см. в разделе [\<random>](../standard-library/random.md).
 
-## <a name="sort"></a>  sort
+## <a name="sort"></a> Сортировка
 
 Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом.
 
@@ -7642,17 +8442,30 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class RandomAccessIterator>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в сортируемом диапазоне.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции после последнего элемента в сортируемом диапазоне.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Этот бинарный предикат принимает два аргумента и возвращает **true** Если оба аргумента являются в порядке и **false** в противном случае. Эта функция средства сравнения должна задать строгое слабое упорядочение пар элементов последовательности. Дополнительные сведения см. в разделе [Алгоритмы](../standard-library/algorithms.md).
 
 ### <a name="remarks"></a>Примечания
@@ -7731,7 +8544,7 @@ Resorted (greater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 Resorted (UDgreater) vector v1 = ( 11 10 9 8 7 6 5 4 3 2 1 0 )
 ```
 
-## <a name="sort_heap"></a>  sort_heap
+## <a name="sort_heap"></a> sort_heap
 
 Преобразует кучу в упорядоченный диапазон.
 
@@ -7750,13 +8563,13 @@ template<class RandomAccessIterator, class Predicate>
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор произвольного доступа, обращающийся к позиции первого элемента в целевой куче.
 
-*последний*<br/>
+*последний*\
 Итератор произвольного доступа, обращающийся к позиции, следующей за последним элементом в целевой куче.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -7827,7 +8640,7 @@ int main() {
 }
 ```
 
-## <a name="stable_partition"></a>  stable_partition
+## <a name="stable_partition"></a> stable_partition
 
 Разделяет элементы диапазона на два непересекающихся множества, при этом элементы, удовлетворяющие унарному предикату, расположены перед теми, которые ему не удовлетворяют, с сохранением относительного порядка равноценных элементов.
 
@@ -7837,17 +8650,24 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
+    
+template<class ExecutionPolicy, class BidirectionalIterator, class Predicate>
+BidirectionalIterator stable_partition(
+    ExecutionPolicy&& exec,
+    BidirectionalIterator first,
+    BidirectionalIterator last,
+    Predicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор адресует позицию первого элемента в разделяемом диапазоне.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор, указывающий позицию, следующую за последним элементом в разделяемом диапазоне.
 
-*_Pred*<br/>
+*_Pred*\
 Определенный пользователем объект функции предиката, задающий условие, которое должно удовлетворяться, чтобы элемент был классифицирован. Предикат принимает один аргумент и возвращает значение **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -7905,7 +8725,7 @@ int main() {
 }
 ```
 
-## <a name="stable_sort"></a>  stable_sort
+## <a name="stable_sort"></a> stable_sort
 
 Упорядочивает элементы в указанном диапазоне в не нисходящем порядке или согласно критерию упорядочивания, заданному бинарным предикатом, и сохраняет относительный порядок равноценных элементов.
 
@@ -7918,17 +8738,30 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class RandomAccessIterator>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last);
+
+template<class ExecutionPolicy, class RandomAccessIterator, class Compare>
+void stable_sort(
+    ExecutionPolicy&& exec,
+    RandomAccessIterator first, 
+    RandomAccessIterator last,
+    Compare comp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Двунаправленный итератор указывает позицию первого элемента в диапазоне для сортировки.
 
-*последний*<br/>
+*последний*\
 Двунаправленный итератор указывает позицию, следующую за последним элементом в диапазоне для сортировки.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий критерий сравнения, который должен соблюдаться идущими подряд элементами при упорядочении. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="remarks"></a>Примечания
@@ -8006,7 +8839,7 @@ Resorted (greater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 Resorted (UDgreater) vector v1 = ( 10 10 8 8 6 6 4 4 2 2 0 0 )
 ```
 
-## <a name="swap"></a>  swap
+## <a name="swap"></a> Swap
 
 Первое переопределение меняет местами значения двух объектов. Второе переопределение меняет местами значения двух массивов объектов.
 
@@ -8023,10 +8856,10 @@ template<class Type, size_t N>
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Для первого переопределения — первый объект для обмена его содержимого. Для второго переопределения — первый массив для обмена его содержимого.
 
-*right*<br/>
+*Правильно*\
 Для первого переопределения — второй объект для обмена его содержимого. Для второго переопределения — второй массив для обмена его содержимого.
 
 ### <a name="remarks"></a>Примечания
@@ -8089,7 +8922,7 @@ Vector v1 is ( 5 5 5 5 5 ).
 Vector v2 is ( 0 1 2 3 4 5 6 7 8 9 10 ).
 ```
 
-## <a name="swap_ranges"></a>  swap_ranges
+## <a name="swap_ranges"></a> swap_ranges
 
 Меняет местами элементы одного диапазона с элементами другого диапазона такого же размера.
 
@@ -8099,17 +8932,24 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
+   
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 swap_ranges(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Прямой итератор, указывающий первую позицию первого диапазона элементов для обмена.
 
-*last1*<br/>
+*last1*\
 Прямой итератор, указывающий позицию, следующую за последней позицией первого диапазона элементов для обмена.
 
-*first2*<br/>
+*first2*\
 Прямой итератор, указывающий первую позицию второго диапазона элементов для обмена.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8183,7 +9023,7 @@ After the swap_range, vector v1 is ( 6 6 6 6 6 6 ).
 After the swap_range deque d1 is   ( 0 1 2 3 4 5 ).
 ```
 
-## <a name="transform"></a>  transform
+## <a name="transform"></a> Преобразование
 
 Применяет заданный объект функции к каждому элементу в исходном диапазоне или к паре элементов из двух исходных диапазонов и копирует возвращаемые значения объекта функции в диапазон назначения.
 
@@ -8202,23 +9042,42 @@ OutputIterator transform(
     InputIterator2 first2,
     OutputIterator result,
     BinaryFunction func );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class UnaryOperation>
+ForwardIterator2 transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    UnaryOperation op);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class ForwardIterator, class BinaryOperation>
+ForwardIterator transform(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first1, 
+    ForwardIterator1 last1,
+    ForwardIterator2 first2, 
+    ForwardIterator result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Итератор ввода указывает на позицию первого элемента в первом исходном обрабатываемом диапазоне.
 
-*last1*<br/>
+*last1*\
 Итератор ввода указывает на позицию, следующую за последним элементом в первом исходном обрабатываемом диапазоне.
 
-*first2*<br/>
+*first2*\
 Итератор ввода указывает на позицию первого элемента во втором исходном обрабатываемом диапазоне.
 
-*result*<br/>
+*результат*\
 Итератор вывода указывает на позицию первого элемента в диапазоне назначения.
 
-*_Func*<br/>
+*_Func*\
 Определенный пользователем объект унарной функции, используемый в первой версии алгоритма, который применяется к каждому элементу в первом исходном диапазоне, или определенный пользователем объект бинарной функции, используемый во второй версии алгоритма, который применяется попарно в прямом порядке к двум исходным диапазонам.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8320,7 +9179,7 @@ Multiplying elements of the vectors v1mod and v2 pairwise gives:
 v3 = ( 320 180 80 20 0 20 80 ).
 ```
 
-## <a name="unique"></a>  unique
+## <a name="unique"></a> Уникальный
 
 Удаляет повторяющиеся элементы, расположенные в указанном диапазоне рядом друг с другом.
 
@@ -8335,17 +9194,30 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
+      
+template<class ExecutionPolicy, class ForwardIterator>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last);
+
+template<class ExecutionPolicy, class ForwardIterator, class BinaryPredicate>
+ForwardIterator unique(
+    ExecutionPolicy&& exec,
+    ForwardIterator first, 
+    ForwardIterator last,
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий позицию первого элемента в диапазоне, который должен проверяться для поиска и удаления дубликатов.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий позицию, следующую за последним элементом в диапазоне, который должен проверяться для поиска и удаления дубликатов.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8453,7 +9325,7 @@ Removing adjacent elements satisfying the binary
   predicate mod_equal from vector v1 gives ( 5 7 ).
 ```
 
-## <a name="unique_copy"></a>  unique_copy
+## <a name="unique_copy"></a> unique_copy
 
 Копирует элементы из исходного диапазона в диапазон назначения за исключением повторяющихся элементов, расположенных рядом друг с другом.
 
@@ -8468,20 +9340,34 @@ OutputIterator unique_copy( InputIterator first,
     InputIterator last,
     OutputIterator result,
     BinaryPredicate comp );
+    
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryPredicate>
+ForwardIterator2 unique_copy(ExecutionPolicy&& exec,
+    ForwardIterator1 first, 
+    ForwardIterator1 last,
+    ForwardIterator2 result, 
+    BinaryPredicate pred);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, указывающий на позицию первого элемента в исходном диапазоне для копирования.
 
-*последний*<br/>
+*последний*\
 Прямой итератор, указывающий на позицию, следующую за последним элементом в исходном диапазоне для копирования.
 
-*result*<br/>
+*результат*\
 Выходной итератор, указывающий на позицию первого элемента в диапазоне назначения, получающем копию с последовательными удаленными дубликатами.
 
-*Зап.*<br/>
+*Зап.* \
 Заданный пользователем объект функции предиката, определяющий условие, которое должно выполняться, чтобы два элемента считались эквивалентными друг другу. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8570,7 +9456,7 @@ int main() {
 }
 ```
 
-## <a name="upper_bound"></a>  upper_bound
+## <a name="upper_bound"></a> upper_bound
 
 Находит позицию первого элемента в упорядоченном диапазоне, который имеет значение больше указанного значения, где критерий упорядочивания может быть задан бинарным предикатом.
 
@@ -8591,16 +9477,16 @@ template<class ForwardIterator, class Type, class Predicate>
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Позиция первого элемента в диапазоне для поиска.
 
-*последний*<br/>
+*последний*\
 Позиция, следующая за последним элементом в диапазоне для поиска.
 
-*value*<br/>
+*value*\
 Значение в упорядоченном диапазоне, которое должно превышаться значением элемента, указанного возвращенным итератором.
 
-*Зап.*<br/>
+*Зап.* \
 Определяемый пользователем объект функции предиката, задающий условие, когда один элемент меньше другого. Двоичный предикат принимает два аргумента и возвращает **true** , если условие удовлетворено, или **false** , если условие не удовлетворено.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -8708,7 +9594,3 @@ int main()
         << *Result << "." << endl;
 }
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<algorithm>](../standard-library/algorithm.md)<br/>

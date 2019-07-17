@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-ms.openlocfilehash: a1f5ace58af427645a0ad4eb8706506cc52ab08c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dedc1b5812357c84944654d1c352be2a51e9393c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413181"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245407"
 ---
 # <a name="locale-class"></a>Класс locale
 
@@ -168,6 +168,7 @@ cout.imbue(loc);
 
 |Оператор|Описание|
 |-|-|
+|[оператор=](#op_eq)|Назначает языкового стандарта.|
 |[operator!=](#op_neq)|Проверка двух языковых стандартов на неравенство.|
 |[оператор( )](#op_call)|Сравнивает два объекта `basic_string`.|
 |[operator==](#op_eq_eq)|Проверка двух языковых стандартов на равенство.|
@@ -417,7 +418,7 @@ class id
 
 ## <a name="locale"></a>  locale::locale
 
-Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта.
+Создает языковой стандарт, копию языкового стандарта или копию языкового стандарта, в которой аспект или категория заменены аспектом или категорией из другого языкового стандарта. Также содержит деструктор.
 
 ```cpp
 locale();
@@ -430,6 +431,8 @@ locale(const locale& Loc, const char* Locname, category Cat);
 
 template <class Facet>
 locale(const locale& Loc, const Facet* Fac);
+
+~locale();
 ```
 
 ### <a name="parameters"></a>Параметры
@@ -546,6 +549,14 @@ int main( )
 ```Output
 The name of the previous locale is: C.
 The name of the current locale is: German_Germany.1252.
+```
+
+## <a name="op_eq"></a>  locale::operator =
+
+Назначает языкового стандарта.
+
+```cpp
+const locale& operator=(const locale& other) noexcept;
 ```
 
 ## <a name="op_neq"></a>  locale::operator!=

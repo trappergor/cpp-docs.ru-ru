@@ -93,6 +93,8 @@
           href: build/cmake-projects-in-visual-studio.md
         - name: Учебник. Создание кроссплатформенных проектов C++ в Visual Studio
           href: build/get-started-linux-cmake.md
+        - name: Clang для LLVM в проектах CMake
+          href: build/clang-support-cmake.md
         - name: Настройка проекта Linux CMake
           href: build/../linux/cmake-linux-project.md
         - name: Настройка параметров сборки CMake
@@ -1689,7 +1691,7 @@
                       href: atl-mfc-shared/cstring-argument-passing.md
                     - name: Поддержка Юникода и многобайтовой кодировки
                       href: atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md
-        - name: Ссылка
+        - name: Справочники
           expanded: false
           items:
             - name: Класс CSize
@@ -2915,7 +2917,7 @@
       href: security/how-user-account-control-uac-affects-your-application.md
     - name: Руководство разработчика C++ по сторонним каналам при спекулятивном выполнении команд
       href: security/developer-guidance-speculative-execution.md
-- name: Ссылка
+- name: Справочники
   expanded: false
   items:
     - name: Справочники по языкам
@@ -4130,7 +4132,7 @@
                   href: cpp/binary-operators.md
                 - name: Назначение
                   href: cpp/assignment.md
-                - name: 'Вызов функции '
+                - name: Вызов функции
                   href: cpp/function-call-cpp.md
                 - name: Индексация ;
                   href: cpp/subscripting.md
@@ -4141,9 +4143,9 @@
               items:
                 - name: Классы и структуры
                   href: cpp/classes-and-structs-cpp.md
-                - name: класс
+                - name: class
                   href: cpp/class-cpp.md
-                - name: структура
+                - name: struct
                   href: cpp/struct-cpp.md
                 - name: Обзор членов класса
                   href: cpp/class-member-overview.md
@@ -4205,7 +4207,7 @@
                       href: cpp/summary-of-scope-rules.md
                     - name: Ключевые слова наследования
                       href: cpp/inheritance-keywords.md
-                    - name: виртуальный
+                    - name: virtual
                       href: cpp/virtual-cpp.md
                     - name: __super
                       href: cpp/super.md
@@ -6009,11 +6011,11 @@
               href: extensions/compiler-support-for-type-traits-cpp-component-extensions.md
             - name: Контекстные ключевые слова
               href: extensions/context-sensitive-keywords-cpp-component-extensions.md
-            - name: делегат
+            - name: delegate
               href: extensions/delegate-cpp-component-extensions.md
             - name: Класс перечисления
               href: extensions/enum-class-cpp-component-extensions.md
-            - name: событие
+            - name: event
               href: extensions/event-cpp-component-extensions.md
             - name: Обработка исключений
               href: extensions/exception-handling-cpp-component-extensions.md
@@ -6262,7 +6264,7 @@
                   href: windows/attributes/importidl.md
                 - name: importlib
                   href: windows/attributes/importlib.md
-                - name: в
+                - name: in
                   href: windows/attributes/in-cpp.md
                 - name: include
                   href: windows/attributes/include-cpp.md
@@ -8358,14 +8360,14 @@
                   items:
                     - name: <algorithm>
                       href: standard-library/algorithm.md
-                    - name: 'Функции<algorithm> '
+                    - name: Функции<algorithm>
                       href: standard-library/algorithm-functions.md
                 - name: <allocators>
                   expanded: false
                   items:
                     - name: <allocators>
                       href: standard-library/allocators-header.md
-                    - name: 'Функции<allocators> '
+                    - name: Функции<allocators>
                       href: standard-library/allocators-functions.md
                     - name: Операторы <allocators>
                       href: standard-library/allocators-operators.md
@@ -8414,7 +8416,7 @@
                   items:
                     - name: <array>
                       href: standard-library/array.md
-                    - name: 'Функции<array> '
+                    - name: Функции<array>
                       href: standard-library/array-functions.md
                     - name: Операторы <array>
                       href: standard-library/array-operators.md
@@ -8429,7 +8431,7 @@
                       href: standard-library/atomic-structure.md
                     - name: Структура atomic_flag
                       href: standard-library/atomic-flag-structure.md
-                    - name: 'Функции<atomic> '
+                    - name: Функции<atomic>
                       href: standard-library/atomic-functions.md
                     - name: Перечисления <atomic>
                       href: standard-library/atomic-enums.md
@@ -8459,7 +8461,7 @@
                   items:
                     - name: <chrono>
                       href: standard-library/chrono.md
-                    - name: 'Функции<chrono> '
+                    - name: Функции<chrono>
                       href: standard-library/chrono-functions.md
                     - name: Операторы <chrono>
                       href: standard-library/chrono-operators.md
@@ -8507,7 +8509,7 @@
                   items:
                     - name: <complex>
                       href: standard-library/complex.md
-                    - name: 'Функции<complex> '
+                    - name: Функции<complex>
                       href: standard-library/complex-functions.md
                     - name: Операторы <complex>
                       href: standard-library/complex-operators.md
@@ -8565,7 +8567,7 @@
                   items:
                     - name: <deque>
                       href: standard-library/deque.md
-                    - name: 'Функции<deque> '
+                    - name: Функции<deque>
                       href: standard-library/deque-functions.md
                     - name: Операторы <deque>
                       href: standard-library/deque-operators.md
@@ -8576,7 +8578,7 @@
                   items:
                     - name: <exception>
                       href: standard-library/exception.md
-                    - name: 'Функции<exception> '
+                    - name: Функции<exception>
                       href: standard-library/exception-functions.md
                     - name: Определения типов <exception>
                       href: standard-library/exception-typedefs.md
@@ -8591,7 +8593,7 @@
                       href: standard-library/filesystem.md
                     - name: Операторы <filesystem>
                       href: standard-library/filesystem-operators.md
-                    - name: 'Функции<filesystem> '
+                    - name: Функции<filesystem>
                       href: standard-library/filesystem-functions.md
                     - name: Перечисления <filesystem>
                       href: standard-library/filesystem-enumerations.md
@@ -8640,7 +8642,7 @@
                   items:
                     - name: <functional>
                       href: standard-library/functional.md
-                    - name: 'Функции<functional> '
+                    - name: Функции<functional>
                       href: standard-library/functional-functions.md
                     - name: Операторы <functional>
                       href: standard-library/functional-operators.md
@@ -8725,7 +8727,7 @@
                   items:
                     - name: <future>
                       href: standard-library/future.md
-                    - name: 'Функции<future> '
+                    - name: Функции<future>
                       href: standard-library/future-functions.md
                     - name: Перечисления <future>
                       href: standard-library/future-enums.md
@@ -8785,14 +8787,14 @@
                   items:
                     - name: <iomanip>
                       href: standard-library/iomanip.md
-                    - name: 'Функции<iomanip> '
+                    - name: Функции<iomanip>
                       href: standard-library/iomanip-functions.md
                 - name: <ios>
                   expanded: false
                   items:
                     - name: <ios>
                       href: standard-library/ios.md
-                    - name: 'Функции<ios> '
+                    - name: Функции<ios>
                       href: standard-library/ios-functions.md
                     - name: Определения типов <ios>
                       href: standard-library/ios-typedefs.md
@@ -8811,7 +8813,7 @@
                   items:
                     - name: <istream>
                       href: standard-library/istream.md
-                    - name: 'Функции<istream> '
+                    - name: Функции<istream>
                       href: standard-library/istream-functions.md
                     - name: Операторы <istream>
                       href: standard-library/istream-operators.md
@@ -8826,7 +8828,7 @@
                   items:
                     - name: <iterator>
                       href: standard-library/iterator.md
-                    - name: 'Функции<iterator> '
+                    - name: Функции<iterator>
                       href: standard-library/iterator-functions.md
                     - name: Операторы <iterator>
                       href: standard-library/iterator-operators.md
@@ -8889,7 +8891,7 @@
                   items:
                     - name: <locale>
                       href: standard-library/locale.md
-                    - name: 'Функции<locale> '
+                    - name: Функции<locale>
                       href: standard-library/locale-functions.md
                     - name: Класс codecvt
                       href: standard-library/codecvt-class.md
@@ -8954,7 +8956,7 @@
                   items:
                     - name: <map>
                       href: standard-library/map.md
-                    - name: 'Функции<map> '
+                    - name: Функции<map>
                       href: standard-library/map-functions.md
                     - name: Операторы <map>
                       href: standard-library/map-operators.md
@@ -8969,7 +8971,7 @@
                   items:
                     - name: <memory>
                       href: standard-library/memory.md
-                    - name: 'Функции<memory> '
+                    - name: Функции<memory>
                       href: standard-library/memory-functions.md
                     - name: Операторы <memory>
                       href: standard-library/memory-operators.md
@@ -9002,7 +9004,7 @@
                   items:
                     - name: <mutex>
                       href: standard-library/mutex.md
-                    - name: 'Функции<mutex> '
+                    - name: Функции<mutex>
                       href: standard-library/mutex-functions.md
                     - name: Структура adopt_lock_t
                       href: standard-library/adopt-lock-t-structure.md
@@ -9029,7 +9031,7 @@
                   items:
                     - name: <new>
                       href: standard-library/new.md
-                    - name: 'Функции<new> '
+                    - name: Функции<new>
                       href: standard-library/new-functions.md
                     - name: Определения типов <new>
                       href: standard-library/new-typedefs.md
@@ -9044,7 +9046,7 @@
                   items:
                     - name: <numeric>
                       href: standard-library/numeric.md
-                    - name: 'Функции<numeric> '
+                    - name: Функции<numeric>
                       href: standard-library/numeric-functions.md
                 - name: <ostream>
                   expanded: false
@@ -9053,7 +9055,7 @@
                       href: standard-library/ostream.md
                     - name: Класс basic_ostream
                       href: standard-library/basic-ostream-class.md
-                    - name: 'Функции<ostream> '
+                    - name: Функции<ostream>
                       href: standard-library/ostream-functions.md
                     - name: Операторы <ostream>
                       href: standard-library/ostream-operators.md
@@ -9075,7 +9077,7 @@
                   items:
                     - name: <random>
                       href: standard-library/random.md
-                    - name: 'Функции<random> '
+                    - name: Функции<random>
                       href: standard-library/random-functions.md
                     - name: Класс bernoulli_distribution
                       href: standard-library/bernoulli-distribution-class.md
@@ -9140,7 +9142,7 @@
                   items:
                     - name: <regex>
                       href: standard-library/regex.md
-                    - name: 'Функции<regex> '
+                    - name: Функции<regex>
                       href: standard-library/regex-functions.md
                     - name: Операторы <regex>
                       href: standard-library/regex-operators.md
@@ -9180,7 +9182,7 @@
                   items:
                     - name: <set>
                       href: standard-library/set.md
-                    - name: 'Функции<set> '
+                    - name: Функции<set>
                       href: standard-library/set-functions.md
                     - name: Операторы <set>
                       href: standard-library/set-operators.md
@@ -9195,7 +9197,7 @@
                   items:
                     - name: <sstream>
                       href: standard-library/sstream.md
-                    - name: 'Функции<sstream> '
+                    - name: Функции<sstream>
                       href: standard-library/sstream-functions.md
                     - name: Определения типов <sstream>
                       href: standard-library/sstream-typedefs.md
@@ -9253,7 +9255,7 @@
                   items:
                     - name: <string>
                       href: standard-library/string.md
-                    - name: 'Функции<string> '
+                    - name: Функции<string>
                       href: standard-library/string-functions.md
                     - name: Операторы <string>
                       href: standard-library/string-operators.md
@@ -9325,7 +9327,7 @@
                   items:
                     - name: <thread>
                       href: standard-library/thread.md
-                    - name: 'Функции<thread> '
+                    - name: Функции<thread>
                       href: standard-library/thread-functions.md
                     - name: Операторы <thread>
                       href: standard-library/thread-operators.md
@@ -9338,7 +9340,7 @@
                   items:
                     - name: <tuple>
                       href: standard-library/tuple.md
-                    - name: 'Функции<tuple> '
+                    - name: Функции<tuple>
                       href: standard-library/tuple-functions.md
                     - name: Операторы <tuple>
                       href: standard-library/tuple-operators.md
@@ -9581,7 +9583,7 @@
                   items:
                     - name: <utility>
                       href: standard-library/utility.md
-                    - name: 'Функции<utility> '
+                    - name: Функции<utility>
                       href: standard-library/utility-functions.md
                     - name: Операторы <utility>
                       href: standard-library/utility-operators.md
@@ -9594,7 +9596,7 @@
                   items:
                     - name: <valarray>
                       href: standard-library/valarray.md
-                    - name: 'Функции<valarray> '
+                    - name: Функции<valarray>
                       href: standard-library/valarray-functions.md
                     - name: Операторы <valarray>
                       href: standard-library/valarray-operators.md
@@ -9636,7 +9638,7 @@
                               href: standard-library/vector-bool-reference-operator-bool.md
                             - name: 'vector<bool>::reference::operator='
                               href: standard-library/vector-bool-reference-operator-assign.md
-                    - name: 'Функции<vector> '
+                    - name: Функции<vector>
                       href: standard-library/vector-functions.md
                     - name: Операторы <vector>
                       href: standard-library/vector-operators.md
@@ -10218,7 +10220,7 @@
                       href: parallel/concrt/best-practices-in-the-asynchronous-agents-library.md
                     - name: Общие рекомендации в среде выполнения с параллелизмом
                       href: parallel/concrt/general-best-practices-in-the-concurrency-runtime.md
-                - name: Ссылка
+                - name: Справочники
                   expanded: false
                   items:
                     - name: Справочные материалы (среда выполнения с параллелизмом)

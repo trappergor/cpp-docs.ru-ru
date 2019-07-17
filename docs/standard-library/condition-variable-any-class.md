@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ecf13974404ec6e223d5d3e7387a70526eeefcc
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279063"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244651"
 ---
 # <a name="conditionvariableany-class"></a>Класс condition_variable_any
 
@@ -37,29 +37,23 @@ class condition_variable_any;
 
 ## <a name="members"></a>Участники
 
-### <a name="public-constructors"></a>Открытые конструкторы
+### <a name="constructors"></a>Конструкторы
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable_any](#condition_variable_any)|Создает объект `condition_variable_any`.|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="functions"></a>Функции
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable_any`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.|
 |[wait](#wait)|Блокирует поток.|
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<condition_variable >
-
-**Пространство имен:** std
-
-## <a name="condition_variable_any"></a> Конструктор condition_variable_any::condition_variable_any
+## <a name="condition_variable_any"></a> condition_variable_any
 
 Создает объект `condition_variable_any`.
 
@@ -71,7 +65,7 @@ condition_variable_any();
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
-## <a name="notify_all"></a>  condition_variable_any::notify_all
+## <a name="notify_all"></a> notify_all
 
 Разблокирует все потоки, которые ожидают объект `condition_variable_any`.
 
@@ -79,7 +73,7 @@ condition_variable_any();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable_any::notify_one
+## <a name="notify_one"></a> notify_one
 
 Разблокирует один из потоков, которые ожидают объект `condition_variable_any`.
 
@@ -87,7 +81,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable_any::wait
+## <a name="wait"></a> Подождите
 
 Блокирует поток.
 
@@ -101,10 +95,10 @@ void wait(Lock& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект `mutex` любого типа.
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="remarks"></a>Примечания
@@ -118,7 +112,7 @@ while (!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable_any::wait_for
+## <a name="wait_for"></a> wait_for
 
 Блокирует поток и задает интервал времени, после которого поток разблокируется.
 
@@ -132,13 +126,13 @@ bool wait_for(Lock& Lck, const chrono::duration<Rep, Period>& Rel_time, Predicat
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект `mutex` любого типа.
 
-*Rel_time*<br/>
+*Rel_time*\
 Объект `chrono::duration`, указывающий количество времени до активации потока.
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -161,7 +155,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable_any::wait_until
+## <a name="wait_until"></a> wait_until
 
 Блокирует поток и задает максимальный момент времени, в который поток разблокируется.
 
@@ -187,13 +181,13 @@ void wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект mutex.
 
-*Abs_time*<br/>
+*Abs_time*\
 Объект [chrono::time_point](../standard-library/time-point-class.md).
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -217,8 +211,3 @@ return true;
 ```
 
 Третий и четвертый методы используют указатель на объект типа `xtime` для замены объекта `chrono::time_point`. Объект `xtime` задает максимальное время ожидания сигнала.
-
-## <a name="see-also"></a>См. также
-
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>

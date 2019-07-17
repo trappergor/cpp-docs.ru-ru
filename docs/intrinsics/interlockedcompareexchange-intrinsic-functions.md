@@ -48,18 +48,18 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ac3ea1c97fe78cf2a145cd2ce62f7b3f198ab3c
+ms.sourcegitcommit: 6cf0c67acce633b07ff31b56cebd5de3218fd733
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62263741"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67344439"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>Встроенные функции _InterlockedCompareExchange
 
 **Блок, относящийся только к системам Microsoft**
 
-Выполняет заблокированное сравнение и обмен.
+Блокируемые сравнения и обмена.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -202,15 +202,15 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="remarks"></a>Примечания
 
-`_InterlockedCompareExchange` выполняет атомарное сравнение значения `Destination` со значением `Comparand`. Если значение `Destination` равно значению `Comparand`, значение `Exchange` сохранится по адресу, указанному `Destination`. В противном случае операция не выполняется.
+`_InterlockedCompareExchange` выполняет атомарные сравнение `Destination` со значением `Comparand` значение. Если значение `Destination` равно значению `Comparand`, значение `Exchange` сохранится по адресу, указанному `Destination`. В противном случае не ни одна из операций.
 
 `_InterlockedCompareExchange` предоставляет встроенную поддержку компилятора для пакета SDK Windows Win32 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange) функции.
 
-Существуют несколько вариантов `_InterlockedCompareExchange`, они различаются в зависимости от типов данных, которые включают, и от того, используется ли семантика получения или освобождения конкретного процессора.
+Существуют несколько вариантов на `_InterlockedCompareExchange` , различаются в зависимости от типов данных, они включают и ли получить конкретного процессора или используются семантика освобождения.
 
-Функция `_InterlockedCompareExchange`работает с длинными целыми значениями, `_InterlockedCompareExchange8`работает с 8-разрядными целыми значениями, `_InterlockedCompareExchange16`работает с короткими целыми значениями и `_InterlockedCompareExchange64`работает с 64-разрядными целыми значениями.
+Хотя `_InterlockedCompareExchange` функция работает с длинными целыми значениями, `_InterlockedCompareExchange8` работает с 8-разрядными целыми значениями, `_InterlockedCompareExchange16` работает с короткими целыми значениями и `_InterlockedCompareExchange64` работает с 64-разрядными целыми значениями.
 
-На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции ARM с суффиксом `_nf` («без границ») не действуют как барьер памяти.
+На платформах ARM используются встроенные функции с суффиксами `_acq` и `_rel` для получения и освобождения семантики, например, в начале и конце критической секции. Встроенные функции ARM с `_nf` суффикса («без границ») не действуют как барьер памяти.
 
 Встроенные функции с суффиксом `_np` («нет упреждающей выборки") запрещают возможную вставку компилятором операции упреждающей выборки.
 
@@ -220,7 +220,7 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="example"></a>Пример
 
-В следующем примере `_InterlockedCompareExchange` используется для простой синхронизации потоков нижнего уровня. Такой подход имеет ограничения в качестве основы многопоточного программирования; он представлен, чтобы продемонстрировать типичное использование блокирующих встроенных функций. Для получения наилучших результатов используйте Windows API. Дополнительные сведения о многопоточном программировании см. в разделе [написание многопоточной программы Win32](../parallel/writing-a-multithreaded-win32-program.md).
+В следующем примере `_InterlockedCompareExchange` используется для простой синхронизации потоков нижнего уровня. Такой подход имеет свои ограничения, в качестве основы для многопоточного программирования; она появится на продемонстрировать типичное использование блокирующих встроенных функций. Для получения наилучших результатов используйте Windows API. Дополнительные сведения о многопоточном программировании см. в разделе [написание многопоточной программы Win32](../parallel/writing-a-multithreaded-win32-program.md).
 
 ```
 // intrinExample.cpp
@@ -248,7 +248,7 @@ using namespace std;
 //#define SKIP_LOCKING
 
 // A common way of locking using _InterlockedCompareExchange.
-// Please refer to other sources for a discussion of the many issues
+// Refer to other sources for a discussion of the many issues
 // involved. For example, this particular locking scheme performs well
 // when lock contention is low, as the while loop overhead is small and
 // locks are acquired very quickly, but degrades as many callers want

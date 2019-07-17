@@ -10,22 +10,16 @@ f1_keywords:
 - memory/std::operator<<
 - memory/std::operator==
 ms.assetid: 257e3ba9-c4c2-4ae8-9b11-b156ba9c28de
-ms.openlocfilehash: ca1412efb4d095ef9a371b3739d4c282683821dc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 661f1bb4c0f5734d88dd23f73c69b362f59a76c2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348462"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243821"
 ---
 # <a name="ltmemorygt-operators"></a>операторы &lt;memory&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|[operator&lt;=](#op_lt_eq)|
-|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет неравенство между объектами.
 
@@ -48,16 +42,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из объектов для проверки на неравенство.
 
-*right*<br/>
+*Правильно*\
 Один из объектов для проверки на неравенство.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым общим указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым общим указателем.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -126,7 +120,7 @@ sp0 != sp0 == false
 sp0 != sp1 == true
 ```
 
-## <a name="op_eq_eq"></a>  оператор==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет равенство между объектами.
 
@@ -149,16 +143,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из объектов для проверки на равенство.
 
-*right*<br/>
+*Правильно*\
 Один из объектов для проверки на равенство.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым общим указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым общим указателем.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -238,7 +232,7 @@ sp0 == sp0 == true
 sp0 == sp1 == false
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Проверяет, больше или равен один объект второму объекту.
 
@@ -256,23 +250,23 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Один из сравниваемых объектов.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым общим указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым общим указателем.
 
 ### <a name="remarks"></a>Примечания
 
 Операторы шаблона возвращают `left.get() >= right.get()`.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Проверяет, меньше ли один объект второго объекта.
 
@@ -290,19 +284,19 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Один из сравниваемых объектов.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым указателем.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Проверяет, меньше или равен один объект второму объекту.
 
@@ -320,23 +314,23 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Один из сравниваемых объектов.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым общим указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым общим указателем.
 
 ### <a name="remarks"></a>Примечания
 
 Операторы шаблона возвращают `left.get() <= right.get()`
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Проверяет, больше ли один объект второго объекта.
 
@@ -354,19 +348,19 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Один из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Один из сравниваемых объектов.
 
-*Ty1*<br/>
+*Ty1*\
 Тип, управляемый левым общим указателем.
 
-*Ty2*<br/>
+*Ty2*\
 Тип, управляемый правым общим указателем.
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Оператор&lt;&lt;
 
 Записывает в поток общий указатель.
 
@@ -378,19 +372,19 @@ std::basic_ostream<Elem, Tr>& operator<<(std::basic_ostream<Elem, Tr>& out,
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента потока.
 
-*Tr*<br/>
+*TR*\
 Тип признаков элемента потока.
 
-*Ty*<br/>
+*За этот год*\
 Тип, управляемый общим указателем.
 
-*out*<br/>
+*out*\
 Выходной поток.
 
-*sp*<br/>
+*SP*\
 Общий указатель.
 
 ### <a name="remarks"></a>Примечания
@@ -418,7 +412,3 @@ int main()
 ```Output
 sp0 == 3f3040 (varies)
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<memory>](../standard-library/memory.md)<br/>
