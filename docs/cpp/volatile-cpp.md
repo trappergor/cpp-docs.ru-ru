@@ -50,7 +50,7 @@ Visual Studio интерпретирует ключевое слово **volatil
 
 ## <a name="iso-compliant"></a>Блок, относящийся к стандарту ISO
 
-Если вы знакомы с C# volatile-ключевое слово, или знакомы с поведением **volatile** в более ранних версиях Microsoft C++ компилятор (MSVC), имейте в виду, C ++ 11 стандарте ISO **volatile** ключевое слово отличается и поддерживается в MSVC при [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) указан параметр компилятора. (Для архитектуры ARM он установлен по умолчанию). **Volatile** ключевого слова в C ++ 11 стандарта ISO кода будет использоваться только для аппаратного доступа; не используйте его для взаимодействия между потоками. Для взаимодействия между потоками, используют механизмы, например [std::atomic\<T >](../standard-library/atomic.md) из [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md).
+Если вы знакомы с ключевым словом volatile в C# или с поведением **volatile** в более ранних версиях компилятора Microsoft C++ (MSVC), имейте в виду, что ключевое слово **volatile** в стандарте C++11 ISO отличается и поддерживается в MSVC при указании параметра компилятора [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md) (для архитектуры ARM он установлен по умолчанию). Ключевое слово **volatile** в коде по стандарту C++11 ISO используется только для аппаратного доступа; не используйте его для взаимодействия между потоками. Для взаимодействия между потоками используйте такие механизмы, как [std::atomic\<T >](../standard-library/atomic.md) из [стандартной библиотеки C++](../standard-library/cpp-standard-library-reference.md).
 
 ## <a name="end-of-iso-compliant"></a>Конец блока, относящегося к стандарту ISO
 
