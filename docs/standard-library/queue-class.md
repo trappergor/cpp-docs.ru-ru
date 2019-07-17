@@ -22,12 +22,12 @@ helpviewer_keywords:
 - std::queue [C++], push
 - std::queue [C++], size
 ms.assetid: 28c20ab0-3a72-4185-9e0f-5a44eea0e204
-ms.openlocfilehash: 2b82e4237a525b09758323ae2483d8818fc938af
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 78479a05f8957aea5ca0f78fd3a086a49b9ef009
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369947"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240402"
 ---
 # <a name="queue-class"></a>Класс queue
 
@@ -42,10 +42,10 @@ class queue
 
 ### <a name="parameters"></a>Параметры
 
-*Type*<br/>
+*Тип*\
 Тип данных элемента для сохранения в очереди.
 
-*Контейнер*<br/>
+*Контейнер*\
 Тип базового контейнера, используемый для реализации очереди.
 
 ## <a name="remarks"></a>Примечания
@@ -64,23 +64,25 @@ class queue
 
 - [Класс priority_queue](../standard-library/priority-queue-class.md) упорядочивает элементы, чтобы наибольший элемент всегда находился сверху. Он поддерживает вставку элемента, а также проверку и удаление верхнего элемента. Хороший аналог такого подхода — очередь из людей, упорядоченная по возрасту, росту или любому другому критерию.
 
+## <a name="members"></a>Участники
+
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[queue](#queue)|Создает `queue`, который является пустым или копией объекта базового контейнера.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[container_type](#container_type)|Тип, предоставляющий базовый контейнер для изменения в `queue`.|
 |[size_type](#size_type)|Целочисленный Typedef без знака, который может представлять число элементов в `queue`.|
 |[value_type](#value_type)|Тип, представляющий тип объекта, который хранится в виде элемента в `queue`.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[back](#back)|Возвращает ссылку на последний и наиболее недавно добавленный элемент в конец `queue`.|
 |[empty](#empty)|Проверяет, является ли `queue` пустым.|
@@ -89,13 +91,7 @@ class queue
 |[push](#push)|Добавляет элемент в конец `queue`.|
 |[size](#size)|Возвращает количество элементов в контейнере `queue`.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<queue>
-
-**Пространство имен:** std
-
-## <a name="back"></a>  queue::back
+## <a name="back"></a> Назад
 
 Возвращает ссылку на последний и наиболее недавно добавленный элемент в конце очереди.
 
@@ -141,7 +137,7 @@ int main( )
 }
 ```
 
-## <a name="container_type"></a>  queue::container_type
+## <a name="container_type"></a> container_type
 
 Тип, предоставляющий базовый контейнер для изменения.
 
@@ -159,7 +155,7 @@ typedef Container container_type;
 
 См. пример для [queue](#queue) с примером объявления и использования `container_type`.
 
-## <a name="empty"></a>  queue::empty
+## <a name="empty"></a> пустой
 
 Проверяет, пуста ли очередь.
 
@@ -205,7 +201,7 @@ The queue q1 is not empty.
 The queue q2 is empty.
 ```
 
-## <a name="front"></a>  queue::front
+## <a name="front"></a> передний план
 
 Возвращает ссылку на первый элемент в начале очереди.
 
@@ -257,7 +253,7 @@ int main() {
 }
 ```
 
-## <a name="pop"></a>  queue::pop
+## <a name="pop"></a> POP
 
 Удаляет элемент из начала очереди.
 
@@ -313,7 +309,7 @@ After a pop the queue length is 2.
 After a pop, the element at the front of the queue is 20.
 ```
 
-## <a name="push"></a>  queue::push
+## <a name="push"></a> Push-уведомлений
 
 Добавляет элемент в конец queue.
 
@@ -323,7 +319,7 @@ void push(const Type& val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Элемент, добавляемый в конец очереди.
 
 ### <a name="remarks"></a>Примечания
@@ -362,7 +358,7 @@ The queue length is 3.
 The element at the front of the queue is 10.
 ```
 
-## <a name="queue"></a>  queue::queue
+## <a name="queue"></a> очереди
 
 Создает пустую очередь или очередь — копию базового объекта-контейнера.
 
@@ -374,7 +370,7 @@ explicit queue(const container_type& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Контейнер **const**, из которого будет копироваться создаваемая очередь.
 
 ### <a name="remarks"></a>Примечания
@@ -429,7 +425,7 @@ The element at the front of queue q5 is 1.
 The element at the back of queue q5 is 2.
 ```
 
-## <a name="size"></a>  queue::size
+## <a name="size"></a> Размер
 
 Возвращает число элементов в очереди.
 
@@ -470,7 +466,7 @@ The queue length is 1.
 The queue length is now 2.
 ```
 
-## <a name="size_type"></a>  queue::size_type
+## <a name="size_type"></a> size_type
 
 Тип целого числа без знака, который может представлять количество элементов в очереди.
 
@@ -486,7 +482,7 @@ typedef typename Container::size_type size_type;
 
 См. пример для [queue::front](#front) с примером объявления и использования `size_type`.
 
-## <a name="value_type"></a>  queue::value_type
+## <a name="value_type"></a> value_type
 
 Тип, представляющий тип объекта, который хранится в виде элемента в очереди.
 

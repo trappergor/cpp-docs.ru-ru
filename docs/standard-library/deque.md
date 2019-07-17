@@ -6,26 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - deque header
 ms.assetid: 4521fe92-5a91-4853-9e9f-59600bf9e46f
-ms.openlocfilehash: 4c9746a0ffee654bb783e30e9a98e708b68048cf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 167bdc324a67d8b1379f279e8fcc363ee6b0fca2
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393991"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246739"
 ---
 # <a name="ltdequegt"></a>&lt;deque&gt;
 
 Определяет двустороннюю очередь (deque) классов шаблонов контейнеров и некоторые вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <deque>
-```
+**Заголовок:** \<deque>
+
+> [!NOTE]
+> \<Deque > Библиотека также использует `#include <initializer_list>` инструкции.
+
+## <a name="members"></a>Участники
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator!=](../standard-library/deque-operators.md#op_neq)|Проверяет неравенство объекта deque слева от оператора объекту deque справа от оператора.|
 |[оператор<](../standard-library/deque-operators.md#op_lt)|Проверяет, меньше ли объект deque слева от оператора объекта deque справа от оператора.|
@@ -36,13 +39,13 @@ ms.locfileid: "62393991"
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[swap](../standard-library/deque-functions.md#swap)|Меняет местами элементы двух объектов deque.|
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс deque](../standard-library/deque-class.md)|Класс шаблона контейнеров последовательности, которые упорядочивают элементы заданного типа в линейном порядке и, подобно векторам, обеспечивают быстрый произвольный доступ к любому элементу и эффективную вставку и удаление в конце контейнера.|
 

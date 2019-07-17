@@ -31,12 +31,12 @@ helpviewer_keywords:
 - std::shared_ptr [C++], unique
 - std::shared_ptr [C++], use_count
 ms.assetid: 1469fc51-c658-43f1-886c-f4530dd84860
-ms.openlocfilehash: 791a18461b3a0ee8237dec47c87f9d441221141d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca427bd364a5ab66112f23e0a920598ad8ba190b
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412557"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246373"
 ---
 # <a name="sharedptr-class"></a>Класс shared_ptr
 
@@ -46,7 +46,7 @@ ms.locfileid: "62412557"
 
 ```cpp
 template <class T>
-class shared_ptr;
+    class shared_ptr;
 ```
 
 ## <a name="remarks"></a>Примечания
@@ -57,7 +57,7 @@ class shared_ptr;
 
 Аргумент шаблона `T` может быть неполным типом, за исключением случаев, особо отмеченных для определенных функций-членов.
 
-При создании объекта `shared_ptr<T>` из указателя ресурса типа `G*` или из `shared_ptr<G>` тип указателя `G*` должен допускать преобразование в `T*`. В противном случае код не будет компилироваться. Пример:
+При создании объекта `shared_ptr<T>` из указателя ресурса типа `G*` или из `shared_ptr<G>` тип указателя `G*` должен допускать преобразование в `T*`. В противном случае код не будет компилироваться. Например:
 
 ```cpp
 #include <memory>
@@ -129,44 +129,67 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[shared_ptr](#shared_ptr)|Создает документ `shared_ptr`.|
-|[shared_ptr::~shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|
+|[~ shared_ptr](#dtorshared_ptr)|Удаляет `shared_ptr`.|
 
-### <a name="types"></a>Типы
+### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[element_type](#element_type)|Тип элемента.|
 
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
+|[allocate_shared](#allocate_shared)||
+|[const_pointer_cast](#const_pointer_cast)||
+|[dynamic_pointer_cast](#dynamic_pointer_cast)||
 |[get](#get)|Возвращает адрес принадлежащего ресурса.|
+|[get_deleter](#get_deleter)||
+|[make_shared](#make_shared)||
 |[owner_before](#owner_before)|Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.|
+|[reinterpret_pointer_cast](#reinterpret_pointer_cast)||
 |[reset](#reset)|Заменяет принадлежащий ресурс.|
+|[static_pointer_cast](#static_pointer_cast)||
 |[swap](#swap)|Меняет местами два объекта `shared_ptr`.|
 |[unique](#unique)|Проверяет, является ли принадлежащий ресурс уникальным.|
 |[use_count](#use_count)|Подсчитывает количество владельцев ресурса.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
-|[shared_ptr::operator bool](#op_bool)|Проверяет существование принадлежащего ресурса.|
-|[shared_ptr::operator*](#op_star)|Возвращает указанное значение.|
-|[shared_ptr::operator=](#op_eq)|Заменяет принадлежащий ресурс.|
-|[shared_ptr::operator-&gt;](#op_arrow)|Получает указатель на указанное значение.|
+|[operator bool](#op_bool)|Проверяет существование принадлежащего ресурса.|
+|[оператор*](#op_star)|Возвращает указанное значение.|
+|[оператор=](#op_eq)|Заменяет принадлежащий ресурс.|
+|[оператор-&gt;](#op_arrow)|Получает указатель на указанное значение.|
+|[operator&lt;&lt;](#op_arrowarrow)||
 
-## <a name="requirements"></a>Требования
+### <a name="allocate_shared"></a> allocate_shared
 
-**Заголовок:** \<memory>
+```cpp
+template<class T, class A, class... Args>
+    shared_ptr<T> allocate_shared(const A& a, Args&&... args);
+```
 
-**Пространство имен:** std
+### <a name="const_pointer_cast"></a> const_pointer_cast
 
-## <a name="element_type"></a>  shared_ptr::element_type
+```cpp
+template<class T, class U>
+    shared_ptr<T> const_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="dynamic_pointer_cast"></a> dynamic_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> dynamic_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="element_type"></a> element_type
 
 Тип элемента.
 
@@ -174,11 +197,11 @@ shared_ptr<int> sp6(sp2);   // error, template parameter int and argument shared
 typedef T element_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом для параметра шаблона `T`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_element_type.cpp
@@ -201,7 +224,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="get"></a>  shared_ptr::get
+### <a name="get"></a> Получить
 
 Возвращает адрес принадлежащего ресурса.
 
@@ -209,11 +232,11 @@ int main()
 T *get() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает адрес контролируемого ресурса. Если объект не является владельцем ресурса, он возвращает значение 0.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_get.cpp
@@ -239,7 +262,21 @@ sp0.get() == 0 == true
 *sp1.get() == 5
 ```
 
-## <a name="op_bool"></a>  shared_ptr::operator bool
+### <a name="get_deleter"></a> get_deleter
+
+```cpp
+template<class D, class T>
+    D* get_deleter(const shared_ptr<T>& p) noexcept;
+```
+
+### <a name="make_shared"></a> make_shared
+
+```cpp
+template<class T, class... Args>
+    shared_ptr<T> make_shared(Args&&... args);
+```
+
+### <a name="op_bool"></a> Operator bool
 
 Проверяет существование принадлежащего ресурса.
 
@@ -247,11 +284,11 @@ sp0.get() == 0 == true
 explicit operator bool() const noexcept;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Оператор возвращает значение **true** при `get() != nullptr`, в противном случае **false**.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_operator_bool.cpp
@@ -278,7 +315,7 @@ int main()
 (bool)sp1 == true
 ```
 
-## <a name="op_star"></a>  shared_ptr::operator*
+### <a name="op_star"></a> оператор *
 
 Возвращает указанное значение.
 
@@ -286,11 +323,11 @@ int main()
 T& operator*() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Оператор косвенного обращения возвращает `*get()`. Следовательно, сохраненный указатель не должен быть пустым.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_operator_st.cpp
@@ -312,7 +349,7 @@ int main()
 *sp0 == 5
 ```
 
-## <a name="op_eq"></a>  shared_ptr::operator=
+### <a name="op_eq"></a> оператор =
 
 Заменяет принадлежащий ресурс.
 
@@ -320,34 +357,34 @@ int main()
 shared_ptr& operator=(const shared_ptr& sp);
 
 template <class Other>
-shared_ptr& operator=(const shared_ptr<Other>& sp);
+    shared_ptr& operator=(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>& ap);
+    shared_ptr& operator=(auto_ptr<Other>& ap);
 
 template <class Other>
-shared_ptr& operator=(auto_ptr<Other>&& ap);
+    shared_ptr& operator=(auto_ptr<Other>&& ap);
 
 template <class Other, class Deletor>
-shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
+    shared_ptr& operator=(unique_ptr<Other, Deletor>&& ap);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*sp*<br/>
+*SP*\
 Общий указатель для копирования.
 
-*тихоокеанского региона*<br/>
+*тихоокеанского региона*\
 "Автоматический" указатель ( auto_ptr ) для копирования
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Все операторы уменьшают значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`, и передают владение ресурсом, указанным последовательностью операндов, объекту `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается сбоем, значение `*this` остается неизменным.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_operator_as.cpp
@@ -376,7 +413,7 @@ int main()
 *sp0 == 10
 ```
 
-## <a name="op_arrow"></a>  shared_ptr::operator-&gt;
+### <a name="op_arrow"></a> оператор-&gt;
 
 Получает указатель на указанное значение.
 
@@ -384,11 +421,11 @@ int main()
 T * operator->() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Оператор выбора возвращает `get()`, так что выражение `sp->member` ведет себя так же, как `(sp.get())->member`, где `sp` — это объект класса `shared_ptr<T>`. Следовательно, сохраненный указатель не должен быть пустым, и `T` должен быть классом, структурой или типом объединения с членом `member`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_operator_ar.cpp
@@ -413,28 +450,42 @@ sp0->first == 1
 sp0->second == 2
 ```
 
-## <a name="owner_before"></a>  shared_ptr::owner_before
+### <a name="op_arrowarrow"></a> Оператор&lt;&lt;
+
+```cpp
+template<class E, class T, class Y>
+    basic_ostream<E, T>& operator<< (basic_ostream<E, T>& os, const shared_ptr<Y>& p);
+```
+
+### <a name="owner_before"></a> owner_before
 
 Возвращает значение true, если `shared_ptr` упорядочен до (меньше) предоставленного указателя.
 
 ```cpp
 template <class Other>
-bool owner_before(const shared_ptr<Other>& ptr);
+    bool owner_before(const shared_ptr<Other>& ptr);
 
 template <class Other>
-bool owner_before(const weak_ptr<Other>& ptr);
+    bool owner_before(const weak_ptr<Other>& ptr);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*PTR*\
 Ссылка `lvalue` на значение `shared_ptr` или `weak_ptr`.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает значение true, если `*this` — `ordered before` `ptr`.
 
-## <a name="reset"></a>  shared_ptr::reset
+### <a name="reinterpret_pointer_cast"></a> reinterpret_pointer_cast
+
+```cpp
+template<class T, class U>
+    shared_ptr<T> reinterpret_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="reset"></a> Сброс
 
 Заменяет принадлежащий ресурс.
 
@@ -442,40 +493,40 @@ bool owner_before(const weak_ptr<Other>& ptr);
 void reset();
 
 template <class Other>
-void reset(Other *ptr;);
+    void reset(Other *ptr;);
 
 template <class Other, class D>
-void reset(Other *ptr, D dtor);
+    void reset(Other *ptr, D dtor);
 
 template <class Other, class D, class A>
-void reset(Other *ptr, D dtor, A alloc);
+    void reset(Other *ptr, D dtor, A alloc);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый указателем аргумента.
 
-*D*<br/>
+*D*\
 Тип метода удаления.
 
-*ptr*<br/>
+*PTR*\
 Копируемый указатель.
 
-*dtor*<br/>
+*dtor*\
 Метод удаления для копирования.
 
-*A*<br/>
+*ОБЪЕКТ*\
 Тип распределителя.
 
-*Alloc*<br/>
+*Alloc*\
 Распределитель для копирования.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Все операторы уменьшают значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`, и передают владение ресурсом, указанным последовательностью операндов, объекту `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete). Если оператор завершается сбоем, значение `*this` остается неизменным.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_reset.cpp
@@ -521,7 +572,7 @@ int main()
 *sp == 15
 ```
 
-## <a name="shared_ptr"></a>  shared_ptr::shared_ptr
+### <a name="shared_ptr"></a> shared_ptr
 
 Создает документ `shared_ptr`.
 
@@ -535,76 +586,76 @@ shared_ptr(const shared_ptr& sp);
 shared_ptr(shared_ptr&& sp);
 
 template <class Other>
-explicit shared_ptr(Other* ptr);
+    explicit shared_ptr(Other* ptr);
 
 template <class Other, class D>
-shared_ptr(Other* ptr, D dtor);
+    shared_ptr(Other* ptr, D dtor);
 
 template <class D>
-shared_ptr(nullptr_t ptr, D dtor);
+    shared_ptr(nullptr_t ptr, D dtor);
 
 template <class Other, class D, class A>
-shared_ptr(Other* ptr, D dtor, A  alloc);
+    shared_ptr(Other* ptr, D dtor, A  alloc);
 
 template <class D, class A>
-shared_ptr(nullptr_t ptr, D dtor, A alloc);
+    shared_ptr(nullptr_t ptr, D dtor, A alloc);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp);
+    shared_ptr(const shared_ptr<Other>& sp);
 
 template <class Other>
-shared_ptr(const weak_ptr<Other>& wp);
+    shared_ptr(const weak_ptr<Other>& wp);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>& ap);
+    shared_ptr(std::auto_ptr<Other>& ap);
 
 template <class &>
-shared_ptr(std::auto_ptr<Other>&& ap);
+    shared_ptr(std::auto_ptr<Other>&& ap);
 
 template <class Other, class D>
-shared_ptr(unique_ptr<Other, D>&& up);
+    shared_ptr(unique_ptr<Other, D>&& up);
 
 template <class Other>
-shared_ptr(const shared_ptr<Other>& sp, T* ptr);
+    shared_ptr(const shared_ptr<Other>& sp, T* ptr);
 
 template <class Other, class D>
-shared_ptr(const unique_ptr<Other, D>& up) = delete;
+    shared_ptr(const unique_ptr<Other, D>& up) = delete;
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Другое*<br/>
+*Другие*\
 Тип, управляемый указателем аргумента.
 
-*ptr*<br/>
+*PTR*\
 Копируемый указатель.
 
-*D*<br/>
+*D*\
 Тип метода удаления.
 
-*A*<br/>
+*ОБЪЕКТ*\
 Тип распределителя.
 
-*dtor*<br/>
+*dtor*\
 Метод удаления.
 
-*ator*<br/>
+*ator*\
 Распределитель.
 
-*sp*<br/>
+*SP*\
 Интеллектуальный указатель для копирования
 
-*wp*<br/>
+*WP*\
 Слабый указатель.
 
-*тихоокеанского региона*<br/>
+*тихоокеанского региона*\
 "Автоматический" указатель ( auto_ptr ) для копирования
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Каждый из конструкторов создает объект для контроля над ресурсом, указанным в качестве операнда. Конструктор `shared_ptr(const weak_ptr<Other>& wp)` создает объект исключения типа [Класс bad_weak_ptr](../standard-library/bad-weak-ptr-class.md), если `wp.expired()`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_construct.cpp
@@ -656,7 +707,7 @@ int main()
 *sp5 == 15
 ```
 
-## <a name="dtorshared_ptr"></a>  shared_ptr::~shared_ptr
+### <a name="dtorshared_ptr"></a> ~ shared_ptr
 
 Удаляет `shared_ptr`.
 
@@ -664,11 +715,11 @@ int main()
 ~shared_ptr();
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Деструктор уменьшает значение счетчика ссылок для ресурса, который в настоящее время контролируется `*this`. Если число ссылок на ресурс становится равным нулю, ресурс освобождается (delete).
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_destroy.cpp
@@ -711,7 +762,14 @@ use count == 2
 use count == 1
 ```
 
-## <a name="swap"></a>  shared_ptr::swap
+### <a name="static_pointer_cast"></a> static_pointer_cast
+
+```cpp
+template<class T, class U>
+shared_ptr<T> static_pointer_cast(const shared_ptr<U>& r) noexcept;
+```
+
+### <a name="swap"></a> Swap
 
 Меняет местами два объекта `shared_ptr`.
 
@@ -719,16 +777,16 @@ use count == 1
 void swap(shared_ptr& sp);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*sp*<br/>
+*SP*\
 Разделяемый указатель (shared_ptr), с которым требуется произвести обмен контролируемыми объектами.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член устанавливает ресурсов, изначально контролируемым `*this` над *sp*и ресурсов, изначально контролируемым *sp* над `*this`. Функция не изменяет подсчет ссылок для двух ресурсов и не создает исключений.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_swap.cpp
@@ -781,7 +839,7 @@ int main()
 *wp1 == 5
 ```
 
-## <a name="unique"></a>  shared_ptr::unique
+### <a name="unique"></a> Уникальный
 
 Проверяет, является ли принадлежащий ресурс уникальным.
 
@@ -789,11 +847,11 @@ int main()
 bool unique() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает **true** Если никакие другие `shared_ptr` объекта, которому принадлежит ресурс, владельцем которого является `*this`, в противном случае **false**.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_unique.cpp
@@ -828,7 +886,7 @@ sp1.unique() == true
 sp1.unique() == false
 ```
 
-## <a name="use_count"></a>  shared_ptr::use_count
+### <a name="use_count"></a> use_count
 
 Подсчитывает количество владельцев ресурса.
 
@@ -836,11 +894,11 @@ sp1.unique() == false
 long use_count() const;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Функция-член возвращает число объектов `shared_ptr`, контролирующих ресурс, который контролируется `*this`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // std__memory__shared_ptr_use_count.cpp
@@ -866,8 +924,3 @@ int main()
 sp1.use_count() == 1
 sp1.use_count() == 2
 ```
-
-## <a name="see-also"></a>См. также
-
-[Класс weak_ptr](../standard-library/weak-ptr-class.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

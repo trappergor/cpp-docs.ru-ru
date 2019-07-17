@@ -7,12 +7,12 @@ helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-ms.openlocfilehash: 9632227619d0cad337a1cb026a20c9af0ec9d2a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6c7297fa7c31470591b473ab5eadcde54e8c3b34
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413818"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244153"
 ---
 # <a name="divides-struct"></a>divides - структура
 
@@ -39,12 +39,13 @@ struct divides<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*, *T*, *U* тип, поддерживающий `operator/` , принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Тип, поддерживающий `operator/`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд в операции деления. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -99,21 +100,10 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 The vector v1 = ( 0 7 14 21 28 35 )
 The vector v2 = ( 2 4 6 8 10 12 )
 The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
-*/
 ```
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

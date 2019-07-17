@@ -1,6 +1,6 @@
 ---
 title: Класс HString
-ms.date: 09/24/2018
+ms.date: 07/15/2019
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
@@ -8,6 +8,7 @@ f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
 - corewrappers/Microsoft::WRL::Wrappers::HString::Detach
 - corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetRawBuffer
 - corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
 - corewrappers/Microsoft::WRL::Wrappers::HString::HString
 - corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
@@ -37,12 +38,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HString::Set method
 - Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
-ms.openlocfilehash: 19ef11a5d33e69bb77049e450df1b386528b7f7b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 884efb2a69b05589ad9458148409533880073878
+ms.sourcegitcommit: fd466f2e14ad001f52f3dbe54f46d77be10f2d7b
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62398294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894401"
 ---
 # <a name="hstring-class"></a>Класс HString
 
@@ -76,6 +77,7 @@ name                                     | Описание
 [HString::Detach](#detach)               | Отменяет связывание заданных `HString` объект с его базовым значением.
 [HString::Get](#get)                     | Получает значение базового дескриптора HSTRING.
 [HString::GetAddressOf](#getaddressof)   | Извлекает указатель на базовый дескриптор HSTRING.
+[HString::GetRawBuffer](#getrawbuffer)   | Извлекает указатель на основные данные строки.
 [HString::IsValid](#isvalid)             | Указывает, является ли текущий `HString` объект является допустимым.
 [HString::MakeReference](#makereference) | Создает `HStringReference` объект из указанного строкового параметра.
 [HString::Release](#release)             | Удаляет базовое строковое значение и инициализирует текущий `HString` объекта пустое значение.
@@ -181,6 +183,22 @@ HSTRING* GetAddressOf() throw()
 ### <a name="remarks"></a>Примечания
 
 После этой операции строковое значение базового дескриптора HSTRING будет уничтожено.
+
+## <a name="getrawbuffer"></a>HString::GetRawBuffer
+
+Извлекает указатель на основные данные строки.
+
+```cpp
+const wchar_t* GetRawBuffer(unsigned int* length) const;
+```
+### <a name="parameters"></a>Параметры
+
+*Длина* указатель на **int** переменную, которая получает длину данных.
+
+### <a name="return-value"></a>Возвращаемое значение
+
+Объект **const** указатель на основные данные строки.
+
 
 ## <a name="hstring"></a>HString::HString
 
@@ -295,7 +313,7 @@ inline bool operator==(
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения. *rhs* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -328,7 +346,7 @@ inline bool operator!=( const HString& lhs,
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения. *rhs* может быть `HString` или `HStringReference` объекта или дескриптором HSTRING.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -350,7 +368,7 @@ inline bool operator<(
 *lhs*<br/>
 Первый параметр для сравнения. *LHS* можно ссылаться на `HString`.
 
-*правая часть*<br/>
+*rhs*<br/>
 Второй параметр для сравнения. *правая часть* можно ссылаться на `HString`.
 
 ### <a name="return-value"></a>Возвращаемое значение

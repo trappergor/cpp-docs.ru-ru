@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-ms.openlocfilehash: df984d90f8b632f8e3e3b183943343952d45b8be
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ccd9d7e58b9cadec83b64df5553564db20a5745
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62211979"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244528"
 ---
 # <a name="constmemfun1t-class"></a>Класс const_mem_fun1_t
 
@@ -30,13 +30,13 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 ### <a name="parameters"></a>Параметры
 
-*member_ptr*<br/>
+*member_ptr*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*left*<br/>
+*Слева*\
 **Const** объекта, *member_ptr* вызывается функция-член.
 
-*right*<br/>
+*Правильно*\
 Аргумент, который передается в *member_ptr*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -50,14 +50,3 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 ## <a name="example"></a>Пример
 
 Конструктор `const_mem_fun1_t` редко используется напрямую. `mem_fn` используется для адаптации функций-членов. См. в разделе [mem_fn](../standard-library/functional-functions.md#mem_fn) пример того, как использовать адаптеры функций-членов.
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

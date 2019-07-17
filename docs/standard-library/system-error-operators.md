@@ -5,20 +5,16 @@ f1_keywords:
 - system_error/std::operator!=
 - system_error/std::operator==
 ms.assetid: c14edefb-bd8a-4e90-88d3-c59c98e6f73c
-ms.openlocfilehash: d5c8f49c4a38862d62b7fe8212d98c87949fecfc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5cf6a455beb5654ef65f7411db4783a32c71d625
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412128"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246210"
 ---
 # <a name="ltsystemerrorgt-operators"></a>Операторы &lt;system_error&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор&lt;](#op_lt)|[оператор==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет равенство объекта слева от оператора объекту справа от оператора.
 
@@ -28,14 +24,18 @@ bool operator==(const error_code& left,
 
 bool operator==(const error_condition& left,
     const error_code& right);
+
+bool operator==(const error_condition& left,
+    const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект для проверки на равенство.|
-|*right*|Объект для проверки на равенство.|
+*Слева*\
+Объект для проверки на равенство.
+
+*Правильно*\
+Объект для проверки на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -45,24 +45,24 @@ bool operator==(const error_condition& left,
 
 Функция возвращает `left.category() == right.category() && left.value() == right.value()`.
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет неравенство объекта слева от оператора объекту справа от оператора.
 
 ```cpp
-bool operator!=(const error_code& left,
-    const error_condition& right);
-
-bool operator!=(const error_condition& left,
-    const error_code& right);
+bool operator!=(const error_code& left, const error_condition& right);
+bool operator!=(const error_condition& left, const error_code& right);
+bool operator!=(const error_code& left, const error_code& right);
+bool operator!=(const error_condition& left, const error_condition& right);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект для проверки на неравенство.|
-|*right*|Объект для проверки на неравенство.|
+*Слева*\
+Объект для проверки на неравенство.
+
+*Правильно*\
+Объект для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -72,7 +72,7 @@ bool operator!=(const error_condition& left,
 
 Функция возвращает `!(left == right)`.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Проверяет, меньше ли какой-либо объект переданного для сравнения объекта.
 
@@ -102,10 +102,11 @@ inline bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Сравниваемый объект.|
-|*right*|Сравниваемый объект.|
+*Слева*\
+Сравниваемый объект.
+
+*Правильно*\
+Сравниваемый объект.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -115,6 +116,9 @@ inline bool operator<(
 
 Эта функция проверяет порядок ошибок.
 
-## <a name="see-also"></a>См. также
+## <a name="op_ostream"></a> Оператор&lt;&lt;
 
-[<system_error>](../standard-library/system-error.md)<br/>
+```cpp
+template <class charT, class traits> 
+    basic_ostream<charT, traits>& operator<<(basic_ostream<charT, traits>& os, const error_code& ec);
+```

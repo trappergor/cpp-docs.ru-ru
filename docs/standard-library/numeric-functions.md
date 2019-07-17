@@ -11,24 +11,27 @@ ms.assetid: a4b0449a-c80c-4a1d-8d9f-d7fcd0058f8b
 helpviewer_keywords:
 - std::accumulate [C++]
 - std::adjacent_difference [C++]
+- std::exclusive_scan [C++]
+- std::gcd [C++]
+- std::inclusive_scan [C++]
 - std::inner_product [C++]
 - std::iota [C++]
+- std::lcm [C++]
 - std::partial_sum [C++]
-ms.openlocfilehash: 6df37cf4f6c8afe09f25550d4fc0d9acb553ac52
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+- std::reduce [C++]
+- std::transform_exclusive_scan [C++]
+- std::transform_inclusive_scan [C++]
+- std::transform_reduce [C++]
+ms.openlocfilehash: 0a9d0ce34b1dcd2dd9252f4b243db85118deabe6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236564"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246723"
 ---
 # <a name="ltnumericgt-functions"></a>Функции &lt;numeric&gt;
 
-||||
-|-|-|-|
-|[accumulate](#accumulate)|[adjacent_difference](#adjacent_difference)|[inner_product](#inner_product)|
-|[iota](#iota)|[partial_sum](#partial_sum)|
-
-## <a name="accumulate"></a>  accumulate
+## <a name="accumulate"></a> накапливать
 
 Вычисляет сумму всех элементов в указанном диапазоне, включая некоторое начальное значение, путем вычисления последовательных частичных сумм или вычисляет результат последовательных частичных сумм, аналогичным образом полученных от использования указанной бинарной операции, отличной от суммы.
 
@@ -46,25 +49,25 @@ Type accumulate(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий первый элемент в диапазоне для суммирования или комбинирования в соответствии с указанной бинарной операцией.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий последний элемент в диапазоне для суммирования или комбинирования в соответствии с указанной бинарной операцией, который находится на одну позицию позади конечного элемента, фактически включенного в перебираемое накопление.
 
-*Val*<br/>
+*Val*\
 Начальное значение, к которому каждый элемент по очереди прибавляется или с которым комбинируется в соответствии с указанной бинарной операцией.
 
-*binary_op*<br/>
+*binary_op*\
 Бинарная операция, которая будет применена к каждому элементу в указанном диапазоне, и результат ее предыдущих применений.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Сумма *val* и все элементы в указанном диапазоне для первой функции шаблона, или, для второй функции шаблона, результат применения указан, вместо операции суммы, чтобы бинарная операция (  *PartialResult, \*Iter*), где *PartialResult* является результатом предыдущего применения операции и `Iter` является итератором, указывающего на элемент в диапазоне.
+Сумма *val* и все элементы в указанном диапазоне для первой функции шаблона, или, для второй функции шаблона, результат применения указан, вместо операции суммы, чтобы бинарная операция ( *PartialResult, \*Iter*), где *PartialResult* является результатом предыдущего применения операции и `Iter` является итератором, указывающего на элемент в диапазоне.
 
 ### <a name="remarks"></a>Примечания
 
-Начальное значение гарантирует, что будет получен правильно определенный результат при пустом диапазоне будет, в этом случае *val* возвращается. Бинарная операция не обязательно должна быть ассоциативной или коммутативной. Результат инициализируется в начальное значение *val* и затем *результат*  =  `binary_op` ( *результат*, <strong>\*</strong> `Iter`) вычисляется последовательно по диапазоне, где `Iter` — это итератор, указывающий на следующий элемент в диапазоне. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
+Начальное значение гарантирует, что будет получен правильно определенный результат при пустом диапазоне будет, в этом случае *val* возвращается. Бинарная операция не обязательно должно быть ассоциативными или коммутативными. Результат инициализируется в начальное значение *val* и затем *результат*  =  `binary_op` (*результат*, <strong>\*</strong> `Iter`) вычисляется последовательно по диапазоне, где `Iter` — это итератор, указывающий на следующий элемент в диапазоне. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
 
 ### <a name="example"></a>Пример
 
@@ -165,7 +168,7 @@ The vector of partial products is:
 ( 1 2 6 24 120 720 5040 40320 362880 3628800 ).
 ```
 
-## <a name="adjacent_difference"></a>  adjacent_difference
+## <a name="adjacent_difference"></a> adjacent_difference
 
 Вычисляет последовательные различия между каждым элементом и его предшественником в диапазоне ввода и выводит результаты в диапазон назначения или вычисляет результат обобщенной процедуры, где операция разности заменена другой определенной бинарной операцией.
 
@@ -182,25 +185,41 @@ OutputIterator adjacent_difference(
     InputIterator last,
     OutputIterator result,
     BinaryOperation binary_op);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result);
+
+template <class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 adjacent_difference(
+    ExecutionPolicy&& exec,
+    ForwardIterator1 first,
+    ForwardIterator1 last,
+    ForwardIterator2 result,
+    BinaryOperation binary_op);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода, обращающийся к первому элементу в диапазоне ввода, элементы которого необходимо отличить от соответствующих им предшественников или где с парой значений должна быть выполнена другая заданная бинарная операция.
 
-*последний*<br/>
+*последний*\
 Итератор ввода, обращающийся к последнему элементу в диапазоне ввода, элементы которого необходимо отличить от соответствующих им предшественников или где с парой значений должна быть выполнена другая заданная бинарная операция.
 
-*результат*<br/>
+*результат*\
 Итератор вывода, обращающийся к первому элементу в диапазоне назначения, где необходимо сохранить ряд различий или результаты определенной операции.
 
-*binary_op*<br/>
+*binary_op*\
 Бинарная операция, которую необходимо применить в обобщенной операции с заменой операции вычитания в процедуре дифференцирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Итератор вывода, адресующий конец целевого диапазона: `result` + (`last` - `first`).
+Выходной итератор, указывающий конец диапазона назначения: `result` + (`last` - `first`).
 
 ### <a name="remarks"></a>Примечания
 
@@ -210,7 +229,7 @@ OutputIterator adjacent_difference(
 
 Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне вторая функция-шаблон сохраняет последовательные `partial_difference`s *a* 1, *a*2 `binary_op` *a*1, *a*3 `binary_op` *a*2 в диапазоне назначения.
 
-Бинарная операция `binary_op` не обязательно должна быть либо ассоциативной, либо коммутативной, поскольку применяемый порядок операций полностью определен.
+Бинарная операция `binary_op` не обязательно должна быть ассоциативной или коммутативной, поскольку применяемый порядок операций указывается.
 
 ### <a name="example"></a>Пример
 
@@ -273,7 +292,70 @@ int main( )
 }
 ```
 
-## <a name="inner_product"></a>  inner_product
+## <a name="exclusive_scan"></a> exclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator, class T>
+OutputIterator exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init);
+template<class InputIterator, class OutputIterator, class T, class BinaryOperation>
+OutputIterator exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init, BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T>
+ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation>
+ForwardIterator2 exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init, BinaryOperation binary_op);
+```
+
+## <a name="gcd"></a> функция gcd
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> gcd(M m, N n);
+```
+
+## <a name="inclusive_scan"></a> inclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result);
+template<class InputIterator, class OutputIterator, class BinaryOperation>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op);
+template<class InputIterator, class OutputIterator, class BinaryOperation, class T>
+OutputIterator inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op, T init);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class T>
+ForwardIterator2 inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op, T init);
+```
+
+## <a name="inner_product"></a> inner_product
 
 Вычисляет сумму поэлементного умножения двух диапазонов и добавляет ее к указанному начальному значению либо вычисляет результат обобщенной процедуры, где бинарные операции суммы и умножения заменены на другие указанные бинарные операции.
 
@@ -297,22 +379,22 @@ Type inner_product(
 
 ### <a name="parameters"></a>Параметры
 
-*first1*<br/>
+*first1*\
 Входной итератор, адресующий первый элемент в первом диапазоне, для которого нужно вычислить внутреннее произведение или обобщенное внутреннее произведение со вторым диапазоном.
 
-*last1*<br/>
+*last1*\
 Входной итератор, адресующий последний элемент в первом диапазоне, для которого нужно вычислить внутреннее произведение или обобщенное внутреннее произведение со вторым диапазоном.
 
-*first2*<br/>
+*first2*\
 Входной итератор, адресующий первый элемент во втором диапазоне, для которого нужно вычислить внутреннее произведение или обобщенное внутреннее произведение с первым диапазоном.
 
-*Val*<br/>
+*Val*\
 Начальное значение, к которому прибавляется внутреннее произведение или обобщенное внутреннее произведение диапазонов.
 
-*binary_op1*<br/>
+*binary_op1*\
 Бинарная операция, которая заменяет операцию внутреннего произведения суммирования, применяемую к поэлементным произведениям в обобщении внутреннего произведения.
 
-*binary_op2*<br/>
+*binary_op2*\
 Бинарная операция, которая заменяет операцию внутреннего поэлементного произведения умножения в обобщении внутреннего произведения.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -321,17 +403,17 @@ Type inner_product(
 
 `val` + ( *a*1 \* *b*1 ) + ( *a*2 \* *b*2 ) + ... + ( *a*n \* *b*n )
 
-последовательно заменяя *val* with `val` + ( *a*i \* *b*i ).
+последовательно заменяя *val* с `val` + (*a*я \* *b*я).
 
 Вторая функция-член возвращает:
 
 `val` *binary_op1* ( *a*1 *binary_op2* *b*1 ) *binary_op1* ( *a*2 *binary_op2* *b*2 ) *binary_op1* ... *binary_op1* ( *a*n *binary_op2* *b*n )
 
-последовательно заменяя *val* with `val` *binary_op1* ( *a*i *binary_op2* *b*i ).
+последовательно заменяя *val* с `val` *binary_op1* (*a*я *binary_op2* *b* i).
 
 ### <a name="remarks"></a>Примечания
 
-Начальное значение гарантирует, что будет получен правильно определенный результат при пустом диапазоне будет, в этом случае *val* возвращается. Бинарные операции не обязательно должны быть ассоциативными или коммутативными. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
+Начальное значение гарантирует, что будет получен правильно определенный результат при пустом диапазоне будет, в этом случае *val* возвращается. Бинарные операции не нужно быть ассоциативными или коммутативными. Диапазон должен быть корректным, а сложность должна быть линейной от размера диапазона. Возвращаемый тип бинарного оператора должен поддерживать преобразование в **Type**, чтобы гарантировать закрытие в ходе перебора.
 
 ### <a name="example"></a>Пример
 
@@ -423,9 +505,9 @@ int main()
 }
 ```
 
-## <a name="iota"></a>  iota
+## <a name="iota"></a> iota
 
-Сохраняет начальное значение, начиная с первого элемента и заполняя последовательными приращениями этого значения (` value++`) в каждом из элементов в интервале `[ first,  last)`.
+Сохраняет начальное значение, начиная с первого элемента и заполняя последовательными приращениями этого значения (` value++`) в каждом из элементов в интервале `[first,  last)`.
 
 ```cpp
 template <class ForwardIterator, class Type>
@@ -434,16 +516,14 @@ void iota(ForwardIterator first, ForwardIterator last, Type value);
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Входной итератор, адресующий первый элемент в диапазоне для заполнения.
 
-*последний*<br/>
+*последний*\
 Входной итератор, адресующий последний элемент в диапазоне для заполнения.
 
-*value*<br/>
-Начальное значение для сохранения в первом элементе и для последовательного приращения для последующих элементов.
-
-### <a name="remarks"></a>Примечания
+*value*\
+Начальное значение для хранения в первом элементе и для последовательного приращения для более поздней версии элементов.
 
 ### <a name="example"></a>Пример
 
@@ -487,7 +567,14 @@ int main(void)
 }
 ```
 
-## <a name="partial_sum"></a>  partial_sum
+## <a name="lcm"></a> lcm
+
+```cpp
+template <class M, class N>
+constexpr common_type_t<M,N> lcm(M m, N n);
+```
+
+## <a name="partial_sum"></a> partial_sum
 
 Вычисляет ряд сумм во входном диапазоне от первого до *i*-го элемента и сохраняет результат каждого суммирования в *i*-м элементе диапазона назначения либо вычисляет результат обобщенной процедуры, где операция суммирования заменяется на другую указанную бинарную операцию.
 
@@ -508,16 +595,16 @@ OutputIterator partial_sum(
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Итератор ввода, обращающийся к первому элементу в диапазоне, который необходимо частично суммировать или объединить в соответствии с заданной бинарной операцией.
 
-*последний*<br/>
+*последний*\
 Итератор ввода, обращающийся к последнему элементу в диапазоне, который необходимо частично суммировать или объединить в соответствии с указанной бинарной операцией, который расположен на одну позицию далее за последним элементом, фактически включенным в совокупности, в которой проводятся итерации.
 
-*результат*<br/>
+*результат*\
 Итератор вывода, обращающийся к первому элементу в диапазоне назначения, где необходимо сохранить ряд частичных сумм или результаты определенной операции.
 
-*binary_op*<br/>
+*binary_op*\
 Бинарная операция, которую необходимо применить в обобщенной операции с заменой операции суммирования в процедуре частичного суммирования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -528,11 +615,11 @@ OutputIterator partial_sum(
 
 Выходной итератор *результат* может быть один и тот же итератор как итератор ввода *первый*так, чтобы частичные суммы можно было вычислить на месте.
 
-Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне первая функция-шаблон сохраняет последовательные частичные суммы в диапазоне назначения, где *i*-й элемент определяется (((*a*1 + *a*2) + *a*3) *a*i).
+Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне Первая функция-шаблон сохраняет последовательных частичных сумм в диапазоне назначения, где *я*й элемент определяется (((*a*1 + *a*2) + *a*(3) *a*я).
 
-Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне вторая функция шаблона сохраняет последовательных частичных сумм в диапазоне назначения, в котором элемент i-го предоставленное (  ( ( *a*1 `binary_op` *a*2 ) `binary_op` *a*3 ) *a*i).
+Для последовательности значений *a*1, *a*2, *a*3 во входном диапазоне вторая функция шаблона сохраняет последовательных частичных сумм в диапазоне назначения, в котором элемент i-го предоставленное (((*a*1 `binary_op` *a*2) `binary_op` *a*(3) *a*я).
 
-Бинарная операция *binary_op* не обязана быть ассоциативной или коммутативной, поскольку применяемый порядок операций полностью определен.
+Бинарная операция *binary_op* не обязательно должна быть ассоциативной или коммутативной, поскольку применяемый порядок операций указывается.
 
 ### <a name="example"></a>Пример
 
@@ -594,6 +681,125 @@ int main( )
 }
 ```
 
-## <a name="see-also"></a>См. также
+## <a name="reduce"></a> уменьшить
 
-[\<numeric>](../standard-library/numeric.md)<br/>
+```cpp
+template<class InputIterator>
+typename iterator_traits<InputIterator>::value_type
+reduce(InputIterator first, InputIterator last);
+template<class InputIterator, class T>
+T reduce(InputIterator first, InputIterator last, T init);
+template<class InputIterator, class T, class BinaryOperation>
+T reduce(InputIterator first, InputIterator last, T init,
+BinaryOperation binary_op);
+template<class ExecutionPolicy, class ForwardIterator>
+typename iterator_traits<ForwardIterator>::value_type
+reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last);
+template<class ExecutionPolicy, class ForwardIterator, class T>
+T reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last, T init);
+template<class ExecutionPolicy, class ForwardIterator, class T, class BinaryOperation>
+T reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last, T init,
+BinaryOperation binary_op);
+```
+
+## <a name="transform_exclusive_scan"></a> transform_exclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator, class T,
+class BinaryOperation, class UnaryOperation>
+OutputIterator transform_exclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+T init,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_exclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+T init,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+```
+
+## <a name="transform_inclusive_scan"></a> transform_inclusive_scan
+
+```cpp
+template<class InputIterator, class OutputIterator,
+class BinaryOperation, class UnaryOperation>
+OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class InputIterator, class OutputIterator,
+class BinaryOperation, class UnaryOperation, class T>
+OutputIterator transform_inclusive_scan(InputIterator first, InputIterator last,
+OutputIterator result,
+BinaryOperation binary_op,
+UnaryOperation unary_op,
+T init);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class UnaryOperation>
+ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op,
+UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2,
+class BinaryOperation, class UnaryOperation, class T>
+ForwardIterator2 transform_inclusive_scan(ExecutionPolicy&& exec, 
+ForwardIterator1 first, ForwardIterator1 last,
+ForwardIterator2 result,
+BinaryOperation binary_op,
+UnaryOperation unary_op,
+T init);
+```
+
+## <a name="transform_reduce"></a> transform_reduce
+
+```cpp
+template<class InputIterator1, class InputIterator2, class T>
+T transform_reduce(InputIterator1 first1, InputIterator1 last1,
+InputIterator2 first2,
+T init);
+template<class InputIterator1, class InputIterator2, class T,
+class BinaryOperation1, class BinaryOperation2>
+T transform_reduce(InputIterator1 first1, InputIterator1 last1,
+InputIterator2 first2,
+T init,
+BinaryOperation1 binary_op1,
+BinaryOperation2 binary_op2);
+template<class InputIterator, class T,
+class BinaryOperation, class UnaryOperation>
+T transform_reduce(InputIterator first, InputIterator last,
+T init,
+BinaryOperation binary_op, UnaryOperation unary_op);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator1 first1, ForwardIterator1 last1,
+ForwardIterator2 first2,
+T init);
+template<class ExecutionPolicy,
+class ForwardIterator1, class ForwardIterator2, class T,
+class BinaryOperation1, class BinaryOperation2>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator1 first1, ForwardIterator1 last1,
+ForwardIterator2 first2,
+T init,
+BinaryOperation1 binary_op1,
+BinaryOperation2 binary_op2);
+template<class ExecutionPolicy,
+class ForwardIterator, class T,
+class BinaryOperation, class UnaryOperation>
+T transform_reduce(ExecutionPolicy&& exec, 
+ForwardIterator first, ForwardIterator last,
+T init,
+BinaryOperation binary_op, UnaryOperation unary_op);
+```

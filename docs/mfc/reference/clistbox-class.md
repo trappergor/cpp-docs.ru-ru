@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f7b62ecf64c70c554fe14883c45d6b7936c668d7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225273"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243569"
 ---
 # <a name="clistbox-class"></a>CListBox-класс
 
@@ -146,7 +146,7 @@ class CListBox : public CWnd
 |[CListBox::GetCount](#getcount)|Возвращает число строк в поле со списком.|
 |[CListBox::GetCurSel](#getcursel)|Возвращает отсчитываемый от нуля индекс строки, выбранного в поле со списком.|
 |[CListBox::GetHorizontalExtent](#gethorizontalextent)|Возвращает ширину в пикселях, что поле со списком может прокручиваться по горизонтали.|
-|[CListBox::GetItemData](#getitemdata)|Возвращает 32-разрядное значение, связанное с элементом списка.|
+|[CListBox::GetItemData](#getitemdata)|Возвращает значение, связанное с элементом списка.|
 |[CListBox::GetItemDataPtr](#getitemdataptr)|Возвращает указатель на элемент списка.|
 |[CListBox::GetItemHeight](#getitemheight)|Определяет высоту элементов в поле со списком.|
 |[CListBox::GetItemRect](#getitemrect)|Возвращает ограничивающий прямоугольник элемента списка, так как он отображается в текущий момент.|
@@ -170,7 +170,7 @@ class CListBox : public CWnd
 |[CListBox::SetColumnWidth](#setcolumnwidth)|Задает ширину столбца по нескольким столбцам списка.|
 |[CListBox::SetCurSel](#setcursel)|Выбирает строку списка.|
 |[CListBox::SetHorizontalExtent](#sethorizontalextent)|Задает ширину в пикселях, что поле со списком может прокручиваться по горизонтали.|
-|[CListBox::SetItemData](#setitemdata)|Задает 32-разрядное значение, связанное с элементом списка.|
+|[CListBox::SetItemData](#setitemdata)|Задает значение, связанное с элементом списка.|
 |[CListBox::SetItemDataPtr](#setitemdataptr)|Задает указатель на элемент списка.|
 |[CListBox::SetItemHeight](#setitemheight)|Задает высоту элементов в поле со списком.|
 |[CListBox::SetLocale](#setlocale)|Задает идентификатор языкового стандарта для поле со списком.|
@@ -702,7 +702,7 @@ DWORD_PTR GetItemData(int nIndex) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-32-битное значение, связанный с элементом, или LB_ERR при возникновении ошибки.
+Значение, связанное с элементом, или LB_ERR при возникновении ошибки.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1288,7 +1288,7 @@ void SetHorizontalExtent(int cxExtent);
 
 ##  <a name="setitemdata"></a>  CListBox::SetItemData
 
-Задает 32-разрядное значение, связанное с указанным элементом в поле со списком.
+Задает значение, связанное с указанным элементом в поле со списком.
 
 ```
 int SetItemData(

@@ -134,12 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 739e39dcb5dd79cfaae8875c5166eb7015134430
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62362742"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243443"
 ---
 # <a name="unorderedset-class"></a>Класс unordered_set
 
@@ -158,16 +158,23 @@ class unordered_set;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Key*|Тип ключа.|
-|*хэш*|Тип объекта хэш-функции.|
-|*Пред*|Тип объекта функции сравнения на предмет равенства.|
-|*Alloc*|Класс распределителя.|
+*Ключ*\
+Тип ключа.
+
+*хэш*\
+Тип объекта хэш-функции.
+
+*Пред*\
+Тип объекта функции сравнения на предмет равенства.
+
+*Alloc*\
+Класс распределителя.
 
 ## <a name="members"></a>Участники
 
-|Определение типа|Описание|
+### <a name="typedefs"></a>Определения типов
+
+|||
 |-|-|
 |[allocator_type](#allocator_type)|Тип распределителя для управления хранилищем.|
 |[const_iterator](#const_iterator)|Тип постоянного итератора для управляемой последовательности.|
@@ -185,7 +192,9 @@ class unordered_set;
 |[size_type](#size_type)|Тип беззнакового расстояния между двумя элементами.|
 |[value_type](#value_type)|Тип элемента.|
 
-|Функция-член|Описание|
+### <a name="functions"></a>Функции
+
+|||
 |-|-|
 |[begin](#begin)|Задает начало управляемой последовательности.|
 |[контейнер](#bucket)|Получает номер блока для значения ключа.|
@@ -215,7 +224,9 @@ class unordered_set;
 |[swap](#swap)|Меняет местами содержимое двух контейнеров.|
 |[unordered_set](#unordered_set)|Создает объект контейнера.|
 
-|Операторы|Описание|
+### <a name="operators"></a>Операторы
+
+|||
 |-|-|
 |[unordered_set::operator=](#op_eq)|Копирует хэш-таблицу.|
 
@@ -228,12 +239,6 @@ class unordered_set;
 Фактический порядок элементов в управляемой последовательности зависит от хэш-функции, функции сравнения, порядка вставки, максимального коэффициента нагрузки и текущего числа блоков. Обычно невозможно предсказать порядок элементов в управляемой последовательности. Однако всегда можно сохранять уверенность, что любое подмножество элементов, имеющих соответствующий порядок, будет расположено по соседству в управляемой последовательности.
 
 Объект выделяет и освобождает хранилище для управляемой им последовательности с помощью сохраненного объекта распределителя типа [unordered_set::allocator_type](#allocator_type). Такой объект распределителя должен иметь такой же внешний интерфейс, как объект шаблонного класса `allocator`. Обратите внимание, что сохраненный объект распределителя не копируется, когда назначается объект контейнера.
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<unordered_set>
-
-**Пространство имен:** std
 
 ## <a name="allocator_type"></a>  unordered_set::allocator_type
 
@@ -273,7 +278,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="begin"></a>  unordered_set::begin
+## <a name="begin"></a> начать
 
 Задает начало управляемой последовательности или сегмента.
 
@@ -289,9 +294,8 @@ const_local_iterator begin(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*nbucket*|Номер сегмента.|
+*nbucket*\
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -353,7 +357,7 @@ int main()
 [a]
 ```
 
-## <a name="bucket"></a>  unordered_set::bucket
+## <a name="bucket"></a> контейнер
 
 Получает номер блока для значения ключа.
 
@@ -363,7 +367,7 @@ size_type bucket(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*<br/>
+*keyval*\
 Значение ключа для сопоставления.
 
 ### <a name="remarks"></a>Примечания
@@ -408,7 +412,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="bucket_count"></a>  unordered_set::bucket_count
+## <a name="bucket_count"></a> bucket_count
 
 Получает количество блоков.
 
@@ -493,7 +497,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="bucket_size"></a>  unordered_set::bucket_size
+## <a name="bucket_size"></a> bucket_size
 
 Получает размер сегмента.
 
@@ -503,7 +507,7 @@ size_type bucket_size(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nbucket*<br/>
+*nbucket*\
 Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
@@ -548,7 +552,7 @@ bucket('a') == 7
 bucket_size(7) == 1
 ```
 
-## <a name="cbegin"></a>  unordered_set::cbegin
+## <a name="cbegin"></a> cbegin
 
 Возвращает **const** итератор, обращающийся к первому элементу в диапазоне.
 
@@ -574,7 +578,7 @@ auto i2 = Container.cbegin();
 // i2 isContainer<T>::const_iterator
 ```
 
-## <a name="cend"></a>  unordered_set::cend
+## <a name="cend"></a> cend
 
 Возвращает **const** итератор, адресующий расположение после последнего элемента в диапазоне.
 
@@ -602,7 +606,7 @@ auto i2 = Container.cend();
 
 Значение, возвращаемое `cend`, не должно быть подвергнуто удалению ссылки.
 
-## <a name="clear"></a>  unordered_set::clear
+## <a name="clear"></a> Очистить
 
 Удаляет все элементы.
 
@@ -666,7 +670,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="const_iterator"></a>  unordered_set::const_iterator
+## <a name="const_iterator"></a> const_iterator
 
 Тип постоянного итератора для управляемой последовательности.
 
@@ -708,7 +712,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_local_iterator"></a>  unordered_set::const_local_iterator
+## <a name="const_local_iterator"></a> const_local_iterator
 
 Тип постоянного итератора блока для управляемой последовательности.
 
@@ -755,7 +759,7 @@ int main()
 [a]
 ```
 
-## <a name="const_pointer"></a>  unordered_set::const_pointer
+## <a name="const_pointer"></a> const_pointer
 
 Тип постоянного указателя на элемент.
 
@@ -800,7 +804,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="const_reference"></a>  unordered_set::const_reference
+## <a name="const_reference"></a> const_reference
 
 Тип постоянной ссылки на элемент.
 
@@ -845,7 +849,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="count"></a>  unordered_set::count
+## <a name="count"></a> число
 
 Определяет количество элементов, соответствующих заданному ключу.
 
@@ -855,7 +859,7 @@ size_type count(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*<br/>
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
@@ -899,7 +903,7 @@ count('b') == 1
 count('C') == 0
 ```
 
-## <a name="difference_type"></a>  unordered_set::difference_type
+## <a name="difference_type"></a> difference_type
 
 Тип расстояния со знаком между двумя элементами.
 
@@ -955,7 +959,7 @@ end()-begin() == 3
 begin()-end() == -3
 ```
 
-## <a name="emplace"></a>  unordered_set::emplace
+## <a name="emplace"></a> emplace-
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются).
 
@@ -968,9 +972,8 @@ Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*аргументы*|Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если этот объект еще не содержит элемент, ключ которого упорядочен аналогичным образом.|
+*аргументы*\
+Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если этот объект еще не содержит элемент, ключ которого упорядочен аналогичным образом.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -986,7 +989,7 @@ Args&&... args);
 
 Пример кода см. в разделе [set::emplace](../standard-library/set-class.md#emplace).
 
-## <a name="emplace_hint"></a>  unordered_set::emplace_hint
+## <a name="emplace_hint"></a> emplace_hint
 
 Вставляет элемент, созданный на месте (операции копирования или перемещения не выполняются) с подсказкой размещения.
 
@@ -999,10 +1002,11 @@ Args&&... args);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*аргументы*|Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если объект unordered_set не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.|
-|*where*|Подсказка о месте начала поиска правильной точки вставки.|
+*аргументы*\
+Аргументы, которые передаются для создания элемента, который будет вставлен в объект unordered_set, если объект unordered_set не содержит этого элемента или, в более общем случае, если этот объект еще не содержит элемента, ключ которого упорядочен аналогичным образом.
+
+*Где*\
+Подсказка о месте начала поиска правильной точки вставки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1018,7 +1022,7 @@ Args&&... args);
 
 Пример кода см. в разделе [set::emplace_hint](../standard-library/set-class.md#emplace_hint).
 
-## <a name="empty"></a>  unordered_set::empty
+## <a name="empty"></a> пустой
 
 Проверяет отсутствие элементов.
 
@@ -1082,7 +1086,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="end"></a>  unordered_set::end
+## <a name="end"></a> End
 
 Задает конец управляемой последовательности.
 
@@ -1098,9 +1102,8 @@ const_local_iterator end(size_type nbucket) const;
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*nbucket*|Номер сегмента.|
+*nbucket*\
+Номер сегмента.
 
 ### <a name="remarks"></a>Примечания
 
@@ -1151,7 +1154,7 @@ int main()
 [a]
 ```
 
-## <a name="equal_range"></a>  unordered_set::equal_range
+## <a name="equal_range"></a> equal_range
 
 Находит диапазон, соответствующий указанному ключу.
 
@@ -1165,7 +1168,7 @@ equal_range(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*<br/>
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
@@ -1219,7 +1222,7 @@ equal_range('x'):
 equal_range('b'): [b]
 ```
 
-## <a name="erase"></a>  unordered_set::erase
+## <a name="erase"></a> Стирание
 
 Удаляет элемент или диапазон элементов в объекте unordered_set с заданных позиций или удаляет элементы, соответствующие заданному ключу.
 
@@ -1233,16 +1236,16 @@ size_type erase(const key_type& Key);
 
 ### <a name="parameters"></a>Параметры
 
-*Where*<br/>
+*Где*\
 Положение удаляемого элемента.
 
-*Первый*<br/>
+*Первый*\
 Положение первого удаляемого элемента.
 
-*последний*<br/>
+*последний*\
 Положение перед последним удаляемым элементом.
 
-*Key*<br/>
+*Ключ*\
 Значение ключа удаляемых элементов.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1255,7 +1258,7 @@ size_type erase(const key_type& Key);
 
 Пример кода см. в разделе [set::erase](../standard-library/set-class.md#erase).
 
-## <a name="find"></a>  unordered_set::find
+## <a name="find"></a> найти
 
 Определяет элемент, соответствующий указанному ключу.
 
@@ -1265,7 +1268,7 @@ const_iterator find(const Key& keyval) const;
 
 ### <a name="parameters"></a>Параметры
 
-*keyval*<br/>
+*keyval*\
 Искомое значение ключа.
 
 ### <a name="remarks"></a>Примечания
@@ -1314,7 +1317,7 @@ find('A') == false
 find('b') == true: [b]
 ```
 
-## <a name="get_allocator"></a>  unordered_set::get_allocator
+## <a name="get_allocator"></a> get_allocator
 
 Возвращает сохраненный объект распределителя.
 
@@ -1352,7 +1355,7 @@ int main()
 al == std::allocator() is true
 ```
 
-## <a name="hash"></a>  unordered_set::hash_function
+## <a name="hash"></a> hash_function
 
 Получает сохраненный объект хэш-функции.
 
@@ -1390,7 +1393,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="hasher"></a>  unordered_set::hasher
+## <a name="hasher"></a> модуль хэширования
 
 Тип хэш-функции.
 
@@ -1428,7 +1431,7 @@ hfn('a') == 1630279
 hfn('b') == 1647086
 ```
 
-## <a name="insert"></a>  unordered_set::insert
+## <a name="insert"></a> Вставить
 
 Вставляет элемент или диапазон элементов в unordered_set.
 
@@ -1457,15 +1460,26 @@ void insert(initializer_list<value_type> IList);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*Val*|Значение элемента, вставляемого в unordered_set, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.|
-|*Where*|Место начала поиска правильной точки вставки.|
-|*ValTy*|Параметр шаблона, определяющий тип аргумента, с помощью которого unordered_set формирует элемент из[value_type](../standard-library/map-class.md#value_type)и точно пересылает *Val* как аргумент.|
-|*Первый*|Позиция первого элемента, который следует скопировать.|
-|*последний*|Позиция непосредственно перед последним элементом, который следует скопировать.|
-|*InputIterator*|Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).|
-|*IList*|Объект [initializer_list](../standard-library/initializer-list.md), из которого копируются элементы.|
+*Val*\
+Значение элемента, вставляемого в unordered_set, если оно уже не содержит элемент, ключ которого эквивалентно упорядочен.
+
+*Где*\
+Место начала поиска правильной точки вставки.
+
+*ValTy*\
+Параметр шаблона, определяющий тип аргумента, с помощью которого unordered_set формирует элемент из[value_type](../standard-library/map-class.md#value_type)и точно пересылает *Val* как аргумент.
+
+*Первый*\
+Позиция первого элемента, который следует скопировать.
+
+*последний*\
+Позиция непосредственно перед последним элементом, который следует скопировать.
+
+*InputIterator*\
+Аргумент функции-шаблона, который соответствует требованиям [итератора ввода](../standard-library/input-iterator-tag-struct.md), указывающего на элементы типа, которые можно использовать для создания объектов [value_type](../standard-library/map-class.md#value_type).
+
+*IList*\
+Объект [initializer_list](../standard-library/initializer-list.md), из которого копируются элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -1491,7 +1505,7 @@ void insert(initializer_list<value_type> IList);
 
 Пример кода см. в разделе [set::insert](../standard-library/set-class.md#insert).
 
-## <a name="iterator"></a>  unordered_set::iterator
+## <a name="iterator"></a> итератор
 
 Тип, предоставляющий [прямой итератор](../standard-library/forward-iterator-tag-struct.md) константы, может считывать элементы в объекте unordered_set.
 
@@ -1503,7 +1517,7 @@ typedef implementation-defined iterator;
 
 См. пример объявления и использования **итератора** в разделе [begin](../standard-library/set-class.md#begin).
 
-## <a name="key_eq"></a>  unordered_set::key_eq
+## <a name="key_eq"></a> key_eq
 
 Получает сохраненный объект функции сравнения.
 
@@ -1543,7 +1557,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_equal"></a>  unordered_set::key_equal
+## <a name="key_equal"></a> key_equal
 
 Тип функции сравнения.
 
@@ -1583,7 +1597,7 @@ cmpfn('a', 'a') == true
 cmpfn('a', 'b') == false
 ```
 
-## <a name="key_type"></a>  unordered_set::key_type
+## <a name="key_type"></a> key_type
 
 Тип ключа упорядочения.
 
@@ -1635,7 +1649,7 @@ int main()
 [d] [c] [b] [a]
 ```
 
-## <a name="load_factor"></a>  unordered_set::load_factor
+## <a name="load_factor"></a> load_factor
 
 Подсчитывает среднее число элементов в блоке.
 
@@ -1720,7 +1734,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="local_iterator"></a>  unordered_set::local_iterator
+## <a name="local_iterator"></a> local_iterator
 
 Тип итератора контейнера.
 
@@ -1767,7 +1781,7 @@ int main()
 [a]
 ```
 
-## <a name="max_bucket_count"></a>  unordered_set::max_bucket_count
+## <a name="max_bucket_count"></a> max_bucket_count
 
 Получает максимальное количество блоков.
 
@@ -1852,7 +1866,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_load_factor"></a>  unordered_set::max_load_factor
+## <a name="max_load_factor"></a> max_load_factor
 
 Возвращает или задает максимальное количество элементов в блоке.
 
@@ -1864,7 +1878,7 @@ void max_load_factor(float factor);
 
 ### <a name="parameters"></a>Параметры
 
-*Коэффициент*<br/>
+*Коэффициент*\
 Новый коэффициент максимальной нагрузки.
 
 ### <a name="remarks"></a>Примечания
@@ -1944,7 +1958,7 @@ max_bucket_count() == 128
 max_load_factor() == 0.1
 ```
 
-## <a name="max_size"></a>  unordered_set::max_size
+## <a name="max_size"></a> max_size
 
 Возвращает максимальный размер управляемой последовательности.
 
@@ -1979,7 +1993,7 @@ int main()
 max_size() == 4294967295
 ```
 
-## <a name="op_eq"></a>  unordered_set::operator=
+## <a name="op_eq"></a> оператор =
 
 Копирует хэш-таблицу.
 
@@ -1991,9 +2005,8 @@ unordered_set& operator=(unordered_set&& right);
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*right*|[Unordered_set](../standard-library/unordered-set-class.md) копируется в `unordered_set`.|
+*Правильно*\
+[Unordered_set](../standard-library/unordered-set-class.md) копируется в `unordered_set`.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2036,7 +2049,7 @@ int main( )
 }
 ```
 
-## <a name="pointer"></a>  unordered_set::pointer
+## <a name="pointer"></a> указатель
 
 Тип указателя на элемент.
 
@@ -2082,7 +2095,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="reference"></a>  unordered_set::reference
+## <a name="reference"></a> Справочник по
 
 Тип ссылки на элемент.
 
@@ -2128,7 +2141,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="rehash"></a>  unordered_set::rehash
+## <a name="rehash"></a> rehash-
 
 Повторно создает хэш-таблицу.
 
@@ -2138,7 +2151,7 @@ void rehash(size_type nbuckets);
 
 ### <a name="parameters"></a>Параметры
 
-*nbuckets*<br/>
+*nbuckets*\
 Требуемое число сегментов.
 
 ### <a name="remarks"></a>Примечания
@@ -2205,7 +2218,7 @@ load_factor() == 0.0234375
 max_load_factor() == 0.1
 ```
 
-## <a name="size"></a>  unordered_set::size
+## <a name="size"></a> Размер
 
 Подсчитывает количество элементов.
 
@@ -2270,7 +2283,7 @@ size == 2
 empty() == false
 ```
 
-## <a name="size_type"></a>  unordered_set::size_type
+## <a name="size_type"></a> size_type
 
 Тип беззнакового расстояния между двумя элементами.
 
@@ -2306,7 +2319,7 @@ int main()
 size == 0
 ```
 
-## <a name="swap"></a>  unordered_set::swap
+## <a name="swap"></a> Swap
 
 Меняет местами содержимое двух контейнеров.
 
@@ -2316,7 +2329,7 @@ void swap(unordered_set& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Контейнер для замены.
 
 ### <a name="remarks"></a>Примечания
@@ -2375,7 +2388,7 @@ int main()
 [c] [b] [a]
 ```
 
-## <a name="unordered_set"></a>  unordered_set::unordered_set
+## <a name="unordered_set"></a> unordered_set
 
 Создает объект контейнера.
 
@@ -2424,15 +2437,26 @@ unordered_set(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|-|-|
-|*InputIterator*|Тип итератора.|
-|*Al*|Объект распределителя для сохранения.|
-|*Зап.*|Объект функции сравнения для сохранения.|
-|*хэш*|Объект хэш-функции для сохранения.|
-|*bucket_count*|Минимальное количество блоков.|
-|*Right*|Контейнер для копирования.|
-|*IList*|Объект initializer_list, содержащий копируемые элементы.|
+*InputIterator*\
+Тип итератора.
+
+*Al*\
+Объект распределителя для сохранения.
+
+*Зап.* \
+Объект функции сравнения для сохранения.
+
+*хэш*\
+Объект хэш-функции для сохранения.
+
+*bucket_count*\
+Минимальное количество блоков.
+
+*Правильно*\
+Контейнер для копирования.
+
+*IList*\
+Объект initializer_list, содержащий копируемые элементы.
 
 ### <a name="remarks"></a>Примечания
 
@@ -2448,7 +2472,7 @@ unordered_set(
 
 Объектом распределителя является аргумент *Al*, если он существует; в противном случае, это `Alloc()`.
 
-## <a name="value_type"></a>  unordered_set::value_type
+## <a name="value_type"></a> value_type
 
 Тип элемента.
 
@@ -2499,10 +2523,3 @@ int main()
 [c] [b] [a]
 [d] [c] [b] [a]
 ```
-
-## <a name="see-also"></a>См. также
-
-[<unordered_set>](../standard-library/unordered-set.md)<br/>
-[Контейнеры](../cpp/containers-modern-cpp.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

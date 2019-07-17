@@ -9,22 +9,22 @@ helpviewer_keywords:
 - functors
 - functional header
 ms.assetid: 7dd463e8-a29f-49bc-aedd-8fa53b54bfbc
-ms.openlocfilehash: 317344db856a7a0568aca422ecfe8280b80db097
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7a72941c7b8c351f7b4fb8fa0e40afb809ea7cbe
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159422"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243763"
 ---
 # <a name="ltfunctionalgt"></a>&lt;functional&gt;
 
 Определяет функции стандартной библиотеки C++, помогающие создавать *объектов-функций*, также известных как *функторы*и их привязки. Объект-функция — это объект типа, который определяет `operator()`. Объект-функция может быть указателем на функцию, но, как правило, он используется для хранения дополнительных сведений, которые могут потребоваться при вызове функции.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <functional>
-```
+**Заголовок:** \<functional>
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -72,18 +72,23 @@ ms.locfileid: "62159422"
 
 У каждой оболочки вызова есть конструктор перемещения и конструктор копирования. *Простая оболочка вызова* — это оболочка с оператором присваивания, конструктор копирования, конструктор перемещения и оператор присваивания которой не вызывают исключений. *Пересылающая оболочка вызова* — это оболочка, которая может вызываться с помощью списка произвольных аргументов и которая предоставляет аргументы вызываемому объекту в оболочке в виде ссылок. Все аргументы rvalue предоставляются как ссылки rvalue, а аргументы lvalue — как ссылки lvalue.
 
-## <a name="classes"></a>Классы
+## <a name="members"></a>Участники
 
-|Класс|Описание|
+### <a name="classes"></a>Классы
+
+|||
 |-|-|
 |[bad_function_call](../standard-library/bad-function-call-class.md)|Класс, который описывает исключение, указывающий, что вызов `operator()` в объекте-[function](../standard-library/function-class.md) завершился ошибкой, так как объект был пуст.|
 |[binary_negate](../standard-library/binary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной бинарной функции.<br/> (Устарело в C ++ 17). |
 |[binder1st](../standard-library/binder1st-class.md)|Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[binder2nd](../standard-library/binder2nd-class.md)|Класс шаблона, предоставляющий конструктор, который преобразует объект бинарной функции в объект унарной функции, привязывая второй аргумент бинарной функции к указанному значению.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
+|[boyer_moore_horspool_searcher](../standard-library/boyer-moore-horspool-searcher-class.md)||
+|[boyer_moore_searcher](../standard-library/boyer-moore-searcher-class.md)||
 |[const_mem_fun_ref_t](../standard-library/const-mem-fun-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с ссылочным аргументом.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[const_mem_fun_t](../standard-library/const-mem-fun-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, не принимающую аргументы, как объект унарной функции при инициализации с аргументом указателя.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[const_mem_fun1_ref_t](../standard-library/const-mem-fun1-ref-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, принимающую один аргумент, как объект бинарной функции при инициализации с ссылочным аргументом.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[const_mem_fun1_t](../standard-library/const-mem-fun1-t-class.md)|Класс адаптера, который позволяет вызывать функцию-член-константу, принимающую один аргумент, как объект бинарной функции при инициализации с аргументом указателя.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
+|[default_searcher](../standard-library/default-searcher-class.md)||
 |[function](../standard-library/function-class.md)|Класс, создающий оболочку для вызываемого объекта.|
 |[hash](../standard-library/hash-class.md)|Класс, который вычисляет хэш-код для значения.|
 |[is_bind_expression](../standard-library/is-bind-expression-class.md)|Класс, который проверяет, можно ли создать определенный тип, вызывая `bind`.|
@@ -97,9 +102,9 @@ ms.locfileid: "62159422"
 |[reference_wrapper](../standard-library/reference-wrapper-class.md)|Класс, который создает оболочку для ссылки.|
 |[unary_negate](../standard-library/unary-negate-class.md)|Класс шаблона, предоставляющий функцию-член, которая инвертирует возвращаемое значение указанной унарной функции.<br/> (Устарело в C ++ 17).  |
 
-## <a name="functions"></a>Функции
+### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[bind](../standard-library/functional-functions.md#bind)|Привязывает аргументы к вызываемому объекту.|
 |[bind1st](../standard-library/functional-functions.md#bind1st)|Вспомогательная функция шаблона, которая создает адаптер для преобразования объекта бинарной функции в объект унарной функции, привязывая первый аргумент бинарной функции к указанному значению.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
@@ -109,6 +114,7 @@ ms.locfileid: "62159422"
 |[bit_or](../standard-library/functional-functions.md#bit_or)|Возвращает результат применения логической операции ИЛИ (оператор &#124;) между двумя параметрами.|
 |[bit_xor](../standard-library/functional-functions.md#bit_xor)|Возвращает результат применения логической операции ИСКЛЮЧАЮЩЕЕ ИЛИ (оператор ^) между двумя параметрами.|
 |[cref](../standard-library/functional-functions.md#cref)|Создает конструкцию `reference_wrapper` из аргумента.|
+|[Вызвать](../standard-library/functional-functions.md#invoke)||
 |[mem_fn](../standard-library/functional-functions.md#mem_fn)|Создает простую оболочку вызова.|
 |[mem_fun](../standard-library/functional-functions.md#mem_fun)|Вспомогательные функции шаблона, которые используются для создания адаптеров объекта-функции для функций-членов при инициализации с аргументами указателя.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref)|Вспомогательная функция шаблона, которая используется для создания адаптеров объекта-функции для функций-членов при инициализации с ссылочными аргументами.|
@@ -119,9 +125,9 @@ ms.locfileid: "62159422"
 |[ref](../standard-library/functional-functions.md#ref)|Создает `reference_wrapper` из аргумента.|
 |[swap](../standard-library/functional-functions.md#swap)|Меняет местами два объекта `function`.|
 
-## <a name="structs"></a>Структуры
+### <a name="structs"></a>Структуры
 
-|Структура|Описание|
+|||
 |-|-|
 |[binary_function](../standard-library/binary-function-struct.md)|Пустой базовый класс, определяющий типы, которые могут наследоваться производным классом, предоставляющим объект бинарной функции.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 |[divides](../standard-library/divides-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию деления элементов заданного типа значения.|
@@ -141,15 +147,15 @@ ms.locfileid: "62159422"
 |[plus](../standard-library/plus-struct.md)|Этот класс предоставляет стандартный объект-функцию, который выполняет арифметическую операцию сложения для элементов заданного типа значения.|
 |[unary_function](../standard-library/unary-function-struct.md)|Пустой базовый класс, определяющий типы, которые могут наследоваться производным классом, предоставляющим объект унарной функции.<br/> (Устарело в C ++ 11, удалено в C ++ 17). |
 
-## <a name="objects"></a>Объекты
+### <a name="objects"></a>Объекты
 
-|Object|Описание|
+|||
 |-|-|
 |[_1.._M](../standard-library/1-object.md)|Заполнители для подстановочных аргументов.|
 
-## <a name="operators"></a>Операторы
+### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator==](../standard-library/functional-operators.md#op_eq_eq)|Запрещает сравнение вызываемых объектов на равенство.|
 |[operator!=](../standard-library/functional-operators.md#op_neq)|Запрещает сравнение вызываемых объектов на неравенство.|

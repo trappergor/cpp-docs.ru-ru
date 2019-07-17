@@ -7,12 +7,12 @@ helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c83949a2c74447735f6863c5f1af68b4dfe2ee4e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62278986"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243522"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
@@ -110,6 +110,7 @@ using add_const_t = typename add_const<T>::type;
 |[is_polymorphic](../standard-library/is-polymorphic-class.md)|Проверяет, является ли тип полиморфным классом.|
 |[is_abstract](../standard-library/is-abstract-class.md)|Проверяет, является ли тип абстрактным классом.|
 |[is_final](../standard-library/is-final-class.md)|Проверяет, является ли тип типом класса, отмеченным `final`.|
+|[is_aggregate](../standard-library/is-aggregate-class.md)||
 |[is_signed](../standard-library/is-signed-class.md)|Проверяет, является ли тип знаковым целочисленным типом.|
 |[is_unsigned](../standard-library/is-unsigned-class.md)|Проверяет, является ли тип беззнаковым целочисленным типом.|
 |[is_constructible](../standard-library/is-constructible-class.md)|Проверяет, можно ли сконструировать тип с использованием заданных типов аргументов.|
@@ -119,6 +120,8 @@ using add_const_t = typename add_const<T>::type;
 |[is_assignable](../standard-library/type-traits-functions.md#is_assignable)|Проверяет, можно ли первому типу назначить значение второго типа.|
 |[is_copy_assignable](../standard-library/type-traits-functions.md#is_copy_assignable)|Проверяет, можно ли типу назначить значение ссылки константы типа.|
 |[is_move_assignable](../standard-library/type-traits-functions.md#is_move_assignable)|Проверяет, можно ли типу назначить ссылку rvalue типа.|
+|[is_swappable](../standard-library/type-traits-functions.md#is_swappable)||
+|[is_swappable_with](../standard-library/type-traits-functions.md#is_swappable_with)||
 |[is_destructible](../standard-library/is-destructible-class.md)|Проверяет, можно ли уничтожить тип.|
 |[is_trivially_constructible](../standard-library/is-trivially-constructible-class.md)|Проверяет, использует ли тип нетривиальные операции, если создан с использованием заданных типов.|
 |[is_trivially_default_constructible](../standard-library/is-trivially-default-constructible-class.md)|Проверяет, использует ли тип нетривиальные операции, если создан конструктором по умолчанию.|
@@ -135,8 +138,11 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_assignable](../standard-library/is-nothrow-assignable-class.md)|Проверяет, является ли тип назначаемым с использованием определенного типа и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_copy_assignable](../standard-library/is-nothrow-copy-assignable-class.md)|Проверяет, является ли тип назначаемым с использованием типа копирования и известно ли, что назначение не создаст исключения.|
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|Проверяет, является ли тип назначаемым с использованием типа перемещения и известно ли, что назначение не создаст исключения.|
+|[is_nothrow_swappable](../standard-library/type-traits-functions.md#is_nothrow_swappable)||
+|[is_nothrow_swappable_with](../standard-library/type-traits-functions.md#is_nothrow_swappable_with)||
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|Проверяет, является ли тип уничтожаемым и известно ли, что деструктор не создаст исключения.|
 |`has_virtual_destructor`|Проверяет, есть ли у типа виртуальный деструктор.|
+|`has_unique_object_representations`||
 | [is_invocable](is-invocable-classes.md) | Проверяет, является ли вызываемый тип можно вызывать с помощью указанных типов аргументов.<br/> Добавлен в C ++ 17. |
 | [is_invocable_r](is-invocable-classes.md) | Проверяет ли вызываемый тип может вызываться с помощью указанных типов аргументов и результат может быть преобразован в указанный тип.<br/> Добавлен в C ++ 17. |
 | [is_nothrow_invocable](is-invocable-classes.md) | Проверяет ли вызываемый тип может вызываться с помощью указанного аргумента типы и известен не могут вызывать исключения.<br/> Добавлен в C ++ 17. |
@@ -211,6 +217,14 @@ using add_const_t = typename add_const<T>::type;
 |[invoke_result](invoke-result-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлен в C ++ 17. |
 |[result_of](../standard-library/result-of-class.md)|Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. <br/>Добавлена в C ++ 14, устаревшим в C ++ 17. |
 |[underlying_type](../standard-library/underlying-type-class.md)|Создает базовый целочисленный тип для типа перечисления.|
+
+Признаки логический оператор
+
+|||
+|-|-|
+|[вместе](../standard-library/conjunction-class.md)||
+|[сложение](../standard-library/disjunction-class.md)||
+|[Отрицание](../standard-library/negation-class.md)||
 
 ## <a name="see-also"></a>См. также
 

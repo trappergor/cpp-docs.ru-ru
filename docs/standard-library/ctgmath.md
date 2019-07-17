@@ -2,26 +2,26 @@
 title: '&lt;ctgmath&gt;'
 ms.date: 11/04/2016
 ms.assetid: ff521893-f445-4dc8-a2f6-699185bb7024
-ms.openlocfilehash: 64d72bb643e792fe39978d5c2e92e1bcf23cfc4f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 85099f3cb206dd791aade59bf9a531a714e68ac3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394205"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246610"
 ---
 # <a name="ltctgmathgt"></a>&lt;ctgmath&gt;
 
-Фактически включает заголовки стандартной библиотеки C++ \<ccomplex> и \<cmath>, которые предоставляют математический макрос универсального типа, эквивалентный \<tgmath.h>.
+Фактически, включает C++ заголовки стандартной библиотеки \<сложных > и \<cmath >, которые предоставляют математический универсального типа макрос, эквивалентно \<tgmath.h >.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <ctgmath>
-```
+**Заголовок:** \<ctgmath >
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
-Функциональность заголовка стандартной библиотеки C \<tgmath.h> обеспечивается перегрузками в заголовках \<ccomplex> и \<cmath>.
+Функциональность заголовка стандартной библиотеки C \<tgmath.h > обеспечиваются перегрузками в заголовках \<сложных > и \<cmath >.
 
 Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-ms.openlocfilehash: 44c7691cc967b13b4fa94a7c51da57b7bf4d511f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d775af68b8238093c794a0f78d7e24f2a515ee56
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159721"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243796"
 ---
 # <a name="function-class"></a>Класс function
 
@@ -79,10 +79,10 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*Fty*<br/>
+*Fty*\
 Тип функции для заключения в оболочку.
 
-*AX*<br/>
+*AX*\
 Функция распределителя.
 
 ## <a name="remarks"></a>Примечания
@@ -103,21 +103,23 @@ public:
 
 Пустой объект `function` не содержит вызываемый объект или ссылку на вызываемый объект.
 
+## <a name="members"></a>Участники
+
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[function](#function)|Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[result_type](#result_type)|Возвращаемый тип хранимого вызываемого объекта.|
 
-### <a name="member-functions"></a>Функции-члены
+### <a name="functions"></a>Функции
 
-|Функция-член|Описание|
+|||
 |-|-|
 |[assign](#assign)|Присваивает вызываемый объект данному объекту функции.|
 |[swap](#swap)|Меняет местами два вызываемых объекта.|
@@ -126,19 +128,13 @@ public:
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
-|[function::operator unspecified](#op_unspecified)|Проверяет, существует ли вызываемый объект.|
-|[function::operator()](#op_call)|Вызывает вызываемый объект.|
-|[function::operator=](#op_eq)|Заменяет хранимый вызываемый объект.|
+|[оператор не указан](#op_unspecified)|Проверяет, существует ли вызываемый объект.|
+|[operator()](#op_call)|Вызывает вызываемый объект.|
+|[оператор=](#op_eq)|Заменяет хранимый вызываемый объект.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="assign"></a>  function::assign
+## <a name="assign"></a> назначить
 
 Присваивает вызываемый объект данному объекту функции.
 
@@ -156,20 +152,20 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Параметры
 
-*_Func*<br/>
+*_Func*\
 Вызываемый объект.
 
-*_Fnref*<br/>
+*_Fnref*\
 Оболочка ссылки, которая содержит вызываемый объект.
 
-*AX*<br/>
+*AX*\
 Объект распределителя.
 
 ### <a name="remarks"></a>Примечания
 
 Каждая функция-член заменяет `callable object`, который содержится в `*this`, на вызываемый объект, переданный как `operand`. Они оба выделяют память с объектом распределителя *Ax*.
 
-## <a name="function"></a>  function::function
+## <a name="function"></a> функция
 
 Создает оболочку, которая является пустой или содержит вызываемый объект произвольного типа с фиксированной сигнатурой.
 
@@ -194,22 +190,22 @@ template <class Fx, class Alloc>
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект функции для копирования.
 
-*FX*<br/>
+*FX*\
 Тип вызываемого объекта.
 
-*_Func*<br/>
+*_Func*\
 Вызываемый объект, для которого создается оболочка.
 
-*Alloc*<br/>
+*Alloc*\
 Тип распределителя.
 
-*AX*<br/>
+*AX*\
 Распределитель.
 
-*_Fnref*<br/>
+*_Fnref*\
 Ссылка на вызываемый объект для упаковки.
 
 ### <a name="remarks"></a>Примечания
@@ -286,7 +282,7 @@ f is non-empty (correct).
 g is empty (correct).
 ```
 
-## <a name="op_unspecified"></a>  function::operator unspecified
+## <a name="op_unspecified"></a> оператор не указан
 
 Проверяет, существует ли вызываемый объект.
 
@@ -328,7 +324,7 @@ not empty == false
 not empty == true
 ```
 
-## <a name="op_call"></a>  function::operator()
+## <a name="op_call"></a> Operator()
 
 Вызывает вызываемый объект.
 
@@ -341,10 +337,10 @@ result_type operator()(
 
 ### <a name="parameters"></a>Параметры
 
-*TN*<br/>
+*TN*\
 Тип N-го аргумента вызова.
 
-*TN*<br/>
+*TN*\
 N-й аргумент вызова.
 
 ### <a name="remarks"></a>Примечания
@@ -379,7 +375,7 @@ empty == false
 val == -3
 ```
 
-## <a name="op_eq"></a>  function::operator=
+## <a name="op_eq"></a> оператор =
 
 Заменяет хранимый вызываемый объект.
 
@@ -394,16 +390,16 @@ template <class Fty>
 
 ### <a name="parameters"></a>Параметры
 
-*NPC*<br/>
+*NPC*\
 Константа указателя null.
 
-*right*<br/>
+*Правильно*\
 Объект функции для копирования.
 
-*fn*<br/>
+*fn*\
 Вызываемый объект, для которого создается оболочка.
 
-*fnref*<br/>
+*fnref*\
 Ссылка на вызываемый объект для упаковки.
 
 ### <a name="remarks"></a>Примечания
@@ -461,7 +457,7 @@ empty == false
 val == -3
 ```
 
-## <a name="result_type"></a>  function::result_type
+## <a name="result_type"></a> result_type
 
 Возвращаемый тип хранимого вызываемого объекта.
 
@@ -503,7 +499,7 @@ empty == false
 val == -3
 ```
 
-## <a name="swap"></a>  function::swap
+## <a name="swap"></a> Swap
 
 Меняет местами два вызываемых объекта.
 
@@ -513,7 +509,7 @@ void swap(function& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект функции для обмена.
 
 ### <a name="remarks"></a>Примечания
@@ -562,7 +558,7 @@ empty == false
 val == -3
 ```
 
-## <a name="target"></a>  function::target
+## <a name="target"></a> Целевой объект
 
 Проверяет, является ли вызываемый объект вызываемым, как указано.
 
@@ -575,7 +571,7 @@ template <class Fty2>
 
 ### <a name="parameters"></a>Параметры
 
-*Fty2*<br/>
+*Fty2*\
 Тип целевого вызываемого объекта для проверки.
 
 ### <a name="remarks"></a>Примечания
@@ -623,7 +619,7 @@ empty == true
 no target == true
 ```
 
-## <a name="target_type"></a>  function::target_type
+## <a name="target_type"></a> target_type
 
 Возвращает сведения о типе в вызываемый объект.
 
@@ -668,8 +664,3 @@ type == int (__cdecl*)(int)
 empty == true
 type == void
 ```
-
-## <a name="see-also"></a>См. также
-
-[mem_fn](../standard-library/functional-functions.md#mem_fn)<br/>
-[Класс reference_wrapper](../standard-library/reference-wrapper-class.md)<br/>

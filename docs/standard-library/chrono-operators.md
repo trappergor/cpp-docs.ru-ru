@@ -4,23 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - chrono/std::operator modulo
 ms.assetid: c5a19267-4684-40c1-b7a9-cc1012b058f3
-ms.openlocfilehash: d86fbf15313c25dd28b9220c654750ee8bc96d81
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 398e2429c38cffb454c7b510aa5ab44fbe4cfef6
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279077"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244891"
 ---
 # <a name="ltchronogt-operators"></a>Операторы &lt;chrono&gt;
 
-||||
-|-|-|-|
-|[operator modulo](#op_modulo)|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|
-|[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|
-|[оператор*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[оператор/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="operator-"></a>  operator-
+## <a name="operator-"></a> оператор-
 
 Оператор вычитания или отрицания объектов [duration](../standard-library/duration-class.md) и [time_point](../standard-library/time-point-class.md).
 
@@ -46,16 +39,16 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
-*Время*<br/>
+*время*\
 Объект `time_point`.
 
-*Длительность*<br/>
+*Длительность*\
 Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -66,7 +59,7 @@ constexpr typename common_type<Duration1, Duration2>::type
 
 Третья функция возвращает `duration` , представляющий интервал времени между *слева* и *справа*.
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Оператор неравенства для объектов [duration](../standard-library/duration-class.md) и [time_point](../standard-library/time-point-class.md).
 
@@ -84,17 +77,17 @@ constexpr bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Каждая функция возвращает значение `!(Left == Right)`.
 
-## <a name="op_star"></a>  operator*
+## <a name="op_star"></a> оператор *
 
 Оператор деления для объектов [duration](../standard-library/chrono-operators.md#op_star).
 
@@ -115,10 +108,10 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Длительность*\
 Объект `duration`.
 
-*Mult*<br/>
+*Mult*\
 Целочисленное значение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -129,7 +122,7 @@ constexpr duration<typename common_type<Rep1, Rep2>::type, Period2>
 
 Если `is_convertible<Rep1, common_type<Rep1, Rep2>>`*не содержит значение true*, вторая функция не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_div"></a>  operator/
+## <a name="op_div"></a> оператор /
 
 Оператор деления для объектов[duration](../standard-library/chrono-operators.md#op_star).
 
@@ -149,16 +142,16 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Длительность*\
 Объект `duration`.
 
-*ДИВ*<br/>
+*div*\
 Целочисленное значение.
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -169,7 +162,7 @@ constexpr typename common_type<Rep1, Rep2>::type
 
 Если `is_convertible<Rep2, common_type<Rep1, Rep2>>`*содержит значение true*, а `Rep2` не является экземпляром `duration`, первый оператор не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
 
-## <a name="op_add"></a>  operator+
+## <a name="op_add"></a> оператор +
 
 Добавляет объекты [duration](../standard-library/duration-class.md) и [time_point](../standard-library/time-point-class.md).
 
@@ -195,16 +188,16 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
-*Время*<br/>
+*время*\
 Объект `time_point`.
 
-*Длительность*<br/>
+*Длительность*\
 Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -213,7 +206,7 @@ time_point<Clock, constexpr typename common_type<duration<Rep1, Period1>, Durati
 
 Вторая и третья функции возвращают `time_point` , представляющий точку во времени, отстоящий интервал *Dur*, от момента времени *время*.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Определяет, справедливо ли, что один из объектов [duration](../standard-library/duration-class.md) или [time_point](../standard-library/time-point-class.md) меньше, чем другой объект `duration` или `time_point`.
 
@@ -231,10 +224,10 @@ constexpr bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -243,7 +236,7 @@ constexpr bool operator<(
 
 Вторая функция возвращает **true** Если *слева* предшествует *справа*. В противном случае функция возвращает **false**.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Определяет, верно ли, что один из объектов [duration](../standard-library/duration-class.md) или [time_point](../standard-library/time-point-class.md) меньше другого объекта `duration` или `time_point` или равен ему.
 
@@ -261,17 +254,17 @@ constexpr bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Каждая функция возвращает значение `!(Right < Left)`.
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Определяет, справедливо ли, что два объекта `duration` представляют интервалы времени, имеющие одинаковую длину, или, что два объекта `time_point` представляют один и тот же момент времени.
 
@@ -289,10 +282,10 @@ constexpr bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -301,7 +294,7 @@ constexpr bool operator==(
 
 Вторая функция возвращает **true** Если *слева* и *справа* представляют тот же момент времени. В противном случае функция возвращает **false**.
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Определяет, верно ли, что один из объектов [duration](../standard-library/duration-class.md) или [time_point](../standard-library/time-point-class.md) больше, чем другой объект `duration` или `time_point`.
 
@@ -319,17 +312,17 @@ constexpr bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Каждая функция возвращает значение `Right < Left`.
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Определяет, верно ли, что один из объектов [duration](../standard-library/duration-class.md) или [time_point](../standard-library/time-point-class.md) больше другого объекта `duration` или `time_point` или равен ему.
 
@@ -347,17 +340,17 @@ constexpr bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration` или объект `time_point`.
 
-*Right*<br/>
+*Правильно*\
 Правый объект `duration` или объект `time_point`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Каждая функция возвращает значение `!(Left < Right)`.
 
-## <a name="op_modulo"></a>  operator modulo
+## <a name="op_modulo"></a> Оператор остатка от деления
 
 Оператор для операций вычисления остатка от деления над объектами [duration](../standard-library/duration-class.md).
 
@@ -377,16 +370,16 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Длительность*\
 Объект `duration`.
 
-*ДИВ*<br/>
+*div*\
 Целочисленное значение.
 
-*Left*<br/>
+*Слева*\
 Левый объект `duration`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -394,7 +387,3 @@ constexpr typename common_type<duration<Rep1, _Period1>, duration<Rep2, Period2>
 Первая функция возвращает `duration` объекта, длительность интервала которого равна *Dur* остаток от деления *Div*.
 
 Вторая функция возвращает значение, представляющее *слева* остаток от деления *справа*.
-
-## <a name="see-also"></a>См. также
-
-[\<chrono>](../standard-library/chrono.md)<br/>

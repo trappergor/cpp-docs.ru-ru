@@ -17,22 +17,16 @@ helpviewer_keywords:
 - std::operator&gt;= (iterator)
 - std::operator&lt; (iterator)
 - std::operator&lt;= (iterator), std::operator== (iterator)
-ms.openlocfilehash: 311710d5614bbc7c24d6b32e89285715476f94da
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7455610af5f03be024753e26f67e561b14c85612
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224263"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244021"
 ---
 # <a name="ltiteratorgt-operators"></a>Операторы &lt;iterator&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator+](#op_add)|
-|[operator-](#operator-)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет объект итератора в левой части оператора на неравенство объекту итератора в правой части.
 
@@ -49,10 +43,10 @@ bool operator!=(const istreambuf_iterator<CharType, Traits>& left, const istream
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `iterator`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -125,7 +119,7 @@ in the reversed sequence: 7.
 The iterators are not equal.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет объект итератора в левой части оператора на равенство объекту итератора в правой части.
 
@@ -153,10 +147,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа iterator.
 
-*right*<br/>
+*Правильно*\
 Объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -167,7 +161,7 @@ bool operator==(
 
 Один итератор равен другому, если они адресуют одни и те же элементы в контейнере. Если два итератора указывают на различные элементы в контейнере, они не равны.
 
-Первые два шаблона оператора возвращает значение true, только если оба *левой* и *правой* сохранить тот же итератор. Третий оператор шаблона возвращает значение true, только если оба *левой* и *правой* хранить один и тот же указатель потока. Четвертый оператор-шаблон возвращает ` left.equal ( right)`.
+Первые два шаблона оператора возвращает значение true, только если оба *левой* и *правой* сохранить тот же итератор. Третий оператор шаблона возвращает значение true, только если оба *левой* и *правой* хранить один и тот же указатель потока. Четвертый оператор-шаблон возвращает `left.equal (right)`.
 
 ### <a name="example"></a>Пример
 
@@ -231,7 +225,7 @@ in the reversed sequence: 8.
 The iterators are not equal.
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Определяет, верно ли, что объект итератора в левой части оператора меньше объекта итератора в правой части.
 
@@ -242,10 +236,10 @@ bool operator<(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `iterator`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `iterator`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -322,7 +316,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than the iterator rVPOS2.
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Определяет, верно ли, что объект итератора в левой части оператора меньше или равен объекту итератора в правой части.
 
@@ -333,10 +327,10 @@ bool operator<=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа iterator.
 
-*right*<br/>
+*Правильно*\
 Объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -417,7 +411,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is less than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Определяет, верно ли, что объект итератора в левой части оператора больше объекта итератора в правой части.
 
@@ -428,10 +422,10 @@ bool operator>(const reverse_iterator<RandomIterator>& left, const reverse_itera
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа iterator.
 
-*right*<br/>
+*Правильно*\
 Объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -506,7 +500,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than the iterator rVPOS2.
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Определяет, верно ли, что объект итератора в левой части оператора больше или равен объекту итератора в правой части.
 
@@ -517,10 +511,10 @@ bool operator>=(const reverse_iterator<RandomIterator>& left, const reverse_iter
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа iterator.
 
-*right*<br/>
+*Правильно*\
 Объект типа iterator.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -601,7 +595,7 @@ in the reversed sequence: 8.
 The iterator rVPOS1 is greater than or equal to the iterator rVPOS2.
 ```
 
-## <a name="op_add"></a> operator+
+## <a name="op_add"></a> оператор +
 
 Добавляет смещение к итератору и возвращает `move_iterator` или `reverse_iterator` с адресом вставленного элемента в новой позиции смещения.
 
@@ -621,15 +615,15 @@ operator+(
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Число позиций, на которое нужно сместить const move_iterator или const reverse_iterator.
 
-*right*<br/>
+*Правильно*\
 Итератор для смещения.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает сумму *правой* + *_Off*.
+Возвращает сумму *правой* +  *_Off*.
 
 ### <a name="example"></a>Пример
 
@@ -680,7 +674,7 @@ The iterator rVPOS1 now points to the fifth element
 in the reversed sequence: 2.
 ```
 
-## <a name="operator-"></a>  оператор-
+## <a name="operator-"></a> оператор-
 
 Вычитает один итератор из другого и возвращает разницу.
 
@@ -698,10 +692,10 @@ Tdiff operator-(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Итератор.
 
-*right*<br/>
+*Правильно*\
 Итератор.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -772,7 +766,3 @@ The iterator rVPOS2 now points to the fifth element
 in the reversed sequence: 2.
 The difference: rVPOS2 - rVPOS1= 4.
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<iterator>](../standard-library/iterator.md)<br/>

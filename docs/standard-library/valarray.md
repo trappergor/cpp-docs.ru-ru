@@ -6,38 +6,45 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9154f15500863d815f56438090662416b9b6fe7f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365420"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246658"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
 Определяет класс шаблона valarray и многочисленные вспомогательные классы и функции шаблонов.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <valarray>
-```
+**Заголовок:** \<valarray>
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Valarray > Библиотека использует "#include < initializer_list >" инструкции.
 
 ## <a name="remarks"></a>Примечания
 
 Эти классы и функции обладают нестандартной широтой для повышения производительности. В частности, любая функция, возвращающая тип `valarray<T1>` может возвращать объект другого типа T2. В этом случае любая функция, которая принимает один или несколько аргументов типа `valarray<T2>` должна иметь перегрузки, принимающие произвольные сочетания этих аргументов, каждый которых заменяется аргументом типа T2.
 
+## <a name="members"></a>Участники
+
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[abs](../standard-library/valarray-functions.md#abs)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны абсолютному значению элементов входного valarray.|
 |[acos](../standard-library/valarray-functions.md#acos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арккосинусу элементов входного valarray.|
 |[asin](../standard-library/valarray-functions.md#asin)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арксинусу элементов входного valarray.|
 |[atan](../standard-library/valarray-functions.md#atan)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны арифметическому значению арктангенса элементов входного valarray.|
 |[atan2](../standard-library/valarray-functions.md#atan2)|Возвращает valarray, элементы которого равны арктангенсу декартовых компонентов, заданных сочетанием констант и элементов массивов valarray.|
+|[begin](../standard-library/valarray-functions.md#begin)||
 |[cos](../standard-library/valarray-functions.md#cos)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны косинусу элементов входного valarray.|
 |[cosh](../standard-library/valarray-functions.md#cosh)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны гиперболическому косинусу элементов входного valarray.|
+|[end](../standard-library/valarray-functions.md#end)||
 |[exp](../standard-library/valarray-functions.md#exp)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны натуральной экспоненте элементов входного valarray.|
 |[log](../standard-library/valarray-functions.md#log)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны натуральному логарифму элементов входного valarray.|
 |[log10](../standard-library/valarray-functions.md#log10)|Обрабатывает элементы входного valarray, возвращая массив valarray, элементы которого равны десятичному логарифму элементов входного valarray.|
@@ -51,7 +58,7 @@ ms.locfileid: "62365420"
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[operator!=](../standard-library/valarray-operators.md#op_neq)|Проверяет, не равны ли соответствующие элементы двух одинаковых по размеру valarray или не равны ли все элементы valarray указанному значению типа элемента valarray.|
 |[оператор%](../standard-library/valarray-operators.md#op_mod)|Возвращает остаток от деления соответствующих элементов двух одинаковых по размеру valarray или от деления valarray на указанное значение типа элемента valarray или от деления указанного значения на valarray.|
@@ -74,7 +81,7 @@ ms.locfileid: "62365420"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс gslice](../standard-library/gslice-class.md)|Служебный класс, используемый для определения многомерных срезов valarray.|
 |[Класс gslice_array](../standard-library/gslice-array-class.md)|Внутренний, вспомогательный класс шаблона, который поддерживает общие объекты срезов, предоставляя операции между массивами подмножеств, заданные общим срезом valarray.|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - multiplies class
 - multiplies struct
 ms.assetid: ec85e8af-70ad-44ad-90f0-d961a5847864
-ms.openlocfilehash: 7e91c834d3e56d4c0170c4e2f6b26b73dc925432
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bccaf2a5e6594652a1179b357cdbbee2d2436b3
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62186079"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240582"
 ---
 # <a name="multiplies-struct"></a>multiplies - структура
 
@@ -39,12 +39,13 @@ struct multiplies<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Тип*, *T*, *U* тип, поддерживающий бинарный `operator*` , принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Тип, поддерживающий бинарный `operator*`, который принимает операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд в операции умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -99,21 +100,11 @@ int main( )
       cout << *Iter3 << " ";
    cout << ")" << endl;
 }
-/* Output:
+```
+
+```Output
 The vector v1 = ( 2 4 6 8 10 12 )
 The vector v2 = ( 3 6 9 12 15 18 )
 The element-wise products of vectors V1 & v2
 are: ( 6 24 54 96 150 216 )
-*/
 ```
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

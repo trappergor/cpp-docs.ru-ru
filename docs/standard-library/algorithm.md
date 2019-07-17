@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 36dfca8418cbbabd7dcfb30b2cece483406a5667
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411153"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245958"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -24,6 +24,9 @@ ms.locfileid: "62411153"
 ```cpp
 (see relevant links below for specific algorithm syntax)
 ```
+
+> [!NOTE]
+> \<Алгоритм > Библиотека также использует `#include <initializer_list>` инструкции.
 
 ## <a name="remarks"></a>Примечания
 
@@ -43,12 +46,13 @@ ms.locfileid: "62411153"
 
 ### <a name="function-templates"></a>Шаблоны функций
 
-|Функции-шаблона|Описание|
+|||
 |-|-|
 |[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)|Поиск двух соседних элементов, которые либо равны, либо удовлетворяют указанному условию.|
 |[all_of](../standard-library/algorithm-functions.md#all_of)|Возвращает **true** когда условие выполняется каждым элементом заданного диапазона.|
 |[any_of](../standard-library/algorithm-functions.md#any_of)|Возвращает **true** Если условие выполняется хотя бы один раз в указанный диапазон элементов.|
 |[binary_search](../standard-library/algorithm-functions.md#binary_search)|Проверяет, есть ли в отсортированном диапазоне элемент, равный указанному значению или эквивалентный ему в смысле, заданном двоичным предикатом.|
+|[clamp](../standard-library/algorithm-functions.md#clamp)||
 |[copy](../standard-library/algorithm-functions.md#copy)|Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в прямом направлении.|
 |[copy_backward](../standard-library/algorithm-functions.md#copy_backward)|Присваивает значения элементов из исходного диапазона диапазону назначения, выполняя итерации в исходной последовательности элементов и присваивая им новые позиции в обратном направлении.|
 |[copy_if](../standard-library/algorithm-functions.md#copy_if)|Копирует все элементы в заданном диапазоне, возвращающие **true** для указанного условия|
@@ -65,6 +69,7 @@ ms.locfileid: "62411153"
 |[find_if](../standard-library/algorithm-functions.md#find_if)|Находит позицию первого вхождения элемента, удовлетворяющего определенному условию, в диапазон.|
 |[find_if_not](../standard-library/algorithm-functions.md#find_if_not)|Возвращает первый элемент, который не удовлетворяет условию, в указанном диапазоне.|
 |[for_each](../standard-library/algorithm-functions.md#for_each)|Применяет заданный объект функции к каждому элементу в прямом порядке в пределах диапазона и возвращает объект функции.|
+|[for_each_n](../standard-library/algorithm-functions.md#for_each_n)||
 |[generate](../standard-library/algorithm-functions.md#generate)|Присваивает значения, создаваемые объектом функции, каждому элементу в диапазоне.|
 |[generate_n](../standard-library/algorithm-functions.md#generate_n)|Присваивает значения, создаваемые объектом функции, указанному количеству элементов в диапазон и возвращается на позицию, следующую за последним присвоенным значением.|
 |[includes](../standard-library/algorithm-functions.md#includes)|Проверяет, содержит ли один отсортированный диапазон все элементы, содержащиеся во втором отсортированном диапазоне, где порядок сортировки или критерий эквивалентности элементов можно задать бинарным предикатом.|
@@ -113,6 +118,7 @@ ms.locfileid: "62411153"
 |[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)|Изменяет порядок элементов в исходном диапазоне на обратный, одновременно копируя их в диапазон назначения|
 |[rotate](../standard-library/algorithm-functions.md#rotate)|Меняет местами элементы в двух соседних диапазонах.|
 |[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)|Меняет местами элементы в двух соседних диапазонах в пределах исходного диапазона и копирует результат в диапазон назначения.|
+|[Пример](../standard-library/algorithm-functions.md#sample)||
 |[search](../standard-library/algorithm-functions.md#search)|Выполняет поиск первого вхождения последовательности в целевой диапазон, элементы которого равны указанным в заданной последовательности элементов или элементы которого равноценны в смысле, заданным бинарным предикатом, элементам в заданной последовательности.|
 |[search_n](../standard-library/algorithm-functions.md#search_n)|Выполняет поиск первой подпоследовательности в диапазоне заданного числа элементов, имеющих определенное значение или связанных с этим значением отношением, указанным бинарным предикатом.|
 |[set_difference](../standard-library/algorithm-functions.md#set_difference)|Объединяет все элементы, принадлежащие одному отсортированному исходному диапазону, но не второму отсортированному исходному диапазону, в один отсортированный диапазон назначения, где критерий упорядочивания может быть указан бинарным предикатом.|

@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operatoroperator&gt=; (forward_list)
 - std::operatoroperator&lt; (forward_list)
 - std::operatoroperator&lt;= (forward_list)
-ms.openlocfilehash: 4126b81f61bd37a7a12e0621c323ec832c5b2ab7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64a49273cafd72158f176ee34ec271557ebee097
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159435"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240664"
 ---
 # <a name="ltforwardlistgt-operators"></a>Операторы &lt;forward_list&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет, равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.
 
@@ -42,16 +37,17 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="remarks"></a>Примечания
 
 Эта функция шаблона перегружает `operator==` для сравнения двух объектов класса шаблона `forward_list`. Функция возвращает `distance(left.begin(), end()) == distance(right.begin(),right.end()) && equal(left. begin(),left. end(),right.begin())`.
 
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет, не равен ли объект прямого списка слева от оператора объекту прямого списка справа от оператора.
 
@@ -63,10 +59,11 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -76,7 +73,7 @@ bool operator!=(
 
 Эта функция шаблона возвращает `!(left == right)`.
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Проверяет, меньше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -88,10 +85,11 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -101,7 +99,7 @@ bool operator<(
 
 Эта функция шаблона перегружает `operator<` для сравнения двух объектов класса шаблона `forward_list`. Функция возвращает `lexicographical_compare(lhs. begin(), lhs. end(), rhs.begin(), rhs.end())`.
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Проверяет, меньше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -113,10 +111,11 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -126,7 +125,7 @@ bool operator<=(
 
 Эта функция шаблона возвращает `!(right < left)`.
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Проверяет, больше ли объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -138,10 +137,11 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -151,7 +151,7 @@ bool operator>(
 
 Эта функция шаблона возвращает `right < left`.
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Проверяет, больше ли (или равен) объект прямого списка слева от оператора объекта прямого списка справа от оператора.
 
@@ -163,10 +163,11 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-|Параметр|Описание|
-|---------------|-----------------|
-|*left*|Объект типа `forward_list`.|
-|*right*|Объект типа `forward_list`.|
+*Слева*\
+Объект типа `forward_list`.
+
+*Правильно*\
+Объект типа `forward_list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -175,7 +176,3 @@ bool operator>=(
 ### <a name="remarks"></a>Примечания
 
 Эта функция шаблона возвращает `!(left < right)`.
-
-## <a name="see-also"></a>См. также
-
-[<forward_list>](../standard-library/forward-list.md)<br/>

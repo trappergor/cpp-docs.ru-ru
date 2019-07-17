@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ce195742605c3dd2e127c84ac2f4e1e696c75bd0
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371461"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246698"
 ---
 # <a name="ltnumericgt"></a>&lt;numeric&gt;
 
 Определяет шаблонные функции контейнера, которые выполняют алгоритмы числовой обработки.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <numeric>
-```
+**Заголовок**: \<числовых >
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -29,15 +29,25 @@ ms.locfileid: "62371461"
 
 Алгоритмы расширяют действия, поддерживаемые операциями и функциями-членами каждого из контейнеров стандартной библиотеки C++, и позволяют взаимодействовать с различными типами объектов-контейнеров одновременно.
 
+## <a name="members"></a>Участники
+
 ### <a name="functions"></a>Функции
 
-|Функция|Описание|
+|||
 |-|-|
 |[accumulate](../standard-library/numeric-functions.md#accumulate)|Вычисляет сумму всех элементов в указанном диапазоне, включая некоторое исходное значение, путем вычисления последовательных частичных сумм или вычисляет результат последовательных частичных результатов, полученных с помощью определенной бинарной операции вместо операции суммы.|
 |[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)|Вычисляет последовательные различия между каждым элементом и его предшественником в диапазоне ввода и выводит результаты в диапазон назначения или вычисляет результат обобщенной процедуры, где операция разности заменена другой определенной бинарной операцией.|
+|[exclusive_scan](../standard-library/numeric-functions.md#exclusive_scan)||
+|[функция gcd](../standard-library/numeric-functions.md#gcd)||
+|[inclusive_scan](../standard-library/numeric-functions.md#inclusive_scan)||
 |[inner_product](../standard-library/numeric-functions.md#inner_product)|Вычисляет сумму учитывающего элементы произведения двух диапазонов и добавляет ее к указанному начальному значению или вычисляет результат обобщенной процедуры, где операции суммы и произведения заменяются другими определенными бинарными операциями.|
 |[iota](../standard-library/numeric-functions.md#iota)|Хранит начальное значение, начиная с первого элемента, и заполняет последовательными приращениями значения (`value++`) в каждом из элементов в интервале `[first, last)`.|
+|[lcm](../standard-library/numeric-functions.md#lcm)||
 |[partial_sum](../standard-library/numeric-functions.md#partial_sum)|Вычисляет ряд сумм во входном диапазоне с первого элемента по *i*-й элемент и сохраняет результат каждой такой суммы в *i*-м элементе диапазона назначения или вычисляет результат обобщенной процедуры, где операция суммы заменена другой заданной бинарной операцией.|
+|[уменьшить](../standard-library/numeric-functions.md#reduce)||
+|[transform_exclusive_scan](../standard-library/numeric-functions.md#transform_exclusive_scan)||
+|[transform_inclusive_scan](../standard-library/numeric-functions.md#transform_inclusive_scan)||
+|[transform_reduce](../standard-library/numeric-functions.md#transform_reduce)||
 
 ## <a name="see-also"></a>См. также
 

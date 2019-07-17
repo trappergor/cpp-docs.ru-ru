@@ -12,21 +12,16 @@ helpviewer_keywords:
 - std::operator&amp; (bitset)
 - std::operator&gt;&gt; (bitset)
 - std::operator&lt;&lt; (bitset)
-ms.openlocfilehash: 1c4c1b6f6c023514a1d3ae46f6670247e4bf99d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 30367e003d2dad95e870854098e7fcae34f50efa
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380199"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243324"
 ---
 # <a name="ltbitsetgt-operators"></a>Операторы &lt;bitset&gt;
 
-||||
-|-|-|-|
-|[оператор&amp;](#op_amp)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[оператор^](#op_xor)|[оператор|](#op_or)| |
-
-## <a name="op_amp"></a> operator&amp;
+## <a name="op_amp"></a> Оператор&amp;
 
 Выполняет побитовую операцию `AND` между двумя битовыми массивами.
 
@@ -40,10 +35,10 @@ operator&(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.
 
-*right*<br/>
+*Правильно*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `AND`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -78,7 +73,7 @@ bitset 2: 0011
 bitset 3: 0001
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Оператор&lt;&lt;
 
 Вставляет текстовое представление битовой последовательности в поток вывода.
 
@@ -91,8 +86,8 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
-Объект типа **bitset\<N>**, который будет вставлен в выходной поток в виде строки.
+*Правильно*\
+Объект типа **bitset\<N>** , который будет вставлен в выходной поток в виде строки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -102,7 +97,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 Функция шаблона перегружает `operator<<`, позволяя битовом массиве были записаны без предварительного преобразования в строку. Шаблонная функция фактически выполняется.
 
-**ostr** << _ *Right*. [to_string](bitset-class.md) < **CharType**, **Traits**, **allocator**\< **CharType**> > ( )
+**ostr** << _*справа*. [to_string](bitset-class.md) <**CharType**, **Traits**, **распределителя**\<**CharType**>>)
 
 ### <a name="example"></a>Пример
 
@@ -135,7 +130,7 @@ int main( )
 }
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> Оператор&gt;&gt;
 
 Считывает строку битовых символов в битовый массив.
 
@@ -150,10 +145,10 @@ _Istr,
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr*<br/>
+*_Istr*\
 Строка, которая вводится во входной поток для вставки в битовый массив.
 
-*right*<br/>
+*Правильно*\
 Битовый массив, получающий биты из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -221,7 +216,7 @@ int main()
 }
 ```
 
-## <a name="op_xor"></a>  оператор^
+## <a name="op_xor"></a> оператор ^
 
 Выполняет побитовую операцию `EXCLUSIVE-OR` между двумя битовыми массивами.
 
@@ -235,10 +230,10 @@ operator^(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.
 
-*right*<br/>
+*Правильно*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `EXCLUSIVE-OR`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -273,7 +268,7 @@ bitset 2: 0011
 bitset 3: 0110
 ```
 
-## <a name="op_or"></a>  оператор|
+## <a name="op_or"></a> оператор&#124;
 
 Выполняет побитовую операцию `OR` между двумя битовыми массивами.
 
@@ -287,10 +282,10 @@ operator|(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух битовых массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.
 
-*right*<br/>
+*Правильно*\
 Второй из двух массивов, элементы которого должны объединяться с помощью побитовой операции `OR`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -324,7 +319,3 @@ bitset 1: 0101
 bitset 2: 0011
 bitset 3: 0111
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<bitset>](../standard-library/bitset.md)<br/>
