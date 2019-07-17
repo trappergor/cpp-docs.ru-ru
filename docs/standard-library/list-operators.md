@@ -16,21 +16,16 @@ helpviewer_keywords:
 - std::operator&lt; (list)
 - std::operator&lt;= (list)
 - std::operator== (list)
-ms.openlocfilehash: 919c24217866a57d0401c8cd6fea8f5cef02906b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b0b7540c1b9a55140405a55e8e034f9c6ec646c
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413194"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246467"
 ---
 # <a name="ltlistgt-operators"></a>Операторы &lt;list&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор&gt;](#op_gt)|[operator&gt;=](#op_gt_eq)|
-|[оператор&lt;](#op_lt)|[operator&lt;=](#op_lt_eq)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет неравенство объекта-списка слева от оператора объекту-списку справа от оператора.
 
@@ -42,10 +37,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -81,7 +76,7 @@ Lists not equal.
 */
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Проверяет, меньше ли объект-список слева от оператора, чем объект-список справа от оператора.
 
@@ -93,10 +88,10 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -136,7 +131,7 @@ List c1 is less than list c2.
 */
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Проверяет, что объект-список слева от оператора меньше или равен объекту-списку справа от оператора.
 
@@ -148,10 +143,10 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -191,7 +186,7 @@ List c1 is less than or equal to list c2.
 */
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет, равен ли объект-список слева от оператора объекту-списку справа от оператора.
 
@@ -203,10 +198,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -242,7 +237,7 @@ The lists are equal.
 */
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Проверяет, больше ли объект-список слева от оператора, чем объект-список справа от оператора.
 
@@ -254,10 +249,10 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -297,7 +292,7 @@ List c1 is greater than list c2.
 */
 ```
 
-## <a name="op_gt_eq"></a> operator&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Проверяет, что объект-список слева от оператора больше или равен объекту-списку справа от оператора.
 
@@ -309,10 +304,10 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Объект типа `list`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `list`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -352,7 +347,3 @@ int main( )
 List c1 is greater than or equal to list c2.
 */
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<list>](../standard-library/list.md)<br/>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - logical_and class
 - logical_and struct
 ms.assetid: 1a375cc2-0592-4d57-a553-78009c7ad610
-ms.openlocfilehash: 0a8d8c0fba8b1ad621e80fb96336eefe2aec5dd8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 86b780c71a0b0265cbd0c8829fb5aea70f0fa42e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413116"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243277"
 ---
 # <a name="logicaland-struct"></a>logical_and - структура
 
@@ -39,12 +39,13 @@ struct logical_and<void>
 
 ### <a name="parameters"></a>Параметры
 
-*Type*, *T*, *U* любой тип, поддерживающий `operator&&`, принимающий операнды указанного или выводимого типа.
+*Тип*, *T*, *U*\
+Любой тип, поддерживающий `operator&&`, принимающий операнды указанного или выводимого типа.
 
-*Left*<br/>
+*Слева*\
 Левый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную передачу ссылочных аргументов lvalue и rvalue выводимого типа *T*.
 
-*Right*<br/>
+*Правильно*\
 Правый операнд операции логического умножения. Неспециализированный шаблон принимает ссылочный аргумент lvalue типа *Type*. Специализированный шаблон выполняет точную пересылку lvalue и rvalue ссылочных аргументов выводимого типа *U*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -116,24 +117,13 @@ int main( )
       cout << *iter3 << " ";
    cout << ")" << endl;
 }
+```
 
-/* Output:
+```Output
 Original deque:
 d1 = ( true true true true true false false )
 Original deque:
 d2 = ( true false true true false true false )
 The deque which is the conjuction of d1 & d2 is:
 d3 = ( true false true true false false false )
-*/
 ```
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

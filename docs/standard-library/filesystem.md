@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: 0f397d8b0c39769fde20b6aa50412c979237f70a
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220370"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240699"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -33,7 +33,7 @@ using namespace std::experimental::filesystem::v1;
 
 Этот заголовок поддерживает файловые системы одного из двух широких классов операционных систем размещения: Microsoft Windows и Posix.
 
-Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Пример:
+Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Например:
 
 - Windows поддерживает несколько корневых имен, таких как c: или \\\network_name. Поэтому файловая система состоит из леса деревьев, где каждое дерево имеет свой собственный корневой каталог (например, c:\ или \\\network_name\\) и свой собственный текущий каталог для завершения относительного пути (который не является абсолютным путем).
 
@@ -89,10 +89,12 @@ using namespace std::experimental::filesystem::v1;
 
 Дополнительные сведения и примеры кода см. в разделе [Навигация по файловой системе (C++)](../standard-library/file-system-navigation.md).
 
-## <a name="classes"></a>Классы
+## <a name="members"></a>Участники
 
-|name|Описание|
-|----------|-----------------|
+### <a name="classes"></a>Классы
+
+|||
+|-|-|
 |[Класс directory_entry](../standard-library/directory-entry-class.md)|Описывает объект, возвращаемый `directory_iterator` или `recursive_directory_iterator`, и содержит путь.|
 |[Класс directory_iterator](../standard-library/directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы.|
 |[Класс filesystem_error](../standard-library/filesystem-error-class.md)|Базовый класс для исключений, создаваемых для отчета о переполнении системы низкого уровня.|
@@ -100,10 +102,10 @@ using namespace std::experimental::filesystem::v1;
 |[Класс recursive_directory_iterator](../standard-library/recursive-directory-iterator-class.md)|Описывает итератор ввода, выполняющий последовательный перебор имен файлов в каталоге файловой системы. Итератор может также просматривать подкаталоги.|
 |[Класс file_status](../standard-library/file-status-class.md)|Создает оболочку для `file_type`.|
 
-## <a name="structs"></a>Структуры
+### <a name="structs"></a>Структуры
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[Структура space_info](../standard-library/space-info-structure.md)|Содержит сведения о томе.|
 
 ## <a name="functions"></a>Функции
@@ -116,12 +118,13 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="enumerations"></a>Перечисления
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file) , которое определяет действия в случае, если целевой файл уже существует.|
 |[copy_options](../standard-library/filesystem-enumerations.md#copy_options)|Перечисление, используемое с функцией [copy_file](../standard-library/filesystem-functions.md#copy_file) , которое определяет действия в случае, если целевой файл уже существует.|
 |[directory_options](../standard-library/filesystem-enumerations.md#directory_options)|Перечисление, указывающее параметры итераторов каталога.|
 |[file_type](../standard-library/filesystem-enumerations.md#file_type)|Перечисление для типов файлов.|
+|[perm_options](../standard-library/filesystem-enumerations.md#perm_options)||
 |[perms](../standard-library/filesystem-enumerations.md#perms)|Тип битовой маски, используемый для передачи разрешений и параметров для разрешений.|
 
 ## <a name="see-also"></a>См. также

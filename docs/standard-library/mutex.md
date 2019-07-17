@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <mutex>
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 377ec995f4e61c957e8e620749f96523b60fed3e
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224081"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240598"
 ---
 # <a name="ltmutexgt"></a>&lt;Мьютекс&gt;
 
@@ -18,11 +18,11 @@ ms.locfileid: "62224081"
 > [!WARNING]
 > Типы синхронизации стандартной библиотеки C++, начиная с Visual Studio 2015 основаны на примитивах синхронизации Windows и больше не используют ConcRT (кроме случаев, когда целевой платформы Windows XP). Типы, определенные в \<mutex>, не должны использоваться с какими-либо типами или функциями ConcRT.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <mutex>
-```
+**Заголовок:** \<mutex >
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -47,28 +47,33 @@ ms.locfileid: "62224081"
 
 Тип мьютекса также известен как *блокируемый тип*. Если он не предоставляет функцию-член `try_lock`, это *базовый блокируемый тип*. Мьютекс с ограничением по времени также известен как *блокируемый тип с ограничением по времени* .
 
+## <a name="members"></a>Участники
+
 ### <a name="classes"></a>Классы
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[Класс lock_guard](../standard-library/lock-guard-class.md)|Представляет шаблон, для которого можно создать экземпляры и объект, деструктор которого разблокирует `mutex`.|
 |[Класс mutex (Стандартная библиотека C++)](../standard-library/mutex-class-stl.md)|Представляет тип мьютекса. Используйте объекты этого типа для принудительного взаимного исключения в программе.|
 |[Класс recursive_mutex](../standard-library/recursive-mutex-class.md)|Представляет тип мьютекса. В отличие от класса `mutex`, поведение вызывающих методов блокировки для объектов, которые уже заблокированы, четко определено.|
 |[Класс recursive_timed_mutex](../standard-library/recursive-timed-mutex-class.md)|Представляет тип мьютекса с ограничением по времени. Используйте объекты этого типа для принудительного взаимного исключения с ограниченной по времени блокировкой в программе. В отличие от объектов типа `timed_mutex`, эффект вызова методов блокировки для объектов `recursive_timed_mutex` четко определен.|
+|[Класс scoped_lock](../standard-library/scoped-lock-class.md)||
 |[Класс timed_mutex](../standard-library/timed-mutex-class.md)|Представляет тип мьютекса с ограничением по времени. Используйте объекты этого типа для принудительного взаимного исключения с ограниченной по времени блокировкой в программе.|
 |[Класс unique_lock](../standard-library/unique-lock-class.md)|Представляет шаблон, для которого можно создать экземпляры и объекты, управляющие блокировкой и разблокировкой `mutex`.|
 
 ### <a name="functions"></a>Функции
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[call_once](../standard-library/mutex-functions.md#call_once)|Предоставляет механизм для однократного вызова указанного объекта во время выполнения.|
 |[lock](../standard-library/mutex-functions.md#lock)|Пытается заблокировать все аргументы без взаимоблокировки.|
+|[swap](../standard-library/mutex-functions.md#swap)||
+|[try_lock](../standard-library/mutex-functions.md#try_lock)||
 
-### <a name="structs"></a>структурам;
+### <a name="structs"></a>Структуры
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[Структура adopt_lock_t](../standard-library/adopt-lock-t-structure.md)|Представляет тип, который используется для определения `adopt_lock`.|
 |[Структура defer_lock_t](../standard-library/defer-lock-t-structure.md)|Представляет тип, который определяет объект `defer_lock`, используемый для выбора одного из перегруженных конструкторов `unique_lock`.|
 |[Структура once_flag](../standard-library/once-flag-structure.md)|Представляет **структуры** , используемый с функцией шаблона `call_once` чтобы убедиться, что инициализация кода вызывается только один раз, даже при наличии нескольких потоков выполнения.|
@@ -76,8 +81,8 @@ ms.locfileid: "62224081"
 
 ### <a name="variables"></a>Переменные
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|Представляет объект, который можно передать в конструкторы для `lock_guard` и `unique_lock`, чтобы указать на блокировку объекта мьютекса, также передаваемого в конструктор.|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|Представляет объект, который можно передать в конструктор для `unique_lock`, чтобы указать, что конструктор не должен блокировать объект мьютекса, который также передается в него.|
 |[try_to_lock](../standard-library/mutex-functions.md#try_to_lock)|Представляет объект, который можно передать в конструктор для `unique_lock`, чтобы указать, что конструктор должен попытаться разблокировать объект `mutex`, который также передается в него без блокировки.|

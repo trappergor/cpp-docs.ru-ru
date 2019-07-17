@@ -30,25 +30,16 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 231bad65e2af1ee2ab800890c83cc50e584a8c6a
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365492"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68246115"
 ---
 # <a name="ltvalarraygt-operators"></a>Операторы &lt;valarray&gt;
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[оператор%](#op_mod)|[оператор&amp;](#op_amp)|
-|[operator&amp;&amp;](#op_amp_amp)|[оператор&gt;](#op_gt)|[operator&gt;&gt;](#op_gt_gt)|
-|[operator&gt;=](#op_gt_eq)|[оператор&lt;](#op_lt)|[operator&lt;&lt;](#op_lt_lt)|
-|[operator&lt;=](#op_lt_eq)|[оператор*](#op_star)|[operator+](#op_add)|
-|[operator-](#operator-)|[оператор/](#op_div)|[operator==](#op_eq_eq)|
-|[оператор^](#op_xor)|[оператор|](#op_or)|[оператор||](#op_lor)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет, не равны ли все элементы двух одинаковых по размеру объектов valarray или не равны ли все элементы объекта valarray указанному значению.
 
@@ -74,10 +65,10 @@ operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которых проверяются на неравенство.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которых проверяются на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -136,15 +127,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the not equal comparison test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_mod"></a>  оператор%
+## <a name="op_mod"></a> Operator %
 
 Вычисляет остаток от деления соответствующих элементов двух одинаковых по размеру объектов valarray, остаток от деления объекта valarray на указанное значение или остаток от деления указанного значения на объект valarray.
 
@@ -170,10 +162,10 @@ operator%(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Значение или объект valarray, который служит в качестве делимого, которое делится на другое значение или на объект valarray.
 
-*right*<br/>
+*Правильно*\
 Значение или объект valarray, который выступает в качестве делителя, на который делится другое значение или объект valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -220,15 +212,16 @@ int main( )
          cout << vaREM [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 53 -67 53 -67 53 -67 ).
 The initial Right valarray is: ( 1 4 7 10 13 16 ).
 The remainders from the element-by-element division is the
 valarray: ( 0 -3 4 -7 1 -3 ).
-*/
 ```
 
-## <a name="op_amp"></a> operator&amp;
+## <a name="op_amp"></a> Оператор&amp;
 
 Вычисляет результат применения побитовой операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента.
 
@@ -254,10 +247,10 @@ operator&(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого объединяются с помощью операции "побитовое `AND`", или указанное значение типа элемента, которое объединяется с помощью этой побитовой операции с каждым элементом объекта valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого объединяются с помощью операции "побитовое `AND`", или указанное значение типа элемента, которое объединяется с помощью этой побитовой операции с каждым элементом объекта valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -310,15 +303,16 @@ int main( )
          cout << vaBWA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 2 0 4 0 6 0 8 0 10 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the bitwise operator & is the
 valarray: ( 0 0 0 0 0 4 0 0 0 8 ).
-*/
 ```
 
-## <a name="op_amp_amp"></a> operator&amp;&amp;
+## <a name="op_amp_amp"></a> Оператор&amp;&amp;
 
 Вычисляет результат применения логической операции **И** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента valarray.
 
@@ -344,10 +338,10 @@ operator&&(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого объединяются с помощью операции "логическое `AND`", или указанное значение типа элемента, которое объединяется с помощью этой логической операции с каждым элементом объекта valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого объединяются с помощью операции "логическое `AND`", или указанное значение типа элемента, которое объединяется с помощью этой логической операции с каждым элементом объекта valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -398,15 +392,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the logical AND operator&& is the
 valarray: ( 0 0 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt"></a> operator&gt;
+## <a name="op_gt"></a> Оператор&gt;
 
 Проверяет, что элементы одного объекта valarray больше чем элементы одинакового по размеру объекта valarray или что все элементы объекта valarray больше или меньше, чем указанное значение.
 
@@ -432,10 +427,10 @@ operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -490,15 +485,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_eq"></a>  оператор&gt;=
+## <a name="op_gt_eq"></a> Оператор&gt;=
 
 Проверяет, больше или равны ли элементы одного valarray элементам одинакового по размеру valarray, или проверяет, больше или равны ли либо меньше или равны ли все элементы valarray указанному значению.
 
@@ -524,10 +520,10 @@ operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -582,15 +578,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the greater than or equal test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> Оператор&gt;&gt;
 
 Сдвигает вправо биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.
 
@@ -616,10 +613,10 @@ operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Значение для сдвига или объект valarray, элементы которого будут сдвигаться.
 
-*right*<br/>
+*Правильно*\
 Значение, которое указывает количество позиций для сдвига вправо, или объект valarray, элементы которого указывают поэлементное количество позиций для сдвига вправо.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -670,15 +667,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 64 -64 64 -64 64 -64 64 -64 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the right shift is the
 valarray: ( 64 -32 16 -8 4 -2 1 -1 ).
-*/
 ```
 
-## <a name="op_lt"></a> operator&lt;
+## <a name="op_lt"></a> Оператор&lt;
 
 Проверяет, меньше ли элементы одного valarray, чем элементы одинакового по размеру valarray или больше ли либо меньше ли все элементы valarray, чем указанное значение.
 
@@ -704,10 +702,10 @@ operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -762,15 +760,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the less-than comparson test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_eq"></a> operator&lt;=
+## <a name="op_lt_eq"></a> Оператор&lt;=
 
 Проверяет, меньше или равны ли элементы одного valarray элементам одинакового по размеру valarray, или проверяет, больше или равны ли либо меньше или равны ли все элементы valarray указанному значению.
 
@@ -796,10 +795,10 @@ operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в сравнении, или указанное значение, которое будет сравниваться с каждым элементом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -854,15 +853,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( -1 0 1 2 3 4 5 6 7 8 ).
 The element-by-element result of the less than or equal test is the
 valarray: ( 0 0 1 0 1 0 1 0 1 0 ).
-*/
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Оператор&lt;&lt;
 
 Сдвигает влево биты для каждого элемента valarray на указанное число позиций или на поэлементную сумму, указанную вторым valarray.
 
@@ -888,10 +888,10 @@ operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Значение для сдвига или объект valarray, элементы которого будут сдвигаться.
 
-*right*<br/>
+*Правильно*\
 Значение, которое указывает количество позиций для сдвига влево, или объект valarray, элементы которого указывают поэлементное количество позиций для сдвига влево.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -942,15 +942,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 1 -1 1 -1 1 -1 1 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the left shift is the
 valarray: ( 1 -2 4 -8 16 -32 64 -128 ).
-*/
 ```
 
-## <a name="op_star"></a>  оператор*
+## <a name="op_star"></a> оператор *
 
 Вычисляет результат поэлементного умножения для двух одинаковых по размеру объектов valarray или результат умножения объекта valarray на указанное значение.
 
@@ -976,10 +977,10 @@ operator*(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в умножении, или указанное значение, которое будет умножаться на каждый элемент valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в умножении, или указанное значение, которое будет умножаться на каждый элемент valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1026,15 +1027,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the multiplication is the
 valarray: ( 0 -1 4 -3 8 -5 12 -7 ).
-*/
 ```
 
-## <a name="op_add"></a>  оператор+
+## <a name="op_add"></a> оператор +
 
 Вычисляет поэлементную сумму для двух одинаковых по размеру объектов valarray или результат сложения объекта valarray с указанным значением.
 
@@ -1060,10 +1062,10 @@ operator+(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого будут участвовать в сложении, или указанное значение, которое будет складываться с каждым элементом valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого будут участвовать в сложении, или указанное значение, которое будет складываться с каждым элементом valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1110,15 +1112,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 2 -1 2 -1 2 -1 2 -1 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the sum is the
 valarray: ( 2 0 4 2 6 4 8 6 ).
-*/
 ```
 
-## <a name="operator-"></a>  оператор-
+## <a name="operator-"></a> оператор-
 
 Вычисляет поэлементную разность для двух одинаковых по размеру объектов valarray или разность между объектом valarray и указанным значением.
 
@@ -1144,10 +1147,10 @@ operator-(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Значение или объект valarray, который выступает в качестве уменьшаемого, из которого вычитаются другие значения или объекты valarray.
 
-*right*<br/>
+*Правильно*\
 Значение или объект valarray, который выступает в качестве вычитаемого и вычитается из других значений или объектов valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1200,15 +1203,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 10 0 10 0 10 0 10 0 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 ).
 The element-by-element result of the difference is the
 valarray: ( 10 -1 8 -3 6 -5 4 -7 ).
-*/
 ```
 
-## <a name="op_div"></a>  оператор/
+## <a name="op_div"></a> оператор /
 
 Вычисляет результат поэлементного деления для двух одинаковых по размеру объектов valarray или результат деления объекта valarray на указанное значение.
 
@@ -1234,10 +1238,10 @@ operator/(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Значение или объект valarray, который служит в качестве делимого, которое делится на другое значение или на объект valarray для формирования частного.
 
-*right*<br/>
+*Правильно*\
 Значение или объект valarray, который выступает в качестве делителя, на который делится другое значение или объект valarray для формирования частного.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1290,15 +1294,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 100 -100 100 -100 100 -100 ).
 The initial Right valarray is: ( 0 2 4 6 8 10 ).
 The element-by-element result of the quotient is the
 valarray: ( inf -50 25 -16.6667 12.5 -10 ).
-*/
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет, равны ли все элементы двух одинаковых по размеру объектов valarray или равны ли все элементы объекта valarray указанному значению.
 
@@ -1324,10 +1329,10 @@ operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которых проверяются на равенство.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которых проверяются на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1382,15 +1387,16 @@ int main( )
          cout << vaNE [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is: ( 0 1 -2 3 -4 5 -6 7 -8 9 ).
 The initial Right valarray is: ( 0 1 2 3 4 5 6 7 8 9 ).
 The element-by-element result of the equality comparison test is the
 valarray: ( 1 1 0 1 0 1 0 1 0 1 ).
-*/
 ```
 
-## <a name="op_xor"></a>  оператор^
+## <a name="op_xor"></a> оператор ^
 
 Вычисляет результат применения побитовой операции исключающего `OR` **ИЛИ** между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента.
 
@@ -1416,10 +1422,10 @@ operator^(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого объединяются с помощью операции "исключающее **ИЛИ**", или указанное значение типа элемента, которое объединяется с помощью операции "исключающее ИЛИ" с каждым элементом объекта valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого объединяются с помощью операции "исключающее **ИЛИ**", или указанное значение типа элемента, которое объединяется с помощью операции "исключающее ИЛИ" с каждым элементом объекта valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1476,15 +1482,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise XOR operator^ is the
 valarray: ( 1 0 0 3 2 4 7 6 6 9 ).
-*/
 ```
 
-## <a name="op_or"></a>  оператор|
+## <a name="op_or"></a> оператор&#124;
 
 Получает результат применения побитовой операции `OR` между соответствующими элементами двух одинаковых по размеру valarray или valarray и указанного значения типа элемента.
 
@@ -1510,10 +1517,10 @@ operator|(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого объединяются с помощью операции "побитовое `OR`", или указанное значение типа элемента, которое объединяется с помощью этой побитовой операции с каждым элементом объекта valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого объединяются с помощью операции "побитовое `OR`", или указанное значение типа элемента, которое объединяется с помощью этой побитовой операции с каждым элементом объекта valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1570,15 +1577,16 @@ int main( )
          cout << vaLAA [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 1 0 1 0 1 0 1 0 1 0 ).
 The initial Right valarray is: ( 0 0 1 3 3 4 6 6 7 9 ).
 The element-by-element result of the bitwise OR operator| is the
 valarray: ( 1 0 1 3 3 4 7 6 7 9 ).
-*/
 ```
 
-## <a name="op_lor"></a>  оператор||
+## <a name="op_lor"></a> оператор&#124;&#124;
 
 Вычисляет результат применения логической операции `OR` между соответствующими элементами двух одинаковых по размеру объектов valarray или между объектом valarray и указанным значением типа элемента valarray.
 
@@ -1604,10 +1612,10 @@ operator||(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первый из двух объектов valarray, элементы которого объединяются с помощью операции "логическое `OR`", или указанное значение типа элемента, которое объединяется с помощью этой логической операции с каждым элементом объекта valarray.
 
-*right*<br/>
+*Правильно*\
 Второй из двух объектов valarray, элементы которого объединяются с помощью операции "логическое `OR`", или указанное значение типа элемента, которое объединяется с помощью этой логической операции с каждым элементом объекта valarray.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -1662,14 +1670,11 @@ int main( )
          cout << vaLOR [ i ] << " ";
    cout << ")." << endl;
 }
-/* Output:
+```
+
+```Output
 The initial Left valarray is:  ( 0 0 0 2 0 4 0 6 0 8 ).
 The initial Right valarray is: ( 0 0 0 3 0 0 6 0 0 9 ).
 The element-by-element result of the logical OR operator|| is the
 valarray: ( 0 0 0 1 0 1 1 1 0 1 ).
-*/
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<valarray>](../standard-library/valarray.md)<br/>

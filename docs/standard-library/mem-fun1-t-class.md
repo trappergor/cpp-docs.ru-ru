@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mem_fun1_t class
 ms.assetid: 01a8c2c2-b2f7-4e3f-869c-5b5b9f06ea54
-ms.openlocfilehash: 42a6ee7c169d078e216b82365ab26d10838798c6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 822de97849750a72948137ba8fe23beab8554ff5
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412869"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245102"
 ---
 # <a name="memfun1t-class"></a>Класс mem_fun1_t
 
@@ -28,19 +28,18 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
     Result operator()(
     Type* _Pleft,
     Arg right) const;
-
 };
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*_Pm*<br/>
+*_Pm*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*_Pleft*<br/>
+*_Pleft*\
 Объект, *_Pm* вызывается функция-член.
 
-*right*<br/>
+*Правильно*\
 Аргумент, который передается в *_Pm*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -49,19 +48,8 @@ class mem_fun1_t : public binary_function<Type *, Arg, Result> {
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию *_Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( **_Pleft**->\* `_Pm`)( **right**).
+Класс шаблона сохраняет копию *_Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую ( **_Pleft** -> \* `_Pm`) (**правой**).
 
 ## <a name="example"></a>Пример
 
 Конструктор `mem_fun1_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun`. Пример использования адаптера функции-члена см. в разделе [mem_fun](../standard-library/functional-functions.md#mem_fun).
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

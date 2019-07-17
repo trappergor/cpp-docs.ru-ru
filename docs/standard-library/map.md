@@ -6,22 +6,25 @@ f1_keywords:
 helpviewer_keywords:
 - map header
 ms.assetid: bbf76680-7362-456e-88fa-ecda93561b6a
-ms.openlocfilehash: 0ea47a28599df543987831ee13a2c645f72a0113
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 96ca19b2562c3f145555c3c1b1d8db4fc700ed91
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412999"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68243312"
 ---
 # <a name="ltmapgt"></a>&lt;map&gt;
 
 Определяет классы шаблонов контейнеров map и multimap и их вспомогательные шаблоны.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <map>
-```
+**Заголовок:** \<map>
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Map > Библиотека также использует `#include <initializer_list>` инструкции.
 
 ## <a name="members"></a>Участники
 
@@ -44,7 +47,7 @@ ms.locfileid: "62412999"
 
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс value_compare](../standard-library/value-compare-class-map.md)|Предоставляет объект функции, который может сравнить элементы объекта map, сравнивая значения их ключей, чтобы определить их относительный порядок в объекте map.|
 |[Класс map](../standard-library/map-class.md)|Используется для хранения и извлечения данных из коллекции, в которой у каждого элемента есть уникальный ключ, по которым данные автоматически упорядочиваются.|

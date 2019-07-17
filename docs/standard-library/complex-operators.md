@@ -15,27 +15,20 @@ helpviewer_keywords:
 - std::operator!= (complex)
 - std::operator&gt;&gt; (complex)
 - std::operator&lt;&lt; (complex), std::operator== (complex)
-ms.openlocfilehash: 8641e2f8bcc80cd2ba9b6b68e5574a476f60312e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a8f8b623ad53b84b8e614a1831d1a060df890931
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371624"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244711"
 ---
 # <a name="ltcomplexgt-operators"></a>&lt;операторы&gt; complex
 
-||||
-|-|-|-|
-|[operator!=](#op_neq)|[operator&gt;&gt;](#op_gt_gt)|[operator&lt;&lt;](#op_lt_lt)|
-|[оператор*](#op_star)|[operator+](#op_add)|[operator-](#operator-)|
-|[оператор/](#op_div)|[operator==](#op_eq_eq)|
-
-## <a name="op_neq"></a> operator!=
+## <a name="op_neq"></a> оператор! =
 
 Проверяет на неравенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
 ```
-
 template <class Type>
 bool operator!=(
     const complex<Type>& left,
@@ -54,10 +47,10 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Комплексное число или объект типа его параметра для проверки на неравенство.
 
-*right*<br/>
+*Правильно*\
 Комплексное число или объект типа его параметра для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -170,7 +163,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_star"></a> operator\*
+## <a name="op_star"></a> Оператор\*
 
 Умножает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
@@ -194,10 +187,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет умножено с \* операции.
 
-*right*<br/>
+*Правильно*\
 Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет умножено с \* операции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -268,7 +261,7 @@ int main( )
 }
 ```
 
-## <a name="op_add"></a> operator+
+## <a name="op_add"></a> оператор +
 
 Складывает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
@@ -295,10 +288,10 @@ complex<Type> operator+(const complex<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет сложено с помощью операции +.
 
-*right*<br/>
+*Правильно*\
 Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, которое будет сложено с помощью операции +.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -409,7 +402,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: 0.927295 radians, which is 53.1301 degrees.
 ```
 
-## <a name="operator-"></a>  оператор-
+## <a name="operator-"></a> оператор-
 
 Вычитает два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
@@ -435,10 +428,10 @@ complex<Type> operator-(const complex<Type>& left);
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Первое из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, для выполнения вычитания с помощью операции –.
 
-*right*<br/>
+*Правильно*\
 Второе из двух комплексных чисел или число, имеющее тип параметра для комплексного числа, для выполнения вычитания с помощью операции –.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -551,7 +544,7 @@ The modulus of cs4 is: 5
 The argument of cs4 is: -2.2143 radians, which is -126.87 degrees.
 ```
 
-## <a name="op_div"></a>  оператор/
+## <a name="op_div"></a> оператор /
 
 Делит два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
@@ -574,10 +567,10 @@ complex<Type> operator*(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Комплексное число или число, имеющее тип параметра для комплексного числа, которое является делимым для деления на делитель с помощью операции /.
 
-*right*<br/>
+*Правильно*\
 Комплексное число или число, имеющее тип параметра для комплексного числа, которое является делителем для деления делимого с помощью операции /.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -671,7 +664,7 @@ The modulus of cs3 is: 1.66667
 The argument of cs3 is: -0.523599 radians, which is -30 degrees.
 ```
 
-## <a name="op_lt_lt"></a> operator&lt;&lt;
+## <a name="op_lt_lt"></a> Оператор&lt;&lt;
 
 Вставляет указанное комплексное число в выходной поток.
 
@@ -684,10 +677,10 @@ basic_ostream<Elem, Traits>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*Ostr*<br/>
+*Ostr*\
 Выходной поток, в который будет введено комплексное число.
 
-*right*<br/>
+*Правильно*\
 Комплексное число для ввода в выходной поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -733,7 +726,7 @@ The modulus of c2 is: 2
 The argument of c2 is: 0.523599 radians, which is 30 degrees.
 ```
 
-## <a name="op_eq_eq"></a> operator==
+## <a name="op_eq_eq"></a> оператор ==
 
 Проверяет на равенство два комплексных числа, по крайней мере одно из которых может принадлежать к подмножеству типа для вещественной и мнимой частей.
 
@@ -757,10 +750,10 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*Слева*\
 Комплексное число или объект типа его параметра для проверки на неравенство.
 
-*right*<br/>
+*Правильно*\
 Комплексное число или объект типа его параметра для проверки на неравенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -873,7 +866,7 @@ The 2nd right-side complex number is cr3b = (5,0)
 The complex numbers cl3b & cr3b are equal.
 ```
 
-## <a name="op_gt_gt"></a> operator&gt;&gt;
+## <a name="op_gt_gt"></a> Оператор&gt;&gt;
 
 Извлекает комплексное число из входного потока.
 
@@ -887,10 +880,10 @@ basic_istream<Elem, Traits>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*ISTR*<br/>
+*ISTR*\
 Входной поток, из которого будет извлечено комплексное число.
 
-*right*<br/>
+*Правильно*\
 Комплексное число, которое извлекается из входного потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -932,7 +925,3 @@ int main( )
 Input a complex number ( try: 2.0 ): 2.0
 2.0
 ```
-
-## <a name="see-also"></a>См. также
-
-[\<complex>](../standard-library/complex.md)<br/>

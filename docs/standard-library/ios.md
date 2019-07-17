@@ -7,28 +7,31 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385223"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245240"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
 Определяет несколько основных типов и функций при работе с потоками ввода-вывода. Этот заголовок обычно включается автоматически при использовании других заголовков потоков ввода-вывода. Его редко приходится включать напрямую.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <ios>
-```
+**Заголовок**: \<ios >
+
+**Пространство имен:** std
+
+> [!NOTE]
+> \<Ios > Библиотека использует `#include <iosfwd>` инструкции.
 
 ## <a name="remarks"></a>Примечания
 
 Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг формата `ios_base::skipws` в объекте `str`, который может быть одного из этих типов.
 
-Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Пример:
+Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Например:
 
 ```cpp
 istr>> noskipws;
@@ -36,9 +39,11 @@ istr>> noskipws;
 
 вызывает [noskipws](../standard-library/ios-functions.md#noskipws)(**istr**).
 
+## <a name="members"></a>Участники
+
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[ios](../standard-library/ios-typedefs.md#ios)|Поддерживает класс ios из старой библиотеки iostream.|
 |[streamoff](../standard-library/ios-typedefs.md#streamoff)|Поддерживает внутренние операции.|
@@ -56,6 +61,7 @@ istr>> noskipws;
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Устанавливает флаги объекта `ios_base` в соответствии с форматом отображения значений с плавающей запятой, принятым по умолчанию.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Устанавливает режим отображения чисел с плавающей запятой в нотации фиксированного десятичного формата.|
 |[hex](../standard-library/ios-functions.md#hex)|Устанавливает режим отображения целочисленных переменных в нотации с основанием 16.|
+|[шестнадцатеричные](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Устанавливает режим выравнивания знака числа по левому краю, а самого числа — по правому краю.|
 |[left](../standard-library/ios-functions.md#left)|Устанавливает режим добавления левого поля для текста, ширина которого меньше, чем ширина выходных данных, при представлении его в потоке.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Устанавливает режим отображения переменных типа [bool](../cpp/bool-cpp.md) в потоке в виде 1 или 0.|
@@ -75,9 +81,19 @@ istr>> noskipws;
 |[unitbuf](../standard-library/ios-functions.md#unitbuf)|Устанавливает режим обработки выходных данных при наличии данных в буфере.|
 |[uppercase](../standard-library/ios-functions.md#uppercase)|Устанавливает режим отображения шестнадцатеричных цифр и показателя степени в экспоненциальном представлении в верхнем регистре.|
 
+### <a name="error-reporting"></a>Отчеты об ошибках
+
+|||
+|-|-|
+|[io_errc](../standard-library/ios-functions.md#io_errc)||
+|[is_error_code_enum](../standard-library/ios-functions.md#is_error_code_enum)||
+|[iostream_category](../standard-library/ios-functions.md#iostream_category)||
+|[make_error_code](../standard-library/ios-functions.md#make_error_code)||
+|[make_error_condition](../standard-library/ios-functions.md#make_error_condition)||
+
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[basic_ios](../standard-library/basic-ios-class.md)|Класс шаблона описывает хранилище и функции-члены, общие для обоих потоков (потока ввода — класс шаблона [basic_istream](../standard-library/basic-istream-class.md) и потока вывода — класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), зависящих от параметров шаблона.|
 |[fpos](../standard-library/fpos-class.md)|Класс шаблона описывает объект, который может хранить все сведения, необходимые для восстановления произвольного указателя позиции файла в любом потоке.|

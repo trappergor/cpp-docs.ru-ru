@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59790b5791dc50d217053dc7a13856d436101020
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212018"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244540"
 ---
 # <a name="constmemfun1reft-class"></a>Класс const_mem_fun1_ref_t
 
@@ -21,8 +21,8 @@ ms.locfileid: "62212018"
 
 ```cpp
 template <class Result, class Type, class Arg>
-class const_mem_fun1_ref_t
-: public binary_function<Type, Arg, Result>
+    class const_mem_fun1_ref_t
+        : public binary_function<Type, Arg, Result>
 {
     explicit const_mem_fun1_ref_t(Result (Type::* Pm)(Arg) const);
     Result operator()(const Type& left, Arg right) const;
@@ -31,13 +31,13 @@ class const_mem_fun1_ref_t
 
 ### <a name="parameters"></a>Параметры
 
-*PM*<br/>
+*PM*\
 Указатель на функцию-член класса `Type` для преобразования в объект функции.
 
-*left*<br/>
+*Слева*\
 **Const** объекта, *Pm* вызывается функция-член.
 
-*right*<br/>
+*Правильно*\
 Аргумент, который передается в *Pm*.
 
 ## <a name="return-value"></a>Возвращаемое значение
@@ -46,19 +46,8 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет функцию-член `operator()` как возвращающую ( `left`.\* *Pm*)( `right`) **const**.
+Класс шаблона сохраняет копию *Pm*, который должен быть указателем на функцию-член класса `Type`, в частном члене объекта. Он определяет свою функцию-член `operator()` как возвращающую (`left`.\* *PM*) (`right`) **const**.
 
 ## <a name="example"></a>Пример
 
 Конструктор `const_mem_fun1_ref_t` обычно не используется напрямую; для адаптации функций-членов используется вспомогательная функция `mem_fun_ref`. Примеры использования адаптеров функций-членов см. в разделе [mem_fun_ref](../standard-library/functional-functions.md#mem_fun_ref).
-
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<functional>
-
-**Пространство имен:** std
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>

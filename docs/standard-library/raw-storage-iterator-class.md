@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: eb32d1846c4e94fbd275dcc416de4f37d9bb53f1
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369767"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68240376"
 ---
 # <a name="rawstorageiterator-class"></a>Класс raw_storage_iterator
 
@@ -25,15 +25,15 @@ ms.locfileid: "62369767"
 
 ```cpp
 template <class OutputIterator, class Type>
-class raw_storage_iterator
+    class raw_storage_iterator
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Указывает выходной итератор сохраняемого объекта.
 
-*Type*<br/>
+*Тип*\
 Тип объекта, для которого выполняется выделение памяти.
 
 ## <a name="remarks"></a>Примечания
@@ -46,32 +46,26 @@ class raw_storage_iterator
 
 ### <a name="constructors"></a>Конструкторы
 
-|Конструктор|Описание|
+|||
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|Создает итератор необработанного хранилища с указанным базовым выходным итератором.|
 
 ### <a name="typedefs"></a>Определения типов
 
-|Имя типа|Описание|
+|||
 |-|-|
 |[element_type](#element_type)|Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.|
 |[iter_type](#iter_type)|Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.|
 
 ### <a name="operators"></a>Операторы
 
-|Оператор|Описание|
+|||
 |-|-|
 |[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `ii`  =  `x`.|
 |[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* `i`  =  `x` для сохранения в памяти.|
 |[оператор++](#op_add_add)|Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<memory>
-
-**Пространство имен:** std
-
-## <a name="element_type"></a>  raw_storage_iterator::element_type
+### <a name="element_type"></a> element_type
 
 Предоставляет тип, описывающий элемент, в котором будет сохранен итератор необработанного хранилища.
 
@@ -79,11 +73,11 @@ class raw_storage_iterator
 typedef Type element_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Тип является синонимом параметра-шаблона класса raw_storage_iterator `Type`.
 
-## <a name="iter_type"></a>  raw_storage_iterator::iter_type
+### <a name="iter_type"></a> iter_type
 
 Предоставляет тип, который описывает итератор, базовый для итератора необработанного хранилища.
 
@@ -91,11 +85,11 @@ typedef Type element_type;
 typedef ForwardIterator iter_type;
 ```
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Этот тип является синонимом для параметра шаблона `ForwardIterator`.
 
-## <a name="op_star"></a>  raw_storage_iterator::operator\*
+### <a name="op_star"></a> Оператор\*
 
 Оператор разыменования, используемый для реализации выражения итератора необработанного хранилища \* *ii* = *x*.
 
@@ -103,15 +97,15 @@ typedef ForwardIterator iter_type;
 raw_storage_iterator<ForwardIterator, Type>& operator*();
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Ссылка на итератор необработанного хранилища
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Требования к `ForwardIterator` необработанный, которые должен выполнить итератор хранилища, требуют только выражения \* *ii* = *t* быть допустимым и что он ничего не говорит о **оператор** или `operator=` сами по себе. Возвращает операторы-члены в этой реализации  **\*это**, так что [оператор =](#op_eq)(**constType**&) может выполнить фактическое сохранение в выражении Например, \* *ptr* = `val`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // raw_storage_iterator_op_deref.cpp
@@ -155,14 +149,15 @@ int main( void)
    raw_storage_iterator< Int*, Int > it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_eq"></a>  raw_storage_iterator::operator=
+### <a name="op_eq"></a> оператор =
 
 Оператор присваивания, используемый для реализации выражения итератора необработанного хранилища \* *i* = *x* для сохранения в памяти.
 
@@ -171,22 +166,22 @@ raw_storage_iterator<ForwardIterator, Type>& operator=(
     const Type& val);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Значение объекта типа `Type` для вставки в память.
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Оператор вставляет `val` в память и возвращает ссылку на итератор необработанного хранилища.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Требования к `ForwardIterator` состояние, которое должен выполнить итератор необработанного хранилища требуется только выражения \* *ii* = *t* быть правильной, и он ничего не говорит о **оператор** или `operator=` сами по себе. Эти операторы-члены возвращают **\*this**.
 
 Оператор присваивания создает следующий объект в выходной последовательности, используя сначала значение сохраненного итератора путем вычисления расположения нового выражения **new** ((`void` \*)&\* **first**) **Type**(`val`).
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // raw_storage_iterator_op_assign.cpp
@@ -228,14 +223,15 @@ int main( void )
    raw_storage_iterator<Int*, Int> it( pInt );
 *it = 5;
 }
-/* Output:
+```
+
+```Output
 Not constructed.
 Copying 5
 Constructing 5
-*/
 ```
 
-## <a name="op_add_add"></a>  raw_storage_iterator::operator++
+### <a name="op_add_add"></a> Operator ++
 
 Преинкрементный и постинкрементный операторы для итераторов необработанного хранилища.
 
@@ -245,11 +241,11 @@ raw_storage_iterator<ForwardIterator, Type>& operator++();
 raw_storage_iterator<ForwardIterator, Type> operator++(int);
 ```
 
-### <a name="return-value"></a>Возвращаемое значение
+#### <a name="return-value"></a>Возвращаемое значение
 
 Итератор необработанного хранилища или ссылка такой итератор.
 
-### <a name="remarks"></a>Примечания
+#### <a name="remarks"></a>Примечания
 
 Первый оператор в конечном итоге пытается извлечь и сохранить объект типа `CharType` из соответствующего входного потока. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.
 
@@ -259,7 +255,7 @@ raw_storage_iterator<ForwardIterator, Type> operator++(int);
 
 Конструктор сохраняет `first` как объект-итератор вывода.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // raw_storage_iterator_op_incr.cpp
@@ -282,16 +278,17 @@ int main( void )
 
    delete[] pInt;
 }
-/* Output:
+```
+
+```Output
 array 0 = 0
 array 1 = 2
 array 2 = 4
 array 3 = 6
 array 4 = 8
-*/
 ```
 
-## <a name="raw_storage_iterator"></a>  raw_storage_iterator::raw_storage_iterator
+### <a name="raw_storage_iterator"></a> raw_storage_iterator
 
 Создает итератор необработанного хранилища с указанным базовым выходным итератором.
 
@@ -299,12 +296,12 @@ array 4 = 8
 explicit raw_storage_iterator(ForwardIterator first);
 ```
 
-### <a name="parameters"></a>Параметры
+#### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*Первый*\
 Прямой итератор, который лежит в основе создаваемого объекта `raw_storage_iterator`.
 
-### <a name="example"></a>Пример
+#### <a name="example"></a>Пример
 
 ```cpp
 // raw_storage_iterator_ctor.cpp
@@ -360,7 +357,9 @@ int main( void )
 
    free(pInt);
 }
-/* Output:
+```
+
+```Output
 Error! I'm not constructed!
 Copying 1
 Error! I'm not constructed!
@@ -381,9 +380,4 @@ array 0 = 1
 array 1 = 2
 array 2 = 3
 array 3 = 4
-*/
 ```
-
-## <a name="see-also"></a>См. также
-
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>

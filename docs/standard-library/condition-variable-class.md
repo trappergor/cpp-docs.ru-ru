@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212390"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68244628"
 ---
 # <a name="conditionvariable-class"></a>Класс condition_variable
 
@@ -39,16 +39,16 @@ class condition_variable;
 
 ## <a name="members"></a>Участники
 
-### <a name="public-constructors"></a>Открытые конструкторы
+### <a name="constructors"></a>Конструкторы
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[condition_variable](#condition_variable)|Создает объект `condition_variable`.|
 
-### <a name="public-methods"></a>Открытые методы
+### <a name="functions"></a>Функции
 
-|name|Описание|
-|----------|-----------------|
+|||
+|-|-|
 |[native_handle](#native_handle)|Возвращает тип реализации, представляющий дескриптор condition_variable.|
 |[notify_all](#notify_all)|Разблокирует все потоки, которые ожидают объект `condition_variable`.|
 |[notify_one](#notify_one)|Разблокирует один из потоков, которые ожидают объект `condition_variable`.|
@@ -56,13 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
-## <a name="requirements"></a>Требования
-
-**Заголовок:** \<condition_variable >
-
-**Пространство имен:** std
-
-## <a name="condition_variable"></a>  Конструктор condition_variable::condition_variable
+## <a name="condition_variable"></a> CONDITION_VARIABLE
 
 Создает объект `condition_variable`.
 
@@ -74,7 +68,7 @@ condition_variable();
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a>  condition_variable::native_handle
+## <a name="native_handle"></a> native_handle
 
 Возвращает тип реализации, представляющий дескриптор condition_variable.
 
@@ -86,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` определяется как указатель на внутренние структуры данных среды выполнения с параллелизмом.
 
-## <a name="notify_all"></a>  condition_variable::notify_all
+## <a name="notify_all"></a> notify_all
 
 Разблокирует все потоки, которые ожидают объект `condition_variable`.
 
@@ -94,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a>  condition_variable::notify_one
+## <a name="notify_one"></a> notify_one
 
 Разблокирует один из потоков, которые ожидают объект `condition_variable`.
 
@@ -102,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a>  condition_variable::wait
+## <a name="wait"></a> Подождите
 
 Блокирует поток.
 
@@ -115,10 +109,10 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="remarks"></a>Примечания
@@ -132,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a>  condition_variable::wait_for
+## <a name="wait_for"></a> wait_for
 
 Блокирует поток и задает интервал времени, после которого поток разблокируется.
 
@@ -151,13 +145,13 @@ bool wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Rel_time*<br/>
+*Rel_time*\
 Объект `chrono::duration`, указывающий количество времени до активации потока.
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -180,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a>  condition_variable::wait_until
+## <a name="wait_until"></a> wait_until
 
 Блокирует поток и задает максимальный момент времени, в который поток разблокируется.
 
@@ -209,13 +203,13 @@ bool wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*<br/>
+*LCK*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Abs_time*<br/>
+*Abs_time*\
 Объект [chrono::time_point](../standard-library/time-point-class.md).
 
-*Пред*<br/>
+*Пред*\
 Любое выражение, возвращающее **true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение

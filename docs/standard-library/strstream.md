@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - strstream header
 ms.assetid: eaa9d0d4-d217-4f28-8a68-9b9ad7b1c0f5
-ms.openlocfilehash: 72b96c300aba1729823462ce6671e2f9a5285761
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 212223f98db09097e596fc6fe2ddd31bbe16e6b7
+ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412271"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68245368"
 ---
 # <a name="ltstrstreamgt"></a>&lt;strstream&gt;
 
 Определяет несколько классов, поддерживающих операции iostreams для последовательностей, хранящихся в выделенном массиве **char** объекта. Такие последовательности легко преобразуются в строки C и обратно.
 
-## <a name="syntax"></a>Синтаксис
+## <a name="requirements"></a>Требования
 
-```cpp
-#include <strstream>
-```
+**Заголовок:** \<strstream>
+
+**Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
@@ -30,14 +30,24 @@ ms.locfileid: "62412271"
 > [!NOTE]
 > Классы в \<strstream > являются устаревшими. Рассмотрите возможность использования классов в \<sstream > вместо этого.
 
+## <a name="members"></a>Участники
+
 ### <a name="classes"></a>Классы
 
-|Класс|Описание|
+|||
 |-|-|
 |[Класс strstreambuf](../standard-library/strstreambuf-class.md)|Этот класс описывает буфер потока, который управляет передачей элементов в и из последовательности элементов, сохраненную в **char** объект массива.|
 |[Класс istrstream](../standard-library/istrstream-class.md)|Этот класс описывает объект, управляющий извлечением элементов и закодированных объектов из буфера потока класса [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Класс ostrstream](../standard-library/ostrstream-class.md)|Этот класс описывает объект, управляющий вставкой элементов и закодированных объектов в буфер потока класса [strstreambuf](../standard-library/strstreambuf-class.md).|
 |[Класс strstream](../standard-library/strstream-class.md)|Этот класс описывает объект, управляющий вставкой и извлечением элементов и закодированных объектов с помощью буфера потока класса [strstreambuf](../standard-library/strstreambuf-class.md).|
+
+### <a name="functions"></a>Функции
+
+```cpp
+void freeze(bool freezefl = true);
+char* str();
+int pcount();
+```
 
 ## <a name="see-also"></a>См. также
 
