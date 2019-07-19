@@ -1,33 +1,38 @@
 ---
 title: '&lt;cstdbool&gt;'
-ms.date: 11/04/2016
+ms.date: 07/11/2019
+f1_keywords:
+- <cstdbool>
+- cstdbool
+helpviewer_keywords:
+- cstdbool header
 ms.assetid: 44ccb8b2-d808-4715-8097-58ba09ab33ed
-ms.openlocfilehash: 0bc21753b108dbdbfee86ea1319223e49753b8dc
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: ed780e059a5e456731fd6a4f651639e282016f5e
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244501"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341099"
 ---
 # <a name="ltcstdboolgt"></a>&lt;cstdbool&gt;
 
-Включает заголовок \<stdbool.h> стандартной библиотеки C и добавляет связанные имена в пространство имен `std`.
+Включает заголовок \<стандартной библиотеки C stdbool. h > и добавляет связанные имена `std` в пространство имен.
 
 > [!NOTE]
-> Этот заголовок был объявлен устаревшим в C++ 17.
+> Так как заголовок C++ stdbool.h>определяетмакросы,которыеявляютсяключевымисловамив,втомчисленеоказываетникакого\<влияния. В C++рекомендуется использовать заголовок stdbool.h\<>. Заголовок \<кстдбул > является устаревшим в c++ 17 и удаляется в черновом стандарте c++ 20.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<cstdbool >
+**Заголовок:** \<кстдбул >
 
 **Пространство имен:** std
 
 ## <a name="remarks"></a>Примечания
 
-Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C, объявляются в пространстве имен `std`.
+Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C `std` , объявляются в пространстве имен.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](cpp-standard-library-header-files.md)\
+[C++Общие сведения о стандартной библиотеке](cpp-standard-library-overview.md)\
+[Безопасность потоков в C++ стандартной библиотеке](thread-safety-in-the-cpp-standard-library.md)
