@@ -414,6 +414,8 @@
                   href: build/reference/general-property-page-project.md
                 - name: Страница свойств "Общие"
                   href: build/reference/general-property-page-file.md
+                - name: Страница свойств "Дополнительно"
+                  href: build/reference/advanced-property-page.md
                 - name: Страница свойств каталогов VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Страницы свойств командной строки
