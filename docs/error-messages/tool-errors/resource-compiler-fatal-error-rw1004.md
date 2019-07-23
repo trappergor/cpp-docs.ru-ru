@@ -6,15 +6,15 @@ f1_keywords:
 helpviewer_keywords:
 - RW1004
 ms.assetid: 89cfcb02-a5d3-4271-be4f-df2ec3f94f3e
-ms.openlocfilehash: 9ed9c314cf916f3853934de20c1b8f8a20a3695e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0d8ee23393db43637a8694d22ec23a74be78adf8
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380360"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376353"
 ---
 # <a name="resource-compiler-fatal-error-rw1004"></a>Неустранимая ошибка компилятора ресурсов RW1004
 
-Неожиданный конец файла
+Непредвиденный конец файла
 
-Это ошибка может быть вызвана отсутствуют символы возврата каретки в последней строке текстового файла и перевода строки.
+Эта ошибка может быть вызвана отсутствием перевода строки и символами возврата каретки в последней строке текстового файла.
