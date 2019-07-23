@@ -1,5 +1,5 @@
 ---
-title: Токены (C++)
+title: ТокеныC++()
 ms.date: 11/04/2016
 helpviewer_keywords:
 - tokens [C++]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - translation units
 - white space, in C++ tokens
 ms.assetid: aa812fd0-6d47-4f3f-aee0-db002ee4d8b9
-ms.openlocfilehash: 1606df56191ec00ffea543dedd3fd4eda98d01c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cd104b7308716ca182374bbff2df61731c84d574
+ms.sourcegitcommit: 878a164fe6d550ca81ab87d8425c8d3cd52fe384
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62330444"
+ms.lasthandoff: 07/22/2019
+ms.locfileid: "68376253"
 ---
-# <a name="tokens-c"></a>Токены (C++)
+# <a name="tokens-c"></a>ТокеныC++()
 
 Токен — это наименьший элемент на C++, который имеет значение для компилятора. Синтаксический анализатор C++ распознает следующие типы токенов: идентификаторы, ключевые слова, литералы, операторы, символы пунктуации и другие разделители. Поток этих токенов составляет один блок трансляции.
 
@@ -26,7 +26,7 @@ ms.locfileid: "62330444"
 
 - Символы перевода строки
 
-- Символы перевода страницы
+- Веб-каналы форм
 
 - Комментарии
 
