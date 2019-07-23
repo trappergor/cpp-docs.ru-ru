@@ -3,12 +3,12 @@ title: Установка рабочей нагрузки Linux для прое�
 description: Скачивание, установка и настройка рабочей нагрузки Linux для проектов C++ в Visual Studio.
 ms.date: 06/11/2019
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-ms.openlocfilehash: d5c099794f781fa9e6217f3796d24d1a63fd7b53
-ms.sourcegitcommit: fde637f823494532314790602c2819f889706ff6
+ms.openlocfilehash: 5df7b323d202f398059e92abaeeeedbf73439fa4
+ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/13/2019
-ms.locfileid: "67042743"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68299797"
 ---
 # <a name="download-install-and-set-up-the-linux-workload"></a>Загрузка, установка и настройка рабочей нагрузки Linux
 
@@ -31,8 +31,6 @@ Visual Studio IDE в Windows можно использовать для созд
 ::: moniker range="vs-2019"
 
 В Visual Studio 2019 можно указать отдельные целевые объекты для сборки и отладки. При использовании WSL больше не нужно добавлять удаленное подключение или настраивать SSH.
-
-Поддержка [AddressSanitizer (ASan)](https://github.com/google/sanitizers/wiki/AddressSanitizer) реализована в Visual Studio для проектов Linux.
 
 ::: moniker-end
 
