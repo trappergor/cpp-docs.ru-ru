@@ -5,12 +5,12 @@ helpviewer_keywords:
 - tokens
 - translation units
 ms.assetid: 05e5f6f1-b8ea-4f74-af17-c0b9b5dbd3b5
-ms.openlocfilehash: 8f92692fb19b0eeff2fe9af179fc8fe3fa6c2f7e
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 44d8956313053ca6c7a55994f241c00bd71092b4
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56149730"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68340978"
 ---
 # <a name="c-tokens"></a>Токены C
 
@@ -33,7 +33,7 @@ ms.locfileid: "56149730"
 > [!NOTE]
 >  Описание соглашений о синтаксисе ANSI вы найдете во введении к статье [Общие сведения о синтаксисе языка C](../c-language/c-language-syntax-summary.md).
 
-Ключевые слова, идентификаторы, константы, строковые литералы и операторы, описанные в этом разделе, являются примерами токенов. Символы пунктуации, например квадратные (**[ ]**), фигурные (**{ }**) и круглые скобки (**( )**) и запятая (**,**), также являются лексемами.
+Ключевые слова, идентификаторы, константы, строковые литералы и операторы, описанные в этом разделе, являются примерами токенов. Символы пунктуации, например квадратные ( **[ ]** ), фигурные ( **{ }** ) и круглые скобки ( **( )** ) и запятая ( **,** ), также являются лексемами.
 
 ## <a name="see-also"></a>См. также
 
