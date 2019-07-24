@@ -1,10 +1,11 @@
 ---
 title: /X (Отклонение стандартных путей включения)
-ms.date: 11/04/2016
+ms.date: 07/18/2019
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
+- VC.Project.VCCLCompilerTool.IgnoreStandardIncludePath
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -13,16 +14,16 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 16f903b98d69472fe1a33b084fe6393ecf9ec001
+ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62316318"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68341050"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (Отклонение стандартных путей включения)
 
-Запрещает компилятору поиск включаемых файлов в каталогах, указанных в переменных среды PATH и INCLUDE.
+Предотвращает Поиск включаемых файлов в каталогах, указанных в переменных среды PATH и INCLUDE, компилятором.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -32,17 +33,17 @@ ms.locfileid: "62316318"
 
 ## <a name="remarks"></a>Примечания
 
-Можно использовать этот параметр вместе с [/I (Дополнительные каталоги включаемых файлов)](i-additional-include-directories.md) (**/I**`directory`) параметр.
+Этот параметр можно использовать с параметром [/i (дополнительные каталоги включаемых каталогов)](i-additional-include-directories.md) ( **/i**`directory`).
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Установка данного параметра компилятора в среде разработки Visual Studio
 
-1. Откройте диалоговое окно **Страницы свойств** проекта. Дополнительные сведения см. в разделе [свойств компилятора и собранной задать C++ в Visual Studio](../working-with-project-properties.md).
+1. Откройте диалоговое окно **Страницы свойств** проекта. Подробнее см. в статье [Настройка компилятора C++ и свойства сборки в Visual Studio](../working-with-project-properties.md).
 
 1. Откройте папку **C/C++** .
 
-1. Нажмите кнопку **препроцессор** страницу свойств.
+1. Щелкните страницу  свойств препроцессора.
 
-1. Изменить **отклонение стандартных путей включения** свойство.
+1. Измените свойство " **игнорировать стандартные включаемые пути** ".
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>Установка данного параметра компилятора программным способом
 
@@ -50,7 +51,7 @@ ms.locfileid: "62316318"
 
 ## <a name="example"></a>Пример
 
-В следующей команде `/X` указывает компилятору игнорировать расположений, указанных в переменных среды PATH и INCLUDE и `/I` указывает каталог, в которой необходимо искать включаемые файлы:
+В следующей команде `/X` указывает компилятору игнорировать расположения, указанные в переменных среды PATH и include, и `/I` указывает каталог, в котором следует искать включаемые файлы:
 
 ```
 CL /X /I \ALT\INCLUDE MAIN.C
