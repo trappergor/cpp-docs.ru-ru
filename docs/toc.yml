@@ -444,16 +444,7 @@
                 - name: Страница свойств управляемых ресурсов
                   href: build/reference/managed-resources-property-page.md
                 - name: Страницы свойств MIDL
-                  expanded: false
-                  items:
-                    - name: Страницы свойств MIDL
-                      href: build/reference/midl-property-pages.md
-                    - name: 'Страницы свойств MIDL: Общие'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'Страницы свойств MIDL: Вывод'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'Страницы свойств MIDL: Дополнительно'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Страница свойств веб-ссылок
                   href: build/reference/web-references-property-page.md
                 - name: Страница свойств "Инструмент создания XML-данных"
