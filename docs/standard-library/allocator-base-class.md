@@ -38,12 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 115f5ad4461b98f24e3aa6756e501b91ae3a1566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411075"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456434"
 ---
 # <a name="allocatorbase-class"></a>Класс allocator_base
 
@@ -61,7 +61,7 @@ class allocator_base
 |Параметр|Описание|
 |---------------|-----------------|
 |*Type*|Тип элементов, распределяемых распределителем.|
-|*Синхронизация*|Политика синхронизации распределителя: [класс sync_none](../standard-library/sync-none-class.md), [класс sync_per_container](../standard-library/sync-per-container-class.md), [класс sync_per_thread](../standard-library/sync-per-thread-class.md) или [класс sync_shared](../standard-library/sync-shared-class.md).|
+|*Nosync*|Политика синхронизации распределителя: [класс sync_none](../standard-library/sync-none-class.md), [класс sync_per_container](../standard-library/sync-per-container-class.md), [класс sync_per_thread](../standard-library/sync-per-thread-class.md) или [класс sync_shared](../standard-library/sync-shared-class.md).|
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -83,10 +83,10 @@ class allocator_base
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
-|[_Charalloc](#charalloc)|Выделяет память под массив объектов типа **char**.|
-|[_Chardealloc](#chardealloc)|Освобождает память для массива, содержащего элементы типа **char**.|
+|[_Charalloc](#charalloc)|Выделяет хранилище для массива типа **char**.|
+|[_Chardealloc](#chardealloc)|Освобождает хранилище для массива, содержащего элементы типа **char**.|
 |[address](#address)|Находит адрес объекта, значение которого задано.|
 |[allocate](#allocate)|Выделяет блок памяти, достаточный для хранения по крайней мере некоторого указанного числа элементов.|
 |[construct](#construct)|Создает определенный тип объекта по указанному адресу, инициализированный с использованием заданного значения.|
@@ -102,7 +102,7 @@ class allocator_base
 
 ## <a name="charalloc"></a>  allocator_base::_Charalloc
 
-Выделяет память под массив объектов типа **char**.
+Выделяет хранилище для массива типа **char**.
 
 ```cpp
 char *_Charalloc(size_type count);
@@ -124,7 +124,7 @@ char *_Charalloc(size_type count);
 
 ## <a name="chardealloc"></a>  allocator_base::_Chardealloc
 
-Освобождает память для массива, содержащего элементы типа **char**.
+Освобождает хранилище для массива, содержащего элементы типа **char**.
 
 ```cpp
 void _Chardealloc(void* ptr, size_type count);
@@ -153,7 +153,7 @@ const_pointer address(const_reference val);
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Константное или неконстантное значение объекта, адрес которого ищется.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -341,4 +341,4 @@ typedef Type value_type;
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)
