@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_fixed_size [C++], released
 - stdext::max_fixed_size [C++], saved
 ms.assetid: 8c8f4588-37e9-4579-8168-ba3553800914
-ms.openlocfilehash: 08510ecc3b7469e8f88a61dcb0df28541e170892
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bbc39a169f9a4bbac3e78b208b3a1a31e4e30ff2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412960"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456367"
 ---
 # <a name="maxfixedsize-class"></a>Класс max_fixed_size
 
@@ -48,7 +48,7 @@ class max_fixed_size
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocated](#allocated)|Увеличивает счетчик выделенных блоков памяти.|
 |[deallocated](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
@@ -78,7 +78,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член ничего не делает. Эта функция-член вызывается после каждого успешного вызова со стороны `cache_freelist::allocate` оператору **новый**. Аргумент *_Nx* — количество блоков памяти в блоке, выделяемом оператором **новый**.
+Эта функция-член ничего не делает. Эта функция-член вызывается после каждого успешного вызова `cache_freelist::allocate` оператором **New**. Аргумент *_Nx* — это количество блоков памяти в блоке, выделенном оператором **New**.
 
 ## <a name="deallocated"></a>  max_fixed_size::deallocated
 
@@ -96,7 +96,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператору **удалить**. Аргумент *_Nx* — количество блоков памяти в блоке, который освобождается оператором **удалить**.
+Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова `cache_freelist::deallocate` оператором **Delete**. Аргумент *_Nx* — это количество блоков памяти в блоке, освобожденных оператором **Delete**.
 
 ## <a name="full"></a>  max_fixed_size::full
 
@@ -108,11 +108,11 @@ bool full();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если `Max <= _Nblocks`; в противном случае **false**.
+**значение true** , если `Max <= _Nblocks`; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **true**, `deallocate` помещает блок памяти в свободный список; если он возвращает false, `deallocate` вызывает оператор **удалить** для освобождения блока.
+Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **значение true**, `deallocate` блок памяти помещается в свободный список; если возвращается значение false, `deallocate` вызывает оператор **Delete** для освобождения блока.
 
 ## <a name="max_fixed_size"></a>  max_fixed_size::max_fixed_size
 
@@ -152,4 +152,4 @@ void saved();
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)
