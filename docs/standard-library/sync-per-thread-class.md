@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_per_thread [C++], deallocate
 - stdext::sync_per_thread [C++], equals
 ms.assetid: 47bf75f8-5b02-4760-b1d3-3099d08fe14c
-ms.openlocfilehash: 3cb1946ee68642065488cfd13c146abab818ec60
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a08aa13aa46d5181e7c874b132b2bcbd5ec26dee
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412323"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450265"
 ---
 # <a name="syncperthread-class"></a>Класс sync_per_thread
 
@@ -42,7 +42,7 @@ class sync_per_thread
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -108,10 +108,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**false** Если объект кэша не выделен для этого объекта или для *других* в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
+**значение false** , если ни один объект кэша не был выделен для данного объекта или для *другого* в текущем потоке. В противном случае возвращается результат применения `operator==` к двум объектам кэша.
 
 ### <a name="remarks"></a>Примечания
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)
