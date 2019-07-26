@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0445c2f8868fc9f2863ad4a2a12cc00261546c75
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409763"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447847"
 ---
 # <a name="basicstringbuf-class"></a>Класс basic_stringbuf
 
@@ -51,13 +51,13 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*Elem*<br/>
+*Elem*\
 Тип основного элемента строки.
 
-*Tr*<br/>
+*ТС*\
 Признаки символа, соответствующие основному элементу строки.
 
 ## <a name="remarks"></a>Примечания
@@ -80,16 +80,16 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 |Имя типа|Описание|
 |-|-|
-|[allocator_type](#allocator_type)|Тип является синонимом параметра-шаблона *Alloc*.|
+|[allocator_type](#allocator_type)|Тип является синонимом для *выделения*параметра шаблона.|
 |[char_type](#char_type)|Связывает имя типа с параметром шаблона *Elem*.|
-|[int_type](#int_type)|Делает этот тип в `basic_filebuf`по эквивалентным типу с тем же именем в области *Tr* области.|
-|[off_type](#off_type)|Делает этот тип в `basic_filebuf`по эквивалентным типу с тем же именем в области *Tr* области.|
-|[pos_type](#pos_type)|Делает этот тип в `basic_filebuf`по эквивалентным типу с тем же именем в области *Tr* области.|
+|[int_type](#int_type)|Делает этот тип в `basic_filebuf`области эквивалентен типу с тем же именем в области *tr* .|
+|[off_type](#off_type)|Делает этот тип в `basic_filebuf`области эквивалентен типу с тем же именем в области *tr* .|
+|[pos_type](#pos_type)|Делает этот тип в `basic_filebuf`области эквивалентен типу с тем же именем в области *tr* .|
 |[traits_type](#traits_type)|Связывает имя типа с параметром шаблона *Tr*.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[overflow](#overflow)|Защищенная виртуальная функция, которая может вызываться при вставке нового символа в полный буфер.|
 |[pbackfail](#pbackfail)|Защищенная виртуальная функция-член пытается поместить элемент обратно во входной буфер, затем делает его текущим (на него указывает следующий указатель).|
@@ -107,7 +107,7 @@ class basic_stringbuf : public basic_streambuf<Elem, Tr>
 
 ## <a name="allocator_type"></a>  basic_stringbuf::allocator_type
 
-Тип является синонимом параметра-шаблона *Alloc*.
+Тип является синонимом для *выделения*параметра шаблона.
 
 ```cpp
 typedef Alloc allocator_type;
@@ -128,17 +128,17 @@ basic_stringbuf(
 
 ### <a name="parameters"></a>Параметры
 
-*_Mode*<br/>
+*_Mode*\
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*str*<br/>
+*str*\
 Объект типа [basic_string](../standard-library/basic-string-class.md).
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор сохраняет пустой указатель во всех указателях, управляющих входным и выходным буферами. Дополнительные сведения см. в разделе "Примечания" для [класса basic_streambuf](../standard-library/basic-streambuf-class.md). Он также хранит *_режим* в качестве режима stringbuf. Дополнительные сведения см. в разделе "Примечания" для [класса basic_stringbuf](../standard-library/basic-stringbuf-class.md).
+Первый конструктор сохраняет пустой указатель во всех указателях, управляющих входным и выходным буферами. Дополнительные сведения см. в разделе "Примечания" для [класса basic_streambuf](../standard-library/basic-streambuf-class.md). Он также сохраняет *_Mode* в качестве режима stringbuf. Дополнительные сведения см. в разделе "Примечания" для [класса basic_stringbuf](../standard-library/basic-stringbuf-class.md).
 
-Второй конструктор выделяет копию последовательности, управляемой строковым объектом *str*. Если `_Mode & ios_base::in` имеет ненулевое значение, то он задает входной буфер для чтения в начале последовательности. Если `_Mode & ios_base::out` имеет ненулевое значение, то он задает выходной буфер для записи в начале последовательности. Он также хранит *_режим* в качестве режима stringbuf. Дополнительные сведения см. в разделе "Примечания" для [класса basic_stringbuf](../standard-library/basic-stringbuf-class.md).
+Второй конструктор выделяет копию последовательности, управляемой строкой *строковых объектов.* Если `_Mode & ios_base::in` имеет ненулевое значение, то он задает входной буфер для чтения в начале последовательности. Если `_Mode & ios_base::out` имеет ненулевое значение, то он задает выходной буфер для записи в начале последовательности. Он также сохраняет *_Mode* в качестве режима stringbuf. Дополнительные сведения см. в разделе "Примечания" для [класса basic_stringbuf](../standard-library/basic-stringbuf-class.md).
 
 ## <a name="char_type"></a>  basic_stringbuf::char_type
 
@@ -150,7 +150,7 @@ typedef Elem char_type;
 
 ## <a name="int_type"></a>  basic_stringbuf::int_type
 
-Делает этот тип в области basic_filebuf эквивалентным типу с тем же именем в `Tr` области.
+Делает этот тип в области basic_filebuf's эквивалентным типу с тем же именем в `Tr` области.
 
 ```cpp
 typedef typename traits_type::int_type int_type;
@@ -158,7 +158,7 @@ typedef typename traits_type::int_type int_type;
 
 ## <a name="off_type"></a>  basic_stringbuf::off_type
 
-Делает этот тип в области basic_filebuf эквивалентным типу с тем же именем в `Tr` области.
+Делает этот тип в области basic_filebuf's эквивалентным типу с тем же именем в `Tr` области.
 
 ```cpp
 typedef typename traits_type::off_type off_type;
@@ -174,16 +174,16 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta*<br/>
+*_Meta*\
 Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае она возвращает **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Примечания
 
-Если  *\_Meta* не считаются равными **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), защищенная функция-член пытается вставить элемент  **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_Meta*) в выходной буфер. Для этого существует несколько способов.
+Если[](../standard-library/char-traits-struct.md#eof)[](../standard-library/char-traits-struct.md#to_char_type) *\_*   *\_значение meta* не равно **traits_type::** EOF, Защищенная виртуальная функция-член пытается вставить элемент traits_type:: to_char_type (Meta) в выходной буфер. Для этого существует несколько способов.
 
 - Если позиция записи доступна, можно сохранить элемент в позиции записи и увеличить следующий указатель для выходного буфера.
 
@@ -199,16 +199,16 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ### <a name="parameters"></a>Параметры
 
-*_Meta*<br/>
+*_Meta*\
 Символ для вставки в буфер или `traits_type::eof`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае она возвращает **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
+Если функции не удалось выполниться успешно, возвращается значение `traits_type::eof`. В противном случае она возвращает **traits_type::** [not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*).
 
 ### <a name="remarks"></a>Примечания
 
-Если *_Meta* равно сравнивает **traits_type::**[eof](../standard-library/char-traits-struct.md#eof), элемент, который необходимо передать обратно, фактически уже в потоке перед текущим элементом. В противном случае этот элемент заменяется на **byte** = **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). Функция может передать элемент обратно различными способами.
+Если *_Meta* сравнивается со значением **traits_type::** [EOF](../standard-library/char-traits-struct.md#eof), то элемент, который необходимо вернуть, фактически находится в потоке до текущего элемента. В противном случае этот элемент заменяется на **byte** = **traits_type::** [to_char_type](../standard-library/char-traits-struct.md#to_char_type)(_ *Meta*). Функция может передать элемент обратно различными способами.
 
 - Если позиция возврата доступна и сохраненный там элемент оценивается как равный byte, функция может уменьшить следующий указатель для входного буфера.
 
@@ -216,7 +216,7 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof());
 
 ## <a name="pos_type"></a>  basic_stringbuf::pos_type
 
-Делает этот тип в области basic_filebuf эквивалентным типу с тем же именем в `Tr` области.
+Делает этот тип в области basic_filebuf's эквивалентным типу с тем же именем в `Tr` области.
 
 ```cpp
 typedef typename traits_type::pos_type pos_type;
@@ -235,13 +235,13 @@ virtual pos_type seekoff(
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
-Позиция для поиска относительно *_Way*. Дополнительные сведения см. в разделе [basic_stringbuf::off_type](#off_type).
+*_Off*\
+Искомое положение относительно *_Way*. Дополнительные сведения см. в разделе [basic_stringbuf::off_type](#off_type).
 
-*_Way*<br/>
+*_Way*\
 Начальная точка для операций смещения. Возможные значения см. в разделе [ios_base::seekdir](../standard-library/ios-base-class.md#seekdir).
 
-*_Mode*<br/>
+*_Mode*\
 Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -254,13 +254,13 @@ virtual pos_type seekoff(
 
 Новая позиция определяется следующим образом.
 
-- Если `_Way`  ==  `ios_base::beg`, новая позиция — это начало потока плюс *_Off*.
+- Если `_Way` значение == равно, то Новая координата является началом потока и *_Off.* `ios_base::beg`
 
-- Если `_Way`  ==  `ios_base::cur`, новая позиция — текущую позицию в потоке, а также *_Off*.
+- Если `_Way` значение == равно, то Новая единица является текущей позицией в потоке плюс *_Off.* `ios_base::cur`
 
-- Если `_Way`  ==  `ios_base::end`, новая позиция — это конец потока плюс *_Off*.
+- Если `_Way` значение == равно, то новая точка является концом потока и *_Off.* `ios_base::end`
 
-Если `_Mode & ios_base::in` имеет ненулевое значение, функция изменяет следующую позицию для чтения во входном буфере. Если `_Mode & ios_base::out` имеет ненулевое значение, функция изменяет следующую позицию для записи в выходном буфере. Для затрагиваемого потока должен существовать свой буфер. Для успешного выполнения операции размещения итоговая позиция потока должна находиться в управляемой последовательности. Если функция влияет на обе позиции потока, *_Way* должно быть `ios_base::beg` или `ios_base::end` и оба потоки располагаются в том же элементе. В противном случае (или если не затрагивается ни одна позиция) операция размещения завершится неудачно.
+Если `_Mode & ios_base::in` имеет ненулевое значение, функция изменяет следующую позицию для чтения во входном буфере. Если `_Mode & ios_base::out` имеет ненулевое значение, функция изменяет следующую позицию для записи в выходном буфере. Для затрагиваемого потока должен существовать свой буфер. Для успешного выполнения операции размещения итоговая позиция потока должна находиться в управляемой последовательности. Если функция влияет на обе позиции потока, *_Way* должна иметь `ios_base::beg` значение `ios_base::end` или и оба потока расположены в одном и том же элементе. В противном случае (или если не затрагивается ни одна позиция) операция размещения завершится неудачно.
 
 Если функция успешно изменила одну или обе позиции потока, то она возвращает итоговую позицию потока. В противном случае она завершается неудачно и возвращает недопустимую позицию потока.
 
@@ -274,10 +274,10 @@ virtual pos_type seekpos(pos_type _Sp, ios_base::openmode _Mode = ios_base::in |
 
 ### <a name="parameters"></a>Параметры
 
-*_Sp*<br/>
+*_Sp*\
 Позиция для поиска.
 
-*_Mode*<br/>
+*_Mode*\
 Задает режим для положения указателя. По умолчанию разрешается изменять позиции чтения и записи.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -302,12 +302,12 @@ void str(
 
 ### <a name="parameters"></a>Параметры
 
-*_Newstr*<br/>
+*_Newstr*\
 Новая строка.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)\< **Elem**, **Tr**, Alloc **>,**, управляемая последовательность которого является копией последовательности, управляемой **\*this**.
+Возвращает объект класса [basic_string](../standard-library/basic-string-class.md)\< **Elem**, **Tr**, Alloc **>,** , управляемая последовательность которого является копией последовательности, управляемой **\*this**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -319,7 +319,7 @@ void str(
 
 - В противном случае скопированная последовательность пуста.
 
-Вторая функция-член освобождает все последовательности, в текущий момент управляемые **\*this**. Затем она выделяет копию последовательности, управляемой *_Newstr*. Если **mode & ios_base::in** имеет ненулевое значение, то она задает входной буфер для чтения в начале последовательности. Если **mode & ios_base::out** имеет ненулевое значение, то она задает выходной буфер для записи в начале последовательности.
+Вторая функция-член освобождает все последовательности, в текущий момент управляемые **\*this**. Затем он выделяет копию последовательности, управляемой *_Newstr*. Если **mode & ios_base::in** имеет ненулевое значение, то она задает входной буфер для чтения в начале последовательности. Если **mode & ios_base::out** имеет ненулевое значение, то она задает выходной буфер для записи в начале последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -375,11 +375,11 @@ virtual int_type underflow();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Если функция не может выполниться успешно, она возвращает **traits_type::**[eof](../standard-library/char-traits-struct.md#eof). В противном случае она возвращает текущий элемент во входном потоке, который был преобразован.
+Если функция не может выполниться успешно, она возвращает **traits_type::** [eof](../standard-library/char-traits-struct.md#eof). В противном случае она возвращает текущий элемент во входном потоке, который был преобразован.
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член пытается извлечь текущий элемент `byte` из входного буфера, переместить текущую позицию в потоке и возвратить элемент как **traits_type::**[to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **байтов**). Это можно сделать одним из способов: Если позиция чтения доступна, функция принимает `byte` как элемента, хранящегося в этой позиции чтения и перемещает следующий указатель для входного буфера.
+Защищенная виртуальная функция-член пытается извлечь текущий элемент `byte` из входного буфера, перейти к текущему положению потока и вернуть элемент в виде **traits_type::** [to_int_type](../standard-library/char-traits-struct.md#to_int_type)( **Byte**). Это можно сделать одним из следующих способов: Если доступная для чтения позиции доступна, она `byte` принимает в качестве элемента, хранящегося в позиции чтения, и перемещает следующий указатель для входного буфера.
 
 ## <a name="swap"></a>  basic_streambuf::swap
 
@@ -391,7 +391,7 @@ void basic_stringbuf<T>::swap(basic_stringbuf& other)
 
 ### <a name="parameters"></a>Параметры
 
-*other*<br/>
+*иной*\
 Буфер basic_stringbuf, содержимое которого будет заменено содержимым этого буфера basic_stringbuf.
 
 ### <a name="remarks"></a>Примечания
@@ -406,13 +406,13 @@ basic_stringbuf& basic_stringbuf:: operator=(const basic_stringbuf& other)
 
 ### <a name="parameters"></a>Параметры
 
-*other*<br/>
+*иной*\
 basic_stringbuf, содержимое которого, включая признаки языкового стандарта, будут назначены функции stringbuf слева от оператора.
 
 ### <a name="remarks"></a>Примечания
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)
