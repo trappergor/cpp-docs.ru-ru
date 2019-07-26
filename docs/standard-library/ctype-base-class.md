@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ctype_base class
 ms.assetid: ccffe891-d7ab-4d22-baf8-8eb6d438a96d
-ms.openlocfilehash: 83ef35f9fac438cfa217decf222abd365ff84269
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f23b9528cf9a921e1d005756aa82751f3fdb745e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394186"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449349"
 ---
 # <a name="ctypebase-class"></a>Класс ctype_base
 
@@ -69,7 +69,7 @@ struct ctype_base : public locale::facet
 
 - **graph** (функция [isgraph](../standard-library/locale-functions.md#isgraph))
 
-Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, он всегда имеет значение true, **alnum** == ( **альфа-канал** &#124; **цифра** \) и **graph** \= \= \( **alnum** &#124; **punct**).
+Вы можете охарактеризовать комбинацию классификаций, выполняя операцию OR с этими константами. В частности, всегда истинно, что **алнум** = = ( **альфа** &#124; **-цифра** \) и **Graph** \=  &#124; \= \( алнум **punct**).
 
 ## <a name="requirements"></a>Требования
 
@@ -79,4 +79,4 @@ struct ctype_base : public locale::facet
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - <condition_variable>
 ms.assetid: 8567f7cc-20bd-42a7-9137-87c46f878009
-ms.openlocfilehash: ed98966f651df76078fa47b05f5a2d8ae1b71d05
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e63dc5a494f471997c28be8b2cd237aba45a6fd6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244581"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457385"
 ---
 # <a name="ltconditionvariablegt"></a>&lt;condition_variable&gt;
 
@@ -19,12 +19,12 @@ ms.locfileid: "68244581"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<condition_variable >
+**Заголовок:** \<CONDITION_VARIABLE >
 
 **Пространство имен:** std
 
 > [!NOTE]
-> В коде, скомпилированном с помощью **/CLR**, этот заголовок блокируется.
+> В коде, компилируемом с помощью **/CLR**, этот заголовок блокируется.
 
 ### <a name="remarks"></a>Примечания
 
@@ -49,15 +49,15 @@ while (condition is false)
 
 - Метод `wait_for` ожидает в течение указанного `time interval`.
 
-Каждый из этих методов имеет две перегруженные версии. Одна просто ожидает и может выполнить ложную активацию. Другая принимает дополнительный аргумент шаблона, который задает предикат. Метод не возвращает до предикат **true**.
+Каждый из этих методов имеет две перегруженные версии. Одна просто ожидает и может выполнить ложную активацию. Другая принимает дополнительный аргумент шаблона, который задает предикат. Метод не возвращает значение, пока предикат не будет **истинным**.
 
-Каждый класс также содержит два метода, которые используются для уведомления переменной условия, что его условие **true**.
+У каждого класса также есть два метода, которые используются для уведомления переменной условия о том, что ее условие имеет **значение true**.
 
 - `notify_one` активирует один из потоков, ожидающий переменную условия.
 
 - `notify_all` активирует все потоки, ожидающие переменную условия.
 
-## <a name="functions-and-enums"></a>Функции и перечислений
+## <a name="functions-and-enums"></a>Функции и перечисления
 
 ```cpp
 void notify_all_at_thread_exit(condition_variable& cond, unique_lock<mutex> lk);
@@ -67,6 +67,6 @@ enum class cv_status { no_timeout, timeout };
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Класс condition_variable](../standard-library/condition-variable-class.md)<br/>
-[Класс condition_variable_any](../standard-library/condition-variable-any-class.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Класс condition_variable](../standard-library/condition-variable-class.md)\
+[Класс condition_variable_any](../standard-library/condition-variable-any-class.md)

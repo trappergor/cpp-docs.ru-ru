@@ -7,12 +7,12 @@ helpviewer_keywords:
 - iterator_traits struct
 - iterator_traits class
 ms.assetid: 8b92c2c5-f658-402f-8ca1-e7ae301b8514
-ms.openlocfilehash: 6fe9e2d576afcacc7d014d4f5c920ecab3a83fc9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9d2f9d79d200579f539f7d9edc49d4a907e6cdb2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224043"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455580"
 ---
 # <a name="iteratortraits-struct"></a>Структура iterator_traits
 
@@ -35,19 +35,19 @@ struct iterator_traits {
 
 Структура-шаблон определяет типы элементов
 
-- `iterator_category`: синоним `Iterator::iterator_category`.
+- `iterator_category`: синоним для `Iterator::iterator_category`.
 
-- `value_type`: синоним `Iterator::value_type`.
+- `value_type`: синоним для `Iterator::value_type`.
 
-- `difference_type`: синоним `Iterator::difference_type`.
+- `difference_type`: синоним для `Iterator::difference_type`.
 
-- `distance_type`: синоним `Iterator::difference_type.`
+- `distance_type`: синоним для`Iterator::difference_type.`
 
-- `pointer`: синоним `Iterator::pointer`.
+- `pointer`: синоним для `Iterator::pointer`.
 
-- `reference`: синоним `Iterator::reference`.
+- `reference`: синоним для `Iterator::reference`.
 
-Частичные специализации определяют критические типы, связанные с указателем на объект типа **тип** <strong>\*</strong> или **тип const**  <strong>\*</strong>.
+Частичные специализации определяют критические типы, связанные с указателем <strong>\*</strong> на объект **типа или типа** **const** <strong>\*</strong>.
 
 В этой реализации вы также можете применить несколько шаблонов функций, которые не используют частичную специализацию:
 
@@ -124,6 +124,6 @@ struct std::bidirectional_iterator_tag
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

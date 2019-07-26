@@ -1,19 +1,19 @@
 ---
-title: '&lt;Выполнение&gt;'
+title: '&lt;InstancePersistenceCommand&gt;'
 ms.date: 04/18/2019
 f1_keywords:
 - <execution>
 - std::<execution>
 helpviewer_keywords:
 - execution header
-ms.openlocfilehash: 3bce34019f9ed4880d72a9d16c3c8b78dde0e0e3
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 3b0ccd540c56500c2f265aa6192a12fc2d5078b0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268426"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457968"
 ---
-# <a name="ltexecutiongt"></a>&lt;Выполнение&gt;
+# <a name="ltexecutiongt"></a>&lt;InstancePersistenceCommand&gt;
 
 Описывает политики выполнения для параллельных алгоритмов.
 
@@ -33,19 +33,19 @@ namespace std::execution {
 
 |||
 |-|-|
-|[is_execution_policy структуры](is-execution-policy-struct.md)|Определяет политики выполнения для целей за исключением сигнатур функций из участия в противном случае неоднозначная перегрузка разрешения.|
-|[Класс parallel_policy](parallel-policy-class.md)|Используется как уникальный тип для устранения неоднозначности перегрузки параллельный алгоритм и указать, что выполнение параллельного алгоритма может выполняться параллельно.|
-|[Класс parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Используется как уникальный тип для устранения неоднозначности перегрузки параллельный алгоритм и указать, что параллельный алгоритм выполнения может быть параллелизован и преобразованы в векторный формат.|
-|[Класс sequenced_policy](sequenced-policy-class.md)|Используется как уникальный тип для устранения неоднозначности перегрузки параллельного алгоритма и требуют, что выполнение параллельного алгоритма не может выполняться параллельно.|
+|[Структура is_execution_policy](is-execution-policy-struct.md)|Обнаруживает политики выполнения в целях исключения сигнатур функций из неоднозначного участия в разрешении перегрузки.|
+|[Класс parallel_policy](parallel-policy-class.md)|Используется в качестве уникального типа для устранения неоднозначности при перегрузке параллельного алгоритма и указывает, что выполнение параллельного алгоритма может быть параллельным.|
+|[Класс parallel_unsequenced_policy](parallel-unsequenced-policy-class.md)|Используется в качестве уникального типа для устранения неоднозначности при перегрузке параллельного алгоритма и указывает, что выполнение параллельного алгоритма может быть параллельным и векторным.|
+|[Класс sequenced_policy](sequenced-policy-class.md)|Используется в качестве уникального типа для устранения неоднозначности при перегрузке параллельного алгоритма и требует, чтобы выполнение параллельного алгоритма не было параллельным.|
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<выполнения >
+**Заголовок:** \<> выполнения
 
 **Пространство имен:** stdext
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](thread-safety-in-the-cpp-standard-library.md)\
 [Справочник по стандартной библиотеке C++](cpp-standard-library-reference.md)

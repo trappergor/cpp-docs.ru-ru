@@ -1,5 +1,5 @@
 ---
-title: 'Безопасные библиотеки: Стандартная библиотека C++'
+title: 'Надежные библиотеки: Стандартная библиотека C++'
 ms.date: 11/04/2016
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-ms.openlocfilehash: 0c8f2de77255015254eabe018399f913b4582b7c
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 782a3610909de01e1a1991dee3a74aee9a131da3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220469"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454548"
 ---
-# <a name="safe-libraries-c-standard-library"></a>Безопасные библиотеки: Стандартная библиотека C++
+# <a name="safe-libraries-c-standard-library"></a>Надежные библиотеки: Стандартная библиотека C++
 
-Были внесены различные улучшения в библиотеки, входящие в состав Microsoft C++, в том числе C++ стандартной библиотеки, чтобы сделать их более безопасными.
+В библиотеки, поставляемые с Microsoft C++, включая C++ стандартную библиотеку, внесено несколько улучшений, чтобы сделать их более безопасными.
 
 В стандартной библиотеке C++ несколько методов оказались потенциально небезопасными, так как могли привести к переполнению буфера или другим дефектам кода. Использовать эти методы не рекомендуется; вместо них созданы новые, более безопасные методы. Эти новые методы оканчиваются на `_s`.
 
@@ -46,4 +46,4 @@ ms.locfileid: "65220469"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)

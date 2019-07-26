@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::piecewise_linear_distribution [C++], param_type
 - std::piecewise_linear_distribution [C++], param_type
 ms.assetid: cd141152-7163-4754-8f98-c6d6500005e0
-ms.openlocfilehash: 327da9c6793e4e74f099bdc313ce34720561bbd0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9221daa002f19c3f73e65a49efb8da9c6f96b258
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370377"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455226"
 ---
 # <a name="piecewiselineardistribution-class"></a>Класс piecewise_linear_distribution
 
@@ -80,8 +80,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-С плавающей запятой тип результата, по умолчанию — **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата с плавающей точкой, по умолчанию, равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -249,31 +249,31 @@ explicit piecewise_linear_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*firstI*<br/>
+*фирсти*\
 Итератор ввода первого элемента в диапазоне распределения.
 
-*lastI*<br/>
+*ласти*\
 Итератор ввода последнего элемента в диапазоне распределения.
 
-*firstW*<br/>
+*firstW*\
 Итератор ввода первого элемента в диапазоне весов.
 
-*intervals*<br/>
+*диапазона*\
 Объект [initializer_list](../cpp/initializers.md) с интервалами распределения.
 
-*count*<br/>
+*расчета*\
 Количество элементов в диапазоне распределения.
 
-*xmin*<br/>
+*xmin*\
 Минимальное значение в диапазоне распределения.
 
-*xmax*<br/>
+*xmax*\
 Максимальное значение в диапазоне распределения. Должно быть больше, чем *xmin*.
 
-*weightfunc*<br/>
-Объект, представляющий функцию вероятности распределения. Параметр и возвращаемое значение должно быть преобразуемым в **двойные**.
+*веигхтфунк*\
+Объект, представляющий функцию вероятности распределения. Оба параметра и возвращаемое значение должны быть преобразованы в **Double**.
 
-*parm*<br/>
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -290,7 +290,7 @@ piecewise_linear_distribution(
     InputIteratorW firstW);
 ```
 
-Создает объект распределения с интервалами от итераторов в последовательности [ `firstI`, `lastI`) и соответствующей последовательности весов начиная с *firstW*.
+конструирует объект распределения с интервалами от итераторов по последовательности [ `firstI`, `lastI`) и соответствующей последовательности весов, начиная с *firstW*.
 
 Конструктор списка инициализаторов
 
@@ -301,7 +301,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-Создает объект распределения с интервалами из списка инициализаторов *интервалы* и весами из функции *weightfunc*.
+Создает объект распределения с интервалами между *интервалами* списка инициализаторов и весовыми коэффициентами, созданными из функции *веигхтфунк*.
 
 Конструктор, определенный как
 
@@ -314,7 +314,7 @@ piecewise_linear_distribution(
     UnaryOperation weightfunc);
 ```
 
-Создает объект распределения с *число* интервалов, равномерно распределенных по [ `xmin,xmax`], вес каждого интервала в соответствии с функцией *weightfunc*, и  *weightfunc* должна принимать один параметр и должны иметь возвращаемого значения, которые могут быть преобразованы `double`. **Предварительные условия** `xmin < xmax`
+конструирует объект *распределения с* интервалами равномерного распределения по [ `xmin,xmax`], присваивая вес каждого интервала в соответствии с функцией *веигхтфунк*, а *веигхтфунк* должен принимать один параметр и возвращать , оба из которых могут быть преобразованы `double`в. **Предварительные условия** `xmin < xmax`
 
 Конструктор, определенный как
 
@@ -322,7 +322,7 @@ piecewise_linear_distribution(
 explicit piecewise_linear_distribution(const param_type& parm);
 ```
 
-Создает объект распределения, используя *parm* как сохраненную структуру параметров.
+конструирует объект распределения, используя *ParM* в качестве структуры хранимого параметра.
 
 ## <a name="param_type"></a>  piecewise_linear_distribution::param_type
 
@@ -358,4 +358,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

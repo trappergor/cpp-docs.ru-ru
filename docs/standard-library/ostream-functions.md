@@ -12,16 +12,16 @@ helpviewer_keywords:
 - std::endl [C++]
 - std::ends [C++]
 - std::flush [C++]
-ms.openlocfilehash: fa498f4acbb151eab4321bcddc6af027ee266237
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8d93e46b0323058d93c6d0bd8c1ee566998aef61
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62371000"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447199"
 ---
 # <a name="ltostreamgt-functions"></a>Функции &lt;ostream&gt;
 
-Это глобальный шаблон функции, определенные в &lt;ostream&gt;. Для функций-членов см. в разделе [класс basic_ostream](basic-ostream-class.md) документации.
+Это глобальные функции шаблонов, определенные в &lt;ostream.&gt; Сведения о функциях элементов см. в документации по [классу basic_ostream](basic-ostream-class.md) .
 
 ||||
 |-|-|-|
@@ -40,13 +40,13 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента.
 
-*Ostr*<br/>
+*OSTR*\
 Объект типа **basic_ostream**.
 
-*Tr*<br/>
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -55,7 +55,7 @@ basic_ostream<Elem, Tr>& endl(
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Ostr*.[ расширить](../standard-library/basic-ios-class.md#widen)(«\n»)), а затем вызывает *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
+Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put) (*OSTR*. [расширить](../standard-library/basic-ios-class.md#widen) (' \n ')), а затем вызывает *OSTR*. [Сброс](../standard-library/basic-ostream-class.md#flush). Он возвращает *OSTR*.
 
 ### <a name="example"></a>Пример
 
@@ -87,13 +87,13 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента.
 
-*Ostr*<br/>
+*OSTR*\
 Объект типа `basic_ostream`.
 
-*Tr*<br/>
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -102,7 +102,7 @@ basic_ostream<Elem, Tr>& ends(
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает *Ostr*.[ Поместите](../standard-library/basic-ostream-class.md#put)(*Elem*(«\0»)). Он возвращает *Ostr*.
+Манипулятор вызывает *OSTR*. [Размещение](../standard-library/basic-ostream-class.md#put) (*Elem*(' \ 0 ')). Он возвращает *OSTR*.
 
 ### <a name="example"></a>Пример
 
@@ -136,13 +136,13 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента.
 
-*Ostr*<br/>
+*OSTR*\
 Объект типа `basic_ostream`.
 
-*Tr*<br/>
+*ТС*\
 Признаки символа.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,7 +151,7 @@ basic_ostream<Elem, Tr>& flush(
 
 ### <a name="remarks"></a>Примечания
 
-Манипулятор вызывает *Ostr*.[ Очистить](../standard-library/basic-ostream-class.md#flush). Он возвращает *Ostr*.
+Манипулятор вызывает *OSTR*. [Сброс](../standard-library/basic-ostream-class.md#flush). Он возвращает *OSTR*.
 
 ### <a name="example"></a>Пример
 
@@ -184,16 +184,16 @@ void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента.
 
-*Tr*<br/>
+*ТС*\
 Признаки символа.
 
-*left*<br/>
+*слева*\
 Ссылка lvalue на объект `basic_ostream`.
 
-*right*<br/>
+*Правильно*\
 Ссылка lvalue на объект `basic_ostream`.
 
 ### <a name="remarks"></a>Примечания

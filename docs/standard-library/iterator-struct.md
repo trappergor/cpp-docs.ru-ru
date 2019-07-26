@@ -7,16 +7,16 @@ helpviewer_keywords:
 - iterator class
 - iterator struct
 ms.assetid: c74c8000-8b18-4829-9b71-6103c4229b74
-ms.openlocfilehash: 1dd62a6141e690d3bd4dcad69aa107c126a0f386
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64c9be76cb92d818e40714dd141ded3a8cc17c8a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224107"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455623"
 ---
 # <a name="iterator-struct"></a>Структура iterator
 
-Пустая базовая структура позволяет убедиться в правильной работе класс пользовательской итератора с `iterator_trait`s.
+Пустая базовая структура, используемая, чтобы гарантировать, что определяемый пользователем класс итератора правильно работает с `iterator_trait`s.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -47,7 +47,7 @@ struct iterator {
 
 - `reference` (синоним для параметра-шаблона `Reference`).
 
-Обратите внимание, что `value_type` не должны даже если тип константы `pointer` указывает на объект из **const** `Type` и ссылка обозначает объект **const** `Type`.
+Обратите `value_type` внимание, что не должен быть константным `pointer` типом, даже если точки в объекте **const** `Type` и Reference обозначают объект **const** `Type`.
 
 ## <a name="example"></a>Пример
 
@@ -61,6 +61,6 @@ struct iterator {
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

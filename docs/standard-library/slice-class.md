@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 830e345eb7522cef44dbf6e727a976fb79c1e081
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412531"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450348"
 ---
 # <a name="slice-class"></a>Класс slice
 
@@ -25,7 +25,7 @@ ms.locfileid: "62412531"
 
 ## <a name="remarks"></a>Примечания
 
-Класс хранит параметры, характеризующие объект типа [slice_array](../standard-library/slice-array-class.md). Подмножество valarray косвенно создается, когда объект среза класса отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#op_at)**\<Type>**. Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:
+Класс хранит параметры, характеризующие объект типа [slice_array](../standard-library/slice-array-class.md). Подмножество valarray косвенно создается, когда объект среза класса отображается как аргумент для объекта класса [valarray](../standard-library/valarray-class.md#op_at) **\<Type>** . Хранимые значения, задающие подмножество, выбираемое из родительского valarray, включают:
 
 - начальный индекс в valarray;
 
@@ -45,7 +45,7 @@ ms.locfileid: "62412531"
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[size](#size)|Определяет число элементов в срезе `valarray`.|
 |[start](#start)|Находит начальный индекс среза `valarray`.|
@@ -136,18 +136,18 @@ slice(
 
 ### <a name="parameters"></a>Параметры
 
-*_StartIndex*<br/>
+*_StartIndex*\
 Индекс valarray первого элемента в подмножестве.
 
-*_Len*<br/>
+*_Len*\
 Количество элементов в подмножестве.
 
-*stride*<br/>
+*шага*\
 Расстояние между элементами в подмножестве.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Конструктор по умолчанию хранит нули для начального индекса, общей длины и полного шага. Второй конструктор сохраняет *_StartIndex* для начального индекса, *_Len* общей длины и *stride* для полного шага.
+Конструктор по умолчанию хранит нули для начального индекса, общей длины и полного шага. Второй конструктор сохраняет *_StartIndex* для начального индекса, *_Len* для общей длины и *шаг* для шага.
 
 ### <a name="remarks"></a>Примечания
 
@@ -312,4 +312,4 @@ The stride of slice vaSlice is: 3.
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

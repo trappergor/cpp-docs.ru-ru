@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.openlocfilehash: 99477f57dc44d63f663a6db38250cc0620151ec9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4511c7b2d8629f1a052137c7997daf5913c976ab
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411998"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459991"
 ---
 # <a name="timepoint-class"></a>Класс time_point
 
@@ -63,7 +63,7 @@ class time_point;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<chrono >
+**Заголовок:** \<Chrono >
 
 **Пространство имен:** std::chrono
 
@@ -101,7 +101,7 @@ time_point& operator+=(const duration& Dur);
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Ожидаем*\
 Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -118,7 +118,7 @@ time_point& operator-=(const duration& Dur);
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Ожидаем*\
 Объект `duration`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -140,17 +140,17 @@ constexpr time_point(const time_point<clock, Duration2>& Tp);
 
 ### <a name="parameters"></a>Параметры
 
-*Длительность*<br/>
+*Ожидаем*\
 Объект [duration](../standard-library/duration-class.md).
 
-*TP*<br/>
+*Пи*\
 Объект `time_point`.
 
 ### <a name="remarks"></a>Примечания
 
 Первый конструктор создает объект, хранимое значение `duration` которого равно [duration::zero](../standard-library/duration-class.md#zero).
 
-Второй конструктор создает объект, значение длительности равен *Dur*. Если не `is_convertible<Duration2, duration>` содержит значение true, второй конструктор не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
+Второй конструктор конструирует объект, сохраненное значение длительности которого равно *Duration.* Если `is_convertible<Duration2, duration>` не имеет значение true, второй конструктор не участвует в разрешении перегрузки. Дополнительные сведения см. в разделе [<type_traits>](../standard-library/type-traits.md).
 
 Третий конструктор инициализирует свое значение `duration`, используя `Tp.time_since_epoch()`.
 
@@ -164,5 +164,5 @@ constexpr duration time_since_epoch() const;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<chrono>](../standard-library/chrono.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<chrono>](../standard-library/chrono.md)

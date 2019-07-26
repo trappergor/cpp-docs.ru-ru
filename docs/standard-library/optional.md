@@ -6,20 +6,20 @@ f1_keywords:
 helpviewer_keywords:
 - <optional>
 ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: c73ad2ad94a5de29bc2c457fdf6ca8b9c783615c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268486"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447186"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Определяет необязательный класс шаблонов контейнеров и некоторые вспомогательные шаблоны.
+Определяет класс шаблона контейнера необязательно и несколько вспомогательных шаблонов.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<необязательно >
+**Заголовок:** \<необязательный >
 
 **Пространство имен:** std
 
@@ -37,13 +37,13 @@ ms.locfileid: "68268486"
 |[оператор>=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет больше ли объект `optional` слева от оператора, чем объект `optional` справа от оператора, или равен ему.|
 
 > [!NOTE]
-> В дополнение к реляционной сравнивает \<необязательно > операторы также поддерживает сравнение с **nullopt** и `T`.
+> Помимо реляционных сравнений, \<необязательные > операторы также поддерживают сравнение с **нуллопт** и `T`.
 
 ### <a name="functions"></a>Функции
 
 |||
 |-|-|
-|[make_optional](../standard-library/optional-functions.md#make_optional)|Делает объект необязательно.|
+|[make_optional](../standard-library/optional-functions.md#make_optional)|Делает объект необязательным.|
 |[swap](../standard-library/optional-functions.md#swap)||
 
 ### <a name="classes-and-structs"></a>Классы и структуры
@@ -52,15 +52,15 @@ ms.locfileid: "68268486"
 |-|-|
 |[hash]()||
 |[необязательный класс](../standard-library/optional-class.md)|Описывает объект, который может или не может содержать значение.|
-|[nullopt_t структуры](../standard-library/nullopt-t-structure.md)|Описывает объект, не удерживающие значение.|
-|[Класс bad_optional_access](../standard-library/bad-optional-access-class.md)|Описывает объект, формировать исключение сообщить о попытке получить доступ к значение не существует.|
+|[Структура nullopt_t](../standard-library/nullopt-t-structure.md)|Описывает объект, который не удерживает значение.|
+|[Класс bad_optional_access](../standard-library/bad-optional-access-class.md)|Описывает объект, вызываемый как исключение для сообщения о попытке доступа к значению, которое отсутствует.|
 
 ### <a name="objects"></a>Объекты
 
 |||
 |-|-|
-|[nullopt](../standard-library/optional-functions.md#nullopt)||
+|[нуллопт](../standard-library/optional-functions.md#nullopt)||
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

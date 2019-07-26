@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - queue header
 ms.assetid: 24fcf350-eb0e-48cf-9fef-978be1aeda1f
-ms.openlocfilehash: 641ab1bfe99360320509b806149fcedfe1068879
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d7a13b98ba8cff78839b2afb98371ffba5ced461
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240366"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458338"
 ---
 # <a name="ltqueuegt"></a>&lt;queue&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68240366"
 **Пространство имен:** std
 
 > [!NOTE]
-> \<Очередь > Библиотека также использует `#include <initializer_list>` инструкции.
+> Библиотека > `#include <initializer_list>` очереди также использует инструкцию. \<
 
 ## <a name="members"></a>Участники
 
@@ -54,6 +54,6 @@ ms.locfileid: "68240366"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::rts_alloc [C++], deallocate
 - stdext::rts_alloc [C++], equals
 ms.assetid: ab41bffa-83d1-4a1c-87b9-5707d516931f
-ms.openlocfilehash: 2c77f93a2311dbf21959b0d2a7830c20ba6dce96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 065c0eaf936a438f48dbb8aa28704e0f53926a03
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409750"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451138"
 ---
 # <a name="rtsalloc-class"></a>Класс rts_alloc
 
@@ -42,7 +42,7 @@ class rts_alloc
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -74,7 +74,7 @@ void *allocate(std::size_t count);
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает `caches[_IDX].allocate(count)`, где индекс `_IDX` определяется запрошенным размером блока *число*, или, если *число* слишком велик, возвращается `operator new(count)`. `cache`, представляющий объект кэша.
+Функция-член возвращает `caches[_IDX].allocate(count)`, где индекс `_IDX` определяется запрошенным количеством размеров блоков, или, если *Count* слишком велик, возвращается значение `operator new(count)`. `cache`, представляющий объект кэша.
 
 ## <a name="deallocate"></a>  rts_alloc::deallocate
 
@@ -93,7 +93,7 @@ void deallocate(void* ptr, std::size_t count);
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член вызывает `caches[_IDX].deallocate(ptr, count)`, где индекс `_IDX` определяется запрошенным размером блока *число*, или, если *число* слишком велик, возвращается `operator delete(ptr)`.
+Функция-член вызывает `caches[_IDX].deallocate(ptr, count)`, где индекс `_IDX` определяется запрошенным количеством размеров блока, или, если *Count* слишком велик, возвращается значение `operator delete(ptr)`.
 
 ## <a name="equals"></a>  rts_alloc::equals
 
@@ -108,13 +108,13 @@ bool equals(const sync<_Cache>& _Other) const;
 |Параметр|Описание|
 |---------------|-----------------|
 |*_Cache*|Объект кэша, связанный с фильтром.|
-|*_Другое*|Объект кэша для сравнения на равенство.|
+|*_Other*|Объект кэша для сравнения на равенство.|
 
 ### <a name="remarks"></a>Примечания
 
-**значение true,** Если результат `caches[0].equals(other.caches[0])`; в противном случае **false**. `caches` представляет массив объектов кэша.
+**значение true** , если результат `caches[0].equals(other.caches[0])`; в противном случае — **значение false**. `caches` представляет массив объектов кэша.
 
 ## <a name="see-also"></a>См. также
 
-[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)<br/>
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[ALLOCATOR_DECL](../standard-library/allocators-functions.md#allocator_decl)\
+[\<allocators>](../standard-library/allocators-header.md)

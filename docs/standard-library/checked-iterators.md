@@ -10,12 +10,12 @@ helpviewer_keywords:
 - iterators, checked
 - checked iterators
 ms.assetid: cfc87df8-e3d9-403b-ab78-e9483247d940
-ms.openlocfilehash: 163729b401fa917d7df0002c621998f5021757f6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f5a31843386d2246f5d74eae1f40b93f0ae35c90
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279168"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452138"
 ---
 # <a name="checked-iterators"></a>Checked Iterators
 
@@ -25,12 +25,12 @@ ms.locfileid: "62279168"
 
 Дополнительные сведения об отключении предупреждений, создаваемых проверенными итераторами, см. в разделе [_SCL_SECURE_NO_WARNINGS](../standard-library/scl-secure-no-warnings.md).
 
-Вы можете использовать макрос препроцессора [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md), чтобы включать или отключать функцию проверенных итераторов. Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, небезопасное использование итераторов вызовет ошибку среды выполнения и программа будет завершена. Если задано значение 0, проверенные итераторы блокируются. По умолчанию для _ITERATOR_DEBUG_LEVEL значение 0 для сборок выпуска и 2 для отладочных сборок.
+Вы можете использовать макрос препроцессора [\_ITERATOR\_DEBUG\_LEVEL](../standard-library/iterator-debug-level.md), чтобы включать или отключать функцию проверенных итераторов. Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, ненадежное использование итераторов вызывает ошибку времени выполнения и программа завершается. Если задано значение 0, проверенные итераторы блокируются. По умолчанию значение _ITERATOR_DEBUG_LEVEL равно 0 для сборок выпуска и 2 для отладочных сборок.
 
 > [!IMPORTANT]
-> В более старой документации и исходном коде могут быть ссылки на макрос [_SECURE_SCL](../standard-library/secure-scl.md). Для управления _SECURE_SCL используйте _ITERATOR_DEBUG_LEVEL. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> В более старой документации и исходном коде могут быть ссылки на макрос [_SECURE_SCL](../standard-library/secure-scl.md). Используйте _ITERATOR_DEBUG_LEVEL для управления _SECURE_SCL. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
-Когда _ITERATOR_DEBUG_LEVEL определен как 1 или 2, выполнения этих проверок итератора:
+Если _ITERATOR_DEBUG_LEVEL определен как 1 или 2, выполняются следующие проверки итератора:
 
 - Проверяются все стандартные итераторы (например [vector::iterator](../standard-library/vector-class.md#iterator)).
 
@@ -60,7 +60,7 @@ ms.locfileid: "62279168"
 
 ## <a name="example"></a>Пример
 
-При компиляции с помощью _ITERATOR_DEBUG_LEVEL присвоено значение 1 или 2, возникнет ошибка времени выполнения, при попытке обращения к элементу, который находится за границами контейнера при помощи оператора индексации определенных классов.
+При компиляции с параметром _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, возникает ошибка времени выполнения при попытке доступа к элементу, который находится за пределами контейнера, с помощью оператора индексирования определенных классов.
 
 ```cpp
 // checked_iterators_1.cpp
@@ -89,7 +89,7 @@ int main()
 
 ## <a name="example"></a>Пример
 
-Аналогично, при компиляции с помощью _ITERATOR_DEBUG_LEVEL присвоено значение 1 или 2, возникнет ошибка времени выполнения при попытке доступа к элементу с помощью `front` или `back` в классах контейнера, если контейнер пуст.
+Аналогично при компиляции с помощью _ITERATOR_DEBUG_LEVEL, для которого задано значение 1 или 2, возникает ошибка времени выполнения при попытке получить доступ к элементу `back` с помощью `front` или в классах контейнеров, если контейнер пуст.
 
 ```cpp
 // checked_iterators_2.cpp
@@ -113,7 +113,7 @@ int main()
 
 ## <a name="example"></a>Пример
 
-Следующий код демонстрирует различные сценарии использования итератора с комментариями о каждом. По умолчанию _ITERATOR_DEBUG_LEVEL имеет значение 2 в отладочных сборках и 0 в окончательных сборках.
+Следующий код демонстрирует различные сценарии использования итератора с комментариями о каждом. По умолчанию для _ITERATOR_DEBUG_LEVEL задано значение 2 в отладочных сборках, а в розничных сборках — 0.
 
 ```cpp
 // checked_iterators_3.cpp
@@ -219,5 +219,5 @@ a8: 0 8 16 24 32 40 48 56 64 72 80 88 96 104 112 120
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Поддержка итераторов отладки](../standard-library/debug-iterator-support.md)

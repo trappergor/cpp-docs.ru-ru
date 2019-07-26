@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_byname class
 ms.assetid: b63b6c04-f60c-47b9-8e30-a933f24a8ffb
-ms.openlocfilehash: 62aac6abca3dce45ff3cc875823df04c69618b10
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 62781d575d6b9dda3f3c1e2a744091221c6f9584
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405278"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459853"
 ---
 # <a name="codecvtbyname-class"></a>Класс codecvt_byname
 
@@ -43,17 +43,17 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*<br/>
+*_Locname*\
 Именованный языковой стандарт.
 
-*_Refs*<br/>
+*_Refs*\
 Начальное значение счетчика ссылок.
 
 ## <a name="remarks"></a>Примечания
 
 Аспекты Byname создаются автоматически при создании именованного языкового стандарта.
 
-Его поведение определяется именованным языковым стандартом *_Locname*. Каждый конструктор инициализирует свой базовый объект с [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
+Его поведение определяется с помощью именованного языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [codecvt](../standard-library/codecvt-class.md)\<CharType, Byte, StateType>( `_Refs`).
 
 ## <a name="requirements"></a>Требования
 
@@ -63,4 +63,4 @@ protected:
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

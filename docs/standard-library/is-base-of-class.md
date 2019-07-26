@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_base_of class
 - is_base_of
 ms.assetid: 436f6213-1d4c-4ffc-a588-fc7c4887dd86
-ms.openlocfilehash: 345301b5eeed7b66f18a54e56b9bee6346078634
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d56222f218033d00583e5e3def9790720ef7bb94
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383676"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456623"
 ---
 # <a name="isbaseof-class"></a>Класс is_base_of
 
@@ -27,15 +27,15 @@ struct is_base_of;
 
 ### <a name="parameters"></a>Параметры
 
-*Base*<br/>
+*Из*\
 Базовый класс для проверки.
 
-*Производные*<br/>
+*Получает*\
 Производный тип для проверки.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *базового* является базовым классом типа *Derived*, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если *базовый* тип является базовым классом производного типа , в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -80,5 +80,5 @@ is_base_of<derived, base> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_convertible](../standard-library/is-convertible-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+Класс [is_convertible](../standard-library/is-convertible-class.md)

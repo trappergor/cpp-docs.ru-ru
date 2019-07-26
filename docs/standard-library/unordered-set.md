@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unordered_set header
 ms.assetid: a3364d54-147d-4796-8728-9e62a2e4c226
-ms.openlocfilehash: 5065d1f2d0ea710dbaaaa09ec9079dbf502065af
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: e03fc2f1c541caedfa9ac83bb9500e50a4b513b1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243405"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454676"
 ---
 # <a name="ltunorderedsetgt"></a>&lt;unordered_set&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68243405"
 **Пространство имен:** std
 
 > [!NOTE]
-> \<Unordered_set > Библиотека также использует `#include <initializer_list>` инструкции.
+> Библиотека > `#include <initializer_list>` unordered_set также использует инструкцию. \<
 
 ## <a name="members"></a>Участники
 
@@ -48,5 +48,5 @@ ms.locfileid: "68243405"
 
 ## <a name="see-also"></a>См. также
 
-[Класс unordered_map](../standard-library/unordered-map-class.md)<br/>
-[Класс unordered_multimap](../standard-library/unordered-multimap-class.md)<br/>
+[Класс unordered_map](../standard-library/unordered-map-class.md)\
+[Класс unordered_multimap](../standard-library/unordered-multimap-class.md)

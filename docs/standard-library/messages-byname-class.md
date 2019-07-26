@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8fe1ab2db792819831f5c50aa99a02559f71cdd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404797"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451809"
 ---
 # <a name="messagesbyname-class"></a>Класс messages_byname
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*<br/>
+*_Locname*\
 Именованный языковой стандарт.
 
-*_Refs*<br/>
+*_Refs*\
 Начальное значение счетчика ссылок.
 
 ## <a name="remarks"></a>Примечания
 
-Его поведение определяется именованным языковым стандартом *_Locname*. Каждый конструктор инициализирует свой базовый объект с [сообщениями](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
+Его поведение определяется с помощью именованного языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [сообщениями](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Требования
 
@@ -57,4 +57,4 @@ protected:
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

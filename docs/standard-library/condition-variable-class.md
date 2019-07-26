@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.openlocfilehash: 69f356301ce5b546c8bebe9429ca64fa61eff404
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 999e236433ec4f3f2f52abb06855004a89169fa6
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244628"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449459"
 ---
 # <a name="conditionvariable-class"></a>Класс condition_variable
 
@@ -56,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|Блокирует поток и задает интервал времени, после которого поток разблокируется.|
 |[wait_until](#wait_until)|Блокирует поток и задает максимальный момент времени, в который поток разблокируется.|
 
-## <a name="condition_variable"></a> CONDITION_VARIABLE
+## <a name="condition_variable"></a>condition_variable
 
 Создает объект `condition_variable`.
 
@@ -68,7 +68,7 @@ condition_variable();
 
 При недостатке памяти этот конструктор вызывает объект [system_error](../standard-library/system-error-class.md), имеющий код ошибки `not_enough_memory`. Если объект не может быть создан из-за недоступности некоторых других ресурсов, конструктор создает объект `system_error`, имеющий код ошибки `resource_unavailable_try_again`.
 
-## <a name="native_handle"></a> native_handle
+## <a name="native_handle"></a>native_handle
 
 Возвращает тип реализации, представляющий дескриптор condition_variable.
 
@@ -80,7 +80,7 @@ native_handle_type native_handle();
 
 `native_handle_type` определяется как указатель на внутренние структуры данных среды выполнения с параллелизмом.
 
-## <a name="notify_all"></a> notify_all
+## <a name="notify_all"></a>notify_all
 
 Разблокирует все потоки, которые ожидают объект `condition_variable`.
 
@@ -88,7 +88,7 @@ native_handle_type native_handle();
 void notify_all() noexcept;
 ```
 
-## <a name="notify_one"></a> notify_one
+## <a name="notify_one"></a>notify_one
 
 Разблокирует один из потоков, которые ожидают объект `condition_variable`.
 
@@ -96,7 +96,7 @@ void notify_all() noexcept;
 void notify_one() noexcept;
 ```
 
-## <a name="wait"></a> Подождите
+## <a name="wait"></a>ожидания
 
 Блокирует поток.
 
@@ -109,11 +109,11 @@ void wait(unique_lock<mutex>& Lck, Predicate Pred);
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*\
+*лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
-*Пред*\
-Любое выражение, возвращающее **true** или **false**.
+*Возможен*\
+Любое выражение, возвращающее **значение true** или **false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -126,7 +126,7 @@ while(!Pred())
     wait(Lck);
 ```
 
-## <a name="wait_for"></a> wait_for
+## <a name="wait_for"></a>wait_for
 
 Блокирует поток и задает интервал времени, после которого поток разблокируется.
 
@@ -145,24 +145,24 @@ bool wait_for(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*\
+*лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Rel_time*\
 Объект `chrono::duration`, указывающий количество времени до активации потока.
 
-*Пред*\
-Любое выражение, возвращающее **true** или **false**.
+*Возможен*\
+Любое выражение, возвращающее **значение true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый метод возвращает `cv_status::timeout` Если ожидание прекращается, когда *Rel_time* истечет. В противном случае метод возвращает значение `cv_status::no_timeout`.
+Первый метод возвращает `cv_status::timeout` значение, если ожидание завершается после истечения *Rel_time* . В противном случае метод возвращает значение `cv_status::no_timeout`.
 
-Второй метод возвращает значение *Pred*.
+Второй метод возвращает значение *пред*.
 
 ### <a name="remarks"></a>Примечания
 
-Первый метод блокируется до `condition_variable` объект переводится в сигнальное состояние при вызове [notify_one](#notify_one) или [notify_all](#notify_all) или до завершения интервала времени *Rel_time* истечет. Он может также ложно активироваться.
+Первый метод блокируется до тех `condition_variable` пор, пока объект не сообщит о вызове [notify_one](#notify_one) или [notify_all](#notify_all) или до истечения интервала времени *Rel_time* . Он может также ложно активироваться.
 
 Второй метод фактически выполняет следующий код.
 
@@ -174,7 +174,7 @@ while(!Pred())
 return true;
 ```
 
-## <a name="wait_until"></a> wait_until
+## <a name="wait_until"></a>wait_until
 
 Блокирует поток и задает максимальный момент времени, в который поток разблокируется.
 
@@ -203,20 +203,20 @@ bool wait_until(
 
 ### <a name="parameters"></a>Параметры
 
-*LCK*\
+*лкк*\
 Объект [unique_lock\<mutex>](../standard-library/unique-lock-class.md).
 
 *Abs_time*\
 Объект [chrono::time_point](../standard-library/time-point-class.md).
 
-*Пред*\
-Любое выражение, возвращающее **true** или **false**.
+*Возможен*\
+Любое выражение, возвращающее **значение true** или **false**.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Методы, возвращающие `cv_status` введите возврата `cv_status::timeout` Если ожидание прекращается, когда *Abs_time* пройдет указанное время. В противном случае эти методы возвращают `cv_status::no_timeout`.
+Методы, возвращающие `cv_status` тип `cv_status::timeout` , возвращают, если ожидание завершается при истечении *Abs_time* . В противном случае эти методы возвращают `cv_status::no_timeout`.
 
-Методы, возвращающие **bool** возвращают значение *Pred*.
+Методы, возвращающие **bool** , возвращают значение " *пред*".
 
 ### <a name="remarks"></a>Примечания
 
@@ -236,5 +236,5 @@ return true;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[<condition_variable>](../standard-library/condition-variable.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[<condition_variable>](../standard-library/condition-variable.md)

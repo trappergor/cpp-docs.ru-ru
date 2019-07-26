@@ -15,12 +15,12 @@ helpviewer_keywords:
 - std::shuffle_order_engine [C++], base_type
 - std::shuffle_order_engine [C++], seed
 ms.assetid: 0bcd1fb0-44d7-4e59-bb1b-4a9b673a960d
-ms.openlocfilehash: bf767c12a19e4ae47c34a8f01e1b1a2f1e028eb3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 972ba83afb5478cd89314817ba823b8d5657c9c8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62399438"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450412"
 ---
 # <a name="shuffleorderengine-class"></a>Класс shuffle_order_engine
 
@@ -35,10 +35,10 @@ class shuffle_order_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*ядра*<br/>
+*Ядре*\
 Тип базового механизма.
 
-*K*<br/>
+*ЗАНЯТ*\
 **Размер таблицы**. Количество элементов в буфере (таблице). **Предварительные условия**: `0 < K`
 
 ## <a name="members"></a>Участники
@@ -52,7 +52,7 @@ class shuffle_order_engine;
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс шаблона описывает *адаптер механизма*, формирующий значения путем изменения порядка значений, возвращаемых базовым механизмом. Каждый конструктор заполняет внутреннюю таблицу с *K* возвращаются значения базового механизма, а случайный элемент выбирается из таблицы, при запросе значения.
+Этот класс шаблона описывает *адаптер механизма*, формирующий значения путем изменения порядка значений, возвращаемых базовым механизмом. Каждый конструктор заполняет внутреннюю таблицу значениями *K* , возвращаемыми базовым механизмом, и при запросе значения выбирается случайный элемент из таблицы.
 
 ## <a name="requirements"></a>Требования
 
@@ -62,4 +62,4 @@ class shuffle_order_engine;
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

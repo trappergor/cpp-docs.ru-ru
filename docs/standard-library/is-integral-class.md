@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_integral class
 - is_integral
 ms.assetid: fe9279d0-4495-4e88-bf23-153cc6602397
-ms.openlocfilehash: c7d0d8b8572c26bfa75b9fab81900c0ae21fb932
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a367bb06f49dd2c9c64f0c257a3573add5645efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336499"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456242"
 ---
 # <a name="isintegral-class"></a>Класс is_integral
 
@@ -27,14 +27,14 @@ struct is_integral;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является одним из целочисленных типов или `cv-qualified` форму одного из целочисленных типов, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является одним из целочисленных типов или `cv-qualified` формой одного из целочисленных типов, в противном случае — значение false.
 
-Целочисленный тип данных является одним из **bool**, **char**, **unsigned char**, **автоматический char**, **wchar_t**, **короткие**, **unsigned short**, **int**, **unsigned int**, **long**и **unsigned long**. Кроме того, с помощью компиляторов, которые обеспечивают их, целочисленный тип данных может принимать одно из **long long**, **long long без знака**, **__int64**, и **unsigned __int64**.
+Целочисленный тип — это один из типов **bool**, **char**, char, **без знака**, **со знаком char**, **wchar_t**, **Short**, **без знака Short**, **int**, **без знака int**, **Long**и **без знака Long**. Кроме того, с компиляторами, предоставляющими их, целочисленный тип может быть одним из длинных длинных, беззнаковых длинных, **__int64**и неподписанных **__int64**.
 
 ## <a name="example"></a>Пример
 
@@ -76,6 +76,6 @@ is_integral<float> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_enum](../standard-library/is-enum-class.md)<br/>
-[Класс is_floating_point](../standard-library/is-floating-point-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_enum](../standard-library/is-enum-class.md)\
+[Класс is_floating_point](../standard-library/is-floating-point-class.md)

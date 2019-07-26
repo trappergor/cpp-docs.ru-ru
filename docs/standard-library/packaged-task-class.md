@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bb04b84b723f239c338c02befa8cd3468cec3f2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370675"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450082"
 ---
 # <a name="packagedtask-class"></a>Класс packaged_task
 
@@ -55,7 +55,7 @@ class packaged_task;
 |[make_ready_at_thread_exit](#make_ready_at_thread_exit)|Вызывает вызываемый объект, который хранится в связанном асинхронном состоянии и атомарно сохраняет возвращаемое значение.|
 |[reset](#reset)|Заменяет связанное асинхронное состояние.|
 |[swap](#swap)|Меняет местами связанное асинхронное состояние с состоянием указанного объекта.|
-|[допустимый](#valid)|Указывает, имеет ли объект связанное асинхронное состояние.|
+|[допустимым](#valid)|Указывает, имеет ли объект связанное асинхронное состояние.|
 
 ### <a name="public-operators"></a>Открытые операторы
 
@@ -67,7 +67,7 @@ class packaged_task;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<будущих >
+**Заголовок:** \<будущие >
 
 **Пространство имен:** std
 
@@ -113,7 +113,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="parameters"></a>Параметры
 
-*Right*<br/>
+*Правильно*\
 Объект `packaged_task`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -122,7 +122,7 @@ packaged_task& operator=(packaged_task&& Right);
 
 ### <a name="remarks"></a>Примечания
 
-После выполнения операции *справа* больше не имеет связанного асинхронного состояния.
+После операции *право* больше не имеет связанного асинхронного состояния.
 
 ## <a name="op_call"></a>  packaged_task::operator()
 
@@ -150,7 +150,7 @@ operator bool() const noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объект имеет связанное асинхронное состояние; в противном случае **false**.
+**значение true** , если у объекта есть связанное асинхронное состояние; в противном случае — **значение false**.
 
 ## <a name="packaged_task"></a>  Конструктор packaged_task::packaged_task
 
@@ -169,24 +169,24 @@ template <class Fn, class Alloc>
 
 ### <a name="parameters"></a>Параметры
 
-*Right*<br/>
+*Правильно*\
 Объект `packaged_task`.
 
-*Alloc*<br/>
+*Идентификатор*\
 Распределитель памяти. Дополнительные сведения см. в разделе [\<allocators>](../standard-library/allocators-header.md).
 
-*fn*<br/>
+*FN*\
 Объект функции.
 
 ### <a name="remarks"></a>Примечания
 
 Первый конструктор создает объект `packaged_task`, который не имеет *связанного асинхронного состояния*.
 
-Второй конструктор создает `packaged_task` и передает связанное асинхронное состояние из *справа*. После выполнения операции *справа* больше не имеет связанного асинхронного состояния.
+Второй конструктор конструирует `packaged_task` объект и передает связанное асинхронное состояние из *right*. После операции *право* больше не имеет связанного асинхронного состояния.
 
-Третий конструктор создает `packaged_task` объект, имеющий копию *fn* хранящиеся в его связанном асинхронном состоянии.
+Третий конструктор конструирует `packaged_task` объект, имеющий копию *fn* , хранящуюся в связанном асинхронном состоянии.
 
-Четвертый конструктор создает `packaged_task` объект, имеющий копию *fn* хранятся в его связанном асинхронном состоянии и использует `alloc` для выделения памяти.
+Четвертый конструктор конструирует `packaged_task` объект с копией *fn* , хранящейся в связанном асинхронном состоянии, и использует `alloc` для выделения памяти.
 
 ## <a name="dtorpackaged_task_destructor"></a> Деструктор packaged_task::~packaged_task
 
@@ -222,7 +222,7 @@ void swap(packaged_task& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Right*<br/>
+*Правильно*\
 Объект `packaged_task`.
 
 ## <a name="valid"></a>  packaged_task::valid
@@ -235,9 +235,9 @@ bool valid() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объект имеет связанное асинхронное состояние; в противном случае **false**.
+**значение true** , если у объекта есть связанное асинхронное состояние; в противном случае — **значение false**.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<future>](../standard-library/future.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<future>](../standard-library/future.md)

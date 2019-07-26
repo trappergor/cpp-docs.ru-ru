@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - ctype<char> class
 ms.assetid: ee30acb4-a743-405e-b3d4-13602092da84
-ms.openlocfilehash: adaad8f76de5b712aea13794ef2d7b9a096fb8ef
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7fe1eef32741d63e7b2e2c2320d18f445784c44f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62394160"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455457"
 ---
 # <a name="ctypeltchargt-class"></a>Класс ctype&lt;char&gt;
 
-Этот класс является явной специализацией шаблона класса `ctype\<CharType>` ввода **char**, описывающего объект, который можно использовать в качестве аспекта языкового стандарта для характеристики различных свойств символа типа **char**.
+Класс является явной специализацией класса `ctype\<CharType>` шаблона для типа **char**, описывающий объект, который может служить в качестве аспекта языкового стандарта для описания различных свойств символа типа **char**.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -108,15 +108,15 @@ protected:
 
 Явная специализация отличается от класса шаблона несколькими аспектами.
 
-- Объект класса CType < `char`> сохраняет указатель на первый элемент таблицы маски ctype, массив UCHAR_MAX + 1 элементов типа `ctype_base::mask`. Он также хранит объект логического типа, указывающий, следует ли удалять массив (с помощью `operator delete[]`), когда удаляется объект ctype\< **Elem**>.
+- Объект класса ctype < `char`> сохраняет указатель на первый элемент таблицы маски ctype, массив элементов UCHAR_MAX + 1 типа. `ctype_base::mask` Он также хранит объект логического типа, указывающий, следует ли удалять массив (с помощью `operator delete[]`), когда удаляется объект ctype\< **Elem**>.
 
-- Его единственный открытый конструктор позволяет указать `tab`, таблицу маски ctype, и `del`, логический объект, имеющий значение true, если в массиве должно быть удалено, когда ctype < `char`> объект уничтожается, а также счетчик ссылок параметр refs.
+- Его единственный открытый конструктор позволяет указать `tab`, таблицу маски ctype и `del`логический объект, который имеет значение true, если массив должен быть удален при уничтожении объекта CType < `char`>, а также счетчика ссылок. параметр ReFS.
 
-- Защищенная функция-член `table` Возвращает сохраненную таблицу маски ctype.
+- Защищенная функция `table` Member возвращает хранимую таблицу маски ctype.
 
-- Статический объект-член `table_size` указывает минимальное количество элементов в таблицу маски ctype.
+- Объект `table_size` статического элемента указывает минимальное число элементов в таблице маски ctype.
 
-- Защищенные статическую функцию-член `classic_table`(возвращает таблицу маски ctype соответствующей языковом стандарте «C».
+- Защищенная статическая функция `classic_table`-член (Возвращает таблицу маски ctype, соответствующую языковому стандарту "C".
 
 - Отсутствуют защищенные виртуальные функции-члены [do_is](../standard-library/ctype-class.md#do_is), [do_scan_is](../standard-library/ctype-class.md#do_scan_is) или [do_scan_not](../standard-library/ctype-class.md#do_scan_not). Соответствующие открытые функции-члены самостоятельно выполняют эквивалентные операции.
 
@@ -130,6 +130,6 @@ protected:
 
 ## <a name="see-also"></a>См. также
 
-[Класс Facet](locale-class.md#facet_class)<br/>
-[Класс ctype_base](../standard-library/ctype-base-class.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Класс facet](locale-class.md#facet_class)\
+[Класс ctype_base](../standard-library/ctype-base-class.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

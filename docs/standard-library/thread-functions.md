@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::sleep_until [C++]
 - std::swap [C++]
 - std::yield [C++]
-ms.openlocfilehash: c0a8e42cb7ee78c399459be82e50ef37ab203816
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8064cec7e94a909d7dc2e1b22142d362bb7b9488
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62279038"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458503"
 ---
 # <a name="ltthreadgt-functions"></a>Функции &lt;thread&gt;
 
@@ -52,12 +52,12 @@ inline void sleep_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time*<br/>
+*Rel_time*\
 Объект [duration](../standard-library/duration-class.md), задающий интервал времени.
 
 ### <a name="remarks"></a>Примечания
 
-Функция блокирует вызывающий поток для по крайней мере времени, который задается параметром *Rel_time*. Эта функция не вызывает исключений.
+Функция блокирует вызывающий поток в течение как минимум времени, заданного параметром *Rel_time*. Эта функция не вызывает исключений.
 
 ## <a name="sleep_until"></a>  sleep_until
 
@@ -72,7 +72,7 @@ void sleep_until(const xtime *Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time*<br/>
+*Abs_time*\
 Представляет момент времени.
 
 ### <a name="remarks"></a>Примечания
@@ -81,7 +81,7 @@ void sleep_until(const xtime *Abs_time);
 
 ## <a name="swap"></a>  swap
 
-Меняет местами состояния двух **поток** объектов.
+Меняет местами состояния двух объектов **потока** .
 
 ```cpp
 void swap(thread& Left, thread& Right) noexcept;
@@ -89,11 +89,11 @@ void swap(thread& Left, thread& Right) noexcept;
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
-Слева **поток** объекта.
+*Слева*\
+Левый объект **потока** .
 
-*Right*<br/>
-Справа **поток** объекта.
+*Правильно*\
+Правый объект **потока** .
 
 ### <a name="remarks"></a>Примечания
 
@@ -109,4 +109,4 @@ inline void yield() noexcept;
 
 ## <a name="see-also"></a>См. также
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

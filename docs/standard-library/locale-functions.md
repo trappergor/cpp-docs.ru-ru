@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::tolower [C++]
 - std::toupper [C++]
 - std::use_facet [C++]
-ms.openlocfilehash: b1ffe9e5294e4b945f81dbecbabba64c15c188a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3c5d81aecb5e78a8fd3c3f32da82f6048ae4fac8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413168"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453567"
 ---
 # <a name="ltlocalegt-functions"></a>Функции &lt;locale&gt;
 
@@ -62,7 +62,7 @@ bool has_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, проверяемый на наличие аспекта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -105,10 +105,10 @@ bool isalnum(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Буквенно-цифровой элемент для проверки.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий буквенно-цифровой элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -172,10 +172,10 @@ bool isalpha(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий буквенный элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -237,10 +237,10 @@ bool iscntrl(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -302,10 +302,10 @@ bool isdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -367,10 +367,10 @@ bool isgraph(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -432,10 +432,10 @@ bool islower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -497,10 +497,10 @@ bool isprint(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -561,10 +561,10 @@ bool ispunct(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -626,10 +626,10 @@ bool isspace(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -691,10 +691,10 @@ bool isupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -756,10 +756,10 @@ bool isxdigit(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Проверяемый элемент.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий элемент для проверки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -823,10 +823,10 @@ CharType tolower(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Символ для преобразования в нижний регистр.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий символ для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -872,10 +872,10 @@ CharType toupper(CharType Ch, const locale& Loc)
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Символ для преобразования в верхний регистр.
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт, содержащий символ для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -921,7 +921,7 @@ const Facet& use_facet(const locale& Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc*<br/>
+*Loc*\
 Языковой стандарт const, содержащий тип аспекта, на который приведена ссылка.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -973,4 +973,4 @@ The character '!' in locale loc2 is not alphabetic.
 
 ## <a name="see-also"></a>См. также
 
-[\<locale>](../standard-library/locale.md)<br/>
+[\<locale>](../standard-library/locale.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_signed class
 - is_signed
 ms.assetid: 20ae44d9-22ad-4fbd-b26a-f18c62689451
-ms.openlocfilehash: eacc271697930bec64630c0a1be612bd89eeb91f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 153970412f324f070bb66ae4a1bb6a8c204a5886
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413537"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457504"
 ---
 # <a name="issigned-class"></a>Класс is_signed
 
@@ -27,12 +27,12 @@ struct is_signed;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является целочисленным типом со знаком или `cv-qualified` целого типа со знаком, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является целочисленным типом со знаком или `cv-qualified` целочисленным типом со знаком, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -77,5 +77,5 @@ is_signed<float> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_unsigned](../standard-library/is-unsigned-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_unsigned](../standard-library/is-unsigned-class.md)

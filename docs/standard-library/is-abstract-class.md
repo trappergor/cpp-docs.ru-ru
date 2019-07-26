@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_abstract class
 - is_abstract
 ms.assetid: 8867f660-3434-404c-ba90-c26607a5e0d2
-ms.openlocfilehash: 02863f5694f519e8cca54d07622a185f69de82d4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 57b2413e673f92e5258bee5711db2870e2b58a11
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404823"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448987"
 ---
 # <a name="isabstract-class"></a>Класс is_abstract
 
@@ -27,12 +27,12 @@ struct is_abstract;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, который имеет по крайней мере один чистой виртуальной функции, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, имеющим по крайней мере одну чисто виртуальную функцию, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -76,5 +76,5 @@ is_abstract<abstract> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_polymorphic](../standard-library/is-polymorphic-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+Класс [is_polymorphic](../standard-library/is-polymorphic-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extent class
 - extent
 ms.assetid: 6d16263d-90b2-4330-9ec7-b59ed898792d
-ms.openlocfilehash: 7463b424d15ee86f851b7d81953abf3fe1c98fee
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cd53ba8537e706a68ffdcf08df998108266ad20
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62393978"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457793"
 ---
 # <a name="extent-class"></a>Класс extent
 
@@ -27,15 +27,15 @@ struct extent;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
-*I*<br/>
+*СОХРАНЕНИИ*\
 Массив, привязанный к запросу.
 
 ## <a name="remarks"></a>Примечания
 
-Если *Ty* является типом массива, который имеет по крайней мере *я* измерений, запрос типа содержит число элементов в измерении, заданное *я*. Если *Ty* не является типом массива или его ранг меньше, чем *я*, или если *я* равно нулю и *Ty* имеет тип «массив с неизвестной граница `U` «, запрос типа содержит значение 0.
+Если *Ty* является типом массива, имеющего по крайней мере *i* единицу измерения, то запрос типа содержит количество элементов в измерении, заданном параметром *i*. Если *Ty* не является типом массива или его ранг меньше *I*, или если *i* равен нулю и *Ty* имеет `U`тип "массив с неизвестной границей", запрос типа содержит значение 0.
 
 ## <a name="example"></a>Пример
 
@@ -69,6 +69,6 @@ extent 1 == 10
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_all_extents](../standard-library/remove-all-extents-class.md)<br/>
-[Класс remove_extent](../standard-library/remove-extent-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_all_extents](../standard-library/remove-all-extents-class.md)\
+[Класс remove_extent](../standard-library/remove-extent-class.md)

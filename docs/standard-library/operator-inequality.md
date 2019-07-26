@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator!=
 - operator !=
 ms.assetid: ef2be7f0-1c94-4edc-b65c-731fddd519f4
-ms.openlocfilehash: e29088b64b46e3aa907f4a09ec131c6f9b68a74b
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 1214dd7d5034b80b14f8dd1422aa1a3b8a253023
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220502"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447651"
 ---
 # <a name="operator"></a>operator!=
 
 > [!NOTE]
-> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает `operator!=` для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 
@@ -42,4 +42,4 @@ bool operator!=(
 
 ## <a name="see-also"></a>См. также
 
-[\<образец контейнера>](../standard-library/sample-container.md)<br/>
+[\<образец контейнера>](../standard-library/sample-container.md)

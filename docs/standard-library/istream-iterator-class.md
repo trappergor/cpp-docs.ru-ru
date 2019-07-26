@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::istream_iterator [C++], istream_type
 - std::istream_iterator [C++], traits_type
 ms.assetid: fb52a8cd-7f71-48d1-b73e-4b064e2a8d16
-ms.openlocfilehash: f8fc1593db8ddacefb4a231be76ca6d7cbd30849
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 941d625e388edc75dfe25a2de0e609c6d955ff19
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413324"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447755"
 ---
 # <a name="istreamiterator-class"></a>Класс istream_iterator
 
@@ -36,16 +36,16 @@ class istream_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*Type*<br/>
+*Тип*\
 Тип объекта, который необходимо извлечь из потока ввода.
 
-*CharType*<br/>
-Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным и значение по умолчанию — **char**.
+*CharType*\
+Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным, и значение по умолчанию — **char**.
 
-*Признаки*<br/>
+*Признаки*\
 Тип, представляющий шрифт символа для `istream_iterator`. Этот аргумент является необязательным, и в качестве значения по умолчанию используется `char_traits`< `CharType`>.
 
-*Distance*<br/>
+*Друг*\
 Тип целого числа со знаком, представляющий тип отличия для `istream_iterator`. Этот аргумент является необязательным, и значением по умолчанию является `ptrdiff_t`.
 
 После создания или увеличения объекта класса istream_iterator с помощью сохраненного указателя, не содержащего null, объект фактически пытается извлечь и сохранить объект типа `Type` из соответствующего входного потока. Если извлечение завершается ошибкой, этот объект фактически заменяет сохраненный указатель указателем null, тем самым создавая индикатор конца последовательности.
@@ -138,12 +138,12 @@ istream_iterator(istream_type& _Istr);
 
 ### <a name="parameters"></a>Параметры
 
-*_Istr*<br/>
+*_Istr*\
 Входной поток для чтения, используется для инициализации `istream_iterator`.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует указатель входного потока значением null и создает итератор конца потока. Второй конструктор инициализирует указатель входного потока с *& _Istr*, затем пытается извлечь и сохранить объект типа `Type`.
+Первый конструктор инициализирует указатель входного потока значением null и создает итератор конца потока. Второй конструктор инициализирует указатель входного потока с *& _Istr*, а затем пытается извлечь и сохранить объект типа `Type`.
 
 Итератор конца потока можно использовать для проверки, достигнут ли конец потока `istream_iterator`.
 
@@ -255,7 +255,7 @@ const Type* operator->() const;
 
 ### <a name="remarks"></a>Примечания
 
-`i->m` эквивалентно `(*i).m`
+`i->m`эквивалентно`(*i).m`
 
 Оператор возвращает `&*this`.
 
@@ -303,7 +303,7 @@ istream_iterator<Type, CharType, Traits, Distance> operator++(int);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первый оператор-член возвращает ссылку на увеличенный объект типа `Type` извлеченный из входного потока, а вторая функция-член возвращает копию объекта.
+Первый оператор-член возвращает ссылку на увеличивающийся объект типа `Type` , извлеченного из входного потока, а вторая функция-член возвращает копию объекта.
 
 ### <a name="example"></a>Пример
 
@@ -386,8 +386,8 @@ int main( )
 
 ## <a name="see-also"></a>См. также
 
-[Структура input_iterator_tag](../standard-library/input-iterator-tag-struct.md)<br/>
-[Структура iterator](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Структура input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
+[Структура iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

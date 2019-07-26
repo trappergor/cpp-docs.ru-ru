@@ -4,17 +4,17 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - empty method
 ms.assetid: 2055418d-3c42-4d28-a7db-111586119ed9
-ms.openlocfilehash: 5f455d79c0d017660ee4505ab9b0a3b993420977
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 30b21e9826bdeca279a9baea9029fa607faa6c77
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65221655"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450817"
 ---
 # <a name="container-classempty"></a>Класс контейнера::empty
 
 > [!NOTE]
-> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Возвращает значение **true** для пустой управляемой последовательности.
 
@@ -27,4 +27,4 @@ bool empty() const;
 
 ## <a name="see-also"></a>См. также
 
-[Пример класса контейнера](../standard-library/sample-container-class.md)<br/>
+[Пример класса контейнера](../standard-library/sample-container-class.md)
