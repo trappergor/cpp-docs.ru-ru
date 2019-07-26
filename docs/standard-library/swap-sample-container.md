@@ -8,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - swap function
 ms.assetid: d8dd6436-fb97-46ed-bec5-052cfd710462
-ms.openlocfilehash: 48238e4a67fb656eac714a8732ee071e26847768
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 8d89a59e90c3e4258c8ca7bf9e981536f3779d4b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220295"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450340"
 ---
 # <a name="swap-ltsample-containergt"></a>swap (&lt;образец контейнера&gt;)
 
 > [!NOTE]
-> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
-Выполняет `left.` [замены](../standard-library/container-class-swap.md)`(right)`.
+Выполняет переключение.`(right)` [](../standard-library/container-class-swap.md) `left.`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -33,4 +33,4 @@ void swap(
 
 ## <a name="see-also"></a>См. также
 
-[\<образец контейнера>](../standard-library/sample-container.md)<br/>
+[\<образец контейнера>](../standard-library/sample-container.md)

@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator==, containers
 - == operator, with specific standard C++ objects
 ms.assetid: d3d8754e-5157-4b8b-bf9c-da41856f5eed
-ms.openlocfilehash: 9313df5d75efa043f2fb9df6090c125de75a2636
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 168785abb09ca198435c301040d7628a6dd12b26
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220257"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460155"
 ---
 # <a name="operator-ltsample-containergt"></a>оператор== (&lt;образец контейнера&gt;)
 
 > [!NOTE]
-> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает `operator==` для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 
@@ -38,8 +38,8 @@ bool operator==(
 
 ## <a name="return-value"></a>Возвращаемое значение
 
-Возвращает `left.` [размер](../standard-library/container-class-size.md) ` == right.size && equal(left.` [начать](../standard-library/container-class-begin.md)`, left.`[окончания](../standard-library/container-class-end.md)`, right.begin)`.
+Возвращает `left.`[конец](../standard-library/container-class-end.md) [](../standard-library/container-class-begin.md) [](../standard-library/container-class-size.md) ` == right.size && equal(left.`размера.`, left.``, right.begin)`
 
 ## <a name="see-also"></a>См. также
 
-[\<образец контейнера>](../standard-library/sample-container.md)<br/>
+[\<образец контейнера>](../standard-library/sample-container.md)
