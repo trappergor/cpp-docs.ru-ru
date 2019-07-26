@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::bernoulli_distribution [C++], param_type
 - std::bernoulli_distribution [C++], param_type
 ms.assetid: 586bcde1-95ca-411a-bf17-4aaf19482f34
-ms.openlocfilehash: dbd5229e8b8a2c2b368688635d9d596a8538356b
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: faadc99b6351af884331e6658e1e11de8def2195
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450861"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447772"
 ---
 # <a name="bernoullidistribution-class"></a>Класс bernoulli_distribution
 
@@ -66,12 +66,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*РГСЧ*<br/>
-Универсальный механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс описывает распределение, которое формирует значения указанного типа **bool**, распределенные в соответствии с Бернулли дискретной функции вероятности распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс описывает распределение, которое создает значения типа **bool**, распределенные в соответствии с дискретной функцией вероятности распределения Бернулли. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -169,10 +169,10 @@ explicit bernoulli_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*ш*\
 Хранимый параметр распределения `p`.
 
-*parm*<br/>
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -193,7 +193,7 @@ struct param_type { typedef bernoulli_distribution distribution_type; param_type
 
 ### <a name="parameters"></a>Параметры
 
-*p*<br/>
+*ш*\
 Хранимый параметр распределения `p`.
 
 ### <a name="remarks"></a>Примечания
@@ -204,4 +204,4 @@ struct param_type { typedef bernoulli_distribution distribution_type; param_type
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

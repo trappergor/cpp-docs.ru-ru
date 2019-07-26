@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_freelist [C++], allocate
 - stdext::cache_freelist [C++], deallocate
 ms.assetid: 840694de-36ba-470f-8dae-2b723d5a8cd9
-ms.openlocfilehash: 56fdfb191f9208a5ffa692e1d599545ddeaeb36c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 05260d6800597b64908ff0aeffac47b09fed9a0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62352116"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449686"
 ---
 # <a name="cachefreelist-class"></a>Класс cache_freelist
 
@@ -32,14 +32,14 @@ class cache_freelist
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*sz*|Число элементов в массиве, которые нужно выделить.|
+|*SZ*|Число элементов в массиве, которые нужно выделить.|
 |*Max*|Класс max, представляющий максимальный размер списка свободных блоков. Это может быть класс [max_fixed_size](../standard-library/max-fixed-size-class.md), [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона cache_freelist ведет список свободных блоков памяти размером *Sz*. При заполнении списка свободных блоков он использует **оператор delete** для освобождения блоков памяти. Когда список свободных пуст он использует **оператор new** для выделения новых блоков памяти. Максимальный размер списка свободных блоков определяется классом max, переданным в *Max* параметра.
+Класс шаблона cache_freelist поддерживает свободный список блоков памяти размером *SZ*. Когда список свободных ресурсов заполнен, для освобождения блоков памяти используется **оператор DELETE** . Если список свободных пуст, для выделения новых блоков памяти используется **оператор New** . Максимальный размер списка свободных элементов определяется классом max класса, переданным в параметре *Max* .
 
-Каждый блок памяти содержит *Sz* байт свободной памяти и данные, **оператор new** и **оператор delete** требуют.
+Каждый блок памяти содержит *SZ* байт доступной памяти и данные, необходимые **операторам New** и **Delete** .
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -49,7 +49,7 @@ class cache_freelist
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -109,4 +109,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

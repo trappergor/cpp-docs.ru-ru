@@ -7,12 +7,12 @@ helpviewer_keywords:
 - add_pointer class
 - add_pointer
 ms.assetid: d8095cb0-6578-4143-b78f-87f82485298c
-ms.openlocfilehash: fda2bcbd3484b9244d69358aac3e9baf5d37a4ad
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 759867a542aa128755ba31e090984eb5b3fe6963
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411218"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456560"
 ---
 # <a name="addpointer-class"></a>Класс add_pointer
 
@@ -30,12 +30,12 @@ using add_pointer_t = typename add_pointer<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Элемент **typedef** `type` именует тот же тип как `remove_reference<T>::type*`. Псевдоним `add_pointer_t` является ярлыком для доступа к члену **typedef** `type`.
+`remove_reference<T>::type*`  Typedef`type` элемента именуется тем же типом, что и. Псевдоним `add_pointer_t` является ярлыком для доступа к определению **типа** `type`члена.
 
 Поскольку его нельзя использовать для создания указателя из ссылки, `add_pointer` удаляет ссылку (если таковая имеется) из указанного типа, прежде чем создать указатель на тип. Следовательно, можно использовать тип с `add_pointer` вне зависимости от того, является ли данный тип ссылкой.
 
@@ -71,5 +71,5 @@ add_pointer_t<int> == int *
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_pointer](../standard-library/remove-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_pointer](../standard-library/remove-pointer-class.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_final
 ms.assetid: 9dbad82f-6685-4909-94e8-98e4a93994b9
-ms.openlocfilehash: f605b160f6ed71aaafcc7c391e17180e4b243444
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 14efbeb33193cc674c6e766b880e89d9b76d140a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346444"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452656"
 ---
 # <a name="isfinal-class"></a>Класс is_final
 
@@ -26,12 +26,12 @@ struct is_final;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* помечен типом класса `final`, в противном случае он содержит значение false. Если *T* является типом класса, он должен быть полным типом.
+Экземпляр предиката типа содержит значение true, если тип *T* является типом класса, помеченным `final`, в противном случае — значение false. Если *T* является типом класса, он должен быть полным типом.
 
 ## <a name="requirements"></a>Требования
 
@@ -41,5 +41,5 @@ struct is_final;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Описатель final](../cpp/final-specifier.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Спецификатор final](../cpp/final-specifier.md)

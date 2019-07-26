@@ -7,16 +7,16 @@ f1_keywords:
 helpviewer_keywords:
 - iomanip header
 ms.assetid: 3681c346-4763-4037-bba4-cf0dc3447974
-ms.openlocfilehash: 983fbc190fb83b81534e3888c748c0bf9c235638
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b9da0de64bbb0ef48a6a9741ff941e6abda0e705
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404940"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449209"
 ---
 # <a name="ltiomanipgt"></a>&lt;iomanip&gt;
 
-Включить `iostreams` стандартный заголовок \<iomanip > для определения нескольких манипуляторов, каждый принимают один аргумент.
+Включите стандартный заголовок \<iomanip >, чтобы определить несколько манипуляторов, каждый из которых принимает один аргумент. `iostreams`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,7 +26,7 @@ ms.locfileid: "62404940"
 
 ## <a name="remarks"></a>Примечания
 
-Все эти манипуляторы возвращают неопределенный тип, с именем `T1` через `T10`, который перегружает как `basic_istream` \< **Elem**, **Tr** > `::` [оператор >>](../standard-library/istream-operators.md#op_gt_gt) и `basic_ostream` \< **Elem**, **Tr** > `::` [оператор <<](../standard-library/ostream-operators.md#op_lt_lt).
+Каждый из этих `T1` манипуляторов возвращает неуказанный тип, вызываемый `T10`с помощью, который перегружает `basic_istream`оба \< **elem**, оператор **tr**>`::`[> >](../standard-library/istream-operators.md#op_gt_gt) и `basic_ostream` **Elem,** [оператор](../standard-library/ostream-operators.md#op_lt_lt) **tr**<<.> \<`::`
 
 ### <a name="manipulators"></a>Манипуляторы
 
@@ -46,7 +46,7 @@ ms.locfileid: "62404940"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

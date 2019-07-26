@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-ms.openlocfilehash: 7aff4b051786c3d77dacb65ddbdbd29fa695ca48
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2c148b7cb58cf38e5f73d4e3d2297eac099ef7e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404810"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456686"
 ---
 # <a name="isarithmetic-class"></a>Класс is_arithmetic
 
@@ -27,12 +27,12 @@ struct is_arithmetic;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является арифметический тип, то есть целочисленный тип или число с плавающей запятой, или `cv-qualified` форму одного из них, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является арифметическим типом, то есть целочисленным типом или типом с плавающей запятой или `cv-qualified` формой одного из них, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -74,6 +74,6 @@ is_arithmetic<float> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_floating_point](../standard-library/is-floating-point-class.md)<br/>
-[Класс is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+Класс [is_floating_point](../standard-library/is-floating-point-class.md)\
+Класс [is_integral](../standard-library/is-integral-class.md)

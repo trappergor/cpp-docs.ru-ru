@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_fundamental class
 - is_fundamental
 ms.assetid: b84eee84-2fb2-4611-beaf-b384074d8b6a
-ms.openlocfilehash: d16dfeebabd5909212425fcc27b355110e891d89
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5643aa6a2d4bbfaafc86cba4251df162b59b4692
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348449"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456250"
 ---
 # <a name="isfundamental-class"></a>Класс is_fundamental
 
@@ -27,12 +27,12 @@ struct is_fundamental;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* — фундаментальный тип, то есть **void**, целочисленный тип, с плавающей запятой, или `cv-qualified` форму одного из них, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является фундаментальным типом, то есть **void**, целочисленным типом, типом с плавающей запятой или `cv-qualified` формой одного из них, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -77,5 +77,5 @@ is_fundamental<void> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_compound](../standard-library/is-compound-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_compound](../standard-library/is-compound-class.md)

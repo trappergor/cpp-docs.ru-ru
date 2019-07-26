@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_member_function_pointer class
 - is_member_function_pointer
 ms.assetid: 02e372c4-2714-40f2-b376-2e10ca91c8ed
-ms.openlocfilehash: 0eb758977abf889a7d5ec8cdec9213980493ba2e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1f51c389e86f2d0550a6418d04080f40f4bf4204
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351934"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456182"
 ---
 # <a name="ismemberfunctionpointer-class"></a>Класс is_member_function_pointer
 
@@ -27,12 +27,12 @@ struct is_member_function_pointer;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является указателем на функцию-член или `cv-qualified` указатель на функцию-член, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является указателем на функцию-член или `cv-qualified` указатель на функцию-член, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -85,5 +85,5 @@ is_member_function_pointer<int (functional::*)()> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_member_pointer](../standard-library/is-member-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_member_pointer](../standard-library/is-member-pointer-class.md)

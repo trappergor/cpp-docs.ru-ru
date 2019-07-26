@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 59b69d3f862715840e1557a10d6087350488a3c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62224278"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448077"
 ---
 # <a name="istrstream-class"></a>Класс istrstream
 
@@ -39,7 +39,7 @@ class istrstream : public istream
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[rdbuf](#rdbuf)|Возвращает указатель на объект `strstreambuf`, связанный с потоком.|
 |[str](#str)|Вызывает метод [freeze](../standard-library/strstreambuf-class.md#freeze), а затем возвращает указатель на начало управляемой последовательности.|
@@ -72,15 +72,15 @@ istrstream(
 
 ### <a name="parameters"></a>Параметры
 
-*count*<br/>
+*расчета*\
 Длина буфера (*ptr*).
 
-*ptr*<br/>
+*указатель*\
 Содержимое, с которым инициализируется буфер.
 
 ### <a name="remarks"></a>Примечания
 
-Все конструкторы инициализируют базовый класс путем вызова [istream](../standard-library/istream-typedefs.md#istream)(**sb**), где `sb` является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первые два конструктора также инициализируют `sb` путем вызова `strstreambuf`(( **const** `char` \*) `ptr`, 0). Оставшиеся два конструктора вместо этого вызывают `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
+Все конструкторы инициализируют базовый класс путем вызова [IStream](../standard-library/istream-typedefs.md#istream)(**SB**), где `sb` — это хранимый объект класса [strstreambuf](../standard-library/strstreambuf-class.md). Первые два конструктора также `sb` инициализируются путем вызова`char` `strstreambuf`(( \* **const** ) `ptr`, 0). Оставшиеся два конструктора вместо этого вызывают `strstreambuf`( ( **const**`char` *) `ptr`, `count` ).
 
 ## <a name="rdbuf"></a>  istrstream::rdbuf
 
@@ -120,11 +120,11 @@ char *str();
 
 ### <a name="example"></a>Пример
 
-См. в разделе [strstream::str](../standard-library/strstreambuf-class.md#str) пример, использующий `str`.
+Пример, в котором используется `str`, см. в разделе [strstream:: str](../standard-library/strstreambuf-class.md#str) .
 
 ## <a name="see-also"></a>См. также
 
-[istream](../standard-library/istream-typedefs.md#istream)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[istream](../standard-library/istream-typedefs.md#istream)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

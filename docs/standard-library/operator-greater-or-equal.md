@@ -13,17 +13,17 @@ helpviewer_keywords:
 - operator >=
 - operator>=
 ms.assetid: 14fbebf5-8b75-4afa-a51b-3112d31c07cf
-ms.openlocfilehash: 9994456a1345276af426bddd883fa7c53d7b93d0
-ms.sourcegitcommit: da32511dd5baebe27451c0458a95f345144bd439
+ms.openlocfilehash: 6eb8db25f5f30a978de197d699acf28bf8bea116
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65220282"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447965"
 ---
 # <a name="operatorgt"></a>оператор&gt;=
 
 > [!NOTE]
-> Этот раздел находится в Microsoft C++ документации в качестве нефункционального примера контейнеров, используемых в C++ стандартной библиотеки. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
+> Этот раздел находится в документации Майкрософт C++ как нефункциональный пример контейнеров, C++ используемых в стандартной библиотеке. Дополнительные сведения см. в разделе [Контейнеры стандартной библиотеки C++](../standard-library/stl-containers.md).
 
 Перегружает **оператор>=** для сравнения двух объектов класса шаблона [контейнер](../standard-library/sample-container-class.md).
 
@@ -42,4 +42,4 @@ bool operator>=(
 
 ## <a name="see-also"></a>См. также
 
-[\<образец контейнера>](../standard-library/sample-container.md)<br/>
+[\<образец контейнера>](../standard-library/sample-container.md)

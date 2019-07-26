@@ -5,12 +5,12 @@ f1_keywords:
 - unordered_map/std::operator!=
 - unordered_map/std::operator==
 ms.assetid: 9d5add0b-84bd-4a79-bd82-3f58b55145ed
-ms.openlocfilehash: a27ef8e320f59464f15603c330346db86bc30aac
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: fe4877bc5b371a2570c18950bac36a003078ccc7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158451"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454771"
 ---
 # <a name="ltunorderedmapgt-operators"></a>Операторы &lt;unordered_map&gt;
 
@@ -28,15 +28,15 @@ bool operator!=(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `unordered_map`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `unordered_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты unordered_map не равны; **false** если они равны.
+**значение true** , если unordered_maps не равны; **значение false** , если они равны.
 
 ### <a name="remarks"></a>Примечания
 
@@ -92,15 +92,15 @@ bool operator==(const unordered_map <Key, Type, Hash, Pred, Allocator>& left, co
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `unordered_map`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `unordered_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты unordered_map равны; **false** если они не равны.
+**значение true** , если unordered_maps равны; **значение false** , если они не равны.
 
 ### <a name="remarks"></a>Примечания
 
@@ -156,15 +156,15 @@ bool operator!=(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `unordered_multimap`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `unordered_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты unordered_multimap не равны; **false** если они равны.
+**значение true** , если unordered_multimaps не равны; **значение false** , если они равны.
 
 ### <a name="remarks"></a>Примечания
 
@@ -221,15 +221,15 @@ bool operator==(const unordered_multimap <Key, Type, Hash, Pred, Allocator>& lef
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `unordered_multimap`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `unordered_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если объекты unordered_multimap равны; **false** если они не равны.
+**значение true** , если unordered_multimaps равны; **значение false** , если они не равны.
 
 ### <a name="remarks"></a>Примечания
 
@@ -278,4 +278,4 @@ int main( )
 
 ## <a name="see-also"></a>См. также
 
-[<unordered_map>](../standard-library/unordered-map.md)<br/>
+[<unordered_map>](../standard-library/unordered-map.md)

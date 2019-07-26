@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_volatile class
 - remove_volatile
 ms.assetid: 8b87e2c2-a581-4eb3-8691-c5603910d61d
-ms.openlocfilehash: b327bb8362e1f6523d22950974012747e0de99f8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19514d1839fa6e0afcecb690dcb12657a85f3c2e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185936"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451264"
 ---
 # <a name="removevolatile-class"></a>Класс remove_volatile
 
@@ -30,12 +30,12 @@ using remove_volatile_t = typename remove_volatile<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `remove_volatile<T>` содержит модифицированный тип, который является `T1` при *T* имеет форму `volatile T1`, в противном случае *T*.
+Экземпляр `remove_volatile<T>` содержит модифицированный тип, который имеет `T1` значение, если *t* имеет форму `volatile T1`, в противном случае *t*.
 
 ## <a name="example"></a>Пример
 
@@ -67,5 +67,5 @@ remove_volatile_t<volatile int> == int
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс add_volatile](../standard-library/add-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс add_volatile](../standard-library/add-volatile-class.md)

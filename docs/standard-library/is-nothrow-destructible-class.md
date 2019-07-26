@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-ms.openlocfilehash: 366b40af45c57d058d918c4c2f21d1b2ba486d35
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 44de1f1fae1ea542aa247c0b39f04ee6bbd6308a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62217330"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455906"
 ---
 # <a name="isnothrowdestructible-class"></a>Класс is_nothrow_destructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_destructible;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* — Уничтожаемый, а деструктор известен компилятору не будет выдавать. В противном случае — значение false.
+Экземпляр предиката типа содержит значение true, если тип *T* является типом можно уничтожить, и деструктор известен компилятору, не вызываемому. В противном случае — значение false.
 
 ## <a name="requirements"></a>Требования
 
@@ -41,4 +41,4 @@ struct is_nothrow_destructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

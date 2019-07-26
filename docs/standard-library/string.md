@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: 3f3874b1d439326c97b015007ad8d5ede06341f7
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245396"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459190"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -32,14 +32,14 @@ ms.locfileid: "68245396"
 
 - Массивы символов, оканчивающиеся нулевым символов, часто называют строками C.
 
-- Объекты класса шаблонов типа `basic_string`, обрабатывающие все **char**-, такие как аргументы шаблона.
+- Объекты класса шаблона типа `basic_string`, которые обрабатывали все аргументы шаблона, аналогичные **символам**.
 
 ### <a name="typedefs"></a>Определения типов
 
 |Имя типа|Описание|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **char** как `string`.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса шаблона `basic_string` с элементами типа **wchar_t** как `wstring`.|
+|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа  `string`char в виде.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа  `wstring`wchar_t в виде.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char32_t`.|
 
@@ -63,13 +63,13 @@ ms.locfileid: "68245396"
 |-|-|
 |[hash]()||
 |[swap](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|
-|[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов **двойные**.|
-|[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов **float**.|
+|[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в значение **типа Double**.|
+|[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в тип **float**.|
 |[stoi](../standard-library/string-functions.md#stoi)|Преобразует последовательность символов в целое число.|
-|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов **long double**.|
-|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов **long long**.|
-|[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов **unsigned long**.|
-|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов **long long без знака**.|
+|[stold](../standard-library/string-functions.md#stold)|Преобразует последовательность символов в длинное **Двойное**значение.|
+|[stoll](../standard-library/string-functions.md#stoll)|Преобразует последовательность символов в длинную **длину**.|
+|[stoul](../standard-library/string-functions.md#stoul)|Преобразует последовательность символов в **длину без знака**.|
+|[stoull](../standard-library/string-functions.md#stoull)|Преобразует последовательность символов в длинную длину **без знака**.|
 |[to_string](../standard-library/string-functions.md#to_string)|Преобразует значение в `string`.|
 |[to_wstring](../standard-library/string-functions.md#to_wstring)|Преобразует значение в двухбайтовое `string`.|
 
@@ -77,7 +77,7 @@ ms.locfileid: "68245396"
 
 |Функция|Описание|
 |-|-|
-|[getline шаблона](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|
+|[Шаблон строки](../standard-library/string-functions.md#getline)|Извлекает строки из входного потока, последовательно по одной строке.|
 
 ### <a name="classes"></a>Классы
 
@@ -103,5 +103,5 @@ ms.locfileid: "68245396"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

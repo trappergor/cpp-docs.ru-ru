@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - codecvt_utf8 class
 ms.assetid: 2a87478f-e2d4-4b8d-ad9c-00add01d1bb0
-ms.openlocfilehash: 3e3ddeccac2c18eedb96746f1c442c6b42349783
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dcbb34c300d7c15f89c4a882275be0efd68359dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405255"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458715"
 ---
 # <a name="codecvtutf8"></a>codecvt_utf8
 
@@ -24,13 +24,13 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип двухбайтового элемента.
 
-*Maxcode*<br/>
+*макскоде*\
 Максимальное количество символов для аспекта языкового стандарта.
 
-*Режим*<br/>
+*Режима*\
 Сведения о конфигурации для аспекта языкового стандарта.
 
 ## <a name="remarks"></a>Примечания
@@ -39,6 +39,6 @@ class codecvt_utf8 : public std::codecvt<Elem, char, StateType>
 
 ## <a name="requirements"></a>Требования
 
-Заголовок: \<codecvt > \
+Заголовок: \<codecvt >
 
-Пространство имен: std
+Пространство имен: STD

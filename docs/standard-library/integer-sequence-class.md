@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: ca923933ac7a401f6a3ef14f821ceb04b844797b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404953"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451018"
 ---
 # <a name="integersequence-class"></a>Класс integer_sequence
 
@@ -34,10 +34,10 @@ struct integer_sequence
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип значений. Это должен быть целочисленный тип: bool, char, char16_t, char32_t, wchar_t или целочисленный тип со знаком или без знака.
 
-*Ывать*<br/>
+*валс*\
 Пакет параметров, не являющихся типами, представляющий последовательность значений целочисленного типа T.
 
 ## <a name="members"></a>Участники
@@ -57,7 +57,7 @@ struct integer_sequence
 
 В функции `a2t` `index_sequence` является псевдонимом `integer_sequence` на основе целочисленного типа `size_t`. `make_index_sequence` — это псевдоним, который во время компиляции создает `index_sequence`, отсчитываемый от нуля, с тем же количеством элементов, как у массива, переданного вызывающим объектом. `a2t` передает `index_sequence` по значению в `a2t_`, где выражение `a[I]...` распаковывает `I`, а затем элементы передаются в `make_tuple`, который использует их как отдельные аргументы. Например, если последовательность содержит три элемента, то `make_tuple` вызывается как make_tuple(a[0], a[1], a[2]). Сами элементы массива, конечно, могут быть любого типа.
 
-Функция apply принимает [std::tuple](../standard-library/tuple-class.md)и создает `integer_sequence` с помощью `tuple_size` вспомогательный класс. Обратите внимание, что [std::decay_t](../standard-library/decay-class.md) необходим, так как [tuple_size](../standard-library/tuple-size-class-tuple.md) не работает со ссылочными типами. Функция `apply_` распаковывает элементы кортежа и пересылает их как отдельные аргументы при вызове функции. В этом примере функция представляет из себя простое лямбда-выражение, которое выводит значения.
+Функция Apply принимает значение [std:: Tuple](../standard-library/tuple-class.md)и создает `integer_sequence` с помощью `tuple_size` вспомогательного класса. Обратите внимание, что [std::d ecay_t](../standard-library/decay-class.md) является обязательным, так как [tuple_size](../standard-library/tuple-size-class-tuple.md) не работает со ссылочными типами. Функция `apply_` распаковывает элементы кортежа и пересылает их как отдельные аргументы при вызове функции. В этом примере функция представляет из себя простое лямбда-выражение, которое выводит значения.
 
 ```cpp
 #include <stddef.h>
@@ -125,4 +125,4 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[Многоточия и шаблоны с переменным числом аргументов](../cpp/ellipses-and-variadic-templates.md)<br/>
+[Многоточия и шаблоны с переменным числом аргументов](../cpp/ellipses-and-variadic-templates.md)

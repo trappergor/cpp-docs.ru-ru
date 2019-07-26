@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::basic_ofstream [C++], rdbuf
 - std::basic_ofstream [C++], swap
 ms.assetid: 3bcc9c51-6dfc-4844-8fcc-22ef57c9dff1
-ms.openlocfilehash: 9a8255a02c46a4ade33bd95635516e5d36fe8e64
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a73803f25c4fb9e54703b8bca93e68fedb63074e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452505"
 ---
 # <a name="basicofstream-class"></a>Класс basic_ofstream
 
@@ -36,15 +36,15 @@ class basic_ofstream : public basic_ostream<Elem, Tr>
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Базовый элемент буфера файла.
 
-*Tr*<br/>
+*ТС*\
 Признаки базового элемента буфера файла (обычно `char_traits`< `Elem`>).
 
 ## <a name="remarks"></a>Примечания
 
-Когда **wchar_t** специализация `basic_ofstream` записывает в файл, если файл открыт в текстовом режиме, она будет записана последовательность MBCS. Внутреннее представление будет использовать буфер символов `wchar_t`.
+При записи  специализации `basic_ofstream` wchar_t на запись в файл, если файл открыт в текстовом режиме, будет записана последовательность MBCS. Внутреннее представление будет использовать буфер символов `wchar_t`.
 
 Объект сохраняет объект класса `basic_filebuf`< `Elem`, `Tr`>.
 
@@ -78,7 +78,7 @@ int main(int argc, char **argv)
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[close](#close)|Закрывает файл.|
 |[is_open](#is_open)|Определяет, открыт ли файл.|
@@ -121,25 +121,25 @@ basic_ofstream(
 
 ### <a name="parameters"></a>Параметры
 
-*_Filename*<br/>
+*_Filename*\
 Имя файла, который необходимо открыть.
 
-*_Mode*<br/>
+*_Mode*\
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
+*_Prot*\
 Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
-*right*<br/>
+*Правильно*\
 Ссылка rvalue на объект `basic_ofstream`, используемый для инициализации этого объекта `basic_ofstream`.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует базовый класс путем вызова [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), где `sb` является сохраненным объектом класса [basic_filebuf](../standard-library/basic-filebuf-class.md) <  `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
+Первый конструктор инициализирует базовый класс путем вызова [basic_ostream](../standard-library/basic-ostream-class.md)(`sb`), где `sb` — это сохраненный объект класса [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`>. Он также инициализирует `sb` путем вызова `basic_filebuf`< `Elem`, `Tr`>.
 
-Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_ostream`( **sb**). Он также инициализирует `sb` путем вызова `basic_filebuf` <  `Elem`, `Tr`> и затем `sb`. [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Если последняя функция возвращает пустой указатель, конструктор вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Второй и третий конструкторы инициализируют базовый класс путем вызова `basic_ostream`( **sb**). Он также инициализируется `sb` путем вызова `basic_filebuf` <  `Tr`, >, а `sb`затем. `Elem` [open](../standard-library/basic-filebuf-class.md#open)( `_Filename`, `_Mode` &#124; `ios_base::out`). Если последняя функция возвращает пустой указатель, конструктор вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
-Четвертый конструктор является функцией копирования. Он инициализирует объект с содержимым *правой*, рассматривается как ссылка rvalue.
+Четвертый конструктор является функцией копирования. Он инициализирует объект с содержимым *right*, который рассматривается как ссылка rvalue.
 
 ### <a name="example"></a>Пример
 
@@ -173,7 +173,7 @@ void close();
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член вызывает [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf)**->**[закрыть](../standard-library/basic-filebuf-class.md#close).
+Функция члена вызывает [rdbuf](../standard-library/basic-ifstream-class.md#rdbuf) **->** [Close](../standard-library/basic-filebuf-class.md#close).
 
 ### <a name="example"></a>Пример
 
@@ -193,7 +193,7 @@ bool is_open() const;
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
+Функция – член возвращает [rdbuf](#rdbuf) **->** [is_open](../standard-library/basic-filebuf-class.md#is_open).
 
 ### <a name="example"></a>Пример
 
@@ -243,22 +243,22 @@ void open(
 
 ### <a name="parameters"></a>Параметры
 
-*_Filename*<br/>
+*_Filename*\
 Имя файла, который необходимо открыть.
 
-*_Mode*<br/>
+*_Mode*\
 Одно из перечислений в [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*_Prot*<br/>
+*_Prot*\
 Защита открытия файла по умолчанию, эквивалент параметра `shflag` в [_fsopen, _wfsopen](../c-runtime-library/reference/fsopen-wfsopen.md).
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Если эта функция возвращает указатель null, функция вызывает [setstate](../standard-library/basic-ios-class.md#setstate)(`failbit`).
+Эта функция-член вызывает [rdbuf](#rdbuf) **->** [open](../standard-library/basic-filebuf-class.md#open)(_ *Filename*, `_Mode` &#124; `ios_base::out`). Если эта функция возвращает пустой указатель, функция вызывает [SetState](../standard-library/basic-ios-class.md#setstate)(`failbit`).
 
 ### <a name="example"></a>Пример
 
-См. в разделе [basic_filebuf::open](../standard-library/basic-filebuf-class.md#open) пример, использующий `open`.
+Пример, в котором используется `open`, см. в разделе [basic_filebuf:: Open](../standard-library/basic-filebuf-class.md#open) .
 
 ## <a name="op_eq"></a>  basic_ofstream::operator=
 
@@ -270,7 +270,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Ссылка rvalue на объект `basic_ofstream`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -279,7 +279,7 @@ basic_ofstream& operator=(basic_ofstream&& right);
 
 ### <a name="remarks"></a>Примечания
 
-Оператор-член заменяет содержимое объекта с помощью содержимого *правой*, рассматривается как ссылка rvalue.
+Оператор Member заменяет содержимое объекта с помощью содержимого *right*, которое рассматривается как ссылка rvalue.
 
 ## <a name="rdbuf"></a>  basic_ofstream::rdbuf
 
@@ -307,16 +307,16 @@ void swap(basic_ofstream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Ссылка `lvalue` на другой объект `basic_ofstream`.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член меняет местами содержимое этого объекта для содержимого *правой*.
+Функция элемента меняет местами содержимое этого объекта на содержимое, находящееся *справа*.
 
 ## <a name="see-also"></a>См. также
 
-[Класс basic_ostream](../standard-library/basic-ostream-class.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Класс basic_ostream](../standard-library/basic-ostream-class.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

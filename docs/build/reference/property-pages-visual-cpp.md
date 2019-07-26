@@ -14,12 +14,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 164a8e8aff5428be36c5d921bc8078ab352f51c0
-ms.sourcegitcommit: 7f5b29e24e1be9b5985044a030977485fea0b50c
+ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
+ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68299729"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68492136"
 ---
 # <a name="c-project-property-page-reference"></a>C++Справочник по страницам свойств проекта
 
@@ -47,21 +47,7 @@ ms.locfileid: "68299729"
 
 [Страница свойств "Общие" (файл)](general-property-page-file.md)
 
-
-
-
-
 [Страницы свойств HLSL](hlsl-property-pages.md)
-
-[Страницы свойств HLSL: дополнительно](hlsl-property-pages-advanced.md)
-
-[Страницы свойств HLSL: общие](hlsl-property-pages-general.md)
-
-[Страницы свойств HLSL: выходные файлы](hlsl-property-pages-output-files.md)
-
-
-
-
 
 [Страницы свойств компоновщика](linker-property-pages.md)
 
@@ -71,17 +57,9 @@ ms.locfileid: "68299729"
 
 [Страницы свойств MIDL](midl-property-pages.md)
 
-[Страницы свойств MIDL: дополнительно](midl-property-pages-advanced.md)
-
-[Страницы свойств MIDL: общие](midl-property-pages-general.md)
-
-[Страницы свойств MIDL: вывод](midl-property-pages-output.md)
-
 [Страница свойств NMake](nmake-property-page.md)
 
 [Страницы свойств ресурсов](resources-property-pages.md)
-
-
 
 [Страница свойств веб-ссылок](web-references-property-page.md)
 

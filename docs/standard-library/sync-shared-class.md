@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_shared [C++], deallocate
 - stdext::sync_shared [C++], equals
 ms.assetid: cab3af9e-3d1a-4f2c-8580-0f89e5687d8e
-ms.openlocfilehash: c368e99eb9f128963e90cdc1d39bdb9d4569efe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 72ed21d3a0fb519bca2e19b7fbface05d5ac64ce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412245"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450249"
 ---
 # <a name="syncshared-class"></a>Класс sync_shared
 
@@ -38,7 +38,7 @@ class sync_shared
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -108,10 +108,10 @@ bool equals(const sync_shared<Cache>& Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если результат `cache.equals(Other.cache)`, где `cache` представляет объект кэша, является **true**; в противном случае **false**.
+**значение true** , если результат `cache.equals(Other.cache)`, где `cache` представляет объект кэша, имеет **значение true**; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

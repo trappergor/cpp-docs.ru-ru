@@ -9,12 +9,12 @@ f1_keywords:
 - filesystem/std::experimental::filesystem::directory_iterator
 - <filesystem>
 ms.assetid: 5005753b-46fa-43e1-8d4e-1b38617d3cfd
-ms.openlocfilehash: a44fc3c6c6a37c20e1e1c294929ae3cb15cece58
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6f97ad75dcf3f01406f305b713b9d14cbe527c52
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68240699"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457020"
 ---
 # <a name="ltfilesystemgt"></a>&lt;filesystem&gt;
 
@@ -29,9 +29,9 @@ using namespace std::experimental::filesystem::v1;
 ```
 
 > [!IMPORTANT]
-> В выпуске Visual Studio 2017 \<filesystem > заголовок еще не был стандартом C++. C++в Visual Studio 2017 (версии 141 MSVC) реализует окончательный проект стандарта, найти в [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
+> На момент выпуска Visual Studio 2017 \<заголовок FileSystem > не является C++ стандартным. C++в Visual Studio 2017 (КОМПИЛЯТОРОМ MSVC v141) реализует окончательный вариант черновика, который находится в стандарте [ISO/IEC JTC 1/SC 22/WG 21 N4100](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4100.pdf).
 
-Этот заголовок поддерживает файловые системы одного из двух широких классов операционных систем размещения: Microsoft Windows и Posix.
+Этот заголовок поддерживает файловые системы для одного из двух основных классов операционных систем размещения: Microsoft Windows и POSIX.
 
 Хотя большинство функций являются общими для обеих операционных систем, в этом документе указываются некоторые отличия. Например:
 
@@ -129,4 +129,4 @@ using namespace std::experimental::filesystem::v1;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

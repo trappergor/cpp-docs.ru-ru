@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_lvalue_reference class
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
-ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5bcd5c8333f011475cb11a452759c8986ab22215
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62351947"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456207"
 ---
 # <a name="islvaluereference-class"></a>Класс is_lvalue_reference
 
@@ -27,12 +27,12 @@ struct is_lvalue_reference;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр этого предиката типа содержит значение true, если тип *Ty* является ссылкой на объект или функцию, в противном случае он содержит значение false. Обратите внимание, что *Ty* не может быть ссылкой rvalue. Дополнительные сведения о rvalues см. в разделе [Оператор объявления ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
+Экземпляр этого предиката типа содержит значение true, если тип *Ty* является ссылкой на объект или функцию, в противном случае — значение false. Обратите внимание, что *Ty* не может быть ссылкой rvalue. Дополнительные сведения о rvalues см. в разделе [Оператор объявления ссылки Rvalue: &&](../cpp/rvalue-reference-declarator-amp-amp.md).
 
 ## <a name="requirements"></a>Требования
 
@@ -42,5 +42,5 @@ struct is_lvalue_reference;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Значения Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Значения Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)

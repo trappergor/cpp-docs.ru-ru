@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-ms.openlocfilehash: def0023b259a7b4816bdda29684c1dd9853d5f5b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d83f5278c2c4f8344334bfce40946612e9ca3e56
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62379536"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448963"
 ---
 # <a name="chartraitsltchar16tgt-struct"></a>Структура char_traits&lt;char16_t&gt;
 
@@ -37,6 +37,6 @@ struct char_traits<char16_t>;
 
 ## <a name="see-also"></a>См. также
 
-[\<string>](../standard-library/string.md)<br/>
-[Структура char_traits](../standard-library/char-traits-struct.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<string>](../standard-library/string.md)\
+[Структура char_traits](../standard-library/char-traits-struct.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

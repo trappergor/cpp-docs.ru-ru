@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_copy_constructible
 ms.assetid: d8db9d4c-21ed-4884-bead-0b0b562de007
-ms.openlocfilehash: c85d036efda2509885a079cf59a130a63c0389bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 70de134fa0cb3e9d6b0259135372f37b9c017e92
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336635"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452794"
 ---
 # <a name="iscopyconstructible-class"></a>Класс is_copy_constructible
 
@@ -26,12 +26,12 @@ struct is_copy_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, имеющим конструктор копии, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с конструктором копии, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -75,4 +75,4 @@ is_copy_constructible<NotCopyable > == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

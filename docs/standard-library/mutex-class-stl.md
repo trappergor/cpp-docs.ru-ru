@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::mutex [C++], native_handle
 - std::mutex [C++], try_lock
 - std::mutex [C++], unlock
-ms.openlocfilehash: 7766b063eb89a14a94eaa41ebfa17f3e4a1c102e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 099cf17db7b99f9cd1d953a603db70f75c33358e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62158582"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457060"
 ---
 # <a name="mutex-class-c-standard-library"></a>Класс mutex (Стандартная библиотека C++)
 
@@ -53,11 +53,11 @@ class mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex >
+**Заголовок:** \<> мьютекса
 
 **Пространство имен:** std
 
-## <a name="lock"></a>  mutex::lock
+## <a name="lock"></a>мьютекс:: Lock
 
 Блокирует вызывающий поток до тех пор, пока этот поток не получит права владельца объекта `mutex`.
 
@@ -111,7 +111,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -131,5 +131,5 @@ void unlock();
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

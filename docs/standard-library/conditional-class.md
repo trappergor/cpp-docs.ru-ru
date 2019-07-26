@@ -7,12 +7,12 @@ helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8f0f69cc1e4f6966bc9ccb63fe529436295badd
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62212109"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457324"
 ---
 # <a name="conditional-class"></a>Класс conditional
 
@@ -30,18 +30,18 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*B*<br/>
+*&* \
 Значение, определяющее выбранный тип.
 
-*T1*<br/>
+*T1*\
 Результат типа, если B — true.
 
-*T2*<br/>
+*T2*\
 Результат типа, если B — false.
 
 ## <a name="remarks"></a>Примечания
 
-Член шаблона typedef `conditional<B, T1, T2>::type` принимает значение *T1* при *B* принимает значение **true**и дает в результате *T2* при  *B* принимает значение **false**.
+Typedef `conditional<B, T1, T2>::type` элемента шаблона оценивается как *T1* , если *b* возвращает **значение true**, а значение *T2* равно, если *b* возвращает **false**.
 
 ## <a name="requirements"></a>Требования
 
@@ -51,4 +51,4 @@ using conditional_t = typename conditional<_Test, _T1, _T2>::type;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -31,12 +31,12 @@ f1_keywords:
 - ratio/std::deci
 - ratio/std::deca
 ms.assetid: 8543e912-2d84-45ea-b3c0-bd7bfacee405
-ms.openlocfilehash: 4279aa75bf4e9b8a0c7a86f102f70164bbb620e0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f84bea2e3f4a01bb9428eddde3efbf53b73bc2f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369637"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458165"
 ---
 # <a name="ltratiogt"></a>&lt;ratio&gt;
 
@@ -48,7 +48,7 @@ ms.locfileid: "62369637"
 #include <ratio>
 ```
 
-### <a name="ratio-template"></a>соотношение шаблона
+### <a name="ratio-template"></a>Шаблон соотношения
 
 ```cpp
 template<std::intmax_t Numerator, std::intmax_t Denominator = 1>
@@ -60,7 +60,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 }
 ```
 
-Шаблон `ratio` определяет статические константы `num` и `den` таким образом, чтобы `num`  /  `den` == числителя и знаменателя и `num` и `den` не имеют общих делителей. `num` / `den` значение, которое представляется классом шаблона. Таким образом `type` определяет экземпляр `ratio<num, den>`.
+`ratio` Шаблон определяет статические константы `num` `den` и `den` `num` такие  /  `num` элементы = = числитель/знаменатель и не имеют общих факторов. `den` `num` / `den`значение, представленное классом шаблона. Таким образом `type` , обозначает `ratio<num, den>`создание экземпляра.
 
 ### <a name="specializations"></a>Специализации
 
@@ -85,7 +85,7 @@ struct ratio // holds the ratio of Numerator to Denominator
 
 ### <a name="typedefs"></a>определения типов
 
-Для удобства заголовок определяет коэффициенты для стандартных SI префиксов:
+Для удобства заголовок определяет коэффициенты для стандартных префиксов SI:
 
 ```cpp
 typedef ratio<1, 1000000000000000000> atto;
@@ -108,4 +108,4 @@ typedef ratio<1000000000000000000, 1> exa;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

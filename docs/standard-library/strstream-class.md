@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::strstream [C++], rdbuf
 - std::strstream [C++], str
 ms.assetid: 63f3be31-9e36-42b1-9715-a474a5997e2a
-ms.openlocfilehash: 9494f7ee2508df1971d56c94b929a7212bedb254
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 53baa350121796d5198211e1fdb08f4341df6b80
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412297"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459101"
 ---
 # <a name="strstream-class"></a>Класс strstream
 
@@ -44,7 +44,7 @@ class strstream : public iostream
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Параметры
 
-*_Freezeit*<br/>
-Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
+*_Freezeit*\
+**Логическое** значение, указывающее, нужно ли заморозить поток.
 
 ### <a name="remarks"></a>Примечания
 
@@ -76,7 +76,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>Пример
 
-См. в разделе [strstreambuf::freeze](../standard-library/strstreambuf-class.md#freeze) пример, использующий `freeze`.
+Пример, в котором используется `freeze`, см. в разделе [strstreambuf:: Freeze](../standard-library/strstreambuf-class.md#freeze) .
 
 ## <a name="pcount"></a>  strstream::pcount
 
@@ -112,7 +112,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает адрес буфера сохраненного потока типа `pointer` для [strstreambuf](../standard-library/strstreambuf-class.md).
+Функция члена возвращает адрес буфера сохраненного потока типа `pointer` в [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Пример
 
@@ -136,7 +136,7 @@ char *str();
 
 ### <a name="example"></a>Пример
 
-См. в разделе [strstreambuf::str](../standard-library/strstreambuf-class.md#str) пример, использующий `str`.
+Пример, в котором используется `str`, см. в разделе [strstreambuf:: str](../standard-library/strstreambuf-class.md#str) .
 
 ## <a name="strstream"></a>  strstream::strstream
 
@@ -152,26 +152,26 @@ strstream(char* ptr,
 
 ### <a name="parameters"></a>Параметры
 
-*count*<br/>
+*расчета*\
 Размер буфера.
 
-*_Mode*<br/>
+*_Mode*\
 Режим ввода-вывода буфера. Дополнительные сведения см. в разделе [ios_base::openmode](../standard-library/ios-base-class.md#openmode).
 
-*ptr*<br/>
+*указатель*\
 Буфер.
 
 ### <a name="remarks"></a>Примечания
 
-Оба конструктора инициализируют базовый класс путем вызова [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **sb**), где `sb` является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует `sb` путем вызова [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Второй конструктор инициализирует базовый класс одним из двух способов:
+Оба конструктора инициализируют базовый класс путем вызова [streambuf](../standard-library/streambuf-typedefs.md#streambuf)( **SB**), где `sb` — это хранимый объект класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализируется `sb` путем вызова [strstreambuf](../standard-library/strstreambuf-class.md#strstreambuf). Второй конструктор инициализирует базовый класс одним из двух способов:
 
-- Если `_Mode`  &  **ios_base::app**== 0, то *ptr* должен назначить первый элемент массива `count` элементов, а также вызовы конструктора `strstreambuf`( `ptr`, `count`, `ptr`).
+- Если `_Mode` `strstreambuf` `ptr` `count` `count` `ptr`  ios_base:: App = = 0, то PTR должен обозначать первый элемент массива элементов, а конструктор вызывает (,,).  &  .
 
-- В противном случае *ptr* должен назначить первый элемент массива элементов count, содержащий строку C первый элемент которой обозначается *ptr*, а также вызовы конструктора `strstreambuf`( `ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- В противном случае *ptr* должен обозначать первый элемент массива элементов count, содержащий строку C, первый элемент которой обозначен указателем *ptr*, а `strstreambuf`конструктор вызывает ( `ptr`,, `ptr` `count`  +  `strlen`( `ptr`) ).
 
 ## <a name="see-also"></a>См. также
 
-[iostream](../standard-library/istream-typedefs.md#iostream)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[iostream](../standard-library/istream-typedefs.md#iostream)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

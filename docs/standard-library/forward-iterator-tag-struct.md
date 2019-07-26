@@ -7,12 +7,12 @@ helpviewer_keywords:
 - forward_iterator_tag struct
 - forward_iterator_tag class
 ms.assetid: 68b633ac-b135-4e9e-837d-14248a262ec5
-ms.openlocfilehash: 04d526e7778dc219a8d9a49db40751b4418cc82d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 687e39ce752bc0d4d289421887570dea6870f8f3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159799"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457126"
 ---
 # <a name="forwarditeratortag-struct"></a>Структура forward_iterator_tag
 
@@ -26,9 +26,9 @@ struct forward_iterator_tag    : public input_iterator_tag {};
 
 ## <a name="remarks"></a>Примечания
 
-Классы тегов категории используются как теги компиляции для выбора алгоритма. Функция шаблона должна найти наиболее точно определенную категорию своего аргумента итератора, чтобы можно было использовать наиболее эффективный алгоритм во время компиляции. Для каждого итератора типа `Iterator` `iterator_traits`< `Iterator`> **::iterator_category** должна быть определена до наиболее точного тега категории, который описывает поведение итератора.
+Классы тегов категории используются как теги компиляции для выбора алгоритма. Функция шаблона должна найти наиболее точно определенную категорию своего аргумента итератора, чтобы можно было использовать наиболее эффективный алгоритм во время компиляции. Для каждого итератора типа `Iterator` `iterator_traits`< `Iterator`>  **::iterator_category** должна быть определена до наиболее точного тега категории, который описывает поведение итератора.
 
-Тип является таким же, как **итератор**\< **Iter**> **::iterator_category**, когда **Iter** описывает объект, который может быть прямым итератором.
+Тип является таким же, как **итератор**\< **Iter**>  **::iterator_category**, когда **Iter** описывает объект, который может быть прямым итератором.
 
 ## <a name="example"></a>Пример
 
@@ -42,6 +42,6 @@ struct forward_iterator_tag    : public input_iterator_tag {};
 
 ## <a name="see-also"></a>См. также
 
-[Структура input_iterator_tag](../standard-library/input-iterator-tag-struct.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Структура input_iterator_tag](../standard-library/input-iterator-tag-struct.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

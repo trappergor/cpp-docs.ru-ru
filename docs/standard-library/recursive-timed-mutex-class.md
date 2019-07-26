@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::recursive_timed_mutex [C++], try_lock_for
 - std::recursive_timed_mutex [C++], try_lock_until
 - std::recursive_timed_mutex [C++], unlock
-ms.openlocfilehash: 2cb6fe8588f4b81ae5c67533c4b9124ae8c9b252
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6ae61d17084cc744cac8819ac2c0ca48eb59add7
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370077"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460121"
 ---
 # <a name="recursivetimedmutex-class"></a>Класс recursive_timed_mutex
 
@@ -56,7 +56,7 @@ class recursive_timed_mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex >
+**Заголовок:** \<> мьютекса
 
 **Пространство имен:** std
 
@@ -102,11 +102,11 @@ bool try_lock() noexcept;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владельца `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получил владение `mutex` или если вызывающий `mutex`поток уже владеет; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, функция немедленно возвращает **true**, и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, функция немедленно возвращает **значение true**, а предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_for"></a>  try_lock_for
 
@@ -119,16 +119,16 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time*<br/>
+*Rel_time*\
 Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex` или если вызывающий `mutex`поток уже владеет; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **true**, и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **значение true**, а предыдущая блокировка остается в силе.
 
 ## <a name="try_lock_until"></a>  try_lock_until
 
@@ -143,16 +143,16 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time*<br/>
+*Abs_time*\
 Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex` или если вызывающий поток уже владеет `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex` или если вызывающий `mutex`поток уже владеет; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **true**, и предыдущая блокировка остается в силе.
+Если вызывающий поток уже владеет `mutex`, метод немедленно возвращает **значение true**, а предыдущая блокировка остается в силе.
 
 ## <a name="unlock"></a>  unlock
 
@@ -170,5 +170,5 @@ void unlock();
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

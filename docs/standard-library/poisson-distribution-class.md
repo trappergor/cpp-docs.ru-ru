@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::poisson_distribution [C++], param_type
 - std::poisson_distribution [C++], param_type
 ms.assetid: 09614281-349a-45f7-8e95-c0196be0a937
-ms.openlocfilehash: 2653af7b0582995f8a2643486585fca6a5edc395
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 19fab66c3ffca428114e4586c4ad6d6de3fdbf83
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450160"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458465"
 ---
 # <a name="poissondistribution-class"></a>Класс poisson_distribution
 
@@ -67,8 +67,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType*<br/>
-По умолчанию используется целочисленный тип результата, **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*инттипе*\
+Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -207,10 +207,10 @@ explicit binomial_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*mean*<br/>
+*приводит*\
 Параметр распределения `mean`.
 
-*parm*<br/>
+*ParM*\
 Структура параметров, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -248,4 +248,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - std::subtract_with_carry_engine [C++], max
 - std::subtract_with_carry_engine [C++], seed
 ms.assetid: 94a055f2-a620-4a22-ac34-c156924bab31
-ms.openlocfilehash: 76981df1f4a642cca1a57a9619f20aa4cebd63bb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 17091e33c504df60c0b6b8e346d2a6fd3893679c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412195"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447417"
 ---
 # <a name="subtractwithcarryengine-class"></a>Класс subtract_with_carry_engine
 
@@ -36,16 +36,16 @@ class subtract_with_carry_engine;
 
 ### <a name="parameters"></a>Параметры
 
-*UIntType*<br/>
+*уинттипе*\
 Беззнаковый целочисленный тип результата. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*W*<br/>
+*БЕЛАЯ*\
 **Размер слова**. Размер каждого слова последовательности состояния в битах. **Предварительные условия**: `0 < W ≤ numeric_limits<UIntType>::digits`
 
-*S*<br/>
+*#D0*\
 **Короткая задержка**. Количество целочисленных значений. **Предварительные условия**: `0 < S < R`
 
-*R*<br/>
+*R*\
 **Длинная задержка**. Определяет повторения в созданном ряду.
 
 ## <a name="members"></a>Участники
@@ -62,7 +62,7 @@ class subtract_with_carry_engine;
 
 Класс шаблона `substract_with_carry_engine` — это улучшение [linear_congruential_engine](../standard-library/linear-congruential-engine-class.md). Ни один из этих механизмов не обеспечивает такую же скорость и качество результатов, как механизм [mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md).
 
-Этот механизм формирует значения указанного пользователем беззнакового целого типа, используя рекуррентное соотношение (*период*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, где `cy(i)` имеет значение `1`, если `x(i - S) - x(i - R) - cy(i - 1) < 0`; в противном случае — значение `0`, а `M` имеет значение `2`<sup>W</sup>. Состояние механизма — это перенос индикатор плюс *R* значения. Эти значения состоят из последнего *R* возвращается, если значения `operator()` был вызван хотя бы *R* время ожидания, в противном случае `N` значения, которые были возвращены, а последний `R - N` значения начального значения.
+Этот механизм формирует значения указанного пользователем беззнакового целого типа, используя рекуррентное соотношение (*период*) `x(i) = (x(i - R) - x(i - S) - cy(i - 1)) mod M`, где `cy(i)` имеет значение `1`, если `x(i - S) - x(i - R) - cy(i - 1) < 0`; в противном случае — значение `0`, а `M` имеет значение `2`<sup>W</sup>. Состояние механизма — это индикатор переноса и значения *R* . Эти значения состоят из последних значений *r* , возвращаемых `operator()` , если вызывался по крайней мере `N` *R* раз, в противном случае возвращаемые значения `R - N` и последние значения начальных значений.
 
 Аргумент шаблона `UIntType` должен быть достаточно большим, чтобы хранить значения до `M - 1`.
 
@@ -84,4 +84,4 @@ class subtract_with_carry_engine;
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

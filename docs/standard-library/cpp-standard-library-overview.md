@@ -7,16 +7,16 @@ helpviewer_keywords:
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7b1e5226db751605d5352b1c5195759c34d080f5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210805"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452440"
 ---
 # <a name="c-standard-library-overview"></a>Общие сведения о стандартной библиотеке C++
 
-Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка, \<hash_map > и \<hash_set >, которые не требуются C++ Standard. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
+Все сущности библиотеки C++ объявляются или определяются в одном или нескольких стандартных заголовках. Эта реализация включает два дополнительных заголовка: \<hash_map > и \<hash_set >, которые не требуются C++ стандарту. Полный список заголовков, поддерживаемых этой реализацией, см. в разделе [Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md).
 
 Автономная реализация библиотеки С++ предоставляет только подмножество этих заголовков:
 
@@ -60,4 +60,4 @@ ms.locfileid: "62210805"
 
 ## <a name="see-also"></a>См. также
 
-[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)

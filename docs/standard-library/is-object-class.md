@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_object class
 - is_object
 ms.assetid: b452ceea-5676-488f-925b-ab881126c387
-ms.openlocfilehash: 89c554bda1c82fbedda5b027dbb70b12c2c7cec4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 521c3fe1053f53e5d30edf39a41cb840522575a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413661"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455850"
 ---
 # <a name="isobject-class"></a>Класс is_object
 
@@ -27,12 +27,12 @@ struct is_object;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение false, если тип *Ty* является ссылочным типом, тип функции или тип void, или `cv-qualified` форму одного из них, в противном случае содержит значение true.
+Экземпляр предиката типа содержит значение false, если тип *Ty* является ссылочным типом, типом функции или void или `cv-qualified` формой одного из них, в противном случае содержит значение true.
 
 ## <a name="example"></a>Пример
 
@@ -85,5 +85,5 @@ is_object<void> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_function](../standard-library/is-function-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_function](../standard-library/is-function-class.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_cv class
 - remove_cv
 ms.assetid: 8502602a-1c80-479c-84e0-33bd1d6496d6
-ms.openlocfilehash: dcabf9b4687d473898dea98f1001647299a40b76
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: dbe21d8e9f0ed0dc7c72a19584f24ee1bce0803c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368907"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451328"
 ---
 # <a name="removecv-class"></a>Класс remove_cv
 
@@ -30,12 +30,12 @@ using remove_cv_t = typename remove_cv<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `remove_cv<T>` содержит модифицированный тип, который является `T1` при *T* имеет форму `const T1`, `volatile T1`, или `const volatile T1`, в противном случае *T*.
+Экземпляр `remove_cv<T>` содержит модифицированный тип, который имеет `T1` значение, если *t* имеет форму `const T1`, `volatile T1`или `const volatile T1`, в противном случае *t*.
 
 ## <a name="example"></a>Пример
 
@@ -67,6 +67,6 @@ remove_cv_t<const volatile int> == int
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_const](../standard-library/remove-const-class.md)<br/>
-[Класс remove_volatile](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_const](../standard-library/remove-const-class.md)\
+[Класс remove_volatile](../standard-library/remove-volatile-class.md)

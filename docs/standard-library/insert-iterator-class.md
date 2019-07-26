@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 15041e21b53c29aedda831fd73b37a65e57a3680
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62404894"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447666"
 ---
 # <a name="insertiterator-class"></a>Класс insert_iterator
 
@@ -30,12 +30,12 @@ class insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер*<br/>
+*Контейнера*\
 Тип контейнера, в который итератор `insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Примечания
 
-Контейнер типа `Container` должен удовлетворять требованиям к контейнеру переменного размера и имеют функцию-член вставки с двумя аргументами, параметры которой имеют типа `Container::iterator` и `Container::value_type` и которая возвращает тип `Container::iterator`. Последовательности из стандартной библиотеки С++ и упорядоченные ассоциативные контейнеры удовлетворяют данным требованиям и могут быть адаптированы к использованию в сочетании с `insert_iterator`s. Для ассоциативных контейнеров аргумент позиции обрабатывается как подсказка, которая потенциально может увеличить или снизить производительность в зависимости от эффективности подсказки. Итератор `insert_iterator` всегда необходимо инициализировать с его контейнером.
+Контейнер типа `Container` должен удовлетворять требованиям к контейнеру переменного размера и иметь функцию-член вставки с двумя аргументами, где параметры имеют тип `Container::iterator` и `Container::value_type` и возвращают тип `Container::iterator`. Последовательности из стандартной библиотеки С++ и упорядоченные ассоциативные контейнеры удовлетворяют данным требованиям и могут быть адаптированы к использованию в сочетании с `insert_iterator`s. Для ассоциативных контейнеров аргумент позиции обрабатывается как подсказка, которая потенциально может увеличить или снизить производительность в зависимости от эффективности подсказки. Итератор `insert_iterator` всегда необходимо инициализировать с его контейнером.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -116,10 +116,10 @@ insert_iterator(Container& _Cont, typename Container::iterator _It);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont*<br/>
+*_Cont*\
 Контейнер, в который `insert_iterator` вставляет элементы.
 
-*_It*<br/>
+*_It*\
 Позиция для вставки.
 
 ### <a name="remarks"></a>Примечания
@@ -186,7 +186,7 @@ insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Примечания
 
-Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который адресует элемент в последовательности, затем  **\*Iter** = **значение** заменяет этот элемент со значением и не изменяет общее число элементы в последовательности.
+Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который обращается к элементу последовательности,  **\*** то**значение** iter = заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -310,7 +310,7 @@ insert_iterator<Container>& operator=(
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Значение, которое должно быть присвоено контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -429,6 +429,6 @@ The first element in the list L is: 10.
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

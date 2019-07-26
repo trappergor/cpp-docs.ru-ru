@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - gslice_array class
 ms.assetid: ad1b4514-b14a-4baf-a293-d5a8e8674c75
-ms.openlocfilehash: 1485b68f29651c0c42048fea02a8320ced8748aa
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 37c54d09fdfe920c832c4baa7984fee4e090d04a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159563"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448920"
 ---
 # <a name="gslicearray-class"></a>Класс gslice_array
 
@@ -54,15 +54,15 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс описывает объект, который хранит ссылку на объект `va` класса [valarray](../standard-library/valarray-class.md)**\<тип >**, вместе с объектом `gs` класса [ gslice](../standard-library/gslice-class.md) который описывает последовательность элементов для выбора из `valarray<Type>` объекта.
+`va` Класс описывает объект, хранящий ссылку на объект класса [valarray](../standard-library/valarray-class.md) **\<Type >** , а также объект `gs` класса [gslice](../standard-library/gslice-class.md) , описывающий последовательность элементов для выбора из `valarray<Type>` объект.
 
-При создании `gslice_array<Type>` только путем написания выражения вида [va&#91;gs&#93;](../standard-library/valarray-class.md#op_at). Функции-члены класса gslice_array ведут себя как соответствующие сигнатуры функций, заданные для `valarray<Type>`, за исключением того, что затрагивается только последовательность выбранных элементов.
+`gslice_array<Type>` Объект создается только путем написания выражения формы, созаписывающей [&#91;GS&#93;](../standard-library/valarray-class.md#op_at). Функции-члены класса gslice_array ведут себя так же, как и соответствующие сигнатуры `valarray<Type>`функций, определенные для, за исключением того, что затрагивается только последовательность выбранных элементов.
 
 Класс шаблона создается неявно с помощью определенных операций valarray и не может использоваться непосредственно в программе. Вместо этого оператором индекса среза используется внутренний вспомогательный класс шаблона:
 
-`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&**).
+`gslice_array`\< **Type**> `valarray`\< **Type**>:: `operator[]` ( **constgslice&** ).
 
-При создании `gslice_array<Type>` только путем написания выражения вида `va[gsl]`, для среза `gsl` объекта valarray `va`. Функции-члены класса gslice_array ведут себя как соответствующие сигнатуры функций, заданные для `valarray<Type>`, за исключением того, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом gslice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в первом срезе, количеством элементов в каждом срезе и расстояние между элементами в каждом срезе.
+`gslice_array<Type>` Объект создается только путем написания выражения формы `va[gsl]`для среза `gsl` valarray `va`. Функции-члены класса gslice_array ведут себя так же, как и соответствующие сигнатуры `valarray<Type>`функций, определенные для, за исключением того, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом gslice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в первом срезе, количеством элементов в каждом срезе и расстояние между элементами в каждом срезе.
 
 В следующем примере:
 
@@ -89,4 +89,4 @@ const valarray<size_t> len(lv, 2), str(dv, 2);
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

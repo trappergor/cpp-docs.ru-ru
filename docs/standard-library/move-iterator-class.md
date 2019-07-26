@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::move_iterator [C++], reference
 - std::move_iterator [C++], base
 ms.assetid: a5e5cdd8-a264-4c6b-9f9c-68b0e8edaab7
-ms.openlocfilehash: 3e2e62946325c082e761b6997ae584419175f8fe
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: 4a173ea022f21c454d8edd66f94d2d9b14faa4e1
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64346200"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460220"
 ---
 # <a name="moveiterator-class"></a>Класс move_iterator
 
@@ -54,15 +54,15 @@ class move_iterator;
 |Имя типа|Описание|
 |-|-|
 |[iterator_type](#iterator_type)|Синоним параметра шаблона `RandomIterator`.|
-|[iterator_category](#iterator_category)|Синоним более длинного **typename** выражение с тем же именем, `iterator_category` определяет общие возможности данного итератора.|
-|[value_type](#value_type)|Синоним более длинного **typename** выражение с тем же именем, `value_type` описывает тип элементов итератора.|
-|[difference_type](#difference_type)|Синоним более длинного **typename** выражение с тем же именем, `difference_type` описывает целочисленный тип, необходимый для выражения разницы между элементами.|
+|[iterator_category](#iterator_category)|Синоним более длинного выражения **TypeName** с тем же именем `iterator_category` определяет общие возможности итератора.|
+|[value_type](#value_type)|Синоним для более длинного выражения **TypeName** с тем же именем, `value_type` описывает тип элементов итератора.|
+|[difference_type](#difference_type)|Синоним для более длинного выражения **TypeName** с тем же именем, `difference_type` описывает целочисленный тип, необходимый для выражения разности между элементами.|
 |[pointer](#pointer)|Синоним параметра шаблона `RandomIterator`.|
 |[reference](#reference)|Синоним ссылки `rvalue` `value_type&&`.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[base](#base)|Функция-член возвращает сохраненный итератор, инкапсулированный данным итератором `move_iterator`.|
 
@@ -147,7 +147,7 @@ move_iterator(const move_iterator<Type>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Итератор, который требуется использовать в качестве сохраненного итератора.
 
 ### <a name="remarks"></a>Примечания
@@ -164,7 +164,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Смещение, добавляемое к текущей позиции, для определения новой текущей позиции.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -173,7 +173,7 @@ move_iterator& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>Примечания
 
-Добавляет оператор *_Off* к сохраненному итератору. Затем возвращает `*this`.
+Оператор добавляет *_Off* к сохраненному итератору. Затем возвращает `*this`.
 
 ## <a name="operator-_eq"></a>  move_iterator::operator-=
 
@@ -291,7 +291,7 @@ pointer operator->() const;
 
 ## <a name="pointer"></a>  move_iterator::pointer
 
-Тип `pointer` — **typedef** на произвольном итераторе основе `RandomIterator` для `move_iterator`и могут быть взаимозаменяемыми.
+Тип является `pointer` определением  типа, основанным на случайном `move_iterator`итераторе `RandomIterator` для, и может использоваться взаимозаменяемым.
 
 ```cpp
 typedef RandomIterator  pointer;
@@ -303,7 +303,7 @@ typedef RandomIterator  pointer;
 
 ## <a name="reference"></a>  move_iterator::reference
 
-Тип `reference` — **typedef** на основе `value_type&&` для `move_iterator`его можно использовать вместе с `value_type&&`.
+Тип является `reference` определением  типа, основанным `move_iterator`на `value_type&&` , и может использоваться в качестве взаимозаменяемого с `value_type&&`.
 
 ```cpp
 typedef value_type&& reference;
@@ -327,7 +327,7 @@ typedef typename iterator_traits<RandomIterator>::value_type   value_type;
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Значения Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)<br/>
-[Конструкторы перемещения и операторы присваивания перемещением (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Lvalues и Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)\
+[Конструкторы перемещения и операторы присваивания перемещением (C++)](../cpp/move-constructors-and-move-assignment-operators-cpp.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

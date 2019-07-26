@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-ms.openlocfilehash: 7fc873a2ec21dbfad83fd9d9c006d8345b83cdb8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: daba5dff55e0f3afa1e9996631125bf7ba64d52e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413363"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458847"
 ---
 # <a name="isvolatile-class"></a>Класс is_volatile
 
@@ -27,12 +27,12 @@ struct is_volatile;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если *Ty* является `volatile-qualified`.
+Экземпляр предиката типа содержит значение true, если *Ty* — `volatile-qualified`.
 
 ## <a name="example"></a>Пример
 
@@ -77,5 +77,5 @@ is_volatile<volatile int> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_const](../standard-library/is-const-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_const](../standard-library/is-const-class.md)

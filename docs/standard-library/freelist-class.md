@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::freelist [C++], pop
 - stdext::freelist [C++], push
 ms.assetid: 8ad7e35c-4c80-4479-8ede-1a2497b06d71
-ms.openlocfilehash: ef1f2e617e93869a1084dc030c6496c819f1ed96
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a504f58f9f64aa8b0d26b17090387c5c2b5de21
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159396"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454130"
 ---
 # <a name="freelist-class"></a>Класс freelist
 
@@ -32,12 +32,12 @@ class freelist : public Max
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*sz*|Число элементов в массиве, которые нужно выделить.|
+|*SZ*|Число элементов в массиве, которые нужно выделить.|
 |*Max*|Класс max, представляющий максимальное количество элементов, которые необходимо сохранить в свободном списке. Классом max может быть [max_none](../standard-library/max-none-class.md), [max_unbounded](../standard-library/max-unbounded-class.md), [max_fixed_size](../standard-library/max-fixed-size-class.md) или [max_variable_size](../standard-library/max-variable-size-class.md).|
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс шаблона управляет списком блоков памяти размером *Sz* с максимальной длиной списка, которая определяется классом max, переданный *Max*.
+Этот класс шаблона управляет списком блоков памяти размером *SZ* с максимальной длиной списка, определяемой классом Max, который передается *Max*.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -47,7 +47,7 @@ class freelist : public Max
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[pop](#pop)|Удаляет первый блок памяти из свободного списка.|
 |[push](#push)|Добавляет блок памяти в список.|
@@ -100,12 +100,12 @@ bool push(void* ptr);
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если `full` функция класса max возвращает **false**; в противном случае `push` возвращает **false**.
+**значение true** , `full` если функция класса max Возвращает `push` **значение false**; в противном случае функция возвращает **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Если `full` функция класса max возвращает **false**, эта функция-член добавляет блок памяти, на которые указывают *ptr* в начало списка.
+Если функция класса max Возвращает **значение false**, эта функция-член добавляет блок памяти, на который указывает PTR, в заголовок списка.  `full`
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

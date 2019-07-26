@@ -9,12 +9,12 @@ helpviewer_keywords:
 - startup code, and C++ program termination
 - main function, program startup
 ms.assetid: f72c8f76-f507-4ddd-a270-7b60f4fed625
-ms.openlocfilehash: 2246e50c81da9eb505fd30cfa31f9f24e3fe4703
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e59e8852172a998e4bf4f42f9f919dc29c2ded85
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62210766"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450649"
 ---
 # <a name="c-program-startup-and-termination"></a>Запуск и завершение программ C++
 
@@ -36,5 +36,5 @@ ms.locfileid: "62210766"
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

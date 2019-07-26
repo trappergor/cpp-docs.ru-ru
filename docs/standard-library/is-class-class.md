@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_class class
 - is_class
 ms.assetid: 96fc34a3-a81b-4ec6-b7fb-baafde1a0f4e
-ms.openlocfilehash: 43a4211d9841e754cefbe1bdf405001f0f4657d0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7dc71622a37164e996b067276ddf8a5d1dd88b62
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383650"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456639"
 ---
 # <a name="isclass-class"></a>Класс is_class
 
@@ -27,12 +27,12 @@ struct is_class;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является типом, определенным как **класс** или **структуры**, или `cv-qualified` форму одного из них, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является типом, определенным как **класс** или `cv-qualified` **Структура**, или формой одного из них, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -71,6 +71,6 @@ is_class<int> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_compound](../standard-library/is-compound-class.md)<br/>
-[Класс is_union](../standard-library/is-union-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+Класс [is_compound](../standard-library/is-compound-class.md)\
+Класс [is_union](../standard-library/is-union-class.md)

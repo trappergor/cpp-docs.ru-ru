@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_default_constructible
 ms.assetid: 653ecd73-909f-4dd8-b95a-d1164d1c2da4
-ms.openlocfilehash: b35458ca280285eb699c9b12b15b705660299ef2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 19a5e8afedf3e59d5dafa937af4f7d35343eb7d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413415"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459643"
 ---
 # <a name="istriviallydefaultconstructible-class"></a>Класс is_trivially_default_constructible
 
@@ -26,22 +26,22 @@ struct is_trivially_default_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, имеющим тривиальный конструктор, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с тривиальным конструктором, в противном случае — значение false.
 
-Конструктор по умолчанию для класса *Ty* является тривиальным если:
+Конструктор по умолчанию для класса *Ty* является тривиальным, если:
 
 - он является конструктором по умолчанию, объявленным неявно;
 
-- Класс *Ty* не имеет виртуальных функций
+- у класса *Ty* нет виртуальных функций
 
-- Класс *Ty* не имеет виртуальных баз
+- класс *Ty* не имеет виртуальных базовых классов
 
-- все прямые базы класса *Ty* имеют тривиальные конструкторы
+- все прямые базовые классы класса *Ty* имеют тривиальные конструкторы
 
 - классы всех нестатических элементов данных типа класса имеют тривиальные конструкторы;
 
@@ -55,4 +55,4 @@ struct is_trivially_default_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

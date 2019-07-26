@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 33b0ce6112119c935ff70e5d619b284acc6ee8c2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62391014"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456670"
 ---
 # <a name="isassignable-class"></a>Класс is_assignable
 
@@ -26,15 +26,15 @@ struct is_assignable;
 
 ### <a name="parameters"></a>Параметры
 
-*Задача*<br/>
+*Кому*\
 Тип объекта, который получает назначение.
 
-*From*<br/>
+*От*\
 Тип объекта, который предоставляет значение.
 
 ## <a name="remarks"></a>Примечания
 
-Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. Оба `From` и `To` должны быть полными типами **void**, или массивами с неизвестной границей.
+Невычисленное выражение `declval<To>() = declval<From>()` должно иметь правильный формат. И должны быть полными типами, void или массивами неизвестной привязки.  `From` `To`
 
 ## <a name="requirements"></a>Требования
 
@@ -44,4 +44,4 @@ struct is_assignable;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

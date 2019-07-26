@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73f4cdd0028164ce5f8215258c517c2e59eb7538
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411933"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459944"
 ---
 # <a name="timeput-class"></a>Класс time_put
 
@@ -35,10 +35,10 @@ class time_put : public locale::facet;
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*<br/>
+*CharType*\
 Тип, используемый внутри программы для кодирования символов.
 
-*OutputIterator*<br/>
+*OutputIterator*\
 Тип итератора, в который функции записи времени записывают свои выходные данные.
 
 ## <a name="remarks"></a>Примечания
@@ -60,7 +60,7 @@ class time_put : public locale::facet;
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[do_put](#do_put)|Виртуальная функция, выводящая информацию о времени и дате в виде последовательности `CharType`.|
 |[put](#put)|Выводит информацию о времени и дате в виде последовательности `CharType`.|
@@ -98,19 +98,19 @@ virtual iter_type do_put(
 
 ### <a name="parameters"></a>Параметры
 
-*next*<br/>
+*очеред*\
 Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Не используется.
 
-*_Pt*<br/>
+*_Pt*\
 Выводимые сведения о дате и времени.
 
-*_Fmt*<br/>
+*_Fmt*\
 Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*_Mod*<br/>
+*_Mod*\
 Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -119,9 +119,9 @@ virtual iter_type do_put(
 
 ### <a name="remarks"></a>Примечания
 
-Виртуальный защищенная функция-член создает последовательные элементы, начиная с `next` из значения времени, хранящееся в объекте \* `_Pt`, типа `tm`. Функция возвращает итератор, обозначающий следующую позицию для вставки элемента после сформированного вывода.
+Виртуальная Защищенная функция Member создает последовательные элементы `next` , начиная с значений времени, хранящихся в объекте `tm` \* `_Pt`, типа. Функция возвращает итератор, обозначающий следующую позицию для вставки элемента после сформированного вывода.
 
-Вывод создается по тем же правилам, используемые `strftime`, с последним аргументом *_Pt*, для создания ряда **char** элементы в массив. Каждый такой **char** элемент полагается к эквивалентному элементу типа `CharType` путем простого взаимно-однозначное сопоставление. Если *_Mod* равно нулю, эффективный формат имеет «%F», где F заменяется *_Fmt*. В противном случае эффективный формат имеет вид «% MF», где M заменяется *_Mod*.
+Выходные данные создаются теми же правилами `strftime`, которые используются с последним аргументом *_Pt*для создания последовательности элементов **char** в массиве. Предполагается, что каждый такой элемент **char** сопоставлен с эквивалентным элементом типа `CharType` с помощью простого сопоставления «один к одному». Если *_Mod* равно нулю, эффективный формат — "% F", где F заменяется на *_Fmt*. В противном случае эффективный формат — "% MF", где M заменяется на *_Mod*.
 
 ### <a name="example"></a>Пример
 
@@ -161,28 +161,28 @@ iter_type put(iter_type next,
 
 ### <a name="parameters"></a>Параметры
 
-*next*<br/>
+*очеред*\
 Итератор вывода, куда необходимо вставить последовательность символов, представляющих дату и время.
 
-*_Iosbase*<br/>
+*_Iosbase*\
 Не используется.
 
-*_Fill*<br/>
-Символ типа `CharType` применяется для интервала.
+*_Fill*\
+Символ типа `CharType` , используемый для интервала.
 
-*_Pt*<br/>
+*_Pt*\
 Выводимые сведения о дате и времени.
 
-*_Fmt*<br/>
+*_Fmt*\
 Формат вывода См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*_Mod*<br/>
+*_Mod*\
 Модификатор для формата. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*Первый*<br/>
+*началь*\
 Начало строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
-*последний*<br/>
+*Последняя*\
 Конец строки форматирования для выходных данных. См. допустимые значения в разделе [strftime, wcsftime, _strftime_l, _wcsftime_l](../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -191,7 +191,7 @@ iter_type put(iter_type next,
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член возвращает [do_put](#do_put)(`next`, `_Iosbase`, `_Fill`, `_Pt`, `_Fmt`, `_Mod`). Вторая функция-член копирует в \* `next` ++ любой элемент в интервале [ `first`, `last`), отличный от процента (%). Что касается процента, за которым следует символ *C* в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) и пропускает *C*. Однако если *C* является символом квалификатора из набора EOQ#, за которым следует символ `C2` в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) и пропускает `C2`.
+Первая функция-член возвращает [do_put](#do_put)(`next` `_Iosbase` `_Fill` ,,`_Pt`,, `_Mod`,). `_Fmt` Вторая функция-член копирует в \* `next` ++ любой элемент в интервале [ `first`, `last`), отличный от процента (%). Что касается процента, за которым следует символ *C* в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, *C*, 0) и пропускает *C*. Однако если *C* является символом квалификатора из набора EOQ#, за которым следует символ `C2` в интервале [ `first`, `last`), функция вместо этого оценивает `next` = `do_put`( `next`, `_Iosbase`, `_Fill`, `_Pt`, `C2`, *C*) и пропускает `C2`.
 
 ### <a name="example"></a>Пример
 
@@ -247,23 +247,23 @@ explicit time_put(size_t _Refs = 0);
 
 ### <a name="parameters"></a>Параметры
 
-*_Refs*<br/>
+*_Refs*\
 Целочисленное значение, используемое для указания типа управления памятью для объекта.
 
 ### <a name="remarks"></a>Примечания
 
-Возможные значения *_Refs* параметра и их важность:
+Возможные значения для параметра *_Refs* и их значимость:
 
-- 0: Время существования объекта управляется языковыми стандартами, которые его содержат.
+- 0,0 Время существования объекта управляется языками, содержащими его.
 
-- 1: Время существования объекта должно управляться вручную.
+- 1: Время существования объекта должно быть управляемым вручную.
 
-- \> 1: Эти значения не определены.
+- \>1: Эти значения не определены.
 
-Конструктор инициализирует свой базовый объект с [locale::facet](../standard-library/locale-class.md#facet_class)(*_Refs*).
+Конструктор инициализирует свой базовый объект с [локальным:: Facet](../standard-library/locale-class.md#facet_class)( *_Refs*).
 
 ## <a name="see-also"></a>См. также
 
-[\<locale>](../standard-library/locale.md)<br/>
-[Класс time_base](../standard-library/time-base-class.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[\<locale>](../standard-library/locale.md)\
+[Класс time_base](../standard-library/time-base-class.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

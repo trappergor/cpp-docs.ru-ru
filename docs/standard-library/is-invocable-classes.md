@@ -1,5 +1,5 @@
 ---
-title: is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r классы
+title: классы is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::is_invocable
@@ -15,16 +15,16 @@ helpviewer_keywords:
 - is_nothrow_invocable
 - is_nothrow_invocable_r class
 - is_nothrow_invocable_r
-ms.openlocfilehash: bb5e75a897029ded2e00e491d93d2df41a3e115b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 20fec55fc3ad1924ee85db3b2f78812e4847f447
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336235"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456232"
 ---
-# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r классы
+# <a name="isinvocable-isinvocabler-isnothrowinvocable-isnothrowinvocabler-classes"></a>классы is_invocable, is_invocable_r, is_nothrow_invocable, is_nothrow_invocable_r
 
-Эти шаблоны определяют, если тип может быть вызван с указанным типам аргументов. `is_invocable_r` и `is_nothrow_invocable_r` также определить, является ли результат вызова можно преобразовать в определенный тип. `is_nothrow_invocable` и `is_nothrow_invocable_r` также определить, если вызов известен не могут вызывать исключения. Добавлен в C ++ 17.
+Эти шаблоны определяют, можно ли вызывать тип с указанными типами аргументов. `is_invocable_r`а `is_nothrow_invocable_r` также определить, будет ли результат вызова преобразован в конкретный тип. `is_nothrow_invocable`а `is_nothrow_invocable_r` также определить, может ли вызов не создавать исключения. Добавлено в C++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -61,26 +61,26 @@ inline constexpr bool is_nothrow_invocable_r_v =
 
 ### <a name="parameters"></a>Параметры
 
-*Вызываемый*<br/>
+*Предназначен*\
 Вызываемый тип для запроса.
 
-*Args*<br/>
+*Args*\
 Типы аргументов для запроса.
 
-*Можно преобразовать*<br/>
-Тип результата из *Callable* должно быть преобразуемым в.
+*Приведен*\
+Тип результата вызываемого  элемента должен быть преобразован в.
 
 ## <a name="remarks"></a>Примечания
 
-`is_invocable` Предиката типа содержит значение true, если вызываемый тип *Callable* можно вызывать, используя аргументы *Args* в невычисляемом контексте.
+Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с помощью аргументов arguments в невычисленном контексте.  `is_invocable`
 
-`is_invocable_r` Предиката типа содержит значение true, если вызываемый тип *Callable* можно вызывать, используя аргументы *Args* в невычисляемом контексте для создания результата типом, приводимым к  *Можно преобразовать*.
+Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с *помощью аргументов arguments* в неоцененном контексте, чтобы получить тип результата, преобразуемый в преобразуемое.  `is_invocable_r`
 
-`is_nothrow_invocable` Предиката типа содержит значение true, если вызываемый тип *Callable* можно вызывать, используя аргументы *Args* в невычисляемом контексте и что такой вызов известно, не к возникновению исключения.
+Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с помощью аргументов arguments в неоцененном контексте, и такой вызов не вызывает исключение.  `is_nothrow_invocable`
 
-`is_nothrow_invocable_r` Предиката типа содержит значение true, если вызываемый тип *Callable* можно вызывать, используя аргументы *Args* в невычисляемом контексте для создания результата типом, приводимым к  *Можно преобразовать*, и что такой вызов будет известен не исключение.
+Предикат типа содержит значение true, если вызываемый вызываемый *тип можно вызвать* с *помощью аргументов arguments* в неоцененном контексте, чтобы получить тип результата, преобразуемый в *Преобразование, и*что такой вызов известно не для создания `is_nothrow_invocable_r` исключение.
 
-Каждый из типов *преобразуемыми*, *Callable*и типы в пакете параметров *Args* должно быть полным типом, массив неизвестной границей или ,возможноcvполное**void**. В противном случае поведение предиката не определено.
+Каждый из типов, которые могут быть преобразованы, вызываемые и типы в аргументах *типа пакета параметров* , должны быть полным типом, массивом неизвестной привязки или, возможно, имеет **значение void**с квалификатором. В противном случае поведение предиката не определено.
 
 ## <a name="example"></a>Пример
 
@@ -122,5 +122,5 @@ int main()
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Вызвать](functional-functions.md#invoke)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[вызвать](functional-functions.md#invoke)

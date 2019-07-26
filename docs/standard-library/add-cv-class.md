@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_cv class
 - add_cv
 ms.assetid: a5572c78-a097-45d7-b476-ed4876889dea
-ms.openlocfilehash: 37001815710b197ec77ed0d45a16ea971ad1edce
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0cc63558ea392976bd6a3c5a43735c592e4606b4
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411231"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456597"
 ---
 # <a name="addcv-class"></a>Класс add_cv
 
-Делает **const volatile** тип из типа.
+Делает тип **const volatile** независимым от типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,12 +30,12 @@ using add_cv_t = typename add_cv<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр измененного типа `add_cv<T>` имеет `type` член **typedef** эквивалентно *T* измененному и [add_volatile](../standard-library/add-volatile-class.md) и [ add_const](../standard-library/add-const-class.md), если не *T* уже имеет cv квалификаторы, является ссылкой или является функцией.
+Экземпляр измененного `add_cv<T>` типа `type` имеет эквивалент **typedef** для элемента *T* , измененный как [add_volatile](../standard-library/add-volatile-class.md) , так и [add_const](../standard-library/add-const-class.md), если только у *T* нет квалификаторов КП, является ссылкой или является функций.
 
 Вспомогательный тип `add_cv_t<T>` является ярлыком для доступа к определению типа `type``add_cv<T>`.
 
@@ -92,6 +92,6 @@ invoked const volatile S.f()
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_const](../standard-library/remove-const-class.md)<br/>
-[Класс remove_volatile](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_const](../standard-library/remove-const-class.md)\
+[Класс remove_volatile](../standard-library/remove-volatile-class.md)

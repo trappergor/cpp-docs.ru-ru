@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::sub_match [C++], iterator
 - std::sub_match [C++], value_type
 ms.assetid: 804e2b9e-d16a-4c4c-ac60-024e0b2dd0e8
-ms.openlocfilehash: e0edfbc69d6cba6ee352a34406860e4c999dc3a7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 07ec6f0dc9daaec19fa97a6220da4d4ea93b254b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412219"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447427"
 ---
 # <a name="submatch-class"></a>Класс sub_match
 
@@ -41,7 +41,7 @@ class sub_match
 
 ## <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора для подстрок соответствия.
 
 ## <a name="remarks"></a>Примечания
@@ -50,7 +50,7 @@ class sub_match
 
 Если группа записи не соответствует члену данных объекта, `matched` содержит значение false, а два итератора `first` и `second` (наследуются от базового класса `std::pair`) равны. Если обнаружено соответствие группе записи, `matched` содержит значение true, итератор `first` указывает на первый символ в целевой последовательности, которая соответствует группе записи, а итератор `second` указывает на одну позицию после последнего символа в целевой последовательности, которая соответствует группе записи. Обратите внимание, что для соответствия нулевой длины член `matched` должен содержать значение true, два итератора быть эквиваленты и оба указывать на одну позицию соответствия.
 
-Соответствие нулевой длины может возникать, когда группа записи состоит только из утверждения или из повторения, допускающего нулевые повторы. Пример:
+Соответствие нулевой длины может возникать, когда группа записи состоит только из утверждения или из повторения, допускающего нулевые повторы. Например:
 
 "^" соответствует целевой последовательности "a"; объект `sub_match` , соответствующий группе записи 0, содержит два итератора, которые указывают на первый символ в последовательности.
 
@@ -66,7 +66,7 @@ class sub_match
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[compare](#compare)|Сравнение подстроки и последовательности.|
 |[length](#length)|Возвращает длину частичного совпадения.|
@@ -77,7 +77,7 @@ class sub_match
 
 |Оператор|Описание|
 |-|-|
-|[Operator basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
+|[Оператор basic_string < value_type >](#op_basic_string_lt_value_type_gt)|Приводит подстроку соответствия к строке.|
 
 ## <a name="example"></a>Пример
 
@@ -149,13 +149,13 @@ int compare(const value_type *ptr) const;
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Подстрока для сравнения.
 
-*str*<br/>
+*str*\
 Строка для сравнения.
 
-*ptr*<br/>
+*указатель*\
 Последовательность, оканчивающаяся нулевым символом, для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -216,7 +216,7 @@ bool matched;
 
 ### <a name="remarks"></a>Примечания
 
-Член содержит **true** только в том случае, если группа захвата, связанная с `*this` входил в состав совпадения регулярного выражения.
+Элемент имеет **значение true** , только если группа захвата, связанная с `*this` , является частью сопоставления регулярного выражения.
 
 ## <a name="op_basic_string_lt_value_type_gt"></a>  sub_match::operator basic_string&lt;value_type&gt;
 
@@ -256,5 +256,5 @@ Typedef является синонимом `iterator_traits<BidIt>::value_type`
 
 ## <a name="see-also"></a>См. также
 
-[\<regex>](../standard-library/regex.md)<br/>
-[sub_match](../standard-library/sub-match-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[sub_match](../standard-library/sub-match-class.md)

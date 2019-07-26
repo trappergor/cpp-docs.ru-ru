@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - regex header
 ms.assetid: 5dd4ef74-6063-4dbc-b692-1960bb736f0b
-ms.openlocfilehash: 0a4728008130119ed9a01334efb2fea2a4ac0639
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3e3f3b49b3672042e0376e7738a8cf8924e1c2a8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368985"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451445"
 ---
 # <a name="ltregexgt"></a>&lt;regex&gt;
 
@@ -27,9 +27,9 @@ ms.locfileid: "62368985"
 
 Чтобы создать объект регулярного выражения, используйте класс шаблона [Класс basic_regex](../standard-library/basic-regex-class.md) или одну из его специализаций ([regex](../standard-library/regex-typedefs.md#regex) и [wregex](../standard-library/regex-typedefs.md#wregex)) вместе с флагами синтаксиса типа [regex_constants::syntax_option_type](../standard-library/regex-constants-class.md#syntax_option_type).
 
-Для поиска в тексте соответствий с объектом регулярного выражения, используйте функции шаблона [regex_match](../standard-library/regex-functions.md#regex_match) и [regex_search](../standard-library/regex-functions.md#regex_search)вместе с флагами соответствия типа [regex_constants::match_ flag_type](../standard-library/regex-constants-class.md#match_flag_type). Эти функции возвращают результаты с использованием класса шаблонов [match_results Class](../standard-library/match-results-class.md) и его специализаций, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) и [wsmatch](../standard-library/regex-typedefs.md#wsmatch), а также класса шаблона [Класс sub_match](../standard-library/sub-match-class.md) и его специализаций, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) и [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
+Для поиска совпадений с объектом регулярного выражения используйте функции-шаблоны [regex_match](../standard-library/regex-functions.md#regex_match) и [regex_search](../standard-library/regex-functions.md#regex_search)вместе с флагами соответствия типа [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type). Эти функции возвращают результаты с использованием класса шаблонов [match_results Class](../standard-library/match-results-class.md) и его специализаций, [cmatch](../standard-library/regex-typedefs.md#cmatch), [wcmatch](../standard-library/regex-typedefs.md#wcmatch), [smatch](../standard-library/regex-typedefs.md#smatch) и [wsmatch](../standard-library/regex-typedefs.md#wsmatch), а также класса шаблона [Класс sub_match](../standard-library/sub-match-class.md) и его специализаций, [csub_match](../standard-library/regex-typedefs.md#csub_match), [wcsub_match](../standard-library/regex-typedefs.md#wcsub_match), [ssub_match](../standard-library/regex-typedefs.md#ssub_match) и [wssub_match](../standard-library/regex-typedefs.md#wssub_match).
 
-Для замены текста, соответствующего объекту регулярного выражения, используйте функцию шаблона [regex_replace](../standard-library/regex-functions.md#regex_replace)вместе с флагами соответствия типа [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
+Чтобы заменить текст, совпадающий с объектом регулярного выражения, используйте функцию-шаблон [regex_replace](../standard-library/regex-functions.md#regex_replace)вместе с флагами Match типа [regex_constants:: match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
 Чтобы выполнить итерацию нескольких соответствий объекта регулярного выражения, используйте классы шаблона [Класс regex_iterator](../standard-library/regex-iterator-class.md) и [Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md) или одну из их специализаций, [cregex_iterator](../standard-library/regex-typedefs.md#cregex_iterator), [sregex_iterator](../standard-library/regex-typedefs.md#sregex_iterator), [wcregex_iterator](../standard-library/regex-typedefs.md#wcregex_iterator), [wsregex_iterator](../standard-library/regex-typedefs.md#wsregex_iterator), [cregex_token_iterator](../standard-library/regex-typedefs.md#cregex_token_iterator), [sregex_token_iterator](../standard-library/regex-typedefs.md#sregex_token_iterator), [wcregex_token_iterator](../standard-library/regex-typedefs.md#wcregex_token_iterator) или [wsregex_token_iterator](../standard-library/regex-typedefs.md#wsregex_token_iterator), вместе с флагами соответствия типа [regex_constants::match_flag_type](../standard-library/regex-constants-class.md#match_flag_type).
 
@@ -96,12 +96,12 @@ ms.locfileid: "62368985"
 
 ## <a name="see-also"></a>См. также
 
-[Регулярные выражения (C++)](../standard-library/regular-expressions-cpp.md)<br/>
-[Класс regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Класс regex_error](../standard-library/regex-error-class.md)<br/>
-[Функции \<regex>](../standard-library/regex-functions.md)<br/>
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Операторы \<regex>](../standard-library/regex-operators.md)<br/>
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Класс regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
+[Регулярные выражения (C++)](../standard-library/regular-expressions-cpp.md)\
+[Класс regex_constants](../standard-library/regex-constants-class.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<>ные операторы Regex](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[Определения типов \<regex>](../standard-library/regex-typedefs.md)

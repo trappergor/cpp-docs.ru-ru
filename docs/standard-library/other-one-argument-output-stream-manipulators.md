@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - output streams, one-argument manipulators
 ms.assetid: e381dee8-6b16-4cef-805a-4a6a1d2b696b
-ms.openlocfilehash: b5f24033d8da0933b8252fdace60fb419ef2e605
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c9e9e7531733ac40022b477980297c80ac488221
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370831"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453452"
 ---
 # <a name="other-one-argument-output-stream-manipulators"></a>Прочие манипуляторы потока вывода с одним аргументом
 
-В следующем примере используется класс `money`, который является **long** типа. Манипулятор `setpic` присоединяет строку форматирования "рисунок" к классу, который может использоваться перегруженным оператором вставки в поток класса `money`. Строка изображения сохраняется как статическая переменная в классе `money`, а не как член данных класса потока, поэтому не нужно производить новый класс потока вывода.
+В следующем примере используется класс `money`типа **Long** . Манипулятор `setpic` присоединяет строку форматирования "рисунок" к классу, который может использоваться перегруженным оператором вставки в поток класса `money`. Строка изображения сохраняется как статическая переменная в классе `money`, а не как член данных класса потока, поэтому не нужно производить новый класс потока вывода.
 
 ## <a name="example"></a>Пример
 
@@ -77,4 +77,4 @@ int main( )
 
 ## <a name="see-also"></a>См. также
 
-[Пользовательские манипуляторы с аргументами](../standard-library/custom-manipulators-with-arguments.md)<br/>
+[Пользовательские манипуляторы с аргументами](../standard-library/custom-manipulators-with-arguments.md)

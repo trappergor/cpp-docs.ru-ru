@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f8c4026da424e77b57555dd4c342c9ac7a386591
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413441"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447989"
 ---
 # <a name="istriviallycopyconstructible-class"></a>Класс is_trivially_copy_constructible
 
@@ -26,14 +26,14 @@ struct is_trivially_copy_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* является классом, имеющим тривиальный конструктор копии, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *T* является классом с тривиальным конструктором копии, в противном случае — значение false.
 
-Конструктор копии для класса *T* является тривиальным, если он неявно объявляется, класс *T* не имеет виртуальных функций или виртуальных базовых классов, все прямые базовые классы класса *T* имеют тривиальные конструкторы копирования; классы всех нестатических членов типа класса имеют тривиальные конструкторы копий и классы всех нестатических членов массива типов класса имеют тривиальные конструкторы копирования.
+Конструктор копии для класса *t* является тривиальным, если он неявно объявлен, но у класса *t* нет виртуальных функций или виртуальных базовых баз, все прямые базы класса *t* имеют тривиальные конструкторы копий, классы всех нестатических элементов данных. класс Type имеет тривиальные конструкторы копий, а классы всех нестатических элементов данных массива типов класса имеют тривиальные конструкторы копий.
 
 ## <a name="requirements"></a>Требования
 
@@ -43,4 +43,4 @@ struct is_trivially_copy_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

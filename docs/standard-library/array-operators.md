@@ -9,16 +9,16 @@ f1_keywords:
 - array/std::array::operator>=
 - array/std::array::operator==
 ms.assetid: c8f46282-f179-4909-9a01-639cb8e18c27
-ms.openlocfilehash: c44789c958b3fc24441b95178acc85ce3ba337fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 88244879be9ab27c826c0b051b724fa1c3ed4784
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62377339"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456766"
 ---
 # <a name="ltarraygt-operators"></a>Операторы &lt;array&gt;
 
-\<Массива > Заголовок включает эти **массива** сравнения не являющиеся членами функции шаблона.
+Заголовок \<массива > **содержит следующие функции** шаблона сравнения, не являющиеся элементами.
 
 ||||
 |-|-|-|
@@ -38,16 +38,16 @@ bool operator!=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -111,16 +111,16 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -184,16 +184,16 @@ bool operator<=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -257,16 +257,16 @@ bool operator==(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -330,16 +330,16 @@ bool operator>(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -403,16 +403,16 @@ bool operator>=(
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Тип элемента.
 
-*N*<br/>
+*\N*\
 Размер массива.
 
-*left*<br/>
+*слева*\
 Левый контейнер для сравнения.
 
-*right*<br/>
+*Правильно*\
 Правый контейнер для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -465,4 +465,4 @@ false
 
 ## <a name="see-also"></a>См. также
 
-[\<array>](../standard-library/array.md)<br/>
+[\<array>](../standard-library/array.md)

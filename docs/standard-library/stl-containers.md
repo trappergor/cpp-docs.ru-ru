@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ Standard Library, template class containers
 - containers, C++ Standard Library
 ms.assetid: 8e915ca1-19ba-4f0d-93c8-e2c3bfd638eb
-ms.openlocfilehash: a6f4da35468143e6d7c3dda684ed93f33e29b21d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6077ff76e04e6f078946eed0856723e2a9998f58
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412414"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449598"
 ---
 # <a name="c-standard-library-containers"></a>Контейнеры стандартной библиотеки C++
 
@@ -166,11 +166,11 @@ int main()
 
 ### <a name="comparing-dissimilar-containers-c14"></a>Сравнение контейнеров разного типа (C++ 14)
 
-В C ++ 14 и более поздних версиях можно сравнивать контейнеры и элементы разного типа с помощью одного из `std::equal`, `std::mismatch`, или `std::is_permutation` функции перегрузки, которые принимают два полных диапазона. Эти перегрузки позволяют сравнивать контейнеры разной длины. Эти перегрузки намного менее подвержены ошибкам пользователя и оптимизированы для возврата значения false в одно и то же время, когда сравниваются контейнеры разной длины. Поэтому рекомендуется использовать эти перегрузки, если у вас нет веской причины против их использования и если вы не используете контейнер [std::list](../standard-library/list-class.md), в котором не реализуются преимущества двухдиапазонной оптимизации.
+В c++ 14 и более поздних версиях можно сравнивать несхожие контейнеры и (или) типы элементов, используя одну `std::equal`из `std::mismatch`перегрузок функций, или `std::is_permutation` , принимающих два полных диапазона. Эти перегрузки позволяют сравнивать контейнеры разной длины. Эти перегрузки намного менее подвержены ошибкам пользователя и оптимизированы для возврата значения false в одно и то же время, когда сравниваются контейнеры разной длины. Поэтому рекомендуется использовать эти перегрузки, если у вас нет веской причины против их использования и если вы не используете контейнер [std::list](../standard-library/list-class.md), в котором не реализуются преимущества двухдиапазонной оптимизации.
 
 ## <a name="see-also"></a>См. также
 
-[Контейнеры](../cpp/containers-modern-cpp.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[\<образец контейнера>](../standard-library/sample-container.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Контейнеры](../cpp/containers-modern-cpp.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)\
+[\<образец контейнера>](../standard-library/sample-container.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

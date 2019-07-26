@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_assignable
 ms.assetid: aa3aca92-308b-4b1d-b3f3-c54216c48fe7
-ms.openlocfilehash: c59c3623f9c9548a7b7e59d0c56a2acd4d3883a3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9ee8b5f97c92b6eb378db40f93696e5e6c554205
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383624"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456020"
 ---
 # <a name="isnothrowassignable-class"></a>Класс is_nothrow_assignable
 
-Проверяет, является ли значение *из* типа могут быть назначены *для* не будет выдавать известен тип и назначения.
+Проверяет, может ли значение *из* типа быть присвоено *типу,* и известно, что присваивание не вызывается.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,15 +26,15 @@ struct is_nothrow_assignable;
 
 ### <a name="parameters"></a>Параметры
 
-*Задача*<br/>
+*Кому*\
 Тип объекта, который получает назначение.
 
-*From*<br/>
+*От*\
 Тип объекта, который предоставляет значение.
 
 ## <a name="remarks"></a>Примечания
 
-Выражение `declval<To>() = declval<From>()` должно иметь правильный формат и быть известно компилятору как не вызывающее исключений. Оба *из* и *для* должны быть полными типами **void**, или массивами с неизвестной границей.
+Выражение `declval<To>() = declval<From>()` должно иметь правильный формат и быть известно компилятору как не вызывающее исключений. И *от* , и *до* должны быть полными типами, **void**или массивами неизвестной привязки.
 
 ## <a name="requirements"></a>Требования
 
@@ -44,4 +44,4 @@ struct is_nothrow_assignable;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

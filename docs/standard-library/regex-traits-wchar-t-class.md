@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - regex_traits<wchar_t> class
 ms.assetid: 288d6fdb-fb8e-4a4d-904a-53916be7f95b
-ms.openlocfilehash: cba5a7a036806f244f45a2d3b7a6317393f7a196
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1a1f08509a20b5a0eabb26b715e22bf7c6de544c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369089"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451477"
 ---
 # <a name="regextraitsltwchartgt-class"></a>Класс regex_traits&lt;wchar_t&gt;
 
-Специализация `regex_traits` для **wchar_t**.
+Специализация для **wchar_t.** `regex_traits`
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,7 +26,7 @@ class regex_traits<wchar_t>
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс является явной специализацией шаблона класса [regex_traits](../standard-library/regex-traits-class.md) для элементов типа **wchar_t** (благодаря чему он может использовать преимущества библиотечных функций, манипулирующих объектами данного типа).
+Класс является явной специализацией класса шаблона [regex_traits](../standard-library/regex-traits-class.md) для элементов типа **wchar_t** (чтобы использовать преимущества библиотечных функций, которые управляют объектами этого типа).
 
 ## <a name="requirements"></a>Требования
 
@@ -36,12 +36,12 @@ class regex_traits<wchar_t>
 
 ## <a name="see-also"></a>См. также
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Класс regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Класс regex_error](../standard-library/regex-error-class.md)<br/>
-[Функции \<regex>](../standard-library/regex-functions.md)<br/>
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Операторы \<regex>](../standard-library/regex-operators.md)<br/>
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Класс regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Класс regex_constants](../standard-library/regex-constants-class.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<>ные операторы Regex](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[Определения типов \<regex>](../standard-library/regex-typedefs.md)

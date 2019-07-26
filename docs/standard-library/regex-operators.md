@@ -10,12 +10,12 @@ f1_keywords:
 - regex/std::operator==
 - regex/std::operator<<
 ms.assetid: ec623e65-c186-491f-aa18-6b12b47e1127
-ms.openlocfilehash: ee0d9ba820cff55a9cfbb130c8f90ca02fbee84a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 829b4cf50b02db0a88d61a8801c1e21ddb470344
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62369557"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460124"
 ---
 # <a name="ltregexgt-operators"></a>Операторы &lt;regex&gt;
 
@@ -66,19 +66,19 @@ bool operator!=(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
@@ -181,24 +181,24 @@ bool operator<(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
 
-Каждый оператор-шаблон преобразует свои аргументы в тип string и возвращает значение true только в том случае, если преобразованное значение *левой* оказывается меньше преобразованное значение *правой*.
+Каждый оператор-шаблон преобразует свои аргументы в строковый тип и возвращает значение true, только если преобразованное значение *Left* сравнивается со значением *right*.
 
 ### <a name="example"></a>Пример
 
@@ -266,22 +266,22 @@ basic_ostream<Elem, IOtraits>& operator<<(basic_ostream<Elem, IOtraits>& os,
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*ОС*<br/>
+*эквивалент*\
 Выходной поток.
 
-*right*<br/>
+*Правильно*\
 Вставляемый объект.
 
 ### <a name="remarks"></a>Примечания
@@ -351,19 +351,19 @@ bool operator<=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
@@ -465,19 +465,19 @@ bool operator==(const match_results<BidIt, Alloc>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
@@ -588,19 +588,19 @@ bool operator>(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
@@ -698,19 +698,19 @@ bool operator>=(const sub_match<BidIt>& left,
 
 ### <a name="parameters"></a>Параметры
 
-*BidIt*<br/>
+*Двунаправленный*\
 Тип итератора.
 
-*IOtraits*<br/>
+*иотраитс*\
 Класс характеристик строки.
 
-*Alloc*<br/>
+*Идентификатор*\
 Класс распределителя.
 
-*left*<br/>
+*слева*\
 Левый из сравниваемых объектов.
 
-*right*<br/>
+*Правильно*\
 Правый из сравниваемых объектов.
 
 ### <a name="remarks"></a>Примечания
@@ -773,11 +773,11 @@ sub >= 'a' == true
 
 ## <a name="see-also"></a>См. также
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Класс regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Класс regex_error](../standard-library/regex-error-class.md)<br/>
-[Функции \<regex>](../standard-library/regex-functions.md)<br/>
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Класс regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Класс regex_constants](../standard-library/regex-constants-class.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[Определения типов \<regex>](../standard-library/regex-typedefs.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::cauchy_distribution [C++], param_type
 - std::cauchy_distribution [C++], param_type
 ms.assetid: 21522351-f2f1-46d9-97f0-d358c932356c
-ms.openlocfilehash: 680ceb29514265ff77be6f6ae708fea0a8e769af
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 628d79c8026c11c7583448ce021a6aaee4ace6d9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66450225"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449861"
 ---
 # <a name="cauchydistribution-class"></a>Класс cauchy_distribution
 
@@ -70,15 +70,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*<br/>
-Универсальный механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*\
+Единый механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем с плавающей запятой типа или типа **двойные** Если тип не указан, распределенные в соответствии с распределением Коши. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с распределением распределение Коши. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -251,13 +251,13 @@ explicit cauchy_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*\
 Параметр распределения `a`.
 
-*b*<br/>
+*&* \
 Параметр распределения `b`.
 
-*parm*<br/>
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -286,13 +286,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*\
 Параметр распределения `a`.
 
-*b*<br/>
+*&* \
 Параметр распределения `b`.
 
-*right*<br/>
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
@@ -303,4 +303,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

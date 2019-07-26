@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_constructible
 ms.assetid: 3fa918c1-e66f-4d0e-a11b-be1fb2c02e7b
-ms.openlocfilehash: c83bea8be5c88876ffa25337464caa62b998ab45
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6f177463b985d3e7b2f7ab7783f9c3db0dcd5722
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413480"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448011"
 ---
 # <a name="istriviallyconstructible-class"></a>Класс is_trivially_constructible
 
@@ -26,15 +26,15 @@ struct is_trivially_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
-*Args*<br/>
-Типы аргументов для сопоставления в конструктор *T*.
+*Args*\
+Типы аргументов для сопоставления в конструкторе *T*.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* — просто создаваемый при использовании типов аргументов в *Args*, в противном случае он содержит значение false. Тип *T* является просто создаваемым при определении переменной `T t(std::declval<Args>()...);` имеет правильный формат и известно, что вызов не нетривиальные операции. Оба *T* и все типы в *Args* должны быть полными типами **void**, или массивами с неизвестной границей.
+Экземпляр предиката типа содержит значение true, если тип *T* является тривиально конструируемым с помощью типов аргументов в аргументах *args*, в противном случае — значение false. Тип *T* является тривиальным конструируемым, если определение `T t(std::declval<Args>()...);` переменной имеет правильный формат и известно, что он вызывает не нетривиальные операции. *T* и все типы в аргументах *args* должны быть полными типами, **void**или массивами неизвестной привязки.
 
 ## <a name="requirements"></a>Требования
 
@@ -44,4 +44,4 @@ struct is_trivially_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - stdext::cache_suballoc [C++], allocate
 - stdext::cache_suballoc [C++], deallocate
 ms.assetid: 9ea9c5e9-1dcc-45d0-b3a7-a56a93d88898
-ms.openlocfilehash: 06d0ef390e6ae1980b9ab20b8ceb67213837148b
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: aa0ceda69fc169593719c3a4f81d308bb6cde284
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62380121"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449645"
 ---
 # <a name="cachesuballoc-class"></a>Класс cache_suballoc
 
@@ -32,13 +32,13 @@ class cache_suballoc
 
 |Параметр|Описание|
 |---------------|-----------------|
-|*sz*|Число элементов в массиве, которые нужно выделить.|
+|*SZ*|Число элементов в массиве, которые нужно выделить.|
 
 ## <a name="remarks"></a>Примечания
 
-Класс cache_suballoc шаблона сохраняет освобожденные блоки памяти в списке свободных неограниченной длины с помощью `freelist<sizeof(Type), max_unbounded>`и распределяет блоки памяти из большего участка, выделена при помощи **оператор new** при свободного списка пустой.
+Класс шаблона cache_suballoc сохраняет освобожденные блоки памяти в свободном списке с неограниченной длиной, используя `freelist<sizeof(Type), max_unbounded>`и подраспределяет блоки памяти из большего блока, выделенного с помощью **оператора New** , если свободный список пуст.
 
-Каждый блок содержит `Sz * Nelts` байт свободной памяти и данные, **оператор new** и **оператор delete** требуют. Выделенные участки памяти никогда не будут освобождены.
+Каждый блок содержит `Sz * Nelts` байты доступной памяти и данные, необходимые **операторам New** и **Delete** . Выделенные участки памяти никогда не будут освобождены.
 
 ### <a name="constructors"></a>Конструкторы
 
@@ -48,7 +48,7 @@ class cache_suballoc
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -108,4 +108,4 @@ void deallocate(void* ptr, std::size_t count);
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

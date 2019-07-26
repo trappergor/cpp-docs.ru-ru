@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - std::value_compare
 ms.assetid: ea97c1d0-04b2-4d42-8d96-23522c04cc41
-ms.openlocfilehash: 69b484944c9ce30dc28fceacfb082051da31c053
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d098e947aec1ea543f29c168a632d1f4c9412e82
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365020"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448327"
 ---
 # <a name="valuecompare-class-ltmapgt"></a>Класс value_compare (&lt;map&gt;)
 
@@ -35,7 +35,7 @@ protected:
 
 ## <a name="remarks"></a>Примечания
 
-Критерий сравнения, предоставляемые `value_compare` между `value_types` всех элементов, содержащихся в сопоставлении, вытекает из сравнения между ключами соответствующих элементов во вспомогательном классе. Оператор функции-члена использует объект `comp` типа `key_compare` хранящиеся в объекте функции, предоставляемые `value_compare` для сравнения ключей сортировки компонентов для двух элементов.
+Критерий сравнения, `value_compare` предоставляемый `value_types` между целыми элементами, содержащимися в сопоставлении, вызывается путем сравнения ключей соответствующих элементов с помощью вспомогательной конструкции класса. Оператор функции-члена использует объект `comp` типа `key_compare` , хранящийся в объекте функции, предоставляемом `value_compare` функцией, для сравнения компонентов ключа сортировки двух элементов.
 
 Для наборов и множественных наборов, которые представляют собой простые контейнеры, в которых значения ключей идентичны значениям элементов, `value_compare` эквивалентно `key_compare`; для сопоставлений и объектов multimap, это не так, так как элементы типа `pair` не эквивалентны значению ключа элемента.
 
@@ -51,6 +51,6 @@ protected:
 
 ## <a name="see-also"></a>См. также
 
-[Структура binary_function](../standard-library/binary-function-struct.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Структура binary_function](../standard-library/binary-function-struct.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)
