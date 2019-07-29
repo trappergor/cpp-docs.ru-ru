@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Пример файла проекта
                   href: build/reference/project-files.md
-            - name: Справочник по свойствам проектов С++
+            - name: Страницы свойств проекта C++
               expanded: false
               items:
                 - name: Справочник по свойствам проектов С++
@@ -416,6 +416,8 @@
                   href: build/reference/general-property-page-file.md
                 - name: Страница свойств "Дополнительно"
                   href: build/reference/advanced-property-page.md
+                - name: Страницы свойств отладки
+                  href: build/reference/debugging-prop-pages.md
                 - name: Страница свойств каталогов VC++
                   href: build/reference/vcpp-directories-property-page.md
                 - name: Страницы свойств C/C++
@@ -4351,6 +4353,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: Модули
+              expanded: false
+              items:
+                - name: Обзор модулей в C++
+                  href: cpp/modules-cpp.md
+                - name: 'модуль, импорт, экспорт'
+                  href: cpp/import-export-module.md
             - name: Шаблоны
               expanded: false
               items:
