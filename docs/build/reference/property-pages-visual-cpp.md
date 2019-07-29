@@ -1,8 +1,6 @@
 ---
 title: C++Справочник по страницам свойств проекта — Visual Studio
-ms.date: 07/16/2019
-f1_keywords:
-- VC.Project.NotAProp.Edit
+ms.date: 07/24/2019
 helpviewer_keywords:
 - project-file macro
 - project properties [C++], default values
@@ -14,12 +12,12 @@ helpviewer_keywords:
 - build macro
 - user-defined macros
 ms.assetid: 13ffe3ea-1bc3-4bee-be5e-053a8a99cce4
-ms.openlocfilehash: 9f0dbe31325ec894add3d2577eb977a0c6dd7c41
-ms.sourcegitcommit: ce3393846c86e7905ff0c86e4cd6610476809585
+ms.openlocfilehash: d425cc6c5c6a2a8934c026174f396cb01bc3a9b7
+ms.sourcegitcommit: 720b74dddb1cdf4e570d55103158304ee1df81f8
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68492136"
+ms.lasthandoff: 07/29/2019
+ms.locfileid: "68606388"
 ---
 # <a name="c-project-property-page-reference"></a>C++Справочник по страницам свойств проекта
 
@@ -29,45 +27,25 @@ ms.locfileid: "68492136"
 
 ## <a name="in-this-section"></a>В этом разделе
 
-[Страница свойств "Общие" (проект)](general-property-page-project.md)
-
-[Страница свойств каталогов VC++](vcpp-directories-property-page.md)
-
-[Средство манифеста, средство общего](general-manifest-tool-configuration-properties.md)
-манифеста, средство манифеста[входных и выходных данных](input-and-output-manifest-tool.md)
-[, изолированное](isolated-com-manifest-tool.md)
-[средство манифеста COM, дополнительно](advanced-manifest-tool.md)
-
-
-[Страницы свойств командной строки](command-line-property-pages.md)
-
-[Страница свойств настраиваемого этапа сборки: общие](custom-build-step-property-page-general.md)
-
-[Добавление ссылок](../adding-references-in-visual-cpp-projects.md)
-
-[Страница свойств "Общие" (файл)](general-property-page-file.md)
-
-[Страницы свойств HLSL](hlsl-property-pages.md)
-
-[Страницы свойств компоновщика](linker-property-pages.md)
-
-[Страница свойств управляемых ресурсов](managed-resources-property-page.md)
-
-[Страницы свойств инструмента манифеста](manifest-tool-property-pages.md)
-
-[Страницы свойств MIDL](midl-property-pages.md)
-
-[Страница свойств NMake](nmake-property-page.md)
-
-[Страницы свойств ресурсов](resources-property-pages.md)
-
-[Страница свойств веб-ссылок](web-references-property-page.md)
-
-[Страница свойств "Инструмент создания XML-данных"](xml-data-generator-tool-property-page.md)
-
-[Страницы свойств средства создания XML-документов](xml-document-generator-tool-property-pages.md)
+- [Страница свойств "Общие" (проект)](general-property-page-project.md)
+- [Страница свойств "Общие" (файл)](general-property-page-file.md)
+- [Страница свойств «Дополнительно»](advanced-property-page.md)
+- [Страница свойств каталогов VC++](vcpp-directories-property-page.md)
+- [Страницы свойств компоновщика](linker-property-pages.md)
+- [Страницы свойств инструмента манифеста](manifest-tool-property-pages.md)
+- [Страницы свойств HLSL](hlsl-property-pages.md)
+- [Страницы свойств командной строки](command-line-property-pages.md)
+- [Страница свойств настраиваемого этапа сборки: общие](custom-build-step-property-page-general.md)
+- [Добавление ссылок](../adding-references-in-visual-cpp-projects.md)
+- [Страница свойств управляемых ресурсов](managed-resources-property-page.md)
+- [Страницы свойств MIDL](midl-property-pages.md)
+- [Страница свойств NMake](nmake-property-page.md)
+- [Страницы свойств ресурсов](resources-property-pages.md)
+- [Страница свойств веб-ссылок](web-references-property-page.md)
+- [Страница свойств "Инструмент создания XML-данных"](xml-data-generator-tool-property-page.md)
+- [Страницы свойств средства создания XML-документов](xml-document-generator-tool-property-pages.md)
 
 ## <a name="see-also"></a>См. также
 
-[Практическое руководство. Создание и удаление зависимостей проекта](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[Практическое руководство. Создание и удаление зависимостей проекта](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br/>
 [Практическое руководство. Создание и изменение конфигураций](/visualstudio/ide/how-to-create-and-edit-configurations)
