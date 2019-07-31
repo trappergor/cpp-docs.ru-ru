@@ -3,18 +3,16 @@ title: Свойства CC++ /Project (Visual Studio)
 ms.date: 7/18/2019
 ms.topic: article
 ms.assetid: 16375038-4917-4bd0-9a2a-26343c1708b7
-author: mikeblome
-ms.author: mblome
-ms.openlocfilehash: bf457366f1818593e937d4c9e95651f48db64528
-ms.sourcegitcommit: 0867d648e0955ebad7260b5fbebfd6cd4d58f3c7
-ms.translationtype: HT
+ms.openlocfilehash: 91edf30ef0e5f38088727c0280d2edf07cdebfa5
+ms.sourcegitcommit: 7b039b5f32f6c59be6c6bb1cffafd69c3bfadd35
+ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68342265"
+ms.lasthandoff: 07/26/2019
+ms.locfileid: "68537572"
 ---
 # <a name="cc-property-pages"></a>C/C++ страницы свойств
 
-Следующие страницы свойств находятся в разделе Свойства **проекта** > свойства > **конфигурации** > **C/C++** :
+Следующие страницы свойств находятся в разделе Свойства **проекта** > **свойства** > **конфигурации** > **C/C++** :
 
 ## <a name="cc-general-properties"></a>Свойства CC++ /общие
 
@@ -436,7 +434,7 @@ ms.locfileid: "68342265"
 **Элементов**
 
 - **__cdecl** — указывает соглашение о вызовах __cdecl для всех функций C++ , кроме функций-членов и функций, помеченных как __stdcall или __fastcall.
-- **__fastcall** — указывает соглашение о вызовах __fastcall для всех функций C++ , кроме Member сфунктионс и функций, помеченных как __cdecl или __stdcall. Все функции __fastcall должны иметь прототипы.
+- **__fastcall** — указывает соглашение о вызовах __fastcall для всех функций C++ , кроме функций-членов и функций, помеченных как __cdecl или __stdcall. Все функции __fastcall должны иметь прототипы.
 - **__stdcall** — указывает соглашение о вызовах __stdcall для всех функций C++ , кроме функций-членов и функций, помеченных как __cdecl или __fastcall. Все функции __stdcall должны иметь прототипы.
 - **__vectorcall** — указывает соглашение о вызовах __vectorcall для всех функций C++ , кроме функций-членов и функций, помеченных как __cdecl, __fastcall или __stdcall. Все функции __vectorcall должны иметь прототипы.
 
