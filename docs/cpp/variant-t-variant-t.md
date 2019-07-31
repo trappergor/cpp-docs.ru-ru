@@ -208,7 +208,7 @@ _variant_t(
 
 - **_variant_t (VARIANT &** *varSrc* **, bool**`fCopy` **)** создает `_variant_t` из существующего `VARIANT` объект. Если *fCopy* — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.
 
-- **_variant_t (короткий***sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** создает `_variant_t` объект типа VT_I2 или VT_BOOL из **короткие** целочисленное значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
+- **_variant_t (короткий** *sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** создает `_variant_t` объект типа VT_I2 или VT_BOOL из **короткие** целочисленное значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
 
 - **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** создает `_variant_t` объект типа VT_I4, VT_BOOL или VT_ERROR из **long**  целочисленное значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
 
