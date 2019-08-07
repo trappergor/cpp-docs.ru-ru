@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonApplicationButton
+title: Класс Кмфкриббонаппликатионбуттон
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonApplicationButton
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-ms.openlocfilehash: 01b6937ee597766922597fda5664c78f75be6b67
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: d1dc8ef6e801623aa96cb4b47936413cd17f24f0
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772167"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821241"
 ---
-# <a name="cmfcribbonapplicationbutton-class"></a>Класс CMFCRibbonApplicationButton
+# <a name="cmfcribbonapplicationbutton-class"></a>Класс Кмфкриббонаппликатионбуттон
 
 Реализует отдельную кнопку, расположенную в левом верхнем углу окна приложения. При нажатии кнопки открывается меню, которое обычно содержит общие команды **Файл** , **Открыть**, **Сохранить**и **Выход**.
 
@@ -33,19 +33,19 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonApplicationButton::CMFCRibbonApplicationButton](#cmfcribbonapplicationbutton)|Создает и инициализирует объект `CMFCRibbonApplicationButton`.|
+|[Кмфкриббонаппликатионбуттон:: Кмфкриббонаппликатионбуттон](#cmfcribbonapplicationbutton)|Создает и инициализирует объект `CMFCRibbonApplicationButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
 |`CMFCRibbonApplicationButton::CreateObject`|Используется платформой для создания динамического экземпляра этого типа класса.|
-|`CMFCRibbonApplicationButton::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|[CMFCRibbonApplicationButton::SetImage](#setimage)|Назначает изображение кнопка приложения на ленте.|
+|`CMFCRibbonApplicationButton::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
+|[Кмфкриббонаппликатионбуттон:: Сетимаже](#setimage)|Назначает изображение для кнопки приложения на ленте.|
 
 ## <a name="example"></a>Пример
 
-В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonApplicationButton` . В примере показано, как назначить изображение для кнопки приложения и как задать ее всплывающей подсказкой. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
+В приведенном ниже примере демонстрируется использование различных методов класса `CMFCRibbonApplicationButton` . В примере показано, как назначить изображение кнопке приложения и как задать его подсказку. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -58,37 +58,37 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
 
-[CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
+[кмфкриббонаппликатионбуттон](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxRibbonBar.h
+**Заголовок:** афксриббонбар. h
 
-##  <a name="cmfcribbonapplicationbutton"></a>  CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
+##  <a name="cmfcribbonapplicationbutton"></a>Кмфкриббонаппликатионбуттон:: Кмфкриббонаппликатионбуттон
 
-Создает и инициализирует [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md) объекта.
+Создает и инициализирует объект [кмфкриббонаппликатионбуттон](../../mfc/reference/cmfcribbonapplicationbutton-class.md) .
 
 ```
 CMFCRibbonApplicationButton();
 CMFCRibbonApplicationButton(UINT uiBmpResID);
-  CMFCRibbonApplicationButton(HBITMAP hBmp);
+CMFCRibbonApplicationButton(HBITMAP hBmp);
 ```
 
 ### <a name="parameters"></a>Параметры
 
-*uiBmpResID*<br/>
-Идентификатор ресурса изображения для отображения кнопки приложения.
+*уибмпресид*<br/>
+Идентификатор ресурса изображения, отображаемого на кнопке приложения.
 
-*hBmp*<br/>
-Дескриптор к растровому изображению, для отображения кнопки приложения.
+*хбмп*<br/>
+Маркер для растрового изображения, отображаемого на кнопке приложения.
 
 ### <a name="remarks"></a>Примечания
 
-Эта кнопка на ленте приложения имеет отдельную кнопку, расположенную в левом верхнем углу окна приложения. Когда пользователь нажимает эту кнопку, чтобы приложение открывается меню, которое обычно содержит общие **файл** команд, таких как **откройте**, **Сохранить**, и **выхода**.
+Кнопка «приложение-лента» — это специальная кнопка, расположенная в левом верхнем углу окна приложения. Когда пользователь нажимает эту кнопку, приложение открывает меню, которое обычно содержит общие команды **File** , такие как **Открытие**, **Сохранение**и **выход**.
 
-##  <a name="setimage"></a>  CMFCRibbonApplicationButton::SetImage
+##  <a name="setimage"></a>Кмфкриббонаппликатионбуттон:: Сетимаже
 
-Назначает изображения для кнопки приложения.
+Назначает изображение кнопке приложения.
 
 ```
 void SetImage(UINT uiBmpResID);
@@ -97,15 +97,15 @@ void SetImage(HBITMAP hBmp);
 
 ### <a name="parameters"></a>Параметры
 
-*uiBmpResID*<br/>
-[in] Идентификатор ресурса изображения для отображения кнопки приложения.
+*уибмпресид*<br/>
+окне Идентификатор ресурса изображения, отображаемого на кнопке приложения.
 
-*hBmp*<br/>
-[in] Дескриптор к растровому изображению, для отображения кнопки приложения.
+*хбмп*<br/>
+окне Маркер для растрового изображения, отображаемого на кнопке приложения.
 
 ### <a name="remarks"></a>Примечания
 
-Используйте этот метод, чтобы назначить новый образ в кнопка приложения на ленте после создания кнопки. Кнопка приложения находится в левом верхнем углу окна приложения.
+Используйте этот метод для назначения нового изображения кнопке приложения-ленты после создания кнопки. Кнопка приложения находится в левом верхнем углу окна приложения.
 
 ## <a name="see-also"></a>См. также
 
