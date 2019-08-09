@@ -7,12 +7,12 @@ helpviewer_keywords:
 - aligned_storage class
 - aligned_storage
 ms.assetid: f255e345-1f05-4d07-81e4-017f420839fb
-ms.openlocfilehash: 6a3145cb1837a3ea95c48022db391ddbccf55199
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8a4e907faa6175b9e03f5367d09501aaea388bce
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411101"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456476"
 ---
 # <a name="alignedstorage-class"></a>Класс aligned_storage
 
@@ -30,15 +30,15 @@ using aligned_storage_t = typename aligned_storage<Len, Align>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*функция Len*<br/>
+*Len*\
 Размер объекта.
 
-*Выравнивание*<br/>
+*Нижнем*\
 Выравнивание объекта.
 
 ## <a name="remarks"></a>Примечания
 
-Член шаблона typedef `type` является синонимом типа POD с выравниванием *выровнять* и размер *Len*. *Выровнять* должно быть равно `alignment_of<T>::value` для некоторого типа `T`, или выравниванию по умолчанию.
+Typedef `type` элемента шаблона является синонимом для типа POD с *выравниванием* по размеру и *длинам*размера. Значение *выравнивания* должно быть `alignment_of<T>::value` равным для `T`некоторого типа или для выравнивания по умолчанию.
 
 ## <a name="example"></a>Пример
 
@@ -72,5 +72,5 @@ aligned to double == 8
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс alignment_of](../standard-library/alignment-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс alignment_of](../standard-library/alignment-of-class.md)

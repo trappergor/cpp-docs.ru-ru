@@ -5,12 +5,12 @@ f1_keywords:
 - hash_set/std::operator!=
 - hash_set/std::operator==
 ms.assetid: 403d8e4e-0b3f-43fb-bc5a-8100c4f331c5
-ms.openlocfilehash: 901070731d372904ae297a5360ec0da78d179468
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3900e9c6e4fb7f5a163279165a51b440d138a8e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405031"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452034"
 ---
 # <a name="lthashsetgt-operators"></a>Операторы &lt;hash_set&gt;
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_set`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -46,7 +46,7 @@ bool operator!=(const hash_set <Key, Traits, Allocator>& left, const hash_set <K
 
 Сравнение между объектами hash_set основывается на попарном сравнении их элементов. Два объекта hash_set равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
-Членами [< hash_map >](../standard-library/hash-map.md) и [< hash_set >](../standard-library/hash-set.md) файлы заголовков находятся в [пространство имен stdext](../standard-library/stdext-namespace.md).
+Члены файлов заголовков [< hash_map >](../standard-library/hash-map.md) и [< hash_set >](../standard-library/hash-set.md) находятся в [пространстве имен stdext](../standard-library/stdext-namespace.md).
 
 ### <a name="example"></a>Пример
 
@@ -100,10 +100,10 @@ bool operator!==(const hash_set <Key, Traits, Allocator>& left, const hash_set <
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_set`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_set`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -166,10 +166,10 @@ bool operator!=(const hash_multiset <Key, Traits, Allocator>& left, const hash_m
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_multiset`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -232,10 +232,10 @@ bool operator!==(const hash_multiset <Key, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_multiset`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_multiset`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -287,4 +287,4 @@ The hash_multisets s1 and s2 are equal.
 
 ## <a name="see-also"></a>См. также
 
-[<hash_set>](../standard-library/hash-set.md)<br/>
+[<hash_set>](../standard-library/hash-set.md)

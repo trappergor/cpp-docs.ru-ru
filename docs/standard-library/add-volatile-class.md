@@ -7,16 +7,16 @@ helpviewer_keywords:
 - add_volatile class
 - add_volatile
 ms.assetid: cde57277-d764-402d-841e-97611ebaab14
-ms.openlocfilehash: ff48b1848e2d7631d789621a5ef845d04d8e8821
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: becea4ff52342a79d0b87ffe0022e2cf84c47949
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411140"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456535"
 ---
 # <a name="addvolatile-class"></a>Класс add_volatile
 
-Делает **volatile** типа из указанного типа.
+Создает тип **volatile** из указанного типа.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -30,12 +30,12 @@ using add_volatile_t = typename add_volatile<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `add_volatile<T>` имеет член **typedef** `type` то есть *T* Если *T* является ссылкой, функцией или квалификатором volatile тип, в противном случае **volatile** *T*. Псевдоним `add_volatile_t` является ярлыком для доступа к члену **typedef** `type`.
+`add_volatile<T>` У экземпляра есть **typedef** `type` члена, который имеет тип *t* , если *t* является ссылкой, функцией или типом с квалификатором, в противном случае — **переменную** *t*. Псевдоним `add_volatile_t` является ярлыком для доступа к определению **типа** `type`члена.
 
 ## <a name="example"></a>Пример
 
@@ -67,5 +67,5 @@ add_volatile<int> == int
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_volatile](../standard-library/remove-volatile-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_volatile](../standard-library/remove-volatile-class.md)

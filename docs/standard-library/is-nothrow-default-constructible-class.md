@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 76b58800a454f42f6b5b6fcea23df161c37564b2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148488"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455933"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>Класс is_nothrow_default_constructible
 
@@ -26,12 +26,12 @@ struct is_nothrow_default_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* имеет nothrow конструктор по умолчанию, в противном случае он содержит значение false. Экземпляр предиката типа эквивалентен `is_nothrow_constructible<Ty>`.
+Экземпляр предиката типа содержит значение true, если тип *Ty* имеет конструктор по умолчанию, в противном случае — значение false. Экземпляр предиката типа эквивалентен `is_nothrow_constructible<Ty>`.
 
 ## <a name="requirements"></a>Требования
 
@@ -41,4 +41,4 @@ struct is_nothrow_default_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

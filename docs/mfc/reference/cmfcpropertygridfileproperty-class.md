@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCPropertyGridFileProperty
+title: Класс Кмфкпропертигридфилепроперти
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCPropertyGridFileProperty
@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCPropertyGridFileProperty [MFC], CMFCPropertyGridFileProperty
 ms.assetid: 2bb8b8b4-47fc-4798-bd5e-dc8ea0b4cd9d
-ms.openlocfilehash: 20a0a50198357602d70a2111c6884058f7578af7
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4b64d18a67ea499c202b81481684227200846483
+ms.sourcegitcommit: c3bf94210bdb73be80527166264d49e33784152c
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62326712"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68821281"
 ---
-# <a name="cmfcpropertygridfileproperty-class"></a>Класс CMFCPropertyGridFileProperty
+# <a name="cmfcpropertygridfileproperty-class"></a>Класс Кмфкпропертигридфилепроперти
 
-`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления списка свойств, которая открывает диалоговое окно выбора файла.
+`CMFCPropertyGridFileProperty` Класс поддерживает элемент управления "список свойств", который открывает диалоговое окно выбора файла.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,8 +38,8 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 |name|Описание|
 |----------|-----------------|
-|`CMFCPropertyGridFileProperty::GetThisClass`|Используется инфраструктурой, чтобы получить указатель на [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md) объект, связанный с этим типом класса.|
-|`CMFCPropertyGridFileProperty::OnClickButton`|(Переопределяет [CMFCPropertyGridProperty::OnClickButton](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
+|`CMFCPropertyGridFileProperty::GetThisClass`|Используется платформой для получения указателя на объект [крунтимекласс](../../mfc/reference/cruntimeclass-structure.md) , связанный с этим типом класса.|
+|`CMFCPropertyGridFileProperty::OnClickButton`|(Переопределяет [кмфкпропертигридпроперти:: онкликкбуттон](../../mfc/reference/cmfcpropertygridproperty-class.md#onclickbutton).)|
 
 ### <a name="remarks"></a>Примечания
 
@@ -47,13 +47,13 @@ class CMFCPropertyGridFileProperty : public CMFCPropertyGridProperty
 
 [CObject](../../mfc/reference/cobject-class.md)
 
-[CMFCPropertyGridProperty](../../mfc/reference/cmfcpropertygridproperty-class.md)
+[кмфкпропертигридпроперти](../../mfc/reference/cmfcpropertygridproperty-class.md)
 
 [CMFCPropertyGridFileProperty](../../mfc/reference/cmfcpropertygridfileproperty-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxpropertygridctrl.h
+**Заголовок:** афкспропертигридктрл. h
 
 ##  <a name="cmfcpropertygridfileproperty"></a>  CMFCPropertyGridFileProperty::CMFCPropertyGridFileProperty
 
@@ -74,38 +74,38 @@ CMFCPropertyGridFileProperty(
 ### <a name="parameters"></a>Параметры
 
 *strName*<br/>
-[in] Имя свойства.
+окне Имя свойства.
 
-*bOpenFileDialog*<br/>
-[in] Значение true, чтобы открыть **открыть файл** диалоговом окне; Значение FALSE, чтобы открыть **сохранить файл** диалоговое окно.
+*бопенфиледиалог*<br/>
+окне Значение TRUE, чтобы открыть диалоговое окно **открытия файла** ; Значение FALSE, чтобы открыть диалоговое окно **сохранения файла** .
 
 *strFileName*<br/>
-[in] Исходное имя файла.
+окне Начальное имя файла.
 
-*lpszDefExt*<br/>
-[in] Строка, содержащая одно или несколько расширений имени файла. Значение по умолчанию имеет значение NULL.
+*лпсздефекст*<br/>
+окне Строка из одного или нескольких расширений имен файлов. Значение по умолчанию — NULL.
 
 *dwFlags*<br/>
-[in] Флаги диалогового окна. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов OFN_HIDEREADONLY и OFN_OVERWRITEPROMPT.
+окне Флаги диалогового окна. Значение по умолчанию представляет собой битовую комбинацию (OR) флагов OFN_HIDEREADONLY и OFN_OVERWRITEPROMPT.
 
-*lpszFilter*<br/>
-[in] Строка, содержащая один или несколько фильтров файлов. Значение по умолчанию имеет значение NULL.
+*лпсзфилтер*<br/>
+окне Строка из одного или нескольких фильтров файлов. Значение по умолчанию — NULL.
 
-*lpszDescr*<br/>
-[in] Описание элемента свойства. Значение по умолчанию имеет значение NULL.
+*лпсздескр*<br/>
+окне Описание элемента свойства. Значение по умолчанию — NULL.
 
-*dwData*<br/>
-[in] Данные конкретного приложения, связанный с этим элементом свойства. Например, 32-разрядное целое число или указатель на другие данные. Значение по умолчанию — 0.
+*двдата*<br/>
+окне Данные конкретного приложения, связанные с элементом свойства. Например, 32-разрядное целое число или указатель на другие данные. Значение по умолчанию — 0.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-Полный список доступных флагов см. в разделе [структуры OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna).
+Полный список доступных флагов см. в разделе [Структура OpenFileName](/windows/win32/api/commdlg/ns-commdlg-openfilenamew).
 
 ### <a name="example"></a>Пример
 
-В этом примере демонстрируется создание объекта с помощью конструктора класса `CMFCPropertyGridFileProperty`. Этот пример является частью [Visual Studio демонстрационного](../../overview/visual-cpp-samples.md).
+В этом примере демонстрируется создание объекта с помощью конструктора класса `CMFCPropertyGridFileProperty`. Этот пример является частью демонстрационного [примера Visual Studio](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#22](../../mfc/codesnippet/cpp/cmfcpropertygridfileproperty-class_1.cpp)]
 

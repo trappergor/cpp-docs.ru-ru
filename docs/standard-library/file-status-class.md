@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::operator=
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
-ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60ced1f60c811f585928f47c6cfd5e695d0c4085
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62160021"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457750"
 ---
 # <a name="filestatus-class"></a>Класс file_status
 
@@ -33,11 +33,11 @@ class file_status;
 
 |Конструктор|Описание|
 |-|-|
-|[file_status](#file_status)|Создает оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и файл [perms](../standard-library/filesystem-enumerations.md#perms).|
+|[file_status](#file_status)|Конструирует оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и [разрешений](../standard-library/filesystem-enumerations.md#perms)на файлы.|
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[type](#type)|Возвращает или задает класс `file_type`.|
 |[permissions](#permissions)|Возвращает или задает разрешения для файла.|
@@ -50,13 +50,13 @@ class file_status;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<filesystem >
+**Заголовок:** \<> FileSystem
 
-**Пространство имен:** std::experimental:: FileSystem, std::experimental:: FileSystem
+**Пространство имен:** std:: экспериментальный:: FileSystem, std:: экспериментальный:: FileSystem
 
 ## <a name="file_status"></a> file_status::file_status
 
-Создает оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и файл [perms](../standard-library/filesystem-enumerations.md#perms).
+Конструирует оболочку для [file_type](../standard-library/filesystem-enumerations.md#file_type) и [разрешений](../standard-library/filesystem-enumerations.md#perms)на файлы.
 
 ```cpp
 explicit file_status(
@@ -72,16 +72,16 @@ file_status(file_status&&) noexcept = default;
 
 ### <a name="parameters"></a>Параметры
 
-*ftype*<br/>
-Указанный `file_type`, по умолчанию используется `file_type::none`.
+*Ftype*\
+По `file_type`умолчанию задано `file_type::none`значение.
 
-*Маска*<br/>
-Указанный файл `perms`, по умолчанию используется `perms::unknown`.
+*виде*\
+Указанный файл `perms`по умолчанию имеет `perms::unknown`значение.
 
-*file_status*<br/>
+*file_status*\
 Сохраненный объект.
 
-## <a name="op_as"></a> file_status::operator=
+## <a name="op_as"></a>file_status:: operator =
 
 Операторы-члены присваивания по умолчанию работают корректно.
 
@@ -92,10 +92,10 @@ file_status& operator=(file_status&&) nexcept = default;
 
 ### <a name="parameters"></a>Параметры
 
-*file_status*<br/>
-[File_status](../standard-library/file-status-class.md) копируется в `file_status`.
+*file_status*\
+[File_status](../standard-library/file-status-class.md) копируется `file_status`в.
 
-## <a name="type"></a> Тип
+## <a name="type"></a>Тип
 
 Возвращает или задает класс `file_type`.
 
@@ -106,14 +106,14 @@ void type(file_type ftype) noexcept
 
 ### <a name="parameters"></a>Параметры
 
-*ftype*<br/>
+*Ftype*\
 Задается следующим образом: `file_type`.
 
-## <a name="permissions"></a> Разрешения
+## <a name="permissions"></a>чтение
 
 Возвращает или задает разрешения для файла.
 
-Используйте метод задания, чтобы создать файл `readonly` или удалите `readonly` атрибута.
+Используйте метод задания, чтобы создать файл `readonly` или `readonly` удалить атрибут.
 
 ```cpp
 perms permissions() const noexcept
@@ -122,11 +122,11 @@ void permissions(perms mask) noexcept
 
 ### <a name="parameters"></a>Параметры
 
-*Маска*<br/>
+*виде*\
 Задается следующим образом: `perms`.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Класс path](../standard-library/path-class.md)<br/>
-[\<filesystem>](../standard-library/filesystem.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Класс Path](../standard-library/path-class.md)\
+[\<filesystem>](../standard-library/filesystem.md)

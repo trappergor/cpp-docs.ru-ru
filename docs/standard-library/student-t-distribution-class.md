@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::student_t_distribution [C++], max
 - std::student_t_distribution [C++], param_type
 ms.assetid: 87b48127-9311-4d07-95df-833ed46bf0b1
-ms.openlocfilehash: 4c63f37c07a56144fdd18531af5e8f9fbdac656a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 42e7337a2a0803af51e7dd11f53c482dbfc2aa0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412258"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459001"
 ---
 # <a name="studenttdistribution-class"></a>Класс student_t_distribution
 
@@ -64,12 +64,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа **двойные** Если тип не указан, распределенные в соответствии с Стьюдента *t*-распределения. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с *t*-распределением учащегося. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -174,10 +174,10 @@ explicit student_t_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*n*<br/>
+*n*\
 Параметр распределения `n`.
 
-*parm*<br/>
+*ParM*\
 Пакет параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -205,10 +205,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*n*<br/>
+*n*\
 Параметр распределения `n`.
 
-*right*<br/>
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
@@ -219,4 +219,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

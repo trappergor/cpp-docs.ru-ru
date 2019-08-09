@@ -5,12 +5,12 @@ f1_keywords:
 - type_traits/std::is_aggregate
 helpviewer_keywords:
 - is_aggregate
-ms.openlocfilehash: 7d979d4e4019ada12b72fb563c0b969fffe2c12d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 89749e2b4c0e6aaf00de074718cfb598333bc739
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68268986"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456693"
 ---
 # <a name="isaggregate-class"></a>Класс is_aggregate
 
@@ -25,12 +25,12 @@ struct is_aggregate;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* помечен типом класса `aggregate`, в противном случае он содержит значение false. Если *T* является типом класса, он должен быть полным типом.
+Экземпляр предиката типа содержит значение true, если тип *T* является типом класса, помеченным `aggregate`, в противном случае — значение false. Если *T* является типом класса, он должен быть полным типом.
 
 ## <a name="requirements"></a>Требования
 
@@ -40,4 +40,4 @@ struct is_aggregate;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

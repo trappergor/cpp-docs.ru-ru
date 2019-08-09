@@ -7,12 +7,12 @@ f1_keywords:
 - string/std::u32string
 - string/std::wstring
 ms.assetid: fdca01e9-f2f1-4b59-abda-0093d760b3cc
-ms.openlocfilehash: 534c51e8a627ca893ea42e023f12d8bc62d6fb5c
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: a1ade5547b98e4376a00f33d45d695a328b772d3
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412336"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459236"
 ---
 # <a name="ltstringgt-typedefs"></a>Определения типов &lt;string&gt;
 
@@ -94,8 +94,8 @@ basic_string<wchar_t> wstr(L"");
 Список конструкторов строк см. в разделе [basic_string::basic_string](../standard-library/basic-string-class.md#basic_string).
 
 > [!NOTE]
-> Размер **wchar_t** определяется реализацией. Если код зависит от **wchar_t** быть определенного размера, проверьте реализацию вашей платформы (например, с помощью `sizeof(wchar_t)`). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
+> Размер **wchar_t** определяется реализацией. Если код зависит от типа **wchar_t** и имеет определенный размер, проверьте реализацию своей платформы (например, с помощью `sizeof(wchar_t)`). Если требуется тип строчного символа, ширина которого гарантированно останется одинаковой на всех платформах, используйте [string](../standard-library/string-typedefs.md#string), [u16string](../standard-library/string-typedefs.md#u16string) или [u32string](../standard-library/string-typedefs.md#u32string).
 
 ## <a name="see-also"></a>См. также
 
-[\<string>](../standard-library/string.md)<br/>
+[\<string>](../standard-library/string.md)

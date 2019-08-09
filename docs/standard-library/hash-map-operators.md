@@ -5,12 +5,12 @@ f1_keywords:
 - hash_map/std::operator!=
 - hash_map/std::operator==
 ms.assetid: 24b9bb9e-e983-4060-bce5-2c7c8161ee61
-ms.openlocfilehash: ba84f476c712f64e7782f0ea476bbb65a35dc14a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c4cc73feb3c8163a2be9f0122f57eaa0fb8ab3b8
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405057"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448732"
 ---
 # <a name="lthashmapgt-operators"></a>Операторы &lt;hash_map&gt;
 
@@ -32,10 +32,10 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_map`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -46,7 +46,7 @@ bool operator!=(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 Сравнение между объектами hash_map основывается на попарном сравнении их элементов. Два объекта hash_map равны, если они содержат одинаковое количество элементов, а их соответствующие элементы имеют одинаковые значения. В противном случае они не равны.
 
-Членами [< hash_map >](hash-map.md) и [< hash_set >](hash-set.md) файлы заголовков в [ пространство имен stdext](stdext-namespace.md).
+Члены [< hash_map >](hash-map.md) и [< hash_set >](hash-set.md) заголовков в [пространстве имен stdext](stdext-namespace.md).
 
 ### <a name="example"></a>Пример
 
@@ -101,10 +101,10 @@ bool operator==(const hash_map <Key, Type, Traits, Allocator>& left, const hash_
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_map`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_map`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -155,7 +155,7 @@ The hash_maps hm1 and hm2 are not equal.
 The hash_maps hm1 and hm3 are equal.
 ```
 
-## <a name="op_neq_mm"></a>  оператор! = (hash_multimap)
+## <a name="op_neq_mm"></a>operator! = (hash_multimap)
 
 > [!NOTE]
 > Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
@@ -168,10 +168,10 @@ bool operator!=(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_multimap`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -222,7 +222,7 @@ The hash_multimaps hm1 and hm2 are not equal.
 The hash_multimaps hm1 and hm3 are equal.
 ```
 
-## <a name="op_eq_eq_mm"></a>  оператор == (hash_multimap)
+## <a name="op_eq_eq_mm"></a>оператор = = (hash_multimap)
 
 > [!NOTE]
 > Этот API устарел. Вместо него следует использовать [класс unordered_multimap](unordered-multimap-class.md).
@@ -235,10 +235,10 @@ bool operator==(const hash_multimap <Key, Type, Traits, Allocator>& left, const 
 
 ### <a name="parameters"></a>Параметры
 
-*left*<br/>
+*слева*\
 Объект типа `hash_multimap`.
 
-*right*<br/>
+*Правильно*\
 Объект типа `hash_multimap`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -291,4 +291,4 @@ The hash_multimaps hm1 and hm3 are equal.
 
 ## <a name="see-also"></a>См. также
 
-[<hash_map>](hash-map.md)<br/>
+[<hash_map>](hash-map.md)

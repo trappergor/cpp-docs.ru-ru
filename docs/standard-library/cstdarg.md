@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cstdarg header
 ms.assetid: 639b4ef7-8408-4640-9343-41631f0ab663
-ms.openlocfilehash: f8d2d3b886cfa46905e8f17f1e13b51881b80191
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 0b45d5f591c5394ffa861e75169dce70f53b1baf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244486"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448027"
 ---
 # <a name="ltcstdarggt"></a>&lt;cstdarg&gt;
 
-Включает C стандартный заголовок библиотеки \<stdarg.h > и добавляет связанные имена в `std` пространства имен. Включение этого заголовка гарантирует, что имена, объявленные с внешней компоновкой в заголовке библиотеки C Standard, объявляются в `std` пространства имен.
+Включает заголовок \<стандартной библиотеки C STDARG. h > и добавляет связанные имена `std` в пространство имен. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C `std` , объявляются в пространстве имен.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -38,6 +38,6 @@ namespace std {
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

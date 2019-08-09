@@ -10,22 +10,22 @@ f1_keywords:
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-ms.openlocfilehash: 72d16b068f337fe935d07e1eb2d0e2b74de6268f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: f01b00a1469cdf82590a1bdfc742312ec96912c9
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244866"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459454"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 Включите стандартный заголовок \<chrono> для определения классов и функций, которые представляют интервалы и моменты времени и работают с ними.
 
-Начиная с Visual Studio 2015, реализация `steady_clock` был изменен в соответствии с требованиями равномерности и монотонности стандарта C++. `steady_clock` теперь основан на функции QueryPerformanceCounter(), а `high_resolution_clock` теперь является определением типа для `steady_clock`. Таким образом, в Microsoft C++ компилятора `steady_clock::time_point` теперь является typedef для `chrono::time_point<steady_clock>`, однако это правило не обязательно в случае других реализаций.
+Начиная с Visual Studio 2015, реализация `steady_clock` была изменена в соответствии со C++ стандартными требованиями для обеспечения стабильности и монотонности. `steady_clock` теперь основан на функции QueryPerformanceCounter(), а `high_resolution_clock` теперь является определением типа для `steady_clock`. В результате в компиляторе C++ `steady_clock::time_point` Майкрософт теперь является typedef для `chrono::time_point<steady_clock>`, однако это правило не обязательно для других реализаций.
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<chrono >
+**Заголовок:** \<Chrono >
 
 **Пространство имен:** std
 
@@ -44,7 +44,7 @@ ms.locfileid: "68244866"
 |-|-|
 |[Структура common_type](../standard-library/common-type-structure.md)|Описывает специализации класса шаблона [common_type](../standard-library/common-type-class.md) для создания экземпляров `duration` и `time_point`.|
 |[Структура duration_values](../standard-library/duration-values-structure.md)|Предоставляет конкретные значения для параметра `Rep` шаблона `duration`.|
-|[high_resolution_clock структуры](../standard-library/high-resolution-clock-struct.md)||
+|[Структура high_resolution_clock](../standard-library/high-resolution-clock-struct.md)||
 |[Структура steady_clock](../standard-library/steady-clock-struct.md)|Представляет часы `steady`.|
 |[Структура system_clock](../standard-library/system-clock-structure.md)|Представляет *тип clock*, использующий данные системных часов в реальном времени.|
 |[Структура treat_as_floating_point](../standard-library/treat-as-floating-point-structure.md)|Указывает, может ли тип рассматриваться как тип с плавающей запятой.|
@@ -76,26 +76,26 @@ ms.locfileid: "68244866"
 
 Дополнительные сведения о типах отношения, используемых в следующих определениях типов, см. в разделе [\<ratio>](../standard-library/ratio.md).
 
-||| ||| | `typedef duration<long long, nano> nanoseconds;`| Синоним для `duration` типа, имеющего с тактовым периодом равным 1 наносекунды. | |`typedef duration<long long, micro> microseconds;`| Синоним для `duration` типа, имеющего с тактовым периодом равным 1 микросекунды. | |`typedef duration<long long, milli> milliseconds;`| Синоним для `duration` типа, имеющего с тактовым периодом равным 1 миллисекунде. | |`typedef duration<long long> seconds;`| Синоним для `duration` типа, имеющего с тактовым периодом равным 1 секунде. | |`typedef duration<int, ratio<60> > minutes;`| Синоним для `duration` тип, с тактовым периодом равным 1 минуте. | |`typedef duration<int, ratio<3600> > hours;`| Синоним для `duration` типа, имеющего с тактовым периодом равным 1 час. |
+||| ||| | `typedef duration<long long, nano> nanoseconds;`| Синоним для `duration` типа с тактовым периодом 1 НС. | |`typedef duration<long long, micro> microseconds;`| Синоним для `duration` типа с тактовым периодом 1 микросекунда. | |`typedef duration<long long, milli> milliseconds;`| Синоним для `duration` типа с тактовым периодом 1 миллисекунда. | |`typedef duration<long long> seconds;`| Синоним для `duration` типа с тактовым периодом в 1 секунду. | |`typedef duration<int, ratio<60> > minutes;` Синоним для `duration` типа с тактовым периодом в 1 минуту. | |`typedef duration<int, ratio<3600> > hours;`| Синоним для `duration` типа с тактовым периодом в 1 час. |
 
 ### <a name="literals"></a>Литералы
 
-**(C ++ 11)**  \<Chrono > заголовок определяет следующие [определенные пользователем литералы](../cpp/user-defined-literals-cpp.md) можно использовать для более удобства, типобезопасности и обслуживаемости кода. Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.
+**(C++ 11)** Заголовок Chrono > определяет следующие пользовательские литералы, которые можно использовать для более удобного удобства, типизации и сопровождения кода. [](../cpp/user-defined-literals-cpp.md) \< Такие литералы определяются во встроенном пространстве имен `literals::chrono_literals` и находятся в области действия, когда std::chrono находится в области действия.
 
 |||
 |-|-|
-|часы оператор «» h (unsigned long long Val)|Указывает часы как целочисленное значение.|
-|длительность\<двойным, соотношением\<3600 >> оператор «» h (long double Val)|Указывает часы как значение с плавающей запятой.|
-|минут (оператор «» min) (unsigned long long Val)|Указывает минуты как целочисленное значение.|
-|длительность\<двойным, соотношением\<60 >> (оператор «» min) (long двойной Val)|Указывает минуты как значение с плавающей запятой.|
-|оператор секунд «» s (unsigned long long Val)|Указывает минуты как целочисленное значение.|
-|длительность\<double > оператор «» s (long double Val)|Указывает секунды как значение с плавающей запятой.|
-|оператор миллисекунд «» мс (unsigned long long Val)|Указывает миллисекунды как целочисленное значение.|
-|длительность\<double передачи > оператор «» мс (long double Val)|Указывает миллисекунды как значение с плавающей запятой.|
-|оператор микросекундах» «США (unsigned long long Val)|Указывает микросекунды как целочисленное значение.|
-|длительность\<double, micro > оператор «» нам (long double Val)|Указывает микросекунды как значение с плавающей запятой.|
-|оператор наносекунд «» ns (unsigned long long Val)|Указывает наносекунды как целочисленное значение.|
-|длительность\<double nano > оператор «» ns (long double Val)|Указывает наносекунды как значение с плавающей запятой.|
+|Оператор hours "" h (беззнаковое длинное значение Long)|Указывает часы как целочисленное значение.|
+|Длительность\<Double, соотношение\<3600 > > оператор "" h (long double Val)|Указывает часы как значение с плавающей запятой.|
+|минуты (оператор "" min) (длинное целое значение без знака)|Указывает минуты как целочисленное значение.|
+|Длительность\<Double, соотношение\<60 > > (оператор "" min) (long double Val)|Указывает минуты как значение с плавающей запятой.|
+|Оператор секунд "" s (беззнаковое длинное значение Long)|Указывает минуты как целочисленное значение.|
+|Оператор\<длительности двойного > "" s (long double Val)|Указывает секунды как значение с плавающей запятой.|
+|миллисекунда оператор "" MS (беззнаковое длинное значение Long)|Указывает миллисекунды как целочисленное значение.|
+|Длительность\<Double, миллисекунда > оператор "" МС (long double Val)|Указывает миллисекунды как значение с плавающей запятой.|
+|оператор в микросекундах "" US (беззнаковое длинное значение Long)|Указывает микросекунды как целочисленное значение.|
+|Длительность\<Double, Micro > оператор "" US (long double Val)|Указывает микросекунды как значение с плавающей запятой.|
+|оператор в наносекундах "" NS (неподписанное длинное значение Long)|Указывает наносекунды как целочисленное значение.|
+|Длительность\<Double, оператор Nano > "" NS (long double Val)|Указывает наносекунды как значение с плавающей запятой.|
 
 В следующем примере демонстрируется использование литералов chrono.
 
@@ -107,4 +107,4 @@ constexpr auto my_duration_unit = 108ms;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)

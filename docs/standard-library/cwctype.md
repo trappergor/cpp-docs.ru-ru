@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cwctype header
 ms.assetid: 46476f95-b8c3-4ab2-a172-9a1be91124b7
-ms.openlocfilehash: f6a754a96200e235cfc278746b1f0e5fc4ce018d
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 26fbefa7dbaf68ac559e79c702a5a7a2c31266a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243625"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450594"
 ---
 # <a name="ltcwctypegt"></a>&lt;cwctype&gt;
 
@@ -64,6 +64,6 @@ wctrans_t wctrans(const char* property);
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

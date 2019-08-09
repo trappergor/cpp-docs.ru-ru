@@ -5,12 +5,12 @@ f1_keywords:
 - mutex/std::lock_guard
 - mutex/std::lock_guard::lock_guard
 ms.assetid: 57121f0d-9c50-481c-b971-54e64df864e0
-ms.openlocfilehash: 45a01c5fdd431bcfad1eeb5ab0531c11c89e9767
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f59860c3aaa9ef7458fe5e30b85b119dede52c72
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413142"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453846"
 ---
 # <a name="lockguard-class"></a>Класс lock_guard
 
@@ -44,7 +44,7 @@ class lock_guard;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex >
+**Заголовок:** \<> мьютекса
 
 **Пространство имен:** std
 
@@ -60,14 +60,14 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ### <a name="parameters"></a>Параметры
 
-*Mtx*<br/>
+*MTX*\
 Объект *типа мьютекс*.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор создает объект типа `lock_guard` и блокировки *Mtx*. Если *Mtx* не является рекурсивным мьютексом, его необходимо разблокировать при вызове этого конструктора.
+Первый конструктор конструирует объект типа `lock_guard` и блокирует *MTX*. Если *MTX* не является рекурсивным мьютексом, он должен быть разблокирован при вызове этого конструктора.
 
-Второй конструктор не блокирует *Mtx*. *Mtx* должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.
+Второй конструктор не блокирует *MTX*. *MTX* должен быть заблокирован при вызове этого конструктора. Конструктор не выдает никаких исключений.
 
 ## <a name="dtorlock_guard_destructor"></a>  Деструктор lock_guard::~lock_guard
 
@@ -83,5 +83,5 @@ lock_guard(mutex_type& Mtx, adopt_lock_t);
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

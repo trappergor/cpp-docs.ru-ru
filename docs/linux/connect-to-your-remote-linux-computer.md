@@ -3,12 +3,12 @@ title: Подключение к целевой системе Linux из Visual
 description: Подключение к удаленному компьютеру Linux или WSL из проекта C++ в Visual Studio.
 ms.date: 06/19/2019
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-ms.openlocfilehash: 7fa09c49df3da39084edb6735a7a2ccc724c34d3
-ms.sourcegitcommit: 3ae8025df7fd50f5f56a0a2b5396533218bcc7dc
+ms.openlocfilehash: cd107f096e4395f93775ee80b889cc0efd627166
+ms.sourcegitcommit: 610751254a01cba6ad15fb1e1764ecb2e71f66bf
 ms.translationtype: HT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67285258"
+ms.lasthandoff: 07/18/2019
+ms.locfileid: "68313437"
 ---
 # <a name="connect-to-your-target-linux-system-in-visual-studio"></a>Подключение к целевой системе Linux из Visual Studio
 
@@ -20,11 +20,11 @@ ms.locfileid: "67285258"
 
 ::: moniker range=">=vs-2017"
 
-Вы можете настроить проект Linux для использования на удаленном компьютере или подсистеме Windows для Linux (WSL). Для работы на удаленных компьютерах и в WSL необходимо настроить в Visual Studio 2017 подключение к ним. 
+Вы можете настроить проект Linux для использования на удаленном компьютере или в подсистеме Windows для Linux (WSL). Для работы на удаленных компьютерах и в WSL необходимо настроить в Visual Studio 2017 удаленное подключение к ним. 
 
 ## <a name="connect-to-a-remote-linux-computer"></a>Подключение к удаленному компьютеру Linux
 
-При сборке проекта C++ для удаленной системы Linux (виртуальной машины или физического компьютера) код Linux копируется на удаленный компьютер Linux, а затем компилируется в соответствии с параметрами Visual Studio.
+При сборке проекта C++ для удаленной системы Linux (виртуальной машины или физического компьютера) исходный код Linux копируется на удаленный компьютер Linux, а затем компилируется в соответствии с параметрами Visual Studio.
 
 Настройка удаленного подключения.
 
@@ -92,15 +92,15 @@ ms.locfileid: "67285258"
 
 ::: moniker range="vs-2019"
 
-Начиная с Visual Studio 2019 версии 16.1, вам больше не нужно добавлять удаленное подключение или настраивать SSH для использования WSL. Вам достаточно штатных средств системы Linux: gcc, gdb, make, rsync и zip. Visual Studio использует rsync и zip только для того, чтобы извлечь при первом использовании файлы заголовков, которые используются для IntelliSense, из экземпляра WSL в файловую систему Windows. В Visual Studio 2019 версии 16.1 поддержка WSL рассчитана на Windows версии 1809. Вы можете работать и с более поздней версией Windows, но Visual Studio пока не использует более новые возможности WSL.
+В Visual Studio 2019 версии 16.1 добавлена собственная поддержка для использования C++ с [подсистемой Windows для Linux (WSL)](https://docs.microsoft.com/windows/wsl/about).  Это значит, что для сборки и отладки локальной установки WSL больше не нужно добавлять удаленное подключение или настраивать SSH. Дополнительные сведения [об установке WSL](https://docs.microsoft.com/windows/wsl/install-win10) можно найти здесь.
 
-Если ваш дистрибутив поддерживает apt, для установки необходимых пакетов можно использовать следующую команду:
+Чтобы настроить установку WSL для работы с Visual Studio, потребуется установить следующие средства: gcc, gdb, make, rsync и zip. Их можно установить из дистрибутивов, использующих APT, с помощью следующей команды: 
 
 ```bash
 sudo apt install g++ gdb make rsync zip
 ```
 
-Чтобы настроить проект для WSL, воспользуйтесь разделами [о настройке проекта Linux](configure-a-linux-project.md) или [проекта Linux CMake](cmake-linux-project.md) в зависимости от того, какой тип проекта вы используете.
+Чтобы настроить проект для WSL, воспользуйтесь разделами [о настройке проекта Linux](configure-a-linux-project.md) или [проекта Linux CMake](cmake-linux-project.md) в зависимости от того, какой тип проекта вы используете. Пошаговые инструкции по созданию простого консольного приложения с помощью WSL приводятся в ознакомительной публикации блога о [C++ в Visual Studio 2019 и подсистеме Windows для Linux (WSL)](https://devblogs.microsoft.com/cppblog/c-with-visual-studio-2019-and-windows-subsystem-for-linux-wsl/).
 
 ::: moniker-end
 

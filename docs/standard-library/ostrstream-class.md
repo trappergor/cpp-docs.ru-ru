@@ -12,12 +12,12 @@ helpviewer_keywords:
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c73ab13d3cb2531ff3d741766bc86f8354a0be9d
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370876"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458062"
 ---
 # <a name="ostrstream-class"></a>Класс ostrstream
 
@@ -44,7 +44,7 @@ class ostrstream : public ostream
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[freeze](#freeze)|Делает буфер потока недоступным для операций с буфером потока.|
 |[pcount](#pcount)|Возвращает число элементов, записанных в управляемую последовательность.|
@@ -67,8 +67,8 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="parameters"></a>Параметры
 
-*_Freezeit*<br/>
-Объект **bool** , указывающее, следует ли поток, который должен быть зафиксирован.
+*_Freezeit*\
+**Логическое** значение, указывающее, нужно ли заморозить поток.
 
 ### <a name="remarks"></a>Примечания
 
@@ -76,7 +76,7 @@ void freeze(bool _Freezeit = true);
 
 ### <a name="example"></a>Пример
 
-См. в разделе [strstream::freeze](../standard-library/strstreambuf-class.md#freeze) пример, использующий `freeze`.
+Пример, в котором используется `freeze`, см. в разделе [strstream:: Freeze](../standard-library/strstreambuf-class.md#freeze) .
 
 ## <a name="ostrstream"></a>  ostrstream::ostrstream
 
@@ -92,22 +92,22 @@ ostrstream(char* ptr,
 
 ### <a name="parameters"></a>Параметры
 
-*ptr*<br/>
+*указатель*\
 Буфер.
 
-*count*<br/>
+*расчета*\
 Размер буфера в байтах.
 
-*_Mode*<br/>
+*_Mode*\
 Режим ввода-вывода буфера. См. раздел [ios_base::openmode](../standard-library/ios-base-class.md#openmode) для получения дополнительной информации.
 
 ### <a name="remarks"></a>Примечания
 
-Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**sb**), где `sb` является сохраненным объектом класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализирует `sb` путем вызова `strstreambuf`. Второй конструктор инициализирует базовый класс одним из двух способов:
+Оба конструктора инициализируют базовый класс путем вызова [ostream](../standard-library/ostream-typedefs.md#ostream)(**SB**), где `sb` — это хранимый объект класса [strstreambuf](../standard-library/strstreambuf-class.md). Первый конструктор также инициализируется `sb` путем вызова. `strstreambuf` Второй конструктор инициализирует базовый класс одним из двух способов:
 
-- Если `_Mode`  &  **ios_base::app**== 0, то `ptr` должен назначить первый элемент массива `count` элементов, а также вызовы конструктора `strstreambuf`(`ptr`, `count`, `ptr`).
+- Если `_Mode` `strstreambuf` `count` `count`  `ptr` `ptr`ios_base:: App = = 0, то должен обозначать первый элемент массива элементов, а конструктор вызывает (,,  &  `ptr`).
 
-- В противном случае `ptr` должен назначить первый элемент массива элементов count, содержащий строку C первый элемент которой обозначается `ptr`, а также вызовы конструктора `strstreambuf`(`ptr`, `count`, `ptr` + `strlen`( `ptr`) ).
+- `ptr` `ptr` `strstreambuf`В противном случае `count`должен обозначать первый элемент массива элементов count, содержащий строку C, первый элемент которой обозначен, и конструктор вызывает (,, `ptr` `ptr` + `strlen`( `ptr`) ).
 
 ## <a name="pcount"></a>  ostrstream::pcount
 
@@ -143,7 +143,7 @@ strstreambuf *rdbuf() const
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает адрес буфера сохраненного потока типа `pointer` для [strstreambuf](../standard-library/strstreambuf-class.md).
+Функция члена возвращает адрес буфера сохраненного потока типа `pointer` в [strstreambuf](../standard-library/strstreambuf-class.md).
 
 ### <a name="example"></a>Пример
 
@@ -167,11 +167,11 @@ char *str();
 
 ### <a name="example"></a>Пример
 
-См. в разделе [strstream::str](../standard-library/strstreambuf-class.md#str) пример, использующий `str`.
+Пример, в котором используется `str`, см. в разделе [strstream:: str](../standard-library/strstreambuf-class.md#str) .
 
 ## <a name="see-also"></a>См. также
 
-[ostream](../standard-library/ostream-typedefs.md#ostream)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[ostream](../standard-library/ostream-typedefs.md#ostream)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

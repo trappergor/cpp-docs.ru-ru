@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - new header
 ms.assetid: 218e2a15-34e8-4ef3-9122-1e90eccf8559
-ms.openlocfilehash: bc873f278461fcdc6dbb42e7c968c691e3dc7f73
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 6155a89c9cbba67ce27253aa64ff70ca7871e748
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68243554"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457686"
 ---
 # <a name="ltnewgt"></a>&lt;new&gt;
 
@@ -33,7 +33,7 @@ ms.locfileid: "68243554"
 
 |||
 |-|-|
-|[nothrow](../standard-library/new-functions.md#nothrow)|Предоставляет объект для использования в качестве аргумента для **nothrow** версиях **новый** и **удалить**.|
+|[nothrow](../standard-library/new-functions.md#nothrow)|Предоставляет объект, который будет использоваться в качестве аргумента для **версий** **New** и **Delete**.|
 
 ### <a name="typedefs"></a>Определения типов
 
@@ -48,7 +48,7 @@ ms.locfileid: "68243554"
 |||
 |-|-|
 |[get_new_handler](../standard-library/new-functions.md#get_new_handler)||
-|[launder](../standard-library/new-functions.md#launder)||
+|[лаундер](../standard-library/new-functions.md#launder)||
 |[set_new_handler](../standard-library/new-functions.md#set_new_handler)|Устанавливает пользовательскую функцию, вызываемую в случае сбоя оператора new при попытке выделения памяти.|
 
 ### <a name="operators"></a>Операторы
@@ -76,5 +76,5 @@ ms.locfileid: "68243554"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

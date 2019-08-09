@@ -200,39 +200,39 @@ _variant_t(
 
 - **_variant_t ()** создает пустой `_variant_t` объекта, `VT_EMPTY`.
 
-- **_variant_t (VARIANT &***varSrc***)** создает `_variant_t` объекта из копии `VARIANT` объекта.     Тип variant сохранен.
+- **_variant_t (VARIANT &** *varSrc* **)** создает `_variant_t` объекта из копии `VARIANT` объекта. Тип variant сохранен.
 
-- **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc***)** создает `_variant_t` объекта из копии `VARIANT` объекта.     Тип variant сохранен.
+- **_variant_t (VARIANT**<strong>\*</strong>*pVarSrc* **)** создает `_variant_t` объекта из копии `VARIANT` объекта. Тип variant сохранен.
 
-- **_variant_t (_variant_t &***var_t_Src***)** создает `_variant_t` из другого объекта `_variant_t` объекта.     Тип variant сохранен.
+- **_variant_t (_variant_t &** *var_t_Src* **)** создает `_variant_t` из другого объекта `_variant_t` объекта. Тип variant сохранен.
 
-- **_variant_t (VARIANT &***varSrc* **, bool**`fCopy`**)** создает `_variant_t` из существующего `VARIANT` объект.       Если *fCopy* — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.
+- **_variant_t (VARIANT &** *varSrc* **, bool**`fCopy` **)** создает `_variant_t` из существующего `VARIANT` объект. Если *fCopy* — **false**, **VARIANT** объект присоединен к новому объекту без создания копии.
 
-- **_variant_t (короткий***sSrc* **, VARTYPE**`vtSrc`**= VT_I2)** создает `_variant_t` объект типа VT_I2 или VT_BOOL из **короткие** целочисленное значение.       Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
+- **_variant_t (короткий** *sSrc* **, VARTYPE**`vtSrc` **= VT_I2)** создает `_variant_t` объект типа VT_I2 или VT_BOOL из **короткие** целочисленное значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
 
-- **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc`**= VT_I4)** создает `_variant_t` объект типа VT_I4, VT_BOOL или VT_ERROR из **long**  целочисленное значение.       Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
+- **_variant_t (long** `lSrc` **, VARTYPE**`vtSrc` **= VT_I4)** создает `_variant_t` объект типа VT_I4, VT_BOOL или VT_ERROR из **long**  целочисленное значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
 
-- **_variant_t (float**`fltSrc`**)** создает `_variant_t` объект типа VT_R4 из **float** числовое значение.    
+- **_variant_t (float**`fltSrc` **)** создает `_variant_t` объект типа VT_R4 из **float** числовое значение.
 
-- **_variant_t (double** `dblSrc` **, VARTYPE**`vtSrc`**= VT_R8)** создает `_variant_t` тип VT_R8 или VT_DATE из объекта **двойной** числовое значение.       Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
+- **_variant_t (double** `dblSrc` **, VARTYPE**`vtSrc` **= VT_R8)** создает `_variant_t` тип VT_R8 или VT_DATE из объекта **двойной** числовое значение. Любой другой `VARTYPE` приводит к возникновению ошибки E_INVALIDARG.
 
-- **_variant_t (CY &**`cySrc`**)** создает `_variant_t` объект введите VT_CY из `CY` объекта.    
+- **_variant_t (CY &** `cySrc` **)** создает `_variant_t` объект введите VT_CY из `CY` объекта.
 
-- **_variant_t (_bstr_t &**`bstrSrc`**)** создает `_variant_t` объект типа VT_BSTR из `_bstr_t` объекта.     Выделяется новый параметр `BSTR`.
+- **_variant_t (_bstr_t &** `bstrSrc` **)** создает `_variant_t` объект типа VT_BSTR из `_bstr_t` объекта. Выделяется новый параметр `BSTR`.
 
-- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc***)** создает `_variant_t` объект типа VT_BSTR из строки Юникода.   Выделяется новый параметр `BSTR`.
+- **_variant_t (wchar_t** <strong>\*</strong> *wstrSrc* **)** создает `_variant_t` объект типа VT_BSTR из строки Юникода. Выделяется новый параметр `BSTR`.
 
-- **_variant_t (char**<strong>\*</strong>`strSrc`**)** создает `_variant_t` объект типа VT_BSTR из строки.     Выделяется новый параметр `BSTR`.
+- **_variant_t (char**<strong>\*</strong>`strSrc` **)** создает `_variant_t` объект типа VT_BSTR из строки. Выделяется новый параметр `BSTR`.
 
-- **_variant_t (bool**`bSrc`**)** создает `_variant_t` объект введите VT_BOOL из **bool** значение.    
+- **_variant_t (bool**`bSrc` **)** создает `_variant_t` объект введите VT_BOOL из **bool** значение.
 
-- **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` тип объекта VT_UNKNOWN из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.
+- **_variant_t (IUnknown** <strong>\*</strong> `pIUknownSrc` **, bool**`fAddRef` **= true)** создает `_variant_t` тип объекта VT_UNKNOWN из указателя интерфейса СОМ. Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.
 
-- **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef`**= true)** создает `_variant_t` объект Тип VT_DISPATCH из указателя интерфейса СОМ.       Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.
+- **_variant_t (IDispatch** <strong>\*</strong> `pDispSrc` **, bool**`fAddRef` **= true)** создает `_variant_t` объект Тип VT_DISPATCH из указателя интерфейса СОМ. Если `fAddRef` — **true**, затем `AddRef` вызывается в предоставленном указателе на интерфейс для соответствия вызову `Release` , будет выполняться при `_variant_t` уничтожении объекта. Это следует вызвать метод `Release` в предоставленном указателе на интерфейс. Если `fAddRef` — **false**, этот конструктор принимает владение предоставленном указателе на интерфейс; не следует вызывать `Release` в предоставленном указателе на интерфейс.
 
-- **_variant_t (DECIMAL &**`decSrc`**)** создает `_variant_t` объект введите VT_DECIMAL из `DECIMAL` значение.    
+- **_variant_t (DECIMAL &** `decSrc` **)** создает `_variant_t` объект введите VT_DECIMAL из `DECIMAL` значение.
 
-- **_variant_t (BYTE**`bSrc`**)** создает `_variant_t` объект типа `VT_UI1` из `BYTE` значение.    
+- **_variant_t (BYTE**`bSrc` **)** создает `_variant_t` объект типа `VT_UI1` из `BYTE` значение.
 
 **Завершение блока, относящегося только к системам Майкрософт**
 

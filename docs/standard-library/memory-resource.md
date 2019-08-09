@@ -5,16 +5,16 @@ f1_keywords:
 - <memory_resource>
 helpviewer_keywords:
 - memory_resource header
-ms.openlocfilehash: b5957412d2beff0dc709dc71a77834f13eeacb41
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d4b25c6ee575191f1e17b0202d33298e2e9e67f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68269346"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451904"
 ---
 # <a name="ltmemoryresourcegt"></a>&lt;memory_resource&gt;
 
-Определяет memory_resource класс шаблона контейнера и его вспомогательные шаблоны.
+Определяет класс шаблона контейнера memory_resource и его вспомогательные шаблоны.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -28,8 +28,8 @@ ms.locfileid: "68269346"
 
 |||
 |-|-|
-|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Проверяет объект memory_resource слева от оператора не равен объекту memory_resource справа от оператора.|
-|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Проверяет объект memory_resource слева от оператора равен объекту memory_resource справа от оператора.|
+|[operator!=](../standard-library/memory-resource-operators.md#op_neq)|Проверяет, не равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.|
+|[operator==](../standard-library/memory-resource-operators.md#op_eq_eq)|Проверяет, равен ли объект memory_resource слева от оператора объекту memory_resource в правой части.|
 
 ### <a name="specialized-template-functions"></a>Специализированные функции шаблонов
 
@@ -52,12 +52,12 @@ ms.locfileid: "68269346"
 |-|-|
 |[Класс memory_resource](../standard-library/memory-resource-class.md)||
 |[Класс monotonic_buffer_resource](../standard-library/monotonic-buffer-resource-class.md)||
-|[pool_options структуры](../standard-library/pool-options-structure.md)||
+|[Структура pool_options](../standard-library/pool-options-structure.md)||
 |[Класс synchronized_pool_resource](../standard-library/synchronized-pool-resource-class.md)||
 |[Класс unsynchronized_pool_resource](../standard-library/unsynchronized-pool-resource-class.md)||
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

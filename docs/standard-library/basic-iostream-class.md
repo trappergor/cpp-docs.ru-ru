@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - basic_iostream class
 ms.assetid: 294b680b-eb49-4066-8db2-6d52dac9d6e3
-ms.openlocfilehash: 80aad69f05b7473b508447d6f69f1d92edbeeca3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 052271e2e2cc929875489e27abde2147bc5c070a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400647"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460085"
 ---
 # <a name="basiciostream-class"></a>Класс basic_iostream
 
@@ -45,7 +45,7 @@ public:
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[swap](#swap)|Меняет местами содержимое предоставленного объекта `basic_iostream` на содержимое этого объекта.|
 
@@ -75,10 +75,10 @@ basic_iostream();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf*<br/>
+*strBuf*\
 Существующий объект `basic_streambuf`.
 
-*right*<br/>
+*Правильно*\
 Существующий объект `basic_iostream`, который используется для создания нового объекта `basic_iostream`.
 
 ### <a name="remarks"></a>Примечания
@@ -97,12 +97,12 @@ basic_iostream& operator=(basic_iostream&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Ссылка `rvalue` на объект `basic_iostream`, на основе которого будет присвоено значение.
 
 ### <a name="remarks"></a>Примечания
 
-Оператор-член вызывает `swap(right)`.
+Оператор члена вызывает `swap(right)`.
 
 ## <a name="swap"></a>  basic_iostream::swap
 
@@ -114,15 +114,15 @@ void swap(basic_iostream& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект `basic_iostream` для обмена.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член вызывает `swap(right)`.
+Функция члена вызывает `swap(right)`.
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

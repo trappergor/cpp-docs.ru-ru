@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - cmath header
 ms.assetid: 80df1dba-60ca-4918-9c2e-fbf446eaa7d6
-ms.openlocfilehash: 1b581e19d53be6faddb983f12d739f2a199b2e9c
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: d01b02d8fa169aa7fddbc3e51d75e5328b400d2b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244747"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459265"
 ---
 # <a name="ltcmathgt"></a>&lt;cmath&gt;
 
@@ -217,7 +217,7 @@ float hypotf(float x, float y);
 long double hypotl(long double x, long double y);
 ```
 
-## <a name="three-dimensional-hypotenuse"></a>Трехмерные гипотенузы
+## <a name="three-dimensional-hypotenuse"></a>Трехмерная гипотенуза
 
 ```cpp
 float hypot(float x, float y, float z);
@@ -358,7 +358,7 @@ float fmaf(float x, float y, float z);
 long double fmal(long double x, long double y, long double z);
 ```
 
-## <a name="classification--comparison-functions"></a>Классификации / функции сравнения
+## <a name="classification--comparison-functions"></a>Функции классификации и сравнения
 
 ```cpp
 int fpclassify(float x);
@@ -401,7 +401,7 @@ int isunordered(long double x, long double y);
 
 ## <a name="mathematical-special-functions"></a>Специальные математические функции
 
-### <a name="associated-laguerre-polynomials"></a>Связанные polynomials Laguerre
+### <a name="associated-laguerre-polynomials"></a>Связанные Лагуерреные полиномы
 
 ```cpp
 double assoc_laguerre(unsigned n, unsigned m, double x);
@@ -409,7 +409,7 @@ float assoc_laguerref(unsigned n, unsigned m, float x);
 long double assoc_laguerrel(unsigned n, unsigned m, long double x);
 ```
 
-### <a name="associated-legendre-functions"></a>Связанные функции Legendre
+### <a name="associated-legendre-functions"></a>Связанные функции Лежендре
 
 ```cpp
 double assoc_legendre(unsigned l, unsigned m, double x);
@@ -425,7 +425,7 @@ float betaf(float x, float y);
 long double betal(long double x, long double y);
 ```
 
-### <a name="complete-elliptic-integral-of-the-first-kind"></a>Полного эллиптического интеграла первого типа
+### <a name="complete-elliptic-integral-of-the-first-kind"></a>Завершение эллиптического интеграла первого типа
 
 ```cpp
 double comp_ellint_1(double k);
@@ -433,7 +433,7 @@ float comp_ellint_1f(float k);
 long double comp_ellint_1l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-second-kind"></a>Полного эллиптического интеграла второго типа
+### <a name="complete-elliptic-integral-of-the-second-kind"></a>Завершение эллиптического интеграла второго типа
 
 ```cpp
 double comp_ellint_2(double k);
@@ -441,7 +441,7 @@ float comp_ellint_2f(float k);
 long double comp_ellint_2l(long double k);
 ```
 
-### <a name="complete-elliptic-integral-of-the-third-kind"></a>Полного эллиптического интеграла третьего типа
+### <a name="complete-elliptic-integral-of-the-third-kind"></a>Завершение эллиптического интеграла третьего типа
 
 ```cpp
 double comp_ellint_3(double k, double nu);
@@ -449,7 +449,7 @@ float comp_ellint_3f(float k, float nu);
 long double comp_ellint_3l(long double k, long double nu);
 ```
 
-### <a name="regular-modified-cylindrical-bessel-functions"></a>Regular изменения Цилиндрическая функции Бесселя
+### <a name="regular-modified-cylindrical-bessel-functions"></a>Обычные измененные функции Бесселя цилиндра
 
 ```cpp
 double cyl_bessel_i(double nu, double x);
@@ -457,7 +457,7 @@ float cyl_bessel_if(float nu, float x);
 long double cyl_bessel_il(long double nu, long double x);
 ```
 
-### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Цилиндрическая функции Бесселя первого типа
+### <a name="cylindrical-bessel-functions-of-the-first-kind"></a>Функции цилиндрического Бесселя первого вида
 
 ```cpp
 double cyl_bessel_j(double nu, double x);
@@ -465,7 +465,7 @@ float cyl_bessel_jf(float nu, float x);
 long double cyl_bessel_jl(long double nu, long double x);
 ```
 
-### <a name="irregular-modified-cylindrical-bessel-functions"></a>Нестандартные изменения Цилиндрическая функции Бесселя
+### <a name="irregular-modified-cylindrical-bessel-functions"></a>Нестандартные измененные функции Бесселя цилиндра
 
 ```cpp
 double cyl_bessel_k(double nu, double x);
@@ -473,7 +473,7 @@ float cyl_bessel_kf(float nu, float x);
 long double cyl_bessel_kl(long double nu, long double x);
 ```
 
-### <a name="cylindrical-neumann-functions"></a>Цилиндрическая Неймана функции
+### <a name="cylindrical-neumann-functions"></a>Цилиндрические функции Неймана
 
 ```cpp
 double cyl_neumann(double nu, double x);
@@ -481,7 +481,7 @@ float cyl_neumannf(float nu, float x);
 long double cyl_neumannl(long double nu, long double x);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Неполные эллиптического интеграла первого типа
+### <a name="incomplete-elliptic-integral-of-the-first-kind"></a>Незавершенный эллиптический интеграл первого типа
 
 ```cpp
 double ellint_1(double k, double phi);
@@ -489,7 +489,7 @@ float ellint_1f(float k, float phi);
 long double ellint_1l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Неполные эллиптического интеграла второго типа
+### <a name="incomplete-elliptic-integral-of-the-second-kind"></a>Незавершенный эллиптический интеграл второго типа
 
 ```cpp
 double ellint_2(double k, double phi);
@@ -497,7 +497,7 @@ float ellint_2f(float k, float phi);
 long double ellint_2l(long double k, long double phi);
 ```
 
-### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Неполные эллиптического интеграла третьего типа
+### <a name="incomplete-elliptic-integral-of-the-third-kind"></a>Незавершенный эллиптический интеграл третьего вида
 
 ```cpp
 double ellint_3(double k, double nu, double phi);
@@ -505,7 +505,7 @@ float ellint_3f(float k, float nu, float phi);
 long double ellint_3l(long double k, long double nu, long double phi);
 ```
 
-### <a name="exponential-integral"></a>Показательной функции
+### <a name="exponential-integral"></a>Экспоненциальный интеграл
 
 ```cpp
 double expint(double x);
@@ -513,7 +513,7 @@ float expintf(float x);
 long double expintl(long double x);
 ```
 
-### <a name="hermite-polynomials"></a>Polynomials эрмитову
+### <a name="hermite-polynomials"></a>Хермите
 
 ```cpp
 double hermite(unsigned n, double x);
@@ -521,7 +521,7 @@ float hermitef(unsigned n, float x);
 long double hermitel(unsigned n, long double x);
 ```
 
-### <a name="laguerre-polynomials"></a>Laguerre polynomials
+### <a name="laguerre-polynomials"></a>Лагуерре
 
 ```cpp
 double laguerre(unsigned n, double x);
@@ -529,7 +529,7 @@ float laguerref(unsigned n, float x);
 long double laguerrel(unsigned n, long double x);
 ```
 
-### <a name="legendre-polynomials"></a>Legendre polynomials
+### <a name="legendre-polynomials"></a>Лежендре
 
 ```cpp
 double legendre(unsigned l, double x);
@@ -537,7 +537,7 @@ float legendref(unsigned l, float x);
 long double legendrel(unsigned l, long double x);
 ```
 
-### <a name="riemann-zeta-function"></a>Функция Дзета Римана
+### <a name="riemann-zeta-function"></a>Римана дзета, функция
 
 ```cpp
 double riemann_zeta(double x);
@@ -545,7 +545,7 @@ float riemann_zetaf(float x);
 long double riemann_zetal(long double x);
 ```
 
-### <a name="spherical-bessel-functions-of-the-first-kind"></a>Сферическая функции Бесселя первого типа
+### <a name="spherical-bessel-functions-of-the-first-kind"></a>Сферические функции Бесселя первого типа
 
 ```cpp
 double sph_bessel(unsigned n, double x);
@@ -553,7 +553,7 @@ float sph_besself(unsigned n, float x);
 long double sph_bessell(unsigned n, long double x);
 ```
 
-### <a name="spherical-associated-legendre-functions"></a>Сферическая связанных функций Legendre
+### <a name="spherical-associated-legendre-functions"></a>Сферические связанные функции Лежендре
 
 ```cpp
 double sph_legendre(unsigned l, unsigned m, double theta);
@@ -561,7 +561,7 @@ float sph_legendref(unsigned l, unsigned m, float theta);
 long double sph_legendrel(unsigned l, unsigned m, long double theta);
 ```
 
-### <a name="spherical-neumann-functions"></a>Сферическая Неймана функции
+### <a name="spherical-neumann-functions"></a>Сферические функции Неймана
 
 ```cpp
 double sph_neumann(unsigned n, double x);
@@ -575,6 +575,6 @@ long double sph_neumannl(unsigned n, long double x);
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

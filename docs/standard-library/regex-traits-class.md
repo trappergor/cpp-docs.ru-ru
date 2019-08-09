@@ -38,12 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-ms.openlocfilehash: 47e0a1e51809efad2924a2051d1627fe2e9ff95f
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: a34346b4fc15beb605836037ef8a05a541562f33
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400678"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451508"
 ---
 # <a name="regextraits-class"></a>Класс regex_traits
 
@@ -58,12 +58,12 @@ class regex_traits
 
 ## <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип элемента символа для описания.
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает различные характеристики регулярного выражения для типа *Elem*. Класс шаблона [класс basic_regex](../standard-library/basic-regex-class.md) использует эти сведения для управления элементами типа *Elem*.
+Класс шаблона описывает различные признаки регулярных выражений для типа *elem*. Класс шаблона [basic_regex](../standard-library/basic-regex-class.md) использует эти сведения для управления элементами типа *elem*.
 
 Каждый объект `regex_traits` содержит объект типа `regex_traits::locale` , используемый некоторыми из его функций-членов. Языковой стандарт по умолчанию является копией `regex_traits::locale()`. Функция-член `imbue` заменяет объект языкового стандарта, а функция-член `getloc` возвращает копию объекта языкового стандарта.
 
@@ -85,12 +85,12 @@ class regex_traits
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[getloc](#getloc)|Возвращает сохраненный объект языкового стандарта.|
 |[imbue](#imbue)|Изменяет сохраненный объект языкового стандарта.|
-|[isctype](#isctype)|Проверяет членство в классе.|
-|[length](#length)|Возвращает длину последовательности, завершающаяся символом null.|
+|[Функция CType](#isctype)|Проверяет членство в классе.|
+|[length](#length)|Возвращает длину последовательности, завершающейся нулем.|
 |[lookup_classname](#lookup_classname)|Сопоставляет последовательность с классом символов.|
 |[lookup_collatename](#lookup_collatename)|Сопоставляет последовательность с элементом упорядочивания.|
 |[transform](#transform)|Преобразует в эквивалентную упорядоченную последовательность.|
@@ -221,12 +221,12 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc*<br/>
+*Loc*\
 Объект языкового стандарта, который необходимо сохранить.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член копирует *loc* сохраненному `locale` и возвращает копию предыдущего значения сохраненного `locale` объекта.
+Функция-член копирует *Loc* в сохраненный `locale` объект и возвращает копию предыдущего значения сохраненного `locale` объекта.
 
 ## <a name="isctype"></a>  regex_traits::isctype
 
@@ -238,19 +238,19 @@ bool isctype(char_type ch, char_class_type cls) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ch*<br/>
+*канал*\
 Элемент для проверки.
 
-*CLS*<br/>
+*Спецификация*\
 Классы для проверки.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает значение true только в том случае, если символ *ch* находится в классе символов, указанном *cls*.
+Функция-член возвращает значение true, только если символ *CH* находится в классе символов, обозначенном *CLS*.
 
 ## <a name="length"></a>  regex_traits::length
 
-Возвращает длину последовательности, завершающаяся символом null.
+Возвращает длину последовательности, завершающейся нулем.
 
 ```cpp
 static size_type length(const char_type *str);
@@ -258,8 +258,8 @@ static size_type length(const char_type *str);
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
-Завершающаяся нулем последовательность.
+*str*\
+Последовательность, завершающаяся нулем.
 
 ### <a name="remarks"></a>Примечания
 
@@ -288,10 +288,10 @@ char_class_type lookup_classname(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*началь*\
 Начало искомой последовательности.
 
-*последний*<br/>
+*Последняя*\
 Конец искомой последовательности.
 
 ### <a name="remarks"></a>Примечания
@@ -313,10 +313,10 @@ string_type lookup_collatename(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*началь*\
 Начало искомой последовательности.
 
-*последний*<br/>
+*Последняя*\
 Конец искомой последовательности.
 
 ### <a name="remarks"></a>Примечания
@@ -372,10 +372,10 @@ string_type transform(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*началь*\
 Начало преобразуемой последовательности.
 
-*последний*<br/>
+*Последняя*\
 Конец преобразуемой последовательности.
 
 ### <a name="remarks"></a>Примечания
@@ -393,10 +393,10 @@ string_type transform_primary(FwdIt first, FwdIt last) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Первый*<br/>
+*началь*\
 Начало преобразуемой последовательности.
 
-*последний*<br/>
+*Последняя*\
 Конец преобразуемой последовательности.
 
 ### <a name="remarks"></a>Примечания
@@ -413,7 +413,7 @@ char_type translate(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ch*<br/>
+*канал*\
 Преобразуемый элемент.
 
 ### <a name="remarks"></a>Примечания
@@ -430,7 +430,7 @@ char_type translate_nocase(char_type ch) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ch*<br/>
+*канал*\
 Преобразуемый элемент.
 
 ### <a name="remarks"></a>Примечания
@@ -447,25 +447,25 @@ int value(Elem ch, int radix) const;
 
 ### <a name="parameters"></a>Параметры
 
-*ch*<br/>
+*канал*\
 Преобразуемый элемент.
 
-*radix*<br/>
+*основание системы счисления*\
 Используемое арифметическое основание.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает значение, представленное символом *ch* в базовом *основание системы счисления*, или -1, если *ch* не является допустимой цифрой в базовом *основание системы счисления*. Функция будет вызываться только с *основание системы счисления* аргумент 8, 10 или 16.
+Функция-член возвращает значение, представленное символом *CH* в базовом представлении системы *счисления*, или значение – 1, если *CH* не является допустимой цифрой в базовом *основание системы счисления*. Функция будет вызываться только с аргументом системы *счисления* 8, 10 или 16.
 
 ## <a name="see-also"></a>См. также
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Класс regex_constants](../standard-library/regex-constants-class.md)<br/>
-[Класс regex_error](../standard-library/regex-error-class.md)<br/>
-[Функции \<regex>](../standard-library/regex-functions.md)<br/>
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Операторы \<regex>](../standard-library/regex-operators.md)<br/>
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
-[regex_traits\<char > класс](../standard-library/regex-traits-char-class.md)<br/>
-Класс [regex_traits\<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Класс regex_constants](../standard-library/regex-constants-class.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<>ные операторы Regex](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[\<Regex > определения типов](../standard-library/regex-typedefs.md)\
+Класс [regex_traits\<char>](../standard-library/regex-traits-char-class.md)\
+Класс [regex_traits\<wchar_t>](../standard-library/regex-traits-wchar-t-class.md)

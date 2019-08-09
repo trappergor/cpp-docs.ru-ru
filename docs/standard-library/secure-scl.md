@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - _SECURE_SCL
 ms.assetid: 4ffbc788-cc12-4c6a-8cd7-490081675086
-ms.openlocfilehash: dcfaee2906136dffbe79a49f089a079104112e78
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1af084363fc0d6d1723a9af7b633779f92ed2b38
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62295751"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450532"
 ---
 # <a name="securescl"></a>_SECURE_SCL
 
 Этот макрос, заменяемый [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md), определяет, включены ли [Проверяемые итераторы](../standard-library/checked-iterators.md). По умолчанию проверяемые итераторы включены в отладочных сборках и отключены в окончательных сборках.
 
 > [!IMPORTANT]
-> Непосредственное использование макроса _SECURE_SCL является устаревшим. Вместо этого используйте _ITERATOR_DEBUG_LEVEL к параметрам управления проверяется итератора. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
+> Непосредственное использование макроса _SECURE_SCL является устаревшим. Вместо этого используйте _ITERATOR_DEBUG_LEVEL для управления установленными параметрами итератора. Дополнительные сведения см. в разделе [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md).
 
 ## <a name="remarks"></a>Примечания
 
-Если проверяемые итераторы включены, небезопасный итератор может вызвать ошибку во время выполнения и программа будет завершена. Чтобы включить проверяемые итераторы, задайте _ITERATOR_DEBUG_LEVEL 1 или 2. Это эквивалентно _SECURE_SCL значение 1, или включить.
+Если проверяемые итераторы включены, небезопасный итератор может вызвать ошибку во время выполнения и программа будет завершена. Чтобы включить Проверяемые итераторы, установите _ITERATOR_DEBUG_LEVEL в значение 1 или 2. Это эквивалентно параметру _SECURE_SCL, равному 1, или включенному:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 1
 ```
 
-Чтобы выключить проверяемые итераторы, равным 0 _ITERATOR_DEBUG_LEVEL. Это эквивалентно _SECURE_SCL значение 0 или отключена.
+Чтобы отключить Проверяемые итераторы, установите _ITERATOR_DEBUG_LEVEL в значение 0. Это эквивалентно значению параметра _SECURE_SCL, равному 0, или отключенному:
 
 ```cpp
 #define _ITERATOR_DEBUG_LEVEL 0
@@ -38,7 +38,7 @@ ms.locfileid: "62295751"
 
 ## <a name="see-also"></a>См. также
 
-[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)<br/>
-[Checked Iterators](../standard-library/checked-iterators.md)<br/>
-[Debug Iterator Support](../standard-library/debug-iterator-support.md)<br/>
-[Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)<br/>
+[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)\
+[Проверяемые итераторы](../standard-library/checked-iterators.md)\
+[Поддержка итераторов отладки](../standard-library/debug-iterator-support.md)\
+[Безопасные библиотеки: стандартная библиотека C++](../standard-library/safe-libraries-cpp-standard-library.md)

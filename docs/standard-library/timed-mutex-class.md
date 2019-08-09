@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 6b9785dc41791be63d585d18802953eade370b2a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411959"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459925"
 ---
 # <a name="timedmutex-class"></a>Класс timed_mutex
 
@@ -56,7 +56,7 @@ class timed_mutex;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** \<mutex >
+**Заголовок:** \<> мьютекса
 
 **Пространство имен:** std
 
@@ -102,7 +102,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -119,12 +119,12 @@ bool try_lock_for(const chrono::duration<Rep, Period>& Rel_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Rel_time*<br/>
+*Rel_time*\
 Объект [chrono::duration](../standard-library/duration-class.md), который указывает максимальный интервал времени, в течение которого метод пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -143,12 +143,12 @@ bool try_lock_until(const xtime* Abs_time);
 
 ### <a name="parameters"></a>Параметры
 
-*Abs_time*<br/>
+*Abs_time*\
 Момент времени, определяющий порог, после которого метод больше не пытается получить права владельца объекта `mutex`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если метод успешно получает права владения `mutex`; в противном случае **false**.
+**значение true** , если метод успешно получает владение `mutex`; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -168,5 +168,5 @@ void unlock();
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[\<mutex>](../standard-library/mutex.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[\<mutex>](../standard-library/mutex.md)

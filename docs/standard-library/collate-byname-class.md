@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-ms.openlocfilehash: 46eb139bafcf7368688f32cce37e38362c158c91
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: b8ed428da05e706796a981b8ca9d601033156c6f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62405187"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458622"
 ---
 # <a name="collatebyname-class"></a>Класс collate_byname
 
@@ -39,15 +39,15 @@ protected:
 
 ### <a name="parameters"></a>Параметры
 
-*_Locname*<br/>
+*_Locname*\
 Именованный языковой стандарт.
 
-*_Refs*<br/>
+*_Refs*\
 Начальное значение счетчика ссылок.
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется [с именем](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
+Класс шаблона, описывающий объект, который может служить в качестве [аспекта языкового стандарта](../standard-library/locale-class.md#facet_class) типа [collate](../standard-library/collate-class.md#collate)\<CharType>. Его поведение определяется с помощью [именованного](../standard-library/locale-class.md#name) языкового стандарта *_Locname*. Каждый конструктор инициализирует свой базовый объект с [collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`).
 
 ## <a name="requirements"></a>Требования
 
@@ -57,4 +57,4 @@ protected:
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

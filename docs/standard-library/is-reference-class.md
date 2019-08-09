@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_reference class
 - is_reference
 ms.assetid: 3d9e631f-3092-430c-843e-e914ab58c257
-ms.openlocfilehash: 793a84f03dba762ff686627004ffe3830a5d98d8
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 99aae64bcaef1e17956c3b3001627d128f966352
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413571"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455679"
 ---
 # <a name="isreference-class"></a>Класс is_reference
 
@@ -27,12 +27,12 @@ struct is_reference;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является ссылкой на объект или функцию, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является ссылкой на объект или функцию, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -77,5 +77,5 @@ is_reference<int(&)()> == true
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_pointer](../standard-library/is-pointer-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_pointer](../standard-library/is-pointer-class.md)

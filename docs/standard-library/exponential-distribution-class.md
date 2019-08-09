@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::exponential_distribution [C++], param_type
 - std::exponential_distribution [C++], param_type
 ms.assetid: d54f3126-a09b-45f9-a30b-0d94d03bcdc9
-ms.openlocfilehash: a8dd8168075a0fff3b61154098c0bee100961f98
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 8fd47b6acd4d991741f7ae45332d6cacc1903977
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451242"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457883"
 ---
 # <a name="exponentialdistribution-class"></a>Класс exponential_distribution
 
@@ -67,15 +67,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*<br/>
-Механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*\
+Модуль генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа **двойные** Если тип не указан, распределенные в соответствии с экспоненциальное распределение. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с экспоненциальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -182,10 +182,10 @@ explicit exponential_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*lambda*<br/>
+*даваемая*\
 Параметр распределения `lambda`.
 
-*parm*<br/>
+*ParM*\
 Пакет параметров, используемый для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -213,10 +213,10 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*lambda*<br/>
+*даваемая*\
 Параметр распределения `lambda`.
 
-*right*<br/>
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
@@ -227,4 +227,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

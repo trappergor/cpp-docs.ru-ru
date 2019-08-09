@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - vector<bool> reference class
 ms.assetid: f27854f9-0ef0-4e7e-ad2e-cd53b6cb3334
-ms.openlocfilehash: 7930c1cd93cd05a752d4997b9480c766ee26bd99
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 65bfc91cf5dc79fb1e5151a6f62c394b4579883b
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62407722"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453217"
 ---
 # <a name="vectorltboolgtreference-class"></a>Класс vector&lt;bool&gt;::reference
 
@@ -19,7 +19,7 @@ ms.locfileid: "62407722"
 
 ## <a name="remarks"></a>Примечания
 
-Необходима смоделированная ссылка, поскольку C++ изначально не допускает прямых ссылок на биты. `vector<bool>` использует только один бит на элемент, ссылку на который можно создать с помощью данного класса прокси. Однако моделирование ссылки является незавершенным, поскольку определенные назначения не являются допустимыми. Например так как адрес `vector<bool>::reference` объекта не может быть выполнено, следующий код, который пытается использовать `vector<bool>::operator&` не верна:
+Необходима смоделированная ссылка, поскольку C++ изначально не допускает прямых ссылок на биты. `vector<bool>` использует только один бит на элемент, ссылку на который можно создать с помощью данного класса прокси. Однако моделирование ссылки является незавершенным, поскольку определенные назначения не являются допустимыми. Например, поскольку адрес `vector<bool>::reference` объекта не может быть получен, следующий код, который пытается использовать `vector<bool>::operator&` , является неправильным:
 
 ```cpp
 vector<bool> vb;
@@ -30,10 +30,10 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[flip](../standard-library/vector-bool-reference-flip.md)|Инвертирует логическое значение элемента вектора.|
-|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Предоставляет неявное преобразование из `vector<bool>::reference` для **bool**.|
+|[operator bool](../standard-library/vector-bool-reference-operator-bool.md)|Обеспечивает неявное преобразование `vector<bool>::reference` из в **bool**.|
 |[оператор=](../standard-library/vector-bool-reference-operator-assign.md)|Присваивает биту логическое значение или значение, которое содержит элемент со ссылкой.|
 
 ## <a name="requirements"></a>Требования
@@ -44,6 +44,6 @@ bool& refb = vb[1];   // conversion error - do not use
 
 ## <a name="see-also"></a>См. также
 
-[\<vector>](../standard-library/vector.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<vector>](../standard-library/vector.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

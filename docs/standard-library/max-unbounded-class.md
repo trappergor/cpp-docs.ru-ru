@@ -16,12 +16,12 @@ helpviewer_keywords:
 - stdext::max_unbounded [C++], released
 - stdext::max_unbounded [C++], saved
 ms.assetid: e34627a9-c231-4031-a483-cbb0514fff46
-ms.openlocfilehash: ba99d6ed3af34363bf88cde1a40e4bf37841cd8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cea2f09837e5efc6969e4ab305d106b9c9728412
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412921"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447205"
 ---
 # <a name="maxunbounded-class"></a>Класс max_unbounded
 
@@ -35,7 +35,7 @@ class max_unbounded
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocated](#allocated)|Увеличивает счетчик выделенных блоков памяти.|
 |[deallocated](#deallocated)|Уменьшает счетчик выделенных блоков памяти.|
@@ -65,7 +65,7 @@ void allocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член ничего не делает. Вызывается после каждого успешного вызова со стороны `cache_freelist::allocate` оператору **новый**. Аргумент *_Nx* — количество блоков памяти в блоке, выделяемом оператором **новый**.
+Эта функция-член ничего не делает. Он вызывается после каждого успешного вызова `cache_freelist::allocate` оператора **New**. Аргумент *_Nx* — это количество блоков памяти в блоке, выделенном оператором **New**.
 
 ## <a name="deallocated"></a>  max_unbounded::deallocated
 
@@ -83,7 +83,7 @@ void deallocated(std::size_t _Nx = 1);
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова со стороны `cache_freelist::deallocate` оператору **удалить**. Аргумент *_Nx* — количество блоков памяти в блоке, который освобождается оператором **удалить**.
+Эта функция-член ничего не делает. Эта функция-член вызывается после каждого вызова `cache_freelist::deallocate` оператором **Delete**. Аргумент *_Nx* — это количество блоков памяти в блоке, освобожденных оператором **Delete**.
 
 ## <a name="full"></a>  max_unbounded::full
 
@@ -95,11 +95,11 @@ bool full();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция-член всегда возвращает **false**.
+Функция члена всегда возвращает **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **true**, `deallocate` помещает блок памяти в свободный список; если он возвращает false, `deallocate` вызывает оператор **удалить** для освобождения блока.
+Эта функция-член вызывается `cache_freelist::deallocate`. Если вызов возвращает **значение true**, `deallocate` блок памяти помещается в свободный список; если возвращается значение false, `deallocate` вызывает оператор **Delete** для освобождения блока.
 
 ## <a name="released"></a>  max_unbounded::released
 
@@ -127,4 +127,4 @@ void saved();
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

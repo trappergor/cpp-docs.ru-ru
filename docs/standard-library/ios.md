@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 013888a1ae11042645ef48c4fae15cbe6c2d939f
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 96e8588e72e864d5324e406859e5a39053a46ccf
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68245240"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449136"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -20,16 +20,16 @@ ms.locfileid: "68245240"
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок**: \<ios >
+**Заголовок**: \<> iOS
 
 **Пространство имен:** std
 
 > [!NOTE]
-> \<Ios > Библиотека использует `#include <iosfwd>` инструкции.
+> Библиотека > `#include <iosfwd>` iOS использует инструкцию. \<
 
 ## <a name="remarks"></a>Примечания
 
-Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг формата `ios_base::skipws` в объекте `str`, который может быть одного из этих типов.
+Существует большая группа функций — манипуляторы. Манипулятор, объявленный в \<ios>, изменяет значения, хранящиеся в его аргументе — объекте класса [ios_base](../standard-library/ios-base-class.md). Другие манипуляторы выполняют действия над потоками, управляемыми объектами типа, производного от этого класса, например, специализацией одного из шаблонов классов [basic_istream](../standard-library/basic-istream-class.md) или [basic_ostream](../standard-library/basic-ostream-class.md). Например, [noskipws](../standard-library/ios-functions.md#noskipws)(**str**) очищает флаг `ios_base::skipws` формата в объекте `str`, который может иметь один из этих типов.
 
 Вы можете также вызвать манипулятор путем вставки его в поток вывода или извлечения из потока ввода благодаря специальным операциям вставки и извлечения, доступным для классов, производных от `ios_base`. Например:
 
@@ -61,7 +61,7 @@ istr>> noskipws;
 |[defaultfloat](../standard-library/ios-functions.md#ios_defaultfloat)|Устанавливает флаги объекта `ios_base` в соответствии с форматом отображения значений с плавающей запятой, принятым по умолчанию.|
 |[fixed](../standard-library/ios-functions.md#fixed)|Устанавливает режим отображения чисел с плавающей запятой в нотации фиксированного десятичного формата.|
 |[hex](../standard-library/ios-functions.md#hex)|Устанавливает режим отображения целочисленных переменных в нотации с основанием 16.|
-|[шестнадцатеричные](../standard-library/ios-functions.md#hexfloat)|
+|[свертывания](../standard-library/ios-functions.md#hexfloat)|
 |[internal](../standard-library/ios-functions.md#internal)|Устанавливает режим выравнивания знака числа по левому краю, а самого числа — по правому краю.|
 |[left](../standard-library/ios-functions.md#left)|Устанавливает режим добавления левого поля для текста, ширина которого меньше, чем ширина выходных данных, при представлении его в потоке.|
 |[noboolalpha](../standard-library/ios-functions.md#noboolalpha)|Устанавливает режим отображения переменных типа [bool](../cpp/bool-cpp.md) в потоке в виде 1 или 0.|
@@ -101,7 +101,7 @@ istr>> noskipws;
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

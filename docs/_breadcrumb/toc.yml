@@ -18,7 +18,7 @@
               topicHref: /cpp/c-language/c-language-reference
             - name: "Препроцессор\_C/C++"
               tocHref: /cpp/preprocessor/
-              topicHref: /cpp/c-cpp-preprocessor-reference
+              topicHref: /cpp/preprocessor/c-cpp-preprocessor-reference
             - name: Внутренние объекты компилятора и язык ассемблера
               tocHref: /cpp/intrinsics/
               topicHref: /cpp/intrinsics/compiler-intrinsics-and-assembly-language
@@ -28,7 +28,7 @@
                   topicHref: /cpp/assembler/arm/arm-assembler-reference
                 - name: Встроенный сборщик
                   tocHref: /cpp/assembler/inline/
-                  topicHref: /cpp/assembler/inline-assembler
+                  topicHref: /cpp/assembler/inline/inline-assembler
                 - name: MASM
                   tocHref: /cpp/assembler/masm/
                   topicHref: /cpp/assembler/masm/microsoft-macro-assembler-reference
@@ -36,7 +36,7 @@
               tocHref: /cpp/c-runtime-library/
               topicHref: /cpp/c-runtime-library/c-run-time-library-reference
               items:
-                - name: Ссылка
+                - name: Справочник
                   tocHref: /cpp/c-runtime-library/reference/
                   topicHref: /cpp/c-runtime-library/reference/crt-alphabetical-function-reference
             - name: Стандартная библиотека C++
@@ -53,16 +53,16 @@
                   tocHref: /cpp/mfc/
                   topicHref: /cpp/mfc/mfc-desktop-applications
                   items:
-                    - name: Ссылка
+                    - name: Справочники
                       tocHref: /cpp/mfc/reference/
                       topicHref: /cpp/mfc/reference/mfc-classes
                 - name: Общие классы ATL и MFC
                   tocHref: /cpp/atl-mfc-shared/
                   topicHref: /cpp/atl-mfc-shared/atl-mfc-shared-classes
                   items:
-                    - name: Ссылка
+                    - name: Справочники
                       tocHref: /cpp/atl-mfc-shared/reference/
-                      topicHref: /cpp/atl-mfc/shared/reference/classes-shared-by-mfc-and-atl
+                      topicHref: /cpp/atl-mfc-shared/reference/classes-shared-by-mfc-and-atl
                 - name: C++/CX
                   tocHref: /cpp/cppcx/
                   topicHref: /cpp/cppcx/visual-c-language-reference-c-cx
@@ -77,7 +77,7 @@
               topicHref: /cpp/parallel/parallel-programming-in-visual-cpp
             - name: Доступ к данным
               tocHref: /cpp/data/
-              topicHref: /cpp/data/
+              topicHref: /cpp/data/data-access-in-cpp
               items:
                 - name: OLEDB
                   tocHref: /cpp/data/oledb/

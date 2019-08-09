@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_nothrow_constructible
 ms.assetid: 8be3f927-283e-4d67-95a5-8bf5dc4e7a3d
-ms.openlocfilehash: 9ea11d54d49bf8f6ae6416f9663c2593cc66ea3e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 7ec4fc3ef5d9a799d5d77124870fbb337061c94c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383611"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455994"
 ---
 # <a name="isnothrowconstructible-class"></a>Класс is_nothrow_constructible
 
@@ -26,15 +26,15 @@ struct is_nothrow_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Запрашиваемый тип.
 
-*Args*<br/>
-Типы аргументов для сопоставления в конструктор *T*.
+*Args*\
+Типы аргументов для сопоставления в конструкторе *T*.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *T* — конструируемый при использовании типов аргументов в *Args*и конструктор известен, компилятор не будет выдавать; в противном случае он содержит значение false. Тип *T* конструируемым Если определение переменной `T t(std::declval<Args>()...);` имеет правильный формат. Оба *T* и все типы в *Args* должны быть полными типами **void**, или массивами с неизвестной границей.
+Экземпляр предиката типа содержит значение true, если тип *T* является конструируемым с помощью типов аргументов в аргументах *args*, и конструктору известно, что компилятор не создает исключение. в противном случае он содержит значение false. Тип *T* — конструируемым, если определение `T t(std::declval<Args>()...);` переменной имеет правильный формат. *T* и все типы в аргументах *args* должны быть полными типами, **void**или массивами неизвестной привязки.
 
 ## <a name="requirements"></a>Требования
 
@@ -44,4 +44,4 @@ struct is_nothrow_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

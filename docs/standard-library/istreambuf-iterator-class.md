@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::istreambuf_iterator [C++], traits_type
 - std::istreambuf_iterator [C++], equal
 ms.assetid: 39002da2-61a6-48a5-9d0c-5df8271f6038
-ms.openlocfilehash: 41298909b53de1c7acf3cb8ae4b999eb6260765d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0a2bbc69d4f2d3af0ee6e00a2672436a5f15ab67
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413272"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448132"
 ---
 # <a name="istreambufiterator-class"></a>Класс istreambuf_iterator
 
@@ -39,10 +39,10 @@ class istreambuf_iterator
 
 ### <a name="parameters"></a>Параметры
 
-*CharType*<br/>
+*CharType*\
 Тип, представляющий тип символа для istreambuf_iterator.
 
-*Признаки*<br/>
+*Признаки*\
 Тип, представляющий тип символа для istreambuf_iterator. Этот аргумент является необязательным, значение по умолчанию — `char_traits`\< *CharType>.*
 
 ## <a name="remarks"></a>Примечания
@@ -69,7 +69,7 @@ class istreambuf_iterator
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[equal](#equal)|Тесты на равенство между двумя итераторами буфера входного потока.|
 
@@ -142,7 +142,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Итератор, для которого выполняется проверка на равенство.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -151,7 +151,7 @@ bool equal(const istreambuf_iterator<CharType, Traits>& right) const;
 
 ### <a name="remarks"></a>Примечания
 
-Диапазон определяется `istreambuf_iterator` для текущей позиции и итератора окончания потока, но, поскольку все не конца потока итераторы, эквивалентны в рамках `equal` функция-член, не удается определить никакие поддиапазоны с помощью `istreambuf_iterator`s. Операторы `==` и `!=` имеют одинаковую семантику.
+Диапазон определяется `istreambuf_iterator` в соответствии с текущей позицией и итератором конца потока, но так как все итераторы, не являющиеся `equal` элементами конца потока, эквивалентны в функции-члене, невозможно определить поддиапазоны с помощью `istreambuf_iterator`s. Операторы `==` и `!=` имеют одинаковую семантику.
 
 ### <a name="example"></a>Пример
 
@@ -239,15 +239,15 @@ istreambuf_iterator(istream_type& _Istr) throw();
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf*<br/>
+*strBuf*\
 Буфер входного потока, к которому присоединяется `istreambuf_iterator`.
 
-*_Istr*<br/>
+*_Istr*\
 Входной поток, к которому присоединяется `istreambuf_iterator`.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует указатель буфера входного потока значением *strbuf*. Второй конструктор инициализирует указатель буфера входного потока значением *_Istr*. `rdbuf`, а затем в конечном итоге пытается извлечь и сохранить объект типа `CharType`.
+Первый конструктор инициализирует указатель буфера входного потока с помощью *strBuf*. Второй конструктор инициализирует указатель буфера входного потока с помощью *_Istr*. `rdbuf`, а затем пытается извлечь и сохранить объект типа `CharType`.
 
 ### <a name="example"></a>Пример
 
@@ -336,7 +336,7 @@ istreambuf_iterator<CharType, Traits> operator++(int);
 
 ### <a name="remarks"></a>Примечания
 
-Первый оператор в конечном итоге пытается извлечь и сохранить объект типа `CharType` из соответствующего входного потока. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.
+Первый оператор в конечном итоге пытается извлечь и сохранить объект типа `CharType` из связанного входного потока. Второй оператор создает копию объекта, выполняет приращение объекта, а затем возвращает копию.
 
 ### <a name="example"></a>Пример
 
@@ -441,7 +441,7 @@ int main( )
 
 ## <a name="see-also"></a>См. также
 
-[Структура iterator](../standard-library/iterator-struct.md)<br/>
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Структура iterator](../standard-library/iterator-struct.md)\
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

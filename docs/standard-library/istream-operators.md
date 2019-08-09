@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - istream/std::operator&gt;&gt;
 ms.assetid: 7174da41-f301-4a34-b631-0ab918b188d2
-ms.openlocfilehash: 05b10c27d8e0cf4c0300bb307d8b7ceda43ddb2f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c10692194c80051b10ecbe776c7d23a03860d508
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413311"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68447787"
 ---
 # <a name="ltistreamgt-operators"></a>Операторы &lt;istream&gt;
 
@@ -56,16 +56,16 @@ basic_istream<Elem, Tr>& operator>>(
 
 ### <a name="parameters"></a>Параметры
 
-*CH*<br/>
+*Канал*\
 Символ.
 
-*ISTR*<br/>
+*ISTR*\
 Поток.
 
-*str*<br/>
+*str*\
 Строка.
 
-*Val*<br/>
+*Val*\
 Тип.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -84,9 +84,9 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem* str);
 ```
 
-извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **Ширина**; в противном случае это будет размер самого большого массива из `Elem` , могут быть объявлены. Функция всегда сохраняет значение `Elem()` после сохранения всех извлеченных элементов сохраняется. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае она вызывает `Istr`. **Ширина**(0) и возвращает *Istr*.
+извлекает до *N* − 1 элементов и сохраняет их в массив, начиная с _ *Str*. Если `Istr`. [width](../standard-library/ios-base-class.md#width) больше нуля, *N* имеет значение `Istr`. **Ширина**; в противном случае это размер самого крупного массива `Elem` , который может быть объявлен. Функция всегда сохраняет значение `Elem()` после извлеченных элементов, которые он хранит. Извлечение останавливается досрочно при достижении конца файла, на символе со значением **Elem**(0) (который не извлекается), или на любом элементе (который не извлекается), который будет отклонен [ws](../standard-library/istream-functions.md#ws). Если функция не извлекает ни один элемент, она вызывает `Istr`. [SetState](../standard-library/basic-ios-class.md#setstate) (**failbit**). В любом случае она вызывает `Istr`. **Ширина** (0) и возвращает *ISTR*.
 
-**Примечание по безопасности** нулем строка, извлекаемая из входного потока не должна превышать размер буфера назначения *str*. Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
+**Примечание по безопасности** Строка, завершающаяся нулем, извлекаемая из входного потока, не должна превышать размер строки *целевого буфера.* Дополнительные сведения см. в разделе [Как избежать переполнения буфера](/windows/desktop/SecBP/avoiding-buffer-overruns).
 
 Функция-шаблон:
 
@@ -96,7 +96,7 @@ basic_istream<Elem, Tr>& operator>>(
     basic_istream<Elem, Tr>& Istr, Elem& Ch);
 ```
 
-Извлекает элемент, в том случае, если он возможен и сохраняет его в *Ch*. В противном случае она вызывает **is**. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае он возвращает *Istr*.
+Извлекает элемент, если это возможно, и сохраняет его в *CH*. В противном случае она вызывает **is**. [setstate](../standard-library/basic-ios-class.md#setstate)(**failbit**). В любом случае возвращается *ISTR*.
 
 Функция-шаблон:
 
@@ -147,7 +147,7 @@ basic_istream<Elem, Tr>& operator>>(
     Type& val);
 ```
 
-Возвращает `Istr >> val` (и преобразует ссылка rvalue на `Istr` для lvalue в процессе).
+Возвращает `Istr >> val` (и преобразует `Istr` ссылку rvalue в значение lvalue в процессе).
 
 ### <a name="example"></a>Пример
 
@@ -170,4 +170,4 @@ int main( )
 
 ## <a name="see-also"></a>См. также
 
-[\<istream>](../standard-library/istream.md)<br/>
+[\<istream>](../standard-library/istream.md)

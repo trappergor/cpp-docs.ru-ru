@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: f60a3ef6528da33fd1117fc940e961e9fe0987df
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a3265cfe4b2629bf02925ea6e3eeb0c4acb1e0e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62185910"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451213"
 ---
 # <a name="resultof-class"></a>Класс result_of
 
-Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. Добавлена в C ++ 14, устаревшим в C ++ 17.
+Определяет возвращаемый тип вызываемого типа, который принимает заданные типы аргументов. Добавлено в C++ 14, не рекомендуется в C++ 17.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,15 +37,15 @@ template<class T>
 
 ### <a name="parameters"></a>Параметры
 
-*fn*<br/>
+*FN*\
 Вызываемый тип для запроса.
 
-*ArgTypes*<br/>
+*аргтипес*\
 Типы списка аргументов к вызываемому типу для запроса.
 
 ## <a name="remarks"></a>Примечания
 
-Этот шаблон служит для определения во время компиляции тип результата `Fn`(`ArgTypes`), где *Fn* вызываемый тип, ссылка на функцию или ссылку на вызываемый тип, вызванные с помощью списка аргументов типов в  *ArgTypes*. Член `type` класса шаблонов называет тип результата `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, если неоцененное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае класс шаблона не имеет члена `type`. Тип *Fn* и все типы в пакете параметров *ArgTypes* должны быть полными типами **void**, или массивами с неизвестной границей. Не рекомендуется, вместо него используется [invoke_result](invoke-result-class.md) в C ++ 17.
+Используйте этот шаблон для определения во `Fn`время компиляции типа результата (`ArgTypes`), где *fn* — это вызываемый тип, ссылка на функцию или ссылка на вызываемый тип, вызываемая с помощью списка аргументов типов в *аргтипес*. Член `type` класса шаблонов называет тип результата `decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))`, если неоцененное выражение `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` имеет правильный формат. В противном случае класс шаблона не имеет члена `type`. Тип *fn* и все типы в пакете параметров *аргтипес* должны быть полными типами, **void**или массивами неизвестной привязки. Не рекомендуется в пользу [invoke_result](invoke-result-class.md) в c++ 17.
 
 ## <a name="requirements"></a>Требования
 
@@ -55,5 +55,5 @@ template<class T>
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс invoke_result](invoke-result-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[класс invoke_result](invoke-result-class.md)

@@ -405,7 +405,7 @@
                   href: build/reference/vcxproj-file-structure.md
                 - name: Пример файла проекта
                   href: build/reference/project-files.md
-            - name: Справочник по свойствам проектов С++
+            - name: Страницы свойств проекта C++
               expanded: false
               items:
                 - name: Справочник по свойствам проектов С++
@@ -414,42 +414,28 @@
                   href: build/reference/general-property-page-project.md
                 - name: Страница свойств "Общие"
                   href: build/reference/general-property-page-file.md
+                - name: Страница свойств "Дополнительно"
+                  href: build/reference/advanced-property-page.md
+                - name: Страницы свойств отладки
+                  href: build/reference/debugging-prop-pages.md
                 - name: Страница свойств каталогов VC++
                   href: build/reference/vcpp-directories-property-page.md
+                - name: Страницы свойств C/C++
+                  href: build/reference/c-cpp-prop-page.md
+                - name: Страницы свойств компоновщика
+                  href: build/reference/linker-property-pages.md
                 - name: Страницы свойств командной строки
                   href: build/reference/command-line-property-pages.md
                 - name: Страница свойств NMake
                   href: build/reference/nmake-property-page.md
-                - name: Страницы свойств компоновщика
-                  href: build/reference/linker-property-pages.md
                 - name: Страницы свойств средства манифестов
-                  expanded: false
-                  items:
-                    - name: Страницы свойств средства манифестов
-                      href: build/reference/manifest-tool-property-pages.md
-                    - name: 'Общие, инструмент манифеста, свойства конфигурации, диалоговое окно "Страницы свойств <Projectname>"'
-                      href: build/reference/general-manifest-tool-configuration-properties.md
-                    - name: 'Вход и выход, инструмент манифеста, свойства конфигурации, диалоговое окно "Страницы свойств <Projectname>"'
-                      href: build/reference/input-and-output-manifest-tool.md
-                    - name: 'Изолированный COM, инструмент манифеста, свойства конфигурации, диалоговое окно "Страницы свойств <Projectname>"'
-                      href: build/reference/isolated-com-manifest-tool.md
-                    - name: 'Дополнительно, инструмент манифеста, свойства конфигурации, диалоговое окно "Страницы свойств <Projectname>"'
-                      href: build/reference/advanced-manifest-tool.md
+                  href: build/reference/manifest-tool-property-pages.md
                 - name: Страницы свойств ресурсов
                   href: build/reference/resources-property-pages.md
                 - name: Страница свойств управляемых ресурсов
                   href: build/reference/managed-resources-property-page.md
                 - name: Страницы свойств MIDL
-                  expanded: false
-                  items:
-                    - name: Страницы свойств MIDL
-                      href: build/reference/midl-property-pages.md
-                    - name: 'Страницы свойств MIDL: Общие'
-                      href: build/reference/midl-property-pages-general.md
-                    - name: 'Страницы свойств MIDL: Вывод'
-                      href: build/reference/midl-property-pages-output.md
-                    - name: 'Страницы свойств MIDL: Дополнительно'
-                      href: build/reference/midl-property-pages-advanced.md
+                  href: build/reference/midl-property-pages.md
                 - name: Страница свойств веб-ссылок
                   href: build/reference/web-references-property-page.md
                 - name: Страница свойств "Инструмент создания XML-данных"
@@ -459,16 +445,7 @@
                 - name: 'Страница свойств настраиваемого этапа сборки: Общие'
                   href: build/reference/custom-build-step-property-page-general.md
                 - name: Страницы свойств HLSL
-                  expanded: false
-                  items:
-                    - name: Страницы свойств HLSL
-                      href: build/reference/hlsl-property-pages.md
-                    - name: 'Страницы свойств HLSL: Общие'
-                      href: build/reference/hlsl-property-pages-general.md
-                    - name: 'Страницы свойств HLSL: Дополнительно'
-                      href: build/reference/hlsl-property-pages-advanced.md
-                    - name: 'Страницы свойств HLSL: выходные файлы'
-                      href: build/reference/hlsl-property-pages-output-files.md
+                  href: build/reference/hlsl-property-pages.md
         - name: Справочник по компилятору MSVC
           expanded: false
           items:
@@ -1610,10 +1587,10 @@
 - name: Разработка классических приложений для Windows
   expanded: false
   items:
-    - name: Классические приложения на C++
-      href: windows/desktop-applications-visual-cpp.md
     - name: Общие сведения о программировании на C++ в Windows
       href: windows/overview-of-windows-programming-in-cpp.md
+    - name: Классические приложения на C++
+      href: windows/desktop-applications-visual-cpp.md
     - name: Пошаговое руководство. Создание стандартной программы на C++
       href: windows/walkthrough-creating-a-standard-cpp-program-cpp.md
     - name: Пошаговое руководство. Создание классических приложений Windows
@@ -4356,6 +4333,13 @@
                   href: cpp/assertion-and-user-supplied-messages-cpp.md
                 - name: static_assert
                   href: cpp/static-assert.md
+            - name: Модули
+              expanded: false
+              items:
+                - name: Обзор модулей в C++
+                  href: cpp/modules-cpp.md
+                - name: 'модуль, импорт, экспорт'
+                  href: cpp/import-export-module.md
             - name: Шаблоны
               expanded: false
               items:
@@ -8411,6 +8395,15 @@
                       href: standard-library/sync-per-thread-class.md
                     - name: Класс sync_shared
                       href: standard-library/sync-shared-class.md
+                - name: <any>
+                  expanded: false
+                  items:
+                    - name: <any>
+                      href: standard-library/any.md
+                    - name: Функции<any>
+                      href: standard-library/any-functions.md
+                    - name: Класс any (стандартная библиотека C++)
+                      href: standard-library/any-class.md
                 - name: <array>
                   expanded: false
                   items:
@@ -8536,6 +8529,8 @@
                   href: standard-library/csetjmp.md
                 - name: <csignal>
                   href: standard-library/csignal.md
+                - name: <cstdalign>
+                  href: standard-library/cstdalign.md
                 - name: <cstdarg>
                   href: standard-library/cstdarg.md
                 - name: <cstdbool>
@@ -8554,6 +8549,8 @@
                   href: standard-library/ctgmath.md
                 - name: <ctime>
                   href: standard-library/ctime.md
+                - name: <cuchar>
+                  href: standard-library/cuchar.md
                 - name: <cvt-wbuffer>
                   href: standard-library/cvt-wbuffer.md
                 - name: <cvt-wstring>
@@ -8586,6 +8583,8 @@
                       href: standard-library/bad-exception-class.md
                     - name: Класс exception
                       href: standard-library/exception-class.md
+                - name: <execution>
+                  href: standard-library/execution.md
                 - name: <filesystem>
                   expanded: false
                   items:
@@ -8999,6 +8998,17 @@
                       href: standard-library/unique-ptr-class.md
                     - name: Класс weak_ptr
                       href: standard-library/weak-ptr-class.md
+                - name: <memory_resource>
+                  expanded: false
+                  items:
+                    - name: <memory_resource>
+                      href: standard-library/memory-resource.md
+                    - name: Функции <memory_resource>
+                      href: standard-library/memory-resource-functions.md
+                    - name: Операторы <memory_resource>
+                      href: standard-library/memory-resource-operators.md
+                    - name: Класс memory_resource
+                      href: standard-library/memory-resource-class.md
                 - name: <mutex>
                   expanded: false
                   items:
@@ -9048,6 +9058,17 @@
                       href: standard-library/numeric.md
                     - name: Функции<numeric>
                       href: standard-library/numeric-functions.md
+                - name: <optional>
+                  expanded: false
+                  items:
+                    - name: <optional>
+                      href: standard-library/optional.md
+                    - name: Функции<optional>
+                      href: standard-library/optional-functions.md
+                    - name: Операторы <optional>
+                      href: standard-library/optional-operators.md
+                    - name: необязательный класс
+                      href: standard-library/optional-class.md
                 - name: <ostream>
                   expanded: false
                   items:
@@ -9616,6 +9637,17 @@
                       href: standard-library/valarray-class.md
                     - name: Класс valarray<bool>
                       href: standard-library/valarray-bool-class.md
+                - name: <variant>
+                  expanded: false
+                  items:
+                    - name: <variant>
+                      href: standard-library/variant.md
+                    - name: Функции<variant>
+                      href: standard-library/variant-functions.md
+                    - name: Операторы <variant>
+                      href: standard-library/variant-operators.md
+                    - name: класс variant
+                      href: standard-library/variant-class.md
                 - name: <vector>
                   expanded: false
                   items:

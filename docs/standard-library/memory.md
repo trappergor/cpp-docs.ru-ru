@@ -7,12 +7,12 @@ f1_keywords:
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: d2776e658b511208d9a295cd84a961d7691d29e0
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246811"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451891"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -48,9 +48,9 @@ ms.locfileid: "68246811"
 |[declare_no_pointers](../standard-library/memory-functions.md#declare_no_pointers)|Сообщает сборщику мусора, что символы, начинающиеся с указанного адреса и попадающие в блок указанного размера, не содержат трассируемых указателей.|
 |[declare_reachable](../standard-library/memory-functions.md#declare_reachable)|Уведомляет сборщик мусора, что указанный адрес относится к выделенной памяти и является доступным.|
 |[default_delete](../standard-library/memory-functions.md#default_delete)|Удаляет объекты, выделенные с помощью `operator new`. Подходит для использования с `unique_ptr`.|
-|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Сокращение `destroy` метод.|
-|[destroy](../standard-library/memory-functions.md#destroy)|Сокращение `destroy` метод.|
-|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Сокращение `destroy` метод.|
+|[destroy_at](../standard-library/memory-functions.md#destroy_at)|Сокращенный `destroy` метод.|
+|[destroy](../standard-library/memory-functions.md#destroy)|Сокращенный `destroy` метод.|
+|[destroy_n](../standard-library/memory-functions.md#destroy_n)|Сокращенный `destroy` метод.|
 |[dynamic_pointer_cast](../standard-library/memory-functions.md#dynamic_pointer_cast)|Динамическое приведение к `shared_ptr`.|
 |[get_deleter](../standard-library/memory-functions.md#get_deleter)|Получение метода удаления из `shared_ptr`.|
 |[get_pointer_safety](../standard-library/memory-functions.md#get_pointer_safety)|Возвращает тип безопасности указателя, подразумеваемый любым сборщиком мусора.|
@@ -65,14 +65,14 @@ ms.locfileid: "68246811"
 |[undeclare_reachable](../standard-library/memory-functions.md#undeclare_reachable)|Уведомляет `garbage_collector`, что указанная область памяти является недоступной.|
 |[uninitialized_copy](../standard-library/memory-functions.md#uninitialized_copy)|Копирует объекты из указанного входного диапазона в неинициализированный конечный диапазон.|
 |[uninitialized_copy_n](../standard-library/memory-functions.md#uninitialized_copy_n)|Создает копию заданного числа элементов из итератора ввода. Копии помещаются в прямой итератор.|
-|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Сокращение `uninitialized_default_construct` метод.|
-|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Сокращение `uninitialized_construct` метод.|
+|[uninitialized_default_construct](../standard-library/memory-functions.md#uninitialized_default_construct)|Сокращенный `uninitialized_default_construct` метод.|
+|[uninitialized_default_construct_n](../standard-library/memory-functions.md#uninitialized_default_construct_n)|Сокращенный `uninitialized_construct` метод.|
 |[uninitialized_fill](../standard-library/memory-functions.md#uninitialized_fill)|Копирует объекты с указанным значением в неинициализированный конечный диапазон.|
 |[uninitialized_fill_n](../standard-library/memory-functions.md#uninitialized_fill_n)|Копирует объекты с указанным значением в указанное число элементов в неинициализированном конечном диапазоне.|
-|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Сокращение `uninitialized_move` метод.|
-|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Сокращение `uninitialized_move` метод.|
-|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Сокращение `uninitialized_value_construct` метод.|
-|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Сокращение `uninitialized_value_construct` метод.|
+|[uninitialized_move](../standard-library/memory-functions.md#uninitialized_move)|Сокращенный `uninitialized_move` метод.|
+|[uninitialized_move_n](../standard-library/memory-functions.md#uninitialized_move_n)|Сокращенный `uninitialized_move` метод.|
+|[uninitialized_value_construct](../standard-library/memory-functions.md#uninitialized_value_construct)|Сокращенный `uninitialized_value_construct` метод.|
+|[uninitialized_value_construct_n](../standard-library/memory-functions.md#uninitialized_value_construct_n)|Сокращенный `uninitialized_value_construct` метод.|
 |[uses_allocator_v](../standard-library/memory-functions.md#uses_allocator_v)||
 
 ### <a name="operators"></a>Операторы
@@ -93,7 +93,7 @@ ms.locfileid: "68246811"
 |-|-|
 |[allocator](../standard-library/allocator-class.md)|Класс шаблона описывает объект, который управляет выделением и освобождением памяти для массивов объектов типа **тип**.|
 |[allocator_traits](../standard-library/allocator-traits-class.md)|Описывает объект, определяющий все сведения, необходимые контейнеру с распределителем.|
-|[auto_ptr](../standard-library/auto-ptr-class.md)|Класс шаблона описывает объект, который хранит указатель на выделенный объект типа **тип** <strong>\*</strong> , гарантирующий, что объект, на которое он указывает, удаляется при получении его включающего auto_ptr уничтожить.|
+|[auto_ptr](../standard-library/auto-ptr-class.md)|Класс шаблона описывает объект, хранящий указатель на выделенный объект типа **Type** <strong>\*</strong> , который гарантирует, что объект, на который он указывает, удаляется, когда его включающий auto_ptr уничтожается.|
 |[bad_weak_ptr](../standard-library/bad-weak-ptr-class.md)|Сообщает о необрабатываемом исключении weak_ptr.|
 |[enabled_shared_from_this](../standard-library/enable-shared-from-this-class.md)|Помогает сформировать `shared_ptr`.|
 |[pointer_traits](../standard-library/pointer-traits-struct.md)|Предоставляет данные, необходимые объекту класса шаблонов `allocator_traits` для описания распределителя с типом указателя `Ptr`.|
@@ -120,5 +120,5 @@ ms.locfileid: "68246811"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

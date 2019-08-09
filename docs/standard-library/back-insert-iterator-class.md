@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d8f48b1f714697aff63a4ee658a69fce6dab8041
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376449"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68459527"
 ---
 # <a name="backinsertiterator-class"></a>Класс back_insert_iterator
 
@@ -30,7 +30,7 @@ class back_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер*<br/>
+*Контейнера*\
 Тип контейнера, в конец которого итератор `back_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Примечания
@@ -54,9 +54,9 @@ class back_insert_iterator;
 
 |Оператор|Описание|
 |-|-|
-|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в конечную часть.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для \* реализации выражения `i`  =  `x` итератора вывода для вставки обратной передачи.|
 |[оператор++](#op_add_add)|Увеличивает `back_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в конечную часть.|
+|[оператор=](#op_eq)|Оператор присваивания, используемый для \* реализации выражения `i`  =  `x` итератора вывода для вставки обратной передачи.|
 
 ## <a name="requirements"></a>Требования
 
@@ -74,7 +74,7 @@ explicit back_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont*<br/>
+*_Cont*\
 Контейнер, в который `back_insert_iterator` вставляет элемент.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -315,7 +315,7 @@ back_insert_iterator<Container>& operator=(typename Container::value_type&& val)
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Значение для вставки в контейнер.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -423,6 +423,6 @@ The last element in the vector vec is: 3.
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

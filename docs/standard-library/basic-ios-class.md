@@ -55,16 +55,16 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-ms.openlocfilehash: c22e048d01665deed83a9474525f414dfd874fe0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: e2341dcc0f2f03fbfa212d1ea49993016e193638
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62400660"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460106"
 ---
 # <a name="basicios-class"></a>Класс basic_ios
 
-Этот класс шаблона описывает хранилище и функции-члены, общие для входных потоков (класс шаблона [basic_istream](../standard-library/basic-istream-class.md)) и выходных потоков (класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), которые зависят от параметров шаблона. (Класс [basic_ios](../standard-library/ios-base-class.md) описывает общие принципы, не зависящие от параметров шаблона.) Объект класса **basic_ios\<class Elem, class Traits >** помогает управлять потоком с элементами типа `Elem`, признаки символов определяются классом `Traits`.
+Этот класс шаблона описывает хранилище и функции-члены, общие для входных потоков (класс шаблона [basic_istream](../standard-library/basic-istream-class.md)) и выходных потоков (класс шаблона [basic_ostream](../standard-library/basic-ostream-class.md)), которые зависят от параметров шаблона. (Класс [basic_ios](../standard-library/ios-base-class.md) описывает общие принципы, не зависящие от параметров шаблона.) Объект класса **basic_ios\<класса Elem,** признаков класса > помогает управлять потоком с элементами типа `Elem`, признаки символов которых определяются классом `Traits`.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -76,19 +76,19 @@ class basic_ios : public ios_base
 
 ### <a name="parameters"></a>Параметры
 
-*Elem*<br/>
+*Elem*\
 Тип.
 
-*Признаки*<br/>
+*Признаки*\
 Переменная типа `char_traits`.
 
 ## <a name="remarks"></a>Примечания
 
 Объект класса **basic_ios\<class Elem, class Traits>** хранит следующее.
 
-- Указатель на объект типа [basic_istream](../standard-library/basic-istream-class.md)**\<Elem, Traits>**.
+- Указатель на объект типа [basic_istream](../standard-library/basic-istream-class.md) **\<Elem, Traits>** .
 
-- Указатель буфера потока на объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md)**\<Elem, Traits >**.
+- Указатель буфера потока на объект типа [basic_streambuf](../standard-library/basic-streambuf-class.md) **\<Elem, Traits >** .
 
 - [Сведения о форматировании](../standard-library/ios-base-class.md).
 
@@ -114,7 +114,7 @@ class basic_ios : public ios_base
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[bad](#bad)|Сообщает о потере целостности буфера потока.|
 |[clear](#clear)|Очищает все флаги ошибок.|
@@ -140,7 +140,7 @@ class basic_ios : public ios_base
 
 |Оператор|Описание|
 |-|-|
-|[explicit operator bool](#op_bool)|Позволяет использовать `basic_ios` объекта в виде **bool**. Автоматическое преобразование типов отключено для предотвращения распространенных непредвиденных побочных эффектов.|
+|[explicit operator bool](#op_bool)|Позволяет использовать `basic_ios` объект в качестве **bool**. Автоматическое преобразование типов отключено для предотвращения распространенных непредвиденных побочных эффектов.|
 |[operator void *](#op_void_star)|Указывает, находится ли поток по-прежнему в хорошем состоянии.|
 |[оператор!](#op_not)|Указывает, не находится ли поток в плохом состоянии.|
 
@@ -160,7 +160,7 @@ bool bad() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если `rdstate & badbit` ненулевое значение; в противном случае **false**.
+**значение true** , если `rdstate & badbit` значение не равно нулю; в противном случае — **false**.
 
 Дополнительные сведения по `badbit` см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -194,12 +194,12 @@ basic_ios();
 
 ### <a name="parameters"></a>Параметры
 
-*sb*<br/>
+*средствами*\
 Стандартный буфер для хранения элементов ввода или вывода.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор инициализирует свой объект-член путем вызова [init](#init)(_ *Sb*). Второй (защищенный) конструктор оставляет свои объекты-члены не инициализированными. Последующий вызов `init` должен инициализировать объект, прежде чем он может быть безопасно уничтожен.
+Первый конструктор инициализирует свой объект-член путем вызова [init](#init)(_ *Sb*). Второй (защищенный) конструктор оставляет свои объекты-члены не инициализированными. После последующего вызова `init` метод должен инициализировать объект, прежде чем его можно будет безопасно уничтожить.
 
 ## <a name="char_type"></a>  basic_ios::char_type
 
@@ -220,25 +220,25 @@ void clear(io_state state);
 
 ### <a name="parameters"></a>Параметры
 
-*state*<br/>
-(Необязательно) Флаги, которые вы хотите задать после очистки всех флагов. По умолчанию — `goodbit`.
+*с*\
+Используемых Флаги, которые необходимо задать после очистки всех флагов. По умолчанию — `goodbit`.
 
-*reraise-*<br/>
-(Необязательно) Указывает, должны ли исключение быть заново создать исключение. По умолчанию используется **false** (не будет создано заново исключение).
+*reraise*\
+Используемых Указывает, следует ли повторно создавать исключение. По умолчанию используется **значение false** (исключение не будет вызываться повторно).
 
 ### <a name="remarks"></a>Примечания
 
-Флаги — `goodbit`, `failbit`, `eofbit`, и `badbit`. Проверяет наличие этих флагов с помощью [good](#good), [bad](#bad), [eof](#eof) и [fail](#fail)
+Флаги: `goodbit` `failbit` ,`eofbit`, и `badbit`. Проверяет наличие этих флагов с помощью [good](#good), [bad](#bad), [eof](#eof) и [fail](#fail)
 
 Функция-член заменяет сохраненную информацию о состоянии потока на следующее:
 
 `state` &#124; `(`[rdbuf](#rdbuf) != 0 **goodbit** : **badbit**)
 
-Если `state`**&**[exceptions](#exceptions) имеет ненулевое значение, то создается объект класса [failure](../standard-library/ios-base-class.md#failure).
+Если `state` **&** [exceptions](#exceptions) имеет ненулевое значение, то создается объект класса [failure](../standard-library/ios-base-class.md#failure).
 
 ### <a name="example"></a>Пример
 
-См. в разделе [rdstate](#rdstate) и [getline](../standard-library/string-functions.md#getline) примеры использования `clear`.
+Примеры использования см [](../standard-library/string-functions.md#getline) . в `clear`разделе [rdstate](#rdstate) и @ Line.
 
 ## <a name="copyfmt"></a>  basic_ios::copyfmt
 
@@ -251,7 +251,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Поток, флаги которого требуется скопировать.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -260,7 +260,7 @@ const basic_ios<Elem, Traits>& right);
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член сообщает событие обратного вызова **стереть\_событий**. Затем она копирует из *правой* в  **\*это** символ заливки, указатель tie и сведения о форматировании. Перед изменением маски исключения, он сообщает событие обратного вызова `copyfmt_event`. Если после завершения копирования **state &** [exceptions](#exceptions) не равно нулю, функция эффективно вызывает [clear](#clear) с аргументом [rdstate](#rdstate). Она возвращает **\*this**.
+Функция – член сообщает о событии **стирания\_** события обратного вызова. Затем он копируется *непосредственно* в  **\*этот** символ заполнения, указатель на привязку и сведения о форматировании. Перед изменением маски исключения он сообщает о событии `copyfmt_event`обратного вызова. Если после завершения копирования **state &** [exceptions](#exceptions) не равно нулю, функция эффективно вызывает [clear](#clear) с аргументом [rdstate](#rdstate). Она возвращает **\*this**.
 
 ### <a name="example"></a>Пример
 
@@ -293,11 +293,11 @@ bool eof() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если был достигнут конец потока, **false** в противном случае.
+**значение true** , если достигнут конец потока; в противном случае — **значение false** .
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает **true** Если [rdstate](#rdstate) `& eofbit` имеет ненулевое значение. Дополнительные сведения по `eofbit` см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
+Функция-член возвращает **значение true** , если [rdstate](#rdstate) `& eofbit` не равно нулю. Дополнительные сведения по `eofbit` см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
 ### <a name="example"></a>Пример
 
@@ -333,7 +333,7 @@ void exceptions(io_state Newexcept);
 
 ### <a name="parameters"></a>Параметры
 
-*Newexcept*<br/>
+*невексцепт*\
 Флаги, которые должны вызывать исключение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -390,7 +390,7 @@ bool fail() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если [rdstate](#rdstate) `& (badbit|failbit)` не равно нулю, в противном случае **false**.
+**значение true** , если [rdstate](#rdstate) `& (badbit|failbit)` не равно нулю; в противном случае — **значение false**.
 
 Дополнительные сведения по `failbit` см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -421,7 +421,7 @@ char_type fill(char_type Char);
 
 ### <a name="parameters"></a>Параметры
 
-*Char*<br/>
+*Типа*\
 Символ, который нужно использовать в качестве символа заливки.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -430,7 +430,7 @@ char_type fill(char_type Char);
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член возвращает сохраненный символ заливки. Вторая функция-член сохраняет *Char* в символе заливки и возвращает его ранее сохраненное значение.
+Первая функция-член возвращает сохраненный символ заливки. Вторая функция *члена сохраняет знак* в символе заполнения и возвращает свое предыдущее сохраненное значение.
 
 ### <a name="example"></a>Пример
 
@@ -467,7 +467,7 @@ bool good() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если [rdstate](#rdstate) `== goodbit` (флаги состояния не установлены), в противном случае **false**.
+**значение true** , если [rdstate](#rdstate) `== goodbit` (флаги состояния не заданы); в противном случае — **значение false**.
 
 Дополнительные сведения по `goodbit` см. в разделе [ios_base::iostate](../standard-library/ios-base-class.md#iostate).
 
@@ -485,7 +485,7 @@ locale imbue(const locale& Loc);
 
 ### <a name="parameters"></a>Параметры
 
-*Loc*<br/>
+*Loc*\
 Строка языкового стандарта.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -528,10 +528,10 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 ### <a name="parameters"></a>Параметры
 
-*_Sb*<br/>
+*_Sb*\
 Стандартный буфер для хранения элементов ввода или вывода.
 
-*_Isstd*<br/>
+*_Isstd*\
 Указывает, является ли этот поток стандартным.
 
 ### <a name="remarks"></a>Примечания
@@ -542,9 +542,9 @@ void init(basic_streambuf<Elem,Traits>* _Sb, bool _Isstd = false);
 
 - [tie](#tie) возвращает пустой указатель;
 
-- [rdstate](#rdstate) возвращает [goodbit](../standard-library/ios-base-class.md#iostate) Если *_Sb* равен нулю; в противном случае — значение возвращается [badbit](../standard-library/ios-base-class.md#iostate).
+- [rdstate](#rdstate) возвращает [goodbit](../standard-library/ios-base-class.md#iostate) , если *_Sb* не равен нулю; в противном случае возвращается [badbit](../standard-library/ios-base-class.md#iostate).
 
-- [исключения](#exceptions) возвращает `goodbit`.
+- [исключения](#exceptions) возвращают `goodbit`.
 
 - [flags](../standard-library/ios-base-class.md#flags) возвращает [skipws](../standard-library/ios-base-class.md#fmtflags) &#124; [dec](../standard-library/ios-base-class.md#fmtflags);
 
@@ -576,12 +576,12 @@ void move(basic_ios&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект `ios_base`, из которого будут перемещаться значения.
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член перемещает все значения, хранящиеся в *правой* для `*this` за исключением сохраненного `stream buffer pointer`, который не изменяется в *правой* и присваивается пустой указатель в `*this`. Сохраненный `tie pointer` присваивается пустой указатель в *правой*.
+Защищенная функция-член перемещает все значения,  хранящиеся `*this` справа, за `stream buffer pointer`исключением хранимой функции, которая не изменяется в *правой части* и устанавливает для `*this`нее указатель null в. Сохраненный `tie pointer` указатель имеет значение NULL в *правильном*указателе.
 
 ## <a name="narrow"></a>  basic_ios::narrow
 
@@ -593,19 +593,19 @@ char narrow(char_type Char, char Default = '\0') const;
 
 ### <a name="parameters"></a>Параметры
 
-*Char*<br/>
-**Char** для преобразования.
+*Типа*\
+Преобразуемый **символ** .
 
-*Default*<br/>
-**Char** который должен возвращаться, если эквивалент не будет найден.
+*Default*\
+**Символ** , который должен возвращаться, если эквивалент не найден.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Эквивалент **char** для заданного `char_type`.
+Эквивалентный **Символ char** для заданного `char_type`.
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член возвращает [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E >> ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
+Функция-член возвращает [use_facet](../standard-library/basic-filebuf-class.md#open)\<ctype\<E > > ( [getloc](../standard-library/ios-base-class.md#getloc)()).`narrow` ( `Char`, `Default`).
 
 ### <a name="example"></a>Пример
 
@@ -698,7 +698,7 @@ int main( )
 
 ## <a name="op_bool"></a>  basic_ios::operator bool
 
-Позволяет использовать `basic_ios` объекта в виде **bool**. Автоматическое преобразование типов отключено для предотвращения распространенных непредвиденных побочных эффектов.
+Позволяет использовать `basic_ios` объект в качестве **bool**. Автоматическое преобразование типов отключено для предотвращения распространенных непредвиденных побочных эффектов.
 
 ```cpp
 explicit operator bool() const;
@@ -706,7 +706,7 @@ explicit operator bool() const;
 
 ### <a name="remarks"></a>Примечания
 
-Оператор возвращает значение, преобразуемое в **false** только если `fail()`. Тип возвращаемого значения можно преобразовать только в **bool**, а не в `void *` или другие известные скалярные типы.
+Оператор возвращает значение, преобразуемое в **false** , только `fail()`если. Тип возвращаемого значения можно преобразовать только в **bool**, а `void *` не в или другой известный скалярный тип.
 
 ## <a name="pos_type"></a>  basic_ios::pos_type
 
@@ -728,14 +728,14 @@ basic_streambuf<Elem, Traits>* _Sb);
 
 ### <a name="parameters"></a>Параметры
 
-*_Sb*<br/>
+*_Sb*\
 Поток.
 
 ### <a name="remarks"></a>Примечания
 
 Первая функция-член возвращает сохраненный указатель буфера потока.
 
-Вторая функция-член сохраняет *_Sb* в сохраненном указателе буфера потока и возвращает ранее сохраненное значение.
+Вторая функция – член сохраняет *_Sb* в указателе буфера сохраненного потока и возвращает ранее сохраненное значение.
 
 ### <a name="example"></a>Пример
 
@@ -820,7 +820,7 @@ void setstate(iostate _State);
 
 ### <a name="parameters"></a>Параметры
 
-*_State*<br/>
+*_State*\
 Дополнительные флаги для установки.
 
 ### <a name="remarks"></a>Примечания
@@ -870,12 +870,12 @@ basic_streambuf<Elem, Tr>* strbuf)
 
 ### <a name="parameters"></a>Параметры
 
-*strbuf*<br/>
+*strBuf*\
 Буфер потока, который должен стать буфером чтения.
 
 ### <a name="remarks"></a>Примечания
 
-Функция сохраняет защищенный член *strbuf* в `stream buffer pointer`. Он не вызывает `clear`.
+Защищенная функция члена сохраняет *strBuf* в `stream buffer pointer`. Он не вызывает `clear`.
 
 ## <a name="tie"></a>  basic_ios::tie
 
@@ -889,12 +889,12 @@ basic_ostream<Elem, Traits>* str);
 
 ### <a name="parameters"></a>Параметры
 
-*str*<br/>
+*str*\
 Поток.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Первая функция-член возвращает сохраненный указатель tie. Вторая функция-член сохраняет *str* в указателе tie и возвращает его ранее сохраненное значение.
+Первая функция-член возвращает сохраненный указатель tie. Вторая функция члена сохраняет *str* в указателе привязки и возвращает свое предыдущее сохраненное значение.
 
 ### <a name="remarks"></a>Примечания
 
@@ -928,7 +928,7 @@ typedef Traits traits_type;
 
 ## <a name="widen"></a>  basic_ios::widen
 
-Находит эквивалент `char_type` для заданного **char**.
+Находит эквивалент `char_type` заданного **символа**.
 
 ```cpp
 char_type widen(char Char) const;
@@ -936,12 +936,12 @@ char_type widen(char Char) const;
 
 ### <a name="parameters"></a>Параметры
 
-*Char*<br/>
+*Типа*\
 Символ для преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Находит эквивалент `char_type` для заданного **char**.
+Находит эквивалент `char_type` заданного **символа**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -977,15 +977,15 @@ void swap(basic_ios&& right);
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Объект `basic_ios`, используемый для обмена значений.
 
 ### <a name="remarks"></a>Примечания
 
-Защищенная функция-член меняет местами все значения, хранящиеся в *правой* с `*this` за исключением сохраненного `stream buffer pointer`.
+Защищенная функция элемента обменивается со `*this` всеми значениями, которые хранятся *справа* , за исключением хранимой `stream buffer pointer`функции.
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

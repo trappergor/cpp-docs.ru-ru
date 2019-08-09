@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - ostream header
 ms.assetid: 90c3b6fb-57cd-4ae7-99b8-8512f24a67d2
-ms.openlocfilehash: eb73c77f0e2658cf750cf17ca85549a09d1cbe51
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8de66718dab10b5c95e8c1ab7fd0bd17e9b4ee5e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62370935"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448170"
 ---
 # <a name="ltostreamgt"></a>&lt;ostream&gt;
 
@@ -29,8 +29,8 @@ ms.locfileid: "62370935"
 
 |Имя типа|Описание|
 |-|-|
-|[ostream](../standard-library/ostream-typedefs.md#ostream)|Создает тип из `basic_ostream` который специализируется на **char** и `char_traits` специализированный на **char**.|
-|[wostream](../standard-library/ostream-typedefs.md#wostream)|Создает тип из `basic_ostream` который специализируется на **wchar_t** и `char_traits` специализированный на **wchar_t**.|
+|[ostream](../standard-library/ostream-typedefs.md#ostream)|Создает тип из `basic_ostream` , который специализируется на **char** и `char_traits` специализированный для **типа char**.|
+|[wostream](../standard-library/ostream-typedefs.md#wostream)|Создает тип из `basic_ostream` , специализированного для **wchar_t** и `char_traits` специализированного для **wchar_t**.|
 
 ### <a name="manipulators"></a>Манипуляторы
 
@@ -55,7 +55,7 @@ ms.locfileid: "62370935"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

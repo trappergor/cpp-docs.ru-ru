@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_same class
 - is_same
 ms.assetid: d9df6c1d-c270-4ec2-802a-af275648dd1d
-ms.openlocfilehash: 5bb306ec29da225293affd0207f67271f59ec599
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: f4e4babeef89960762ebb2ccf0f733f60eadfa47
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413558"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450059"
 ---
 # <a name="issame-class"></a>Класс is_same
 
@@ -27,15 +27,15 @@ struct is_same;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty1*<br/>
+*Ty1*\
 Первый запрашиваемый тип.
 
-*Ty2*<br/>
+*Ty2*\
 Второй запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если типы *Ty1* и *Ty2* относятся к одному типу, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если типы *Ty1* и *Ty2* имеют один и тот же тип, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -88,6 +88,6 @@ is_same<int, const int> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_convertible](../standard-library/is-convertible-class.md)<br/>
-[Класс is_base_of](../standard-library/is-base-of-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_convertible](../standard-library/is-convertible-class.md)\
+[Класс is_base_of](../standard-library/is-base-of-class.md)

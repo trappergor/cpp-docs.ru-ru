@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - slice_array class
 ms.assetid: a182d5f7-f35c-4e76-86f2-b5ac64ddc846
-ms.openlocfilehash: 9577447b2201c1c9e53192b99abad1979f45d15f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf33c5f627a88698c84947f9b803edaebccf5566
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412544"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450404"
 ---
 # <a name="slicearray-class"></a>Класс slice_array
 
@@ -42,13 +42,13 @@ public:
 
 ## <a name="remarks"></a>Примечания
 
-Класс описывает объект, который хранит ссылку на объект класса [valarray](../standard-library/valarray-class.md)**\<Type>** вместе с объектом класса [slice](../standard-library/slice-class.md), который описывает последовательность элементов для выбора из объекта **valarray\<Type**.
+Класс описывает объект, который хранит ссылку на объект класса [valarray](../standard-library/valarray-class.md) **\<Type>** вместе с объектом класса [slice](../standard-library/slice-class.md), который описывает последовательность элементов для выбора из объекта **valarray\<Type**.
 
 Класс шаблона создается неявно с помощью определенных операций valarray и не может использоваться непосредственно в программе. Оператор индекса среза использует внутренний вспомогательный класс шаблона:
 
 `slice_array`\< **Type**> `valarray`< **Type**:: `operator[]` ( `slice`).
 
-При создании `slice_array<Type>` только путем написания выражения вида [va&#91;sl&#93;](../standard-library/valarray-class.md#op_at), для среза `sl` объекта valarray `va`. Функции-члены класса slice_array ведут себя как соответствующие сигнатуры функций, заданные для `valarray<Type>`, за исключением того, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом slice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в срезе, количеством элементов и расстоянием между элементами. Массив slice_array, вырезанный из valarray `va` объявленные **va**[ `slice`(2, 5, 3)] выбирает элементы с индексами 2, 5, 8, 11 и 14 из `va`. Чтобы процедура была действительной, индексы должны быть действительными.
+`slice_array<Type>` Объект создается только путем написания выражения формы с форматом `sl` [&#91;SL&#93;](../standard-library/valarray-class.md#op_at), для среза valarray `va`. Функции-члены класса slice_array ведут себя так же, как и соответствующие сигнатуры `valarray<Type>`функций, определенные для, за исключением того, что затрагивается только последовательность выбранных элементов. Последовательность, управляемая классом slice_array, определяется тремя параметрами конструктора среза: индексом первого элемента в срезе, количеством элементов и расстоянием между элементами. Slice_array вырезание из valarray `va` , объявленного по `slice` **ва**[(2, 5, 3)], выбирает элементы с индексами 2, 5, 8, 11 `va`и 14 от. Чтобы процедура была действительной, индексы должны быть действительными.
 
 ## <a name="example"></a>Пример
 
@@ -62,4 +62,4 @@ public:
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

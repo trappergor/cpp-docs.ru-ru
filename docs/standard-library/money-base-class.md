@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - money_base class
 ms.assetid: 1a303c15-9272-4f26-ae16-dcf43a0fd38a
-ms.openlocfilehash: b0c77b523dbe31bc5b07ae3d736441880fe04546
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b19635cf4d2cce58ec50226c463a075cfac5b0f
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62383572"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455564"
 ---
 # <a name="moneybase-class"></a>Класс money_base
 
@@ -28,17 +28,17 @@ struct pattern
 
 ## <a name="remarks"></a>Примечания
 
-Перечисление `part` описывает возможные значения в элементах поля массива в шаблоне структуры. Значения `part` являются:
+Перечисление `part` описывает возможные значения в элементах поля массива в шаблоне структуры. Значения `part` :
 
-- `none` для соответствия нулю или более пробелам или формирования пустого значения.
+- `none`значение, чтобы сопоставить ноль или больше пробелов или ничего не создавать.
 
-- `sign` для соответствия или формирования положительный или отрицательный знак.
+- `sign`для сопоставления или создания положительного или отрицательного знака.
 
-- `space` для соответствия нулю или более пробелам или для формирования пробела.
+- `space`значение, чтобы сопоставить ноль или больше пробелов или сгенерировать пробел.
 
-- `symbol` для соответствия или формирования символа валюты.
+- `symbol`для сопоставления или создания символа валюты.
 
-- `value` для соответствия или формирования денежного значения.
+- `value`для сопоставления или создания денежного значения.
 
 ## <a name="requirements"></a>Требования
 
@@ -48,4 +48,4 @@ struct pattern
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

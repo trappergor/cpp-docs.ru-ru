@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CD2DRectF [MFC], CD2DRectF
 - CD2DRectF [MFC], IsNull
 ms.assetid: 87c12d87-9d18-4a19-ba14-0f51d6b6835a
-ms.openlocfilehash: 8e5c22fe15ce0d930f81dd16673927d5299bf630
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9b91cfaec3827a61152c4116b56e817a436606be
+ms.sourcegitcommit: 725e86dabe2901175ecc63261c3bf05802dddff4
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62396279"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68682404"
 ---
 # <a name="cd2drectf-class"></a>Класс CD2DRectF
 
@@ -33,19 +33,19 @@ class CD2DRectF : public D2D1_RECT_F;
 
 |name|Описание|
 |----------|-----------------|
-|[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Создает `CD2DRectF` объекта из `D2D1_RECT_F` объекта.|
+|[CD2DRectF::CD2DRectF](#cd2drectf)|Перегружен. Конструирует объект из `D2D1_RECT_F`объекта. `CD2DRectF`|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CD2DRectF::IsNull](#isnull)|Возвращает **логическое** значение, указывающее, является ли выражение содержит недопустимые данные (NULL).|
+|[CD2DRectF:: IsNull](#isnull)|Возвращает **логическое** значение, указывающее, содержит ли выражение допустимые данные (null).|
 
 ### <a name="public-operators"></a>Открытые операторы
 
 |name|Описание|
 |----------|-----------------|
-|[CD2DRectF::operator CRect](#operator_crect)|Преобразует `CD2DRectF` для `CRect` объекта.|
+|[CD2DRectF:: operator Крект](#operator_crect)|Преобразует `CD2DRectF` в`CRect` объект.|
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -55,16 +55,16 @@ class CD2DRectF : public D2D1_RECT_F;
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxrendertarget.h
+**Заголовок:** афксрендертаржет. h
 
-##  <a name="cd2drectf"></a>  CD2DRectF::CD2DRectF
+##  <a name="cd2drectf"></a>CD2DRectF::CD2DRectF
 
-Создает CD2DRectF объект из объекта CRect.
+Конструирует объект CD2DRectF из объекта Крект.
 
 ```
 CD2DRectF(const CRect& rect);
 CD2DRectF(const D2D1_RECT_F& rect);
-  CD2DRectF(const D2D1_RECT_F* rect);
+CD2DRectF(const D2D1_RECT_F* rect);
 
 CD2DRectF(
     FLOAT fLeft = 0.,
@@ -76,23 +76,23 @@ CD2DRectF(
 ### <a name="parameters"></a>Параметры
 
 *rect*<br/>
-исходный прямоугольник
+Исходный прямоугольник
 
-*fLeft*<br/>
-Левая координата источника
+*флефт*<br/>
+Координата слева источника
 
-*fTop*<br/>
-Верхняя координата источника
+*фтоп*<br/>
+Координата вершины источника
 
-*fRight*<br/>
-Источник прямо координат
+*фригхт*<br/>
+Координата справа источника
 
-*fBottom*<br/>
-Нижняя координата источника
+*фботтом*<br/>
+координата нижней части источника
 
-##  <a name="isnull"></a>  CD2DRectF::IsNull
+##  <a name="isnull"></a>CD2DRectF:: IsNull
 
-Возвращает логическое значение, указывающее, является ли выражение содержит недопустимые данные (Null).
+Возвращает логическое значение, указывающее, содержит ли выражение допустимые данные (null).
 
 ```
 BOOL IsNull() const;
@@ -100,11 +100,11 @@ BOOL IsNull() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если начало прямоугольника, левую, нижнюю и правильные значения равны 0; в противном случае — значение FALSE.
+TRUE, если значения верхнего, левого, нижнего и правого прямоугольника равны 0; в противном случае — FALSE.
 
-##  <a name="operator_crect"></a>  CD2DRectF::operator CRect
+##  <a name="operator_crect"></a>CD2DRectF:: operator Крект
 
-Преобразует CD2DRectF объект CRect.
+Преобразует CD2DRectF в объект Крект.
 
 ```
 operator CRect();

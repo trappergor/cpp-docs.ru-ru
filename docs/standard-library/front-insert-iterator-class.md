@@ -10,12 +10,12 @@ helpviewer_keywords:
 - std::front_insert_iterator [C++], container_type
 - std::front_insert_iterator [C++], reference
 ms.assetid: a9a9c075-136a-4419-928b-c4871afa033c
-ms.openlocfilehash: 322b513dc648bf10fe593d9541560c4d22da21fb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 176fac8053d352d6a7a72ce62d5a8ee7a64b9811
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159591"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454123"
 ---
 # <a name="frontinsertiterator-class"></a>Класс front_insert_iterator
 
@@ -30,7 +30,7 @@ class front_insert_iterator;
 
 ### <a name="parameters"></a>Параметры
 
-*Контейнер*<br/>
+*Контейнера*\
 Тип контейнера, в переднюю часть которого итератор `front_insert_iterator` вставит элементы.
 
 ## <a name="remarks"></a>Примечания
@@ -54,9 +54,9 @@ class front_insert_iterator;
 
 |Оператор|Описание|
 |-|-|
-|[оператор*](#op_star)|Оператор разыменования, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в переднюю часть.|
+|[оператор*](#op_star)|Оператор разыменования, используемый для \* реализации выражения `i`  =  `x` итератора вывода для вставки на передний план.|
 |[оператор++](#op_add_add)|Увеличивает `front_insert_iterator` до следующего местоположения, в котором можно сохранить значение.|
-|[оператор=](#op_eq)|Оператор присваивания, используемый для реализации выражения итератора вывода \* `i`  =  `x` для вставки в переднюю часть.|
+|[оператор=](#op_eq)|Оператор присваивания, используемый для \* реализации выражения `i`  =  `x` итератора вывода для вставки на передний план.|
 
 ## <a name="requirements"></a>Требования
 
@@ -116,7 +116,7 @@ explicit front_insert_iterator(Container& _Cont);
 
 ### <a name="parameters"></a>Параметры
 
-*_Cont*<br/>
+*_Cont*\
 Объект контейнера, в который `front_insert_iterator` вставляет элементы.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -183,7 +183,7 @@ front_insert_iterator<Container>& operator*();
 
 ### <a name="remarks"></a>Примечания
 
-Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который адресует элемент в последовательности, затем  **\*Iter** = **значение** заменяет этот элемент со значением и не изменяет общее число элементы в последовательности.
+Используется для применения выражения итератора вывода **\*Iter** = **value**. Если `Iter` является итератором, который обращается к элементу последовательности,  **\*** то**значение** iter = заменяет этот элемент значением и не изменяет общее число элементов в последовательности.
 
 ### <a name="example"></a>Пример
 
@@ -293,7 +293,7 @@ front_insert_iterator<Container>& operator=(typename Container::value_type&& val
 
 ### <a name="parameters"></a>Параметры
 
-*Val*<br/>
+*Val*\
 Значение, которое должно быть присвоено контейнеру.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -389,6 +389,6 @@ The first element in the list L is: 30.
 
 ## <a name="see-also"></a>См. также
 
-[\<iterator>](../standard-library/iterator.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[\<iterator>](../standard-library/iterator.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

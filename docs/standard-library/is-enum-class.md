@@ -7,12 +7,12 @@ helpviewer_keywords:
 - is_enum class
 - is_enum
 ms.assetid: df3b00b7-4f98-4b3a-96ce-10ad958ee69c
-ms.openlocfilehash: 623bda13a12ac311618e1b9fffdbc3f676013df6
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c8ac69bacf72cc9a281e239263a14a42f4a0efe
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62336510"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452681"
 ---
 # <a name="isenum-class"></a>Класс is_enum
 
@@ -27,12 +27,12 @@ struct is_enum;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является типом перечисления или `cv-qualified` форму типа перечисления, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является типом перечисления или `cv-qualified` формой типа перечисления, в противном случае — значение false.
 
 ## <a name="example"></a>Пример
 
@@ -77,5 +77,5 @@ is_enum<int> == false
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс is_integral](../standard-library/is-integral-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс is_integral](../standard-library/is-integral-class.md)

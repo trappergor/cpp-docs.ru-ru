@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 279da956eaff21c39c6e5ca563f26989105f7e74
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62413400"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68448362"
 ---
 # <a name="istriviallymoveconstructible-class"></a>Класс is_trivially_move_constructible
 
@@ -26,26 +26,26 @@ struct is_trivially_move_constructible;
 
 ### <a name="parameters"></a>Параметры
 
-*Ty*<br/>
+*Ty*\
 Запрашиваемый тип.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр предиката типа содержит значение true, если тип *Ty* является классом, имеющим тривиальный конструктор перемещения, в противном случае он содержит значение false.
+Экземпляр предиката типа содержит значение true, если тип *Ty* является классом с тривиальным конструктором перемещения, в противном случае — значение false.
 
-Конструктор перемещения для класса *Ty* является тривиальным если:
+Конструктор перемещения для класса *Ty* является тривиальным, если:
 
 он неявно объявлен;
 
 его типы параметров эквивалентны типам неявного объявления;
 
-Класс *Ty* не имеет виртуальных функций
+у класса *Ty* нет виртуальных функций
 
-Класс *Ty* не имеет виртуальных баз
+класс *Ty* не имеет виртуальных базовых классов
 
 класс не содержит изменчивых нестатических элементов данных;
 
-все прямые базы класса *Ty* имеют тривиальные конструкторы перемещения
+все прямые базовые классы класса *Ty* имеют тривиальные конструкторы перемещения
 
 классы всех нестатических элементов данных типа класса имеют тривиальные конструкторы перемещения;
 
@@ -59,4 +59,4 @@ struct is_trivially_move_constructible;
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)

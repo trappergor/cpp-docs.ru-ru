@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::extreme_value_distribution [C++], param_type
 - std::extreme_value_distribution [C++], param_type
 ms.assetid: a0cd8370-0a54-4e26-9388-8b9678fb57da
-ms.openlocfilehash: 5bc0270cb24fcff93d995e8908daaec62c956371
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 810a02e620e6b38732daf611d3b44a4a277322a5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66451188"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68457763"
 ---
 # <a name="extremevaluedistribution-class"></a>Класс extreme_value_distribution
 
@@ -71,15 +71,15 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
-*РГСЧ*<br/>
-Механизм генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*РГСЧ*\
+Модуль генератора случайных чисел. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем с плавающей запятой типа или типа **двойные** Если тип не указан, распределенные в соответствии с распределением экстремальных значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое формирует значения указанного пользователем типа с плавающей запятой или тип **Double** , если значение не указано, распределяется в соответствии с экстремальным распределением значений. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -192,13 +192,13 @@ explicit extreme_value_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a_value*<br/>
+*a_value*\
 Параметр распределения `a`.
 
-*b_value*<br/>
+*b_value*\
 Параметр распределения `b`.
 
-*parm*<br/>
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a_value*<br/>
+*a_value*\
 Параметр распределения `a`.
 
-*b_value*<br/>
+*b_value*\
 Параметр распределения `b`.
 
-*right*<br/>
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

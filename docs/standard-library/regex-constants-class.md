@@ -82,12 +82,12 @@ helpviewer_keywords:
 - std::regex_constants [C++], optimize
 - std::regex_constants [C++], collate
 ms.assetid: 4a69c0ba-c46d-46e4-bd29-6f4efb805f26
-ms.openlocfilehash: b657dbc5ae537e15f6638ffbd3594cd52b644f3b
-ms.sourcegitcommit: 8bb2bea1384b290b7570b01608a86c7488ae7a02
+ms.openlocfilehash: c8abca8109db9c781d63721b795feb01161fdb40
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400783"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451671"
 ---
 # <a name="regexconstants-namespace"></a>Пространство имен regex_constants
 
@@ -290,11 +290,11 @@ enum syntax_option_type
 
 ## <a name="see-also"></a>См. также
 
-[\<regex>](../standard-library/regex.md)<br/>
-[Класс regex_error](../standard-library/regex-error-class.md)<br/>
-[Функции \<regex>](../standard-library/regex-functions.md)<br/>
-[Класс regex_iterator](../standard-library/regex-iterator-class.md)<br/>
-[Операторы \<regex>](../standard-library/regex-operators.md)<br/>
-[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)<br/>
-[Класс regex_traits](../standard-library/regex-traits-class.md)<br/>
-[Определения типов \<regex>](../standard-library/regex-typedefs.md)<br/>
+[\<regex>](../standard-library/regex.md)\
+[Класс regex_error](../standard-library/regex-error-class.md)\
+[\<функции > регулярных выражений](../standard-library/regex-functions.md)\
+[Класс regex_iterator](../standard-library/regex-iterator-class.md)\
+[\<>ные операторы Regex](../standard-library/regex-operators.md)\
+[Класс regex_token_iterator](../standard-library/regex-token-iterator-class.md)\
+[Класс regex_traits](../standard-library/regex-traits-class.md)\
+[Определения типов \<regex>](../standard-library/regex-typedefs.md)

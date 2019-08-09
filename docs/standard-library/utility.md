@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - utility header
 ms.assetid: c4491103-5da9-47a1-9c2b-ed8bc64b0599
-ms.openlocfilehash: 76b04c3c26f6ec49f1d816feaeec7e21312d79a9
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: eaae94bcffcda6e113001dd7070bcc80e7c14d09
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246282"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458077"
 ---
 # <a name="ltutilitygt"></a>&lt;utility&gt;
 
@@ -28,7 +28,7 @@ ms.locfileid: "68246282"
 Пары широко используются в стандартной библиотеке C++. Они используются как аргументы и возвращаемые значения для различных функций и как типы элементов для контейнеров, таких как [класс map](../standard-library/map-class.md) и [класс multimap](../standard-library/multimap-class.md). \<map> автоматически включает заголовок \<utility> для управления их элементами, которые представляют собой пары "ключ — значение".
 
 > [!NOTE]
-> \<Программа > заголовок используется оператор `#include <initializer_list>`. Оно также подразумевает `class tuple` как определено в \<кортежа >.
+> Заголовок служебной > использует инструкцию `#include <initializer_list>`. \< Он также ссылается `class tuple` как определено в \<> кортежа.
 
 ## <a name="members"></a>Участники
 
@@ -36,7 +36,7 @@ ms.locfileid: "68246282"
 
 |||
 |-|-|
-|[chars_format](../standard-library/chars-format-class.md)|Формат с плавающей запятой для простые числовые преобразования.|
+|[chars_format](../standard-library/chars-format-class.md)|Формат с плавающей запятой для преобразования примитивных чисел.|
 |[tuple_element](../standard-library/tuple-element-class-tuple.md)|Класс, который заключает в оболочку тип элемента `pair`.|
 |[tuple_size](../standard-library/tuple-size-class-tuple.md)|Класс, который заключает в оболочку счетчик элементов `pair`.|
 
@@ -54,8 +54,8 @@ ms.locfileid: "68246282"
 |||
 |-|-|
 |[as_const](../standard-library/utility-functions.md#asconst)|Возвращает тип.|
-|[declval](../standard-library/utility-functions.md#declval)|Сокращенное вычисление выражений.|
-|[exchange](../standard-library/utility-functions.md#exchange)|Назначает новое значение объекту и возвращает его старое значение.|
+|[деклвал](../standard-library/utility-functions.md#declval)|Вычисление сокращенного выражения.|
+|[exchange](../standard-library/utility-functions.md#exchange)|Присваивает новое значение объекту и возвращает его старое значение.|
 |[forward](../standard-library/utility-functions.md#forward)|Не позволяет изменить ссылочный тип (`lvalue` или `rvalue`) аргумента при точной пересылке.|
 |[from_chars](../standard-library/utility-functions.md#from_chars)||
 |[get](../standard-library/utility-functions.md#get)|Функция, которая возвращает элемент из объекта `pair`.|
@@ -63,7 +63,7 @@ ms.locfileid: "68246282"
 |[move](../standard-library/utility-functions.md#move)|Возвращает переданный аргумент в виде ссылки `rvalue`.|
 |[move_if_noexcept](../standard-library/utility-functions.md#moveif)||
 |[swap](../standard-library/utility-functions.md#swap)|Меняет местами элементы двух объектов `pair`.|
-|[to_chars](../standard-library/utility-functions.md#to_chars)|Преобразует значение в строку символов.|
+|[to_chars](../standard-library/utility-functions.md#to_chars)|Преобразует значение в символьную строку.|
 
 ### <a name="operators"></a>Операторы
 
@@ -80,15 +80,15 @@ ms.locfileid: "68246282"
 
 |||
 |-|-|
-|[from_chars_result](../standard-library/from-chars-result-structure.md)|Структуры, используемым для `from_chars`.|
+|[from_chars_result](../standard-library/from-chars-result-structure.md)|Структура, используемая `from_chars`для.|
 |[identity](../standard-library/identity-structure.md)|Структура, предоставляющая определение типа как параметр шаблона.|
 |[in_place_t](../standard-library/in-place-t-struct.md)|Также включает структуры `in_place_type_t` и `in_place_index_t`.|
 |[integer_sequence](../standard-library/integer-sequence-class.md)|Представляет последовательность целых чисел.|
 |[pair](../standard-library/pair-structure.md)|Тип, позволяющий обрабатывать два объекта как один объект.|
-|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Тип, используемый для сохранения отдельных конструктор и перегрузка функций.|
-|[to_chars_result](../standard-library/to-chars-result-structure.md)|Структуры, используемым для `to_chars`.|
+|[piecewise_construct_t](../standard-library/piecewise-construct-t-structure.md)|Тип, используемый для сохранения отдельного конструктора и перегрузки функции.|
+|[to_chars_result](../standard-library/to-chars-result-structure.md)|Структура, используемая `to_chars`для.|
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

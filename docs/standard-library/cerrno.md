@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - cerrno header
 ms.assetid: c618f95c-ad4b-4a6f-825b-8727322ec77a
-ms.openlocfilehash: 04c8fd66edc8a61c3964241e41ef7ef1b6c88752
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: 1186a1e3c58c34de53f7a9835eaf9fd188593301
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68244985"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68455499"
 ---
 # <a name="ltcerrnogt"></a>&lt;cerrno&gt;
 
-Включает C стандартный заголовок библиотеки \<errno.h > и добавляет связанные имена в `std` пространства имен. Включение этого заголовка гарантирует, что имена, объявленные с внешней компоновкой в заголовке библиотеки C Standard, объявляются в `std` пространства имен.
+Включает заголовок \<стандартной библиотеки C/н. h > и добавляет связанные имена `std` в пространство имен. Включение этого заголовка гарантирует, что имена, объявленные с помощью внешней компоновки в заголовке стандартной библиотеки C `std` , объявляются в пространстве имен.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -109,10 +109,10 @@ ms.locfileid: "68244985"
 
 ### <a name="remarks"></a>Примечания
 
-Здесь макросы определяются в стандарте POSIX.
+Здесь макросы определяются стандартом POSIX.
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Общие сведения о стандартной библиотеке C++](../standard-library/cpp-standard-library-overview.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

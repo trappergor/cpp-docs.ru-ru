@@ -48,12 +48,12 @@ f1_keywords:
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4c46eb2b9bea30bf37800b33ce0dcf44c0d807f0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62376605"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456726"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -68,7 +68,7 @@ ms.locfileid: "62376605"
 ## <a name="remarks"></a>Примечания
 
 > [!NOTE]
-> В коде, скомпилированном с помощью **/CLR**, этот заголовок блокируется.
+> В коде, компилируемом с помощью **/CLR**, этот заголовок блокируется.
 
 Атомарная операция имеет 2 ключевых свойства, позволяющих организовать безопасный доступ к объекту из нескольких потоков без использования мьютексов.
 
@@ -78,9 +78,9 @@ ms.locfileid: "62376605"
 
 На некоторых платформах бывает невозможно эффективно реализовать атомарные операции для некоторых типов без использования блокировок `mutex`. Атомарный тип является *неблокирующим*, если никакие атомарные операции с этим типом не используют блокировки.
 
-**C++11**: В обработчиках сигналов можно выполнять атомарные операции с объектом `obj` Если `obj.is_lock_free()` или `atomic_is_lock_free(x)` верны.
+**C++ 11**: В обработчиках сигналов можно выполнять атомарные операции с объектом `obj` , если `obj.is_lock_free()` или `atomic_is_lock_free(x)` имеет значение true.
 
-Класс [atomic_flag](../standard-library/atomic-flag-structure.md) предоставляет минимальный атомарный тип, содержащий **bool** флаг. Его операции всегда являются неблокирующими.
+Класс [atomic_flag](../standard-library/atomic-flag-structure.md) предоставляет минимальный атомарный тип, который содержит флаг **bool** . Его операции всегда являются неблокирующими.
 
 Класс шаблона `atomic<T>` хранит объект типа его аргумента `T` и предоставляет атомарный доступ к этому сохраненному значению. Его можно создать с помощью любого типа, который может быть скопирован с помощью [memcpy](../c-runtime-library/reference/memcpy-wmemcpy.md) и проверен на равенство с помощью [memcmp](../c-runtime-library/reference/memcmp-wmemcmp.md). В частности, его можно использовать с пользовательскими типами, которые соответствуют этим требованиям, и во многих случаях с типами с плавающей запятой.
 
@@ -101,7 +101,7 @@ ms.locfileid: "62376605"
 |Тип `atomic_integral`|Целочисленный тип|Макрос `atomic_is_lock_free`|
 |----------------------------|-------------------|---------------------------------|
 |`atomic_char`|**char**|ATOMIC_CHAR_LOCK_FREE|
-|`atomic_schar`|**char со знаком**|ATOMIC_CHAR_LOCK_FREE|
+|`atomic_schar`|**знак со знаком**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_uchar`|**unsigned char**|ATOMIC_CHAR_LOCK_FREE|
 |`atomic_char16_t`|`char16_t`|ATOMIC_CHAR16_T_LOCK_FREE|
 |`atomic_char32_t`|`char32_t`|ATOMIC_CHAR32_T_LOCK_FREE|
@@ -113,7 +113,7 @@ ms.locfileid: "62376605"
 |`atomic_long`|**long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_ulong`|**unsigned long**|ATOMIC_LONG_LOCK_FREE|
 |`atomic_llong`|**long long**|ATOMIC_LLONG_LOCK_FREE|
-|`atomic_ullong`|**long long без знака**|ATOMIC_LLONG_LOCK_FREE|
+|`atomic_ullong`|**длинное целое без знака**|ATOMIC_LLONG_LOCK_FREE|
 
 Имена typedef существуют для специализаций атомарного шаблона для некоторых типов, определенных в заголовке \<inttypes.h>.
 
@@ -155,7 +155,7 @@ ms.locfileid: "62376605"
 |name|Описание|
 |----------|-----------------|
 |[Структура atomic](../standard-library/atomic-structure.md)|Описывает объект, который выполняет атомарные операции с сохраненным значением.|
-|[Структура atomic_flag](../standard-library/atomic-flag-structure.md)|Описывает объект, который автоматически устанавливает и очищает **bool** флаг.|
+|[Структура atomic_flag](../standard-library/atomic-flag-structure.md)|Описывает объект, который атомарно задает и очищает флаг **bool** .|
 
 ## <a name="enums"></a>перечислениям;
 
@@ -185,10 +185,10 @@ ms.locfileid: "62376605"
 |[atomic_fetch_sub_explicit](../standard-library/atomic-functions.md#atomic_fetch_sub_explicit)|Вычитает указанное значение из существующего хранимого значения.|
 |[atomic_fetch_xor](../standard-library/atomic-functions.md#atomic_fetch_xor)|Выполняет побитовую операцию `exclusive or` с указанным значением и существующим хранимым значением.|
 |[atomic_fetch_xor_explicit](../standard-library/atomic-functions.md#atomic_fetch_xor_explicit)|Выполняет побитовую операцию `exclusive or` с указанным значением и существующим хранимым значением.|
-|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Устанавливает флаг в `atomic_flag` объект **false**.|
-|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Устанавливает флаг в `atomic_flag` объект **false**.|
-|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Устанавливает флаг в `atomic_flag` объект **true**.|
-|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Устанавливает флаг в `atomic_flag` объект **true**.|
+|[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)|Устанавливает флаг `atomic_flag` объекта в **значение false**.|
+|[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)|Устанавливает флаг `atomic_flag` объекта в **значение false**.|
+|[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)|Устанавливает флаг `atomic_flag` объекта в **значение true**.|
+|[atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit)|Устанавливает флаг `atomic_flag` объекта в **значение true**.|
 |[atomic_init](../standard-library/atomic-functions.md#atomic_init)|Задает сохраненное значение в объекте `atomic`.|
 |[atomic_is_lock_free](../standard-library/atomic-functions.md#atomic_is_lock_free)|Указывает, являются ли атомарные операции с указанным объектом неблокирующими.|
 |[atomic_load](../standard-library/atomic-functions.md#atomic_load)|Атомарным образом получает значение.|
@@ -201,5 +201,5 @@ ms.locfileid: "62376605"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::uniform_int_distribution [C++], param_type
 - std::uniform_int_distribution [C++], param_type
 ms.assetid: a1867dcd-3bd9-4787-afe3-4b62692c1d04
-ms.openlocfilehash: 5e37f21e19be730d3437507e83f2417fa2dc020a
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 1307f64fb5f92b59337665d108d950b28c6ff63e
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62348176"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454959"
 ---
 # <a name="uniformintdistribution-class"></a>Класс uniform_int_distribution
 
@@ -71,8 +71,8 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*IntType*<br/>
-По умолчанию используется целочисленный тип результата, **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*инттипе*\
+Целочисленный тип результата, по умолчанию, равен **int**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
@@ -191,13 +191,13 @@ explicit uniform_int_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*b*<br/>
+*&* \
 Верхняя граница случайных значений (инклюзивно).
 
-*parm*<br/>
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -227,13 +227,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*a*<br/>
+*конкретного*\
 Нижняя граница случайных значений (инклюзивно).
 
-*b*<br/>
+*&* \
 Верхняя граница случайных значений (инклюзивно).
 
-*right*<br/>
+*Правильно*\
 Объект `param_type`, который требуется сравнить с данным объектом.
 
 ### <a name="remarks"></a>Примечания
@@ -244,4 +244,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

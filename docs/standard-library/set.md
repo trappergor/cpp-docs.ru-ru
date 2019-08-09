@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - set header
 ms.assetid: 43cb1ab2-6383-48cf-8bdc-2b96d7203596
-ms.openlocfilehash: 1bf5663d3e6891d45e2139c612d8e16860b6cace
-ms.sourcegitcommit: 3590dc146525807500c0477d6c9c17a4a8a2d658
+ms.openlocfilehash: b947d9ba268c9b4028415216e4ad0813f2d71947
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68246382"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450527"
 ---
 # <a name="ltsetgt"></a>&lt;set&gt;
 
@@ -24,7 +24,7 @@ ms.locfileid: "68246382"
 **Пространство имен:** std
 
 > [!NOTE]
-> \<Задать > Библиотека также использует `#include <initializer_list>` инструкции.
+> Библиотека > `#include <initializer_list>` Set также использует инструкцию. \<
 
 ## <a name="members"></a>Участники
 
@@ -54,6 +54,6 @@ ms.locfileid: "68246382"
 
 ## <a name="see-also"></a>См. также
 
-[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Справочник по файлам заголовков](../standard-library/cpp-standard-library-header-files.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

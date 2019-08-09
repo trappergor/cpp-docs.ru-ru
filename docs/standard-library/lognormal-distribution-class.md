@@ -26,12 +26,12 @@ helpviewer_keywords:
 - std::lognormal_distribution [C++], param_type
 - std::lognormal_distribution [C++], param_type
 ms.assetid: f2d6a431-6c3a-4370-b12e-4adb4ddf6cc4
-ms.openlocfilehash: eb92844ae1af36b9f4f7146e378fed1832c0b4f9
-ms.sourcegitcommit: 28eae422049ac3381c6b1206664455dbb56cbfb6
+ms.openlocfilehash: 20967204d1df40d2b8dbb21c499e45404f44a4ae
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66449791"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453812"
 ---
 # <a name="lognormaldistribution-class"></a>Класс lognormal_distribution
 
@@ -68,12 +68,12 @@ public:
 
 ### <a name="parameters"></a>Параметры
 
-*RealType*<br/>
-По умолчанию используется тип результат с плавающей запятой, **двойные**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
+*реалтипе*\
+Тип результата операции с плавающей запятой по умолчанию равен **Double**. Возможные типы см. в разделе [\<random>](../standard-library/random.md).
 
 ## <a name="remarks"></a>Примечания
 
-Класс шаблона описывает распределение, которое формирует значения указанного пользователем целочисленного типа или типа **двойные** Если тип не указан, распределенные в соответствии с логарифмически нормальным распределением. В следующей таблице представлены ссылки на статьи об отдельных членах.
+Класс шаблона описывает распределение, которое создает значения указанного пользователем целочисленного типа, или тип **Double** , если значение не указано, распределяется в соответствии с нормальным распределением журнала. В следующей таблице представлены ссылки на статьи об отдельных членах.
 
 ||||
 |-|-|-|
@@ -195,13 +195,13 @@ explicit lognormal_distribution(const param_type& parm);
 
 ### <a name="parameters"></a>Параметры
 
-*m*<br/>
+*Пн*\
 Параметр распределения `m`.
 
-*s*<br/>
+*#d0*\
 Параметр распределения `s`.
 
-*parm*<br/>
+*ParM*\
 Структура `param_type`, используемая для формирования распределения.
 
 ### <a name="remarks"></a>Примечания
@@ -230,13 +230,13 @@ struct param_type {
 
 ### <a name="parameters"></a>Параметры
 
-*m*<br/>
+*Пн*\
 Параметр распределения `m`.
 
-*s*<br/>
+*#d0*\
 Параметр распределения `s`.
 
-*right*<br/>
+*Правильно*\
 Структура `param_type`, используемая для сравнения.
 
 ### <a name="remarks"></a>Примечания
@@ -247,4 +247,4 @@ struct param_type {
 
 ## <a name="see-also"></a>См. также
 
-[\<random>](../standard-library/random.md)<br/>
+[\<random>](../standard-library/random.md)

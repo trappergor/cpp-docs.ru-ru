@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - add_rvalue_reference Class
 ms.assetid: 76b0cb7c-1031-45d0-b409-f03ab0297580
-ms.openlocfilehash: e5e658f16657c0021b78175e87d122a3accd11eb
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 64694f2428c1dd536df4d242a17f3f011cfb290c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62411178"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68456540"
 ---
 # <a name="addrvaluereference-class"></a>Класс add_rvalue_reference
 
@@ -29,14 +29,14 @@ using add_rvalue_reference_t = typename add_rvalue_reference<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-`add_rvalue_reference` Классе имеется член с именем `type`, который является псевдонимом для типа ссылки rvalue к параметру шаблона *T*. Семантика сворачивания ссылок подразумевает, что для типов без объектов и функции, не являющейся *T*, `T&&` — *T*. Например, если *T* является типом ссылки lvalue `add_rvalue_reference<T>::type` является ссылочным типом lvalue, а не ссылкой rvalue.
+Класс содержит член с именем `type`, который является псевдонимом для типа ссылки rvalue на параметр шаблона *T.* `add_rvalue_reference` Семантика свертывания ссылок подразумевает, что для типов, не являющихся объектами и не являющихся функциями t `T&&` , является *t*. Например, если *T* является ссылочным типом lvalue, `add_rvalue_reference<T>::type` то является ссылочным типом lvalue, а не ссылкой rvalue.
 
-Для удобства \<type_traits > определяет вспомогательный шаблон `add_rvalue_reference_t`, в котором псевдонимы `type` членом `add_rvalue_reference`.
+Для удобства \<type_traits > определяет вспомогательный `add_rvalue_reference_t`шаблон, `add_rvalue_reference`который является псевдонимом `type` члена.
 
 ## <a name="example"></a>Пример
 
@@ -73,10 +73,10 @@ All static_assert tests of add_rvalue_reference passed.
 
 Заголовок: \<type_traits >
 
-Пространство имен: std
+Пространство имен: STD
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)<br/>
-[Класс is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс add_lvalue_reference](../standard-library/add-lvalue-reference-class.md)\
+[Класс is_rvalue_reference](../standard-library/is-rvalue-reference-class.md)

@@ -15,16 +15,16 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-ms.openlocfilehash: f7663987b2759c762d1f6c1604923478915f5726
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d4ae53f9a14f04d5656a13c32e75494688c5cdd0
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62365004"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68452260"
 ---
 # <a name="vectorltboolgt-class"></a>Класс vector&lt;bool&gt;
 
-`vector<bool>` Класс является частичной специализацией объекта [вектор](../standard-library/vector-class.md) для элементов типа **bool**. Он имеет распределитель для базового типа, который используется специализацией, обеспечивающей оптимизацию пространства путем сохранения одного **bool** значение бит.
+Класс является частичной специализацией вектора для элементов типа **bool**. [](../standard-library/vector-class.md) `vector<bool>` Он имеет распределитель для базового типа, используемого специализацией, который обеспечивает оптимизацию пространства путем хранения одного **логического** значения на бит.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,7 +37,7 @@ class vector<bool, Allocator>
 
 Поведение данной специализации шаблона класса аналогично поведению класса vector, за исключением различий, указанных в данной статье.
 
-Операции, которые работают с **bool** типа соответствуют значениям в хранилище контейнера. Параметр `allocator_traits::construct` не используется для создания данных значений.
+Операции, которые работают с типом **bool** , соответствуют значениям в хранилище контейнера. Параметр `allocator_traits::construct` не используется для создания данных значений.
 
 ### <a name="typedefs"></a>Определения типов
 
@@ -49,7 +49,7 @@ class vector<bool, Allocator>
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[flip](#flip)|Обращает все биты в `vector<bool>`.|
 |[swap](#swap)|Выполняет обмен элементами между двумя объектами `vector<bool>`.|
@@ -142,7 +142,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 |Параметр|Описание|
 |-|-|
-|*торговых терминалов*|Позиция элемента `vector<bool>`.|
+|*POS*|Позиция элемента `vector<bool>`.|
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -152,7 +152,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>Примечания
 
-При компиляции с набором _ITERATOR_DEBUG_LEVEL, то во время выполнения возникает ошибка при попытке доступа к элементу за пределами вектора.  Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
+При компиляции с набором _ITERATOR_DEBUG_LEVEL возникает ошибка времени выполнения при попытке доступа к элементу за пределами вектора.  Для получения дополнительной информации см. [Checked Iterators](../standard-library/checked-iterators.md).
 
 ### <a name="example"></a>Пример
 
@@ -257,7 +257,7 @@ The vector with first element flipped is:
 
 ###  <a name="reference_operator_bool"></a>  vector\<bool>::reference::operator bool
 
-Предоставляет неявное преобразование из `vector<bool>::reference` для **bool**.
+Обеспечивает неявное преобразование `vector<bool>::reference` из в **bool**.
 
 ```cpp
 operator bool() const;
@@ -282,10 +282,10 @@ reference& operator=(bool Val);
 
 ### <a name="parameters"></a>Параметры
 
-*Right*<br/>
+*Правильно*\
 Ссылка на элемент, значение которого должно быть присвоено биту.
 
-*Val*<br/>
+*Val*\
 Логическое значение, которое должно быть присвоено биту.
 
 #### <a name="example"></a>Пример
@@ -371,11 +371,11 @@ static void swap(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
-Элемент должны поменяться местами с *справа* элемент.
+*Слева*\
+Элемент, который должен быть заменен правым  элементом.
 
-*Right*<br/>
-Элемент должны поменяться местами с *слева* элемент.
+*Правильно*\
+Элемент, который должен быть заменен *левым* элементом.
 
 ### <a name="remarks"></a>Примечания
 
@@ -383,5 +383,5 @@ static void swap(
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Справочник по стандартной библиотеке C++](../standard-library/cpp-standard-library-reference.md)

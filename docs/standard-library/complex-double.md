@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - complex<double> function
 ms.assetid: 0d0b9d2a-9b9b-410b-82a0-86b6df127e47
-ms.openlocfilehash: 7cb516363df7267c2870d2188a14208f54f7ffe9
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 565a2e6b5ee4eb495cb4cc3241bb8ce72de538a2
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62148411"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68453154"
 ---
 # <a name="complexltdoublegt"></a>complex&lt;double&gt;
 
-Описывает объект, который хранит упорядоченную пару объектов типа **двойные**, первый представляет вещественную часть комплексного числа, а второй мнимую.
+Описывает объект, в котором хранится упорядоченная пара объектов типа **Double**, первая из которых представляет реальную часть комплексного числа, а вторая — мнимую часть.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -36,14 +36,14 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ### <a name="parameters"></a>Параметры
 
-*RealVal*<br/>
+*реалвал*\
 Значение типа **double** для вещественной части конструируемого комплексного числа.
 
-*ImagVal*<br/>
+*имагвал*\
 Значение типа **double** для мнимой части конструируемого комплексного числа.
 
-*complexNum*<br/>
-Комплексное число типа **float** или типа **long double** , и действительная и мнимая части которого используются для инициализации комплексное число типа **двойные** конструируемого.
+*комплекснум*\
+Комплексное число типа **float** или **long double** , действительные и мнимые части которых используются для инициализации комплексного числа создаваемого типа **double** .
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -51,7 +51,7 @@ constexpr explicit complex(const complex<long double>& complexNum);
 
 ## <a name="remarks"></a>Примечания
 
-Явная специализация комплексного класса шаблонов для комплексного класса типа **double** отличается от класса шаблона только определяемыми конструкторами. Преобразование из **float** для **двойные** может быть неявным, но преобразование из **long double** для **двойные** должен быть **явные**. Использование **явного** типа исключает инициацию преобразования типа при помощи синтаксиса назначения.
+Явная специализация комплексного класса шаблонов для комплексного класса типа **double** отличается от класса шаблона только определяемыми конструкторами. Преобразование из **float** в **Double** может быть неявным, но преобразование из длинного **double** в **Double** должно быть **явным**. Использование **явного** типа исключает инициацию преобразования типа при помощи синтаксиса назначения.
 
 Дополнительные сведения о классе шаблона `complex` см. в разделе [Класс complex](../standard-library/complex-class.md). Список членов класса шаблона `complex` см. в разделе.
 
@@ -118,5 +118,5 @@ arg ( c3 ) = 0.896055 radians, which is 51.3402 degrees.
 
 ## <a name="see-also"></a>См. также
 
-[Класс complex](../standard-library/complex-class.md)<br/>
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Класс complex](../standard-library/complex-class.md)\
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

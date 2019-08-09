@@ -7,12 +7,12 @@ helpviewer_keywords:
 - remove_extent class
 - remove_extent
 ms.assetid: b9320862-3891-49fc-80bc-571eb2c035cf
-ms.openlocfilehash: 1425de12158354c649ec355124f8c255255b29c2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73af53d2b93d794e2479a33721bfeae71e531794
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62368881"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68451292"
 ---
 # <a name="removeextent-class"></a>Класс remove_extent
 
@@ -30,12 +30,12 @@ using remove_extent_t = typename remove_extent<T>::type;
 
 ### <a name="parameters"></a>Параметры
 
-*T*<br/>
+*T*\
 Тип для изменения.
 
 ## <a name="remarks"></a>Примечания
 
-Экземпляр `remove_extent<T>` содержит модифицированный тип, который является `T1` при *T* имеет форму `T1[N]`, в противном случае *T*.
+Экземпляр `remove_extent<T>` содержит модифицированный тип, который имеет `T1` значение, если *t* имеет форму `T1[N]`, в противном случае *t*.
 
 ## <a name="example"></a>Пример
 
@@ -72,5 +72,5 @@ remove_extent_t<int[5][10]> == int [10]
 
 ## <a name="see-also"></a>См. также
 
-[<type_traits>](../standard-library/type-traits.md)<br/>
-[Класс remove_all_extents](../standard-library/remove-all-extents-class.md)<br/>
+[<type_traits>](../standard-library/type-traits.md)\
+[Класс remove_all_extents](../standard-library/remove-all-extents-class.md)

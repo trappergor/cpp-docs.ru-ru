@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - mask_array class
 ms.assetid: c49bed6a-3000-4f39-bff6-cb9a453acb0b
-ms.openlocfilehash: 108c942bef33e44b515d46e953c9d99274e3ce8d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 9da5e3593288be02819330e11b60e306784054dc
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412986"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68460137"
 ---
 # <a name="maskarray-class"></a>mask_array - класс
 
@@ -21,11 +21,11 @@ ms.locfileid: "62412986"
 
 ## <a name="remarks"></a>Примечания
 
-Этот класс описывает объект, который хранит ссылку на объект `va` класса [valarray](../standard-library/valarray-class.md)**\<тип >**, вместе с объектом `ba` класса [ valarray\<bool >](../standard-library/valarray-bool-class.md), который описывает последовательность элементов для выбора из `valarray<Type>` объекта.
+Класс описывает объект, хранящий ссылку на `va` объект класса [valarray](../standard-library/valarray-class.md) **\<Type >** , а также объект `ba` класса [valarray\<bool >](../standard-library/valarray-bool-class.md), который описывает последовательность элементов для выбора из `valarray<Type>` объекта.
 
-При создании `mask_array<Type>` только путем написания выражения вида [va&#91;ba&#93;](../standard-library/valarray-class.md#op_at). Функции-члены класса mask_array ведут себя как соответствующие сигнатуры функций, заданные для `valarray<Type>`, за исключением того, что затрагивается только последовательность выбранных элементов.
+`mask_array<Type>` Объект создается только путем написания выражения формы No [&#91;Ба&#93;](../standard-library/valarray-class.md#op_at). Функции-члены класса mask_array ведут себя так же, как и соответствующие сигнатуры `valarray<Type>`функций, определенные для, за исключением того, что затрагивается только последовательность выбранных элементов.
 
-Последовательность состоит максимум `ba.size` элементов. Элемент *J* включается, только если **ba**[ *J*] имеет значение true. Таким образом, существует столько элементов в последовательности существует элементов со значением true в `ba`. Если `I` является индексом наименьшего элемента true в `ba`, затем **va**[ `I`] является нулевым элементом в выбранной последовательности.
+Последовательность состоит не более `ba.size` чем из элементов. Элемент *J* включается, только если **ba**[ *J*] имеет значение true. Таким образом, в последовательности существует столько же элементов, сколько есть в `ba`них. Если `I` является индексом самого нижнего истинного элемента `ba`в, то в `I`выбранной последовательности значение **a []** равно нулю.
 
 ## <a name="example"></a>Пример
 
@@ -76,4 +76,4 @@ The modified operand valarray is:  (0 -1 2 -1 10 -1 10 -1 10 -1).
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - std::operator&lt;&lt; (thread)
 - std::operator&lt;= (thread)
 - std::operator== (thread)
-ms.openlocfilehash: 5a2fd845598ac9f9c983bf53cbd7665ef66ffb70
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: c0593b8016cf45abe64114958ccda84eb3704844
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412050"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68458440"
 ---
 # <a name="ltthreadgt-operators"></a>Операторы &lt;thread&gt;
 
@@ -45,10 +45,10 @@ bool operator>= (
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -71,10 +71,10 @@ bool operator> (
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -97,10 +97,10 @@ bool operator<= (
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -123,15 +123,15 @@ bool operator<(
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если *слева* предшествует *справа* в общем порядке; в противном случае **false**.
+**значение true** , если *Left* находится перед *справа* в общем порядке; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -151,10 +151,10 @@ bool operator!= (
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -177,15 +177,15 @@ bool operator== (
 
 ### <a name="parameters"></a>Параметры
 
-*Left*<br/>
+*Слева*\
 Левый объект `thread::id`.
 
-*Right*<br/>
+*Правильно*\
 Правой объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-**значение true,** Если два объекта представляют один и тот же поток выполнения или если ни один из объектов представляет поток выполнения; в противном случае **false**.
+**значение true** , если два объекта представляют один и тот же поток выполнения, или если ни один из объектов не представляет поток выполнения; в противном случае — **значение false**.
 
 ### <a name="remarks"></a>Примечания
 
@@ -203,22 +203,22 @@ basic_ostream<Elem, Tr>& operator<<(
 
 ### <a name="parameters"></a>Параметры
 
-*Ostr*<br/>
+*OSTR*\
 Объект [basic_ostream](../standard-library/basic-ostream-class.md).
 
-*Идентификатор*<br/>
+*Удостоверения*\
 Объект `thread::id`.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-*Ostr*.
+*OSTR*.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция вставляет *идентификатор* в *Ostr*.
+Эта функция вставляет *идентификатор* в *OSTR*.
 
 Если два объекта `thread::id` равны, вставленные текстовые представления этих объектов совпадают.
 
 ## <a name="see-also"></a>См. также
 
-[\<thread>](../standard-library/thread.md)<br/>
+[\<thread>](../standard-library/thread.md)

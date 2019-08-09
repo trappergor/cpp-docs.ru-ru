@@ -12,12 +12,12 @@ helpviewer_keywords:
 - stdext::sync_none [C++], deallocate
 - stdext::sync_none [C++], equals
 ms.assetid: f7473cee-14f3-4fe1-88bc-68cd085e59e1
-ms.openlocfilehash: eba2c60e621df717f29c0b25c735df3fda285fa0
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 4cb311289207dbcf78186e11b2c7f03c503389e5
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62412180"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68450317"
 ---
 # <a name="syncnone-class"></a>Класс sync_none
 
@@ -38,7 +38,7 @@ class sync_none
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[allocate](#allocate)|Выделяет блок памяти.|
 |[deallocate](#deallocate)|Освобождает указанное число объектов из памяти, начиная с заданной позиции.|
@@ -104,10 +104,10 @@ bool equals(const sync<Cache>& Other) const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Функция-член всегда возвращает **true**.
+Функция члена всегда возвращает **значение true**.
 
 ### <a name="remarks"></a>Примечания
 
 ## <a name="see-also"></a>См. также
 
-[\<allocators>](../standard-library/allocators-header.md)<br/>
+[\<allocators>](../standard-library/allocators-header.md)

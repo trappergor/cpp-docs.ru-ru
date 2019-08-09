@@ -11,12 +11,12 @@ helpviewer_keywords:
 - std::fpos [C++], seekpos
 - std::fpos [C++], state
 ms.assetid: ffd0827c-fa34-47f4-b10e-5cb707fcde47
-ms.openlocfilehash: 78b136d72067fa5fff58e8a7acc044fb4e1a409e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 60d7d00e6b9426df9b3086d9b82deaf1fdd1463c
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62159461"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68454145"
 ---
 # <a name="fpos-class"></a>Класс fpos
 
@@ -24,7 +24,7 @@ ms.locfileid: "62159461"
 
 - Смещение в байтах типа [streamoff](../standard-library/ios-typedefs.md#streamoff).
 
-- Состояние преобразования, для использования объектом класса basic_filebuf типа `St`, обычно `mbstate_t`.
+- Состояние преобразования, используемое объектом класса basic_filebuf, обычно `St` `mbstate_t`имеет тип.
 
 Также можно хранить произвольное положение в файле для использования объектом класса [basic_filebuf](../standard-library/basic-filebuf-class.md) типа `fpos_t`. В среде с ограниченным размером файлов `streamoff` и `fpos_t` могут быть взаимозаменяемыми. В среде без потоков с кодированием, зависящим от состояния, `mbstate_t` может фактически не использоваться. Таким образом, число хранимых объектов-членов может различаться.
 
@@ -37,7 +37,7 @@ class fpos
 
 ### <a name="parameters"></a>Параметры
 
-*Statetype*<br/>
+*StateType*\
 Сведения о состоянии.
 
 ### <a name="constructors"></a>Конструкторы
@@ -48,7 +48,7 @@ class fpos
 
 ### <a name="member-functions"></a>Функции-члены
 
-|Функция-член|Описание|
+|Функция Member|Описание|
 |-|-|
 |[seekpos](#seekpos)|Используется только внутренними механизмами стандартной библиотеки C++. Не вызывайте этот метод в коде.|
 |[state](#state)|Задает или возвращает состояние преобразования.|
@@ -83,18 +83,18 @@ fpos(Statetype _State, fpos_t _Filepos);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Смещение в поток.
 
-*_State*<br/>
+*_State*\
 Начальное состояние объекта `fpos`.
 
-*_Filepos*<br/>
+*_Filepos*\
 Смещение в поток.
 
 ### <a name="remarks"></a>Примечания
 
-Первый конструктор сохраняет смещение *_Off*, относительно начала файла и в начальном состоянии преобразования (если это важно). Если *_Off* равно -1, результирующий объект представляет недопустимую позицию в потоке.
+Первый конструктор сохраняет смещение *_Off*относительно начала файла и в начальном состоянии преобразования (если это важно). Если *_Off* имеет значение-1, результирующий объект представляет недопустимую точку в потоке.
 
 Второй конструктор сохраняет нулевое смещение и объект *_State*.
 
@@ -108,7 +108,7 @@ bool operator!=(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Индикатор положения в файле, с которым нужно выполнять сравнение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -181,7 +181,7 @@ fpos<Statetype> operator+(streamoff _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -206,7 +206,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Смещение, на которое нужно увеличить индикатор положения в файле.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -215,7 +215,7 @@ fpos<Statetype>& operator+=(streamoff _Off);
 
 ### <a name="remarks"></a>Примечания
 
-Функция-член добавляет *_Off* хранимых член смещения объекта и возвращает  **\*это**. Для позиционирования в файле результат будет обычно действителен только для двоичных потоков, в которых не применяется зависящее от состояния кодирование.
+Функция члена добавляет *_Off* к сохраненному объекту смещения элемента, а затем возвращает  **\*this**. Для позиционирования в файле результат будет обычно действителен только для двоичных потоков, в которых не применяется зависящее от состояния кодирование.
 
 ### <a name="example"></a>Пример
 
@@ -233,10 +233,10 @@ fpos<Statetype> operator-(streamoff _Off) const;
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Положение в файле.
 
-*_Off*<br/>
+*_Off*\
 Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -257,7 +257,7 @@ fpos<Statetype>& operator-=(streamoff _Off);
 
 ### <a name="parameters"></a>Параметры
 
-*_Off*<br/>
+*_Off*\
 Смещение потока.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -282,7 +282,7 @@ bool operator==(const fpos<Statetype>& right) const;
 
 ### <a name="parameters"></a>Параметры
 
-*right*<br/>
+*Правильно*\
 Индикатор положения в файле, с которым нужно выполнять сравнение.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -356,7 +356,7 @@ void state(Statetype _State);
 
 ### <a name="parameters"></a>Параметры
 
-*_State*<br/>
+*_State*\
 Новое состояние преобразования.
 
 ### <a name="return-value"></a>Возвращаемое значение
@@ -365,7 +365,7 @@ void state(Statetype _State);
 
 ### <a name="remarks"></a>Примечания
 
-Первая функция-член возвращает значение, хранящееся в `St` объект-член. Вторая функция-член сохраняет *_State* в `St` объект-член.
+Первая функция – член возвращает значение, хранящееся в `St` объекте члена. Вторая функция – член сохраняет *_State* в `St` объекте Member.
 
 ### <a name="example"></a>Пример
 
@@ -394,6 +394,6 @@ int main() {
 
 ## <a name="see-also"></a>См. также
 
-[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)<br/>
-[Программирование iostream](../standard-library/iostream-programming.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Потокобезопасность в стандартной библиотеке C++](../standard-library/thread-safety-in-the-cpp-standard-library.md)\
+[Программирование iostream](../standard-library/iostream-programming.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)

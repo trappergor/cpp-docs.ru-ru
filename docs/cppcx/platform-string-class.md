@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0b8a29efc5b18432eabfeddc75af12737538281c
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62330210"
 ---
 # <a name="platformstring-class"></a>Класс Platform::String
 
@@ -43,7 +43,7 @@ public ref class String sealed : Object,
 
 Две функции итераторов, не являющиеся членами класса String, можно использовать с функциями шаблона `std::for_each` для перечисления символов в объекте String.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |`const char16* begin(String^ s)`|Возвращает указатель на начало указанного объекта String.|
 |`const char16* end(String^ s)`|Возвращает указатель на позицию после окончания указанного объекта String.|
@@ -56,7 +56,7 @@ public ref class String sealed : Object,
 
 **Конструкторы**
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
 |[String::String](#ctor)|Инициализирует новый экземпляр класса String.|
 
@@ -64,7 +64,7 @@ public ref class String sealed : Object,
 
 Класс String наследует методы Equals(), Finalize(), GetHashCode(), GetType(), MemberwiseClose() и ToString() от класса [Platform::Object Class](../cppcx/platform-object-class.md). Класс String содержит также следующие методы.
 
-|Метод|Описание:|
+|Метод|Описание|
 |------------|-----------------|
 |[String::Begin](#begin)|Возвращает указатель на начало текущей строки.|
 |[String::CompareOrdinal](#compareordinal)|Сравнивает два объекта `String` , оценивая числовые значения соответствующих символов в двух строковых значениях, представленных объектами.|
@@ -83,13 +83,13 @@ public ref class String sealed : Object,
 
 Класс String имеет следующие операторы.
 
-|Член|Описание:|
+|Член|Описание|
 |------------|-----------------|
-|[String::operator ==-оператор](#operator-equality)|Указывает, равны ли значения двух указанных объектов String.|
+|[String::operator ==-оператор](#operator-equality)|Указывает, имеют ли два указанных объекта строки и то же значение.|
 |[Оператор operator+](#operator-plus)|Сцепляет два объекта String в новый объект String.|
 |[String::operator > оператор](#operator-greater-than)|Указывает, является ли значение одного объекта String большим, чем значение второго объекта String.|
 |[String::operator > =-оператор](#operator-greater-than-or-equals)|Указывает, является ли значение одного объекта String больше или равным значению второго объекта String.|
-|[String::operator! =-оператор](#operator-inequality)|Указывает, различны ли значения двух указанных объектов String.|
+|[String::operator! =-оператор](#operator-inequality)|Указывает, имеют ли два указанных объекта строки разные значения.|
 |[String::operator < оператор](#operator-less-than)|Указывает, является ли значение одного объекта String меньшим, чем значение второго объекта String.|
 
 ### <a name="requirements"></a>Требования
@@ -411,7 +411,7 @@ bool String::operator>=( String^ str1, String^ str2);
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-Указывает ли два указанных `String` объекты имеют разные значения.
+Указывает, являются ли два заданных `String` объекты имеют разные значения.
 
 ### <a name="syntax"></a>Синтаксис
 

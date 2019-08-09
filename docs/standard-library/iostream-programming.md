@@ -17,12 +17,12 @@ helpviewer_keywords:
 - programming [C++], iostream programming
 - text input [C++]
 ms.assetid: 1aa0a0be-4dd8-4dac-ac1f-d2afdaeab769
-ms.openlocfilehash: 56b6d2a69372c9c8232823feb085780c38c00f0e
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 883050c8ad838d642156dc6dac4c779d2dd3420a
+ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62385164"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68449068"
 ---
 # <a name="iostream-programming"></a>Программирование iostream
 
@@ -44,5 +44,5 @@ ms.locfileid: "62385164"
 
 ## <a name="see-also"></a>См. также
 
-[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)<br/>
-[Соглашения iostreams](../standard-library/iostreams-conventions.md)<br/>
+[Стандартная библиотека C++](../standard-library/cpp-standard-library-reference.md)\
+[Соглашения iostreams](../standard-library/iostreams-conventions.md)
