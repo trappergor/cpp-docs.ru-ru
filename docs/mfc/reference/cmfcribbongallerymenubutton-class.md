@@ -1,5 +1,5 @@
 ---
-title: CMFCRibbonGalleryMenuButton Class
+title: Класс Кмфкриббонгаллерименубуттон
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonGalleryMenuButton
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - CMFCRibbonGalleryMenuButton [MFC], HasButton
 - CMFCRibbonGalleryMenuButton [MFC], IsEmptyMenuAllowed
 ms.assetid: 4d459d9b-8b1a-4371-92f6-dc4ce6cc42c8
-ms.openlocfilehash: b63eab7c1e4d03a9103795892603b819eb7d02f3
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 0ec295fa64b835064435992a398d4292ccf26f38
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236948"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866163"
 ---
-# <a name="cmfcribbongallerymenubutton-class"></a>CMFCRibbonGalleryMenuButton Class
+# <a name="cmfcribbongallerymenubutton-class"></a>Класс Кмфкриббонгаллерименубуттон
 
 Реализует кнопку меню ленты, которая содержит коллекцию лент.
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
@@ -42,17 +42,17 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|Создает и инициализирует объект `CMFCRibbonGalleryMenuButton`.|
+|[Кмфкриббонгаллерименубуттон:: Кмфкриббонгаллерименубуттон](#cmfcribbongallerymenubutton)|Создает и инициализирует объект `CMFCRibbonGalleryMenuButton`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CopyFrom](#copyfrom)|(Переопределяет [CMFCToolBarMenuButton::CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|
-|[CMFCRibbonGalleryMenuButton::CreatePopupMenu](#createpopupmenu)|(Переопределяет [CMFCToolBarMenuButton::CreatePopupMenu](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|
-|[CMFCRibbonGalleryMenuButton::GetPalette](#getpalette)||
-|[CMFCRibbonGalleryMenuButton::HasButton](#hasbutton)|(Переопределяет `CMFCToolBarMenuButton::HasButton`.)|
-|[CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|(Переопределяет [CMFCToolBarMenuButton::IsEmptyMenuAllowed](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).)|
+|[Кмфкриббонгаллерименубуттон:: CopyFrom](#copyfrom)|(Переопределяет [кмфктулбарменубуттон:: CopyFrom](../../mfc/reference/cmfctoolbarmenubutton-class.md#copyfrom).)|
+|[Кмфкриббонгаллерименубуттон:: Креатепопупмену](#createpopupmenu)|(Переопределяет [кмфктулбарменубуттон:: креатепопупмену](../../mfc/reference/cmfctoolbarmenubutton-class.md#createpopupmenu).)|
+|[Кмфкриббонгаллерименубуттон:: "Palette"](#getpalette)||
+|[Кмфкриббонгаллерименубуттон:: Хасбуттон](#hasbutton)|(Переопределяет `CMFCToolBarMenuButton::HasButton`.)|
+|[Кмфкриббонгаллерименубуттон:: Исемптименуалловед](#isemptymenuallowed)|(Переопределяет [кмфктулбарменубуттон:: исемптименуалловед](../../mfc/reference/cmfctoolbarmenubutton-class.md#isemptymenuallowed).)|
 
 ### <a name="remarks"></a>Примечания
 
@@ -62,40 +62,42 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 В этом примере демонстрируется, как можно отобразить коллекцию маркеров с помощью кнопки меню:
 
-```
+```cpp
 BOOL CMainFrame::OnShowPopupMenu (CMFCPopupMenu* pMenuPopup)
 {
     int nBulletIndex = pMenuBar->CommandToIndex (ID_PARA_BULLETS);
 
     if (nBulletIndex>= 0)
-{
-    CMFCToolBarButton* pExButton =
-    pMenuBar->GetButton(nBulletIndex);
-ASSERT_VALID (pExButton);
+    {
+        CMFCToolBarButton* pExButton =
+        pMenuBar->GetButton(nBulletIndex);
+        ASSERT_VALID (pExButton);
 
-    CMFCRibbonGalleryMenuButton paletteBullet (
-    pExButton->m_nID,
-    pExButton->GetImage (),
-    pExButton->m_strText);
+        CMFCRibbonGalleryMenuButton paletteBullet (
+        pExButton->m_nID,
+        pExButton->GetImage (),
+        pExButton->m_strText);
 
-InitBulletPalette (&paletteBullet.GetPalette ());
+        InitBulletPalette (&paletteBullet.GetPalette ());
 
-    pMenuBar->ReplaceButton (ID_PARA_BULLETS,
-    paletteBullet);
-
-}
+        pMenuBar->ReplaceButton (ID_PARA_BULLETS,
+        paletteBullet);
+    }
 }
 ```
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md) [CMFCToolBarMenuButton](../../mfc/reference/cmfctoolbarmenubutton-class.md) [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Кмфктулбарменубуттон](../../mfc/reference/cmfctoolbarmenubutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Кмфкриббонгаллерименубуттон](../../mfc/reference/cmfcribbongallerymenubutton-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxRibbonPaletteGallery.h
+**Заголовок:** афксриббонпалеттегаллери. h
 
-##  <a name="copyfrom"></a>  CMFCRibbonGalleryMenuButton::CopyFrom
+##  <a name="copyfrom"></a>Кмфкриббонгаллерименубуттон:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -103,13 +105,13 @@ virtual void CopyFrom(const CMFCToolBarButton& src);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *src*<br/>
+окне *src*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="cmfcribbongallerymenubutton"></a>  CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton
+##  <a name="cmfcribbongallerymenubutton"></a>Кмфкриббонгаллерименубуттон:: Кмфкриббонгаллерименубуттон
 
-Создает и инициализирует [CMFCRibbonGalleryMenuButton](../../mfc/reference/cmfcribbongallerymenubutton-class.md) объекта.
+Создает и инициализирует объект [кмфкриббонгаллерименубуттон](../../mfc/reference/cmfcribbongallerymenubutton-class.md) .
 
 ```
 CMFCRibbonGalleryMenuButton(
@@ -129,34 +131,34 @@ CMFCRibbonGalleryMenuButton(
 ### <a name="parameters"></a>Параметры
 
 *uiID*<br/>
-Идентификатор команды кнопки. Это значение отправляется в сообщении WM_COMMAND, когда пользователь нажимает эту кнопку.
+Идентификатор команды для кнопки. Это значение, отправляемое в сообщении WM_COMMAND, когда пользователь нажимает эту кнопку.
 
-*iImage*<br/>
-Индекс изображения, отображаемого с помощью кнопки меню коллекции. Изображения сохраняются в *imagesPalette* параметра.
+*иимаже*<br/>
+Индекс изображения, отображаемого с помощью кнопки меню "Коллекция". Изображения хранятся в параметре *имажеспалетте* .
 
 *lpszText*<br/>
-Текст, отображаемый на кнопке меню.
+Текст, отображаемый в кнопке меню.
 
-*imagesPalette*<br/>
+*имажеспалетте*<br/>
 Содержит список изображений, отображаемых в коллекции.
 
-*uiImagesPaletteResID*<br/>
-Идентификатор ресурса для изображений в списке изображений для отображения в коллекции.
+*уиимажеспалеттересид*<br/>
+Идентификатор ресурса списка изображений, отображаемых в коллекции.
 
-*cxPaletteImage*<br/>
-Задает ширину в пикселях изображения для отображения в коллекции.
+*ккспалеттеимаже*<br/>
+Задает ширину изображения, отображаемого в коллекции (в пикселях).
 
 ### <a name="remarks"></a>Примечания
 
-Кнопка коллекции отображается в виде всплывающего меню со стрелкой. Когда пользователь нажимает эту кнопку, открывается коллекция изображений.
+Кнопка меню Коллекция отображается как всплывающее меню со стрелкой. Когда пользователь нажимает эту кнопку, открывается коллекция изображений.
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует способы использования конструктора `CMFCRibbonGalleryMenuButton` класса. Этот фрагмент кода является частью [MS Office 2007 демонстрационного](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как использовать конструктор `CMFCRibbonGalleryMenuButton` класса. Этот фрагмент кода является частью демонстрационного [примера MS Office 2007](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#8](../../mfc/reference/codesnippet/cpp/cmfcribbongallerymenubutton-class_1.cpp)]
 
-##  <a name="createpopupmenu"></a>  CMFCRibbonGalleryMenuButton::CreatePopupMenu
+##  <a name="createpopupmenu"></a>Кмфкриббонгаллерименубуттон:: Креатепопупмену
 
 ```
 virtual CMFCPopupMenu* CreatePopupMenu();
@@ -166,7 +168,7 @@ virtual CMFCPopupMenu* CreatePopupMenu();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getpalette"></a>  CMFCRibbonGalleryMenuButton::GetPalette
+##  <a name="getpalette"></a>Кмфкриббонгаллерименубуттон:: "Palette"
 
 ```
 CMFCRibbonGallery& GetPalette();
@@ -186,7 +188,7 @@ virtual BOOL HasButton() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isemptymenuallowed"></a>  CMFCRibbonGalleryMenuButton::IsEmptyMenuAllowed
+##  <a name="isemptymenuallowed"></a>Кмфкриббонгаллерименубуттон:: Исемптименуалловед
 
 ```
 virtual BOOL IsEmptyMenuAllowed() const;
