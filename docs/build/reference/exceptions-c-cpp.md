@@ -12,22 +12,22 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: cf38af464f08e143ed9073befe30f6aeb8b913b6
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62271636"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915460"
 ---
 # <a name="exceptions-cc"></a>Исключения (C/C++)
 
-Два кода исключения могут возникать при возникновении ошибок:
+При обнаружении сбоев могут возникать два кода исключений:
 
-- Для **LoadLibrary** сбоя
+- Для сбоя **LoadLibrary**
 
-- Для **GetProcAddress** сбоя
+- Для ошибки **GetProcAddress**
 
-Вот сведения об исключении:
+Ниже приведены сведения об исключении:
 
 ```
 //
@@ -37,11 +37,11 @@ ms.locfileid: "62271636"
 #define VcppException(sev,err)  ((sev) | (FACILITY_VISUALCPP<<16) | err)
 ```
 
-Исключение кодами исключений — это стандартный VcppException (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и значения VcppException (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на **DelayLoadInfo** структуры в значении LPDWORD, можно получить с **GetExceptionInformation** в [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-_exception_record) Структура, поле ExceptionInformation [0].
+Вызываемые коды исключений — это стандартные значения Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_MOD_NOT_FOUND) и Вкппексцептион (ERROR_SEVERITY_ERROR, ERROR_PROC_NOT_FOUND). Исключение передает указатель на структуру **делайлоадинфо** в значении лпдворд, которое может быть извлечено **жетексцептионинформатион** в поле структура [EXCEPTION_RECORD](/windows/desktop/api/winnt/ns-winnt-exception_record) , матрице ExceptionInformation [0].
 
-Кроме того Если в поле grAttrs неверные биты, ERROR_INVALID_PARAMETER исключение. Это исключение, для всех, Собрав Неустранимая.
+Кроме того, если в поле Граттрс заданы неверные биты, выдается исключение ERROR_INVALID_PARAMETER. Это исключение для всех целей и назначений, неустранимое.
 
-См. в разделе [определение структуры и константы](structure-and-constant-definitions.md) Дополнительные сведения.
+Дополнительные сведения см. в разделе [определения структур и констант](structure-and-constant-definitions.md) .
 
 ## <a name="see-also"></a>См. также
 

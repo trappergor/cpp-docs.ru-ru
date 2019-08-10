@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonLinkCtrl
+title: Класс Кмфкриббонлинкктрл
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonLinkCtrl
@@ -32,14 +32,14 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: bc13cf29fd9fed9f91221f00d4b605b3d9c3506f
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 12a83e45176f7fc6020da1f0d0ee5923ef0f466c
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62388388"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866173"
 ---
-# <a name="cmfcribbonlinkctrl-class"></a>Класс CMFCRibbonLinkCtrl
+# <a name="cmfcribbonlinkctrl-class"></a>Класс Кмфкриббонлинкктрл
 
 Реализует гиперссылку, которая расположена на ленте. Гиперссылка при щелчке открывает веб-страницу.
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
@@ -56,42 +56,43 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|Создает и инициализирует объект `CMFCRibbonLinkCtrl`.|
+|[Кмфкриббонлинкктрл:: Кмфкриббонлинкктрл](#cmfcribbonlinkctrl)|Создает и инициализирует объект `CMFCRibbonLinkCtrl`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonLinkCtrl::CopyFrom](#copyfrom)|(Переопределяет `CMFCRibbonButton::CopyFrom`.)|
-|[CMFCRibbonLinkCtrl::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonLinkCtrl::GetLink](#getlink)|Возвращает значение гиперссылки.|
-|[CMFCRibbonLinkCtrl::GetRegularSize](#getregularsize)|(Переопределяет [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonLinkCtrl::GetToolTipText](#gettooltiptext)|(Переопределяет [CMFCRibbonButton::GetToolTipText](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
-|[CMFCRibbonLinkCtrl::IsDrawTooltipImage](#isdrawtooltipimage)|(Переопределяет `CMFCRibbonButton::IsDrawTooltipImage`.)|
-|[CMFCRibbonLinkCtrl::OnDraw](#ondraw)|(Переопределяет [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonLinkCtrl::OnDrawMenuImage](#ondrawmenuimage)|(Переопределяет [CMFCRibbonBaseElement::OnDrawMenuImage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
-|[CMFCRibbonLinkCtrl::OnMouseMove](#onmousemove)|(Переопределяет `CMFCRibbonButton::OnMouseMove`.)|
-|[CMFCRibbonLinkCtrl::OnSetIcon](#onseticon)||
-|[CMFCRibbonLinkCtrl::OpenLink](#openlink)|Открывает веб-страницу, указанную в гиперссылке.|
-|[CMFCRibbonLinkCtrl::SetLink](#setlink)|Задает значение гиперссылки.|
+|[Кмфкриббонлинкктрл:: CopyFrom](#copyfrom)|(Переопределяет `CMFCRibbonButton::CopyFrom`.)|
+|[Кмфкриббонлинкктрл:: Жеткомпактсизе](#getcompactsize)|(Переопределяет [CMFCRibbonButton:: жеткомпактсизе](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[Кмфкриббонлинкктрл::.](#getlink)|Возвращает значение гиперссылки.|
+|[Кмфкриббонлинкктрл:: Жетрегуларсизе](#getregularsize)|(Переопределяет [CMFCRibbonButton:: жетрегуларсизе](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[Кмфкриббонлинкктрл:: Жеттултиптекст](#gettooltiptext)|(Переопределяет [CMFCRibbonButton:: жеттултиптекст](../../mfc/reference/cmfcribbonbutton-class.md#gettooltiptext).)|
+|[Кмфкриббонлинкктрл:: Исдравтултипимаже](#isdrawtooltipimage)|(Переопределяет `CMFCRibbonButton::IsDrawTooltipImage`.)|
+|[Кмфкриббонлинкктрл:: OnDraw](#ondraw)|(Переопределяет [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[Кмфкриббонлинкктрл:: Ондравменуимаже](#ondrawmenuimage)|(Переопределяет [метод CMFCRibbonBaseElement:: ондравменуимаже](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage).)|
+|[Кмфкриббонлинкктрл:: OnMouseMove](#onmousemove)|(Переопределяет `CMFCRibbonButton::OnMouseMove`.)|
+|[Кмфкриббонлинкктрл:: Онсетикон](#onseticon)||
+|[Кмфкриббонлинкктрл:: Опенлинк](#openlink)|Открывает веб-страницу, указанную в гиперссылке.|
+|[Кмфкриббонлинкктрл:: Сетлинк](#setlink)|Задает значение гиперссылки.|
 
 ## <a name="remarks"></a>Примечания
 
-После создания гиперссылки, добавьте его на панель, вызвав [CMFCRibbonPanel::Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
+После создания гиперссылки добавьте ее на панель, вызвав [CMFCRibbonPanel:: Add](../../mfc/reference/cmfcribbonpanel-class.md#add).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)
-
-[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md) [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[Метод CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Кмфкриббонлинкктрл](../../mfc/reference/cmfcribbonlinkctrl-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxRibbonLinkCtrl.h
+**Заголовок:** афксриббонлинкктрл. h
 
-##  <a name="cmfcribbonlinkctrl"></a>  CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl
+##  <a name="cmfcribbonlinkctrl"></a>Кмфкриббонлинкктрл:: Кмфкриббонлинкктрл
 
-Создает и инициализирует [CMFCRibbonLinkCtrl](../../mfc/reference/cmfcribbonlinkctrl-class.md) объекта.
+Создает и инициализирует объект [кмфкриббонлинкктрл](../../mfc/reference/cmfcribbonlinkctrl-class.md) .
 
 ```
 CMFCRibbonLinkCtrl(
@@ -103,21 +104,21 @@ CMFCRibbonLinkCtrl(
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Указывает идентификатор команды команда, выполняемая при нажатии ссылки элемента управления.
+окне Указывает идентификатор команды, которая выполняется при нажатии на элемент управления Link.
 
 *lpszText*<br/>
-[in] Указывает метку, которая отображается в элементе управления ссылку.
+окне Задает метку, отображаемую на элементе управления ссылки.
 
-*lpszLink*<br/>
-[in] Определяет гиперссылку, связанную с элементом управления link.
+*лпсзлинк*<br/>
+окне Задает гиперссылку, связанную с элементом управления "ссылка".
 
 ### <a name="example"></a>Пример
 
-Следующий пример демонстрирует способы использования конструктора `CMFCRibbonLinkCtrl` класса. Этот фрагмент кода является частью [пример мини-приложения ленты](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как использовать конструктор `CMFCRibbonLinkCtrl` класса. Этот фрагмент кода является частью [примера мини-приложений ленты](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 
-##  <a name="copyfrom"></a>  CMFCRibbonLinkCtrl::CopyFrom
+##  <a name="copyfrom"></a>Кмфкриббонлинкктрл:: CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCRibbonBaseElement& src);
@@ -125,11 +126,11 @@ virtual void CopyFrom(const CMFCRibbonBaseElement& src);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *src*<br/>
+окне *src*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getcompactsize"></a>  CMFCRibbonLinkCtrl::GetCompactSize
+##  <a name="getcompactsize"></a>Кмфкриббонлинкктрл:: Жеткомпактсизе
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -137,13 +138,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getlink"></a>  CMFCRibbonLinkCtrl::GetLink
+##  <a name="getlink"></a>Кмфкриббонлинкктрл::.
 
 Возвращает значение гиперссылки.
 
@@ -157,7 +158,7 @@ LPCTSTR GetLink() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getregularsize"></a>  CMFCRibbonLinkCtrl::GetRegularSize
+##  <a name="getregularsize"></a>Кмфкриббонлинкктрл:: Жетрегуларсизе
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -165,13 +166,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="gettooltiptext"></a>  CMFCRibbonLinkCtrl::GetToolTipText
+##  <a name="gettooltiptext"></a>Кмфкриббонлинкктрл:: Жеттултиптекст
 
 ```
 virtual CString GetToolTipText() const;
@@ -181,7 +182,7 @@ virtual CString GetToolTipText() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawmenuimage"></a>  CMFCRibbonLinkCtrl::OnDrawMenuImage
+##  <a name="ondrawmenuimage"></a>Кмфкриббонлинкктрл:: Ондравменуимаже
 
 ```
 virtual BOOL OnDrawMenuImage(CDC*, CRect);
@@ -189,14 +190,14 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *CDC&#42;*<br/>
-[in] *CRect*<br/>
+окне *CDC&#42;*<br/>
+окне *Крект*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isdrawtooltipimage"></a>  CMFCRibbonLinkCtrl::IsDrawTooltipImage
+##  <a name="isdrawtooltipimage"></a>Кмфкриббонлинкктрл:: Исдравтултипимаже
 
 ```
 virtual BOOL IsDrawTooltipImage() const;
@@ -206,7 +207,7 @@ virtual BOOL IsDrawTooltipImage() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondraw"></a>  CMFCRibbonLinkCtrl::OnDraw
+##  <a name="ondraw"></a>Кмфкриббонлинкктрл:: OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -214,11 +215,11 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onmousemove"></a>  CMFCRibbonLinkCtrl::OnMouseMove
+##  <a name="onmousemove"></a>Кмфкриббонлинкктрл:: OnMouseMove
 
 ```
 virtual void OnMouseMove(CPoint point);
@@ -226,11 +227,11 @@ virtual void OnMouseMove(CPoint point);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *точки*<br/>
+окне *точка*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onseticon"></a>  CMFCRibbonLinkCtrl::OnSetIcon
+##  <a name="onseticon"></a>Кмфкриббонлинкктрл:: Онсетикон
 
 ```
 virtual void OnSetIcon();
@@ -238,7 +239,7 @@ virtual void OnSetIcon();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="openlink"></a>  CMFCRibbonLinkCtrl::OpenLink
+##  <a name="openlink"></a>Кмфкриббонлинкктрл:: Опенлинк
 
 Открывает веб-страницу, указанную в гиперссылке.
 
@@ -248,13 +249,13 @@ BOOL OpenLink();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если связанный веб-страницы был открыт успешно; в противном случае — значение FALSE.
+Значение TRUE, если связанная веб-страница успешно открыта. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Открывает веб-страницу, используя гиперссылку, указывающую `CMFCRibbonLinkCtrl` объекта.
+Открывает веб-страницу, используя гиперссылку, связанную с `CMFCRibbonLinkCtrl` объектом.
 
-##  <a name="setlink"></a>  CMFCRibbonLinkCtrl::SetLink
+##  <a name="setlink"></a>Кмфкриббонлинкктрл:: Сетлинк
 
 Задает значение гиперссылки.
 
@@ -264,8 +265,8 @@ void SetLink(LPCTSTR lpszLink);
 
 ### <a name="parameters"></a>Параметры
 
-*lpszLink*<br/>
-[in] Задает текст гиперссылки.
+*лпсзлинк*<br/>
+окне Задает текст гиперссылки.
 
 ## <a name="see-also"></a>См. также
 

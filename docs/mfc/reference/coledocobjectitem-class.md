@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 454be491fe5875b1b1ac9b2b85fdebe2f1663ebc
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62225519"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68916966"
 ---
 # <a name="coledocobjectitem-class"></a>Класс COleDocObjectItem
 
@@ -47,36 +47,36 @@ class COleDocObjectItem : public COleClientItem
 
 |name|Описание|
 |----------|-----------------|
-|[COleDocObjectItem::COleDocObjectItem](#coledocobjectitem)|Создает `COleDocObject` элемента.|
+|[COleDocObjectItem:: COleDocObjectItem](#coledocobjectitem)|`COleDocObject` Конструирует элемент.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[COleDocObjectItem::DoDefaultPrinting](#dodefaultprinting)|Печать документа приложения-контейнера, используя параметры принтера по умолчанию.|
-|[COleDocObjectItem::ExecCommand](#execcommand)|Выполняет команду, указанные пользователем.|
-|[COleDocObjectItem::GetActiveView](#getactiveview)|Получает активное представление документа.|
-|[COleDocObjectItem::GetPageCount](#getpagecount)|Возвращает число страниц в документе приложения-контейнера.|
-|[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|Подготавливает приложения-контейнера документа для печати.|
-|[COleDocObjectItem::OnPrint](#onprint)|Печать документа приложения-контейнера.|
-|[COleDocObjectItem::QueryCommand](#querycommand)|Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.|
-|[COleDocObjectItem::Release](#release)|Освобождает соединение для связанного элемента OLE и закрывается, если он был открыт. Уничтожает элемент клиента.|
+|[COleDocObjectItem::D Одефаултпринтинг](#dodefaultprinting)|Печать документа приложения контейнера с использованием параметров принтера по умолчанию.|
+|[COleDocObjectItem:: Ексеккомманд](#execcommand)|Выполняет команду, указанную пользователем.|
+|[COleDocObjectItem:: Жетактивевиев](#getactiveview)|Извлекает активное представление документа.|
+|[COleDocObjectItem:: Жетпажекаунт](#getpagecount)|Извлекает количество страниц в документе приложения контейнера.|
+|[COleDocObjectItem:: Онпрепарепринтинг](#onprepareprinting)|Подготавливает документ приложения контейнера для печати.|
+|[COleDocObjectItem:: OnPrint](#onprint)|Выводит документ приложения контейнера.|
+|[COleDocObjectItem:: Куерикомманд](#querycommand)|Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.|
+|[COleDocObjectItem:: Release](#release)|Освобождает подключение к связанному элементу OLE и закрывает его, если он был открыт. Не уничтожает клиентский элемент.|
 
 ## <a name="remarks"></a>Примечания
 
-В MFC активном документе подобным образом распределяется регулярных месте, в редактируемой внедрения, со следующими отличиями:
+В MFC активный документ обрабатывается аналогично обычному встроенному внедрению с возможностью редактирования со следующими отличиями.
 
-- `COleDocument`-Производный класс по-прежнему поддерживает список в настоящее время внедренные элементы; тем не менее, это могут быть `COleDocObjectItem`-производных элементов.
+- Класс `COleDocument`, производный от, по-прежнему сохраняет список внедренных в данный момент элементов, однако эти `COleDocObjectItem`элементы могут быть производными.
 
-- При активном в активном документе занимает всей клиентской области, представления, когда активен на месте.
+- Если активный документ активен, он занимает всю клиентскую область представления, когда она находится в активном состоянии.
 
-- Контейнер активного документа обладает полным контролем над **помочь** меню.
+- Активный контейнер документа имеет полный контроль над меню " **Справка** ".
 
-- **Помочь** меню содержит элементы меню для контейнера активных документов и сервера.
+- Меню **Справка** содержит пункты меню для активного контейнера документа и сервера.
 
-Так как контейнер активного документа, которому принадлежит **помочь** меню контейнер отвечает за сервера пересылки **помочь** меню сообщения на сервер. Такая интеграция обрабатывается `COleDocObjectItem`.
+Поскольку контейнер активного документа владеет меню " **Справка** ", контейнер отвечает за сообщения меню " **Справка** сервера" на сервер. Эта интеграция обрабатывается `COleDocObjectItem`.
 
-Дополнительные сведения о путем слияния меню и активации активного документа, см. в разделе Обзор [вложение активного документа](../../mfc/active-document-containment.md).
+Дополнительные сведения о слиянии меню и активации активных документов см. в разделе Обзор [включения активного документа](../../mfc/active-document-containment.md).
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
@@ -84,7 +84,7 @@ class COleDocObjectItem : public COleClientItem
 
 [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
 
-[CDocItem](../../mfc/reference/cdocitem-class.md)
+[кдоЦитем](../../mfc/reference/cdocitem-class.md)
 
 [COleClientItem](../../mfc/reference/coleclientitem-class.md)
 
@@ -92,11 +92,11 @@ class COleDocObjectItem : public COleClientItem
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxole.h
+**Заголовок:** афксоле. h
 
-##  <a name="coledocobjectitem"></a>  COleDocObjectItem::COleDocObjectItem
+##  <a name="coledocobjectitem"></a>COleDocObjectItem:: COleDocObjectItem
 
-Вызов этой функции-члена для инициализации `COleDocObjectItem` объекта.
+Вызовите эту функцию члена для инициализации `COleDocObjectItem` объекта.
 
 ```
 COleDocObjectItem(COleDocument* pContainerDoc = NULL);
@@ -104,12 +104,12 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 
 ### <a name="parameters"></a>Параметры
 
-*pContainerDoc*<br/>
-Указатель на `COleDocument` объект, действующий как контейнер активного документа. Этот параметр должен иметь значение NULL для разрешения implement_serialize. Обычно элементы OLE создаются с использованием указателя документа отличное от NULL.
+*пконтаинердок*<br/>
+Указатель на `COleDocument` объект, выступающий в качестве активного контейнера документа. Этот параметр должен иметь значение NULL, чтобы включить IMPLEMENT_SERIALIZE. Обычно элементы OLE создаются с указателем документа со значением, отличным от NULL.
 
-##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting
+##  <a name="dodefaultprinting"></a>COleDocObjectItem::D Одефаултпринтинг
 
-Вызывается платформой для документа, используя параметры по умолчанию.
+Вызвано платформой в документ с использованием параметров по умолчанию.
 
 ```
 static HRESULT DoDefaultPrinting(
@@ -119,15 +119,15 @@ static HRESULT DoDefaultPrinting(
 
 ### <a name="parameters"></a>Параметры
 
-*pCaller*<br/>
-Указатель на [CView](../../mfc/reference/cview-class.md) объект, который отправляет команды print.
+*пкаллер*<br/>
+Указатель на объект [CView](../../mfc/reference/cview-class.md) , который отправляет команду Print.
 
-*pInfo*<br/>
-Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объект, который содержит описание задания печати.
+*пинфо*<br/>
+Указатель на объект [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , описывающий задание для печати.
 
-##  <a name="execcommand"></a>  COleDocObjectItem::ExecCommand
+##  <a name="execcommand"></a>COleDocObjectItem:: Ексеккомманд
 
-Вызов этой функции-члена для выполнения команды, указанные пользователем.
+Вызовите эту функцию члена, чтобы выполнить команду, указанную пользователем.
 
 ```
 HRESULT ExecCommand(
@@ -138,37 +138,37 @@ HRESULT ExecCommand(
 
 ### <a name="parameters"></a>Параметры
 
-*nCmdID*<br/>
-Идентификатор команды для выполнения. Должна входить в группу, идентифицируемый *параметром pguidCmdGroup*.
+*нкмдид*<br/>
+Идентификатор выполняемой команды. Должен входить в группу, обозначенную *пгуидкмдграуп*.
 
-*nCmdExecOpt*<br/>
-Указывает параметры выполнения команды. По умолчанию, чтобы выполнить команду без подтверждения пользователя. См. в разделе [перечислений OLECMDEXECOPT](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) список значений.
+*нкмдексекопт*<br/>
+Задает параметры выполнения команды. По умолчанию задайте для выполнения команды без запроса пользователя. Список значений см. в разделе [олекмдексекопт](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt) .
 
-*pguidCmdGroup*<br/>
-Уникальный идентификатор группы команд. По умолчанию NULL, которое указывает стандартной группы. Команда переданный *nCmdID* должны принадлежать к группе.
+*пгуидкмдграуп*<br/>
+Уникальный идентификатор группы команд. По умолчанию имеет значение NULL, которое указывает стандартную группу. Команда, передаваемая в *нкмдид* , должна принадлежать к группе.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение S_OK, если выполнение прошло успешно; в противном случае возвращает одно из следующих кодов ошибки.
+В случае успешного выполнения возвращает значение S_OK; в противном случае возвращает один из следующих кодов ошибок.
 
 |Значение|Описание|
 |-----------|-----------------|
 |E_UNEXPECTED|Произошла непредвиденная ошибка.|
 |E_FAIL|Произошла ошибка.|
-|E_NOTIMPL|Указывает MFC сам должен попытаться перевести и отправлять команды.|
-|OLECMDERR_E_UNKNOWNGROUP|*параметром pguidCmdGroup* не равно NULL, но не указывает на известную группу команд.|
-|OLECMDERR_E_NOTSUPPORTED|*nCmdID* не является допустимой командой в pGroup группы.|
-|OLECMDERR_DISABLED|Команда, указанная *nCmdID* отключена и не может быть выполнена.|
-|OLECMDERR_NOHELP|Вызывающий объект и ответы для получения справки о команде, указанной *nCmdID* , но нет справочных сведений.|
+|E_NOTIMPL|Указывает, что библиотека MFC должна попытаться преобразовать и отправить команду.|
+|OLECMDERR_E_UNKNOWNGROUP|*пгуидкмдграуп* не имеет значение null, но не указывает распознанную группу команд.|
+|OLECMDERR_E_NOTSUPPORTED|*нкмдид* не распознана как допустимая команда в группе пграуп.|
+|OLECMDERR_DISABLED|Команда, определенная параметром *нкмдид* , отключена и не может быть выполнена.|
+|OLECMDERR_NOHELP|Вызывающая сторона запросила справку по команде, указанной параметром *нкмдид* , но Справка недоступна.|
 |OLECMDERR_CANCELLED|Пользователь отменил выполнение.|
 
 ### <a name="remarks"></a>Примечания
 
-*Параметром pguidCmdGroup* и *nCmdID* параметра однозначно определить команду, вызываемую. *NCmdExecOpt* параметр указывает точное действие, выполняемое.
+Параметры *пгуидкмдграуп* и *нкмдид* однозначно идентифицируют вызываемую команду. Параметр *нкмдексекопт* указывает точное выполняемое действие.
 
-##  <a name="getactiveview"></a>  COleDocObjectItem::GetActiveView
+##  <a name="getactiveview"></a>COleDocObjectItem:: Жетактивевиев
 
-Вызов этой функции-члена для получения указателя на `IOleDocumentView` интерфейс текущему активному представлению.
+Вызовите эту функцию-член, чтобы получить указатель `IOleDocumentView` на интерфейс текущего активного представления.
 
 ```
 LPOLEDOCUMENTVIEW GetActiveView() const;
@@ -176,15 +176,15 @@ LPOLEDOCUMENTVIEW GetActiveView() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на [IOleDocumentView](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) интерфейс текущему активному представлению. Если нет текущего представления, возвращается значение NULL.
+Указатель на интерфейс [иоледокументвиев](/windows/desktop/api/docobj/nn-docobj-ioledocumentview) текущего активного представления. Если текущее представление отсутствует, возвращается значение NULL.
 
 ### <a name="remarks"></a>Примечания
 
-Счетчик ссылок в возвращенном `IOleDocumentView` указатель не увеличивается, возвращаемую этой функцией.
+Счетчик ссылок на возвращаемый `IOleDocumentView` указатель не увеличивается до тех пор, пока эта функция не вернет значение.
 
-##  <a name="getpagecount"></a>  COleDocObjectItem::GetPageCount
+##  <a name="getpagecount"></a>COleDocObjectItem:: Жетпажекаунт
 
-Вызовите эту функцию-член для извлечения нескольких страниц в документе.
+Вызовите эту функцию члена, чтобы получить количество страниц в документе.
 
 ```
 BOOL GetPageCount(
@@ -194,19 +194,19 @@ BOOL GetPageCount(
 
 ### <a name="parameters"></a>Параметры
 
-*pnFirstPage*<br/>
-Указатель на номер первой страницы документа. Может иметь значение NULL, указывающее, что вызывающему объекту не требуется этот номер.
+*пнфирстпаже*<br/>
+Указатель на номер первой страницы документа. Может иметь значение NULL, что означает, что вызывающему объекту не требуется это число.
 
-*pcPages*<br/>
-Указатель на общее число страниц в документе. Может иметь значение NULL, указывающее, что вызывающему объекту не требуется этот номер.
+*пкпажес*<br/>
+Указатель на общее число страниц в документе. Может иметь значение NULL, что означает, что вызывающему объекту не требуется это число.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-##  <a name="onprepareprinting"></a>  COleDocObjectItem::OnPreparePrinting
+##  <a name="onprepareprinting"></a>COleDocObjectItem:: Онпрепарепринтинг
 
-Эта функция-член вызывается платформой для подготовки к печати документа.
+Эта функция-член вызывается платформой для подготовки документа к печати.
 
 ```
 static BOOL OnPreparePrinting(
@@ -217,20 +217,20 @@ static BOOL OnPreparePrinting(
 
 ### <a name="parameters"></a>Параметры
 
-*pCaller*<br/>
-Указатель на [CView](../../mfc/reference/cview-class.md) объект, который отправляет команды print.
+*пкаллер*<br/>
+Указатель на объект [CView](../../mfc/reference/cview-class.md) , который отправляет команду Print.
 
-*pInfo*<br/>
-Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объект, который содержит описание задания печати.
+*пинфо*<br/>
+Указатель на объект [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , описывающий задание для печати.
 
-*bPrintAll*<br/>
-Указывает, является ли на печать всего документа.
+*бпринталл*<br/>
+Указывает, следует ли печатать весь документ.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 Имеет ненулевое значение в случае успешного выполнения, иначе — 0.
 
-##  <a name="onprint"></a>  COleDocObjectItem::OnPrint
+##  <a name="onprint"></a>COleDocObjectItem:: OnPrint
 
 Эта функция-член вызывается платформой для печати документа.
 
@@ -243,16 +243,16 @@ static void OnPrint(
 
 ### <a name="parameters"></a>Параметры
 
-*pCaller*<br/>
-Указатель на объект CView, который отправляет команды print.
+*пкаллер*<br/>
+Указатель на объект CView, который отправляет команду Print.
 
-*pInfo*<br/>
-Указатель на [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) объект, который содержит описание задания печати.
+*пинфо*<br/>
+Указатель на объект [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) , описывающий задание для печати.
 
-*bPrintAll*<br/>
-Указывает, является ли на печать всего документа.
+*бпринталл*<br/>
+Указывает, следует ли печатать весь документ.
 
-##  <a name="querycommand"></a>  COleDocObjectItem::QueryCommand
+##  <a name="querycommand"></a>COleDocObjectItem:: Куерикомманд
 
 Запрашивает состояние одной или нескольких команд, созданных событиями пользовательского интерфейса.
 
@@ -266,29 +266,29 @@ HRESULT QueryCommand(
 
 ### <a name="parameters"></a>Параметры
 
-*nCmdID*<br/>
-Идентификатор команды, для которого запрашивается.
+*нкмдид*<br/>
+Идентификатор команды, для которой выполняется запрос.
 
-*pdwStatus*<br/>
+*пдвстатус*<br/>
 Указатель на флаги, возвращаемые в результате запроса. Список возможных значений см. в разделе [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf).
 
-*pCmdText*<br/>
-Указатель на [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext) структуры, в которую будет возвращено имя и сведения о состоянии одной команды. Может иметь значение NULL, чтобы указать, что ему нужны эти сведения.
+*пкмдтекст*<br/>
+Указатель на структуру [олекмдтекст](/windows/desktop/api/docobj/ns-docobj-olecmdtext) , в которой возвращаются имя и сведения о состоянии для одной команды. Может иметь значение NULL, чтобы указать, что вызывающему объекту не требуются эти сведения.
 
-*pguidCmdGroup*<br/>
-Уникальный идентификатор группы команд; может иметь значение NULL для указания стандартной группы.
+*пгуидкмдграуп*<br/>
+Уникальный идентификатор группы команд; может иметь значение NULL, чтобы указать стандартную группу.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Полный список возвращаемых значений, см. в разделе [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) в пакете Windows SDK.
+Полный список возвращаемых значений см. в разделе [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция-член эмулирует функциональные возможности [IOleCommandTarget::QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) метод, как описано в пакете Windows SDK.
+Эта функция члена эмулирует функциональность метода [IOleCommandTarget:: QueryStatus](/windows/desktop/api/docobj/nf-docobj-iolecommandtarget-querystatus) , как описано в Windows SDK.
 
-##  <a name="release"></a>  COleDocObjectItem::Release
+##  <a name="release"></a>COleDocObjectItem:: Release
 
-Освобождает соединение для связанного элемента OLE и закрывается, если он был открыт. Уничтожает элемент клиента.
+Освобождает подключение к связанному элементу OLE и закрывает его, если он был открыт. Не уничтожает клиентский элемент.
 
 ```
 virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
@@ -296,16 +296,16 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 
 ### <a name="parameters"></a>Параметры
 
-*dwCloseOption*<br/>
-Флаг, указывающий, при каких обстоятельствах объекта OLE сохраняется при возвращении в загруженное состояние. Список возможных значений см. в разделе [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close).
+*двклосеоптион*<br/>
+Флаг, указывающий, при каких обстоятельствах объект OLE сохраняется при возвращении в состояние загруженности. Список возможных значений см. в разделе [COleClientItem:: Close](../../mfc/reference/coleclientitem-class.md#close).
 
 ### <a name="remarks"></a>Примечания
 
-Уничтожает элемент клиента.
+Не уничтожает клиентский элемент.
 
 ## <a name="see-also"></a>См. также
 
-[Пример MFC MFCBIND](../../overview/visual-cpp-samples.md)<br/>
+[Пример МФКБИНД для MFC](../../overview/visual-cpp-samples.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
 [Диаграмма иерархии](../../mfc/hierarchy-chart.md)<br/>
 [Класс COleClientItem](../../mfc/reference/coleclientitem-class.md)<br/>
