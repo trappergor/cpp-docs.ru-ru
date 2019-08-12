@@ -10529,22 +10529,8 @@
                   items:
                     - name: Реализация многопоточности на языке C с помощью функций Win32
                       href: parallel/multithreading-with-c-and-win32.md
-                    - name: Многопоточные программы
-                      href: parallel/multithread-programs.md
-                    - name: Поддержка многопоточности библиотеками
-                      href: parallel/library-support-for-multithreading.md
-                    - name: Включаемые файлы для многопоточности
-                      href: parallel/include-files-for-multithreading.md
-                    - name: Функции управления потоками в библиотеке времени выполнения C
-                      href: parallel/c-run-time-library-functions-for-thread-control.md
                     - name: Образец многопоточной программы на C
                       href: parallel/sample-multithread-c-program.md
-                    - name: Написание многопоточной программы Win32
-                      href: parallel/writing-a-multithreaded-win32-program.md
-                    - name: Компиляция и компоновка многопоточных программ
-                      href: parallel/compiling-and-linking-multithread-programs.md
-                    - name: Устранение потенциальных проблем при работе с многопоточными программами
-                      href: parallel/avoiding-problem-areas-with-multithread-programs.md
                     - name: Локальное хранилище потока (TLS)
                       href: parallel/thread-local-storage-tls.md
                 - name: Реализация многопоточности на языке C++ с помощью классов MFC
