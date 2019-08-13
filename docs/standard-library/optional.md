@@ -1,21 +1,20 @@
 ---
 title: '&lt;optional&gt;'
-ms.date: 11/04/2016
+ms.date: 08/06/2019
 f1_keywords:
 - <optional>
 helpviewer_keywords:
 - <optional>
-ms.assetid: 8b4ab09e-1475-434a-b4e0-fdbc07a08b5b
-ms.openlocfilehash: 83a0ad52735f92d731dafb32ad1be5a8278776b4
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: f3b4896a3cb4774e46b36480dd9769fa131fc287
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68447186"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957178"
 ---
 # <a name="ltoptionalgt"></a>&lt;optional&gt;
 
-Определяет класс шаблона контейнера необязательно и несколько вспомогательных шаблонов.
+Определяет класс шаблонов контейнеров `optional` и некоторые вспомогательные шаблоны.
 
 ## <a name="requirements"></a>Требования
 
@@ -29,12 +28,12 @@ ms.locfileid: "68447186"
 
 |||
 |-|-|
-|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Проверяет равенство объекта `optional` слева от оператора объекту `optional` справа от оператора.|
-|[operator!=](../standard-library/optional-operators.md#op_neq)|Проверяет неравенство объекта `optional` слева от оператора объекту `optional` справа от оператора.|
-|[оператор<](../standard-library/optional-operators.md#op_lt)|Проверяет, меньше ли объект `optional` слева от оператора, чем объект `optional` справа от оператора.|
-|[оператор<=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, меньше ли объект `optional` слева от оператора, чем объект `optional` справа от оператора, или равен ему.|
-|[оператор>](../standard-library/optional-operators.md#op_gt)|Проверяет больше ли объект `optional` слева от оператора, чем объект `optional` справа от оператора.|
-|[оператор>=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет больше ли объект `optional` слева от оператора, чем объект `optional` справа от оператора, или равен ему.|
+|[operator==](../standard-library/optional-operators.md#op_eq_eq)|Проверяет, равен ли объект другому объекту.|
+|[operator!=](../standard-library/optional-operators.md#op_neq)|Проверяет, не равен ли объект другому объекту.|
+|[оператор<](../standard-library/optional-operators.md#op_lt)|Проверяет, что объект слева меньше объекта справа.|
+|[оператор<=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева меньше или равен объекту справа.|
+|[оператор>](../standard-library/optional-operators.md#op_gt)|Проверяет, что объект слева больше объекта справа.|
+|[оператор>=](../standard-library/optional-operators.md#op_lt_eq)|Проверяет, что объект слева больше или равен объекту справа.|
 
 > [!NOTE]
 > Помимо реляционных сравнений, \<необязательные > операторы также поддерживают сравнение с **нуллопт** и `T`.
@@ -44,22 +43,22 @@ ms.locfileid: "68447186"
 |||
 |-|-|
 |[make_optional](../standard-library/optional-functions.md#make_optional)|Делает объект необязательным.|
-|[swap](../standard-library/optional-functions.md#swap)||
+|[swap](../standard-library/optional-functions.md#swap)|Меняет местами содержащиеся значения двух `optional` объектов.|
 
 ### <a name="classes-and-structs"></a>Классы и структуры
 
 |||
 |-|-|
-|[hash]()||
+|hash|Возвращает хэш содержащегося объекта.|
 |[необязательный класс](../standard-library/optional-class.md)|Описывает объект, который может или не может содержать значение.|
 |[Структура nullopt_t](../standard-library/nullopt-t-structure.md)|Описывает объект, который не удерживает значение.|
-|[Класс bad_optional_access](../standard-library/bad-optional-access-class.md)|Описывает объект, вызываемый как исключение для сообщения о попытке доступа к значению, которое отсутствует.|
+|[класс bad_optional_access](../standard-library/bad-optional-access-class.md)|Описывает объект, вызываемый как исключение для сообщения о попытке доступа к значению, которое отсутствует.|
 
 ### <a name="objects"></a>Объекты
 
 |||
 |-|-|
-|[нуллопт](../standard-library/optional-functions.md#nullopt)||
+|[нуллопт](../standard-library/optional-functions.md#nullopt)|Экземпляр `nullopt_t` для сравнений.|
 
 ## <a name="see-also"></a>См. также
 

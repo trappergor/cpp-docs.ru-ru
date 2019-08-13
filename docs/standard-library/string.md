@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - string header
 ms.assetid: a2fb9d00-d7ae-4170-bfea-2dc337aa37cf
-ms.openlocfilehash: fda00cd5a8f8768688c8e10f25a0d1f2370a256f
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 80d5d297cc28cfb019dae99e9e9736e4b2eb654f
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68459190"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957136"
 ---
 # <a name="ltstringgt"></a>&lt;string&gt;
 
@@ -38,8 +38,8 @@ ms.locfileid: "68459190"
 
 |Имя типа|Описание|
 |-|-|
-|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа  `string`char в виде.|
-|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа  `wstring`wchar_t в виде.|
+|[string](../standard-library/string-typedefs.md#string)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа `string`char в виде.|
+|[wstring](../standard-library/string-typedefs.md#wstring)|Тип, описывающий специализацию класса `basic_string` шаблона с элементами типа `wstring`wchar_t в виде.|
 |[u16string](../standard-library/string-typedefs.md#u16string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char16_t`.|
 |[u32string](../standard-library/string-typedefs.md#u32string)|Тип, описывающий специализацию класса шаблона `basic_string` на основе элементов типа `char32_t`.|
 
@@ -61,7 +61,7 @@ ms.locfileid: "68459190"
 
 |||
 |-|-|
-|[hash]()||
+|hash|Создает хэш строки.|
 |[swap](../standard-library/string-functions.md#swap)|Меняет местами массивы символов двух строк.|
 |[stod](../standard-library/string-functions.md#stod)|Преобразует последовательность символов в значение **типа Double**.|
 |[stof](../standard-library/string-functions.md#stof)|Преобразует последовательность символов в тип **float**.|
