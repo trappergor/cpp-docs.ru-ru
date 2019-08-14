@@ -1,5 +1,5 @@
 ---
-title: Класс CMFCRibbonGallery
+title: Класс Кмфкриббонгаллери
 ms.date: 11/04/2016
 f1_keywords:
 - CMFCRibbonGallery
@@ -78,14 +78,14 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], SetPaletteID
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
-ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5a723af1e32a7a2e78bfb099680dce3e9b710838
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62236774"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866212"
 ---
-# <a name="cmfcribbongallery-class"></a>Класс CMFCRibbonGallery
+# <a name="cmfcribbongallery-class"></a>Класс Кмфкриббонгаллери
 
 Реализует коллекции лент в стиле Office 2007.
 Дополнительные сведения см. в исходном коде, расположенном в папке **VC\\atlmfc\\src\\mfc** каталога установки Visual Studio.
@@ -102,76 +102,77 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|Создает и инициализирует объект `CMFCRibbonGallery`.|
+|[Кмфкриббонгаллери:: Кмфкриббонгаллери](#cmfcribbongallery)|Создает и инициализирует объект `CMFCRibbonGallery`.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonGallery::AddGroup](#addgroup)|Добавляет новую группу в коллекции.|
-|[CMFCRibbonGallery::AddSubItem](#addsubitem)|Добавляет новый элемент меню в раскрывающемся меню.|
-|[CMFCRibbonGallery::Clear](#clear)|Очищает содержимое коллекции.|
-|[CMFCRibbonGallery::EnableMenuResize](#enablemenuresize)|Включает или отключает изменение размера панели меню.|
-|[CMFCRibbonGallery::EnableMenuSideBar](#enablemenusidebar)|Включает или отключает боковой панели слева от во всплывающем меню.|
-|[CMFCRibbonGallery::GetCompactSize](#getcompactsize)|(Переопределяет [CMFCRibbonButton::GetCompactSize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
-|[CMFCRibbonGallery::GetDroppedDown](#getdroppeddown)|(Переопределяет [CMFCRibbonBaseElement::GetDroppedDown](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
-|[CMFCRibbonGallery::GetGroupName](#getgroupname)|Возвращает имя группы, расположенный по указанному индексу.|
+|[Кмфкриббонгаллери:: AddGroup](#addgroup)|Добавляет новую группу в коллекцию.|
+|[Кмфкриббонгаллери:: Аддсубитем](#addsubitem)|Добавляет новый пункт меню в раскрывающееся меню.|
+|[Кмфкриббонгаллери:: Clear](#clear)|Очищает содержимое коллекции.|
+|[Кмфкриббонгаллери:: Енаблеменуресизе](#enablemenuresize)|Включает или отключает изменение размера панели меню.|
+|[Кмфкриббонгаллери:: Енаблеменусидебар](#enablemenusidebar)|Включает или отключает боковую панель слева от всплывающего меню.|
+|[Кмфкриббонгаллери:: Жеткомпактсизе](#getcompactsize)|(Переопределяет [CMFCRibbonButton:: жеткомпактсизе](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize).)|
+|[Кмфкриббонгаллери:: Жетдроппеддовн](#getdroppeddown)|(Переопределяет [метод CMFCRibbonBaseElement:: жетдроппеддовн](../../mfc/reference/cmfcribbonbaseelement-class.md#getdroppeddown).)|
+|[Кмфкриббонгаллери:: Жетграупнаме](#getgroupname)|Возвращает имя группы, расположенной по указанному индексу.|
 |[CMFCRibbonGallery::GetGroupOffset](#getgroupoffset)||
-|[CMFCRibbonGallery::GetIconsInRow](#geticonsinrow)|Возвращает количество элементов в строке галереи ленты.|
-|[CMFCRibbonGallery::GetItemToolTip](#getitemtooltip)|Возвращает текст подсказки, связанный с элементом в коллекции.|
-|[CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem)|Возвращает индекс последнего элемента в коллекции, выбранного пользователем.|
-|[CMFCRibbonGallery::GetPaletteID](#getpaletteid)|Возвращает идентификатор текущей коллекции.|
-|[CMFCRibbonGallery::GetRegularSize](#getregularsize)|(Переопределяет [CMFCRibbonButton::GetRegularSize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
-|[CMFCRibbonGallery::GetSelectedItem](#getselecteditem)||
-|[CMFCRibbonGallery::HasMenu](#hasmenu)|(Переопределяет [CMFCRibbonButton::HasMenu](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
-|[CMFCRibbonGallery::IsButtonMode](#isbuttonmode)|Указывает, содержится ли в коллекции кнопки коллекции.|
-|[CMFCRibbonGallery::IsMenuResizeEnabled](#ismenuresizeenabled)|Указывает, является ли изменение размеров меню включен или отключен.|
-|[CMFCRibbonGallery::IsMenuResizeVertical](#ismenuresizevertical)||
-|[CMFCRibbonGallery::IsMenuSideBar](#ismenusidebar)|Указывает, включена ли на боковой панели.|
-|[CMFCRibbonGallery::OnAfterChangeRect](#onafterchangerect)|(Переопределяет `CMFCRibbonButton::OnAfterChangeRect`.)|
-|[CMFCRibbonGallery::OnDraw](#ondraw)|(Переопределяет [CMFCRibbonButton::OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
-|[CMFCRibbonGallery::OnEnable](#onenable)|(Переопределяет `CMFCRibbonBaseElement::OnEnable`.)|
-|[CMFCRibbonGallery::OnRTLChanged](#onrtlchanged)|(Переопределяет [CMFCRibbonBaseElement::OnRTLChanged](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
-|[CMFCRibbonGallery::RedrawIcons](#redrawicons)|Перерисовывает коллекции.|
-|[CMFCRibbonGallery::RemoveItemToolTips](#removeitemtooltips)|Удаляет подсказки из всех элементов в коллекции.|
-|[CMFCRibbonGallery::SelectItem](#selectitem)||
-|[CMFCRibbonGallery::SetACCData](#setaccdata)|(Переопределяет [CMFCRibbonButton::SetACCData](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
-|[CMFCRibbonGallery::SetButtonMode](#setbuttonmode)|Указывает, следует ли отображать галереи ленты, разворачивающуюся кнопку или палитры непосредственно на ленте.|
-|[CMFCRibbonGallery::SetGroupName](#setgroupname)|Задает имя группы.|
-|[CMFCRibbonGallery::SetIconsInRow](#seticonsinrow)|Определяет количество элементов на каждую строку в коллекции.|
-|[CMFCRibbonGallery::SetItemToolTip](#setitemtooltip)|Задает текст подсказки для элемента в коллекции.|
-|[CMFCRibbonGallery::SetPalette](#setpalette)|Присоединяет палитры к коллекции лент.|
-|[CMFCRibbonGallery::SetPaletteID](#setpaletteid)|Определяет идентификатор команды, который отправляется в сообщении WM_COMMAND, при выборе элемента галереи.|
+|[Кмфкриббонгаллери:: Жетиконсинров](#geticonsinrow)|Возвращает число элементов в строке коллекции лент.|
+|[Кмфкриббонгаллери:: Жетитемтултип](#getitemtooltip)|Возвращает текст подсказки, связанный с элементом в коллекции.|
+|[Кмфкриббонгаллери:: Жетластселектедитем](#getlastselecteditem)|Возвращает индекс последнего элемента в коллекции, выбранного пользователем.|
+|[Кмфкриббонгаллери:: Жетпалеттеид](#getpaletteid)|Возвращает идентификатор текущей коллекции.|
+|[Кмфкриббонгаллери:: Жетрегуларсизе](#getregularsize)|(Переопределяет [CMFCRibbonButton:: жетрегуларсизе](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize).)|
+|[Кмфкриббонгаллери:: Жетселектедитем](#getselecteditem)||
+|[Кмфкриббонгаллери:: Хасмену](#hasmenu)|(Переопределяет [CMFCRibbonButton:: хасмену](../../mfc/reference/cmfcribbonbutton-class.md#hasmenu).)|
+|[Кмфкриббонгаллери:: Исбуттонмоде](#isbuttonmode)|Указывает, содержится ли коллекция в кнопке коллекции.|
+|[Кмфкриббонгаллери:: Исменуресизинаблед](#ismenuresizeenabled)|Указывает, включена или отключена возможность изменения размера меню.|
+|[Кмфкриббонгаллери:: Исменуресизевертикал](#ismenuresizevertical)||
+|[Кмфкриббонгаллери:: Исменусидебар](#ismenusidebar)|Указывает, включена ли боковая панель.|
+|[Кмфкриббонгаллери:: Онафтерчанжерект](#onafterchangerect)|(Переопределяет `CMFCRibbonButton::OnAfterChangeRect`.)|
+|[Кмфкриббонгаллери:: OnDraw](#ondraw)|(Переопределяет [CMFCRibbonButton:: OnDraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw).)|
+|[Кмфкриббонгаллери:: OnEnable](#onenable)|(Переопределяет `CMFCRibbonBaseElement::OnEnable`.)|
+|[Кмфкриббонгаллери:: Онртлчанжед](#onrtlchanged)|(Переопределяет [метод CMFCRibbonBaseElement:: онртлчанжед](../../mfc/reference/cmfcribbonbaseelement-class.md#onrtlchanged).)|
+|[Кмфкриббонгаллери:: Редравиконс](#redrawicons)|Перерисовывает галерею.|
+|[Кмфкриббонгаллери:: Ремовеитемтултипс](#removeitemtooltips)|Удаляет подсказки из всех элементов коллекции.|
+|[Кмфкриббонгаллери:: Селектитем](#selectitem)||
+|[Кмфкриббонгаллери:: Сетаккдата](#setaccdata)|(Переопределяет [CMFCRibbonButton:: сетаккдата](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata).)|
+|[Кмфкриббонгаллери:: Сетбуттонмоде](#setbuttonmode)|Указывает, следует ли отображать коллекцию лент в виде раскрывающейся кнопки или палитры непосредственно на ленте.|
+|[Кмфкриббонгаллери:: Сетграупнаме](#setgroupname)|Задает имя группы.|
+|[Кмфкриббонгаллери:: Сетиконсинров](#seticonsinrow)|Определяет количество элементов в строке коллекции.|
+|[Кмфкриббонгаллери:: Сетитемтултип](#setitemtooltip)|Задает текст подсказки для элемента в коллекции.|
+|[Кмфкриббонгаллери:: Сетпалетте](#setpalette)|Присоединяет палитру к коллекции лент.|
+|[Кмфкриббонгаллери:: Сетпалеттеид](#setpaletteid)|Определяет идентификатор команды, который отправляется в сообщении WM_COMMAND при выборе элемента коллекции.|
 
 ### <a name="protected-methods"></a>Защищенные методы
 
 |name|Описание|
 |----------|-----------------|
-|[CMFCRibbonGallery::OnDrawPaletteIcon](#ondrawpaletteicon)|Вызывается платформой при рисовании значок в виде коллекции.|
+|[Кмфкриббонгаллери:: Ондравпалеттеикон](#ondrawpaletteicon)|Вызывается структурой при прорисовке значка галереи.|
 
 ## <a name="remarks"></a>Примечания
 
-Кнопка коллекции ведет себя так же, как обычное меню кнопки, за исключением того, что он отображает коллекции, когда пользователь открывает его. При выборе элемента в коллекции, инфраструктура отправляет сообщение WM_COMMAND, а также идентификатор команды кнопки. Когда вы обрабатываете сообщения, следует вызывать [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) для определения, какой элемент был выбран из коллекции.
+Кнопка коллекция ведет себя так же, как обычная кнопка меню, за исключением того, что она отображает коллекцию, когда пользователь открывает ее. При выборе элемента в коллекции платформа отправляет сообщение WM_COMMAND вместе с ИДЕНТИФИКАТОРом команды кнопки. При обработке сообщения следует вызвать метод [кмфкриббонгаллери:: жетластселектедитем](#getlastselecteditem) , чтобы определить, какой элемент был выбран из коллекции.
 
 ## <a name="example"></a>Пример
 
-Следующий пример демонстрирует использование различных методов `CMFCRibbonGallery` класс для настройки `CMFCRibbonGallery` объекта. Пример иллюстрирует способ указать количество элементов на каждую строку в коллекции, включить изменение размера панели меню, на боковой панели слева от всплывающего меню и отображения галереи ленты как палитра непосредственно на панели ленты. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
+В следующем примере показано, как использовать различные методы в `CMFCRibbonGallery` классе для `CMFCRibbonGallery` настройки объекта. В примере показано, как указать количество элементов на строку в коллекции, разрешить изменение размера панели меню, открыть боковую панель слева от всплывающего меню и отобразить коллекцию Ribbon в виде палитры непосредственно на ленте. Этот фрагмент кода входит в состав [примера Draw Client](../../overview/visual-cpp-samples.md).
 
 [!code-cpp[NVC_MFC_DrawClient#6](../../mfc/reference/codesnippet/cpp/cmfcribbongallery-class_1.cpp)]
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
-[CObject](../../mfc/reference/cobject-class.md) [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md) [CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)
-
-[CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md)
+[CObject](../../mfc/reference/cobject-class.md)\
+└&nbsp;[Метод CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[CMFCRibbonButton](../../mfc/reference/cmfcribbonbutton-class.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└&nbsp;[Кмфкриббонгаллери](../../mfc/reference/cmfcribbongallery-class.md)
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** afxRibbonPaletteGallery.h
+**Заголовок:** афксриббонпалеттегаллери. h
 
-##  <a name="addgroup"></a>  CMFCRibbonGallery::AddGroup
+##  <a name="addgroup"></a>Кмфкриббонгаллери:: AddGroup
 
-Добавляет новую группу в коллекции.
+Добавляет новую группу в коллекцию.
 
 ```
 void AddGroup(
@@ -190,28 +191,28 @@ void AddGroup(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszGroupName*<br/>
-[in] Указывает имя группы.
+*лпсзграупнаме*<br/>
+окне Указывает имя группы.
 
-*uiImagesPaletteResID*<br/>
-[in] Указывает идентификатор списка изображений с изображениями для группы ресурсов.
+*уиимажеспалеттересид*<br/>
+окне Указывает идентификатор ресурса для списка изображений, который содержит изображения для группы.
 
-*cxPaletteImage*<br/>
-[in] Задает ширину в пикселях изображения.
+*ккспалеттеимаже*<br/>
+окне Задает ширину изображения в пикселях.
 
-*imagesGroup*<br/>
-[in] Ссылка на список изображений, содержащий группы образов.
+*имажесграуп*<br/>
+окне Ссылка на список изображений, содержащий изображения группы.
 
-*nIconsNum*<br/>
-[in] Указывает количество значков в группе. Этот параметр должен быть указан только для пользовательских (рисование владельцем) группы.
+*никонснум*<br/>
+окне Указывает число значков в группе. Этот параметр должен быть указан только для пользовательских групп (рисуемых владельцем).
 
 ### <a name="remarks"></a>Примечания
 
-Элементы коллекции лент можно разделить на несколько групп, вызвав этот метод. Каждая группа может иметь заголовок.
+Можно разделить элементы коллекции ленты на несколько групп, вызвав этот метод. Каждая группа может иметь заголовок.
 
-##  <a name="addsubitem"></a>  CMFCRibbonGallery::AddSubItem
+##  <a name="addsubitem"></a>Кмфкриббонгаллери:: Аддсубитем
 
-Добавляет новый элемент меню в раскрывающемся меню.
+Добавляет новый пункт меню в раскрывающееся меню.
 
 ```
 void AddSubItem(
@@ -222,25 +223,25 @@ void AddSubItem(
 
 ### <a name="parameters"></a>Параметры
 
-*pSubItem*<br/>
-[in] Указатель на элемент, добавляемый в меню.
+*псубитем*<br/>
+окне Указатель на элемент, добавляемый в меню.
 
-*nIndex*<br/>
-[in] Указывает место вставки элемента, отсчитываемый от нуля индекс расположения.
+*ниндекс*<br/>
+окне Указывает отсчитываемый от нуля индекс места вставки элемента.
 
-*bOnTop*<br/>
-[in] Значение TRUE, чтобы указать, что элемент следует вставить перед галереи ленты; в противном случае — значение FALSE.
+*бонтоп*<br/>
+окне Значение TRUE, чтобы указать, что элемент должен быть вставлен перед коллекцией Ribbon; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Всплывающее окно галереи можно объединить с элементов всплывающих меню путем вызова данного метода. Пункты меню можно поместить до или после коллекции.
+Можно объединить всплывающие коллекции с элементами всплывающего меню, вызвав этот метод. Пункты меню можно разместить до или после коллекции.
 
-Чтобы вставить пункт до коллекции, задайте *bOnTop* значение true. Задайте *bOnTop* значение false, чтобы вставить элемент под коллекцию.
+Чтобы вставить элемент перед коллекцией, установите для *бонтоп* значение true. Задайте для *бонтоп* значение false, чтобы вставить элемент под галереей.
 
 > [!NOTE]
->  Параметр *nIndex* указывает индекс вставки, как в верхней части коллекции, так и в нижней части галереи. Например, если необходимо вставить элемент на одну позицию перед коллекции, задайте *nIndex* 1 и *bOnTop* значение true. Аналогичным образом, если необходимо вставить элемент на одну позицию под коллекцию, задайте *nIndex* 1 и *bOnTop* значение false.
+>  Параметр *ниндекс* задает индекс вставки как в верхней части коллекции, так и в нижней части коллекции. Например, если необходимо вставить элемент в одну позицию перед коллекцией, установите для *ниндекс* значение 1, а для *бонтоп* — значение true. Аналогичным образом, если необходимо вставить элемент на одну позицию под галереей, установите для *ниндекс* значение 1, а для *БОНТОП* — значение false.
 
-##  <a name="clear"></a>  CMFCRibbonGallery::Clear
+##  <a name="clear"></a>Кмфкриббонгаллери:: Clear
 
 Очищает содержимое коллекции.
 
@@ -250,11 +251,11 @@ virtual void Clear();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовите этот метод, чтобы удалить все содержимое из галереи ленты. Это необходимо сделать перед присоединением новой коллекции лент или набор групп к коллекции лент.
+Вызовите этот метод, чтобы удалить все содержимое из коллекции лент. Это необходимо сделать до присоединения новой коллекции лент или набора групп к коллекции лент.
 
-##  <a name="cmfcribbongallery"></a>  CMFCRibbonGallery::CMFCRibbonGallery
+##  <a name="cmfcribbongallery"></a>Кмфкриббонгаллери:: Кмфкриббонгаллери
 
-Создает и инициализирует [CMFCRibbonGallery](../../mfc/reference/cmfcribbongallery-class.md) объекта.
+Создает и инициализирует объект [кмфкриббонгаллери](../../mfc/reference/cmfcribbongallery-class.md) .
 
 ```
 CMFCRibbonGallery (
@@ -285,38 +286,38 @@ CMFCRibbonGallery (
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-Указывает идентификатор команды выполнения, когда пользователь нажимает кнопку команды.
+Указывает идентификатор команды, выполняемой при нажатии пользователем кнопки.
 
 *lpszText*<br/>
 Задает текст, отображаемый на кнопке.
 
-*nSmallImageIndex*<br/>
-Отсчитываемый от нуля индекс небольшое изображение, отображаемый на кнопке.
+*нсмаллимажеиндекс*<br/>
+Отсчитываемый от нуля индекс мелкого изображения, отображаемого на кнопке.
 
-*nLargeImageIndex*<br/>
-Отсчитываемый от нуля индекс большого изображения, отображаемый на кнопке.
+*нларжеимажеиндекс*<br/>
+Отсчитываемый от нуля индекс крупного изображения, отображаемого на кнопке.
 
-*imagesPalette*<br/>
-Ссылку на [CMFCToolBarImages](../../mfc/reference/cmfctoolbarimages-class.md) , содержащий изображения, отображаются в коллекции.
+*имажеспалетте*<br/>
+Ссылка на объект [кмфктулбаримажес](../../mfc/reference/cmfctoolbarimages-class.md) , содержащий изображения, которые должны отображаться в коллекции.
 
-*uiImagesPaletteResID*<br/>
-Идентификатор ресурса в список изображений для отображения в коллекции.
+*уиимажеспалеттересид*<br/>
+Идентификатор ресурса списка изображений, отображаемых в коллекции.
 
-*cxPaletteImage*<br/>
-Задает ширину в пикселях изображения в коллекции.
+*ккспалеттеимаже*<br/>
+Задает ширину (в пикселях) изображения в коллекции.
 
-*sizeIcon*<br/>
-Размер в пикселях образа из коллекции.
+*сизеикон*<br/>
+Задает размер изображения коллекции в пикселях.
 
-*nIconsNum*<br/>
-Задает количество значков в галерее.
+*никонснум*<br/>
+Указывает число значков в коллекции.
 
-*bDefaultButtonStyle*<br/>
-Указывает, следует ли использовать значение по умолчанию или стиль кнопки, рисуемый владельцем.
+*бдефаултбуттонстиле*<br/>
+Указывает, следует ли использовать стиль кнопки по умолчанию или рисуемый владельцем.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="enablemenuresize"></a>  CMFCRibbonGallery::EnableMenuResize
+##  <a name="enablemenuresize"></a>Кмфкриббонгаллери:: Енаблеменуресизе
 
 Включает или отключает изменение размера панели меню.
 
@@ -329,18 +330,18 @@ void EnableMenuResize(
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы включить изменение размеров меню; в противном случае — значение FALSE.
+окне Значение TRUE, чтобы разрешить изменение размера меню; в противном случае — значение FALSE.
 
-*bVertcalOnly*<br/>
-[in] Значение TRUE, чтобы указать, что коллекции могут быть изменены размеры только по вертикали; Значение FALSE, чтобы указать, что коллекции могут быть изменены размеры горизонтальном и вертикальном направлениях.
+*бверткалонли*<br/>
+окне Значение TRUE, чтобы указать, что размер коллекции можно изменять только по вертикали; Значение FALSE, чтобы указать, что размер коллекции можно изменить как по вертикали, так и по горизонтали.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет включить или отключить изменение размера коллекции лент. Если изменение размера галереи ленты выводит захвата, пользователь может использовать для изменения размера.
+Этот метод используется для включения или отключения изменения размера коллекции лент. Если изменение размера включено, в коллекции лент отображается область захвата, которую пользователь может использовать для изменения его размера.
 
-##  <a name="enablemenusidebar"></a>  CMFCRibbonGallery::EnableMenuSideBar
+##  <a name="enablemenusidebar"></a>Кмфкриббонгаллери:: Енаблеменусидебар
 
-Включает или отключает боковой панели слева от во всплывающем меню.
+Включает или отключает боковую панель слева от всплывающего меню.
 
 ```
 void EnablMenuSideBar(BOOL bEnable=TRUE);
@@ -349,13 +350,13 @@ void EnablMenuSideBar(BOOL bEnable=TRUE);
 ### <a name="parameters"></a>Параметры
 
 *bEnable*<br/>
-[in] Значение TRUE, чтобы указать, что включено на боковой панели; в противном случае — значение FALSE.
+окне Значение TRUE, чтобы указать, что боковая панель включена; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод используется для включения или отключения Office XP в стиле боковой панели в левой части меню.
+Вызовите этот метод, чтобы включить или отключить боковую панель в стиле Office XP в левой части меню.
 
-##  <a name="getcompactsize"></a>  CMFCRibbonGallery::GetCompactSize
+##  <a name="getcompactsize"></a>Кмфкриббонгаллери:: Жеткомпактсизе
 
 ```
 virtual CSize GetCompactSize(CDC* pDC);
@@ -363,13 +364,13 @@ virtual CSize GetCompactSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getdroppeddown"></a>  CMFCRibbonGallery::GetDroppedDown
+##  <a name="getdroppeddown"></a>Кмфкриббонгаллери:: Жетдроппеддовн
 
 ```
 virtual CMFCRibbonBaseElement* GetDroppedDown();
@@ -379,9 +380,9 @@ virtual CMFCRibbonBaseElement* GetDroppedDown();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getgroupname"></a>  CMFCRibbonGallery::GetGroupName
+##  <a name="getgroupname"></a>Кмфкриббонгаллери:: Жетграупнаме
 
-Возвращает имя группы, расположенный по указанному индексу.
+Возвращает имя группы, расположенной по указанному индексу.
 
 ```
 LPCTSTR GetGroupName(int nGroupIndex) const;
@@ -389,16 +390,16 @@ LPCTSTR GetGroupName(int nGroupIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nGroupIndex*<br/>
-[in] Указывает отсчитываемый от нуля индекс для группы, имя которого требуется извлечь.
+*нграупиндекс*<br/>
+окне Указывает отсчитываемый от нуля индекс для группы, имя которой необходимо получить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Имя группы, расположенный по указанному индексу. Недопустимый индекс передачи приведет к утверждение, вызвавшее сбой.
+Имя группы, расположенной по указанному индексу. Передача недопустимого индекса приведет к неудачному утверждению.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getgroupoffset"></a>  CMFCRibbonGallery::GetGroupOffset
+##  <a name="getgroupoffset"></a>Кмфкриббонгаллери:: Жетграупоффсет
 
 ```
 virtual int GetGroupOffset() const;
@@ -408,9 +409,9 @@ virtual int GetGroupOffset() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="geticonsinrow"></a>  CMFCRibbonGallery::GetIconsInRow
+##  <a name="geticonsinrow"></a>Кмфкриббонгаллери:: Жетиконсинров
 
-Возвращает количество элементов в строке галереи ленты.
+Возвращает число элементов в строке коллекции лент.
 
 ```
 int GetIconsInRow() const;
@@ -422,7 +423,7 @@ int GetIconsInRow() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getitemtooltip"></a>  CMFCRibbonGallery::GetItemToolTip
+##  <a name="getitemtooltip"></a>Кмфкриббонгаллери:: Жетитемтултип
 
 Возвращает текст подсказки, связанный с элементом в коллекции.
 
@@ -432,18 +433,18 @@ LPCTSTR GetItemToolTip(int nItemIndex) const;
 
 ### <a name="parameters"></a>Параметры
 
-*nItemIndex*<br/>
-[in] Указывает отсчитываемый от нуля индекс элемента, для которого необходимо получить текст подсказки.
+*нитеминдекс*<br/>
+окне Указывает отсчитываемый от нуля индекс элемента, для которого требуется получить текст подсказки.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Указатель на строку подсказки, присвоенное элементу в коллекции лент. Он может иметь значение NULL, если к этому элементу назначено никакого tooltip.
+Указатель на строку подсказки, назначенную элементу в коллекции лент. Может иметь значение NULL, если этому элементу не назначена подсказка.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getlastselecteditem"></a>  CMFCRibbonGallery::GetLastSelectedItem
+##  <a name="getlastselecteditem"></a>Кмфкриббонгаллери:: Жетластселектедитем
 
-Возвращает индекс последнего элемента в коллекции лент, выбранного пользователем.
+Возвращает индекс последнего элемента в коллекции ленты, выбранного пользователем.
 
 ```
 static int GetLastSelectedItem(UINT uiCmdID);
@@ -451,18 +452,18 @@ static int GetLastSelectedItem(UINT uiCmdID);
 
 ### <a name="parameters"></a>Параметры
 
-*uiCmdID*<br/>
-[in] Указывает идентификатор команды пункта меню, который открыт галереи ленты.
+*уикмдид*<br/>
+окне Указывает идентификатор команды для пункта меню, который открыл коллекцию лент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Когда пользователь выбирает любой элемент в коллекции лент, библиотека отправляет сообщение WM_COMMAND, а также идентификатор команды меню кнопки, которая открывается галереи ленты.
+Когда пользователь выбирает любой элемент в коллекции лент, Библиотека отправляет сообщение WM_COMMAND вместе с ИДЕНТИФИКАТОРом команды кнопки меню, открывшей коллекцию лент.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getpaletteid"></a>  CMFCRibbonGallery::GetPaletteID
+##  <a name="getpaletteid"></a>Кмфкриббонгаллери:: Жетпалеттеид
 
-Возвращает идентификатор текущей палитре.
+Возвращает идентификатор команды текущей палитры.
 
 ```
 int GetPaletteID() const;
@@ -470,11 +471,11 @@ int GetPaletteID() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Идентификатор команды выделенного палитры.
+Идентификатор команды текущей выбранной палитры.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getregularsize"></a>  CMFCRibbonGallery::GetRegularSize
+##  <a name="getregularsize"></a>Кмфкриббонгаллери:: Жетрегуларсизе
 
 ```
 virtual CSize GetRegularSize(CDC* pDC);
@@ -482,13 +483,13 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="getselecteditem"></a>  CMFCRibbonGallery::GetSelectedItem
+##  <a name="getselecteditem"></a>Кмфкриббонгаллери:: Жетселектедитем
 
 ```
 int GetSelectedItem() const;
@@ -498,7 +499,7 @@ int GetSelectedItem() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="hasmenu"></a>  CMFCRibbonGallery::HasMenu
+##  <a name="hasmenu"></a>Кмфкриббонгаллери:: Хасмену
 
 ```
 virtual BOOL HasMenu() const;
@@ -508,9 +509,9 @@ virtual BOOL HasMenu() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="isbuttonmode"></a>  CMFCRibbonGallery::IsButtonMode
+##  <a name="isbuttonmode"></a>Кмфкриббонгаллери:: Исбуттонмоде
 
-Указывает, содержится ли в коллекции кнопке палитры.
+Указывает, содержится ли палитра в кнопке коллекции.
 
 ```
 BOOL IsButtonMode() const;
@@ -518,13 +519,13 @@ BOOL IsButtonMode() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если палитре отображается как кнопка с раскрывающимся меню; Значение FALSE, если палитре отображается непосредственно на ленте.
+Значение TRUE, если палитра отображается в виде кнопки раскрывающегося меню; Значение FALSE, если палитра отображается непосредственно на ленте.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ismenuresizeenabled"></a>  CMFCRibbonGallery::IsMenuResizeEnabled
+##  <a name="ismenuresizeenabled"></a>Кмфкриббонгаллери:: Исменуресизинаблед
 
-Указывает, включена ли изменение размеров меню.
+Указывает, включен ли режим изменения размера меню.
 
 ```
 BOOL IsMenuResizeEnabled() const;
@@ -532,11 +533,11 @@ BOOL IsMenuResizeEnabled() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если изменение размеров меню включен; в противном случае — значение FALSE.
+Значение TRUE, если изменение размера меню включено. в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ismenuresizevertical"></a>  CMFCRibbonGallery::IsMenuResizeVertical
+##  <a name="ismenuresizevertical"></a>Кмфкриббонгаллери:: Исменуресизевертикал
 
 ```
 BOOL IsMenuResizeVertical() const;
@@ -546,9 +547,9 @@ BOOL IsMenuResizeVertical() const;
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ismenusidebar"></a>  CMFCRibbonGallery::IsMenuSideBar
+##  <a name="ismenusidebar"></a>Кмфкриббонгаллери:: Исменусидебар
 
-Указывает, включена ли на боковой панели.
+Указывает, включена ли боковая панель.
 
 ```
 BOOL IsMenuSideBar() const;
@@ -556,11 +557,11 @@ BOOL IsMenuSideBar() const;
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Значение TRUE, если на боковой панели в стиле Office XP выводится с левой стороны меню; в противном случае — значение FALSE.
+Значение TRUE, если боковая панель стиля Office XP отображается в левой части всплывающего меню; в противном случае — значение FALSE.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onafterchangerect"></a>  CMFCRibbonGallery::OnAfterChangeRect
+##  <a name="onafterchangerect"></a>Кмфкриббонгаллери:: Онафтерчанжерект
 
 ```
 virtual void OnAfterChangeRect(CDC* pDC);
@@ -568,11 +569,11 @@ virtual void OnAfterChangeRect(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondraw"></a>  CMFCRibbonGallery::OnDraw
+##  <a name="ondraw"></a>Кмфкриббонгаллери:: OnDraw
 
 ```
 virtual void OnDraw(CDC* pDC);
@@ -580,13 +581,13 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *основного контроллера домена*<br/>
+окне *основной контроллер домена*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="ondrawpaletteicon"></a>  CMFCRibbonGallery::OnDrawPaletteIcon
+##  <a name="ondrawpaletteicon"></a>Кмфкриббонгаллери:: Ондравпалеттеикон
 
-Вызывается платформой при рисовании значок в виде коллекции.
+Вызывается структурой при прорисовке значка галереи.
 
 ```
 virtual void OnDrawPaletteIcon(
@@ -600,25 +601,25 @@ virtual void OnDrawPaletteIcon(
 ### <a name="parameters"></a>Параметры
 
 *pDC*<br/>
-[in] Указатель на контекст устройства, который используется для рисования.
+окне Указатель на контекст устройства, используемый для рисования.
 
-*rectIcon*<br/>
-[in] Указывает ограничивающий прямоугольник значка для рисования.
+*ректикон*<br/>
+окне Задает ограничивающий прямоугольник значка для рисования.
 
-*nIconIndex*<br/>
-[in] Указывает отсчитываемый от нуля индекс в списке изображений значков в галерее значка для рисования.
+*никониндекс*<br/>
+окне Указывает отсчитываемый от нуля индекс в списке изображений значков коллекции значка для рисования.
 
-*pIcon*<br/>
-[in] Указатель на значок, который отрисовывается.
+*пикон*<br/>
+окне Указатель на рисуемый значок.
 
-*clrText*<br/>
-[in] Указывает цвет для текста элемента для рисования.
+*клртекст*<br/>
+окне Задает цвет текста элемента для рисования.
 
 ### <a name="remarks"></a>Примечания
 
-Можно переопределить этот метод в производном классе, чтобы настроить внешний вид коллекции лент.
+Этот метод можно переопределить в производном классе, чтобы настроить внешний вид коллекции Ribbon.
 
-##  <a name="onenable"></a>  CMFCRibbonGallery::OnEnable
+##  <a name="onenable"></a>Кмфкриббонгаллери:: OnEnable
 
 ```
 virtual void OnEnable(BOOL bEnable);
@@ -626,11 +627,11 @@ virtual void OnEnable(BOOL bEnable);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bEnable*<br/>
+окне *бенабле*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="onrtlchanged"></a>  CMFCRibbonGallery::OnRTLChanged
+##  <a name="onrtlchanged"></a>Кмфкриббонгаллери:: Онртлчанжед
 
 ```
 virtual void OnRTLChanged(BOOL bIsRTL);
@@ -638,13 +639,13 @@ virtual void OnRTLChanged(BOOL bIsRTL);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *bIsRTL*<br/>
+окне *бисртл*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="redrawicons"></a>  CMFCRibbonGallery::RedrawIcons
+##  <a name="redrawicons"></a>Кмфкриббонгаллери:: Редравиконс
 
-Перерисовывает коллекции.
+Перерисовывает галерею.
 
 ```
 void RedrawIcons();
@@ -652,11 +653,11 @@ void RedrawIcons();
 
 ### <a name="remarks"></a>Примечания
 
-Эта функция вызывается для перерисовки коллекции. Этот метод необходимо вызвать при изменении содержимого коллекции во время выполнения.
+Вызовите эту функцию для перерисовки коллекции. Этот метод следует вызывать, если содержимое коллекции было изменено во время выполнения.
 
-##  <a name="removeitemtooltips"></a>  CMFCRibbonGallery::RemoveItemToolTips
+##  <a name="removeitemtooltips"></a>Кмфкриббонгаллери:: Ремовеитемтултипс
 
-Удаляет подсказки из всех элементов в коллекции.
+Удаляет подсказки из всех элементов коллекции.
 
 ```
 void RemoveItemToolTips();
@@ -664,7 +665,7 @@ void RemoveItemToolTips();
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="selectitem"></a>  CMFCRibbonGallery::SelectItem
+##  <a name="selectitem"></a>Кмфкриббонгаллери:: Селектитем
 
 ```
 void SelectItem(int nItemIndex);
@@ -672,11 +673,11 @@ void SelectItem(int nItemIndex);
 
 ### <a name="parameters"></a>Параметры
 
-[in] *nItemIndex*<br/>
+окне *нитеминдекс*<br/>
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setaccdata"></a>  CMFCRibbonGallery::SetACCData
+##  <a name="setaccdata"></a>Кмфкриббонгаллери:: Сетаккдата
 
 Заполняет указанный объект `CAccessibilityData` , используя данные специальных возможностей из галереи ленты.
 
@@ -688,21 +689,21 @@ virtual BOOL SetACCData(
 
 ### <a name="parameters"></a>Параметры
 
-*pParent*<br/>
-[in] Родительское окно окна галереи ленты.
+*ппарент*<br/>
+окне Родительское окно в окне коллекции лент.
 
 *data*<br/>
-[out] Объект `CAccessibilityData` объект, получающий данные специальных возможностей из галереи ленты.
+заполняет `CAccessibilityData` Объект, который получает данные о специальных возможностях из коллекции лент.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
 ### <a name="remarks"></a>Примечания
 
-Значение TRUE, если метод выполнен успешно; в противном случае — значение FALSE.
+Значение TRUE, если метод успешно выполнен; в противном случае — значение FALSE.
 
-##  <a name="setbuttonmode"></a>  CMFCRibbonGallery::SetButtonMode
+##  <a name="setbuttonmode"></a>Кмфкриббонгаллери:: Сетбуттонмоде
 
-Определяет, следует ли отображать галереи ленты, разворачивающуюся кнопку или палитры непосредственно на ленте.
+Определяет, отображать ли коллекцию лент как раскрывающиеся кнопки или как палитру непосредственно на ленте.
 
 ```
 void SetButtonMode(BOOL bSet=TRUE);
@@ -710,12 +711,12 @@ void SetButtonMode(BOOL bSet=TRUE);
 
 ### <a name="parameters"></a>Параметры
 
-*bSet*<br/>
-[in] Значение TRUE для отображения галереи ленты как кнопка с раскрывающимся меню; Значение FALSE, чтобы отобразить содержимое коллекции лент непосредственно на ленте.
+*Управляемое bSet*<br/>
+окне Значение TRUE, если коллекция Ribbon отображается в виде раскрывающегося меню. Значение FALSE, чтобы отобразить содержимое коллекции ленты непосредственно на ленте.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setgroupname"></a>  CMFCRibbonGallery::SetGroupName
+##  <a name="setgroupname"></a>Кмфкриббонгаллери:: Сетграупнаме
 
 Задает имя группы.
 
@@ -727,19 +728,19 @@ void SetGroupName(
 
 ### <a name="parameters"></a>Параметры
 
-*nGroupIndex*<br/>
-[in] Указывает отсчитываемый от нуля индекс, для которого изменяется имя группы.
+*нграупиндекс*<br/>
+окне Указывает отсчитываемый от нуля индекс для группы, для которой изменяется имя.
 
-*lpszGroupName*<br/>
-[in] Указывает новое имя для группы.
+*лпсзграупнаме*<br/>
+окне Указывает новое имя для группы.
 
 ### <a name="remarks"></a>Примечания
 
-Группа, имя которого изменяется должно быть добавлено с помощью [CMFCRibbonGallery::AddGroup](#addgroup) метод.
+Группа, имя которой изменяется, должна быть добавлена с помощью метода [кмфкриббонгаллери:: addgroup](#addgroup) .
 
-##  <a name="seticonsinrow"></a>  CMFCRibbonGallery::SetIconsInRow
+##  <a name="seticonsinrow"></a>Кмфкриббонгаллери:: Сетиконсинров
 
-Указывает количество элементов на каждую строку в коллекции.
+Указывает количество элементов в строке коллекции.
 
 ```
 void SetIconsInRow(int nIconsInRow);
@@ -747,14 +748,14 @@ void SetIconsInRow(int nIconsInRow);
 
 ### <a name="parameters"></a>Параметры
 
-*nIconsInRow*<br/>
-[in] Указывает количество элементов в каждой строке коллекции.
+*никонсинров*<br/>
+окне Указывает количество элементов, отображаемых в каждой строке коллекции.
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод позволяет задать ширину галереи ленты.
+Используйте этот метод, чтобы указать ширину коллекции лент.
 
-##  <a name="setitemtooltip"></a>  CMFCRibbonGallery::SetItemToolTip
+##  <a name="setitemtooltip"></a>Кмфкриббонгаллери:: Сетитемтултип
 
 Задает текст подсказки для элемента в коллекции.
 
@@ -766,17 +767,17 @@ void SetItemToolTip(
 
 ### <a name="parameters"></a>Параметры
 
-*nItemIndex*<br/>
-[in] Отсчитываемый от нуля индекс элемента палитры, с которым связывается всплывающей подсказки.
+*нитеминдекс*<br/>
+окне Отсчитываемый от нуля индекс элемента Palette, с которым необходимо связать подсказку.
 
-*lpszToolTip*<br/>
-[in] Текст для отображения в подсказке.
+*лпсзтултип*<br/>
+окне Текст, отображаемый в подсказке.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setpalette"></a>  CMFCRibbonGallery::SetPalette
+##  <a name="setpalette"></a>Кмфкриббонгаллери:: Сетпалетте
 
-Присоединяет палитры к коллекции лент.
+Присоединяет палитру к коллекции лент.
 
 ```
 void SetPalette(CMFCToolBarImages& imagesPalette);
@@ -788,18 +789,18 @@ void SetPalette(
 
 ### <a name="parameters"></a>Параметры
 
-*imagesPalette*<br/>
-[in] Задает список изображений, содержащий значки, которые отображаются в коллекции.
+*имажеспалетте*<br/>
+окне Указывает список изображений, содержащий значки, которые будут отображаться в коллекции.
 
-*uiImagesPaletteResID*<br/>
-[in] Указывает идентификатор ресурса в список изображений, содержащий значки, которые отображаются в коллекции.
+*уиимажеспалеттересид*<br/>
+окне Указывает идентификатор ресурса для списка изображений, который содержит значки, отображаемые в коллекции.
 
-*cxPaletteImage*<br/>
-[in] Задает ширину в пикселях изображения в коллекции.
+*ккспалеттеимаже*<br/>
+окне Задает ширину (в пикселях) изображения в коллекции.
 
 ### <a name="remarks"></a>Примечания
 
-##  <a name="setpaletteid"></a>  CMFCRibbonGallery::SetPaletteID
+##  <a name="setpaletteid"></a>Кмфкриббонгаллери:: Сетпалеттеид
 
 Определяет идентификатор команды, который отправляется в сообщении WM_COMMAND, когда пользователь выбирает элемент коллекции.
 
@@ -810,11 +811,11 @@ void SetPaletteID(UINT nID);
 ### <a name="parameters"></a>Параметры
 
 *nID*<br/>
-[in] Указывает идентификатор команды, который отправляется в сообщении WM_COMMAND, когда пользователь выбирает элемент коллекции.
+окне Указывает идентификатор команды, который отправляется в сообщении WM_COMMAND, когда пользователь выбирает элемент коллекции.
 
 ### <a name="remarks"></a>Примечания
 
-Чтобы определить конкретный элемент, который пользователь выбрал из коллекции, вызовите [CMFCRibbonGallery::GetLastSelectedItem](#getlastselecteditem) статический метод.
+Чтобы определить конкретный элемент, выбранный пользователем из коллекции, вызовите статический метод [кмфкриббонгаллери:: жетластселектедитем](#getlastselecteditem) .
 
 ## <a name="see-also"></a>См. также
 

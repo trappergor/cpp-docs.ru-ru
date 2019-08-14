@@ -5,16 +5,16 @@ ms.topic: reference
 helpviewer_keywords:
 - NotifyHandler function
 ms.assetid: 5ff953ec-de35-42bc-8b3c-d384d636c139
-ms.openlocfilehash: 292a1c6606585dc0694ee678ba8bc9b5fbc42681
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: d875a039b01b7458a1df46a2539cf5c68aa67e41
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62261450"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915935"
 ---
 # <a name="notifyhandler"></a>NotifyHandler
 
-Имя функции, заданных третий параметр макроса NOTIFY_HANDLER в схему сообщения.
+Имя функции, определяемой третьим параметром макроса NOTIFY_HANDLER в схеме сообщений.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -27,14 +27,14 @@ LRESULT NotifyHandler(
 
 #### <a name="parameters"></a>Параметры
 
-*idCtrl*<br/>
-Идентификатор элемента управления, отправляющего сообщения.
+*идктрл*<br/>
+Идентификатор элемента управления, отправляющего сообщение.
 
-*pnmh*<br/>
-Адрес [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr) структуру, содержащую код уведомления и Дополнительные сведения. Для некоторых сообщений уведомлений, этот параметр указывает на структуру большего размера, имеет `NMHDR` структуру, что ее первого элемента.
+*пнмх*<br/>
+Адрес структуры [NMHDR](/windows/desktop/api/richedit/ns-richedit-nmhdr) , содержащей код уведомления и дополнительные сведения. Для некоторых сообщений с уведомлениями этот параметр указывает на большую структуру, в `NMHDR` которой структура является первым элементом.
 
-*bHandled*<br/>
-Карта наборов сообщений *bHandled* значение TRUE перед *NotifyHandler* вызывается. Если *NotifyHandler* не полностью обрабатывает сообщение, она должна задать *bHandled* для **FALSE** для указания сообщения требуется дополнительная обработка.
+*бхандлед*<br/>
+Схема сообщений устанавливает для *бхандлед* значение true перед вызовом *нотифихандлер* . Если *нотифихандлер* не обрабатывает сообщение полностью, ему следует присвоить параметру *бхандлед* значение **false** , чтобы указать, что сообщение требует дальнейшей обработки.
 
 ## <a name="return-value"></a>Возвращаемое значение
 
@@ -42,7 +42,7 @@ LRESULT NotifyHandler(
 
 ## <a name="remarks"></a>Примечания
 
-Пример использования этого обработчика сообщений в схеме сообщений, см. в разделе [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
+Пример использования этого обработчика сообщений в схеме сообщений см. в разделе [NOTIFY_HANDLER](reference/message-map-macros-atl.md#notify_handler)).
 
 ## <a name="see-also"></a>См. также
 

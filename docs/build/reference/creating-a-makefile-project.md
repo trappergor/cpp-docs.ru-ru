@@ -1,18 +1,17 @@
 ---
 title: Создание проекта makefile на C++ в Visual Studio
-ms.date: 05/16/2019
+ms.date: 08/05/2019
 f1_keywords:
 - vc.appwiz.makefile.project
 helpviewer_keywords:
-- Makefile projects, creating
-- project files [C++], Makefile projects
+- Makefile projects [C++]
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: b460b16b3a64818501187b00e503ad0179d26443
-ms.sourcegitcommit: a10c9390413978d36b8096b684d5ed4cf1553bc8
+ms.openlocfilehash: 861cd88440a697ce5a3abc83109526227ae42f8e
+ms.sourcegitcommit: bd7ddc044f9083246614b602ef6a758775313214
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65837394"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68866134"
 ---
 # <a name="create-a-c-makefile-project"></a>Создание проекта makefile на C++
 
@@ -25,7 +24,7 @@ ms.locfileid: "65837394"
 - **Visual Studio 2017 и более поздних версий**: используйте функцию **Открыть папку**, чтобы открыть проект makefile и выполнить его сборку "как есть", не задействуя систему MSBuild. Дополнительные сведения см. в статье [Проекты "Открыть папку" для C++](../open-folder-projects-cpp.md).
 - **Visual Studio 2019 и более поздних версий**: создайте проект makefile UNIX для Linux.
 
-## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Создание проекта makefile с использованием шаблона проекта makefile
+## <a name="a-namecreate_a_makefile_project-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> Создание проекта makefile с использованием шаблона проекта makefile
 
 В Visual Studio 2017 и более поздних версиях шаблон проекта Makefile доступен, если установлена рабочая нагрузка разработки классических приложений на C++.
 
@@ -39,7 +38,7 @@ ms.locfileid: "65837394"
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2019"></a>Создание проекта makefile в Visual Studio 2019
 
-1. В главном меню Visual Studio выберите **Файл** > **Создать** > **Проект** и в поле поиска введите "makefile". Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++** > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и выберите один из двух вариантов в зависимости от того, предназначен ли проект для Windows или Linux.
+1. В главном меню Visual Studio выберите **Файл** > **Создать** > **Проект** и в поле поиска введите "makefile". Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++**  > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и выберите один из двух вариантов в зависимости от того, предназначен ли проект для Windows или Linux.
 
 1. **Только для Windows**: На странице **Параметры конфигурации отладки** предоставьте сведения о команде, выводе, удалении и повторной сборке для отладочной и окончательной сборок. Чтобы указать другие параметры для конфигурации выпуска, нажмите кнопку **Далее**.
 
@@ -51,7 +50,7 @@ ms.locfileid: "65837394"
 
 ### <a name="to-create-a-makefile-project-in-visual-studio-2015-or-visual-studio-2017"></a>Создание проекта makefile в Visual Studio 2015 или Visual Studio 2017
 
-1. На начальной странице Visual Studio введите строку "makefile" в поле поиска **Новый проект**. Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++** > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и в области шаблонов выберите **Проект Makefile**, чтобы открыть мастер проектов.
+1. На начальной странице Visual Studio введите строку "makefile" в поле поиска **Новый проект**. Или же откройте диалоговое окно **Новый проект**, разверните узел **Visual C++**  > **Общие** (Visual Studio 2015) или **Прочие** (Visual Studio 2017) и в области шаблонов выберите **Проект Makefile**, чтобы открыть мастер проектов.
 
 1. На странице **Параметры приложения** предоставьте сведения о команде, выводе, удалении и перестроении для отладочной и окончательной сборок.
 

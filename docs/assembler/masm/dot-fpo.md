@@ -6,40 +6,40 @@ f1_keywords:
 helpviewer_keywords:
 - .FPO directive
 ms.assetid: 35f4cd61-32f9-4262-b657-73f04f775d09
-ms.openlocfilehash: 83d6e81ea7dd35038f27f2721f3cc41fe49ef1bc
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 3bdb6af98aa71fef3d4af24091dc7463d917ce15
+ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62204062"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915964"
 ---
 # <a name="fpo"></a>.FPO
 
-. Директива FPO контролирует вывод записи об отладке .debug$ F сегмента или раздел.
+Тот. Директива FPO управляет эмиссией отладочных записей в сегмент. Debug $ F или раздел.
 
 ## <a name="syntax"></a>Синтаксис
 
-> FPO (*cdwLocals*, *cdwParams*, *cbProlog*, *cbRegs*, *fUseBP*,  *cbFrame*)
+> FPO (*кдвлокалс*, *кдвпарамс*, *кбпролог*, *кбрегс*, *фусебп*, *кбфраме*)
 
 ### <a name="parameters"></a>Параметры
 
-*cdwLocals*<br/>
-Количество локальных переменных, значение без знака 32-разрядная версия.
+*кдвлокалс*<br/>
+Число локальных переменных — Неподписанное 32 разрядное значение.
 
-*cdwParams*<br/>
-Размер параметров в ЧЕТЫРЕХБАЙТОВЫЙ, значение без знака 16-разрядных систем.
+*кдвпарамс*<br/>
+Размер параметров в DWORD, 16 разрядных значений без знака.
 
 *cbProlog*<br/>
-Число байтов в кода пролога функции значение 8-разрядное число без знака.
+Число байтов в коде пролога функции — 8 разрядное значение без знака.
 
-*cbRegs*<br/>
-Номер сохраненные регистры.
+*кбрегс*<br/>
+Число сохраняемых регистров.
 
-*fUseBP*<br/>
-Указывает, выделен ли регистр EBP. 0 или 1.
+*фусебп*<br/>
+Указывает, выделен ли регистр EBP. значение 0 или 1.
 
-*cbFrame*<br/>
-Указывает тип пакета.  См. в разделе [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-_fpo_data) Дополнительные сведения.
+*кбфраме*<br/>
+Указывает тип кадра.  Дополнительные сведения см. в разделе [FPO_DATA](/windows/desktop/api/winnt/ns-winnt-fpo_data) .
 
 ## <a name="see-also"></a>См. также
 

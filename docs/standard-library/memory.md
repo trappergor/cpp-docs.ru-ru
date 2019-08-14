@@ -1,18 +1,18 @@
 ---
 title: '&lt;memory&gt;'
-ms.date: 04/04/2019
+ms.date: 08/04/2019
 f1_keywords:
 - memory/std::<memory>
 - <memory>
 - std::<memory>
 helpviewer_keywords:
 - memory header
-ms.openlocfilehash: 7c30a44de70675af69648fdba79325a173ab62fc
-ms.sourcegitcommit: 0dcab746c49f13946b0a7317fc9769130969e76d
+ms.openlocfilehash: 869a7590d880beba7ccc1d324fd1ba227eeac4e0
+ms.sourcegitcommit: 16c0392fc8d96e814c3a40b0c5346d7389aeb525
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68451891"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957088"
 ---
 # <a name="ltmemorygt"></a>&lt;memory&gt;
 
@@ -108,7 +108,7 @@ ms.locfileid: "68451891"
 |-|-|
 |[allocator_arg_t](../standard-library/allocator-class.md#allocator_arg_t)||
 |[default_delete](../standard-library/default-delete-struct.md)||
-|[hash]()||
+|hash|Предоставляет перегрузки, специализированные `unique_ptr` для `shared_ptr`и.|
 |[owner_less](../standard-library/memory-functions.md#owner_less)|Разрешает смешанные сравнения общих и слабых указателей на основе собственности.|
 |[uses_allocator](../standard-library/allocator-class.md#uses_allocator)||
 
@@ -116,7 +116,7 @@ ms.locfileid: "68451891"
 
 |||
 |-|-|
-|[allocator\<void>](../standard-library/allocator-void-class.md)|Специализация распределителя класса шаблона для типа void, определяющая только типы членов, имеющие смысл в данном специализированном контексте.|
+|[allocator\<void>](../standard-library/allocator-void-class.md)|Специализация распределителя класса шаблона до типа **void**, определяющая только типы элементов, имеющие смысл в этом специализированном контексте.|
 
 ## <a name="see-also"></a>См. также
 
