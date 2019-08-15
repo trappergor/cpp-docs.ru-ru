@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CShellManager [MFC], GetParentItem
 - CShellManager [MFC], ItemFromPath
 ms.assetid: f15c4c1a-6fae-487d-9913-9b7369b33da0
-ms.openlocfilehash: 14e8da573621f712ae9e27647122d305be54b7b0
-ms.sourcegitcommit: 46d24d6e70c03e05484923d9efc6ed5150e96a64
+ms.openlocfilehash: 8151550dafdd1bdf8593d555008af387cf548bc8
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68916685"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69502619"
 ---
 # <a name="cshellmanager-class"></a>Класс Кшеллманажер
 
@@ -113,7 +113,7 @@ BOOL BrowseForFolder(
 окне Заголовок для диалогового окна.
 
 *улфлагс*<br/>
-окне Флаги, указывающие параметры для диалогового окна. Подробное описание см. в разделе [бровсеинфо](/windows/desktop/api/shlobj_core/ns-shlobj_core-browseinfoa) .
+окне Флаги, указывающие параметры для диалогового окна. Подробное описание см. в разделе [бровсеинфо](/windows/win32/api/shlobj_core/ns-shlobj_core-browseinfow) .
 
 *пифолдеримаже*<br/>
 заполняет Указатель на целочисленное значение, в котором метод записывает индекс изображения выбранной папки.
@@ -156,7 +156,7 @@ LPITEMIDLIST ConcatenateItem(
 
 ### <a name="remarks"></a>Примечания
 
-Этот метод создает новый [итемидлист](/windows/desktop/api/shtypes/ns-shtypes-itemidlist) , достаточно большой для размещения как *pidl1* , так и *pidl2*. Затем он копирует *pidl1* и *pidl2* в новый список.
+Этот метод создает новый [итемидлист](/windows/win32/api/shtypes/ns-shtypes-itemidlist) , достаточно большой для размещения как *pidl1* , так и *pidl2*. Затем он копирует *pidl1* и *pidl2* в новый список.
 
 ##  <a name="copyitem"></a>Кшеллманажер:: CopyItem
 
