@@ -1,21 +1,21 @@
 ---
-title: HelpContext (атрибут COM C++)
+title: HelpContext (C++ атрибут com)
 ms.date: 10/02/2018
 f1_keywords:
 - vc-attr.helpcontext
 helpviewer_keywords:
 - helpcontext attribute
 ms.assetid: 6fbb022d-a4b7-4989-a02f-7f18a9b0ad96
-ms.openlocfilehash: 22023b4087c67b62d540d021fa06fd3582c7e4e2
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 8ec13d785ae491a4082d0bbdc908448cb1b8a49c
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62409672"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69490916"
 ---
 # <a name="helpcontext"></a>helpcontext
 
-Указывает идентификатор контекста, который позволяет пользователю просматривать сведения об этом элементе в **помочь** файл.
+Указывает идентификатор контекста, позволяющий пользователю просматривать сведения об этом элементе в файле **справки** .
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -26,15 +26,15 @@ ms.locfileid: "62409672"
 ### <a name="parameters"></a>Параметры
 
 *id*<br/>
-Идентификатор контекста справки. См. в разделе [HTML-справки: Контекстная справка для ваших программ](../../mfc/html-help-context-sensitive-help-for-your-programs.md) Дополнительные сведения о контексте идентификаторы.
+Идентификатор контекста раздела справки. См [. справку HTML: Контекстно-зависимая справка для](../../mfc/html-help-context-sensitive-help-for-your-programs.md) ваших программ для получения дополнительных сведений об идентификаторах контекста.
 
 ## <a name="remarks"></a>Примечания
 
-**Helpcontext** атрибут C++ имеет ту же функциональность, что [helpcontext](/windows/desktop/Midl/helpcontext) описании атрибута MIDL.
+Атрибут **HelpContext** C++ имеет те же функциональные возможности, что и атрибут MIDL для [HelpContext](/windows/win32/Midl/helpcontext) .
 
 ## <a name="example"></a>Пример
 
-См. в примере [defaultvalue](defaultvalue.md) пример демонстрирует использование **helpcontext**.
+Пример использования **HelpContext**см. в примере для [DefaultValue](defaultvalue.md) .
 
 ## <a name="requirements"></a>Требования
 
@@ -42,10 +42,10 @@ ms.locfileid: "62409672"
 
 |||
 |-|-|
-|**Применение**|**интерфейс**, **typedef**, **класс**, метод, свойство|
+|**Относится к**|**Interface**, **typedef**, **класс**, метод, свойство|
 |**Повторяемый**|Нет|
-|**Обязательные атрибуты**|Нет|
-|**Недопустимые атрибуты**|Нет|
+|**Обязательные атрибуты**|Отсутствуют|
+|**Недопустимые атрибуты**|Отсутствуют|
 
 Дополнительные сведения см. в разделе [Контексты атрибутов](cpp-attributes-com-net.md#contexts).
 

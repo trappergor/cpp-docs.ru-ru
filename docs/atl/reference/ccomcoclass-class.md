@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 5b4e39fa4d93893d288bb8de03d8a71b671be087
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62259876"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497397"
 ---
 # <a name="ccomcoclass-class"></a>Класс CComCoClass
 
@@ -33,9 +33,9 @@ class CComCoClass
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Ваш класс, производный от `CComCoClass`.
+Класс, производный от `CComCoClass`.
 
-*pclsid*<br/>
+*пклсид*<br/>
 Указатель на идентификатор CLSID объекта.
 
 ## <a name="members"></a>Участники
@@ -44,32 +44,32 @@ class CComCoClass
 
 |name|Описание|
 |----------|-----------------|
-|[CComCoClass::CreateInstance](#createinstance)|(Статический) Создает экземпляр класса и запросы для интерфейса.|
-|[CComCoClass::Error](#error)|(Статический) Возвращает сведения об ошибке клиенту.|
-|[CComCoClass::GetObjectCLSID](#getobjectclsid)|(Статический) Возвращает идентификатор класса объекта.|
-|[CComCoClass::GetObjectDescription](#getobjectdescription)|(Статический) Переопределите для возврата описание объекта.|
+|[CComCoClass:: CreateInstance](#createinstance)|Статически Создает экземпляр класса и запросы для интерфейса.|
+|[CComCoClass:: Error](#error)|Статически Возвращает клиенту подробные сведения об ошибке.|
+|[CComCoClass:: Жетобжектклсид](#getobjectclsid)|Статически Возвращает идентификатор класса объекта.|
+|[CComCoClass:: Жетобжектдескриптион](#getobjectdescription)|Статически Переопределение для возврата описания объекта.|
 
 ## <a name="remarks"></a>Примечания
 
-`CComCoClass` Предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс, который зарегистрирован в карте объектов должен быть производным от `CComCoClass`.
+`CComCoClass`предоставляет методы для получения CLSID объекта, настройки сведений об ошибках и создания экземпляров класса. Любой класс, зарегистрированный в сопоставлении объектов, `CComCoClass`должен быть производным от.
 
-`CComCoClass` также определяет модель по умолчанию класс фабрики и статистическую обработку для объекта. `CComCoClass` использует следующие два макроса:
+`CComCoClass`также определяет фабрику класса по умолчанию и модель статистической обработки для объекта. `CComCoClass`использует следующие два макроса:
 
-- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) объявляет фабрики класса быть [CComClassFactory](../../atl/reference/ccomclassfactory-class.md).
+- [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory) Объявляет фабрику класса для [ккомклассфактори](../../atl/reference/ccomclassfactory-class.md).
 
-- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) объявляет, что объект может быть агрегировано.
+- [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable) Объявляет, что объект может быть агрегирован.
 
-Одно из этих умолчаний можно переопределить, указав другой макроса в определении класса. Например, чтобы использовать [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) вместо `CComClassFactory`, укажите [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) макрос:
+Можно переопределить любое из этих значений по умолчанию, указав другой макрос в определении класса. Например, чтобы использовать [CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md) вместо `CComClassFactory`, укажите макрос [DECLARE_CLASSFACTORY2](aggregation-and-class-factory-macros.md#declare_classfactory2) :
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/ccomcoclass-class_1.h)]
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-##  <a name="createinstance"></a>  CComCoClass::CreateInstance
+##  <a name="createinstance"></a>CComCoClass:: CreateInstance
 
-Используйте эти `CreateInstance` функции для создания экземпляра COM и получите указатель интерфейса без использования COM API.
+Используйте эти `CreateInstance` функции для создания экземпляра COM-объекта и получения указателя интерфейса без использования API COM.
 
 ```
 template <class  Q>
@@ -82,37 +82,37 @@ static HRESULT CreateInstance(IUnknown* punkOuter, Q** pp);
 ### <a name="parameters"></a>Параметры
 
 *Q*<br/>
-COM-интерфейс, который должен возвращаться через *pp*.
+COM-интерфейс, который должен возвращаться через *PP*.
 
-*punkOuter*<br/>
-[in] Внешняя Неизвестная строка или управляющий unknown агрегатной функции.
+*пункаутер*<br/>
+окне Внешняя неизвестная или неизвестная функция управления статистической функцией.
 
 *PP*<br/>
-[out] Адрес переменной указателя, получающей указатель запрошенный интерфейс в том случае, если успешно создана.
+заполняет Адрес переменной указателя, которая получает запрошенный указатель интерфейса при успешности создания.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Стандартное значение HRESULT. См. в разделе [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance) в пакете SDK для Windows, описание возможные возвращаемые значения.
+Стандартное значение HRESULT. Описание возможных возвращаемых значений см. в разделе [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance) в Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-Использовать первую перегрузку этой функции для создания типичных объекта; Используйте вторую перегрузку, когда просуммируйте создаваемый объект.
+Используйте первую перегрузку этой функции для типичного создания объектов; Используйте вторую перегрузку, если необходимо выполнить статистическую обработку создаваемого объекта.
 
-ATL-класс, реализующий необходимый объект COM (то есть класс, используемый как первый параметр шаблона для [CComCoClass](../../atl/reference/ccomcoclass-class.md)) должен быть в том же проекте, что вызывающий код. Создание COM-объекта, выполняемая процессом фабрики класса, зарегистрированные для этого класса ATL.
+Класс ATL, реализующий требуемый COM-объект (то есть класс, используемый в качестве первого параметра шаблона для [CComCoClass](../../atl/reference/ccomcoclass-class.md)), должен находиться в том же проекте, что и вызывающий код. Создание COM-объекта выполняется фабрикой классов, зарегистрированной для этого класса ATL.
 
-Эти функции полезны для создания объектов, которые запрещено быть внешне с помощью [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto) макрос. Они также полезны в ситуациях, где вы хотите избежать API COM для повышения эффективности.
+Эти функции удобно использовать для создания объектов, которые не могут быть созданы извне с помощью макроса [OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO](object-map-macros.md#object_entry_non_createable_ex_auto) . Они также полезны в ситуациях, когда необходимо избежать COM-API для повышения эффективности.
 
-Обратите внимание, что интерфейс *Q* должен иметь связанный с ним IID, можно получить с помощью [__uuidof](../../cpp/uuidof-operator.md) оператор.
+Обратите внимание, что интерфейсу *Q* должен быть сопоставлен идентификатор IID, который можно получить с помощью оператора [__uuidof](../../cpp/uuidof-operator.md) .
 
 ### <a name="example"></a>Пример
 
-В следующем примере `CDocument` созданный мастером ATL класс, производный от `CComCoClass` , реализующий `IDocument` интерфейс. Класс регистрируется в карте объектов с помощью макроса OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, поэтому клиенты не смогут создавать экземпляры документа с помощью [CoCreateInstance](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication` Представляет компонентный класс, предоставляющий метод на одном из собственных интерфейсов COM, для создания экземпляров класса документа. В коде ниже показан как просто его, чтобы создать экземпляры класса документа с использованием `CreateInstance` член наследуется от `CComCoClass` базового класса.
+В следующем примере `CDocument` — созданный мастером класс ATL, производный от `CComCoClass` , реализующий `IDocument` интерфейс. Класс регистрируется в сопоставлении объектов с помощью макроса OBJECT_ENTRY_NON_CREATEABLE_EX_AUTO, поэтому клиенты не могут создавать экземпляры документа, используя [CoCreateInstance](/windows/win32/api/combaseapi/nf-combaseapi-cocreateinstance). `CApplication`— Это компонентный класс, предоставляющий метод для одного из своих собственных интерфейсов COM для создания экземпляров класса Document. В приведенном ниже коде показано, как легко создать экземпляры класса Document с помощью члена `CreateInstance` , унаследованного `CComCoClass` от базового класса.
 
 [!code-cpp[NVC_ATL_COM#11](../../atl/codesnippet/cpp/ccomcoclass-class_2.cpp)]
 
-##  <a name="error"></a>  CComCoClass::Error
+##  <a name="error"></a>CComCoClass:: Error
 
-Настраивает эту статическую функцию `IErrorInfo` интерфейс для предоставления клиенту сведений об ошибке.
+Эта статическая функция настраивает `IErrorInfo` интерфейс для предоставления клиенту сведений об ошибке.
 
 ```
 static HRESULT WINAPI Error(
@@ -156,26 +156,26 @@ static HRESULT Error(
 
 ### <a name="parameters"></a>Параметры
 
-*lpszDesc*<br/>
-[in] Строка, описывающая ошибку. Версия Юникода `Error` указывает, что *lpszDesc* имеет тип LPCOLESTR; версия ANSI указывает тип LPCSTR.
+*лпсздеск*<br/>
+окне Строка, описывающая ошибку. Версия `Error` Юникода указывает, что *лпсздеск* имеет тип лпколестр; версия ANSI указывает тип LPCSTR.
 
 *IID*<br/>
-[in] Идентификатор IID интерфейса, определяющего GUID_NULL (значение по умолчанию) или ошибка, если ошибки определяется операционной системой.
+окне Идентификатор IID интерфейса, определяющего ошибку или GUID_NULL (значение по умолчанию), если ошибка определяется операционной системой.
 
-*hRes*<br/>
-[in] Значение HRESULT, который вы хотите возвращается вызывающей стороне. Значение по умолчанию — 0. Дополнительные сведения о *hRes*, см. в разделе "Примечания".
+*хрес*<br/>
+окне Значение HRESULT, которое требуется вернуть вызывающему объекту. Значение по умолчанию — 0. Дополнительные сведения о *хрес*см. в разделе Примечания.
 
 *nID*<br/>
-[in] Идентификатор ресурса, где хранится строка описания ошибки. Это значение должно лежать между 0x0200 и 0xFFFF, включительно. В отладочных сборках **ASSERT** Если *nID* индекса не является допустимой строкой. Строка описания ошибки в сборках выпуска будет указано значение «Unknown Error».
+окне Идентификатор ресурса, в котором хранится строка описания ошибки. Это значение должно находиться в диапазоне от 0x0200 до 0xFFFF включительно. В отладочных сборках оператор **Assert** приведет к тому, что *NID* не индексирует допустимую строку. В сборках выпуска для строки описания ошибки будет задано значение "Неизвестная ошибка".
 
-*dwHelpID*<br/>
-[in] Идентификатор контекста справки для ошибки.
+*двхелпид*<br/>
+окне Идентификатор контекста справки для ошибки.
 
-*lpszHelpFile*<br/>
-[in] Путь и имя файла справки, описывающий ошибку.
+*лпсзелпфиле*<br/>
+окне Путь и имя файла справки, описывающего ошибку.
 
-*hInst*<br/>
-[in] Дескриптор для ресурса. По умолчанию этот параметр является `_AtlModule::GetResourceInstance`, где `_AtlModule` — это глобальный экземпляр [CAtlModule](../../atl/reference/catlmodule-class.md).
+*хинст*<br/>
+окне Маркер ресурса. По умолчанию этот параметр имеет `_AtlModule::GetResourceInstance`значение, `_AtlModule` где является глобальным экземпляром [катлмодуле](../../atl/reference/catlmodule-class.md).
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -183,13 +183,13 @@ static HRESULT Error(
 
 ### <a name="remarks"></a>Примечания
 
-Для вызова `Error`, ваш объект должен реализовывать `ISupportErrorInfo Interface` интерфейс.
+Для вызова `Error`объект должен `ISupportErrorInfo Interface` реализовать интерфейс.
 
-Если *hRes* параметра не равно нулю, затем `Error` возвращает значение *hRes*. Если *hRes* равно нулю, то в первых четырех версиях `Error` возвращает DISP_E_EXCEPTION. Две последние версии возвращают результат этого макроса **MAKE_HRESULT (1, FACILITY_ITF,** *nID* **)**.
+Если параметр *хрес* не равен нулю, `Error` возвращается значение *хрес*. Если *хрес* равен нулю, то первые четыре версии `Error` возвращают DISP_E_EXCEPTION. Последние две версии возвращают результат макроса **MAKE_HRESULT (1, FACILITY_ITF,** *NID* **)** .
 
-##  <a name="getobjectclsid"></a>  CComCoClass::GetObjectCLSID
+##  <a name="getobjectclsid"></a>CComCoClass:: Жетобжектклсид
 
-Предоставляет согласованный способ получения CLSID объекта.
+Обеспечивает согласованный способ получения CLSID объекта.
 
 ```
 static const CLSID& WINAPI GetObjectCLSID();
@@ -199,9 +199,9 @@ static const CLSID& WINAPI GetObjectCLSID();
 
 Идентификатор класса объекта.
 
-##  <a name="getobjectdescription"></a>  CComCoClass::GetObjectDescription
+##  <a name="getobjectdescription"></a>CComCoClass:: Жетобжектдескриптион
 
-Эта статическая функция извлекает текстовое описание для объекта класса.
+Эта статическая функция получает текстовое описание для объекта класса.
 
 ```
 static LPCTSTR WINAPI GetObjectDescription();
@@ -209,18 +209,18 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Описание класса объекта.
+Описание объекта класса.
 
 ### <a name="remarks"></a>Примечания
 
-Реализация по умолчанию возвращает значение NULL. Можно переопределить этот метод с [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) макрос. Пример:
+Реализация по умолчанию возвращает значение NULL. Этот метод можно переопределить с помощью макроса [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description) . Например:
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 
-`GetObjectDescription` вызывается `IComponentRegistrar::GetComponents`. `IComponentRegistrar` представляет собой интерфейс автоматизации для регистрации и отмены регистрации отдельных компонентов в библиотеке DLL. При создании объекта регистрации компонента с помощью мастера проектов ATL, мастер будет автоматически реализовывать `IComponentRegistrar` интерфейс. `IComponentRegistrar` обычно используется сервером транзакций.
+`GetObjectDescription`метод вызывается `IComponentRegistrar::GetComponents`методом. `IComponentRegistrar`— Это интерфейс автоматизации, позволяющий регистрировать и отменять регистрацию отдельных компонентов в библиотеке DLL. При создании объекта регистратора компонентов с помощью мастера проектов ATL мастер автоматически реализует `IComponentRegistrar` интерфейс. `IComponentRegistrar`обычно используется сервером транзакций Microsoft Transaction Server.
 
-Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
+Дополнительные сведения о мастере проектов ATL см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
 
 ## <a name="see-also"></a>См. также
 
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[Обзор класса](../../atl/atl-class-overview.md)

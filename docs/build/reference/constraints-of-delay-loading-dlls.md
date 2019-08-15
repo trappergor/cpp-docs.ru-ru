@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
-ms.sourcegitcommit: c6f8e6c2daec40ff4effd8ca99a7014a3b41ef33
+ms.openlocfilehash: be5e5eb360f80e0b2ea9682f38f6787044cd3c63
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "64344168"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493072"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>Ограничения библиотек DLL, загружаемых с задержкой
 
@@ -21,9 +21,9 @@ ms.locfileid: "64344168"
 
 - Отложенная загрузка Kernel32.dll не поддерживается. Эта библиотека DLL необходима для того, чтобы вспомогательные подпрограммы отложенной загрузки могли выполнить отложенную загрузку.
 
-- [Привязка](binding-imports.md) записи переадресованных точек не поддерживается.
+- [Привязка](binding-imports.md) перенаправляемых точек входа не поддерживается.
 
-- Отложенная загрузка библиотеки DLL может изменить поведение процесса, если в точке входа библиотеки DLL, загружаемой с задержкой, осуществляется инициализация процессов. Другие варианты включают статическая память TLS (локальное хранилище потока), объявленные с помощью [__declspec(thread)](../../cpp/thread.md), который не обрабатывается, когда библиотека DLL загружается через `LoadLibrary`. Тем не менее, как в статических библиотеках DLL, так и в библиотеках DLL, загружаемых с задержкой, доступна для использования динамическая память TLS, реализуемая с помощью функций `TlsAlloc`, `TlsFree`, `TlsGetValue` и `TlsSetValue`.
+- Отложенная загрузка библиотеки DLL может изменить поведение процесса, если в точке входа библиотеки DLL, загружаемой с задержкой, осуществляется инициализация процессов. В других случаях — статический протокол TLS (локальное хранилище потока), объявленный с помощью [__declspec (thread)](../../cpp/thread.md), который не обрабатывается при `LoadLibrary`загрузке библиотеки DLL с помощью. Тем не менее, как в статических библиотеках DLL, так и в библиотеках DLL, загружаемых с задержкой, доступна для использования динамическая память TLS, реализуемая с помощью функций `TlsAlloc`, `TlsFree`, `TlsGetValue` и `TlsSetValue`.
 
 - Статические (глобальные) указатели импортируемых функций потребуется инициализировать заново после первого вызова соответствующих функций. Причина в том, что при первом вызове указатель функции указывает на преобразователь.
 
@@ -34,10 +34,10 @@ ms.locfileid: "64344168"
 ## <a name="see-also"></a>См. также
 
 [Поддержка компоновщика для библиотек DLL с отложенной загрузкой](linker-support-for-delay-loaded-dlls.md)<br/>
-[Функции LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
-[Функция GetModuleHandle](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
-[GetProcAddress-функция](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
-[Функцию TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
-[Функция TlsFree](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
-[Функция TlsGetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
-[Функция TlsSetValue](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)
+[LoadLibrary, функция](/windows/win32/api/libloaderapi/nf-libloaderapi-loadlibraryw)<br/>
+[Функция ошибка GetModuleHandle](/windows/win32/api/libloaderapi/nf-libloaderapi-getmodulehandlew)<br/>
+[Функция GetProcAddress](/windows/win32/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>
+[TlsAlloc, функция](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsalloc)<br/>
+[Функция TlsFree](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsfree)<br/>
+[Функция Тлсжетвалуе](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlsgetvalue)<br/>
+[Функция Тлссетвалуе](/windows/win32/api/processthreadsapi/nf-processthreadsapi-tlssetvalue)

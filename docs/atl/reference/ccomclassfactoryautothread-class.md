@@ -1,5 +1,5 @@
 ---
-title: Класс CComClassFactoryAutoThread
+title: Класс Ккомклассфакторяутосреад
 ms.date: 11/04/2016
 f1_keywords:
 - CComClassFactoryAutoThread
@@ -9,19 +9,19 @@ f1_keywords:
 helpviewer_keywords:
 - CComClassFactoryAutoThread class
 ms.assetid: 22008042-533f-4dd9-bf7e-191ee571f9a1
-ms.openlocfilehash: 473e697dfb0203b52713fcfb359ec4f56138f560
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: 73879a73a48290e19d2a27307884953129826df7
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246464"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497493"
 ---
-# <a name="ccomclassfactoryautothread-class"></a>Класс CComClassFactoryAutoThread
+# <a name="ccomclassfactoryautothread-class"></a>Класс Ккомклассфакторяутосреад
 
-Этот класс реализует [IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory) интерфейс и позволяет создавать в нескольких подразделениях объекты.
+Этот класс реализует интерфейс [IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory) и позволяет создавать объекты в нескольких подразделениях.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -37,14 +37,14 @@ class CComClassFactoryAutoThread
 
 |name|Описание|
 |----------|-----------------|
-|[CComClassFactoryAutoThread::CreateInstance](#createinstance)|Создает объект для указанного идентификатора CLSID.|
-|[CComClassFactoryAutoThread::LockServer](#lockserver)|Блокирует фабрики класса в памяти.|
+|[Ккомклассфакторяутосреад:: CreateInstance](#createinstance)|Создает объект указанного идентификатора CLSID.|
+|[Ккомклассфакторяутосреад:: Локксервер](#lockserver)|Блокирует фабрику класса в памяти.|
 
 ## <a name="remarks"></a>Примечания
 
-`CComClassFactoryAutoThread` аналогичен [CComClassFactory](../../atl/reference/ccomclassfactory-class.md), но позволяет создавать в нескольких подразделениях объекты. Чтобы воспользоваться преимуществами этой поддержки, являются производными модуле exe-файла из [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+`CComClassFactoryAutoThread`аналогичен [ккомклассфактори](../../atl/reference/ccomclassfactory-class.md), но позволяет создавать объекты в нескольких апартаментах. Чтобы воспользоваться этой поддержкой, создайте свой модуль EXE из [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md).
 
-Объекты ATL обычно получить фабрику класса путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [CComClassFactory](../../atl/reference/ccomclassfactory-class.md) как фабрики класса по умолчанию. Чтобы использовать `CComClassFactoryAutoThread`, укажите [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) макроса в определении класса объекта. Пример:
+Объекты ATL обычно получают фабрику классов путем наследования от [CComCoClass](../../atl/reference/ccomcoclass-class.md). Этот класс включает макрос [DECLARE_CLASSFACTORY](aggregation-and-class-factory-macros.md#declare_classfactory), который объявляет [ккомклассфактори](../../atl/reference/ccomclassfactory-class.md) в качестве фабрики классов по умолчанию. Чтобы использовать `CComClassFactoryAutoThread`, укажите макрос [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread) в определении класса объекта. Например:
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/ccomclassfactoryautothread-class_1.h)]
 
@@ -60,11 +60,11 @@ class CComClassFactoryAutoThread
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlcom.h
+**Заголовок:** атлком. h
 
-##  <a name="createinstance"></a>  CComClassFactoryAutoThread::CreateInstance
+##  <a name="createinstance"></a>Ккомклассфакторяутосреад:: CreateInstance
 
-Создает объект для указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
+Создает объект указанного идентификатора CLSID и получает указатель интерфейса на этот объект.
 
 ```
 STDMETHODIMP CreateInstance(
@@ -75,14 +75,14 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="parameters"></a>Параметры
 
-*pUnkOuter*<br/>
-[in] Если объект создается как часть агрегата, затем *pUnkOuter* должен быть внешняя Неизвестная строка. В противном случае *pUnkOuter* должен иметь значение NULL.
+*пункаутер*<br/>
+окне Если объект создается как часть агрегата, *пункаутер* должен быть внешним неизвестным. В противном случае *пункаутер* должен иметь значение null.
 
 *riid*<br/>
-[in] Идентификатор IID запрошенного интерфейса. Если *pUnkOuter* отлично от NULL, *riid* должно быть `IID_IUnknown`.
+окне IID запрашиваемого интерфейса. Если *пункаутер* не равен null, *riid* должен иметь `IID_IUnknown`значение.
 
-*ppvObj*<br/>
-[out] Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс *ppvObj* имеет значение NULL.
+*ппвобж*<br/>
+заполняет Указатель на указатель интерфейса, идентифицируемый *riid*. Если объект не поддерживает этот интерфейс, *ппвобж* имеет значение null.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -90,11 +90,11 @@ STDMETHODIMP CreateInstance(
 
 ### <a name="remarks"></a>Примечания
 
-Если модуль является производным от [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` сначала выбирает поток для создания объекта в связанного подразделения.
+Если модуль является производным от [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md), `CreateInstance` сначала выбирает поток для создания объекта в связанном апартаменте.
 
-##  <a name="lockserver"></a>  CComClassFactoryAutoThread::LockServer
+##  <a name="lockserver"></a>Ккомклассфакторяутосреад:: Локксервер
 
-Увеличивает и уменьшает счетчик блокировки модуля путем вызова `_Module::Lock` и `_Module::Unlock`, соответственно.
+Увеличивает и уменьшает счетчик блокировок модуля, вызывая `_Module::Lock` и `_Module::Unlock`соответственно.
 
 ```
 STDMETHODIMP LockServer(BOOL fLock);
@@ -102,8 +102,8 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="parameters"></a>Параметры
 
-*fLock*<br/>
-[in] Если значение равно TRUE, увеличивается счетчик блокировок; в противном случае уменьшается количество блокировок.
+*флокк*<br/>
+окне Если значение равно TRUE, счетчик блокировок увеличивается; в противном случае счетчик блокировок уменьшается.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -111,15 +111,15 @@ STDMETHODIMP LockServer(BOOL fLock);
 
 ### <a name="remarks"></a>Примечания
 
-При использовании `CComClassFactoryAutoThread`, `_Module` обычно относится к глобальному экземпляру [CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md).
+При использовании `CComClassFactoryAutoThread` `_Module` обычно относится к глобальному экземпляру [ккомаутосреадмодуле](../../atl/reference/ccomautothreadmodule-class.md).
 
-Вызов `LockServer` позволяет клиенту, чтоб фабрику класса для создания нескольких объектов можно быстро.
+Вызов `LockServer` позволяет клиенту хранить фабрику класса, чтобы можно было быстро создавать несколько объектов.
 
 ## <a name="see-also"></a>См. также
 
-[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
+[IClassFactory](/windows/win32/api/unknwnbase/nn-unknwnbase-iclassfactory)<br/>
 [Класс CComClassFactory2](../../atl/reference/ccomclassfactory2-class.md)<br/>
 [Класс CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)<br/>
 [Класс CComObjectRootEx](../../atl/reference/ccomobjectrootex-class.md)<br/>
-[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)
+[ккомглобалссреадмодел](atl-typedefs.md#ccomglobalsthreadmodel)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)

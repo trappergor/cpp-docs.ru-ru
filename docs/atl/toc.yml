@@ -240,7 +240,7 @@
             - name: Создание скриптов регистратора
               href: creating-registrar-scripts.md
             - name: Основные сведения о синтаксисе формы Бэкуса-Наура (BNF)
-              href: understanding-backus-nauer-form-bnf-syntax.md
+              href: understanding-backus-naur-form-bnf-syntax.md
             - name: Основные сведения о деревьях синтаксического анализа
               href: understanding-parse-trees.md
             - name: Примеры скриптов реестра

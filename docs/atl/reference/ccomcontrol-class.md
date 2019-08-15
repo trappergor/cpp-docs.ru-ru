@@ -1,5 +1,5 @@
 ---
-title: Класс CComControl
+title: Класс Ккомконтрол
 ms.date: 11/04/2016
 f1_keywords:
 - CComControl
@@ -19,19 +19,19 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: ffbec7c1a83c0dd829878f4c73340528d32fb852
-ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.openlocfilehash: bf0f64d8c7b8e8a3347e4c0fcad902b9e8a0ecb4
+ms.sourcegitcommit: fcb48824f9ca24b1f8bd37d647a4d592de1cc925
 ms.translationtype: MT
 ms.contentlocale: ru-RU
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62246503"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69497521"
 ---
-# <a name="ccomcontrol-class"></a>Класс CComControl
+# <a name="ccomcontrol-class"></a>Класс Ккомконтрол
 
-Этот класс предоставляет методы для создания и управления элементами управления ATL.
+Этот класс предоставляет методы для создания элементов управления ATL и управления ими.
 
 > [!IMPORTANT]
->  Этот класс и его члены не может использоваться в приложениях, выполняемых в среде выполнения Windows.
+>  Этот класс и его члены не могут использоваться в приложениях, выполняемых в среда выполнения Windows.
 
 ## <a name="syntax"></a>Синтаксис
 
@@ -44,10 +44,10 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 #### <a name="parameters"></a>Параметры
 
 *T*<br/>
-Класс, реализация элемента управления.
+Класс, реализующий элемент управления.
 
-*WinBase*<br/>
-Базовый класс, реализующий функции управления окнами. По умолчанию используется [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
+*винбасе*<br/>
+Базовый класс, реализующий функции для работы с окнами. По умолчанию используется [квиндовимпл](../../atl/reference/cwindowimpl-class.md).
 
 ## <a name="members"></a>Участники
 
@@ -55,39 +55,39 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 |name|Описание|
 |----------|-----------------|
-|[CComControl::CComControl](#ccomcontrol)|Конструктор.|
+|[Ккомконтрол:: Ккомконтрол](#ccomcontrol)|Конструктор.|
 
 ### <a name="public-methods"></a>Открытые методы
 
 |name|Описание|
 |----------|-----------------|
-|[CComControl::ControlQueryInterface](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
-|[CComControl::CreateControlWindow](#createcontrolwindow)|Создает окно для элемента управления.|
-|[CComControl::FireOnChanged](#fireonchanged)|Уведомляет приемника контейнера, измененного свойства элемента управления.|
-|[CComControl::FireOnRequestEdit](#fireonrequestedit)|Уведомляет приемника контейнера, что свойство элемента управления является изменением и что объект запрашивает приемника дальнейшие действия.|
-|[CComControl::MessageBox](#messagebox)|Этот метод используется для создания, отображения и работы окно сообщения.|
+|[Ккомконтрол:: Контролкуеринтерфаце](#controlqueryinterface)|Извлекает указатель на запрошенный интерфейс.|
+|[Ккомконтрол:: Креатеконтролвиндов](#createcontrolwindow)|Создает окно для элемента управления.|
+|[Ккомконтрол:: Фиреончанжед](#fireonchanged)|Сообщает приемнику контейнера, что свойство элемента управления изменилось.|
+|[Ккомконтрол:: Фиреонрекуестедит](#fireonrequestedit)|Уведомляет приемник контейнера о том, что свойство элемента управления собирается измениться и что объект запрашивает приемник, как продолжать.|
+|[Ккомконтрол:: MessageBox](#messagebox)|Вызовите этот метод, чтобы создать, отобразить и обработать окно сообщения.|
 
 ## <a name="remarks"></a>Примечания
 
-`CComControl` — Это набор полезных управления вспомогательные функции и важные данные-члены для элементов управления ATL. При создании стандартного элемента управления или элемент управления DHTML, с помощью мастера управления ATL, мастер автоматически будут производными от класса `CComControl`. `CComControl` является производным большинство методов из [CComControlBase](../../atl/reference/ccomcontrolbase-class.md).
+`CComControl`— это набор полезных вспомогательных функций элемента управления и важные элементы данных для элементов управления ATL. При создании стандартного элемента управления или элемента управления DHTML с помощью мастера элементов управления ATL мастер автоматически создает производный класс от `CComControl`. `CComControl`наследует большинство своих методов от [ккомконтролбасе](../../atl/reference/ccomcontrolbase-class.md).
 
-Дополнительные сведения о создании элемента управления, см. в разделе [учебник по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проекта ATL, см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
+Дополнительные сведения о создании элемента управления см. в [руководстве по ATL](../../atl/active-template-library-atl-tutorial.md). Дополнительные сведения о мастере проектов ATL см. в статье [Создание проекта ATL](../../atl/reference/creating-an-atl-project.md).
 
-С примером `CComControl` методы и элементы данных, см. в разделе [Кр](../../overview/visual-cpp-samples.md) образца.
+Демонстрацию `CComControl` методов и элементов данных см. в образце [Circ](../../overview/visual-cpp-samples.md) .
 
 ## <a name="inheritance-hierarchy"></a>Иерархия наследования
 
 `WinBase`
 
-[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)
+[ккомконтролбасе](../../atl/reference/ccomcontrolbase-class.md)
 
 `CComControl`
 
 ## <a name="requirements"></a>Требования
 
-**Заголовок:** atlctl.h
+**Заголовок:** атлктл. h
 
-##  <a name="ccomcontrol"></a>  CComControl::CComControl
+##  <a name="ccomcontrol"></a>Ккомконтрол:: Ккомконтрол
 
 Конструктор.
 
@@ -97,9 +97,9 @@ CComControl();
 
 ### <a name="remarks"></a>Примечания
 
-Вызовы [CComControlBase](ccomcontrolbase-class.md#ccomcontrolbase) конструктор, передавая `m_hWnd` данные-член наследуется через [CWindowImpl](../../atl/reference/cwindowimpl-class.md).
+Вызывает конструктор [ккомконтролбасе](ccomcontrolbase-class.md#ccomcontrolbase) , передавая `m_hWnd` член данных, наследуемый через [квиндовимпл](../../atl/reference/cwindowimpl-class.md).
 
-##  <a name="controlqueryinterface"></a>  CComControl::ControlQueryInterface
+##  <a name="controlqueryinterface"></a>Ккомконтрол:: Контролкуеринтерфаце
 
 Извлекает указатель на запрошенный интерфейс.
 
@@ -110,20 +110,20 @@ virtual HRESULT ControlQueryInterface(const IID& iid, void** ppv);
 ### <a name="parameters"></a>Параметры
 
 *IID*<br/>
-[in] Идентификатор GUID запрашиваемого интерфейса.
+окне Идентификатор GUID запрашиваемого интерфейса.
 
-*ppv*<br/>
-[out] Указатель на указатель интерфейса, идентифицируемый *iid*, или значение NULL, если интерфейс не найден.
+*ппв*<br/>
+заполняет Указатель на указатель интерфейса, идентифицируемый по *IID*, или значение null, если интерфейс не найден.
 
 ### <a name="remarks"></a>Примечания
 
-обрабатывает интерфейсы только в таблицу сопоставлений COM.
+Обрабатывает только интерфейсы в таблице-сопоставлении COM.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#15](../../atl/codesnippet/cpp/ccomcontrol-class_1.cpp)]
 
-##  <a name="createcontrolwindow"></a>  CComControl::CreateControlWindow
+##  <a name="createcontrolwindow"></a>Ккомконтрол:: Креатеконтролвиндов
 
 По умолчанию создает окно для элемента управления путем вызова `CWindowImpl::Create`.
 
@@ -133,23 +133,23 @@ virtual HWND CreateControlWindow(HWND hWndParent, RECT& rcPos);
 
 ### <a name="parameters"></a>Параметры
 
-*hWndParent*<br/>
-[in] Дескриптор окна родительского или владельца. Необходимо указать действительный дескриптор окна. Окно управления сводится к области его родительского окна.
+*хвндпарент*<br/>
+окне Обработайте с родительским или владельцем окном. Необходимо указать допустимый описатель окна. Окно управления ограничено областью родительского окна.
 
-*rcPos*<br/>
-[in] Первоначальный размер и положение окна должен быть создан.
+*ркпос*<br/>
+окне Начальный размер и расположение создаваемого окна.
 
 ### <a name="remarks"></a>Примечания
 
-Переопределите этот метод, если вы хотите сделать что-то отличное от создания одного окна, например, чтобы создать два окна, один из которых становится панель инструментов для элемента управления.
+Переопределите этот метод, если вы хотите сделать что-то, отличное от создания одного окна, например, чтобы создать два окна, одно из которых превращается в панель инструментов для элемента управления.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#16](../../atl/codesnippet/cpp/ccomcontrol-class_2.cpp)]
 
-##  <a name="fireonchanged"></a>  CComControl::FireOnChanged
+##  <a name="fireonchanged"></a>Ккомконтрол:: Фиреончанжед
 
-Уведомляет приемника контейнера, измененного свойства элемента управления.
+Сообщает приемнику контейнера, что свойство элемента управления изменилось.
 
 ```
 HRESULT FireOnChanged(DISPID dispID);
@@ -158,7 +158,7 @@ HRESULT FireOnChanged(DISPID dispID);
 ### <a name="parameters"></a>Параметры
 
 *dispID*<br/>
-[in] Идентификатор измененного свойства.
+окне Идентификатор измененного свойства.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -166,17 +166,17 @@ HRESULT FireOnChanged(DISPID dispID);
 
 ### <a name="remarks"></a>Примечания
 
-Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnChanged](cfirepropnotifyevent-class.md#fireonchanged) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного элемента управления Свойство изменилось. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.
+Если класс элемента управления является производным от [ипропертинотифисинк](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает [кфирепропнотифевент:: фиреончанжед](cfirepropnotifyevent-class.md#fireonchanged) для уведомления всех `IPropertyNotifySink` подключенных интерфейсов об изменении указанного свойства элемента управления. Если класс элемента управления не является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.
 
-Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.
+Этот метод можно вызывать, даже если элемент управления не поддерживает точки подключения.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#17](../../atl/codesnippet/cpp/ccomcontrol-class_3.cpp)]
 
-##  <a name="fireonrequestedit"></a>  CComControl::FireOnRequestEdit
+##  <a name="fireonrequestedit"></a>Ккомконтрол:: Фиреонрекуестедит
 
-Уведомляет приемника контейнера, что свойство элемента управления является изменением и что объект запрашивает приемника дальнейшие действия.
+Уведомляет приемник контейнера о том, что свойство элемента управления собирается измениться и что объект запрашивает приемник, как продолжать.
 
 ```
 HRESULT FireOnRequestEdit(DISPID dispID);
@@ -185,7 +185,7 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 ### <a name="parameters"></a>Параметры
 
 *dispID*<br/>
-[in] Идентификатор свойства изменением.
+окне Идентификатор свойства, которое необходимо изменить.
 
 ### <a name="return-value"></a>Возвращаемое значение
 
@@ -193,17 +193,17 @@ HRESULT FireOnRequestEdit(DISPID dispID);
 
 ### <a name="remarks"></a>Примечания
 
-Если класса элемента управления является производным от [IPropertyNotifySink](/windows/desktop/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает метод [CFirePropNotifyEvent::FireOnRequestEdit](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления о всех подключенных `IPropertyNotifySink` интерфейсы, указанного как изменить свойства элемента управления. Если ваш класс элемента управления является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.
+Если класс элемента управления является производным от [ипропертинотифисинк](/windows/win32/api/ocidl/nn-ocidl-ipropertynotifysink), этот метод вызывает [кфирепропнотифевент:: фиреонрекуестедит](cfirepropnotifyevent-class.md#fireonrequestedit) для уведомления всех `IPropertyNotifySink` подключенных интерфейсов, которые собирается изменить указанное свойство элемента управления. Если класс элемента управления не является производным от `IPropertyNotifySink`, этот метод возвращает значение S_OK.
 
-Этот метод можно вызвать, даже если элемент управления не поддерживает точки подключения.
+Этот метод можно вызывать, даже если элемент управления не поддерживает точки подключения.
 
 ### <a name="example"></a>Пример
 
 [!code-cpp[NVC_ATL_COM#18](../../atl/codesnippet/cpp/ccomcontrol-class_4.cpp)]
 
-##  <a name="messagebox"></a>  CComControl::MessageBox
+##  <a name="messagebox"></a>Ккомконтрол:: MessageBox
 
-Этот метод используется для создания, отображения и работы окно сообщения.
+Вызовите этот метод, чтобы создать, отобразить и обработать окно сообщения.
 
 ```
 int MessageBox(
@@ -217,23 +217,23 @@ int MessageBox(
 *lpszText*<br/>
 Текст, отображаемый в окне сообщения.
 
-*lpszCaption*<br/>
-Заголовок диалогового окна. Если значение NULL (по умолчанию), заголовок, используемый «Error».
+*лпсзкаптион*<br/>
+Заголовок диалогового окна. Если значение NULL (по умолчанию), используется заголовок "Error".
 
-*nType*<br/>
-Указывает содержимое и поведение диалогового окна. См. в разделе [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) запись в документации по Windows SDK для получения списка доступных полей другое сообщение. Значение по умолчанию предоставляет простой **ОК** кнопки.
+*Nуведомления*<br/>
+Задает содержимое и поведение диалогового окна. Список различных доступных окон сообщений см. в записи [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) в документации Windows SDK. По умолчанию имеется простая кнопка **ОК** .
 
 ### <a name="return-value"></a>Возвращаемое значение
 
-Возвращает значение типа integer, указав одно из значений пунктов меню, списке [MessageBox](/windows/desktop/api/winuser/nf-winuser-messagebox) в документации по Windows SDK.
+Возвращает целочисленное значение, указывающее одно из значений элементов меню, перечисленных в разделе [MessageBox](/windows/win32/api/winuser/nf-winuser-messagebox) в документации по Windows SDK.
 
 ### <a name="remarks"></a>Примечания
 
-`MessageBox` полезно как во время разработки, так и с легкостью для отображения ошибки или сообщение с предупреждением для пользователя.
+`MessageBox`полезен как во время разработки, так и в качестве простого способа отобразить сообщение об ошибке или предупреждение пользователю.
 
 ## <a name="see-also"></a>См. также
 
 [Класс CWindowImpl](../../atl/reference/cwindowimpl-class.md)<br/>
-[Общие сведения о классе](../../atl/atl-class-overview.md)<br/>
+[Обзор класса](../../atl/atl-class-overview.md)<br/>
 [Класс CComControlBase](../../atl/reference/ccomcontrolbase-class.md)<br/>
 [Класс CComCompositeControl](../../atl/reference/ccomcompositecontrol-class.md)
